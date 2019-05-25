@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.gaiagreen.tech/api/v1/schema/connectors.json",
+  "title": "Connectors",
+  "description": "Power connector types",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "Name of the connector",
+        "type": "string"
+      },
+      "otherNames": {
+        "description": "Other names for the connector",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true
+      },
+      "current": {
+        "description": "Electric power current type",
+        "items": {
+          "type": "string",
+          "enum": ["DC", "AC single-phase", "AC three-phase"]
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      },
+      "maxCurrent": {
+        "description": "Maximum current in amps",
+        "type": "number"
+      },
+      "maxVoltage": {
+        "description": "Maximum voltage in volts",
+        "type": "number"
+      }
+    },
+    "required": ["name", "current", "maxCurrent", "maxVoltage"]
+  }
+}
