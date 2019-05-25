@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  validate:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run: npm install
+workflows:
+  Validate JSON Schema:
+    jobs:
+      - validate
