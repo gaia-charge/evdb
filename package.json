@@ -4,7 +4,8 @@
   "description": "Public domain EV database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nwb serve-react-app",
+    "build": "nwb build-react-app --config ./nwb.dist.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,12 @@
   },
   "homepage": "https://github.com/gaia-green-tech/evdb#readme",
   "devDependencies": {
-    "ajv-cli": "^3.0.0"
+    "@coreui/coreui": "^2.1.9",
+    "@coreui/react": "^2.5.1",
+    "ajv-cli": "^3.0.0",
+    "nwb": "^0.23.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   }
 }
