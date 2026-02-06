@@ -1,0 +1,101 @@
+# Nissan Motor Company, Ltd.
+# https://www.nissan.com/
+
+id: nissan
+name: Nissan Motor Company, Ltd.
+short_name: Nissan
+country: JP  # Japan
+founded: 1933
+headquarters:
+  city: Yokohama
+  country: JP
+
+description: >
+  Nissan is a Japanese multinational automobile manufacturer headquartered in Yokohama, Japan.
+  Founded in 1933, Nissan is part of the Renault-Nissan-Mitsubishi Alliance, the world's largest
+  automotive alliance. Nissan was an early pioneer in electric mobility with the Nissan LEAF,
+  launched in 2010 as the world's first mass-market electric car. The LEAF remains one of the
+  best-selling electric vehicles globally with over 650,000 units sold. Nissan's current EV
+  strategy focuses on its e-POWER hybrid technology and pure electric models built on dedicated
+  EV platforms.
+
+parent_company: Nissan Motor Co., Ltd. (independent, part of Renault-Nissan-Mitsubishi Alliance)
+
+brands:
+  - Nissan
+  - Infiniti (luxury brand)
+  - Datsun (budget brand, discontinued 2022)
+
+ev_platforms:
+  - name: CMF-EV
+    description: >
+      Common Module Family - Electric Vehicle platform developed jointly with Renault-Nissan-Mitsubishi Alliance.
+      Shared with Renault Megane E-Tech Electric. Supports 400V architecture, multiple battery sizes,
+      and various body styles. Used for Nissan Ariya.
+    vehicles:
+      - Nissan Ariya
+      - Renault Megane E-Tech Electric
+      - Renault Scenic E-Tech Electric
+    
+  - name: LEAF Platform
+    description: >
+      Dedicated EV platform for the Nissan LEAF. Originally launched in 2010, evolved through
+      multiple generations. Not shared with other Alliance vehicles.
+    vehicles:
+      - Nissan LEAF (all generations)
+
+notable_models:
+  electric:
+    - Nissan LEAF (2010-present, world's first mass-market EV)
+    - Nissan Ariya (2021-present, electric crossover)
+    - Nissan Townstar EV (2022-present, commercial van)
+  hybrid:
+    - Nissan X-Trail e-POWER
+    - Nissan Qashqai e-POWER
+    - Nissan Note e-POWER
+
+production_sites:
+  ev_production:
+    - location: Tochigi, Japan
+      models: [Nissan Ariya]
+    - location: Sunderland, UK
+      models: [Nissan LEAF, planned Ariya]
+    - location: Smyrna, USA
+      models: [Nissan LEAF]
+
+innovation:
+  - "World's first mass-market electric car (LEAF, 2010)"
+  - "e-POWER series-hybrid technology (electric drive, gasoline generator)"
+  - "ProPILOT Assist semi-autonomous driving"
+  - "V2G/V2H bidirectional charging (since LEAF gen 1)"
+  - "CHAdeMO fast charging standard (co-founded)"
+
+sustainability:
+  goals:
+    - "Carbon neutrality across lifecycle by 2050"
+    - "All new vehicles in major markets electrified by early 2030s"
+    - "23 electrified models by 2030"
+  initiatives:
+    - "Nissan Ambition 2030 electrification plan"
+    - "4R Energy - Battery second-life and recycling joint venture"
+    - "Blue Switch - V2X energy management platform"
+
+partnerships:
+  - name: Renault-Nissan-Mitsubishi Alliance
+    description: Strategic alliance for platform sharing, technology development
+  - name: Envision AESC
+    description: Battery manufacturing joint venture
+  - name: 4R Energy Corporation
+    description: EV battery reuse and recycling
+
+website: https://www.nissan-global.com/
+ev_website: https://www.nissan.com/electric-vehicles
+
+metadata:
+  sources:
+    - https://www.nissan-global.com/EN/
+    - https://www.nissan.com/
+    - https://en.wikipedia.org/wiki/Nissan
+  data_quality: verified
+  created_at: "2026-02-07"
+  last_updated: "2026-02-07"
