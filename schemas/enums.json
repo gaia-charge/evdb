@@ -1,0 +1,278 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.org/schemas/enums.json",
+  "title": "EVDB Enumeration Values",
+  "description": "Standardized enumeration values used across EVDB schemas",
+  "version": "1.0.0",
+  
+  "definitions": {
+    "bodyStyles": {
+      "description": "Vehicle body styles",
+      "enum": [
+        "sedan",
+        "hatchback",
+        "wagon",
+        "coupe",
+        "convertible",
+        "suv",
+        "crossover",
+        "minivan",
+        "van",
+        "pickup-truck",
+        "sports-car"
+      ]
+    },
+    
+    "segments": {
+      "description": "European vehicle segments",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "J",
+        "M",
+        "S"
+      ]
+    },
+    
+    "batteryChemistry": {
+      "description": "Battery cell chemistry types",
+      "enum": [
+        "NMC",
+        "NCA",
+        "LFP",
+        "LTO",
+        "LMFP",
+        "NCM",
+        "Hybrid",
+        "Other"
+      ]
+    },
+    
+    "driveType": {
+      "description": "Vehicle drive configurations",
+      "enum": [
+        "RWD",
+        "FWD",
+        "AWD",
+        "4WD"
+      ]
+    },
+    
+    "connectorTypes": {
+      "description": "Charging connector types",
+      "enum": [
+        "Type1",
+        "Type2",
+        "CCS1",
+        "CCS2",
+        "CHAdeMO",
+        "GB/T-AC",
+        "GB/T-DC",
+        "Tesla-Modified-Type2",
+        "Tesla-NACS"
+      ]
+    },
+    
+    "productionStatus": {
+      "description": "Vehicle production lifecycle status",
+      "enum": [
+        "concept",
+        "announced",
+        "pre-production",
+        "active",
+        "discontinued",
+        "limited-production"
+      ]
+    },
+    
+    "dataQuality": {
+      "description": "Data quality confidence levels",
+      "enum": [
+        "verified",
+        "manufacturer-spec",
+        "measured",
+        "estimated",
+        "calculated",
+        "partial",
+        "unverified",
+        "community-reported"
+      ]
+    },
+    
+    "dataSource": {
+      "description": "Source of data",
+      "enum": [
+        "manufacturer",
+        "official-test",
+        "independent-test",
+        "user-reported",
+        "calculated",
+        "estimated",
+        "third-party",
+        "press-release"
+      ]
+    },
+    
+    "countries": {
+      "description": "ISO 3166-1 alpha-2 country codes (common EV markets)",
+      "enum": [
+        "AT", "AU", "BE", "BR", "CA", "CH", "CL", "CN", "CZ", "DE",
+        "DK", "ES", "FI", "FR", "GB", "HU", "IE", "IL", "IN", "IT",
+        "JP", "KR", "MX", "NL", "NO", "NZ", "PL", "PT", "RO", "SE",
+        "SG", "TH", "TR", "US", "ZA"
+      ]
+    },
+    
+    "currencies": {
+      "description": "ISO 4217 currency codes (common currencies)",
+      "enum": [
+        "AUD", "BRL", "CAD", "CHF", "CNY", "CZK", "DKK", "EUR", "GBP",
+        "HUF", "ILS", "INR", "JPY", "KRW", "MXN", "NOK", "NZD", "PLN",
+        "RON", "SEK", "SGD", "THB", "TRY", "USD", "ZAR"
+      ]
+    },
+    
+    "regions": {
+      "description": "Geographic regions",
+      "enum": [
+        "North America",
+        "Europe",
+        "Asia",
+        "Asia-Pacific",
+        "China",
+        "South America",
+        "Middle East",
+        "Africa",
+        "Oceania",
+        "Global"
+      ]
+    },
+    
+    "chargingStandards": {
+      "description": "Charging communication standards",
+      "enum": [
+        "IEC 62196",
+        "SAE J1772",
+        "CHAdeMO",
+        "GB/T 20234",
+        "ISO 15118",
+        "OCPP"
+      ]
+    },
+    
+    "v2xCapabilities": {
+      "description": "Vehicle-to-X capabilities",
+      "enum": [
+        "V2L",
+        "V2H",
+        "V2G",
+        "V2V",
+        "None"
+      ]
+    },
+    
+    "incentiveTypes": {
+      "description": "Government incentive types",
+      "enum": [
+        "purchase-rebate",
+        "tax-credit",
+        "vat-reduction",
+        "registration-discount",
+        "toll-exemption",
+        "parking-free",
+        "subsidy",
+        "grant",
+        "bonus",
+        "other"
+      ]
+    },
+    
+    "availabilityStatus": {
+      "description": "Market availability status",
+      "enum": [
+        "available",
+        "pre-order",
+        "coming-soon",
+        "discontinued",
+        "limited-availability",
+        "sold-out",
+        "waitlist"
+      ]
+    },
+    
+    "colorTypes": {
+      "description": "Paint/color finish types",
+      "enum": [
+        "solid",
+        "metallic",
+        "pearl",
+        "matte",
+        "special"
+      ]
+    },
+    
+    "wheelMaterials": {
+      "description": "Wheel material types",
+      "enum": [
+        "alloy",
+        "steel",
+        "forged",
+        "carbon-fiber"
+      ]
+    },
+    
+    "interiorMaterials": {
+      "description": "Interior trim material types",
+      "enum": [
+        "cloth",
+        "synthetic-leather",
+        "leather",
+        "vegan-leather",
+        "alcantara",
+        "microfiber",
+        "premium-textile"
+      ]
+    },
+    
+    "autonomyLevels": {
+      "description": "SAE autonomous driving levels",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L2+",
+        "L3",
+        "L4",
+        "L5"
+      ]
+    },
+    
+    "safetyRatings": {
+      "description": "Safety test organizations",
+      "enum": [
+        "Euro NCAP",
+        "NHTSA",
+        "IIHS",
+        "ANCAP",
+        "C-NCAP",
+        "JNCAP"
+      ]
+    },
+    
+    "warrantyTypes": {
+      "description": "Warranty coverage types",
+      "enum": [
+        "vehicle",
+        "battery",
+        "drivetrain",
+        "corrosion",
+        "paint",
+        "roadside-assistance"
+      ]
+    }
+  }
+}
