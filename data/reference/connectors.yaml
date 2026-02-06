@@ -1,0 +1,171 @@
+# EV Charging Connectors Reference Data
+# Last Updated: 2026-02-06
+#
+# This file contains standardized information about EV charging connectors
+# used worldwide. Each connector has a unique ID that can be referenced
+# in vehicle variant specifications.
+
+connectors:
+  # AC Connectors (Slow/Fast Charging)
+  
+  - id: type1
+    name: "Type 1 (SAE J1772)"
+    type: ac
+    max_power_kw: 7.4
+    max_current_a: 32
+    max_voltage_v: 230
+    phases: 1
+    regions:
+      - US
+      - JP
+      - CA
+    description: "Standard AC connector in North America and Japan. Single-phase."
+    common_locations: "Home charging, public L2 stations"
+    
+  - id: type2
+    name: "Type 2 (IEC 62196)"
+    type: ac
+    max_power_kw: 43
+    max_current_a: 63
+    max_voltage_v: 400
+    phases: 3
+    regions:
+      - EU
+      - AU
+      - NZ
+    description: "Standard AC connector in Europe. Supports three-phase charging."
+    common_locations: "Home charging, public AC stations, destination charging"
+    also_known_as: "Mennekes"
+
+  # DC Fast Charging Connectors
+  
+  - id: ccs1
+    name: "CCS1 (Combined Charging System)"
+    type: dc
+    max_power_kw: 350
+    max_current_a: 500
+    max_voltage_v: 920
+    phases: null
+    regions:
+      - US
+      - CA
+      - KR
+    description: "DC fast charging standard in North America. Combines Type 1 AC with DC pins."
+    common_locations: "Highway fast charging stations"
+    also_known_as: "CCS Combo 1"
+    
+  - id: ccs2
+    name: "CCS2 (Combined Charging System)"
+    type: dc
+    max_power_kw: 350
+    max_current_a: 500
+    max_voltage_v: 920
+    phases: null
+    regions:
+      - EU
+      - AU
+      - NZ
+      - CN
+    description: "DC fast charging standard in Europe. Combines Type 2 AC with DC pins."
+    common_locations: "Highway fast charging stations, ultra-fast charging hubs"
+    also_known_as: "CCS Combo 2"
+    
+  - id: chademo
+    name: "CHAdeMO"
+    type: dc
+    max_power_kw: 400
+    max_current_a: 400
+    max_voltage_v: 1000
+    phases: null
+    regions:
+      - JP
+      - US
+      - EU
+    description: "Japanese DC fast charging standard. Being phased out in favor of CCS in many markets."
+    common_locations: "Older fast charging stations, especially for Nissan/Mitsubishi"
+    note: "CHAdeMO 3.0 supports up to 400kW, but most stations are 50kW"
+    
+  - id: gb-t-ac
+    name: "GB/T AC"
+    type: ac
+    max_power_kw: 7
+    max_current_a: 32
+    max_voltage_v: 220
+    phases: 1
+    regions:
+      - CN
+    description: "Chinese AC charging standard (Guobiao/GB)"
+    common_locations: "China - home and public AC charging"
+    
+  - id: gb-t-dc
+    name: "GB/T DC"
+    type: dc
+    max_power_kw: 240
+    max_current_a: 250
+    max_voltage_v: 960
+    phases: null
+    regions:
+      - CN
+    description: "Chinese DC fast charging standard"
+    common_locations: "China - fast charging stations"
+    note: "Some newer stations support up to 600kW"
+
+  # Tesla Proprietary (Legacy & Current)
+  
+  - id: tesla-nacs
+    name: "NACS (North American Charging Standard)"
+    type: both
+    max_power_kw: 250
+    max_current_a: 500
+    max_voltage_v: 1000
+    phases: null
+    regions:
+      - US
+      - CA
+      - MX
+    description: "Tesla's connector, opened as NACS. Being adopted by Ford, GM, Rivian, and others in North America."
+    common_locations: "Tesla Supercharger network"
+    also_known_as: "Tesla connector, Tesla plug"
+    note: "Supports both AC and DC charging through same connector"
+    
+  - id: tesla-type2
+    name: "Tesla Type 2 (Modified)"
+    type: both
+    max_power_kw: 250
+    max_current_a: 500
+    max_voltage_v: 500
+    phases: 3
+    regions:
+      - EU
+      - AU
+      - NZ
+    description: "Tesla's modified Type 2 connector that supports both AC and DC"
+    common_locations: "Tesla Supercharger and Destination chargers in Europe"
+    note: "Physically compatible with standard Type 2, but DC only works with Tesla vehicles (pre-2024)"
+
+  # Three-phase AC (High Power)
+  
+  - id: type2-three-phase
+    name: "Type 2 Three-Phase"
+    type: ac
+    max_power_kw: 22
+    max_current_a: 32
+    max_voltage_v: 400
+    phases: 3
+    regions:
+      - EU
+    description: "Standard three-phase AC charging in Europe for faster AC charging"
+    common_locations: "Public AC charging stations, commercial parking"
+    note: "Most common configuration is 11kW (16A) or 22kW (32A)"
+
+# Connector Compatibility Notes:
+# - CCS2 vehicles can charge at Type 2 AC stations
+# - CCS1 vehicles can charge at Type 1 AC stations
+# - NACS (Tesla) can adapt to CCS with official adapter
+# - CHAdeMO requires dedicated connector, no backward compatibility
+# - GB/T is isolated to China, requires adapters for international use
+
+# Power Levels Reference:
+# - Level 1 (AC): 1.4-1.9 kW (standard outlet)
+# - Level 2 (AC): 3.7-22 kW (dedicated EVSE)
+# - Level 3 (DC): 50-350+ kW (fast charging)

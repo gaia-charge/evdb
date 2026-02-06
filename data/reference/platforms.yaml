@@ -1,0 +1,387 @@
+# EV Platforms Reference Data
+# Last Updated: 2026-02-06
+#
+# This file contains information about major EV platforms (skateboard chassis)
+# used by manufacturers. Platforms are shared across multiple models and
+# determine fundamental characteristics like battery architecture, motor layout,
+# and charging capabilities.
+
+platforms:
+  # Volkswagen Group
+  
+  - id: vw-meb
+    name: "MEB (Modular Electric Drive Matrix)"
+    manufacturer: Volkswagen Group
+    introduced: 2019
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 45
+      max: 86
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 125
+      max: 250
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Volkswagen
+      - Audi
+      - Skoda
+      - Cupra
+      - Seat
+    notable_models:
+      - "VW ID.3"
+      - "VW ID.4"
+      - "VW ID.5"
+      - "VW ID.7"
+      - "VW ID.Buzz"
+      - "Audi Q4 e-tron"
+      - "Skoda Enyaq"
+      - "Cupra Born"
+    max_dc_charging_kw: 170
+    description: "Volkswagen Group's mass-market EV platform. Rear-motor standard with optional front motor for AWD."
+    
+  - id: vw-ppe
+    name: "PPE (Premium Platform Electric)"
+    manufacturer: Volkswagen Group
+    introduced: 2023
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 85
+      max: 120
+    typical_voltage_v: 800
+    typical_power_range_kw:
+      min: 250
+      max: 450
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Audi
+      - Porsche
+    notable_models:
+      - "Audi Q6 e-tron"
+      - "Audi A6 e-tron"
+      - "Porsche Macan EV"
+    max_dc_charging_kw: 270
+    description: "Premium platform co-developed by Audi and Porsche. 800V architecture for ultra-fast charging."
+
+  # Hyundai Motor Group
+  
+  - id: hmg-egmp
+    name: "E-GMP (Electric-Global Modular Platform)"
+    manufacturer: Hyundai Motor Group
+    introduced: 2021
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 58
+      max: 84
+    typical_voltage_v: 800
+    typical_power_range_kw:
+      min: 125
+      max: 430
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Hyundai
+      - Kia
+      - Genesis
+    notable_models:
+      - "Hyundai Ioniq 5"
+      - "Hyundai Ioniq 6"
+      - "Kia EV6"
+      - "Genesis GV60"
+      - "Genesis GV70 Electrified"
+    max_dc_charging_kw: 350
+    description: "Hyundai/Kia's 800V platform with ultra-fast charging (10-80% in 18 minutes) and V2L capability."
+    features:
+      - "800V architecture"
+      - "Vehicle-to-Load (V2L)"
+      - "Bi-directional charging ready"
+      - "Multi-charging system (400V/800V)"
+
+  # General Motors
+  
+  - id: gm-ultium
+    name: "Ultium Platform"
+    manufacturer: General Motors
+    introduced: 2022
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 50
+      max: 200
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 100
+      max: 560
+    drive_layouts:
+      - rwd
+      - fwd
+      - awd
+    brands:
+      - Chevrolet
+      - GMC
+      - Cadillac
+      - Hummer
+    notable_models:
+      - "Chevrolet Silverado EV"
+      - "GMC Hummer EV"
+      - "Cadillac Lyriq"
+      - "Chevrolet Blazer EV"
+      - "Chevrolet Equinox EV"
+    max_dc_charging_kw: 350
+    description: "GM's flexible platform supporting FWD, RWD, and AWD. Large battery capacity range for trucks and SUVs."
+    features:
+      - "Wireless battery management system"
+      - "Flexible configurations"
+      - "LG Energy pouch cells"
+
+  # BMW Group
+  
+  - id: bmw-clar
+    name: "CLAR (Cluster Architecture)"
+    manufacturer: BMW Group
+    introduced: 2022
+    architecture: flexible
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 70
+      max: 105
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 190
+      max: 400
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - BMW
+    notable_models:
+      - "BMW i4"
+      - "BMW iX"
+      - "BMW i5"
+      - "BMW i7"
+    max_dc_charging_kw: 195
+    description: "BMW's flexible platform supporting ICE, PHEV, and BEV. Same platform as gasoline 5/7-series."
+    note: "Not a dedicated EV platform but adapted for electric powertrains"
+    
+  - id: bmw-neue-klasse
+    name: "Neue Klasse"
+    manufacturer: BMW Group
+    introduced: 2025
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 75
+      max: 100
+    typical_voltage_v: 800
+    typical_power_range_kw:
+      min: 200
+      max: 350
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - BMW
+    notable_models:
+      - "BMW Vision Neue Klasse (concept)"
+      - "Future 3-series EV"
+    max_dc_charging_kw: 270
+    description: "BMW's next-gen dedicated EV platform with 800V architecture and 30% more range efficiency."
+    features:
+      - "800V architecture"
+      - "Round battery cells (cylindrical)"
+      - "30% efficiency improvement vs. current gen"
+
+  # Mercedes-Benz
+  
+  - id: mb-eva2
+    name: "EVA2 (Electric Vehicle Architecture)"
+    manufacturer: Mercedes-Benz
+    introduced: 2021
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 90
+      max: 120
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 215
+      max: 560
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Mercedes-Benz
+      - Mercedes-AMG
+    notable_models:
+      - "Mercedes EQS"
+      - "Mercedes EQS SUV"
+      - "Mercedes EQE"
+      - "Mercedes EQE SUV"
+    max_dc_charging_kw: 200
+    description: "Mercedes' luxury EV platform with focus on range and efficiency. Used for large sedans and SUVs."
+    features:
+      - "Hyperscreen option"
+      - "MBUX infotainment"
+      - "Air suspension standard"
+      
+  - id: mb-mma
+    name: "MMA (Mercedes Modular Architecture)"
+    manufacturer: Mercedes-Benz
+    introduced: 2025
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 60
+      max: 100
+    typical_voltage_v: 800
+    typical_power_range_kw:
+      min: 150
+      max: 300
+    drive_layouts:
+      - rwd
+      - fwd
+      - awd
+    brands:
+      - Mercedes-Benz
+    notable_models:
+      - "Future CLA EV"
+      - "Compact Mercedes EVs"
+    max_dc_charging_kw: 320
+    description: "Mercedes' next-gen platform for compact and mid-size EVs with 800V architecture."
+
+  # Tesla
+  
+  - id: tesla-model-3-y
+    name: "Model 3/Y Platform"
+    manufacturer: Tesla
+    introduced: 2017
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 60
+      max: 82
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 208
+      max: 377
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Tesla
+    notable_models:
+      - "Tesla Model 3"
+      - "Tesla Model Y"
+    max_dc_charging_kw: 250
+    description: "Tesla's high-volume platform sharing major components between Model 3 sedan and Model Y crossover."
+    features:
+      - "Structural battery pack (4680 cells)"
+      - "Mega castings (front/rear)"
+      - "Heat pump standard"
+
+  # Stellantis
+  
+  - id: stellantis-stla-medium
+    name: "STLA Medium"
+    manufacturer: Stellantis
+    introduced: 2023
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 87
+      max: 98
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 100
+      max: 210
+    drive_layouts:
+      - fwd
+      - awd
+    brands:
+      - Peugeot
+      - Opel
+      - Citroën
+      - Jeep
+      - Alfa Romeo
+    notable_models:
+      - "Peugeot e-3008"
+      - "Peugeot e-5008"
+      - "Opel Grandland Electric"
+    max_dc_charging_kw: 160
+    description: "Stellantis' platform for compact and mid-size EVs across multiple brands."
+
+  # Ford
+  
+  - id: ford-gef1
+    name: "GE1 (Global Electric Platform 1)"
+    manufacturer: Ford
+    introduced: 2024
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 70
+      max: 90
+    typical_voltage_v: 400
+    typical_power_range_kw:
+      min: 170
+      max: 270
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - Ford
+    notable_models:
+      - "Future Ford EVs (next-gen)"
+    max_dc_charging_kw: 150
+    description: "Ford's next-generation EV platform for mid-size and large vehicles."
+
+  # BYD
+  
+  - id: byd-e-platform-3
+    name: "e-Platform 3.0"
+    manufacturer: BYD
+    introduced: 2021
+    architecture: dedicated
+    battery_position: floor-mounted
+    typical_battery_range_kwh:
+      min: 50
+      max: 85
+    typical_voltage_v: 800
+    typical_power_range_kw:
+      min: 150
+      max: 230
+    drive_layouts:
+      - rwd
+      - awd
+    brands:
+      - BYD
+    notable_models:
+      - "BYD Seal"
+      - "BYD Atto 3"
+      - "BYD Dolphin"
+      - "BYD Han"
+    max_dc_charging_kw: 150
+    description: "BYD's latest platform with integrated motor-controller-transmission and Blade Battery (LFP)."
+    features:
+      - "Blade Battery (LFP)"
+      - "Cell-to-Body integration"
+      - "Heat pump standard"
+      - "800V architecture"
+
+# Platform Architecture Types:
+# - dedicated: Purpose-built for EVs only
+# - flexible: Supports ICE, PHEV, and BEV on same platform
+# - adapted: Modified ICE platform for electric powertrains
+
+# Voltage Architectures:
+# - 400V: Standard, supports up to ~150-200kW DC charging
+# - 800V: High-voltage, enables 250-350kW+ ultra-fast charging
+# - Multi-voltage: Can charge at both 400V and 800V (e.g., E-GMP)
