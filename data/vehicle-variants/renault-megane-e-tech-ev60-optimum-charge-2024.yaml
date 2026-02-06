@@ -1,0 +1,136 @@
+# Renault Megane E-Tech Electric EV60 Optimum Charge (2024)
+id: renault-megane-e-tech-ev60-optimum-charge-2024
+name: EV60 Optimum Charge
+model_id: renault-megane-e-tech
+model_year: 2024
+variant_code: MEGANE-EV60-OPT
+
+battery:
+  usable_kwh: 60.0
+  total_kwh: 65.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 450
+  wltp_city_km: 595
+  wltp_highway_km: 370
+  epa_km: null
+  real_world_km: 380
+  real_world_source: ADAC EcoTest
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 130
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 130
+    - soc_percent: 30
+      power_kw: 125
+    - soc_percent: 40
+      power_kw: 110
+    - soc_percent: 50
+      power_kw: 95
+    - soc_percent: 60
+      power_kw: 75
+    - soc_percent: 70
+      power_kw: 55
+    - soc_percent: 80
+      power_kw: 35
+  time_10_to_80_min: 32
+  time_20_to_80_min: 26
+  charging_speed_kmh: 780
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.0
+  v2h: true
+  v2g: true
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: wound rotor
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+  acceleration_0_100_sec: 7.4
+  top_speed_kmh: 160
+
+weight:
+  curb_weight_kg: 1636
+  gross_vehicle_weight_kg: 2090
+  payload_kg: 454
+
+efficiency:
+  wltp_kwh_per_100km: 15.5
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.3
+  efficiency_rating: A
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+
+technology:
+  - name: OpenR Multimedia System
+    description: Dual 12" screens with Google Automotive Services
+  - name: Multi-Sense Driving Modes
+    description: Comfort, Eco, Sport, Perso
+  - name: E-Tech Regen Braking
+    description: Adjustable regenerative braking with B-mode
+
+optional_equipment:
+  - name: Google Services Pack
+    code: GOOGLE
+    category: technology
+    included_in_base: true
+  - name: Optimum Charge
+    code: OPT-CHG
+    category: charging
+    included_in_base: true
+    description: Enhanced DC charging capability (130kW)
+
+notes: |
+  The EV60 Optimum Charge variant features the larger 60kWh battery with
+  enhanced 130kW DC fast charging capability. This is the most popular
+  variant offering excellent range for daily use and road trips.
+  
+  The "Optimum Charge" package enables the full 130kW DC charging speed
+  (base EV60 is limited to 85kW). It also includes improved thermal
+  management for better charging performance in all weather conditions.
+  
+  Notable for having bidirectional charging (V2L/V2H/V2G) capability,
+  allowing the vehicle to power external devices or even feed energy
+  back to your home or the grid.
+  
+  Efficient aerodynamics (Cd 0.30) and relatively light weight (1636kg)
+  contribute to excellent real-world efficiency of 17.3 kWh/100km.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/prix-versions.html
