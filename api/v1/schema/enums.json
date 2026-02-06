@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.gaiagreen.tech/api/v1/schema/enums.json",
+  "title": "EVDB Enumerations",
+  "description": "Standardized enum values for EVDB fields",
+  "definitions": {
+    "battery_chemistry": {
+      "type": "string",
+      "enum": [
+        "LFP",
+        "NMC",
+        "NCA",
+        "LTO",
+        "SODIUM_ION",
+        "SOLID_STATE",
+        "OTHER"
+      ],
+      "descriptions": {
+        "LFP": "Lithium Iron Phosphate - Safe, long-lasting, lower energy density",
+        "NMC": "Nickel Manganese Cobalt - Balanced performance, most common",
+        "NCA": "Nickel Cobalt Aluminum - High energy density, used by Tesla",
+        "LTO": "Lithium Titanate Oxide - Very fast charging, long life, expensive",
+        "SODIUM_ION": "Sodium-ion - Emerging technology, cheaper materials",
+        "SOLID_STATE": "Solid-state - Future technology, higher density and safety",
+        "OTHER": "Other or unknown chemistry - specify in chemistry_other field"
+      }
+    },
+    "drivetrain": {
+      "type": "string",
+      "enum": [
+        "FWD",
+        "RWD",
+        "AWD",
+        "4WD"
+      ],
+      "descriptions": {
+        "FWD": "Front-Wheel Drive",
+        "RWD": "Rear-Wheel Drive",
+        "AWD": "All-Wheel Drive (typically dual motor)",
+        "4WD": "Four-Wheel Drive (typically for trucks/off-road)"
+      }
+    },
+    "body_type": {
+      "type": "string",
+      "enum": [
+        "SEDAN",
+        "HATCHBACK",
+        "SUV",
+        "CROSSOVER",
+        "COUPE",
+        "CONVERTIBLE",
+        "WAGON",
+        "VAN",
+        "PICKUP",
+        "MINIBUS",
+        "BUS",
+        "TRUCK",
+        "OTHER"
+      ],
+      "descriptions": {
+        "SEDAN": "Sedan/Saloon - 3-box design, separate trunk",
+        "HATCHBACK": "Hatchback - 2-box design, integrated cargo area",
+        "SUV": "Sport Utility Vehicle - Tall, truck-based platform",
+        "CROSSOVER": "Crossover - SUV-styled, car-based platform",
+        "COUPE": "Coupe - 2-door, sporty design",
+        "CONVERTIBLE": "Convertible/Cabriolet - Retractable roof",
+        "WAGON": "Station Wagon/Estate - Extended cargo area",
+        "VAN": "Van - Commercial or passenger, sliding doors",
+        "PICKUP": "Pickup Truck - Open cargo bed",
+        "MINIBUS": "Minibus - 8-16 passengers",
+        "BUS": "Bus - 16+ passengers",
+        "TRUCK": "Truck - Commercial heavy-duty",
+        "OTHER": "Other body type"
+      }
+    },
+    "charging_port_ac": {
+      "type": "string",
+      "enum": [
+        "TYPE1",
+        "TYPE2",
+        "OTHER"
+      ],
+      "descriptions": {
+        "TYPE1": "Type 1 (SAE J1772) - Common in North America, Japan",
+        "TYPE2": "Type 2 (IEC 62196, Mennekes) - Standard in Europe",
+        "OTHER": "Other AC port type"
+      }
+    },
+    "charging_port_dc": {
+      "type": "string",
+      "enum": [
+        "CCS1",
+        "CCS2",
+        "CHADEMO",
+        "TESLA_NACS",
+        "TESLA_SCC",
+        "GB_T",
+        "OTHER"
+      ],
+      "descriptions": {
+        "CCS1": "Combined Charging System Type 1 - North America",
+        "CCS2": "Combined Charging System Type 2 - Europe",
+        "CHADEMO": "CHAdeMO - Japanese standard",
+        "TESLA_NACS": "Tesla NACS (North American Charging Standard) - Becoming SAE J3400",
+        "TESLA_SCC": "Tesla Supercharger (proprietary) - Europe",
+        "GB_T": "GB/T - Chinese standard",
+        "OTHER": "Other DC port type"
+      }
+    },
+    "dc_speed_class": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "SLOW",
+        "MEDIUM",
+        "FAST",
+        "ULTRA_FAST",
+        "HYPER_FAST"
+      ],
+      "descriptions": {
+        "NONE": "No DC fast charging capability",
+        "SLOW": "< 50 kW",
+        "MEDIUM": "50-99 kW",
+        "FAST": "100-149 kW",
+        "ULTRA_FAST": "150-249 kW",
+        "HYPER_FAST": "250+ kW"
+      }
+    },
+    "market_status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "discontinued",
+        "announced"
+      ],
+      "descriptions": {
+        "available": "Currently available for purchase in this market",
+        "discontinued": "No longer available for purchase",
+        "announced": "Announced but not yet available"
+      }
+    },
+    "image_type": {
+      "type": "string",
+      "enum": [
+        "exterior",
+        "interior",
+        "technical",
+        "press",
+        "render",
+        "user"
+      ],
+      "descriptions": {
+        "exterior": "Outside/exterior photos",
+        "interior": "Inside/interior photos",
+        "technical": "Technical diagrams, cutaways, schematics",
+        "press": "Official press photos from manufacturer",
+        "render": "3D renders or artist illustrations",
+        "user": "Community-submitted photos"
+      }
+    },
+    "euro_segment": {
+      "type": "string",
+      "pattern": "^[ABCDEFMJS][AB]?$",
+      "examples": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "JA",
+        "JB",
+        "JC",
+        "M",
+        "S"
+      ],
+      "descriptions": {
+        "A": "Mini cars (city cars)",
+        "B": "Small cars (supermini)",
+        "C": "Medium cars (compact)",
+        "D": "Large cars (mid-size)",
+        "E": "Executive cars",
+        "F": "Luxury cars",
+        "JA": "Mini SUV",
+        "JB": "Small SUV",
+        "JC": "Medium SUV",
+        "M": "Multi-purpose vehicles (MPV)",
+        "S": "Sports cars"
+      }
+    },
+    "country_code": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country codes",
+      "pattern": "^[A-Z]{2}$",
+      "examples": [
+        "DE",
+        "PL",
+        "GB",
+        "FR",
+        "ES",
+        "IT",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "SE",
+        "NO",
+        "DK",
+        "FI",
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU"
+      ],
+      "common_markets": {
+        "DE": "Germany",
+        "PL": "Poland",
+        "GB": "United Kingdom",
+        "FR": "France",
+        "ES": "Spain",
+        "IT": "Italy",
+        "NL": "Netherlands",
+        "BE": "Belgium",
+        "AT": "Austria",
+        "CH": "Switzerland",
+        "SE": "Sweden",
+        "NO": "Norway",
+        "DK": "Denmark",
+        "FI": "Finland",
+        "US": "United States",
+        "CA": "Canada",
+        "CN": "China",
+        "JP": "Japan",
+        "KR": "South Korea",
+        "AU": "Australia"
+      }
+    },
+    "currency_code": {
+      "type": "string",
+      "description": "ISO 4217 currency codes",
+      "pattern": "^[A-Z]{3}$",
+      "examples": [
+        "EUR",
+        "USD",
+        "GBP",
+        "PLN",
+        "SEK",
+        "NOK",
+        "DKK",
+        "CHF",
+        "CNY",
+        "JPY",
+        "KRW",
+        "AUD"
+      ]
+    }
+  }
+}
