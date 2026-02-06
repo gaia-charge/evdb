@@ -1,0 +1,331 @@
+{
+  "title": "EVDB - Electric Vehicle Database",
+  "description": "Comprehensive, open-source database of electric vehicles with technical specifications, market availability, and pricing. Built with YAML, validated with JSON Schema, queryable via SQL.",
+  "description_html": "<p>EVDB is a comprehensive, open-source database of electric vehicles with:</p><ul><li>Battery and charging specifications</li><li>Real-world range data</li><li>Market pricing and availability</li><li>Technical details (motors, dimensions, weight)</li></ul><p>Data is stored in human-readable YAML, validated with JSON Schema, and exposed via Datasette API.</p>",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "GitHub",
+  "source_url": "https://github.com/yourusername/evdb",
+  "databases": {
+    "evdb": {
+      "title": "EVDB",
+      "description": "Electric Vehicle Database",
+      "tables": {
+        "manufacturers": {
+          "title": "EV Manufacturers",
+          "description": "Automotive manufacturers producing electric vehicles",
+          "sort_desc": "created_at",
+          "facets": ["country", "parent_company"],
+          "columns": {
+            "id": "Unique manufacturer identifier (slug)",
+            "name": "Official manufacturer name",
+            "country": "Country of headquarters (ISO 3166-1 alpha-2)",
+            "parent_company": "Parent company if applicable",
+            "founded": "Year founded",
+            "website": "Official website URL",
+            "logo_url": "Logo image URL",
+            "description": "Brief description of the manufacturer",
+            "created_at": "Record creation timestamp",
+            "updated_at": "Record last update timestamp"
+          }
+        },
+        "vehicle_models": {
+          "title": "Vehicle Models",
+          "description": "Base vehicle models (platform/generation level)",
+          "sort_desc": "created_at",
+          "facets": ["manufacturer_id", "body_style", "segment", "production_status"],
+          "columns": {
+            "id": "Unique model identifier (manufacturer-model slug)",
+            "manufacturer_id": "Manufacturer ID (foreign key)",
+            "name": "Model name",
+            "body_style": "Body style (SUV, sedan, hatchback, etc.)",
+            "segment": "Market segment (A, B, C, D, E, F, S, J, M)",
+            "platform": "EV platform name",
+            "production_start": "Production start date (YYYY-MM-DD)",
+            "production_end": "Production end date if discontinued",
+            "production_status": "Current status (active/discontinued/announced)",
+            "seating_capacity_min": "Minimum seating capacity",
+            "seating_capacity_max": "Maximum seating capacity",
+            "cargo_capacity_min": "Minimum cargo capacity (liters)",
+            "cargo_capacity_max": "Maximum cargo capacity (liters)",
+            "length_mm": "Vehicle length (millimeters)",
+            "width_mm": "Vehicle width (millimeters)",
+            "height_mm": "Vehicle height (millimeters)",
+            "wheelbase_mm": "Wheelbase (millimeters)",
+            "ground_clearance_mm": "Ground clearance (millimeters)",
+            "drag_coefficient": "Aerodynamic drag coefficient (Cd)",
+            "towing_capacity_kg": "Maximum towing capacity (kilograms)",
+            "description": "Model description",
+            "created_at": "Record creation timestamp",
+            "updated_at": "Record last update timestamp"
+          }
+        },
+        "vehicle_variants": {
+          "title": "Vehicle Variants",
+          "description": "Specific vehicle variants with detailed specifications (trim levels, battery options)",
+          "sort_desc": "created_at",
+          "facets": [
+            "model_id",
+            "model_year",
+            "battery_chemistry",
+            "drive_type",
+            "bidirectional_charging"
+          ],
+          "columns": {
+            "id": "Unique variant identifier",
+            "model_id": "Vehicle model ID (foreign key)",
+            "variant_name": "Variant/trim name",
+            "model_year": "Model year",
+            "battery_gross_kwh": "Battery gross capacity (kWh)",
+            "battery_usable_kwh": "Battery usable capacity (kWh)",
+            "battery_chemistry": "Battery chemistry (NMC/NCA/LFP/etc.)",
+            "battery_warranty_years": "Battery warranty duration (years)",
+            "battery_warranty_km": "Battery warranty distance (km)",
+            "range_wltp_km": "WLTP range (km)",
+            "range_epa_km": "EPA range (km)",
+            "range_real_world_km": "Real-world range estimate (km)",
+            "consumption_wltp_kwh_100km": "WLTP consumption (kWh/100km)",
+            "consumption_real_world_kwh_100km": "Real-world consumption (kWh/100km)",
+            "charging_ac_max_kw": "Maximum AC charging power (kW)",
+            "charging_dc_max_kw": "Maximum DC fast charging power (kW)",
+            "charging_dc_10_80_minutes": "DC charging time 10-80% (minutes)",
+            "charging_ac_0_100_hours": "AC charging time 0-100% (hours)",
+            "charging_ports": "Charging port types (JSON array)",
+            "bidirectional_charging": "V2X capability (V2L/V2H/V2G)",
+            "drive_type": "Drive configuration (RWD/FWD/AWD)",
+            "motors_total_power_kw": "Total motor power (kW)",
+            "motors_total_power_hp": "Total motor power (hp)",
+            "motors_total_torque_nm": "Total motor torque (Nm)",
+            "motors_count": "Number of motors",
+            "motors_layout": "Motor layout description",
+            "acceleration_0_100_seconds": "0-100 km/h acceleration (seconds)",
+            "top_speed_kph": "Top speed (km/h)",
+            "curb_weight_kg": "Curb weight (kg)",
+            "gross_weight_kg": "Gross vehicle weight (kg)",
+            "payload_capacity_kg": "Payload capacity (kg)",
+            "efficiency_wh_km": "Energy efficiency (Wh/km)",
+            "efficiency_rating": "Efficiency class rating",
+            "version": "Specification version/revision",
+            "effective_from": "Spec effective date",
+            "effective_to": "Spec end date if superseded",
+            "data_quality": "Data quality indicator",
+            "data_sources": "Data sources (JSON array)",
+            "notes": "Additional notes",
+            "created_at": "Record creation timestamp",
+            "updated_at": "Record last update timestamp"
+          }
+        },
+        "market_availability": {
+          "title": "Market Availability",
+          "description": "Vehicle pricing, options, and availability by market/country",
+          "sort_desc": "created_at",
+          "facets": ["variant_id", "market_code", "currency", "availability_status"],
+          "columns": {
+            "id": "Unique market availability record ID",
+            "variant_id": "Vehicle variant ID (foreign key)",
+            "market_code": "Market/country code (ISO 3166-1 alpha-2)",
+            "currency": "Currency code (ISO 4217)",
+            "base_price": "Base MSRP (local currency)",
+            "price_including_incentives": "Price after incentives",
+            "availability_status": "Availability (available/orderable/announced/discontinued)",
+            "available_from": "Availability start date",
+            "available_until": "Availability end date",
+            "lead_time_weeks": "Typical delivery time (weeks)",
+            "trim_name_local": "Local market trim name",
+            "notes": "Market-specific notes",
+            "created_at": "Record creation timestamp",
+            "updated_at": "Record last update timestamp"
+          }
+        },
+        "market_incentives": {
+          "title": "Market Incentives",
+          "description": "Government incentives and subsidies by market",
+          "columns": {
+            "market_availability_id": "Market availability record ID (foreign key)",
+            "incentive_name": "Incentive program name",
+            "incentive_amount": "Incentive amount (local currency)",
+            "incentive_type": "Type (tax credit/rebate/grant/etc.)"
+          }
+        },
+        "market_colors": {
+          "title": "Market Paint Colors",
+          "description": "Available paint colors by market",
+          "columns": {
+            "market_availability_id": "Market availability record ID (foreign key)",
+            "color_name": "Color name",
+            "color_code": "Manufacturer color code",
+            "color_type": "Paint type (solid/metallic/pearl)",
+            "additional_cost": "Additional cost for this color"
+          }
+        },
+        "market_wheels": {
+          "title": "Market Wheel Options",
+          "description": "Available wheel options by market",
+          "columns": {
+            "market_availability_id": "Market availability record ID (foreign key)",
+            "wheel_size": "Wheel size (inches)",
+            "wheel_design": "Wheel design name/code",
+            "tire_size": "Tire size specification",
+            "additional_cost": "Additional cost for this option"
+          }
+        },
+        "market_interiors": {
+          "title": "Market Interior Options",
+          "description": "Available interior options by market",
+          "columns": {
+            "market_availability_id": "Market availability record ID (foreign key)",
+            "interior_name": "Interior name/code",
+            "material": "Material (leather/vegan/fabric/etc.)",
+            "color": "Color name",
+            "additional_cost": "Additional cost for this option"
+          }
+        },
+        "connectors": {
+          "title": "Charging Connectors",
+          "description": "EV charging connector types and specifications",
+          "sort": "name",
+          "facets": ["type", "regions"],
+          "columns": {
+            "id": "Connector identifier",
+            "name": "Connector name",
+            "type": "Connector type (AC/DC)",
+            "max_power_kw": "Maximum power rating (kW)",
+            "max_voltage_v": "Maximum voltage (V)",
+            "max_current_a": "Maximum current (A)",
+            "phases": "AC phases (1/3)",
+            "regions": "Common regions (JSON array)",
+            "description": "Connector description",
+            "standard": "Technical standard name"
+          }
+        },
+        "platforms": {
+          "title": "EV Platforms",
+          "description": "Electric vehicle platforms (skateboard chassis)",
+          "sort": "name",
+          "facets": ["manufacturer", "type"],
+          "columns": {
+            "id": "Platform identifier",
+            "name": "Platform name",
+            "manufacturer": "Platform manufacturer/developer",
+            "type": "Platform type (BEV/flexible/PHEV)",
+            "introduced": "Introduction year",
+            "architecture": "Architecture description",
+            "battery_options": "Battery size options (JSON array)",
+            "drive_options": "Available drive configurations",
+            "voltage": "System voltage",
+            "examples": "Example vehicles (JSON array)"
+          }
+        },
+        "view_vehicles_full": {
+          "title": "Complete Vehicle Data",
+          "description": "Full vehicle information with manufacturer and model details joined",
+          "hidden": false
+        },
+        "view_vehicles_latest": {
+          "title": "Latest Model Year Vehicles",
+          "description": "Only the most recent model year for each variant",
+          "hidden": false
+        }
+      },
+      "queries": {
+        "vehicles_by_range": {
+          "title": "Find vehicles by range",
+          "description": "Search for vehicles with minimum WLTP range",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, battery_usable_kwh, range_wltp_km, range_real_world_km, price_base_eur FROM view_vehicles_full WHERE range_wltp_km >= :min_range ORDER BY range_wltp_km DESC",
+          "params": {
+            "min_range": {
+              "type": "number",
+              "description": "Minimum WLTP range (km)",
+              "default": 400
+            }
+          }
+        },
+        "vehicles_by_charging_speed": {
+          "title": "Fast charging vehicles",
+          "description": "Vehicles with minimum DC fast charging power",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, dc_charge_power_kw, dc_charge_time_10_80_min, range_wltp_km FROM view_vehicles_full WHERE dc_charge_power_kw >= :min_power ORDER BY dc_charge_power_kw DESC",
+          "params": {
+            "min_power": {
+              "type": "number",
+              "description": "Minimum DC power (kW)",
+              "default": 150
+            }
+          }
+        },
+        "vehicles_by_price": {
+          "title": "Find vehicles by base price (EUR)",
+          "description": "Search vehicles within price range (base EUR price)",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, price_base_eur, range_wltp_km, battery_usable_kwh FROM view_vehicles_full WHERE price_base_eur IS NOT NULL AND price_base_eur BETWEEN :min_price AND :max_price ORDER BY price_base_eur",
+          "params": {
+            "min_price": {
+              "type": "number",
+              "description": "Minimum price (EUR)",
+              "default": 30000
+            },
+            "max_price": {
+              "type": "number",
+              "description": "Maximum price (EUR)",
+              "default": 60000
+            }
+          }
+        },
+        "vehicles_by_efficiency": {
+          "title": "Most efficient vehicles",
+          "description": "Vehicles sorted by real-world energy efficiency",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, consumption_real_world_kwh_100km, range_wltp_km, range_real_world_km FROM view_vehicles_full WHERE consumption_real_world_kwh_100km IS NOT NULL ORDER BY consumption_real_world_kwh_100km ASC",
+          "params": {}
+        },
+        "vehicles_comparison": {
+          "title": "Compare specific vehicles",
+          "description": "Side-by-side comparison of selected vehicles",
+          "sql": "SELECT * FROM view_vehicles_full WHERE variant_id IN (:ids)",
+          "params": {
+            "ids": {
+              "type": "text",
+              "description": "Comma-separated variant IDs",
+              "default": "bmw-i4-edrive40-2024,tesla-model-3-long-range-awd-2024"
+            }
+          }
+        },
+        "market_overview": {
+          "title": "Market overview by country",
+          "description": "All available vehicles from manufacturers based in a specific country",
+          "sql": "SELECT manufacturer_name, manufacturer_country, model_name, variant_name, range_wltp_km, battery_usable_kwh, dc_charge_power_kw FROM view_vehicles_full WHERE manufacturer_country = :country ORDER BY manufacturer_name, model_name",
+          "params": {
+            "country": {
+              "type": "text",
+              "description": "Country code (US/DE/KR/CN/etc.)",
+              "default": "DE"
+            }
+          }
+        },
+        "latest_additions": {
+          "title": "Latest model years",
+          "description": "Most recent model year vehicles",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, model_year, battery_usable_kwh, range_wltp_km FROM view_vehicles_latest ORDER BY model_year DESC LIMIT 20",
+          "params": {}
+        },
+        "long_range_evs": {
+          "title": "Long-range EVs (500km+)",
+          "description": "Vehicles with WLTP range over 500km",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, battery_usable_kwh, range_wltp_km, range_real_world_km, price_base_eur FROM view_vehicles_full WHERE range_wltp_km >= 500 ORDER BY range_wltp_km DESC"
+        },
+        "budget_evs": {
+          "title": "Budget EVs under €40k",
+          "description": "Affordable electric vehicles with base EUR pricing",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, price_base_eur, range_wltp_km, battery_usable_kwh FROM view_vehicles_full WHERE price_base_eur IS NOT NULL AND price_base_eur < 40000 ORDER BY price_base_eur"
+        },
+        "performance_evs": {
+          "title": "Performance EVs",
+          "description": "Fast-accelerating electric vehicles (0-100 km/h under 5 seconds)",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, acceleration_0_100_sec, total_power_kw, drive_type, range_wltp_km FROM view_vehicles_full WHERE acceleration_0_100_sec IS NOT NULL AND acceleration_0_100_sec < 5.0 ORDER BY acceleration_0_100_sec"
+        },
+        "all_vehicles": {
+          "title": "All vehicles overview",
+          "description": "Complete list of all vehicles in the database",
+          "sql": "SELECT manufacturer_name, model_name, variant_name, model_year, battery_usable_kwh, range_wltp_km, dc_charge_power_kw, total_power_kw FROM view_vehicles_full ORDER BY manufacturer_name, model_name, variant_name"
+        }
+      }
+    }
+  }
+}
