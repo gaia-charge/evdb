@@ -1,0 +1,247 @@
+# MG4 Electric Extended Range (64kWh) - 2024 Model Year
+# Most popular variant with excellent range for the price
+
+id: mg4-electric-extended-range-2024
+model_id: mg4-electric
+name: MG4 Electric Extended Range
+model_year: 2024
+trim_level: Extended Range
+
+# Version & Updates
+version_info:
+  major_version: 1
+  minor_version: 2
+  release_date: 2024-01-01
+  changes_from_previous: "Minor software updates, heat pump now standard"
+
+# Battery System
+battery:
+  chemistry: LFP  # Lithium Iron Phosphate - cost-effective & safe
+  supplier: CATL
+  usable_kwh: 61.7
+  total_kwh: 64.0
+  cells: 192
+  modules: 24
+  voltage_nominal: 403
+  voltage_max: 460
+  warranty_years: 7
+  warranty_km: 175000
+  warranty_capacity_percent: 70
+  thermal_management: liquid_cooling
+  
+# Range (WLTP)
+range:
+  wltp_combined_km: 435
+  wltp_city_km: 595
+  wltp_highway_km: 360
+  epa_combined_km: null  # Not sold in USA
+  real_world_combined_km: 380
+  real_world_highway_km: 330
+  real_world_city_km: 450
+
+# Charging - AC
+charging_ac:
+  standard_power_kw: 11.0
+  standard_phases: 3
+  optional_power_kw: null
+  connector_type: type2
+  onboard_charger_kw: 11.0
+  time_0_100_11kw_hours: 6.5
+
+# Charging - DC
+charging_dc:
+  max_power_kw: 144
+  connector_type: ccs2
+  time_10_80_percent_min: 35
+  time_20_80_percent_min: 28
+  peak_charging_temperature_range: "15-35°C"
+  preconditioning_available: false
+
+# Charging Curve (DC Fast Charging)
+charging_curve:
+  - soc_percent: 10
+    power_kw: 140
+    current_a: 340
+  - soc_percent: 20
+    power_kw: 144
+    current_a: 350
+  - soc_percent: 30
+    power_kw: 144
+    current_a: 350
+  - soc_percent: 40
+    power_kw: 140
+    current_a: 340
+  - soc_percent: 50
+    power_kw: 135
+    current_a: 330
+  - soc_percent: 60
+    power_kw: 120
+    current_a: 290
+  - soc_percent: 70
+    power_kw: 95
+    current_a: 230
+  - soc_percent: 80
+    power_kw: 70
+    current_a: 170
+  - soc_percent: 90
+    power_kw: 40
+    current_a: 95
+
+# Bidirectional Charging
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+  external_device_power_kw: null
+
+# Motor & Performance
+motor:
+  type: permanent_magnet
+  position: rear
+  power_kw: 150
+  power_hp: 204
+  torque_nm: 250
+  max_rpm: 16000
+
+drivetrain:
+  type: RWD
+  drive_type: rear_wheel_drive
+  motors: 1
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.7
+  acceleration_0_60_mph_s: 7.3
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1655
+  gross_vehicle_weight_kg: 2105
+  weight_distribution_front_percent: 48
+  weight_distribution_rear_percent: 52
+
+efficiency:
+  wltp_consumption_kwh_per_100km: 16.2
+  epa_consumption_kwh_per_100km: null
+  real_world_consumption_kwh_per_100km: 17.8
+  energy_efficiency_rating: B  # EU energy label
+  co2_emissions_wltp_g_per_km: 0
+
+# Wheels & Tires
+wheels_tires:
+  standard:
+    front_size: "215/55 R17"
+    rear_size: "215/55 R17"
+    wheel_size_inches: 17
+  optional:
+    - front_size: "235/45 R18"
+      rear_size: "235/45 R18"
+      wheel_size_inches: 18
+      notes: "Alloy wheels, slightly reduces range"
+
+# Brakes
+brakes:
+  front: "Ventilated discs"
+  rear: "Solid discs"
+  regenerative_braking: true
+  one_pedal_driving: true
+  regen_levels: 3
+
+# Suspension
+suspension:
+  front: "MacPherson strut"
+  rear: "Multi-link independent"
+
+# Technology & ADAS
+adas:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  autonomous_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_monitoring: false
+  level: 2  # SAE Level 2
+
+# Connectivity
+connectivity:
+  5g: false
+  4g: true
+  wifi_hotspot: false
+  bluetooth: true
+  smartphone_integration:
+    - apple_carplay
+    - android_auto
+  remote_services: true
+  ota_updates: true
+
+# Interior
+interior:
+  seating_material: fabric  # Base, leather optional
+  heated_seats_front: true
+  heated_seats_rear: false
+  heated_steering_wheel: true
+  ventilated_seats: false
+  power_adjustable_driver_seat: false
+  panoramic_roof: false
+  ambient_lighting: true
+
+# Climate
+climate:
+  heat_pump: true  # Standard on Extended Range 2024+
+  heated_windshield: false
+  remote_climate_control: true
+
+# Audio
+audio:
+  speakers: 6
+  premium_audio: false
+
+# Pricing (Reference - DE market)
+pricing_reference:
+  base_price_eur: 33990
+  market: DE
+  year: 2024
+
+# Availability
+availability:
+  markets:
+    - DE
+    - GB
+    - FR
+    - NL
+    - ES
+    - IT
+    - NO
+    - SE
+    - PL
+  production_plant: "SAIC Lingang Plant, Shanghai, China"
+
+# Competitors
+competitors:
+  - Volkswagen ID.3 Pro
+  - Renault Megane E-Tech EV60
+  - Opel Astra Electric
+  - Cupra Born 58kWh
+  - Nissan Leaf e+ (62kWh)
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.eu/mg4-electric/specs
+    - https://mg.co.uk/new-cars/mg4-electric/specifications
+    - https://www.autogefuehl.de/mg4-electric-test-review/
+    - https://www.car.info/en-se/mg/4-electric/
+  created_at: "2024-02-06"
+  last_updated: "2024-02-06"
+  notes: |
+    Extended Range is the most popular MG4 variant (64kWh battery).
+    Heat pump standard from 2024 model year improves cold weather efficiency.
+    LFP battery chemistry (CATL) provides excellent safety and longevity.
+    Very competitive pricing - typically €8,000-10,000 cheaper than ID.3.
+    Fast charging limited to ~144kW but adequate for this class.
+    Rear-wheel drive provides good handling dynamics.
+    7-year/175,000km battery warranty among best in class.
