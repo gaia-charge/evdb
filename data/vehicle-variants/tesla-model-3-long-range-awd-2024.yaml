@@ -1,0 +1,130 @@
+# Tesla Model 3 Long Range AWD (2024 - Highland)
+id: tesla-model-3-long-range-awd-2024
+name: Long Range AWD
+model_id: tesla-model-3
+model_year: 2024
+variant_code: M3LR
+
+battery:
+  usable_kwh: 78.1
+  total_kwh: 82.0
+  chemistry: NCA
+  cell_type: cylindrical
+  manufacturer: Panasonic
+  warranty_years: 8
+  warranty_km: 192000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 629
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: 567  # 352 miles
+  real_world_km: 560
+  real_world_source: InsideEVs 70mph range test
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 250
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 200
+    - soc_percent: 40
+      power_kw: 170
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 100
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 15
+  time_0_to_80_min: 27
+  time_10_to_80_min: 24
+  time_20_to_80_min: 21
+  charging_speed_kmh: 1200
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+  total_power_kw: 366
+  total_power_hp: 498
+  total_torque_nm: null
+  acceleration_0_100_sec: 4.4
+  top_speed_kmh: 201
+
+weight:
+  curb_weight_kg: 1844
+  gross_vehicle_weight_kg: 2232
+  payload_kg: 388
+
+efficiency:
+  wltp_kwh_per_100km: 14.9
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 16.2
+  efficiency_rating: A+
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+
+optional_equipment:
+  - name: Enhanced Autopilot
+    code: AP
+    category: technology
+    included_in_base: false
+  - name: Full Self-Driving Capability
+    code: FSD
+    category: technology
+    included_in_base: false
+  - name: Premium Connectivity
+    code: PC
+    category: technology
+    included_in_base: false
+
+notes: |
+  This is the 2024 Highland refresh version with updated exterior design,
+  improved interior with textile dashboard, and enhanced range efficiency.
+  The Long Range variant features dual-motor AWD.
+
+metadata:
+  created_at: "2026-02-06"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.tesla.com/model3/design
+    - https://insideevs.com/reviews/tesla-model-3-long-range-2024/

@@ -1,0 +1,65 @@
+# EV Manufacturer Template
+# Copy this template and fill in the details for a new manufacturer
+# Required fields are marked with [REQUIRED]
+
+# [REQUIRED] Unique identifier (lowercase, hyphens allowed)
+# Examples: tesla, volkswagen-group, byd
+id: manufacturer-id-here
+
+# [REQUIRED] Official company name
+name: Company Name
+
+# Parent company if this is a subsidiary (null if independent)
+parent_company: null
+
+# [REQUIRED] Country code (ISO 3166-1 alpha-2)
+# Examples: US, DE, CN, JP, KR, FR, GB
+country: XX
+
+# Year company was founded (null if unknown)
+founded_year: 2000
+
+# Official website URL (null if none)
+website: https://example.com
+
+# Logo image URL (null if none)
+logo_url: null
+
+# Brand names under this manufacturer
+brands:
+  - Brand One
+  - Brand Two
+
+# Geographic markets served
+# Common values: north-america, europe, china, asia-pacific, middle-east, africa, oceania
+markets:
+  - europe
+  - north-america
+
+# Social media handles (optional)
+social:
+  twitter: "@company"
+  linkedin: company-name
+  facebook: CompanyPage
+  instagram: "@company"
+
+# Additional notes or context
+notes: |
+  Brief description of the company, its history, and focus.
+  Multiple lines are allowed here.
+
+# Metadata (REQUIRED)
+metadata:
+  # [REQUIRED] Date record was created (YYYY-MM-DD)
+  created_at: "2026-02-06"
+  
+  # Date record was last updated (null if never updated)
+  updated_at: null
+  
+  # [REQUIRED] Data quality level
+  # Options: verified, unverified, estimated, partial
+  data_quality: verified
+  
+  # Source URLs for verification (at least one recommended)
+  sources:
+    - https://example.com/about

@@ -1,0 +1,175 @@
+# EV Vehicle Variant Template
+# This template is for specific variants/trim levels with detailed specifications
+# Required fields are marked with [REQUIRED]
+
+# [REQUIRED] Unique identifier (lowercase, hyphens allowed)
+# Examples: tesla-model-3-long-range-awd-2024, volkswagen-id4-pro-2023
+id: variant-id-here
+
+# [REQUIRED] Variant name/trim level
+# Examples: Long Range AWD, Pro Performance, GT-Line
+name: Variant Name
+
+# [REQUIRED] Reference to vehicle model ID (must exist in vehicle-models/)
+model_id: model-id-here
+
+# [REQUIRED] Model year
+model_year: 2024
+
+# Official variant/trim code (null if unknown)
+variant_code: null
+
+# Battery specifications (REQUIRED)
+battery:
+  # [REQUIRED] Usable battery capacity in kWh
+  usable_kwh: 75.0
+  
+  # Total (gross) battery capacity in kWh (null if unknown)
+  total_kwh: 82.0
+  
+  # Battery chemistry: NMC, NCA, LFP, LTO, NCM, NMCA, LCO, other
+  chemistry: NMC
+  
+  # Cell form factor: cylindrical, prismatic, pouch, blade
+  cell_type: prismatic
+  
+  # Battery manufacturer (null if unknown)
+  manufacturer: CATL
+  
+  # Battery warranty
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range specifications (all optional, in kilometers)
+range:
+  wltp_km: 550
+  wltp_city_km: 650
+  wltp_highway_km: 480
+  epa_km: null  # Use if EPA-rated
+  real_world_km: 500
+  real_world_source: "InsideEVs 70 mph test"
+
+# Charging specifications (optional)
+charging:
+  # AC charging
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  
+  # DC fast charging
+  dc_max_kw: 150
+  dc_connector: CCS2
+  
+  # DC charging curve (optional, but useful!)
+  # Format: list of {soc_percent, power_kw} pairs
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 20
+      power_kw: 150
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 100
+      power_kw: 20
+  
+  # Charging times (DC, in minutes)
+  time_0_to_80_min: 35
+  time_10_to_80_min: 28
+  time_20_to_80_min: 25
+  
+  # Peak charging speed (km of range added per hour)
+  charging_speed_kmh: 900
+
+# Bidirectional charging capabilities (optional)
+bidirectional:
+  v2l: true  # Vehicle-to-Load
+  v2l_max_kw: 3.6
+  v2h: false  # Vehicle-to-Home
+  v2g: false  # Vehicle-to-Grid
+
+# Performance specifications (optional)
+performance:
+  # Drive type: RWD, FWD, AWD
+  drive_type: AWD
+  
+  # Motor configuration (optional but recommended)
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 310
+    - position: rear
+      type: permanent magnet
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 310
+  
+  # Total system power
+  total_power_kw: 300
+  total_power_hp: 408
+  total_torque_nm: 620
+  
+  # Acceleration and top speed
+  acceleration_0_100_sec: 5.5
+  top_speed_kmh: 180
+
+# Weight specifications (optional, in kilograms)
+weight:
+  curb_weight_kg: 2100
+  gross_vehicle_weight_kg: 2600
+  payload_kg: 500
+
+# Efficiency (optional)
+efficiency:
+  wltp_kwh_per_100km: 16.5
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.0
+  efficiency_rating: A+
+
+# Key features (optional)
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2  # SAE level 0-5
+
+# Optional equipment (optional)
+optional_equipment:
+  - name: Premium Sound System
+    code: PSS
+    category: comfort
+    included_in_base: false
+  - name: Panoramic Glass Roof
+    code: PGR
+    category: comfort
+    included_in_base: true
+
+# Additional notes or context
+notes: |
+  Any special notes about this variant, such as limited editions,
+  unique features, or known issues.
+
+# Metadata (REQUIRED)
+metadata:
+  # [REQUIRED] Date record was created (YYYY-MM-DD)
+  created_at: "2026-02-06"
+  
+  # Date record was last updated (null if never updated)
+  updated_at: null
+  
+  # [REQUIRED] Data quality level
+  # Options: verified, unverified, estimated, partial
+  data_quality: verified
+  
+  # Estimated data completeness (0-100%)
+  data_completeness_percent: 90
+  
+  # Source URLs for verification (at least one recommended)
+  sources:
+    - https://example.com/specs

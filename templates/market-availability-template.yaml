@@ -1,0 +1,153 @@
+# Market Availability Template
+# This template is for market-specific pricing and availability information
+# Required fields are marked with [REQUIRED]
+
+# [REQUIRED] Unique identifier (lowercase, hyphens allowed)
+# Format: variant-id-market (e.g., tesla-model-3-lr-awd-2024-de)
+id: variant-id-market
+
+# [REQUIRED] Reference to vehicle variant ID (must exist in vehicle-variants/)
+variant_id: variant-id-here
+
+# [REQUIRED] Market/country code (ISO 3166-1 alpha-2)
+# Examples: DE, US, GB, PL, FR, NO, NL, SE, ES, IT
+market: DE
+
+# [REQUIRED] Currency code (ISO 4217)
+# Examples: EUR, USD, GBP, PLN, SEK, NOK
+currency: EUR
+
+# Availability status
+# Options: available, pre-order, limited, discontinued, announced
+availability_status: available
+
+# Date when vehicle became/becomes available (YYYY-MM-DD)
+available_from: "2024-01-01"
+
+# Date when availability ends (null if ongoing)
+available_until: null
+
+# Pricing information (REQUIRED)
+pricing:
+  # [REQUIRED] Base price (before taxes/incentives)
+  base_price: 45000
+  
+  # Price including VAT/sales tax
+  price_including_vat: 53550
+  
+  # VAT rate as percentage
+  vat_rate_percent: 19
+  
+  # Delivery/destination charge
+  destination_charge: 950
+  
+  # Typical registration fees
+  registration_fees: 500
+  
+  # Estimated total on-road price
+  total_price_estimate: 55000
+
+# Available incentives (optional but very useful!)
+incentives:
+  - name: Federal EV Grant
+    type: rebate  # rebate, tax_credit, grant, subsidy, tax_exemption, discount
+    amount: 6750
+    description: Federal grant for battery electric vehicles
+    valid_from: "2023-01-01"
+    valid_until: "2024-12-31"
+    conditions:
+      - Vehicle MSRP under €65,000
+      - Battery capacity over 40 kWh
+      - Must be privately registered
+    source_url: https://example.gov/ev-incentives
+  
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 2000  # Annual benefit estimate
+    description: Reduced company car taxation (0.25% instead of 1%)
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Only for company cars
+    source_url: null
+
+# Market-specific details (optional)
+market_specific:
+  # Standard equipment in this market
+  standard_equipment:
+    - Heat pump
+    - LED headlights
+    - Navigation system
+  
+  # Available exterior colors
+  available_colors:
+    - name: Solid Black
+      code: SB
+      additional_cost: 0
+      hex: "#000000"
+    - name: Pearl White
+      code: PW
+      additional_cost: 1200
+      hex: "#FFFFFF"
+  
+  # Available interior options
+  available_interiors:
+    - name: Black Fabric
+      color: Black
+      additional_cost: 0
+    - name: Beige Leather
+      color: Beige
+      additional_cost: 1500
+  
+  # Available wheel options
+  available_wheels:
+    - size_inches: 18
+      design: Standard Alloy
+      material: alloy
+      additional_cost: 0
+    - size_inches: 20
+      design: Sport Alloy
+      material: alloy
+      additional_cost: 800
+
+# Dealer network information (optional)
+dealer_network:
+  dealer_count: 120
+  service_centers: 85
+  online_sales_available: true
+
+# Delivery information (optional)
+delivery:
+  typical_delivery_weeks: 8
+  current_order_backlog_weeks: 12
+
+# Compliance and safety (optional)
+compliance:
+  ncap_rating: 5
+  ncap_year: 2023
+  emission_class: Zero Emission
+  type_approval: EU Type Approval
+
+# Market-specific notes
+notes: |
+  Any special notes about this market, such as regional variations,
+  special editions, or market-specific restrictions.
+
+# Metadata (REQUIRED)
+metadata:
+  # [REQUIRED] Date record was created (YYYY-MM-DD)
+  created_at: "2026-02-06"
+  
+  # Date record was last updated (null if never updated)
+  updated_at: null
+  
+  # [REQUIRED] Data quality level
+  # Options: verified, unverified, estimated, partial
+  data_quality: verified
+  
+  # Date when pricing was last verified (YYYY-MM-DD)
+  price_checked_at: "2026-02-06"
+  
+  # Source URLs for verification (at least one recommended)
+  sources:
+    - https://example.com/configurator
