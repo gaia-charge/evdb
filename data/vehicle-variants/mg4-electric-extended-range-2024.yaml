@@ -31,33 +31,34 @@ battery:
   
 # Range (WLTP)
 range:
-  wltp_combined_km: 435
+  wltp_km: 435
   wltp_city_km: 595
   wltp_highway_km: 360
-  epa_combined_km: null  # Not sold in USA
-  real_world_combined_km: 380
+  epa_km: null  # Not sold in USA
+  real_world_km: 380
   real_world_highway_km: 330
   real_world_city_km: 450
 
-# Charging - AC
-charging_ac:
-  standard_power_kw: 11.0
-  standard_phases: 3
-  optional_power_kw: null
-  connector_type: type2
-  onboard_charger_kw: 11.0
-  time_0_100_11kw_hours: 6.5
-
-# Charging - DC
-charging_dc:
-  max_power_kw: 144
-  connector_type: ccs2
-  time_10_80_percent_min: 35
-  time_20_80_percent_min: 28
-  peak_charging_temperature_range: "15-35°C"
-  preconditioning_available: false
-
-# Charging Curve (DC Fast Charging)
+# Charging
+charging:
+  connectors:
+    - type2
+    - ccs2
+  ac:
+    max_power_kw: 11.0
+    phases: 3
+    onboard_charger_kw: 11.0
+    time_0_100_hours: 6.5
+  dc:
+    max_power_kw: 144
+    peak_power_kw: 144
+    time_10_80_min: 35
+    time_20_80_min: 28
+    preconditioning_available: false
+  bidirectional:
+    capabilities: []
+    max_power_kw: null
+  
 charging_curve:
   - soc_percent: 10
     power_kw: 140
@@ -87,47 +88,28 @@ charging_curve:
     power_kw: 40
     current_a: 95
 
-# Bidirectional Charging
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-  external_device_power_kw: null
-
 # Motor & Performance
 motor:
   type: permanent_magnet
-  position: rear
+  count: 1
+  drive_type: RWD
   power_kw: 150
   power_hp: 204
   torque_nm: 250
   max_rpm: 16000
 
-drivetrain:
-  type: RWD
-  drive_type: rear_wheel_drive
-  motors: 1
-
-# Performance
 performance:
-  acceleration_0_100_kmh_s: 7.7
-  acceleration_0_60_mph_s: 7.3
-  top_speed_kmh: 160
+  acceleration_0_100_sec: 7.7
+  acceleration_0_60_sec: 7.3
+  top_speed_kph: 160
   top_speed_limited: true
 
-# Weight & Efficiency
+# Weight
 weight:
-  curb_weight_kg: 1655
-  gross_vehicle_weight_kg: 2105
+  curb_kg: 1655
+  gross_kg: 2105
   weight_distribution_front_percent: 48
   weight_distribution_rear_percent: 52
-
-efficiency:
-  wltp_consumption_kwh_per_100km: 16.2
-  epa_consumption_kwh_per_100km: null
-  real_world_consumption_kwh_per_100km: 17.8
-  energy_efficiency_rating: B  # EU energy label
-  co2_emissions_wltp_g_per_km: 0
 
 # Wheels & Tires
 wheels_tires:
