@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.gaiacharge.com/schemas/manufacturer.schema.json",
+  "title": "EV Manufacturer",
+  "description": "Schema for electric vehicle manufacturers",
+  "type": "object",
+  "required": ["id", "name", "country"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier (lowercase, hyphens allowed)",
+      "examples": ["tesla", "volkswagen-group", "byd"]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Official company name",
+      "examples": ["Tesla", "Volkswagen Group", "BYD"]
+    },
+    "parent_company": {
+      "type": ["string", "null"],
+      "description": "Parent company if subsidiary"
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "Country code (ISO 3166-1 alpha-2)",
+      "examples": ["US", "DE", "CN"]
+    },
+    "founded_year": {
+      "type": ["integer", "null"],
+      "minimum": 1800,
+      "maximum": 2100,
+      "description": "Year company was founded"
+    },
+    "website": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Official website URL"
+    },
+    "logo_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Logo image URL"
+    },
+    "brands": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "description": "Brand names under this manufacturer",
+      "examples": [["Tesla"], ["Mercedes-Benz", "Mercedes-EQ", "EQ"]]
+    },
+    "markets": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "description": "Geographic markets served",
+      "examples": [["europe", "north-america", "china"]]
+    },
+    "social": {
+      "type": ["object", "null"],
+      "properties": {
+        "twitter": {
+          "type": ["string", "null"],
+          "description": "Twitter/X handle"
+        },
+        "linkedin": {
+          "type": ["string", "null"],
+          "description": "LinkedIn company page"
+        },
+        "facebook": {
+          "type": ["string", "null"],
+          "description": "Facebook page"
+        },
+        "instagram": {
+          "type": ["string", "null"],
+          "description": "Instagram handle"
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Additional notes or context"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "data_quality"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date record was created (YYYY-MM-DD)"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Date record was last updated (YYYY-MM-DD)"
+        },
+        "data_quality": {
+          "type": "string",
+          "enum": ["verified", "unverified", "estimated", "partial"],
+          "description": "Quality level of this data"
+        },
+        "sources": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "Source URLs for verification"
+        }
+      }
+    }
+  }
+}
