@@ -1,0 +1,170 @@
+id: kia-ev6-long-range-awd-2024-de
+variant_id: kia-ev6-long-range-awd-2024
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2021-10"
+delivery_time_weeks: 16
+
+# Pricing (Germany, 2024)
+pricing:
+  base_price: 53990
+  price_including_vat: 53990
+  vat_rate_percent: 19
+  destination_charge: 990
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Glacier White Pearl
+    code: SWP
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: metallic
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: Moonscape Gray Matte
+    code: MGM
+    type: matte
+    price_add:
+      amount: 1490
+      currency: EUR
+  
+  - name: Yacht Blue
+    code: YB
+    type: metallic
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: Interstellar Gray
+    code: IG
+    type: metallic
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: Runway Red
+    code: RR
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 19-inch alloy wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: 20-inch alloy wheels (GT-Line)
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Included in GT-Line package"
+
+# Interior Options
+available_interiors:
+  - name: Black vegan leather
+    code: BVL
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Gray vegan leather with lime accents (GT-Line)
+    code: GVL
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Included in GT-Line package"
+
+# Optional Equipment
+optional_equipment:
+  - name: GT-Line Package
+    price: 2500
+    includes:
+      - "20-inch alloy wheels"
+      - "Sportier exterior styling"
+      - "GT-Line sport seats"
+      - "Gray/lime interior"
+      - "GT-Line badging"
+  
+  - name: Technology Pack
+    price: 1800
+    includes:
+      - "Augmented Reality Head-Up Display"
+      - "Surround View Monitor"
+      - "Remote Smart Parking Assist"
+      - "Blind Spot View Monitor"
+  
+  - name: Premium Sound Package
+    price: 990
+    includes:
+      - "Meridian Premium Sound (14 speakers)"
+  
+  - name: Solar Roof
+    price: 1200
+    includes:
+      - "Solar panel integrated into roof"
+      - "Up to 2000 km additional range per year"
+  
+  - name: Tow Package
+    price: 890
+    includes:
+      - "Tow hitch (removable)"
+      - "Trailer stability control"
+      - "1600 kg towing capacity"
+
+# Dealer Network & Service
+market_info:
+  dealers_count: 450
+  service_centers_count: 450
+  warranty_years: 7
+  warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  free_charging_network: false
+  home_charger_included: false
+  roadside_assistance_years: 7
+
+# Specific to German Market
+market_notes: >
+  - Kia EV6 was European Car of the Year 2022
+  - Strong market presence with extensive dealer network
+  - Delivery times improving after initial high demand
+  - Popular with company car drivers due to tax benefits
+  - 7-year warranty is best-in-class
+  - OTA software updates supported
+  - Kia Connect app for remote features (subscription after 7 years)
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-06"
+  confidence_level: high
+  sources:
+    - https://www.kia.com/de/modelle/ev6/entdecken/
+    - https://www.kia.com/de/konfigurator/
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/kia-ev6/
+  created_at: "2026-02-06T23:40:00Z"
+  created_by: Patricio
