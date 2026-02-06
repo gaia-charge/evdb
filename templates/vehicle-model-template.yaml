@@ -1,0 +1,92 @@
+# EV Vehicle Model Template
+# This template is for base model information (not specific variants/trims)
+# Required fields are marked with [REQUIRED]
+
+# [REQUIRED] Unique identifier (lowercase, hyphens allowed)
+# Examples: tesla-model-3, volkswagen-id4, hyundai-ioniq-5
+id: model-id-here
+
+# [REQUIRED] Official model name
+name: Model Name
+
+# [REQUIRED] Reference to manufacturer ID (must exist in manufacturers/)
+manufacturer_id: manufacturer-id
+
+# [REQUIRED] Vehicle body style
+# Options: sedan, hatchback, wagon, coupe, convertible, suv, crossover, pickup, van, minivan, mpv, roadster
+body_style: sedan
+
+# [REQUIRED] Euro car segment
+# A=mini, B=small, C=medium, D=large, E=executive, F=luxury, J=SUV, M=MPV, S=sports
+segment: C
+
+# Production start date (YYYY or YYYY-MM)
+production_start: "2020"
+
+# Production end date (null if still in production)
+production_end: null
+
+# Current production status
+# Options: announced, active, discontinued
+production_status: active
+
+# Model generation number (1 for first generation)
+generation: 1
+
+# Platform/architecture name (null if unknown)
+# Examples: MEB, E-GMP, Ultium, MEA, EVA2
+platform: null
+
+# Vehicle dimensions (all optional, in millimeters)
+dimensions:
+  length_mm: 4694
+  width_mm: 1850
+  width_with_mirrors_mm: 2088
+  height_mm: 1443
+  wheelbase_mm: 2875
+  ground_clearance_mm: 140
+
+# Seating configuration (optional)
+seating:
+  seats: 5
+  seating_configurations:
+    - 5
+
+# Cargo capacity (optional, in liters)
+cargo:
+  trunk_capacity_liters: 425
+  frunk_capacity_liters: 88
+  total_cargo_liters: 1100
+
+# Towing capacity (optional, in kilograms)
+towing:
+  max_towing_capacity_kg: 1000
+  max_trailer_weight_braked_kg: 1000
+  max_trailer_weight_unbraked_kg: 750
+  towbar_available: true
+
+# Official model webpage (null if none)
+website: https://example.com/model
+
+# Official model image URL (null if none)
+image_url: null
+
+# Additional notes or context
+notes: |
+  Brief description of the model, its target market, and unique features.
+
+# Metadata (REQUIRED)
+metadata:
+  # [REQUIRED] Date record was created (YYYY-MM-DD)
+  created_at: "2026-02-06"
+  
+  # Date record was last updated (null if never updated)
+  updated_at: null
+  
+  # [REQUIRED] Data quality level
+  # Options: verified, unverified, estimated, partial
+  data_quality: verified
+  
+  # Source URLs for verification (at least one recommended)
+  sources:
+    - https://example.com/specs

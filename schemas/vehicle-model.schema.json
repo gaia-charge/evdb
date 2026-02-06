@@ -1,0 +1,240 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.gaiacharge.com/schemas/vehicle-model.schema.json",
+  "title": "EV Vehicle Model",
+  "description": "Schema for electric vehicle models (base model information)",
+  "type": "object",
+  "required": ["id", "name", "manufacturer_id", "body_style", "segment"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier (lowercase, hyphens allowed)",
+      "examples": ["tesla-model-3", "volkswagen-id4", "hyundai-ioniq-5"]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Official model name",
+      "examples": ["Model 3", "ID.4", "Ioniq 5"]
+    },
+    "manufacturer_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Reference to manufacturer ID"
+    },
+    "body_style": {
+      "type": "string",
+      "enum": [
+        "sedan",
+        "hatchback",
+        "wagon",
+        "coupe",
+        "convertible",
+        "suv",
+        "crossover",
+        "pickup",
+        "van",
+        "minivan",
+        "mpv",
+        "roadster"
+      ],
+      "description": "Vehicle body style"
+    },
+    "segment": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "J",
+        "M",
+        "S"
+      ],
+      "description": "Euro car segment (A=mini, B=small, C=medium, D=large, E=executive, F=luxury, J=SUV, M=MPV, S=sports)"
+    },
+    "production_start": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}(-[0-9]{2})?$",
+      "description": "Production start date (YYYY or YYYY-MM)",
+      "examples": ["2017", "2020-09"]
+    },
+    "production_end": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}(-[0-9]{2})?$",
+      "description": "Production end date (YYYY or YYYY-MM), null if still in production"
+    },
+    "production_status": {
+      "type": "string",
+      "enum": ["announced", "active", "discontinued"],
+      "default": "active",
+      "description": "Current production status"
+    },
+    "generation": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "description": "Model generation number (1st gen, 2nd gen, etc.)"
+    },
+    "platform": {
+      "type": ["string", "null"],
+      "description": "Platform/architecture name",
+      "examples": ["MEB", "E-GMP", "Ultium"]
+    },
+    "dimensions": {
+      "type": ["object", "null"],
+      "properties": {
+        "length_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 10000,
+          "description": "Vehicle length in millimeters"
+        },
+        "width_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 3000,
+          "description": "Vehicle width in millimeters (without mirrors)"
+        },
+        "width_with_mirrors_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 3000,
+          "description": "Vehicle width including mirrors"
+        },
+        "height_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 3000,
+          "description": "Vehicle height in millimeters"
+        },
+        "wheelbase_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1000,
+          "maximum": 5000,
+          "description": "Wheelbase in millimeters"
+        },
+        "ground_clearance_mm": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 500,
+          "description": "Ground clearance in millimeters"
+        }
+      }
+    },
+    "seating": {
+      "type": ["object", "null"],
+      "properties": {
+        "seats": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Number of seats"
+        },
+        "seating_configurations": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "integer"
+          },
+          "description": "Available seating configurations",
+          "examples": [[5], [5, 7]]
+        }
+      }
+    },
+    "cargo": {
+      "type": ["object", "null"],
+      "properties": {
+        "trunk_capacity_liters": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 5000,
+          "description": "Trunk/boot capacity in liters"
+        },
+        "frunk_capacity_liters": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 500,
+          "description": "Front trunk (frunk) capacity in liters"
+        },
+        "total_cargo_liters": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 10000,
+          "description": "Total cargo capacity with seats folded"
+        }
+      }
+    },
+    "towing": {
+      "type": ["object", "null"],
+      "properties": {
+        "max_towing_capacity_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 10000,
+          "description": "Maximum towing capacity in kilograms"
+        },
+        "max_trailer_weight_braked_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 5000,
+          "description": "Maximum trailer weight with brakes"
+        },
+        "max_trailer_weight_unbraked_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 1000,
+          "description": "Maximum trailer weight without brakes"
+        },
+        "towbar_available": {
+          "type": ["boolean", "null"],
+          "description": "Whether towbar/hitch is available"
+        }
+      }
+    },
+    "website": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Official model webpage"
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Official model image URL"
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Additional notes or context"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "data_quality"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date record was created (YYYY-MM-DD)"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Date record was last updated (YYYY-MM-DD)"
+        },
+        "data_quality": {
+          "type": "string",
+          "enum": ["verified", "unverified", "estimated", "partial"],
+          "description": "Quality level of this data"
+        },
+        "sources": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "Source URLs for verification"
+        }
+      }
+    }
+  }
+}

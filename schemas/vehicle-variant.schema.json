@@ -1,0 +1,452 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://evdb.gaiacharge.com/schemas/vehicle-variant.schema.json",
+  "title": "EV Vehicle Variant",
+  "description": "Schema for electric vehicle variants with detailed specifications",
+  "type": "object",
+  "required": ["id", "name", "model_id", "model_year"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier (lowercase, hyphens allowed)",
+      "examples": ["tesla-model-3-long-range-awd-2024", "volkswagen-id4-pro-2023"]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Variant name/trim level",
+      "examples": ["Long Range AWD", "Pro Performance", "GT-Line"]
+    },
+    "model_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Reference to vehicle model ID"
+    },
+    "model_year": {
+      "type": "integer",
+      "minimum": 2010,
+      "maximum": 2030,
+      "description": "Model year"
+    },
+    "variant_code": {
+      "type": ["string", "null"],
+      "description": "Official variant/trim code",
+      "examples": ["M3P", "ID4-PRO-77"]
+    },
+    "battery": {
+      "type": "object",
+      "required": ["usable_kwh"],
+      "properties": {
+        "usable_kwh": {
+          "type": "number",
+          "minimum": 10,
+          "maximum": 300,
+          "description": "Usable battery capacity in kWh"
+        },
+        "total_kwh": {
+          "type": ["number", "null"],
+          "minimum": 10,
+          "maximum": 300,
+          "description": "Total (gross) battery capacity in kWh"
+        },
+        "chemistry": {
+          "type": ["string", "null"],
+          "enum": ["NMC", "NCA", "LFP", "LTO", "NCM", "NMCA", "LCO", "other", null],
+          "description": "Battery chemistry type"
+        },
+        "cell_type": {
+          "type": ["string", "null"],
+          "enum": ["cylindrical", "prismatic", "pouch", "blade", null],
+          "description": "Battery cell form factor"
+        },
+        "manufacturer": {
+          "type": ["string", "null"],
+          "description": "Battery manufacturer",
+          "examples": ["CATL", "LG Energy Solution", "Panasonic", "BYD"]
+        },
+        "warranty_years": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Battery warranty duration in years"
+        },
+        "warranty_km": {
+          "type": ["integer", "null"],
+          "minimum": 10000,
+          "maximum": 500000,
+          "description": "Battery warranty distance in kilometers"
+        },
+        "warranty_capacity_percent": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 100,
+          "description": "Guaranteed minimum capacity after warranty period"
+        }
+      }
+    },
+    "range": {
+      "type": ["object", "null"],
+      "properties": {
+        "wltp_km": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 1500,
+          "description": "WLTP range in kilometers"
+        },
+        "wltp_city_km": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 2000,
+          "description": "WLTP city range"
+        },
+        "wltp_highway_km": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 1500,
+          "description": "WLTP highway range"
+        },
+        "epa_km": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 1500,
+          "description": "EPA range in kilometers"
+        },
+        "real_world_km": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 1500,
+          "description": "Real-world range estimate"
+        },
+        "real_world_source": {
+          "type": ["string", "null"],
+          "description": "Source of real-world range data",
+          "examples": ["InsideEVs", "ADAC", "Autocar"]
+        }
+      }
+    },
+    "charging": {
+      "type": ["object", "null"],
+      "properties": {
+        "ac_max_kw": {
+          "type": ["number", "null"],
+          "minimum": 1,
+          "maximum": 50,
+          "description": "Maximum AC charging power in kW"
+        },
+        "ac_phases": {
+          "type": ["integer", "null"],
+          "enum": [1, 3, null],
+          "description": "Number of AC charging phases"
+        },
+        "ac_connector": {
+          "type": ["string", "null"],
+          "enum": ["Type1", "Type2", "NACS", null],
+          "description": "AC connector type"
+        },
+        "dc_max_kw": {
+          "type": ["number", "null"],
+          "minimum": 10,
+          "maximum": 500,
+          "description": "Maximum DC fast charging power in kW"
+        },
+        "dc_connector": {
+          "type": ["string", "null"],
+          "enum": ["CCS1", "CCS2", "CHAdeMO", "GB/T", "NACS", null],
+          "description": "DC connector type"
+        },
+        "dc_curve": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "required": ["soc_percent", "power_kw"],
+            "properties": {
+              "soc_percent": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "State of charge percentage"
+              },
+              "power_kw": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Charging power at this SOC"
+              }
+            }
+          },
+          "description": "DC fast charging curve data points"
+        },
+        "time_0_to_80_min": {
+          "type": ["integer", "null"],
+          "minimum": 5,
+          "maximum": 300,
+          "description": "Time to charge from 0-80% in minutes (DC)"
+        },
+        "time_10_to_80_min": {
+          "type": ["integer", "null"],
+          "minimum": 5,
+          "maximum": 300,
+          "description": "Time to charge from 10-80% in minutes (DC)"
+        },
+        "time_20_to_80_min": {
+          "type": ["integer", "null"],
+          "minimum": 5,
+          "maximum": 300,
+          "description": "Time to charge from 20-80% in minutes (DC)"
+        },
+        "charging_speed_kmh": {
+          "type": ["integer", "null"],
+          "minimum": 10,
+          "maximum": 3000,
+          "description": "Peak charging speed in km/hour added"
+        }
+      }
+    },
+    "bidirectional": {
+      "type": ["object", "null"],
+      "properties": {
+        "v2l": {
+          "type": ["boolean", "null"],
+          "description": "Vehicle-to-Load (V2L) capable"
+        },
+        "v2l_max_kw": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 20,
+          "description": "Maximum V2L power output in kW"
+        },
+        "v2h": {
+          "type": ["boolean", "null"],
+          "description": "Vehicle-to-Home (V2H) capable"
+        },
+        "v2g": {
+          "type": ["boolean", "null"],
+          "description": "Vehicle-to-Grid (V2G) capable"
+        }
+      }
+    },
+    "performance": {
+      "type": ["object", "null"],
+      "properties": {
+        "drive_type": {
+          "type": ["string", "null"],
+          "enum": ["RWD", "FWD", "AWD", null],
+          "description": "Drive type"
+        },
+        "motors": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "string",
+                "enum": ["front", "rear"],
+                "description": "Motor position"
+              },
+              "type": {
+                "type": ["string", "null"],
+                "enum": ["AC induction", "permanent magnet", "wound rotor", null],
+                "description": "Motor type"
+              },
+              "power_kw": {
+                "type": ["number", "null"],
+                "minimum": 10,
+                "maximum": 500,
+                "description": "Motor power in kW"
+              },
+              "power_hp": {
+                "type": ["integer", "null"],
+                "minimum": 10,
+                "maximum": 1500,
+                "description": "Motor power in horsepower"
+              },
+              "torque_nm": {
+                "type": ["integer", "null"],
+                "minimum": 50,
+                "maximum": 2000,
+                "description": "Motor torque in Newton-meters"
+              }
+            }
+          }
+        },
+        "total_power_kw": {
+          "type": ["number", "null"],
+          "minimum": 10,
+          "maximum": 1000,
+          "description": "Total system power in kW"
+        },
+        "total_power_hp": {
+          "type": ["integer", "null"],
+          "minimum": 10,
+          "maximum": 1500,
+          "description": "Total system power in horsepower"
+        },
+        "total_torque_nm": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 3000,
+          "description": "Total system torque in Newton-meters"
+        },
+        "acceleration_0_100_sec": {
+          "type": ["number", "null"],
+          "minimum": 1,
+          "maximum": 30,
+          "description": "0-100 km/h acceleration time in seconds"
+        },
+        "top_speed_kmh": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 400,
+          "description": "Top speed in km/h"
+        }
+      }
+    },
+    "weight": {
+      "type": ["object", "null"],
+      "properties": {
+        "curb_weight_kg": {
+          "type": ["integer", "null"],
+          "minimum": 500,
+          "maximum": 5000,
+          "description": "Curb weight (unladen) in kilograms"
+        },
+        "gross_vehicle_weight_kg": {
+          "type": ["integer", "null"],
+          "minimum": 500,
+          "maximum": 6000,
+          "description": "Gross vehicle weight in kilograms"
+        },
+        "payload_kg": {
+          "type": ["integer", "null"],
+          "minimum": 100,
+          "maximum": 2000,
+          "description": "Maximum payload in kilograms"
+        }
+      }
+    },
+    "efficiency": {
+      "type": ["object", "null"],
+      "properties": {
+        "wltp_kwh_per_100km": {
+          "type": ["number", "null"],
+          "minimum": 5,
+          "maximum": 50,
+          "description": "WLTP energy consumption in kWh/100km"
+        },
+        "epa_kwh_per_100km": {
+          "type": ["number", "null"],
+          "minimum": 5,
+          "maximum": 50,
+          "description": "EPA energy consumption in kWh/100km"
+        },
+        "real_world_kwh_per_100km": {
+          "type": ["number", "null"],
+          "minimum": 5,
+          "maximum": 50,
+          "description": "Real-world energy consumption in kWh/100km"
+        },
+        "efficiency_rating": {
+          "type": ["string", "null"],
+          "enum": ["A+++", "A++", "A+", "A", "B", "C", "D", "E", "F", "G", null],
+          "description": "Energy efficiency class"
+        }
+      }
+    },
+    "features": {
+      "type": ["object", "null"],
+      "properties": {
+        "heat_pump": {
+          "type": ["boolean", "null"],
+          "description": "Heat pump included"
+        },
+        "adaptive_suspension": {
+          "type": ["boolean", "null"],
+          "description": "Adaptive suspension system"
+        },
+        "air_suspension": {
+          "type": ["boolean", "null"],
+          "description": "Air suspension system"
+        },
+        "torque_vectoring": {
+          "type": ["boolean", "null"],
+          "description": "Torque vectoring capability"
+        },
+        "one_pedal_driving": {
+          "type": ["boolean", "null"],
+          "description": "One-pedal driving mode"
+        },
+        "autopilot_level": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 5,
+          "description": "SAE automation level (0-5)"
+        }
+      }
+    },
+    "optional_equipment": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Option name"
+          },
+          "code": {
+            "type": ["string", "null"],
+            "description": "Option code"
+          },
+          "category": {
+            "type": ["string", "null"],
+            "description": "Option category",
+            "examples": ["comfort", "safety", "technology", "appearance"]
+          },
+          "included_in_base": {
+            "type": ["boolean", "null"],
+            "description": "Whether included in base trim"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Additional notes or context"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "data_quality"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date record was created (YYYY-MM-DD)"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Date record was last updated (YYYY-MM-DD)"
+        },
+        "data_quality": {
+          "type": "string",
+          "enum": ["verified", "unverified", "estimated", "partial"],
+          "description": "Quality level of this data"
+        },
+        "sources": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "Source URLs for verification"
+        },
+        "data_completeness_percent": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Estimated data completeness percentage"
+        }
+      }
+    }
+  }
+}
