@@ -1,0 +1,175 @@
+# BMW i4 M50 2024 Variant
+# High-performance dual-motor AWD variant
+
+id: bmw-i4-m50-2024
+name: M50
+model_id: bmw-i4
+model_year: 2024
+variant_code: M50
+
+# Battery Specifications
+battery:
+  usable_kwh: 80.7
+  total_kwh: 83.9
+  chemistry: NMC  # Nickel Manganese Cobalt
+  warranty_years: 8
+  warranty_km: 160000
+  degradation_warranty_percent: 70
+
+# Range (WLTP - Combined)
+range:
+  wltp_km: 510  # Reduced vs eDrive40 due to higher performance
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_miles: 271
+  real_world_km: 430
+  real_world_source: measured
+
+# Range Conditions
+range_conditions:
+  - temperature_c: 20
+    speed_kmh: 120
+    estimated_range_km: 400
+    conditions: "Highway, steady speed"
+  - temperature_c: -5
+    speed_kmh: 90
+    estimated_range_km: 340
+    conditions: "Winter, heating on"
+
+# Charging - AC
+charging_ac:
+  max_power_kw: 11
+  connector_type: Type2
+  onboard_charger_kw: 11
+  charge_time_0_100_hours: 8.25
+
+# Charging - DC Fast Charging
+charging_dc:
+  max_power_kw: 205
+  connector_type: CCS2
+  charge_time_10_80_minutes: 31
+  charge_time_10_80_source: manufacturer
+  charging_curve_type: standard
+  peak_charge_rate_soc_percent: 30
+  charge_speed_km_per_hour: 900
+
+# Charging Curve
+charging_curve:
+  - soc_percent: 10
+    power_kw: 195
+  - soc_percent: 20
+    power_kw: 205
+  - soc_percent: 30
+    power_kw: 205
+  - soc_percent: 40
+    power_kw: 190
+  - soc_percent: 50
+    power_kw: 170
+  - soc_percent: 60
+    power_kw: 140
+  - soc_percent: 70
+    power_kw: 105
+  - soc_percent: 80
+    power_kw: 70
+  - soc_percent: 90
+    power_kw: 35
+
+# Bidirectional Charging / V2X
+bidirectional_charging: false
+v2l_power_kw: null
+v2h_capable: false
+v2g_capable: false
+
+# Performance
+performance:
+  electric_motors: 2  # Dual motor AWD
+  motor_type: "Synchronous (front + rear)"
+  total_power_kw: 400  # 544 hp
+  total_power_hp: 544
+  total_torque_nm: 795
+  drive_type: AWD
+  acceleration_0_100_kmh: 3.9
+  top_speed_kmh: 225
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 18.0  # Higher than eDrive40
+  epa_mpge: null
+  efficiency_rating: C
+
+# Weight
+weight:
+  curb_weight_kg: 2215  # Heavier than eDrive40
+  gross_vehicle_weight_kg: 2720
+  payload_kg: 505
+
+# Dimensions (same as base i4)
+dimensions:
+  length_mm: 4783
+  width_mm: 1852
+  height_mm: 1448
+  wheelbase_mm: 2856
+
+# Interior
+interior:
+  seating_capacity: 5
+  doors: 4
+  trunk_volume_liters: 470
+  frunk_volume_liters: null
+
+# Production & Availability
+production_status: active
+production_start_date: "2023-11-01"
+production_end_date: null
+assembly_location: "Munich, Germany"
+
+# Platform
+platform_id: bmw-clar-ev
+
+# Trim Level
+trim_level: M50
+trim_position: 2  # Performance trim (above eDrive40)
+base_trim: false
+
+# Features & Equipment
+standard_equipment:
+  - "M Sport Package"
+  - "Adaptive M Suspension"
+  - "M Sport Brakes"
+  - "19-inch M alloy wheels"
+  - "M Sport steering wheel"
+  - "M Sport seats"
+  - "BMW Live Cockpit Plus"
+  - "BMW Curved Display (12.3\" + 14.9\")"
+  - "Harman Kardon audio"
+  - "Driving Assistant Professional"
+  - "Parking Assistant Plus"
+  - "BMW IconicSounds Electric by Hans Zimmer"
+
+optional_equipment:
+  - name: "BMW Individual paint"
+    description: "Extended color palette"
+  - name: "Comfort Access"
+    description: "Keyless entry and start"
+  - name: "Bowers & Wilkins audio"
+    description: "Premium audio upgrade"
+
+# Sources
+sources:
+  - url: "https://www.bmw.com/en/all-models/m-series/i4-m50/2024/bmw-i4-m50-overview.html"
+    type: manufacturer
+    accessed_date: "2024-02-06"
+  - url: "https://www.car.info/en-se/bmw/i4/m50-gran-coupe-12806322"
+    type: verified_database
+    accessed_date: "2024-02-06"
+
+# Notes
+notes: "M50 is the performance variant with dual motors and AWD. Features M-specific suspension, brakes, and styling. Sound design by Hans Zimmer creates artificial engine sound. Slightly reduced range compared to eDrive40 due to higher power output and weight."
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_verified_date: "2024-02-01"
+  last_updated: "2024-02-06"
+  created_at: "2024-02-06T23:20:00Z"
+  updated_at: "2024-02-06T23:20:00Z"
