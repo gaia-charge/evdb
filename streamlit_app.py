@@ -51,17 +51,6 @@ def get_database_stats(_conn):
         GROUP BY market_code
         ORDER BY vehicles DESC
     """, _conn)
-
-@st.cache_data(ttl=3600)
-def load_markdown_file(filename):
-    """Load markdown file content (cached for 1 hour)"""
-    try:
-        with open(filename, 'r', encoding='utf-8') as f:
-            return f.read()
-    except FileNotFoundError:
-        return f"⚠️ File `{filename}` not found."
-    except Exception as e:
-        return f"⚠️ Error loading file: {str(e)}"
     
     # Get latest additions (last 5)
     stats['latest_additions'] = pd.read_sql_query("""
@@ -81,6 +70,17 @@ def load_markdown_file(filename):
     """, _conn)
     
     return stats
+
+@st.cache_data(ttl=3600)
+def load_markdown_file(filename):
+    """Load markdown file content (cached for 1 hour)"""
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        return f"⚠️ File `{filename}` not found."
+    except Exception as e:
+        return f"⚠️ Error loading file: {str(e)}"
 
 @st.cache_data(ttl=3600)
 def search_vehicles(_conn, query):
