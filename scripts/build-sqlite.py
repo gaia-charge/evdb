@@ -552,7 +552,6 @@ class DatabaseBuilder:
                 continue
             
             pricing = data.get('pricing', {})
-            availability = data.get('availability', {})
             metadata = data.get('metadata', {})
             
             # Get updated_at with proper null handling
@@ -577,12 +576,12 @@ class DatabaseBuilder:
                 pricing.get('base_price') or pricing.get('base'),
                 pricing.get('price_including_vat') or pricing.get('including_vat'),
                 pricing.get('price_after_incentives') or pricing.get('after_incentives'),
-                availability.get('available_from'),
-                availability.get('available_until'),
-                availability.get('status'),
-                availability.get('delivery_time_weeks'),
-                1 if availability.get('pre_order_available') else 0,
-                1 if availability.get('order_book_open') else 0,
+                data.get('available_from'),
+                data.get('available_until'),
+                data.get('availability_status'),
+                data.get('delivery_time_weeks'),
+                1 if data.get('pre_order_available') else 0,
+                1 if data.get('order_book_open') else 0,
                 data.get('notes'),
                 metadata.get('created_at', datetime.now().isoformat()),
                 updated_at
