@@ -1,0 +1,163 @@
+# Tesla Model Y Performance (2024)
+# High-Performance Variant - Dual Motor All-Wheel Drive
+
+id: tesla-model-y-performance-2024
+model_id: tesla-model-y
+name: Performance
+model_year: 2024
+variant_code: "PERF"  # Performance
+
+# Battery
+battery:
+  usable_kwh: 75.0  # Usable capacity (same as Long Range)
+  total_kwh: 78.1   # Total capacity (estimate)
+  chemistry: NCA    # Nickel-Cobalt-Aluminum (Panasonic cells)
+  cells: prismatic  # 4680 cells (newer production) or 2170 (older)
+  pack_voltage_v: 400  # Nominal voltage
+  supplier: 
+    - "Panasonic"
+    - "LG Energy Solution"  # Depending on factory
+  warranty_years: 8
+  warranty_km: 192000
+  warranty_capacity_percent: 70
+
+# Range (Lower than Long Range due to 21" wheels and more aggressive driving)
+range:
+  wltp_km: 514  # WLTP combined (2024 refresh, reduced vs LR due to 21" wheels)
+  wltp_city_km: 605  # Estimated city range
+  wltp_highway_km: 440  # Estimated highway range
+  epa_miles: 303  # EPA combined (488 km)
+  epa_km: 488
+  real_world_km: 435  # Typical real-world range (mixed driving, mild weather)
+  real_world_highway_km: 380  # Highway at 120 km/h
+  real_world_winter_km: 345  # Cold weather (-5°C to 5°C)
+
+# Charging - AC
+charging_ac:
+  max_power_kw: 11  # 3-phase Type 2
+  connector_type: Type2
+  onboard_charger_kw: 11
+  charge_time_0_100_hours: 7.5  # 11kW charging
+  
+# Charging - DC
+charging_dc:
+  max_power_kw: 250  # Tesla Supercharger V3 peak
+  connector_type: CCS2  # Europe
+  charge_time_10_80_percent_min: 27  # Official Tesla spec (same as LR)
+  charge_time_0_100_percent_min: 44
+  km_per_10min: 270  # At peak charging speed
+
+# Charging Curve (DC Fast Charging) - Same as Long Range
+charging_curve:
+  - soc_percent: 0
+    power_kw: 180
+  - soc_percent: 10
+    power_kw: 250  # Peak power
+  - soc_percent: 20
+    power_kw: 250
+  - soc_percent: 30
+    power_kw: 230
+  - soc_percent: 40
+    power_kw: 190
+  - soc_percent: 50
+    power_kw: 160
+  - soc_percent: 60
+    power_kw: 125
+  - soc_percent: 70
+    power_kw: 95
+  - soc_percent: 80
+    power_kw: 70
+  - soc_percent: 90
+    power_kw: 40
+  - soc_percent: 100
+    power_kw: 20
+
+# Bidirectional Charging
+bidirectional_charging: false  # Not currently supported
+v2l: false
+v2h: false
+v2g: false
+
+# Motors & Drivetrain (More powerful than Long Range)
+motors:
+  count: 2  # Dual motor AWD
+  type: "Permanent Magnet Synchronous"  # Both front and rear
+  total_power_kw: 534  # Combined power (Performance motors)
+  total_power_hp: 725  # Combined power
+  front_motor_kw: 180  # Front motor (estimated, more powerful than LR)
+  rear_motor_kw: 354   # Rear motor (estimated, more powerful than LR)
+  
+drivetrain:
+  type: AWD  # All-Wheel Drive
+  drive_config: "Dual Motor AWD Performance"
+
+# Performance (Much faster than Long Range)
+performance:
+  acceleration_0_100_kmh_s: 3.5  # 2024 model (supercar acceleration!)
+  acceleration_0_60_mph_s: 3.3
+  top_speed_kmh: 250  # Higher than LR's 217 km/h
+  
+# Weight (Slightly heavier than LR due to performance components)
+weight:
+  curb_weight_kg: 2003  # EU curb weight (+24kg vs LR)
+  gross_weight_kg: 2579  # GVWR
+  payload_kg: 576       # GVWR - curb weight
+
+# Efficiency (Lower than LR due to more powerful motors and 21" wheels)
+efficiency:
+  wltp_kwh_per_100km: 17.8  # Higher consumption vs LR's 16.9
+  epa_mpge: 115  # Miles per gallon equivalent (lower than LR's 122)
+  real_world_kwh_per_100km: 19.8  # Typical real-world consumption
+  energy_efficiency_class: C  # EU energy label (lower than LR's B)
+
+# Technology & Features (Same as Long Range + Track Mode)
+technology:
+  autopilot: true  # Standard
+  adaptive_cruise: true
+  lane_keeping: true
+  autonomous_level: 2  # SAE Level 2 (Autopilot standard)
+  full_self_driving: false  # Optional €7,500 upgrade
+  ota_updates: true
+  track_mode: true  # Performance exclusive
+  
+infotainment:
+  screen_size_inch: 15.4
+  screen_orientation: landscape
+  navigation: true
+  streaming: true
+  connectivity: "4G LTE"
+
+# Standard Features (2024 Model Year) - Performance-specific
+features: null  # Use standard_equipment in market files for detailed lists
+
+notes: |
+  Performance model includes Track Mode for circuit driving optimization.
+  21" Überturbine wheels standard (reduce range vs 19" wheels on LR).
+  Performance Brakes with red calipers for better stopping power.
+  Lowered suspension (-10mm) for improved handling and aerodynamics.
+  Aluminum pedals with rubber inserts (Performance exclusive).
+  Carbon fiber spoiler (Performance exclusive).
+  Dual motor AWD with more powerful motors than Long Range.
+  0-100 km/h in 3.5 seconds = faster than Porsche 911 Carrera!
+  Track Mode allows torque vectoring and customizable handling.
+  250kW peak charging on Tesla Supercharger V3.
+  Access to Tesla Supercharger network (50,000+ chargers globally).
+  Over-the-air updates add new features regularly.
+  Full Self-Driving Capability available as €7,500 option or €99/month subscription.
+  Made in Germany at Gigafactory Berlin (Europe deliveries).
+  Optional tow hitch: €1,000 (1,600kg capacity).
+  Optional 7-seater: €3,000 (third row).
+  2024 'Juniper' refresh: improved interior, better efficiency vs 2023.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  last_updated: "2026-02-07"
+  sources:
+    - https://www.tesla.com/model-y/design
+    - https://ev-database.org/car/1750/Tesla-Model-Y-Performance
+    - https://www.fastned.nl/en/support/charge-speed-reference-list
+    - https://insideevs.com/reviews/443791/tesla-model-y-performance-review/
+  notes: "2024 model with Juniper refresh improvements"
+  version: "2024-juniper"
