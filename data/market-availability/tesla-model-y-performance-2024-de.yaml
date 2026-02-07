@@ -1,0 +1,165 @@
+# Tesla Model Y Performance - German Market (2024)
+
+id: tesla-model-y-performance-2024-de
+variant_id: tesla-model-y-performance-2024
+market: DE  # Germany
+currency: EUR
+availability_status: available
+available_from: "2021-09-01"
+
+# Pricing
+pricing:
+  base_price: 58990  # EUR (as of 2024) - €6,000 more than Long Range
+  price_including_vat: 58990  # Tesla prices include VAT
+  vat_rate_percent: 19
+  destination_charge: 1200
+  registration_fees: 450
+  total_price_estimate: 60640
+
+market_specific:
+  standard_equipment:
+    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
+    - Heat pump climate control
+    - Premium audio system (14 speakers)
+    - Panoramic glass roof
+    - Power liftgate
+    - Heated front and rear seats
+    - Wireless charging pad
+    - HEPA air filtration
+    - Sentry Mode and Dashcam
+    - Ambient LED lighting (2024)
+    - Ventilated front seats (2024)
+    - "Performance Upgrade Package (included):"
+    - 21" Überturbine wheels
+    - Performance Brakes with red calipers
+    - Lowered suspension (-10mm)
+    - Carbon fiber spoiler
+    - Aluminum pedals
+    - Track Mode
+  
+  available_colors:
+    - name: "Pearl White Multi-Coat"
+      code: "PPSW"
+      additional_cost: 0
+    - name: "Solid Black"
+      code: "PBSB"
+      additional_cost: 1200
+    - name: "Midnight Silver Metallic"
+      code: "PMNG"
+      additional_cost: 1200
+    - name: "Deep Blue Metallic"
+      code: "PPSB"
+      additional_cost: 1200
+    - name: "Red Multi-Coat"
+      code: "PPMR"
+      additional_cost: 2400
+    - name: "Quicksilver"
+      code: "PPQS"
+      additional_cost: 2400
+    - name: "Stealth Grey"
+      code: "PPSG"
+      additional_cost: 2400
+  
+  available_wheels:
+    - size_inches: 21
+      design: "Überturbine"
+      material: alloy
+      additional_cost: 0  # Standard on Performance
+      notes: "Performance exclusive design, no other options available"
+  
+  available_interiors:
+    - name: "All Black"
+      color: Black
+      additional_cost: 0
+    - name: "Black and White"
+      color: "Black/White"
+      additional_cost: 1500
+
+  optional_packages:
+    - name: "Full Self-Driving Capability"
+      price: 7500
+      description: "Navigate on Autopilot, Auto Lane Change, Autopark, Summon, Smart Summon"
+    - name: "Tow Hitch"
+      price: 1000
+      description: "1,600 kg towing capacity"
+    - name: "Wall Connector"
+      price: 550
+      description: "Home charging solution (11 kW)"
+    - name: "7-Seater Configuration"
+      price: 3000
+      description: "Third row seating (2 additional seats)"
+
+dealer_network:
+  dealer_count: 0  # Direct-to-consumer sales
+  service_centers: 25
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 3
+  current_order_backlog_weeks: 4
+  
+# German Market Incentives (2024)
+incentives:
+  - name: "BAFA Umweltbonus (Federal EV Subsidy)"
+    amount: 0
+    type: grant
+    description: "Federal EV incentive ended December 17, 2023"
+    valid_from: "2023-01-01"
+    valid_until: "2023-12-17"
+    source_url: https://www.bafa.de/umweltbonus
+    
+  - name: "Company Car Tax Benefit"
+    amount: 0
+    type: tax_exemption
+    description: >
+      Electric company cars taxed at 0.25% of gross list price per month
+      (vs. 1% for ICE vehicles). Massive savings for business use.
+      Save ~€450/month in taxes vs. comparable ICE vehicle.
+      €58,990 × 0.25% = €147/month vs €590/month for ICE (1%).
+    
+  - name: "Kfz-Steuer (Vehicle Tax) Exemption"
+    amount: 0
+    type: tax_exemption
+    description: "Zero vehicle tax until December 31, 2030"
+    valid_until: "2030-12-31"
+    
+  - name: "THG-Quote (Greenhouse Gas Quota)"
+    amount: 300
+    type: subsidy
+    description: >
+      Sell your CO2 savings certificate annually. Typical payout: €300-400/year.
+      Register via platforms like eQuota, Geld für eAuto, etc.
+
+compliance:
+  ncap_rating: 5
+  ncap_year: 2022
+  emission_class: Zero Emission
+
+notes: |
+  Performance model: 0-100 km/h in 3.5 seconds - supercar acceleration!
+  Track Mode enables torque vectoring and customizable performance settings.
+  Performance Upgrade Package (€6,000 value) included in base price.
+  21" Überturbine wheels reduce range by ~50km vs 19" wheels on Long Range.
+  Performance Brakes with red calipers for improved stopping power.
+  Lowered suspension (-10mm) for better handling and aerodynamics.
+  Carbon fiber spoiler improves high-speed stability.
+  Built at Gigafactory Berlin-Brandenburg, Germany (Grünheide).
+  Made in Germany - fastest delivery times in Europe (2-4 weeks).
+  Direct-to-consumer sales model via tesla.com (no dealerships).
+  25 Tesla Service Centers across Germany.
+  160 Supercharger locations in Germany (1,600+ charging stalls).
+  8-year/192,000 km battery and drive unit warranty.
+  4-year/80,000 km basic vehicle warranty.
+  Over-the-air software updates add new features regularly.
+  Faster than Porsche 911 Carrera (0-100 in 4.2s) but seats 5-7!
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  price_checked_at: "2026-02-07"
+  sources:
+    - https://www.tesla.com/de_DE/model-y/design
+    - https://www.bafa.de/umweltbonus
+    - https://www.bundesfinanzministerium.de
+    - https://insideevs.com/reviews/443791/tesla-model-y-performance-review/
