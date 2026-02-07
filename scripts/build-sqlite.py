@@ -460,20 +460,62 @@ class DatabaseBuilder:
             pricing = data.get('pricing', {})
             metadata = data.get('metadata', {})
             
-            # Extract motor data from performance section
-            # Support both old (motor key) and new (performance.motors) formats
-            drive_type = performance.get('drive_type')
-            total_power_kw = performance.get('total_power_kw')
-            total_torque_nm = performance.get('total_torque_nm')
-            
-            # Determine motor type and count from motors array
-            motors = performance.get('motors', [])
-            motor_count = len(motors) if motors else None
+            # Extract motor data - handle multiple formats
+            motors_data = data.get('motors', {})
+            drive_type = None
+            total_power_kw = None
+            total_torque_nm = None
+            motor_count = None
             motor_type = None
-            if motors and len(motors) > 0:
-                # Get primary motor type (rear for RWD/AWD, front for FWD)
-                primary_motor = next((m for m in motors if m.get('position') == 'rear'), motors[0])
+            
+            # Format 1: New format with dict containing combined, front, rear
+            if isinstance(motors_data, dict):
+                drive_type = motors_data.get('drive_type')
+                combined = motors_data.get('combined', {})
+                total_power_kw = combined.get('max_power_kw')
+                total_torque_nm = combined.get('max_torque_nm')
+                
+                # Determine motor type and count from motor configuration
+                configuration = motors_data.get('configuration', '')
+                if not isinstance(configuration, str):
+                    configuration = ''
+                
+                if 'dual' in configuration.lower() or 'twin' in configuration.lower():
+                    motor_count = 2
+                    # Get type from rear motor (AWD) or front motor (FWD)
+                    rear_motor = motors_data.get('rear', {})
+                    front_motor = motors_data.get('front', {})
+                    if rear_motor:
+                        motor_type = rear_motor.get('type')
+                    elif front_motor:
+                        motor_type = front_motor.get('type')
+                elif 'single' in configuration.lower():
+                    motor_count = 1
+                    # Get type from whichever motor exists (rear or front)
+                    rear_motor = motors_data.get('rear', {})
+                    front_motor = motors_data.get('front', {})
+                    if rear_motor:
+                        motor_type = rear_motor.get('type')
+                    elif front_motor:
+                        motor_type = front_motor.get('type')
+                        
+            # Format 2: Old format with list of motors
+            elif isinstance(motors_data, list) and len(motors_data) > 0:
+                motor_count = len(motors_data)
+                # Sum up power and torque from all motors
+                total_power_kw = sum(m.get('max_power_kw', 0) for m in motors_data)
+                total_torque_nm = sum(m.get('max_torque_nm', 0) for m in motors_data)
+                # Get primary motor type (rear for AWD, first motor otherwise)
+                primary_motor = next((m for m in motors_data if m.get('position') == 'rear'), motors_data[0])
                 motor_type = primary_motor.get('type')
+                # Determine drive type from motor positions
+                positions = [m.get('position') for m in motors_data]
+                if 'front' in positions and 'rear' in positions:
+                    drive_type = 'AWD'
+                elif 'rear' in positions:
+                    drive_type = 'RWD'
+                elif 'front' in positions:
+                    drive_type = 'FWD'
             
             # Get updated_at with proper null handling
             updated_at = metadata.get('updated_at')
@@ -534,8 +576,8 @@ class DatabaseBuilder:
                 drive_type,
                 total_power_kw,
                 total_torque_nm,
-                performance.get('acceleration_0_100_sec'),
-                performance.get('top_speed_kph'),
+                performance.get('acceleration_0_100_kmh_s'),  # YAML uses _kmh_s, DB uses _sec
+                performance.get('top_speed_kmh'),
                 weight.get('curb_kg'),
                 weight.get('gross_vehicle_kg'),
                 pricing.get('base_price_eur'),
