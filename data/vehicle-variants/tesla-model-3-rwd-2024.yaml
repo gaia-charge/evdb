@@ -1,0 +1,151 @@
+# Tesla Model 3 RWD 2024
+# Base variant - Volume seller (~45% of Model 3 sales globally)
+# Entry-level Tesla with excellent value proposition
+
+id: tesla-model-3-rwd-2024
+model_id: tesla-model-3
+name: RWD
+model_year: 2024
+variant_code: "RWD"
+
+# Production Info
+production_status: active
+production_start_date: "2023-09-01"  # Highland refresh
+# Made at Gigafactory Shanghai (for EU) and Fremont (for US)
+
+# Pricing (base MSRP, market-specific pricing in market-availability files)
+base_price_usd: 38990  # US starting price
+base_price_eur: 40990  # Germany starting price
+
+# Battery & Range
+battery:
+  usable_kwh: 60.0  # LFP battery (CATL)
+  total_kwh: 62.0
+  chemistry: "LFP"  # Lithium Iron Phosphate - safer, longer lifespan, 100% charging OK
+  cells_supplier: "CATL"
+  pack_voltage: 360  # V
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range
+range:
+  wltp_km: 513  # WLTP combined (Highland refresh)
+  epa_miles: 272  # EPA combined (438 km)
+  epa_km: 438
+  real_world_km: 450  # Mixed driving, excellent efficiency
+  highway_km: 390  # @130 km/h, good aerodynamics
+  city_km: 585  # Exceeds WLTP, regenerative braking advantage
+
+# Motors & Performance
+performance:
+  motors:
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 208  # Single rear motor (Highland refresh - improved efficiency)
+      max_torque_nm: 420
+  total_power_kw: 208
+  total_torque_nm: 420  # Good for RWD sedan
+  drive_type: RWD  # Rear-Wheel Drive
+  acceleration_0_100_kmh_s: 6.1  # Quick for base variant
+  top_speed_kmh: 201  # Electronically limited
+  
+# Charging
+charging:
+  ac_charge_power_kw: 11  # Standard AC charging
+  ac_charge_port: Type 2
+  ac_charge_time_0_100_hours: 5.5  # @11 kW
+  
+  dc_charge_power_peak_kw: 170  # LFP maintains power longer than NCA
+  dc_charge_port: CCS2  # Europe/CCS1 US
+  dc_charge_time_10_80_min: 27  # Good charging speed for LFP
+  dc_charge_time_10_80_km_added: 257  # ~70% of 513 km WLTP range
+  dc_charge_km_per_10min: 174  # Practical road trip charging
+  
+  # LFP battery advantages:
+  # - 100% charging recommended (no degradation at full charge)
+  # - Longer lifespan (3,000+ cycles vs 1,500-2,000 NCA)
+  # - Safer chemistry (less thermal runaway risk)
+  # - Lower cost (CATL mass production)
+  # Trade-offs: slightly lower energy density, reduced cold weather performance
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 13.2  # Excellent efficiency (Highland refresh aerodynamics)
+  epa_kwh_per_100km: 13.7  # US rating
+  real_world_kwh_per_100km: 15.0  # Mixed driving, very efficient
+  highway_kwh_per_100km: 17.3  # @130 km/h
+  city_kwh_per_100km: 11.5  # Regenerative braking advantage
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4720  # Highland refresh - slightly shorter
+  width_mm: 1850
+  width_with_mirrors_mm: 2089
+  height_mm: 1441  # Lower than Long Range AWD (same chassis)
+  wheelbase_mm: 2875
+  ground_clearance_mm: 138
+  drag_coefficient: 0.219  # Best-in-class aerodynamics (Highland refresh improvement!)
+  frontal_area_m2: 2.22
+
+weight:
+  curb_weight_kg: 1765  # Lighter than Long Range AWD (single motor, smaller battery)
+  gross_weight_kg: 2215
+  payload_kg: 450
+  weight_distribution_front_percent: 47
+  weight_distribution_rear_percent: 53  # RWD balanced weight
+
+# Cargo & Seating
+cargo:
+  trunk_liters: 594  # Frunk + rear trunk combined (improved in Highland)
+  frunk_liters: 88  # Front trunk
+  rear_seats_folded_liters: 1148  # Seats down
+
+seating:
+  seats: 5
+  seating_configuration: "2+3"
+
+# Technology & Features
+technology:
+  autopilot: true  # Standard
+  adaptive_cruise: true
+  lane_keeping: true
+  autonomous_level: 2  # SAE Level 2 (Autopilot standard)
+  full_self_driving: false  # Optional €7,500 upgrade
+  ota_updates: true
+  
+infotainment:
+  screen_size_inch: 15.4
+  screen_orientation: landscape
+  navigation: true
+  streaming: true
+  connectivity: "4G LTE"
+
+# Standard Features (Highland refresh improvements)
+features: null  # Use market-specific standard_equipment in market files
+
+notes: |
+  RWD base variant - entry-level Tesla, volume seller (~45% of Model 3 sales).
+  Highland refresh (September 2023): improved aerodynamics (Cd 0.219), efficiency, interior upgrades.
+  LFP battery (CATL): 100% charging recommended (no degradation), longer lifespan (3,000+ cycles).
+  513 km WLTP range with excellent real-world efficiency (450 km mixed, 90% of WLTP).
+  Single rear motor RWD - simpler drivetrain, balanced weight distribution (47/53).
+  170 kW DC fast charging - adequate for road trips (27 min 10-80%).
+  6.1s 0-100 km/h - quick for entry-level sedan.
+  €40,990 in Germany - most affordable Tesla, excellent value vs competitors.
+  Supercharger network access (50,000+ chargers globally, 1,600+ in Germany).
+  Made at Gigafactory Shanghai (EU) and Fremont (US), 2-4 week delivery.
+  Highland improvements: ventilated seats, rear 8" display, ambient lighting, Li-ion 12V battery.
+  Strong company car value: under €70k = 0.25% tax rate (saves €1,476/year vs ICE).
+
+metadata:
+  created_at: "2024-02-07"
+  updated_at: null
+  data_quality: verified
+  last_updated: "2024-02-07"
+  sources:
+    - https://www.tesla.com/model3
+    - https://ev-database.org/car/1714/Tesla-Model-3-Standard-Range
+    - https://www.fastned.nl/en/support/charge-speed-reference-list
+  notes: "2024 Highland refresh with LFP battery - entry-level Tesla, volume seller (~45% of sales)"
+  version: "2024-highland"
