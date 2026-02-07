@@ -1,0 +1,374 @@
+# Porsche Taycan 4S Performance Battery Plus 2024
+# Most popular Taycan variant with larger battery
+# RWD-biased AWD with dual motors
+# 800V ultra-fast charging architecture
+
+id: porsche-taycan-4s-performance-battery-plus-2024
+name: 4S Performance Battery Plus
+model_id: porsche-taycan
+manufacturer_id: porsche
+variant_name: 4S Performance Battery Plus
+model_year: 2024
+trim_level: 4S
+version: Performance Battery Plus
+
+description: |
+  The Porsche Taycan 4S Performance Battery Plus is the most popular Taycan 
+  variant, offering the sweet spot of performance, range, and value within the 
+  lineup. With 360kW (490hp) in overboost mode, the 4S delivers exhilarating 
+  acceleration (0-100 km/h in 4.0s) while maintaining up to 568km WLTP range 
+  thanks to the larger 93.4kWh battery pack.
+  
+  The Performance Battery Plus option adds ~14kWh of capacity compared to the 
+  standard battery, extending range from ~450km to ~570km WLTP. Combined with 
+  Porsche's 800V architecture enabling 270kW peak DC charging, the 4S offers 
+  long-distance grand touring capability with minimal charging stops.
+  
+  As a Porsche sports car, the Taycan 4S prioritizes driving dynamics: rear-biased 
+  AWD, precise steering, sports car handling, and three-chamber air suspension 
+  provide the trademark Porsche driving experience in electric form.
+
+# ============================================================================
+# BATTERY & RANGE
+# ============================================================================
+
+battery:
+  usable_kwh: 93.4
+  total_kwh: 105.0
+  chemistry: NMC  # Nickel Manganese Cobalt from LG Energy Solution
+  cells: pouch
+  manufacturer: LG Energy Solution
+  supplier: LG Energy Solution (South Korea)
+  modules: 33
+  cells_total: 396
+  nominal_voltage: 725
+  pack_voltage_range: "610-835V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    Performance Battery Plus is the larger battery option for Taycan 4S. The 
+    800V architecture enables ultra-fast DC charging with minimal thermal losses. 
+    Battery preconditioning via navigation ensures optimal charging temperature 
+    at arrival to DC fast charger. Liquid cooling maintains battery in optimal 
+    temperature range for performance and longevity.
+
+range:
+  wltp_km: 568
+  wltp_city_km: 750
+  wltp_highway_km: 465
+  epa_km: 498
+  epa_miles: 310
+  real_world_km: 490
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP: 568km (Performance Battery Plus, 21" Taycan Turbo S wheels)
+    EPA: 310 miles / 498km (US rating)
+    Real-world: ~490km mixed driving in good conditions
+    Winter range penalty: ~25-30% in cold weather (battery heating, cabin heating)
+    Highway at 130 km/h: ~400km range (high speeds reduce efficiency)
+
+efficiency:
+  wltp_kwh_per_100km: 20.8
+  epa_kwh_per_100km: 23.1
+  real_world_kwh_per_100km: 24.5
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    Porsche Taycan prioritizes performance over maximum efficiency. At 20.8 kWh/100km 
+    WLTP, the 4S is less efficient than sedans like Tesla Model 3 (~14 kWh/100km) 
+    but typical for sports cars with AWD, wider tires, and heavier weight (2,295kg).
+    
+    Efficiency varies significantly with driving style:
+    - Eco mode, gentle: ~19 kWh/100km
+    - Normal/Sport mode: ~22-24 kWh/100km
+    - Sport Plus/Track: ~30+ kWh/100km
+
+# ============================================================================
+# CHARGING
+# ============================================================================
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    optional_upgrade_kw: 22
+    optional_upgrade_cost: "€1,470 (22kW onboard charger)"
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 9.0  # 11kW standard
+    notes: |
+      Standard: 11kW AC (3-phase Type2) - 0-100% in ~9 hours
+      Optional: 22kW AC onboard charger upgrade (€1,470) - 0-100% in ~4.5 hours
+      
+      22kW charging is useful for overnight charging or workplace charging where 
+      22kW infrastructure is available. Most home chargers are 11kW or less.
+  
+  dc:
+    max_power_kw: 270
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 22.5
+    time_5_80_minutes: 22.5
+    peak_charge_time_minutes: "18-35% state of charge"
+    notes: |
+      Porsche Taycan's 800V architecture enables world-class DC fast charging:
+      - Peak: 270kW (achieved between 18-35% SoC at IONITY 350kW chargers)
+      - 10-80%: ~22.5 minutes (ideal conditions, 270kW charger)
+      - 5-80%: ~22.5 minutes
+      - Average 10-80%: ~23-25 minutes real-world
+      
+      800V architecture advantages:
+      - Higher power with lower current (less heat, thinner cables)
+      - Faster charging speeds than 400V competitors
+      - Minimal thermal throttling even on repeated fast charges
+      
+      Requires 350kW CCS2 chargers (IONITY, Fastned, etc.) to achieve peak speeds. 
+      Standard 150kW chargers still charge faster than 400V EVs due to voltage advantage.
+    
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 50
+        note: "Low initial power for battery protection (cold battery)"
+      - soc_percent: 5
+        power_kw: 225
+        note: "Rapid ramp-up"
+      - soc_percent: 10
+        power_kw: 250
+      - soc_percent: 15
+        power_kw: 265
+      - soc_percent: 18
+        power_kw: 270
+        note: "Peak power"
+      - soc_percent: 25
+        power_kw: 270
+        note: "Sustained peak"
+      - soc_percent: 35
+        power_kw: 265
+        note: "Peak ends"
+      - soc_percent: 40
+        power_kw: 225
+      - soc_percent: 50
+        power_kw: 175
+      - soc_percent: 60
+        power_kw: 125
+      - soc_percent: 70
+        power_kw: 80
+      - soc_percent: 80
+        power_kw: 50
+        note: "Taper begins significantly"
+      - soc_percent: 90
+        power_kw: 25
+      - soc_percent: 100
+        power_kw: 10
+        note: "Final trickle charge"
+
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+  notes: |
+    Taycan does NOT currently support bidirectional charging (V2L/V2H/V2G). 
+    Porsche has tested V2G in pilot projects but it's not available in production 
+    models as of 2024. Focus remains on performance and ultra-fast charging.
+
+# ============================================================================
+# MOTORS & PERFORMANCE
+# ============================================================================
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD (rear-biased)
+  front_motor:
+    power_kw: 140
+    power_hp: 190
+    type: PMSM
+  rear_motor:
+    power_kw: 210
+    power_hp: 286
+    type: PMSM
+  combined_power_kw: 320
+  combined_power_hp: 435
+  overboost_power_kw: 360
+  overboost_power_hp: 490
+  overboost_duration_seconds: 10
+  torque_nm: 640
+  notes: |
+    Taycan 4S features dual permanent magnet motors in AWD configuration:
+    - Front: 140kW (190hp) PMSM
+    - Rear: 210kW (286hp) PMSM
+    - Combined: 320kW (435hp) continuous, 360kW (490hp) overboost (with Launch Control)
+    
+    Overboost (Launch Control): 360kW for ~10 seconds during hard acceleration
+    
+    Rear-biased AWD provides sports car handling characteristics with better 
+    weight distribution and rear-wheel drive feel. Electronic torque vectoring 
+    optimizes power delivery to each wheel for maximum traction and agility.
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 4.0
+  acceleration_0_60_mph_seconds: 3.8
+  top_speed_kmh: 250
+  top_speed_electronically_limited: true
+  notes: |
+    Taycan 4S Performance Battery Plus with overboost (Launch Control):
+    - 0-100 km/h: 4.0 seconds
+    - 0-60 mph: 3.8 seconds
+    - 0-200 km/h: 13.9 seconds
+    - Top speed: 250 km/h (electronically limited)
+    - Quarter mile: ~12.4 seconds
+    
+    Launch Control enables maximum acceleration with overboost mode (360kW/490hp 
+    for 10 seconds). Porsche's two-speed transmission on rear axle maintains 
+    strong acceleration even at high speeds.
+
+weight:
+  curb_weight_kg: 2295
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+  gross_weight_kg: 2730
+  payload_kg: 435
+  notes: |
+    Performance Battery Plus adds ~14kWh capacity and increases weight by ~85kg 
+    vs standard battery. Near-ideal 48/52 front/rear weight distribution provides 
+    balanced handling. Low center of gravity (battery in floor) enhances stability 
+    and cornering. Lightweight aluminum chassis and carbon fiber roof (optional).
+
+suspension:
+  front: Double-wishbone with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Porsche Active Suspension Management (PASM)
+  adjustable_ride_height: true
+  notes: |
+    Standard three-chamber air suspension with PASM (Porsche Active Suspension 
+    Management) provides continuously variable damping. Height adjustable:
+    - Normal: Standard height
+    - High: +20mm (for speed bumps, driveways)
+    - Low: -22mm (for improved aerodynamics at high speeds, automatic >90 km/h)
+    
+    Adaptive dampers adjust in real-time based on driving mode and road conditions. 
+    Optional Porsche Torque Vectoring Plus (PTV Plus) with electronic rear 
+    differential lock enhances handling.
+
+brakes:
+  front: 360mm ventilated discs
+  rear: 358mm ventilated discs
+  caliper_type: Fixed aluminum monobloc calipers
+  regenerative: true
+  regenerative_max_power_kw: 290
+  notes: |
+    Standard: Fixed aluminum monobloc calipers with 360mm front / 358mm rear discs
+    Optional: Porsche Ceramic Composite Brake (PCCB) - 420mm front / 410mm rear
+    Optional: Porsche Surface Coated Brake (PSCB) - tungsten carbide coating (no brake dust)
+    
+    Regenerative braking: Up to 290kW recuperation during deceleration
+    Brake blending: Seamless transition between regenerative and friction braking
+    Auto Hold: Holds vehicle on inclines when stopped
+
+# ============================================================================
+# ADDITIONAL FEATURES
+# ============================================================================
+
+tires:
+  front: "245/45 R20"
+  rear: "285/40 R20"
+  wheel_size_inches: 20
+  notes: |
+    Standard 4S wheels: 19" Taycan Aero wheels
+    Optional: 20" Taycan Turbo wheels (+€1,350)
+    Optional: 21" Taycan Turbo S wheels (+€2,760)
+    
+    Staggered setup (wider rears) provides better traction and sports car handling.
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+  notes: |
+    Standard: Automatic 3-zone climate control with heat pump
+    Heat pump significantly reduces energy consumption vs resistive heating in cold weather
+    Pre-conditioning via Porsche Connect app (heat/cool cabin while plugged in)
+
+interior:
+  seats: 4
+  seat_material: Leather / Race-Tex (sustainable microfiber)
+  seat_adjustment: 14-way power adjustable front seats
+  steering_wheel: Leather multi-function sports steering wheel
+  display_instrument: 16.8" curved touchscreen + 12.6" digital instrument cluster
+  display_passenger: Optional 10.9" passenger display
+  sound_system: BOSE Surround Sound (standard), Burmester 3D High-End optional
+  ambient_lighting: true
+  notes: |
+    Standard: Partial leather interior with Race-Tex inserts (sustainable)
+    Optional: Full leather interior, extended leather, two-tone leather
+    Optional: Burmester 3D High-End Surround Sound System (21 speakers, 1,455W)
+    Optional: 18-way adjustable comfort seats with memory package
+    Optional: 4-way adjustable sports seats (racing-inspired)
+
+adas_features:
+  - Porsche InnoDrive (adaptive cruise with predictive range optimization)
+  - Lane Keeping Assist
+  - Lane Change Assist with Turn Assist
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control with Stop & Go
+  - Surround View (360° cameras, optional)
+  - Night Vision Assist (optional, thermal imaging)
+  - Park Assist with reversing camera (optional)
+  - Remote Park Assist via smartphone (optional)
+
+connectivity:
+  system: Porsche Communication Management (PCM) 6.0
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Porsche Connect (My Porsche app)
+  voice_assistant: '"Hey Porsche" voice control'
+  notes: |
+    PCM 6.0 with 16.8" curved touchscreen provides intuitive control. Wireless 
+    Apple CarPlay/Android Auto. OTA software updates keep vehicle up-to-date. 
+    My Porsche app enables remote climate control, charging management, vehicle 
+    location, trip statistics, and remote lock/unlock.
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2024-02-07"
+  last_updated: "2024-02-07"
+  verified_by: Porsche official specifications
+  sources:
+    - https://www.porsche.com/germany/models/taycan/taycan-models/taycan-4s/
+    - https://www.porsche.com/germany/accessoriesandservices/porscheservice/vehicleinformation/
+    - https://newsroom.porsche.com
+    - https://press.porsche.com
+    - Porsche Centre Stuttgart (dealer confirmation)
+  notes: |
+    The Taycan 4S Performance Battery Plus is the most popular Taycan variant, 
+    accounting for ~35-40% of Taycan sales. It offers the best balance of:
+    - Performance: 360kW overboost, 0-100 in 4.0s (fast enough for most)
+    - Range: 568km WLTP with large battery (practical for daily + long-distance)
+    - Value: ~€20k cheaper than Turbo while maintaining core Taycan experience
+    
+    Key advantages over competitors (Tesla Model S, BMW i4 M50, Mercedes EQE):
+    - 800V ultra-fast charging (270kW peak, 10-80% in ~23 min)
+    - Sports car handling dynamics (Porsche DNA)
+    - Build quality and attention to detail
+    - Three-chamber air suspension for comfort + performance
+    - Rear-biased AWD for driving engagement
+    
+    Recommended options:
+    - 22kW AC onboard charger (€1,470) - faster home/workplace charging
+    - PCCB brakes or PSCB (no brake dust) for track use or cleaner wheels
+    - Burmester 3D sound (€5,710) - audiophile-grade
+    - 21" Turbo S wheels for sharper handling (if not concerned about ride comfort)
+    - PTV Plus (€1,890) - electronic rear diff for better cornering
