@@ -633,7 +633,7 @@ elif page == "⚖️ Compare":
                 m.body_style,
                 v.battery_usable_kwh,
                 v.battery_chemistry,
-                v.battery_architecture,
+                CASE WHEN v.battery_voltage >= 700 THEN '800V' WHEN v.battery_voltage IS NOT NULL THEN '400V' END as battery_architecture,
                 v.range_wltp_km,
                 v.range_real_world_km,
                 v.consumption_real_world_kwh_100km,
@@ -645,9 +645,8 @@ elif page == "⚖️ Compare":
                 v.dc_charge_power_kw,
                 v.dc_charge_time_10_80_min,
                 v.ac_charge_power_kw,
-                v.ac_charge_time_0_100_min,
                 ma.price_base as price_eur,
-                ma.price_on_the_road as price_otr_eur
+                ma.price_including_vat as price_otr_eur
             FROM vehicle_variants v
             JOIN vehicle_models m ON v.model_id = m.id
             JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
@@ -742,7 +741,6 @@ elif page == "⚖️ Compare":
                 'DC Fast Charge': f"{int(row['dc_charge_power_kw'])} kW" if pd.notna(row['dc_charge_power_kw']) else 'N/A',
                 'DC 10-80%': f"{int(row['dc_charge_time_10_80_min'])} min" if pd.notna(row['dc_charge_time_10_80_min']) else 'N/A',
                 'AC Charge': f"{row['ac_charge_power_kw']:.1f} kW" if pd.notna(row['ac_charge_power_kw']) else 'N/A',
-                'AC 0-100%': f"{int(row['ac_charge_time_0_100_min'])} min" if pd.notna(row['ac_charge_time_0_100_min']) else 'N/A',
                 '   ': '**Pricing (Germany)**',
                 'Base Price': f"€{int(row['price_eur']):,}" if pd.notna(row['price_eur']) else 'TBD',
                 'On-the-Road Price': f"€{int(row['price_otr_eur']):,}" if pd.notna(row['price_otr_eur']) else 'TBD',
@@ -1041,7 +1039,7 @@ elif page == "📊 Analytics":
             m.body_style,
             v.battery_usable_kwh,
             v.battery_chemistry,
-            v.battery_architecture,
+            CASE WHEN v.battery_voltage >= 700 THEN '800V' WHEN v.battery_voltage IS NOT NULL THEN '400V' END as battery_architecture,
             v.range_wltp_km,
             v.range_real_world_km,
             v.consumption_real_world_kwh_100km,
@@ -1471,10 +1469,10 @@ WHERE ma.price_base IS NOT NULL
 GROUP BY mo.body_style
 ORDER BY avg_price_eur DESC;""",
         
-        "800V vs 400V Platform Comparison": """SELECT 
-    CASE 
-        WHEN v.battery_architecture = '800V' THEN '800V Platform'
-        WHEN v.battery_architecture = '400V' THEN '400V Platform'
+        "800V vs 400V Platform Comparison": """SELECT
+    CASE
+        WHEN v.battery_voltage >= 700 THEN '800V Platform'
+        WHEN v.battery_voltage IS NOT NULL THEN '400V Platform'
         ELSE 'Other/Unknown'
     END AS architecture,
     COUNT(v.id) AS vehicles,
@@ -1482,7 +1480,7 @@ ORDER BY avg_price_eur DESC;""",
     MAX(v.dc_charge_power_kw) AS max_dc_power_kw,
     ROUND(AVG(v.dc_charge_time_10_80_min), 1) AS avg_charge_time_min
 FROM vehicle_variants v
-WHERE v.battery_architecture IS NOT NULL
+WHERE v.battery_voltage IS NOT NULL
 GROUP BY architecture
 ORDER BY avg_dc_power_kw DESC;""",
         
