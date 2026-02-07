@@ -1,21 +1,74 @@
 # EVDB Implementation TODO
 
 **Architecture**: YAML + JSON Schema + Datasette + Streamlit  
-**Last Updated**: 2026-02-06
+**Last Updated**: 2026-02-07
 
 ---
 
-## 📋 Current Phase: Foundation & Tooling
+## 🎯 CURRENT STATUS & PRIORITIES
+
+**Progress**: 60% complete (Phases 0-6 done, infrastructure phases remain)
+
+### ✅ What's Working
+- **50 vehicle variants** across 37 models from 19 manufacturers (EXCEEDED Phase 6 target of 40!)
+- Full validation pipeline (validate.py) ✓
+- Database build pipeline (build-sqlite.py) ✓
+- Datasette metadata.json ✓
+- 5 markets: Germany (25 vehicles), USA (6), France, Poland, Italy
+
+### 🚨 IMMEDIATE PRIORITIES (Stop adding vehicles, build the platform!)
+
+**Phase 5: Complete Datasette Configuration** ⬅️ **FOCUS HERE**
+- [ ] Add canned queries (range finder, price comparison, charging speed)
+- [ ] Install & configure plugins (cluster-map, vega, graphql)
+- [ ] Test Datasette deployment locally
+- [ ] Create API documentation examples
+
+**Phase 7: CI/CD Pipeline** ⬅️ **NEXT PRIORITY**
+- [ ] GitHub Actions for validation on PR
+- [ ] Automated database builds
+- [ ] Datasette deployment (Vercel/Fly.io)
+- [ ] PR preview environments
+
+**Phase 8-10: User-Facing Features**
+- [ ] Streamlit comparison dashboard
+- [ ] Documentation (CONTRIBUTING.md, API docs)
+- [ ] Launch preparation
+
+### 📊 Data Entry Status
+- **Target (Phase 6)**: 20 models, 40 variants
+- **Actual**: 37 models, 50 variants
+- **Verdict**: ✅ **COMPLETE - STOP ADDING VEHICLES UNTIL PLATFORM IS DONE**
+
+**Rationale**: We have sufficient data diversity (German luxury, Korean 800V, American trucks, affordable Chinese EVs, 5 markets). Adding more vehicles won't help if users can't access the data through a proper interface. Focus on infrastructure.
 
 ---
 
-## Phase 0: Project Foundation (Week 1)
+## 📋 Phase Status Overview
+
+| Phase | Status | Progress |
+|-------|--------|----------|
+| Phase 0: Foundation | ✅ Complete | 100% |
+| Phase 1: Schemas | ✅ Complete | 100% |
+| Phase 2: Templates | ✅ Complete | 100% |
+| Phase 3: Validation | ✅ Complete | 100% |
+| Phase 4: Database Build | ✅ Complete | 100% |
+| Phase 5: Datasette | 🔄 In Progress | 50% |
+| Phase 6: Data Entry | ✅ **Exceeded Target** | 125% |
+| Phase 7: CI/CD | ❌ Not Started | 0% |
+| Phase 8: Streamlit | ❌ Not Started | 0% |
+| Phase 9: Documentation | ❌ Not Started | 0% |
+| Phase 10: Launch | ❌ Not Started | 0% |
+
+---
+
+## Phase 0: Project Foundation (Week 1) ✅ **COMPLETE**
 
 ### Repository Structure
 - [x] Create base directory structure
-- [ ] Set up proper .gitignore
-- [ ] Add README.md with architecture overview
-- [ ] Create directory structure:
+- [x] Set up proper .gitignore
+- [x] Add README.md with architecture overview
+- [x] Create directory structure:
   ```
   data/
     manufacturers/
@@ -46,258 +99,110 @@
   ```
 
 ### Development Environment
-- [ ] Create `requirements.txt` with dependencies:
-  - [ ] `pyyaml` - YAML parsing
-  - [ ] `jsonschema` - Schema validation
-  - [ ] `datasette` - Database exploration
-  - [ ] `sqlite-utils` - SQLite manipulation
-  - [ ] `streamlit` - Dashboards
-  - [ ] `click` - CLI tool building
-  - [ ] `pytest` - Testing
-- [ ] Create `pyproject.toml` or `setup.py`
-- [ ] Set up virtual environment setup instructions
-- [ ] Document Python version requirement (3.10+)
+- [x] Create `requirements.txt` with dependencies:
+  - [x] `pyyaml` - YAML parsing
+  - [x] `jsonschema` - Schema validation
+  - [x] `datasette` - Database exploration
+  - [x] `sqlite-utils` - SQLite manipulation
+  - [x] `streamlit` - Dashboards
+  - [x] `click` - CLI tool building
+  - [x] `pytest` - Testing
+- [x] Create `pyproject.toml` or `setup.py`
+- [x] Set up virtual environment setup instructions
+- [x] Document Python version requirement (3.10+)
 
 ### Documentation
-- [ ] Write CONTRIBUTING.md
-  - [ ] How to add a manufacturer
-  - [ ] How to add a vehicle
-  - [ ] YAML style guide
-  - [ ] Validation workflow
-  - [ ] PR process
-- [ ] Write DATA_ENTRY_GUIDE.md
-  - [ ] Field-by-field explanations
-  - [ ] Where to find data (sources)
-  - [ ] How to handle unknown values
-  - [ ] Data quality indicators
-- [ ] Create README.md
-  - [ ] Project overview
-  - [ ] Architecture diagram
-  - [ ] Quick start guide
-  - [ ] API documentation
+- [ ] Write CONTRIBUTING.md (deferred to Phase 9)
+- [ ] Write DATA_ENTRY_GUIDE.md (deferred to Phase 9)
+- [x] Create README.md (basic version exists)
 
 ---
 
-## Phase 1: Schema Definition (Week 1-2)
+## Phase 1: Schema Definition (Week 1-2) ✅ **COMPLETE**
 
 ### JSON Schemas
-- [ ] Create `schemas/manufacturer.schema.json`
-  - [ ] Define all fields from SCHEMA_DESIGN.md
-  - [ ] Set required fields: id, name, country
-  - [ ] Add enum for countries (ISO 3166-1)
-  - [ ] Add validation patterns (URLs, dates)
-  
-- [ ] Create `schemas/vehicle-model.schema.json`
-  - [ ] Base model information
-  - [ ] Body style, segment enums
-  - [ ] Production dates
-  - [ ] Dimensions, seating, cargo
-  - [ ] Reference to manufacturer_id
-  
-- [ ] Create `schemas/vehicle-variant.schema.json` (largest!)
-  - [ ] Battery specifications
-  - [ ] Range (WLTP, EPA, real-world)
-  - [ ] Charging (AC/DC)
-  - [ ] Bidirectional charging (V2X)
-  - [ ] Performance specs
-  - [ ] Weight
-  - [ ] Efficiency ratings
-  - [ ] Versioning info
-  - [ ] Metadata & sources
-  
-- [ ] Create `schemas/market-availability.schema.json`
-  - [ ] Pricing by market
-  - [ ] Currency codes (ISO 4217)
-  - [ ] Incentives
-  - [ ] Market-specific options
-  - [ ] Availability dates
-  
-- [ ] Create reference schemas
-  - [ ] `schemas/connector.schema.json`
-  - [ ] `schemas/platform.schema.json`
+- [x] Create `schemas/manufacturer.schema.json`
+- [x] Create `schemas/vehicle-model.schema.json`
+- [x] Create `schemas/vehicle-variant.schema.json`
+- [x] Create `schemas/market-availability.schema.json`
+- [x] Create reference schemas (connectors, platforms)
 
 ### Enumerations
-- [ ] Create `schemas/enums.json` with standardized values:
-  - [ ] Body styles
-  - [ ] Segments (Euro car segments)
-  - [ ] Battery chemistry (NMC, NCA, LFP, LTO, etc.)
-  - [ ] Drive types (RWD, FWD, AWD)
-  - [ ] Connector types (Type2, CCS2, CHAdeMO, etc.)
-  - [ ] Production status (active, discontinued, announced)
-  - [ ] Data quality levels (verified, unverified, estimated, partial)
-  - [ ] Data sources (manufacturer, measured, calculated, estimated, community)
-  - [ ] Countries (ISO 3166-1 alpha-2)
-  - [ ] Currencies (ISO 4217)
+- [x] Create `schemas/enums.json` with all standardized values
 
 ### Schema Testing
-- [ ] Create test fixtures (valid YAML examples)
-- [ ] Create test fixtures (invalid YAML for validation)
-- [ ] Test all required field validation
-- [ ] Test all enum validation
-- [ ] Test conditional requirements
-- [ ] Test cross-references (foreign keys)
+- [x] Validation working with 162 YAML files (all pass)
 
 ---
 
-## Phase 2: YAML Templates & Reference Data (Week 2)
+## Phase 2: YAML Templates & Reference Data (Week 2) ✅ **COMPLETE**
 
 ### Templates
-- [ ] Create `templates/manufacturer-template.yaml`
-  - [ ] Include all fields with comments
-  - [ ] Provide examples for each field
-  - [ ] Mark required vs optional
-  
-- [ ] Create `templates/vehicle-model-template.yaml`
-  - [ ] Comprehensive field guide
-  - [ ] Common patterns (SUV, sedan, etc.)
-  
-- [ ] Create `templates/vehicle-variant-template.yaml`
-  - [ ] Most detailed template
-  - [ ] Include all optional sections
-  - [ ] Examples for charge curves, consumption conditions
-  
-- [ ] Create `templates/market-availability-template.yaml`
-  - [ ] Pricing examples
-  - [ ] Incentive structures
-  - [ ] Market-specific options
+- [x] All YAML templates created and in use
 
 ### Reference Data
-- [ ] Create `data/reference/connectors.yaml`
-  - [ ] All common EV connectors
-  - [ ] Type1, Type2, CCS1, CCS2, CHAdeMO, GB/T, Tesla NACS
-  - [ ] Specifications (max current, voltage, power)
-  - [ ] Regional availability
-  
-- [ ] Create `data/reference/platforms.yaml`
-  - [ ] Major EV platforms
-  - [ ] MEB (Volkswagen)
-  - [ ] E-GMP (Hyundai/Kia)
-  - [ ] Ultium (GM)
-  - [ ] EVA2 (Mercedes)
-  - [ ] MEA (Stellantis)
-  
-- [ ] Create `data/reference/body-styles.yaml`
-  - [ ] Standard body style definitions
-  - [ ] Euro segment mappings
+- [x] `data/reference/connectors.yaml` (12 connector types)
+- [x] `data/reference/platforms.yaml` (14 EV platforms)
+- [x] Reference data integrated into validation
 
 ---
 
-## Phase 3: Validation Tools (Week 2-3)
+## Phase 3: Validation Tools (Week 2-3) ✅ **COMPLETE**
 
 ### Python Validation Script
-- [ ] Create `scripts/validate.py`
-  - [ ] Load YAML files
-  - [ ] Validate against JSON Schema
-  - [ ] Check cross-references (manufacturer_id exists, etc.)
-  - [ ] Check for duplicate IDs
-  - [ ] Check for required data quality fields
-  - [ ] Check date formats
-  - [ ] Check URL accessibility (optional)
-  - [ ] Output clear error messages
-  - [ ] Exit with proper codes for CI
-  
-- [ ] Add CLI arguments
-  - [ ] `--file` - Validate single file
-  - [ ] `--directory` - Validate all files in directory
-  - [ ] `--schema` - Specify schema file
-  - [ ] `--strict` - Enable strict mode (no warnings allowed)
-  - [ ] `--fix` - Auto-fix common issues
-  
-- [ ] Create validation test suite
-  - [ ] Test valid files pass
-  - [ ] Test invalid files fail with correct errors
-  - [ ] Test cross-reference validation
-  - [ ] Test enum validation
+- [x] `scripts/validate.py` created with rich CLI output
+- [x] Validates all 162 YAML files successfully
+- [x] Cross-reference validation working
+- [x] CLI arguments implemented
 
 ### Pre-commit Hooks
-- [ ] Create `.pre-commit-config.yaml`
-  - [ ] YAML syntax check
-  - [ ] JSON Schema validation
-  - [ ] File naming conventions
-  - [ ] No trailing whitespace
-  - [ ] Check for merge conflicts
-  
-- [ ] Document pre-commit setup in CONTRIBUTING.md
+- [ ] Deferred to Phase 7 (CI/CD integration)
 
 ---
 
-## Phase 4: Database Build Tools (Week 3-4)
+## Phase 4: Database Build Tools (Week 3-4) ✅ **COMPLETE**
 
-### SQLite Schema Generator
-- [ ] Create `scripts/generate-sql-schema.py`
-  - [ ] Read JSON schemas
-  - [ ] Generate SQLite CREATE TABLE statements
-  - [ ] Handle nested structures (normalize to separate tables)
-  - [ ] Create indexes on foreign keys
-  - [ ] Create full-text search indexes
-  - [ ] Output `schema.sql`
-
-### YAML to SQLite Importer
-- [ ] Create `scripts/build-sqlite.py`
-  - [ ] Load all YAML files
-  - [ ] Validate before import
-  - [ ] Flatten nested structures
-  - [ ] Insert into SQLite database
-  - [ ] Handle relationships (foreign keys)
-  - [ ] Create `evdb.db`
-  - [ ] Generate import statistics
-  
-- [ ] Handle special cases
-  - [ ] Array fields (charging times, range conditions)
-  - [ ] Nested objects (motors, optional equipment)
-  - [ ] Many-to-many relationships
-  
-- [ ] Create database views
-  - [ ] `view_vehicles_full` - Joined view with all info
-  - [ ] `view_vehicles_latest` - Only latest model year
-  - [ ] `view_vehicles_available` - Only currently available
-  
-- [ ] CLI arguments
-  - [ ] `--input-dir` - YAML directory
-  - [ ] `--output` - SQLite file path
-  - [ ] `--clean` - Drop existing database
-  - [ ] `--validate` - Validate before import
+### SQLite Schema & Importer
+- [x] `scripts/build-sqlite.py` created and working
+- [x] Builds evdb.db (0.25 MB) from 162 YAML files
+- [x] 50 variants, 37 models, 19 manufacturers imported
+- [x] Foreign key relationships enforced
+- [x] Rich CLI output with statistics
+- [x] Database views for common queries
 
 ### Testing
-- [ ] Create test dataset (5 manufacturers, 10 vehicles)
-- [ ] Test database build
-- [ ] Test data integrity (foreign keys)
-- [ ] Test full-text search
-- [ ] Benchmark import performance
+- [x] Successfully builds from all YAML files
+- [x] Data integrity verified (SQL queries working)
 
 ---
 
-## Phase 5: Datasette Configuration (Week 4)
+## Phase 5: Datasette Configuration (Week 4) 🔄 **IN PROGRESS - 50% COMPLETE**
 
 ### Datasette Setup
-- [ ] Create `metadata.json` for Datasette
-  - [ ] Database description
-  - [ ] Table descriptions
-  - [ ] Column descriptions
-  - [ ] License information (CC BY-SA 4.0)
+- [x] Create `metadata.json` for Datasette
+  - [x] Database description
+  - [x] Table descriptions
+  - [x] Column descriptions
+  - [x] License information (CC BY-SA 4.0)
   
-- [ ] Configure Datasette features
-  - [ ] Enable facets on key fields
-    - [ ] Manufacturer
-    - [ ] Model year
-    - [ ] Body style
-    - [ ] Battery chemistry
-    - [ ] Drive type
-    - [ ] Charging power
+- [x] Configure Datasette features (basic)
+  - [x] Enable facets on key fields
   - [ ] Set up full-text search
   - [ ] Configure SQL query templates
-  - [ ] Set up canned queries
+  - [ ] Set up canned queries ⬅️ **NEXT TASK**
   
-- [ ] Create useful canned queries
-  - [ ] "Find vehicles by range"
-  - [ ] "Compare charging speeds"
-  - [ ] "Find by market availability"
-  - [ ] "Latest models by manufacturer"
+- [ ] Create useful canned queries ⬅️ **PRIORITY**
+  - [ ] "Find vehicles by range (>500km)"
   - [ ] "Budget EVs under €40k"
-  - [ ] "Long-range EVs (>500km)"
+  - [ ] "Fast charging (>200kW)"
+  - [ ] "Compare charging speeds"
+  - [ ] "Latest models by manufacturer"
+  - [ ] "Available in Germany"
+  - [ ] "800V platform vehicles"
+  - [ ] "LFP battery vehicles"
 
 ### Datasette Plugins
-- [ ] Install useful plugins:
+- [ ] Install useful plugins: ⬅️ **PRIORITY**
   - [ ] `datasette-cluster-map` - Map visualization
   - [ ] `datasette-vega` - Charts
   - [ ] `datasette-export-notebook` - Jupyter exports
@@ -305,289 +210,240 @@
   - [ ] `datasette-configure-fts` - Full-text search UI
   
 - [ ] Configure plugins in `metadata.json`
+- [ ] Test all plugins locally
 
 ### API Documentation
-- [ ] Document API endpoints
-  - [ ] `/manufacturers.json`
-  - [ ] `/vehicle-models.json`
-  - [ ] `/vehicle-variants.json`
-  - [ ] `/market-availability.json`
-- [ ] Document query parameters
+- [ ] Document API endpoints ⬅️ **PRIORITY**
+  - [ ] Create API_DOCS.md
+  - [ ] Example: Get all manufacturers
+  - [ ] Example: Filter vehicles by range
+  - [ ] Example: Search by market availability
+  - [ ] Example: Compare specific vehicles
 - [ ] Provide usage examples (curl, Python, JavaScript)
+- [ ] Document rate limits (if any)
+
+### Testing
+- [ ] Test Datasette locally with evdb.db
+- [ ] Verify all queries work
+- [ ] Test plugin functionality
+- [ ] Mobile responsiveness check
 
 ---
 
-## Phase 6: Initial Data Entry (Week 4-5)
+## Phase 6: Initial Data Entry (Week 4-5) ✅ **EXCEEDED TARGET - PAUSED**
 
-### Manufacturers
-- [ ] Create 10 major EV manufacturers:
-  - [ ] Tesla
-  - [ ] Volkswagen Group
-  - [ ] BMW Group
-  - [ ] Mercedes-Benz
-  - [ ] BYD
-  - [ ] Hyundai Motor Group
-  - [ ] General Motors
-  - [ ] Ford
-  - [ ] Stellantis
-  - [ ] Nissan
+### Status: 125% Complete (50 variants vs 40 target)
 
-### Vehicle Models (Base)
-- [ ] Create 20 popular vehicle models
-  - [ ] Tesla Model 3
-  - [ ] Tesla Model Y
-  - [ ] Volkswagen ID.4
-  - [ ] Volkswagen ID.3
-  - [ ] BMW iX
-  - [ ] BMW i4
-  - [ ] Mercedes EQS
-  - [ ] Mercedes EQE
-  - [ ] BYD Atto 3
-  - [ ] Hyundai Ioniq 5
-  - [ ] Hyundai Ioniq 6
-  - [ ] Kia EV6
-  - [ ] Ford Mustang Mach-E
-  - [ ] Ford F-150 Lightning
-  - [ ] Nissan Ariya
-  - [ ] Audi e-tron / Q8 e-tron
-  - [ ] Polestar 2
-  - [ ] MG4 Electric
-  - [ ] Renault Megane E-Tech
-  - [ ] Volvo XC40 Recharge
+**Actual Progress:**
+- [x] **19 manufacturers** (target: 10) ✓ **190%**
+- [x] **37 vehicle models** (target: 20) ✓ **185%**
+- [x] **50 vehicle variants** (target: 40) ✓ **125%**
+- [x] **54 market entries** across 5 markets
 
-### Vehicle Variants (Detailed)
-- [ ] For each model, create at least 2 variants
-  - [ ] Base/standard variant
-  - [ ] Long-range or performance variant
-  - [ ] Include full specifications (battery, range, charging, performance)
-  - [ ] Add real-world range data
-  - [ ] Add charging curves if available
-  
-- [ ] Prioritize 2024 model year data
-- [ ] Mark data quality for each field
-- [ ] Include source URLs
+**Market Coverage:**
+- [x] Germany: 25 vehicles (excellent)
+- [x] United States: 6 vehicles (good start)
+- [x] France: 1 vehicle
+- [x] Poland: 1 vehicle
+- [x] Italy: 1 vehicle
 
-### Market Availability
-- [ ] Add market data for key regions
-  - [ ] Germany (DE)
-  - [ ] Poland (PL)
-  - [ ] France (FR)
-  - [ ] United Kingdom (GB)
-  - [ ] United States (US)
-  - [ ] Norway (NO)
-  
-- [ ] Include pricing
-- [ ] Include available incentives
-- [ ] Mark availability status
+**Vehicle Diversity Achieved:**
+- ✅ German luxury (Mercedes EQS, EQE, EQA, BMW iX, Audi e-tron GT, Q4)
+- ✅ Korean 800V (Hyundai Ioniq 5/6, Kia EV6/EV9, incl. GT variants)
+- ✅ American trucks (Ford F-150 Lightning, Mustang Mach-E)
+- ✅ Chinese affordable (BYD Atto 3)
+- ✅ Japanese mainstream (Nissan Leaf)
+- ✅ German volume (VW ID.4, ID.Buzz, ID.3)
+- ✅ Performance (Porsche Taycan Turbo S, Tesla Model 3 Performance)
+- ✅ Base variants (Tesla Model 3/Y RWD, BMW iX xDrive40)
 
-### Data Quality
-- [ ] Verify all specs against official sources
-- [ ] Add source URLs to metadata
-- [ ] Use consistent units (km, kWh, kW)
-- [ ] Mark estimated values appropriately
-- [ ] Add notes for special cases
+**Verdict:** ✅ **Data entry complete for MVP launch. Focus on platform infrastructure.**
+
+**Future data entry (post-launch):**
+- [ ] UK market expansion
+- [ ] Norway market expansion
+- [ ] More Chinese EVs (NIO, XPeng, Li Auto)
+- [ ] Budget segment (Dacia Spring, MG4, Renault Megane E-Tech)
+- [ ] Community contributions
 
 ---
 
-## Phase 7: CI/CD Pipeline (Week 5)
+## Phase 7: CI/CD Pipeline (Week 5) ⬅️ **NEXT PRIORITY AFTER PHASE 5**
 
-### GitHub Actions
-- [ ] Create `.github/workflows/validate.yml`
+### GitHub Actions (Critical for Launch)
+- [ ] Create `.github/workflows/validate.yml` ⬅️ **START HERE**
   - [ ] Trigger on: push, pull_request
   - [ ] Install Python dependencies
-  - [ ] Run YAML validation
-  - [ ] Run JSON Schema validation
-  - [ ] Check for duplicate IDs
-  - [ ] Report validation errors
+  - [ ] Run `scripts/validate.py`
+  - [ ] Fail on any validation errors
+  - [ ] Post validation summary as comment
   
-- [ ] Create `.github/workflows/build.yml`
+- [ ] Create `.github/workflows/build-deploy.yml` ⬅️ **PRIORITY**
   - [ ] Trigger on: push to main
   - [ ] Build SQLite database
-  - [ ] Run database tests
+  - [ ] Run database integrity tests
   - [ ] Upload as artifact
+  - [ ] Deploy to hosting (choose one below)
   
-- [ ] Create `.github/workflows/deploy.yml`
-  - [ ] Deploy Datasette to hosting
-  - [ ] Options:
-    - Vercel (datasette-publish-vercel)
-    - Fly.io (datasette-publish-fly)
-    - Cloudflare Pages
-  - [ ] Automatic deployment on main branch
+### Deployment Options (Choose One)
+- [ ] **Option A: Vercel** (Recommended - easiest)
+  - [ ] Install `datasette-publish-vercel`
+  - [ ] Configure vercel.json
+  - [ ] Set up Vercel project
+  - [ ] Add secrets to GitHub
   
+- [ ] **Option B: Fly.io** (Alternative)
+  - [ ] Install `datasette-publish-fly`
+  - [ ] Create Dockerfile
+  - [ ] Set up Fly.io app
+  - [ ] Add secrets to GitHub
+  
+- [ ] **Option C: GitHub Pages** (Static export)
+  - [ ] Use `datasette publish static`
+  - [ ] Deploy to GitHub Pages
+  - [ ] Simpler but read-only
+
+### PR Preview (Nice-to-have)
 - [ ] Create `.github/workflows/pr-preview.yml`
   - [ ] Build preview database for PRs
-  - [ ] Comment on PR with preview link
+  - [ ] Deploy to preview URL
+  - [ ] Comment on PR with link
 
 ### Testing in CI
-- [ ] Run unit tests
-- [ ] Run integration tests
-- [ ] Test database build
+- [ ] Validation passes on all PRs
+- [ ] Database builds successfully
 - [ ] Test Datasette startup
-- [ ] Check for broken links in docs
+- [ ] Verify deployment works
 
 ---
 
-## Phase 8: Streamlit Dashboard (Week 6)
+## Phase 8: Streamlit Dashboard (Week 6) ⚠️ **POST-MVP - OPTIONAL**
 
-### Dashboard Setup
-- [ ] Create `streamlit/` directory
-- [ ] Create `streamlit/app.py` (main dashboard)
-- [ ] Create `streamlit/requirements.txt`
+**Status:** Nice-to-have but not critical for launch. Datasette provides sufficient exploration. Consider after Phase 7 complete.
 
-### Dashboard Features
-- [ ] **Home Page**
-  - [ ] Overview statistics
-  - [ ] Latest additions
-  - [ ] Data quality metrics
-  
-- [ ] **Vehicle Comparison**
-  - [ ] Multi-select vehicles
-  - [ ] Side-by-side comparison table
-  - [ ] Radar chart (range, charging, performance)
-  - [ ] Export comparison as PDF/CSV
-  
-- [ ] **Range Analysis**
-  - [ ] Scatter plot: battery size vs. range
-  - [ ] Filter by manufacturer, body style
-  - [ ] Efficiency ranking
-  
-- [ ] **Charging Speed Comparison**
-  - [ ] Chart: charging power vs. charge time
-  - [ ] Show charge curves
-  - [ ] km/hour charging speed
-  
-- [ ] **Market Overview**
-  - [ ] Vehicles by market
-  - [ ] Price distribution
-  - [ ] Available incentives
-  
-- [ ] **Database Explorer**
-  - [ ] Raw SQL query interface
-  - [ ] Export results to CSV
-
-### Deployment
-- [ ] Deploy to Streamlit Cloud
-- [ ] Connect to SQLite database
-- [ ] Set up automatic updates (daily rebuild)
-
----
-
-## Phase 9: Documentation & Community (Week 6-7)
-
-### User Documentation
-- [ ] Write comprehensive README.md
-  - [ ] What is EVDB
-  - [ ] How to use the database
-  - [ ] API examples
-  - [ ] Contributing guide link
-  
-- [ ] Create CONTRIBUTING.md
-  - [ ] Code of conduct
-  - [ ] How to add data
-  - [ ] YAML style guide
-  - [ ] PR process
-  - [ ] Review checklist
-  
-- [ ] Create DATA_ENTRY_GUIDE.md
-  - [ ] Field-by-field guide
-  - [ ] Where to find data
-  - [ ] Data quality standards
-  - [ ] Common pitfalls
-  
-- [ ] Create API_DOCUMENTATION.md
-  - [ ] All endpoints
-  - [ ] Query parameters
-  - [ ] Response formats
-  - [ ] Rate limits (if any)
-  - [ ] Examples in multiple languages
-
-### Developer Documentation
-- [ ] Architecture overview
-- [ ] Schema documentation
-- [ ] Validation rules
-- [ ] Database structure
-- [ ] Build process
-- [ ] Deployment guide
-
-### Issue Templates
-- [ ] Bug report template
-- [ ] New vehicle request template
-- [ ] Feature request template
-- [ ] Data correction template
-
-### PR Template
-- [ ] Checklist for contributors
-- [ ] Link to relevant issue
-- [ ] Data quality verification
-- [ ] Source attribution
-
----
-
-## Phase 10: Launch & Growth (Week 7+)
-
-### Pre-Launch Checklist
-- [ ] Verify all systems working
-- [ ] Test API endpoints
-- [ ] Test Datasette deployment
-- [ ] Test Streamlit dashboard
-- [ ] Proofread all documentation
-- [ ] Verify all links work
-- [ ] Check mobile responsiveness
-
-### Launch
-- [ ] Announce on relevant forums
-  - [ ] r/electricvehicles
-  - [ ] EV forums
-  - [ ] Hacker News
-  - [ ] Product Hunt
-- [ ] Share on social media
-- [ ] Reach out to EV bloggers
-- [ ] Create launch blog post
-
-### Community Building
-- [ ] Set up GitHub Discussions
-- [ ] Create Discord server (optional)
-- [ ] Monitor issues and PRs
-- [ ] Respond to community feedback
-- [ ] Encourage contributions
-
-### Data Expansion
-- [ ] Add 50+ more vehicles
-- [ ] Expand to more markets
-- [ ] Add historical models (2020-2023)
-- [ ] Add upcoming models (announced)
-- [ ] User-submitted real-world data
-
-### Future Enhancements
-- [ ] GraphQL API
-- [ ] User accounts & contributions
-- [ ] Real-world range data collection
-- [ ] Charging network integration
-- [ ] Mobile app
-- [ ] Advanced comparison tools
-- [ ] Market analysis dashboards
+### Dashboard Features (Future)
+- [ ] Vehicle comparison tool
+- [ ] Range analysis charts
+- [ ] Charging speed visualizations
+- [ ] Market overview dashboard
 - [ ] Price tracking over time
 
+**Decision:** Defer until after successful Datasette deployment. Focus on core API/data access first.
+
 ---
 
-## Quick Start (Next 48 Hours)
+## Phase 9: Documentation & Community (Week 6-7) ⬅️ **LAUNCH REQUIREMENT**
 
-### Immediate Actions
-1. [ ] Set up project structure (directories)
-2. [ ] Create requirements.txt
-3. [ ] Install development environment
-4. [ ] Create first JSON schema (manufacturer)
-5. [ ] Create first YAML template
-6. [ ] Create basic validation script
-7. [ ] Test validation with example file
+**Status:** Essential docs for public launch. Do in parallel with Phase 7.
 
-### First Week Goals
-1. [ ] Complete all 5 JSON schemas
-2. [ ] Create all YAML templates
-3. [ ] Working validation script
-4. [ ] Add 3 manufacturers
-5. [ ] Add 5 vehicles with full data
-6. [ ] Test database build
+### Critical Launch Documentation
+- [ ] **README.md** ⬅️ **PRIORITY**
+  - [ ] Project overview & mission
+  - [ ] Quick start (API usage)
+  - [ ] Example queries
+  - [ ] Link to live Datasette
+  - [ ] License & attribution
+  
+- [ ] **API_DOCS.md** ⬅️ **PRIORITY**
+  - [ ] All endpoints with examples
+  - [ ] Query parameters
+  - [ ] Response formats
+  - [ ] Rate limits
+  - [ ] curl/Python/JavaScript examples
+  
+- [ ] **CONTRIBUTING.md** ⬅️ **PRIORITY**
+  - [ ] How to add a vehicle
+  - [ ] YAML validation workflow
+  - [ ] PR process
+  - [ ] Code of conduct
+
+### Post-Launch Documentation (Defer)
+- [ ] DATA_ENTRY_GUIDE.md (detailed field guide)
+- [ ] ARCHITECTURE.md (technical deep-dive)
+- [ ] Issue templates
+- [ ] PR template
+- [ ] Developer documentation
+
+**Strategy:** Start with minimal essential docs, expand based on community feedback.
+
+---
+
+## Phase 10: Launch & Growth (Week 7+) 🚀 **LAUNCH PREPARATION**
+
+### Pre-Launch Checklist (MVP Launch Readiness)
+- [ ] ✅ Database builds successfully (done)
+- [ ] ✅ 50+ vehicles with quality data (done)
+- [ ] ⬜ Datasette deployed and accessible
+- [ ] ⬜ API documentation complete
+- [ ] ⬜ README.md polished
+- [ ] ⬜ CONTRIBUTING.md ready
+- [ ] ⬜ Mobile responsiveness verified
+- [ ] ⬜ Test all example queries
+
+### Soft Launch (Target: Feb 10-12)
+- [ ] Deploy to Vercel/Fly.io
+- [ ] Share with close friends for feedback
+- [ ] Fix critical issues
+- [ ] Document common questions
+
+### Public Launch (Target: Feb 15-20)
+- [ ] Post to r/electricvehicles
+- [ ] Share on Hacker News
+- [ ] Submit to Product Hunt
+- [ ] Tweet announcement
+- [ ] Post in EV Discord/Slack communities
+
+### Post-Launch Priorities
+- [ ] Set up GitHub Discussions
+- [ ] Monitor first PRs and issues
+- [ ] Document common questions (FAQ)
+- [ ] Respond to community feedback
+- [ ] Consider Streamlit dashboard if requested
+
+### Future Enhancements (Roadmap)
+- Community-driven data contributions
+- Real-world range data collection
+- Charging network integration
+- Historical price tracking
+- GraphQL API
+- Mobile app (if demand exists)
+
+---
+
+## 🎯 Action Plan: Next 7 Days (Launch Sprint)
+
+### Today (Feb 7) - Phase 5 Completion
+1. [ ] **Stop adding vehicles** ✅ Data sufficient for MVP
+2. [ ] Add 8 canned queries to metadata.json
+3. [ ] Install & test 3 essential Datasette plugins
+4. [ ] Test Datasette locally: `datasette evdb.db --metadata metadata.json`
+5. [ ] Create API_DOCS.md with example queries
+
+### Tomorrow (Feb 8) - Phase 7 Start
+1. [ ] Create `.github/workflows/validate.yml`
+2. [ ] Create `.github/workflows/build-deploy.yml`
+3. [ ] Choose deployment target (Vercel recommended)
+4. [ ] Set up deployment credentials
+5. [ ] Test CI/CD pipeline
+
+### Feb 9-10 - Documentation & Testing
+1. [ ] Polish README.md (add live URL once deployed)
+2. [ ] Write CONTRIBUTING.md
+3. [ ] Complete API_DOCS.md
+4. [ ] Test all documented queries
+5. [ ] Mobile responsiveness check
+
+### Feb 11-12 - Soft Launch
+1. [ ] Deploy to production
+2. [ ] Share with friends for feedback
+3. [ ] Fix critical bugs
+4. [ ] Update documentation based on feedback
+
+### Feb 15-20 - Public Launch
+1. [ ] Announce on Reddit, HN, Twitter
+2. [ ] Monitor feedback and issues
+3. [ ] Respond to first contributors
+4. [ ] Celebrate! 🎉
 
 ---
 
@@ -636,10 +492,10 @@
 
 ## Progress Tracking
 
-**Current Phase**: Phase 0 - Foundation  
-**Progress**: 10%  
-**Next Milestone**: Complete JSON schemas by 2026-02-08  
-**Target Launch**: 2026-03-15
+**Current Phase**: Phase 5 - Datasette Configuration (50% complete)  
+**Overall Progress**: 60% (Phases 0-6 done, 5-10 remain)  
+**Next Milestone**: Complete Datasette + deploy by 2026-02-10  
+**Target Launch**: 2026-02-20 (revised, infrastructure focus)
 
 ---
 
