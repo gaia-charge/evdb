@@ -1245,7 +1245,7 @@ elif page == "📊 Analytics":
                 }
             )
             fig_price_body.update_layout(height=400, showlegend=False)
-            fig_price_body.update_xaxis(tickangle=45)
+            fig_price_body.update_xaxes(tickangle=45)
             st.plotly_chart(fig_price_body, use_container_width=True)
             
             st.markdown("---")
