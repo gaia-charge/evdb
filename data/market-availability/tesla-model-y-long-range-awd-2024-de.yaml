@@ -1,0 +1,270 @@
+# Tesla Model Y Long Range AWD 2024 - Germany Market
+
+id: tesla-model-y-long-range-awd-2024-de
+variant_id: tesla-model-y-long-range-awd-2024
+market: DE
+market_code: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base: 52990
+  base_price: 52990
+  includes_vat: true
+  vat_rate: 19
+  delivery_fee: 1200
+  registration_fee: null  # Included in base price
+
+# Available Colors (6 options)
+colors:
+  - name: Pearl White Multi-Coat
+    code: PPSW
+    price: 0  # Standard
+    type: solid
+    available: true
+  
+  - name: Midnight Silver Metallic
+    code: PMNG
+    price: 1500
+    type: metallic
+    available: true
+  
+  - name: Deep Blue Metallic
+    code: PPSB
+    price: 1500
+    type: metallic
+    available: true
+  
+  - name: Ultra Red Multi-Coat
+    code: PPMR
+    price: 2500
+    type: multi-coat
+    available: true
+  
+  - name: Quicksilver
+    code: PPGS
+    price: 2500
+    type: multi-coat
+    available: true
+    notes: New 2024 color
+  
+  - name: Stealth Grey
+    code: PPSR
+    price: 2500
+    type: multi-coat
+    available: true
+    notes: New 2024 color
+
+# Available Wheels (2 options)
+wheels:
+  - name: 19" Gemini Wheels
+    size: 19
+    price: 0  # Standard
+    available: true
+    notes: Best range option (565km WLTP)
+  
+  - name: 20" Induction Wheels
+    size: 20
+    price: 2000
+    available: true
+    notes: Reduces range to ~550km WLTP
+
+# Available Interiors (2 options)
+interiors:
+  - name: All Black
+    material: synthetic_leather_textile
+    price: 0  # Standard
+    available: true
+    colors:
+      - Black vegan leather seats
+      - Black textile dashboard
+      - Black steering wheel
+  
+  - name: Black and White
+    material: synthetic_leather_textile
+    price: 1500
+    available: true
+    colors:
+      - White vegan leather seats
+      - Black textile dashboard
+      - White steering wheel accents
+
+# Equipment Packages & Options
+equipment_packages:
+  - name: Full Self-Driving Capability
+    price: 7500
+    included_features:
+      - Navigate on Autopilot
+      - Auto Lane Change
+      - Autopark
+      - Summon and Smart Summon
+      - Traffic Light and Stop Sign Control
+      - Full Self-Driving Computer
+      - Future autonomous driving capabilities (OTA)
+    notes: |
+      One-time purchase or monthly subscription available.
+      Subscription: €99/month in Germany.
+  
+  - name: Tow Hitch
+    price: 1000
+    included_features:
+      - Factory-installed tow hitch
+      - 1600kg towing capacity
+      - 75kg tongue weight
+    notes: Must be ordered at time of purchase
+  
+  - name: Wall Connector
+    price: 550
+    included_features:
+      - Tesla Wall Connector Gen 3
+      - Up to 22kW charging (11kW limited by vehicle)
+      - Wi-Fi connectivity
+    notes: Installation not included (€500-1500 typical)
+
+# Incentives & Tax Benefits (Germany 2024)
+incentives:
+  - name: BAFA Umweltbonus
+    type: rebate
+    amount: 0
+    description: |
+      German EV subsidy ended December 17, 2023.
+      Previously provided €4,500 for vehicles under €65,000.
+    valid_until: "2023-12-17"
+    
+  - name: Company Car Tax Benefit
+    type: tax_credit
+    amount: 0
+    description: |
+      Electric company cars taxed at 0.25% of gross list price per month
+      (vs 1.0% for combustion vehicles).
+      Applies if vehicle costs under €70,000 gross.
+      Model Y Long Range qualifies.
+    
+  - name: Kfz-Steuer Exemption
+    type: tax_exemption
+    amount: 0
+    description: |
+      Battery electric vehicles exempt from vehicle tax until 2030.
+      Worth ~€150-250/year for comparable ICE vehicle.
+    valid_until: "2030-12-31"
+    
+  - name: THG-Quote (Greenhouse Gas Quota)
+    type: subsidy
+    amount: 300
+    description: |
+      Sell your vehicle's CO2 savings to fuel companies.
+      Annual payment of €250-400 per year (varies by provider).
+      Multiple providers: Elektrovorteil, ADAC, etc.
+
+# Delivery & Availability
+availability:
+  status: in_stock
+  delivery_time_weeks: 2-4
+  build_location: Berlin-Brandenburg, Germany
+  notes: |
+    Fastest delivery in Europe thanks to Gigafactory Berlin.
+    China-built models also available with slightly longer delivery.
+    US-built models no longer exported to Europe.
+
+# Sales & Service
+sales_model: direct
+  # Tesla sells directly to consumers online
+  # No traditional dealerships
+
+service:
+  warranty_vehicle_years: 4
+  warranty_vehicle_km: 80000
+  warranty_battery_years: 8
+  warranty_battery_km: 192000
+  warranty_battery_capacity_percent: 70
+  
+  service_centers: 25  # In Germany
+  mobile_service: true  # Tesla mobile service available
+  
+  service_plans:
+    - name: Annual Maintenance
+      price: null
+      notes: |
+        Tesla recommends cabin air filter replacement every 2 years.
+        No traditional maintenance required (no oil changes, etc.).
+        Tire rotation every 10,000-12,000km recommended.
+
+# Charging Networks
+charging_networks:
+  - name: Tesla Supercharger Network
+    stations_count: 160  # Supercharger locations in Germany
+    chargers_count: 1600  # Individual charging stalls
+    pricing: variable  # €0.42-0.60/kWh depending on location and time
+    membership_required: false
+    notes: |
+      Unlimited free Supercharging not included with Model Y.
+      Pay per use via Tesla account.
+      V3 Superchargers: up to 250kW
+      V4 Superchargers: up to 250kW (vehicle limited)
+  
+  - name: Public CCS Networks
+    notes: |
+      Model Y compatible with all CCS2 charging networks in Europe:
+      - Ionity (€0.79/kWh without subscription)
+      - EnBW (€0.48-0.69/kWh)
+      - Fastned (€0.69/kWh)
+      - And 300,000+ public charging points
+
+# Environmental Information
+environmental:
+  co2_emissions_gkm: 0  # Zero tailpipe emissions
+  energy_efficiency_class: B
+  environmental_bonus_eligible: false  # BAFA bonus ended 2023
+  
+  lifecycle_emissions:
+    production_kg_co2: 14000  # Estimated for battery + vehicle
+    use_phase_kg_co2_per_100km: 0  # Zero direct emissions
+    notes: |
+      Actual lifecycle emissions depend on electricity source.
+      German grid mix: ~11 kg CO2/100km
+      100% renewable energy: ~0 kg CO2/100km
+
+# Market Position
+market_position:
+  segment: premium_electric_suv
+  competitors:
+    - BMW iX xDrive50
+    - Mercedes EQE SUV
+    - Audi Q8 e-tron
+    - Volkswagen ID.4 GTX
+    - Ford Mustang Mach-E AWD
+  
+  best_selling: true
+  rank_germany: 1  # Best-selling EV in Germany 2023
+  
+  notes: |
+    Model Y was the best-selling vehicle (any powertrain) in Germany
+    in Q1 2023. Dominates the premium electric SUV segment.
+
+# Additional Notes
+notes: |
+  Tesla Model Y Long Range AWD built in Berlin offers the fastest
+  delivery times in Europe (2-4 weeks). Made in Germany qualification.
+  
+  2024 "Juniper" refresh includes:
+  - Ventilated front seats
+  - Ambient lighting
+  - Improved suspension
+  - Better soundproofing
+  - Refreshed exterior design
+  - ~5% efficiency improvement
+  
+  Order online at tesla.com/de/modely
+  Test drives available at Tesla Stores in major German cities.
+  
+  Residual values remain strong (typically 60-70% after 3 years).
+
+# Metadata
+metadata:
+  created_at: "2026-02-07"
+  last_updated: "2026-02-07"
+  data_quality: verified
+  sources:
+    - "https://www.tesla.com/de_de/modely/design"
+    - "https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html"
+    - "https://www.bundesfinanzministerium.de/"
