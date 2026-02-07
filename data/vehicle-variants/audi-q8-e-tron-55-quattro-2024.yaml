@@ -1,0 +1,132 @@
+---
+id: audi-q8-e-tron-55-quattro-2024
+name: "55 quattro"
+model_id: audi-q8-e-tron
+model_year: 2024
+
+battery:
+  usable_kwh: 106.0
+  total_kwh: 114.0
+  chemistry: NCM
+  supplier: LG Energy Solution
+  cell_type: pouch
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  
+range:
+  wltp_km: 582
+  wltp_city_km: 725
+  wltp_highway_km: 485
+  epa_km: null
+  epa_miles: null
+  real_world_km: 510
+  real_world_highway_km: 425
+  notes: |
+    Sportback variant achieves 600km WLTP (better aerodynamics).
+    Range improved by ~100km vs previous generation (2018-2023).
+
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    connector_type: Type2
+    charge_time_0_100_hours: 10.5
+    notes: "Optional 22kW AC charger available (+€590)"
+  dc:
+    max_power_kw: 170
+    connector_type: CCS2
+    charge_time_10_80_percent_minutes: 31
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 170
+      - soc_percent: 20
+        power_kw: 170
+      - soc_percent: 30
+        power_kw: 168
+      - soc_percent: 40
+        power_kw: 160
+      - soc_percent: 50
+        power_kw: 148
+      - soc_percent: 60
+        power_kw: 130
+      - soc_percent: 70
+        power_kw: 105
+      - soc_percent: 80
+        power_kw: 75
+    notes: |
+      400V architecture limits DC charging speed vs 800V competitors.
+      Battery preconditioning available via navigation system.
+      
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+motors:
+  configuration: dual_motor
+  drive_type: AWD
+  motor_type: permanent_magnet
+  front_motor:
+    power_kw: 115
+    torque_nm: 247
+    motor_type: asynchronous
+  rear_motor:
+    power_kw: 172
+    torque_nm: 355
+    motor_type: permanent_magnet
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 664
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.6
+  top_speed_kmh: 200
+  
+efficiency:
+  wltp_kwh_per_100km: 21.6
+  real_world_kwh_per_100km: 24.2
+  notes: |
+    Sportback variant: 21.0 kWh/100km WLTP (better aerodynamics).
+    Heavier vehicle than competitors due to adapted ICE platform.
+
+weight:
+  curb_weight_kg: 2620
+  gross_vehicle_weight_kg: 3170
+  notes: "Relatively heavy due to MLB evo adapted platform (not dedicated EV)"
+
+features:
+  standard:
+    - "Quattro electric AWD"
+    - "Adaptive air suspension standard"
+    - "Heat pump climate control standard"
+    - "Matrix LED headlights"
+    - "Virtual cockpit plus 12.3\""
+    - "MMI touch response dual-screen"
+    - "Audi pre sense safety suite"
+    - "360-degree cameras"
+    - "Park assist plus"
+    - "Panoramic sunroof"
+    - "Power tailgate"
+    - "Keyless entry and start"
+
+optional_features:
+  - name: "Bang & Olufsen 3D Premium Sound"
+    price_eur: 850
+  - name: "22kW AC onboard charger"
+    price_eur: 590
+  - name: "Virtual exterior mirrors (camera mirrors)"
+    price_eur: 1950
+    notes: "Not available in all markets due to regulations"
+  - name: "Comfort Package Plus"
+    price_eur: 2990
+
+metadata:
+  source: https://www.audi.com/en/models/q8-e-tron.html
+  created_at: "2024-02-07"
+  last_updated: "2024-02-07"
+  data_quality: verified
+  notes: |
+    Most popular Q8 e-tron variant with large 106 kWh battery.
+    Balanced performance and range for luxury SUV segment.
+    2024 model year brings ~17% range improvement over pre-facelift.
