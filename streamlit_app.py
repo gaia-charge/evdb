@@ -1011,14 +1011,359 @@ elif page == "⚖️ Compare":
 
 elif page == "📊 Analytics":
     st.title("📊 Analytics Dashboard")
-    st.info("🚧 Coming soon: Interactive data visualizations")
-    st.markdown("""
-    This page will include:
-    - **Range Analysis:** Battery vs range, efficiency rankings
-    - **Charging Speeds:** DC power comparison, 800V vs 400V
-    - **Price Distribution:** Price histograms, value analysis
-    - **Market Overview:** Market heatmap, manufacturer share
-    """)
+    st.markdown("Explore market trends, performance patterns, and value analysis across all vehicles")
+    
+    # Load all vehicles with market data
+    @st.cache_data(ttl=3600)
+    def get_analytics_data(_conn):
+        """Get comprehensive vehicle data for analytics"""
+        query = """
+        SELECT 
+            v.id,
+            mfr.name as manufacturer,
+            m.name as model,
+            v.variant_name,
+            v.model_year,
+            m.body_style,
+            v.battery_usable_kwh,
+            v.battery_chemistry,
+            v.battery_architecture,
+            v.range_wltp_km,
+            v.range_real_world_km,
+            v.consumption_real_world_kwh_100km,
+            v.dc_charge_power_kw,
+            v.dc_charge_time_10_80_min,
+            v.total_power_kw,
+            v.drive_type,
+            ma.price_base as price_eur
+        FROM vehicle_variants v
+        JOIN vehicle_models m ON v.model_id = m.id
+        JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
+        LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+        ORDER BY mfr.name, m.name, v.variant_name
+        """
+        return pd.read_sql_query(query, _conn)
+    
+    conn = get_connection()
+    df = get_analytics_data(conn)
+    
+    # Create full vehicle name
+    df['vehicle_name'] = df['manufacturer'] + ' ' + df['model'] + ' ' + df['variant_name']
+    
+    # Create tabs for different analysis sections
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📏 Range Analysis",
+        "⚡ Charging Speeds",
+        "💰 Price Distribution",
+        "🌍 Market Overview"
+    ])
+    
+    # Tab 1: Range Analysis
+    with tab1:
+        st.markdown("### Battery Capacity vs. Range")
+        st.markdown("Explore the relationship between battery size and real-world range")
+        
+        # Battery vs Range scatter plot
+        fig_range = px.scatter(
+            df.dropna(subset=['battery_usable_kwh', 'range_wltp_km']),
+            x='battery_usable_kwh',
+            y='range_wltp_km',
+            color='body_style',
+            size='total_power_kw',
+            hover_data=['vehicle_name', 'range_real_world_km', 'consumption_real_world_kwh_100km'],
+            title='Battery Capacity vs. WLTP Range',
+            labels={
+                'battery_usable_kwh': 'Battery Capacity (kWh)',
+                'range_wltp_km': 'WLTP Range (km)',
+                'body_style': 'Body Style',
+                'total_power_kw': 'Power (kW)'
+            }
+        )
+        fig_range.update_layout(height=500)
+        st.plotly_chart(fig_range, use_container_width=True)
+        
+        st.markdown("---")
+        st.markdown("### Most Efficient Vehicles")
+        st.markdown("Vehicles ranked by real-world consumption (lower is better)")
+        
+        # Efficiency ranking
+        efficiency_df = df.dropna(subset=['consumption_real_world_kwh_100km']).sort_values(
+            'consumption_real_world_kwh_100km'
+        ).head(15)
+        
+        fig_efficiency = px.bar(
+            efficiency_df,
+            x='consumption_real_world_kwh_100km',
+            y='vehicle_name',
+            orientation='h',
+            color='consumption_real_world_kwh_100km',
+            color_continuous_scale='RdYlGn_r',
+            title='Top 15 Most Efficient EVs (kWh/100km)',
+            labels={
+                'consumption_real_world_kwh_100km': 'Consumption (kWh/100km)',
+                'vehicle_name': 'Vehicle'
+            }
+        )
+        fig_efficiency.update_layout(height=600, showlegend=False)
+        st.plotly_chart(fig_efficiency, use_container_width=True)
+        
+        # Range statistics
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            avg_range = df['range_wltp_km'].mean()
+            st.metric("Average WLTP Range", f"{avg_range:.0f} km")
+        with col2:
+            max_range = df['range_wltp_km'].max()
+            max_range_vehicle = df.loc[df['range_wltp_km'].idxmax(), 'vehicle_name']
+            st.metric("Best Range", f"{max_range:.0f} km", delta=max_range_vehicle)
+        with col3:
+            avg_efficiency = df['consumption_real_world_kwh_100km'].mean()
+            st.metric("Average Consumption", f"{avg_efficiency:.1f} kWh/100km")
+    
+    # Tab 2: Charging Speeds
+    with tab2:
+        st.markdown("### DC Fast Charging Power Comparison")
+        st.markdown("Compare charging capabilities across all vehicles")
+        
+        # DC charge power histogram
+        fig_dc_hist = px.histogram(
+            df.dropna(subset=['dc_charge_power_kw']),
+            x='dc_charge_power_kw',
+            nbins=20,
+            title='DC Fast Charging Power Distribution',
+            labels={'dc_charge_power_kw': 'DC Charge Power (kW)', 'count': 'Number of Vehicles'},
+            color_discrete_sequence=['#4CAF50']
+        )
+        fig_dc_hist.update_layout(height=400)
+        st.plotly_chart(fig_dc_hist, use_container_width=True)
+        
+        st.markdown("---")
+        st.markdown("### 800V vs 400V Platform Comparison")
+        
+        # Filter vehicles with architecture data
+        arch_df = df.dropna(subset=['battery_architecture', 'dc_charge_power_kw'])
+        
+        if not arch_df.empty:
+            fig_arch = px.box(
+                arch_df,
+                x='battery_architecture',
+                y='dc_charge_power_kw',
+                color='battery_architecture',
+                title='DC Charging Power by Platform Architecture',
+                labels={
+                    'battery_architecture': 'Platform Architecture',
+                    'dc_charge_power_kw': 'DC Charge Power (kW)'
+                }
+            )
+            fig_arch.update_layout(height=400, showlegend=False)
+            st.plotly_chart(fig_arch, use_container_width=True)
+            
+            # Statistics by architecture
+            arch_stats = arch_df.groupby('battery_architecture').agg({
+                'dc_charge_power_kw': ['mean', 'max', 'count']
+            }).round(1)
+            
+            st.markdown("#### Platform Statistics")
+            for arch in arch_stats.index:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric(f"{arch} - Average", f"{arch_stats.loc[arch, ('dc_charge_power_kw', 'mean')]:.0f} kW")
+                with col2:
+                    st.metric(f"{arch} - Maximum", f"{arch_stats.loc[arch, ('dc_charge_power_kw', 'max')]:.0f} kW")
+                with col3:
+                    st.metric(f"{arch} - Vehicles", f"{int(arch_stats.loc[arch, ('dc_charge_power_kw', 'count')])}")
+        else:
+            st.info("Platform architecture data not available for comparison")
+        
+        st.markdown("---")
+        st.markdown("### Fastest Charging Vehicles")
+        
+        # Top charging speeds
+        top_charging = df.dropna(subset=['dc_charge_power_kw']).nlargest(15, 'dc_charge_power_kw')
+        
+        fig_top_charging = px.bar(
+            top_charging,
+            x='dc_charge_power_kw',
+            y='vehicle_name',
+            orientation='h',
+            color='battery_architecture',
+            title='Top 15 Fastest Charging EVs',
+            labels={
+                'dc_charge_power_kw': 'DC Charge Power (kW)',
+                'vehicle_name': 'Vehicle',
+                'battery_architecture': 'Architecture'
+            }
+        )
+        fig_top_charging.update_layout(height=600)
+        st.plotly_chart(fig_top_charging, use_container_width=True)
+    
+    # Tab 3: Price Distribution
+    with tab3:
+        st.markdown("### Price Distribution (German Market)")
+        
+        price_df = df.dropna(subset=['price_eur'])
+        
+        if not price_df.empty:
+            # Price histogram
+            fig_price_hist = px.histogram(
+                price_df,
+                x='price_eur',
+                nbins=20,
+                title='EV Price Distribution',
+                labels={'price_eur': 'Base Price (EUR)', 'count': 'Number of Vehicles'},
+                color_discrete_sequence=['#2196F3']
+            )
+            fig_price_hist.update_layout(height=400)
+            st.plotly_chart(fig_price_hist, use_container_width=True)
+            
+            st.markdown("---")
+            st.markdown("### Price by Body Style")
+            
+            # Box plot by body style
+            fig_price_body = px.box(
+                price_df,
+                x='body_style',
+                y='price_eur',
+                color='body_style',
+                title='Price Distribution by Body Style',
+                labels={
+                    'body_style': 'Body Style',
+                    'price_eur': 'Base Price (EUR)'
+                }
+            )
+            fig_price_body.update_layout(height=400, showlegend=False)
+            fig_price_body.update_xaxis(tickangle=45)
+            st.plotly_chart(fig_price_body, use_container_width=True)
+            
+            st.markdown("---")
+            st.markdown("### Value Analysis: Price per kWh")
+            st.markdown("Which vehicles offer the best battery value for money?")
+            
+            # Calculate price per kWh
+            value_df = price_df.dropna(subset=['battery_usable_kwh']).copy()
+            value_df['price_per_kwh'] = value_df['price_eur'] / value_df['battery_usable_kwh']
+            
+            # Best value vehicles
+            best_value = value_df.nsmallest(15, 'price_per_kwh')
+            
+            fig_value = px.bar(
+                best_value,
+                x='price_per_kwh',
+                y='vehicle_name',
+                orientation='h',
+                color='price_per_kwh',
+                color_continuous_scale='RdYlGn_r',
+                title='Top 15 Best Value EVs (€/kWh - Lower is Better)',
+                labels={
+                    'price_per_kwh': 'Price per kWh (EUR)',
+                    'vehicle_name': 'Vehicle'
+                }
+            )
+            fig_value.update_layout(height=600, showlegend=False)
+            st.plotly_chart(fig_value, use_container_width=True)
+            
+            # Price statistics
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                avg_price = price_df['price_eur'].mean()
+                st.metric("Average Price", f"€{avg_price:,.0f}")
+            with col2:
+                median_price = price_df['price_eur'].median()
+                st.metric("Median Price", f"€{median_price:,.0f}")
+            with col3:
+                avg_value = value_df['price_per_kwh'].mean()
+                st.metric("Average €/kWh", f"€{avg_value:.0f}")
+        else:
+            st.info("Pricing data not available. Add market availability data to enable price analysis.")
+    
+    # Tab 4: Market Overview
+    with tab4:
+        st.markdown("### Market Coverage")
+        
+        # Manufacturer distribution
+        mfr_counts = df.groupby('manufacturer').size().reset_index(name='vehicle_count')
+        mfr_counts = mfr_counts.sort_values('vehicle_count', ascending=False)
+        
+        fig_mfr = px.bar(
+            mfr_counts,
+            x='vehicle_count',
+            y='manufacturer',
+            orientation='h',
+            title='Vehicles by Manufacturer',
+            labels={
+                'vehicle_count': 'Number of Variants',
+                'manufacturer': 'Manufacturer'
+            },
+            color='vehicle_count',
+            color_continuous_scale='Viridis'
+        )
+        fig_mfr.update_layout(height=600, showlegend=False)
+        st.plotly_chart(fig_mfr, use_container_width=True)
+        
+        st.markdown("---")
+        st.markdown("### Body Style Distribution")
+        
+        # Body style pie chart
+        body_counts = df.groupby('body_style').size().reset_index(name='count')
+        
+        fig_body = px.pie(
+            body_counts,
+            values='count',
+            names='body_style',
+            title='Vehicle Distribution by Body Style',
+            hole=0.4
+        )
+        fig_body.update_layout(height=500)
+        st.plotly_chart(fig_body, use_container_width=True)
+        
+        st.markdown("---")
+        st.markdown("### Drive Type Distribution")
+        
+        # Drive type distribution
+        drive_counts = df.groupby('drive_type').size().reset_index(name='count')
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            fig_drive = px.pie(
+                drive_counts,
+                values='count',
+                names='drive_type',
+                title='Drive Type Distribution',
+                color_discrete_sequence=px.colors.qualitative.Set2
+            )
+            fig_drive.update_layout(height=400)
+            st.plotly_chart(fig_drive, use_container_width=True)
+        
+        with col2:
+            # Battery chemistry distribution
+            chem_counts = df.groupby('battery_chemistry').size().reset_index(name='count')
+            
+            fig_chem = px.pie(
+                chem_counts,
+                values='count',
+                names='battery_chemistry',
+                title='Battery Chemistry Distribution',
+                color_discrete_sequence=px.colors.qualitative.Pastel
+            )
+            fig_chem.update_layout(height=400)
+            st.plotly_chart(fig_chem, use_container_width=True)
+        
+        # Overall statistics
+        st.markdown("---")
+        st.markdown("### Database Statistics")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("Total Vehicles", len(df))
+        with col2:
+            st.metric("Manufacturers", df['manufacturer'].nunique())
+        with col3:
+            st.metric("Models", df['model'].nunique())
+        with col4:
+            with_pricing = df['price_eur'].notna().sum()
+            st.metric("With Pricing", with_pricing)
 
 elif page == "💾 Data Explorer":
     st.title("💾 Data Explorer")
