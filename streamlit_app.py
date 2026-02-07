@@ -602,15 +602,412 @@ elif page == "🔍 Browse Vehicles":
 
 elif page == "⚖️ Compare":
     st.title("⚖️ Compare Vehicles")
-    st.info("🚧 Coming soon: Side-by-side vehicle comparison")
-    st.markdown("""
-    This page will include:
-    - Multi-select vehicle picker (2-4 vehicles)
-    - Side-by-side comparison table
-    - Radar chart visualization
-    - Bar charts for key metrics
-    - Export comparison as PDF/PNG
-    """)
+    st.markdown("Select 2-4 vehicles to compare side-by-side")
+    
+    # Load all vehicles
+    @st.cache_data(ttl=3600)
+    def load_all_vehicles(_conn):
+        """Load all vehicles for comparison"""
+        return pd.read_sql_query("""
+            SELECT 
+                v.id,
+                mfr.name || ' ' || m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
+                mfr.name as manufacturer,
+                m.name as model,
+                v.variant_name,
+                v.model_year,
+                m.body_style,
+                v.battery_usable_kwh,
+                v.battery_chemistry,
+                v.battery_architecture,
+                v.range_wltp_km,
+                v.range_real_world_km,
+                v.consumption_real_world_kwh_100km,
+                v.total_power_kw,
+                v.total_torque_nm,
+                v.acceleration_0_100_sec,
+                v.top_speed_kph,
+                v.drive_type,
+                v.dc_charge_power_kw,
+                v.dc_charge_time_10_80_min,
+                v.ac_charge_power_kw,
+                v.ac_charge_time_0_100_min,
+                ma.price_base as price_eur,
+                ma.price_on_the_road as price_otr_eur
+            FROM vehicle_variants v
+            JOIN vehicle_models m ON v.model_id = m.id
+            JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
+            LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+            ORDER BY mfr.name, m.name, v.variant_name
+        """, _conn)
+    
+    vehicles_df = load_all_vehicles(conn)
+    
+    # Vehicle selection
+    st.markdown("### Select Vehicles to Compare")
+    
+    # Create options list (vehicle names)
+    vehicle_options = vehicles_df['full_name'].tolist()
+    
+    # Multi-select with max 4 vehicles
+    selected_vehicles = st.multiselect(
+        "Choose 2-4 vehicles:",
+        options=vehicle_options,
+        default=[],
+        max_selections=4,
+        help="Select between 2 and 4 vehicles to compare"
+    )
+    
+    if len(selected_vehicles) < 2:
+        st.info("👆 Please select at least 2 vehicles to start comparing")
+        
+        # Show some popular comparisons as suggestions
+        st.markdown("### 💡 Popular Comparisons")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            **Performance EVs:**
+            - Tesla Model 3 Performance (2024)
+            - BMW i4 M50 (2024)
+            - Porsche Taycan Turbo S (2024)
+            
+            **Long Range Leaders:**
+            - Mercedes-Benz EQS 450+ (2024)
+            - BMW iX xDrive50 (2024)
+            - Tesla Model 3 Long Range AWD (2024)
+            """)
+        
+        with col2:
+            st.markdown("""
+            **Korean 800V Platforms:**
+            - Hyundai Ioniq 5 Long Range AWD (2024)
+            - Hyundai Ioniq 6 Long Range AWD (2024)
+            - Kia EV6 GT (2024)
+            
+            **Budget-Friendly:**
+            - Tesla Model 3 RWD (2024)
+            - VW ID.3 Pro (2024)
+            - Hyundai Ioniq 6 Standard Range RWD (2024)
+            """)
+    
+    else:
+        # Get data for selected vehicles
+        selected_df = vehicles_df[vehicles_df['full_name'].isin(selected_vehicles)].copy()
+        
+        st.success(f"✅ Comparing {len(selected_vehicles)} vehicles")
+        
+        # Create comparison table
+        st.markdown("### 📊 Specification Comparison")
+        
+        # Transpose for side-by-side view
+        comparison_data = {}
+        
+        for _, row in selected_df.iterrows():
+            vehicle_name = row['full_name']
+            comparison_data[vehicle_name] = {
+                'Manufacturer': row['manufacturer'],
+                'Model': f"{row['model']} {row['variant_name']}",
+                'Year': int(row['model_year']),
+                'Body Style': row['body_style'] if pd.notna(row['body_style']) else 'N/A',
+                'Drive Type': row['drive_type'] if pd.notna(row['drive_type']) else 'N/A',
+                '': '**Battery & Range**',
+                'Battery Capacity': f"{row['battery_usable_kwh']:.1f} kWh" if pd.notna(row['battery_usable_kwh']) else 'N/A',
+                'Battery Chemistry': row['battery_chemistry'] if pd.notna(row['battery_chemistry']) else 'N/A',
+                'Battery Architecture': row['battery_architecture'] if pd.notna(row['battery_architecture']) else 'N/A',
+                'WLTP Range': f"{int(row['range_wltp_km'])} km" if pd.notna(row['range_wltp_km']) else 'N/A',
+                'Real-World Range': f"{int(row['range_real_world_km'])} km" if pd.notna(row['range_real_world_km']) else 'N/A',
+                'Consumption': f"{row['consumption_real_world_kwh_100km']:.1f} kWh/100km" if pd.notna(row['consumption_real_world_kwh_100km']) else 'N/A',
+                ' ': '**Performance**',
+                'Total Power': f"{int(row['total_power_kw'])} kW ({int(row['total_power_kw'] * 1.341)} hp)" if pd.notna(row['total_power_kw']) else 'N/A',
+                'Total Torque': f"{int(row['total_torque_nm'])} Nm" if pd.notna(row['total_torque_nm']) else 'N/A',
+                '0-100 km/h': f"{row['acceleration_0_100_sec']:.1f} sec" if pd.notna(row['acceleration_0_100_sec']) else 'N/A',
+                'Top Speed': f"{int(row['top_speed_kph'])} km/h" if pd.notna(row['top_speed_kph']) else 'N/A',
+                '  ': '**Charging**',
+                'DC Fast Charge': f"{int(row['dc_charge_power_kw'])} kW" if pd.notna(row['dc_charge_power_kw']) else 'N/A',
+                'DC 10-80%': f"{int(row['dc_charge_time_10_80_min'])} min" if pd.notna(row['dc_charge_time_10_80_min']) else 'N/A',
+                'AC Charge': f"{row['ac_charge_power_kw']:.1f} kW" if pd.notna(row['ac_charge_power_kw']) else 'N/A',
+                'AC 0-100%': f"{int(row['ac_charge_time_0_100_min'])} min" if pd.notna(row['ac_charge_time_0_100_min']) else 'N/A',
+                '   ': '**Pricing (Germany)**',
+                'Base Price': f"€{int(row['price_eur']):,}" if pd.notna(row['price_eur']) else 'TBD',
+                'On-the-Road Price': f"€{int(row['price_otr_eur']):,}" if pd.notna(row['price_otr_eur']) else 'TBD',
+            }
+        
+        # Create DataFrame for display
+        comparison_table = pd.DataFrame(comparison_data)
+        
+        # Display table
+        st.dataframe(
+            comparison_table,
+            use_container_width=True,
+            height=800
+        )
+        
+        # Visualizations
+        st.markdown("---")
+        st.markdown("### 📈 Visual Comparison")
+        
+        # Prepare data for charts (only numeric values)
+        chart_data = selected_df[['full_name', 'battery_usable_kwh', 'range_wltp_km', 
+                                   'total_power_kw', 'dc_charge_power_kw', 
+                                   'acceleration_0_100_sec', 'price_eur']].copy()
+        
+        # Rename for better chart labels
+        chart_data.columns = ['Vehicle', 'Battery (kWh)', 'Range (km)', 
+                              'Power (kW)', 'DC Charge (kW)', '0-100 (sec)', 'Price (EUR)']
+        
+        # Shorten vehicle names for charts
+        chart_data['Vehicle Short'] = chart_data['Vehicle'].apply(
+            lambda x: ' '.join(x.split()[:-1])  # Remove year
+        )
+        
+        # Create tabs for different chart types
+        chart_tab1, chart_tab2, chart_tab3 = st.tabs(["📊 Bar Charts", "🎯 Radar Chart", "💰 Value Analysis"])
+        
+        with chart_tab1:
+            st.markdown("#### Key Specifications")
+            
+            # Create 2x3 grid of bar charts
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                # Battery capacity
+                import plotly.express as px
+                
+                fig_battery = px.bar(
+                    chart_data,
+                    x='Vehicle Short',
+                    y='Battery (kWh)',
+                    title='Battery Capacity (kWh)',
+                    color='Vehicle Short',
+                    text='Battery (kWh)'
+                )
+                fig_battery.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+                fig_battery.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_battery, use_container_width=True)
+                
+                # Power
+                fig_power = px.bar(
+                    chart_data,
+                    x='Vehicle Short',
+                    y='Power (kW)',
+                    title='Total Power (kW)',
+                    color='Vehicle Short',
+                    text='Power (kW)'
+                )
+                fig_power.update_traces(texttemplate='%{text:.0f}', textposition='outside')
+                fig_power.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_power, use_container_width=True)
+                
+                # DC Charging
+                fig_charge = px.bar(
+                    chart_data,
+                    x='Vehicle Short',
+                    y='DC Charge (kW)',
+                    title='DC Fast Charging (kW)',
+                    color='Vehicle Short',
+                    text='DC Charge (kW)'
+                )
+                fig_charge.update_traces(texttemplate='%{text:.0f}', textposition='outside')
+                fig_charge.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_charge, use_container_width=True)
+            
+            with col2:
+                # Range
+                fig_range = px.bar(
+                    chart_data,
+                    x='Vehicle Short',
+                    y='Range (km)',
+                    title='WLTP Range (km)',
+                    color='Vehicle Short',
+                    text='Range (km)'
+                )
+                fig_range.update_traces(texttemplate='%{text:.0f}', textposition='outside')
+                fig_range.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_range, use_container_width=True)
+                
+                # 0-100 (inverted - lower is better)
+                fig_accel = px.bar(
+                    chart_data,
+                    x='Vehicle Short',
+                    y='0-100 (sec)',
+                    title='0-100 km/h (seconds)',
+                    color='Vehicle Short',
+                    text='0-100 (sec)'
+                )
+                fig_accel.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+                fig_accel.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_accel, use_container_width=True)
+                
+                # Price
+                fig_price = px.bar(
+                    chart_data.dropna(subset=['Price (EUR)']),
+                    x='Vehicle Short',
+                    y='Price (EUR)',
+                    title='Base Price (EUR)',
+                    color='Vehicle Short',
+                    text='Price (EUR)'
+                )
+                fig_price.update_traces(texttemplate='€%{text:,.0f}', textposition='outside')
+                fig_price.update_layout(showlegend=False, height=300)
+                st.plotly_chart(fig_price, use_container_width=True)
+        
+        with chart_tab2:
+            st.markdown("#### Multi-Dimensional Comparison")
+            
+            # Prepare radar chart data (normalize to 0-100 scale)
+            radar_data = selected_df[['full_name', 'battery_usable_kwh', 'range_wltp_km', 
+                                      'total_power_kw', 'dc_charge_power_kw']].copy()
+            
+            # Normalize each metric to 0-100 scale
+            for col in ['battery_usable_kwh', 'range_wltp_km', 'total_power_kw', 'dc_charge_power_kw']:
+                if radar_data[col].notna().any():
+                    max_val = radar_data[col].max()
+                    if max_val > 0:
+                        radar_data[f'{col}_normalized'] = (radar_data[col] / max_val) * 100
+            
+            # Create radar chart using plotly
+            import plotly.graph_objects as go
+            
+            categories = ['Battery\nCapacity', 'WLTP\nRange', 'Power', 'DC Fast\nCharging']
+            
+            fig_radar = go.Figure()
+            
+            for _, row in radar_data.iterrows():
+                vehicle_short = ' '.join(row['full_name'].split()[:-1])
+                
+                values = [
+                    row.get('battery_usable_kwh_normalized', 0),
+                    row.get('range_wltp_km_normalized', 0),
+                    row.get('total_power_kw_normalized', 0),
+                    row.get('dc_charge_power_kw_normalized', 0)
+                ]
+                
+                fig_radar.add_trace(go.Scatterpolar(
+                    r=values,
+                    theta=categories,
+                    fill='toself',
+                    name=vehicle_short
+                ))
+            
+            fig_radar.update_layout(
+                polar=dict(
+                    radialaxis=dict(
+                        visible=True,
+                        range=[0, 100]
+                    )
+                ),
+                showlegend=True,
+                title="Normalized Performance Comparison (0-100 scale)",
+                height=500
+            )
+            
+            st.plotly_chart(fig_radar, use_container_width=True)
+            
+            st.info("""
+            **Note:** Each metric is normalized to a 0-100 scale where 100 represents the 
+            best value among the selected vehicles. This allows for easy visual comparison 
+            across different units (kWh, km, kW).
+            """)
+        
+        with chart_tab3:
+            st.markdown("#### Value for Money Analysis")
+            
+            # Filter vehicles with pricing
+            priced_vehicles = selected_df[selected_df['price_eur'].notna()].copy()
+            
+            if len(priced_vehicles) == 0:
+                st.warning("No pricing data available for selected vehicles")
+            else:
+                # Calculate value metrics
+                priced_vehicles['EUR per kWh'] = priced_vehicles['price_eur'] / priced_vehicles['battery_usable_kwh']
+                priced_vehicles['EUR per km Range'] = priced_vehicles['price_eur'] / priced_vehicles['range_wltp_km']
+                priced_vehicles['EUR per kW Power'] = priced_vehicles['price_eur'] / priced_vehicles['total_power_kw']
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    # Price per kWh
+                    fig_value_kwh = px.bar(
+                        priced_vehicles,
+                        x='full_name',
+                        y='EUR per kWh',
+                        title='Price per kWh Battery (lower is better)',
+                        color='full_name',
+                        text='EUR per kWh'
+                    )
+                    fig_value_kwh.update_traces(texttemplate='€%{text:.0f}', textposition='outside')
+                    fig_value_kwh.update_layout(showlegend=False, xaxis_title='', height=300)
+                    fig_value_kwh.update_xaxes(tickangle=45)
+                    st.plotly_chart(fig_value_kwh, use_container_width=True)
+                    
+                    # Price per kW
+                    fig_value_kw = px.bar(
+                        priced_vehicles,
+                        x='full_name',
+                        y='EUR per kW Power',
+                        title='Price per kW Power (lower is better)',
+                        color='full_name',
+                        text='EUR per kW Power'
+                    )
+                    fig_value_kw.update_traces(texttemplate='€%{text:.0f}', textposition='outside')
+                    fig_value_kw.update_layout(showlegend=False, xaxis_title='', height=300)
+                    fig_value_kw.update_xaxes(tickangle=45)
+                    st.plotly_chart(fig_value_kw, use_container_width=True)
+                
+                with col2:
+                    # Price per km range
+                    fig_value_range = px.bar(
+                        priced_vehicles,
+                        x='full_name',
+                        y='EUR per km Range',
+                        title='Price per km Range (lower is better)',
+                        color='full_name',
+                        text='EUR per km Range'
+                    )
+                    fig_value_range.update_traces(texttemplate='€%{text:.0f}', textposition='outside')
+                    fig_value_range.update_layout(showlegend=False, xaxis_title='', height=300)
+                    fig_value_range.update_xaxes(tickangle=45)
+                    st.plotly_chart(fig_value_range, use_container_width=True)
+                    
+                    # Summary table
+                    st.markdown("#### Value Summary")
+                    value_summary = priced_vehicles[['full_name', 'EUR per kWh', 'EUR per km Range', 'EUR per kW Power']].copy()
+                    value_summary.columns = ['Vehicle', '€/kWh', '€/km', '€/kW']
+                    value_summary = value_summary.round(0)
+                    
+                    st.dataframe(
+                        value_summary,
+                        hide_index=True,
+                        use_container_width=True
+                    )
+        
+        # Export functionality
+        st.markdown("---")
+        st.markdown("### 💾 Export Comparison")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Export as CSV
+            csv_export = comparison_table.T.to_csv()
+            st.download_button(
+                label="⬇️ Download Comparison (CSV)",
+                data=csv_export,
+                file_name=f"evdb_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                mime="text/csv"
+            )
+        
+        with col2:
+            # Export as JSON
+            json_export = selected_df.to_json(orient='records', indent=2)
+            st.download_button(
+                label="⬇️ Download Data (JSON)",
+                data=json_export,
+                file_name=f"evdb_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json"
+            )
 
 elif page == "📊 Analytics":
     st.title("📊 Analytics Dashboard")
