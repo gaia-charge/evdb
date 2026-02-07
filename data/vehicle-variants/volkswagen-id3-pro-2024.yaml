@@ -1,0 +1,201 @@
+# Volkswagen ID.3 Pro (2024) - Base Long-Range Variant
+id: volkswagen-id3-pro-2024
+name: Pro
+model_id: volkswagen-id3
+model_year: 2024
+variant_code: ID3-PRO
+
+battery:
+  usable_kwh: 58.0
+  total_kwh: 59.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution / CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 352
+  notes: |
+    58 kWh usable battery (59 kWh gross). Smaller than Pro S (77 kWh).
+    352V architecture with NCM chemistry for good energy density.
+    98.3% usable capacity ratio (excellent efficiency).
+
+range:
+  wltp_km: 426
+  wltp_city_km: 545
+  wltp_highway_km: 340
+  epa_km: null
+  real_world_km: 360
+  real_world_source: ADAC EcoTest
+  notes: |
+    WLTP range of 426 km (76% of Pro S's 558 km).
+    Real-world range around 360 km in mixed conditions.
+    Excellent city efficiency with 545 km city range.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 170
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 5
+      power_kw: 170
+    - soc_percent: 10
+      power_kw: 170
+    - soc_percent: 20
+      power_kw: 165
+    - soc_percent: 30
+      power_kw: 155
+    - soc_percent: 40
+      power_kw: 145
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 35
+  time_0_to_100_min: 32
+  time_5_to_80_min: 26
+  time_10_to_80_min: 28
+  time_20_to_80_min: 25
+  charging_speed_kmh: 900
+  plug_and_charge: true
+  preconditioning: true
+  notes: |
+    Fast DC charging up to 170 kW peak (improved from 150 kW in 2023).
+    5-80% in 26 minutes. 11 kW AC charging standard.
+    Preconditioning available when navigating to DC charger.
+    ISO 15118 Plug & Charge support.
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+  notes: "Bidirectional charging not supported yet (hardware capable, software updates planned)"
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      power_kw: 125
+      power_hp: 170
+      torque_nm: 310
+      manufacturer: Volkswagen
+  max_power_kw: 125
+  max_power_hp: 170
+  max_torque_nm: 310
+  acceleration_0_100_kmh_s: 7.9
+  acceleration_0_60_mph_s: 7.5
+  acceleration_80_120_kmh_s: 5.8
+  top_speed_kmh: 160
+  top_speed_mph: 99
+  notes: |
+    Slower than Pro S (7.9s vs 7.3s 0-100 km/h) due to less power (125kW vs 150kW).
+    Higher top speed (160 km/h vs 155 km/h).
+
+weight:
+  curb_weight_kg: 1805
+  gross_vehicle_weight_kg: 2270
+  payload_kg: 465
+  towing_capacity_braked_kg: 1000
+  towing_capacity_unbraked_kg: 750
+  notes: |
+    Lighter than Pro S (1805 kg vs 1974 kg) due to smaller battery (-169 kg).
+    Towing capacity 1000 kg with optional tow hitch.
+
+dimensions:
+  length_mm: 4261
+  width_mm: 1809
+  width_with_mirrors_mm: 2024
+  height_mm: 1552
+  wheelbase_mm: 2765
+  ground_clearance_mm: 145
+  drag_coefficient: 0.267
+  frontal_area_m2: 2.41
+  turning_radius_m: 10.2
+  notes: "Excellent aerodynamics with Cd 0.267"
+
+cargo:
+  trunk_volume_l: 385
+  trunk_max_volume_l: 1267
+  frunk_volume_l: 0
+  notes: "385L trunk, expandable to 1267L with rear seats folded"
+
+consumption:
+  wltp_kwh_per_100km: 13.6
+  wltp_city_kwh_per_100km: 10.6
+  wltp_highway_kwh_per_100km: 17.1
+  real_world_kwh_per_100km: 16.1
+  real_world_city_kwh_per_100km: 14.5
+  real_world_highway_kwh_per_100km: 18.7
+  efficiency_rating: A+
+  notes: |
+    Excellent WLTP efficiency at 13.6 kWh/100km.
+    Real-world consumption around 16.1 kWh/100km.
+    Heat pump standard helps winter efficiency.
+
+features:
+  infotainment_screen_inches: 12.0
+  digital_cockpit_inches: 10.0
+  head_up_display: optional
+  wireless_charging: true
+  wireless_connectivity: true
+  ota_updates: true
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: optional
+  parking_assist: optional
+  heat_pump: true
+  notes: |
+    10-inch Digital Cockpit + 12-inch Discover Pro touchscreen
+    ID.Light interactive LED light strip
+    IQ.Drive Travel Assist (Level 2 ADAS)
+    Heat pump climate control standard
+    We Connect ID. app with remote functions
+    Wireless Apple CarPlay & Android Auto
+    OTA software updates
+
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2019
+  euro_ncap_adult: 87
+  euro_ncap_child: 85
+  euro_ncap_vulnerable: 73
+  euro_ncap_safety_assist: 85
+  airbags: 7
+  adas_level: 2
+  notes: |
+    5-star Euro NCAP rating (tested 2019)
+    7 airbags (front, side, curtain, driver knee)
+    SAE Level 2 autonomous driving capability
+
+production:
+  plant: Zwickau, Germany
+  platform: MEB
+  platform_generation: 1
+  status: active
+  notes: |
+    Built at Volkswagen's first dedicated EV factory in Zwickau.
+    MEB platform shared with ID.4, ID.5, Enyaq, etc.
+
+metadata:
+  data_quality: verified
+  last_updated: '2024-02-07'
+  created_at: '2024-02-07'
+  source: "Volkswagen official specifications"
+  source_urls:
+    - "https://www.volkswagen.de/de/modelle/id-3.html"
+    - "https://www.vw.com/en/models/id-3.html"
+  verification_date: '2024-02-07'
+  notes: |
+    2024 model year with improved efficiency (13.6 vs 14.0 kWh/100km in 2023)
+    and faster DC charging (170kW vs 150kW).
+    Most popular ID.3 variant (~65% of sales).
+    Lighter and more efficient than Pro S.
