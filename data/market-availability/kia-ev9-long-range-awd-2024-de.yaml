@@ -1,0 +1,255 @@
+# Kia EV9 Long Range AWD 2024 - German Market
+
+id: kia-ev9-long-range-awd-2024-de
+variant_id: kia-ev9-long-range-awd-2024
+market: DE
+currency: EUR
+model_year: 2024
+
+# Availability
+availability:
+  status: available
+  release_date: "2024-01"
+  order_status: orderable
+  delivery_time_weeks: 12
+  production_location: "Hwaseong Factory, South Korea"
+
+# Pricing
+pricing:
+  base_price: 73990
+  destination_charge: 1190
+  total_msrp: 75180
+  price_including_incentives: 75180
+
+  trim_levels:
+    - name: "Earth"
+      price: 73990
+      description: "Base trim with Long Range AWD, comprehensive equipment"
+    
+    - name: "GT-Line"
+      price: 79990
+      price_difference: 6000
+      description: "Premium trim with sport styling and enhanced features"
+
+# Standard Equipment
+standard_equipment:
+  exterior:
+    - "19-inch alloy wheels"
+    - "Parametric Pixel LED headlights and taillights"
+    - "Heated power-folding side mirrors"
+    - "Privacy glass"
+    - "Flush door handles"
+  
+  interior:
+    - "Triple 12.3-inch panoramic curved display"
+    - "Kia Connect infotainment with navigation"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Digital Key 2.0 with UWB"
+    - "Heated front seats"
+    - "Dual-zone automatic climate control"
+    - "7-seat configuration standard"
+    - "Highway Driving Assist 2 (Level 2)"
+    - "V2L (Vehicle-to-Load) 3.6kW"
+
+# Optional Equipment
+optional_equipment:
+  packages:
+    - name: "Comfort Package Plus"
+      price: 2490
+      available_trims: ["Earth"]
+      description: "Panoramic roof, tri-zone climate, power tailgate"
+    
+    - name: "Technology Package Pro"
+      price: 3990
+      available_trims: ["Earth"]
+      description: "AR HUD, Meridian audio, 360 camera, RSPA2"
+    
+    - name: "Relaxation Package"
+      price: 2900
+      available_trims: ["Earth"]
+      description: "Relaxation seats with massage, ventilation, leg support"
+
+  colors:
+    - name: "Aurora Black Pearl"
+      type: "metallic"
+      price: 0
+      notes: "Free standard color"
+    
+    - name: "Glacier White Pearl"
+      type: "pearl"
+      price: 0
+      notes: "Free standard color"
+    
+    - name: "Moonscape"
+      type: "matte"
+      price: 1095
+    
+    - name: "Pebble Gray"
+      type: "metallic"
+      price: 895
+    
+    - name: "Urban Yellow"
+      type: "solid"
+      price: 895
+    
+    - name: "Ceramica Blue"
+      type: "metallic"
+      price: 1095
+    
+    - name: "Snow White Pearl"
+      type: "pearl"
+      price: 1095
+
+  wheels:
+    - size: "19-inch"
+      design: "Alloy"
+      price: 0
+      notes: "Standard"
+    
+    - size: "20-inch"
+      design: "Black alloy"
+      price: 1400
+      notes: "GT-Line standard, -20km range"
+    
+    - size: "21-inch"
+      design: "Diamond-cut alloy"
+      price: 2800
+      notes: "GT-Line option, -35km range"
+
+  interior:
+    - name: "Black Synthetic Leather"
+      price: 0
+      notes: "Standard"
+    
+    - name: "Green/Gray Two-Tone"
+      price: 1500
+      notes: "Earth exclusive"
+
+  individual_options:
+    - name: "Towing Package"
+      price: 1050
+      description: "2,500kg braked capacity"
+    
+    - name: "V2L Exterior Adapter"
+      price: 250
+      description: "External 3.6kW power via charging port"
+    
+    - name: "6-Seat Configuration"
+      price: 2000
+      description: "Captain's chairs in 2nd row, swiveling"
+    
+    - name: "Winter Tire Package"
+      price: 1200
+      description: "19-inch winter wheels and tires"
+
+# Incentives
+incentives:
+  - type: "subsidy"
+    name: "BAFA Umweltbonus"
+    amount: 0
+    notes: "Federal EV subsidy ended December 2023"
+    valid_until: null
+  
+  - type: "tax_exemption"
+    name: "Company Car Tax (0.25%)"
+    amount: 6660
+    notes: "Electric company cars taxed at 0.25% vs 1% for ICE, saves €6,660/year"
+    valid_until: null
+  
+  - type: "tax_exemption"
+    name: "Road Tax Exemption"
+    amount: 420
+    notes: "Electric vehicles exempt from road tax until 2030"
+    valid_until: "2030-12-31"
+  
+  - type: "grant"
+    name: "THG-Quote (CO2 Certificate)"
+    amount: 350
+    notes: "Annual CO2 certificate trading income"
+    valid_until: null
+
+# Running Costs
+running_costs:
+  electricity_home_kwh: 0.25
+  electricity_public_kwh: 0.49
+  annual_km: 15000
+  consumption_kwh_per_100km: 24.5
+  annual_electricity_cost_home: 919
+  annual_electricity_cost_public: 1800
+  annual_maintenance_cost: 350
+  annual_insurance_cost: 1200
+  total_annual_cost_home: 2469
+  total_annual_cost_public: 3350
+
+# Charging Infrastructure
+charging_networks:
+  - name: "Kia Charge"
+    locations_europe: 500000
+    locations_germany: null
+    notes: "Aggregates multiple networks, single app"
+  
+  - name: "IONITY"
+    locations_germany: 51
+    stalls_germany: 350
+    subscription_monthly: 17.99
+    price_per_kwh_subscription: 0.35
+    price_per_kwh_payg: 0.79
+    notes: "800V ultra-fast charging, 10-80% in 24 minutes"
+  
+  - name: "EnBW"
+    locations_germany: 6000
+    subscription_monthly: 5.99
+    price_per_kwh_dc_subscription: 0.49
+    price_per_kwh_dc_payg: 0.59
+
+# Warranty
+warranty:
+  vehicle_years: 7
+  vehicle_km: 150000
+  battery_years: 7
+  battery_km: 150000
+  battery_capacity_percent: 70
+  paint_years: 5
+  perforation_years: 12
+  roadside_assistance_years: 7
+
+# Dealer Network
+dealer_network:
+  dealer_count: 650
+  service_centers: 650
+  purchase_online: true
+  home_delivery: true
+  home_delivery_fee: 500
+
+# Environmental Impact
+environmental:
+  production_co2_tonnes: 18.0
+  operation_co2_annual_tonnes: 1.1
+  lifecycle_co2_tonnes: 33.0
+  notes: "EU electricity mix 300g CO2/kWh"
+
+# Market Positioning
+market_notes: |
+  The Kia EV9 is positioned as a premium 3-row electric SUV at €73,990, 
+  significantly undercutting German luxury competitors (Tesla Model X €98,990, 
+  Mercedes EQS SUV €114,641, BMW iX €109,900) while offering competitive 
+  technology, range, and 800V fast charging (10-80% in 24 minutes).
+  
+  Target buyers: Families needing 6-7 seats, company car drivers (0.25% tax 
+  saves €6,660/year), road trippers, towing enthusiasts (2,500kg capacity).
+  
+  Popular configurations: Earth Family (€83,910 with comfort + tech packages), 
+  GT-Line Executive (€89,565 fully loaded with 6-seat configuration).
+
+# Data Quality
+data_quality: verified
+data_sources:
+  - "Kia Germany official configurator"
+  - "Kia Germany press materials"
+  - "ADAC testing data"
+source_urls:
+  - "https://www.kia.com/de/modelle/ev9/"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/ev9/"
+
+created_at: "2024-02-07"
+updated_at: "2024-02-07"
