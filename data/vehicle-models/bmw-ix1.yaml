@@ -1,0 +1,99 @@
+# BMW iX1 Vehicle Model
+# Premium compact electric SUV on FAAR platform
+# Launched 2022, production at Regensburg, Germany
+
+id: bmw-ix1
+manufacturer_id: bmw-group
+name: iX1
+marketing_name: BMW iX1
+body_style: suv
+segment: J # Compact SUV
+platform_id: faar
+
+production:
+  start: "2022-11"
+  status: active
+  locations:
+    - name: Regensburg
+      country: Germany
+      notes: BMW Group Plant Regensburg, shared with X1 gasoline/diesel
+
+awards:
+  - name: Auto Motor und Sport Best Cars 2023
+    category: Import Compact SUV
+    year: 2023
+  - name: ADAC EcoTest
+    category: 5 Stars
+    year: 2023
+
+description: >
+  The BMW iX1 is BMW's entry-level electric SUV, built on the flexible FAAR platform 
+  alongside the gasoline and diesel X1. Launched in late 2022 as part of the third-generation 
+  X1 family, it offers premium BMW quality in a compact package with excellent efficiency 
+  and practicality. The iX1 xDrive30 features dual-motor AWD and a 64.7kWh battery delivering 
+  up to 439km WLTP range.
+  
+  Key features include BMW's latest Curved Display (10.25" + 10.7"), standard heat pump, 
+  and practical 490L cargo space (expandable to 1,495L). The iX1 targets young families 
+  and urban professionals wanting BMW premium quality in a compact electric SUV format.
+
+dimensions:
+  length_mm: 4500
+  width_mm: 1845
+  height_mm: 1642
+  wheelbase_mm: 2692
+  ground_clearance_mm: 183
+  drag_coefficient: 0.26 # Good for a compact SUV shape
+
+seating:
+  capacity: 5
+  configuration: 2+3
+
+cargo:
+  trunk_volume_liters: 490
+  trunk_max_volume_liters: 1495
+  frunk_volume_liters: 0 # No frunk
+
+infotainment:
+  system: BMW Operating System 8.5
+  display: 10.25" instrument cluster + 10.7" central display
+  features:
+    - BMW Curved Display
+    - BMW Maps with cloud-based navigation
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+    - Digital Key Plus with UWB (iPhone)
+    - BMW IconicSounds Electric by Hans Zimmer
+
+safety:
+  ncap_rating:
+    organization: Euro NCAP
+    year: 2022
+    stars: 5
+    adult_occupant: 89
+    child_occupant: 87
+    vulnerable_road_users: 84
+    safety_assist: 82
+  standard_features:
+    - Front collision warning with AEB
+    - Lane departure warning with lane keeping assist
+    - Speed limit information
+    - Driver attention warning
+    - 6 airbags (front, side, curtain)
+  optional_features:
+    - Driving Assistant Professional (Highway Assistant)
+    - Active Cruise Control with Stop & Go
+    - Parking Assistant Professional
+    - 360° camera system
+
+notes: "First BMW compact electric SUV (entry-level). Built on flexible FAAR platform (shared with gasoline/diesel X1). Smaller and lighter than iX flagship. Competes with Audi Q4 e-tron, Mercedes EQA, Volvo XC40. Popular in Germany as premium compact electric SUV. Standard heat pump essential for winter efficiency. 130kW DC fast charging (competitive for segment)."
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: "2026-02-07"
+  data_quality: verified
+  sources:
+    - https://www.bmw.de/de/neufahrzeuge/x/ix1.html
+    - https://www.euroncap.com/en/results/bmw/ix1/46552
+    - https://www.bmw.com/en/innovation/bmw-ix1.html
+    - https://ev-database.org/car/1738/BMW-iX1-xDrive30

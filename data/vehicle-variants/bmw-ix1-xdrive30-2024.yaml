@@ -1,0 +1,150 @@
+# BMW iX1 xDrive30 2024 Vehicle Variant
+# Dual-motor AWD compact SUV with 64.7kWh battery
+# 439km WLTP range, 130kW DC fast charging
+
+id: bmw-ix1-xdrive30-2024
+name: xDrive30
+model_id: bmw-ix1
+model_year: 2024
+trim_level: Base
+
+battery:
+  usable_kwh: 64.7
+  total_kwh: 66.5
+  chemistry: NMC
+  cell_type: prismatic
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 439
+  wltp_city_km: 545
+  wltp_highway_km: 365
+  epa_km: null # Not sold in US
+  real_world_km: 370
+  conditions:
+    - test: WLTP Combined
+      result_km: 439
+      temperature_c: 23
+    - test: Real-world mixed
+      result_km: 370
+      temperature_c: 15
+      notes: "Mixed city/highway driving"
+    - test: Real-world winter
+      result_km: 290
+      temperature_c: -5
+      notes: "Cold weather with heating, 34% loss"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 130
+    - soc_percent: 40
+      power_kw: 125
+    - soc_percent: 60
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 40
+  charge_times:
+    - type: DC fast charging
+      power_kw: 130
+      soc_from: 10
+      soc_to: 80
+      time_minutes: 29
+      notes: "CCS2 DC fast charging"
+    - type: AC home charging
+      power_kw: 11
+      soc_from: 0
+      soc_to: 100
+      time_minutes: 390
+      notes: "11kW 3-phase wallbox (6.5 hours)"
+  plug_and_charge: true
+  bidirectional:
+    v2l: false
+    v2g: false
+  preconditioning: true
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      power_kw: 70
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: 150
+      torque_nm: null
+  total_power_kw: 230
+  total_power_hp: 313
+  total_torque_nm: 494
+  acceleration_0_100_sec: 5.7
+  acceleration_0_60_mph_sec: 5.4
+  top_speed_kph: 180
+  top_speed_mph: 112
+
+weight:
+  curb_weight_kg: 2085
+  gross_weight_kg: 2600
+  towing_capacity_braked_kg: 1200
+  towing_capacity_unbraked_kg: 750
+  roof_load_kg: 75
+
+efficiency:
+  wltp_kwh_per_100km: 17.9
+  wltp_city_kwh_per_100km: 14.3
+  wltp_highway_kwh_per_100km: 21.5
+  real_world_kwh_per_100km: 19.4
+  energy_efficiency_class: A # EU energy label
+
+features:
+  standard:
+    - Heat pump (essential for winter efficiency)
+    - LED headlights
+    - Dual-zone automatic climate control
+    - BMW Live Cockpit Professional (Curved Display)
+    - 10.25" instrument cluster + 10.7" central display
+    - BMW Operating System 8.5
+    - Apple CarPlay & Android Auto wireless
+    - Digital Key Plus with UWB
+    - Parking sensors front and rear
+    - Reversing camera
+    - Adaptive cruise control
+    - Lane departure warning with lane keeping
+    - Speed limit information
+    - BMW IconicSounds Electric by Hans Zimmer
+  optional:
+    - M Sport Package (sport styling, 19" wheels)
+    - Driving Assistant Professional (Highway Assistant Level 2+)
+    - Parking Assistant Professional with 360° camera
+    - Harman Kardon surround sound (16 speakers)
+    - Panoramic glass roof
+    - Adaptive LED headlights
+    - Head-Up Display
+    - Comfort Access (keyless entry)
+
+version_info:
+  release_date: "2022-11"
+  changes_from_previous: "New model, first electric X1"
+  current_production: true
+
+notes: "BMW's entry-level electric SUV (most affordable BMW EV). Dual-motor AWD standard (no RWD variant available). Built on FAAR platform (shared with gasoline/diesel X1). 400V architecture limits DC charging to 130kW. Heat pump standard on 2024+ models (was option in 2023). Competitive charging speed for compact SUV segment. Excellent city range (545km WLTP) for urban use. Popular in Germany as premium compact electric SUV. Competes with Audi Q4 40 e-tron, Mercedes EQA 350, Volvo XC40 Recharge. Real-world 370km range adequate for daily commuting. 0-100 in 5.7s competitive for segment (faster than Q4 40, EQA 250+). 1,200kg towing capacity adequate for small trailers. Digital Key Plus with UWB enables hands-free unlocking. BMW IconicSounds Electric by Hans Zimmer creates immersive driving experience."
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: "2026-02-07"
+  data_quality: verified
+  sources:
+    - https://www.bmw.de/de/neufahrzeuge/x/ix1/technische-daten.html
+    - https://ev-database.org/car/1738/BMW-iX1-xDrive30
+    - https://insideevs.com/reviews/579543/bmw-ix1-xdrive30-test/
+    - https://www.whatcar.com/bmw/ix1/estate/review
