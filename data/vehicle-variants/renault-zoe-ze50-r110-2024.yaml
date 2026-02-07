@@ -1,0 +1,143 @@
+# Renault Zoe ZE50 R110 (2024)
+id: renault-zoe-ze50-r110-2024
+name: ZE50 R110
+model_id: renault-zoe
+model_year: 2024
+variant_code: ZE50-R110
+
+battery:
+  usable_kwh: 50.0
+  total_kwh: 52.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: LG Chem
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 386
+  wltp_city_km: 510
+  wltp_highway_km: 315
+  epa_km: null
+  real_world_km: 325
+  real_world_source: InsideEVs range test
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 50
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 45
+    - soc_percent: 10
+      power_kw: 50
+    - soc_percent: 40
+      power_kw: 50
+    - soc_percent: 60
+      power_kw: 45
+    - soc_percent: 70
+      power_kw: 38
+    - soc_percent: 80
+      power_kw: 25
+    - soc_percent: 90
+      power_kw: 15
+    - soc_percent: 100
+      power_kw: 5
+  time_10_to_80_min: 70
+  time_20_to_80_min: 60
+  charging_speed_kmh: 280
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 80
+      power_hp: 109
+      torque_nm: 225
+  total_power_kw: 80
+  total_power_hp: 109
+  total_torque_nm: 225
+  acceleration_0_100_sec: 11.4
+  top_speed_kmh: 135
+
+weight:
+  curb_weight_kg: 1577
+  gross_vehicle_weight_kg: 1952
+  payload_kg: 375
+
+efficiency:
+  wltp_kwh_per_100km: 16.8
+  epa_kwh_per_100km: null
+
+dimensions:
+  length_mm: 4087
+  width_mm: 1787
+  height_mm: 1562
+  wheelbase_mm: 2588
+  trunk_volume_l: 338
+  frunk_volume_l: 0
+  turning_circle_m: 10.6
+
+seating:
+  capacity: 5
+  rows: 2
+  doors: 5
+
+trim:
+  level: "Base"
+  base_trim: true
+  position: 1
+
+equipment:
+  standard:
+    - 7-inch TFT driver display
+    - Easy Link multimedia system (9.3-inch touchscreen)
+    - LED daytime running lights
+    - Manual climate control
+    - Electric parking brake
+    - Cruise control with speed limiter
+    - Rear parking sensors
+    - Reversing camera
+    - Lane departure warning
+    - Automatic emergency braking
+    - Traffic sign recognition
+    - Hill start assist
+    - 16-inch steel wheels with wheel covers
+    - Fabric upholstery
+
+production:
+  status: active
+  start_date: "2019-09"
+  end_date: null
+  assembly:
+    - location: Flins, France
+      name: Renault Flins Plant
+
+notes: >
+  Entry-level Renault Zoe with 52 kWh battery and R110 motor (80 kW / 109 hp).
+  Offers 386 km WLTP range with efficient city driving. Long-standing city EV
+  with compact dimensions and agile handling. More affordable than R135 variant.
+
+sources:
+  - url: https://www.renault.fr/vehicules-electriques/zoe.html
+    type: manufacturer
+    date: "2024-02-08"
+  - url: https://ev-database.org/car/1164/Renault-Zoe-ZE50-R110
+    type: database
+    date: "2024-02-08"
+
+metadata:
+  created_at: "2026-02-08T00:45:00Z"
+  updated_at: null
+  data_quality: verified
+  confidence_level: high
