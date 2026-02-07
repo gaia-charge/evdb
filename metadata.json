@@ -6,6 +6,15 @@
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "GitHub",
   "source_url": "https://github.com/yourusername/evdb",
+  "plugins": {
+    "datasette-cluster-map": {
+      "latitude_column": "latitude",
+      "longitude_column": "longitude"
+    },
+    "datasette-graphql": {
+      "auto_camelcase": true
+    }
+  },
   "databases": {
     "evdb": {
       "title": "EVDB",
