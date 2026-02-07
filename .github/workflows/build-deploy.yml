@@ -30,7 +30,7 @@ jobs:
         
     - name: Build SQLite database
       run: |
-        python scripts/build-sqlite.py
+        python scripts/build-sqlite.py --clean
         
     - name: Verify database integrity
       run: |
