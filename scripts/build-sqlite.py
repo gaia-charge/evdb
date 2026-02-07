@@ -474,31 +474,54 @@ class DatabaseBuilder:
             if isinstance(motors_data, dict):
                 if not drive_type:
                     drive_type = motors_data.get('drive_type')
+                
+                # Try motors.total_power_kw first (Ford, Mercedes, Volvo format)
+                if not total_power_kw:
+                    total_power_kw = motors_data.get('total_power_kw')
+                if not total_torque_nm:
+                    total_torque_nm = motors_data.get('total_torque_nm')
+                
+                # Try motors.combined_power_kw (Porsche format)
+                if not total_power_kw:
+                    total_power_kw = motors_data.get('combined_power_kw')
+                
+                # Try motors.combined.max_power_kw (old format)
                 combined = motors_data.get('combined', {})
                 if not total_power_kw:
                     total_power_kw = combined.get('max_power_kw')
                 if not total_torque_nm:
                     total_torque_nm = combined.get('max_torque_nm')
                 
+                # Try summing front_motor + rear_motor power (Nissan, Mini format)
+                if not total_power_kw:
+                    rear_motor = motors_data.get('rear', {}) or motors_data.get('rear_motor', {})
+                    front_motor = motors_data.get('front', {}) or motors_data.get('front_motor', {})
+                    rear_power = rear_motor.get('power_kw', 0) or rear_motor.get('max_power_kw', 0)
+                    front_power = front_motor.get('power_kw', 0) or front_motor.get('max_power_kw', 0)
+                    if rear_power or front_power:
+                        total_power_kw = rear_power + front_power
+                
                 # Determine motor type and count from motor configuration
+                # Try direct count field first (Mercedes, Volvo format)
+                motor_count = motors_data.get('count')
+                motor_type = motors_data.get('type')
+                
+                # Try configuration field (Ford format)
                 configuration = motors_data.get('configuration', '')
                 if not isinstance(configuration, str):
                     configuration = ''
                 
-                if 'dual' in configuration.lower() or 'twin' in configuration.lower():
-                    motor_count = 2
+                if not motor_count:
+                    if 'dual' in configuration.lower() or 'twin' in configuration.lower():
+                        motor_count = 2
+                    elif 'single' in configuration.lower():
+                        motor_count = 1
+                
+                # Get motor type from sub-motors if not set
+                if not motor_type:
                     # Get type from rear motor (AWD) or front motor (FWD)
-                    rear_motor = motors_data.get('rear', {})
-                    front_motor = motors_data.get('front', {})
-                    if rear_motor:
-                        motor_type = rear_motor.get('type')
-                    elif front_motor:
-                        motor_type = front_motor.get('type')
-                elif 'single' in configuration.lower():
-                    motor_count = 1
-                    # Get type from whichever motor exists (rear or front)
-                    rear_motor = motors_data.get('rear', {})
-                    front_motor = motors_data.get('front', {})
+                    rear_motor = motors_data.get('rear', {}) or motors_data.get('rear_motor', {})
+                    front_motor = motors_data.get('front', {}) or motors_data.get('front_motor', {})
                     if rear_motor:
                         motor_type = rear_motor.get('type')
                     elif front_motor:
