@@ -1367,14 +1367,256 @@ elif page == "📊 Analytics":
 
 elif page == "💾 Data Explorer":
     st.title("💾 Data Explorer")
-    st.info("🚧 Coming soon: SQL query interface for power users")
-    st.markdown("""
-    This page will include:
-    - SQL query text editor
-    - Pre-built query templates
-    - Query result display
-    - Export results (CSV/JSON)
-    """)
+    st.markdown("### Run custom SQL queries on the EVDB database")
+    
+    # Warning about SQL injection
+    st.info("ℹ️ **Read-only access:** This interface only allows SELECT queries. Database is not modifiable through this interface.")
+    
+    # Pre-built query templates
+    st.markdown("#### 📋 Example Queries")
+    
+    example_queries = {
+        "All Vehicles Overview": """SELECT 
+    m.name AS manufacturer,
+    mo.name AS model,
+    v.variant_name,
+    v.model_year,
+    v.battery_usable_kwh,
+    v.range_wltp_km,
+    v.total_power_kw,
+    v.dc_charge_power_kw,
+    ma.price_base AS price_eur
+FROM vehicle_variants v
+JOIN vehicle_models mo ON v.model_id = mo.id
+JOIN manufacturers m ON mo.manufacturer_id = m.id
+LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+ORDER BY m.name, mo.name, v.variant_name;""",
+        
+        "Top 10 Longest Range EVs": """SELECT 
+    m.name AS manufacturer,
+    mo.name AS model,
+    v.variant_name,
+    v.range_wltp_km,
+    v.range_real_world_km,
+    v.battery_usable_kwh
+FROM vehicle_variants v
+JOIN vehicle_models mo ON v.model_id = mo.id
+JOIN manufacturers m ON mo.manufacturer_id = m.id
+ORDER BY v.range_wltp_km DESC
+LIMIT 10;""",
+        
+        "Fastest Charging Vehicles": """SELECT 
+    m.name AS manufacturer,
+    mo.name AS model,
+    v.variant_name,
+    v.dc_charge_power_kw,
+    v.dc_charge_time_10_80_min,
+    v.battery_usable_kwh
+FROM vehicle_variants v
+JOIN vehicle_models mo ON v.model_id = mo.id
+JOIN manufacturers m ON mo.manufacturer_id = m.id
+WHERE v.dc_charge_power_kw IS NOT NULL
+ORDER BY v.dc_charge_power_kw DESC
+LIMIT 10;""",
+        
+        "Most Efficient Vehicles": """SELECT 
+    m.name AS manufacturer,
+    mo.name AS model,
+    v.variant_name,
+    v.consumption_real_world_kwh_100km,
+    v.range_real_world_km,
+    v.battery_usable_kwh
+FROM vehicle_variants v
+JOIN vehicle_models mo ON v.model_id = mo.id
+JOIN manufacturers m ON mo.manufacturer_id = m.id
+WHERE v.consumption_real_world_kwh_100km IS NOT NULL
+ORDER BY v.consumption_real_world_kwh_100km ASC
+LIMIT 10;""",
+        
+        "Vehicles by Manufacturer Count": """SELECT 
+    m.name AS manufacturer,
+    m.country,
+    COUNT(DISTINCT mo.id) AS models,
+    COUNT(v.id) AS variants
+FROM manufacturers m
+LEFT JOIN vehicle_models mo ON m.id = mo.manufacturer_id
+LEFT JOIN vehicle_variants v ON mo.id = v.model_id
+GROUP BY m.id, m.name, m.country
+ORDER BY variants DESC;""",
+        
+        "Price Distribution by Body Style": """SELECT 
+    mo.body_style,
+    COUNT(v.id) AS vehicles,
+    ROUND(AVG(ma.price_base), 0) AS avg_price_eur,
+    MIN(ma.price_base) AS min_price_eur,
+    MAX(ma.price_base) AS max_price_eur
+FROM vehicle_variants v
+JOIN vehicle_models mo ON v.model_id = mo.id
+LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+WHERE ma.price_base IS NOT NULL
+GROUP BY mo.body_style
+ORDER BY avg_price_eur DESC;""",
+        
+        "800V vs 400V Platform Comparison": """SELECT 
+    CASE 
+        WHEN v.battery_architecture = '800V' THEN '800V Platform'
+        WHEN v.battery_architecture = '400V' THEN '400V Platform'
+        ELSE 'Other/Unknown'
+    END AS architecture,
+    COUNT(v.id) AS vehicles,
+    ROUND(AVG(v.dc_charge_power_kw), 1) AS avg_dc_power_kw,
+    MAX(v.dc_charge_power_kw) AS max_dc_power_kw,
+    ROUND(AVG(v.dc_charge_time_10_80_min), 1) AS avg_charge_time_min
+FROM vehicle_variants v
+WHERE v.battery_architecture IS NOT NULL
+GROUP BY architecture
+ORDER BY avg_dc_power_kw DESC;""",
+        
+        "Database Schema Info": """SELECT 
+    name AS table_name,
+    type
+FROM sqlite_master
+WHERE type IN ('table', 'view')
+ORDER BY type, name;"""
+    }
+    
+    # Query selector
+    selected_example = st.selectbox(
+        "Choose an example query:",
+        ["Custom Query"] + list(example_queries.keys())
+    )
+    
+    # Query editor
+    st.markdown("#### ✏️ SQL Query Editor")
+    
+    if selected_example == "Custom Query":
+        default_query = "-- Write your SELECT query here\nSELECT * FROM manufacturers LIMIT 10;"
+    else:
+        default_query = example_queries[selected_example]
+    
+    query = st.text_area(
+        "Enter your SQL query:",
+        value=default_query,
+        height=250,
+        help="Only SELECT queries are allowed. Use JOIN to combine tables."
+    )
+    
+    # Execute query button
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        execute_button = st.button("▶️ Run Query", type="primary", use_container_width=True)
+    with col2:
+        st.markdown("**Tip:** Press Ctrl+Enter in the query box to run")
+    
+    # Execute query
+    if execute_button or (query and query.strip()):
+        # Validate query (basic security check)
+        query_upper = query.strip().upper()
+        
+        # Check if it's a SELECT query
+        if not query_upper.startswith('SELECT') and not query_upper.startswith('WITH'):
+            st.error("❌ Only SELECT queries are allowed. No INSERT, UPDATE, DELETE, DROP, etc.")
+        elif any(dangerous in query_upper for dangerous in ['DROP', 'DELETE', 'UPDATE', 'INSERT', 'ALTER', 'CREATE']):
+            st.error("❌ Potentially dangerous keywords detected. Only read-only queries are allowed.")
+        else:
+            try:
+                # Execute query
+                conn = get_connection()
+                start_time = datetime.now()
+                df = pd.read_sql_query(query, conn)
+                end_time = datetime.now()
+                execution_time = (end_time - start_time).total_seconds()
+                
+                # Display results
+                st.success(f"✅ Query executed successfully in {execution_time:.3f} seconds")
+                
+                # Result statistics
+                st.markdown(f"**Results:** {len(df)} rows × {len(df.columns)} columns")
+                
+                # Display results table
+                st.markdown("#### 📊 Query Results")
+                
+                # Pagination for large results
+                if len(df) > 100:
+                    st.warning(f"⚠️ Large result set ({len(df)} rows). Showing first 100 rows. Use LIMIT in your query for better performance.")
+                    st.dataframe(df.head(100), use_container_width=True, height=400)
+                else:
+                    st.dataframe(df, use_container_width=True, height=400)
+                
+                # Export options
+                st.markdown("#### 💾 Export Results")
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    # CSV export
+                    csv = df.to_csv(index=False)
+                    st.download_button(
+                        label="📄 Download CSV",
+                        data=csv,
+                        file_name=f"evdb_query_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                        mime="text/csv",
+                        use_container_width=True
+                    )
+                
+                with col2:
+                    # JSON export
+                    json_data = df.to_json(orient='records', indent=2)
+                    st.download_button(
+                        label="📋 Download JSON",
+                        data=json_data,
+                        file_name=f"evdb_query_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                        mime="application/json",
+                        use_container_width=True
+                    )
+                
+                with col3:
+                    # Excel export (requires openpyxl)
+                    st.markdown("**Excel export:** Coming soon")
+                
+                # Show column info
+                with st.expander("📋 Column Information"):
+                    col_info = pd.DataFrame({
+                        'Column': df.columns,
+                        'Type': df.dtypes.astype(str),
+                        'Non-Null Count': df.count(),
+                        'Null Count': df.isnull().sum()
+                    })
+                    st.dataframe(col_info, use_container_width=True)
+                
+            except Exception as e:
+                st.error(f"❌ Query error: {str(e)}")
+                st.markdown("**Common issues:**")
+                st.markdown("- Check table/column names (use the schema query to see available tables)")
+                st.markdown("- Ensure proper JOIN syntax")
+                st.markdown("- Verify column references")
+    
+    # Database schema reference
+    st.markdown("---")
+    st.markdown("#### 📖 Database Schema Reference")
+    
+    with st.expander("📊 Available Tables & Columns"):
+        conn = get_connection()
+        
+        # Get all tables
+        tables = pd.read_sql_query("""
+            SELECT name FROM sqlite_master 
+            WHERE type='table' 
+            ORDER BY name
+        """, conn)
+        
+        for table_name in tables['name']:
+            st.markdown(f"**`{table_name}`**")
+            
+            # Get columns for this table
+            columns = pd.read_sql_query(f"PRAGMA table_info({table_name})", conn)
+            
+            # Display columns
+            for _, col in columns.iterrows():
+                null_str = "" if col['notnull'] == 1 else " (nullable)"
+                pk_str = " 🔑" if col['pk'] == 1 else ""
+                st.markdown(f"- `{col['name']}` - {col['type']}{null_str}{pk_str}")
+            
+            st.markdown("")  # Empty line between tables
 
 elif page == "📚 Documentation":
     st.title("📚 Documentation")
