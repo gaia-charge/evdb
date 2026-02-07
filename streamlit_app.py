@@ -314,14 +314,291 @@ if page == "🏠 Home":
 
 elif page == "🔍 Browse Vehicles":
     st.title("🔍 Browse Vehicles")
-    st.info("🚧 Coming soon: Advanced filtering and browsing interface")
-    st.markdown("""
-    This page will include:
-    - Interactive filters (price, range, charging speed, manufacturer, body style)
-    - Sortable and searchable data table
-    - Vehicle detail expansion
-    - Export functionality (CSV/JSON)
-    """)
+    st.markdown("Explore all vehicles with advanced filtering options")
+    
+    # Load all data
+    @st.cache_data(ttl=3600)
+    def load_browse_data(_conn):
+        """Load all vehicle data with filters"""
+        return pd.read_sql_query("""
+            SELECT 
+                v.id,
+                mfr.name as manufacturer,
+                m.name as model,
+                v.variant_name,
+                v.model_year,
+                m.body_style,
+                v.battery_usable_kwh,
+                v.battery_chemistry,
+                v.range_wltp_km,
+                v.range_real_world_km,
+                v.total_power_kw,
+                v.acceleration_0_100_sec,
+                v.dc_charge_power_kw,
+                v.dc_charge_time_10_80_min,
+                v.drive_type,
+                ma.price_base as price_eur,
+                ma.market_code
+            FROM vehicle_variants v
+            JOIN vehicle_models m ON v.model_id = m.id
+            JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
+            LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+            ORDER BY mfr.name, m.name, v.variant_name
+        """, _conn)
+    
+    df = load_browse_data(conn)
+    
+    # Sidebar filters
+    st.sidebar.markdown("### 🎚️ Filters")
+    
+    # Manufacturer filter
+    all_manufacturers = sorted(df['manufacturer'].unique().tolist())
+    selected_manufacturers = st.sidebar.multiselect(
+        "Manufacturer:",
+        options=all_manufacturers,
+        default=[]
+    )
+    
+    # Body style filter
+    all_body_styles = sorted([bs for bs in df['body_style'].unique() if pd.notna(bs)])
+    selected_body_styles = st.sidebar.multiselect(
+        "Body Style:",
+        options=all_body_styles,
+        default=[]
+    )
+    
+    # Drive type filter
+    all_drive_types = sorted([dt for dt in df['drive_type'].unique() if pd.notna(dt)])
+    selected_drive_types = st.sidebar.multiselect(
+        "Drive Type:",
+        options=all_drive_types,
+        default=[]
+    )
+    
+    # Price range filter
+    st.sidebar.markdown("#### Price (EUR)")
+    price_min_val = int(df['price_eur'].min()) if df['price_eur'].notna().any() else 20000
+    price_max_val = int(df['price_eur'].max()) if df['price_eur'].notna().any() else 150000
+    
+    price_range = st.sidebar.slider(
+        "Price Range:",
+        min_value=price_min_val,
+        max_value=price_max_val,
+        value=(price_min_val, price_max_val),
+        step=5000,
+        format="€%d"
+    )
+    
+    # WLTP range filter
+    st.sidebar.markdown("#### Range (WLTP)")
+    range_min_val = int(df['range_wltp_km'].min()) if df['range_wltp_km'].notna().any() else 200
+    range_max_val = int(df['range_wltp_km'].max()) if df['range_wltp_km'].notna().any() else 800
+    
+    range_filter = st.sidebar.slider(
+        "WLTP Range (km):",
+        min_value=range_min_val,
+        max_value=range_max_val,
+        value=(range_min_val, range_max_val),
+        step=50
+    )
+    
+    # DC charging power filter
+    st.sidebar.markdown("#### Charging Speed")
+    charge_min_val = int(df['dc_charge_power_kw'].min()) if df['dc_charge_power_kw'].notna().any() else 50
+    charge_max_val = int(df['dc_charge_power_kw'].max()) if df['dc_charge_power_kw'].notna().any() else 350
+    
+    charge_power = st.sidebar.slider(
+        "DC Charge Power (kW):",
+        min_value=charge_min_val,
+        max_value=charge_max_val,
+        value=(charge_min_val, charge_max_val),
+        step=10
+    )
+    
+    # Battery chemistry filter
+    all_chemistries = sorted([c for c in df['battery_chemistry'].unique() if pd.notna(c)])
+    selected_chemistries = st.sidebar.multiselect(
+        "Battery Chemistry:",
+        options=all_chemistries,
+        default=[]
+    )
+    
+    # Reset filters button
+    if st.sidebar.button("🔄 Reset All Filters"):
+        st.rerun()
+    
+    # Apply filters
+    filtered_df = df.copy()
+    
+    if selected_manufacturers:
+        filtered_df = filtered_df[filtered_df['manufacturer'].isin(selected_manufacturers)]
+    
+    if selected_body_styles:
+        filtered_df = filtered_df[filtered_df['body_style'].isin(selected_body_styles)]
+    
+    if selected_drive_types:
+        filtered_df = filtered_df[filtered_df['drive_type'].isin(selected_drive_types)]
+    
+    if selected_chemistries:
+        filtered_df = filtered_df[filtered_df['battery_chemistry'].isin(selected_chemistries)]
+    
+    # Price filter (handle NaN)
+    filtered_df = filtered_df[
+        (filtered_df['price_eur'].isna()) | 
+        ((filtered_df['price_eur'] >= price_range[0]) & (filtered_df['price_eur'] <= price_range[1]))
+    ]
+    
+    # Range filter
+    filtered_df = filtered_df[
+        (filtered_df['range_wltp_km'] >= range_filter[0]) & 
+        (filtered_df['range_wltp_km'] <= range_filter[1])
+    ]
+    
+    # Charge power filter (handle NaN)
+    filtered_df = filtered_df[
+        (filtered_df['dc_charge_power_kw'].isna()) | 
+        ((filtered_df['dc_charge_power_kw'] >= charge_power[0]) & (filtered_df['dc_charge_power_kw'] <= charge_power[1]))
+    ]
+    
+    # Display results count
+    st.markdown(f"### Found {len(filtered_df)} vehicle(s)")
+    
+    if len(filtered_df) == 0:
+        st.warning("No vehicles match the selected filters. Try adjusting your criteria.")
+    else:
+        # Sort options
+        col1, col2 = st.columns([3, 1])
+        
+        with col1:
+            sort_by = st.selectbox(
+                "Sort by:",
+                options=[
+                    "Manufacturer (A-Z)",
+                    "Price (Low-High)",
+                    "Price (High-Low)",
+                    "Range (High-Low)",
+                    "Range (Low-High)",
+                    "Charging Speed (High-Low)",
+                    "Power (High-Low)"
+                ],
+                index=0
+            )
+        
+        with col2:
+            st.markdown("<br>", unsafe_allow_html=True)
+            export_format = st.selectbox("Export:", ["CSV", "JSON"])
+        
+        # Apply sorting
+        if sort_by == "Manufacturer (A-Z)":
+            filtered_df = filtered_df.sort_values(['manufacturer', 'model', 'variant_name'])
+        elif sort_by == "Price (Low-High)":
+            filtered_df = filtered_df.sort_values('price_eur', na_position='last')
+        elif sort_by == "Price (High-Low)":
+            filtered_df = filtered_df.sort_values('price_eur', ascending=False, na_position='last')
+        elif sort_by == "Range (High-Low)":
+            filtered_df = filtered_df.sort_values('range_wltp_km', ascending=False)
+        elif sort_by == "Range (Low-High)":
+            filtered_df = filtered_df.sort_values('range_wltp_km')
+        elif sort_by == "Charging Speed (High-Low)":
+            filtered_df = filtered_df.sort_values('dc_charge_power_kw', ascending=False, na_position='last')
+        elif sort_by == "Power (High-Low)":
+            filtered_df = filtered_df.sort_values('total_power_kw', ascending=False)
+        
+        # Format display data
+        display_df = filtered_df.copy()
+        display_df['Vehicle'] = (
+            display_df['manufacturer'] + ' ' + 
+            display_df['model'] + ' ' + 
+            display_df['variant_name'] + ' (' + 
+            display_df['model_year'].astype(str) + ')'
+        )
+        display_df['Battery'] = display_df['battery_usable_kwh'].apply(
+            lambda x: f"{x:.1f} kWh" if pd.notna(x) else "N/A"
+        )
+        display_df['WLTP Range'] = display_df['range_wltp_km'].apply(
+            lambda x: f"{int(x)} km" if pd.notna(x) else "N/A"
+        )
+        display_df['Real Range'] = display_df['range_real_world_km'].apply(
+            lambda x: f"{int(x)} km" if pd.notna(x) else "N/A"
+        )
+        display_df['Power'] = display_df['total_power_kw'].apply(
+            lambda x: f"{int(x)} kW" if pd.notna(x) else "N/A"
+        )
+        display_df['0-100'] = display_df['acceleration_0_100_sec'].apply(
+            lambda x: f"{x:.1f}s" if pd.notna(x) else "N/A"
+        )
+        display_df['DC Charge'] = display_df['dc_charge_power_kw'].apply(
+            lambda x: f"{int(x)} kW" if pd.notna(x) else "N/A"
+        )
+        display_df['Price'] = display_df['price_eur'].apply(
+            lambda x: f"€{int(x):,}" if pd.notna(x) else "TBD"
+        )
+        
+        # Display table
+        st.dataframe(
+            display_df[[
+                'Vehicle', 'body_style', 'Battery', 'WLTP Range', 
+                'Real Range', 'Power', '0-100', 'DC Charge', 'drive_type', 'Price'
+            ]].rename(columns={
+                'body_style': 'Body',
+                'drive_type': 'Drive'
+            }),
+            hide_index=True,
+            use_container_width=True,
+            height=600
+        )
+        
+        # Export functionality
+        if export_format == "CSV":
+            csv_data = filtered_df.to_csv(index=False)
+            st.download_button(
+                label="⬇️ Download CSV",
+                data=csv_data,
+                file_name=f"evdb_browse_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                mime="text/csv"
+            )
+        else:  # JSON
+            json_data = filtered_df.to_json(orient='records', indent=2)
+            st.download_button(
+                label="⬇️ Download JSON",
+                data=json_data,
+                file_name=f"evdb_browse_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json"
+            )
+        
+        # Quick stats
+        st.markdown("---")
+        st.markdown("### 📊 Quick Statistics")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            avg_price = filtered_df['price_eur'].mean()
+            st.metric(
+                "Average Price",
+                f"€{int(avg_price):,}" if pd.notna(avg_price) else "N/A"
+            )
+        
+        with col2:
+            avg_range = filtered_df['range_wltp_km'].mean()
+            st.metric(
+                "Average Range",
+                f"{int(avg_range)} km" if pd.notna(avg_range) else "N/A"
+            )
+        
+        with col3:
+            avg_power = filtered_df['total_power_kw'].mean()
+            st.metric(
+                "Average Power",
+                f"{int(avg_power)} kW" if pd.notna(avg_power) else "N/A"
+            )
+        
+        with col4:
+            avg_charge = filtered_df['dc_charge_power_kw'].mean()
+            st.metric(
+                "Average DC Charge",
+                f"{int(avg_charge)} kW" if pd.notna(avg_charge) else "N/A"
+            )
 
 elif page == "⚖️ Compare":
     st.title("⚖️ Compare Vehicles")
