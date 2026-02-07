@@ -1078,7 +1078,7 @@ elif page == "📊 Analytics":
         
         # Battery vs Range scatter plot
         fig_range = px.scatter(
-            df.dropna(subset=['battery_usable_kwh', 'range_wltp_km']),
+            df.dropna(subset=['battery_usable_kwh', 'range_wltp_km', 'total_power_kw', 'body_style']),
             x='battery_usable_kwh',
             y='range_wltp_km',
             color='body_style',
@@ -1192,7 +1192,7 @@ elif page == "📊 Analytics":
         st.markdown("### Fastest Charging Vehicles")
         
         # Top charging speeds
-        top_charging = df.dropna(subset=['dc_charge_power_kw']).nlargest(15, 'dc_charge_power_kw')
+        top_charging = df.dropna(subset=['dc_charge_power_kw', 'battery_architecture']).nlargest(15, 'dc_charge_power_kw')
         
         fig_top_charging = px.bar(
             top_charging,
@@ -1234,7 +1234,7 @@ elif page == "📊 Analytics":
             
             # Box plot by body style
             fig_price_body = px.box(
-                price_df,
+                price_df.dropna(subset=['body_style']),
                 x='body_style',
                 y='price_eur',
                 color='body_style',
