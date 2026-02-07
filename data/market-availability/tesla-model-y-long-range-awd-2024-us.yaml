@@ -1,0 +1,367 @@
+# Tesla Model Y Long Range AWD - United States Market
+# America's Best-Selling EV - Crossover SUV Segment Leader
+
+id: tesla-model-y-long-range-awd-2024-us
+variant_id: tesla-model-y-long-range-awd-2024
+market: US
+currency: USD
+
+pricing:
+  base_price: 47990  # 2024 pricing (reduced from $52,990 in 2023)
+  destination_charge: 1390
+  total_msrp: 49380
+  price_before_incentives: 49380
+  
+  available_incentives:
+    - name: Federal EV Tax Credit
+      type: tax-credit
+      amount: 7500
+      description: "Federal tax credit for new EVs under Inflation Reduction Act (IRA)"
+      eligibility: "Built in North America (Texas or California). Subject to income limits: $300k married/$225k head of household/$150k single. MSRP limit: $80,000 for SUVs. Point-of-sale instant discount available at participating dealers."
+      url: https://www.fueleconomy.gov/feg/tax2023.shtml
+      notes: "Model Y qualifies (made in USA). Instant discount at delivery."
+      
+    - name: California Clean Vehicle Rebate (CVRP)
+      type: rebate
+      amount: 2000  # Standard rate
+      description: "California state rebate for eligible EVs"
+      eligibility: "California residents only. Income limits: $180k single/$300k joint. Vehicle MSRP under $80,000."
+      url: https://cleanvehiclerebate.org/
+      region: CA
+      notes: "Additional $5,500 for low-income ($90k single/$150k joint). Not stackable with other CA rebates."
+      
+    - name: Colorado EV Tax Credit
+      type: tax-credit
+      amount: 5000
+      description: "Colorado state EV tax credit"
+      eligibility: "Colorado residents, income under $85k single/$170k joint"
+      url: https://energyoffice.colorado.gov/zero-emission-vehicles
+      region: CO
+      notes: "Stackable with federal credit for total $12,500 savings"
+      
+    - name: Connecticut CHEAPR Rebate
+      type: rebate
+      amount: 2250  # Standard tier
+      description: "Connecticut hydrogen and electric automobile purchase rebate"
+      eligibility: "CT residents, MSRP under $50,000 for full rebate"
+      url: https://portal.ct.gov/DEEP/Air/Mobile-Sources/CHEAPR/CHEAPR---Home
+      region: CT
+      notes: "Model Y may qualify for reduced rebate depending on configuration"
+      
+    - name: Massachusetts MOR-EV Rebate
+      type: rebate
+      amount: 3500
+      description: "Massachusetts offers rebates for electric vehicles"
+      eligibility: "MA residents, MSRP under $50,000"
+      url: https://www.mass.gov/mor-ev
+      region: MA
+      notes: "Model Y exceeds MSRP limit in most configurations"
+      
+    - name: New Jersey EV Rebate
+      type: rebate
+      amount: 4000
+      description: "New Jersey Charge Up program"
+      eligibility: "NJ residents, income under $300k household"
+      url: https://chargeup.njcleanenergy.com/
+      region: NJ
+      notes: "Stackable with federal credit for $11,500 total"
+      
+    - name: New York Drive Clean Rebate
+      type: rebate
+      amount: 2000
+      description: "New York State Drive Clean Rebate"
+      eligibility: "NY residents, MSRP under $80,000"
+      url: https://www.nyserda.ny.gov/drive-clean-rebate
+      region: NY
+      notes: "Stackable with federal credit for $9,500 total"
+      
+    - name: Oregon Clean Vehicle Rebate
+      type: rebate
+      amount: 7500
+      description: "Oregon's new rebate program (2024+)"
+      eligibility: "OR residents, income limits apply"
+      url: https://www.oregon.gov/deq/aq/Pages/Clean-Vehicle-Rebate.aspx
+      region: OR
+      notes: "One of most generous state programs! Stackable with federal for $15,000 total"
+      
+    - name: Washington Sales Tax Exemption
+      type: tax-exemption
+      amount: 4500  # Approximate, based on $49,380 * 9% avg sales tax
+      description: "Washington state sales tax exemption for EVs under $90,000"
+      eligibility: "WA residents, vehicle MSRP under $90,000"
+      url: https://www.dol.wa.gov/vehicleregistration/evexemption.html
+      region: WA
+      notes: "Up to $15,000 of MSRP exempt from sales tax"
+      
+  estimated_price_after_incentives: 41880  # With federal credit only
+  estimated_price_ca_with_incentives: 39880  # Federal + California CVRP
+  estimated_price_best_case: 34380  # Federal + Oregon ($15,000 total)
+
+availability:
+  status: available
+  order_status: available
+  estimated_delivery: "2-4 weeks"  # Faster than most competitors (built in USA)
+  last_updated: "2024-02-01"
+  production_location: "Fremont, CA and Austin, TX, USA"
+  notes: "Quick delivery due to domestic production. Inventory vehicles available for immediate delivery."
+
+market_specific:
+  trim_name: "Long Range All-Wheel Drive"
+  
+  standard_features:
+    - Autopilot with Traffic-Aware Cruise Control and Autosteer (SAE Level 2)
+    - Premium interior with heated front and rear seats
+    - 15-speaker audio system with subwoofers
+    - Panoramic glass roof with UV protection
+    - Power-folding, heated side mirrors
+    - Power liftgate with hands-free open
+    - Wireless charging pad for 3 devices
+    - Tinted glass roof
+    - Center console with wireless charging and USB-C ports
+    - 15.4-inch touchscreen display
+    - Premium connectivity (1 year included, then $10/month)
+    - Navigate on Autopilot (with Premium Connectivity)
+    - Sentry Mode and Dashcam
+    - Dog Mode and Camp Mode
+    - Mobile app control (climate, unlock, summon)
+    - Over-the-air software updates
+    - 8-year/120,000-mile battery and drive unit warranty
+    - 4-year/50,000-mile basic vehicle warranty
+    - Tesla Supercharger network access (pay-per-use)
+  
+  available_colors:
+    - name: Pearl White Multi-Coat
+      type: pearl
+      price_premium: 0
+      notes: "Most popular, included in base price"
+      
+    - name: Solid Black
+      type: solid
+      price_premium: 0
+      notes: "No-cost option"
+      
+    - name: Midnight Silver Metallic
+      type: metallic
+      price_premium: 1000
+      
+    - name: Deep Blue Metallic
+      type: metallic
+      price_premium: 1000
+      notes: "Popular premium color"
+      
+    - name: Red Multi-Coat
+      type: pearl
+      price_premium: 2000
+      notes: "Signature Tesla red, most expensive"
+      
+    - name: Quicksilver
+      type: metallic
+      price_premium: 2000
+      notes: "New 2024 color, premium finish"
+      
+    - name: Ultra Red
+      type: multi-coat
+      price_premium: 2000
+      notes: "New 2024 color, replaces Red Multi-Coat in some markets"
+  
+  available_wheels:
+    - size_inches: 19
+      name: Gemini Wheels
+      type: aero
+      price_premium: 0
+      range_impact_km: 0
+      notes: "Standard, optimized for efficiency (565 km range)"
+      
+    - size_inches: 20
+      name: Induction Wheels
+      type: sport
+      price_premium: 2000
+      range_impact_km: -25  # Reduces range to ~540 km
+      notes: "Sportier look, slightly reduced efficiency"
+  
+  available_interiors:
+    - name: All Black
+      material: synthetic-leather
+      price_premium: 0
+      notes: "Standard, vegan-friendly materials"
+      
+    - name: Black and White
+      material: synthetic-leather
+      price_premium: 1000
+      notes: "Premium two-tone interior, popular upgrade"
+  
+  optional_packages:
+    - name: Enhanced Autopilot
+      price: 6000
+      description: "Navigate on Autopilot, Auto Lane Change, Autopark, Summon, Smart Summon"
+      notes: "One-time purchase or $99/month subscription after delivery"
+      
+    - name: Full Self-Driving Capability
+      price: 12000
+      description: "Traffic Light and Stop Sign Control, Autosteer on city streets (beta)"
+      notes: "One-time purchase or $199/month subscription. Features subject to regulatory approval."
+      
+    - name: Seven-Seat Interior
+      price: 3000
+      description: "Third-row seating for 2 additional passengers (7 total)"
+      notes: "Popular family option, reduces cargo space"
+      
+    - name: Tow Hitch
+      price: 1000
+      description: "2-inch receiver hitch, 3,500 lb towing capacity"
+      notes: "Must be ordered with vehicle, cannot be added later"
+  
+  popular_configurations:
+    - name: "Base Family"
+      description: "Long Range AWD + White + Gemini wheels + All Black interior"
+      total_price: 49380
+      total_with_federal_credit: 41880
+      notes: "Most popular, best value configuration"
+      
+    - name: "Premium 7-Seater"
+      description: "Long Range AWD + Deep Blue + Induction wheels + Black/White + 7-seat"
+      total_price: 56380  # Base + $1k color + $2k wheels + $1k interior + $3k seats
+      total_with_federal_credit: 48880
+      notes: "Popular family hauler with style upgrades"
+      
+    - name: "Tech Enthusiast"
+      description: "Long Range AWD + Quicksilver + Induction wheels + Black/White + FSD"
+      total_price: 66380  # Base + $2k color + $2k wheels + $1k interior + $12k FSD
+      total_with_federal_credit: 58880
+      notes: "Fully loaded with Full Self-Driving Capability"
+      
+    - name: "Adventure Towing"
+      description: "Long Range AWD + White + Gemini wheels + All Black + Tow Hitch"
+      total_price: 50380  # Base + $1k hitch
+      total_with_federal_credit: 42880
+      notes: "Practical for camping/outdoor enthusiasts"
+
+charging_infrastructure:
+  superchargers_count: 2150  # Supercharger stations in North America
+  superchargers_stalls: 24000  # Individual charging stalls
+  supercharger_pricing: "Pay-per-use, ~$0.25-0.60/kWh depending on location and time"
+  supercharger_membership: "$12.99/month for reduced per-kWh pricing (optional)"
+  destination_chargers: 8500  # Hotels, restaurants, shopping centers
+  home_charging_incentives: "Many utilities offer off-peak EV charging rates"
+  notes: "Largest proprietary fast-charging network in North America. Average supercharger spacing: 150 miles. Idle fees apply after charge completes."
+
+warranty:
+  basic_years: 4
+  basic_miles: 50000
+  battery_years: 8
+  battery_miles: 120000
+  battery_retention_percent: 70
+  rust_perforation_years: 12
+  rust_perforation_miles: "unlimited"
+  notes: "Battery warranty covers 70% capacity retention. Extended service agreements not available (Tesla philosophy: fix it right the first time)."
+
+dealer_network:
+  type: direct-sales  # No dealers, buy directly from Tesla
+  showrooms_count: 125  # Tesla stores/galleries in US
+  service_centers_count: 195  # Tesla service centers
+  mobile_service: true
+  mobile_service_coverage: "Most major metropolitan areas"
+  online_purchase: true
+  notes: "No traditional dealers. Buy online or at Tesla stores. Mobile service for minor repairs. Service centers for major work."
+
+real_world_performance:
+  typical_range_mi: 300  # Real-world mixed driving
+  typical_range_km: 483
+  highway_range_75mph_mi: 280  # Highway at 75 mph
+  highway_range_75mph_km: 451
+  city_range_mi: 350  # City driving
+  city_range_km: 563
+  winter_range_20f_mi: 240  # Winter at 20°F (-6°C)
+  winter_range_20f_km: 386
+  consumption_real_world_kwh_100mi: 25  # Typical efficiency
+  consumption_real_world_kwh_100km: 15.5
+  notes: "Range varies by driving style, climate control use, weather. Heat pump standard (2021+) improves cold weather efficiency. Preconditioning battery before DC charging optimizes charge speed."
+
+competitive_positioning:
+  primary_competitors:
+    - "Ford Mustang Mach-E Extended Range AWD ($56,295)"
+    - "Hyundai Ioniq 5 Long Range AWD ($48,500)"
+    - "Kia EV6 Long Range AWD ($48,700)"
+    - "Volkswagen ID.4 Pro S AWD ($48,995)"
+    - "Chevrolet Blazer EV LT ($51,800)"
+    - "BMW iX xDrive40 ($87,250)"
+    - "Mercedes-Benz EQE SUV 350+ ($77,900)"
+  
+  advantages:
+    - "Best-selling EV in America (375,000+ units in 2023)"
+    - "Largest fast-charging network (24,000+ Supercharger stalls)"
+    - "Quick delivery (2-4 weeks vs 6-12 weeks for competitors)"
+    - "Frequent over-the-air software updates add new features"
+    - "Industry-leading range efficiency (EPA 122 MPGe)"
+    - "Strong resale value (60-70% after 3 years)"
+    - "Lower total cost of ownership (minimal maintenance)"
+    - "Built in USA (qualifies for full federal tax credit)"
+    - "Competitive pricing after $7,500 federal credit ($41,880)"
+    - "Spacious interior and cargo (76 cu ft)"
+    - "Quick acceleration (0-60 mph in 4.8 seconds)"
+    - "Advanced Autopilot standard (competitors charge extra)"
+  
+  disadvantages:
+    - "No dealer network (must use Tesla service centers)"
+    - "Build quality inconsistencies (panel gaps, paint issues)"
+    - "Minimalist interior (no buttons, everything on touchscreen)"
+    - "Firm ride quality (sportier suspension tuning)"
+    - "No Android Auto or Apple CarPlay"
+    - "Full Self-Driving still in beta despite high price ($12,000)"
+    - "No traditional driver's cluster (HUD not available)"
+    - "Mobile service not available in rural areas"
+  
+  best_for:
+    - "Daily commuters (excellent efficiency, low running costs)"
+    - "Tech enthusiasts (OTA updates, advanced Autopilot)"
+    - "Road trippers (Supercharger network coverage)"
+    - "Families (spacious, 7-seat option, safety features)"
+    - "Company car users (low TCO, federal incentives)"
+    - "Urban/suburban drivers (smooth acceleration, quiet)"
+  
+  not_ideal_for:
+    - "Buyers wanting traditional dealer experience"
+    - "Off-road enthusiasts (low ground clearance 6.6\")"
+    - "Maximum towing capacity needs (3,500 lb limit)"
+    - "Buyers preferring physical buttons and knobs"
+    - "Rural areas without nearby service centers"
+
+notes: |
+  Best-selling EV in America for 2023 with 375,000+ units sold.
+  Model Y outsold all other EVs combined in many US states.
+  Built at Fremont, California (original) and Gigafactory Texas (newer).
+  Texas-built vehicles use 4680 battery cells (structural pack).
+  California-built vehicles use 2170 battery cells (traditional pack).
+  Both achieve similar range/performance, but 4680 pack is lighter.
+  
+  Popular in California (30% of US sales) due to generous state incentives.
+  Tesla Supercharger network is largest advantage over competitors.
+  Average Supercharger session: 15-25 minutes for 200+ miles of range.
+  Mobile app allows remote climate control, lock/unlock, summon.
+  
+  Insurance costs higher than average ($2,400/year vs $1,600 for ICE SUV).
+  Maintenance minimal: brake pads last 100,000+ miles (regen braking).
+  Tire replacement more frequent due to instant torque and vehicle weight.
+  
+  Federal tax credit available at point of sale (instant discount at delivery).
+  Best value: Base Long Range AWD ($47,990 - $7,500 = $40,490 effective).
+  California buyers: $47,990 - $7,500 federal - $2,000 CVRP = $38,490!
+  Oregon buyers: $47,990 - $7,500 federal - $7,500 OR = $32,990!
+  
+  Recommended for buyers who prioritize:
+  - Range efficiency and low operating costs
+  - Fast charging infrastructure access
+  - Latest technology and OTA updates
+  - Minimal maintenance
+  - Strong safety ratings (IIHS Top Safety Pick+, NHTSA 5-star)
+
+metadata:
+  created_at: "2026-02-07"
+  data_quality: verified
+  source: manufacturer
+  source_url: https://www.tesla.com/modely/design
+  last_verified: "2026-02-07"
+  contributors:
+    - name: EVDB Team
+      date: "2026-02-07"
+  notes: "2024 pricing reflects Tesla's price reductions throughout 2023-2024. State incentives current as of Feb 2024 but subject to change based on funding availability."
