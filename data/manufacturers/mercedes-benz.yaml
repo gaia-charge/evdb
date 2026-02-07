@@ -1,0 +1,80 @@
+id: mercedes-benz
+name: Mercedes-Benz Group AG
+country: DE
+website: https://www.mercedes-benz.com/
+founded: 1926
+description: >
+  Mercedes-Benz Group AG (formerly Daimler AG) is a German multinational automotive 
+  corporation headquartered in Stuttgart, Baden-Württemberg, Germany. Mercedes-Benz 
+  is one of the world's most recognized luxury vehicle brands, known for innovation 
+  in safety, comfort, and performance.
+  
+  The company pioneered the modern automobile and has been at the forefront of 
+  automotive technology for over a century. Mercedes-Benz entered the electric 
+  vehicle market with the EQ brand, offering a range of premium electric vehicles 
+  across all segments.
+
+ev_platforms:
+  - name: EVA2
+    description: >
+      Electric Vehicle Architecture 2.0, developed specifically for large luxury 
+      electric vehicles. Features 400V architecture with up to 200kW DC fast 
+      charging. Used in EQE, EQS, EQS SUV, EQE SUV.
+    voltage: 400
+    years: 2021-present
+    
+  - name: EVA
+    description: >
+      First-generation Electric Vehicle Architecture for Mercedes-Benz EQ vehicles. 
+      400V architecture. Used in EQC, EQA, EQB, EQV (adapted from ICE platforms).
+    voltage: 400
+    years: 2019-present
+
+sustainability_targets:
+  carbon_neutral_year: 2039
+  all_electric_year: null
+  notes: >
+    Mercedes-Benz aims for carbon neutrality across all new vehicle fleet by 2039. 
+    The company has committed to offering an all-electric alternative in every 
+    segment where Mercedes-Benz is active by 2025. Target is to sell only electric 
+    vehicles by 2030, "where market conditions allow."
+
+battery_tech:
+  recycling: true
+  second_life: true
+  notes: >
+    Mercedes-Benz has partnered with various battery suppliers including CATL, 
+    SK Innovation, and Farasis Energy. The company is investing in battery 
+    production and recycling infrastructure, including a battery recycling plant 
+    in Kuppenheim, Germany with 96% material recovery rate.
+
+charging_standards:
+  - CCS2
+  - CCS1
+
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+  notes: >
+    Mercedes-Benz has announced bidirectional charging capability for future 
+    models but it is not yet available in current production vehicles.
+
+notes: >
+  Mercedes-Benz is one of the "big three" German luxury automakers alongside 
+  BMW and Audi. The EQ brand represents Mercedes-Benz's electric vehicle lineup. 
+  The company has committed over €40 billion to electrification through 2030.
+  
+  Mercedes-Benz vehicles are known for exceptional build quality, advanced 
+  driver assistance systems (DRIVE PILOT Level 3 autonomy in Germany), and 
+  luxurious interiors. The MBUX (Mercedes-Benz User Experience) infotainment 
+  system features "Hey Mercedes" voice assistant and over-the-air updates.
+
+metadata:
+  data_quality: verified
+  created_at: "2024-02-07"
+  last_updated: "2024-02-07"
+  sources:
+    - https://www.mercedes-benz.com/
+    - https://group.mercedes-benz.com/sustainability/
+    - https://www.mercedes-benz.com/en/innovation/digitalisation/mbux/
