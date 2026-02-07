@@ -1,54 +1,54 @@
-# Renault Megane E-Tech EV60 Techno (2024) - Germany Market Availability
+# Renault Megane E-Tech EV60 Techno (2024) - France Market Availability
 
-id: renault-megane-e-tech-ev60-techno-2024-de
+id: renault-megane-e-tech-ev60-techno-2024-fr
 variant_id: renault-megane-e-tech-ev60-techno-2024
-market: DE
+market: FR
 currency: EUR
 
 # Market-Specific Details
 availability_status: available
 available_from: "2024-01-01"
-delivery_time_weeks: 14
+delivery_time_weeks: 10
 
 # Pricing
 pricing:
-  base_price: 43000
-  price_including_vat: 43000
-  vat_rate_percent: 19
+  base_price: 40500
+  price_including_vat: 40500
+  vat_rate_percent: 20
 
 # Available Colors
 available_colors:
-  - name: Midnight Black
+  - name: Noir Étoilé
     code: NB
     type: metallic
     price_add:
       amount: 0
       currency: EUR
-  - name: Glacier White
+  - name: Blanc Glacier
     code: OV369
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Flame Red
+  - name: Rouge Flamme
     code: NNP
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Highland Grey
+  - name: Gris Highland
     code: KNM
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Diamond Black
+  - name: Noir Diamant
     code: GNE
     type: metallic
     price_add:
       amount: 750
       currency: EUR
-  - name: Schist Grey
+  - name: Gris Schiste
     code: KNA
     type: metallic
     price_add:
@@ -93,51 +93,61 @@ available_interiors:
 
 # Incentives
 available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price", "BEV", "Zero emissions"]
+  - type: federal
+    name: "Bonus Écologique"
+    amount:
+      amount: 5000
+      currency: EUR
+    conditions: ["Price under €47,000", "BEV", "Minimum 2-year ownership"]
+    expires_at: "2024-12-31"
+  - type: regional
+    name: "Prime à la Conversion"
+    amount:
+      amount: 2500
+      currency: EUR
+    conditions: ["Scrapping old vehicle", "Income limits apply"]
 
 # Options
 popular_packages:
-  - name: Comfort Package
+  - name: Pack Confort
     price:
       amount: 1400
       currency: EUR
     features:
-      - Heated front and rear seats
-      - Heated steering wheel
-      - Ventilated front seats
-  - name: Premium Package
+      - Sièges avant et arrière chauffants
+      - Volant chauffant
+      - Sièges avant ventilés
+  - name: Pack Premium
     price:
       amount: 2200
       currency: EUR
     features:
-      - Panoramic glass roof
-      - Harman Kardon sound system
-      - Ambient lighting
-  - name: Driver Assistance Plus
+      - Toit panoramique en verre
+      - Système audio Harman Kardon
+      - Éclairage d'ambiance
+  - name: Pack Conduite Autonome Plus
     price:
       amount: 1600
       currency: EUR
     features:
-      - Highway pilot assist
-      - Hands-free parking
-      - Traffic jam assist
+      - Assistance autoroute
+      - Parking mains libres
+      - Assistant embouteillages
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Techno is the best-selling variant in Germany,
-  offering excellent balance between range, performance, and equipment.
-  Heat pump and 22kW AC charging included as standard. Ideal for company cars
-  with 0.25% tax rate. Real-world range of 370km suits most daily needs
-  with occasional long-distance trips.
+  Renault Megane E-Tech EV60 Techno, la version la plus populaire en France.
+  Excellent équilibre entre autonomie (450 km WLTP, 370 km réel), performances,
+  et équipements. Pompe à chaleur et chargeur 22kW AC de série.
+  Prix attractif avec bonus écologique (€5,000) et prime à la conversion (€2,500).
+  Fabriqué en France à Douai (Renault ElectriCity). Autonomie suffisante pour
+  la plupart des trajets quotidiens et déplacements occasionnels longue distance.
 
 # Metadata
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  source_url: https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
   created_at: "2024-02-07"
   last_verified_at: "2024-02-07"
-  notes: Prices as of February 2024
+  notes: Prix février 2024 avec bonus écologique
