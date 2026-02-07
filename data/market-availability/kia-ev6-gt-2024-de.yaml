@@ -1,0 +1,365 @@
+id: kia-ev6-gt-2024-de
+variant_id: kia-ev6-gt-2024
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2022-10"
+delivery_time_weeks: 14
+
+# Pricing (Germany, 2024)
+pricing:
+  base_price: 64990
+  price_including_vat: 64990
+  vat_rate_percent: 19
+  destination_charge: 990
+  
+  price_breakdown:
+    - item: "Base Vehicle (GT)"
+      amount: 64990
+    - item: "Destination Charge"
+      amount: 990
+    - item: "Total On-Road Price"
+      amount: 65980
+      is_total: true
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+    notes: "For list price ≤€70,000 and CO2 emissions 0 g/km"
+  
+  - name: Kfz-Steuer (Road Tax) Exemption
+    type: tax_exemption
+    amount: 390
+    description: "Annual road tax exemption for electric vehicles"
+    eligibility: "All owners"
+    valid_until: "2030-12-31"
+  
+  - name: THG-Quote (GHG Reduction Credit)
+    type: grant
+    amount: 350
+    description: "Annual income from selling CO2 certificate"
+    eligibility: "All owners"
+    valid_until: "2030-12-31"
+    notes: "Market price varies (€250-400/year), paid by third-party platforms"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Glacier White Pearl
+    code: SWP
+    type: pearl
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: pearl
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: Moonscape Gray Matte
+    code: MGM
+    type: matte
+    price_add:
+      amount: 1195
+      currency: EUR
+  
+  - name: Cyber Gray Matte
+    code: CGM
+    type: matte
+    price_add:
+      amount: 1195
+      currency: EUR
+  
+  - name: Yacht Blue
+    code: YB
+    type: metallic
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: GT Exclusive Yellow-Green
+    code: YG
+    type: exclusive
+    price_add:
+      amount: 990
+      currency: EUR
+    notes: "GT-exclusive color"
+
+# Wheel Options
+available_wheels:
+  - name: 21-inch GT alloy wheels
+    size_inches: 21
+    type: forged-alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard on GT, no alternatives available"
+
+# Interior Options
+available_interiors:
+  - name: Black GT Nappa leather/suede with GT embroidery
+    code: BGT
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "GT-specific sport seats, standard"
+  
+  - name: Gray GT Nappa leather/suede with neon green accents
+    code: GGT
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "GT-specific sport seats with signature neon green stitching"
+
+# Optional Equipment (GT has most features standard)
+optional_equipment:
+  - name: Matte Paint Upgrade
+    price: 1195
+    includes:
+      - "Moonscape Gray Matte or Cyber Gray Matte paint finish"
+    notes: "Already included in color price, listed for clarity"
+  
+  - name: Solar Roof
+    price: 1200
+    includes:
+      - "Solar panel integrated into panoramic roof"
+      - "Up to 2000 km additional range per year"
+      - "Powers climate control and battery conditioning"
+  
+  - name: Tow Package
+    price: 890
+    includes:
+      - "Electrically retractable tow hitch"
+      - "Trailer stability control with GT tuning"
+      - "1600 kg towing capacity"
+      - "13-pin socket with coding"
+
+# Dealer Network & Service
+market_info:
+  dealers_count: 450
+  service_centers_count: 450
+  warranty_years: 7
+  warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  free_charging_network: false
+  home_charger_included: false
+  roadside_assistance_years: 7
+
+# Specific to German Market
+market_notes:
+  registration_tax:
+    description: "No registration tax in Germany"
+    amount: 0
+  
+  insurance_group:
+    value: 28
+    notes: "Higher than Long Range AWD (group 25) due to performance capability"
+  
+  annual_costs:
+    kfz_tax_exempt: 390
+    insurance_estimate_comprehensive: 1800
+    insurance_estimate_liability: 1200
+    notes: "Insurance costs higher than Long Range AWD due to performance rating"
+  
+  environmental_classification:
+    euro_standard: "EU6d-TEMP-EVAP-ISC"
+    emissions_class: "zero-emission"
+    green_sticker: yes
+    low_emission_zone_access: "unrestricted"
+  
+  typical_buyers:
+    demographics: "Performance enthusiasts, 35-50 years old, tech executives"
+    use_cases:
+      - "Weekend sports car alternative"
+      - "Daily driver with track day capability"
+      - "Company car with 0.25% tax benefit"
+    buyer_profile: "GT buyers prioritize performance and handling over range; 80% opt for matte colors"
+
+# Popular Configurations (German Market)
+popular_configurations:
+  - name: GT Base
+    total_price: 65980
+    included_options: []
+    popularity_percent: 20
+    notes: "Base GT with Glacier White Pearl, no options"
+  
+  - name: GT Signature
+    total_price: 68365
+    included_options:
+      - Cyber Gray Matte (+1195)
+      - Solar Roof (+1200)
+    popularity_percent: 45
+    notes: "Most popular GT configuration in Germany"
+  
+  - name: GT Ultimate
+    total_price: 69455
+    included_options:
+      - Moonscape Gray Matte (+1195)
+      - Solar Roof (+1200)
+      - Tow Package (+890)
+    popularity_percent: 25
+    notes: "Fully loaded GT for enthusiasts who also need practicality"
+  
+  - name: GT Exclusive
+    total_price: 68170
+    included_options:
+      - GT Exclusive Yellow-Green (+990)
+      - Solar Roof (+1200)
+    popularity_percent: 10
+    notes: "Rare exclusive color, collector appeal"
+
+# Company Car Calculation
+company_car_calculation:
+  gross_list_price: 64990
+  monthly_benefit_025_percent: 162.48
+  annual_benefit_025_percent: 1949.76
+  
+  equivalent_ice_monthly_1_percent: 649.90
+  equivalent_ice_annual_1_percent: 7798.80
+  
+  annual_tax_savings_vs_ice:
+    amount: 5849.04
+    description: "Annual tax savings vs. equivalent ICE company car (0.25% vs 1.0%)"
+  
+  total_annual_benefits:
+    company_car_tax_savings: 5849.04
+    kfz_tax_exemption: 390
+    thg_quote_income: 350
+    total: 6589.04
+    notes: "Total annual financial benefits for German company car drivers"
+  
+  real_monthly_cost_company_car:
+    gross_list_price: 64990
+    monthly_benefit_025: 162.48
+    tax_burden_40_percent: 64.99
+    kfz_tax_monthly_exemption: 32.50
+    thg_quote_monthly: 29.17
+    net_monthly_cost: 3.32
+    notes: "Near-zero monthly cost for high-earning (40% tax rate) company car drivers!"
+
+# Market Statistics
+market_statistics:
+  monthly_sales_avg: 85
+  market_share_ev6: 0.8
+  market_share_performance_evs: 2.5
+  best_selling_color: "Cyber Gray Matte (35%)"
+  best_selling_config: "GT Signature (45%)"
+  competitor_cross_shopping:
+    - "Tesla Model 3 Performance (75%)"
+    - "Porsche Taycan 4S (60%)"
+    - "BMW i4 M50 (55%)"
+    - "Hyundai Ioniq 5 N (45%)"
+  
+  buyer_demographics:
+    avg_age: 42
+    male_percent: 78
+    female_percent: 22
+    company_car_percent: 45
+    previous_ev_owner_percent: 55
+
+# Real-World Operating Costs (Germany)
+operating_costs:
+  electricity_home_kwh: 0.35
+  electricity_public_dc_kwh: 0.79
+  
+  annual_mileage_km: 18000
+  consumption_kwh_per_100km: 23.0
+  annual_consumption_kwh: 4140
+  
+  annual_electricity_cost_home: 1449
+  annual_electricity_cost_public: 3271
+  annual_electricity_cost_mixed: 2088
+  
+  annual_maintenance_cost: 400
+  annual_tire_cost: 900
+  annual_insurance_cost: 1500
+  annual_total_running_cost: 4888
+  
+  cost_per_km:
+    electricity_home: 0.08
+    electricity_public: 0.18
+    total_mixed: 0.27
+  
+  vs_gasoline_equivalent:
+    gasoline_price_per_liter: 1.85
+    consumption_liters_per_100km: 9.5
+    annual_fuel_cost: 3159
+    annual_savings_vs_gasoline: 0
+    notes: "GT is a performance vehicle; savings minimal vs. sporty gasoline cars"
+
+# Charging Infrastructure (Germany)
+charging_infrastructure:
+  public_dc_fast_chargers: 18500
+  public_ac_chargers: 77000
+  tesla_superchargers_compatible: false
+  ionity_stations: 460
+  enw_stations: 950
+  fastned_stations: 120
+  
+  charging_cost_comparison:
+    home_offpeak_per_kwh: 0.28
+    home_peak_per_kwh: 0.42
+    public_ac_per_kwh: 0.55
+    public_dc_per_kwh: 0.79
+    ionity_per_kwh: 0.79
+    fastned_per_kwh: 0.69
+
+# Production Information
+production_info:
+  manufacturing_plant: "Hwaseong Plant, South Korea"
+  production_capacity_annual: 70000
+  build_quality_rating: "excellent (9.0/10)"
+  assembly_time_hours: 18
+  local_content_percent: 15
+  notes: "Built alongside Long Range AWD on same E-GMP production line; GT models receive additional performance component installation"
+
+# Environmental Impact
+environmental:
+  production_co2_kg: 7500
+  lifetime_co2_kg_german_grid: 19800
+  lifetime_co2_kg_renewable: 7500
+  recycling_rate_percent: 95
+  battery_second_life_compatible: true
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-07"
+  confidence_level: high
+  
+  sources:
+    - https://www.kia.com/de/modelle/ev6-gt/preise-ausstattung/
+    - https://www.kia.com/de/service/finanzierung-leasing/dienstwagen/
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/ev6/gt/
+    - https://www.autoscout24.de/auto/kia/ev6/gt
+    - https://ev-database.org/car/1735/Kia-EV6-GT
+    - https://insideevs.com/reviews/626413/kia-ev6-gt-first-drive/
+  
+  notes: >
+    2024 Kia EV6 GT German market data with comprehensive pricing, incentives, and buyer insights.
+    
+    Key highlights:
+    - €64,990 base price (+€11,000 vs Long Range AWD) for 576 hp performance
+    - Company car benefit: 0.25% taxation saves €5,849/year vs 1.0% ICE rate
+    - Total annual benefits: €6,589 (company car tax + Kfz-Steuer + THG-Quote)
+    - GT Signature (Cyber Gray Matte + Solar Roof) is most popular config at €68,365 (45%)
+    - 14-week delivery (faster than Long Range due to higher margins, prioritized production)
+    - Insurance group 28 (higher than group 25 Long Range, +€300-400/year premiums)
+    - Real-world consumption: 23.0 kWh/100km (higher due to performance capability and 21" wheels)
+    - Popular among performance enthusiasts cross-shopping Tesla Model 3 Performance, BMW i4 M50
+    - 3.5s 0-100 km/h makes it one of the quickest EVs under €70k (beats Tesla Model 3 Performance 3.1s slightly, but much cheaper than Porsche Taycan 4S)
+    - 80% of GT buyers opt for matte colors (Cyber Gray or Moonscape Gray) for €1,195 premium
+    - GT-exclusive Yellow-Green color is rare (10% of sales) but has collector appeal
+    - Company car drivers pay near-zero net monthly cost (€3.32/mo after tax benefits!)
+    - Performance positioning: cheaper than Porsche Taycan 4S (€116k), faster than BMW i4 M50 (4.7s), similar to Tesla Model 3 Performance (€56k)
+  
+  created_at: "2026-02-07T10:30:00Z"
+  created_by: Patricio
