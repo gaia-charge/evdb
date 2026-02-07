@@ -1,0 +1,174 @@
+# Fiat 500e Electric Vehicle Model
+
+id: fiat-500e
+name: Fiat 500e
+manufacturer_id: stellantis
+brand: Fiat
+
+# Classification
+body_style: hatchback
+segment: A  # City car / Mini car segment
+production_years:
+  start: 2020
+  end: null  # Still in production
+generation: 3  # Third generation (electric-only), derivatives of 1957 and 2007 versions
+
+# Platform & Architecture
+platform: eCMP  # Stellantis Electric Common Modular Platform
+platform_shared_with:
+  - Peugeot e-208
+  - Opel Corsa-e
+  - Citroën ë-C4
+architecture: "400V"
+
+# Awards & Recognition
+awards:
+  - name: "Golden Steering Wheel 2020"
+    year: 2020
+    category: "Best City Car"
+    region: Europe
+    
+  - name: "Auto Europa 2022"
+    year: 2022
+    category: "Car of the Year (Portugal)"
+    region: Portugal
+    
+  - name: "Red Dot Design Award 2021"
+    year: 2021
+    category: "Product Design"
+    
+  - name: "Compasso d'Oro 2020"
+    year: 2020
+    category: "Industrial Design (Italy)"
+
+# Safety
+safety_rating:
+  euro_ncap:
+    year: 2021
+    overall: 3  # 3 stars (criticized for lack of active safety features in base models)
+    adult_occupant: 68  # 68% (low due to lack of AEB standard)
+    child_occupant: 77  # 77%
+    vulnerable_road_users: 59  # 59%
+    safety_assist: 39  # 39% (improved with optional packs)
+    notes: "3-star rating primarily due to AEB not being standard (optional in Safety Pack). Structure is solid."
+
+# Dimensions (convertible - most popular body style)
+dimensions:
+  length_mm: 3632  # Very compact for city driving
+  width_mm: 1683   # Including mirrors: 1900mm
+  height_mm: 1527  # Slightly taller than ICE 500
+  wheelbase_mm: 2320
+  ground_clearance_mm: 130
+  drag_coefficient: 0.31  # Cd - Good for retro-styled car
+
+# Interior & Cargo
+interior:
+  seating_capacity: 4  # 2+2 seating (rear seats are tight)
+  trunk_capacity_liters: 185  # Small but adequate for city car (no frunk)
+  trunk_capacity_seats_folded_liters: null  # Rear seats do not fold in convertible
+  frunk_capacity_liters: 0  # No frunk
+
+# Towing
+towing:
+  capacity_kg: 0  # Not rated for towing
+  notes: "City car not designed for towing"
+
+# Technology & Features
+technology:
+  infotainment: "UConnect 5 with 10.25-inch touchscreen (7-inch standard)"
+  digital_cockpit: "7-inch TFT driver display"
+  connectivity:
+    - "Apple CarPlay"
+    - "Android Auto"
+    - "Wireless charging (optional)"
+    - "4G LTE connectivity"
+    - "My Remote app (remote climate, charging status)"
+  ota_updates: true  # UConnect 5 supports OTA software updates
+  key_features:
+    - "Vintage-inspired design with modern EV technology"
+    - "UConnect 5 with natural language voice control"
+    - "Autonomous Driving Level 2 (optional)"
+    - "360-degree camera (optional)"
+    - "Magic Eye hidden headlights (LED rings visible only when on)"
+
+# Driver Assistance (Optional Packages)
+adas:
+  level: 2  # Level 2 with optional Autonomous Driving Pack
+  features_standard:
+    - "Electronic Stability Control"
+    - "Hill Hold Control"
+    - "Tire Pressure Monitoring"
+  features_optional:
+    - "Adaptive Cruise Control"
+    - "Lane Keeping Assist"
+    - "Blind Spot Monitoring"
+    - "Autonomous Emergency Braking (AEB)"
+    - "Intelligent Speed Assist"
+    - "Traffic Sign Recognition"
+    - "Drowsiness Detection"
+  notes: "AEB and safety features are NOT standard - require Safety Pack or Autonomous Driving Pack"
+
+# Available Body Styles
+body_styles:
+  - hatchback  # 3-door hardtop (most common)
+  - convertible  # Soft-top cabrio (iconic style)
+
+# Charging Standards
+charging_standards:
+  dc: CCS2  # Combined Charging System (Europe)
+  ac: Type2  # IEC 62196 Type 2 (Europe)
+
+# Variants Available
+variant_types:
+  - "Passion (base, 23.8kWh battery, 190km range)"
+  - "Icon (mid-range, 42kWh battery, 320km range)"
+  - "La Prima (launch edition, 42kWh battery, premium trim)"
+  - "Action (42kWh battery, 320km range, sporty trim)"
+
+# Production
+production:
+  plant: "Mirafiori, Turin, Italy"
+  status: active
+  notes: "Produced at historic Mirafiori plant (since 1939), fully electrified production line"
+
+# Heritage & Design
+heritage:
+  - "Inspired by iconic 1957 Fiat 500 'Cinquecento' - symbol of Italian design and mobility"
+  - "Third generation (2020): Electric-only from day one, honoring retro design with modern tech"
+  - "Second generation (2007-2019): ICE revival of classic design"
+  - "First generation (1957-1975): Revolutionary micro-car, over 4 million units sold"
+
+# Notable Features
+notable_features:
+  - "Europe's best-selling A-segment electric car (2021-2023)"
+  - "Retro-futuristic design blending 1957 heritage with modern EV technology"
+  - "Cabrio (convertible) version offers open-top electric driving"
+  - "Compact dimensions perfect for narrow European city streets and tight parking"
+  - "Magic Eye LED headlights (hidden when off, iconic rings when on)"
+  - "Made in Italy at historic Mirafiori plant (Turin)"
+  - "Available in vibrant colors and two-tone options"
+  - "Optional bamboo dashboard inserts and sustainable materials"
+  - "Fiat's first fully electric vehicle in Europe"
+
+# References
+references:
+  - name: "Fiat 500e Official Website"
+    url: "https://www.fiat.com/500-electric"
+  - name: "Euro NCAP Safety Rating"
+    url: "https://www.euroncap.com/en/results/fiat/500e/44447"
+  - name: "Fiat 500e Specifications"
+    url: "https://www.fiat.com/500-electric/specifications"
+  - name: "Fiat 500e Wikipedia"
+    url: "https://en.wikipedia.org/wiki/Fiat_500_(2020)"
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2024-02-07"
+  created_at: "2024-02-07"
+  sources:
+    - "Fiat official specifications"
+    - "Euro NCAP safety tests"
+    - "Automotive press reviews"
+    - "Industry analyst reports"
+  notes: "Third-generation 500 is electric-only, no ICE variant. Iconic Italian design meets electric mobility."

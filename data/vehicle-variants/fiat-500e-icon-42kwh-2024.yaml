@@ -1,0 +1,295 @@
+# Fiat 500e Icon 42kWh 2024 Vehicle Variant
+
+id: fiat-500e-icon-42kwh-2024
+name: "Icon 42kWh"
+model_id: fiat-500e
+variant_name: "Icon 42kWh"
+model_year: 2024
+trim_level: Icon  # Mid-range trim with 42kWh battery
+
+# Battery Specifications
+battery:
+  total_kwh: 42.0  # Total battery capacity
+  usable_kwh: 37.3  # Estimated usable (Stellantis typically ~88-90% usable)
+  chemistry: NMC  # Nickel Manganese Cobalt
+  supplier: "CATL / LG Energy Solution"
+  cell_type: pouch
+  modules: 8
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid  # Liquid cooling for battery
+  architecture: "400V"
+
+# Range (WLTP)
+range:
+  wltp_km: 320  # WLTP combined range
+  wltp_city_km: 420  # City driving (best case)
+  wltp_highway_km: 260  # Highway driving (worst case)
+  epa_km: null  # Not sold in US market
+  real_world_km: 260  # Realistic range in mixed conditions
+
+# Range Conditions
+range_conditions:
+  - condition: "City driving, 20°C, eco mode"
+    range_km: 420
+    avg_speed_kmh: 30
+    temperature_c: 20
+    notes: "Best-case scenario with regenerative braking"
+    
+  - condition: "Highway driving, 20°C, 120 km/h"
+    range_km: 260
+    avg_speed_kmh: 120
+    temperature_c: 20
+    notes: "Highway range at motorway speeds"
+    
+  - condition: "Mixed driving, 20°C"
+    range_km: 320
+    avg_speed_kmh: 50
+    temperature_c: 20
+    notes: "WLTP official test cycle"
+    
+  - condition: "Winter driving, -5°C, heating on"
+    range_km: 220
+    avg_speed_kmh: 50
+    temperature_c: -5
+    notes: "Cold weather reduces range by ~30%"
+
+# Charging - DC Fast Charging
+charging_dc:
+  standard: CCS2
+  max_power_kw: 85  # Peak DC fast charging power
+  typical_power_kw: 80  # Sustained power
+  time_10_80_minutes: 35  # 10-80% SoC in 35 minutes
+  time_20_80_minutes: 28  # 20-80% SoC (most common)
+  peak_charge_rate_kmh: 150  # km of range added per hour at peak
+
+# Charging Curve (DC Fast Charging, CCS2, 85kW peak)
+charging_curve:
+  - soc_percent: 10
+    power_kw: 85
+    
+  - soc_percent: 20
+    power_kw: 85
+    
+  - soc_percent: 30
+    power_kw: 85
+    
+  - soc_percent: 40
+    power_kw: 85
+    
+  - soc_percent: 50
+    power_kw: 78
+    notes: "Slight taper begins"
+    
+  - soc_percent: 60
+    power_kw: 68
+    
+  - soc_percent: 70
+    power_kw: 52
+    notes: "Significant taper for battery protection"
+    
+  - soc_percent: 80
+    power_kw: 35
+    
+  - soc_percent: 90
+    power_kw: 20
+    notes: "Slow trickle charge to 100%"
+    
+  - soc_percent: 100
+    power_kw: 8
+
+# Charging - AC Charging
+charging_ac:
+  standard: Type2
+  max_power_kw: 11  # 3-phase, 16A (standard in Europe)
+  phases: 3
+  time_0_100_hours: 4.0  # 0-100% in 4 hours with 11kW charger
+  typical_home_power_kw: 7.4  # Single-phase 32A (common in homes)
+  time_0_100_home_hours: 6.0  # 0-100% with 7.4kW home charger
+
+# Bidirectional Charging
+bidirectional:
+  v2l: false  # No Vehicle-to-Load
+  v2h: false  # No Vehicle-to-Home
+  v2g: false  # No Vehicle-to-Grid
+  notes: "eCMP platform does not support bidirectional charging"
+
+# Motor & Performance
+motor:
+  type: "Permanent Magnet Synchronous Motor (PMSM)"
+  position: front
+  max_power_kw: 87  # 118 hp
+  max_power_hp: 118
+  max_torque_nm: 220
+  cooling: liquid
+
+# Drivetrain
+drivetrain:
+  type: FWD  # Front-Wheel Drive
+  gearbox: "Single-speed reduction gear"
+
+# Performance
+performance:
+  acceleration_0_100_kmh_seconds: 9.0
+  acceleration_0_60_mph_seconds: 8.6
+  top_speed_kmh: 150  # Electronically limited for city car efficiency
+  quarter_mile_seconds: null  # Not performance-focused
+  notes: "Adequate for city driving, not a performance vehicle"
+
+# Weight & Capacity
+weight:
+  curb_weight_kg: 1330  # With 42kWh battery
+  gross_vehicle_weight_kg: 1630
+  payload_capacity_kg: 300  # Driver + passengers + cargo
+  weight_distribution_front_percent: 58  # Front-heavy due to FWD motor and battery
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 14.5  # Very efficient for city car
+  wltp_km_per_kwh: 6.9  # 6.9 km per kWh
+  real_world_kwh_per_100km: 16.5  # Real-world consumption
+  epa_mpge: null  # Not sold in US
+  energy_label: "A"  # EU energy efficiency class
+
+# Suspension & Brakes
+suspension:
+  front: "MacPherson strut with coil springs"
+  rear: "Torsion beam with coil springs"
+  adaptive: false  # Fixed suspension tuning
+
+brakes:
+  front: "Ventilated disc brakes (240mm)"
+  rear: "Drum brakes"
+  regenerative: true  # Regenerative braking standard
+  notes: "Rear drum brakes are adequate for lightweight city car"
+
+# Wheels & Tires
+wheels:
+  standard_size_inches: 15
+  standard_tire_size: "185/60 R15"
+  optional_sizes_inches: [16]
+  optional_tire_sizes: ["195/55 R16"]
+
+# Climate Control
+climate:
+  type: "Electric heat pump"
+  heat_pump: true  # Heat pump standard for efficiency in cold weather
+  precondition: true  # Remote preconditioning via app
+  zones: 1  # Single-zone climate control (small cabin)
+
+# Exterior Features
+exterior:
+  headlights: "LED with 'Magic Eye' design"
+  daytime_running_lights: "LED"
+  taillights: "LED"
+  mirrors:
+    - "Power-adjustable"
+    - "Heated"
+  wipers: "Intermittent with rain sensor (optional)"
+  roof: "Fixed hardtop (convertible available separately)"
+
+# Interior Features
+interior:
+  seats:
+    material: "Cloth / Eco-leather (optional)"
+    front_heated: true  # Optional
+    rear_heated: false
+    power_adjustable: false  # Manual adjustment
+    
+  steering_wheel:
+    material: "Leather-wrapped (optional)"
+    heated: false  # Not available
+    power_adjustable: false  # Manual tilt/telescopic
+    
+  infotainment:
+    screen_size_inches: 10.25  # Icon trim gets larger screen
+    system: "UConnect 5"
+    apple_carplay: true
+    android_auto: true
+    wireless_carplay: false  # Wired only
+    navigation: true  # Built-in navigation
+    wifi_hotspot: false
+    
+  audio:
+    speakers: 6  # Standard 6-speaker system
+    brand: "Fiat Audio (optional JBL Premium)"
+
+# Advanced Driver Assistance Systems (ADAS) - Optional
+adas:
+  level: 1  # Level 1 standard, Level 2 optional with Autonomous Driving Pack
+  
+  standard_features:
+    - "Electronic Stability Control (ESC)"
+    - "Hill Hold Control"
+    - "Tire Pressure Monitoring System (TPMS)"
+    
+  optional_features:
+    - "Adaptive Cruise Control (ACC)"
+    - "Lane Keeping Assist (LKA)"
+    - "Autonomous Emergency Braking (AEB)"
+    - "Blind Spot Monitoring (BSM)"
+    - "Traffic Sign Recognition"
+    - "Intelligent Speed Assist"
+    - "Drowsiness Detection"
+    - "360-degree camera"
+  
+  notes: "AEB is NOT standard - requires Safety Pack. This was criticized by Euro NCAP (3-star rating)."
+
+# Software & Connectivity
+software:
+  operating_system: "UConnect 5"
+  ota_updates: true
+  remote_features:
+    - "Remote climate control"
+    - "Remote charging control"
+    - "Charge status notifications"
+    - "Vehicle location tracking"
+    - "Remote door lock/unlock"
+  mobile_app: "My Fiat app (iOS/Android)"
+
+# Version History
+version:
+  generation: 3
+  facelift: false  # 2024 model is current generation, no major facelift yet
+  changes_from_previous: "2024 model: Minor software updates, UConnect 5 improvements"
+
+# Colors Available (varies by market)
+colors_sample:
+  - "Gelato White (solid)"
+  - "Onyx Black (solid)"
+  - "Ocean Green (metallic)"
+  - "Celestial Blue (metallic)"
+  - "Passion Red (bi-tone with black roof)"
+  - "Mineral Gray (metallic)"
+
+# Market Positioning
+positioning:
+  segment: A  # City car / Mini car
+  target_audience: "Urban drivers, young professionals, eco-conscious city dwellers"
+  competitors:
+    - "Mini Cooper Electric"
+    - "Honda e"
+    - "Renault Zoe"
+    - "Citroën ë-C3"
+  price_position: "Premium city car (€30-35k range)"
+
+# References
+references:
+  - name: "Fiat 500e Icon Specifications"
+    url: "https://www.fiat.com/500-electric/specifications"
+  - name: "Fiat 500e Technical Data"
+    url: "https://www.fiat.com/content/dam/fiat/cross/model-pages/500-electric/tech-specs.pdf"
+  - name: "InsideEVs Fiat 500e Review"
+    url: "https://insideevs.com/reviews/457289/fiat-500e-first-drive-review/"
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2024-02-07"
+  created_at: "2024-02-07"
+  sources:
+    - "Fiat official technical specifications"
+    - "Automotive press reviews and tests"
+    - "Owner forums and real-world data"
+  notes: "Icon trim is most popular variant with 42kWh battery. Combines style with practical range for city driving."
