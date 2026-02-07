@@ -1,13 +1,13 @@
 # EVDB Implementation TODO
 
 **Architecture**: YAML + JSON Schema + Datasette + Streamlit  
-**Last Updated**: 2026-02-07
+**Last Updated**: 2026-02-07 15:07
 
 ---
 
 ## 🎯 CURRENT STATUS & PRIORITIES
 
-**Progress**: 80% complete (Phases 0-7 at 90%, Phase 8 at 40%, Phase 9 critical docs done)
+**Progress**: 85% complete (Phases 0-7 at 90%, Phase 8 at 75%, Phase 9 critical docs done)
 
 ### ✅ What's Working
 - **50 vehicle variants** across 37 models from 19 manufacturers (EXCEEDED Phase 6 target of 40!)
@@ -59,7 +59,7 @@
 | Phase 5: Datasette | ✅ Complete | 100% |
 | Phase 6: Data Entry | ✅ **Exceeded Target** | 125% |
 | Phase 7: CI/CD | ✅ Nearly Complete | 90% |
-| Phase 8: Streamlit | 🔄 In Progress | 40% |
+| Phase 8: Streamlit | 🔄 In Progress | 75% |
 | Phase 9: Documentation | ✅ **Launch Ready** | 90% |
 | Phase 10: Launch | ✅ **Preparation Complete** | 60% |
 
@@ -349,7 +349,7 @@
   - [ ] Vehicle detail pages
   - [ ] Data quality indicators
   
-- [x] **Core Features** (Partial - Compare Complete ✅ **Session #60**)
+- [x] **Core Features** (Analytics Complete ✅ **Session #61**)
   - [x] **Vehicle Comparison Tool** (side-by-side, 2-4 vehicles) ✅
     - [x] Multi-select vehicle picker (2-4 vehicles) ✅
     - [x] Side-by-side comparison table (20+ specs, organized sections) ✅
@@ -357,18 +357,18 @@
     - [x] Radar chart (normalized multi-dimensional comparison) ✅
     - [x] Value analysis (€/kWh, €/km, €/kW) ✅
     - [x] Export functionality (CSV table + JSON data) ✅
-  - [ ] **Range Analysis** (scatter plots, efficiency rankings)
-  - [ ] **Charging Speed Comparison** (bar charts, charge curves)
-  - [ ] **Market Overview** (price distribution, availability heatmap)
+  - [x] **Range Analysis** (scatter plots, efficiency rankings) ✅ **Session #61**
+  - [x] **Charging Speed Comparison** (bar charts, 800V vs 400V) ✅ **Session #61**
+  - [x] **Market Overview** (price distribution, manufacturer share) ✅ **Session #61**
   - [ ] **Database Explorer** (raw SQL query interface for power users)
   
-- [ ] **Visualization Features**
-  - [ ] Battery capacity vs. range scatter plot
-  - [ ] Charging power comparison charts
-  - [ ] Price distribution histograms
-  - [ ] Manufacturer market share
-  - [ ] Body style breakdown
-  - [ ] 800V vs 400V platform comparison
+- [x] **Visualization Features** ✅ **Session #61**
+  - [x] Battery capacity vs. range scatter plot ✅
+  - [x] Charging power comparison charts ✅
+  - [x] Price distribution histograms ✅
+  - [x] Manufacturer market share ✅
+  - [x] Body style breakdown ✅
+  - [x] 800V vs 400V platform comparison ✅
   
 - [ ] **Interactive Filters**
   - [ ] Price range slider (€20k-€250k)
@@ -421,9 +421,9 @@ streamlit_app.py
 - ✅ Better for non-technical users
 - ✅ Still provides data explorer for power users
 
-**Phase 8 Status:** 🟢 **60% COMPLETE** (Home ✅ + Browse ✅ + Compare ✅) - **SOFT LAUNCH READY**
+**Phase 8 Status:** 🟢 **75% COMPLETE** (Home ✅ + Browse ✅ + Compare ✅ + Analytics ✅) - **FULLY LAUNCH READY**
 
-**Next:** Analytics page (optional for soft launch)
+**Next:** Data Explorer page (optional for soft launch)
 
 ---
 
@@ -650,7 +650,7 @@ streamlit_app.py
 ## Progress Tracking
 
 **Current Phase**: Phase 8 - Streamlit App Development ⬅️ **NEW PRIORITY**  
-**Overall Progress**: 75% (Phases 0-7 at 90%, Phase 8 is 0% → launch blocker)  
+**Overall Progress**: 85% (Phases 0-7 at 90%, Phase 8 at 75% → launch ready)  
 **Next Milestone**: Build & deploy Streamlit app by 2026-02-10  
 **Target Launch**: 2026-02-20 (timeline unchanged, deployment target changed)
 
