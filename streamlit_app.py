@@ -7,6 +7,7 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
 
 # Page configuration
 st.set_page_config(
@@ -17,10 +18,12 @@ st.set_page_config(
 )
 
 # Database connection (cached)
+DB_PATH = Path(__file__).resolve().parent / 'evdb.db'
+
 @st.cache_resource
 def get_connection():
     """Create cached database connection"""
-    return sqlite3.connect('evdb.db', check_same_thread=False)
+    return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
 @st.cache_data(ttl=3600)
 def get_database_stats(_conn):
