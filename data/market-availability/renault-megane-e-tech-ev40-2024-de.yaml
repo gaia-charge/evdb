@@ -1,0 +1,181 @@
+# Renault Megane E-Tech EV40 (2024) - Germany Market Availability
+
+id: renault-megane-e-tech-ev40-2024-de
+variant_id: renault-megane-e-tech-ev40-2024
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2022-09-01"
+delivery_time_weeks: 12
+
+# Pricing
+pricing:
+  base_price: 38600
+  price_including_vat: 38600
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Glacier White
+    code: OV369
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Diamond Black
+    code: GNE
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Flame Red
+    code: NNP
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Titanium Grey
+    code: KNA
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Schist Grey
+    code: KQM
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 17" Alloy Wheels
+    size_inches: 17
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 18" Alloy Wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 900
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Fabric
+    material: fabric
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey Fabric
+    material: fabric
+    color: grey
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (ended 2023)"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions: ["Program ended December 2023"]
+    expires_at: "2023-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €60,000 gross list price"
+    conditions: ["Price under €60,000 gross list price", "BEV registered as company car"]
+
+# Options
+popular_packages:
+  - name: Comfort Package
+    price:
+      amount: 1800
+      currency: EUR
+    features:
+      - Heat pump
+      - Heated front seats
+      - Heated steering wheel
+  - name: Tech Package
+    price:
+      amount: 2400
+      currency: EUR
+    features:
+      - 360° camera system
+      - Hands-free parking
+      - Highway & Traffic Jam Companion
+
+# Sample Configurations
+sample_configurations:
+  - name: Base Configuration
+    description: "Entry-level Megane E-Tech"
+    price:
+      amount: 38600
+      currency: EUR
+    includes:
+      - Base vehicle
+      - 17-inch alloy wheels
+      - Black fabric interior
+      - Glacier White (solid)
+    
+  - name: Popular Configuration
+    description: "EV40 with Comfort Package"
+    price:
+      amount: 41100
+      currency: EUR
+    includes:
+      - Base vehicle
+      - Comfort Package (+€1,800)
+      - Titanium Grey metallic (+€700)
+      - 17-inch alloy wheels
+      - Black fabric interior
+  
+  - name: Fully Loaded Configuration
+    description: "EV40 with both packages"
+    price:
+      amount: 44300
+      currency: EUR
+    includes:
+      - Base vehicle
+      - Comfort Package (+€1,800)
+      - Tech Package (+€2,400)
+      - 18-inch alloy wheels (+€900)
+      - Schist Grey metallic (+€700)
+
+# Company Car Tax Calculations
+company_car_tax:
+  gross_list_price: 38600
+  tax_rate_percent: 0.25  # BEV under €60k
+  monthly_taxable_benefit_1percent_rule: 96.50  # 0.25% × €38,600
+  notes: "Eligible for reduced 0.25% taxation as BEV under €60,000 gross list price"
+
+# Notes
+notes: |
+  The Renault Megane E-Tech EV40 is the entry-level variant designed for urban
+  and suburban use. With 300 km WLTP range (270 km real-world), it's suitable
+  for daily commuting and weekend trips. The smaller battery makes it lighter
+  and more affordable. Germany no longer offers the Umweltbonus federal subsidy
+  (ended December 2023), but company car tax benefits remain attractive at 0.25%.
+  
+  Delivery times are relatively short (12 weeks) compared to other EVs.
+  The Megane E-Tech is produced at Renault's ElectriCity facility in Douai, France.
+  
+  Popular configuration includes the Comfort Package for heat pump and heated
+  seats, essential for German winters. The Tech Package adds advanced driver
+  assistance features.
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.renault.de/elektroautos/megane-e-tech-electric.html
+  created_at: "2026-02-07"
+  last_verified_at: "2026-02-07"
+  notes: Prices as of February 2026

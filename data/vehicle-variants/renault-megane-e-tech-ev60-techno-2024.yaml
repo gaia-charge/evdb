@@ -1,0 +1,179 @@
+id: renault-megane-e-tech-ev60-techno-2024
+name: EV60 Techno
+model_id: renault-megane-e-tech
+model_year: 2024
+production_years:
+  start: 2022
+  end: null
+
+trim_level: mid-range
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 60
+  total_kwh: 65
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: pouch
+  supplier: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 395
+
+# Range
+range:
+  wltp_km: 450
+  wltp_source: manufacturer
+  
+  real_world_km: 380
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 10-20°C"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.5
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+      "0_100": 55
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 115
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 30
+        power_kw: 130
+      - soc_percent: 50
+        power_kw: 110
+      - soc_percent: 70
+        power_kw: 70
+      - soc_percent: 80
+        power_kw: 45
+      - soc_percent: 90
+        power_kw: 25
+      - soc_percent: 100
+        power_kw: 12
+
+  bidirectional:
+    v2l: false
+    v2g: true  # Bidirectional charging capable
+    v2h: true
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 160
+    max_torque_nm: 300
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1743
+  gross_weight_kg: 2158
+  payload_kg: 415
+  towing_capacity_kg: 900
+  
+efficiency:
+  wltp_kwh_per_100km: 15.5
+  real_world_kwh_per_100km: 17.2
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 19.0
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 21.5
+
+# Features & Options
+standard_features:
+  - "OpenR multimedia system with 12-inch touchscreen"
+  - "Google built-in (Maps, Assistant, Play)"
+  - "12-inch digital instrument cluster"
+  - "OpenR Link multi-sense ambient lighting"
+  - "LED Pure Vision headlights"
+  - "18-inch alloy wheels"
+  - "Heat pump"
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Dual-zone climate control"
+  - "Rear parking camera"
+  - "360° camera system"
+  - "Active Emergency Braking System"
+  - "Lane Centering Assist"
+  - "Adaptive cruise control"
+  - "Bi-directional charging capability"
+
+optional_packages:
+  - name: "Tech Package"
+    features:
+      - "Harman Kardon sound system"
+      - "Head-up display"
+      - "Hands-free parking"
+
+colors:
+  standard:
+    - "Glacier White"
+    - "Diamond Black"
+  premium:
+    - "Flame Red"
+    - "Titanium Grey"
+    - "Schist Grey"
+    - "Midnight Blue"
+
+interior_colors:
+  - "Black TEP (vegan leather)"
+  - "Grey fabric with TEP inserts"
+
+# Version Information
+version:
+  facelift: false
+  major_changes: []
+
+# Market & Pricing Notes
+notes: >
+  The EV60 Techno is the most popular Megane E-Tech variant, offering an excellent
+  balance of range, performance, and features. With 450 km WLTP range and 130 kW
+  fast charging, it's suitable for both daily use and longer trips. The 22 kW
+  AC charging capability makes it practical for European markets with 3-phase
+  infrastructure. Bidirectional charging (V2G/V2H) is a standout feature,
+  allowing the car to feed energy back to the grid or home. The Techno trim
+  includes heat pump as standard, improving winter efficiency. Real-world range
+  is typically 350-400 km depending on driving conditions.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
+    - https://ev-database.org/car/1658/Renault-Megane-E-Tech-EV60
