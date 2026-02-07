@@ -1,0 +1,156 @@
+# Tesla Model Y RWD (2024)
+# Base Variant - Single Motor Rear-Wheel Drive - Volume Seller
+
+id: tesla-model-y-rwd-2024
+model_id: tesla-model-y
+name: RWD
+model_year: 2024
+variant_code: "RWD"  # Rear-Wheel Drive base variant
+
+# Battery
+battery:
+  usable_kwh: 60.0  # Usable capacity (LFP battery in Europe)
+  total_kwh: 62.5   # Total capacity (estimate)
+  chemistry: LFP    # Lithium Iron Phosphate (CATL cells for base RWD)
+  cells: prismatic  # LFP prismatic cells
+  pack_voltage_v: 400  # Nominal voltage
+  supplier: 
+    - "CATL"  # Contemporary Amperex Technology (LFP supplier)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range
+range:
+  wltp_km: 455  # WLTP combined (2024 model)
+  wltp_city_km: 545  # Estimated city range (LFP excels in city)
+  wltp_highway_km: 390  # Estimated highway range
+  epa_miles: 260  # EPA combined (419 km)
+  epa_km: 419
+  real_world_km: 400  # Typical real-world range (mixed driving, mild weather)
+  real_world_highway_km: 345  # Highway at 120 km/h
+  real_world_winter_km: 310  # Cold weather (-5°C to 5°C)
+
+# Charging - AC
+charging_ac:
+  max_power_kw: 11  # 3-phase Type 2
+  connector_type: Type2
+  onboard_charger_kw: 11
+  charge_time_0_100_hours: 6.0  # 11kW charging for 60 kWh battery
+  
+# Charging - DC
+charging_dc:
+  max_power_kw: 170  # Lower than Long Range due to LFP chemistry
+  connector_type: CCS2  # Europe
+  charge_time_10_80_percent_min: 27  # Similar to Long Range despite lower peak
+  charge_time_0_100_percent_min: 37
+  km_per_10min: 210  # At peak charging speed
+
+# Charging Curve (DC Fast Charging) - LFP Characteristics
+charging_curve:
+  - soc_percent: 0
+    power_kw: 140
+  - soc_percent: 10
+    power_kw: 170  # Peak power (LFP limited to ~170 kW)
+  - soc_percent: 20
+    power_kw: 170
+  - soc_percent: 30
+    power_kw: 165
+  - soc_percent: 40
+    power_kw: 160
+  - soc_percent: 50
+    power_kw: 155
+  - soc_percent: 60
+    power_kw: 145
+  - soc_percent: 70
+    power_kw: 135
+  - soc_percent: 80
+    power_kw: 110  # LFP maintains higher power longer
+  - soc_percent: 90
+    power_kw: 65
+  - soc_percent: 100
+    power_kw: 30
+
+# Bidirectional Charging
+bidirectional_charging: false  # Not currently supported
+v2l: false
+v2h: false
+v2g: false
+
+# Motors & Drivetrain
+performance:
+  motors:
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 220  # Estimated rear motor power
+      max_torque_nm: 420  # Estimated torque
+  total_power_kw: 220
+  total_torque_nm: 420
+  drive_type: RWD
+  
+  # Performance
+  acceleration_0_100_kmh_s: 6.9  # Base RWD is slower
+  top_speed_kmh: 217
+  
+# Weight
+weight:
+  curb_weight_kg: 1909  # EU curb weight (lighter than AWD, LFP heavier than NCA)
+  gross_weight_kg: 2485  # GVWR
+  payload_kg: 576       # GVWR - curb weight
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 16.1  # Better efficiency than AWD (LFP + RWD)
+  epa_mpge: 131  # Miles per gallon equivalent
+  real_world_kwh_per_100km: 17.5  # Typical real-world consumption
+  energy_efficiency_class: A  # EU energy label (best in class)
+
+# Technology & Features
+technology:
+  autopilot: true  # Standard
+  adaptive_cruise: true
+  lane_keeping: true
+  autonomous_level: 2  # SAE Level 2 (Autopilot standard)
+  full_self_driving: false  # Optional €7,500 upgrade
+  ota_updates: true
+  
+infotainment:
+  screen_size_inch: 15.4
+  screen_orientation: landscape
+  navigation: true
+  streaming: true
+  connectivity: "4G LTE"
+
+# Standard Features (2024 Model Year)
+features: null  # Use standard_equipment in market files for detailed lists
+
+notes: |
+  RWD base variant - most affordable Model Y, volume seller (50%+ of sales).
+  LFP battery (CATL) in Europe: safer chemistry, better longevity, 100% charging recommended.
+  60 kWh usable (vs 75 kWh Long Range) - sufficient for daily use, road trips.
+  455 km WLTP range adequate for 95% of driving needs.
+  Single rear motor RWD - simpler drivetrain, lower maintenance.
+  170 kW peak DC charging (vs 250 kW Long Range) - still fast enough.
+  LFP charging curve advantage: maintains power longer (80%+ SoC).
+  6.9s 0-100 km/h - adequate performance for family SUV.
+  €8,000+ cheaper than Long Range AWD - excellent value proposition.
+  Made in Germany at Gigafactory Berlin (Europe deliveries).
+  Access to Tesla Supercharger network (50,000+ chargers globally).
+  Over-the-air updates add new features regularly.
+  Full Self-Driving Capability available as €7,500 option or €99/month subscription.
+  Optional tow hitch: €1,000 (1,600kg capacity).
+  Optional 7-seater: €3,000 (third row).
+  LFP battery advantages: no degradation concern with 100% charging, longer lifespan.
+  LFP battery trade-offs: slightly lower energy density, reduced cold weather performance.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  last_updated: "2026-02-07"
+  sources:
+    - https://www.tesla.com/model-y/design
+    - https://ev-database.org/car/1738/Tesla-Model-Y-RWD
+    - https://www.fastned.nl/en/support/charge-speed-reference-list
+  notes: "2024 model with LFP battery (CATL) for European market"
+  version: "2024-lfp"
