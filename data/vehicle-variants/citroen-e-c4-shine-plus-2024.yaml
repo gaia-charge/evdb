@@ -1,0 +1,182 @@
+# Citroën ë-C4 Shine Plus (2024) - Top Trim Variant
+
+id: citroen-e-c4-shine-plus-2024
+model_id: citroen-e-c4
+name: ë-C4 Shine Plus
+model_year: 2024
+trim_level: Shine Plus  # Top comfort-focused trim
+variant_code: null
+
+production:
+  start_date: 2020-06-01
+  end_date: null
+  status: active
+  notes: 2024 model with minor infotainment updates
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 50.0
+  usable_kwh: 45.0  # 90% usable
+  supplier: CATL (Contemporary Amperex Technology Co. Limited)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+  notes: Same battery as Peugeot e-208/Opel Corsa-e, but in larger C-segment body
+
+range:
+  wltp_km: 357
+  wltp_city_km: 465
+  wltp_highway_km: 285
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 305
+  real_world_source: ADAC EcoTest 2024
+  notes: Range lower than e-208 (400km) due to larger, heavier C-segment body and higher drag
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.0
+    onboard_charger: 11kW 3-phase
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 100kW peak maintained briefly, average ~80kW
+    preconditioning: false
+  
+  charge_curve:
+    - percent: 10
+      power_kw: 100
+    - percent: 20
+      power_kw: 100
+    - percent: 30
+      power_kw: 95
+    - percent: 40
+      power_kw: 88
+    - percent: 50
+      power_kw: 78
+    - percent: 60
+      power_kw: 65
+    - percent: 70
+      power_kw: 50
+    - percent: 80
+      power_kw: 30
+    - percent: 90
+      power_kw: 15
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front  # Front-wheel drive
+  front_motor:
+    type: permanent_magnet
+    max_power_kw: 100
+    max_power_hp: 136
+    max_torque_nm: 260
+    supplier: null
+  rear_motor: null
+  
+  drive_type: FWD
+  total_power_kw: 100
+  total_power_hp: 136
+  total_torque_nm: 260
+
+performance:
+  acceleration_0_100_kmh_s: 9.7
+  acceleration_0_60_mph_s: null
+  top_speed_kmh: 150  # Electronically limited
+  quarter_mile_s: null
+
+efficiency:
+  wltp_kwh_per_100km: 16.7
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.5
+  real_world_source: ADAC EcoTest 2024
+  notes: Less efficient than e-208 (16.1 kWh/100km) due to larger size, higher weight, more drag
+
+weight:
+  curb_weight_kg: 1559
+  gross_vehicle_weight_kg: 2100
+  payload_kg: 541
+  towing_capacity_kg: 0
+  notes: 104kg heavier than e-208 GT (1455kg) due to larger C-segment body
+
+dimensions:
+  length_mm: 4360
+  width_mm: 1800
+  height_mm: 1525
+  wheelbase_mm: 2670
+
+features:
+  interior:
+    - Advanced Comfort Seats with 15mm extra foam
+    - Heated front seats
+    - Driver's seat massage function
+    - Dual-zone automatic climate control
+    - Wireless smartphone charging
+    - Citroën Advanced Comfort interior design
+  
+  exterior:
+    - Full LED headlights
+    - LED tail lights
+    - 18" diamond-cut alloy wheels
+    - Roof rails
+    - Panoramic sunroof
+  
+  technology:
+    - 10.0" touchscreen infotainment
+    - 5.5" digital instrument cluster
+    - Apple CarPlay & Android Auto (wireless in 2024)
+    - Citroën Connect Nav with real-time traffic
+    - Keyless entry and start
+    - Reversing camera
+    - Front and rear parking sensors
+    - Highway Driver Assist (Level 2 ADAS)
+    - Lane keep assist
+    - Adaptive cruise control
+    - Traffic sign recognition
+    - Blind spot monitoring
+
+adas:
+  level: 2
+  features:
+    - Highway Driver Assist (ACC + LKA)
+    - Adaptive cruise control with stop & go
+    - Lane keep assist with centering
+    - Traffic sign recognition
+    - Blind spot monitoring
+    - Driver attention alert
+    - Automatic emergency braking
+    - Collision warning
+  notes: Good Level 2 system for highway driving
+
+data_quality:
+  overall: verified
+  battery_specs: verified
+  range_specs: verified
+  charging_specs: verified
+  performance_specs: verified
+  efficiency_specs: verified
+  source_reliability: high
+  last_updated: 2024-02-07
+
+sources:
+  - name: Citroën Germany Configurator
+    url: https://www.citroen.de/modelle/citroen-e-c4/konfigurieren.html
+    date_accessed: 2024-02-07
+  - name: ADAC EcoTest ë-C4
+    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/citroen-e-c4/
+    date_accessed: 2024-02-07
+  - name: Auto Motor und Sport ë-C4 Test
+    url: https://www.auto-motor-und-sport.de/fahrbericht/citroen-e-c4-test-2024/
+    date_accessed: 2024-02-07
