@@ -455,11 +455,25 @@ class DatabaseBuilder:
             ac = charging.get('ac', {})
             dc = charging.get('dc', {})
             bidir = charging.get('bidirectional', {})
-            motor = data.get('motor', {})
             performance = data.get('performance', {})
             weight = data.get('weight', {})
             pricing = data.get('pricing', {})
             metadata = data.get('metadata', {})
+            
+            # Extract motor data from performance section
+            # Support both old (motor key) and new (performance.motors) formats
+            drive_type = performance.get('drive_type')
+            total_power_kw = performance.get('total_power_kw')
+            total_torque_nm = performance.get('total_torque_nm')
+            
+            # Determine motor type and count from motors array
+            motors = performance.get('motors', [])
+            motor_count = len(motors) if motors else None
+            motor_type = None
+            if motors and len(motors) > 0:
+                # Get primary motor type (rear for RWD/AWD, front for FWD)
+                primary_motor = next((m for m in motors if m.get('position') == 'rear'), motors[0])
+                motor_type = primary_motor.get('type')
             
             # Get updated_at with proper null handling
             updated_at = metadata.get('updated_at')
@@ -515,12 +529,12 @@ class DatabaseBuilder:
                 json.dumps(charging.get('connectors', [])),
                 json.dumps(bidir.get('capabilities', [])),
                 bidir.get('max_power_kw'),
-                motor.get('type'),
-                motor.get('count'),
-                motor.get('drive_type'),
-                motor.get('total_power_kw'),
-                motor.get('total_torque_nm'),
-                performance.get('acceleration_0_100_kph_sec'),
+                motor_type,
+                motor_count,
+                drive_type,
+                total_power_kw,
+                total_torque_nm,
+                performance.get('acceleration_0_100_sec'),
                 performance.get('top_speed_kph'),
                 weight.get('curb_kg'),
                 weight.get('gross_vehicle_kg'),
