@@ -7,7 +7,7 @@
 
 ## 🎯 CURRENT STATUS & PRIORITIES
 
-**Progress**: 65% complete (Phases 0-6 complete, Phase 5 done, Phase 7-10 remain)
+**Progress**: 70% complete (Phases 0-6 complete, Phase 7 at 90%, Phase 8-10 remain)
 
 ### ✅ What's Working
 - **50 vehicle variants** across 37 models from 19 manufacturers (EXCEEDED Phase 6 target of 40!)
@@ -24,11 +24,12 @@
 - [x] Test Datasette deployment locally - verified working
 - [x] Create API documentation examples - comprehensive API_DOCS.md (16KB)
 
-**Phase 7: CI/CD Pipeline** ⬅️ **FOCUS HERE NOW**
-- [ ] GitHub Actions for validation on PR
-- [ ] Automated database builds
-- [ ] Datasette deployment (Vercel/Fly.io)
-- [ ] PR preview environments
+**Phase 7: CI/CD Pipeline** ✅ **90% COMPLETE**
+- [x] GitHub Actions for validation on PR ✓
+- [x] Automated database builds ✓
+- [x] Deployment documentation (DEPLOYMENT.md) ✓
+- [ ] Activate deployment (just needs token + uncomment)
+- [ ] PR preview environments (deferred)
 
 **Phase 8-10: User-Facing Features**
 - [ ] Streamlit comparison dashboard
@@ -55,7 +56,7 @@
 | Phase 4: Database Build | ✅ Complete | 100% |
 | Phase 5: Datasette | ✅ Complete | 100% |
 | Phase 6: Data Entry | ✅ **Exceeded Target** | 125% |
-| Phase 7: CI/CD | ❌ Not Started | 0% |
+| Phase 7: CI/CD | ✅ Nearly Complete | 90% |
 | Phase 8: Streamlit | ❌ Not Started | 0% |
 | Phase 9: Documentation | ❌ Not Started | 0% |
 | Phase 10: Launch | ❌ Not Started | 0% |
@@ -271,52 +272,65 @@
 
 ---
 
-## Phase 7: CI/CD Pipeline (Week 5) ⬅️ **NEXT PRIORITY AFTER PHASE 5**
+## Phase 7: CI/CD Pipeline (Week 5) ✅ **90% COMPLETE - READY FOR DEPLOYMENT**
 
-### GitHub Actions (Critical for Launch)
-- [ ] Create `.github/workflows/validate.yml` ⬅️ **START HERE**
-  - [ ] Trigger on: push, pull_request
-  - [ ] Install Python dependencies
-  - [ ] Run `scripts/validate.py`
-  - [ ] Fail on any validation errors
-  - [ ] Post validation summary as comment
+### GitHub Actions (Critical for Launch) ✅
+- [x] Create `.github/workflows/validate.yml` ✓
+  - [x] Trigger on: push, pull_request
+  - [x] Install Python dependencies
+  - [x] Run `scripts/validate.py`
+  - [x] Fail on any validation errors
+  - [x] Post validation summary
   
-- [ ] Create `.github/workflows/build-deploy.yml` ⬅️ **PRIORITY**
-  - [ ] Trigger on: push to main
-  - [ ] Build SQLite database
-  - [ ] Run database integrity tests
-  - [ ] Upload as artifact
-  - [ ] Deploy to hosting (choose one below)
+- [x] Create `.github/workflows/build-deploy.yml` ✓
+  - [x] Trigger on: push to main, manual dispatch
+  - [x] Build SQLite database
+  - [x] Run database integrity tests
+  - [x] Upload as artifact (90 days retention)
+  - [x] Generate statistics in GitHub summary
+  - [ ] Enable deployment (commented out, ready to activate)
   
-### Deployment Options (Choose One)
-- [ ] **Option A: Vercel** (Recommended - easiest)
-  - [ ] Install `datasette-publish-vercel`
-  - [ ] Configure vercel.json
-  - [ ] Set up Vercel project
-  - [ ] Add secrets to GitHub
+### Deployment Options (Choose One) ⬅️ **READY TO ACTIVATE**
+- [ ] **Option A: Vercel** (Recommended - see DEPLOYMENT.md)
+  - [x] Deployment code ready in workflow
+  - [ ] Get Vercel token
+  - [ ] Add VERCEL_TOKEN to GitHub secrets
+  - [ ] Uncomment deployment section
+  - [ ] Test deployment
   
-- [ ] **Option B: Fly.io** (Alternative)
-  - [ ] Install `datasette-publish-fly`
-  - [ ] Create Dockerfile
-  - [ ] Set up Fly.io app
-  - [ ] Add secrets to GitHub
+- [ ] **Option B: Fly.io** (Alternative - see DEPLOYMENT.md)
+  - [x] Deployment code ready in workflow
+  - [ ] Get Fly.io token
+  - [ ] Add FLY_TOKEN to GitHub secrets
+  - [ ] Uncomment deployment section
+  - [ ] Test deployment
   
-- [ ] **Option C: GitHub Pages** (Static export)
+- [ ] **Option C: GitHub Pages** (Not recommended - limited functionality)
   - [ ] Use `datasette publish static`
   - [ ] Deploy to GitHub Pages
-  - [ ] Simpler but read-only
+  - [ ] Read-only, no API
 
-### PR Preview (Nice-to-have)
+### Documentation ✅
+- [x] Create DEPLOYMENT.md guide
+  - [x] Vercel setup instructions
+  - [x] Fly.io setup instructions
+  - [x] Testing checklist
+  - [x] Troubleshooting guide
+  - [x] Cost estimation
+
+### PR Preview (Nice-to-have) ⏸️ **DEFERRED**
 - [ ] Create `.github/workflows/pr-preview.yml`
   - [ ] Build preview database for PRs
   - [ ] Deploy to preview URL
   - [ ] Comment on PR with link
+- **Decision**: Defer until after initial launch. Not critical for MVP.
 
-### Testing in CI
-- [ ] Validation passes on all PRs
-- [ ] Database builds successfully
-- [ ] Test Datasette startup
-- [ ] Verify deployment works
+### Testing in CI ✅
+- [x] Validation passes on all PRs
+- [x] Database builds successfully
+- [x] Database integrity tests pass
+- [x] Statistics generated
+- [ ] Verify deployment works (pending activation)
 
 ---
 
@@ -415,19 +429,22 @@
 
 ## 🎯 Action Plan: Next 7 Days (Launch Sprint)
 
-### Today (Feb 7) - Phase 5 Completion
-1. [ ] **Stop adding vehicles** ✅ Data sufficient for MVP
-2. [ ] Add 8 canned queries to metadata.json
-3. [ ] Install & test 3 essential Datasette plugins
-4. [ ] Test Datasette locally: `datasette evdb.db --metadata metadata.json`
-5. [ ] Create API_DOCS.md with example queries
+### ✅ Today (Feb 7) - Phase 5 & 7 Completion
+1. [x] **Stop adding vehicles** ✅ Data sufficient for MVP
+2. [x] Add 11 canned queries to metadata.json ✓
+3. [x] Install & test 5 essential Datasette plugins ✓
+4. [x] Test Datasette locally: `datasette evdb.db --metadata metadata.json` ✓
+5. [x] Create API_DOCS.md with comprehensive examples ✓
+6. [x] Create `.github/workflows/validate.yml` ✓
+7. [x] Create `.github/workflows/build-deploy.yml` ✓
+8. [x] Create DEPLOYMENT.md guide ✓
 
-### Tomorrow (Feb 8) - Phase 7 Start
-1. [ ] Create `.github/workflows/validate.yml`
-2. [ ] Create `.github/workflows/build-deploy.yml`
-3. [ ] Choose deployment target (Vercel recommended)
-4. [ ] Set up deployment credentials
-5. [ ] Test CI/CD pipeline
+### Tomorrow (Feb 8) - Deployment Activation
+1. [ ] Choose deployment target (Vercel recommended)
+2. [ ] Get Vercel token (https://vercel.com/account/tokens)
+3. [ ] Add VERCEL_TOKEN to GitHub secrets
+4. [ ] Uncomment deployment section in build-deploy.yml
+5. [ ] Test deployment and verify all endpoints work
 
 ### Feb 9-10 - Documentation & Testing
 1. [ ] Polish README.md (add live URL once deployed)
