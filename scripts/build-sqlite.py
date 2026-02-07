@@ -451,6 +451,7 @@ class DatabaseBuilder:
             battery = data.get('battery', {})
             range_data = data.get('range', {})
             consumption = data.get('consumption', {})
+            efficiency = data.get('efficiency', {})  # Many vehicles use 'efficiency' instead of 'consumption'
             charging = data.get('charging', {})
             ac = charging.get('ac', {})
             dc = charging.get('dc', {})
@@ -565,15 +566,15 @@ class DatabaseBuilder:
                 range_data.get('wltp_km'),
                 range_data.get('epa_km'),
                 range_data.get('real_world_km'),
-                consumption.get('wltp_kwh_100km'),
-                consumption.get('real_world_kwh_100km'),
-                consumption.get('efficiency_wh_km'),
+                consumption.get('wltp_kwh_100km') or efficiency.get('wltp_kwh_per_100km'),
+                consumption.get('real_world_kwh_100km') or efficiency.get('real_world_kwh_per_100km'),
+                consumption.get('efficiency_wh_km') or efficiency.get('efficiency_wh_km'),
                 ac.get('max_power_kw'),
                 ac.get('phases'),
                 ac.get('onboard_charger_kw'),
                 dc.get('max_power_kw'),
-                dc.get('time_10_80_min'),
-                dc.get('time_0_100_min'),
+                dc.get('charging_time_minutes', {}).get('10_80'),
+                dc.get('charging_time_minutes', {}).get('0_100'),
                 dc.get('peak_power_kw'),
                 json.dumps(charging.get('connectors', [])),
                 json.dumps(bidir.get('capabilities', [])),
