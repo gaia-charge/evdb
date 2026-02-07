@@ -51,6 +51,17 @@ def get_database_stats(_conn):
         GROUP BY market_code
         ORDER BY vehicles DESC
     """, _conn)
+
+@st.cache_data(ttl=3600)
+def load_markdown_file(filename):
+    """Load markdown file content (cached for 1 hour)"""
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        return f"⚠️ File `{filename}` not found."
+    except Exception as e:
+        return f"⚠️ Error loading file: {str(e)}"
     
     # Get latest additions (last 5)
     stats['latest_additions'] = pd.read_sql_query("""
@@ -1686,25 +1697,37 @@ elif page == "📚 Documentation":
         """)
     
     elif doc_section == "API Documentation":
-        st.info("🚧 API documentation will be embedded here from API_DOCS.md")
+        st.markdown("## API Documentation")
         st.markdown("""
-        Full API documentation is available in the repository:
-        [API_DOCS.md](https://github.com/openclaw/evdb/blob/main/API_DOCS.md)
+        Complete reference for accessing EVDB data via REST and GraphQL APIs.
+        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/API_DOCS.md).
         """)
+        
+        # Load and display API_DOCS.md
+        api_docs = load_markdown_file("API_DOCS.md")
+        st.markdown(api_docs)
     
     elif doc_section == "Contributing Guide":
-        st.info("🚧 Contributing guide will be embedded here from CONTRIBUTING.md")
+        st.markdown("## Contributing to EVDB")
         st.markdown("""
-        Full contributing guide is available in the repository:
-        [CONTRIBUTING.md](https://github.com/openclaw/evdb/blob/main/CONTRIBUTING.md)
+        Learn how to add vehicles, improve data quality, and contribute to the project.
+        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/CONTRIBUTING.md).
         """)
+        
+        # Load and display CONTRIBUTING.md
+        contributing = load_markdown_file("CONTRIBUTING.md")
+        st.markdown(contributing)
     
     elif doc_section == "FAQ":
-        st.info("🚧 FAQ will be embedded here from FAQ.md")
+        st.markdown("## Frequently Asked Questions")
         st.markdown("""
-        Full FAQ is available in the repository:
-        [FAQ.md](https://github.com/openclaw/evdb/blob/main/FAQ.md)
+        Common questions about EVDB, data sources, and how to use the database.
+        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/FAQ.md).
         """)
+        
+        # Load and display FAQ.md
+        faq = load_markdown_file("FAQ.md")
+        st.markdown(faq)
 
 # Footer
 st.markdown("---")
