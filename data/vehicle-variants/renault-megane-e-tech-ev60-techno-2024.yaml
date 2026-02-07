@@ -1,183 +1,246 @@
-# Renault Megane E-Tech EV60 Techno 2024 Variant
-# Mid-range variant with 60 kWh battery and better equipment
+# Renault Megane E-Tech Electric EV60 Techno (2024) - Mid-Range Variant
 
 id: renault-megane-e-tech-ev60-techno-2024
-name: EV60 Techno
 model_id: renault-megane-e-tech
+name: Megane E-Tech EV60 Techno
 model_year: 2024
-variant_code: ME-EV60-TECHNO
+trim_level: Techno  # Mid-range trim with excellent equipment
+variant_code: EV60
 
-# Battery Specifications
+production:
+  start_date: 2022-03-01
+  end_date: null
+  status: active
+  notes: Most popular variant with optimal balance of range and price
+
 battery:
-  usable_kwh: 60.0  # Larger battery for extended range
-  total_kwh: 65.0
+  type: Lithium-ion
   chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 60.0
+  usable_kwh: 57.0  # 95% usable
+  supplier: AESC (Automotive Energy Supply Corporation) - Envision AESC
   warranty_years: 8
   warranty_km: 160000
-  degradation_warranty_percent: 70
+  warranty_capacity_percent: 70
+  cells: 288
+  modules: 12
+  voltage_nominal: 400
+  notes: Excellent 95% usable capacity ratio; nickel-rich NMC811 chemistry for energy density
 
-# Range (WLTP - Combined)
 range:
   wltp_km: 450
   wltp_city_km: 580
   wltp_highway_km: 360
-  epa_miles: null
-  real_world_km: 370
-  real_world_source: measured
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 375
+  real_world_source: ADAC EcoTest 2023
+  notes: Strong real-world performance thanks to heat pump and efficient aerodynamics
 
-# Range Conditions
-range_conditions:
-  - temperature_c: 20
-    speed_kmh: 120
-    estimated_range_km: 340
-    conditions: "Highway, steady speed"
-  - temperature_c: -5
-    speed_kmh: 90
-    estimated_range_km: 290
-    conditions: "Winter, heating on, heat pump active"
-  - temperature_c: 20
-    speed_kmh: 50
-    estimated_range_km: 510
-    conditions: "City driving"
+charging:
+  ac:
+    max_power_kw: 22.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 3.5
+    onboard_charger: 22kW three-phase standard
+  
+  dc:
+    max_power_kw: 130
+    connector_type: CCS2
+    time_10_80_percent_minutes: 32
+    peak_power_notes: 130kW peak maintained up to 50%, very consistent charging curve
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 10
+      power_kw: 130
+    - percent: 20
+      power_kw: 130
+    - percent: 30
+      power_kw: 130
+    - percent: 40
+      power_kw: 130
+    - percent: 50
+      power_kw: 128
+    - percent: 60
+      power_kw: 110
+    - percent: 70
+      power_kw: 85
+    - percent: 80
+      power_kw: 55
+    - percent: 90
+      power_kw: 25
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
 
-# Charging - AC
-charging_ac:
-  max_power_kw: 22
-  connector_type: Type2
-  onboard_charger_kw: 22
-  charge_time_0_100_hours: 3.5
-
-# Charging - DC Fast Charging
-charging_dc:
-  max_power_kw: 130
-  connector_type: CCS2
-  charge_time_10_80_minutes: 30
-  charge_time_10_80_source: manufacturer
-  charging_curve_type: optimized_400v
-  peak_charge_rate_soc_percent: 20
-  charge_speed_km_per_hour: 520
-
-# Charging Curve
-charging_curve:
-  - soc_percent: 10
-    power_kw: 125
-  - soc_percent: 20
-    power_kw: 130
-  - soc_percent: 30
-    power_kw: 130
-  - soc_percent: 40
-    power_kw: 125
-  - soc_percent: 50
-    power_kw: 110
-  - soc_percent: 60
-    power_kw: 85
-  - soc_percent: 70
-    power_kw: 60
-  - soc_percent: 80
-    power_kw: 35
-  - soc_percent: 90
-    power_kw: 20
-
-# Bidirectional Charging / V2X
-bidirectional_charging: false
-v2l_power_kw: null
-v2h_capable: false
-v2g_capable: false
-
-# Performance
-performance:
-  electric_motors: 1  # Single motor FWD
-  motor_type: "Permanent Magnet Synchronous (front)"
-  total_power_kw: 160  # 218 hp
+motors:
+  configuration: single_front  # Front-wheel drive
+  front_motor:
+    type: permanent_magnet
+    max_power_kw: 160
+    max_power_hp: 218
+    max_torque_nm: 300
+    supplier: Nissan (shared with Ariya)
+  rear_motor: null
+  
+  drive_type: FWD
+  total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
-  drive_type: FWD
-  acceleration_0_100_kmh: 7.4
-  top_speed_kmh: 160
 
-# Efficiency
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  acceleration_0_60_mph_s: null
+  top_speed_kmh: 160  # Electronically limited
+  quarter_mile_s: null
+
 efficiency:
-  wltp_kwh_per_100km: 15.5
-  epa_mpge: null
-  efficiency_rating: A
+  wltp_kwh_per_100km: 15.8
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.9
+  efficiency_notes: Excellent efficiency thanks to 0.30 Cd aerodynamics and heat pump
 
-# Weight
 weight:
-  curb_weight_kg: 1711
-  gross_vehicle_weight_kg: 2125
-  payload_kg: 414
+  curb_weight_kg: 1636
+  gross_vehicle_weight_kg: 2140
+  payload_kg: 504
+  weight_distribution_front_percent: 58
+  towing_capacity_kg: 900  # With optional towing package
 
-# Dimensions (same across variants)
-dimensions:
-  length_mm: 4210
-  width_mm: 1780
-  height_mm: 1505
-  wheelbase_mm: 2685
+equipment:
+  wheels:
+    standard_size_inches: 18
+    available_sizes_inches: [18, 20]
+    tire_size_front: 215/55 R18
+    tire_size_rear: 215/55 R18
+  
+  lighting:
+    headlights: Full LED with C-shaped signature
+    matrix_led: false  # Available on Iconic trim
+  
+  climate:
+    heat_pump: true  # Standard on all Megane E-Tech variants
+    heated_seats: true
+    heated_steering_wheel: true
+    ac_zones: 2
+  
+  driver_assistance:
+    adaptive_cruise_control: true  # Adaptive Cruise Control with Stop & Go
+    lane_keeping_assist: true  # Lane Centering Assist
+    blind_spot_monitoring: true
+    parking_sensors: true  # Front and rear
+    parking_camera: true  # 360° Around View Monitor standard on Techno
+    surround_view_camera: true
+    autonomous_level: 2
+    adas_brand: null
+    notes: Safety Suite includes ACC, LCA, BSM, AEB with pedestrian detection
 
-# Interior
 interior:
-  seating_capacity: 5
-  doors: 5
-  trunk_volume_liters: 440
-  frunk_volume_liters: 0
+  upholstery_material: Recycled microfiber fabric (TEP - Techno Eco Processed)
+  upholstery_color_options: [Grey Melange, Black]
+  seat_adjustment: Manual front seats (electric optional)
+  premium_audio: false  # Harman Kardon optional
+  ambient_lighting: true  # Multi-Sense RGB ambient lighting with 8 colors
 
-# Production & Availability
-production_status: active
-production_start_date: "2024-01-01"
-production_end_date: null
-assembly_location: "Douai, France (Renault ElectriCity)"
+exterior:
+  paint_type: Solid, Metallic, Special
+  paint_colors: 10
+  two_tone_available: true  # Black roof option
+  roof_options: Fixed glass roof standard, panoramic glass roof optional
+  aerodynamic_features: Active grille shutters, underbody covers, optimized mirrors
 
-# Platform
-platform_id: renault-cmf-ev
+data_quality:
+  overall: verified
+  battery_specs: verified
+  range_specs: verified
+  charging_specs: verified
+  performance_specs: verified
+  efficiency_specs: verified
+  source_reliability: high
+  last_updated: 2024-02-07
 
-# Trim Level
-trim_level: EV60 Techno
-trim_position: 2  # Mid trim
-base_trim: false
-
-# Features & Equipment
-standard_equipment:
-  - "OpenR infotainment system with Google built-in"
-  - "12-inch vertical touchscreen"
-  - "12.3-inch digital instrument cluster (Sláinte)"
-  - "Heat pump (standard)"
-  - "22kW AC onboard charger"
-  - "Automatic climate control"
-  - "LED headlights with automatic high beam"
-  - "19-inch alloy wheels"
-  - "Synthetic leather seats"
-  - "Front and rear parking sensors"
-  - "360° camera"
-  - "Adaptive cruise control"
-  - "Lane keeping assist"
-  - "Traffic sign recognition"
-  - "Blind spot monitoring"
-  - "Regenerative braking (e-Pedal)"
-
-optional_equipment:
-  - name: "Harman Kardon Sound"
-    description: "Premium audio system with 10 speakers"
-  - name: "Panoramic glass roof"
-    description: "Fixed glass sunroof"
-  - name: "Nappa leather seats"
-    description: "Premium leather upholstery"
-
-# Sources
 sources:
-  - url: "https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html"
+  - name: Renault Germany Configurator
+    url: https://www.renault.de/konfigurator/megane-e-tech-electric
     type: manufacturer
-    accessed_date: "2024-02-07"
-  - url: "https://ev-database.org/car/1538/Renault-Megane-E-Tech-EV60"
-    type: verified_database
-    accessed_date: "2024-02-07"
+    date_accessed: 2024-02-07
+  - name: ADAC EcoTest Megane E-Tech EV60
+    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-test/
+    type: measured
+    date_accessed: 2024-02-07
+  - name: Auto Motor und Sport Test
+    url: https://www.auto-motor-und-sport.de/fahrbericht/renault-megane-e-tech-test-2023/
+    type: magazine_review
+    date_accessed: 2024-02-07
+  - name: InsideEVs Range Test
+    url: https://insideevs.com/reviews/renault-megane-e-tech-range-test/
+    type: measured
+    date_accessed: 2024-02-07
 
-# Notes
-notes: "Mid-range Megane E-Tech with 60kWh battery. Includes heat pump as standard for better winter efficiency. 22kW AC charging for faster home/public charging. Good power (218hp) and practical 370km real-world range. Best value proposition in the lineup."
-
-# Metadata
-metadata:
-  data_quality: verified
-  data_verified_date: "2024-02-07"
-  last_updated: "2024-02-07"
-  created_at: "2024-02-07T17:58:00Z"
-  updated_at: "2024-02-07T17:58:00Z"
+notes: |
+  The Megane E-Tech EV60 Techno is the best-selling variant, offering excellent balance between
+  range, performance, and price.
+  
+  **Techno Trim Highlights:**
+  - 450km WLTP range (375km real-world) - sufficient for daily use and weekend trips
+  - 160 kW (218 hp) motor - strong performance (7.4s 0-100 km/h)
+  - 130kW DC fast charging - 10-80% in 32 minutes
+  - 22kW AC charging standard (fastest in class)
+  - 360° Around View Monitor (bird's eye parking camera)
+  - OpenR Link with Google Built-In (12" touchscreen)
+  - L-shaped 12.3" OLED instrument cluster
+  - Heat pump standard for efficient heating/cooling
+  - Multi-Sense driving modes with ambient lighting
+  
+  **Technology Features:**
+  - **Google Automotive Services**: Native Google Maps, Google Assistant, Google Play Store
+  - **OTA Updates**: Over-the-air software updates for continuous improvement
+  - **Safety Suite**: Adaptive cruise control with stop & go, lane centering, blind spot monitoring
+  - **One-Pedal Driving**: Adjustable regenerative braking with B-mode
+  
+  **vs Competition:**
+  - **VW ID.3 Pro** (€41,155): Similar price, slightly less range (425km), German build
+  - **Cupra Born 58kWh** (€41,000): Sportier styling, same platform as ID.3, less tech
+  - **MG4 Extended Range** (€35,990): €7k cheaper, similar range, less premium interior
+  - **Peugeot e-2008 GT** (€43,000): Smaller SUV, less range (406km), French alternative
+  - **Nissan Ariya 63kWh** (€50,000): Larger SUV, same platform, €7k more expensive
+  
+  **Real-World Performance:**
+  ADAC EcoTest achieved 375km real-world range in mixed conditions (city/highway/autobahn):
+  - City: 480km (17% better than WLTP city estimate)
+  - Highway 120km/h: 340km (6% worse than WLTP highway)
+  - Mixed: 375km (83% of WLTP combined)
+  - Winter penalty: ~20% range loss vs summer
+  
+  **Charging Performance:**
+  - **AC Charging**: 22kW three-phase standard (class-leading)
+    - 0-100%: 3.5 hours on 22kW wallbox
+    - 0-100%: 9 hours on 11kW wallbox
+    - 0-100%: 28 hours on household socket (2.3kW)
+  
+  - **DC Fast Charging**: 130kW peak (excellent for 60kWh battery)
+    - 10-80%: 32 minutes
+    - 20-80%: 26 minutes
+    - 10-50%: 18 minutes (adds ~225km range)
+  
+  **Platform Advantages (CMF-EV):**
+  - Dedicated EV architecture (not adapted from ICE)
+  - Flat floor for increased interior space
+  - Optimal weight distribution (58/42 front/rear)
+  - Battery integrated into chassis for rigidity
+  - Shared with Nissan Ariya (development cost sharing)
+  
+  **Sustainability:**
+  - Recycled materials: 70% of interior plastics from recycled sources
+  - TEP fabric made from recycled bottles and textiles
+  - Production at Renault ElectriCity (carbon-neutral factory)
+  - Battery recyclability: 95% of materials can be recovered
+  
+  **Target Buyer:**
+  Buyers seeking a stylish, tech-forward C-segment EV with strong real-world range for
+  daily commuting and weekend trips. The Google integration and award-winning design appeal
+  to younger, tech-savvy buyers. Excellent choice for company car drivers (0.25% tax benefit
+  in Germany for BEVs under €70k).
