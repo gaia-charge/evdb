@@ -1,0 +1,187 @@
+# Tesla Model Y Long Range AWD 2024
+
+id: tesla-model-y-long-range-awd-2024
+model_id: tesla-model-y
+name: Long Range AWD
+variant_name: Long Range AWD
+model_year: 2024
+
+# Battery
+battery:
+  usable_kwh: 75.0  # Estimated, Tesla doesn't publish exact figures
+  total_kwh: 78.1   # Estimated
+  chemistry: NCA    # Nickel Cobalt Aluminum (Panasonic)
+  cells: cylindrical_4680  # New 4680 cells in Berlin/Austin, 2170 in Fremont/Shanghai
+  supplier: Panasonic
+  warranty_years: 8
+  warranty_km: 192000
+  warranty_capacity_percent: 70
+
+# Range
+range:
+  wltp_km: 565
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: 531     # 330 miles EPA
+  epa_miles: 330
+  real_world_km: 480  # Realistic in mixed conditions
+  notes: |
+    2024 refresh improved efficiency by ~5% over pre-refresh.
+    Range varies significantly with wheel choice (19" vs 21").
+
+# Charging - AC
+charging_ac:
+  max_power_kw: 11
+  connector_type: Type2
+  onboard_charger_kw: 11
+  charge_time_0_100_hours: 7.5  # Using 11kW wallbox
+  three_phase: true
+
+# Charging - DC
+charging_dc:
+  max_power_kw: 250
+  connector_type: CCS2
+  charge_time_10_80_percent_minutes: 27
+  charge_time_20_80_percent_minutes: 22
+  architecture_volts: 400
+  preconditioning: true  # Battery preheating via navigation
+  notes: |
+    Peak charging rate of 250kW on V3 Superchargers.
+    V4 Superchargers support higher power but limited by vehicle.
+
+charging_curve:
+  - soc_percent: 0
+    power_kw: 200
+  - soc_percent: 10
+    power_kw: 250
+  - soc_percent: 20
+    power_kw: 250
+  - soc_percent: 30
+    power_kw: 210
+  - soc_percent: 40
+    power_kw: 170
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 115
+  - soc_percent: 70
+    power_kw: 90
+  - soc_percent: 80
+    power_kw: 65
+  - soc_percent: 90
+    power_kw: 40
+  - soc_percent: 100
+    power_kw: 20
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+  notes: |
+    Not currently supported but hardware may be capable.
+    Cybertruck supports bidirectional charging.
+
+# Motors & Performance
+motors:
+  count: 2
+  type: permanent_magnet
+  configuration: dual_motor
+  front_motor_kw: null  # Tesla doesn't publish individual motor specs
+  rear_motor_kw: null
+  total_power_kw: 393   # 534 hp
+  total_power_hp: 534
+  total_torque_nm: 660
+
+performance:
+  drive_type: AWD
+  acceleration_0_100_kmh_seconds: 5.0
+  top_speed_kmh: 217
+  notes: |
+    2024 refresh slightly improved 0-100 time from 5.1s to 5.0s.
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 16.9
+  real_world_kwh_per_100km: 18.3
+  epa_mpge: 122  # Miles per gallon equivalent
+  energy_efficiency_class: B  # EU energy label
+
+# Weight & Dimensions
+weight:
+  curb_weight_kg: 2003  # With 19" wheels
+  gross_vehicle_weight_kg: 2720
+  payload_kg: 717
+
+dimensions:
+  length_mm: 4751
+  width_mm: 1921
+  height_mm: 1624
+  wheelbase_mm: 2890
+
+# Features (Standard on Long Range)
+standard_features:
+  - Tesla Autopilot (Traffic-Aware Cruise, Autosteer)
+  - 15.4" landscape touchscreen
+  - Premium audio (14 speakers)
+  - Dual smartphone wireless charging
+  - Glass roof (panoramic, tinted)
+  - Heat pump climate control
+  - Power liftgate
+  - Heated front and rear seats
+  - Heated steering wheel
+  - LED lighting (interior and exterior)
+  - Two USB-C ports (front)
+  - Two USB-C ports (rear)
+  - 12V power outlet
+  - Autopilot cameras (8 cameras)
+  - Ultrasonic sensors
+
+optional_features:
+  - name: Full Self-Driving Capability
+    price_eur: 7500
+    notes: |
+      Advanced driver assistance including Navigate on Autopilot,
+      Auto Lane Change, Autopark, Summon, and future autonomous driving
+      capabilities via OTA updates.
+  
+  - name: 20" Induction Wheels
+    price_eur: 2000
+    notes: Reduces range by ~15km WLTP
+  
+  - name: Tow Hitch
+    price_eur: 1000
+    notes: 1600kg towing capacity
+
+# Trim & Options
+trim_level: Long Range
+available_colors: 6  # Managed in market-availability files
+available_interiors: 2
+
+# Production
+production:
+  status: active
+  factory: 
+    - Fremont, California, USA
+    - Shanghai, China
+    - Berlin-Brandenburg, Germany
+    - Austin, Texas, USA
+  market_availability: worldwide
+
+# Metadata
+metadata:
+  created_at: "2026-02-07"
+  last_updated: "2026-02-07"
+  data_quality: verified
+  sources:
+    - "https://www.tesla.com/modely/design"
+    - "https://www.tesla.com/support/european-union-energy-label"
+    - "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=45935"
+  notes: |
+    2024 model year includes "Juniper" refresh:
+    - Improved interior with ambient lighting
+    - Ventilated front seats
+    - Redesigned front and rear bumpers
+    - Improved suspension and ride quality
+    - ~5% efficiency improvement
+    - Better sound insulation
