@@ -1,7 +1,121 @@
 # EVDB Implementation Progress
 
-**Last Updated**: 2026-02-07 09:50 (Morning Session #41 - Cron Job)
-**Status**: Phase 6 In Progress - US Market Expansion 🇺🇸
+**Last Updated**: 2026-02-07 09:56 (Morning Session #42 - Cron Job)
+**Status**: Phase 6 In Progress - Vehicle Variant Expansion 🚗
+
+---
+
+## ✅ Completed Tasks (2026-02-07 Morning Session #42 - Cron Job)
+
+### New Variant: VW ID.4 Pro 4Motion (AWD) + Import Script Fix 🔧
+
+**Major Addition: Dual-Motor AWD Variant & Critical Bug Fix**
+
+Added the **Volkswagen ID.4 Pro 4Motion** - the AWD variant of VW's popular electric SUV with dual motors providing 210 kW total power. Also fixed a critical bug in the database import script that was preventing motor/performance data from being imported correctly:
+
+1. **Vehicle Variant Created:**
+   - VW ID.4 Pro 4Motion 2024 (dual-motor AWD)
+   - **210 kW (286 hp) total power** (80 kW front AC induction + 150 kW rear permanent magnet)
+   - 460 Nm torque (significantly more than RWD's 310 Nm)
+   - 497 km WLTP range (slightly less than RWD's 520 km due to added weight)
+   - 443 km EPA range (US rating)
+   - **0-100 km/h in 6.7 seconds** (vs 8.5s RWD) - much sportier!
+   - 77.0 kWh usable battery (same as RWD)
+   - 135 kW DC fast charging (10-80% in 38 minutes)
+   - 11 kW AC charging standard
+   - AWD traction for winter/mountains
+   - Weight: 2,239 kg (vs 2,124 kg RWD, +115 kg)
+   - Efficiency: 18.6 kWh/100km WLTP (vs 17.9 RWD, slightly higher due to AWD)
+   - Real-world range: 440 km (excellent for daily use)
+
+2. **German Market Data Created:**
+   - Base price: **€51,790** (€3,225 premium over RWD Pro at €48,565)
+   - €52,980 on-the-road including €1,190 destination charge
+   - Same color/wheel/interior options as RWD variant
+   - 6 exterior colors (Pure White free, metallics €990-990, pearl €990)
+   - 3 wheel options: 19" standard (497 km), 20" (+€1,080, -15 km), 21" (+€1,780, -25 km)
+   - Popular packages available:
+     - Assistance Package Plus: €1,895 (Travel Assist, adaptive cruise, Park Assist, 360° camera)
+     - Comfort Package: €1,360 (panoramic sunroof, heated seats/steering/windscreen)
+     - Infotainment Package Plus: €1,020 (Discover Pro nav, We Connect Plus, premium sound)
+     - Towing Package: €1,180 (electric swivel hitch, 1,200 kg capacity)
+   - Company car tax: 0.25% rate saves **€1,812/year** vs 1% ICE rate
+   - Kfz-Steuer exemption: €358/year savings
+   - THG-Quote: ~€350/year income from CO2 certificate trading
+   - **Total annual savings: €2,520/year** for company car drivers
+   - 14-week delivery (built at Zwickau, Germany on MEB platform)
+
+3. **Popular Configurations:**
+   - **Family AWD**: €56,235 on-road (base + Comfort + Assistance packages)
+   - **Premium AWD Executive**: €60,145 on-road (Moonstone Grey + 20" wheels + Nutmeg Brown interior + all packages)
+   - **Adventure AWD Towing**: €58,405 on-road (Glacier Blue + Comfort + Assistance + Towing packages)
+
+4. **Critical Import Script Bug Fix:**
+   - **Problem**: Database import script was reading from deprecated `motor` key instead of `performance` section
+   - **Impact**: All motor/drivetrain data (drive_type, total_power_kw, motor_type, motor_count) was NULL in database
+   - **Root cause**: Schema defines `performance.motors` array, but import script expected flat `motor` object
+   - **Fix implemented**:
+     - Updated `build-sqlite.py` to extract motor data from `performance` section
+     - Parse `performance.motors` array to determine motor_type and motor_count
+     - Extract drive_type, total_power_kw, total_torque_nm from performance section
+     - Choose primary motor type (rear for RWD/AWD, front for FWD)
+   - **Result**: All 43 variants now have complete motor/performance data imported correctly
+   - Database rebuild shows proper data:
+     - ID.4 Pro: RWD, permanent magnet, 1 motor, 150 kW
+     - ID.4 Pro 4Motion: AWD, permanent magnet, 2 motors, 210 kW
+
+5. **Market Positioning:**
+   - **vs ID.4 Pro RWD (€48,565)**: +€3,225 (+6.6%), gains AWD traction, faster acceleration (6.7s vs 8.5s), loses 23 km range
+   - **vs Tesla Model Y LR AWD (€44,990)**: +€6,800 (+15%), Model Y has better range (455 km), but ID.4 has VW dealer network
+   - **vs BMW iX1 xDrive30 (€54,200)**: -€2,410 (-4.4%), ID.4 better range (497 vs 439 km), BMW has premium badge
+   - **vs Hyundai Ioniq 5 LR AWD (€48,500)**: +€3,290 (+6.8%), similar range (497 vs 456 km), Ioniq 5 has 800V ultra-fast charging
+   - Best for buyers wanting VW quality, AWD traction, and practical family SUV with strong dealer support
+
+**Database Impact:**
+- Manufacturers: 19 (unchanged) ✓
+- Vehicle models: 37 (unchanged) ✓
+- Vehicle variants: **43** (up from 42, +2.3%) ⭐
+- Market availability: **47** (up from 46, +2.1%) ⭐
+- **Markets covered: 5** (Germany, United States, France, Poland, Italy)
+  - Germany: **22 vehicles** (up from 21, +4.8%) ⭐
+  - United States: 6 vehicles ✓
+- Database size: 0.23 MB (unchanged)
+- Total YAML files: **148** (all pass validation - 145 data files + 3 reference)
+
+**Quality Assurance:**
+✅ All 148 YAML files validate successfully
+✅ Database builds cleanly with new data
+✅ Foreign key relationships intact
+✅ SQL queries return correct motor/performance data (210 kW AWD, 150 kW RWD verified)
+✅ No schema validation errors
+✅ Import script fix verified: all 43 variants have complete motor data
+✅ Comprehensive metadata and sources
+
+**What This Enables:**
+- Complete VW ID.4 lineup: Pro (RWD) + Pro 4Motion (AWD)
+- Dual-motor AWD comparison: front AC induction + rear permanent magnet architecture
+- AWD premium analysis: €3,225 cost for 60 kW additional power + winter traction
+- Acceleration comparison: 6.7s vs 8.5s (21% faster 0-100 km/h)
+- Range trade-off: -23 km WLTP (-4.4%) for AWD capability
+- Company car value: €2,520/year total savings (tax + road tax + THG-Quote)
+- MEB platform flexibility: Same battery/charging on shared production line
+- Popular configuration pricing: €56k-60k range for well-equipped family AWD
+- Real-world range: 440 km mixed driving (excellent for winter traction use case)
+- Towing capability: 1,200 kg with towing package (Adventure configuration)
+
+**Files Created:**
+- `data/vehicle-variants/volkswagen-id4-pro-4motion-2024.yaml` (2.7 KB)
+- `data/market-availability/volkswagen-id4-pro-4motion-2024-de.yaml` (7.2 KB)
+
+**Files Modified:**
+- `scripts/build-sqlite.py` (critical bug fix for performance data import)
+
+**Git Commit:**
+- Commit: `b11e0be` - "Add VW ID.4 Pro 4Motion (AWD) variant + fix import script for performance data"
+- 3 files changed, 397 insertions(+), 7 deletions(-)
+
+**Time Investment:** ~10 minutes
+**Next Priority:** Continue variant expansion (add second variants for single-variant models like BMW iX, Hyundai Ioniq 6, Kia EV9, Porsche Taycan), add more US market data, or add UK/Norway markets
 
 ---
 
