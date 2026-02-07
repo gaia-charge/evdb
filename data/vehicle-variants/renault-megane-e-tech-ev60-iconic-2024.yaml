@@ -1,247 +1,199 @@
-# Renault Megane E-Tech Electric EV60 Iconic (2024) - Premium Top Trim
-
+# Renault Megane E-Tech EV60 Iconic (2024) - Top-Spec Variant
 id: renault-megane-e-tech-ev60-iconic-2024
+name: EV60 Iconic
 model_id: renault-megane-e-tech
-name: Megane E-Tech EV60 Iconic
 model_year: 2024
-trim_level: Iconic  # Top premium trim with optimized aerodynamics
-variant_code: EV60
-
-production:
-  start_date: 2022-03-01
-  end_date: null
-  status: active
-  notes: Top trim with best equipment and slightly improved efficiency vs Techno
+variant_code: MEGANE-EV60-ICONIC
 
 battery:
-  type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
-  total_kwh: 60.0
-  usable_kwh: 57.0  # 95% usable
-  supplier: AESC (Automotive Energy Supply Corporation) - Envision AESC
+  usable_kwh: 60.0
+  total_kwh: 62.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 288
-  modules: 12
-  voltage_nominal: 400
-  notes: Identical battery to Techno trim; improved range through efficiency optimization
+  voltage: 400
+  notes: |
+    60 kWh usable battery (62 kWh gross). Same as Techno.
+    400V architecture with NCM chemistry. 96.8% usable capacity ratio.
 
 range:
   wltp_km: 470
   wltp_city_km: 600
   wltp_highway_km: 375
-  epa_combined_km: null  # Not sold in US
-  real_world_avg_km: 390
-  real_world_source: InsideEVs 70 mph test
-  notes: +20km vs Techno thanks to optimized 18" aero wheels and slightly more efficient tuning
+  epa_km: null
+  real_world_km: 395
+  real_world_source: ADAC EcoTest
+  notes: |
+    WLTP range of 470 km (20km more than Techno due to more efficient wheels).
+    Real-world range around 395 km in mixed conditions.
+    Best-in-class city efficiency with 600 km city range.
 
 charging:
-  ac:
-    max_power_kw: 22.0
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 3.5
-    onboard_charger: 22kW three-phase standard
-  
-  dc:
-    max_power_kw: 130
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 130kW peak maintained up to 50%, very consistent charging curve
-    preconditioning: true
-  
-  charge_curve:
-    - percent: 10
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 5
       power_kw: 130
-    - percent: 20
+    - soc_percent: 10
       power_kw: 130
-    - percent: 30
-      power_kw: 130
-    - percent: 40
-      power_kw: 130
-    - percent: 50
+    - soc_percent: 20
       power_kw: 128
-    - percent: 60
-      power_kw: 110
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 55
-    - percent: 90
-      power_kw: 25
-  
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
+    - soc_percent: 30
+      power_kw: 125
+    - soc_percent: 40
+      power_kw: 118
+    - soc_percent: 50
+      power_kw: 108
+    - soc_percent: 60
+      power_kw: 92
+    - soc_percent: 70
+      power_kw: 72
+    - soc_percent: 80
+      power_kw: 48
+  time_0_to_100_min: 2.7
+  time_5_to_80_min: 32
+  time_10_to_80_min: 30
+  time_20_to_80_min: 27
+  charging_speed_kmh: 780
+  plug_and_charge: true
+  preconditioning: true
+  notes: |
+    DC fast charging up to 130 kW peak. 20-80% in 27 minutes.
+    22 kW AC charging standard (three-phase). Battery preconditioning available.
 
-motors:
-  configuration: single_front  # Front-wheel drive
-  front_motor:
-    type: permanent_magnet
-    max_power_kw: 160
-    max_power_hp: 218
-    max_torque_nm: 300
-    supplier: Nissan (shared with Ariya)
-  rear_motor: null
-  
-  drive_type: FWD
-  total_power_kw: 160
-  total_power_hp: 218
-  total_torque_nm: 300
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.7
+  v2h: false
+  v2g: false
+  notes: "Vehicle-to-Load (V2L) capability up to 3.7 kW for powering devices"
 
 performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: wound rotor
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+      manufacturer: Renault
+  max_power_kw: 160
+  max_power_hp: 218
+  max_torque_nm: 300
   acceleration_0_100_kmh_s: 7.4
-  acceleration_0_60_mph_s: null
-  top_speed_kmh: 160  # Electronically limited
-  quarter_mile_s: null
-
-efficiency:
-  wltp_kwh_per_100km: 15.2
-  epa_kwh_per_100km: null
-  real_world_kwh_per_100km: 17.2
-  efficiency_notes: Best-in-class efficiency thanks to optimized 18" aero wheels and tuning
+  acceleration_0_60_mph_s: 7.0
+  acceleration_80_120_kmh_s: 5.5
+  top_speed_kmh: 160
+  top_speed_mph: 99
+  notes: |
+    Performance-oriented motor with 160 kW (218 hp).
+    Slightly faster than Techno (7.4s vs 7.5s) due to optimizations.
+    Front-wheel drive with wound rotor synchronous motor.
 
 weight:
-  curb_weight_kg: 1650
-  gross_vehicle_weight_kg: 2150
-  payload_kg: 500
-  weight_distribution_front_percent: 58
-  towing_capacity_kg: 900  # With optional towing package
+  curb_weight_kg: 1640
+  gross_vehicle_weight_kg: 2134
+  payload_kg: 494
+  towing_capacity_braked_kg: 900
+  towing_capacity_unbraked_kg: 750
+  notes: |
+    Slightly heavier than Techno (1640 kg vs 1636 kg) due to extra equipment.
+    Optional towing capacity 900 kg with tow hitch.
 
-equipment:
-  wheels:
-    standard_size_inches: 18
-    available_sizes_inches: [18, 20]
-    tire_size_front: 215/55 R18
-    tire_size_rear: 215/55 R18
-  
-  lighting:
-    headlights: Matrix LED with automatic high beam
-    matrix_led: true  # Standard on Iconic trim
-  
-  climate:
-    heat_pump: true  # Standard on all Megane E-Tech variants
-    heated_seats: true  # Front and rear
-    heated_steering_wheel: true
-    ac_zones: 2
-  
-  driver_assistance:
-    adaptive_cruise_control: true  # Adaptive Cruise Control with Stop & Go
-    lane_keeping_assist: true  # Lane Centering Assist with hands-on detection
-    blind_spot_monitoring: true
-    parking_sensors: true  # Front and rear
-    parking_camera: true  # 360° Around View Monitor
-    surround_view_camera: true
-    autonomous_level: 2
-    adas_brand: null
-    notes: Full Safety Suite with highway assist and traffic jam assist
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  width_with_mirrors_mm: 2032
+  height_mm: 1520
+  wheelbase_mm: 2700
+  ground_clearance_mm: 180
+  drag_coefficient: 0.29
+  frontal_area_m2: 2.58
+  turning_radius_m: 10.4
+  notes: "Slightly better aerodynamics (Cd 0.29 vs 0.30) with more efficient wheels"
 
-interior:
-  upholstery_material: Premium recycled microfiber with Alcantara inserts
-  upholstery_color_options: [Black with Grey accents, Black with Blue accents]
-  seat_adjustment: Electric adjustable front seats with memory and massage
-  premium_audio: true  # Harman Kardon 10-speaker system standard
-  ambient_lighting: true  # Multi-Sense RGB ambient lighting with 8 colors
+cargo:
+  trunk_volume_l: 440
+  trunk_max_volume_l: 1332
+  frunk_volume_l: 0
+  notes: "440L trunk, expandable to 1332L with rear seats folded"
 
-exterior:
-  paint_type: Solid, Metallic, Special
-  paint_colors: 10
-  two_tone_available: true  # Black roof option
-  roof_options: Panoramic glass roof standard
-  aerodynamic_features: Active grille shutters, underbody covers, optimized aero wheels
+consumption:
+  wltp_kwh_per_100km: 12.8
+  wltp_city_kwh_per_100km: 10.0
+  wltp_highway_kwh_per_100km: 16.0
+  real_world_kwh_per_100km: 15.2
+  real_world_city_kwh_per_100km: 13.3
+  real_world_highway_kwh_per_100km: 17.6
+  efficiency_rating: A+
+  notes: |
+    Best efficiency in Megane E-Tech lineup at 12.8 kWh/100km.
+    Real-world consumption around 15.2 kWh/100km.
+    Heat pump standard helps winter efficiency.
 
-data_quality:
-  overall: verified
-  battery_specs: verified
-  range_specs: verified
-  charging_specs: verified
-  performance_specs: verified
-  efficiency_specs: verified
-  source_reliability: high
-  last_updated: 2024-02-07
+features:
+  infotainment_screen_inches: 12.3
+  digital_cockpit_inches: 12.3
+  head_up_display: true
+  wireless_charging: true
+  wireless_connectivity: true
+  ota_updates: true
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  parking_assist: true
+  heat_pump: true
+  notes: |
+    12.3-inch portrait OpenR Link touchscreen with Google built-in
+    12.3-inch digital instrument cluster
+    Head-up display included
+    360-degree camera
+    Premium Harman Kardon sound system
+    Solarbay panoramic glass roof (electrochromic)
+    Heat pump climate control standard
+    OTA software updates via My Renault app
+    Full LED adaptive headlights
 
-sources:
-  - name: Renault Germany Configurator
-    url: https://www.renault.de/konfigurator/megane-e-tech-electric
-    type: manufacturer
-    date_accessed: 2024-02-07
-  - name: InsideEVs 70 mph Range Test
-    url: https://insideevs.com/reviews/renault-megane-e-tech-range-test/
-    type: measured
-    date_accessed: 2024-02-07
-  - name: Auto Motor und Sport Test
-    url: https://www.auto-motor-und-sport.de/fahrbericht/renault-megane-e-tech-test-2023/
-    type: magazine_review
-    date_accessed: 2024-02-07
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2022
+  euro_ncap_adult: 91
+  euro_ncap_child: 86
+  euro_ncap_vulnerable: 64
+  euro_ncap_safety_assist: 79
+  airbags: 6
+  adas_level: 2
+  notes: |
+    5-star Euro NCAP rating (tested 2022)
+    6 airbags (front, side, curtain)
+    SAE Level 2 autonomous driving capability
 
-notes: |
-  The Megane E-Tech EV60 Iconic is the flagship variant, offering the best equipment and
-  slightly improved efficiency over the Techno trim.
-  
-  **Iconic Trim Exclusive Features:**
-  - **Matrix LED Headlights**: Automatic high beam with selective dimming (9-segment matrix)
-  - **Harman Kardon Audio**: Premium 10-speaker system with amplifier (standard)
-  - **Electric Seats**: Power-adjustable front seats with memory and massage function
-  - **Heated Rear Seats**: Rear passenger comfort (not available on Techno)
-  - **Panoramic Glass Roof**: Full-length electrochromic glass roof (standard)
-  - **Premium Interior**: Alcantara inserts with premium TEP recycled microfiber
-  - **Optimized Wheels**: 18" aero wheels tuned for maximum efficiency (+20km range)
-  - **Head-Up Display**: Full-color HUD with navigation and speed (standard)
-  - **Wireless Charging**: 15W Qi charging pad (standard)
-  
-  **Efficiency Improvements vs Techno:**
-  - WLTP: 470km vs 450km (+20km, +4.4%)
-  - Consumption: 15.2 vs 15.8 kWh/100km (-3.8%)
-  - Real-world: 390km vs 375km (+15km, +4%)
-  
-  The efficiency gains come from:
-  - Optimized 18" aerodynamic wheels (vs standard 18" on Techno)
-  - Slightly more aggressive regenerative braking tuning
-  - Reduced rolling resistance tires
-  - Software optimization for efficiency (less aggressive acceleration mapping)
-  
-  **vs Competition:**
-  - **VW ID.3 Pro S** (€47,330): €1,400 more, similar range (557km with 77kWh battery)
-  - **Cupra Born e-Boost 77kWh** (€47,000): Similar price, more range (548km), sportier
-  - **MG4 X Power** (€42,990): €3k cheaper, AWD, faster (3.8s 0-100), less premium
-  - **Hyundai Ioniq 5 58kWh** (€46,900): Similar price, 800V architecture, retro design
-  - **Nissan Ariya 87kWh** (€57,000): €11k more, larger battery (520km), bigger SUV
-  
-  **Real-World Performance:**
-  InsideEVs 70 mph highway test: 390km range (83% of WLTP 470km)
-  - Highway consumption: 18.5 kWh/100km (including charging losses)
-  - City consumption: 14.5 kWh/100km (excellent efficiency)
-  - Mixed consumption: 17.2 kWh/100km (vs 15.2 WLTP, +13%)
-  
-  **Premium Features Standard on Iconic:**
-  1. **Matrix LED Headlights** (€1,490 option on Techno)
-  2. **Harman Kardon Audio** (€1,200 option on Techno)
-  3. **Electric Seats with Massage** (€990 option on Techno)
-  4. **Panoramic Glass Roof** (€1,400 option on Techno)
-  5. **Head-Up Display** (€650 option on Techno)
-  6. **Wireless Charging** (€250 option on Techno)
-  7. **Heated Rear Seats** (€350 option on Techno)
-  
-  Total value of standard equipment: ~€6,330
-  Iconic premium over Techno: ~€3,000
-  Effective savings: ~€3,330
-  
-  **Target Buyer:**
-  - Buyers seeking the fully-loaded, no-compromises Megane E-Tech
-  - Premium buyers wanting best equipment without options
-  - Efficiency-focused buyers maximizing range (470km WLTP)
-  - Company car drivers (still under €70k threshold for 0.25% tax)
-  - Tech enthusiasts wanting all premium features standard
-  
-  **vs Techno Trim Decision:**
-  - **Choose Iconic** if you want Matrix LED, Harman Kardon, electric seats, and panoramic roof
-  - **Choose Techno** if you're budget-conscious and can live without premium features
-  - Iconic saves money vs adding all options to Techno (€6,330 value for €3,000 premium)
-  
-  **Sustainability:**
-  - Same recycled materials as Techno (70% interior plastics from recycled sources)
-  - Alcantara inserts are vegan-friendly synthetic suede
-  - Production at carbon-neutral Renault ElectriCity facility
-  - Battery recyclability: 95% material recovery
+production:
+  plant: Douai, France
+  platform: CMF-EV
+  platform_generation: 1
+  status: active
+  notes: |
+    Built at Renault ElectriCity production hub in Douai, France.
+    CMF-EV platform shared with Nissan Ariya.
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-08'
+  created_at: '2026-02-08'
+  source: "Renault official specifications"
+  source_urls:
+    - "https://www.renault.com/en/electric-vehicles/megane-e-tech-electric.html"
+    - "https://www.euroncap.com/en/results/renault/megane-e-tech/45657"
+  verification_date: '2026-02-08'
+  notes: |
+    Top-spec Megane E-Tech with 60 kWh battery and 218 hp motor.
+    Best range (470 km) and efficiency in lineup.
+    Includes premium features: Solarbay roof, Harman Kardon audio, etc.
+    Most popular variant for premium buyers.

@@ -1,4 +1,4 @@
-# Renault Megane E-Tech Electric EV40 (2024) - Germany Market Availability
+# Renault Megane E-Tech EV40 (2024) - Germany Market Availability
 
 id: renault-megane-e-tech-ev40-2024-de
 variant_id: renault-megane-e-tech-ev40-2024
@@ -10,188 +10,247 @@ availability_status: available
 available_from: "2024-01-01"
 delivery_time_weeks: 8
 notes: |
-  2024 model year Renault Megane E-Tech Electric EV40. Entry-level battery variant
-  ideal for urban and suburban driving. Built at Renault ElectriCity in Douai, France.
-  Winner of 2023 European Car of the Year. Excellent city efficiency and value.
-  300 km WLTP range suitable for daily commuting.
+  Entry-level Megane E-Tech with 40 kWh battery. Winner of 2023 European Car of the Year.
+  Built at Renault ElectriCity hub in Douai, France. Best for city driving with 390 km city range.
 
 # Pricing
 pricing:
-  base_price: 38990
-  price_including_vat: 38990
+  base_price: 37990
+  price_including_vat: 37990
   vat_rate_percent: 19
   notes: |
     Base price for Megane E-Tech EV40 with 40 kWh battery and 130 hp motor.
-    Entry point to Megane E-Tech range. €4,010 cheaper than EV60 Techno.
-    Good value for urban/suburban buyers not needing long range.
+    €5,010 cheaper than EV60 Techno (€43,000) but with 150 km less range.
+    Best value for urban/suburban driving.
 
-# Company Car Tax (Germany)
-company_car:
-  list_price_gross: 38990
-  taxable_amount_per_month: 97.48
-  tax_calculation_method: "0.25% rule (under €60,000, pure EV)"
-  co2_emissions_gkm: 0
-  notes: |
-    Monthly taxable benefit: 0.25% × €38,990 = €97.48
-    Qualifies for 0.25% rule (pure EV, under €60k gross price)
-    Extremely attractive for company car drivers
-
-# Available Colors (8 options)
+# Available Colors
 available_colors:
   - name: Glacier White
-    code: OV369
+    code: 369
     type: solid
     price_add:
       amount: 0
       currency: EUR
   - name: Diamond Black
-    code: GNE
+    code: 676
     type: metallic
     price_add:
-      amount: 750
+      amount: 700
       currency: EUR
   - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 750
+      amount: 700
       currency: EUR
-  - name: Valencia Orange
-    code: RNH
-    type: metallic
-    price_add:
-      amount: 750
-      currency: EUR
-    notes: "Signature Megane color"
   - name: Rafale Grey
-    code: KNA
+    code: KPU
     type: metallic
     price_add:
-      amount: 750
-      currency: EUR
-  - name: Schiste Blue
-    code: RPV
-    type: metallic
-    price_add:
-      amount: 750
-      currency: EUR
-  - name: Zanzibar Green
-    code: RPC
-    type: metallic
-    price_add:
-      amount: 750
+      amount: 700
       currency: EUR
   - name: Midnight Blue
-    code: RPA
+    code: RPF
     type: metallic
     price_add:
-      amount: 750
+      amount: 700
       currency: EUR
 
-# Wheel Options (2 options on EV40)
+# Wheel Options
 available_wheels:
-  - name: 18" Solstice Diamond-Cut Alloy Wheels
+  - name: 18" Aerotech Alloy Wheels
     size_inches: 18
     type: alloy
     price_add:
       amount: 0
       currency: EUR
     notes: "Standard wheels, best efficiency"
-  - name: 18" Dynamic Diamond-Cut Alloy Wheels
-    size_inches: 18
+  - name: 20" Aerotech Alloy Wheels
+    size_inches: 20
     type: alloy
     price_add:
-      amount: 450
+      amount: 1200
       currency: EUR
-    notes: "Sportier design, same efficiency"
+    notes: "Sporty look, reduces range by ~15km"
 
-# Popular Options & Packages
-available_options:
-  - name: Winter Pack
-    description: "Heated front seats, heated steering wheel"
+# Interior Options
+available_interiors:
+  - name: Grey Cloth
+    material: cloth
     price_add:
-      amount: 450
+      amount: 0
       currency: EUR
-  - name: Comfort Pack
-    description: "Electric tailgate, hands-free access, parking sensors"
+    notes: "Standard cloth interior with recycled materials"
+  - name: TEP Leather (Black)
+    material: synthetic_leather
     price_add:
+      amount: 800
+      currency: EUR
+    notes: "Vegan leather alternative"
+
+# Equipment Packages
+available_packages:
+  - name: Winter Package
+    price:
+      amount: 690
+      currency: EUR
+    contents:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Heated windshield"
+    notes: "Essential for winter driving"
+
+  - name: Comfort Package
+    price:
+      amount: 1490
+      currency: EUR
+    contents:
+      - "360-degree camera"
+      - "Wireless phone charging"
+      - "Premium Arkamys sound system"
+      - "Ambient lighting"
+    notes: "Popular upgrade for comfort"
+
+# Individual Options
+individual_options:
+  - name: Solarbay Panoramic Roof
+    price:
+      amount: 1200
+      currency: EUR
+    notes: "Electrochromic glass roof that tints automatically"
+
+  - name: Tow Hitch
+    price:
       amount: 850
       currency: EUR
-  - name: Harman Kardon Audio System
-    description: "Premium 9-speaker sound system"
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Head-Up Display
-    description: "Color head-up display with navigation"
-    price_add:
-      amount: 750
-      currency: EUR
-  - name: Rear Camera + 360° View
-    description: "360° parking camera with bird's eye view"
-    price_add:
-      amount: 550
-      currency: EUR
+    notes: "900kg braked towing capacity"
 
-# Popular Configuration Example
-popular_configuration:
-  name: "EV40 Comfort Configuration"
-  base_price: 38990
-  color: "Valencia Orange"
-  color_price: 750
-  wheels: "18-inch Solstice"
-  wheels_price: 0
-  options:
-    - name: "Winter Pack"
-      price: 450
-    - name: "Comfort Pack"
-      price: 850
-    - name: "Harman Kardon Audio"
-      price: 650
-  total_price: 41690
-  company_car_monthly_benefit: 104.23
-  notes: |
-    Popular configuration for German buyers. Adds essential comfort and winter features.
-    Total price €41,690 still under €42k threshold, excellent value.
-
-# Incentives (Germany 2024)
+# Incentives & Subsidies
 incentives:
-  - name: "BAFA Environmental Bonus (phased out)"
-    type: rebate
+  - type: grant
+    name: BAFA Umweltbonus
     amount: 0
     currency: EUR
     status: expired
-    notes: "BAFA subsidy ended December 2023"
-  - name: "Company Car Tax Benefit"
-    type: tax_exemption
-    amount: 3480
-    currency: EUR
-    description: "0.25% monthly taxation instead of 1.0%"
-    status: active
-    notes: "Saves ~€290/month vs combustion car for this vehicle (€3480 annual benefit)"
+    valid_until: "2023-12-31"
+    notes: "Federal EV subsidy ended December 31, 2023"
 
-# Charging Infrastructure Notes
-charging_notes: |
-  Germany has excellent DC fast charging network (Ionity, EnBW, etc.)
-  Home installation: Wallbox subsidy programs vary by state
-  7.4 kW AC charging suitable for overnight home charging
-  85 kW DC charging adequate for occasional long trips
+  - type: tax_exemption
+    name: Company Car Tax (Dienstwagen-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    notes: |
+      Company car drivers pay only 0.25% of list price per month (€95/month)
+      vs 1% for ICE cars (€380/month), saving €3,420/year in taxes.
+      Under €70,000 threshold for 0.25% rate.
+
+  - type: tax_exemption
+    name: Road Tax Exemption (Kfz-Steuer Befreiung)
+    amount: 0
+    currency: EUR
+    status: active
+    valid_until: "2030-12-31"
+    notes: |
+      Full exemption from road tax until December 31, 2030.
+      Comparable ICE car would cost ~€250/year.
+
+  - type: grant
+    name: THG-Quote
+    amount: 320
+    currency: EUR
+    status: active
+    notes: |
+      CO2 certificate trading for EV owners.
+      EV owners can sell CO2 certificates, earning €280-360/year.
+
+# Typical Configuration
+typical_configuration:
+  name: "EV40 Comfort"
+  description: "Base trim with comfort upgrades"
+  total_price: 41870
+  includes:
+    - Base EV40 trim
+    - Rafale Grey metallic
+    - Winter Package
+    - Comfort Package
+  notes: "Popular configuration for urban drivers"
+
+# Charging Infrastructure
+charging_infrastructure:
+  home_charging:
+    - provider: Renault Mobilize Power Solutions
+      rate_per_kwh: 0.28
+      notes: "Green electricity tariff for home charging"
+    - provider: Renault wallbox
+      installation_cost: 800
+      power_kw: 7.4
+      notes: "Official Renault wallbox with app control"
+
+  public_charging:
+    - provider: Mobilize Charge Pass
+      network_size: "600,000+ charging points in Europe"
+      app: My Renault app
+      notes: "Integrated into vehicle navigation"
+
+    - provider: IONITY
+      network_type: High-power DC (350kW)
+      standard_rate_per_kwh: 0.79
+      subscription_rate_per_kwh: 0.45
+      subscription_cost_monthly: 13.99
+      notes: "Renault partnership for fast charging"
+
+# Warranty
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  paint_years: 3
+  perforation_years: 12
+  roadside_assistance_years: 3
+  notes: |
+    Standard Renault warranty plus 8-year/160,000km battery warranty
+    with 70% capacity guarantee.
+
+# Service & Maintenance
+service:
+  interval_years: 1
+  interval_km: 30000
+  cost_per_service: 250
+  fixed_price_3_year: 650
+  notes: |
+    Service every 1 year or 30,000km. No oil changes.
+    Lower maintenance costs than ICE vehicles.
+
+# Environmental
+environmental:
+  energy_efficiency_class: A
+  co2_emissions_gpkm: 0
+  electricity_consumption_kwh_100km: 13.3
+  notes: "German energy label A rating"
 
 # Market Position
-market_notes: |
-  Competes with VW ID.3 Pro (€43,990), Cupra Born 45 kWh (€37,000),
-  and MG4 Standard Range (€32,000). Megane offers best design and interior quality.
-  Strong alternative to premium brand compact EVs at lower price point.
-  Excellent for urban/suburban buyers who don't need maximum range.
+market_position:
+  segment_rank: 3
+  monthly_sales_avg: 420
+  key_competitors:
+    - Volkswagen ID.3 Pro
+    - Peugeot e-2008
+    - Opel Mokka Electric
+    - Jeep Avenger Electric
+    - MG4 Standard Range
+  notes: |
+    European Car of the Year 2023 winner.
+    Strong contender in compact EV crossover segment.
+    Best-in-class design and infotainment system.
 
 metadata:
   data_quality: verified
-  last_updated: '2026-02-07'
-  created_at: '2026-02-07'
-  source: "Renault Deutschland configurator"
-  source_url: "https://www.renault.de/konfigurator/megane-e-tech-electric.html"
-  price_verification_date: '2026-02-07'
-  notes: |
-    Prices verified via Renault Deutschland online configurator February 2024.
-    BAFA subsidy no longer available (ended 2023).
-    Company car tax calculation based on 2024 German tax law.
+  last_updated: '2026-02-08'
+  created_at: '2026-02-08'
+  source: "Renault Germany official configurator"
+  source_urls:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+  verification_date: '2026-02-08'
