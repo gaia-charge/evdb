@@ -1,103 +1,110 @@
-# Tesla Model Y
+# Tesla Model Y - Compact Crossover SUV
+# World's Best-Selling Electric Vehicle (2023)
+# Built on Tesla's proprietary platform (derived from Model 3)
 
 id: tesla-model-y
 manufacturer_id: tesla
 name: Model Y
-name_full: Tesla Model Y
+body_style: crossover
+segment: J  # SUV/Crossover
 
-body_style: suv
-segment: J  # Crossover/Small SUV
+platform_id: tesla-proprietary  # Derived from Model 3 platform
 production_status: active
-
-production_years:
-  start: 2020
-  end: null  # Currently in production
-
-generation: 1  # First generation
-generation_name: "Gen 1"
-facelift: true  # 2024 Highland refresh (Juniper)
-
-platform: tesla-proprietary
-platform_notes: |
-  Built on Tesla's dedicated EV architecture derived from Model 3.
-  Shares ~75% of parts with Model 3. Optimized for manufacturability.
+production_start: "2020-03"
+first_generation_year: 2020
 
 dimensions:
   length_mm: 4751
   width_mm: 1921
-  width_with_mirrors_mm: 2129
   height_mm: 1624
   wheelbase_mm: 2890
-  ground_clearance_mm: 167
-  drag_coefficient: 0.23  # Excellent aerodynamics
-
-weight:
-  curb_weight_kg: null  # Varies by variant (1979-2232kg)
-
+  
 seating:
-  seats: 5
-  seating_config: "2+3"
-  third_row_available: true  # Optional 7-seater with third row
-
+  seats: 5  # Optional 7-seater with third row
+  seat_config: "2+3"  # Standard configuration
+  
 cargo:
-  trunk_liters: 854
-  trunk_seats_down_liters: 2158
+  trunk_liters: 854  # Rear cargo
   frunk_liters: 117
   total_liters: 971
-  towing_capacity_kg: 1600
+  
+towing:
+  capacity_kg: 1600  # With optional tow hitch
 
-features:
-  - 15.4" landscape touchscreen
-  - Tesla Autopilot (standard)
-  - Full Self-Driving Capability (optional)
-  - Premium audio system (14 speakers)
-  - Dual smartphone charging pads
-  - Glass roof (standard)
-  - Heat pump climate control (standard)
-  - OTA software updates
-  - Tesla mobile app control
-  - Sentry Mode and Dashcam
-  - Dog Mode and Camp Mode
+description: >
+  Tesla Model Y is a compact electric crossover SUV and the best-selling electric vehicle 
+  in the world (Q1 2023). Built on Tesla's proprietary platform derived from Model 3, 
+  it shares approximately 75% of parts with its sedan sibling for manufacturing efficiency. 
+  
+  Model Y combines SUV practicality with Tesla's signature performance, technology, and 
+  charging infrastructure. The 2024 "Juniper" refresh brought improved interior quality, 
+  enhanced suspension, and increased efficiency.
+  
+  Key features include dual-motor AWD, up to 565km WLTP range, 250kW Supercharger V3 
+  fast charging, Autopilot standard with optional Full Self-Driving, and over-the-air 
+  software updates.
+
+awards:
+  - name: "Best-Selling Electric Vehicle in the United States"
+    year: 2023
+    organization: "Automotive News"
+  - name: "Best-Selling Electric Vehicle in Europe"
+    year: 2023
+    organization: "JATO Dynamics"
+  - name: "Best Electric Car"
+    year: "2021-2024"
+    organization: "What Car? (UK)"
 
 safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2022
-  euro_ncap_scores:
+  euro_ncap:
+    year: 2022
+    rating: 5
     adult_occupant: 97
     child_occupant: 87
     vulnerable_road_users: 82
     safety_assist: 98
 
-awards:
-  - name: "Best-Selling Electric Vehicle in US"
-    year: 2023
-    organization: "US Auto Sales"
-  - name: "Best-Selling Electric Vehicle in Europe"
-    year: 2023
-    organization: "JATO Dynamics"
-  - name: "Best Electric Car 2021-2024"
-    year: 2021
-    organization: "What Car? UK"
+technology:
+  - "15.4-inch landscape touchscreen with Tesla OS"
+  - "Autopilot standard (Traffic-Aware Cruise Control, Autosteer)"
+  - "Full Self-Driving Capability (optional, €7,500)"
+  - "Over-the-air software updates"
+  - "Tesla mobile app with remote control"
+  - "Sentry Mode and Dashcam"
+  - "Premium connectivity (1 year included)"
+  - "Navigate on Autopilot (highway autonomy)"
 
-description: |
-  Tesla Model Y is a compact electric SUV built on the Model 3 platform.
-  It became the world's best-selling car (any powertrain) in Q1 2023.
-  
-  The Model Y offers impressive range, performance, and cargo space in a
-  practical SUV package. Standard features include Autopilot, glass roof,
-  and heat pump. The 2024 refresh ("Juniper") brings improved interior,
-  suspension, and efficiency.
+features:
+  - "Heat pump climate control (standard)"
+  - "Premium audio system (14 speakers)"
+  - "Power liftgate"
+  - "Panoramic glass roof"
+  - "Heated front and rear seats"
+  - "Wireless charging pad (2 devices)"
+  - "HEPA air filtration (Bioweapon Defense Mode)"
+  - "Ambient LED lighting (2024 refresh)"
+  - "Ventilated front seats (2024 refresh)"
+
+aerodynamics:
+  drag_coefficient: 0.23  # Excellent for SUV/crossover
 
 notes: |
-  - Best-selling EV globally (2023)
-  - Most profitable vehicle in automotive history per unit
-  - Built in Fremont (US), Shanghai (China), Berlin (Germany), Austin (US)
-  - 2024 refresh adds ambient lighting, improved seats, ventilated front seats
+  Shares ~75% of parts with Model 3 for manufacturing efficiency.
+  Best-selling vehicle (any powertrain) globally in Q1 2023.
+  Most profitable vehicle per unit in automotive history.
+  2024 'Juniper' refresh: improved interior, suspension, efficiency.
+  Optional 7-seater with third row (€3,000).
+  Built at Gigafactory Berlin-Brandenburg, Germany (fastest EU delivery).
+  Built at Gigafactory Shanghai, China (Asia-Pacific).
+  Built at Gigafactory Texas, USA (North America).
 
 metadata:
   created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  updated_at: null
   data_quality: verified
+  last_updated: "2026-02-07"
   sources:
-    - "https://www.tesla.com/modely"
-    - "https://www.euroncap.com/en/results/tesla/model-y/46783"
+    - https://www.tesla.com/model-y
+    - https://www.euroncap.com/en/results/tesla/model-y/48022
+    - https://ev-database.org/car/1440/Tesla-Model-Y-Long-Range-AWD
+  version: "2024-juniper"
