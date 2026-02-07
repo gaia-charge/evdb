@@ -28,13 +28,15 @@
 - [x] GitHub Actions for validation on PR ✓
 - [x] Automated database builds ✓
 - [x] Deployment documentation (DEPLOYMENT.md) ✓
-- [ ] Activate deployment (just needs token + uncomment)
+- [ ] **NEW: Streamlit deployment (replacing Vercel)** ⬅️ **PRIORITY**
 - [ ] PR preview environments (deferred)
 
-**Phase 8-10: User-Facing Features**
-- [ ] Streamlit comparison dashboard
-- [ ] Documentation (CONTRIBUTING.md, API docs)
-- [ ] Launch preparation
+**Phase 8: Streamlit Dashboard** ⬅️ **NEW PRIORITY**
+- [ ] Create Streamlit app for data exploration
+- [ ] Deploy to Streamlit Cloud (free tier)
+- [ ] Integrate with evdb.db SQLite database
+- [ ] Add interactive visualizations
+- [ ] **STOP ADDING VEHICLES** - focus on this phase!
 
 ### 📊 Data Entry Status
 - **Target (Phase 6)**: 20 models, 40 variants
@@ -334,18 +336,85 @@
 
 ---
 
-## Phase 8: Streamlit Dashboard (Week 6) ⚠️ **POST-MVP - OPTIONAL**
+## Phase 8: Streamlit Dashboard & Deployment (Week 6) ⬅️ **NEW PRIMARY DEPLOYMENT TARGET**
 
-**Status:** Nice-to-have but not critical for launch. Datasette provides sufficient exploration. Consider after Phase 7 complete.
+**Status:** Changed from "optional" to **PRIMARY deployment method** per user request. Streamlit will be the main public interface instead of Datasette/Vercel.
 
-### Dashboard Features (Future)
-- [ ] Vehicle comparison tool
-- [ ] Range analysis charts
-- [ ] Charging speed visualizations
-- [ ] Market overview dashboard
-- [ ] Price tracking over time
+### 🎯 Streamlit App Development (NEW PRIORITY)
+- [ ] **Create Streamlit app** (`streamlit_app.py` in root)
+  - [ ] Home page with database statistics
+  - [ ] Vehicle browser/search interface
+  - [ ] Interactive filters (manufacturer, price, range, charging speed)
+  - [ ] Vehicle detail pages
+  - [ ] Data quality indicators
+  
+- [ ] **Core Features**
+  - [ ] **Vehicle Comparison Tool** (side-by-side, 2-4 vehicles)
+  - [ ] **Range Analysis** (scatter plots, efficiency rankings)
+  - [ ] **Charging Speed Comparison** (bar charts, charge curves)
+  - [ ] **Market Overview** (price distribution, availability heatmap)
+  - [ ] **Database Explorer** (raw SQL query interface for power users)
+  
+- [ ] **Visualization Features**
+  - [ ] Battery capacity vs. range scatter plot
+  - [ ] Charging power comparison charts
+  - [ ] Price distribution histograms
+  - [ ] Manufacturer market share
+  - [ ] Body style breakdown
+  - [ ] 800V vs 400V platform comparison
+  
+- [ ] **Interactive Filters**
+  - [ ] Price range slider (€20k-€250k)
+  - [ ] WLTP range slider (200-800 km)
+  - [ ] DC charging power slider (50-350 kW)
+  - [ ] Manufacturer multi-select
+  - [ ] Body style multi-select
+  - [ ] Drive type (RWD/FWD/AWD)
+  - [ ] Battery chemistry (NMC/NCA/LFP)
+  - [ ] Market availability (Germany/USA/etc.)
 
-**Decision:** Defer until after successful Datasette deployment. Focus on core API/data access first.
+### 📦 Deployment to Streamlit Cloud
+- [ ] **Create Streamlit Cloud account** (free tier)
+  - [ ] Sign up at https://streamlit.io/cloud
+  - [ ] Connect GitHub repository
+  - [ ] Configure deployment settings
+  
+- [ ] **Deployment Configuration**
+  - [ ] Create `requirements.txt` for Streamlit
+  - [ ] Ensure `evdb.db` is included or auto-built
+  - [ ] Configure `.streamlit/config.toml` (theme, layout)
+  - [ ] Set up automatic redeployment on push to main
+  
+- [ ] **Testing**
+  - [ ] Test locally: `streamlit run streamlit_app.py`
+  - [ ] Verify all charts render correctly
+  - [ ] Test mobile responsiveness
+  - [ ] Performance check (load time <3s)
+
+### 📊 Dashboard Pages Structure
+```
+streamlit_app.py
+├── 🏠 Home (stats, latest additions)
+├── 🔍 Browse Vehicles (searchable table)
+├── ⚖️ Compare (side-by-side comparison)
+├── 📊 Analytics
+│   ├── Range Analysis
+│   ├── Charging Speeds
+│   ├── Price Distribution
+│   └── Market Overview
+├── 💾 Data Explorer (SQL queries)
+└── 📚 API Documentation (embedded API_DOCS.md)
+```
+
+**Why Streamlit over Vercel/Datasette:**
+- ✅ More user-friendly interface (no SQL knowledge needed)
+- ✅ Better visualizations (built-in Plotly/Altair support)
+- ✅ Free hosting on Streamlit Cloud
+- ✅ Easier to add interactive features
+- ✅ Better for non-technical users
+- ✅ Still provides data explorer for power users
+
+**Phase 8 Priority:** 🔴 **HIGH - This is now the main launch blocker**
 
 ---
 
@@ -474,31 +543,51 @@
 9. [x] Create CONTRIBUTING.md (12KB comprehensive guide) ✓
 10. [x] Polish README.md for launch readiness ✓
 
-### Tomorrow (Feb 8) - Deployment Activation
-1. [ ] Choose deployment target (Vercel recommended)
-2. [ ] Get Vercel token (https://vercel.com/account/tokens)
-3. [ ] Add VERCEL_TOKEN to GitHub secrets
-4. [ ] Uncomment deployment section in build-deploy.yml
-5. [ ] Test deployment and verify all endpoints work
+### 🚨 NEW PRIORITY: TODAY (Feb 7) - Start Streamlit App Development
+**USER REQUEST: Deploy on Streamlit, not Vercel**
 
-### Feb 9-10 - Documentation & Testing
-1. [ ] Polish README.md (add live URL once deployed)
-2. [ ] Write CONTRIBUTING.md
-3. [ ] Complete API_DOCS.md
-4. [ ] Test all documented queries
-5. [ ] Mobile responsiveness check
+1. [ ] **CRITICAL: Update cron session to STOP adding vehicles**
+2. [ ] Create `streamlit_app.py` skeleton
+3. [ ] Implement Home page with database statistics
+4. [ ] Implement Vehicle Browser (searchable table with filters)
+5. [ ] Test locally: `streamlit run streamlit_app.py`
+6. [ ] Commit initial Streamlit app
 
-### Feb 11-12 - Soft Launch
-1. [ ] Deploy to production
-2. [ ] Share with friends for feedback
-3. [ ] Fix critical bugs
-4. [ ] Update documentation based on feedback
+### Tomorrow (Feb 8) - Continue Streamlit Development
+1. [ ] Add interactive filters (price range, WLTP range, charging power)
+2. [ ] Implement Vehicle Comparison page (side-by-side)
+3. [ ] Add basic visualizations (Plotly charts)
+   - Range vs battery capacity scatter
+   - Charging power comparison bar chart
+   - Price distribution histogram
+4. [ ] Test mobile responsiveness
+5. [ ] Polish UI/UX
+
+### Feb 9 - Deploy to Streamlit Cloud
+1. [ ] Create Streamlit Cloud account (free tier)
+2. [ ] Connect GitHub repository
+3. [ ] Configure deployment settings
+4. [ ] Deploy to production
+5. [ ] Test all features on live site
+6. [ ] Update README.md with live Streamlit URL
+
+### Feb 10-12 - Soft Launch & Feature Polish
+1. [ ] Share with friends for feedback
+2. [ ] Add Market Overview dashboard
+3. [ ] Implement SQL Query Explorer for power users
+4. [ ] Fix bugs and improve UX based on feedback
+5. [ ] Prepare launch announcements
 
 ### Feb 15-20 - Public Launch
-1. [ ] Announce on Reddit, HN, Twitter
-2. [ ] Monitor feedback and issues
-3. [ ] Respond to first contributors
-4. [ ] Celebrate! 🎉
+1. [ ] Announce on Reddit (r/electricvehicles)
+2. [ ] Post on Hacker News
+3. [ ] Submit to Product Hunt
+4. [ ] Share on Twitter/X
+5. [ ] Monitor feedback and issues
+6. [ ] Respond to first contributors
+7. [ ] Celebrate! 🎉
+
+**Key Change:** Streamlit is now PRIMARY deployment target (not Vercel). Focus all effort on building the Streamlit app.
 
 ---
 
@@ -513,6 +602,10 @@
 **Decision**: Use Streamlit for dashboards
 **Date**: 2026-02-06  
 **Reasoning**: Python-native, quick to build, easy to deploy
+
+**Decision**: **PRIMARY DEPLOYMENT: Streamlit (not Vercel)** ⭐ **NEW**
+**Date**: 2026-02-07  
+**Reasoning**: User request - Streamlit provides better user experience for non-technical users, easier visualization capabilities, and simpler deployment. Datasette metadata/plugins remain available but Streamlit will be the main public interface.
 
 **Decision**: Use SQLite as data store
 **Date**: 2026-02-06  
@@ -547,10 +640,12 @@
 
 ## Progress Tracking
 
-**Current Phase**: Phase 7 - CI/CD (90% complete) + Phase 10 - Launch Prep (60% complete)  
-**Overall Progress**: 78% (Phases 0-6 complete, 7/9/10 nearly done, deployment remains)  
-**Next Milestone**: Deploy to Vercel by 2026-02-08  
-**Target Launch**: 2026-02-20 (on track! 🚀)
+**Current Phase**: Phase 8 - Streamlit App Development ⬅️ **NEW PRIORITY**  
+**Overall Progress**: 75% (Phases 0-7 at 90%, Phase 8 is 0% → launch blocker)  
+**Next Milestone**: Build & deploy Streamlit app by 2026-02-10  
+**Target Launch**: 2026-02-20 (timeline unchanged, deployment target changed)
+
+**🚨 Strategic Shift (Feb 7):** Changed from Vercel/Datasette to **Streamlit Cloud** as primary deployment. Better UX, easier visualizations, more user-friendly for non-technical audience.
 
 ---
 
