@@ -1,336 +1,543 @@
-# EVDB Vehicle Expansion Plan
+# EVDB Vehicle Expansion Plan - ALL European Manufacturers
 
-**Updated:** 2026-02-07  
-**User Request:** Systematically add all electric models from target manufacturers (no hybrids)  
-**Focus:** One manufacturer at a time, all available electric models
-
----
-
-## 🎯 Target Manufacturers
-
-1. **Tesla** (existing: 2 models, 6 variants)
-2. **BYD** (existing: 1 model, 1 variant)
-3. **Renault** (existing: 0 models)
-4. **Stellantis** (existing: 3 models, 3 variants across Fiat/Peugeot/Citroën)
+**Updated:** 2026-02-07 (Streamlit app deployed! 🎉)  
+**Focus:** Systematically add ALL electric vehicles available in Europe  
+**Target:** Comprehensive coverage of every EV sold in European markets
 
 ---
 
-## 📊 Current Status
+## 🎯 Expansion Strategy
 
-### Tesla (2 models, 6 variants) ✅ VOLUME MODELS COMPLETE
-**Existing:**
-- ✅ Model 3: RWD, Long Range AWD, Performance (all 2024)
-- ✅ Model Y: RWD, Long Range AWD, Performance (all 2024)
+**Approach:** Add vehicles manufacturer-by-manufacturer, focusing on models actually available for purchase in Europe (Germany, France, UK, Poland, Italy, Spain, Netherlands, Norway, etc.)
 
-**Missing:**
-- [ ] **Model S** (flagship sedan)
-  - [ ] Model S Standard Range (2024)
-  - [ ] Model S Long Range (2024)
-  - [ ] Model S Plaid (2024) - 1,020 hp, 2.1s 0-100
-- [ ] **Model X** (flagship SUV)
-  - [ ] Model X Standard Range (2024)
-  - [ ] Model X Long Range (2024)
-  - [ ] Model X Plaid (2024) - 1,020 hp, 2.5s 0-100
-- [ ] **Cybertruck** (if available in Europe - check availability first)
-
-**Priority:** Medium (volume models complete, add flagship models for completeness)
+**Priority Order:**
+1. **Major European brands** (high volume, missing models)
+2. **Major global brands** (Tesla, Korean, Japanese)
+3. **Chinese brands** (rapidly expanding in Europe)
+4. **Premium/niche brands** (complete coverage)
 
 ---
 
-### BYD (1 model, 1 variant) 🔴 HIGH PRIORITY
-**Existing:**
-- ✅ Atto 3: Extended Range (2024)
+## 📊 Current Database Status
 
-**Missing (Available in Europe):**
-- [ ] **BYD Seal** (compact sedan, Tesla Model 3 competitor)
-  - [ ] Seal Design (82.5 kWh, RWD, 570 km)
-  - [ ] Seal Excellence (82.5 kWh, AWD, 520 km)
-- [ ] **BYD Dolphin** (compact hatchback)
-  - [ ] Dolphin Active (44.9 kWh, 340 km)
-  - [ ] Dolphin Boost (60.4 kWh, 427 km)
-- [ ] **BYD Han** (executive sedan, if available in target markets)
-  - [ ] Han EV (85.4 kWh, RWD/AWD variants)
-- [ ] **BYD Tang** (7-seat SUV, if available)
-  - [ ] Tang EV (86.4 kWh, AWD)
-- [ ] **BYD Seagull** (if available - ultra-compact city car)
-- [ ] **BYD Seal U DM-i** (⚠️ SKIP - this is a PHEV hybrid, not pure electric)
+**Existing Coverage (51 variants across 19 manufacturers):**
 
-**Priority:** HIGH - Major Chinese manufacturer with growing European presence
+### Complete or Nearly Complete ✅
+- **Tesla**: 6 variants (Model 3, Model Y - all trims) - Add Model S/X
+- **Hyundai**: 5 variants (Ioniq 5, Ioniq 6, Kona Electric) - Good coverage
+- **Kia**: 4 variants (EV6, EV9) - Add EV3, Niro EV
+- **Volkswagen Group**: 4 variants (ID.3, ID.4, ID.Buzz) - Add ID.5, ID.7
+- **BMW Group**: 3 variants (iX, iX1, i4) - Add i5, i7, iX3, Mini EVs
 
----
+### Partial Coverage 🟡
+- **Mercedes-Benz**: 4 variants (EQS, EQE, EQA) - Add EQB, EQS SUV, EQE SUV
+- **Stellantis**: 3 variants (Fiat 500e, Peugeot e-208, Citroën ë-C4) - Add 20+ models!
+- **Audi**: 2 variants (Q4 e-tron, e-tron GT) - Add Q8 e-tron, Q6 e-tron, e-tron GT RS
+- **Porsche**: 2 variants (Taycan 4S, Taycan Turbo S) - Add base Taycan, Macan Electric
+- **Ford**: 2 variants (F-150 Lightning, Mustang Mach-E) - Good US coverage
+- **BYD**: 1 variant (Atto 3) - Add Seal, Dolphin, Han, Tang
 
-### Renault (0 models) 🔴 HIGHEST PRIORITY
-**Existing:**
-- ❌ None!
-
-**Missing (All Available in Europe):**
-- [ ] **Renault Megane E-Tech** (compact crossover, EV of the Year 2023)
-  - [ ] Megane E-Tech EV40 (40 kWh, 300 km)
-  - [ ] Megane E-Tech EV60 (60 kWh, 470 km)
-  - [ ] Megane E-Tech EV60 4Control (60 kWh, AWD)
-- [ ] **Renault Scenic E-Tech** (family SUV, brand new 2024)
-  - [ ] Scenic E-Tech Comfort Range 60 kWh (60 kWh, 430 km)
-  - [ ] Scenic E-Tech Long Range 87 kWh (87 kWh, 625 km)
-- [ ] **Renault Zoe** (city hatchback, classic EV)
-  - [ ] Zoe R110 (52 kWh, 395 km)
-  - [ ] Zoe R135 (52 kWh, 386 km)
-- [ ] **Renault Twingo E-Tech** (ultra-compact city car, if released)
-  - [ ] Check if 2024 model is available yet
-- [ ] **Renault Kangoo E-Tech** (electric van, if including commercial)
-  - [ ] Skip if focusing only on passenger cars
-
-**Priority:** HIGHEST - Major European manufacturer, completely missing from database
+### Missing Completely ❌
+- **Renault** (0 models) - Megane E-Tech, Scenic E-Tech, Zoe, Twingo E-Tech
+- **Nissan**: 2 variants (Leaf, Ariya) - Add Ariya variants
+- **Polestar**: 1 variant (Polestar 2) - Add Polestar 3, Polestar 4
+- **Volvo**: 1 variant (EX30) - Add EX40 (XC40 Recharge), EC40, EX90
+- **Smart**: 0 models - Add #1, #3
+- **MG**: 0 models - Add MG4, MG5, MG ZS EV
+- **Dacia**: 0 models - Add Spring
+- **Mazda**: 0 models - Add MX-30
+- **Honda**: 0 models - Add e:Ny1
+- And 10+ more brands entering Europe!
 
 ---
 
-### Stellantis (3 models, 3 variants) 🟡 MEDIUM PRIORITY
-**Existing:**
-- ✅ Fiat 500e: Icon 42kWh (2024)
-- ✅ Peugeot e-208: GT 51kWh (2024)
-- ✅ Citroën ë-C4: Shine Plus (2024)
+## 📋 PHASE 1: Priority Manufacturers (Weeks 1-4)
 
-**Missing - Opel/Vauxhall:**
-- [ ] **Opel Corsa-e** (B-segment hatchback)
-  - [ ] Corsa-e Edition (50 kWh, 357 km)
-  - [ ] Corsa-e GS (50 kWh, 357 km)
-- [ ] **Opel Astra-e** (C-segment hatchback)
-  - [ ] Astra-e Edition (54 kWh, 418 km)
-  - [ ] Astra-e GS (54 kWh, 418 km)
-- [ ] **Opel Mokka-e** (small SUV)
-  - [ ] Mokka-e Edition (50 kWh, 338 km)
-  - [ ] Mokka-e Ultimate (50 kWh, 338 km)
+### Week 1: Renault Group 🇫🇷 **HIGHEST PRIORITY**
+**Status:** 0 models currently
 
-**Missing - Jeep:**
-- [ ] **Jeep Avenger** (small SUV)
-  - [ ] Avenger Electric (54 kWh, 400 km)
+**Renault:**
+- [ ] **Megane E-Tech** (compact crossover, 2023 European Car of the Year)
+  - [ ] EV40 (40 kWh, 300 km, €38,000)
+  - [ ] EV60 Techno (60 kWh, 450 km, €43,000)
+  - [ ] EV60 Iconic (60 kWh, 470 km, €46,000)
+- [ ] **Scenic E-Tech** (family SUV, new 2024)
+  - [ ] Comfort Range 60 kWh (430 km, €42,000)
+  - [ ] Long Range 87 kWh (625 km, €50,000)
+- [ ] **Zoe** (city hatchback, classic EV)
+  - [ ] R110 (52 kWh, 395 km, €34,000)
+  - [ ] R135 (52 kWh, 386 km, €37,000)
+- [ ] **Twingo E-Tech** (ultra-compact, check 2024 availability)
+  - [ ] Twingo E-Tech (22 kWh, if released)
 
-**Missing - DS:**
+**Dacia (Renault Group):**
+- [ ] **Spring** (ultra-affordable city EV)
+  - [ ] Spring Expression (26.8 kWh, 220 km, €20,900)
+  - [ ] Spring Extreme (26.8 kWh, 220 km, €23,500)
+
+**Alpine (Renault Group):**
+- [ ] **A290** (hot hatch, if released)
+
+**Target:** 5-6 models, 10-12 variants
+
+---
+
+### Week 2: BYD 🇨🇳 **HIGH PRIORITY - RAPID EUROPEAN EXPANSION**
+**Status:** 1 model (Atto 3)
+
+- [ ] **Seal** (sedan, Tesla Model 3 competitor)
+  - [ ] Design 82.5 kWh RWD (570 km, €46,000)
+  - [ ] Excellence 82.5 kWh AWD (520 km, €52,000)
+- [ ] **Dolphin** (compact hatchback)
+  - [ ] Active 44.9 kWh (340 km, €33,000)
+  - [ ] Comfort 60.4 kWh (427 km, €36,000)
+  - [ ] Design 60.4 kWh (427 km, €38,000)
+- [ ] **Han** (executive sedan, if available in Europe)
+  - [ ] Han EV Long Range (85.4 kWh, 521 km)
+- [ ] **Tang** (7-seat SUV, if available)
+  - [ ] Tang EV (86.4 kWh, 530 km)
+- [ ] **Seagull** (ultra-compact, if available)
+
+**Target:** 4-5 models, 9-11 variants
+
+---
+
+### Week 3: Stellantis Brands 🇮🇹🇫🇷🇩🇪 **LARGE EXPANSION**
+**Status:** 3 models (Fiat 500e, Peugeot e-208, Citroën ë-C4)
+
+**Opel/Vauxhall:**
+- [ ] **Corsa Electric** (B-segment hatchback)
+  - [ ] Edition (50 kWh, 357 km, €35,000)
+  - [ ] GS (50 kWh, 357 km, €37,500)
+- [ ] **Astra Electric** (C-segment)
+  - [ ] Edition (54 kWh, 418 km, €45,000)
+  - [ ] GS (54 kWh, 418 km, €48,000)
+- [ ] **Mokka Electric** (small SUV)
+  - [ ] Edition (50 kWh, 338 km, €36,000)
+  - [ ] Ultimate (50 kWh, 338 km, €39,000)
+
+**Peugeot:**
+- [ ] **e-2008** (small SUV)
+  - [ ] Allure (54 kWh, 406 km, €39,000)
+  - [ ] GT (54 kWh, 406 km, €43,000)
+- [ ] **e-308** (compact)
+  - [ ] Allure (54 kWh, 416 km, €43,000)
+  - [ ] GT (54 kWh, 416 km, €47,000)
+
+**Citroën:**
+- [ ] **ë-Berlingo** (MPV, if targeting families)
+- [ ] **ë-Spacetourer** (large MPV)
+
+**Fiat:**
+- [ ] **600e** (small crossover, new 2024)
+  - [ ] (RED) 54 kWh (409 km, €36,000)
+  - [ ] La Prima 54 kWh (409 km, €42,000)
+
+**Jeep:**
+- [ ] **Avenger** (small SUV, 2023 European Car of the Year)
+  - [ ] Avenger Electric (54 kWh, 400 km, €40,000)
+
+**Alfa Romeo:**
+- [ ] **Junior Elettrica** (compact SUV, brand new 2024)
+  - [ ] Ibrida Speciale (156 hp, 410 km, €43,000)
+
+**DS Automobiles:**
 - [ ] **DS 3 E-Tense** (premium compact crossover)
-  - [ ] DS 3 E-Tense Performance Line (50 kWh, 341 km)
-  - [ ] DS 3 E-Tense Rivoli (54 kWh, 402 km)
+  - [ ] Performance Line (50 kWh, 341 km, €42,000)
+  - [ ] Rivoli (54 kWh, 402 km, €45,000)
 
-**Missing - Alfa Romeo:**
-- [ ] **Alfa Romeo Junior Elettrica** (compact SUV, brand new 2024)
-  - [ ] Junior Elettrica Ibrida Speciale (156 hp, 410 km)
+**Maserati:**
+- [ ] **Grecale Folgore** (luxury SUV, if available)
+- [ ] **GranTurismo Folgore** (luxury GT, if available)
 
-**Missing - Peugeot (more models):**
-- [ ] **Peugeot e-2008** (small SUV)
-  - [ ] e-2008 Allure (54 kWh, 406 km)
-  - [ ] e-2008 GT (54 kWh, 406 km)
-- [ ] **Peugeot e-308** (compact hatchback/wagon)
-  - [ ] e-308 Allure (54 kWh, 416 km)
-  - [ ] e-308 GT (54 kWh, 416 km)
-
-**Missing - Citroën (more models):**
-- [ ] **Citroën ë-Berlingo** (MPV, if including commercial-adjacent)
-- [ ] **Citroën ë-Spacetourer** (large MPV)
-
-**Missing - Fiat (more models):**
-- [ ] **Fiat 600e** (small crossover, brand new 2024)
-  - [ ] 600e (RED) (54 kWh, 409 km)
-  - [ ] 600e (La Prima) (54 kWh, 409 km)
-
-**Priority:** MEDIUM - Many models missing across brands, but lower volume than Renault/BYD
+**Target:** 11-15 models, 20-25 variants
 
 ---
 
-## 📋 Recommended Order of Operations
+### Week 4: Volkswagen Group (Missing Models) 🇩🇪
+**Status:** 4 models (ID.3, ID.4, ID.Buzz, Q4 e-tron)
 
-### Week 1: Renault (HIGHEST PRIORITY)
-**Day 1:** Renault Megane E-Tech (3 variants)  
-**Day 2:** Renault Scenic E-Tech (2 variants)  
-**Day 3:** Renault Zoe (2 variants)  
-**Day 4:** Renault Twingo E-Tech (check availability, 1-2 variants)
+**Volkswagen:**
+- [ ] **ID.5** (coupe SUV)
+  - [ ] Pro (77 kWh RWD, 520 km, €52,000)
+  - [ ] Pro 4MOTION (77 kWh AWD, 490 km, €57,000)
+  - [ ] GTX (77 kWh AWD, 480 km, €63,000)
+- [ ] **ID.7** (executive sedan)
+  - [ ] Pro (77 kWh RWD, 621 km, €57,000)
+  - [ ] Pro S (86 kWh RWD, 700 km, €62,000)
+  - [ ] GTX (86 kWh AWD, 595 km, €68,000)
 
-**Goal:** Complete Renault lineup (4 models, ~8 variants)
+**Audi:**
+- [ ] **Q8 e-tron** (flagship SUV)
+  - [ ] 50 quattro (95 kWh, 491 km, €82,000)
+  - [ ] 55 quattro (106 kWh, 582 km, €90,000)
+- [ ] **Q8 e-tron Sportback**
+  - [ ] 55 quattro (106 kWh, 600 km, €93,000)
+- [ ] **Q6 e-tron** (mid-size SUV, PPE platform, if available)
+  - [ ] Check 2024 release
+- [ ] **e-tron GT RS** (performance flagship)
+  - [ ] 440 kW (598 hp, €142,000)
 
----
+**Porsche:**
+- [ ] **Taycan** (base models)
+  - [ ] Taycan RWD (79 kWh, 431 km, €95,000)
+  - [ ] Taycan 4 (79 kWh AWD, 407 km, €103,000)
+  - [ ] Taycan GTS (93 kWh AWD, 504 km, €134,000)
+- [ ] **Macan Electric** (compact SUV, if released)
+  - [ ] Macan 4 (check 2024 availability)
 
-### Week 2: BYD (HIGH PRIORITY)
-**Day 1:** BYD Seal (2 variants)  
-**Day 2:** BYD Dolphin (2 variants)  
-**Day 3:** BYD Han EV (check European availability, 1-2 variants)  
-**Day 4:** BYD Tang EV (check availability, 1 variant)
+**Škoda:**
+- [ ] **Enyaq iV** (SUV, MEB platform)
+  - [ ] 60 (62 kWh RWD, 413 km, €44,000)
+  - [ ] 80 (82 kWh RWD, 534 km, €48,000)
+  - [ ] 80x (82 kWh AWD, 509 km, €53,000)
+  - [ ] vRS (82 kWh AWD, 513 km, €57,000)
+- [ ] **Enyaq Coupé iV**
+  - [ ] 80x (82 kWh AWD, 545 km, €56,000)
+  - [ ] vRS (82 kWh AWD, 540 km, €61,000)
 
-**Goal:** Expand BYD from 1 to 4-5 models (~7-8 variants)
+**Cupra (SEAT):**
+- [ ] **Born** (compact hatchback)
+  - [ ] 45 kWh (340 km, €37,000)
+  - [ ] 58 kWh (424 km, €41,000)
+  - [ ] 77 kWh (548 km, €47,000)
+  - [ ] VZ (77 kWh, 511 km, €51,000)
+- [ ] **Tavascan** (coupe SUV, if available)
 
----
-
-### Week 3-4: Stellantis Brands (MEDIUM PRIORITY)
-**Day 1:** Opel Corsa-e (2 variants)  
-**Day 2:** Opel Mokka-e (2 variants)  
-**Day 3:** Jeep Avenger (1 variant)  
-**Day 4:** Fiat 600e (2 variants)  
-**Day 5:** DS 3 E-Tense (2 variants)  
-**Day 6:** Peugeot e-2008 (2 variants)  
-**Day 7:** Opel Astra-e (2 variants)  
-**Day 8:** Alfa Romeo Junior (1 variant, check availability)
-
-**Goal:** Expand Stellantis from 3 to 11 models (~17 variants)
-
----
-
-### Week 5: Tesla Flagships (OPTIONAL)
-**Day 1:** Tesla Model S (3 variants)  
-**Day 2:** Tesla Model X (3 variants)  
-**Day 3:** Tesla Cybertruck (if available in Europe)
-
-**Goal:** Complete Tesla lineup (4-5 models, ~12-15 variants)
-
----
-
-## 🎯 Target Database Size
-
-**Starting Point:**
-- 19 manufacturers
-- 37 models
-- 51 variants
-
-**After Expansion (Conservative Estimate):**
-- 19 manufacturers (unchanged, all targets already exist)
-- **60+ models** (+23 models)
-- **80+ variants** (+29 variants)
-
-**After Expansion (Optimistic Estimate):**
-- 19 manufacturers
-- **70+ models** (+33 models)
-- **100+ variants** (+49 variants)
+**Target:** 12-15 models, 25-35 variants
 
 ---
 
-## 📝 Per-Vehicle Checklist
+## 📋 PHASE 2: Major Global Brands (Weeks 5-8)
 
-For each new vehicle added, ensure:
+### Week 5: Tesla Flagships 🇺🇸
+**Status:** 2 models (Model 3, Model Y - complete)
 
-1. **Manufacturer exists** in database (should already for these 4)
-2. **Vehicle model YAML** created (`data/vehicle-models/`)
-   - Complete specifications
-   - Production dates
-   - Body style, segment, platform
-   - Dimensions, cargo, towing
-3. **Vehicle variant YAML(s)** created (`data/vehicle-variants/`)
-   - Battery specifications (chemistry, capacity, warranty)
-   - Range (WLTP, EPA if US, real-world estimate)
-   - Charging (AC/DC power, charge times, ports)
-   - Performance (motors, power, torque, acceleration)
-   - Efficiency (consumption WLTP & real-world)
-   - V2X capabilities
-4. **Market availability YAML** created for at least 1 market (`data/market-availability/`)
-   - Start with Germany (DE) or France (FR) for European models
-   - Include base price, on-the-road price
-   - Available colors, wheels, packages
+- [ ] **Model S** (flagship sedan)
+  - [ ] Standard Range (95 kWh, 634 km, €95,000)
+  - [ ] Long Range (100 kWh, 652 km, €100,000)
+  - [ ] Plaid (100 kWh, 600 km, 2.1s 0-100, €130,000)
+- [ ] **Model X** (flagship SUV)
+  - [ ] Standard Range (95 kWh, 543 km, €100,000)
+  - [ ] Long Range (100 kWh, 560 km, €105,000)
+  - [ ] Plaid (100 kWh, 528 km, 2.5s 0-100, €135,000)
+- [ ] **Cybertruck** (if/when available in Europe)
+
+**Target:** 2-3 models, 6-7 variants
+
+---
+
+### Week 6: BMW Group 🇩🇪
+**Status:** 3 models (iX, iX1, i4)
+
+**BMW:**
+- [ ] **iX3** (mid-size SUV)
+  - [ ] iX3 (80 kWh RWD, 461 km, €69,000)
+- [ ] **i5** (executive sedan, new 2024)
+  - [ ] eDrive40 (81.2 kWh RWD, 582 km, €72,000)
+  - [ ] M60 xDrive (81.2 kWh AWD, 516 km, €98,000)
+- [ ] **i7** (luxury sedan)
+  - [ ] eDrive50 (101.7 kWh RWD, 625 km, €135,000)
+  - [ ] M70 xDrive (101.7 kWh AWD, 560 km, €170,000)
+- [ ] **i4 M50** (performance sedan)
+  - [ ] M50 (80.7 kWh AWD, 510 km, €75,000)
+- [ ] **iX M60** (performance SUV)
+  - [ ] M60 (111.5 kWh AWD, 566 km, €120,000)
+
+**Mini:**
+- [ ] **Cooper Electric** (3-door hatch, new 2024)
+  - [ ] Cooper E (54.2 kWh, 402 km, €34,000)
+- [ ] **Countryman Electric** (SUV, new 2024)
+  - [ ] Countryman E (66.5 kWh, if released)
+
+**Target:** 7-8 models, 11-13 variants
+
+---
+
+### Week 7: Mercedes-Benz (Expand) 🇩🇪
+**Status:** 4 models (EQS, EQE, EQA, EQE AMG)
+
+- [ ] **EQB** (compact SUV)
+  - [ ] 250+ (70.5 kWh FWD, 474 km, €56,000)
+  - [ ] 300 4MATIC (66.5 kWh AWD, 423 km, €60,000)
+  - [ ] 350 4MATIC (66.5 kWh AWD, 423 km, €64,000)
+- [ ] **EQS SUV** (luxury SUV)
+  - [ ] 450+ (118 kWh RWD, 660 km, €115,000)
+  - [ ] 450 4MATIC (118 kWh AWD, 600 km, €120,000)
+  - [ ] 580 4MATIC (118 kWh AWD, 536 km, €141,000)
+- [ ] **EQE SUV** (mid-size SUV)
+  - [ ] 350+ (90.6 kWh RWD, 590 km, €77,000)
+  - [ ] 350 4MATIC (90.6 kWh AWD, 547 km, €81,000)
+  - [ ] 500 4MATIC (90.6 kWh AWD, 479 km, €91,000)
+
+**Target:** 3 models, 9 variants
+
+---
+
+### Week 8: Hyundai/Kia/Genesis Expansion 🇰🇷
+**Status:** Hyundai (3 models), Kia (2 models), Genesis (0)
+
+**Hyundai:**
+- [ ] **Kona Electric** (existing - add more variants if missing)
+- [ ] **Ioniq 5 N** (performance, if available)
+  - [ ] N (84 kWh AWD, 448 km, 650 hp, €75,000)
+
+**Kia:**
+- [ ] **EV3** (compact crossover, new 2024)
+  - [ ] Air (58.3 kWh, 410 km, €38,000)
+  - [ ] Earth (81.4 kWh, 600 km, €46,000)
+- [ ] **Niro EV** (compact crossover)
+  - [ ] 64.8 kWh (460 km, €43,000)
+- [ ] **EV6 GT-Line** (add if missing)
+
+**Genesis:**
+- [ ] **Electrified G80** (luxury sedan)
+  - [ ] 87.2 kWh AWD (520 km, €84,000)
+- [ ] **Electrified GV70** (luxury SUV)
+  - [ ] 77.4 kWh AWD (455 km, €80,000)
+- [ ] **GV60** (crossover)
+  - [ ] Sport (77.4 kWh AWD, 470 km, €62,000)
+  - [ ] Sport Plus (77.4 kWh AWD, 451 km, €68,000)
+
+**Target:** 5-6 models, 10-12 variants
+
+---
+
+## 📋 PHASE 3: Volvo, Polestar, Chinese Brands (Weeks 9-12)
+
+### Week 9: Volvo & Polestar 🇸🇪
+**Status:** Volvo (1 model - EX30), Polestar (1 model - Polestar 2)
+
+**Volvo:**
+- [ ] **EX40** (formerly XC40 Recharge, compact SUV)
+  - [ ] Single Motor (69 kWh RWD, 475 km, €53,000)
+  - [ ] Twin Motor (78 kWh AWD, 452 km, €60,000)
+- [ ] **EC40** (coupe SUV)
+  - [ ] Single Motor (69 kWh RWD, 530 km, €56,000)
+  - [ ] Twin Motor (78 kWh AWD, 487 km, €63,000)
+- [ ] **EX90** (flagship 7-seat SUV)
+  - [ ] Twin Motor (111 kWh AWD, 600 km, €86,000)
+
+**Polestar:**
+- [ ] **Polestar 3** (luxury SUV)
+  - [ ] Long Range Dual Motor (111 kWh AWD, 610 km, €84,000)
+- [ ] **Polestar 4** (coupe SUV)
+  - [ ] Long Range Dual Motor (102 kWh AWD, 580 km, €65,000)
+
+**Target:** 5 models, 8-10 variants
+
+---
+
+### Week 10: Smart & MG 🇨🇳
+**Status:** Smart (0), MG (0)
+
+**Smart (Mercedes + Geely):**
+- [ ] **#1** (compact SUV)
+  - [ ] Pro+ (66 kWh, 440 km, €42,000)
+  - [ ] Premium (66 kWh, 420 km, €44,000)
+  - [ ] Brabus (66 kWh, 400 km, €48,000)
+- [ ] **#3** (compact crossover, if available)
+  - [ ] Pro+ (66 kWh, €45,000)
+
+**MG (SAIC Motor):**
+- [ ] **MG4 Electric** (hatchback)
+  - [ ] Standard Range (51 kWh, 350 km, €32,000)
+  - [ ] Long Range (64 kWh, 450 km, €35,000)
+  - [ ] XPower (64 kWh AWD, 385 km, €42,000)
+- [ ] **MG5 Electric** (station wagon)
+  - [ ] Standard Range (50.3 kWh, 320 km, €33,000)
+  - [ ] Long Range (61.1 kWh, 400 km, €36,000)
+- [ ] **MG ZS EV** (compact SUV)
+  - [ ] Long Range (72.6 kWh, 440 km, €36,000)
+
+**Target:** 5-6 models, 10-12 variants
+
+---
+
+### Week 11: Nissan, Mazda, Honda 🇯🇵
+**Status:** Nissan (2 models), Mazda (0), Honda (0)
+
+**Nissan:**
+- [ ] **Ariya** (add missing variants)
+  - [ ] 63 kWh FWD (450 km, €50,000)
+  - [ ] 87 kWh FWD (520 km, €56,000)
+  - [ ] 87 kWh e-4ORCE (500 km, €64,000)
+
+**Mazda:**
+- [ ] **MX-30** (compact crossover)
+  - [ ] 35.5 kWh (200 km, €35,000) - Note: short range!
+  - [ ] MX-30 R-EV (check if range extender counts)
+
+**Honda:**
+- [ ] **e:Ny1** (compact SUV)
+  - [ ] 68.8 kWh (412 km, €45,000)
+
+**Target:** 3-4 models, 5-7 variants
+
+---
+
+### Week 12: New Chinese Entrants 🇨🇳
+**Status:** NIO (0), XPeng (0), Others (0)
+
+**NIO (if officially in Europe):**
+- [ ] **ET5** (sedan)
+- [ ] **EL6** (SUV)
+- Check availability by country
+
+**XPeng:**
+- [ ] **G9** (flagship SUV, if available)
+- [ ] **P7** (sedan, if available)
+
+**Lynk & Co (Geely):**
+- [ ] **01** (if pure electric version available in Europe)
+
+**Ora (Great Wall):**
+- [ ] **Funky Cat** (compact hatchback, if available)
+  - [ ] 48 kWh (310 km, €35,000)
+
+**Maxus (SAIC):**
+- [ ] **Mifa 9** (MPV, if targeting families)
+
+**Aiways:**
+- [ ] **U5** (if still selling in Europe)
+
+**Target:** 3-5 models, 5-8 variants
+
+---
+
+## 📋 PHASE 4: Premium & Niche Brands (Weeks 13-16)
+
+### Week 13-14: Luxury Brands
+**Bentley:**
+- [ ] **Bentayga EWB** (if electric version available)
+
+**Rolls-Royce:**
+- [ ] **Spectre** (luxury coupe)
+  - [ ] 102 kWh (530 km, €380,000+)
+
+**Lotus:**
+- [ ] **Eletre** (luxury SUV)
+  - [ ] Eletre (112 kWh AWD, 600 km, €96,000)
+  - [ ] Eletre R (112 kWh AWD, 490 km, €124,000)
+
+**Lucid (if in Europe):**
+- [ ] **Air** (sedan, check European availability)
+
+### Week 15-16: Sports/Performance
+**Jaguar:**
+- [ ] **I-PACE** (if still current)
+  - [ ] 90 kWh AWD (470 km, €78,000)
+
+**Toyota/Lexus:**
+- [ ] **bZ4X** (Toyota crossover)
+  - [ ] FWD (71.4 kWh, 516 km, €47,000)
+  - [ ] AWD (71.4 kWh, 470 km, €52,000)
+- [ ] **Lexus RZ** (luxury crossover)
+  - [ ] 450e (71.4 kWh AWD, 440 km, €74,000)
+
+**Subaru:**
+- [ ] **Solterra** (crossover, Toyota bZ4X twin)
+  - [ ] AWD (71.4 kWh, 465 km, €52,000)
+
+---
+
+## ✅ Quality Standards for Each Vehicle
+
+**Required for each vehicle:**
+1. **Official manufacturer specifications**
+   - WLTP range (mandatory for EU vehicles)
+   - Battery capacity (usable + total)
+   - Charging power (AC + DC)
+   - Performance (0-100 km/h, top speed)
+2. **Real-world data** (from trusted sources)
+   - Real-world consumption
+   - Real-world range (mixed, highway, city)
+   - Charging curve (if available)
+3. **Market pricing**
+   - At least Germany OR France (our primary markets)
+   - Base price + on-the-road price
+   - Popular configuration examples
    - Company car tax calculations (Germany)
-   - Delivery time
-5. **Validation** before committing
-   - Run `python scripts/validate.py` (all files must pass)
-6. **Database rebuild** to test
-   - Run `python scripts/build-sqlite.py --clean`
-   - Verify new vehicles appear in database
-7. **Commit with descriptive message**
-   - Format: "Add [Manufacturer] [Model] [variants] with [market] pricing"
-   - Example: "Add Renault Megane E-Tech (EV40, EV60) with German/French pricing"
+4. **Data sources documented**
+   - Manufacturer website URL
+   - Test data sources (InsideEVs, ADAC, etc.)
+   - Confidence level (verified/measured/estimated)
 
 ---
 
-## 🚫 What to SKIP
+## 🚫 Exclusions
 
-**Do NOT add:**
-- ❌ Plug-in hybrids (PHEVs) - e.g., BYD Seal U DM-i, any "PHEV" or "Hybrid" models
+**DO NOT add:**
+- ❌ Plug-in hybrids (PHEVs)
 - ❌ Mild hybrids (MHEVs)
-- ❌ Range-extended EVs (unless pure electric mode >100km)
-- ❌ Concept cars or vaporware (must be available for order)
-- ❌ Discontinued models (unless historically significant and recent)
-- ❌ Commercial-only vehicles (vans, trucks) unless user specifically requests
+- ❌ Range-extended EVs (unless >100km pure electric)
+- ❌ Concept cars or vaporware
+- ❌ Discontinued models (unless historically significant)
+- ❌ Models not available for purchase in Europe
+- ❌ Commercial-only vehicles (vans/trucks unless specifically requested)
 
-**Only add:** Pure battery electric vehicles (BEVs) available for purchase in 2024.
+**ONLY add:** Pure battery-electric vehicles (BEVs) actually available for sale in European markets.
 
 ---
 
-## 📊 Data Quality Standards
+## 📊 Target Database Size
 
-For each vehicle, prioritize:
-1. **Official manufacturer specifications** (always primary source)
-2. **WLTP certified data** (for EU vehicles)
-3. **EPA certified data** (for US vehicles)
-4. **Real-world testing** from reputable sources (InsideEVs, Edmunds, AutoBild)
-5. **Mark data confidence** in metadata:
-   - `verified`: Official manufacturer spec
-   - `measured`: Real-world test data
-   - `estimated`: Calculated or inferred
-   - `community`: User-submitted
+**Starting:** 51 variants across 19 manufacturers
+
+**After PHASE 1 (4 weeks):** ~100-120 variants across 25 manufacturers
+
+**After PHASE 2 (8 weeks):** ~180-200 variants across 30 manufacturers
+
+**After PHASE 3 (12 weeks):** ~250-280 variants across 35+ manufacturers
+
+**After PHASE 4 (16 weeks):** ~300-350+ variants across 40+ manufacturers
+
+**Ultimate Goal:** Most comprehensive European EV database with 400-500+ variants covering every BEV available in Europe.
 
 ---
 
 ## 🔗 Key Data Sources
 
-**Manufacturer Sites:**
-- Tesla: https://www.tesla.com/
-- BYD: https://www.bydauto.com.cn/ (China), https://www.byd.com/eu/ (Europe)
-- Renault: https://www.renault.fr/vehicules-electriques.html
-- Stellantis brands:
-  - Opel: https://www.opel.de/elektroautos.html
-  - Peugeot: https://www.peugeot.de/elektrofahrzeuge.html
-  - Citroën: https://www.citroen.de/elektroautos.html
-  - Fiat: https://www.fiat.de/elektroautos
-  - Jeep: https://www.jeep.de/
-  - DS: https://www.dsautomobiles.de/
-  - Alfa Romeo: https://www.alfaromeo.de/
-
-**Third-party Testing:**
-- InsideEVs: https://insideevs.com/reviews/
-- Edmunds: https://www.edmunds.com/electric-car/
-- AutoBild (Germany): https://www.autobild.de/test/elektroauto/
-- ADAC (Germany): https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/
+**Manufacturer Websites** (official specs)
+**WLTP Database:** car.info (Germany)
+**Test Data:**
+- InsideEVs.com (US & Europe)
+- ADAC (Germany)
+- AutoBild (Germany)
+- Automobile Magazine (France)
+- Edmunds (US)
+- What Car? (UK)
 
 **Pricing:**
-- Germany: car.info, mobile.de, autoscout24.de
+- Germany: mobile.de, autoscout24.de
 - France: largus.fr, automobile-magazine.fr
-- General: manufacturer websites, press releases
+- UK: autotrader.co.uk
+- Manufacturer configurators
+
+**European Availability:**
+- EV Database (ev-database.org)
+- Manufacturer press releases
+- Country-specific automotive news sites
 
 ---
 
-## 💡 Tips for Efficient Addition
+## 💡 Tips for Systematic Expansion
 
-1. **Batch by manufacturer** - Do all Renault models in one day rather than one model across 4 days
-2. **Use templates** - Copy existing similar vehicle YAML files as starting point
-3. **Verify before committing** - Always run validation script
-4. **German market first** - We have best coverage there, add other markets later
-5. **Start with base variant** - Add volume seller first, performance variants second
-6. **Real-world range matters** - Users care more about real-world than WLTP
-7. **Company car tax** - Critical for German market (0.25% under €70k)
-
----
-
-## 📅 Timeline
-
-**Start:** 2026-02-07  
-**Estimated completion:** 2026-03-07 (4 weeks at ~2 vehicles/day)  
-**Target launch:** Still 2026-02-15-20 (Streamlit app already done, data expansion is ongoing)
-
-**Note:** Streamlit app is production-ready. Vehicle expansion happens in parallel with launch, not blocking it.
+1. **Work manufacturer-by-manufacturer** - Complete one brand before moving to next
+2. **Start with volume sellers** - Add base variants before special editions
+3. **German market first** - Best coverage, most important for company cars
+4. **French market for French brands** - Home market pricing
+5. **Validate religiously** - Every commit must pass validation
+6. **Real-world data matters** - WLTP is optimistic, users want truth
+7. **Company car calculations** - Critical for German market (0.25% under €70k)
+8. **Check 2024 availability** - Many new models launched, verify they're actually selling
 
 ---
 
-## ✅ Success Criteria
-
-**Minimum (Must-Have):**
-- [ ] All 4 target manufacturers have at least 3 models each
-- [ ] Renault completely added (currently 0 models)
-- [ ] BYD expanded beyond just Atto 3
-- [ ] Database reaches 70+ models, 80+ variants
-
-**Ideal (Stretch Goal):**
-- [ ] All major Renault EVs added (Megane, Scenic, Zoe, Twingo)
-- [ ] All major BYD EVs added (Seal, Dolphin, Han, Tang)
-- [ ] All Stellantis brands represented (Opel, Jeep, DS, Alfa, Fiat, Peugeot, Citroën)
-- [ ] Tesla flagships added (Model S, Model X)
-- [ ] Database reaches 100+ variants
+**Target Completion:** ~4 months for comprehensive European EV coverage
+**Daily Target:** 2-3 vehicles/day = 400+ vehicles in 16 weeks
+**Quality over Speed:** Better to have 200 well-documented vehicles than 500 incomplete entries
 
 ---
 
-**Remember:** Quality over quantity. Each vehicle should have:
-- ✅ Verified specifications from official sources
-- ✅ At least one market with complete pricing
-- ✅ Real-world range estimates
-- ✅ Proper validation (no errors)
-- ✅ Complete metadata (sources, confidence levels)
+**🎯 Current Priority:** Start with Renault (0 models) → Megane E-Tech, Scenic E-Tech, Zoe
