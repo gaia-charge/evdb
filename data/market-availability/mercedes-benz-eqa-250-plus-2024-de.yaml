@@ -1,0 +1,469 @@
+id: mercedes-benz-eqa-250-plus-2024-de
+variant_id: mercedes-benz-eqa-250-plus-2024
+market: DE  # Germany
+currency: EUR
+
+# Pricing (February 2026 Germany)
+pricing:
+  base_price: 54399  # Base "Electric Art" trim, 250+ FWD
+  destination_charge: 1095
+  on_road_price: 55494  # Base + destination
+  
+  # Trim levels
+  trims:
+    - name: "Electric Art"
+      price: 54399
+      description: "Base trim with comprehensive equipment"
+    - name: "AMG Line"
+      price: 57969  # +€3,570 for sport styling
+      description: "Sport styling with 19-inch wheels, AMG body kit, sport seats"
+    - name: "EDITION 1"
+      price: 62790  # +€8,391 for launch edition (limited availability)
+      description: "Launch edition with exclusive design (2021-2022, now sold out)"
+
+# Options and packages
+options:
+  packages:
+    - name: "AMG Line Package"
+      price: 3570
+      description: |
+        Sport styling package with:
+        - 19-inch AMG multi-spoke alloy wheels (reduces range by 15km)
+        - AMG body styling (front/rear aprons, side skirts)
+        - Sport seats with integrated headrests
+        - AMG floor mats
+        - Perforated front brake discs
+        - Sport pedals
+        - Black roof lining
+    
+    - name: "Night Package"
+      price: 1190
+      description: |
+        Black exterior accents:
+        - Black mirror caps
+        - Black roof rails
+        - Black badges
+        - Requires AMG Line
+    
+    - name: "Premium Package"
+      price: 2950
+      description: |
+        Enhanced comfort and convenience:
+        - 10.25-inch digital instrument cluster (vs 7.0" standard)
+        - 10.25-inch MBUX touchscreen (vs standard size)
+        - KEYLESS-GO (keyless entry and start)
+        - Wireless smartphone charging
+        - Ambient lighting 64 colors (upgraded)
+    
+    - name: "Premium Plus Package"
+      price: 6190  # Includes Premium Package
+      description: |
+        Premium Package plus:
+        - Burmester 3D Surround Sound (12 speakers, 590W)
+        - 360° camera system
+        - Head-Up Display
+        - Electrically adjustable front seats with memory
+        - MBUX Augmented Reality for navigation
+    
+    - name: "Comfort Package"
+      price: 1890
+      description: |
+        Additional comfort features:
+        - Heated front seats
+        - Heated steering wheel
+        - Heated windshield washer system
+        - EASY-PACK tailgate (foot-activated)
+    
+    - name: "Advanced Safety Package"
+      price: 1690
+      description: |
+        Enhanced driver assistance:
+        - Active Blind Spot Assist
+        - Active Lane Change Assist
+        - PRE-SAFE PLUS (rear collision preparation)
+        - 360° camera
+        - Active Parking Assist with PARKTRONIC
+  
+  individual_options:
+    - name: "Panoramic sliding sunroof"
+      price: 1190
+      notes: "Reduces headroom by 30mm, no range impact"
+    
+    - name: "Tow hitch (electrically retractable)"
+      price: 1195
+      notes: "1,800kg braked capacity, 80kg tongue weight"
+    
+    - name: "Rear cross-traffic alert"
+      price: 595
+      notes: "Warns of approaching traffic when reversing"
+    
+    - name: "Acoustic comfort package"
+      price: 890
+      notes: "Enhanced sound insulation, acoustic glass windshield"
+    
+    - name: "MBUX High-End Rear Seat Entertainment"
+      price: 2390
+      notes: "Two 11.6-inch displays, HDMI, USB-C, wireless headphones"
+    
+    - name: "Advanced LED headlights"
+      price: 990
+      notes: "LED High Performance with adaptive beam pattern"
+    
+    - name: "Mercedes me Charge L subscription (1 year)"
+      price: 0  # Free first year, then €15.99/month
+      notes: "Preferential rates at 450,000+ charging points"
+
+  wheel_options:
+    - size: "18-inch"
+      design: "5-spoke alloy wheels"
+      price: 0  # Standard on Electric Art
+      range_impact_km: 0
+    
+    - size: "19-inch"
+      design: "AMG multi-spoke alloy wheels"
+      price: 0  # Included with AMG Line, +€1,490 standalone
+      range_impact_km: -15  # Reduces range 426 → 411km
+    
+    - size: "20-inch"
+      design: "AMG multi-spoke alloy wheels (black)"
+      price: 950  # Additional cost over 19-inch
+      range_impact_km: -25  # Reduces range 426 → 401km
+      notes: "Only available with AMG Line, sportier look but harsher ride"
+
+  paint_options:
+    - name: "Polar White (non-metallic)"
+      price: 0  # Free
+      code: "149"
+    
+    - name: "Mountain Grey metallic"
+      price: 990
+      code: "7706"
+    
+    - name: "Cosmos Black metallic"
+      price: 990
+      code: "183"
+    
+    - name: "Digital White metallic"
+      price: 990
+      code: "650"
+    
+    - name: "Denim Blue metallic"
+      price: 990
+      code: "5890"
+    
+    - name: "Patagonia Red metallic"
+      price: 990
+      code: "3594"
+    
+    - name: "Sage Grey metallic"
+      price: 990
+      code: "7297"
+    
+    - name: "designo Mountain Grey Magno (matte)"
+      price: 2380
+      code: "designo"
+      notes: "MANUFAKTUR exclusive, matte finish"
+    
+    - name: "designo Patagonia Red Bright (high-gloss)"
+      price: 2380
+      code: "designo"
+      notes: "MANUFAKTUR exclusive, premium high-gloss"
+
+  interior_options:
+    - name: "Black ARTICO man-made leather / MICROCUT microfiber"
+      price: 0  # Standard
+      code: "201A"
+    
+    - name: "Black nappa leather"
+      price: 1790
+      code: "201"
+      notes: "Premium leather upgrade"
+    
+    - name: "Sahara Beige / Black nappa leather"
+      price: 1790
+      code: "205"
+      notes: "Two-tone premium leather"
+
+# Incentives and subsidies (2024)
+incentives:
+  - name: "BAFA Umweltbonus (Federal EV Grant)"
+    type: grant
+    amount: 0
+    notes: "Ended December 17, 2023 (budget exhausted). Was €4,500 for <€65k EVs until Dec 2023."
+    valid_until: null
+  
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3996  # Annual savings vs 1% ICE rate
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €54,399 vehicle: 0.25% = €136/month = €1,632/year vs 1% ICE GLA (€46,850) = €469/month = €5,628/year. Annual savings: €3,996."
+    calculation: "€54,399 × 0.25% = €136/month. ICE GLA: €46,850 × 1% = €469/month. Difference: €3,996/year"
+    eligibility: "Company car drivers only"
+  
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030. Comparable ICE GLA would pay ~€280/year."
+    valid_until: "2030-12-31"
+  
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "EV owners can sell CO2 certificates for ~€300-350/year via providers like THG, ADAC, Geld für eAuto, eQuota."
+
+# Availability
+availability:
+  status: available
+  waiting_time_weeks: 14  # Current delivery estimate (Feb 2026)
+  pre_order_date: "2021-01-20"
+  first_delivery_date: "2021-04-15"
+  online_configurator: yes
+  online_purchase: yes  # Mercedes me Store
+  
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - France
+    - UK
+    - Norway
+    - Sweden
+    - Denmark
+    - Spain
+    - Italy
+  
+  dealer_network:
+    total_dealers: 650  # Mercedes-Benz dealers in Germany
+    service_centers: 650
+    showroom_availability: excellent
+    test_drive_availability: yes
+
+# Charging infrastructure
+charging:
+  home_charging:
+    wallbox_options:
+      - name: "Mercedes-Benz Wallbox Home"
+        power_kw: 11
+        price: 799
+        installation: "€800-2,500 (electrician, varies by location)"
+      
+      - name: "Mercedes-Benz Wallbox Plus"
+        power_kw: 22
+        price: 1299
+        notes: "Future-proof, but EQA limited to 11kW"
+    
+    standard_outlet:
+      power_kw: 2.3
+      charge_time_0_100_hours: 29.0  # 66.5kWh / 2.3kW
+      notes: "Emergency only, not recommended for regular use"
+  
+  public_charging:
+    networks:
+      - name: "Mercedes me Charge"
+        coverage: "450,000+ charging points in 31 countries"
+        payment: "Integrated billing via Mercedes me app"
+        notes: "Preferential rates at partner networks"
+      
+      - name: "IONITY"
+        coverage: "500+ stations on European highways"
+        subscription_price: 17.99  # €/month
+        subscription_rate_per_kwh: 0.35
+        payg_rate_per_kwh: 0.79
+        charge_time_10_80: 32  # minutes
+        charge_cost_10_80_subscription: 16.28  # €46.5kWh × €0.35
+        charge_cost_10_80_payg: 36.74  # €46.5kWh × €0.79
+        notes: "Best value for frequent highway travel"
+      
+      - name: "EnBW mobility+"
+        coverage: "400,000+ charging points in Europe"
+        rate_per_kwh: 0.55  # AC charging
+        rate_per_kwh_dc: 0.65  # DC fast charging
+        monthly_fee: 5.99  # Optional for better rates
+      
+      - name: "Fastned"
+        coverage: "250+ fast-charging stations"
+        payg_rate_per_kwh: 0.69
+        gold_rate_per_kwh: 0.55  # €11.99/month subscription
+
+# Warranty and service
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  
+  service_intervals:
+    inspection_km: 25000  # Service A
+    inspection_years: 2
+    major_service_km: 50000  # Service B
+    notes: "Much lower maintenance than ICE (no oil changes, etc.)"
+  
+  roadside_assistance_years: 30  # Mercedes Mobilo
+  roadside_assistance_notes: "Included for life with regular servicing"
+
+# Total Cost of Ownership (3-year example)
+tco_3_year:
+  purchase_price: 54399
+  destination: 1095
+  popular_options: 8500  # AMG Line + Premium Plus + Comfort
+  total_purchase: 63994
+  
+  financing_example:
+    down_payment: 12799  # 20%
+    loan_amount: 51195  # 80%
+    interest_rate: 4.5
+    monthly_payment: 1540
+    total_interest: 4245
+  
+  annual_costs:
+    insurance: 950  # Comprehensive, varies by age/location
+    vehicle_tax: 0  # Exempt until 2030
+    service: 350  # Annual service (much less than ICE)
+    tires: 200  # Annual tire budget (winter/summer)
+    charging_home: 1140  # 15,000km/year × 19.2kWh/100km × €0.40/kWh
+    charging_public: 380  # ~20% public charging
+    parking: 0  # Varies by location
+    thg_quote: -300  # CO2 certificate income
+    total_annual: 2720
+  
+  total_3_year_cost: 71154  # Purchase + 3×annual
+  cost_per_km: 0.475  # Over 50,000km (3 years × ~16,700km/year)
+  
+  comparison_ice_gla:
+    purchase_price: 46850
+    fuel_3_year: 9300  # 50,000km × 7L/100km × €1.86/L
+    service_3_year: 2100  # More maintenance than EV
+    vehicle_tax_3_year: 840
+    insurance_3_year: 2850
+    total_3_year: 61940
+    
+    savings_ev: 9214  # Including company car tax benefit
+    notes: |
+      EQA appears more expensive upfront, but:
+      - Company car drivers save €3,996/year on taxes = €11,988 over 3 years
+      - With company car benefit, EV total cost = €59,166 vs ICE €61,940
+      - EV saves €2,774 over 3 years for company car drivers
+      - Private buyers: EV costs €9,214 more over 3 years (premium for electric)
+
+# Market context
+market_context:
+  competitors:
+    - model: "BMW iX1 xDrive30"
+      price: 54200
+      range_wltp: 439
+      charging_max: 130
+      notes: "Similar price, slightly more range, faster charging, AWD standard"
+    
+    - model: "Audi Q4 e-tron 40"
+      price: 49500
+      range_wltp: 488
+      charging_max: 125
+      notes: "€4,899 cheaper, significantly more range, similar charging"
+    
+    - model: "Volvo XC40 Recharge Single Motor"
+      price: 48050
+      range_wltp: 460
+      charging_max: 150
+      notes: "€6,349 cheaper, more range, faster charging"
+    
+    - model: "Tesla Model Y RWD"
+      price: 44990
+      range_wltp: 455
+      charging_max: 170
+      notes: "€9,409 cheaper, similar range, much faster charging, larger"
+    
+    - model: "Mercedes-Benz EQB 250+"
+      price: 60845
+      range_wltp: 423
+      charging_max: 100
+      notes: "€6,446 more, 7 seats, similar range/charging, larger body"
+  
+  market_position: |
+    The Mercedes-Benz EQA 250+ is positioned as Mercedes' entry-level electric SUV,
+    targeting urban families who value premium brand prestige and build quality.
+    
+    At €54,399, it's priced €4,899 more than Audi Q4 40, €6,349 more than Volvo XC40,
+    and €9,409 more than Tesla Model Y - all offering more range and faster charging.
+    
+    The EQA's value proposition:
+    - Premium Mercedes brand prestige (three-pointed star)
+    - Proven MFA2 platform (shared with GLA - over 500,000 sold)
+    - Excellent dealer network (650+ in Germany)
+    - Superior build quality and interior materials
+    - MBUX infotainment (best in class for user experience)
+    - Strong resale value (Mercedes brand holds value well)
+    
+    Best for:
+    - Company car drivers (€3,996/year tax savings vs ICE)
+    - Urban/suburban driving (426km range adequate, rarely use DC charging)
+    - Mercedes loyalists (upgrading from GLA/B-Class)
+    - Premium brand preference (willing to pay for three-pointed star)
+    - Families needing compact luxury crossover (5 seats, 340L trunk)
+    
+    Not ideal for:
+    - Budget-conscious buyers (€9,409 more than Model Y for less range/charging)
+    - Maximum range priority (426km vs 488km Q4, 460km XC40)
+    - Frequent highway driving (100kW DC charging, 32-min 10-80%)
+    - Maximum cargo space (340L vs 854L Model Y, 405L Q4)
+    
+    Popular configurations:
+    - Base "Electric Art": €54,399 (well-equipped, best value)
+    - AMG Line: €60,929 (+€6,530 with Premium Plus, sport styling)
+    - Fully loaded: ~€68,000 (AMG + Premium Plus + options)
+    
+    Typical buyer profile:
+    - Age 35-55, urban/suburban
+    - Company car driver (0.25% tax benefit)
+    - Values premium brand + dealer network
+    - 80% charging at home (11kW wallbox)
+    - 15,000km/year average driving
+
+metadata:
+  created_at: "2026-02-07T08:35:00Z"
+  updated_at: "2026-02-07T08:35:00Z"
+  data_quality: verified
+  data_source: manufacturer_and_market
+  notes: |
+    Pricing and availability for Germany as of February 2026.
+    All prices include 19% German VAT (Mehrwertsteuer).
+    
+    The EQA 250+ replaced the original EQA 250 in 2023 with a larger 66.5kWh battery
+    (vs 60.0kWh), adding +86km range (426 vs 340km WLTP).
+    
+    Mercedes-Benz Germany offers online purchase via Mercedes me Store with:
+    - Home delivery (€295 fee, includes registration)
+    - Trade-in valuation
+    - Financing and leasing options
+    - 14-day return policy
+    
+    Current lead times:
+    - Electric Art (18" wheels): 12 weeks
+    - AMG Line (19" wheels): 14 weeks
+    - Custom MANUFAKTUR paint: +4 weeks
+    
+    Most popular configuration:
+    - AMG Line (€57,969)
+    - Premium Plus Package (€6,190)
+    - Comfort Package (€1,890)
+    - Total: ~€67,139 (typical buyer spec)
+    
+    Residual values (3-year, 50,000km):
+    - 52-55% of purchase price
+    - Higher than non-premium brands (better resale)
+    - Lower than ICE Mercedes (EV depreciation uncertainty)
+
+sources:
+  - url: "https://www.mercedes-benz.de/passengercars/buy/payment-delivery/prices.html"
+    title: "Mercedes-Benz Germany Official Price List"
+    date_accessed: "2026-02-07"
+  - url: "https://www.mobile.de/auto/search.html?ms=17200%3B68%3B%3B"
+    title: "mobile.de - EQA 250+ Market Prices"
+    date_accessed: "2026-02-07"
+  - url: "https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-steuer/"
+    title: "ADAC - German Vehicle Tax Information"
+    date_accessed: "2026-02-07"
+  - url: "https://www.bundesregierung.de/breg-de/themen/klimaschutz/e-autos-kaufpraemie-2146496"
+    title: "German Federal Government - EV Incentives 2024"
+    date_accessed: "2026-02-07"
