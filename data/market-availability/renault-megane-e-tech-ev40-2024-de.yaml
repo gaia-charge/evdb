@@ -1,4 +1,4 @@
-# Renault Megane E-Tech EV40 (2024) - Germany Market Availability
+# Renault Megane E-Tech Electric EV40 (2024) - Germany Market Availability
 
 id: renault-megane-e-tech-ev40-2024-de
 variant_id: renault-megane-e-tech-ev40-2024
@@ -8,39 +8,41 @@ currency: EUR
 # Market-Specific Details
 availability_status: available
 available_from: "2024-01-01"
-delivery_time_weeks: 12
+delivery_time_weeks: 8
+notes: |
+  2024 model year Renault Megane E-Tech Electric EV40. Entry-level battery variant
+  ideal for urban and suburban driving. Built at Renault ElectriCity in Douai, France.
+  Winner of 2023 European Car of the Year. Excellent city efficiency and value.
+  300 km WLTP range suitable for daily commuting.
 
 # Pricing
 pricing:
-  base_price: 38000
-  price_including_vat: 38000
+  base_price: 38990
+  price_including_vat: 38990
   vat_rate_percent: 19
+  notes: |
+    Base price for Megane E-Tech EV40 with 40 kWh battery and 130 hp motor.
+    Entry point to Megane E-Tech range. €4,010 cheaper than EV60 Techno.
+    Good value for urban/suburban buyers not needing long range.
 
-# Available Colors
+# Company Car Tax (Germany)
+company_car:
+  list_price_gross: 38990
+  taxable_amount_per_month: 97.48
+  tax_calculation_method: "0.25% rule (under €60,000, pure EV)"
+  co2_emissions_gkm: 0
+  notes: |
+    Monthly taxable benefit: 0.25% × €38,990 = €97.48
+    Qualifies for 0.25% rule (pure EV, under €60k gross price)
+    Extremely attractive for company car drivers
+
+# Available Colors (8 options)
 available_colors:
-  - name: Midnight Black
-    code: NB
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Glacier White
     code: OV369
     type: solid
     price_add:
       amount: 0
-      currency: EUR
-  - name: Flame Red
-    code: NNP
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Highland Grey
-    code: KNM
-    type: metallic
-    price_add:
-      amount: 600
       currency: EUR
   - name: Diamond Black
     code: GNE
@@ -48,75 +50,148 @@ available_colors:
     price_add:
       amount: 750
       currency: EUR
+  - name: Flame Red
+    code: NNP
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Valencia Orange
+    code: RNH
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+    notes: "Signature Megane color"
+  - name: Rafale Grey
+    code: KNA
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Schiste Blue
+    code: RPV
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Zanzibar Green
+    code: RPC
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Midnight Blue
+    code: RPA
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
 
-# Wheel Options
+# Wheel Options (2 options on EV40)
 available_wheels:
-  - name: 18" Alloy Wheels
+  - name: 18" Solstice Diamond-Cut Alloy Wheels
     size_inches: 18
     type: alloy
     price_add:
       amount: 0
       currency: EUR
-
-# Interior Options
-available_interiors:
-  - name: Black Fabric
-    material: fabric
-    color: black
+    notes: "Standard wheels, best efficiency"
+  - name: 18" Dynamic Diamond-Cut Alloy Wheels
+    size_inches: 18
+    type: alloy
     price_add:
-      amount: 0
+      amount: 450
       currency: EUR
-  - name: Grey Fabric
-    material: fabric
-    color: grey
+    notes: "Sportier design, same efficiency"
+
+# Popular Options & Packages
+available_options:
+  - name: Winter Pack
+    description: "Heated front seats, heated steering wheel"
     price_add:
-      amount: 0
+      amount: 450
+      currency: EUR
+  - name: Comfort Pack
+    description: "Electric tailgate, hands-free access, parking sensors"
+    price_add:
+      amount: 850
+      currency: EUR
+  - name: Harman Kardon Audio System
+    description: "Premium 9-speaker sound system"
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Head-Up Display
+    description: "Color head-up display with navigation"
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Rear Camera + 360° View
+    description: "360° parking camera with bird's eye view"
+    price_add:
+      amount: 550
       currency: EUR
 
-# Incentives
-available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price", "BEV", "Zero emissions"]
+# Popular Configuration Example
+popular_configuration:
+  name: "EV40 Comfort Configuration"
+  base_price: 38990
+  color: "Valencia Orange"
+  color_price: 750
+  wheels: "18-inch Solstice"
+  wheels_price: 0
+  options:
+    - name: "Winter Pack"
+      price: 450
+    - name: "Comfort Pack"
+      price: 850
+    - name: "Harman Kardon Audio"
+      price: 650
+  total_price: 41690
+  company_car_monthly_benefit: 104.23
+  notes: |
+    Popular configuration for German buyers. Adds essential comfort and winter features.
+    Total price €41,690 still under €42k threshold, excellent value.
 
-# Options
-popular_packages:
-  - name: Heat Pump
-    price:
-      amount: 900
-      currency: EUR
-    features:
-      - Improved winter range by up to 20%
-  - name: Comfort Package
-    price:
-      amount: 1200
-      currency: EUR
-    features:
-      - Heated front seats
-      - Heated steering wheel
-      - Rear parking camera
-  - name: Tech Package
-    price:
-      amount: 1800
-      currency: EUR
-    features:
-      - 360° camera
-      - Adaptive cruise control
-      - Blind spot monitoring
+# Incentives (Germany 2024)
+incentives:
+  - name: "BAFA Environmental Bonus (phased out)"
+    type: rebate
+    amount: 0
+    currency: EUR
+    status: expired
+    notes: "BAFA subsidy ended December 2023"
+  - name: "Company Car Tax Benefit"
+    type: tax_exemption
+    amount: 3480
+    currency: EUR
+    description: "0.25% monthly taxation instead of 1.0%"
+    status: active
+    notes: "Saves ~€290/month vs combustion car for this vehicle (€3480 annual benefit)"
 
-# Notes
-notes: |
-  Renault Megane E-Tech EV40 is the entry-level variant, ideal for urban commuting
-  and short-range trips. Eligible for German company car tax benefit (0.25%).
-  Heat pump is optional on this variant but recommended for German winters.
-  Good value for money with strong equipment level even in base trim.
+# Charging Infrastructure Notes
+charging_notes: |
+  Germany has excellent DC fast charging network (Ionity, EnBW, etc.)
+  Home installation: Wallbox subsidy programs vary by state
+  7.4 kW AC charging suitable for overnight home charging
+  85 kW DC charging adequate for occasional long trips
 
-# Metadata
+# Market Position
+market_notes: |
+  Competes with VW ID.3 Pro (€43,990), Cupra Born 45 kWh (€37,000),
+  and MG4 Standard Range (€32,000). Megane offers best design and interior quality.
+  Strong alternative to premium brand compact EVs at lower price point.
+  Excellent for urban/suburban buyers who don't need maximum range.
+
 metadata:
   data_quality: verified
-  data_source: manufacturer
-  source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
-  created_at: "2024-02-07"
-  last_verified_at: "2024-02-07"
-  notes: Prices as of February 2024
+  last_updated: '2026-02-07'
+  created_at: '2026-02-07'
+  source: "Renault Deutschland configurator"
+  source_url: "https://www.renault.de/konfigurator/megane-e-tech-electric.html"
+  price_verification_date: '2026-02-07'
+  notes: |
+    Prices verified via Renault Deutschland online configurator February 2024.
+    BAFA subsidy no longer available (ended 2023).
+    Company car tax calculation based on 2024 German tax law.

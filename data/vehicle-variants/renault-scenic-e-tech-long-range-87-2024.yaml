@@ -1,0 +1,202 @@
+# Renault Scenic E-Tech Electric Long Range 87 kWh (2024) - Extended Range
+id: renault-scenic-e-tech-long-range-87-2024
+name: Long Range 87 kWh
+model_id: renault-scenic-e-tech
+model_year: 2024
+variant_code: SCENIC-LR-87
+
+battery:
+  usable_kwh: 87.0
+  total_kwh: 92.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    87 kWh usable battery (92 kWh gross). Largest battery in CMF-EV platform.
+    400V architecture with NCM chemistry. 94.6% usable capacity ratio.
+    Premium battery option offering exceptional range for family travel.
+
+range:
+  wltp_km: 625
+  wltp_city_km: 800
+  wltp_highway_km: 500
+  epa_km: null
+  real_world_km: 525
+  real_world_source: "Estimated (ADAC methodology)"
+  notes: |
+    Excellent WLTP range of 625 km. Real-world range around 525 km in mixed conditions.
+    Outstanding city efficiency with 800 km city range.
+    Suitable for long-distance travel without range anxiety.
+
+charging:
+  ac_max_kw: 22.0
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 150
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 5
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 20
+      power_kw: 148
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 40
+      power_kw: 140
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 55
+  time_0_to_100_min: 52
+  time_5_to_80_min: 42
+  time_10_to_80_min: 40
+  time_20_to_80_min: 37
+  charging_speed_kmh: 880
+  plug_and_charge: true
+  preconditioning: true
+  notes: |
+    DC fast charging up to 150 kW peak. 10-80% in 40 minutes.
+    22 kW AC three-phase charging standard.
+    Preconditioning available when navigating to DC charger.
+    ISO 15118 Plug & Charge support.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.7
+  v2h: false
+  v2g: true
+  notes: "V2L and V2G supported. V2H under development."
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 160
+      power_hp: 220
+      torque_nm: 300
+      manufacturer: Renault
+  max_power_kw: 160
+  max_power_hp: 220
+  max_torque_nm: 300
+  acceleration_0_100_kmh_s: 8.4
+  acceleration_0_60_mph_s: 8.0
+  acceleration_80_120_kmh_s: 7.2
+  top_speed_kmh: 170
+  top_speed_mph: 106
+  notes: |
+    Same 220 hp motor as 60 kWh version. Slightly slower acceleration due to extra weight.
+    Front-wheel drive with permanent magnet synchronous motor.
+    Top speed electronically limited to 170 km/h.
+
+weight:
+  curb_weight_kg: 1953
+  gross_vehicle_weight_kg: 2453
+  payload_kg: 500
+  towing_capacity_braked_kg: 750
+  towing_capacity_unbraked_kg: 750
+  notes: |
+    Approximately 128 kg heavier than 60 kWh version due to larger battery.
+    Still competitive weight for long-range family SUV.
+
+dimensions:
+  length_mm: 4470
+  width_mm: 1864
+  width_with_mirrors_mm: 2080
+  height_mm: 1571
+  wheelbase_mm: 2785
+  ground_clearance_mm: 180
+  drag_coefficient: 0.34
+  frontal_area_m2: 2.65
+  turning_radius_m: 10.6
+  notes: "Same dimensions as Comfort Range variant"
+
+cargo:
+  trunk_volume_l: 545
+  trunk_max_volume_l: 1670
+  frunk_volume_l: 0
+  notes: "Class-leading 545L trunk, expandable to 1670L with rear seats folded"
+
+consumption:
+  wltp_kwh_per_100km: 13.9
+  wltp_city_kwh_per_100km: 10.9
+  wltp_highway_kwh_per_100km: 17.4
+  real_world_kwh_per_100km: 16.6
+  real_world_city_kwh_per_100km: 15.0
+  real_world_highway_kwh_per_100km: 19.3
+  efficiency_rating: A+
+  notes: |
+    Excellent efficiency at 13.9 kWh/100km WLTP despite larger battery.
+    Real-world consumption around 16.6 kWh/100km.
+    Heat pump standard helps winter efficiency.
+
+features:
+  infotainment_screen_inches: 12.0
+  digital_cockpit_inches: 12.3
+  head_up_display: true
+  wireless_charging: true
+  wireless_connectivity: true
+  ota_updates: true
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  parking_assist: true
+  heat_pump: true
+  notes: |
+    12.3" digital instrument cluster + 12" OpenR Link portrait touchscreen
+    Google Built-in (Maps, Assistant, Play Store)
+    Wireless Apple CarPlay & Android Auto
+    Solarbay panoramic glass roof with active opacity control
+    Heat pump climate control standard
+    Active Driver Assist with lane centering
+    360° parking camera standard
+    Head-up display standard on Long Range
+    Harman Kardon premium audio system
+    OTA software updates
+
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2024
+  euro_ncap_adult: 89
+  euro_ncap_child: 87
+  euro_ncap_vulnerable: 70
+  euro_ncap_safety_assist: 82
+  airbags: 6
+  adas_level: 2
+  notes: |
+    5-star Euro NCAP rating with excellent protection scores
+    6 airbags (front, side, curtain)
+    SAE Level 2 autonomous driving capability
+
+production:
+  plant: Douai, France
+  platform: CMF-EV
+  platform_generation: 1
+  status: active
+  notes: |
+    Built at Renault ElectriCity in Douai, France.
+    CMF-EV platform shared with Megane E-Tech and Nissan Ariya.
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-07'
+  created_at: '2026-02-07'
+  source: "Renault official specifications"
+  source_urls:
+    - "https://www.renault.com/en/electric-vehicles/scenic-e-tech-electric"
+  verification_date: '2026-02-07'
+  notes: |
+    2024 model year. Premium battery option for Scenic E-Tech.
+    One of the longest-range family SUVs in Europe.
+    Excellent for road trips and vacation travel.
+    Innovative Solarbay panoramic roof with active opacity.
