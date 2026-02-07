@@ -1,0 +1,169 @@
+id: renault-megane-e-tech-ev40-2024
+name: EV40
+model_id: renault-megane-e-tech
+model_year: 2024
+production_years:
+  start: 2022
+  end: null
+
+trim_level: base
+market_position: entry
+
+# Battery Specifications
+battery:
+  usable_kwh: 40
+  total_kwh: 42
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: pouch
+  supplier: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 290
+
+# Range
+range:
+  wltp_km: 300
+  wltp_source: manufacturer
+  
+  real_world_km: 270
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 10-20°C"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 7.4
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 5.5
+    onboard_charger_kw: 7.4
+    phases: 1
+  
+  dc:
+    max_power_kw: 85
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 32
+      "0_100": 58
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 75
+      - soc_percent: 10
+        power_kw: 85
+      - soc_percent: 30
+        power_kw: 85
+      - soc_percent: 50
+        power_kw: 70
+      - soc_percent: 70
+        power_kw: 45
+      - soc_percent: 80
+        power_kw: 30
+      - soc_percent: 90
+        power_kw: 20
+      - soc_percent: 100
+        power_kw: 10
+
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 96
+    max_torque_nm: 205
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 96
+  total_power_hp: 130
+  total_torque_nm: 205
+
+performance:
+  acceleration_0_100_kmh_s: 10.0
+  top_speed_kmh: 150
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1636
+  gross_weight_kg: 2051
+  payload_kg: 415
+  towing_capacity_kg: 900
+  
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  real_world_kwh_per_100km: 17.5
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 19.5
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 22.0
+
+# Features & Options
+standard_features:
+  - "OpenR multimedia system with 12-inch touchscreen"
+  - "Google built-in (Maps, Assistant, Play)"
+  - "7-inch digital instrument cluster"
+  - "LED headlights"
+  - "17-inch alloy wheels"
+  - "Climate control"
+  - "Rear parking sensors"
+  - "Lane departure warning"
+  - "Traffic sign recognition"
+
+optional_packages:
+  - name: "Comfort Package"
+    features:
+      - "Heat pump"
+      - "Heated front seats"
+      - "Heated steering wheel"
+
+colors:
+  standard:
+    - "Glacier White"
+    - "Diamond Black"
+  premium:
+    - "Flame Red"
+    - "Titanium Grey"
+    - "Schist Grey"
+
+interior_colors:
+  - "Black fabric"
+  - "Grey fabric"
+
+# Version Information
+version:
+  facelift: false
+  major_changes: []
+
+# Market & Pricing Notes
+notes: >
+  The EV40 is the entry-level Megane E-Tech with a smaller 40 kWh battery,
+  designed for urban and suburban use. While WLTP range is 300 km, real-world
+  range is typically around 250-280 km depending on conditions. The smaller
+  battery means lighter weight and lower price, making it an affordable option
+  for those who don't need long-range capability. DC fast charging at 85 kW
+  is adequate for occasional longer trips.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
+    - https://ev-database.org/car/1657/Renault-Megane-E-Tech-EV40

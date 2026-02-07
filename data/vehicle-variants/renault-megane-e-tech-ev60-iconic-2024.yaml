@@ -1,0 +1,185 @@
+id: renault-megane-e-tech-ev60-iconic-2024
+name: EV60 Iconic
+model_id: renault-megane-e-tech
+model_year: 2024
+production_years:
+  start: 2022
+  end: null
+
+trim_level: high-range
+market_position: premium
+
+# Battery Specifications
+battery:
+  usable_kwh: 60
+  total_kwh: 65
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: pouch
+  supplier: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 395
+
+# Range
+range:
+  wltp_km: 470
+  wltp_source: manufacturer
+  
+  real_world_km: 400
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 10-20°C, eco mode"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.5
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+      "0_100": 55
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 115
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 30
+        power_kw: 130
+      - soc_percent: 50
+        power_kw: 110
+      - soc_percent: 70
+        power_kw: 70
+      - soc_percent: 80
+        power_kw: 45
+      - soc_percent: 90
+        power_kw: 25
+      - soc_percent: 100
+        power_kw: 12
+
+  bidirectional:
+    v2l: false
+    v2g: true  # Bidirectional charging capable
+    v2h: true
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 160
+    max_torque_nm: 300
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1753
+  gross_weight_kg: 2168
+  payload_kg: 415
+  towing_capacity_kg: 900
+  
+efficiency:
+  wltp_kwh_per_100km: 15.2
+  real_world_kwh_per_100km: 16.8
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 18.5
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 21.0
+
+# Features & Options
+standard_features:
+  - "OpenR multimedia system with 12-inch touchscreen"
+  - "Google built-in (Maps, Assistant, Play)"
+  - "12.3-inch digital instrument cluster"
+  - "OpenR Link multi-sense ambient lighting (extended)"
+  - "LED Pure Vision Matrix headlights with auto-leveling"
+  - "19-inch alloy wheels (aerodynamic design)"
+  - "Heat pump with optimized efficiency"
+  - "Heated & ventilated front seats (vegan leather)"
+  - "Heated steering wheel (premium leather)"
+  - "Dual-zone climate control"
+  - "360° camera system with parking assist"
+  - "Harman Kardon sound system (10 speakers)"
+  - "Panoramic glass roof with electrochrome dimming"
+  - "Head-up display"
+  - "Active Emergency Braking System with cyclist detection"
+  - "Lane Centering Assist"
+  - "Adaptive cruise control with Stop & Go"
+  - "Hands-free parking"
+  - "Highway & Traffic Jam Companion (Level 2)"
+  - "Bi-directional charging capability"
+
+optional_packages:
+  - name: "Premium Package"
+    features:
+      - "Extended interior ambient lighting"
+      - "Premium vegan leather seats with massage function"
+
+colors:
+  standard:
+    - "Glacier White"
+    - "Diamond Black"
+  premium:
+    - "Flame Red"
+    - "Titanium Grey"
+    - "Schist Grey"
+    - "Midnight Blue"
+    - "Alpine White (pearl)"
+
+interior_colors:
+  - "Black TEP vegan leather with grey stitching"
+  - "Grey TEP vegan leather with blue accents"
+
+# Version Information
+version:
+  facelift: false
+  major_changes: []
+
+# Market & Pricing Notes
+notes: >
+  The EV60 Iconic is the flagship Megane E-Tech variant with maximum features
+  and slightly better efficiency than the Techno thanks to aerodynamic wheels
+  and optimized heat pump. The 470 km WLTP range (400+ km real-world) makes it
+  suitable for longer journeys without compromising on comfort or technology.
+  Standard features include premium Harman Kardon audio, panoramic glass roof,
+  19-inch aero wheels, and advanced driver assistance (Highway Companion Level 2).
+  Bidirectional charging capability (V2G/V2H) allows energy arbitrage and home
+  backup power. The Iconic trim emphasizes sustainable materials with vegan
+  leather throughout. Real-world range can exceed 400 km in optimal conditions
+  with eco-driving.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: null
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
+    - https://ev-database.org/car/1658/Renault-Megane-E-Tech-EV60

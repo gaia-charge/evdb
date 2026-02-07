@@ -1,0 +1,199 @@
+# Renault Megane E-Tech EV60 Techno (2024) - Germany Market Availability
+
+id: renault-megane-e-tech-ev60-techno-2024-de
+variant_id: renault-megane-e-tech-ev60-techno-2024
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2022-09-01"
+delivery_time_weeks: 14
+
+# Pricing
+pricing:
+  base_price: 43900
+  price_including_vat: 43900
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Glacier White
+    code: OV369
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Diamond Black
+    code: GNE
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Flame Red
+    code: NNP
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Titanium Grey
+    code: KNA
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Schist Grey
+    code: KQM
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Midnight Blue
+    code: RPF
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 18" Alloy Wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 19" Alloy Wheels (Aero)
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 900
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black TEP (vegan leather)
+    material: vegan_leather
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey Fabric with TEP inserts
+    material: fabric_synthetic
+    color: grey
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (ended 2023)"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions: ["Program ended December 2023"]
+    expires_at: "2023-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €60,000 gross list price"
+    conditions: ["Price under €60,000 gross list price", "BEV registered as company car"]
+
+# Options
+popular_packages:
+  - name: Tech Package
+    price:
+      amount: 2400
+      currency: EUR
+    features:
+      - Harman Kardon sound system
+      - Head-up display
+      - Hands-free parking
+  - name: Winter Package
+    price:
+      amount: 800
+      currency: EUR
+    features:
+      - Heated windshield
+      - Heated rear seats
+
+# Sample Configurations
+sample_configurations:
+  - name: Base Configuration
+    description: "Techno with standard features"
+    price:
+      amount: 43900
+      currency: EUR
+    includes:
+      - Base vehicle
+      - 18-inch alloy wheels
+      - Black TEP vegan leather
+      - Glacier White (solid)
+      - Heat pump (standard)
+      - 360° camera (standard)
+    
+  - name: Popular Configuration
+    description: "Techno with Tech Package"
+    price:
+      amount: 47000
+      currency: EUR
+    includes:
+      - Base vehicle
+      - Tech Package (+€2,400)
+      - Titanium Grey metallic (+€700)
+      - 18-inch alloy wheels
+      - Black TEP vegan leather
+  
+  - name: Fully Loaded Configuration
+    description: "Techno with all packages"
+    price:
+      amount: 48600
+      currency: EUR
+    includes:
+      - Base vehicle
+      - Tech Package (+€2,400)
+      - Winter Package (+€800)
+      - 19-inch aero wheels (+€900)
+      - Midnight Blue metallic (+€700)
+
+# Company Car Tax Calculations
+company_car_tax:
+  gross_list_price: 43900
+  tax_rate_percent: 0.25  # BEV under €60k
+  monthly_taxable_benefit_1percent_rule: 109.75  # 0.25% × €43,900
+  notes: "Eligible for reduced 0.25% taxation as BEV under €60,000 gross list price"
+
+# Notes
+notes: |
+  The Renault Megane E-Tech EV60 Techno is the most popular variant, offering
+  excellent value with 450 km WLTP range (380 km real-world) and comprehensive
+  standard equipment. Key features include heat pump, 22 kW AC charging, 130 kW
+  DC fast charging, and bidirectional charging (V2G/V2H) capability.
+  
+  The Techno trim includes as standard:
+  - 12-inch OpenR multimedia system with Google built-in
+  - 12-inch digital instrument cluster
+  - 360° camera system
+  - Adaptive cruise control with Lane Centering Assist
+  - Heat pump for improved winter efficiency
+  - Dual-zone climate control
+  - Bidirectional charging capability (V2G/V2H)
+  
+  Company car tax benefits are excellent at 0.25% (vs. 1% for ICE vehicles).
+  For a €43,900 vehicle, monthly taxable benefit is only €109.75.
+  
+  Delivery times are slightly longer (14 weeks) due to high demand for this variant.
+  The Megane E-Tech is assembled at Renault's ElectriCity facility in Douai, France,
+  with batteries from LG Energy Solution.
+  
+  Popular add-ons include the Tech Package (Harman Kardon audio, HUD, parking assist)
+  and Winter Package (heated windshield, heated rear seats).
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.renault.de/elektroautos/megane-e-tech-electric.html
+  created_at: "2026-02-07"
+  last_verified_at: "2026-02-07"
+  notes: Prices as of February 2026
