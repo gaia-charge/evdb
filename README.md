@@ -71,21 +71,22 @@ This structure handles:
 
 ## 📋 Current Status
 
-**Progress**: 70% Complete - Ready for Deployment! 🚀  
-**Vehicles**: 50 variants across 37 models from 19 manufacturers  
-**Markets**: Germany (25 vehicles), USA (6), France, Poland, Italy  
-**Next Milestone**: Deploy Datasette API by 2026-02-10  
-**Target Public Launch**: 2026-02-20
+**Progress**: 88% Complete - Ready for Deployment! 🚀  
+**Vehicles**: 51 variants across 37 models from 19 manufacturers  
+**Markets**: Germany (27 vehicles), USA (6), France, Poland, Italy  
+**Next Milestone**: Deploy Streamlit app to Streamlit Cloud  
+**Target Public Launch**: 2026-02-15
 
 ### What's Working Now ✅
 
-- ✅ **50 vehicle variants** with comprehensive specifications
+- ✅ **51 vehicle variants** with comprehensive specifications
 - ✅ **Full validation pipeline** - All YAML files validated with JSON Schema
-- ✅ **SQLite database** - Automated builds with relationships
+- ✅ **SQLite database** - Automated builds with relationships (0.25 MB)
 - ✅ **Datasette API** - 11 canned queries + full SQL access
 - ✅ **5 Datasette plugins** - Maps, charts, GraphQL, exports, search
+- ✅ **Streamlit dashboard** - 6 complete pages (Home, Browse, Compare, Analytics, Data Explorer, Documentation)
 - ✅ **CI/CD pipeline** - GitHub Actions for validation + builds
-- ✅ **Comprehensive docs** - API docs, deployment guide, contributing guide
+- ✅ **Comprehensive docs** - API docs, deployment guide, contributing guide, FAQ
 
 See [TODO.md](TODO.md) for detailed roadmap and [PROGRESS.md](PROGRESS.md) for recent updates.
 
@@ -136,10 +137,17 @@ datasette evdb.db --metadata metadata.json
 ### Run Streamlit Dashboard
 
 ```bash
-cd streamlit
-streamlit run app.py
+streamlit run streamlit_app.py
 # Open http://localhost:8501
 ```
+
+**Features:**
+- 🏠 **Home** - Database statistics and quick search
+- 🔍 **Browse Vehicles** - Advanced filtering with 7 filters and 8 sort modes
+- ⚖️ **Compare** - Side-by-side comparison of 2-4 vehicles with visualizations
+- 📊 **Analytics** - Interactive charts for range, charging, price, and market analysis
+- 💾 **Data Explorer** - SQL query interface with 8 example queries
+- 📚 **Documentation** - Embedded API docs, contributing guide, and FAQ
 
 ## 📖 Documentation
 
@@ -202,8 +210,7 @@ evdb/
 │   ├── build-sqlite.py
 │   └── import-yaml.py
 ├── templates/                  # YAML templates for contributors
-├── streamlit/                  # Streamlit dashboard
-│   └── app.py
+├── streamlit_app.py           # Streamlit dashboard (6 pages)
 ├── docs/                       # Documentation
 ├── .github/workflows/          # CI/CD pipelines
 ├── metadata.json              # Datasette configuration
