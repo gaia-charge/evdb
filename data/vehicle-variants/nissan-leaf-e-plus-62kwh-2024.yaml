@@ -1,0 +1,247 @@
+# Nissan Leaf e+ 62kWh (2024)
+# https://www.nissan.com/leaf/
+
+id: nissan-leaf-e-plus-62kwh-2024
+model_id: nissan-leaf
+name: Leaf e+ 62kWh
+variant_name: e+ 62kWh
+model_year: 2024
+trim_level: e+ (Tekna trim in Europe)
+
+production:
+  status: active
+  start_year: 2019  # e+ variant launched January 2019
+  start_month: 1
+
+battery:
+  usable_kwh: 59.0  # Usable capacity
+  total_kwh: 62.0   # Total capacity
+  chemistry: NMC  # Nickel Manganese Cobalt from Envision AESC
+  cells: 288  # 24 modules x 12 cells
+  voltage_nominal: 360
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: passive_air  # Major weakness - no active cooling
+  notes: >
+    62kWh battery pack is significantly larger than base 40kWh LEAF.
+    WARNING: Passive air cooling (no liquid thermal management) can lead to battery
+    degradation in hot climates or during frequent DC fast charging. This is a known
+    limitation vs competitors with active cooling. Real-world reports show ~4-5%
+    capacity loss per year in hot climates, ~2-3% in moderate climates.
+
+range:
+  wltp_km: 385  # Official WLTP
+  wltp_city_km: 490
+  wltp_highway_km: 310
+  real_world_km: 330  # Conservative real-world estimate
+  epa_miles: 226  # EPA rating (US market)
+  epa_km: 364
+  conditions:
+    - type: summer
+      temperature_c: 23
+      range_km: 360
+      notes: "Optimal conditions"
+    - type: winter
+      temperature_c: -10
+      range_km: 240
+      notes: "Cold weather with heating, ~27% range loss (no heat pump)"
+    - type: highway_130
+      speed_kmh: 130
+      range_km: 285
+      notes: "Highway driving at 130 km/h"
+
+charging:
+  dc_fast_charge:
+    port_type: CHAdeMO
+    max_power_kw: 100  # e+ has 100kW, base 40kWh only 50kW
+    charge_curve:
+      - percent: 10
+        power_kw: 95
+      - percent: 30
+        power_kw: 90
+      - percent: 50
+        power_kw: 75
+      - percent: 70
+        power_kw: 55
+      - percent: 80
+        power_kw: 35
+      - percent: 90
+        power_kw: 22
+    charge_time_10_80_min: 45  # 10-80% in 45 minutes
+    charge_time_20_80_min: 38
+    km_per_hour: 450  # At peak rate
+    notes: >
+      CHAdeMO charging only (no CCS). Charge speed degrades with repeated rapid charging
+      due to passive cooling. Battery temperature limits charging power. Real-world DC fast
+      charging speed often lower than rated 100kW, typically 70-85kW peak.
+  
+  ac_charge:
+    port_type: Type 2
+    max_power_kw: 6.6  # Single-phase 32A (European standard)
+    onboard_charger_kw: 6.6
+    charge_time_0_100_hours: 9.5  # 0-100% with 6.6kW
+    charge_time_empty_full_hours: 9.5
+    three_phase: false  # Only single-phase 6.6kW
+    notes: >
+      Only 6.6kW AC charging (single-phase). No optional 11kW or 22kW charger available.
+      This is slower than many competitors (e-208: 11kW, ID.3: 11kW standard).
+
+  bidirectional:
+    v2g_capable: true  # Nissan pioneered V2G!
+    v2h_capable: true
+    v2l_capable: false
+    max_discharge_power_kw: 6.6
+    notes: >
+      LEAF was first mass-market EV with V2G/V2H capability. Requires CHAdeMO V2G wallbox
+      (e.g., Wallbox Quasar). Can power home during outages or sell energy to grid.
+      V2G limited by CHAdeMO adoption (CCS becoming standard).
+
+motors:
+  front_motor:
+    type: permanent_magnet
+    power_kw: 160  # e+ has more powerful motor than base (160kW vs 110kW)
+    power_hp: 218
+    torque_nm: 340
+    manufacturer: Nissan
+  drive_type: FWD
+  notes: "e+ has 160kW motor (vs 110kW in base 40kWh). More powerful for highway passing."
+
+performance:
+  acceleration_0_100_kmh_s: 6.9  # Much quicker than base 40kWh (7.9s)
+  acceleration_0_60_mph_s: 6.5
+  top_speed_kmh: 157  # Electronically limited
+  notes: "Significantly quicker than base LEAF thanks to 50kW more power (160kW vs 110kW)"
+
+efficiency:
+  wltp_kwh_per_100km: 17.1  # Official WLTP consumption
+  epa_kwh_per_100km: 17.9  # EPA consumption (US)
+  real_world_kwh_per_100km: 18.5  # Real-world average
+  energy_efficiency_class: B  # EU energy label
+  notes: >
+    Less efficient than newer competitors (Ioniq 6: 13.9, Model 3: 14.0) due to older
+    platform and less aerodynamic hatchback shape (Cd 0.28 vs 0.21-0.23 for sedans).
+
+weight:
+  curb_weight_kg: 1660  # Heavier than base 40kWh (1520kg) due to larger battery
+  distribution_front_percent: 57
+  distribution_rear_percent: 43
+
+dimensions:
+  length_mm: 4480
+  width_mm: 1790
+  height_mm: 1540
+  wheelbase_mm: 2700
+
+driving_modes:
+  - name: "e-Pedal"
+    description: "One-pedal driving with strong regeneration up to 0.2g deceleration"
+  - name: "Eco Mode"
+    description: "Reduced power and climate control for maximum range"
+  - name: "B-Mode"
+    description: "Increased regenerative braking without full one-pedal driving"
+
+adas_features:
+  level: 2
+  features:
+    - ProPILOT Assist (adaptive cruise + lane centering)
+    - Autonomous Emergency Braking with Pedestrian Detection
+    - Lane Departure Warning & Prevention
+    - Blind Spot Warning
+    - Rear Cross Traffic Alert
+    - Intelligent Around View Monitor (360° camera)
+    - ProPILOT Park (automated parking)
+  notes: "ProPILOT Assist is Nissan's Level 2 system. Works well for highway driving."
+
+standard_equipment:
+  - 8.0" touchscreen with Apple CarPlay & Android Auto (2024+ model year)
+  - 7.0" digital driver display
+  - ProPILOT Assist semi-autonomous driving
+  - e-Pedal one-pedal driving
+  - Dual-zone automatic climate control
+  - LED headlights with automatic high beam
+  - Heated front seats (Tekna trim)
+  - Heated steering wheel (Tekna trim)
+  - Rear parking sensors
+  - 17-inch alloy wheels
+  - Keyless entry and start
+  - Nissan Connect Services with remote app
+
+optional_equipment:
+  - name: Bose Premium Audio
+    description: 8-speaker premium audio system
+  - name: Intelligent Around View Monitor
+    description: 360° camera system
+  - name: ProPILOT Park
+    description: Automated parking assistance
+  - name: Winter Package
+    description: Heated rear seats and windshield washer nozzles
+  - name: Two-tone paint
+    description: Black roof with contrasting body color
+  - name: 17-inch diamond-cut alloy wheels
+    description: Upgraded wheel design
+
+colors:
+  - Pearl Black
+  - Magnetic Blue (signature color)
+  - Pearl White
+  - Vivid Blue
+  - Burgundy
+  - Gun Metallic
+  - Blade Silver
+
+price_positioning: mid-range
+target_market: mainstream
+primary_use_case: daily_commute_urban
+
+competitors:
+  - Renault Zoe ZE50
+  - Volkswagen ID.3 Pro
+  - Peugeot e-208
+  - Kia Soul EV
+  - MG4 Electric
+
+strengths:
+  - Proven reliability (650,000+ LEAFs sold worldwide)
+  - V2G/V2H capability (home energy backup)
+  - e-Pedal one-pedal driving (best in class)
+  - Large dealer network and service support
+  - Competitive pricing vs newer EVs
+  - ProPILOT Assist works well
+  - Comfortable Zero Gravity seats
+
+weaknesses:
+  - CHAdeMO charging (vs CCS2 standard in Europe) limits fast charging network access
+  - Passive battery cooling (no active thermal management) - degrades faster in heat
+  - Only 6.6kW AC charging (vs 11kW competitors)
+  - Older platform shows vs newer MEB/E-GMP competitors
+  - Less efficient than newer EVs (17.1 vs 13.9-15.0)
+  - No heat pump (significant winter range loss)
+  - Modest 385km WLTP range vs 500+ km competitors
+
+versioning:
+  previous_versions:
+    - year: 2019
+      changes: "e+ variant launched with 62kWh battery, 160kW motor"
+    - year: 2020
+      changes: "Minor interior updates, improved infotainment"
+    - year: 2023
+      changes: "Apple CarPlay/Android Auto added, updated ProPILOT"
+  
+metadata:
+  sources:
+    - https://www.nissan.com/leaf/
+    - https://ev-database.org/car/1656/Nissan-Leaf-eplus
+    - https://insideevs.com/reviews/344001/2019-nissan-leaf-plus-first-drive/
+    - https://www.carwow.co.uk/nissan/leaf
+    - https://www.whatcar.com/nissan/leaf/hatchback/review
+  data_quality: verified
+  source_type: [manufacturer, measured]
+  created_at: "2026-02-07"
+  last_updated: "2026-02-07"
+  notes: >
+    The LEAF e+ (62kWh) is the top variant of the world's first mass-market EV.
+    While newer competitors have surpassed it in efficiency and charging speed,
+    the LEAF remains popular for its proven reliability, V2G capability, and value.
+    Main weaknesses are CHAdeMO (vs CCS), passive battery cooling, and only 6.6kW AC charging.
