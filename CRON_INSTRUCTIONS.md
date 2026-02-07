@@ -1,69 +1,113 @@
 # EVDB Cron Session Instructions
 
-**Last Updated:** 2026-02-07  
-**Status:** Active development - Streamlit deployment phase
+**Last Updated:** 2026-02-07 (Updated: 16:45)  
+**Status:** Active development - Vehicle expansion phase
 
 ---
 
-## 🚨 CRITICAL: DO NOT ADD MORE VEHICLES
+## 🎯 NEW PRIORITY: VEHICLE DATA EXPANSION
 
-**User Request (Feb 7):** Stop adding vehicles, focus on building the platform.
+**User Request (Feb 7, 16:42):** Focus background work on adding vehicle data systematically.
+
+**Target:** Add all electric models (no hybrids) from:
+1. **Tesla** (2 models → complete flagship lineup)
+2. **BYD** (1 model → expand to full lineup)
+3. **Renault** (0 models → HIGHEST PRIORITY)
+4. **Stellantis** (3 models → expand across all brands)
 
 **Rationale:**
-- We have **51 vehicle variants** (target was 40) ✅
-- We have **excellent diversity** (luxury, 800V, trucks, affordable, performance)
-- We have **5 markets** covered (Germany strongest with 27 vehicles)
-- **Adding more vehicles doesn't help if users can't access them**
+- Streamlit app is **95% complete and production-ready** ✅
+- Vehicle expansion can happen in parallel with launch
+- Systematic manufacturer-by-manufacturer approach
+- Goal: 70-100+ variants (currently 51)
 
 ---
 
-## 🎯 Current Priority: Phase 8 - Streamlit App
+## 📋 Current Priority: Add Vehicles One Manufacturer at a Time
 
-**Goal:** Build user-friendly Streamlit web app as PRIMARY interface (not Vercel/Datasette)
+**Order of Operations:**
+1. **Week 1:** Renault (HIGHEST - completely missing!)
+2. **Week 2:** BYD (expand beyond just Atto 3)
+3. **Week 3-4:** Stellantis brands (Opel, Jeep, DS, Alfa, Fiat)
+4. **Week 5:** Tesla flagships (Model S, Model X)
 
 **What cron sessions should do:**
-1. **Read STREAMLIT_PLAN.md** - Comprehensive implementation guide
-2. **Read TODO.md** - Current phase status and priorities
-3. **Work on streamlit_app.py** - Build the web interface
-4. **Test locally** - Ensure features work
-5. **Commit progress** - Incremental commits as features complete
+1. **Read VEHICLE_EXPANSION_PLAN.md** - Complete expansion roadmap
+2. **Read TODO.md** - Current phase status
+3. **Add vehicles systematically** - Follow manufacturer order
+4. **Validate before committing** - Run `python scripts/validate.py`
+5. **Test database build** - Run `python scripts/build-sqlite.py --clean`
+6. **Commit with clear messages** - "Add [Manufacturer] [Model] [variants]"
 
 ---
 
-## 📋 Phase 8 Tasks (Priority Order)
+## 📋 Current Tasks: Vehicle Data Expansion
 
-### Day 1 (Feb 7) - Skeleton & Home Page
-- [ ] Create `streamlit_app.py` with basic structure
-- [ ] Implement database connection (with caching)
-- [ ] Build Home page:
-  - [ ] Display database statistics
-  - [ ] Show latest additions
-  - [ ] Add quick search box
-- [ ] Test locally: `streamlit run streamlit_app.py`
-- [ ] Commit initial version
+### Week 1 Priority: Renault (HIGHEST - 0 models currently!)
 
-### Day 2 (Feb 8) - Browse Vehicles
-- [ ] Implement sidebar filters (price, range, charging, manufacturer, etc.)
-- [ ] Build dynamic SQL query from filter selections
-- [ ] Display results in searchable dataframe
-- [ ] Add vehicle detail expansion
-- [ ] Add export functionality (CSV/JSON)
-- [ ] Test all filter combinations
+**Day 1-2: Renault Megane E-Tech** (Most important - EV of the Year 2023)
+- [ ] Create manufacturer entry (if missing)
+- [ ] Add vehicle model: Renault Megane E-Tech
+- [ ] Add 3 variants:
+  - [ ] EV40 (40 kWh, 300 km range)
+  - [ ] EV60 (60 kWh, 470 km range)  
+  - [ ] EV60 4Control AWD (60 kWh AWD)
+- [ ] Add French market pricing (home market)
+- [ ] Add German market pricing (our primary market)
+- [ ] Validate and test database build
 
-### Day 3 (Feb 9) - Compare & Analytics
-- [ ] Implement Compare Vehicles page (multi-select, side-by-side)
-- [ ] Add basic charts in Analytics:
-  - [ ] Range vs battery scatter plot
-  - [ ] Charging speed comparison
-  - [ ] Price distribution histogram
-- [ ] Deploy to Streamlit Cloud
-- [ ] Test on production
+**Day 3-4: Renault Scenic E-Tech** (Brand new family SUV)
+- [ ] Add vehicle model: Renault Scenic E-Tech
+- [ ] Add 2 variants:
+  - [ ] Comfort Range 60 kWh (430 km)
+  - [ ] Long Range 87 kWh (625 km - longest range Renault!)
+- [ ] Add French + German market pricing
+- [ ] Validate and commit
+
+**Day 5-6: Renault Zoe** (Classic EV, still selling)
+- [ ] Add vehicle model: Renault Zoe
+- [ ] Add 2 variants:
+  - [ ] R110 (52 kWh, 395 km)
+  - [ ] R135 (52 kWh, 386 km)
+- [ ] Add French + German market pricing
+- [ ] Validate and commit
+
+**Goal for Week 1:** Complete Renault lineup (3-4 models, 7-8 variants)
+
+---
+
+### Week 2 Priority: BYD (Expand from 1 to 4-5 models)
+
+**Day 1-2: BYD Seal** (Tesla Model 3 competitor)
+- [ ] Add vehicle model: BYD Seal
+- [ ] Add 2 variants:
+  - [ ] Design (82.5 kWh RWD, 570 km)
+  - [ ] Excellence (82.5 kWh AWD, 520 km)
+- [ ] Add German market pricing
+- [ ] Validate and commit
+
+**Day 3-4: BYD Dolphin** (Compact hatchback)
+- [ ] Add vehicle model: BYD Dolphin
+- [ ] Add 2 variants:
+  - [ ] Active (44.9 kWh, 340 km)
+  - [ ] Boost (60.4 kWh, 427 km)
+- [ ] Add German market pricing
+- [ ] Validate and commit
+
+**Goal for Week 2:** Expand BYD from 1 to 3 models (5 variants)
 
 ---
 
 ## ✅ What's Already Complete
 
 Don't redo these - they're done:
+- ✅ **Streamlit app (95% complete, production-ready)**
+  - ✅ Home page with stats and search
+  - ✅ Browse page with 7 filters
+  - ✅ Compare page with charts
+  - ✅ Analytics page with 15+ visualizations
+  - ✅ Data Explorer with SQL interface
+  - ✅ Documentation page (embedded guides)
 - ✅ Database build pipeline (build-sqlite.py)
 - ✅ Validation pipeline (validate.py)
 - ✅ Datasette metadata.json (11 canned queries)
@@ -72,87 +116,155 @@ Don't redo these - they're done:
 - ✅ Launch plan (LAUNCH.md)
 - ✅ FAQ (FAQ.md)
 - ✅ GitHub Actions CI/CD
-- ✅ 51 vehicle variants with quality data
 
 ---
 
-## ❌ What NOT to Do
+## 🎯 What TO Do
+
+**Current Focus: ADD VEHICLES SYSTEMATICALLY**
+
+**Do:**
+- ✅ Add Renault electric models (HIGHEST PRIORITY - 0 models currently)
+- ✅ Add BYD electric models (expand beyond Atto 3)
+- ✅ Add Stellantis brand EVs (Opel, Jeep, DS, Alfa Romeo)
+- ✅ Add Tesla flagship models (Model S, Model X)
+- ✅ Follow manufacturer-by-manufacturer approach
+- ✅ Validate before every commit
+- ✅ Add German market pricing (primary market)
+- ✅ Add French market pricing for French brands
 
 **Don't:**
-- ❌ Add new vehicle variants to the database
-- ❌ Add new market data (unless fixing a bug)
-- ❌ Expand to new markets (UK, Norway, etc.)
-- ❌ Add more manufacturers
-- ❌ Work on Vercel deployment (we're using Streamlit)
-- ❌ Spend time on Datasette plugins (Streamlit is primary)
-
-**Why?** Because the launch blocker is the user interface, not the data. We have sufficient data. Focus on making it accessible.
+- ❌ Add plug-in hybrids (PHEVs) - pure electric only
+- ❌ Add mild hybrids or range extenders
+- ❌ Add discontinued or concept vehicles
+- ❌ Skip validation step
+- ❌ Work on Streamlit app (already 95% complete)
 
 ---
 
 ## 📊 Session Reporting
 
 When announcing session completion, report:
-1. **What was built** (e.g., "Home page with stats display")
-2. **Files created/modified** (e.g., "streamlit_app.py created")
-3. **Testing done** (e.g., "Tested locally - works on desktop & mobile")
-4. **Commits pushed** (e.g., "2 commits: skeleton + home page")
-5. **Next priority** (e.g., "Next: implement sidebar filters")
+1. **What vehicles were added** (e.g., "Added Renault Megane E-Tech (3 variants)")
+2. **Files created** (e.g., "3 files: model, 3 variants, 2 market entries")
+3. **Database impact** (e.g., "Database now has 54 variants (up from 51)")
+4. **Validation status** (e.g., "All 170 YAML files validate successfully")
+5. **Next priority** (e.g., "Next: Add Renault Scenic E-Tech")
 
-**Don't report:**
-- ❌ "Added vehicle X to database" (we're not doing this)
-- ❌ "51 variants now 52 variants" (stop adding vehicles!)
+**Report format example:**
+```
+Added Renault Megane E-Tech with 3 variants (EV40, EV60, EV60 4Control AWD):
+- Created 1 model file, 3 variant files, 2 market files (DE, FR)
+- Database: 54 variants (up from 51, +5.9%)
+- All 170 YAML files validate ✅
+- Next: Renault Scenic E-Tech (2 variants)
+```
 
 ---
 
 ## 🔗 Key Files to Reference
 
-1. **STREAMLIT_PLAN.md** - Detailed implementation guide
+1. **VEHICLE_EXPANSION_PLAN.md** - Complete expansion roadmap (READ THIS FIRST!)
 2. **TODO.md** - Phase status and action plan
-3. **API_DOCS.md** - Query examples (useful for SQL queries in Data Explorer)
-4. **evdb.db** - The database file (0.25 MB, 51 variants)
-5. **requirements.txt** - Check Streamlit dependencies are there
+3. **data/** directory structure - See existing vehicles for templates
+4. **evdb.db** - The database file (currently 0.25 MB, 51 variants)
+5. **requirements.txt** - Python dependencies
 
 ---
 
 ## 🚀 Success Criteria
 
 Session is successful if:
-- ✅ Moved Streamlit app forward (new feature or page)
-- ✅ Code tested locally
-- ✅ Changes committed and pushed
-- ✅ Progress documented
-- ✅ No new vehicles added
+- ✅ Added at least 1 complete vehicle model (with all variants)
+- ✅ Added market pricing for at least 1 market (preferably Germany or France)
+- ✅ All YAML files validate successfully (0 errors)
+- ✅ Database builds successfully with new data
+- ✅ Changes committed and pushed with clear message
+- ✅ Progress documented in commit message
 
 Session is NOT successful if:
-- ❌ Added vehicles instead of building Streamlit app
-- ❌ Spent time on non-priority tasks (like Datasette plugins)
-- ❌ Broke existing functionality
-- ❌ No tangible progress on Streamlit app
+- ❌ Added a plug-in hybrid (PHEV) instead of pure electric
+- ❌ Skipped validation step
+- ❌ Committed files that don't validate
+- ❌ No clear commit message
+- ❌ Worked on non-priority tasks (Streamlit app is already 95% done!)
 
 ---
 
 ## 📅 Timeline
 
-**Target:** Deploy to Streamlit Cloud by Feb 9, public launch Feb 15-20
+**Vehicle Expansion Timeline:**
 
-**Today (Feb 7):** Start Phase 8, build skeleton + home page  
-**Tomorrow (Feb 8):** Browse page with filters  
-**Feb 9:** Deploy to production  
-**Feb 10-12:** Soft launch & polish  
-**Feb 15-20:** Public launch
+**Week 1 (Feb 7-13):** Renault (HIGHEST PRIORITY)  
+**Week 2 (Feb 14-20):** BYD expansion  
+**Week 3-4 (Feb 21-Mar 6):** Stellantis brands  
+**Week 5 (Mar 7-13):** Tesla flagships
+
+**Parallel:** Streamlit app deployment can happen anytime (already 95% complete)
+
+**Target Database Size:** 70-100+ variants by mid-March
 
 ---
 
 ## 💡 Tips for Effective Sessions
 
-1. **Read STREAMLIT_PLAN.md first** - Don't guess, follow the plan
-2. **Work incrementally** - One feature at a time, commit often
-3. **Test as you go** - Run `streamlit run streamlit_app.py` frequently
-4. **Use caching** - `@st.cache_data` and `@st.cache_resource` for performance
-5. **Keep it simple** - MVP first, polish later
-6. **Check mobile** - Many users will browse on phones
+1. **Read VEHICLE_EXPANSION_PLAN.md first** - Comprehensive roadmap with all details
+2. **Follow manufacturer order** - Renault → BYD → Stellantis → Tesla
+3. **Use existing vehicles as templates** - Copy similar vehicle YAML, modify specs
+4. **Always validate before committing** - `python scripts/validate.py`
+5. **Test database build** - `python scripts/build-sqlite.py --clean`
+6. **German market first** - Best coverage, most important for company car buyers
+7. **Real-world range matters** - Include real-world consumption estimates
+8. **Company car tax calculations** - Critical for German market (0.25% under €70k threshold)
 
 ---
 
-**Remember: The goal is a launched product, not a perfect database. Focus on building the interface!**
+## 📋 Per-Vehicle Workflow
+
+**For each new vehicle:**
+
+1. **Research specifications**
+   - Check manufacturer website (official specs)
+   - Verify WLTP range, battery capacity, charging power
+   - Find real-world test data (InsideEVs, ADAC, AutoBild)
+
+2. **Create vehicle model YAML**
+   - File: `data/vehicle-models/[manufacturer]-[model].yaml`
+   - Copy template or similar existing vehicle
+   - Update all specifications
+
+3. **Create vehicle variant YAML(s)**
+   - Files: `data/vehicle-variants/[model]-[variant]-2024.yaml`
+   - One file per trim/battery combination
+   - Complete battery, range, charging, performance specs
+
+4. **Create market availability YAML(s)**
+   - Files: `data/market-availability/[variant]-[country-code].yaml`
+   - Start with German market (DE) - most important
+   - Include pricing, colors, options, delivery time
+   - Calculate company car tax benefits
+
+5. **Validate**
+   ```bash
+   python scripts/validate.py
+   ```
+   - Must show 0 errors before committing
+   - Fix any validation errors
+
+6. **Test database build**
+   ```bash
+   python scripts/build-sqlite.py --clean
+   ```
+   - Verify new vehicles appear in database
+   - Check SQL queries work correctly
+
+7. **Commit & push**
+   ```bash
+   git add data/
+   git commit -m "Add [Manufacturer] [Model] ([variants]) with [markets] pricing"
+   git push origin main
+   ```
+
+---
+
+**Remember: Quality over speed. Each vehicle should have verified specifications, real-world data, and complete market pricing. Follow the manufacturer order in VEHICLE_EXPANSION_PLAN.md!**
