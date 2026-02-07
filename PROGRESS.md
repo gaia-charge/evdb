@@ -1,7 +1,97 @@
 # EVDB Implementation Progress
 
-**Last Updated**: 2026-02-07 07:20 (Early Morning Session #33 - Cron Job)
+**Last Updated**: 2026-02-07 07:36 (Early Morning Session #34 - Cron Job)
 **Status**: Phase 6 In Progress - Dataset Expansion 🚀
+
+---
+
+## ⚠️ Schema Structure Discovery (2026-02-07 Early Morning Session #34 - Cron Job)
+
+### Important Finding: Nested vs Flat Field Structure
+
+**Time Invested:** ~10 minutes investigating schema structure mismatch
+
+**Discovery:**
+Attempted to add Mercedes-Benz EQS 450+ 2024 but discovered critical schema structure mismatch:
+
+**Existing Files Use Nested Objects:**
+```yaml
+battery:
+  usable_kwh: 78.1
+  total_kwh: 82.0
+  chemistry: NCA
+  warranty_years: 8
+  warranty_km: 192000
+
+range:
+  wltp_km: 629
+  epa_km: 567
+  real_world_km: 560
+
+charging:
+  ac_max_kw: 11
+  dc_max_kw: 250
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 250
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+  total_power_kw: 366
+  acceleration_0_100_sec: 4.4
+
+weight:
+  curb_weight_kg: 1844
+
+efficiency:
+  wltp_kwh_per_100km: 14.9
+```
+
+**New File Incorrectly Used Flat Structure:**
+```yaml
+battery_capacity_kwh: 107.8
+battery_usable_kwh: 107.8
+battery_chemistry: NCM811
+battery_warranty_years: 10
+
+range_wltp_km: 782
+range_epa_km: 547
+
+charging_ac_max_kw: 11
+charging_dc_max_kw: 200
+```
+
+**Impact:**
+- Database build failed with "NOT NULL constraint failed: vehicle_variants.battery_capacity_kwh"
+- All 38 existing variant files use nested structure
+- JSON Schema likely expects nested objects (need to verify schema files)
+- Field mapping in build-sqlite.py expects nested structure
+
+**Next Steps:**
+1. Review schemas/vehicle-variant.schema.json to confirm required structure
+2. Create template/example showing correct nested structure
+3. Update SCHEMA_DESIGN.md or create FIELD_STRUCTURE.md documenting nested patterns
+4. Retry Mercedes-Benz EQS 450+ with correct nested structure
+5. Consider creating validation rule to catch flat vs nested structure mismatches
+
+**Files Attempted (Removed After Discovery):**
+- data/vehicle-models/mercedes-benz-eqs.yaml
+- data/vehicle-variants/mercedes-benz-eqs-450-plus-2024.yaml
+- data/market-availability/mercedes-benz-eqs-450-plus-2024-de.yaml
+
+**Lesson Learned:**
+Always examine existing data files for structure patterns before creating new entries. 
+The nested object structure is more organized and matches common database design patterns 
+where related fields are grouped together.
+
+**Database Status After Investigation:**
+- ✅ Database stable at 38 variants
+- ✅ All validations pass (130 files)
+- ✅ Database builds successfully
+- 📚 Valuable schema structure understanding gained
 
 ---
 
