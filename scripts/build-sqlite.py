@@ -789,6 +789,7 @@ class DatabaseBuilder:
         console.print("[cyan]Creating database views...[/cyan]")
         
         # Full vehicle view with all data joined
+        # Note: Prices are from German market (DE) where available, as it's our primary market
         self.cursor.execute("""
             CREATE VIEW IF NOT EXISTS view_vehicles_full AS
             SELECT 
@@ -812,10 +813,13 @@ class DatabaseBuilder:
                 v.total_power_kw,
                 v.acceleration_0_100_sec,
                 v.drive_type,
-                v.price_base_eur
+                ma.price_base as price_base_eur,
+                ma.market_code,
+                ma.currency
             FROM vehicle_variants v
             JOIN vehicle_models m ON v.model_id = m.id
             JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
+            LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
         """)
         
         # Latest model year variants
