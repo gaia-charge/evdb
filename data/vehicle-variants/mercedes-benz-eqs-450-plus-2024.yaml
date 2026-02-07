@@ -1,0 +1,235 @@
+id: mercedes-benz-eqs-450-plus-2024
+name: 450+
+model_id: mercedes-benz-eqs
+model_year: 2024
+production_years:
+  start: 2021
+  end: null
+
+trim_level: 450-plus
+market_position: base  # Entry-level EQS, but still flagship luxury
+
+# Battery Specifications
+battery:
+  usable_kwh: 107.8  # Largest battery in database
+  total_kwh: 108.4
+  chemistry: NCM  # Nickel Manganese Cobalt (NCM811)
+  nominal_voltage_v: 396  # 400V architecture
+  cell_type: pouch
+  supplier: CATL
+  warranty_years: 10
+  warranty_km: 250000  # Best-in-class warranty
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, 400V architecture"
+    weight_kg: 630
+    modules: 12
+    cells: 360
+
+# Range
+range:
+  wltp_km: 782  # Excellent range thanks to Cd 0.20 aerodynamics
+  wltp_source: manufacturer
+  wltp_city_km: 910  # Exceptional city range
+  wltp_highway_km: 665
+  
+  epa_km: 547  # 340 miles (EPA more conservative)
+  epa_source: manufacturer
+  
+  real_world_km: 650
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 9.8  # 11kW AC
+      "10_80": 7.5
+    onboard_charger_kw: 11
+    onboard_charger_optional_kw: 22  # 22kW onboard charger optional
+    phases: 3
+  
+  dc:
+    max_power_kw: 200  # 400V architecture limits DC charging speed
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31  # Slower than 800V competitors (Ioniq 5/6, EV6, Taycan)
+      "0_100": 57
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 190
+      - soc_percent: 10
+        power_kw: 200  # Peak
+      - soc_percent: 20
+        power_kw: 200
+      - soc_percent: 30
+        power_kw: 180
+      - soc_percent: 40
+        power_kw: 160
+      - soc_percent: 50
+        power_kw: 140
+      - soc_percent: 60
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 70
+  
+  plug_and_charge: yes  # ISO 15118
+  
+  bidirectional:
+    v2l: false  # No Vehicle-to-Load
+    v2g: false  # No Vehicle-to-Grid
+    v2h: false  # No Vehicle-to-Home
+
+# Performance
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 245  # 333 hp (modest for EQS flagship)
+      max_torque_nm: 550
+  
+  total_power_kw: 245
+  total_power_hp: 333
+  total_torque_nm: 550
+  
+  acceleration:
+    "0_100_kmh_sec": 6.2  # Relaxed acceleration for luxury focus
+    "0_60_mph_sec": 5.9
+  
+  top_speed_kmh: 210  # Electronically limited
+  
+  energy_recovery:
+    max_regen_power_kw: 186
+    one_pedal_driving: yes  # D Auto mode with intelligent recuperation
+
+# Weight & Dimensions
+weight:
+  curb_weight_kg: 2480  # RWD variant lighter than AWD
+  distribution_front_percent: 45
+  distribution_rear_percent: 55
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.6  # Excellent efficiency thanks to Cd 0.20 aerodynamics
+  wltp_source: manufacturer
+  epa_kwh_per_100km: 19.7  # EPA testing more demanding
+  epa_mpge: 107  # EPA miles per gallon equivalent
+  real_world_kwh_per_100km: 16.8
+  energy_efficiency_class: A  # EU energy label (best class)
+
+# Features
+features:
+  heated_seats: "Front and rear standard"
+  ventilated_seats: "Front standard, rear optional"
+  massage_seats: "Front standard, rear optional (Executive Rear Seat Package)"
+  heated_steering_wheel: yes
+  panoramic_roof: yes  # Panoramic sliding sunroof standard
+  head_up_display: yes  # Augmented Reality HUD standard
+  premium_audio: yes  # Burmester High-End 4D Surround (15 speakers, 710W) standard
+  adaptive_suspension: yes  # AIRMATIC air suspension standard
+  air_suspension: yes
+  all_wheel_steering: yes  # Rear-axle steering up to 10° standard
+  ambient_lighting: yes  # 64 colors
+  keyless_entry: yes
+  power_liftgate: yes  # HANDS-FREE ACCESS
+  tow_hitch: yes  # 750kg capacity
+  
+  adas_level: 2  # Level 2+ with Active Distance Assist DISTRONIC and Active Steering Assist
+  autopilot_highway: yes  # DRIVE PILOT Level 3 optional (in Germany only)
+  
+  climate_zones: 4  # 4-zone automatic climate control standard
+  wireless_charging: yes  # For 2 smartphones
+  
+  special:
+    - "MBUX Hyperscreen optional (standard on 580 4MATIC)"
+    - "Rear-axle steering up to 10° (turning circle 10.9m)"
+    - "ENERGIZING comfort control with 10 programs"
+    - "Air Balance Package with ionizer and fragrance"
+    - "Executive Rear Seat Package (reclining, massage, heating, footrests)"
+    - "E-Active Body Control optional (active suspension, curve tilting)"
+    - "Digital Light LED headlights with projection"
+    - "Acoustic Comfort Package (acoustic glass, additional insulation)"
+
+# Technology
+technology:
+  heat_pump: yes  # Standard
+  preconditioning: yes  # Battery and cabin
+  remote_climate: yes  # Via Mercedes me app
+  battery_preheating: yes  # For optimal DC fast charging
+  over_the_air_updates: yes  # MBUX OTA updates
+  digital_key: yes  # Via Mercedes me app (NFC + UWB)
+  voice_assistant: yes  # "Hey Mercedes" natural language
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  navigation_system: yes  # MBUX with Augmented Reality
+  telematics: yes  # Mercedes me connect with remote services
+
+# Homologation
+homologation:
+  certification_standard: WLTP
+  energy_label_eu: A
+  co2_emissions_g_km: 0  # Zero direct emissions
+
+notes: |
+  The Mercedes-Benz EQS 450+ is the entry-level variant of Mercedes' electric flagship sedan.
+  Despite being the "base" model, it offers 782km WLTP range (650km real-world) from a massive 107.8kWh battery
+  and includes most luxury features as standard (AIRMATIC air suspension, rear-axle steering, Burmester audio).
+  
+  Key strengths:
+  - World's most aerodynamic production car (Cd 0.20) enables exceptional efficiency and range
+  - Massive 782km WLTP range (650km real-world) - best in flagship sedan segment
+  - 107.8kWh battery (largest in database, larger than Tesla Model S, BMW i7)
+  - Rear-axle steering reduces turning circle to 10.9m (despite 5.2m length)
+  - MBUX Hyperscreen optional (56-inch curved display, standard on 580 4MATIC)
+  - 10-year/250,000km battery warranty (best-in-class)
+  - Factory 56 carbon-neutral production
+  
+  Key weaknesses:
+  - 400V architecture limits DC charging to 200kW (vs 800V competitors: Taycan 270kW, Ioniq 5/6 235kW)
+  - 31-minute 10-80% charging slower than 800V rivals (Ioniq 6: 18 min, Taycan: 22 min)
+  - No V2G/V2L bidirectional charging (unlike Korean competitors)
+  - Only 6.2s 0-100 acceleration (vs Taycan 4S: 4.0s, i7: 4.7s)
+  - Heavy at 2,480kg (vs Model S: 2,190kg)
+  - Limited towing capacity: 750kg (vs Model S: 1,600kg, i7: 2,000kg)
+  - No 22kW AC charging standard (optional €1,190)
+  
+  Competes with:
+  - BMW i7 xDrive60 (€135,700): More traditional luxury, faster charging (195kW), better towing (2,000kg)
+  - Porsche Taycan 4S (€118,737): Sportier (4.0s 0-100), 800V fast charging (270kW), less practical
+  - Tesla Model S Long Range (€94,990): Faster (3.2s 0-100), better software, less luxurious interior
+  - Lucid Air Touring (€95,000): More range (883km EPA), faster charging (300kW), less brand prestige
+  
+  The EQS 450+ targets buyers prioritizing ultimate luxury, comfort, and range over performance and charging speed.
+  Most popular configuration: 450+ with MBUX Hyperscreen (~€118,000) or AMG Line (~€122,000).
+  
+  Real-world efficiency: 16.8 kWh/100km (vs WLTP 15.6) confirmed by independent testing.
+  Real-world range: 650km mixed driving (vs 782km WLTP, 547km EPA).
+
+sources:
+  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/explore/technical-data.html
+    title: Mercedes-Benz EQS 450+ Technical Data
+    accessed: "2026-02-07"
+  - url: https://ev-database.org/car/1442/Mercedes-EQS-450plus
+    title: EV Database Mercedes EQS 450+ Real-World Data
+    accessed: "2026-02-07"
+  - url: https://insideevs.com/reviews/565499/mercedes-eqs-450-plus-first-drive/
+    title: InsideEVs Mercedes EQS 450+ Review
+    accessed: "2026-02-07"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-07"
+  last_updated: "2026-02-07"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
