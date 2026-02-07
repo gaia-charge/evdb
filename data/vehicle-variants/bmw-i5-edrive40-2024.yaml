@@ -1,0 +1,218 @@
+id: bmw-i5-edrive40-2024
+name: eDrive40
+model_id: bmw-i5
+model_year: 2024
+production_years:
+  start: 2023
+  end: null
+
+trim_level: base
+market_position: base
+
+# Battery Specifications
+battery:
+  usable_kwh: 81.2
+  total_kwh: 84.3
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: prismatic
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 550
+    cells: 192
+
+# Range
+range:
+  wltp_km: 582
+  wltp_source: manufacturer
+  
+  epa_km: 468
+  epa_source: manufacturer
+  
+  real_world_km: 495
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 15-20°C, comfort mode"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 8.5  # 11kW
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 205
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+      "0_100": 50
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 185
+      - soc_percent: 10
+        power_kw: 205
+      - soc_percent: 30
+        power_kw: 205
+      - soc_percent: 50
+        power_kw: 165
+      - soc_percent: 70
+        power_kw: 105
+      - soc_percent: 80
+        power_kw: 68
+      - soc_percent: 90
+        power_kw: 38
+      - soc_percent: 100
+        power_kw: 18
+
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: rear
+    type: synchronous
+    max_power_kw: 250
+    max_torque_nm: 430
+    cooling: liquid
+
+drivetrain:
+  type: rwd
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 430
+
+performance:
+  acceleration_0_100_kmh_s: 6.0
+  top_speed_kmh: 193
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 2230
+  gross_weight_kg: 2755
+  payload_kg: 525
+  towing_capacity_kg: 0  # Not rated for towing
+  
+efficiency:
+  wltp_kwh_per_100km: 15.9
+  epa_kwh_per_100km: 17.4
+  real_world_kwh_per_100km: 16.4
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 19.2
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 21.8
+    - speed_kmh: 140
+      consumption_kwh_per_100km: 24.8
+
+# Features & Options
+standard_features:
+  - "BMW Curved Display (12.3\" + 14.9\")"
+  - "BMW Operating System 8.5"
+  - "4-zone automatic climate control"
+  - "Heat pump"
+  - "LED headlights with matrix function"
+  - "18-inch alloy wheels"
+  - "Vernasca leather seats"
+  - "Parking Assistant Plus"
+  - "Driving Assistant (Level 2)"
+  - "Comfort Access (keyless entry)"
+  - "3-spoke leather steering wheel"
+  - "Ambient lighting (6 themes)"
+  - "Wireless phone charging"
+  - "Harman Kardon Surround Sound (16 speakers)"
+
+optional_packages:
+  - name: "M Sport Package Pro"
+    features:
+      - "M Sport suspension"
+      - "19-inch M wheels"
+      - "M Sport steering wheel"
+      - "M Sport seats"
+      - "M Sport brakes with blue calipers"
+  
+  - name: "Driving Assistant Professional"
+    features:
+      - "Highway Assistant (Level 2+)"
+      - "Active cruise control with Stop & Go"
+      - "Steering and lane control assistant"
+      - "Active side collision protection"
+      - "Emergency stop assistant"
+  
+  - name: "Executive Package"
+    features:
+      - "Panoramic glass roof Sky Lounge"
+      - "Adaptive air suspension with self-leveling"
+      - "Massage seats front"
+      - "Heated rear seats"
+      - "4-zone climate control rear"
+  
+  - name: "Technology Package"
+    features:
+      - "BMW Head-Up Display with AR"
+      - "Parking Assistant Professional (automated)"
+      - "Surround View with 3D view"
+      - "BMW IconicSounds Electric by Hans Zimmer"
+
+colors:
+  standard:
+    - "Alpine White"
+    - "Black Sapphire Metallic"
+  premium:
+    - "Brooklyn Grey Metallic"
+    - "Mineral White Metallic"
+    - "Portimao Blue Metallic"
+    - "Aventurine Red Metallic"
+    - "Tanzanite Blue II Metallic"
+    - "Skyscraper Grey Metallic"
+  individual:
+    - "Frozen Pure Grey"
+    - "Frozen Deep Grey"
+
+# Version Information
+version:
+  facelift: false
+  major_changes:
+    - "New G60 platform (eighth-generation 5-series)"
+    - "BMW Operating System 8.5 with QuickSelect"
+    - "Improved WLTP range (+8km vs i4 eDrive40)"
+    - "Better aerodynamics (Cd 0.23 vs i4's 0.24)"
+    - "More spacious interior and trunk"
+
+# Market & Pricing Notes
+notes: >
+  The i5 eDrive40 is BMW's new executive electric sedan, replacing the previous
+  generation 5-series. Built on the latest G60 platform, it offers improved
+  efficiency (15.9 kWh/100km), better range (582km WLTP), and more interior
+  space compared to the i4. The 400V architecture limits DC charging to ~205kW
+  peak, but real-world range in mixed conditions approaches 500km. The i5
+  competes directly with Mercedes EQE and is positioned as a premium company
+  car choice with 0.25% tax benefit in Germany. Standard equipment is more
+  comprehensive than i4, with heat pump, LED matrix headlights, and Harman
+  Kardon audio included.
+
+metadata:
+  created_at: "2026-02-07"
+  updated_at: "2026-02-07"
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.bmw.com/en/all-models/5-series/sedan/2023/bmw-5-series-sedan-overview.html
+    - https://www.bmwusa.com/vehicles/bmwi/i5/sedan/overview.html
+    - https://www.press.bmwgroup.com/global/article/detail/T0425116EN/
+    - https://ev-database.org/car/1867/BMW-i5-eDrive40
