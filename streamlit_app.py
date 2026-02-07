@@ -6,6 +6,7 @@ A user-friendly Streamlit interface for exploring EV data
 import streamlit as st
 import sqlite3
 import pandas as pd
+import plotly.express as px
 from datetime import datetime
 from pathlib import Path
 
