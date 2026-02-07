@@ -1,0 +1,322 @@
+# Škoda Enyaq iV 80 2024 - German Market
+id: skoda-enyaq-iv-80-2024-de
+variant_id: skoda-enyaq-iv-80-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 48990  # 2024 facelift (pre-facelift 2023: €49,990, slight price reduction!)
+  
+  colors:
+    - name: "Candy White"
+      type: solid
+      price: 0
+    - name: "Moon White Metallic"
+      type: metallic
+      price: 730
+    - name: "Graphite Grey Metallic"
+      type: metallic
+      price: 730
+    - name: "Brilliant Silver Metallic"
+      type: metallic
+      price: 730
+    - name: "Race Blue Metallic"
+      type: metallic
+      price: 730
+    - name: "Energy Blue Metallic"
+      type: metallic
+      price: 730
+    - name: "Phoenix Orange Metallic"
+      type: metallic
+      price: 980
+    - name: "Velvet Red Metallic"
+      type: metallic
+      price: 980
+    - name: "Black Magic Pearl Effect"
+      type: pearl
+      price: 1140
+    - name: "Two-Tone: Moon White + Black Roof"
+      type: two_tone
+      price: 1460  # €730 metallic + €730 roof
+      note: "Black roof only available with select colors"
+  
+  wheels:
+    - size: "19-inch Vela Aero"
+      price: 0
+      note: "Standard, optimized for range"
+    - size: "20-inch Procyon"
+      price: 900
+    - size: "21-inch Taurus"
+      price: 1500
+      note: "vRS design wheels, reduces range slightly"
+  
+  interior:
+    - name: "Suite Black (fabric/synthetic leather)"
+      price: 0
+      note: "Standard, sustainable materials"
+    - name: "Suite Cognac (fabric/synthetic leather)"
+      price: 250
+    - name: "Lodge Black (recycled fabric/synthetic leather)"
+      price: 1200
+      note: "Sustainable materials with oak veneer trim"
+    - name: "Loft Grey (fabric/synthetic leather)"
+      price: 1450
+      note: "Premium feel with textile trim elements"
+  
+  packages:
+    - name: "Business Package"
+      price: 1590
+      items:
+        - "LED Matrix headlights with Crystalline elements"
+        - "Rear View Camera"
+        - "Park Assist (front + rear sensors)"
+        - "Rain sensor"
+        - "Auto-dimming interior mirror"
+    
+    - name: "Family Package"
+      price: 1290
+      items:
+        - "3-zone automatic climate control (standard is 2-zone)"
+        - "Heated rear seats"
+        - "Heated windscreen washer nozzles"
+        - "KESSY keyless entry"
+        - "Electric tailgate with virtual pedal"
+    
+    - name: "Comfort Package"
+      price: 2190
+      items:
+        - "Ergo seats with electric adjustment and lumbar support"
+        - "Heated front seats"
+        - "Heated steering wheel"
+        - "Wireless smartphone charging"
+    
+    - name: "Tech Package Plus"
+      price: 3290
+      items:
+        - "Travel Assist (Level 2 ADAS)"
+        - "Area View (360° camera)"
+        - "Head-Up Display"
+        - "Park Assist Pro (remote parking via app)"
+        - "Adaptive Cruise Control"
+    
+    - name: "Sound Package"
+      price: 850
+      items:
+        - "Canton Sound System (12 speakers, 570W)"
+        - "Premium audio experience"
+    
+    - name: "Winter Package"
+      price: 890
+      items:
+        - "Heated front seats"
+        - "Heated steering wheel"
+        - "Heated windscreen washer nozzles"
+        - "Winter tires on steel rims"
+    
+    - name: "Panoramic Glass Roof"
+      price: 1350
+      items:
+        - "Fixed panoramic glass roof with electric sunshade"
+        - "Improves cabin ambience"
+      note: "Cannot be combined with standard roof bars"
+    
+    - name: "22kW AC Charging Upgrade"
+      price: 590
+      items:
+        - "22kW onboard charger (3-phase)"
+        - "0-100% charge time: ~4 hours (vs 7.5h at 11kW)"
+      note: "Useful for workplace/destination charging"
+  
+  standalone_options:
+    - name: "Tow Hitch (electrically swivelling)"
+      price: 1095
+      note: "1,200kg braked trailer capacity"
+    
+    - name: "Heat-Insulating Glass (all-round)"
+      price: 490
+      note: "Improves climate control efficiency"
+    
+    - name: "Electric Child Locks"
+      price: 120
+      note: "Control via infotainment or driver door"
+    
+    - name: "Roof Rails (black)"
+      price: 290
+      note: "75kg load capacity"
+
+incentives:
+  - type: grant
+    name: "BAFA Umweltbonus (Environmental Bonus)"
+    amount: 0
+    description: "German federal EV subsidy ended December 2023"
+    valid_until: "2023-12-31"
+    eligibility: "All BEVs under €65,000"
+    note: "Program ended, no longer available for new purchases in 2024"
+  
+  - type: tax_exemption
+    name: "Dienstwagen-Besteuerung (Company Car Tax Benefit)"
+    amount: 1470  # €122.48 × 12 = €1,469.76/year benefit
+    description: "BEVs under €70k: only 0.25% of gross list price per month (vs 1% for ICE)"
+    eligibility: "Company cars, applies to private use taxation"
+    valid_until: "2030-12-31"
+    note: "Massive tax advantage: saves employee ~€3,670/year vs equivalent ICE (0.25% vs 1%)"
+  
+  - type: tax_exemption
+    name: "Kfz-Steuer Exemption (Road Tax Exemption)"
+    amount: 0
+    description: "BEVs exempt from annual road tax until 2030 (saves ~€350/year vs ICE)"
+    valid_until: "2030-12-31"
+    eligibility: "All battery electric vehicles"
+  
+  - type: subsidy
+    name: "THG-Quote (Greenhouse Gas Quota Trading)"
+    amount: 300  # Average 2024 market rate per year
+    description: "Sell your EV's CO2 savings certificate annually (€250-€400/year typical)"
+    eligibility: "All BEV owners in Germany"
+    note: "Rates vary by provider: E.ON Drive, Geld für eAuto, fairnergy, ADAC e-Charge"
+
+availability:
+  available_from: "2024-01"  # 2024 facelift
+  available_until: null  # Still in production
+  availability_status: available
+  delivery_time_weeks: 12  # Typical 2024 delivery time
+  pre_order_available: false
+  order_book_open: true
+  production_status: "Built at Mladá Boleslav, Czech Republic"
+
+distribution:
+  sales_model: "Traditional dealer network"
+  dealers_count: 850  # Škoda dealers across Germany
+  online_purchase: true
+  direct_sales: false
+  test_drive_locations:
+    - "850+ Škoda dealers nationwide"
+    - "Online test drive booking via skoda.de"
+  delivery_options:
+    - "Dealer pickup"
+    - "Home delivery available (some dealers, €200-500)"
+  service_network: "850+ authorized Škoda service centers"
+
+warranties:
+  vehicle:
+    duration_years: 2
+    duration_km: unlimited
+    note: "EU minimum warranty (2 years unlimited km)"
+  
+  battery:
+    duration_years: 8
+    duration_km: 160000
+    capacity_guarantee_percent: 70
+    note: "Battery guaranteed to retain 70% capacity for 8 years or 160,000km"
+  
+  paint:
+    duration_years: 3
+    note: "Paint warranty against manufacturing defects"
+  
+  corrosion:
+    duration_years: 12
+    note: "Perforation corrosion warranty"
+  
+  roadside_assistance:
+    duration_years: 3
+    note: "Pan-European Škoda Assistance included"
+
+charging_infrastructure:
+  home_charging:
+    - "Škoda iV Charger Connect (11kW wallbox): €849"
+    - "Free installation support consultation"
+    - "KfW 440 subsidy ended (was €900 for wallbox + installation)"
+  
+  public_charging:
+    - network: "Škoda Powerpass"
+      coverage: "500,000+ charging points in 29 European countries"
+      powered_by: "Elli (VW Group charging service)"
+      pricing:
+        - "Pay-as-you-go: €0.45/kWh AC, €0.69/kWh DC"
+        - "Active subscription (€9.99/month): €0.37/kWh AC, €0.53/kWh DC"
+        - "IONITY preferential: €0.35/kWh (vs €0.79 pay-as-you-go)"
+    
+    - network: "EnBW mobility+"
+      coverage: "400,000+ charging points in Europe"
+      pricing: "Starting €0.38/kWh AC (with subscription)"
+    
+    - network: "Maingau EinfachStromLaden"
+      coverage: "300,000+ charging points"
+      pricing: "Flat rate €0.49/kWh (no subscription)"
+
+environmental:
+  co2_lifecycle_tonnes: 32  # Complete lifecycle (production + 200,000km driving with EU electricity mix)
+  co2_lifecycle_renewable_tonnes: 23  # With 100% renewable electricity
+  production_co2_tonnes: 11  # Manufacturing emissions
+  driving_co2_tonnes_200k_km: 21  # 200,000km with EU electricity mix (2024: ~350g CO2/kWh)
+  end_of_life_recycling_rate_percent: 95
+  battery_recycling: "VW Group battery recycling programs (95% material recovery)"
+  production_energy: "Mladá Boleslav transitioning to 100% renewable electricity by 2030"
+  sustainability_certifications:
+    - "Carbon-neutral production goal: 2030"
+    - "Sustainable interior materials (recycled content)"
+  
+financing_options:
+  - type: "Škoda Bank Leasing"
+    monthly_from: 349  # Example: 36 months, 10,000km/year, €9,798 down payment
+    note: "Various lease terms available (24-60 months)"
+  
+  - type: "Škoda Bank Financing"
+    monthly_from: 449  # Example: 72 months, €9,798 down payment
+    apr_from: 2.99
+    note: "Special EV financing rates (lower than ICE)"
+  
+  - type: "Battery Leasing"
+    available: false
+    note: "Not offered (battery ownership included in vehicle price)"
+
+total_cost_of_ownership:
+  comparison_vs_ice: "~€8,000-10,000 lower over 4 years (savings from fuel, tax, maintenance)"
+  electricity_cost_per_100km: 5.70  # €0.30/kWh × 19 kWh/100km = €5.70
+  ice_equivalent_fuel_cost_per_100km: 14.70  # Diesel: €1.75/L × 8.4L/100km = €14.70
+  annual_electricity_cost: 855  # 15,000km/year × 19 kWh/100km × €0.30/kWh
+  annual_ice_fuel_cost: 2205  # 15,000km/year × 8.4L/100km × €1.75/L (diesel)
+  annual_savings_vs_ice: 1350  # Fuel alone
+  annual_maintenance_cost: 350  # Typical EV (ICE: ~€800/year)
+  annual_insurance_cost: 850  # Typical comprehensive (varies by driver)
+
+market_position:
+  competitors:
+    - vehicle: "Volkswagen ID.4 Pro"
+      price: 46565
+      advantage: "Enyaq: €2,425 cheaper, more space (585L vs 543L boot), more equipment"
+    
+    - vehicle: "Audi Q4 e-tron 50"
+      price: 52900
+      advantage: "Enyaq: €3,910 cheaper, similar specs, more practical interior"
+    
+    - vehicle: "Tesla Model Y Long Range"
+      price: 52990
+      advantage: "Enyaq: €4,000 cheaper, better build quality, more space inside"
+    
+    - vehicle: "Hyundai Ioniq 5 Long Range"
+      price: 51450
+      advantage: "Enyaq: €2,460 cheaper, larger boot, more traditional SUV design"
+    
+    - vehicle: "Kia EV6 Long Range"
+      price: 50990
+      advantage: "Enyaq: €2,000 cheaper, more space, better value equipment"
+  
+  value_proposition: |
+    Exceptional value in compact electric SUV segment:
+    - €3,000-5,000 cheaper than VW ID.4/Audi Q4 with similar/better specs
+    - Class-leading interior space (best rear legroom, 585L boot)
+    - 10 years connectivity services included (VW charges extra)
+    - Generous standard equipment
+    - Simply Clever practical features (umbrella, ice scraper, etc.)
+    - 2024 facelift: ChatGPT-powered Laura assistant (industry-first)
+    - Strong residual values (Škoda reliability + VW Group engineering)
+    - 850 dealers nationwide (excellent service network)
+
+notes: |
+  2024 facelift brings significantly improved software (ME3 vs ME2). 135kW DC charging upgraded from 125kW in 2023 models (+8%).
+  Range improved from 558km to 570km WLTP in 2024. More physical buttons vs full-touch (customer feedback addressed).
+  Laura AI assistant powered by ChatGPT (unique in segment). Typically €3,000-5,000 cheaper than equivalent VW ID.4 Pro.
+  Best value in VW Group MEB platform family. Consistently Germany's 3rd-4th best-selling electric SUV (after Model Y, ID.4).
+  10-year connectivity services included (vs VW's paid subscription). Company car tax benefit saves employees ~€3,670/year vs equivalent ICE.
+  Built in Czech Republic with lower labor costs = better value. Shares 70% of parts with ID.4/Q4 = proven reliability + lower repair costs.
