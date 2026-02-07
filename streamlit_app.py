@@ -139,7 +139,7 @@ st.sidebar.markdown("""
 <small>
 
 **License:** CC BY-SA 4.0  
-**GitHub:** [openclaw/evdb](https://github.com/openclaw/evdb)
+**GitHub:** [gaia-charge/evdb](https://github.com/gaia-charge/evdb)
 
 </small>
 """, unsafe_allow_html=True)
@@ -320,7 +320,7 @@ if page == "🏠 Home":
     - **Improve accuracy:** Report errors or suggest corrections
     - **Build features:** Contribute code to improve the platform
     
-    Check out our [Contributing Guide](https://github.com/openclaw/evdb/blob/main/CONTRIBUTING.md) to get started.
+    Check out our [Contributing Guide](https://github.com/gaia-charge/evdb/blob/main/CONTRIBUTING.md) to get started.
     """)
 
 elif page == "🔍 Browse Vehicles":
@@ -1690,17 +1690,17 @@ elif page == "📚 Documentation":
         
         ### Contact & Links
         
-        - **GitHub:** [github.com/openclaw/evdb](https://github.com/openclaw/evdb)
+        - **GitHub:** [github.com/gaia-charge/evdb](https://github.com/gaia-charge/evdb)
         - **API Docs:** [See API Documentation section]
-        - **Issues:** [Report bugs or request features](https://github.com/openclaw/evdb/issues)
-        - **Discussions:** [Join the conversation](https://github.com/openclaw/evdb/discussions)
+        - **Issues:** [Report bugs or request features](https://github.com/gaia-charge/evdb/issues)
+        - **Discussions:** [Join the conversation](https://github.com/gaia-charge/evdb/discussions)
         """)
     
     elif doc_section == "API Documentation":
         st.markdown("## API Documentation")
         st.markdown("""
         Complete reference for accessing EVDB data via REST and GraphQL APIs.
-        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/API_DOCS.md).
+        Also available on [GitHub](https://github.com/gaia-charge/evdb/blob/main/API_DOCS.md).
         """)
         
         # Load and display API_DOCS.md
@@ -1711,7 +1711,7 @@ elif page == "📚 Documentation":
         st.markdown("## Contributing to EVDB")
         st.markdown("""
         Learn how to add vehicles, improve data quality, and contribute to the project.
-        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/CONTRIBUTING.md).
+        Also available on [GitHub](https://github.com/gaia-charge/evdb/blob/main/CONTRIBUTING.md).
         """)
         
         # Load and display CONTRIBUTING.md
@@ -1722,7 +1722,7 @@ elif page == "📚 Documentation":
         st.markdown("## Frequently Asked Questions")
         st.markdown("""
         Common questions about EVDB, data sources, and how to use the database.
-        Also available on [GitHub](https://github.com/openclaw/evdb/blob/main/FAQ.md).
+        Also available on [GitHub](https://github.com/gaia-charge/evdb/blob/main/FAQ.md).
         """)
         
         # Load and display FAQ.md
@@ -1735,9 +1735,9 @@ st.markdown("""
 <div style="text-align: center; color: #666; font-size: 0.9em;">
     <p>
         EVDB is open-source and community-driven. Licensed under CC BY-SA 4.0.<br>
-        <a href="https://github.com/openclaw/evdb" target="_blank">GitHub</a> • 
-        <a href="https://github.com/openclaw/evdb/blob/main/CONTRIBUTING.md" target="_blank">Contribute</a> • 
-        <a href="https://github.com/openclaw/evdb/issues" target="_blank">Report Issue</a>
+        <a href="https://github.com/gaia-charge/evdb" target="_blank">GitHub</a> • 
+        <a href="https://github.com/gaia-charge/evdb/blob/main/CONTRIBUTING.md" target="_blank">Contribute</a> • 
+        <a href="https://github.com/gaia-charge/evdb/issues" target="_blank">Report Issue</a>
     </p>
 </div>
 """, unsafe_allow_html=True)
