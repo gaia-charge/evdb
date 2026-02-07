@@ -1,6 +1,8 @@
 # EVDB - Open Electric Vehicle Database
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Validate YAML](https://github.com/gaia-charge/evdb/actions/workflows/validate.yml/badge.svg)](https://github.com/gaia-charge/evdb/actions/workflows/validate.yml)
+[![Build Database](https://github.com/gaia-charge/evdb/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/gaia-charge/evdb/actions/workflows/build-deploy.yml)
 
 A comprehensive, open-source database of electric vehicles with detailed specifications, built with **YAML + JSON Schema + Datasette + Streamlit**.
 
