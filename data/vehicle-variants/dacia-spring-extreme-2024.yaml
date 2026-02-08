@@ -1,0 +1,172 @@
+# Dacia Spring Extreme (2024)
+id: dacia-spring-extreme-2024
+name: Extreme
+model_id: dacia-spring
+model_year: 2024
+variant_code: EXTREME
+
+battery:
+  usable_kwh: 26.8
+  total_kwh: 27.4
+  chemistry: LFP  # Lithium Iron Phosphate
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 120000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 220
+  wltp_city_km: 305
+  wltp_highway_km: 170
+  epa_km: null
+  real_world_km: 170
+  real_world_source: Auto Express winter test
+
+charging:
+  ac_max_kw: 7
+  ac_phases: 1
+  ac_connector: Type2
+  dc_max_kw: 30
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 28
+    - soc_percent: 10
+      power_kw: 30
+    - soc_percent: 50
+      power_kw: 30
+    - soc_percent: 70
+      power_kw: 25
+    - soc_percent: 80
+      power_kw: 18
+    - soc_percent: 90
+      power_kw: 10
+    - soc_percent: 100
+      power_kw: 5
+  time_10_to_80_min: 45
+  time_20_to_80_min: 35
+  charging_speed_kmh: 150
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 48
+      power_hp: 65
+      torque_nm: 113
+  total_power_kw: 48
+  total_power_hp: 65
+  total_torque_nm: 113
+  acceleration_0_100_sec: 13.7
+  top_speed_kmh: 125
+
+weight:
+  curb_weight_kg: 1005
+  gross_vehicle_weight_kg: 1291
+  payload_kg: 286
+
+efficiency:
+  wltp_kwh_per_100km: 14.2
+  epa_kwh_per_100km: null
+
+dimensions:
+  length_mm: 3734
+  width_mm: 1583
+  height_mm: 1519
+  wheelbase_mm: 2423
+  ground_clearance_mm: 150
+
+towing:
+  max_weight_kg: 0
+  max_weight_braked_kg: 0
+
+interior:
+  seating_capacity: 4
+  cargo_volume_seats_up_liters: 308
+  cargo_volume_seats_down_liters: 1004
+  frunk_volume_liters: 0
+
+adas:
+  level: 1
+  features:
+    - Automatic emergency braking (2024+)
+    - Lane keeping assist (2024+)
+    - Traffic sign recognition (2024+)
+    - Speed limiter
+    - Cruise control
+    - Rear parking sensors
+    - Rear-view camera
+    - Hill start assist
+    - ESC
+
+wheels:
+  front: "165/70 R14"
+  rear: "165/70 R14"
+  size_options:
+    - "14 inch steel with covers"
+    - "15 inch alloy (optional)"
+
+climate:
+  type: automatic
+  heat_pump: false
+
+features:
+  heat_pump: false
+  one_pedal_driving: true  # B-mode
+  adaptive_cruise_control: false
+  keyless_entry: false
+  parking_sensors: true  # Rear
+  rear_camera: true
+  automatic_headlights: true
+  rain_sensing_wipers: false
+
+notes: |
+  Extreme trim adds comfort and convenience features over Essential:
+  
+  **Additional Features:**
+  - More powerful motor: 65hp vs 45hp (48kW vs 33kW)
+  - Faster acceleration: 13.7s vs 19.1s 0-100km/h
+  - Automatic climate control (vs manual)
+  - Cruise control
+  - Rear-view camera
+  - Automatic headlights
+  - Electric windows (front + rear)
+  - Fog lights
+  - Leather steering wheel
+  - Height-adjustable driver's seat
+  - Roof bars
+  - Metallic paint options
+  
+  **Price Premium:**
+  ~€2,500 more than Essential (€21,400 in Germany)
+  
+  **Worth It?**
+  The 65hp motor makes a significant difference in city traffic and merging - the 45hp 
+  Essential feels underpowered. If budget allows, Extreme is recommended for:
+  - Better acceleration (less stressful in traffic)
+  - Cruise control (highway comfort)
+  - Rear camera (tight parking)
+  - Automatic climate control
+  
+  However, both variants share the same limitations:
+  - 220km WLTP range (170km real-world)
+  - 30kW DC charging only
+  - Basic interior quality
+  - No heat pump (winter range loss)
+  - 125km/h top speed
+  
+  LFP battery chemistry provides excellent longevity - can charge to 100% daily without 
+  concerns about degradation. Battery warranty is conservative (70% after 8 years/120,000km) 
+  but LFP typically retains 90%+ capacity over this period.
+
+data_source: manufacturer
+data_quality: verified
+last_updated: "2026-02-08"

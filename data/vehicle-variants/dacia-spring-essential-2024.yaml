@@ -1,0 +1,161 @@
+# Dacia Spring Essential (2024)
+id: dacia-spring-essential-2024
+name: Essential
+model_id: dacia-spring
+model_year: 2024
+variant_code: ESSENTIAL
+
+battery:
+  usable_kwh: 26.8
+  total_kwh: 27.4
+  chemistry: LFP  # Lithium Iron Phosphate
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 120000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 220
+  wltp_city_km: 305
+  wltp_highway_km: 170
+  epa_km: null
+  real_world_km: 170
+  real_world_source: Auto Express winter test
+
+charging:
+  ac_max_kw: 7
+  ac_phases: 1
+  ac_connector: Type2
+  dc_max_kw: 30
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 28
+    - soc_percent: 10
+      power_kw: 30
+    - soc_percent: 50
+      power_kw: 30
+    - soc_percent: 70
+      power_kw: 25
+    - soc_percent: 80
+      power_kw: 18
+    - soc_percent: 90
+      power_kw: 10
+    - soc_percent: 100
+      power_kw: 5
+  time_10_to_80_min: 45
+  time_20_to_80_min: 35
+  charging_speed_kmh: 150
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 33
+      power_hp: 45
+      torque_nm: 125
+  total_power_kw: 33
+  total_power_hp: 45
+  total_torque_nm: 125
+  acceleration_0_100_sec: 19.1
+  top_speed_kmh: 125
+
+weight:
+  curb_weight_kg: 984
+  gross_vehicle_weight_kg: 1270
+  payload_kg: 286
+
+efficiency:
+  wltp_kwh_per_100km: 13.9
+  epa_kwh_per_100km: null
+
+dimensions:
+  length_mm: 3734
+  width_mm: 1583
+  height_mm: 1519
+  wheelbase_mm: 2423
+  ground_clearance_mm: 150
+
+towing:
+  max_weight_kg: 0
+  max_weight_braked_kg: 0
+
+interior:
+  seating_capacity: 4
+  cargo_volume_seats_up_liters: 308
+  cargo_volume_seats_down_liters: 1004
+  frunk_volume_liters: 0
+
+adas:
+  level: 1
+  features:
+    - Automatic emergency braking (2024+)
+    - Lane keeping assist (2024+)
+    - Traffic sign recognition (2024+)
+    - Speed limiter
+    - Rear parking sensors
+    - Hill start assist
+    - ESC
+
+wheels:
+  front: "165/70 R14"
+  rear: "165/70 R14"
+  size_options:
+    - "14 inch steel with covers"
+
+climate:
+  type: manual
+  heat_pump: false
+
+features:
+  heat_pump: false
+  one_pedal_driving: true  # B-mode
+  adaptive_cruise_control: false
+  keyless_entry: false
+  parking_sensors: true  # Rear only
+  rear_camera: false
+  automatic_headlights: false
+  rain_sensing_wipers: false
+
+notes: |
+  Essential trim is the base model - Europe's most affordable EV at €18,900 (Germany).
+  
+  Despite basic specification, includes:
+  - 10" touchscreen with wireless Apple CarPlay/Android Auto (2024+)
+  - 6 airbags (upgraded from 2 in 2021)
+  - Automatic emergency braking (2024+)
+  - Lane keeping assist (2024+)
+  - LED daytime running lights
+  - Electric windows (front)
+  - Central locking
+  - MY Dacia app connectivity
+  
+  Omits:
+  - Alloy wheels (steel with covers)
+  - Rear camera
+  - Cruise control
+  - Air conditioning (optional €500)
+  - Metallic paint
+  
+  LFP battery chemistry (CATL) provides excellent longevity and cold-weather stability 
+  compared to NMC, though energy density is lower. LFP batteries can be charged to 100% 
+  regularly without degradation concerns.
+  
+  Real-world range highly dependent on weather:
+  - Summer/city: 200-220km
+  - Winter/mixed: 140-170km
+  - Highway: 150-180km
+  
+  7kW AC charging means overnight charging at home is practical (empty to full in ~4 hours).
+
+data_source: manufacturer
+data_quality: verified
+last_updated: "2026-02-08"
