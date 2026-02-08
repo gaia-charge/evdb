@@ -316,7 +316,7 @@ class DatabaseBuilder:
                 updated_at = metadata.get('created_at', datetime.now().isoformat())
             
             self.cursor.execute("""
-                INSERT INTO manufacturers (
+                INSERT OR REPLACE INTO manufacturers (
                     id, name, country, website, founded_year, headquarters,
                     parent_company, brands, logo_url, description, notes,
                     created_at, updated_at
@@ -394,7 +394,7 @@ class DatabaseBuilder:
                 updated_at = metadata.get('created_at', datetime.now().isoformat())
             
             self.cursor.execute("""
-                INSERT INTO vehicle_models (
+                INSERT OR REPLACE INTO vehicle_models (
                     id, manufacturer_id, brand, name, marketing_name, body_style, segment,
                     platform_id, production_start, production_end, seating_capacity,
                     seating_configuration, length_mm, width_mm, height_mm, wheelbase_mm,
@@ -556,7 +556,7 @@ class DatabaseBuilder:
                 updated_at = metadata.get('created_at', datetime.now().isoformat())
             
             self.cursor.execute("""
-                INSERT INTO vehicle_variants (
+                INSERT OR REPLACE INTO vehicle_variants (
                     id, model_id, variant_name, model_year, trim_level,
                     battery_capacity_kwh, battery_usable_kwh, battery_chemistry,
                     battery_voltage, battery_cells, battery_modules,
@@ -654,7 +654,7 @@ class DatabaseBuilder:
             
             # Insert main market availability record
             self.cursor.execute("""
-                INSERT INTO market_availability (
+                INSERT OR REPLACE INTO market_availability (
                     id, variant_id, market_code, currency,
                     price_base, price_including_vat, price_after_incentives,
                     available_from, available_until, availability_status,
@@ -687,7 +687,7 @@ class DatabaseBuilder:
                     conditions = json.dumps(conditions)
                 
                 self.cursor.execute("""
-                    INSERT INTO market_incentives (
+                    INSERT OR REPLACE INTO market_incentives (
                         market_availability_id, incentive_type, name, amount,
                         currency, valid_from, valid_until, conditions
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -705,7 +705,7 @@ class DatabaseBuilder:
             # Import colors
             for color in data.get('options', {}).get('colors', []):
                 self.cursor.execute("""
-                    INSERT INTO market_colors (
+                    INSERT OR REPLACE INTO market_colors (
                         market_availability_id, name, code, price, is_default
                     ) VALUES (?, ?, ?, ?, ?)
                 """, (
@@ -719,7 +719,7 @@ class DatabaseBuilder:
             # Import wheels
             for wheel in data.get('options', {}).get('wheels', []):
                 self.cursor.execute("""
-                    INSERT INTO market_wheels (
+                    INSERT OR REPLACE INTO market_wheels (
                         market_availability_id, name, size_inches, price, is_default
                     ) VALUES (?, ?, ?, ?, ?)
                 """, (
@@ -733,7 +733,7 @@ class DatabaseBuilder:
             # Import interiors
             for interior in data.get('options', {}).get('interiors', []):
                 self.cursor.execute("""
-                    INSERT INTO market_interiors (
+                    INSERT OR REPLACE INTO market_interiors (
                         market_availability_id, name, price, is_default
                     ) VALUES (?, ?, ?, ?)
                 """, (
@@ -763,7 +763,7 @@ class DatabaseBuilder:
                 console.print(f"[cyan]Importing {len(data['connectors'])} connectors...[/cyan]")
                 for connector in data['connectors']:
                     self.cursor.execute("""
-                        INSERT INTO connectors (
+                        INSERT OR REPLACE INTO connectors (
                             id, name, type, max_power_kw, max_voltage_v,
                             max_current_a, regions, description
                         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -788,7 +788,7 @@ class DatabaseBuilder:
                 console.print(f"[cyan]Importing {len(data['platforms'])} platforms...[/cyan]")
                 for platform in data['platforms']:
                     self.cursor.execute("""
-                        INSERT INTO platforms (
+                        INSERT OR REPLACE INTO platforms (
                             id, name, manufacturer, type, voltage_nominal_v,
                             architecture, battery_supplier, first_used,
                             description, notes
