@@ -1,0 +1,101 @@
+# BMW iX3 Vehicle Model
+# Mid-size premium electric SUV
+# Launched 2020, production in China
+
+id: bmw-ix3
+manufacturer_id: bmw-group
+name: iX3
+marketing_name: BMW iX3
+body_style: suv
+segment: J # Mid-size SUV
+platform_id: clar
+
+production:
+  start: "2020-09"
+  status: active
+  locations:
+    - name: Shenyang
+      country: China
+      notes: BMW Brilliance Automotive Plant, shared with X3 gasoline
+
+awards:
+  - name: Auto Motor und Sport Best Cars 2021
+    category: Electric SUV Premium
+    year: 2021
+  - name: Red Dot Design Award
+    category: Product Design
+    year: 2021
+
+description: >
+  The BMW iX3 is BMW's first mass-production electric SUV, based on the popular X3 platform.
+  Launched in 2020 for the European and Chinese markets (not sold in North America), it features
+  a single rear motor with 80kWh battery delivering up to 461km WLTP range. The iX3 was BMW's
+  first model to use the fifth-generation eDrive technology and showcases BMW's commitment
+  to electrifying their existing lineup.
+  
+  Built on the flexible CLAR platform alongside gasoline and diesel X3 variants, the iX3
+  offers familiar X3 practicality with zero emissions. Key features include 150kW DC fast
+  charging, adaptive air suspension, and BMW's latest iDrive 7 infotainment. The iX3 targets
+  premium SUV buyers seeking electric mobility without compromising on space or luxury.
+
+dimensions:
+  length_mm: 4734
+  width_mm: 1891
+  height_mm: 1668
+  wheelbase_mm: 2864
+  ground_clearance_mm: 192
+  drag_coefficient: 0.29 # Optimized for EV with aero wheels
+
+seating:
+  capacity: 5
+  configuration: 2+3
+
+cargo:
+  trunk_volume_liters: 510
+  trunk_max_volume_liters: 1560
+  frunk_volume_liters: 0 # No frunk
+
+infotainment:
+  system: BMW iDrive 7.0
+  display: 12.3" instrument cluster + 10.25" central display
+  features:
+    - BMW Live Cockpit Professional
+    - BMW Maps with cloud-based navigation
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+    - BMW Intelligent Personal Assistant
+    - Remote services via BMW ConnectedDrive
+    - Over-the-air updates
+
+safety:
+  ncap_rating:
+    organization: Euro NCAP
+    year: 2018 # Based on X3 platform
+    stars: 5
+    adult_occupant: 93
+    child_occupant: 88
+    vulnerable_road_users: 85
+    safety_assist: 85
+  standard_features:
+    - Front collision warning with AEB
+    - Lane departure warning
+    - Speed limit information
+    - Driver attention warning
+    - 8 airbags
+  optional_features:
+    - Driving Assistant Professional
+    - Active Cruise Control with Stop & Go
+    - Parking Assistant Plus
+    - 360° camera
+
+notes: "First mass-production BMW electric SUV (launched 2020). Built on CLAR platform (shared with X3 gasoline/diesel). RWD only configuration (no AWD variant). Produced exclusively in China (Shenyang). Not sold in North America. Uses fifth-generation BMW eDrive technology. 150kW DC fast charging competitive for 2020 launch. Adaptive air suspension standard. Heat pump not standard (optional on early models, standard on 2023+). Competes with Audi e-tron, Mercedes EQC, Jaguar I-PACE. Popular in Europe and China as practical premium electric SUV."
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
+  data_quality: verified
+  sources:
+    - https://www.bmw.de/de/neufahrzeuge/x/ix3.html
+    - https://www.bmw.com/en/innovation/bmw-ix3.html
+    - https://ev-database.org/car/1118/BMW-iX3
+    - https://insideevs.com/reviews/445123/bmw-ix3-first-drive/
