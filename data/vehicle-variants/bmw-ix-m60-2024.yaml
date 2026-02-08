@@ -1,0 +1,247 @@
+id: bmw-ix-m60-2024
+name: M60 xDrive
+model_id: bmw-ix
+model_year: 2024
+production_years:
+  start: 2022
+  end: null
+
+trim_level: m60-xdrive
+market_position: performance
+
+# Battery Specifications
+battery:
+  usable_kwh: 105.2
+  total_kwh: 111.5
+  chemistry: NCM  # Nickel Cobalt Manganese
+  nominal_voltage_v: 400
+  cell_type: prismatic
+  manufacturer: Samsung SDI / CATL
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 715
+    cells: 400
+
+# Range
+range:
+  wltp_km: 566
+  wltp_source: manufacturer
+  wltp_city_km: 710
+  wltp_highway_km: 460
+  
+  epa_km: null  # Not sold in US
+  epa_source: null
+  
+  real_world_km: 485
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 20°C, highway/city 50/50"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 10.5  # 11kW standard
+    onboard_charger_kw: 11
+    phases: 3
+    notes: "Optional 22kW upgrade available (5.5h 0-100%)"
+  
+  dc:
+    max_power_kw: 195
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 35
+      "0_100": 62
+    
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 190
+      - soc_percent: 20
+        power_kw: 195
+      - soc_percent: 30
+        power_kw: 195
+      - soc_percent: 40
+        power_kw: 190
+      - soc_percent: 50
+        power_kw: 175
+      - soc_percent: 60
+        power_kw: 155
+      - soc_percent: 70
+        power_kw: 125
+      - soc_percent: 80
+        power_kw: 85
+      - soc_percent: 90
+        power_kw: 50
+  
+  plug_and_charge: yes  # ISO 15118
+  
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Performance
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      max_power_kw: 190
+      max_torque_nm: 400
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 265
+      max_torque_nm: 650
+  
+  total_power_kw: 455
+  total_power_hp: 619
+  total_torque_nm: 1100
+  
+  acceleration:
+    "0_100_kmh_sec": 3.8  # Very fast for luxury SUV
+    "0_60_mph_sec": 3.6
+  
+  top_speed_kmh: 250  # Higher than xDrive50 (200 km/h)
+  
+  energy_recovery:
+    max_regen_power_kw: 195
+    one_pedal_driving: yes
+
+# Weight & Dimensions
+weight:
+  curb_weight_kg: 2710  # Heavier than xDrive50 due to more powerful motors
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 21.9  # Higher consumption due to more power
+  wltp_source: manufacturer
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 24.3
+  energy_efficiency_class: B  # EU energy label
+
+# Features
+features:
+  heated_seats: "Front and rear standard"
+  ventilated_seats: "Front standard, rear optional"
+  massage_seats: "Front and rear standard (M Sport Package)"
+  heated_steering_wheel: yes
+  panoramic_roof: yes  # Sky Lounge panoramic glass roof standard
+  head_up_display: yes  # BMW Head-Up Display standard
+  premium_audio: yes  # Harman Kardon Surround Sound (18 speakers) standard
+  adaptive_suspension: yes  # Adaptive M suspension standard
+  air_suspension: yes  # Air suspension with automatic self-leveling standard
+  all_wheel_steering: no  # Not available on iX (unlike EQS)
+  ambient_lighting: yes  # BMW Interaction Bar with ambient lighting
+  keyless_entry: yes  # Comfort Access standard
+  power_liftgate: yes  # Automatic tailgate standard
+  tow_hitch: yes  # Optional, 2,500kg capacity
+  
+  adas_level: 2  # Level 2+ with Driving Assistant Professional
+  autopilot_highway: yes  # Extended Traffic Jam Assistant
+  
+  climate_zones: 4  # 4-zone automatic climate control standard
+  wireless_charging: yes  # For 2 smartphones
+  
+  special:
+    - "M Sport Package Professional (standard)"
+    - "M Sport brakes with blue calipers"
+    - "M Sport differential (electronically controlled)"
+    - "Adaptive M suspension with electronically controlled dampers"
+    - "Individual contour seating for driver and front passenger"
+    - "BMW IconicSounds Electric (Hans Zimmer soundtrack)"
+    - "Sky Lounge panoramic glass roof with LED light carpet"
+    - "BMW Interaction Bar (curved ambient light strip)"
+    - "Crafted Clarity glass controls"
+    - "Electrochromic glass roof (tint control)"
+    - "Parking Assistant Professional"
+
+# Technology
+technology:
+  heat_pump: yes  # Standard
+  preconditioning: yes  # Battery and cabin
+  remote_climate: yes  # Via BMW Connected app
+  battery_preheating: yes  # For optimal DC fast charging
+  over_the_air_updates: yes  # BMW Remote Software Upgrade
+  digital_key: yes  # BMW Digital Key Plus (UWB)
+  voice_assistant: yes  # "Hey BMW" intelligent personal assistant
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  navigation_system: yes  # BMW Maps with augmented reality
+  telematics: yes  # BMW ConnectedDrive Services
+
+# Homologation
+homologation:
+  certification_standard: WLTP
+  energy_label_eu: B
+  co2_emissions_g_km: 0
+
+notes: |
+  The BMW iX M60 xDrive is the high-performance variant of BMW's electric flagship SUV.
+  It offers 455kW (619hp) from dual motors, enabling 3.8s 0-100 km/h acceleration - making it one of the fastest
+  luxury SUVs on the market. Despite the massive power, it still achieves 566km WLTP range (485km real-world).
+  
+  Key strengths:
+  - Extremely fast: 3.8s 0-100 km/h (vs Mercedes EQS SUV 580: 4.5s, Audi Q8 e-tron SQ8: 4.5s)
+  - 619 hp (455kW) - most powerful iX variant
+  - 1,100 Nm torque (massive pulling power)
+  - 566km WLTP range (485km real-world) - good for performance SUV
+  - 250 km/h top speed (vs xDrive50: 200 km/h)
+  - M Sport Package Professional standard (adaptive M suspension, M brakes)
+  - BMW IconicSounds Electric by Hans Zimmer (custom EV soundtrack)
+  - Sky Lounge panoramic glass roof with LED light carpet
+  - 2,500kg towing capacity (best in luxury EV SUV segment)
+  - Exceptional build quality and interior materials
+  - 195kW DC fast charging (35-min 10-80%)
+  
+  Key weaknesses:
+  - Very expensive: €120,000 (vs xDrive50: €105,000, EQS SUV 580: €141,000)
+  - 400V architecture limits DC charging vs 800V competitors
+  - No rear-wheel steering (unlike Mercedes EQS SUV)
+  - Higher consumption: 21.9 kWh/100km WLTP (vs xDrive50: 19.5)
+  - Shorter range than xDrive50: 566km vs 630km WLTP
+  - Heavier at 2,710kg (vs xDrive50: 2,585kg)
+  - No V2G/V2L bidirectional charging
+  - 22kW AC charging optional, not standard (unlike Mercedes)
+  
+  Competes with:
+  - Mercedes-Benz EQS SUV 580 4MATIC (€141,000): Less powerful (385kW), more luxurious, more expensive
+  - Audi Q8 e-tron SQ8 (not yet released): Direct competitor, similar performance expected
+  - Tesla Model X Plaid (€135,000): Faster (2.5s), more range (528km), less luxurious
+  - Porsche Cayenne Turbo S E-Hybrid (€181,000): PHEV not pure EV, sportier driving dynamics
+  
+  The iX M60 targets buyers who want BMW's ultimate electric SUV with maximum performance while maintaining
+  practicality and luxury. It's the fastest-accelerating BMW SUV ever made (3.8s 0-100, beating X5 M Competition).
+  
+  Most popular configuration: M60 with Executive Lounge Package (~€135,000) adds rear Executive seats with
+  massage, heating, ventilation, and extended leather trim.
+  
+  Real-world efficiency: 24.3 kWh/100km (vs WLTP 21.9) - high consumption due to performance.
+  Real-world range: 485km mixed driving (vs 566km WLTP).
+
+sources:
+  - url: https://www.bmw.de/de/neufahrzeuge/bmw-i/ix/2021/bmw-ix-highlights.html
+    title: BMW iX M60 Official Page (Germany)
+    accessed: "2026-02-08"
+  - url: https://ev-database.org/car/1588/BMW-iX-M60
+    title: EV Database BMW iX M60 Specifications
+    accessed: "2026-02-08"
+  - url: https://insideevs.com/reviews/598234/bmw-ix-m60-review/
+    title: InsideEVs BMW iX M60 Review
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0

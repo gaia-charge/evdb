@@ -1,0 +1,209 @@
+---
+id: audi-q8-e-tron-50-quattro-2024
+name: "50 quattro"
+model_id: audi-q8-e-tron
+model_year: 2024
+
+battery:
+  usable_kwh: 89.0
+  total_kwh: 95.0
+  chemistry: NCM
+  supplier: LG Energy Solution
+  cell_type: pouch
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  
+range:
+  wltp_km: 491
+  wltp_city_km: 615
+  wltp_highway_km: 410
+  epa_km: null
+  epa_miles: null
+  real_world_km: 430
+  real_world_highway_km: 360
+  notes: |
+    Sportback variant achieves 505km WLTP (better aerodynamics).
+    Entry-level Q8 e-tron with smaller 89kWh battery.
+
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    connector_type: Type2
+    charge_time_0_100_hours: 8.8
+    notes: "Optional 22kW AC charger available (+€590)"
+  dc:
+    max_power_kw: 150
+    connector_type: CCS2
+    charge_time_10_80_percent_minutes: 28
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 150
+      - soc_percent: 20
+        power_kw: 150
+      - soc_percent: 30
+        power_kw: 148
+      - soc_percent: 40
+        power_kw: 145
+      - soc_percent: 50
+        power_kw: 138
+      - soc_percent: 60
+        power_kw: 125
+      - soc_percent: 70
+        power_kw: 100
+      - soc_percent: 80
+        power_kw: 70
+    notes: |
+      400V architecture limits DC charging speed vs 800V competitors.
+      Battery preconditioning available via navigation system.
+      
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+motors:
+  configuration: dual_motor
+  drive_type: AWD
+  motor_type: permanent_magnet
+  front_motor:
+    power_kw: 100
+    torque_nm: 220
+    motor_type: asynchronous
+  rear_motor:
+    power_kw: 150
+    torque_nm: 314
+    motor_type: permanent_magnet
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 664
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.8
+  top_speed_kmh: 190
+  
+efficiency:
+  wltp_kwh_per_100km: 20.9
+  real_world_kwh_per_100km: 23.5
+  notes: |
+    Sportback variant: 20.3 kWh/100km WLTP (better aerodynamics).
+    Slightly better efficiency than 55 quattro due to lighter weight.
+
+weight:
+  curb_weight_kg: 2550
+  gross_vehicle_weight_kg: 3100
+  notes: "70kg lighter than 55 quattro due to smaller battery"
+
+features:
+  standard:
+    - "Quattro electric AWD"
+    - "Matrix LED headlights"
+    - "Progressive steering"
+    - "Virtual cockpit plus (12.3-inch)"
+    - "MMI touch response (10.1-inch + 8.6-inch dual screens)"
+    - "3-zone automatic climate control"
+    - "Leather seats"
+    - "Audi pre sense front and rear"
+    - "Lane departure warning"
+    - "Parking sensors front and rear"
+    - "Rear-view camera"
+    - "Acoustic vehicle alerting system (AVAS)"
+    - "Heat pump"
+  
+  optional:
+    - "22kW AC onboard charger (€590)"
+    - "Adaptive air suspension with damping control"
+    - "Bang & Olufsen 3D Premium Sound System (16 speakers, €850)"
+    - "360-degree cameras (€1,100)"
+    - "Park assist plus (€1,100)"
+    - "Head-up display (€1,200)"
+    - "Massage seats (€650)"
+    - "Panoramic sunroof (€1,350)"
+    - "Trailer hitch (€900)"
+
+adas:
+  adaptive_cruise_control: yes
+  lane_keeping_assist: yes
+  blind_spot_monitoring: yes
+  parking_assist: yes
+  traffic_sign_recognition: yes
+  automatic_emergency_braking: yes
+  notes: |
+    Advanced driver assistance features available as part of Audi pre sense packages.
+    Full suite of Level 2 ADAS features available with optional Tour Package (€2,850).
+
+dimensions:
+  turning_circle_meters: 12.4
+
+towing:
+  max_trailer_weight_kg: 1800
+  max_tongue_weight_kg: 80
+  notes: "Requires optional trailer hitch (€900)"
+
+warranty:
+  basic_years: 2
+  basic_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 2
+  anti_corrosion_years: 12
+
+pricing:
+  germany:
+    base_price_eur: 82000
+    company_car_tax_percent: 1.0  # Over €70k threshold
+    effective_monthly_eur: 683  # Company car tax (1% of gross list price)
+  notes: |
+    Entry-level Q8 e-tron variant, positioned below 55 quattro (€90,000).
+    Standard equipment level similar to 55 quattro.
+    Most customers opt for 55 quattro for better range and performance.
+
+market_positioning:
+  target_audience: "Luxury SUV buyers prioritizing Audi brand and quattro AWD over maximum range"
+  competitors:
+    - "BMW iX xDrive40 (€88,000): Similar price, more tech, 425km range"
+    - "Mercedes-Benz EQE SUV 350+ (€77,000): RWD only, 590km range"
+    - "Audi Q8 e-tron 55 quattro (€90,000): More range (582km), same power, €8k more"
+  
+notes: |
+  The Audi Q8 e-tron 50 quattro is the entry-level variant of Audi's flagship electric SUV.
+  It offers the same quattro AWD system and luxury features as the 55 quattro, but with a smaller 89kWh battery
+  resulting in 491km WLTP range (vs 582km for 55 quattro).
+  
+  Key strengths:
+  - Quattro electric AWD with dual motors (standard)
+  - High build quality and premium materials (typical Audi)
+  - Virtual exterior mirrors available (cameras instead of mirrors)
+  - 1,800kg towing capacity (good for luxury EV SUV)
+  - Comprehensive standard equipment
+  - €8,000 cheaper than 55 quattro
+  
+  Key weaknesses:
+  - 400V architecture limits DC charging to 150kW (vs 800V competitors: 235kW)
+  - 491km range modest for segment (vs Mercedes EQE SUV 350+: 590km)
+  - Heavy at 2,550kg due to adapted MLB evo platform
+  - No V2G/V2L bidirectional charging
+  - Expensive vs non-luxury competitors (Hyundai Ioniq 5 77kWh: €54,000, 507km range)
+  
+  Most buyers opt for the 55 quattro (€90,000) for the extra 91km range and improved performance.
+  The 50 quattro is best for buyers who prioritize lower entry price and don't need maximum range.
+  
+  Real-world efficiency: 23.5 kWh/100km (vs WLTP 20.9).
+  Real-world range: 430km mixed driving (vs 491km WLTP).
+
+sources:
+  - url: https://www.audi.de/de/brand/de/neuwagen/q8-e-tron/q8-e-tron-suv.html
+    title: Audi Q8 e-tron 50 quattro Official Page
+    accessed: "2026-02-08"
+  - url: https://ev-database.org/car/1863/Audi-Q8-e-tron-50-quattro
+    title: EV Database Audi Q8 e-tron 50 quattro Specifications
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
