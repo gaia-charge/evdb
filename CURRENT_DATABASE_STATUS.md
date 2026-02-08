@@ -1,7 +1,7 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 05:45 AM  
-**Total Vehicles:** 90 variants across 51 models from 19 manufacturers
+**Last Updated:** 2026-02-08 06:10 AM  
+**Total Vehicles:** 92 variants across 52 models from 19 manufacturers
 
 ---
 
@@ -26,7 +26,7 @@
 | MG (SAIC) | 1 | 1 | 🟢 Single |
 | Škoda | 1 | 2 | 🟡 Partial |
 | Smart | 1 | 1 | 🟢 Single |
-| Volvo | 1 | 1 | 🟢 Single |
+| Volvo | 2 | 3 | 🟡 Partial |
 
 **Total:** 19 manufacturers, 51 models, 90 variants
 
@@ -62,6 +62,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Volvo EX40**: 1 new model + 2 variants (Single Motor RWD 475km, Twin Motor AWD 452km) - *Added Feb 8, 2026 06:10*
 - ✅ **Porsche Taycan**: 2 new variants (Turbo 543km 500kW, RWD 678km 280kW) + Germany market data - *Added Feb 8, 2026 05:45*
 - ✅ **BMW iX M60**: 1 variant (M60 xDrive 566km, 619hp, 3.8s 0-100) - *Added Feb 8, 2026 05:30*
 - ✅ **Audi Q8 e-tron**: 1 new variant (50 quattro 491km) - *Added Feb 8, 2026 05:30*
@@ -102,7 +103,8 @@
 - **Feb 8, 2026 (05:15):** 85 variants (+2 Peugeot e-2008: Allure, GT)
 - **Feb 8, 2026 (05:30):** 88 variants (+3 Mercedes EQS SUV 450+, Audi Q8 50 quattro, BMW iX M60)
 - **Feb 8, 2026 (05:45):** 90 variants (+2 Porsche Taycan: Turbo, RWD + Germany market data)
-- **Growth:** +39 variants since Feb 7 (76.5% increase)
+- **Feb 8, 2026 (06:10):** 92 variants (+2 Volvo EX40: Single Motor RWD, Twin Motor AWD)
+- **Growth:** +41 variants since Feb 7 (80.4% increase)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
