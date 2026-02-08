@@ -1,0 +1,192 @@
+id: kia-ev3-long-range-2024-de
+variant_id: kia-ev3-long-range-2024
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2024-06"
+delivery_time_weeks: 12
+
+# Pricing (Germany, 2024)
+pricing:
+  base_price: 41990
+  price_including_vat: 41990
+  vat_rate_percent: 19
+  destination_charge: 990
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Clear White
+    code: CW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: metallic
+    price_add:
+      amount: 790
+      currency: EUR
+  
+  - name: Steel Gray Metallic
+    code: SGM
+    type: metallic
+    price_add:
+      amount: 790
+      currency: EUR
+  
+  - name: Twilight Blue
+    code: TB
+    type: metallic
+    price_add:
+      amount: 790
+      currency: EUR
+  
+  - name: Terra Brown
+    code: TBR
+    type: metallic
+    price_add:
+      amount: 790
+      currency: EUR
+  
+  - name: Moonscape Gray Matte
+    code: MGM
+    type: matte
+    price_add:
+      amount: 1290
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 19-inch alloy wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: 20-inch alloy wheels (GT-Line)
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Included in GT-Line package"
+
+# Interior Options
+available_interiors:
+  - name: Black eco-leather
+    code: BEL
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Gray eco-leather with blue accents (GT-Line)
+    code: GEL
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Included in GT-Line package"
+
+# Optional Equipment
+optional_equipment:
+  - name: GT-Line Package
+    price: 2000
+    includes:
+      - "20-inch alloy wheels"
+      - "Sportier exterior styling"
+      - "GT-Line sport seats"
+      - "Gray/blue interior"
+      - "GT-Line badging"
+      - "Sport pedals"
+  
+  - name: Advanced Driver Assistance Plus
+    price: 1200
+    includes:
+      - "Highway Driving Assist 2"
+      - "Surround View Monitor"
+      - "Remote Smart Parking Assist"
+      - "Blind Spot View Monitor"
+  
+  - name: Comfort Package
+    price: 1500
+    includes:
+      - "Panoramic sunroof"
+      - "Heated and ventilated front seats"
+      - "Heated rear seats"
+      - "Power tailgate"
+  
+  - name: Premium Sound Package
+    price: 790
+    includes:
+      - "Meridian Premium Sound (8 speakers)"
+  
+  - name: Winter Package
+    price: 490
+    includes:
+      - "Heated windshield"
+      - "Heated rear seats"
+      - "All-season tires"
+
+# Dealer Network & Service
+market_info:
+  dealers_count: 450
+  service_centers_count: 450
+  warranty_years: 7
+  warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  free_charging_network: false
+  home_charger_included: false
+  roadside_assistance_years: 7
+
+# Specific to German Market
+market_notes: >
+  - Kia EV3 positions between Niro Electric and EV6 in lineup
+  - Excellent value proposition at €41,990 for 600km WLTP range
+  - Targeting young families and urban professionals
+  - Competitive with VW ID.3 (€39,995), Hyundai Kona Electric (€42,990)
+  - Standard heat pump is crucial for German winters
+  - Strong dealer network inherited from established Kia presence
+  - 7-year warranty remains best-in-class competitive advantage
+  - V2L capability appeals to outdoor enthusiasts (camping, etc.)
+  - OTA software updates supported via Kia Connect
+  - Company car tax benefit makes it attractive for fleet buyers
+  - Delivery times shorter than EV6 (12 weeks vs 16 weeks)
+
+# Company Car Calculation (Germany)
+company_car_tax:
+  gross_list_price: 41990
+  monthly_tax_base: 104.98  # 0.25% of 41990
+  annual_tax_base: 1259.76
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    For company car drivers in Germany, the EV3 offers significant tax savings.
+    The 0.25% rule (vs. 1.0% for combustion engines) results in ~75% lower
+    monthly taxation. For a driver in 30% tax bracket, this saves approximately
+    €315/month compared to equivalent ICE vehicle. Below €60,000 threshold
+    ensures 0.25% rate (not 0.5%).
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-08"
+  confidence_level: high
+  sources:
+    - https://www.kia.com/de/modelle/ev3/entdecken/
+    - https://www.kia.com/de/konfigurator/
+    - https://ev-database.org/car/1851/Kia-EV3-Long-Range
+    - https://www.adac.de/
+  created_at: "2026-02-08T14:38:00Z"
+  created_by: Patricio
