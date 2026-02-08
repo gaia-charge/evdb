@@ -1,7 +1,7 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 06:45 AM  
-**Total Vehicles:** 96 variants across 54 models from 20 manufacturers
+**Last Updated:** 2026-02-08 07:00 AM  
+**Total Vehicles:** 98 variants across 54 models from 20 manufacturers
 
 ---
 
@@ -63,6 +63,8 @@
 
 ## ✅ Recently Completed
 
+- ✅ **BMW i5 M60 xDrive**: 1 new variant (442kW 601hp AWD, 3.8s 0-100, 516km WLTP) + Germany market data - *Added Feb 8, 2026 07:00*
+- ✅ **BMW i4 eDrive35**: 1 new variant (210kW 286hp RWD, 6.0s 0-100, 483km WLTP) + Germany market data - *Added Feb 8, 2026 07:00*
 - ✅ **Honda e:Ny1**: 1 NEW MANUFACTURER + 1 model + 1 variant (68.8kWh 204hp, 412km WLTP) + Germany market data - *Added Feb 8, 2026 06:45*
 - ✅ **Audi SQ6 e-tron**: 1 new variant (380kW 517hp, 4.3s 0-100, 598km WLTP) + Germany market data - *Added Feb 8, 2026 06:30*
 - ✅ **Dacia Spring**: 1 new model + 2 variants (Essential 45hp 220km, Extreme 65hp 220km) + Germany market data - *Added Feb 8, 2026 06:25*
@@ -111,7 +113,8 @@
 - **Feb 8, 2026 (06:25):** 94 variants (+2 Dacia Spring: Essential, Extreme + Germany market)
 - **Feb 8, 2026 (06:30):** 95 variants (+1 Audi SQ6 e-tron: Performance flagship + Germany market)
 - **Feb 8, 2026 (06:45):** 96 variants (+1 Honda e:Ny1: NEW MANUFACTURER - First Honda EV in database + Germany market)
-- **Growth:** +45 variants since Feb 7 (88.2% increase) | +1 manufacturer (Honda)
+- **Feb 8, 2026 (07:00):** 98 variants (+2 BMW: i4 eDrive35, i5 M60 xDrive + Germany market data)
+- **Growth:** +47 variants since Feb 7 (92.2% increase) | +1 manufacturer (Honda)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
