@@ -1,0 +1,157 @@
+$schema: "../../schemas/vehicle-variant.schema.json"
+id: hyundai-kona-electric-standard-range-2024
+variant_id: hyundai-kona-electric-standard-range-2024
+model_id: hyundai-kona-electric
+name: Kona Electric Standard Range
+model_year: 2024
+trim_level: Standard Range
+availability_status: available
+
+battery:
+  total_kwh: 48.6
+  usable_kwh: 48.6
+  chemistry: NMC
+  voltage: 400
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: Active liquid cooling with heat pump
+
+motors:
+  combined:
+    configuration: front-wheel drive
+    total_power_kw: 115
+    total_power_hp: 156
+    total_torque_nm: 255
+    motor_type: Permanent magnet synchronous motor (PMSM)
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed automatic
+
+performance:
+  acceleration_0_100_kmh_s: 8.6
+  top_speed_kmh: 155
+  total_power_kw: 115
+  drive_type: FWD
+
+range:
+  wltp_km: 377
+  wltp_source: manufacturer
+  real_world_km: 310
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 10-20°C, comfort mode"
+
+consumption:
+  wltp_kwh_100km: 14.9
+  real_world_kwh_100km: 16.8
+
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 4.5
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 102
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31
+      "0_100": 60
+  
+  bidirectional:
+    v2l: true
+
+dimensions:
+  length_mm: 4355
+  width_mm: 1825
+  width_with_mirrors_mm: 2105
+  height_mm: 1575
+  wheelbase_mm: 2660
+  ground_clearance_mm: 160
+  drag_coefficient: 0.30
+  frontal_area_m2: 2.62
+
+weight:
+  curb_weight_kg: 1715
+  gross_vehicle_weight_kg: 2135
+  payload_capacity_kg: 420
+  towing_capacity_braked_kg: 750
+  towing_capacity_unbraked_kg: 300
+
+cargo:
+  trunk_capacity_liters: 466
+  trunk_capacity_seats_down_liters: 1300
+  frunk_capacity_liters: 27
+
+seating:
+  seating_capacity: 5
+  seating_configuration: 2+3
+
+features:
+  infotainment:
+    - Dual 12.3-inch panoramic curved displays
+    - Hyundai Connected Services
+    - Wireless Apple CarPlay and Android Auto
+    - Digital key (smartphone)
+    - OTA software updates
+    - Bluelink connected services
+  driver_assistance:
+    - Highway Driving Assist 2 (HDA2)
+    - Forward Collision-Avoidance Assist (FCA)
+    - Lane Keeping Assist (LKA)
+    - Lane Following Assist (LFA)
+    - Blind-Spot Collision-Avoidance Assist (BCA)
+    - Rear Cross-Traffic Collision-Avoidance Assist (RCCA)
+    - Smart Cruise Control (SCC)
+    - Driver Attention Warning (DAW)
+  comfort_and_convenience:
+    - Dual-zone automatic climate control
+    - Heat pump (standard)
+    - Heated front seats
+    - Heated steering wheel
+    - Power tailgate
+    - Parametric Pixel LED headlights
+    - Ambient interior lighting
+
+safety:
+  euro_ncap_rating:
+    overall: 5
+    adult_occupant: 88
+    child_occupant: 86
+    vulnerable_road_users: 69
+    safety_assist: 87
+    year_tested: 2023
+  airbags: 6
+  autonomous_emergency_braking: true
+  lane_departure_warning: true
+  blind_spot_monitoring: true
+
+data_sources:
+  - name: Hyundai Germany
+    url: https://www.hyundai.de/modelle/kona-elektro
+    date_accessed: "2024-02-08"
+  - name: Hyundai Official Specifications
+    url: https://www.hyundai.com/worldwide/en/eco/kona-electric
+    date_accessed: "2024-02-08"
+  - name: ADAC Test
+    url: https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/hyundai/kona-electric/
+    date_accessed: "2024-02-08"
+
+confidence_level: verified
+notes: |
+  Entry-level Kona Electric variant with 48.6 kWh battery delivering 377km WLTP range.
+  Same powertrain as Long Range (115kW/156hp FWD) but smaller battery makes it €4,000 cheaper.
+  Built on E-GMP platform (400V architecture, not 800V).
+  Standard heat pump improves winter efficiency.
+  102kW DC fast charging (10-80% in 31 minutes) adequate for daily use.
+  Dual 12.3" curved displays and Highway Driving Assist 2 standard.
+  V2L capability (3.6kW) allows powering external devices.
+  Real-world range 310km mixed driving, 260km highway, 245km winter conditions.
+  Competes with VW ID.3 Pure (€39,995), MG4 Standard Range (€29,990), Nissan Leaf 40kWh (€34,990).
+  Popular with urban families and first-time EV buyers seeking practical electric SUV under €40,000.
+  8-year/160,000km battery warranty standard across all Hyundai electric vehicles.
