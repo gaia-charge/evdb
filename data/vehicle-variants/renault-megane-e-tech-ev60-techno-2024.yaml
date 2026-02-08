@@ -1,193 +1,199 @@
-# Renault Megane E-Tech EV60 Techno (2024) - Mid-Range Variant
 id: renault-megane-e-tech-ev60-techno-2024
 name: EV60 Techno
 model_id: renault-megane-e-tech
 model_year: 2024
-variant_code: MEGANE-EV60-TECHNO
+production_years:
+  start: 2022
+  end: null
 
+trim_level: ev60-techno
+market_position: mid
+
+# Battery Specifications
 battery:
   usable_kwh: 60.0
   total_kwh: 62.0
-  chemistry: NCM
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
   cell_type: pouch
-  manufacturer: LG Energy Solution
+  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    60 kWh usable battery (62 kWh gross). Mid-range battery option.
-    400V architecture with NCM chemistry. 96.8% usable capacity ratio.
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "400V architecture, 12 modules"
+    weight_kg: 457
+    cells: 288
+  
+  notes: >
+    60 kWh battery provides excellent range for daily use and longer trips.
+    NMC chemistry balances energy density and performance. Advanced thermal
+    management optimizes charging speed and battery longevity. 8-year/160,000 km
+    warranty with 70% capacity retention guarantee.
 
+# Range
 range:
   wltp_km: 450
-  wltp_city_km: 575
-  wltp_highway_km: 360
-  epa_km: null
+  wltp_source: manufacturer
+  
   real_world_km: 380
-  real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 450 km. Real-world range around 380 km in mixed conditions.
-    Excellent city efficiency with 575 km city range.
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 15-25°C, Comfort mode"
 
+# Charging
 charging:
-  ac_max_kw: 22
-  ac_phases: 3
-  ac_connector: Type2
-  dc_max_kw: 130
-  dc_connector: CCS2
-  dc_curve:
-    - soc_percent: 5
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 128
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 118
-    - soc_percent: 50
-      power_kw: 108
-    - soc_percent: 60
-      power_kw: 92
-    - soc_percent: 70
-      power_kw: 72
-    - soc_percent: 80
-      power_kw: 48
-  time_0_to_100_min: 2.7
-  time_5_to_80_min: 32
-  time_10_to_80_min: 30
-  time_20_to_80_min: 27
-  charging_speed_kmh: 780
-  plug_and_charge: true
-  preconditioning: true
-  notes: |
-    DC fast charging up to 130 kW peak. 20-80% in 27 minutes.
-    22 kW AC charging standard (three-phase). Battery preconditioning available.
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.5  # 22kW three-phase
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+      "0_100": 60
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 80
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 30
+        power_kw: 130
+      - soc_percent: 50
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 85
+      - soc_percent: 80
+        power_kw: 55
+      - soc_percent: 90
+        power_kw: 30
+      - soc_percent: 100
+        power_kw: 15
+    
+    notes: "Excellent 130kW peak charging enables road trip capability"
 
-bidirectional:
-  v2l: true
-  v2l_max_kw: 3.7
-  v2h: false
-  v2g: false
-  notes: "Vehicle-to-Load (V2L) capability up to 3.7 kW for powering devices"
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 160
+    max_torque_nm: 300
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
 
 performance:
-  drive_type: FWD
-  motors:
-    - position: front
-      type: wound rotor
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 300
-      manufacturer: Renault
-  max_power_kw: 160
-  max_power_hp: 218
-  max_torque_nm: 300
-  acceleration_0_100_kmh_s: 7.5
-  acceleration_0_60_mph_s: 7.1
-  acceleration_80_120_kmh_s: 5.5
+  acceleration_0_100_kmh_s: 7.4
   top_speed_kmh: 160
-  top_speed_mph: 99
-  notes: |
-    Performance-oriented motor with 160 kW (218 hp).
-    Front-wheel drive with wound rotor synchronous motor.
+  top_speed_limited: true
 
+# Weight & Efficiency
 weight:
-  curb_weight_kg: 1636
-  gross_vehicle_weight_kg: 2130
-  payload_kg: 494
-  towing_capacity_braked_kg: 900
-  towing_capacity_unbraked_kg: 750
-  notes: |
-    Heavier than EV40 (1636 kg vs 1548 kg) due to larger battery.
-    Optional towing capacity 900 kg with tow hitch.
-
-dimensions:
-  length_mm: 4210
-  width_mm: 1780
-  width_with_mirrors_mm: 2032
-  height_mm: 1520
-  wheelbase_mm: 2700
-  ground_clearance_mm: 180
-  drag_coefficient: 0.30
-  frontal_area_m2: 2.58
-  turning_radius_m: 10.4
-  notes: "Compact crossover dimensions with excellent space efficiency"
-
-cargo:
-  trunk_volume_l: 440
-  trunk_max_volume_l: 1332
-  frunk_volume_l: 0
-  notes: "440L trunk, expandable to 1332L with rear seats folded"
-
-consumption:
-  wltp_kwh_per_100km: 13.3
-  wltp_city_kwh_per_100km: 10.4
-  wltp_highway_kwh_per_100km: 16.7
+  curb_weight_kg: 1702
+  gross_weight_kg: 2202
+  payload_kg: 500
+  towing_capacity_kg: 0  # Not rated for towing
+  
+efficiency:
+  wltp_kwh_per_100km: 15.5
   real_world_kwh_per_100km: 15.8
-  real_world_city_kwh_per_100km: 13.9
-  real_world_highway_kwh_per_100km: 18.2
-  efficiency_rating: A+
-  notes: |
-    Excellent WLTP efficiency at 13.3 kWh/100km despite more power.
-    Real-world consumption around 15.8 kWh/100km.
-    Heat pump standard helps winter efficiency.
+  
+  at_speed:
+    - speed_kmh: 100
+      consumption_kwh_per_100km: 14.5
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 18.2
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 21.0
 
-features:
-  infotainment_screen_inches: 12.3
-  digital_cockpit_inches: 12.3
-  head_up_display: true
-  wireless_charging: true
-  wireless_connectivity: true
-  ota_updates: true
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_assist: true
-  heat_pump: true
-  notes: |
-    12.3-inch portrait OpenR Link touchscreen with Google built-in
-    12.3-inch digital instrument cluster
-    Head-up display included
-    360-degree camera
-    Heat pump climate control standard
-    OTA software updates via My Renault app
+# Features & Options
+standard_features:
+  - "12.3-inch digital instrument cluster"
+  - "12-inch OpenR vertical touchscreen"
+  - "Google built-in (Maps, Assistant, Play Store)"
+  - "Heat pump climate control"
+  - "Automatic dual-zone climate control"
+  - "LED Pure Vision headlights"
+  - "19-inch alloy wheels"
+  - "Synthetic leather seats"
+  - "Heated front seats"
+  - "Rear parking camera"
+  - "Front and rear parking sensors"
+  - "Adaptive cruise control"
+  - "Lane keeping assist"
+  - "Automatic emergency braking"
+  - "Blind spot warning"
+  - "Traffic sign recognition"
+  - "Driver attention alert"
+  - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
+  - "Hands-free tailgate"
+  - "Wireless phone charging"
+  - "9-speaker Arkamys sound system"
 
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2022
-  euro_ncap_adult: 91
-  euro_ncap_child: 86
-  euro_ncap_vulnerable: 64
-  euro_ncap_safety_assist: 79
-  airbags: 6
-  adas_level: 2
-  notes: |
-    5-star Euro NCAP rating (tested 2022)
-    6 airbags (front, side, curtain)
-    SAE Level 2 autonomous driving capability
+optional_packages:
+  - name: "Tech Package"
+    features:
+      - "360-degree camera"
+      - "Active emergency braking"
+      - "Highway & Traffic Jam Assist"
 
-production:
-  plant: Douai, France
-  platform: CMF-EV
-  platform_generation: 1
-  status: active
-  notes: |
-    Built at Renault ElectriCity production hub in Douai, France.
-    CMF-EV platform shared with Nissan Ariya.
+colors:
+  standard:
+    - "Glacier White"
+    - "Diamond Black"
+  premium:
+    - "Flame Red"
+    - "Iron Blue"
+    - "Titanium Grey"
+    - "Schist Grey"
+    - "Alpine White"
+
+interior_colors:
+  - "Black synthetic leather"
+  - "Grey/Black synthetic leather"
+
+# Version Information
+version:
+  facelift: false
+  major_changes: []
+
+# Market & Pricing Notes
+notes: >
+  The Megane E-Tech EV60 Techno is the mid-range variant balancing performance,
+  range, and features. With 450 km WLTP (380 km real-world), it handles daily
+  commutes and weekend trips confidently. The 218 hp motor delivers sporty
+  performance (7.4s 0-100 km/h) while maintaining efficiency. 22kW AC charging
+  enables fast home/workplace charging, while 130kW DC charging makes road trips
+  practical (10-80% in 30 minutes). Premium features include synthetic leather
+  heated seats, dual-zone climate, and Arkamys premium audio. Adaptive cruise
+  and blind spot monitoring enhance safety. Techno trim offers excellent value
+  with comprehensive standard equipment. Ideal for buyers seeking the best
+  balance of range, performance, and features.
 
 metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
   data_quality: verified
-  last_updated: '2026-02-08'
-  created_at: '2026-02-08'
-  source: "Renault official specifications"
-  source_urls:
-    - "https://www.renault.com/en/electric-vehicles/megane-e-tech-electric.html"
-    - "https://www.euroncap.com/en/results/renault/megane-e-tech/45657"
-  verification_date: '2026-02-08'
-  notes: |
-    Mid-range Megane E-Tech with 60 kWh battery and 218 hp motor.
-    Best all-rounder with good range (450 km) and performance.
-    Includes more standard features than EV40.
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.renault.com/megane-e-tech-electric/specifications
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
+    - https://ev-database.org/car/1749/Renault-Megane-E-Tech-EV60

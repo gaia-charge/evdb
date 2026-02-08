@@ -7,28 +7,28 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 8  # Shorter in home market
+available_from: "2022-02-01"
+delivery_time_weeks: 8
 
 # Pricing
 pricing:
-  base_price: 35500
-  price_including_vat: 35500
+  base_price: 36400
+  price_including_vat: 36400
   vat_rate_percent: 20
 
 # Available Colors
 available_colors:
-  - name: Noir Étoilé
-    code: NB
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Blanc Glacier
-    code: OV369
+    code: QNC
     type: solid
     price_add:
       amount: 0
+      currency: EUR
+  - name: Noir Étoilé
+    code: GNE
+    type: metallic
+    price_add:
+      amount: 600
       currency: EUR
   - name: Rouge Flamme
     code: NNP
@@ -36,22 +36,22 @@ available_colors:
     price_add:
       amount: 600
       currency: EUR
-  - name: Gris Highland
-    code: KNM
+  - name: Bleu Iron
+    code: RPB
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Noir Diamant
-    code: GNE
+  - name: Gris Titanium
+    code: KQM
     type: metallic
     price_add:
-      amount: 750
+      amount: 600
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" Alloy Wheels
+  - name: Jantes Alliage 18"
     size_inches: 18
     type: alloy
     price_add:
@@ -60,13 +60,7 @@ available_wheels:
 
 # Interior Options
 available_interiors:
-  - name: Black Fabric
-    material: fabric
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Grey Fabric
+  - name: Tissu Gris
     material: fabric
     color: grey
     price_add:
@@ -76,57 +70,50 @@ available_interiors:
 # Incentives
 available_incentives:
   - type: federal
-    name: "Bonus Écologique"
+    name: "Bonus écologique"
     amount:
       amount: 5000
       currency: EUR
-    conditions: ["Price under €47,000", "BEV", "Minimum 2-year ownership"]
+    conditions: ["Price under €47,000", "BEV", "Fabrication en France", "First registration"]
     expires_at: "2024-12-31"
   - type: regional
-    name: "Prime à la Conversion"
+    name: "Prime à la conversion"
     amount:
       amount: 2500
       currency: EUR
-    conditions: ["Scrapping old vehicle", "Income limits apply"]
+    conditions: ["Trade-in of old vehicle", "Household income conditions"]
+    expires_at: "2024-12-31"
 
 # Options
 popular_packages:
-  - name: Pompe à Chaleur
-    price:
-      amount: 900
-      currency: EUR
-    features:
-      - Amélioration de l'autonomie en hiver jusqu'à 20%
   - name: Pack Confort
     price:
-      amount: 1200
+      amount: 1300
       currency: EUR
     features:
+      - Climatisation automatique
       - Sièges avant chauffants
-      - Volant chauffant
       - Caméra de recul
-  - name: Pack Tech
-    price:
-      amount: 1800
-      currency: EUR
-    features:
-      - Caméra 360°
-      - Régulateur de vitesse adaptatif
-      - Surveillance des angles morts
+      - Essuie-glaces automatiques
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV40 en France, le marché domestique de Renault.
-  Prix attractif avec bonus écologique (€5,000) et prime à la conversion (€2,500).
-  Livraison plus rapide qu'en Allemagne (8 semaines vs 12 semaines).
-  Excellent rapport qualité-prix pour la mobilité urbaine et périurbaine.
-  La pompe à chaleur est en option mais recommandée pour l'hiver.
+  Renault Megane E-Tech EV40 - version d'entrée de gamme, idéale pour
+  la conduite urbaine et périurbaine. Avec 300 km d'autonomie WLTP et
+  un moteur efficient de 130 ch, elle offre un excellent rapport
+  qualité-prix dans le segment des compactes électriques. Élue
+  Voiture de l'Année 2023 en Europe. Équipement de série comprenant
+  l'habitacle innovant OpenR avec Google intégré, pompe à chaleur
+  pour l'efficacité toutes saisons, et fonctionnalités de sécurité
+  complètes. Délai de livraison actuellement 8 semaines. Éligible au
+  bonus écologique français et à la prime à la conversion. Fabriquée
+  en France à l'usine ElectriCity de Douai.
 
 # Metadata
 metadata:
   data_quality: verified
   data_source: manufacturer
   source_url: https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-  created_at: "2024-02-07"
-  last_verified_at: "2024-02-07"
-  notes: Prix février 2024 avec bonus écologique inclus
+  created_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  notes: Prix au février 2026. Megane E-Tech élue Voiture de l'Année 2023 en Europe. Production française.

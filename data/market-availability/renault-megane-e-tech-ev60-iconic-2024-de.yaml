@@ -7,289 +7,135 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 10
-notes: |
-  Top-spec Megane E-Tech with 60 kWh battery, 218 hp, and premium features.
-  2023 European Car of the Year. Best range (470 km) and efficiency in lineup.
-  Includes Solarbay roof, Harman Kardon audio, and full LED adaptive headlights.
+available_from: "2022-03-01"
+delivery_time_weeks: 14
 
 # Pricing
 pricing:
-  base_price: 46000
-  price_including_vat: 46000
+  base_price: 49900
+  price_including_vat: 49900
   vat_rate_percent: 19
-  notes: |
-    Base price for Megane E-Tech EV60 Iconic with all premium features included.
-    €3,000 more than EV60 Techno but includes Solarbay roof, Harman Kardon, and more.
-    Best value for buyers wanting the complete package.
 
 # Available Colors
 available_colors:
   - name: Glacier White
-    code: 369
+    code: QNC
     type: solid
     price_add:
       amount: 0
       currency: EUR
   - name: Diamond Black
-    code: 676
+    code: GNE
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
   - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
-  - name: Rafale Grey
-    code: KPU
+  - name: Iron Blue
+    code: RPB
     type: metallic
     price_add:
-      amount: 700
-      currency: EUR
-  - name: Midnight Blue
-    code: RPF
-    type: metallic
-    price_add:
-      amount: 700
+      amount: 650
       currency: EUR
   - name: Titanium Grey
+    code: KQM
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Schist Grey
     code: KNA
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
-  - name: Aurora Blue
-    code: RPA
-    type: premium
+  - name: Alpine White
+    code: QMA
+    type: pearlescent
     price_add:
-      amount: 1200
+      amount: 900
       currency: EUR
-    notes: "Exclusive Iconic color"
+  - name: Rafale Blue
+    code: RPA
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Iconic Alloy Wheels
+  - name: 20" Alloy Wheels
     size_inches: 20
     type: alloy
     price_add:
       amount: 0
       currency: EUR
-    notes: "Standard wheels, optimized for efficiency and style"
 
 # Interior Options
 available_interiors:
-  - name: Black Premium TEP Leather
-    material: synthetic_leather
+  - name: Black Alcantara/Synthetic Leather
+    material: alcantara_synthetic_leather
+    color: black
     price_add:
       amount: 0
       currency: EUR
-    notes: "Premium vegan leather with Alcantara inserts"
-  - name: Grey Premium TEP Leather
-    material: synthetic_leather
+  - name: Grey Alcantara/Synthetic Leather
+    material: alcantara_synthetic_leather
+    color: grey
     price_add:
       amount: 0
       currency: EUR
-    notes: "Light grey premium vegan leather"
 
-# Equipment Packages
-available_packages:
-  - name: Winter Package Plus
-    price:
-      amount: 990
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (Environmental Bonus)"
+    amount:
+      amount: 4500
       currency: EUR
-    contents:
-      - "Heated front and rear seats"
-      - "Heated steering wheel"
-      - "Heated windshield"
-      - "Heated mirrors"
-    notes: "Comprehensive winter comfort"
+    conditions: ["Price under €65,000", "BEV", "First registration"]
+    expires_at: "2024-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €60,000"
+    conditions: ["Gross list price under €60,000"]
 
-  - name: Advanced Driver Assistance Package Pro
+# Options
+popular_packages:
+  - name: Safety Pack Plus
     price:
-      amount: 2290
+      amount: 1200
       currency: EUR
-    contents:
-      - "Adaptive cruise control with stop & go"
-      - "Lane centering assist"
-      - "Highway & Traffic Jam Pilot"
-      - "Automatic emergency braking (enhanced)"
-      - "Blind spot monitoring"
-      - "Rear cross-traffic alert"
-      - "360-degree camera with 3D view"
-      - "Automatic parking assist"
-    notes: "Level 2+ autonomous driving with enhanced safety features"
+    features:
+      - Automatic parking assist
+      - Rear cross-traffic alert
+      - Emergency lane keeping
 
-# Individual Options
-individual_options:
-  - name: Tow Hitch
-    price:
-      amount: 850
-      currency: EUR
-    notes: "900kg braked towing capacity"
+# Notes
+notes: |
+  Renault Megane E-Tech EV60 Iconic is the flagship variant with premium
+  equipment and advanced technology. With 470 km WLTP (390 km real-world),
+  it offers excellent range for all scenarios. Premium features include
+  Alcantara/leather seats with heating, ventilation, and massage; head-up
+  display; LED Matrix headlights; 20-inch wheels; Harman Kardon premium
+  audio; and Solarbay electrochromic panoramic roof. Highway & Traffic
+  Jam Assist (ProPilot) provides semi-autonomous driving. Comprehensive
+  safety suite with 360-degree camera. Winner of 2023 European Car of
+  the Year. Qualifies for German environmental bonus and 0.25% company
+  car taxation (under €60,000 threshold - excellent value for premium
+  features). Delivery times currently 14 weeks. Manufactured in France
+  at ElectriCity Douai plant.
 
-  - name: Extended Warranty (5 years/150,000 km)
-    price:
-      amount: 1450
-      currency: EUR
-    notes: "Extends vehicle warranty to 5 years"
-
-# Incentives & Subsidies
-incentives:
-  - type: grant
-    name: BAFA Umweltbonus
-    amount: 0
-    currency: EUR
-    status: expired
-    valid_until: "2023-12-31"
-    notes: "Federal EV subsidy ended December 31, 2023"
-
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      Company car drivers pay only 0.25% of list price per month (€115/month)
-      vs 1% for ICE cars (€460/month), saving €4,140/year in taxes.
-      Under €70,000 threshold for 0.25% rate.
-
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer Befreiung)
-    amount: 0
-    currency: EUR
-    status: active
-    valid_until: "2030-12-31"
-    notes: |
-      Full exemption from road tax until December 31, 2030.
-      Comparable ICE car would cost ~€280/year.
-
-  - type: grant
-    name: THG-Quote
-    amount: 360
-    currency: EUR
-    status: active
-    notes: |
-      CO2 certificate trading for EV owners.
-      EV owners can sell CO2 certificates, earning €320-400/year.
-
-# Standard Features (Included in Iconic)
-standard_features:
-  - "Solarbay panoramic electrochromic glass roof"
-  - "Harman Kardon premium sound system (9 speakers)"
-  - "Full LED adaptive headlights with matrix function"
-  - "360-degree camera"
-  - "Head-up display"
-  - "Wireless phone charging"
-  - "Premium Alcantara/TEP leather interior"
-  - "Ambient lighting (8 colors)"
-  - "Multi-Sense drive modes"
-  - "Heat pump climate control"
-  - "Keyless entry and start"
-
-# Typical Configuration
-typical_configuration:
-  name: "EV60 Iconic Complete"
-  description: "Fully-loaded top-spec configuration"
-  total_price: 51030
-  includes:
-    - Base EV60 Iconic trim (all premium features included)
-    - Aurora Blue premium paint
-    - Winter Package Plus
-    - Advanced Driver Assistance Package Pro
-    - Tow hitch
-  notes: "Ultimate Megane E-Tech experience with all available features"
-
-# Charging Infrastructure
-charging_infrastructure:
-  home_charging:
-    - provider: Renault Mobilize Power Solutions
-      rate_per_kwh: 0.28
-      notes: "Green electricity tariff for home charging"
-    - provider: Renault wallbox (22 kW Premium)
-      installation_cost: 1400
-      power_kw: 22
-      notes: "Three-phase wallbox with app control and solar integration"
-
-  public_charging:
-    - provider: Mobilize Charge Pass Premium
-      network_size: "600,000+ charging points in Europe"
-      app: My Renault app
-      monthly_fee: 9.99
-      dc_discount_per_kwh: 0.10
-      notes: "Premium plan with discounted fast charging rates"
-
-    - provider: IONITY Premium
-      network_type: High-power DC (350kW)
-      subscription_rate_per_kwh: 0.35
-      subscription_cost_monthly: 17.49
-      notes: "Best rates for frequent fast charging - 130 kW charging"
-
-    - provider: EnBW mobility+
-      network_size: "500,000+ points"
-      ac_rate_per_kwh: 0.49
-      dc_rate_per_kwh: 0.55
-      notes: "Popular third-party charging provider"
-
-# Warranty
-warranty:
-  vehicle_years: 3
-  vehicle_km: 100000
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  paint_years: 3
-  perforation_years: 12
-  roadside_assistance_years: 3
-  notes: |
-    Standard Renault warranty plus 8-year/160,000km battery warranty
-    with 70% capacity guarantee. Pan-European roadside assistance included.
-    Extended warranty available up to 5 years.
-
-# Service & Maintenance
-service:
-  interval_years: 1
-  interval_km: 30000
-  cost_per_service: 290
-  fixed_price_3_year: 780
-  fixed_price_5_year: 1350
-  notes: |
-    Service every 1 year or 30,000km. No oil changes.
-    Lower maintenance costs than ICE vehicles. Regenerative braking extends brake life.
-    Premium service packages include pickup/delivery.
-
-# Environmental
-environmental:
-  energy_efficiency_class: A+
-  co2_emissions_gpkm: 0
-  electricity_consumption_kwh_100km: 12.8
-  notes: "German energy label A+ rating - best efficiency in Megane lineup"
-
-# Market Position
-market_position:
-  segment_rank: 1
-  monthly_sales_avg: 320
-  key_competitors:
-    - Volkswagen ID.3 Pro S
-    - Tesla Model 3 Long Range
-    - BMW i4 eDrive35
-    - Polestar 2 Long Range
-    - Cupra Born VZ
-  notes: |
-    European Car of the Year 2023 winner.
-    Premium Megane E-Tech variant (~30% of sales).
-    Best-in-segment infotainment and design.
-    Solarbay roof is unique feature in segment.
-    Strong residual values and low total cost of ownership.
-
+# Metadata
 metadata:
   data_quality: verified
-  last_updated: '2026-02-08'
-  created_at: '2026-02-08'
-  source: "Renault Germany official configurator"
-  source_urls:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-  verification_date: '2026-02-08'
+  data_source: manufacturer
+  source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  created_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  notes: Prices as of February 2026. Premium features at competitive price point. Popular with German company car buyers.
