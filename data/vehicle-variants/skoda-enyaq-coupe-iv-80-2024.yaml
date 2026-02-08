@@ -1,0 +1,186 @@
+# Škoda Enyaq Coupé iV 80 2024 - Most Popular Coupé Variant
+id: skoda-enyaq-coupe-iv-80-2024
+model_id: skoda-enyaq-coupe-iv
+name: Enyaq Coupé iV 80
+model_year: 2024
+trim_level: "80"
+version_name: "2024 Facelift"
+
+description: |
+  The Škoda Enyaq Coupé iV 80 combines the practicality of the popular Enyaq with sportier styling and 
+  improved aerodynamics. The coupé's sloping roofline and streamlined design deliver a Cd of 0.26 
+  (vs 0.27 for standard SUV), resulting in 15km additional WLTP range (585km vs 570km).
+  
+  Despite the sportier profile, the Coupé maintains impressive practicality with 570L boot capacity 
+  (only 15L less than SUV) and identical interior space. The 2024 facelift brought updated styling, 
+  improved Infotainment ME3 software with ChatGPT-powered Laura assistant, and enhanced efficiency.
+  
+  This RWD variant offers excellent range and efficiency, making it ideal for families who want 
+  sporty styling without compromising practicality. Typically priced €2,000-3,000 above the 
+  standard Enyaq iV 80 but €5,000-7,000 below equivalent Audi Q4 Sportback e-tron 50.
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM  # Nickel-Cobalt-Manganese
+  cells_configuration: "288 cells (96s3p pouch cells)"
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump integration"
+  preconditioning: true
+
+range:
+  wltp_km: 585  # 15km more than SUV due to better aerodynamics
+  wltp_city_km: 770
+  wltp_highway_km: 475
+  real_world_km: 500  # Realistic combined cycle
+  epa_km: null  # Not sold in US
+  epa_miles: null
+
+charging:
+  ac_max_power_kw: 11  # Standard 3-phase Type2 (optional 22kW upgrade available)
+  ac_charge_time_hours: 7.5  # 0-100% at 11kW
+  ac_ports:
+    - type: Type2
+      max_power_kw: 11
+      phases: 3
+  
+  dc_max_power_kw: 135  # 2024 facelift (2023: 125kW)
+  dc_charge_time_minutes: 29  # 10-80% at 135kW
+  dc_ports:
+    - type: CCS2
+      max_power_kw: 135
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 10
+    - percent: 10
+      power_kw: 135
+    - percent: 30
+      power_kw: 132
+    - percent: 50
+      power_kw: 125
+    - percent: 70
+      power_kw: 85
+    - percent: 80
+      power_kw: 50
+    - percent: 90
+      power_kw: 30
+    - percent: 100
+      power_kw: 10
+  
+  bidirectional:
+    v2l: false
+    v2l_max_kw: null
+    v2h: false
+    v2g: false
+
+motors:
+  - position: rear
+    type: permanent_magnet  # Permanent magnet synchronous motor (PSM)
+    max_power_kw: 210
+    max_power_hp: 286
+    max_torque_nm: 545
+    description: "APP310 motor (shared with VW ID.5, ID.4 Pro)"
+
+drivetrain:
+  type: RWD
+  drive_type: rear_wheel_drive
+
+performance:
+  acceleration_0_100_kmh_seconds: 8.7  # Slightly slower than SUV (8.5s) due to 20kg extra weight
+  top_speed_kmh: 160  # Electronically limited
+  
+efficiency:
+  wltp_kwh_per_100km: 16.4  # Better than SUV (16.8) due to improved aerodynamics
+  real_world_kwh_per_100km: 18.5
+  co2_emissions_wltp_g_per_km: 0
+
+weights:
+  curb_weight_kg: 2070  # 20kg heavier than SUV (reinforced body structure)
+  gross_vehicle_weight_kg: 2620
+  max_payload_kg: 550
+  distribution_front_percent: 50
+  distribution_rear_percent: 50
+
+software:
+  version: "ME3"  # 2024 facelift, major upgrade from ME2
+  ota_updates: true
+  features:
+    - "Laura virtual assistant (ChatGPT integration)"
+    - "Improved UI responsiveness"
+    - "Faster boot time"
+    - "More physical buttons vs touchscreen (customer feedback)"
+    - "Backlit climate control sliders"
+    - "Improved voice control"
+
+comfort:
+  climate_control: "3-zone automatic climate control"
+  heat_pump: true  # Standard, improves winter efficiency
+  heated_seats_front: true  # Standard
+  heated_seats_rear: true  # Optional
+  heated_steering_wheel: true  # Optional
+  ventilated_seats_front: false  # Not available
+  massage_seats: false  # Not available
+  panoramic_roof: false  # Fixed glass roof standard (panoramic not available on Coupé)
+  ambient_lighting: true  # Standard (10 colors)
+
+audio:
+  standard_speakers: 6
+  premium_system: "Canton Sound System"
+  premium_speakers: 12
+  premium_power_watts: 570
+  
+driver_assistance:
+  adaptive_cruise_control: true  # Optional (part of Travel Assist)
+  lane_keeping_assist: true  # Standard (Lane Assist)
+  blind_spot_monitoring: true  # Standard (Side Assist)
+  parking_sensors_front: true  # Standard
+  parking_sensors_rear: true  # Standard
+  parking_camera: true  # Optional (rear camera standard, 360° optional)
+  traffic_sign_recognition: true  # Standard
+  driver_attention_warning: true  # Standard
+  automatic_emergency_braking: true  # Standard (Front Assist)
+  
+lighting:
+  headlights: "LED Matrix"  # Optional (standard LED)
+  daytime_running_lights: "LED"
+  taillights: "LED with dynamic turn signals"
+  ambient_lighting: true
+  features:
+    - "LED Matrix with Crystalline elements"
+    - "Dynamic turn signals front and rear"
+    - "Coming/Leaving Home function"
+    - "LED puddle lights in doors"
+    - "Redesigned LED rear lights (coupé-specific)"
+
+wheels:
+  standard_size: "20-inch"  # Coupé gets 20" standard vs 19" on SUV
+  standard_design: "Procyon"
+  optional_sizes:
+    - "21-inch"
+  optional_designs:
+    - "Taurus (21-inch, vRS design)"
+    - "Vision (21-inch, exclusive to Coupé)"
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
+  data_quality: verified
+  data_sources:
+    - "Škoda official specifications (skoda-auto.com, 2024)"
+    - "Škoda press materials (2024 facelift, Coupé launch)"
+    - "What Car? independent testing (whatcar.com)"
+    - "Auto Express road test (autoexpress.co.uk)"
+    - "Carwow review (carwow.co.uk)"
+    - "InsideEVs range test"
+    - "ADAC Ecotest (Germany)"
+  notes: |
+    Coupé launched January 2022, 1 year after standard SUV. 2024 facelift brings significant software 
+    improvements (ME3 vs ME2). Better aerodynamics (Cd 0.26) results in 15km additional range vs SUV 
+    (585km vs 570km WLTP). Despite sportier styling, boot only 15L smaller (570L vs 585L). Fixed glass 
+    roof standard on Coupé (panoramic roof not available). Black roof standard. Typically priced 
+    €2,000-3,000 above SUV but €5,000-7,000 below Audi Q4 Sportback e-tron 50. 20-inch wheels 
+    standard (vs 19" on SUV). Shares APP310 motor and 82kWh battery with VW ID.5 and ID.4 Pro.

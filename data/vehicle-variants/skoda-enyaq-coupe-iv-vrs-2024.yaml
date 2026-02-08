@@ -1,0 +1,214 @@
+# Škoda Enyaq Coupé iV vRS 2024 - Performance Flagship
+id: skoda-enyaq-coupe-iv-vrs-2024
+model_id: skoda-enyaq-coupe-iv
+name: Enyaq Coupé iV vRS
+model_year: 2024
+trim_level: "vRS"
+version_name: "2024 Facelift"
+
+description: |
+  The Škoda Enyaq Coupé iV vRS is the performance flagship of the Enyaq lineup, combining 220kW (299hp) 
+  dual-motor AWD with the coupé's sporty styling and improved aerodynamics (Cd 0.26). The vRS delivers 
+  thrilling performance with 0-100 km/h in just 6.5 seconds while maintaining impressive range of 528km WLTP.
+  
+  The vRS features distinctive styling elements including 20" or 21" wheels, sport suspension (-15mm lower), 
+  gloss black exterior accents, LED Matrix headlights standard, and unique vRS interior trim with sport seats. 
+  Despite its performance focus, it remains practical with 570L boot capacity and identical interior space 
+  to standard Coupé.
+  
+  The 2024 facelift brought updated styling, improved Infotainment ME3 software with ChatGPT-powered Laura 
+  assistant, and enhanced efficiency. Positioned as exceptional value vs German competitors: significantly 
+  cheaper than Audi SQ4 Sportback e-tron (€17,000 less) while offering comparable performance.
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM  # Nickel-Cobalt-Manganese
+  cells_configuration: "288 cells (96s3p pouch cells)"
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump integration"
+  preconditioning: true
+
+range:
+  wltp_km: 528  # Lower than 80 due to AWD and performance focus
+  wltp_city_km: 680
+  wltp_highway_km: 430
+  real_world_km: 450  # Realistic combined cycle
+  epa_km: null  # Not sold in US
+  epa_miles: null
+
+charging:
+  ac_max_power_kw: 11  # Standard 3-phase Type2 (optional 22kW upgrade available)
+  ac_charge_time_hours: 7.5  # 0-100% at 11kW
+  ac_ports:
+    - type: Type2
+      max_power_kw: 11
+      phases: 3
+  
+  dc_max_power_kw: 135  # 2024 facelift (2023: 125kW)
+  dc_charge_time_minutes: 29  # 10-80% at 135kW
+  dc_ports:
+    - type: CCS2
+      max_power_kw: 135
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 10
+    - percent: 10
+      power_kw: 135
+    - percent: 30
+      power_kw: 132
+    - percent: 50
+      power_kw: 125
+    - percent: 70
+      power_kw: 85
+    - percent: 80
+      power_kw: 50
+    - percent: 90
+      power_kw: 30
+    - percent: 100
+      power_kw: 10
+  
+  bidirectional:
+    v2l: false
+    v2l_max_kw: null
+    v2h: false
+    v2g: false
+
+motors:
+  - position: front
+    type: asynchronous_induction  # ASM motor (front axle)
+    max_power_kw: 80
+    max_power_hp: 109
+    max_torque_nm: 162
+    description: "AKA motor (front axle, on-demand AWD)"
+  - position: rear
+    type: permanent_magnet  # Permanent magnet synchronous motor (PSM)
+    max_power_kw: 140
+    max_power_hp: 190
+    max_torque_nm: 310
+    description: "APP310 motor (rear axle, primary drive)"
+
+drivetrain:
+  type: AWD
+  drive_type: all_wheel_drive
+  description: "Electric AWD with rear-biased torque distribution (front engages on-demand)"
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.5  # Fastest Škoda EV
+  top_speed_kmh: 180  # Electronically limited (20 km/h higher than standard variants)
+  
+efficiency:
+  wltp_kwh_per_100km: 18.2  # Higher than RWD due to AWD and performance
+  real_world_kwh_per_100km: 20.5
+  co2_emissions_wltp_g_per_km: 0
+
+weights:
+  curb_weight_kg: 2190  # 120kg heavier than RWD Coupé (dual motors + reinforcements)
+  gross_vehicle_weight_kg: 2740
+  max_payload_kg: 550
+  distribution_front_percent: 52
+  distribution_rear_percent: 48
+
+software:
+  version: "ME3"  # 2024 facelift, major upgrade from ME2
+  ota_updates: true
+  features:
+    - "Laura virtual assistant (ChatGPT integration)"
+    - "Improved UI responsiveness"
+    - "Faster boot time"
+    - "More physical buttons vs touchscreen (customer feedback)"
+    - "Backlit climate control sliders"
+    - "Improved voice control"
+    - "vRS-specific driving mode displays"
+
+comfort:
+  climate_control: "3-zone automatic climate control"
+  heat_pump: true  # Standard, improves winter efficiency
+  heated_seats_front: true  # Standard
+  heated_seats_rear: true  # Standard on vRS
+  heated_steering_wheel: true  # Standard on vRS
+  ventilated_seats_front: false  # Not available
+  massage_seats: false  # Not available
+  panoramic_roof: false  # Fixed glass roof standard (panoramic not available on Coupé)
+  ambient_lighting: true  # Standard (10 colors, vRS-specific red theme)
+
+audio:
+  standard_speakers: 12  # Canton Sound System standard on vRS
+  premium_system: "Canton Sound System"
+  premium_speakers: 12
+  premium_power_watts: 570
+  
+driver_assistance:
+  adaptive_cruise_control: true  # Standard on vRS (part of Travel Assist)
+  lane_keeping_assist: true  # Standard (Lane Assist)
+  blind_spot_monitoring: true  # Standard (Side Assist)
+  parking_sensors_front: true  # Standard
+  parking_sensors_rear: true  # Standard
+  parking_camera: true  # Standard (360° Area View on vRS)
+  traffic_sign_recognition: true  # Standard
+  driver_attention_warning: true  # Standard
+  automatic_emergency_braking: true  # Standard (Front Assist)
+  
+lighting:
+  headlights: "LED Matrix"  # Standard on vRS
+  daytime_running_lights: "LED"
+  taillights: "LED with dynamic turn signals (dark-tinted on vRS)"
+  ambient_lighting: true
+  features:
+    - "LED Matrix with Crystalline elements (standard on vRS)"
+    - "Dynamic turn signals front and rear"
+    - "Coming/Leaving Home function"
+    - "LED puddle lights in doors with vRS logo"
+    - "Dark-tinted LED rear lights (vRS-specific)"
+
+wheels:
+  standard_size: "20-inch"
+  standard_design: "Taurus (vRS design)"
+  optional_sizes:
+    - "21-inch"
+  optional_designs:
+    - "Taurus 21-inch (vRS exclusive)"
+    - "Vision 21-inch (Coupé exclusive, optional)"
+
+vrs_exclusive_features:
+  - "Sport suspension (-15mm lower)"
+  - "vRS sport seats with integrated headrests"
+  - "vRS steering wheel with paddle shifters (regen control)"
+  - "Gloss black exterior accents (grille, mirrors, roof)"
+  - "vRS badges and logos (exterior and interior)"
+  - "Red ambient lighting theme"
+  - "Sport pedals (aluminum)"
+  - "Black roof lining"
+  - "Canton Sound System (standard)"
+  - "LED Matrix headlights (standard)"
+  - "Area View 360° camera (standard)"
+  - "Travel Assist Level 2 ADAS (standard)"
+  - "Heated front and rear seats (standard)"
+  - "Heated steering wheel (standard)"
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
+  data_quality: verified
+  data_sources:
+    - "Škoda official specifications (skoda-auto.com, 2024)"
+    - "Škoda press materials (2024 facelift, vRS Coupé launch)"
+    - "What Car? independent testing (whatcar.com)"
+    - "Auto Express road test (autoexpress.co.uk)"
+    - "Carwow review (carwow.co.uk)"
+    - "evo magazine performance testing"
+    - "Top Gear review"
+    - "ADAC Ecotest (Germany)"
+  notes: |
+    Enyaq Coupé iV vRS launched alongside standard Coupé in January 2022. First performance vRS model 
+    in Škoda's electric lineup. 2024 facelift brings significant software improvements (ME3 vs ME2). 
+    Dual-motor AWD with rear-biased torque distribution (140kW rear, 80kW front). Sport suspension 
+    lowers ride height by 15mm for improved handling. 0-100 km/h in 6.5 seconds makes it fastest Škoda EV. 
+    Exceptional value: €17,000 cheaper than Audi SQ4 Sportback e-tron (€58,990 vs €76,990) while 
+    offering comparable performance (6.5s vs 6.3s 0-100 km/h). Significantly more equipment standard 
+    than non-vRS variants. Red ambient lighting and vRS-specific UI themes. Fixed glass roof standard 
+    (panoramic not available). Shares dual-motor AWD setup with VW ID.5 GTX and Enyaq iV 80x.
