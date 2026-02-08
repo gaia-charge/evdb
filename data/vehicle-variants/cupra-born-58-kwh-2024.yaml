@@ -1,0 +1,116 @@
+---
+id: cupra-born-58-kwh-2024
+name: "58kWh"
+model_id: cupra-born
+model_year: 2024
+production_start: "2024-01-01"
+production_end: null
+
+# Battery specifications
+battery:
+  usable_kwh: 58.0
+  total_kwh: 62.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "58 kWh usable battery (62 kWh gross). Same battery as VW ID.3 Pure Performance. 400V MEB platform."
+
+range:
+  wltp_km: 424
+  wltp_city_km: 550
+  wltp_highway_km: 340
+  epa_km: null
+  real_world_km: 360
+  real_world_source: ADAC EcoTest
+  notes: |
+    WLTP range of 424 km. Real-world range around 360 km in mixed conditions.
+    Matches VW ID.3 Pure Performance. Winter range drops to ~270km at -10°C.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 120
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 120
+    - soc_percent: 20
+      power_kw: 120
+    - soc_percent: 30
+      power_kw: 115
+    - soc_percent: 40
+      power_kw: 110
+    - soc_percent: 50
+      power_kw: 100
+    - soc_percent: 60
+      power_kw: 85
+    - soc_percent: 70
+      power_kw: 65
+    - soc_percent: 80
+      power_kw: 45
+  charge_time_10_80_minutes: 35
+  notes: |
+    DC fast charging up to 120kW. 10-80% in 35 minutes.
+    AC charging: 11kW standard, 0-100% in 6 hours.
+
+motors:
+  - position: rear
+    type: permanent_magnet
+    power_kw: 150
+    torque_nm: 310
+    manufacturer: Volkswagen Group
+
+drivetrain:
+  type: RWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 7.3
+  top_speed_kmh: 160
+  notes: "Solid mid-range performance with 150kW motor"
+
+efficiency:
+  wltp_kwh_per_100km: 15.9
+  real_world_kwh_per_100km: 17.8
+  notes: "Good efficiency matching VW ID.3 Pure Performance"
+
+weight:
+  curb_weight_kg: 1835
+  gross_vehicle_weight_kg: 2195
+  towing_capacity_kg: 0
+  notes: "Lighter than 77kWh version by 115kg. No towing capability."
+
+# ADAS features
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: front_and_rear
+  parking_camera: rear
+  autonomous_parking: false
+
+notes: >
+  Mid-range Cupra Born with 58 kWh battery offering 424 km WLTP range. Features
+  150kW motor with 7.3s 0-100 km/h. Good balance between range and price. Built
+  on VW MEB platform at SEAT Martorell plant. Shares battery and motor with VW
+  ID.3 Pure Performance but with Cupra's sportier design and interior. 120kW DC
+  fast charging (35 min 10-80%). Real-world range around 360 km in mixed conditions.
+  Target buyers: those wanting Cupra style without the premium of the 77kWh version.
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  source: manufacturer
+  sources:
+    - "https://www.cupraofficial.com/models/born"
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/"
+    - "https://ev-database.org/car/1687/Cupra-Born-58-kWh"

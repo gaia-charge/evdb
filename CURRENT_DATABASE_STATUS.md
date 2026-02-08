@@ -1,7 +1,7 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 03:15 AM  
-**Total Vehicles:** 66 variants across 42 models from 19 manufacturers
+**Last Updated:** 2026-02-08 03:30 AM  
+**Total Vehicles:** 69 variants across 42 models from 19 manufacturers
 
 ---
 
@@ -15,21 +15,21 @@
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 2 | 6 | ✅ Good |
 | Stellantis | 5 | 5 | 🟡 Partial |
-| Volkswagen Group | 4 | 8 | ✅ Good |
+| Volkswagen Group | 4 | 11 | ✅ Good |
 | Audi | 3 | 4 | 🟡 Partial |
 | Mercedes-Benz | 3 | 4 | 🟡 Partial |
 | Nissan | 2 | 2 | 🟡 Partial |
 | Porsche | 1 | 2 | 🟡 Partial |
-| Cupra | 1 | 1 | 🟢 Single |
+| Cupra | 1 | 3 | 🟡 Partial |
 | Ford | 1 | 1 | 🟢 Single |
 | Polestar | 1 | 1 | 🟢 Single |
 | MG (SAIC) | 1 | 1 | 🟢 Single |
-| Škoda | 1 | 1 | 🟢 Single |
+| Škoda | 1 | 2 | 🟡 Partial |
 | Smart | 1 | 1 | 🟢 Single |
 | Volvo | 1 | 1 | 🟢 Single |
 | Opel | 0 | 0 | ⚠️ No variants |
 
-**Total:** 19 manufacturers, 41 models, 63 variants
+**Total:** 19 manufacturers, 42 models, 69 variants
 
 ---
 
@@ -63,13 +63,13 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Cupra Born**: 2 new variants (58kWh, VZ 77kWh) - *Added Feb 8, 2026 03:30*
+- ✅ **Škoda Enyaq iV**: 1 new variant (iV 60) - *Added Feb 8, 2026 03:30*
 - ✅ **Volkswagen ID.7**: 3 variants (Pro 621km, Pro S 700km, GTX AWD 595km) - *Added Feb 8, 2026*
 - ✅ Renault Group: 8 variants (Megane E-Tech, Scenic E-Tech, Zoe)
 - ✅ BYD: 6 variants (Atto 3, Dolphin, Seal)
 - ✅ Opel: 2 models (Corsa-e, Mokka-e)
 - ✅ Smart: #1 Premium
-- ✅ Cupra: Born E-Boost
-- ✅ Škoda: Enyaq iV 80
 - ✅ MG: MG4 Electric Extended Range
 - ✅ Mini: Cooper Electric
 
@@ -80,7 +80,8 @@
 - **Feb 7, 2026:** 51 variants documented (README)
 - **Feb 8, 2026 (03:00):** 63 variants verified (actual count)
 - **Feb 8, 2026 (03:15):** 66 variants (+3 VW ID.7 variants)
-- **Growth:** +15 variants since Feb 7 (29.4% increase)
+- **Feb 8, 2026 (03:30):** 69 variants (+3 VW Group: Cupra Born 58kWh, Cupra Born VZ, Škoda Enyaq iV 60)
+- **Growth:** +18 variants since Feb 7 (35.3% increase)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
