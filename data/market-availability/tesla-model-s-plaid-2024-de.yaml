@@ -1,0 +1,170 @@
+# Tesla Model S Plaid 2024 - Germany Market
+id: tesla-model-s-plaid-2024-de
+variant_id: tesla-model-s-plaid-2024
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2021-09-01"
+available_until: null
+
+pricing:
+  base_price: 119990
+  price_including_vat: 119990  # Tesla prices in EU include VAT
+  vat_rate_percent: 19
+  destination_charge: 1200
+  registration_fees: 600
+  total_price_estimate: 121790
+
+incentives:
+  - name: Umweltbonus (Environmental Bonus)
+    type: grant
+    amount: 0
+    description: Federal EV incentive ended for vehicles over €45,000 in 2023
+    valid_from: "2023-01-01"
+    valid_until: "2023-12-31"
+    conditions:
+      - Vehicle price must be under €45,000
+      - Model S Plaid exceeds price limit
+    source_url: https://www.bafa.de/umweltbonus
+
+company_car_taxation:
+  list_price_gross: 119990
+  tax_rate_percent: 0.5
+  monthly_benefit_1pct: 600
+  monthly_benefit_0_5pct: 300
+  calculation_basis: list_price
+  notes: |
+    0.5% company car tax rate applies (vehicle price over €70,000).
+    Monthly taxable benefit = €119,990 × 0.5% = €600/month (rounded)
+    Employee pays income tax on this benefit.
+
+market_specific:
+  standard_equipment:
+    - Heat pump
+    - Air suspension
+    - Carbon ceramic brakes
+    - Track Mode with drift mode
+    - Premium audio system (22 speakers, 960W)
+    - Glass roof with UV protection
+    - Autopilot (basic)
+    - Navigation with live traffic visualization
+    - Heated seats front and rear
+    - Ventilated seats front with carbon fiber trim
+    - Power folding mirrors
+    - Tri-zone climate control
+    - 17" horizontal touchscreen
+    - 8" rear touchscreen
+    - Wireless phone charging (dual)
+    - Powered liftgate
+    - LED headlights with auto high beam
+    - Upgraded brake cooling
+    - Three radiators for thermal management
+  
+  available_colors:
+    - name: Pearl White Multi-Coat
+      code: PPSW
+      additional_cost: 0
+      hex: "#F5F5F5"
+    - name: Solid Black
+      code: PBSB
+      additional_cost: 1800
+      hex: "#000000"
+    - name: Midnight Silver Metallic
+      code: PMNG
+      additional_cost: 1800
+      hex: "#4A5660"
+    - name: Deep Blue Metallic
+      code: PPSB
+      additional_cost: 1800
+      hex: "#1B3D6D"
+    - name: Ultra Red
+      code: PPMR
+      additional_cost: 3000
+      hex: "#C41E3D"
+  
+  available_interiors:
+    - name: All Black
+      color: Black
+      material: Premium synthetic leather with carbon fiber
+      additional_cost: 0
+    - name: Black and White
+      color: Black/White
+      material: Premium synthetic leather with carbon fiber
+      additional_cost: 2400
+    - name: Cream
+      color: Cream
+      material: Premium synthetic leather with carbon fiber
+      additional_cost: 2400
+  
+  available_wheels:
+    - size_inches: 19
+      design: Tempest
+      material: alloy
+      additional_cost: -4500
+      notes: Credit for smaller wheels
+    - size_inches: 21
+      design: Arachnid
+      material: alloy
+      additional_cost: 0
+      notes: Standard on Plaid
+
+  optional_packages:
+    - name: Enhanced Autopilot
+      price: 3800
+      description: Navigate on Autopilot, Auto Lane Change, Autopark, Summon
+    - name: Full Self-Driving Capability
+      price: 7500
+      description: All Enhanced Autopilot features plus Traffic Light Recognition and future autonomous driving capabilities
+    - name: Yoke Steering Wheel
+      price: 0
+      description: Optional yoke steering wheel (standard round wheel available at no cost)
+    - name: Carbon Fiber Spoiler
+      price: 5000
+      description: Carbon fiber rear spoiler for improved high-speed stability
+    - name: Premium Connectivity
+      price: 99
+      monthly: true
+      description: Satellite-view maps, video streaming, music streaming, internet browser
+
+dealer_network:
+  dealer_count: 18
+  service_centers: 18
+  online_sales_available: true
+  tesla_stores: 12
+
+delivery:
+  typical_delivery_weeks: 10
+  current_order_backlog_weeks: 14
+  production_location: Fremont, California, USA
+
+compliance:
+  ncap_rating: 5
+  ncap_year: 2022
+  emission_class: Zero Emission
+  type_approval: e1*2018/858*11346*00
+  noise_level_db: 70
+
+notes: |
+  Tesla Model S Plaid is one of the fastest production sedans in the world,
+  featuring tri-motor AWD with torque vectoring. The Plaid includes carbon
+  ceramic brakes standard, Track Mode with drift mode, and upgraded thermal
+  management with three radiators for sustained high-performance driving.
+  
+  0-100 km/h in 2.1 seconds makes it faster than most supercars. Carbon fiber
+  interior trim is standard. Subject to 0.5% company car tax rate. No longer
+  eligible for Umweltbonus.
+  
+  21" Arachnid wheels are standard; 19" wheels available with €4,500 credit.
+  Premium Connectivity subscription required for full feature access after
+  first year.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  price_checked_at: "2026-02-08"
+  sources:
+    - https://www.tesla.com/de_de/models/design
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/tesla/model-s/
+    - https://www.bafa.de/umweltbonus
