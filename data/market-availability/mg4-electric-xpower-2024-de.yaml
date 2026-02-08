@@ -1,0 +1,315 @@
+# MG4 Electric XPower - German Market (2024)
+# Performance hot hatch with 435hp dual-motor AWD
+
+id: mg4-electric-xpower-2024-de
+variant_id: mg4-electric-xpower-2024
+market: DE
+currency: EUR
+
+# Pricing
+base_price: 42490
+base_price_incl_vat: true
+vat_rate_percent: 19
+
+# Price Breakdown
+price_details:
+  msrp: 42490
+  destination_charge: 0  # Included
+  documentation_fee: 0  # Included
+  total_base: 42490
+
+# Incentives & Subsidies (Germany 2024)
+incentives:
+  - name: "Umweltbonus (BAFA)"
+    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
+    type: rebate
+    provider: federal
+    eligibility: "BEV with price ≤€45,000"
+    valid_until: "2024-12-31"
+    notes: "German federal EV subsidy - being phased out"
+    
+  - name: "Company Car Tax"
+    amount: 0  # Percentage-based benefit, not fixed amount
+    type: tax_exemption
+    provider: federal
+    description: "0.25% monthly gross list price for BEVs under €60k"
+    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+
+# Available Colors
+colors:
+  - name: "Polar White"
+    code: "solid-white"
+    type: solid
+    price_delta: 0
+    
+  - name: "Dynamic Red"
+    code: "metallic-red"
+    type: metallic
+    price_delta: 680
+    popular: true
+    
+  - name: "Black Pearl"
+    code: "metallic-black"
+    type: metallic
+    price_delta: 680
+    popular: true
+    
+  - name: "Camden Grey"
+    code: "metallic-grey"
+    type: metallic
+    price_delta: 680
+    
+  - name: "Volcano Orange"
+    code: "metallic-orange"
+    type: metallic
+    price_delta: 680
+    special: true
+    recommended: true
+    notes: "Signature XPower color with matching interior accents"
+
+# Wheel Options
+wheels:
+  - name: "18-inch diamond-cut alloy wheels with Michelin Pilot Sport 4"
+    size_inches: 18
+    tire_size: "235/45 R18"
+    price_delta: 0
+    standard: true
+    notes: "Performance tires included"
+
+# Interior Options
+interiors:
+  - name: "Black Alcantara and leather with orange stitching"
+    material: alcantara_leather
+    price_delta: 0
+    standard: true
+    notes: "Sport seats with enhanced bolstering"
+
+# Equipment Packages & Options
+packages:
+  - name: "XPower Trophy Package"
+    price: 3500
+    includes:
+      - "360-degree camera system"
+      - "LED matrix headlights"
+      - "Power tailgate"
+      - "Panoramic glass roof with UV protection"
+      - "Premium 6-speaker audio system"
+      - "Wireless phone charging"
+    popular: true
+    recommended: true
+    notes: "Most XPower buyers choose this package"
+
+# Individual Options
+individual_options:
+  - name: "Metallic paint"
+    price: 680
+    category: exterior
+    popular: true
+    
+  - name: "Tow bar"
+    price: 650
+    category: utility
+    towing_capacity_kg: 500
+    notes: "Rarely chosen on performance model"
+    
+  - name: "Track Day Package"
+    price: 1500
+    includes:
+      - "Set of performance brake pads"
+      - "Track-oriented tire pressure monitoring"
+      - "Extended cooling system fluid"
+      - "Track mode activation (software unlock)"
+    category: performance
+    notes: "For enthusiast drivers doing track days"
+
+# Total Price Range
+price_range:
+  minimum: 42490  # Base
+  maximum: 48320  # Base + Trophy Package + metallic + Track Package + tow bar
+  typical: 46670  # Base + Trophy Package + metallic paint
+
+# Availability
+availability_status: available
+delivery_time_weeks: 10
+production_location: "Shanghai, China"
+import_duties_included: true
+
+# Market-Specific Notes
+market_notes:
+  - "Fastest affordable performance EV in Germany under €50k"
+  - "435hp / 600Nm rivals €70k+ performance cars"
+  - "0-100 km/h in 3.8s - supercar territory"
+  - "7-year/175,000km battery warranty"
+  - "Enhanced cooling for track use"
+  - "Orange brake calipers and sport interior standard"
+  - "Available at 120+ MG dealers across Germany"
+  - "Direct import from China - no local assembly"
+
+# Sales & Distribution
+distribution:
+  dealer_network_size: 120
+  direct_sales: false
+  online_ordering: true
+  test_drive_available: true
+  demo_cars_available: limited
+  home_delivery: false
+
+# Service & Warranty
+warranty:
+  basic_years: 7
+  basic_km: 150000
+  battery_years: 7
+  battery_km: 175000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+  
+service:
+  service_interval_months: 12
+  service_interval_km: 15000  # More frequent for performance model
+  average_service_cost_eur: 250
+  service_plan_available: true
+  performance_service_available: true
+  
+# Charging Infrastructure Support
+charging_support:
+  - "Partnership with EnBW (Mobility+ card)"
+  - "Access to 200,000+ charging points in Europe"
+  - "Free RFID charging card included"
+  - "MG iSMART app for charging station locator"
+  - "Battery preconditioning for optimal fast charging"
+
+# Insurance
+insurance_notes:
+  typklasse_haftpflicht: 20  # Liability insurance class (higher due to performance)
+  typklasse_vollkasko: 26    # Comprehensive insurance class (higher)
+  average_annual_premium_eur: 1200
+  notes: "Higher premiums due to 435hp performance classification"
+
+# Financing Options
+financing_available: true
+financing_example:
+  down_payment_eur: 8000
+  monthly_payment_eur: 379
+  term_months: 48
+  final_payment_eur: 18000
+  apr_percent: 3.99
+  total_cost_eur: 44192
+
+# Leasing Options
+leasing_available: true
+leasing_example:
+  monthly_payment_eur: 339
+  down_payment_eur: 4000
+  term_months: 36
+  annual_km: 10000
+  excess_km_cost_eur: 0.18
+
+# Competitors in Market
+local_competitors:
+  - vehicle: "Cupra Born VZ"
+    price_eur: 51490
+    price_delta: +9000
+    notes: "Similar concept, VW Group, 326hp"
+    
+  - vehicle: "BMW i4 eDrive40"
+    price_eur: 59900
+    price_delta: +17410
+    notes: "German premium, less power (340hp), more prestige"
+    
+  - vehicle: "Tesla Model 3 Long Range AWD"
+    price_eur: 50990
+    price_delta: +8500
+    notes: "More tech, similar performance"
+    
+  - vehicle: "Hyundai Ioniq 5 N"
+    price_eur: 74900
+    price_delta: +32410
+    notes: "650hp track weapon, much higher price"
+    
+  - vehicle: "Polestar 2 Long Range Dual Motor"
+    price_eur: 55400
+    price_delta: +12910
+    notes: "Volvo/Geely premium, 476hp"
+
+# Market Performance
+market_stats:
+  sales_2023: 420  # Estimated DE registrations for XPower
+  market_share_segment_percent: 12.5  # Of hot hatch EV segment
+  customer_satisfaction_score: 4.5  # out of 5 (enthusiast appeal)
+  
+# Reviews & Ratings (Germany)
+reviews:
+  - source: "Auto Motor und Sport"
+    rating: 4.5
+    score_out_of: 5.0
+    summary: "Preis-Leistungs-Wunder: 435 PS für unter €45.000"
+    
+  - source: "Sport Auto"
+    rating: 4.0
+    score_out_of: 5.0
+    summary: "Überraschend spaßig auf Landstraße und Rennstrecke"
+    
+  - source: "Auto Bild Sportscars"
+    rating: 4.5
+    score_out_of: 5.0
+    summary: "Elektro-Geheimtipp für Fahrspaß-Fans"
+
+# Performance Testing (Germany)
+performance_testing:
+  - test: "0-100 km/h"
+    result: "3.82 sec"
+    source: "Sport Auto"
+    
+  - test: "100-200 km/h"
+    result: "10.4 sec"
+    source: "Sport Auto"
+    
+  - test: "Nürburgring Nordschleife lap time"
+    result: "8:23.0"
+    source: "Sport Auto"
+    notes: "Impressive for FWD-based platform, rivals BMW M135i xDrive"
+
+# Environmental
+environmental:
+  german_environmental_bonus_eligible: true
+  company_car_tax_class: 0.25  # 0.25% vs 1% for ICE (despite performance)
+  co2_emissions_g_per_km: 0
+  noise_level_db: 71  # At 80 km/h (slightly louder due to performance tires)
+
+# Residual Value (Germany-specific)
+residual_value:
+  after_3_years_percent: 52
+  after_5_years_percent: 38
+  notes: "Better residuals than standard MG4 due to enthusiast demand and limited production"
+
+# Track Day & Performance Support
+performance_support:
+  - "MG Performance Driving Academy (track days)"
+  - "Performance brake pad upgrade available"
+  - "Track mode with launch control"
+  - "Drift mode (software unlock via service)"
+  - "Cooling system monitoring via app"
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.de/mg4-electric/xpower
+    - https://www.sportauto.de/
+    - https://www.auto-motor-und-sport.de/
+    - https://www.dat.de/
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
+  notes: |
+    MG4 XPower is the performance bargain of the German EV market.
+    435hp / 600Nm dual-motor AWD for under €43k is unprecedented.
+    0-100 km/h in 3.8s matches €70k+ BMW M cars and Tesla Model 3 Performance.
+    Enhanced cooling allows sustained track use without derating.
+    Sport-tuned suspension lowered 10mm, stiffer than standard MG4.
+    Orange brake calipers, sport seats with Alcantara, and orange stitching.
+    Track Mode optimizes power delivery and regen for circuit driving.
+    Real competitor to Cupra Born VZ (€51k), Polestar 2 (€55k).
+    With Umweltbonus (€3,000), effective price is €39,490 (ends Dec 2024).
+    Nürburgring lap time of 8:23 impressive for FWD-based platform.
+    Insurance costs higher (Typklasse 26) but still reasonable vs competitors.
+    Growing enthusiast community in Germany organizing track days.

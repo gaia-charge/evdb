@@ -1,0 +1,240 @@
+# MG4 Electric XPower (64kWh AWD) - 2024 Model Year
+# Performance hot hatch with dual-motor AWD and 435hp
+
+id: mg4-electric-xpower-2024
+model_id: mg4-electric
+name: MG4 Electric XPower
+model_year: 2024
+trim_level: XPower
+
+# Version & Updates
+version_info:
+  major_version: 1
+  minor_version: 1
+  release_date: 2024-01-01
+  changes_from_previous: "Minor software updates, improved track mode"
+
+# Battery System
+battery:
+  chemistry: LFP  # Lithium Iron Phosphate
+  supplier: CATL
+  usable_kwh: 61.7
+  total_kwh: 64.0
+  cells: 192
+  modules: 24
+  voltage_nominal: 403
+  voltage_max: 460
+  warranty_years: 7
+  warranty_km: 175000
+  warranty_capacity_percent: 70
+  thermal_management: liquid_cooling_enhanced  # Upgraded for performance use
+  
+# Range (WLTP)
+range:
+  wltp_km: 385
+  wltp_city_km: 520
+  wltp_highway_km: 320
+  epa_km: null  # Not sold in USA
+  real_world_km: 330
+  real_world_highway_km: 290
+  real_world_city_km: 390
+
+# Charging
+charging:
+  connectors:
+    - type2
+    - ccs2
+  ac:
+    max_power_kw: 11.0
+    phases: 3
+    onboard_charger_kw: 11.0
+    time_0_100_hours: 6.5
+  dc:
+    max_power_kw: 144
+    peak_power_kw: 144
+    time_10_80_min: 36
+    time_20_80_min: 29
+    preconditioning_available: true  # Performance model includes preconditioning
+  bidirectional:
+    capabilities: []
+    max_power_kw: null
+  
+charging_curve:
+  - soc_percent: 10
+    power_kw: 140
+    current_a: 340
+  - soc_percent: 20
+    power_kw: 144
+    current_a: 350
+  - soc_percent: 30
+    power_kw: 144
+    current_a: 350
+  - soc_percent: 40
+    power_kw: 140
+    current_a: 340
+  - soc_percent: 50
+    power_kw: 132
+    current_a: 320
+  - soc_percent: 60
+    power_kw: 115
+    current_a: 280
+  - soc_percent: 70
+    power_kw: 90
+    current_a: 220
+  - soc_percent: 80
+    power_kw: 65
+    current_a: 160
+  - soc_percent: 90
+    power_kw: 38
+    current_a: 90
+
+# Motor & Performance
+motor:
+  type: permanent_magnet
+  count: 2  # Dual motor AWD
+  drive_type: AWD
+  power_kw: 320  # Combined (435hp)
+  power_hp: 435
+  torque_nm: 600  # Combined
+  max_rpm: 16000
+  motor_placement: front_and_rear
+
+performance:
+  acceleration_0_100_sec: 3.8
+  acceleration_0_60_sec: 3.6
+  top_speed_kph: 200
+  top_speed_limited: true
+  quarter_mile_sec: 12.0
+
+# Weight
+weight:
+  curb_kg: 1920  # Heavier due to dual motors
+  gross_kg: 2370
+  weight_distribution_front_percent: 50
+  weight_distribution_rear_percent: 50
+
+# Wheels & Tires
+wheels_tires:
+  standard:
+    front_size: "235/45 R18"
+    rear_size: "235/45 R18"
+    wheel_size_inches: 18
+    tire_brand: "Michelin Pilot Sport 4"
+    notes: "Performance tires with upgraded brakes"
+
+# Brakes
+brakes:
+  front: "Ventilated discs (320mm, orange calipers)"
+  rear: "Ventilated discs"
+  regenerative_braking: true
+  one_pedal_driving: true
+  regen_levels: 3
+
+# Suspension
+suspension:
+  front: "MacPherson strut (sport tuned)"
+  rear: "Multi-link independent (sport tuned)"
+  notes: "Lowered 10mm, stiffer springs and dampers"
+
+# Technology & ADAS
+adas:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  autonomous_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_monitoring: false
+  level: 2  # SAE Level 2
+
+# Connectivity
+connectivity:
+  5g: false
+  4g: true
+  wifi_hotspot: false
+  bluetooth: true
+  smartphone_integration:
+    - apple_carplay
+    - android_auto
+  remote_services: true
+  ota_updates: true
+
+# Interior
+interior:
+  seating_material: alcantara_leather  # Sport seats with orange stitching
+  heated_seats_front: true
+  heated_seats_rear: false
+  heated_steering_wheel: true
+  ventilated_seats: false
+  power_adjustable_driver_seat: true
+  panoramic_roof: false
+  ambient_lighting: true
+  sport_pedals: true
+
+# Climate
+climate:
+  heat_pump: true  # Standard
+  heated_windshield: false
+  remote_climate_control: true
+
+# Audio
+audio:
+  speakers: 6
+  premium_audio: false
+
+# Performance Features
+performance_features:
+  track_mode: true
+  launch_control: true
+  drift_mode: false
+  adjustable_regen: true
+  sport_plus_mode: true
+
+# Pricing (Reference - DE market)
+pricing_reference:
+  base_price_eur: 42490
+  market: DE
+  year: 2024
+
+# Availability
+availability:
+  markets:
+    - DE
+    - GB
+    - FR
+    - NL
+    - ES
+    - IT
+    - NO
+    - SE
+  production_plant: "SAIC Lingang Plant, Shanghai, China"
+
+# Competitors
+competitors:
+  - Cupra Born VZ
+  - Hyundai Ioniq 5 N
+  - BMW i4 M50
+  - Tesla Model 3 Long Range AWD
+  - Polestar 2 Long Range Dual Motor
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.eu/mg4-electric/xpower
+    - https://mg.co.uk/new-cars/mg4-electric-xpower/specifications
+    - https://www.autocar.co.uk/car-review/mg/4-electric/xpower
+    - https://www.evo.co.uk/mg/4-electric/xpower
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
+  notes: |
+    MG4 XPower is the performance flagship with dual-motor AWD.
+    435hp / 600Nm makes it one of the fastest hot hatches under €50k.
+    0-100 km/h in 3.8s rivals cars costing twice as much.
+    Enhanced cooling system for sustained performance driving.
+    Sport-tuned suspension lowered 10mm, stiffer than standard.
+    Orange brake calipers, sport seats with orange stitching.
+    Track Mode optimizes power delivery and regen for circuit use.
+    Real competitor to Cupra Born VZ and entry-level BMW i4.
+    Range reduced vs Extended Range due to power consumption.
+    Still excellent value - similar performance to €70k+ EVs.
