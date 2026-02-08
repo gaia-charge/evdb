@@ -1,0 +1,267 @@
+# Nissan Leaf 40kWh (2024)
+# https://www.nissan.com/leaf/
+
+id: nissan-leaf-40kwh-2024
+model_id: nissan-leaf
+name: Leaf 40kWh
+variant_name: 40kWh
+model_year: 2024
+trim_level: Acenta (mid-range trim in Europe)
+
+production:
+  status: active
+  start_year: 2017  # Second-generation ZE1 with 40kWh launched 2017
+  start_month: 10
+
+battery:
+  usable_kwh: 37.0  # Usable capacity
+  total_kwh: 40.0   # Total capacity
+  chemistry: NMC  # Nickel Manganese Cobalt from Envision AESC
+  cells: 192  # 24 modules x 8 cells
+  voltage_nominal: 350
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: passive_air  # Major weakness - no active cooling
+  notes: >
+    40kWh battery pack is the base/entry variant of second-generation LEAF.
+    WARNING: Passive air cooling (no liquid thermal management) can lead to battery
+    degradation in hot climates or during frequent DC fast charging. This is a known
+    limitation vs competitors with active cooling. Real-world reports show ~4-5%
+    capacity loss per year in hot climates, ~2-3% in moderate climates.
+    However, 40kWh variant degrades slightly slower than 62kWh due to less battery stress.
+
+range:
+  wltp_km: 270  # Official WLTP
+  wltp_city_km: 340
+  wltp_highway_km: 215
+  real_world_km: 230  # Conservative real-world estimate
+  epa_miles: 149  # EPA rating (US market)
+  epa_km: 240
+  conditions:
+    - type: summer
+      temperature_c: 23
+      range_km: 250
+      notes: "Optimal conditions"
+    - type: winter
+      temperature_c: -10
+      range_km: 165
+      notes: "Cold weather with heating, ~28% range loss (no heat pump)"
+    - type: highway_130
+      speed_kmh: 130
+      range_km: 195
+      notes: "Highway driving at 130 km/h"
+
+charging:
+  dc_fast_charge:
+    port_type: CHAdeMO
+    max_power_kw: 50  # 40kWh has only 50kW (vs 100kW on e+ 62kWh)
+    charge_curve:
+      - percent: 10
+        power_kw: 48
+      - percent: 30
+        power_kw: 46
+      - percent: 50
+        power_kw: 42
+      - percent: 70
+        power_kw: 32
+      - percent: 80
+        power_kw: 22
+      - percent: 90
+        power_kw: 15
+    charge_time_10_80_min: 40  # 10-80% in 40 minutes
+    charge_time_20_80_min: 32
+    km_per_hour: 260  # At peak rate
+    notes: >
+      CHAdeMO charging only (no CCS). Only 50kW max DC charging (vs 100kW on e+ variant).
+      Charge speed degrades with repeated rapid charging due to passive cooling.
+      Battery temperature limits charging power. Real-world DC fast charging often
+      lower than rated 50kW, typically 40-45kW peak.
+  
+  ac_charge:
+    port_type: Type 2
+    max_power_kw: 6.6  # Single-phase 32A (European standard)
+    onboard_charger_kw: 6.6
+    charge_time_0_100_hours: 6.0  # 0-100% with 6.6kW
+    charge_time_empty_full_hours: 6.0
+    three_phase: false  # Only single-phase 6.6kW
+    notes: >
+      Only 6.6kW AC charging (single-phase). No optional 11kW or 22kW charger available.
+      This is slower than many competitors (e-208: 11kW, ID.3: 11kW standard).
+
+  bidirectional:
+    v2g_capable: true  # Nissan pioneered V2G!
+    v2h_capable: true
+    v2l_capable: false
+    max_discharge_power_kw: 6.6
+    notes: >
+      LEAF was first mass-market EV with V2G/V2H capability. Requires CHAdeMO V2G wallbox
+      (e.g., Wallbox Quasar). Can power home during outages or sell energy to grid.
+      V2G limited by CHAdeMO adoption (CCS becoming standard).
+
+motors:
+  front_motor:
+    type: permanent_magnet
+    power_kw: 110  # Base 40kWh has 110kW motor (vs 160kW in e+ 62kWh)
+    power_hp: 150
+    torque_nm: 320
+    manufacturer: Nissan
+  drive_type: FWD
+  notes: "Base 40kWh has 110kW motor (vs 160kW in e+ 62kWh). Adequate for city driving."
+
+performance:
+  acceleration_0_100_kmh_s: 7.9  # Slower than e+ 62kWh (6.9s)
+  acceleration_0_60_mph_s: 7.5
+  top_speed_kmh: 144  # Electronically limited (lower than e+)
+  notes: "Adequate performance for city driving, but noticeably slower than e+ 62kWh variant"
+
+efficiency:
+  wltp_kwh_per_100km: 16.5  # Official WLTP consumption
+  epa_kwh_per_100km: 17.2  # EPA consumption (US)
+  real_world_kwh_per_100km: 17.8  # Real-world average
+  energy_efficiency_class: A  # EU energy label (better than e+ due to lighter weight)
+  notes: >
+    Slightly more efficient than e+ 62kWh variant (16.5 vs 17.1 kWh/100km WLTP)
+    due to lighter weight (140kg lighter). Still less efficient than newest competitors
+    (Ioniq 6: 13.9, Model 3: 14.0) due to older platform and hatchback aerodynamics.
+
+weight:
+  curb_weight_kg: 1520  # Lighter than e+ 62kWh (1660kg) due to smaller battery
+  distribution_front_percent: 57
+  distribution_rear_percent: 43
+
+dimensions:
+  length_mm: 4480
+  width_mm: 1790
+  height_mm: 1540
+  wheelbase_mm: 2700
+
+driving_modes:
+  - name: "e-Pedal"
+    description: "One-pedal driving with strong regeneration up to 0.2g deceleration"
+  - name: "Eco Mode"
+    description: "Reduced power and climate control for maximum range"
+  - name: "B-Mode"
+    description: "Increased regenerative braking without full one-pedal driving"
+
+adas_features:
+  level: 2
+  features:
+    - ProPILOT Assist (adaptive cruise + lane centering) - optional on Acenta
+    - Autonomous Emergency Braking with Pedestrian Detection
+    - Lane Departure Warning
+    - Rear Cross Traffic Alert
+    - Rear parking sensors
+  notes: >
+    ProPILOT Assist is optional on Acenta trim (standard on Tekna).
+    360° camera and ProPILOT Park are optional add-ons.
+
+standard_equipment:
+  - 8.0" touchscreen with Apple CarPlay & Android Auto (2024+ model year)
+  - 7.0" digital driver display
+  - e-Pedal one-pedal driving
+  - Dual-zone automatic climate control
+  - LED headlights
+  - Rear parking sensors
+  - 16-inch alloy wheels
+  - Keyless entry and start
+  - Nissan Connect Services with remote app
+  - DAB radio with 6 speakers
+  - Cruise control
+
+optional_equipment:
+  - name: ProPILOT Assist
+    description: Semi-autonomous driving (adaptive cruise + lane centering)
+    price_eur: 1200
+  - name: Bose Premium Audio
+    description: 8-speaker premium audio system
+  - name: Intelligent Around View Monitor
+    description: 360° camera system
+  - name: ProPILOT Park
+    description: Automated parking assistance
+  - name: Winter Package
+    description: Heated seats, heated steering wheel, heated windshield washer nozzles
+    price_eur: 800
+  - name: Two-tone paint
+    description: Black roof with contrasting body color
+    price_eur: 600
+  - name: 17-inch alloy wheels
+    description: Upgraded wheel design
+    price_eur: 400
+
+colors:
+  - Pearl Black
+  - Magnetic Blue (signature color)
+  - Pearl White
+  - Vivid Blue
+  - Burgundy
+  - Gun Metallic
+  - Blade Silver
+
+price_positioning: entry
+target_market: mainstream
+primary_use_case: daily_commute_urban
+
+competitors:
+  - Renault Zoe ZE40
+  - Peugeot e-208 Allure
+  - Opel Corsa-e
+  - MG4 Standard Range
+  - Fiat 500e 42kWh
+
+strengths:
+  - Most affordable LEAF variant (entry-level pricing)
+  - Proven reliability (650,000+ LEAFs sold worldwide since 2010)
+  - V2G/V2H capability (home energy backup) - pioneered by Nissan
+  - e-Pedal one-pedal driving (best in class, smooth operation)
+  - Large dealer network and service support (90+ dealers in Germany)
+  - Lower depreciation than many EV competitors due to proven track record
+  - Comfortable Zero Gravity seats (inspired by NASA)
+  - 8-year/160,000km battery warranty
+  - Adequate 270km WLTP range for daily commuting
+  - Lighter weight than e+ (1520kg vs 1660kg) improves efficiency
+
+weaknesses:
+  - CHAdeMO charging (vs CCS2 standard in Europe) limits fast charging network access
+  - Only 50kW DC charging (vs 100kW on e+, 100-150kW on competitors)
+  - Passive battery cooling (no active thermal management) - degrades faster in heat
+  - Only 6.6kW AC charging (vs 11kW competitors like e-208, ID.3)
+  - Older platform shows vs newer MEB/E-GMP competitors (2017 design)
+  - Modest 270km WLTP range (vs 400-500km on competitors)
+  - No heat pump (significant 28% winter range loss)
+  - ProPILOT Assist optional on Acenta trim (vs standard on competitors)
+  - 110kW motor feels underpowered vs 150kW competitors
+  - No frunk (front trunk storage)
+  - Infotainment dated vs latest competitors
+
+versioning:
+  previous_versions:
+    - year: 2017
+      changes: "Second-generation ZE1 launched with 40kWh battery, 150hp motor"
+    - year: 2018
+      changes: "ProPILOT Assist introduced, e-Pedal refined"
+    - year: 2020
+      changes: "Minor interior updates, improved infotainment"
+    - year: 2023
+      changes: "Apple CarPlay/Android Auto added, updated ProPILOT"
+  
+metadata:
+  sources:
+    - https://www.nissan.com/leaf/
+    - https://ev-database.org/car/1655/Nissan-Leaf
+    - https://www.carwow.co.uk/nissan/leaf
+    - https://www.whatcar.com/nissan/leaf/hatchback/review
+    - https://www.autocar.co.uk/car-review/nissan/leaf
+  data_quality: verified
+  source_type: [manufacturer, measured]
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  notes: >
+    The base 40kWh LEAF is the most affordable variant of the world's first mass-market EV.
+    It offers adequate 270km WLTP range for daily commuting and urban driving at entry-level pricing.
+    Proven reliability with 650,000+ LEAFs sold worldwide since 2010. V2G/V2H capability pioneered
+    by Nissan is unique selling point. Main weaknesses are CHAdeMO charging (vs CCS2), passive
+    battery cooling leading to faster degradation, only 50kW DC charging, and no heat pump causing
+    significant winter range loss. Best suited for buyers prioritizing proven reliability, low price,
+    and urban/commute driving over maximum range and fast charging speed.
