@@ -1,0 +1,225 @@
+---
+id: bmw-i4-xdrive40-2024
+name: "xDrive40"
+model_id: bmw-i4
+model_year: 2024
+
+battery:
+  usable_kwh: 80.7
+  total_kwh: 83.9
+  chemistry: NCM
+  supplier: CATL / Samsung SDI
+  cell_type: prismatic
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  
+range:
+  wltp_km: 507
+  wltp_city_km: 625
+  wltp_highway_km: 430
+  epa_km: null
+  epa_miles: null
+  real_world_km: 420
+  real_world_highway_km: 370
+  notes: |
+    AWD variant has slightly reduced range vs eDrive40 RWD (507km vs 590km) due to:
+    - Additional front motor weight (+70kg)
+    - Higher energy consumption from dual motors
+    - Less efficient at highway speeds due to second motor drag
+
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    connector_type: Type2
+    charge_time_0_100_hours: 8.25
+    notes: "Optional 22kW AC charger available (+€900)"
+  dc:
+    max_power_kw: 205
+    connector_type: CCS2
+    charge_time_10_80_percent_minutes: 31
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 205
+      - soc_percent: 30
+        power_kw: 205
+      - soc_percent: 50
+        power_kw: 160
+      - soc_percent: 70
+        power_kw: 100
+      - soc_percent: 80
+        power_kw: 65
+    notes: |
+      400V architecture limits DC charging to 205kW peak.
+      Battery preconditioning available via navigation system.
+      Typical 10-80% charge takes 31 minutes at 150kW+ stations.
+      
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+motors:
+  configuration: dual_motor
+  drive_type: AWD
+  motor_type: synchronous
+  front_motor:
+    power_kw: 135
+    torque_nm: 247
+    motor_type: synchronous
+  rear_motor:
+    power_kw: 160
+    torque_nm: 339
+    motor_type: synchronous
+  total_power_kw: 295
+  total_power_hp: 401
+  total_torque_nm: 586
+
+performance:
+  acceleration_0_100_kmh_seconds: 5.5
+  top_speed_kmh: 190
+  
+efficiency:
+  wltp_kwh_per_100km: 17.9
+  real_world_kwh_per_100km: 19.2
+  notes: |
+    AWD increases consumption by ~11% vs RWD eDrive40 (17.9 vs 16.1 kWh/100km).
+    Real-world efficiency in mixed driving: 19.2 kWh/100km.
+    Highway at 130 km/h: ~24 kWh/100km.
+
+weight:
+  curb_weight_kg: 2195
+  gross_vehicle_weight_kg: 2735
+  notes: "70kg heavier than eDrive40 due to front motor and additional electronics"
+
+features:
+  standard:
+    - "xDrive intelligent AWD with torque vectoring"
+    - "BMW Curved Display (12.3\" + 14.9\")"
+    - "BMW Operating System 8 with 5G"
+    - "3-zone automatic climate control"
+    - "Heat pump"
+    - "Adaptive LED headlights"
+    - "18-inch aerodynamic wheels"
+    - "Sensatec synthetic leather seats"
+    - "Parking sensors front and rear"
+    - "Rear-view camera"
+    - "Acoustic pedestrian warning"
+    - "Sport steering wheel"
+    - "Ambient lighting"
+  
+  optional:
+    - "22kW AC onboard charger (€900)"
+    - "M Sport Package (€3,700)"
+    - "Driving Assistant Professional (€2,150)"
+    - "Harman Kardon Surround Sound (€875)"
+    - "Head-up display (€1,200)"
+    - "Panoramic glass roof (€1,350)"
+    - "Comfort Access (€450)"
+    - "19-inch M wheels (€1,100)"
+
+adas:
+  adaptive_cruise_control: yes
+  lane_keeping_assist: yes
+  blind_spot_monitoring: yes
+  parking_assist: yes
+  traffic_sign_recognition: yes
+  automatic_emergency_braking: yes
+  notes: |
+    Full Level 2 ADAS available with Driving Assistant Professional package.
+    Highway Assistant provides hands-on lane centering at highway speeds.
+
+dimensions:
+  turning_circle_meters: 12.0
+
+towing:
+  max_trailer_weight_kg: 0
+  notes: "BMW i4 not rated for towing in any market"
+
+warranty:
+  basic_years: 3
+  basic_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 3
+  anti_corrosion_years: 12
+
+pricing:
+  germany:
+    base_price_eur: 62000
+    company_car_tax_percent: 0.25
+    effective_monthly_eur: 155  # Company car tax (0.25% of gross list price per month)
+  notes: |
+    AWD xDrive40 positioned between eDrive40 (€57,800) and M50 (€74,900).
+    €4,200 premium vs eDrive40 for xDrive AWD system.
+    0.25% company car tax rate applies (under €70k threshold).
+    Company car tax: €155/month vs €2,500+/month for equivalent ICE vehicle.
+
+market_positioning:
+  target_audience: "Premium sedan buyers in winter regions prioritizing AWD traction over maximum range"
+  competitors:
+    - "Tesla Model 3 Long Range AWD (€53,990): 2.5s faster acceleration, 629km range, €8k cheaper but lower build quality"
+    - "Polestar 2 Long Range Dual Motor (€54,900): Similar performance, 592km range, €7k cheaper"
+    - "Mercedes-Benz EQE 350 4MATIC (€74,990): More luxurious, 547km range, €13k more expensive"
+    - "Audi e-tron GT (€115,000): Much more powerful, similar range, significantly more expensive"
+    - "BMW i4 eDrive40 RWD (€57,800): Same car with RWD, 83km more range, €4.2k cheaper"
+    - "BMW i4 M50 xDrive (€74,900): More powerful (400kW), same AWD, €12.9k more expensive"
+  
+notes: |
+  The BMW i4 xDrive40 is the mid-range AWD variant of BMW's electric 4 Series Gran Coupé.
+  It adds BMW's xDrive intelligent AWD system with dual motors for improved traction in winter conditions.
+  
+  Key strengths:
+  - xDrive AWD with intelligent torque distribution (front/rear balance optimized per situation)
+  - Better traction in snow/ice vs RWD eDrive40
+  - 5.5s 0-100 km/h (0.2s faster than eDrive40)
+  - BMW Curved Display with latest iDrive 8 operating system
+  - Excellent build quality and premium interior
+  - 0.25% company car tax rate (significant savings for fleet buyers)
+  - Heat pump standard (maintains winter range)
+  - Good real-world efficiency (19.2 kWh/100km)
+  
+  Key weaknesses:
+  - 507km WLTP range modest for segment (vs Tesla Model 3 LR: 629km)
+  - 83km less range than eDrive40 RWD due to AWD efficiency penalty
+  - 400V architecture limits DC charging to 205kW (vs 800V competitors: 235kW+)
+  - No towing capacity rated (vs Tesla Model 3: 1,000kg)
+  - €4,200 premium vs eDrive40 for AWD (many buyers prefer RWD for better range)
+  - No bidirectional charging (V2G/V2H/V2L)
+  - Adapted ICE platform (not dedicated EV) results in higher weight and smaller frunk
+  
+  Best for:
+  - BMW enthusiasts in winter climates (Scandinavia, Alps, northern Germany)
+  - Company car buyers prioritizing AWD safety over maximum range
+  - Drivers who value premium build quality and brand prestige
+  - Those who need occasional highway passing power beyond eDrive40
+  
+  Most buyers choose either:
+  - eDrive40 RWD (€57,800): Better range, lower price, adequate for most buyers
+  - M50 xDrive (€74,900): Significantly more performance, same AWD capability
+  
+  The xDrive40 occupies a middle ground that appeals mainly to winter-region buyers
+  who want AWD security but don't need M50's extreme performance.
+  
+  Real-world range:
+  - Mixed driving (20°C): 420km
+  - Highway 130 km/h: 335km
+  - City driving: 560km
+  - Winter (-5°C, highway): 280km
+
+sources:
+  - url: https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2024/bmw-i4-uebersicht.html
+    title: BMW i4 xDrive40 Official Germany Page
+    accessed: "2026-02-08"
+  - url: https://ev-database.org/car/1525/BMW-i4-xDrive40
+    title: EV Database BMW i4 xDrive40 Specifications
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
