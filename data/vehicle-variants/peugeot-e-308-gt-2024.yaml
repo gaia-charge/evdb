@@ -1,0 +1,216 @@
+# Peugeot e-308 GT (2024) - Top Trim
+
+id: peugeot-e-308-gt-2024
+model_id: peugeot-e-308
+name: e-308 GT
+model_year: 2024
+trim_level: GT  # Top trim (Active < Allure < GT)
+variant_code: null
+
+production:
+  start_date: 2023-06-01
+  end_date: null
+  status: active
+  notes: Electric version launched mid-2023, GT is sportiest trim
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 54.0
+  usable_kwh: 51.0  # ~94.4% usable
+  supplier: ACC (Automotive Cells Company - Stellantis/Mercedes/TotalEnergies JV)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+  notes: Same 54 kWh battery as Allure trim, identical powertrain
+
+range:
+  wltp_km: 410
+  wltp_city_km: 535
+  wltp_highway_km: 335
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 345
+  real_world_source: ADAC EcoTest 2024, InsideEVs highway test
+  notes: Slightly lower range than Allure due to larger 18" wheels and sportier styling
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger: 11kW 3-phase standard
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 100kW peak maintained up to ~50%, then tapers
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 98
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 92
+    - percent: 60
+      power_kw: 82
+    - percent: 70
+      power_kw: 68
+    - percent: 80
+      power_kw: 45
+    - percent: 90
+      power_kw: 30
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front  # Front-wheel drive (FWD)
+  front:
+    type: permanent_magnet
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 270
+    supplier: null
+  combined:
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 270
+
+performance:
+  acceleration_0_100_kph: 9.8
+  acceleration_0_60_mph: null
+  top_speed_kph: 170  # Electronically limited
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 15.5
+  wltp_wh_per_km: 155
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.5
+  mpge_combined: null
+  drag_coefficient: 0.28
+
+weight:
+  curb_weight_kg: 1655  # Slightly heavier than Allure due to additional equipment
+  gross_weight_kg: 2055
+  weight_distribution_front_percent: 60
+  
+towing:
+  max_towing_kg: 0  # No towing capability
+  max_tongue_weight_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: MacPherson strut with anti-roll bar (sport-tuned)
+  rear: Multi-link independent suspension (sport-tuned)
+
+brakes:
+  front: Ventilated disc (330mm)
+  rear: Disc (268mm)
+  regenerative: true
+
+tires:
+  standard: 225/45 R18
+
+features:
+  infotainment:
+    - "Peugeot i-Cockpit HD with 10.0\" color touchscreen"
+    - "10.0\" digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "DAB+ digital radio"
+    - "10 speakers Focal Hi-Fi audio system"
+    - "MyPeugeot mobile app for remote control"
+    - "Connected Navigation with real-time traffic"
+    - "i-Toggles (5 customizable shortcut buttons)"
+  
+  driver_assistance:
+    - "Active Safety Brake with Pedestrian and Cyclist Detection"
+    - "Lane Keep Assist with Lane Departure Warning"
+    - "Traffic Sign Recognition with Speed Limit Recommendation"
+    - "Adaptive cruise control with Stop & Go"
+    - "Blind spot monitoring"
+    - "360-degree parking camera"
+    - "Driver attention alert"
+    - "Automatic high beam assist"
+    - "Head-up display (GT exclusive)"
+    - "Advanced park assist"
+  
+  comfort_convenience:
+    - "Automatic dual-zone climate control"
+    - "Keyless entry and start"
+    - "One-pedal driving with B-mode regenerative braking"
+    - "Heated and massaging front seats (GT Pack)"
+    - "Heated rear seats (GT Pack)"
+    - "Heated steering wheel"
+    - "Electric windows front and rear"
+    - "Electric and heated auto-dimming mirrors"
+    - "Rain-sensing wipers"
+    - "Wireless smartphone charging"
+    - "Hands-free powered tailgate"
+  
+  exterior:
+    - "Full LED Matrix headlights with LED DRLs"
+    - "18\" alloy wheels (GT design - Boston)"
+    - "Body-colored door handles and mirrors"
+    - "Dark tinted rear windows"
+    - "Shark fin antenna"
+    - "GT badge and black detailing"
+    - "Sports front bumper with GT air intakes"
+  
+  interior:
+    - "Alcantara and leather upholstery (GT Black)"
+    - "Leather-wrapped compact GT steering wheel"
+    - "Aluminum pedals"
+    - "Peugeot Connect emergency call and telematics"
+    - "361L trunk capacity"
+    - "60/40 split-folding rear seats"
+    - "Ambient lighting (8 colors)"
+    - "Metal door sills with GT logo"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  source_urls:
+    - https://www.peugeot.de/modelle/e-308.html
+    - https://www.peugeot.fr/gamme-vehicules/e-308.html
+    - https://ev-database.org/car/peugeot-e-308
+  notes: |
+    The Peugeot e-308 GT is the top trim level, adding premium features and sporty styling
+    to the already well-equipped Allure trim.
+    
+    Key GT upgrades over Allure:
+    - 18" alloy wheels (vs 17" on Allure)
+    - LED Matrix headlights (vs standard LED)
+    - Focal Hi-Fi audio system with 10 speakers (vs 6)
+    - Head-up display (GT exclusive)
+    - Alcantara/leather interior (vs cloth/TEP)
+    - Heated and massaging front seats
+    - 360-degree camera (vs rear-only)
+    - Hands-free powered tailgate
+    - Sport-tuned suspension
+    
+    The GT trim adds approximately €4,000-5,000 over Allure pricing but delivers
+    significantly enhanced comfort, technology, and premium feel.
+    
+    Despite identical powertrain, the GT's larger 18" wheels and sportier styling
+    reduce WLTP range by 6 km compared to Allure (410 km vs 416 km).
+    
+    The e-308 GT offers excellent value in the premium C-segment, competing with
+    VW ID.3 Pro S and Cupra Born VZ but with more sophisticated interior design.
