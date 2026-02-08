@@ -7,28 +7,28 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 12
+available_from: "2022-02-01"
+delivery_time_weeks: 10
 
 # Pricing
 pricing:
-  base_price: 43800
-  price_including_vat: 43800
+  base_price: 47900
+  price_including_vat: 47900
   vat_rate_percent: 20
 
 # Available Colors
 available_colors:
-  - name: Noir Étoilé
-    code: NB
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Blanc Glacier
-    code: OV369
+    code: QNC
     type: solid
     price_add:
       amount: 0
+      currency: EUR
+  - name: Noir Étoilé
+    code: GNE
+    type: metallic
+    price_add:
+      amount: 600
       currency: EUR
   - name: Rouge Flamme
     code: NNP
@@ -36,34 +36,40 @@ available_colors:
     price_add:
       amount: 600
       currency: EUR
-  - name: Gris Highland
-    code: KNM
+  - name: Bleu Iron
+    code: RPB
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Noir Diamant
-    code: GNE
+  - name: Gris Titanium
+    code: KQM
     type: metallic
     price_add:
-      amount: 750
+      amount: 600
       currency: EUR
   - name: Gris Schiste
     code: KNA
     type: metallic
     price_add:
-      amount: 750
+      amount: 600
       currency: EUR
-  - name: Orange Solaris
-    code: ORA
+  - name: Blanc Nacré
+    code: QMA
+    type: pearlescent
+    price_add:
+      amount: 850
+      currency: EUR
+  - name: Bleu Rafale
+    code: RPA
     type: metallic
     price_add:
-      amount: 900
+      amount: 600
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Diamond-Cut Alloy Wheels
+  - name: Jantes Alliage 20"
     size_inches: 20
     type: alloy
     price_add:
@@ -72,14 +78,14 @@ available_wheels:
 
 # Interior Options
 available_interiors:
-  - name: Nappa Leather Black
-    material: nappa_leather
+  - name: Alcantara/Cuir Synthétique Noir
+    material: alcantara_synthetic_leather
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Nappa Leather Grey
-    material: nappa_leather
+  - name: Alcantara/Cuir Synthétique Gris
+    material: alcantara_synthetic_leather
     color: grey
     price_add:
       amount: 0
@@ -88,52 +94,52 @@ available_interiors:
 # Incentives
 available_incentives:
   - type: federal
-    name: "Bonus Écologique"
+    name: "Bonus écologique (réduit)"
     amount:
-      amount: 5000
+      amount: 4000
       currency: EUR
-    conditions: ["Price under €47,000", "BEV", "Minimum 2-year ownership"]
+    conditions: ["Price between €47,000-€53,000", "BEV", "Fabrication en France", "First registration"]
     expires_at: "2024-12-31"
   - type: regional
-    name: "Prime à la Conversion"
+    name: "Prime à la conversion"
     amount:
       amount: 2500
       currency: EUR
-    conditions: ["Scrapping old vehicle", "Income limits apply"]
+    conditions: ["Trade-in of old vehicle", "Household income conditions"]
+    expires_at: "2024-12-31"
 
 # Options
 popular_packages:
-  - name: Pack Hiver
+  - name: Pack Safety Plus
     price:
-      amount: 700
+      amount: 1100
       currency: EUR
     features:
-      - Pare-brise chauffant
-      - Buses de lave-glace chauffantes
-  - name: Pack Conduite Autonome Avancé
-    price:
-      amount: 1200
-      currency: EUR
-    features:
-      - Freinage d'urgence autonome amélioré
-      - Alerte de circulation transversale
-      - Surveillance de l'attention du conducteur
+      - Aide au stationnement automatique
+      - Alerte de trafic arrière
+      - Maintien de voie d'urgence
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Iconic, la version premium avec tous les équipements
-  de série. Meilleure autonomie de la gamme (470 km WLTP, 385 km réel).
-  Parfait pour les acheteurs qui souhaitent l'ensemble complet sans ajouter d'options.
-  Inclut système audio Harman Kardon, toit panoramique, cuir Nappa, phares Matrix LED,
-  et toutes les aides à la conduite. Fabriqué en France à Douai.
-  Prix attractif avec bonus écologique (€5,000) et prime à la conversion (€2,500).
-  Version prestigieuse, populaire auprès des cadres et entreprises.
+  Renault Megane E-Tech EV60 Iconic - version haut de gamme avec
+  équipements premium et technologies avancées. Avec 470 km d'autonomie
+  WLTP (390 km en conditions réelles), elle offre une excellente
+  autonomie pour tous les scénarios. Équipements premium incluant
+  sièges Alcantara/cuir avec chauffage, ventilation et massage;
+  affichage tête haute; phares LED Matrix; jantes 20 pouces; audio
+  premium Harman Kardon; et toit panoramique Solarbay électrochrome.
+  Highway & Traffic Jam Assist (ProPilot) pour conduite semi-autonome.
+  Suite de sécurité complète avec caméra 360°. Élue Voiture de
+  l'Année 2023 en Europe. Éligible au bonus écologique français
+  (montant réduit car prix >€47,000) et à la prime à la conversion.
+  Délai de livraison actuellement 10 semaines. Fabriquée en France
+  à l'usine ElectriCity de Douai.
 
 # Metadata
 metadata:
   data_quality: verified
   data_source: manufacturer
   source_url: https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-  created_at: "2024-02-07"
-  last_verified_at: "2024-02-07"
-  notes: Prix février 2024 avec bonus écologique
+  created_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  notes: Prix au février 2026. Version premium avec équipements luxueux. Production française garantit bonus écologique. Prix sous €53,000 pour maintenir éligibilité bonus (réduit).

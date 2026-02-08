@@ -7,250 +7,108 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 8
-notes: |
-  Entry-level Megane E-Tech with 40 kWh battery. Winner of 2023 European Car of the Year.
-  Built at Renault ElectriCity hub in Douai, France. Best for city driving with 390 km city range.
+available_from: "2022-03-01"
+delivery_time_weeks: 12
 
 # Pricing
 pricing:
-  base_price: 37990
-  price_including_vat: 37990
+  base_price: 38400
+  price_including_vat: 38400
   vat_rate_percent: 19
-  notes: |
-    Base price for Megane E-Tech EV40 with 40 kWh battery and 130 hp motor.
-    €5,010 cheaper than EV60 Techno (€43,000) but with 150 km less range.
-    Best value for urban/suburban driving.
 
 # Available Colors
 available_colors:
   - name: Glacier White
-    code: 369
+    code: QNC
     type: solid
     price_add:
       amount: 0
       currency: EUR
   - name: Diamond Black
-    code: 676
+    code: GNE
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
   - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
-  - name: Rafale Grey
-    code: KPU
+  - name: Iron Blue
+    code: RPB
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
-  - name: Midnight Blue
-    code: RPF
+  - name: Titanium Grey
+    code: KQM
     type: metallic
     price_add:
-      amount: 700
+      amount: 650
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" Aerotech Alloy Wheels
+  - name: 18" Alloy Wheels
     size_inches: 18
     type: alloy
     price_add:
       amount: 0
       currency: EUR
-    notes: "Standard wheels, best efficiency"
-  - name: 20" Aerotech Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1200
-      currency: EUR
-    notes: "Sporty look, reduces range by ~15km"
 
 # Interior Options
 available_interiors:
-  - name: Grey Cloth
-    material: cloth
+  - name: Grey Fabric
+    material: fabric
+    color: grey
     price_add:
       amount: 0
       currency: EUR
-    notes: "Standard cloth interior with recycled materials"
-  - name: TEP Leather (Black)
-    material: synthetic_leather
-    price_add:
-      amount: 800
-      currency: EUR
-    notes: "Vegan leather alternative"
 
-# Equipment Packages
-available_packages:
-  - name: Winter Package
-    price:
-      amount: 690
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (Environmental Bonus)"
+    amount:
+      amount: 4500
       currency: EUR
-    contents:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated windshield"
-    notes: "Essential for winter driving"
+    conditions: ["Price under €65,000", "BEV", "First registration"]
+    expires_at: "2024-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €60,000"
+    conditions: ["Gross list price under €60,000"]
 
+# Options
+popular_packages:
   - name: Comfort Package
     price:
-      amount: 1490
+      amount: 1400
       currency: EUR
-    contents:
-      - "360-degree camera"
-      - "Wireless phone charging"
-      - "Premium Arkamys sound system"
-      - "Ambient lighting"
-    notes: "Popular upgrade for comfort"
+    features:
+      - Automatic climate control
+      - Heated front seats
+      - Rear parking camera
+      - Rain-sensing wipers
 
-# Individual Options
-individual_options:
-  - name: Solarbay Panoramic Roof
-    price:
-      amount: 1200
-      currency: EUR
-    notes: "Electrochromic glass roof that tints automatically"
+# Notes
+notes: |
+  Renault Megane E-Tech EV40 is the entry-level variant, ideal for urban
+  and suburban driving. With 300 km WLTP range and efficient 130 hp motor,
+  it offers excellent value in the compact EV segment. Winner of 2023
+  European Car of the Year. Standard equipment includes innovative OpenR
+  cockpit with Google built-in, heat pump for all-season efficiency, and
+  comprehensive safety features. Delivery times currently 12 weeks.
+  Qualifies for German environmental bonus and 0.25% company car taxation
+  (under €60,000 threshold). Manufactured in France at ElectriCity Douai plant.
 
-  - name: Tow Hitch
-    price:
-      amount: 850
-      currency: EUR
-    notes: "900kg braked towing capacity"
-
-# Incentives & Subsidies
-incentives:
-  - type: grant
-    name: BAFA Umweltbonus
-    amount: 0
-    currency: EUR
-    status: expired
-    valid_until: "2023-12-31"
-    notes: "Federal EV subsidy ended December 31, 2023"
-
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      Company car drivers pay only 0.25% of list price per month (€95/month)
-      vs 1% for ICE cars (€380/month), saving €3,420/year in taxes.
-      Under €70,000 threshold for 0.25% rate.
-
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer Befreiung)
-    amount: 0
-    currency: EUR
-    status: active
-    valid_until: "2030-12-31"
-    notes: |
-      Full exemption from road tax until December 31, 2030.
-      Comparable ICE car would cost ~€250/year.
-
-  - type: grant
-    name: THG-Quote
-    amount: 320
-    currency: EUR
-    status: active
-    notes: |
-      CO2 certificate trading for EV owners.
-      EV owners can sell CO2 certificates, earning €280-360/year.
-
-# Typical Configuration
-typical_configuration:
-  name: "EV40 Comfort"
-  description: "Base trim with comfort upgrades"
-  total_price: 41870
-  includes:
-    - Base EV40 trim
-    - Rafale Grey metallic
-    - Winter Package
-    - Comfort Package
-  notes: "Popular configuration for urban drivers"
-
-# Charging Infrastructure
-charging_infrastructure:
-  home_charging:
-    - provider: Renault Mobilize Power Solutions
-      rate_per_kwh: 0.28
-      notes: "Green electricity tariff for home charging"
-    - provider: Renault wallbox
-      installation_cost: 800
-      power_kw: 7.4
-      notes: "Official Renault wallbox with app control"
-
-  public_charging:
-    - provider: Mobilize Charge Pass
-      network_size: "600,000+ charging points in Europe"
-      app: My Renault app
-      notes: "Integrated into vehicle navigation"
-
-    - provider: IONITY
-      network_type: High-power DC (350kW)
-      standard_rate_per_kwh: 0.79
-      subscription_rate_per_kwh: 0.45
-      subscription_cost_monthly: 13.99
-      notes: "Renault partnership for fast charging"
-
-# Warranty
-warranty:
-  vehicle_years: 3
-  vehicle_km: 100000
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  paint_years: 3
-  perforation_years: 12
-  roadside_assistance_years: 3
-  notes: |
-    Standard Renault warranty plus 8-year/160,000km battery warranty
-    with 70% capacity guarantee.
-
-# Service & Maintenance
-service:
-  interval_years: 1
-  interval_km: 30000
-  cost_per_service: 250
-  fixed_price_3_year: 650
-  notes: |
-    Service every 1 year or 30,000km. No oil changes.
-    Lower maintenance costs than ICE vehicles.
-
-# Environmental
-environmental:
-  energy_efficiency_class: A
-  co2_emissions_gpkm: 0
-  electricity_consumption_kwh_100km: 13.3
-  notes: "German energy label A rating"
-
-# Market Position
-market_position:
-  segment_rank: 3
-  monthly_sales_avg: 420
-  key_competitors:
-    - Volkswagen ID.3 Pro
-    - Peugeot e-2008
-    - Opel Mokka Electric
-    - Jeep Avenger Electric
-    - MG4 Standard Range
-  notes: |
-    European Car of the Year 2023 winner.
-    Strong contender in compact EV crossover segment.
-    Best-in-class design and infotainment system.
-
+# Metadata
 metadata:
   data_quality: verified
-  last_updated: '2026-02-08'
-  created_at: '2026-02-08'
-  source: "Renault Germany official configurator"
-  source_urls:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-  verification_date: '2026-02-08'
+  data_source: manufacturer
+  source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  created_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  notes: Prices as of February 2026. Megane E-Tech won 2023 European Car of the Year.
