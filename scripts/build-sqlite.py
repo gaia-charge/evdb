@@ -465,12 +465,50 @@ class DatabaseBuilder:
             
             # Extract motor data - handle multiple formats
             # Try motors at root level first (old format), then under performance (new format)
-            motors_data = data.get('motors', {}) or performance.get('motors', {})
+            # Also check singular 'motor' (MG, Smart, Alfa format)
+            motors_data = data.get('motors', {}) or data.get('motor', {}) or performance.get('motors', {})
             drive_type = performance.get('drive_type')  # Also check performance level
             total_power_kw = performance.get('total_power_kw')  # Try direct value first
             total_torque_nm = performance.get('total_torque_nm')  # Try direct value first
             motor_count = None
             motor_type = None
+            
+            # If we have singular 'motor' format (MG, Smart, Fiat), extract power directly
+            if 'motor' in data and isinstance(data['motor'], dict):
+                if not total_power_kw:
+                    # Try power_kw first, then max_power_kw (Fiat format)
+                    total_power_kw = data['motor'].get('power_kw') or data['motor'].get('max_power_kw')
+                if not total_torque_nm:
+                    # Try torque_nm first, then max_torque_nm (Fiat format)
+                    total_torque_nm = data['motor'].get('torque_nm') or data['motor'].get('max_torque_nm')
+                if not drive_type:
+                    drive_type = data['motor'].get('drive_type')
+                if not motor_count:
+                    motor_count = data['motor'].get('count', 1)  # Default to 1 if singular motor
+                if not motor_type:
+                    motor_type = data['motor'].get('type')
+            
+            # Check drivetrain.motors format (Alfa Romeo, some Stellantis models)
+            drivetrain = data.get('drivetrain', {})
+            if isinstance(drivetrain, dict) and 'motors' in drivetrain:
+                drivetrain_motors = drivetrain['motors']
+                if isinstance(drivetrain_motors, dict):
+                    # Sum power from front and rear motors
+                    if not total_power_kw:
+                        front_motor = drivetrain_motors.get('front', {})
+                        rear_motor = drivetrain_motors.get('rear', {})
+                        front_power = 0
+                        rear_power = 0
+                        if isinstance(front_motor, dict):
+                            front_power = front_motor.get('power_kw', 0)
+                        if isinstance(rear_motor, dict):
+                            rear_power = rear_motor.get('power_kw', 0)
+                        if front_power or rear_power:
+                            total_power_kw = front_power + rear_power
+                    # Get motor type from drivetrain if not set
+                    if not motor_type and not drive_type:
+                        motor_type = drivetrain.get('motor_type')
+                        drive_type = drivetrain.get('configuration')
             
             # Format 1: New format with dict containing combined, front, rear
             if isinstance(motors_data, dict):

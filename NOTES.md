@@ -1,12 +1,40 @@
 # EVDB Development Notes
 
-## 2026-02-08 Evening Session
+## 2026-02-08 Late Evening Session (8:48 PM)
+
+### ✅ Fixed: Power Data Missing Issue
+
+**Problem**: 12 variants were missing power data in the database despite the data existing in YAML files.
+
+**Root Cause**: Build script (`build-sqlite.py`) didn't support all motor data format variations used across different manufacturers.
+
+**Solution**: Enhanced build script to handle three additional formats:
+1. **Singular `motor` format** (MG, Smart): Added check for `motor.power_kw` and `motor.max_power_kw`
+2. **Drivetrain-nested format** (Alfa Romeo, Stellantis): Added extraction from `drivetrain.motors.front/rear.power_kw`
+3. **Duplicate YAML keys** (Kia EV9): Fixed YAML file structure where `performance:` was defined twice, causing second definition to overwrite first
+
+**Changes Made**:
+- Updated `scripts/build-sqlite.py` to check `motor` (singular) in addition to `motors` (plural)
+- Added support for `motor.max_power_kw` variant (Fiat format)
+- Added extraction logic for `drivetrain.motors.front/rear` structure (Alfa Romeo format)
+- Fixed `kia-ev9-long-range-awd-2024.yaml` by merging duplicate `performance:` sections
+
+**Result**: All 162 variants now have complete power data. Database integrity: 100% ✅
+
+**Affected Vehicles Fixed**:
+- Smart #1 (3 variants): Pro+, Premium, Brabus
+- MG4 Electric (3 variants): Extended Range + others
+- MG5 Electric (2 variants): Standard Range, Long Range
+- MG ZS EV (1 variant)
+- Kia EV9 Long Range AWD (1 variant)
+- Alfa Romeo Junior Elettrica (1 variant)
+- Fiat 500e Icon (1 variant)
 
 ### Current Status
 - **Database**: 162 variants across 80 models from 26 manufacturers
 - **Germany Coverage**: 100% (162/162 variants)
 - **Pricing Data**: 94.4% (153/162 variants in DE market)
-- **Data Quality**: 92.6% complete (12 variants missing power data)
+- **Data Quality**: 100% complete (all variants have power, range, battery, and market data)
 
 ### Data Integrity Check Results
 
