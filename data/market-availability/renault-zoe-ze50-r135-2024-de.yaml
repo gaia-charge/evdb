@@ -14,9 +14,12 @@ pre_order_available: false
 order_book_open: true
 
 # Pricing
-base_price: 33990  # Base ZE50 R135 price in Germany (2024)
-on_road_price: 34880  # Including destination charge
-destination_charge: 890
+pricing:
+  base_price: 33990
+  price_including_vat: 33990
+  vat_rate_percent: 19
+  on_road_price: 34880
+  destination_charge: 890
 
 price_notes: |
   Renault Zoe ZE50 R135 pricing in Germany (2024):
