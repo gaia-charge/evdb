@@ -1,0 +1,115 @@
+# Honda Motor Company, Ltd.
+# https://www.honda.com/
+
+id: honda
+name: Honda Motor Company, Ltd.
+short_name: Honda
+country: JP  # Japan
+founded: 1948
+headquarters:
+  city: Tokyo
+  country: JP
+
+description: >
+  Honda is a Japanese multinational conglomerate manufacturer of automobiles, motorcycles, and
+  power equipment. Founded in 1948 by Soichiro Honda, the company is the world's largest
+  motorcycle manufacturer and a leading automotive manufacturer globally. Honda has been
+  relatively late to pure electric vehicles, focusing initially on hybrid technology with its
+  two-motor hybrid system (e:HEV). However, Honda is now accelerating its EV strategy with the
+  e:N brand for Europe and China, and a partnership with General Motors for North America.
+  Honda aims for 100% electric and fuel cell sales by 2040.
+
+parent_company: Honda Motor Co., Ltd. (independent)
+
+brands:
+  - Honda
+  - Acura (luxury brand, North America)
+
+ev_platforms:
+  - name: e:N Architecture F
+    description: >
+      Honda's dedicated front-wheel drive electric vehicle platform. Developed specifically
+      for compact to mid-size EVs in the European and Chinese markets. Features a flat floor,
+      improved packaging, and optimized battery integration. Used for the e:Ny1.
+    vehicles:
+      - Honda e:Ny1
+      - Honda e:NS1 (China)
+      - Honda e:NP1 (China)
+    
+  - name: e:N Architecture W
+    description: >
+      Honda's dedicated all-wheel drive electric vehicle platform for larger vehicles.
+      Used for mid-size to large EVs in China.
+    vehicles:
+      - Honda e:NS2 (China)
+      - Honda e:NP2 (China)
+  
+  - name: Honda e Platform
+    description: >
+      Dedicated EV platform for the Honda e city car. Compact rear-wheel drive platform
+      optimized for urban mobility. Not shared with other models.
+    vehicles:
+      - Honda e (Europe only, discontinued 2023)
+
+notable_models:
+  electric:
+    - Honda e (2020-2023, compact city car, Europe)
+    - Honda e:Ny1 (2023-present, compact SUV, Europe)
+    - Honda Prologue (2024-present, mid-size SUV, North America, GM Ultium platform)
+  hybrid:
+    - Honda Civic e:HEV
+    - Honda CR-V e:HEV
+    - Honda Accord Hybrid
+    - Honda Jazz e:HEV
+  fuel_cell:
+    - Honda Clarity Fuel Cell (discontinued)
+
+production_sites:
+  ev_production:
+    - location: Dongfeng Honda, Wuhan, China
+      models: [Honda e:Ny1, Honda e:NS1]
+    - location: GAC Honda, Guangzhou, China
+      models: [Honda e:NP1, Honda e:NP2]
+    - location: Swindon, UK
+      models: [None - plant closed 2021]
+    - location: Marysville, USA
+      models: [Honda Prologue (uses GM plant)]
+
+innovation:
+  - "Two-motor hybrid system (e:HEV) - one of the most efficient hybrids"
+  - "Magic Seats folding system for flexible cargo space"
+  - "Honda Sensing driver assistance suite"
+  - "VTEC variable valve timing (ICE heritage)"
+  - "Partnership with GM for Ultium platform EVs"
+
+sustainability:
+  goals:
+    - "100% electric and fuel cell vehicles by 2040"
+    - "Carbon neutrality by 2050 for all products and operations"
+    - "30 EV models globally by 2030"
+    - "2 million EV sales annually by 2030"
+  initiatives:
+    - "Honda e:Technology brand for EVs"
+    - "Strategic partnership with General Motors for EV development"
+    - "Partnership with LG Energy Solution for battery production"
+    - "Solid-state battery development (targeting 2028-2030)"
+
+partnerships:
+  - name: General Motors
+    description: Strategic partnership for EV platform sharing (Ultium), battery procurement
+  - name: LG Energy Solution
+    description: Battery supply and joint battery plant in US
+  - name: Sony Honda Mobility
+    description: Joint venture for premium electric vehicles with Sony
+
+website: https://www.honda.com/
+ev_website: https://www.honda.com/electric
+
+metadata:
+  sources:
+    - https://global.honda/
+    - https://www.honda.com/
+    - https://en.wikipedia.org/wiki/Honda
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
