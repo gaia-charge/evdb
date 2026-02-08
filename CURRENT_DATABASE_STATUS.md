@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 10:45 AM  
-**Total Vehicles:** 117 variants across 59 models from 21 manufacturers  
-**Germany Market Coverage:** 111/117 variants (94.9%)
+**Last Updated:** 2026-02-08 11:00 AM  
+**Total Vehicles:** 119 variants across 59 models from 21 manufacturers  
+**Germany Market Coverage:** 113/119 variants (95.0%)
 
 ---
 
@@ -15,7 +15,7 @@
 | Hyundai Motor Group | 4 | 7 | ✅ Good |
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 2 | 6 | ✅ Good |
-| Stellantis | 10 | 14 | 🟡 Partial |
+| Stellantis | 10 | 16 | 🟡 Partial |
 | Volkswagen Group | 5 | 12 | ✅ Good |
 | Audi | 4 | 7 | ✅ Good |
 | Mercedes-Benz | 6 | 13 | ✅ Good |
@@ -31,7 +31,7 @@
 | Honda | 1 | 1 | 🟢 Single |
 | Genesis | 1 | 1 | 🟢 Single |
 
-**Total:** 21 manufacturers, 59 models, 117 variants
+**Total:** 21 manufacturers, 59 models, 119 variants
 
 ---
 
@@ -65,6 +65,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Opel Corsa-e & Mokka-e Expansion**: Added 2 NEW VARIANTS (Corsa-e Edition €33,990, Mokka-e Edition €36,990) + Germany market data - Completes base trim coverage for Opel's electric lineup - Both Edition trims offer entry-level pricing with full upgrade options - Stellantis now 16 variants (from 14, +14.3%) - Germany coverage now 113/119 = 95.0% (up from 94.9%) - *Added Feb 8, 2026 11:00*
 - ✅ **Cupra Born Germany Market Data**: Added DE market data for 2 variants (58kWh €40,990, VZ 77kWh €51,990) - Completes Cupra Born lineup with full pricing, packages, and company car calculations - Cupra now 100% Germany coverage (3/3 variants) - Germany database coverage now 111/117 = 94.9% (up from 93.2%) - *Added Feb 8, 2026 10:45*
 - ✅ **Volvo EC40**: 1 NEW MODEL + 2 variants (Single Motor RWD 530km WLTP 175kW €56,000, Twin Motor AWD 487km WLTP 300kW €63,000) - Coupe SUV variant of EX40 with superior aerodynamics (Cd 0.30 vs 0.33), 55km more range than equivalent EX40, leather-free interior standard - First Volvo sold online-only - *Added Feb 8, 2026 10:30*
 - ✅ **Ford Mustang Mach-E Expansion**: Added 3 NEW VARIANTS (Standard Range RWD 68kWh 440km €49,990, Extended Range RWD 88kWh 600km €56,990, GT 88kWh AWD 487hp 3.7s 0-100 €74,990) + Germany market data for all variants - Complete Mach-E lineup now available with company car tax calculations - Ford now 4 variants (from 1, +300%) - *Added Feb 8, 2026 10:15*
@@ -147,7 +148,8 @@
 - **Feb 8, 2026 (10:15):** 115 variants (+3 Ford Mustang Mach-E: Standard Range RWD 440km €49,990, Extended Range RWD 600km €56,990, GT AWD 487hp 3.7s €74,990 - Complete Mach-E lineup + Germany market data - Germany coverage now 109/115 = 94.8%)
 - **Feb 8, 2026 (10:30):** 117 variants (+2 Volvo EC40: NEW MODEL - Single Motor RWD 530km €56,000, Twin Motor AWD 487km €63,000 - Coupe SUV with superior aerodynamics Cd 0.30, 55km more range than EX40, leather-free interior)
 - **Feb 8, 2026 (10:45):** 117 variants (no new variants, +2 Germany market records: Cupra Born 58kWh €40,990, Cupra Born VZ €51,990 - Completes Cupra lineup - Germany coverage now 111/117 = 94.9%)
-- **Growth:** +66 variants since Feb 7 (129.4% increase) | +2 manufacturers (Honda, Genesis) | +5 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40)
+- **Feb 8, 2026 (11:00):** 119 variants (+2 Opel: Corsa-e Edition €33,990, Mokka-e Edition €36,990 - Entry-level trims for both models + Germany market data - Stellantis now 16 variants - Germany coverage now 113/119 = 95.0%)
+- **Growth:** +68 variants since Feb 7 (133.3% increase) | +2 manufacturers (Honda, Genesis) | +5 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
