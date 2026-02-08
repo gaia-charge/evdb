@@ -1,0 +1,188 @@
+# Nissan Ariya e-4ORCE 63 kWh (2024)
+id: nissan-ariya-e-4orce-63kwh-2024
+name: e-4ORCE 63 kWh
+model_id: nissan-ariya
+model_year: 2024
+variant_code: ARIYA-63-E4ORCE
+
+battery:
+  usable_kwh: 63.0
+  total_kwh: 66.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    63 kWh usable battery (66 kWh gross). Envision AESC cells with NCM
+    chemistry. 400V architecture. Base battery option for Ariya, now
+    available with AWD e-4ORCE system.
+
+range:
+  wltp_km: 410
+  wltp_city_km: 530
+  wltp_highway_km: 340
+  epa_km: 330
+  real_world_km: 335
+  real_world_source: InsideEVs real-world test
+  notes: |
+    WLTP range of 410 km with AWD e-4ORCE system (40 km less than FWD due
+    to dual motors and higher weight). EPA rated at 330 km (205 miles).
+    Real-world tests show around 335 km in mixed conditions. AWD provides
+    better traction but reduces range compared to FWD variant.
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 130
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 125
+    - soc_percent: 30
+      power_kw: 115
+    - soc_percent: 40
+      power_kw: 100
+    - soc_percent: 50
+      power_kw: 85
+    - soc_percent: 60
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 35
+    - soc_percent: 90
+      power_kw: 25
+  time_0_to_100_min: 45
+  time_10_to_80_min: 35
+  time_20_to_80_min: 30
+  charging_speed_kmh: 780
+  notes: |
+    DC fast charging up to 130 kW peak. 10-80% in 35 minutes with 63 kWh
+    battery. 22 kW three-phase AC charging standard. Same charging
+    performance as FWD variant.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 1.5
+  v2h: true
+  v2g: false
+  notes: |
+    V2L (vehicle-to-load) up to 1.5 kW via adapter. V2H (vehicle-to-home)
+    capable with compatible equipment. V2G not yet available in Europe.
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 115
+      power_hp: 156
+      torque_nm: 250
+    - position: rear
+      type: permanent magnet
+      power_kw: 100
+      power_hp: 136
+      torque_nm: 195
+  total_power_kw: 215
+  total_power_hp: 292
+  total_torque_nm: 445
+  acceleration_0_100_sec: 6.2
+  top_speed_kmh: 180
+  notes: |
+    Dual permanent magnet motors (front + rear) with e-4ORCE all-wheel drive
+    system. 292 hp and 445 Nm combined output. 0-100 km/h in 6.2 seconds,
+    1.3 seconds faster than FWD variant. Top speed of 180 km/h. Electronic
+    torque vectoring provides excellent traction and stability in all
+    conditions.
+
+weight:
+  curb_weight_kg: 2100
+  gross_vehicle_weight_kg: 2570
+  payload_kg: 470
+  distribution_front_percent: 51
+  distribution_rear_percent: 49
+  notes: "Near-perfect 51/49 weight distribution with dual motors"
+
+efficiency:
+  wltp_kwh_per_100km: 18.6
+  wltp_city_kwh_per_100km: 16.0
+  wltp_highway_kwh_per_100km: 21.5
+  epa_kwh_per_100km: 19.1
+  real_world_kwh_per_100km: 20.2
+  efficiency_rating: B
+  notes: |
+    18.6 kWh/100km WLTP - slightly higher than FWD due to dual motors and
+    AWD drivetrain losses. Real-world efficiency around 20.2 kWh/100km in
+    mixed conditions. The trade-off for improved performance and traction.
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "ProPILOT Assist 2.0"
+  notes: |
+    - Heat pump standard for improved cold-weather efficiency
+    - e-4ORCE AWD with electronic torque vectoring
+    - ProPILOT Assist 2.0 with hands-free highway driving (single-lane)
+    - ProPILOT Park for automated parking
+    - e-Pedal Step for one-pedal driving
+    - 12.3-inch digital instrument cluster
+    - 12.3-inch center touchscreen
+    - Wireless Apple CarPlay/Android Auto
+    - Premium Bose audio system (10 speakers)
+    - Panoramic glass roof
+    - Heated front seats and steering wheel
+    - Nissan Safety Shield 360 (AEB, LDW, BSW, RCTA)
+
+optional_equipment:
+  - name: ProPILOT Assist 2.0 Pack
+    code: PROPILOT2
+    category: safety
+    included_in_base: false
+    notes: "Hands-free highway driving with navigation integration"
+  - name: Premium Interior Package
+    code: PREMINT
+    category: comfort
+    included_in_base: false
+    notes: "Quilted leather seats, power driver seat, premium materials"
+  - name: ProPILOT Park Package
+    code: PROPARK
+    category: safety
+    included_in_base: false
+    notes: "Automated parking with 360-degree camera"
+  - name: Bose Premium Audio
+    code: BOSE
+    category: infotainment
+    included_in_base: false
+    notes: "10-speaker Bose audio system"
+
+notes: |
+  The Nissan Ariya e-4ORCE 63 kWh combines Nissan's all-wheel drive system
+  with the more affordable 63 kWh battery option. With 292 hp and electronic
+  torque vectoring, it offers significantly better performance and traction
+  than the FWD variant while maintaining reasonable efficiency. The e-4ORCE
+  name references Nissan's legendary GT-R ATTESA E-TS AWD system. Perfect
+  for buyers who want AWD capability without the premium cost of the 87 kWh
+  battery. Competes with VW ID.4 GTX, Ioniq 5 AWD, and Kia EV6 AWD.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
+    - https://insideevs.com/reviews/nissan-ariya-e-4orce/
+    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+    - https://ev-database.org/car/nissan-ariya-63kwh-awd
