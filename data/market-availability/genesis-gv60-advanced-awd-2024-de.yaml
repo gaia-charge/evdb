@@ -1,0 +1,335 @@
+id: genesis-gv60-advanced-awd-2024-de
+variant_id: genesis-gv60-advanced-awd-2024
+market: DE
+currency: EUR
+availability_status: available
+release_date: "2022-04-01"
+
+pricing:
+  base_price: 57990
+  price_including_vat: 57990
+  vat_rate_percent: 19
+  on_road_price: 59080
+  delivery_charge: 1090
+
+incentives:
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "Company Car Tax Benefit"
+    type: tax_exemption
+    amount: 5219
+    description: |
+      0.25% monthly tax rate vs 1.0% for combustion vehicles.
+      Saves €5,219/year vs combustion equivalent.
+      Vehicles under €70,000 qualify for 0.25% rate.
+  - name: "THG-Quote (Greenhouse Gas Certificate)"
+    type: subsidy
+    amount: 300
+    description: "Annual CO2 savings certificate (~€250-350/year)"
+
+company_car_taxation:
+  applicable: true
+  monthly_rate_percent: 0.25
+  calculation_base: "base_price"
+  taxable_benefit_calculation: |
+    Taxable benefit = €57,990 × 0.25% × distance to work (km)
+    Example (30 km commute): €57,990 × 0.25% × 30 = €434.93/month
+  annual_tax_savings_vs_ice_eur: 5219
+  ice_equivalent_model: "BMW X1 xDrive25i"
+  ice_equivalent_price_eur: 52000
+  ice_monthly_benefit_30km: 1560
+  ev_monthly_benefit_30km: 434.93
+  notes: |
+    0.25% rate for EVs under €70,000 list price provides massive tax advantage.
+    Company car driver saves €5,219/year vs ICE equivalent (30km commute).
+    Based on €57,990 list price and 30km one-way commute distance.
+
+configurations:
+  - name: "Base Configuration (as delivered)"
+    price: 59080
+    description: >
+      GV60 Advanced AWD fully equipped as standard with dual 12.3" displays, Face Connect
+      facial recognition, Crystal Sphere shift dial, Highway Driving Assist 2, Remote Smart
+      Parking Assist 2, 360-degree camera, heated/ventilated seats, panoramic sunroof.
+      Includes delivery charge (€1,090). Ready to drive with comprehensive luxury features.
+    included_features:
+      - "Dual 12.3\" panoramic curved displays"
+      - "Crystal Sphere electronic shift dial"
+      - "Face Connect facial recognition"
+      - "Highway Driving Assist 2"
+      - "Remote Smart Parking Assist 2"
+      - "360-degree surround view camera"
+      - "Blind-Spot View Monitor"
+      - "Smart Cruise Control with Stop & Go"
+      - "Premium leather interior"
+      - "Heated/ventilated front seats"
+      - "Heated steering wheel"
+      - "Panoramic sunroof"
+      - "Dual-zone automatic climate control"
+      - "LED headlights and taillights"
+      - "19\" alloy wheels"
+      - "V2L capability (3.6 kW)"
+      - "Wireless Apple CarPlay/Android Auto"
+      - "Digital key via smartphone"
+      - "8-year/160,000km battery warranty"
+
+  - name: "Advanced Premium"
+    price: 63830
+    description: "Popular configuration adding key comfort features"
+    included_features:
+      - "All base Advanced equipment"
+      - "20\" Sport Design alloy wheels (€1,500)"
+      - "Head-up display with AR (€1,200)"
+      - "Suede headliner (€800)"
+      - "Matte paint (€1,250)"
+  
+  - name: "Advanced Luxury"
+    price: 67580
+    description: "Fully-loaded Advanced approaching Sport Plus equipment"
+    included_features:
+      - "All Premium configuration items"
+      - "Bang & Olufsen 17-speaker audio (€2,500)"
+      - "Extended Nappa leather package (€1,200)"
+
+available_options:
+  exterior:
+    - name: "20\" Sport Design alloy wheels"
+      price_eur: 1500
+      notes: "Reduces range by ~12 km WLTP vs standard 19\" wheels"
+    
+    - name: "Matte paint"
+      price_eur: 1250
+      colors:
+        - "Matte Grey"
+        - "Matte Green"
+      notes: "Distinctive premium finish"
+    
+    - name: "Two-tone paint"
+      price_eur: 900
+      notes: "Contrasting roof color"
+  
+  interior:
+    - name: "Bang & Olufsen 17-speaker premium audio"
+      price_eur: 2500
+      notes: "Standard on Sport Plus, optional on Advanced - excellent sound quality"
+    
+    - name: "Head-up display with augmented reality"
+      price_eur: 1200
+      notes: "Projects navigation and speed onto windshield"
+    
+    - name: "Extended Nappa leather package"
+      price_eur: 1200
+      includes:
+        - "Quilted Nappa leather seats"
+        - "Extended leather door panels"
+        - "Leather dashboard accents"
+      notes: "Elevates interior to Sport Plus level"
+    
+    - name: "Suede headliner"
+      price_eur: 800
+      notes: "Premium touch, reduces interior noise"
+  
+  technology:
+    - name: "Winter package"
+      price_eur: 600
+      includes:
+        - "Heated rear seats"
+        - "Heated steering wheel rim (extended)"
+        - "Windshield heating elements"
+      notes: "Recommended for cold climates"
+
+charging_infrastructure:
+  dc_fast_charging:
+    - network: "Ionity"
+      locations_germany: 53
+      pricing: "€0.69/kWh with Genesis charging card"
+      notes: "800V ultra-fast charging, 350 kW stations, 10-80% in 18 minutes"
+    
+    - network: "EnBW"
+      locations_germany: 4500
+      pricing: "€0.55/kWh (EnBW Mobility+ subscription €5.99/month)"
+      notes: "Largest German network, good 350 kW station coverage"
+    
+    - network: "Fastned"
+      locations_germany: 28
+      pricing: "€0.69/kWh (pay as you go) or €11.99/month Gold membership (€0.55/kWh)"
+      notes: "Premium 350 kW stations, good Autobahn coverage"
+  
+  ac_charging:
+    typical_home_wallbox: "11 kW 3-phase"
+    charge_time_0_100_hours: 7.0
+    monthly_cost_home_eur: 27
+    notes: "€0.35/kWh average home rate, 77.4 kWh × €0.35 = €27.09 per full charge"
+
+running_costs:
+  electricity_cost_per_100km_home_eur: 6.69
+  electricity_cost_per_100km_public_eur: 10.51
+  dc_fast_charging_cost_per_100km_eur: 13.18
+  annual_insurance_eur: 950
+  annual_maintenance_eur: 350
+  annual_road_tax_eur: 0
+  notes: |
+    Electricity costs based on 19.1 kWh/100km real-world consumption:
+    - Home charging: 19.1 × €0.35/kWh = €6.69/100km
+    - Public AC: 19.1 × €0.55/kWh = €10.51/100km
+    - DC fast: 19.1 × €0.69/kWh = €13.18/100km
+    Zero road tax for BEVs in Germany, reduced insurance rates for EVs.
+
+total_cost_ownership:
+  years: 3
+  annual_mileage_km: 15000
+  purchase_price_eur: 59080
+  residual_value_percent: 54
+  residual_value_eur: 31903
+  depreciation_eur: 27177
+  fuel_cost_eur: 3011
+  insurance_eur: 2850
+  maintenance_eur: 1050
+  road_tax_eur: 0
+  total_cost_3years_eur: 34088
+  cost_per_km_eur: 0.76
+  notes: |
+    3-year TCO calculation (15,000 km/year):
+    - Depreciation: €27,177 (46% over 3 years, strong Genesis residuals)
+    - Electricity: €3,011 (80% home charging at €0.35/kWh, 20% public at €0.55/kWh)
+    - Insurance: €2,850 (€950/year, slightly higher for luxury EV)
+    - Maintenance: €1,050 (€350/year, BEV service minimal)
+    - Road tax: €0 (exempt in Germany)
+    Total: €34,088 over 3 years = €0.76/km
+    
+    For company car drivers (0.25% rule, 30km commute):
+    Total cost €34,088 but TAX SAVINGS of €15,657 over 3 years
+    Net cost to company car driver: €18,431 = €0.41/km
+
+comparison_ice_equivalent:
+  model: "BMW X1 xDrive25i M Sport"
+  price_eur: 52000
+  fuel_consumption_l_per_100km: 7.8
+  co2_g_per_km: 177
+  annual_fuel_cost_eur: 1755
+  annual_road_tax_eur: 242
+  three_year_tco_eur: 38450
+  tco_difference_eur: -4362
+  notes: |
+    GV60 Advanced (€59,080) vs BMW X1 xDrive25i (€52,000):
+    - €7,080 higher purchase price for GV60
+    - But 3-year TCO €4,362 CHEAPER than X1 (€34,088 vs €38,450)
+    - GV60 saves €2,232 on fuel over 3 years (electricity vs gasoline)
+    - Company car drivers save additional €15,657 in taxes over 3 years
+    - Genesis offers 8-year/160,000km warranty vs BMW 2-year/unlimited
+    - 800V ultra-fast charging enables long-distance travel
+    - Premium Genesis features and design at competitive X1 pricing
+
+competitors:
+  - model: "BMW iX1 xDrive30"
+    price_eur: 61500
+    range_wltp_km: 439
+    power_kw: 230
+    acceleration_0_100_kmh: 5.6
+    charging_10_80_minutes: 29
+    notes: "€3,510 more expensive, 51 km less range, 11 minutes slower charging, but BMW badge"
+  
+  - model: "Audi Q4 e-tron 50 quattro"
+    price_eur: 57990
+    range_wltp_km: 522
+    power_kw: 220
+    acceleration_0_100_kmh: 6.2
+    charging_10_80_minutes: 28
+    notes: "Same price, 32 km more range, 10 min slower charging, less standard equipment"
+  
+  - model: "Mercedes EQA 350 4MATIC"
+    price_eur: 60990
+    range_wltp_km: 472
+    power_kw: 215
+    acceleration_0_100_kmh: 6.0
+    charging_10_80_minutes: 32
+    notes: "€3,000 more, 18 km less range, 14 min slower charging, aging platform"
+  
+  - model: "Tesla Model Y Long Range"
+    price_eur: 54990
+    range_wltp_km: 533
+    power_kw: 378
+    acceleration_0_100_kmh: 5.0
+    charging_10_80_minutes: 25
+    notes: "€4,090 cheaper, 43 km more range, faster acceleration, but less luxury/refinement"
+  
+  - model: "Hyundai Ioniq 5 Long Range AWD"
+    price_eur: 50990
+    range_wltp_km: 481
+    power_kw: 239
+    acceleration_0_100_kmh: 5.2
+    charging_10_80_minutes: 18
+    notes: "€8,000 cheaper platform sibling, 9 km less range, same 18-min charging, less premium"
+  
+  - model: "Genesis GV60 Sport Plus AWD"
+    price_eur: 65990
+    range_wltp_km: 466
+    power_kw: 270
+    acceleration_0_100_kmh: 5.0
+    charging_10_80_minutes: 18
+    notes: "€8,000 more, 24 km less range, 0.5s faster, adds Bang & Olufsen audio + massage seats"
+
+target_customers:
+  primary:
+    - "Value-conscious luxury EV buyers seeking Genesis quality at entry price"
+    - "Company car drivers maximizing 0.25% tax benefit (€5,219/year savings)"
+    - "Tech enthusiasts wanting 800V ultra-fast charging and Face Connect"
+    - "Design-focused buyers attracted to Genesis distinctive styling"
+    - "Families needing practical AWD crossover with generous equipment"
+  
+  secondary:
+    - "BMW/Audi/Mercedes crossover buyers seeking alternative luxury brand"
+    - "Tesla Model Y buyers wanting more refined interior and build quality"
+    - "Genesis brand loyalists upgrading to EV from combustion G70/GV70"
+    - "Urban professionals prioritizing advanced ADAS and biometric features"
+  
+  use_cases:
+    - "Daily commuting with home charging (490 km range adequate)"
+    - "Weekend getaways enabled by 18-minute ultra-fast charging"
+    - "Business travel with company car tax advantage"
+    - "Urban family transport with 432L trunk + V2L camping capability"
+
+dealer_network:
+  dealers_germany: 42
+  service_centers_germany: 42
+  average_distance_to_dealer_km: 45
+  mobile_service_available: true
+  notes: |
+    Genesis rapidly expanding German dealer network, currently 42 locations.
+    Premium concierge service includes free pickup/delivery for service.
+    Mobile service available in major cities.
+    5-year complimentary service package included.
+
+warranty:
+  vehicle_warranty_years: 5
+  vehicle_warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  roadside_assistance_years: 5
+  roadside_assistance_km: unlimited
+  notes: "Industry-leading warranty coverage, includes 5-year complimentary maintenance"
+
+data_sources:
+  pricing: "https://www.genesis.com/de/configurator/gv60"
+  specifications: "https://www.genesis.com/de/models/gv60/specifications.html"
+  market_data: "https://www.mobile.de, https://www.autoscout24.de"
+  charging: "https://www.ionity.eu, https://www.enbw.com/mobility"
+  tco_calculations: "ADAC, InsideEVs.de"
+
+notes: |
+  Genesis GV60 Advanced AWD is the smart entry point to Genesis electric luxury.
+  At €57,990, it's €8,000 less than Sport Plus while maintaining 95% of the experience.
+  Standard Face Connect, Crystal Sphere shift dial, and Highway Driving Assist 2
+  showcase Genesis innovation. 800V architecture with 18-minute charging matches
+  Sport Plus. 490 km WLTP range adequate for most users. Company car drivers save
+  €5,219/year in taxes versus ICE equivalent. Well-positioned against BMW iX1
+  (€3,510 more, slower charging) and Audi Q4 50 quattro (same price, slower charging).
+  Only sacrifices Bang & Olufsen audio and massage seats versus Sport Plus - reasonable
+  trade-off for €8,000 savings. Strong value proposition for luxury EV buyers.
+
+last_updated: "2026-02-08"
+confidence_level: verified

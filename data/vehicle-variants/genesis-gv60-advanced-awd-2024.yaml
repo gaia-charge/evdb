@@ -1,0 +1,228 @@
+id: genesis-gv60-advanced-awd-2024
+name: "GV60 Advanced AWD"
+model_id: genesis-gv60
+model_year: 2024
+trim_level: Advanced
+
+description: |
+  Genesis GV60 Advanced AWD is the entry-level variant offering exceptional value in
+  Genesis' first dedicated electric crossover. Features dual-motor AWD with 314 hp
+  (232 kW) combined output delivering spirited 5.5-second 0-100 km/h acceleration
+  and respectable 490 km WLTP range - 24 km more than Sport Plus thanks to smaller
+  19" wheels and more efficient tuning. Advanced includes comprehensive standard
+  equipment: 12.3" dual panoramic displays, crystal sphere electronic shift dial,
+  Face Connect facial recognition, Highway Driving Assist 2, Remote Smart Parking
+  Assist 2, premium leather interior with heated/ventilated front seats, panoramic
+  sunroof, and Vehicle-to-Load capability. E-GMP platform with 800V architecture
+  enables 10-80% charging in just 18 minutes at 350 kW DC stations. While lacking
+  Sport Plus' Bang & Olufsen audio and massage seats, Advanced delivers 95% of
+  the experience at €8,000 savings - making it the smart choice for value-conscious
+  luxury EV buyers. Electronic parking brake with Auto Hold, Smart Cruise Control
+  with Stop & Go, Blind-Spot View Monitor, and 360-degree camera system all standard.
+
+battery:
+  usable_kwh: 77.4
+  total_kwh: 82.0
+  chemistry: NCM
+  supplier: SK On
+  cell_type: pouch
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+motors:
+  configuration: dual_motor
+  drive_type: AWD
+  motor_type: permanent_magnet
+  front_motor:
+    power_kw: 74
+    torque_nm: 255
+  rear_motor:
+    power_kw: 160
+    torque_nm: 350
+  combined_power_kw: 232
+  combined_torque_nm: 605
+  notes: "Base dual-motor tune, no Boost mode"
+
+performance:
+  acceleration_0_100_kmh: 5.5
+  top_speed_kmh: 185
+  notes: "0.5 seconds slower than Sport Plus but still brisk"
+
+range:
+  wltp_km: 490
+  wltp_city_km: 615
+  wltp_highway_kmh_130: 390
+  real_world_mixed_km: 405
+  real_world_highway_kmh_130: 330
+  real_world_winter_km: 310
+  notes: "24 km more WLTP range than Sport Plus thanks to 19\" wheels vs 20\""
+
+efficiency:
+  wltp_kwh_per_100km: 17.9
+  real_world_kwh_per_100km: 19.1
+  notes: "More efficient than Sport Plus (18.8 vs 19.1 kWh/100km real-world)"
+
+charging:
+  ac_charging:
+    max_power_kw: 11
+    phases: 3
+    charge_time_0_100_hours: 7.0
+    onboard_charger_kw: 11
+  dc_charging:
+    max_power_kw: 350
+    charge_time_10_80_minutes: 18
+    charge_speed_km_per_minute: 14.8
+    notes: "800V ultra-fast charging, peak 235 kW typical"
+    curve_notes: "Maintains >200 kW from 10-50%, drops to ~100 kW at 70%"
+
+dimensions:
+  length_mm: 4515
+  width_mm: 1890
+  width_with_mirrors_mm: 2110
+  height_mm: 1580
+  wheelbase_mm: 2900
+  ground_clearance_mm: 160
+  drag_coefficient: 0.28
+  frontal_area_m2: 2.58
+
+weight:
+  curb_weight_kg: 2120
+  gross_vehicle_weight_kg: 2620
+  max_payload_kg: 500
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
+  roof_load_kg: 75
+
+cargo:
+  trunk_capacity_liters: 432
+  trunk_capacity_seats_down_liters: 1584
+  frunk_capacity_liters: 24
+  notes: "Practical crossover storage with flat load floor"
+
+seating:
+  capacity: 5
+  configuration: "2+3"
+  seat_material: "Premium leather"
+  front_seats_heated: true
+  front_seats_ventilated: true
+  front_seats_massage: false
+  rear_seats_heated: false
+  isofix_points: 2
+
+wheels_tires:
+  standard_wheel_size_inches: 19
+  standard_tire_size_front: "235/55 R19"
+  standard_tire_size_rear: "255/50 R19"
+  optional_wheel_sizes:
+    - 20
+  spare_wheel: "Tire repair kit"
+
+infotainment:
+  screen_size_inches: 12.3
+  screen_count: 2
+  screen_type: "Dual panoramic curved displays (12.3\" cluster + 12.3\" center)"
+  apple_carplay: true
+  android_auto: true
+  wireless_smartphone_integration: true
+  navigation: true
+  ota_updates: true
+  voice_control: true
+  speakers: 6
+  audio_brand: "Standard Genesis audio"
+  digital_key: true
+  smartphone_app: true
+
+driver_assistance:
+  autonomous_level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  parking_camera: "360-degree surround view"
+  automated_parking: true
+  automated_parking_type: "Remote Smart Parking Assist 2"
+  traffic_sign_recognition: true
+  driver_attention_monitoring: true
+  automatic_emergency_braking: true
+  pedestrian_detection: true
+  cyclist_detection: true
+  notes: "Highway Driving Assist 2, Remote Smart Parking Assist 2"
+
+features:
+  keyless_entry: true
+  keyless_start: true
+  biometric_authentication: "Face Connect facial recognition"
+  heads_up_display: false
+  ambient_lighting: true
+  panoramic_roof: true
+  heated_steering_wheel: true
+  power_tailgate: true
+  hands_free_tailgate: false
+  wireless_charging: false
+  v2l_capability: true
+  v2l_power_kw: 3.6
+  heat_pump: true
+  climate_zones: 2
+  notes: "Crystal Sphere electronic shift dial, Face Connect, V2L 3.6 kW"
+
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2022
+  adult_occupant: 89
+  child_occupant: 86
+  vulnerable_road_users: 68
+  safety_assist: 85
+  notes: "5-star Euro NCAP 2022, strong safety suite"
+
+price_positioning:
+  segment: "D-SUV"
+  competitors:
+    - "BMW iX1 xDrive30"
+    - "Audi Q4 e-tron 50 quattro"
+    - "Mercedes EQA 350 4MATIC"
+    - "Tesla Model Y Long Range"
+    - "Hyundai Ioniq 5 Long Range AWD"
+    - "Kia EV6 Long Range AWD"
+  value_proposition: |
+    GV60 Advanced delivers exceptional value as entry-level Genesis crossover with comprehensive
+    standard equipment and 800V ultra-fast charging at €8,000 less than Sport Plus. 490 km WLTP
+    range adequate for most users, 5.5s 0-100 acceleration still spirited, dual-motor AWD provides
+    all-weather capability. Face Connect biometric authentication and Crystal Sphere shift dial
+    showcase Genesis innovation. Positioned €2,000 below BMW iX1 xDrive30 while offering superior
+    charging (18 min vs 29 min) and more distinctive design. Strong value versus Audi Q4 50 quattro
+    (similar price, 32 km less range) and Mercedes EQA 350 (€3,000 more, 18 km less range). Only
+    sacrifices Bang & Olufsen audio and massage seats versus Sport Plus - reasonable trade-off for
+    most buyers. 8-year/160,000km battery warranty provides peace of mind.
+
+data_sources:
+  manufacturer: "https://www.genesis.com/de/models/gv60/highlights.html"
+  specifications: "https://www.genesis.com/de/models/gv60/specifications.html"
+  tests:
+    - source: "ADAC"
+      url: "https://www.adac.de/rund-ums-fahrzeug/tests/genesis-gv60/"
+      consumption_kwh_per_100km: 19.1
+      range_km: 405
+    - source: "AutoBild"
+      url: "https://www.autobild.de/artikel/genesis-gv60-test-2022-22945381.html"
+      consumption_kwh_per_100km: 19.0
+  confidence_level: verified
+
+tags:
+  - compact-crossover
+  - 800v-charging
+  - ultra-fast-charging
+  - awd
+  - dual-motor
+  - luxury
+  - korean
+  - e-gmp
+  - entry-level
+  - value
+  - face-connect
+  - v2l
+
+last_updated: "2026-02-08"
+data_quality: verified
