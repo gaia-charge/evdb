@@ -1,0 +1,360 @@
+# Porsche Macan Electric RWD 2024
+# Entry-level Macan Electric with single rear motor
+# Built on PPE platform with 800V architecture
+# Porsche's electric compact SUV combining sports car DNA with practicality
+
+id: porsche-macan-electric-rwd-2024
+name: Macan Electric
+model_id: porsche-macan-electric
+manufacturer_id: porsche
+variant_name: Macan Electric (Base RWD)
+model_year: 2024
+trim_level: Base
+version: Base
+
+description: |
+  The Porsche Macan Electric represents a new chapter for Porsche's best-selling SUV.
+  Built on the advanced PPE (Premium Platform Electric) platform co-developed with 
+  Audi, the base Macan Electric features a single rear motor delivering 240kW (326hp) 
+  and rear-wheel drive configuration that honors Porsche's sports car heritage.
+  
+  Despite being the "entry-level" variant, the Macan Electric delivers impressive 
+  performance (0-100 km/h in 6.5s) while offering excellent range (up to 613km WLTP) 
+  and ultra-fast 800V charging capability (270kW peak, 10-80% in 21 minutes).
+  
+  The PPE platform brings cutting-edge technology: 100kWh battery, flat floor for 
+  optimal packaging, sophisticated thermal management, and advanced regenerative 
+  braking. Air suspension is standard, as is the new Porsche Driver Experience 
+  with curved display cockpit.
+  
+  For those seeking pure Porsche driving dynamics in an electric SUV package without 
+  AWD complexity, the RWD Macan Electric offers the best efficiency, longest range, 
+  and most accessible price point while maintaining the sports car character that 
+  defines every Porsche.
+
+# ============================================================================
+# BATTERY & RANGE
+# ============================================================================
+
+battery:
+  usable_kwh: 95.0
+  total_kwh: 100.0
+  chemistry: NMC
+  cells: prismatic
+  manufacturer: Samsung SDI
+  supplier: Samsung SDI (South Korea)
+  modules: 12
+  cells_total: 180
+  nominal_voltage: 662
+  pack_voltage_range: "560-830V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    PPE platform 100kWh battery with 800V architecture for ultra-fast charging.
+    12 modules with 15 prismatic cells each. Advanced thermal management with 
+    heat pump integration for optimal efficiency in all weather conditions.
+    Preconditioning via navigation or Porsche Connect app optimizes charging speed.
+
+range:
+  wltp_km: 613
+  wltp_city_km: 770
+  wltp_highway_km: 500
+  epa_km: 490
+  epa_miles: 305
+  real_world_km: 520
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP: 613km (95kWh battery, 19" Macan wheels, RWD)
+    EPA: ~305 miles / 490km estimated (US rating)
+    Real-world: ~520km mixed driving in good conditions
+    
+    Longest range of Macan variants thanks to single motor efficiency. Excellent 
+    for daily driving and longer trips. Winter range: ~450km in cold conditions 
+    (-5°C to 5°C) with heat pump helping maintain efficiency.
+
+efficiency:
+  wltp_kwh_per_100km: 18.1
+  epa_kwh_per_100km: 21.0
+  real_world_kwh_per_100km: 22.5
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    Most efficient Macan Electric variant at 18.1 kWh/100km WLTP. Single rear 
+    motor eliminates front motor drag. Slightly higher consumption than smaller 
+    EVs due to SUV form factor, wider tires, and Porsche performance tuning, but 
+    excellent for a compact luxury SUV.
+
+# ============================================================================
+# CHARGING
+# ============================================================================
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    optional_upgrade_kw: 22
+    optional_upgrade_cost: "€1,680 (22kW onboard charger)"
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 9.5
+    notes: |
+      Standard: 11kW AC (3-phase Type2) - 0-100% in ~9.5 hours
+      Optional: 22kW AC onboard charger upgrade (€1,680) - 0-100% in ~4.8 hours
+  
+  dc:
+    max_power_kw: 270
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 21
+    time_5_80_minutes: 21
+    peak_charge_time_minutes: "15-30% state of charge"
+    notes: |
+      PPE platform delivers industry-leading 800V fast charging:
+      - Peak: 270kW (achieved between 15-30% SoC at 350kW chargers)
+      - 10-80%: ~21 minutes (ideal conditions, preconditioned battery)
+      - Average 10-80%: ~23-25 minutes real-world
+      - 100km range in ~5 minutes
+      
+      Base RWD offers same flagship charging as Turbo variant - no compromise on 
+      charging technology regardless of trim level. This is a key advantage of 
+      PPE platform.
+    
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 60
+      - soc_percent: 10
+        power_kw: 260
+      - soc_percent: 15
+        power_kw: 270
+        note: "Peak power"
+      - soc_percent: 30
+        power_kw: 268
+      - soc_percent: 50
+        power_kw: 190
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 55
+
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 11
+  v2h: true
+  v2g: true
+  notes: |
+    PPE platform supports bidirectional charging:
+    - V2L: 11kW external power supply (camping, tools, etc.)
+    - V2H: Home backup power (requires compatible home charger)
+    - V2G: Grid services (market/region dependent)
+
+# ============================================================================
+# MOTORS & PERFORMANCE
+# ============================================================================
+
+motors:
+  count: 1
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: RWD (rear-wheel drive)
+  rear_motor:
+    power_kw: 240
+    power_hp: 326
+    type: PMSM
+  combined_power_kw: 240
+  combined_power_hp: 326
+  overboost_power_kw: 265
+  overboost_power_hp: 360
+  overboost_duration_seconds: 10
+  torque_nm: 563
+  notes: |
+    Macan Electric RWD features single rear motor:
+    - Rear: 240kW (326hp) continuous, 265kW (360hp) overboost
+    - Torque: 563 Nm (impressive for single motor setup)
+    
+    Overboost (Launch Control): 265kW for ~10 seconds during hard acceleration.
+    Pure rear-wheel drive provides engaging driving dynamics with excellent 
+    traction control from Porsche Traction Management (PTM).
+
+drive_type: RWD
+driven_wheels: rear
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.5
+  acceleration_0_60_mph_seconds: 6.2
+  acceleration_0_200_kmh_seconds: 26.8
+  top_speed_kmh: 200
+  top_speed_electronically_limited: true
+  notes: |
+    Macan Electric RWD with overboost (Launch Control):
+    - 0-100 km/h: 6.5 seconds
+    - 0-60 mph: 6.2 seconds
+    - 0-200 km/h: 26.8 seconds
+    - Top speed: 200 km/h (electronically limited)
+    
+    Quick for an SUV, maintaining Porsche sports car spirit. Faster than most 
+    hot hatches and competitive luxury SUVs. Instant torque delivery typical of 
+    electric motors provides engaging acceleration.
+
+weight:
+  curb_weight_kg: 2260
+  distribution_front_percent: 47
+  distribution_rear_percent: 53
+  gross_weight_kg: 2865
+  payload_kg: 605
+  towing_capacity_kg: 2000
+  towing_capacity_braked_kg: 2000
+  notes: |
+    RWD is lightest Macan Electric variant at 2,260kg (~80kg lighter than 4S).
+    Rear-biased weight distribution (47/53) aids handling and traction. 
+    2,000kg towing capacity standard (with optional tow hitch).
+
+suspension:
+  front: Multi-link with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Porsche Active Suspension Management (PASM)
+  adjustable_ride_height: true
+  notes: |
+    Standard two-chamber air suspension with PASM (Porsche Active Suspension 
+    Management). Three ride height settings: Normal, High (ground clearance +10mm), 
+    High Level 2 (ground clearance +20mm for off-road). Automatic lowering at 
+    speed for improved aerodynamics and efficiency.
+
+brakes:
+  front: 360mm ventilated discs
+  rear: 350mm ventilated discs
+  caliper_type: Fixed aluminum monobloc calipers
+  regenerative: true
+  regenerative_max_power_kw: 240
+  notes: |
+    Standard: Fixed aluminum monobloc calipers with 360mm front / 350mm rear discs
+    Optional: Porsche Ceramic Composite Brake (PCCB) - €9,240
+    Optional: Porsche Surface Coated Brake (PSCB) - €3,150
+    
+    Regenerative braking: Up to 240kW recuperation, one-pedal driving optional
+
+# ============================================================================
+# DIMENSIONS & CAPACITY
+# ============================================================================
+
+dimensions:
+  length_mm: 4784
+  width_mm: 1938
+  width_with_mirrors_mm: 2164
+  height_mm: 1622
+  wheelbase_mm: 2893
+  ground_clearance_mm: 185
+  drag_coefficient: 0.25
+  frontal_area_m2: 2.82
+  notes: |
+    Compact luxury SUV dimensions, slightly larger than combustion Macan.
+    Class-leading 0.25 drag coefficient contributes to excellent efficiency.
+    185mm ground clearance (Normal mode) provides SUV practicality.
+
+cargo:
+  trunk_litres: 540
+  trunk_max_litres: 1348
+  frunk_litres: 84
+  notes: |
+    540L cargo space (seats up), 1,348L with rear seats folded
+    84L front trunk (frunk) for charging cables
+    Flat load floor thanks to PPE platform design
+    Power liftgate standard
+
+# ============================================================================
+# ADDITIONAL FEATURES
+# ============================================================================
+
+tires:
+  front: "235/60 R19"
+  rear: "255/55 R19"
+  wheel_size_inches: 19
+  notes: |
+    Standard: 19" Macan wheels (optimized for efficiency and ride comfort)
+    Optional: 20" or 21" wheels available but reduce range slightly
+    Square setup on RWD (same width front/rear)
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+  notes: |
+    Standard: Automatic 3-zone climate control with heat pump
+    Heat pump significantly improves winter efficiency
+    Pre-conditioning via Porsche Connect app or navigation system
+
+interior:
+  seats: 5
+  seat_material: Partial leather
+  seat_adjustment: 8-way power adjustable front seats (standard), 14-way optional
+  steering_wheel: Heated multi-function leather steering wheel
+  display_instrument: 12.6" curved digital instrument cluster
+  display_center: 10.9" curved central touchscreen
+  display_passenger: Optional 10.9" passenger display
+  sound_system: Sound Package Plus (standard), BOSE/Burmester optional
+  ambient_lighting: true
+  notes: |
+    New Porsche Driver Experience with curved display cockpit
+    Optional passenger display for co-driver entertainment
+    Standard partial leather, optional full/extended leather packages
+    Excellent SUV practicality with premium Porsche quality
+
+adas_features:
+  - Porsche InnoDrive (adaptive cruise with predictive range optimization, optional)
+  - Lane Keeping Assist with Lane Change Assist
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control with Stop & Go
+  - Surround View with 360° cameras (optional)
+  - Park Assist Plus (optional)
+  - Night Vision Assist (optional)
+
+connectivity:
+  system: Porsche Communication Management (PCM) 6.1
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Porsche Connect (My Porsche app)
+  voice_assistant: '"Hey Porsche" voice control'
+  notes: |
+    PCM 6.1 with dual curved displays. Wireless CarPlay/Android Auto.
+    OTA updates for continuous improvement. My Porsche app for remote control,
+    charging management, and pre-conditioning.
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  verified_by: Porsche official specifications
+  sources:
+    - https://www.porsche.com/germany/models/macan/macan-models/
+    - https://newsroom.porsche.com
+  notes: |
+    The Macan Electric RWD is the ideal entry point into electric Porsche SUV 
+    ownership. It offers:
+    - LONGEST range: 613km WLTP (40-50km more than 4S)
+    - BEST efficiency: 18.1 kWh/100km
+    - LIGHTEST weight: 2,260kg
+    - SAME 800V charging: 270kW peak (no compromise)
+    - LOWER price: ~€20k cheaper than 4S
+    - RWD engagement: Classic sports car driving feel
+    - SUV practicality: 5 seats, 540L cargo, 2,000kg towing
+    
+    For most buyers, the RWD offers the complete package: excellent range for 
+    daily use and road trips, flagship charging technology, strong performance, 
+    and authentic Porsche driving dynamics at the most accessible price.
+    
+    Competitors: Audi Q6 e-tron RWD (platform sibling), BMW iX xDrive40, 
+    Mercedes EQE SUV 350+, Tesla Model Y Long Range
+    
+    Recommended options:
+    - 22kW AC onboard charger (€1,680) - faster home/destination charging
+    - Porsche InnoDrive (€2,990) - adaptive cruise + predictive efficiency
+    - Surround View with Park Assist Plus (€1,890)
+    - Comfort seats with memory (€1,290)
