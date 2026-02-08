@@ -1,0 +1,108 @@
+# MG ZS EV - Affordable Compact Electric SUV
+# Popular budget-friendly electric crossover in European markets
+
+id: mg-zs-ev
+name: MG ZS EV
+manufacturer_id: saic-motor
+body_style: suv
+segment: B  # Compact SUV / B-SUV segment
+
+# Platform
+platform_id: modular-scalable-platform-msp
+platform_details:
+  name: Modular Scalable Platform (MSP)
+  type: dedicated_ev
+  voltage: 400
+  shared_with:
+    - MG4 Electric
+    - MG5 Electric
+
+# Production
+production:
+  start_year: 2019
+  end_year: null  # Still in production
+  status: active
+  generation: 2  # 2nd generation from 2023
+
+# Body & Dimensions
+dimensions:
+  length_mm: 4323
+  width_mm: 1809
+  height_mm: 1649
+  wheelbase_mm: 2585
+  drag_coefficient: 0.32
+  ground_clearance_mm: 161
+
+# Weight (base)
+weight:
+  curb_weight_kg: 1620  # Long Range base
+  gross_vehicle_weight_kg: 2070
+
+# Seating & Cargo
+seating:
+  seats: 5
+  configuration: "2+3"
+  
+cargo:
+  trunk_capacity_liters: 448
+  trunk_capacity_seats_down_liters: 1166
+  frunk_capacity_liters: 0  # No frunk
+
+# Towing
+towing:
+  max_towing_capacity_kg: 500  # Optional tow bar
+  max_towbar_load_kg: 75
+
+# Performance Range
+performance_range:
+  acceleration_0_100_min: 8.2  # Long Range
+  acceleration_0_100_max: 8.6  # Standard Range
+  top_speed_min: 175
+  top_speed_max: 175
+
+# Safety
+safety_rating:
+  euro_ncap:
+    year: 2019
+    overall: 5
+    adult_occupant: 90
+    child_occupant: 85
+    vulnerable_road_users: 64
+    safety_assist: 59
+
+# Features
+key_features:
+  - "10.1-inch touchscreen infotainment"
+  - "7-inch digital instrument cluster"
+  - "Apple CarPlay and Android Auto"
+  - "MG Pilot driver assistance"
+  - "Panoramic sunroof"
+  - "LED headlights"
+  - "Rear parking camera and sensors"
+  - "Keyless entry and start"
+  - "Heat pump (2023+ models)"
+
+# Technology
+technology:
+  infotainment_screen_inches: 10.1
+  digital_instrument_cluster: true
+  apple_carplay: true
+  android_auto: true
+  over_the_air_updates: true
+  mobile_app: true
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.eu/mg-zs-ev
+    - https://mg.co.uk/new-cars/mg-zs-ev
+    - https://www.euroncap.com/en/results/mg/zs-ev/38024
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
+  notes: |
+    Second-generation MG ZS EV launched in 2023 with larger battery.
+    Practical compact SUV with excellent value for money.
+    Popular in UK, Germany, Netherlands, Norway.
+    72.6 kWh battery provides class-leading range for the price.
+    Higher ground clearance than MG4 for better versatility.
