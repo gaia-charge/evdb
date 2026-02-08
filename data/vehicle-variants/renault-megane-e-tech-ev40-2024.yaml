@@ -1,174 +1,181 @@
+# Renault Megane E-Tech EV40 2024 Variant
+# Entry-level variant with 40 kWh battery
+
 id: renault-megane-e-tech-ev40-2024
 name: EV40
 model_id: renault-megane-e-tech
 model_year: 2024
-production_years:
-  start: 2022
-  end: null
-
-trim_level: base
-market_position: base
+variant_code: ME-EV40
 
 # Battery Specifications
 battery:
-  usable_kwh: 40
-  total_kwh: 42
+  usable_kwh: 40.0
+  total_kwh: 42.0
   chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400
-  cell_type: pouch
-  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  
-  pack:
-    configuration: "floor-mounted"
-    weight_kg: 275
-    cells: 132
+  degradation_warranty_percent: 70
 
-# Range
+# Range (WLTP - Combined)
 range:
   wltp_km: 300
-  wltp_source: manufacturer
-  
+  wltp_city_km: 395
+  wltp_highway_km: 250
+  epa_miles: null
   real_world_km: 260
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 10-20°C, eco mode"
 
-# Charging
-charging:
-  ac:
-    max_power_kw: 7.4
-    connector_types:
-      - type2
-    charging_time_hours:
-      "0_100": 5.4  # 7.4kW
-    onboard_charger_kw: 7.4
-    phases: 1
-  
-  dc:
-    max_power_kw: 85
-    connector_types:
-      - ccs2
-    charging_time_minutes:
-      "15_80": 36
-      "0_100": 58
-    
-    charging_curve:
-      - soc_percent: 0
-        power_kw: 70
-      - soc_percent: 10
-        power_kw: 85
-      - soc_percent: 30
-        power_kw: 85
-      - soc_percent: 50
-        power_kw: 70
-      - soc_percent: 70
-        power_kw: 45
-      - soc_percent: 80
-        power_kw: 30
-      - soc_percent: 90
-        power_kw: 18
-      - soc_percent: 100
-        power_kw: 8
+# Range Conditions
+range_conditions:
+  - temperature_c: 20
+    speed_kmh: 120
+    estimated_range_km: 230
+    conditions: "Highway, steady speed"
+  - temperature_c: -5
+    speed_kmh: 90
+    estimated_range_km: 200
+    conditions: "Winter, heating on"
+  - temperature_c: 20
+    speed_kmh: 50
+    estimated_range_km: 380
+    conditions: "City driving"
 
-  bidirectional:
-    v2l: false
-    v2g: true  # Available with specific bidirectional charger
-    v2h: false
+# Charging - AC
+charging_ac:
+  max_power_kw: 7.4
+  connector_type: Type2
+  onboard_charger_kw: 7.4
+  charge_time_0_100_hours: 6.0
 
-# Motors & Performance
-motors:
-  - position: front
-    type: synchronous
-    max_power_kw: 96
-    max_torque_nm: 205
-    cooling: liquid
+# Charging - DC Fast Charging
+charging_dc:
+  max_power_kw: 85
+  connector_type: CCS2
+  charge_time_10_80_minutes: 32
+  charge_time_10_80_source: manufacturer
+  charging_curve_type: standard
+  peak_charge_rate_soc_percent: 20
+  charge_speed_km_per_hour: 300
 
-drivetrain:
-  type: fwd
-  total_power_kw: 96
-  total_power_hp: 130
-  total_torque_nm: 205
+# Charging Curve
+charging_curve:
+  - soc_percent: 10
+    power_kw: 80
+  - soc_percent: 20
+    power_kw: 85
+  - soc_percent: 30
+    power_kw: 85
+  - soc_percent: 40
+    power_kw: 80
+  - soc_percent: 50
+    power_kw: 70
+  - soc_percent: 60
+    power_kw: 60
+  - soc_percent: 70
+    power_kw: 45
+  - soc_percent: 80
+    power_kw: 30
+  - soc_percent: 90
+    power_kw: 15
 
+# Bidirectional Charging / V2X
+bidirectional_charging: false
+v2l_power_kw: 3.0
+v2h_capable: false
+v2g_capable: false
+
+# Performance
 performance:
-  acceleration_0_100_kmh_s: 10.0
+  electric_motors: 1  # Single motor FWD
+  motor_type: "Permanent Magnet Synchronous (front)"
+  total_power_kw: 96  # 130 hp
+  total_power_hp: 130
+  total_torque_nm: 250
+  drive_type: FWD
+  acceleration_0_100_kmh: 10.0
   top_speed_kmh: 150
-  top_speed_limited: true
 
-# Weight & Efficiency
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.3
+  epa_mpge: null
+  efficiency_rating: A
+
+# Weight
 weight:
   curb_weight_kg: 1636
-  gross_weight_kg: 2030
-  payload_kg: 394
-  towing_capacity_kg: 0  # Not rated for towing
-  
-efficiency:
-  wltp_kwh_per_100km: 15.8
-  real_world_kwh_per_100km: 16.5
-  
-  at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 18.5
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 21.2
+  gross_vehicle_weight_kg: 2100
+  payload_kg: 464
 
-# Features & Options
-standard_features:
-  - "12-inch vertical OpenR screen"
-  - "Google built-in (Maps, Assistant, Play Store)"
+# Dimensions
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
+
+# Interior
+interior:
+  seating_capacity: 5
+  doors: 5
+  trunk_volume_liters: 440
+  frunk_volume_liters: 0
+
+# Production & Availability
+production_status: active
+production_start_date: "2024-01-01"
+production_end_date: null
+assembly_location: "Douai, France"
+
+# Platform
+platform_id: renault-cmf-ev
+
+# Trim Level
+trim_level: EV40
+trim_position: 1  # Entry trim
+base_trim: true
+
+# Features & Equipment
+standard_equipment:
+  - "12-inch vertical OpenR Link touchscreen"
+  - "Google built-in (Maps, Assistant, Play)"
   - "7-inch digital instrument cluster"
   - "Heat pump"
-  - "LED headlights"
-  - "18-inch alloy wheels"
+  - "LED Pure Vision headlights"
   - "Automatic climate control"
   - "Rear parking sensors"
+  - "18-inch alloy wheels"
+  - "Fabric seats"
   - "Multi-Sense driving modes"
+  - "E-Tech B-mode regenerative braking"
 
-optional_packages:
-  - name: "Tech Pack"
-    features:
-      - "OpenR Link augmented reality head-up display"
-      - "360-degree camera"
-      - "Hands-free parking"
-  
-  - name: "Safety Pack"
-    features:
-      - "Adaptive cruise control"
-      - "Lane keeping assist"
-      - "Blind spot warning"
-      - "Traffic sign recognition"
+optional_equipment:
+  - name: "Harman Kardon Premium Audio"
+    description: "Premium 9-speaker sound system"
+  - name: "Solarbay Panoramic Sunroof"
+    description: "Electrochromic tinting glass roof"
+  - name: "Advanced Driver Assistance Pack"
+    description: "Adaptive cruise, lane centering, traffic sign recognition"
 
-colors:
-  standard:
-    - "Diamond Black"
-    - "Glacier White"
-  premium:
-    - "Flame Red"
-    - "Highland Grey"
-    - "Zanzibar Blue"
-    - "Rafale Grey"
+# Sources
+sources:
+  - url: "https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications"
+    type: manufacturer
+    accessed_date: "2026-02-08"
+  - url: "https://ev-database.org/car/1696/Renault-Megane-E-Tech-EV40"
+    type: verified_database
+    accessed_date: "2026-02-08"
+  - url: "https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/versions.html"
+    type: manufacturer
+    accessed_date: "2026-02-08"
 
-# Version Information
-version:
-  facelift: false
-  major_changes: []
+# Notes
+notes: "Entry-level Megane E-Tech with 40 kWh battery. Ideal for urban and suburban use with 300 km WLTP range. Heat pump standard improves winter efficiency. OpenR infotainment with Google built-in provides excellent connectivity. Slower DC charging than 60 kWh variants."
 
-# Market & Pricing Notes
-notes: >
-  The Megane E-Tech EV40 is the entry-level variant with a 40 kWh battery,
-  suitable for urban and suburban use. The smaller battery makes it lighter
-  and more affordable, while still offering decent efficiency. DC charging
-  is limited to 85kW, which is adequate for the battery size. Heat pump
-  is standard on all variants, improving winter range.
-
+# Metadata
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-08"
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
-  sources:
-    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://ev-database.org/car/1671/Renault-Megane-E-Tech-EV40
-    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications
+  data_verified_date: "2026-02-08"
+  last_updated: "2026-02-08"
+  created_at: "2026-02-08T02:00:00Z"
+  updated_at: "2026-02-08T02:00:00Z"
