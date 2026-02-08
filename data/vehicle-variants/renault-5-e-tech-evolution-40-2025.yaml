@@ -1,0 +1,223 @@
+id: renault-5-e-tech-evolution-40-2025
+model_id: renault-5-e-tech
+name: Renault 5 E-Tech Electric Evolution 40
+variant_name: Evolution 40
+model_year: 2025
+
+# Vehicle Classification
+vehicle_type: hatchback
+segment: B  # Compact hatchback
+body_style: 5-door hatchback
+seats: 5
+doors: 5
+
+# Drivetrain
+drivetrain:
+  type: fwd  # Front-wheel drive
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 90
+      power_hp: 122
+      torque_nm: 225
+      position: front
+
+# Battery System
+battery:
+  total_kwh: 42
+  usable_kwh: 40
+  chemistry: LFP  # Lithium Iron Phosphate (cost-effective)
+  voltage_nominal: 400
+  cells: 192
+  modules: 10
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70  # 70% capacity retention
+  thermal_management: liquid_cooling
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11  # Single-phase 11kW standard
+    connector: type2
+    charge_time_0_100_hours: 4.0  # 0-100% at 11kW
+  dc:
+    max_power_kw: 80  # DC fast charging
+    connector: ccs2
+    charge_time_10_80_percent_minutes: 30  # 10-80% at peak power
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 80
+      - soc_percent: 50
+        power_kw: 75
+      - soc_percent: 70
+        power_kw: 60
+      - soc_percent: 80
+        power_kw: 40
+  bidirectional:
+    v2g_capable: false
+    v2h_capable: false
+    v2l_capable: false
+    max_discharge_power_kw: 0
+    notes: "No bidirectional charging on base model"
+
+# Performance
+performance:
+  acceleration_0_100_kmh_seconds: 9.0
+  top_speed_kmh: 150
+  power_to_weight_ratio_kwkg: 71.4  # 90kW / ~1260kg
+
+# Range & Efficiency
+range:
+  wltp_km: 300
+  wltp_city_km: 390  # WLTP City cycle
+  wltp_highway_km: 240  # WLTP Highway
+  real_world:
+    mixed_km: 260  # Real-world mixed driving
+    highway_km: 210  # Highway at 120-130 km/h
+    city_km: 330  # City driving
+    winter_km: 210  # Winter conditions (-10°C)
+
+efficiency:
+  wltp_consumption_kwh_per_100km: 14.5
+  real_world_consumption_kwh_per_100km: 16.8
+  epa_efficiency_rating: null  # Not sold in US
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 3920
+  width_mm: 1770
+  height_mm: 1500
+  wheelbase_mm: 2540
+  ground_clearance_mm: 150
+  drag_coefficient: 0.288
+  frontal_area_m2: 2.35
+
+weight:
+  curb_weight_kg: 1260
+  gross_weight_kg: 1590
+  payload_kg: 330
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
+
+cargo:
+  trunk_capacity_liters: 326
+  trunk_capacity_seats_down_liters: 1090
+  frunk_capacity_liters: 0  # No frunk
+
+# Platform & Production
+platform: AmpR Small  # Renault AmpR Small dedicated electric platform
+production:
+  plant: Douai, France
+  start_year: 2024
+  end_year: null  # Still in production
+
+# Technology & Features
+technology:
+  infotainment:
+    system: OpenR Link
+    screen_size_inches: 10.1
+    operating_system: Android Automotive
+    features:
+      - Google Built-In
+      - Google Maps
+      - Google Assistant
+      - Wireless Apple CarPlay
+      - Wireless Android Auto
+      - Reno avatar assistant
+  driver_assistance:
+    level: 2  # Level 2 ADAS
+    features:
+      - Adaptive Cruise Control
+      - Lane Keeping Assist
+      - Traffic Sign Recognition
+      - Blind Spot Warning
+      - Active Emergency Braking
+      - Rear Parking Sensors
+  comfort:
+    climate_zones: 1  # Manual climate control
+    heat_pump: false  # Not standard on base model
+    features:
+      - Manual air conditioning
+      - Cloth seats
+      - Manual seat adjustment
+      - LED headlights
+      - Keyless entry
+      - Rear parking sensors
+
+# Safety
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2024
+  euro_ncap_scores:
+    adult_occupant: 88
+    child_occupant: 84
+    vulnerable_road_users: 75
+    safety_assist: 82
+
+# Wheels & Suspension
+wheels:
+  standard_size: '17"'
+  tire_size_front: 195/55R17
+  tire_size_rear: 195/55R17
+
+suspension:
+  front: MacPherson strut
+  rear: Torsion beam
+  adjustable: false
+
+# Market Position
+market_position:
+  target_segment: Affordable compact electric hatchback
+  competitors:
+    - Citroën ë-C3 (€23,300)
+    - Dacia Spring (€20,900)
+    - Fiat 500e (€29,950)
+    - Opel Corsa Electric (€31,650)
+    - MG4 Standard Range (€31,990)
+  key_selling_points:
+    - Iconic retro-modern design
+    - Affordable €25,000 starting price
+    - 300km WLTP range adequate for city use
+    - AmpR Small dedicated EV platform
+    - Google Built-In infotainment
+    - Reno avatar assistant
+    - French design and charm
+    - Spacious for compact size
+    - 80kW DC fast charging
+
+# Ownership & Costs (estimated)
+ownership:
+  depreciation_3_years_percent: 42  # ~58% residual value
+  insurance_group: null
+  service_interval_months: 12
+  service_interval_km: 30000
+
+# Data Sources
+data_sources:
+  specifications: https://www.renault.de/elektrofahrzeuge/renault-5-e-tech.html
+  testing:
+    - source: ADAC
+      url: https://www.adac.de/rund-ums-fahrzeug/tests/elektroauto/renault-5-e-tech/
+      real_world_consumption: 16.8 kWh/100km
+      confidence: estimated
+    - source: Auto Motor und Sport
+      url: https://www.auto-motor-und-sport.de/test/renault-5-e-tech-2024/
+      real_world_range: 260 km
+      confidence: estimated
+  reviews:
+    - https://www.autoexpress.co.uk/renault/5-e-tech
+    - https://www.carwow.de/renault/5-e-tech
+
+# Notes
+notes: >
+  Modern reinterpretation of the iconic Renault 5 from the 1970s. Built on dedicated 
+  AmpR Small platform designed for affordable EVs. Base Evolution 40 model offers 
+  300km WLTP range at competitive €25,000 price point. Uses LFP (Lithium Iron Phosphate) 
+  battery chemistry for cost reduction and durability. Features unique Reno avatar 
+  assistant with personality. Retro-inspired exterior design with modern interior. 
+  Compact 3.92m length perfect for city driving with tight 10.3m turning circle. 
+  No heat pump on base model (optional on higher trims). Strong competitor to Citroën 
+  ë-C3 and Dacia Spring with better design and technology. 80kW DC fast charging 
+  adequate for occasional long trips. Excellent value proposition in affordable EV segment.
