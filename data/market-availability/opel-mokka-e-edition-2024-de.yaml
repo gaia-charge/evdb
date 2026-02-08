@@ -1,0 +1,310 @@
+# Opel Mokka-e Edition - German Market (2024)
+
+id: opel-mokka-e-edition-2024-de
+variant_id: opel-mokka-e-edition-2024
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2023-09-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 8
+  notes: Fast delivery from Zaragoza, Spain; mechanically identical to Peugeot e-2008
+
+pricing:
+  base_price: 36990  # €3,000 cheaper than Ultimate (€39,990), base electric trim
+  destination_charge: 990
+  total_msrp: 37980
+  pricing_date: 2026-02-08
+  price_notes: Edition is base electric trim; Ultimate is €39,990 with more features
+
+options:
+  colors:
+    - name: Voltaic Blue (metallic)
+      price: 695
+      type: metallic
+    - name: Power Red (metallic)
+      price: 695
+      type: metallic
+    - name: Moonstone Grey (metallic)
+      price: 695
+      type: metallic
+    - name: Quartz Grey (metallic)
+      price: 695
+      type: metallic
+    - name: Diamond Black (pearl)
+      price: 795
+      type: pearl
+    - name: Jade White (solid)
+      price: 0
+      type: solid
+    - name: Polar White (solid)
+      price: 0
+      type: solid
+  
+  two_tone:
+    - name: Two-Tone Black Roof
+      price: 750
+      notes: Black roof and B-pillars with any color (popular SUV styling)
+  
+  wheels:
+    - name: 16" Steel Wheels with Covers
+      price: 0
+      size_inches: 16
+      notes: Standard on Edition trim
+    - name: 16" Alloy Wheels
+      price: 690
+      size_inches: 16
+      notes: Optional upgrade from steel wheels
+    - name: 17" Alloy Wheels
+      price: 990
+      size_inches: 17
+      notes: Premium upgrade with sportier look
+    - name: 18" Bi-Color Alloy Wheels (Ultimate style)
+      price: 1490
+      size_inches: 18
+      notes: Top-spec wheels with two-tone finish
+  
+  interior:
+    - name: Black Cloth Seats
+      price: 0
+      notes: Standard on Edition
+    - name: Black Leather Seats
+      price: 1490
+      notes: Leather upholstery upgrade
+
+packages:
+  - name: Winter Package
+    price: 690
+    includes:
+      - Heated front seats
+      - Heated steering wheel
+      - Heated windscreen
+      - Heated washer nozzles
+  
+  - name: LED Headlight Package
+    price: 790
+    includes:
+      - LED headlights
+      - LED fog lights
+      - Automatic headlight activation
+      - Cornering lights
+  
+  - name: Multimedia Navi Pro Package
+    price: 1590
+    includes:
+      - 10.0" color touchscreen (upgrade from 7.0")
+      - Navigation with live traffic
+      - DAB+ digital radio
+      - Wireless smartphone charging
+      - 8 speakers premium audio (upgrade from 4)
+  
+  - name: Parking Assistance Package
+    price: 790
+    includes:
+      - Front and rear parking sensors (only rear standard)
+      - 360-degree camera with guidelines
+      - Park Assist (automatic parking)
+  
+  - name: Keyless Entry & Start
+    price: 590
+    includes:
+      - Keyless entry on front doors
+      - Keyless start button
+      - Automatic door unlocking on approach
+  
+  - name: Automatic Climate Control
+    price: 490
+    includes:
+      - Automatic temperature control
+      - Air quality sensor
+      - Dual-zone climate control
+  
+  - name: Panoramic Glass Roof
+    price: 990
+    includes:
+      - Fixed glass roof with electric sunshade
+      - UV protection
+      - Panoramic view
+
+standalone_options:
+  - name: 11kW 3-phase AC Onboard Charger
+    price: 0
+    notes: Standard on all Mokka-e trims
+
+incentives:
+  - type: rebate
+    name: "BAFA Umweltbonus"
+    amount: 0
+    currency: EUR
+    valid_until: null
+    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+  
+  - type: tax_exemption
+    name: "Kfz-Steuer exemption for BEVs"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€250-350/year."
+  
+  - type: subsidy
+    name: "THG-Quote (greenhouse gas quota) certificate"
+    amount: 300
+    currency: EUR
+    valid_until: null
+    notes: "Owners can sell CO2 certificates for ~€250-350/year (rates vary by market)"
+
+company_car:
+  taxation_rate: 0.25  # 0.25% for BEVs under €70k (vs 1% for ICE)
+  list_price_for_taxation: 36990
+  monthly_tax_base: 92  # €36,990 × 0.25% = €92/month
+  annual_tax_savings_vs_ice: 3328  # vs ICE: (€36,990 × 1% - €36,990 × 0.25%) × 12 = €3,328/year
+  notes: |
+    Company car taxation: 0.25% of list price per month (vs 1% for ICE).
+    Monthly tax: €92 vs €370 for comparable ICE = saves €3,328/year.
+    Edition trim offers lowest company car tax in Mokka-e lineup.
+
+charging:
+  public_network:
+    name: "Opel Charging powered by Plugsurfing"
+    coverage: "250,000+ charging points across 29 European countries"
+    membership_fee: null
+    notes: "Access to multiple networks with single RFID card"
+  
+  subscription:
+    name: "Opel Charging Subscription"
+    monthly_fee: 9.99
+    currency: EUR
+    ionity_rate_eur_per_kwh: 0.35  # vs €0.79 pay-as-you-go
+    benefits:
+      - "IONITY fast charging at €0.35/kWh (vs €0.79)"
+      - "Access to 250,000+ charging points"
+      - "MyOpel app integration"
+  
+  home_charging:
+    - name: "Opel Wallbox"
+      price: 899
+      power_kw: 11
+      features:
+        - "Integrated Type 2 cable (5m)"
+        - "WiFi connectivity with app control"
+        - "Dynamic load management"
+        - "Weather-resistant (IP54)"
+      installation_cost: "€500-1,500 depending on location"
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  notes: |
+    EU minimum 2-year unlimited km vehicle warranty.
+    Battery: 8 years/160,000km with 70% capacity guarantee (same as Peugeot e-2008).
+    Extended warranties available (up to 5 years total).
+
+dealer_info:
+  dealer_count: 850
+  service_count: 850
+  notes: |
+    Opel has 850+ dealers across Germany (one of largest networks).
+    All dealers can sell, service, and charge Mokka-e.
+    Many dealers have DC fast chargers (50-150kW CCS2).
+
+environmental:
+  production_location: "Zaragoza, Spain (Stellantis plant)"
+  lifecycle_co2_tonnes: 30  # 200,000km with EU electricity mix (slightly higher than Corsa due to weight)
+  driving_co2_g_per_km: 0  # Zero tailpipe emissions
+  notes: |
+    Lifecycle CO2: 30 tonnes (200,000km, EU mix 420g CO2/kWh).
+    With 100% renewable electricity: ~19 tonnes lifecycle.
+    Battery recycling: Stellantis recycles 96% of materials.
+
+market_comparison:
+  direct_competitors:
+    - name: "Peugeot e-2008 Allure"
+      base_price: 39990
+      comparison: "€3,000 cheaper, mechanically identical, Opel has simpler design"
+    
+    - name: "Fiat 600e (RED)"
+      base_price: 36990
+      comparison: "Same price, Mokka-e has more range (340km vs 409km), but 600e is newer"
+    
+    - name: "MG ZS EV"
+      base_price: 33990
+      comparison: "€3,000 more, but MG ZS has larger battery (72.6kWh), more range (440km)"
+    
+    - name: "Nissan Ariya 63kWh"
+      base_price: 50990
+      comparison: "€14,000 cheaper, but Ariya is larger, more range, more premium"
+    
+    - name: "Renault Megane E-Tech EV40"
+      base_price: 38990
+      comparison: "€2,000 cheaper, but Megane has less range (300km) and is sedan-style"
+
+sales_notes: |
+  Opel Mokka (all versions) is a popular compact SUV in Germany.
+  Mokka-e accounts for ~25% of total Mokka sales (2024 estimate).
+  Edition trim is popular entry point for electric crossover buyers.
+
+notes: |
+  The Opel Mokka-e Edition at €36,990 offers excellent electric SUV value:
+  
+  **Key Advantages:**
+  - Lowest-priced Mokka-e trim (€3,000 less than Ultimate)
+  - Same battery, motor, range as all Mokka-e variants
+  - 16" wheels improve efficiency slightly (340km WLTP)
+  - SUV styling with raised driving position
+  - 350L trunk (competitive for compact SUV)
+  - 1,200kg towing capacity (modest but useful)
+  - Company car tax benefit: 0.25% = €92/month (saves €3,328/year vs ICE)
+  - Strong Opel dealer network (850+ locations)
+  - Fast 8-week delivery from Zaragoza, Spain
+  - Mechanically identical to Peugeot e-2008 Allure (€3,000 cheaper)
+  
+  **vs Mokka-e Ultimate:**
+  - €3,000 cheaper (€36,990 vs €39,990)
+  - Halogen headlights vs LED (upgrade available)
+  - Manual climate vs automatic (upgrade available)
+  - 7.0" touchscreen vs 10.0" (upgrade available)
+  - 16" steel wheels vs 18" alloys (upgrade available)
+  - Same battery, motor, charging, performance
+  
+  **vs Peugeot e-2008 Allure:**
+  - €3,000 cheaper (€36,990 vs €39,990)
+  - Same CMP platform, battery, motor, performance
+  - More conservative design vs sportier e-2008
+  - Simpler interior with more physical buttons
+  - Built at same Zaragoza plant
+  
+  **Best for:**
+  - Entry-level electric SUV buyers on a budget
+  - Company car drivers minimizing benefit-in-kind tax
+  - Families needing SUV practicality and styling
+  - German brand loyalty at affordable price
+  - Base trim with option to upgrade features à la carte
+  
+  **Considerations:**
+  - Modest 340km WLTP range (adequate for city/commute, less for long trips)
+  - 100kW DC charging adequate but slower than some competitors
+  - Base trim has fewer standard features (upgradable)
+  - 4-star Euro NCAP (vs 5-star for newer competitors)
+  
+  **Upgrade Path:**
+  For €37,980 base + typical upgrades:
+  - LED headlights: +€790
+  - Automatic climate: +€490
+  - 16" alloys: +€690
+  - Total: ~€39,950 (similar to Ultimate with more flexibility)
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - https://www.opel.com/modelle/mokka/mokka-e.html
+    - https://www.opel.com/tools/konfigurator.html
+    - https://www.adac.de/
+    - https://ev-database.org/
