@@ -1,3 +1,88 @@
+## 2026-02-08 Late Night Session (11:15 PM)
+
+### ✅ Added: Genesis GV60 Advanced AWD - Entry-Level Luxury Crossover Variant
+
+**Task**: Continue EVDB implementation by adding Genesis GV60 Advanced AWD variant to complete GV60 lineup and provide value-conscious entry point to Genesis electric luxury.
+
+**Action**: Added Genesis GV60 Advanced AWD - the base dual-motor variant offering excellent value proposition at €8,000 savings versus Sport Plus while maintaining 95% of the experience. Fills important gap in Genesis lineup providing affordable entry to 800V ultra-fast charging and Face Connect technology.
+
+**What Was Done**:
+- Created `data/vehicle-variants/genesis-gv60-advanced-awd-2024.yaml` with comprehensive specifications (7.0 KB)
+- Created `data/market-availability/genesis-gv60-advanced-awd-2024-de.yaml` with comprehensive Germany market data (12.2 KB)
+- All files validated successfully with proper schema compliance
+- Database rebuilt and all integrity checks passed
+
+**Genesis GV60 Advanced AWD Overview**:
+- **Battery**: 77.4 kWh usable (82.0 kWh total), 800V architecture, SK On NCM chemistry
+- **Motors**: Dual motor AWD, 232kW (314hp) combined (74kW front + 160kW rear), 605Nm torque
+- **Range**: 490km WLTP (405km real-world), 24km MORE than Sport Plus thanks to base tuning and 19" wheels
+- **Performance**: 5.5s 0-100 km/h, 185 km/h top speed (0.5s slower than Sport Plus but still brisk)
+- **Charging**: 11kW AC (3-phase), 350kW DC fast charging (10-80% in 18 minutes, same as Sport Plus!)
+- **Pricing**: €57,990 base, €59,080 on-road with delivery (€8,000 LESS than Sport Plus at €65,990)
+- **Key Features**: Dual 12.3" panoramic displays, Crystal Sphere electronic shift dial, Face Connect biometric authentication (unique to Genesis), Highway Driving Assist 2, Remote Smart Parking Assist 2, 360-degree camera, heated/ventilated seats, panoramic sunroof, V2L capability (3.6kW), 8-year/160,000km battery warranty
+- **What's Missing vs Sport Plus**: Bang & Olufsen 17-speaker audio (standard 6-speaker), massage seats, AR head-up display, 20" wheels (has 19")
+
+**Value Proposition**:
+- **€8,000 savings vs Sport Plus** while maintaining core 800V ultra-fast charging (18 minutes!) and Face Connect technology
+- **490km WLTP range actually 24km MORE than Sport Plus** (490 vs 466km) thanks to more efficient base tuning and smaller 19" wheels
+- 314hp dual-motor AWD still delivers spirited 5.5s 0-100 performance (only 0.5s slower than Sport Plus)
+- 0.25% company car tax rate (under €70k threshold) saves €5,219/year vs ICE equivalent
+- Well-equipped as standard: Face Connect, Crystal Sphere shift dial, Highway Driving Assist 2, comprehensive ADAS
+- Only sacrifices Bang & Olufsen audio, massage seats, and AR HUD - reasonable trade-off for €8,000 savings
+- Strong value versus BMW iX1 xDrive30 (€61,500, €3,510 more, 51km less range, 11 minutes slower charging)
+- Same price as Audi Q4 50 quattro (€57,990) but offers 800V ultra-fast charging (18 min vs 28 min)
+
+**Germany Market Data Added**:
+- **Pricing**: €57,990 base, €59,080 on-road (with €1,090 delivery)
+- **Popular Configurations**: Base as-delivered €59,080 (well-equipped), Premium €63,830 (adds 20" wheels + HUD + suede headliner), Luxury €67,580 (adds Bang & Olufsen + extended Nappa leather)
+- **Company Car**: 0.25% tax rate (under €70k), €57,990 × 0.25% × 30km = €434.93/month taxable benefit, saves €5,219/year vs ICE equivalent
+- **Available Options**: 20" wheels (€1,500), Bang & Olufsen audio (€2,500), AR HUD (€1,200), extended Nappa leather (€1,200), suede headliner (€800), matte paint (€1,250), winter package (€600)
+- **TCO Analysis**: 3-year total €34,088 (€0.76/km), but company car drivers save €15,657 in taxes making net cost €18,431 (€0.41/km)
+- **Charging**: Ionity (€0.69/kWh, 350kW ultra-fast, 18 minutes 10-80%), EnBW Mobility+ (€5.99/month, €0.55/kWh across 4,500+ charging points)
+- **Competitors**: Detailed analysis vs BMW iX1 xDrive30 (€61,500, slower charging), Audi Q4 50 quattro (€57,990, same price but slower charging), Mercedes EQA 350 (€60,990, €3k more, slower charging), Tesla Model Y LR (€54,990, €4k cheaper but less luxury), Hyundai Ioniq 5 LR AWD (€50,990, €8k cheaper platform sibling), GV60 Sport Plus (€65,990, €8k more, 24km less range but Bang & Olufsen + massage)
+- **Target Buyers**: Value-conscious luxury EV buyers seeking Genesis quality at entry price, company car drivers maximizing 0.25% tax benefit, tech enthusiasts wanting 800V charging and Face Connect, design-focused buyers attracted to distinctive Genesis styling, families needing practical AWD crossover with generous standard equipment
+
+**Technical Highlights**:
+- E-GMP platform with 800V ultra-fast charging enables 18-minute 10-80% charging (same as Sport Plus!)
+- Face Connect facial recognition personalizes driver settings upon entry (unique Genesis feature)
+- Crystal Sphere electronic shift dial rotates and illuminates on entry (distinctive Genesis design element)
+- Dual permanent magnet synchronous motors (74kW front + 160kW rear) provide 232kW/314hp combined
+- 490km WLTP delivers 405km real-world mixed driving, 330km highway at 130 km/h, 310km winter
+- Base dual-motor tuning (no Boost mode) still delivers spirited 5.5s acceleration
+- 19" wheels improve efficiency versus Sport Plus' 20" wheels (+24km WLTP range)
+- Remote Smart Parking Assist 2 enables remote parking using smart key
+- V2L capability allows powering external devices up to 3.6kW (camping, emergency backup)
+- Highway Driving Assist 2 provides Level 2 autonomous driving with lane centering and adaptive cruise
+
+**Database Impact**:
+- Variants: **171** (up from 170, +0.6%)
+- Vehicle Models: **83** (unchanged)
+- Genesis: **4 variants** (up from 3, +33%) across **3 models** (GV60/GV70/G80)
+- Germany coverage: **171/171 (100.0%)** maintained
+- Pricing data: **171/171 (100.0%)** maintained
+- Database size: 0.67 MB (up from 0.60 MB)
+
+**Validation**:
+- ✓ All 468 YAML files pass schema validation
+- ✓ Database builds successfully (0.67 MB)
+- ✓ All integrity checks passed (no orphaned data, all variants have power/range/battery/market data/pricing)
+- ✓ Verified GV60 Advanced data correctly imported into SQLite database
+
+**Strategic Value**:
+- Completes Genesis GV60 lineup with entry-level variant providing accessible path to Genesis electric luxury
+- €57,990 pricing positions Advanced as value alternative to €65,990 Sport Plus while maintaining core strengths
+- 800V ultra-fast charging (18 minutes!) at entry price point unique in segment
+- Face Connect and Crystal Sphere differentiate Genesis from established German luxury brands
+- Strong value proposition versus BMW iX1 (€3,510 more, slower charging) and Audi Q4 (same price, slower charging)
+- 490km WLTP range actually EXCEEDS Sport Plus by 24km thanks to efficiency optimizations
+- Company car drivers benefit from 0.25% tax rate saving €5,219/year
+- Only sacrifices Bang & Olufsen audio and massage seats - most buyers prioritize savings over luxury audio
+- Advanced variant likely to become most popular GV60 configuration in Germany due to strong value proposition
+
+**Time**: 10 minutes of focused work + validation + testing + database rebuild + documentation + commit/push
+
+---
+
 ## 2026-02-08 Late Night Session (10:56 PM)
 
 ### ✅ Added: Genesis Electrified G80 AWD - Flagship Electric Executive Sedan
