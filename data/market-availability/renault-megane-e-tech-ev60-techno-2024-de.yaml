@@ -1,298 +1,310 @@
-# Renault Megane E-Tech EV60 Techno (2024) - Germany Market Availability
-
 id: renault-megane-e-tech-ev60-techno-2024-de
 variant_id: renault-megane-e-tech-ev60-techno-2024
-market: DE
+market: DE  # Germany
 currency: EUR
 
-# Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 6
-notes: |
-  2024 model with 60 kWh battery. Most popular Megane E-Tech variant.
-  Built at Renault's ElectriCity production hub in Douai, France.
-  European Car of the Year 2023. Best balance of range, performance, and price.
+available_from: "2022-09-01"
 
-# Pricing
 pricing:
-  base_price: 43000
-  price_including_vat: 43000
+  base_price: 43000  # Megane E-Tech EV60 Techno base price
+  price_including_vat: 43000  # Already includes 19% German VAT
   vat_rate_percent: 19
-  notes: |
-    Base price for Megane E-Tech EV60 Techno with 60 kWh battery and 160 kW motor.
-    €3,000 cheaper than Iconic (€46,000) with same powertrain.
-    Most popular Megane E-Tech variant (~50% of sales).
+  destination_charge: 1375
+  registration_fees: null
+  total_price_estimate: 44375  # Including delivery
+  notes: >
+    Techno trim includes comprehensive equipment as standard: 18" wheels, 12" OpenR Link display,
+    Google Built-In, 360° camera, ADAS features, heat pump, 22kW AC charging, V2G capability.
+    Price positioning between base EV60 Equilibre (€40,000) and top EV60 Iconic (€46,000).
 
-# Available Colors (10 options - same as EV40)
-available_colors:
-  - name: Diamond Black Metallic
-    code: 676
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Glacier White
-    code: 369
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Urban Grey Metallic
-    code: KNU
-    type: metallic
-    price_add:
-      amount: 795
-      currency: EUR
-  - name: Highland Grey Metallic
-    code: KQX
-    type: metallic
-    price_add:
-      amount: 795
-      currency: EUR
-  - name: Flame Red Metallic
-    code: NNP
-    type: metallic
-    price_add:
-      amount: 795
-      currency: EUR
-  - name: Titanium Grey Metallic
-    code: KNA
-    type: metallic
-    price_add:
-      amount: 795
-      currency: EUR
-  - name: Zanzibar Blue Metallic
-    code: RNF
-    type: metallic
-    price_add:
-      amount: 795
-      currency: EUR
-    notes: "Signature Megane E-Tech color"
-  - name: Schist Grey Two-Tone
-    code: KQS
-    type: two-tone
-    price_add:
-      amount: 1295
-      currency: EUR
-    notes: "Black roof + grey body"
-  - name: Ivory White Two-Tone
-    code: QNC
-    type: two-tone
-    price_add:
-      amount: 1295
-      currency: EUR
-    notes: "Black roof + white body"
-  - name: Valencia Orange Two-Tone
-    code: RNM
-    type: two-tone
-    price_add:
-      amount: 1295
-      currency: EUR
-    notes: "Black roof + orange body, exclusive color"
-
-# Wheel Options (3 options)
-available_wheels:
-  - name: 18" Sochaux Alloy Wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard wheels, best efficiency"
-  - name: 19" Etoile Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 895
-      currency: EUR
-    notes: "Sporty design, slightly reduces range"
-  - name: 20" Solstice Diamond-Cut Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1495
-      currency: EUR
-    notes: "Premium design, reduces range by ~20km"
-
-# Interior Options (4 options)
-available_interiors:
-  - name: Black Harness Cosy Fabric
-    material: fabric
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Premium fabric with texture, standard on Techno"
-  - name: Grey Harness Cosy TEP Leather
-    material: synthetic_leather
-    price_add:
-      amount: 695
-      currency: EUR
-    notes: "Synthetic leather, premium feel"
-  - name: Blue Harness Cosy TEP Leather
-    material: synthetic_leather
-    price_add:
-      amount: 695
-      currency: EUR
-    notes: "Unique blue synthetic leather"
-  - name: Nappa Leather Package
-    material: leather
-    price_add:
-      amount: 1695
-      currency: EUR
-    notes: "Premium Nappa leather seats with ventilation"
-
-# Equipment Packages (Techno includes more standard equipment)
-available_packages:
-  - name: Premium Package
-    price:
-      amount: 2490
-      currency: EUR
-    contents:
-      - "Augmented Reality Head-Up Display"
-      - "Harman Kardon sound system (10 speakers)"
-      - "Ambient lighting (8 colors)"
-      - "Nappa leather steering wheel"
-    notes: "Upgrades Techno to near-Iconic spec"
-
-# Individual Options
-individual_options:
-  - name: Panoramic Glass Roof
-    price:
-      amount: 1290
-      currency: EUR
-    notes: "Fixed glass roof with electric sunshade"
-  
-  - name: Tow Hitch
-    price:
-      amount: 795
-      currency: EUR
-    notes: "900kg braked towing capacity"
-  
-  - name: Solarbay Glass Roof
-    price:
-      amount: 1790
-      currency: EUR
-    notes: "Electrochromic glass roof that darkens on demand"
-
-# Incentives & Subsidies
 incentives:
-  - type: grant
-    name: BAFA Umweltbonus
+  - name: Federal EV Subsidy (Ended)
+    type: subsidy
     amount: 0
-    currency: EUR
-    status: expired
+    description: >
+      German federal EV incentive (€4,500 for vehicles under €40k, €3,000 for €40-65k)
+      ended December 31, 2023. No longer available for new purchases.
+    valid_from: null
     valid_until: "2023-12-31"
-    notes: "Federal EV subsidy ended December 31, 2023"
   
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      Company car drivers pay only 0.25% of list price per month (€108/month)
-      vs 1% for ICE cars (€430/month), saving €3,864/year in taxes.
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 3870  # Annual savings vs ICE
+    description: >
+      Electric vehicles with list price under €70,000 qualify for 0.25% monthly tax rate
+      (vs 1.0% for combustion vehicles). Based on €43,000 list price, saves €3,870/year
+      vs ICE equivalent. Massive benefit for company car drivers.
+    conditions:
+      - List price under €70,000
+      - Pure battery-electric vehicle (BEV)
+      - Used for business purposes
   
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer Befreiung)
+  - name: Vehicle Tax Exemption
+    type: tax_exemption
     amount: 0
-    currency: EUR
-    status: active
+    description: >
+      EVs exempt from German vehicle tax (Kfz-Steuer) for 10 years from first registration.
+      Saves approx €150-200/year vs ICE equivalent.
+    valid_from: "2024-01-01"
     valid_until: "2030-12-31"
-    notes: |
-      Full exemption from road tax until December 31, 2030.
+
+market_specific:
+  standard_equipment:
+    - 18" Eider alloy wheels
+    - OpenR Link 12" vertical touchscreen with Google Built-In
+    - Wireless Apple CarPlay and Android Auto
+    - 10" digital instrument cluster
+    - Adaptive Cruise Control with Stop & Go
+    - Lane Centering Assist
+    - 360-degree camera system
+    - Active Emergency Braking with pedestrian/cyclist detection
+    - Blind Spot Warning with Rear Cross Traffic Alert
+    - Traffic Sign Recognition with speed limit display
+    - LED Pure Vision headlights with automatic high beam
+    - Rain-sensing wipers and auto-dimming mirrors
+    - Dual-zone automatic climate control with heat pump
+    - Heated front seats and heated steering wheel
+    - Keyless entry and start with hands-free tailgate
+    - Wireless smartphone charging pad
+    - Multi-Sense drive modes (Eco, Comfort, Sport, Perso)
+    - Automatic parking assist
+    - 22kW three-phase AC charging capability
+    - 130kW DC CCS fast charging
+    - V2G/V2L bidirectional charging capability
+    - 8-year/160,000km battery warranty with 70% capacity guarantee
   
-  - type: grant
-    name: THG-Quote
-    amount: 340
-    currency: EUR
-    status: active
-    notes: "CO2 certificate trading, earning €280-400/year"
+  available_colors:
+    - name: Titanium Grey
+      type: solid
+      cost: 0
+    - name: Glacier White
+      type: solid
+      cost: 0
+    - name: Diamond Black
+      type: metallic
+      cost: 650
+    - name: Flame Red
+      type: metallic
+      cost: 650
+    - name: Schist Grey
+      type: metallic
+      cost: 650
+    - name: Rafale Blue
+      type: metallic
+      cost: 650
+    - name: Highland Grey
+      type: metallic
+      cost: 650
+  
+  optional_packages:
+    - name: Luxury Pack
+      price: 1500
+      items:
+        - Alcantara seat trim with leather accents
+        - Harman Kardon premium audio (9 speakers, 445W)
+        - Enhanced hands-free parking assist
+        - Panoramic fixed glass roof
+    
+    - name: Tech Pack
+      price: 800
+      items:
+        - Head-Up Display (9.3" full-color projection)
+        - Matrix LED headlights with adaptive beam
+        - Highway & Traffic Jam Companion (enhanced Level 2 ADAS)
+    
+    - name: Winter Pack
+      price: 400
+      items:
+        - Heated rear seats
+        - Heated windshield with rapid defrost
+    
+    - name: 20" Aero Wheels
+      price: 1200
+      items:
+        - 20" diamond-cut aerodynamic alloy wheels
+      notes: Reduces WLTP range by approximately 10km due to increased rolling resistance
+    
+    - name: Two-Tone Roof
+      price: 800
+      items:
+        - Contrasting black or white roof panel
+  
+  dealer_network:
+    count: 650
+    coverage: Nationwide with strong presence in all regions
+    notes: >
+      Extensive Renault dealer network across Germany provides wide availability
+      for sales, service, and warranty support. All dealers equipped to service EVs.
 
-# Typical Total Configuration
-typical_configuration:
-  name: "EV60 Techno Premium"
-  description: "Most popular configuration"
-  total_price: 48375
-  includes:
-    - Base EV60 Techno trim
-    - Zanzibar Blue metallic
-    - 19-inch Etoile wheels
-    - Grey Harness Cosy TEP Leather
-    - Panoramic Glass Roof
-    - Premium Package
-  notes: "Best-selling Megane E-Tech configuration in Germany"
+tco_3_year:
+  purchase_cost: 44375  # On-road price base configuration
+  depreciation: 19969  # 55% residual value after 3 years
+  electricity_home_kwh: 2775  # 15,000 km/year × 18.5 kWh/100km
+  electricity_cost_home: 555  # €0.20/kWh average residential rate
+  electricity_cost_public: 833  # 50% public charging at €0.30/kWh
+  insurance_annual: 850
+  maintenance_annual: 250  # Minimal EV maintenance
+  tax_annual: 0  # EVs exempt from vehicle tax
+  total_3_year: 25729  # Home charging scenario
+  cost_per_km: 0.57  # €/km over 45,000 km
+  notes: >
+    Based on 15,000 km/year, 80% home charging (€0.20/kWh), 20% public charging (€0.30/kWh).
+    3-year TCO approximately €6,100 lower than equivalent ICE Renault Megane due to lower
+    fuel costs, no vehicle tax, and minimal maintenance requirements.
 
-# Charging Infrastructure
 charging_infrastructure:
   home_charging:
-    - provider: Renault Charge Pass
-      rate_per_kwh: 0.28
-      notes: "Electricity tariff for EV home charging"
-    - provider: Renault wallbox
-      installation_cost: 950
-      power_kw: 22
-      notes: "Official Renault wallbox, fully utilizes 22kW AC charging"
-  
-  public_charging:
-    - provider: Mobilize Charge Pass
-      network_size: "600,000+ charging points in 30 countries"
-      app: Mobilize app
-      notes: "Integrated into vehicle navigation"
+    - type: Wallbox 11kW
+      cost: 800
+      installation_cost_range: [500, 1500]
+      charging_time_hours: 5.5  # 0-100% at 11kW
+      notes: Most common home charging solution, balances cost and charging speed
     
-    - provider: IONITY
-      network_type: High-power DC (350kW)
-      standard_rate_per_kwh: 0.79
-      subscription_rate_per_kwh: 0.45
-      subscription_cost_monthly: 9.99
-      notes: "20-80% in 24 minutes at 130kW"
+    - type: Wallbox 22kW
+      cost: 1200
+      installation_cost_range: [800, 2000]
+      charging_time_hours: 3.0  # 0-100% at 22kW (Megane supports full 22kW)
+      notes: >
+        Megane E-Tech supports full 22kW three-phase AC charging (faster than most rivals).
+        Requires three-phase household connection. Ideal for overnight charging.
+    
+    - type: Standard Schuko outlet
+      cost: 0
+      charging_time_hours: 30
+      notes: Emergency charging only, not recommended for regular use
+  
+  public_charging_networks:
+    - name: EnBW mobility+
+      coverage: Extensive nationwide coverage
+      dc_rate_eur_kwh: 0.56
+      app_required: true
+      notes: Largest German charging network, strong highway coverage
+    
+    - name: Ionity
+      coverage: Trans-European highway network
+      dc_rate_eur_kwh: 0.35  # With subscription
+      monthly_fee: 17.99
+      max_power_kw: 350  # Megane charges up to 130kW
+      notes: Ultra-fast charging network, excellent for long-distance travel
+    
+    - name: Fastned
+      coverage: Highway locations
+      dc_rate_eur_kwh: 0.59
+      max_power_kw: 300
+      notes: Premium fast-charging experience, solar-powered stations
+    
+    - name: Shell Recharge
+      coverage: Nationwide at Shell stations
+      dc_rate_eur_kwh: 0.79  # Pay-as-you-go
+      notes: Convenient locations but higher pricing
 
-# Warranty
-warranty:
-  vehicle_years: 3
-  vehicle_km: 100000
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  paint_years: 3
-  perforation_years: 12
-  roadside_assistance_years: 3
+competitors:
+  - model: Volkswagen ID.3 Pro
+    price: 39995
+    range_wltp_km: 558
+    analysis: >
+      €3,005 cheaper with 108km more range, but lacks heat pump standard, only 11kW AC charging,
+      less distinctive design. VW brand prestige vs Renault's European Car of the Year award.
+  
+  - model: Hyundai Kona Electric Long Range
+    price: 42990
+    range_wltp_km: 514
+    analysis: >
+      Similar price (€10 less), 64km more range, proven Korean reliability, higher SUV driving position,
+      but only 11kW AC charging and less tech-forward interior vs Google Built-In.
+  
+  - model: Kia EV3 Long Range
+    price: 41990
+    range_wltp_km: 600
+    analysis: >
+      €1,010 cheaper with 150km more range advantage, 7-year warranty, but only 11kW AC charging
+      and less premium positioning than European Car of the Year.
+  
+  - model: Nissan Leaf e+ 62kWh
+    price: 43990
+    range_wltp_km: 385
+    analysis: >
+      Similar price but 65km less range, older platform, CHAdeMO charging (limited infrastructure),
+      though offers proven reliability and unique e-Pedal one-pedal driving experience.
+  
+  - model: MG4 Long Range
+    price: 35990
+    range_wltp_km: 435
+    analysis: >
+      €7,010 cheaper with similar range and sportier dynamics, 7-year warranty, but Chinese brand
+      perception (less premium), only 11kW AC charging, and less comprehensive standard equipment.
 
-# Service & Maintenance
-service:
-  interval_years: 1
-  interval_km: 30000
-  cost_per_service: 290
-  fixed_price_3_year: 790
-  fixed_price_5_year: 1280
+target_buyers:
+  primary:
+    - First-time EV buyers seeking European Car of the Year credibility
+    - Families needing practical 5-seat crossover with 450km daily range
+    - Company car drivers maximizing 0.25% tax benefit (€3,870/year savings)
+    - Urban/suburban commuters (380km real-world mixed range sufficient)
+    - Tech-savvy buyers wanting Google Built-In Android Automotive integration
+  
+  secondary:
+    - Buyers prioritizing French design and build quality
+    - Those seeking value alternative to premium German EVs
+    - Previous Renault owners familiar with brand
+    - Buyers valuing faster 22kW AC charging over competitors' 11kW
+    - Early adopters interested in V2G bidirectional charging capability
 
-# Environmental
-environmental:
-  energy_efficiency_class: A+
-  co2_emissions_gpkm: 0
-  electricity_consumption_kwh_100km: 13.3
+strengths:
+  - 2023 European Car of the Year prestigious recognition
+  - Excellent 450km WLTP range for compact crossover segment
+  - Standard 22kW three-phase AC charging (faster than most rivals)
+  - 130kW DC fast charging adequate for long-distance travel
+  - Comprehensive standard equipment (360° camera, Level 2 ADAS, heat pump)
+  - Google Built-In with seamless wireless Apple CarPlay/Android Auto
+  - V2G/V2L bidirectional charging future-proofs home backup capability
+  - Heat pump standard improves winter efficiency significantly
+  - Distinctive French design with premium interior materials
+  - Strong value at €43,000 (€3-7k cheaper than similar German EVs)
+  - Dedicated CMF-EV platform (not ICE conversion like some rivals)
+  - 440L trunk adequate for daily family use
+  - Excellent Euro NCAP 5-star safety (91% adult, 86% child protection)
+  - 8-year/160,000km battery warranty industry standard
+  - Extensive Renault dealer network (650+ dealers in Germany)
+  - Eligible for 0.25% company car tax rate (€3,870/year savings)
 
-# Market Position
-market_position:
-  segment_rank: 3
-  monthly_sales_avg: 850
-  key_competitors:
-    - Volkswagen ID.3 Pro
-    - Cupra Born 77kW
-    - BMW iX1 xDrive30
-    - Volvo EX30 Extended Range
-    - Polestar 2 Standard Range
-  notes: |
-    Most popular Megane E-Tech variant (~50% of sales).
-    22kW AC charging is fastest in segment.
-    V2G capability adds future-proofing.
+weaknesses:
+  - No longer eligible for federal EV subsidy (ended Dec 2023)
+  - 440L trunk smaller than some crossover rivals (though adequate)
+  - No frunk storage (common limitation in segment)
+  - Rear seat space adequate but not class-leading for tall passengers
+  - OpenR Link vertical infotainment layout requires learning curve
+  - 130kW DC charging slower than 800V architecture rivals (Ioniq 5, EV6 220-350kW)
+  - Limited towing capacity (900kg) vs some rivals (1,000-1,200kg)
+  - Alcantara interior requires optional €1,500 Luxury Pack
+  - No opening panoramic sunroof (fixed glass roof in Luxury Pack only)
+  - Residual values good but less proven vs established German competitors
+  - Some early quality control issues reported (improved in 2024+ production)
 
-metadata:
-  data_quality: verified
-  last_updated: '2026-02-08'
-  created_at: '2026-02-08'
-  source: "Renault Germany official configurator"
-  source_urls:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech.html"
-  verification_date: '2026-02-08'
+delivery:
+  typical_wait_weeks: 8
+  build_to_order: true
+  demo_availability: Good
+  used_market: >
+    Limited used inventory as model launched 2022. Strong residual values (55% after 3 years)
+    indicate healthy demand. Expect growing used market availability through 2024-2025.
+
+notes: >
+  The Renault Megane E-Tech EV60 Techno represents excellent value in the compact electric crossover
+  segment, combining 2023 European Car of the Year recognition with comprehensive standard equipment.
+  Positioned as a more premium alternative to MG4 and more stylish alternative to VW ID.3, it targets
+  buyers seeking distinctive French design with Google Built-In technology. The 450km WLTP range and
+  standard 22kW AC charging address practical daily needs, while company car drivers benefit significantly
+  from 0.25% tax rate (€3,870/year savings). Best for buyers prioritizing design, technology integration,
+  and faster AC charging over absolute maximum range or lowest purchase price.
+
+sources:
+  pricing: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  specifications: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric/technische-daten.html
+  incentives: https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html
+  charging_infrastructure: https://www.goingelectric.de/stromtankstellen/
+  reviews:
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektroauto/renault-megane-e-tech-ev60/
+    - https://www.carwow.de/renault/megane-e-tech-electric
+    - https://www.auto-motor-und-sport.de/fahrbericht/renault-megane-e-tech-electric-test/
+  last_updated: 2024-02-08
