@@ -1,0 +1,403 @@
+# Kia EV9 Standard Range RWD - 2024 Model Year
+# Entry-level variant with 76.1 kWh battery and single rear motor
+# More affordable 7-seater electric SUV for families
+
+id: kia-ev9-standard-range-rwd-2024
+name: Standard Range RWD
+model_id: kia-ev9
+model_year: 2024
+variant_code: null
+
+# Production
+production_status: active
+market_availability:
+  - DE
+  - US
+  - KR
+
+# Battery Specifications
+battery:
+  usable_kwh: 76.1
+  total_kwh: 76.1
+  chemistry: NCM  # Nickel Cobalt Manganese
+  voltage_nominal: 400  # 400V architecture (not 800V like Long Range)
+  cell_supplier: SK On
+  thermal_management: active_liquid_cooling
+  warranty:
+    duration_years: 7
+    distance_km: 150000
+    capacity_retention_percent: 70
+  preconditioning: true
+
+# Range & Efficiency
+range:
+  wltp_km: 505
+  epa_km: null
+  real_world:
+    combined_km: 420
+    highway_130kph_km: 350
+    city_km: 480
+    winter_minus10c_km: 330
+  factors:
+    - Single motor RWD more efficient than AWD
+    - Smaller 76.1 kWh battery vs 99.8 kWh
+    - 400V architecture
+    - Standard heat pump included
+    - Efficient highway cruising with single motor
+
+efficiency:
+  wltp_kwh_per_100km: 15.1
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.1
+  epa_mpge: null
+  factors:
+    - Aerodynamic SUV design (Cd 0.28)
+    - Efficient single permanent magnet motor
+    - Heat pump standard reduces winter penalty
+    - 2,355 kg curb weight (190 kg lighter than AWD)
+    - Energy recovery up to 0.3 g deceleration
+
+# Motors & Performance  
+motors:
+  type: single_motor
+  configuration: rear_wheel_drive
+  count: 1
+  rear:
+    type: permanent_magnet_synchronous
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 350
+    cooling: liquid
+    supplier: Hyundai Motor Group
+
+performance:
+  total_power_kw: 150
+  total_power_hp: 204
+  total_torque_nm: 350
+  acceleration_0_100_kph_sec: 9.4
+  acceleration_80_120_kph_sec: 6.8
+  top_speed_kph: 185
+  top_speed_limited: true
+  quarter_mile_sec: null
+  characteristics:
+    - Adequate acceleration for large SUV
+    - 1.6 seconds slower than AWD (9.4s vs 7.8s)
+    - Rear-wheel drive provides engaging dynamics
+    - Sufficient power for highway merging
+    - Smooth and linear power delivery
+
+# Charging Capabilities
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    onboard_charger_kw: 11
+    charging_time_0_100_hours: 7.5
+    connector_type: Type 2
+  dc:
+    max_power_kw: 210
+    peak_power_kw: 210
+    charging_curve: optimized
+    time_10_80_percent_min: 24
+    time_0_100_percent_min: 45
+    connector_type: CCS2
+    preconditioning: true
+    notes:
+      - 400V architecture limits peak to 210 kW
+      - Slower than 800V Long Range (240 kW)
+      - Battery preconditioning via navigation
+      - Still respectable 24-minute 10-80% time
+  bidirectional:
+    v2l_capable: true
+    v2l_power_kw: 3.6
+    v2h_capable: false
+    v2g_capable: false
+    notes:
+      - V2L (Vehicle-to-Load) standard
+      - Can power camping equipment, tools, appliances
+      - External V2L outlet in rear
+      - Internal 120V outlet
+
+# Drivetrain
+drivetrain:
+  type: rear_wheel_drive
+  gearbox: single_speed_reduction
+  drive_modes:
+    - Eco
+    - Normal
+    - Sport
+    - Snow
+    - Terrain (off-road mode)
+  regen_levels: 4  # i-Pedal, Level 1-3, Coast
+  regen_max_power_kw: 150
+  regen_paddle_shifters: true
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 5015
+  width_mm: 1980
+  width_with_mirrors_mm: 2220
+  height_mm: 1780
+  wheelbase_mm: 3100
+  ground_clearance_mm: 203
+  drag_coefficient: 0.28
+  frontal_area_m2: 2.88
+
+weight:
+  curb_kg: 2355  # 190 kg lighter than AWD
+  gross_vehicle_kg: 3085
+  payload_kg: 730
+  weight_distribution_front_percent: 52
+  weight_distribution_rear_percent: 48
+  towing:
+    max_braked_kg: 1600  # 300 kg less than AWD (1900 kg)
+    max_unbraked_kg: 750
+    tongue_weight_kg: 100
+
+# Interior & Seating
+interior:
+  seating_capacity: 7
+  seating_configuration: "2+2+3"
+  seat_material: synthetic_leather
+  seats:
+    front:
+      - 10-way power adjustable driver
+      - 8-way power adjustable passenger
+      - Heated front seats standard
+      - Memory for driver seat (2 positions)
+    second_row:
+      - Sliding captain's chairs with armrests
+      - Heated outboard seats
+      - One-touch easy access to third row
+      - Recline adjustment
+    third_row:
+      - Full-size seats for adults
+      - Split-folding 50/50
+      - Cup holders and USB-C ports
+      - Suitable for adults up to 6 feet
+
+cargo:
+  trunk_capacity_liters: 333  # Behind third row
+  max_capacity_liters: 2393   # Seats folded
+  frunk_capacity_liters: 52
+  underfloor_storage: true
+  power_tailgate: true
+  notes:
+    - Class-leading third-row space
+    - Sliding second row increases cargo flexibility
+    - Flat load floor with seats folded
+    - Multiple storage compartments
+
+# Technology & Infotainment
+technology:
+  displays:
+    - type: digital_instrument_cluster
+      size_inches: 12.3
+      resolution: high_definition
+    - type: center_touchscreen
+      size_inches: 12.3
+      resolution: high_definition
+    - type: passenger_display
+      size_inches: 5
+      notes: Front passenger entertainment screen
+  head_up_display:
+    type: augmented_reality
+    size: 12_inch_virtual
+  connectivity:
+    - Kia Connect with over-the-air updates
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Bluetooth 5.0 multipoint
+    - 5x USB-C ports (front + second row + third row)
+    - Wireless smartphone charging (2 pads)
+    - Wi-Fi hotspot
+  audio:
+    system: Meridian Premium Sound
+    speakers: 6
+    power_watts: 350
+    notes: Optional Meridian Premium 14-speaker upgrade available
+  voice_assistant: Hey Kia
+  smartphone_app: Kia Access
+  digital_key: true
+  digital_key_sharing: true
+
+# Safety & Driver Assistance
+safety:
+  euro_ncap:
+    overall_rating: 5
+    year: 2023
+    adult_occupant_percent: 88
+    child_occupant_percent: 86
+    vulnerable_road_users_percent: 79
+    safety_assist_percent: 85
+  
+  passive_safety:
+    - 9 airbags (dual front, front side, curtain, center, driver knee)
+    - Reinforced battery protection
+    - Advanced High-Strength Steel body structure
+    - ISOFIX child seat anchors (second row + third row)
+    - Rear door child locks
+    - Automatic emergency braking system
+  
+  active_safety:
+    - Forward Collision-Avoidance Assist (FCA) with pedestrian and cyclist detection
+    - Lane Keeping Assist (LKA)
+    - Lane Following Assist (LFA)
+    - Blind-Spot Collision-Avoidance Assist (BCA)
+    - Rear Cross-Traffic Collision-Avoidance Assist (RCCA)
+    - Safe Exit Warning
+    - Driver Attention Warning (DAW)
+    - High Beam Assist (HBA)
+    - Parking Collision-Avoidance Assist (PCA)
+  
+  driver_assistance_level: SAE_Level_2
+  
+  adas_features:
+    - Highway Driving Assist 2 (HDA 2) - hands-on Level 2
+    - Smart Cruise Control with stop & go
+    - Navigation-based Smart Cruise Control (curve slowdown)
+    - Surround View Monitor (360° camera)
+    - Remote Smart Parking Assist (RSPA)
+    - Blind-Spot View Monitor (camera in side mirror)
+    - Parking Distance Warning front & rear
+  
+  camera_count: 7
+  radar_count: 4
+  ultrasonic_sensors: 12
+
+# Exterior Features
+exterior:
+  lighting:
+    headlights: LED
+    daytime_running_lights: LED Star Map pattern
+    taillights: LED Connected Digital
+    ambient_lighting: false
+  mirrors:
+    type: power_folding_heated
+    blind_spot_camera: true
+    auto_dimming: driver_side
+  glass:
+    front_windshield: acoustic_laminated
+    side_windows: privacy_glass_rear
+    panoramic_roof: fixed_glass
+    roof_solar_panel: false
+  wheels:
+    standard_size_inches: 19
+    standard_design: aero
+    tire_size_front: "255/55 R19"
+    tire_size_rear: "255/55 R19"
+  colors:
+    exterior_count: 8
+    two_tone_available: false
+
+# Climate Control
+climate:
+  type: dual_zone_automatic
+  heat_pump: true
+  heated_features:
+    - Front seats
+    - Steering wheel
+    - Second-row outboard seats (Earth trim)
+  cooled_features:
+    - None (not available on Standard Range Earth trim)
+  air_quality:
+    - cabin_air_filter
+  preconditioning: true
+  notes:
+    - Heat pump standard reduces winter range loss
+    - Remote climate control via app
+    - Battery preconditioning before DC charging
+
+# Warranty & Maintenance
+warranty:
+  basic:
+    duration_years: 7
+    distance_km: 150000
+  powertrain:
+    duration_years: 7
+    distance_km: 150000
+  battery:
+    duration_years: 7
+    distance_km: 150000
+    capacity_retention_percent: 70
+  roadside_assistance:
+    duration_years: 7
+    distance_km: unlimited
+  perforation:
+    duration_years: 12
+    distance_km: unlimited
+
+maintenance:
+  interval_km: 15000
+  interval_months: 12
+  first_service_km: 15000
+  estimated_annual_cost_eur: 300
+  notes:
+    - Minimal maintenance required (brake fluid, filters, tire rotation)
+    - No oil changes needed
+    - Regenerative braking reduces brake wear
+    - Battery coolant replacement at 60,000 km
+
+# Market & Competitors
+positioning:
+  segment: large_suv
+  competitors:
+    - Mercedes-Benz EQS SUV 450+ (€115,900, more luxurious, 122 km less range)
+    - BMW iX xDrive40 (€99,900, €28k more expensive, 80 km less range)
+    - Tesla Model X Long Range (€97,990, 107 km more range, less practical)
+    - Volkswagen ID.Buzz Pro LWB (€65,000, 26 km less range, less premium)
+    - Peugeot e-5008 Long Range (€54,000, less premium, less space)
+  unique_selling_points:
+    - Most affordable 7-seat electric SUV with premium features
+    - Class-leading third-row space for adults
+    - Standard heat pump and V2L capability
+    - 7-year/150,000 km comprehensive warranty
+    - Competitive 505 km WLTP range
+    - €16,010 cheaper than Long Range AWD
+  target_buyers:
+    - Large families needing 7 seats
+    - Cost-conscious buyers wanting EV9 capability at lower price
+    - Urban families prioritizing efficiency over performance
+    - Company car drivers (0.25% tax rate)
+    - Those who don't need AWD or extreme acceleration
+    - Buyers prioritizing practicality over speed
+
+strengths:
+  - Most affordable EV9 variant (€16k savings vs AWD)
+  - Excellent 505 km WLTP range (420 km real-world)
+  - Class-leading third-row space and practicality
+  - 7-year/150,000 km comprehensive warranty
+  - Standard heat pump and V2L capability
+  - Efficient single-motor RWD drivetrain
+  - Adequate performance for SUV (9.4s 0-100 km/h)
+  - 0.25% company car tax rate (under €70k)
+
+weaknesses:
+  - 1.6 seconds slower acceleration than AWD (9.4s vs 7.8s)
+  - 400V architecture limits DC charging to 210 kW (vs 240 kW AWD)
+  - 58 km less WLTP range than Long Range AWD
+  - Lower towing capacity (1,600 kg vs 1,900 kg AWD)
+  - No ventilated seats on Earth trim
+  - Basic 6-speaker audio (vs 14-speaker Meridian on higher trims)
+  - RWD only (no AWD winter/off-road capability)
+
+# Production & Availability
+production:
+  plant: Hyundai Motor Manufacturing Georgia (USA)
+  platform: E-GMP (Electric-Global Modular Platform) - 400V variant
+  production_start: "2024-01"
+  production_end: null
+
+# Data Quality & Sources
+data_quality: detailed
+sources:
+  - https://www.kia.com/de/modelle/ev9/
+  - Kia official press materials
+  - WLTP certification documents
+  - European market specifications
+  - Auto motor und sport test data
+notes: |
+  Standard Range uses 400V architecture (not 800V like Long Range).
+  Earth trim is base configuration.
+  210 kW DC charging adequate for most use cases.
+  Best value proposition in EV9 lineup for families prioritizing efficiency and cost over performance.
