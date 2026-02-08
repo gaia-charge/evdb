@@ -1,0 +1,283 @@
+# Audi Q6 e-tron RWD - German Market (2024)
+id: audi-q6-e-tron-rwd-2024-de
+variant_id: audi-q6-e-tron-rwd-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 71200  # € (2024 pricing, competitive positioning)
+  destination_charge: 1290
+  on_the_road_price: 72490
+  price_includes:
+    - "11kW AC charging (3-phase)"
+    - "270kW DC ultra-fast charging"
+    - "Digital Matrix LED headlights (standard)"
+    - "14.5-inch MMI panoramic display"
+    - "11.9-inch Audi virtual cockpit plus"
+    - "10.9-inch passenger display"
+    - "4-zone automatic climate control"
+    - "Heat pump (standard)"
+    - "360-degree camera system (standard)"
+    - "19-inch wheels"
+    - "Panoramic glass roof (standard)"
+    - "Adaptive air suspension (standard)"
+
+trim_levels:
+  - name: "Q6 e-tron"
+    price: 71200
+    features:
+      - "Base RWD model with 225kW (306hp)"
+      - "641 km WLTP range"
+      - "19-inch wheels standard"
+      - "Digital Matrix LED headlights"
+      - "Leather/leatherette interior"
+  - name: "advanced"
+    price: 76200  # +€5,000
+    features:
+      - "Adaptive cruise control with predictive efficiency"
+      - "Park assist plus with remote parking"
+      - "Virtual exterior mirrors (cameras)"
+      - "Nappa leather seats"
+      - "Ambient lighting plus (30 colors)"
+  - name: "S line"
+    price: 81200  # +€10,000 over base
+    features:
+      - "S line exterior styling"
+      - "S line interior with sport seats"
+      - "20-inch S line wheels (reduces range by 20km)"
+      - "Sport suspension with adaptive dampers"
+      - "Matrix LED with laser light"
+      - "Fine Nappa leather"
+      - "Bang & Olufsen 3D sound (22 speakers)"
+
+colors:
+  - name: "Brilliant Black"
+    type: solid
+    price: 0  # Free
+  - name: "Glacier White metallic"
+    type: metallic
+    price: 895
+  - name: "Mythos Black metallic"
+    type: metallic
+    price: 895
+  - name: "Ascari Blue metallic"
+    type: metallic
+    price: 895
+  - name: "Sakhir Gold metallic"
+    type: metallic
+    price: 895
+  - name: "Taifun Gray metallic"
+    type: metallic
+    price: 895
+  - name: "Audi exclusive paint"
+    type: exclusive
+    price: 4500
+
+wheels:
+  - size: "19 inch"
+    price: 0  # Standard
+    range_impact_km: 0
+    name: "19-inch alloy wheels"
+  - size: "20 inch"
+    price: 1600
+    range_impact_km: -20
+    name: "20-inch dynamic alloy wheels"
+  - size: "21 inch"
+    price: 3200
+    range_impact_km: -35
+    name: "21-inch Audi Sport alloy wheels"
+
+interior:
+  - name: "Leather/leatherette standard"
+    price: 0
+  - name: "Nappa leather seats"
+    price: 1950
+  - name: "Fine Nappa leather"
+    price: 3450
+
+packages:
+  - name: "Comfort Package Plus"
+    price: 2490
+    includes:
+      - "Heated & ventilated front seats"
+      - "Heated rear seats"
+      - "Electric lumbar support (4-way)"
+      - "Massage function front seats"
+      - "Power tailgate with sensor control"
+  - name: "Technology Package Pro"
+    price: 4990
+    includes:
+      - "Adaptive cruise control with predictive efficiency"
+      - "Active lane assist plus"
+      - "Park assist plus with remote parking"
+      - "Intersection assist"
+      - "Emergency assist"
+      - "Augmented reality head-up display"
+  - name: "Premium Plus Package"
+    price: 7990
+    includes:
+      - "All Technology Package Pro features"
+      - "All Comfort Package Plus features"
+      - "Bang & Olufsen 3D sound (22 speakers)"
+      - "Virtual exterior mirrors"
+      - "Matrix LED with laser light"
+      - "Fine Nappa leather"
+      - "Saves €2,490 vs buying separately"
+  - name: "Winter Package"
+    price: 990
+    includes:
+      - "Heated steering wheel"
+      - "Heated windshield"
+      - "Heated windshield washer nozzles"
+
+individual_options:
+  - name: "Towing package"
+    price: 1250
+    notes: "2,400kg braked, 750kg unbraked, electrically folding towbar with trailer assist"
+  - name: "Bang & Olufsen 3D sound"
+    price: 2990
+    notes: "22 speakers, 830W, 3D sound with Auro-3D"
+  - name: "Augmented reality head-up display"
+    price: 1890
+    notes: "Large windshield projection with AR navigation arrows"
+  - name: "Virtual exterior mirrors"
+    price: 1590
+    notes: "Camera-based mirrors, improved aerodynamics"
+  - name: "Matrix LED with laser light"
+    price: 1990
+    notes: "Laser high beam extends range to 600m"
+  - name: "22kW AC charging (3-phase)"
+    price: 790
+    notes: "Useful for public AC chargers"
+  - name: "Audi exclusive interior/exterior"
+    price_from: 3500
+    notes: "Custom colors, materials, stitching"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 6390  # Annual savings vs 1% ICE rate
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €71,200 vehicle: 0.25% = €178/month = €2,136/year vs 1% = €712/month = €8,544/year. Annual savings: €6,408."
+    calculation: "€71,200 × 0.25% = €178/month. ICE: €71,200 × 1% = €712/month. Savings: €534/month = €6,408/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 440  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 16
+  production_status: active
+  order_url: "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-e-tron/konfigurator.html"
+  notes: "Built at Ingolstadt, Germany. First PPE platform model. High demand due to excellent range and ultra-fast charging."
+
+dealers:
+  count: 550  # Audi dealers in Germany
+  network: "Audi Deutschland"
+  service_centers: 550
+  notes: "Extensive Audi dealer network across Germany, all trained for EV servicing"
+
+charging_networks:
+  - name: "Audi e-tron Charging Service"
+    coverage: "400,000+ charging points across Europe, 30+ countries"
+    pricing: "Various tariffs available via Audi connect app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego, Fastned"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€17.99/month + €0.31/kWh"
+    notes: "Audi preferred partner, 270kW charging: 10-80% costs €20.58 (subscription) vs €52.45 (standard)"
+  - name: "EnBW mobility+"
+    pricing: "€0.45-0.55/kWh (depending on tariff)"
+    notes: "Popular in Germany, good coverage"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2024)
+    cost_10_to_80_percent: 19.93  # € (94.9kWh × 70% × €0.30)
+    cost_per_100km: 5.10  # € (17.0 kWh/100km × €0.30)
+  - scenario: "Public AC charging"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_10_to_80_percent: 29.89
+    cost_per_100km: 7.65
+  - scenario: "DC fast charging (IONITY subscription)"
+    cost_per_kwh: 0.31  # €/kWh + €17.99/month
+    cost_10_to_80_percent: 20.58  # € (94.9kWh × 70% × €0.31)
+    cost_per_100km: 5.27
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_10_to_80_percent: 52.45
+    cost_per_100km: 13.43
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "2-year vehicle warranty standard, can be extended up to 5 years. Battery warranty covers capacity degradation below 70% within 8 years/160,000km."
+
+annual_costs:
+  insurance_estimate: 1100  # € per year (comprehensive, experienced driver)
+  road_tax: 0  # Exempt until 2030
+  inspection: 85  # € per year (TÜV inspection every 2 years, €170)
+  maintenance_estimate: 450  # € per year (service, tires, etc.)
+  total_estimate: 1635  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 18000  # Estimated battery production (larger 100kWh battery)
+  lifecycle_co2_kg: 32000   # 200,000km with EU electricity mix
+  recyclability_percent: 90
+  battery_recycling: "Audi battery recycling program, 95% material recovery target"
+  production_site: "Ingolstadt Factory (100% renewable energy)"
+
+popular_configurations:
+  - name: "Base RWD"
+    price: 74385  # Base + typical options
+    includes:
+      - "Base Q6 e-tron (€71,200)"
+      - "Metallic paint (€895)"
+      - "Winter Package (€990)"
+      - "Destination charge (€1,290)"
+    notes: "Most affordable Q6 configuration, excellent range"
+  - name: "advanced Comfort"
+    price: 84975
+    includes:
+      - "advanced trim (€76,200)"
+      - "Premium Plus Package (€7,990)"
+      - "Metallic paint (€895)"
+      - "Destination charge (€1,290)"
+    notes: "Popular configuration with all key features"
+  - name: "S line Premium"
+    price: 96430
+    includes:
+      - "S line trim (€81,200)"
+      - "Premium Plus Package (€7,990)"
+      - "Towing package (€1,250)"
+      - "22kW AC charging (€790)"
+      - "Virtual exterior mirrors (€1,590)"
+      - "Augmented reality HUD (€1,890)"
+      - "Metallic paint (€895)"
+      - "Destination charge (€1,290)"
+    notes: "Fully loaded configuration for enthusiasts"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-e-tron/preis-ausstattung.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/"
+    - "https://ev-database.org/car/1698/Audi-Q6-e-tron"
+  notes: "2024 German market pricing for Audi Q6 e-tron RWD. Base price at €71,200 positions it between Q4 e-tron quattro (€58,990) and Q8 e-tron 55 (€87,500). Excellent value considering 641 km range, 800V ultra-fast charging (270 kW peak, 10-80% in 21 minutes), and standard features (panoramic glass roof, 360° camera, adaptive air suspension). Competes directly with BMW iX3 (€69,000) and Mercedes EQE SUV 350+ (€77,000). Company car drivers save €6,408/year with 0.25% tax rate. Most popular configuration is 'advanced' trim (~€85k) with Premium Plus Package."
