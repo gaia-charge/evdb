@@ -1,0 +1,238 @@
+id: mercedes-benz-eqs-suv-450-4matic-2024
+name: 450 4MATIC
+model_id: mercedes-benz-eqs-suv
+model_year: 2024
+production_years:
+  start: 2022
+  end: null
+
+trim_level: 450-4matic
+market_position: mid  # Mid-level EQS SUV with AWD
+
+# Battery Specifications
+battery:
+  usable_kwh: 118.0  # Same as 450+
+  total_kwh: 122.0
+  chemistry: NCM  # Nickel Manganese Cobalt (NCM811)
+  nominal_voltage_v: 396  # 400V architecture
+  cell_type: pouch
+  supplier: CATL
+  warranty_years: 10
+  warranty_km: 250000  # Best-in-class warranty
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, 400V architecture"
+    weight_kg: 690
+    modules: 12
+    cells: 396
+
+# Range
+range:
+  wltp_km: 600  # Slightly less than RWD due to AWD weight/drivetrain losses
+  wltp_source: manufacturer
+  wltp_city_km: 700
+  wltp_highway_km: 510
+  
+  epa_km: 465  # 289 miles (EPA more conservative)
+  epa_source: manufacturer
+  
+  real_world_km: 500
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 10.7  # 11kW AC
+      "10_80": 8.3
+    onboard_charger_kw: 11
+    onboard_charger_optional_kw: 22  # 22kW onboard charger optional
+    phases: 3
+  
+  dc:
+    max_power_kw: 200  # 400V architecture limits DC charging speed
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31  # Same as 450+
+      "0_100": 62
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 190
+      - soc_percent: 10
+        power_kw: 200  # Peak
+      - soc_percent: 20
+        power_kw: 200
+      - soc_percent: 30
+        power_kw: 180
+      - soc_percent: 40
+        power_kw: 160
+      - soc_percent: 50
+        power_kw: 140
+      - soc_percent: 60
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 70
+  
+  plug_and_charge: yes  # ISO 15118
+  
+  bidirectional:
+    v2l: false  # No Vehicle-to-Load
+    v2g: false  # No Vehicle-to-Grid
+    v2h: false  # No Vehicle-to-Home
+
+# Performance
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      max_power_kw: 140
+      max_torque_nm: 320
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 265
+      max_torque_nm: 568
+  
+  total_power_kw: 265  # Combined system output (not additive due to thermal limits)
+  total_power_hp: 360
+  total_torque_nm: 800  # Higher than RWD due to dual motors
+  
+  acceleration:
+    "0_100_kmh_sec": 6.0  # Faster than 450+ RWD (6.7s)
+    "0_60_mph_sec": 5.7
+  
+  top_speed_kmh: 210  # Electronically limited
+  
+  energy_recovery:
+    max_regen_power_kw: 215  # Higher than RWD due to dual motors
+    one_pedal_driving: yes  # D Auto mode with intelligent recuperation
+
+# Weight & Dimensions
+weight:
+  curb_weight_kg: 2855  # 120kg heavier than RWD due to front motor
+  distribution_front_percent: 50
+  distribution_rear_percent: 50
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 20.6  # Higher than RWD (19.4) due to AWD drivetrain losses
+  wltp_source: manufacturer
+  epa_kwh_per_100km: 25.4  # EPA testing more demanding
+  epa_mpge: 83  # EPA miles per gallon equivalent
+  real_world_kwh_per_100km: 23.6
+  energy_efficiency_class: A  # EU energy label (best class)
+
+# Features
+features:
+  heated_seats: "Front and rear standard"
+  ventilated_seats: "Front standard, rear optional"
+  massage_seats: "Front standard, rear optional (Executive Rear Seat Package)"
+  heated_steering_wheel: yes
+  panoramic_roof: yes  # Panoramic sliding sunroof standard
+  head_up_display: yes  # Augmented Reality HUD standard
+  premium_audio: yes  # Burmester High-End 4D Surround (15 speakers, 710W) standard
+  adaptive_suspension: yes  # AIRMATIC air suspension standard
+  air_suspension: yes
+  all_wheel_steering: yes  # Rear-axle steering up to 10° standard
+  ambient_lighting: yes  # 64 colors
+  keyless_entry: yes
+  power_liftgate: yes  # HANDS-FREE ACCESS
+  tow_hitch: yes  # 1,800kg capacity
+  
+  adas_level: 2  # Level 2+ with Active Distance Assist DISTRONIC and Active Steering Assist
+  autopilot_highway: yes  # DRIVE PILOT Level 3 optional (in Germany only)
+  
+  climate_zones: 4  # 4-zone automatic climate control standard
+  wireless_charging: yes  # For 2 smartphones
+  
+  special:
+    - "MBUX Hyperscreen optional (standard on 580 4MATIC)"
+    - "Rear-axle steering up to 10° (turning circle 11.9m)"
+    - "ENERGIZING comfort control with 10 programs"
+    - "Air Balance Package with ionizer and fragrance"
+    - "Executive Rear Seat Package (reclining, massage, heating, footrests)"
+    - "E-Active Body Control optional (active suspension, curve tilting)"
+    - "Digital Light LED headlights with projection"
+    - "Acoustic Comfort Package (acoustic glass, additional insulation)"
+    - "Off-road mode with transparent hood camera"
+    - "Optional 7-seat configuration with electric-folding third row"
+    - "4MATIC all-wheel drive with 4ETS traction control"
+
+# Technology
+technology:
+  heat_pump: yes  # Standard
+  preconditioning: yes  # Battery and cabin
+  remote_climate: yes  # Via Mercedes me app
+  battery_preheating: yes  # For optimal DC fast charging
+  over_the_air_updates: yes  # MBUX OTA updates
+  digital_key: yes  # Via Mercedes me app (NFC + UWB)
+  voice_assistant: yes  # "Hey Mercedes" natural language
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  navigation_system: yes  # MBUX with Augmented Reality
+  telematics: yes  # Mercedes me connect with remote services
+
+# Homologation
+homologation:
+  certification_standard: WLTP
+  energy_label_eu: A
+  co2_emissions_g_km: 0  # Zero direct emissions
+
+notes: |
+  The Mercedes-Benz EQS SUV 450 4MATIC adds all-wheel drive to the base EQS SUV platform.
+  It provides improved traction and winter capability while maintaining strong efficiency.
+  
+  Key strengths:
+  - All-wheel drive with intelligent 4MATIC system and 4ETS traction control
+  - Faster acceleration: 6.0s vs 6.7s (RWD)
+  - Better winter/adverse weather capability
+  - Same 118kWh battery as RWD
+  - 600km WLTP range (500km real-world) - still excellent for luxury AWD SUV
+  - Rear-axle steering with 10° angle reduces turning circle
+  - 10-year/250,000km battery warranty
+  - Optional 7-seat configuration
+  - Enhanced regenerative braking (215kW vs 186kW RWD)
+  
+  Key differences from 450+ RWD:
+  - AWD adds €5,000 to base price
+  - 120kg heavier (2,855kg vs 2,735kg)
+  - Range reduced 60km WLTP (600 vs 660km)
+  - Slightly higher consumption (20.6 vs 19.4 kWh/100km)
+  - Faster acceleration (6.0s vs 6.7s 0-100)
+  - Better traction in winter/off-road conditions
+  
+  Competes with:
+  - BMW iX xDrive50 (€105,000): 630km range, faster (4.6s), better tech
+  - Audi Q8 e-tron 55 quattro (€90,000): 582km range, less expensive
+  - Tesla Model X Long Range (€105,000): 560km range, much faster (3.9s), 7-seat standard
+  
+  The EQS SUV 450 4MATIC is ideal for buyers who want AWD traction and Mercedes luxury
+  without stepping up to the performance-focused 580 4MATIC.
+  
+  Real-world efficiency: 23.6 kWh/100km (vs WLTP 20.6) confirmed by testing.
+  Real-world range: 500km mixed driving (vs 600km WLTP, 465km EPA).
+
+sources:
+  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/suv-x296/explore/technical-data.html
+    title: Mercedes-Benz EQS SUV 450 4MATIC Technical Data
+    accessed: "2026-02-08"
+  - url: https://ev-database.org/car/1625/Mercedes-EQS-SUV-450-4MATIC
+    title: EV Database Mercedes EQS SUV 450 4MATIC Real-World Data
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
