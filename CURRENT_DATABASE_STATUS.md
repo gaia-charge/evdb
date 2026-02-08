@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 5:10 PM  
-**Total Vehicles:** 147 variants across 74 models from 25 manufacturers  
-**Germany Market Coverage:** 147/147 variants (100%)
+**Last Updated:** 2026-02-08 5:25 PM  
+**Total Vehicles:** 148 variants across 75 models from 25 manufacturers  
+**Germany Market Coverage:** 148/148 variants (100%)
 
 ---
 
@@ -15,7 +15,7 @@
 | Hyundai Motor Group | 5 | 9 | ✅ Good |
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 3 | 8 | ✅ Good |
-| Stellantis | 13 | 19 | 🟡 Partial |
+| Stellantis | 14 | 20 | 🟡 Partial |
 | Volkswagen Group | 5 | 13 | ✅ Good |
 | Audi | 5 | 9 | ✅ Good |
 | Mercedes-Benz | 6 | 14 | ✅ Good |
@@ -36,7 +36,7 @@
 | Lexus | 1 | 1 | 🟢 Single |
 | Subaru | 1 | 1 | 🟢 Single |
 
-**Total:** 25 manufacturers, 74 models, 147 variants
+**Total:** 25 manufacturers, 75 models, 148 variants
 
 ---
 
@@ -70,6 +70,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Alfa Romeo Junior Elettrica**: Added 1 NEW MODEL (Junior Elettrica, Alfa Romeo's first pure-electric vehicle) + 1 NEW VARIANT (Speciale 54kWh 115kW/156hp 410km WLTP €39,990) + Germany market data - First Alfa Romeo BEV built on Stellantis eCMP2 platform (shared with Peugeot e-2008, Opel Mokka-e, DS 3 E-Tense) but with sportier suspension tuning and distinctive Italian design featuring iconic Scudetto grille reinterpreted for electric mobility - Speciale trim well-equipped as standard: heat pump, LED Matrix headlights, dual 10.25" displays (instrument cluster + touchscreen), wireless Apple CarPlay/Android Auto, wireless smartphone charging, D.N.A. drive mode selector (Dynamic, Natural, Advanced Efficiency), comprehensive safety suite (Autonomous Emergency Braking, Lane Keep Assist, Adaptive Cruise Control, Blind Spot Detection) - Targets young professionals seeking premium Italian brand experience at affordable price, positioned €15,000-20,000 below BMW iX1 (€56,000), Mercedes EQA (€54,000), Volvo EX40 (€53,000) while delivering comparable 410km WLTP range and superior style - Competes directly with platform siblings Peugeot e-2008 GT (€43,000) and Opel Mokka-e Ultimate (€39,000) with more premium positioning - Qualifies for €4,500 German federal incentive (price under €40,000) reducing effective price to €35,490, plus 0.25% company car tax rate makes it attractive for fleet buyers (€1,080-1,512 annual tax savings vs combustion equivalent) - Most popular configuration: Speciale Plus (€42,590) adds panoramic roof (€1,200), premium Harman Kardon audio (€600), Advanced Driver Assistance Pack with 360° camera (€800) - More powerful Veloce variant (~240hp) planned for 2025 addressing performance-focused buyers - Real-world range 340km mixed driving adequate for German daily commute (30-50km average), 100kW DC fast charging enables 10-80% in 26 minutes - Stellantis now 20 variants across 14 models (from 19/13, +5.3% variants) - Database now 148 variants across 75 models from 25 manufacturers (from 147/74, +0.7% variants, +1.4% models) - Germany coverage maintained at 100% (148/148) - *Added Feb 8, 2026 17:25*
 - ✅ **Škoda Enyaq Coupé iV**: Added 1 NEW MODEL (Enyaq Coupé iV, sportier coupe variant with improved aerodynamics) + 2 NEW VARIANTS (Coupé iV 80 RWD 210kW/286hp 585km WLTP €56,990, Coupé iV vRS AWD 220kW/299hp 6.5s 0-100 528km WLTP €60,990) + Germany market data - Coupé features sloping roofline with better aerodynamics (Cd 0.26 vs 0.27 SUV) delivering 15km additional range (585km vs 570km) while maintaining impressive practicality (570L boot, only 15L less than SUV) - vRS is Škoda's first performance vRS electric model with dual-motor AWD, sport suspension (-15mm), LED Matrix headlights, Canton audio, Travel Assist standard, exceptional value at €17,000 cheaper than Audi SQ4 Sportback e-tron while offering comparable performance - Both variants qualify for 0.25% company car tax rate - Škoda now 6 variants across 2 models (from 4/1, +50% variants) - Database now 147 variants across 74 models from 25 manufacturers - Germany coverage maintained at 100% (147/147) - *Added Feb 8, 2026 17:10*
 - ✅ **Opel Grandland Electric**: Added 1 NEW MODEL (Grandland Electric, Opel's flagship electric SUV on STLA Medium platform) + 1 variant (Long Range 82 kWh RWD 160kW/218hp 580km WLTP €49,990) + Germany market data - New 2024 model with excellent range and fast 160kW DC charging (10-80% in 26 minutes), spacious family SUV with 550L trunk and Google Automotive Services built-in, built in Eisenach Germany - Competes with VW ID.4 Pro (€50,990), Hyundai Ioniq 5 Long Range (€50,990), Peugeot e-3008 Long Range (€50,990) with competitive pricing and superior cargo space - Platform sibling to Peugeot e-3008 but with more practical German design and larger battery (82 kWh vs 73 kWh) - Stellantis now 19 variants across 13 models (from 18/12, +5.6% variants) - Database now 145 variants across 73 models from 25 manufacturers - Germany coverage maintained at 100% (145/145) - *Added Feb 8, 2026 16:50*
 - ✅ **Smart #1 Expansion + 100% Germany Coverage Achieved**: Added 2 NEW VARIANTS (Smart #1 Pro+ €41,990 entry-level with same 200kW powertrain and 440km range as Premium but reduced equipment, Smart #1 Brabus €53,490 performance flagship with 315kW/428hp delivering supercar-like 3.9s 0-100 acceleration) + Germany market data for both - Pro+ offers excellent value proposition vs Premium at €2,000 savings while maintaining core capabilities (22kW AC, 150kW DC, heat pump standard) - Brabus tuned by legendary German performance house delivers most powerful compact electric crossover under €60k with sport suspension (-10mm), Nappa leather/Alcantara interior, unique body kit, 19" Brabus wheels - Both qualify for 0.25% company car tax rate - Smart now 3 variants (from 1, +200%) - **Database now 144 variants with 100% Germany market coverage (144/144)** - *Added Feb 8, 2026 16:30*
