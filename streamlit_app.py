@@ -578,7 +578,6 @@ elif page == "🔍 Browse Vehicles":
         # Format display data
         display_df = filtered_df.copy()
         display_df['Vehicle'] = (
-            display_df['manufacturer'] + ' ' + 
             display_df['model'] + ' ' + 
             display_df['variant_name'] + ' (' + 
             display_df['model_year'].astype(str) + ')'
