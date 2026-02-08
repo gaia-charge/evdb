@@ -1,0 +1,156 @@
+# Tesla Model S Plaid (2024 Refresh)
+id: tesla-model-s-plaid-2024
+name: Plaid
+model_id: tesla-model-s
+model_year: 2024
+variant_code: MSP
+
+battery:
+  usable_kwh: 100.0
+  total_kwh: 104.5
+  chemistry: NCA
+  cell_type: cylindrical
+  manufacturer: Panasonic
+  warranty_years: 8
+  warranty_km: 240000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 600
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: 637  # 396 miles
+  real_world_km: 540
+  real_world_source: ADAC Ecotest
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 250
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 210
+    - soc_percent: 40
+      power_kw: 180
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
+  time_0_to_80_min: 31
+  time_10_to_80_min: 28
+  time_20_to_80_min: 25
+  charging_speed_kmh: 1280
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+  total_power_kw: 750
+  total_power_hp: 1020
+  total_torque_nm: 1420
+  acceleration_0_100_sec: 2.1
+  top_speed_kmh: 322
+
+weight:
+  curb_weight_kg: 2215
+  gross_vehicle_weight_kg: 2693
+  payload_kg: 478
+
+efficiency:
+  wltp_kwh_per_100km: 17.7
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 19.8
+  efficiency_rating: B
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: true
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2
+
+optional_equipment:
+  - name: Yoke Steering Wheel
+    code: YOKE
+    category: interior
+    included_in_base: false
+  - name: Enhanced Autopilot
+    code: AP
+    category: technology
+    included_in_base: false
+  - name: Full Self-Driving Capability
+    code: FSD
+    category: technology
+    included_in_base: false
+  - name: Premium Connectivity
+    code: PC
+    category: technology
+    included_in_base: false
+  - name: 21" Arachnid Wheels
+    code: W21A
+    category: exterior
+    included_in_base: false
+  - name: Carbon Fiber Spoiler
+    code: SPOILER
+    category: exterior
+    included_in_base: false
+
+notes: |
+  The Tesla Model S Plaid is one of the fastest production sedans in the world,
+  featuring tri-motor AWD with torque vectoring. The tri-motor setup includes
+  one front AC induction motor and two independent rear permanent magnet motors
+  for precise power delivery. Carbon ceramic brakes are standard.
+  
+  Track Mode with drift mode is included. The Plaid features advanced thermal
+  management with three radiators to sustain high-performance driving. 0-60 mph
+  in 1.99 seconds (US EPA claim) makes it quicker than most supercars.
+  
+  Standard equipment includes upgraded seats with carbon fiber trim, premium
+  audio, and all features from the dual-motor variant.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.tesla.com/models/design
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/tesla-model-s-plaid-test/
+    - https://ev-database.org/car/1524/Tesla-Model-S-Plaid

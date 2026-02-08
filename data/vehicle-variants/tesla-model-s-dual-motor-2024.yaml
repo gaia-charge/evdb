@@ -1,0 +1,141 @@
+# Tesla Model S Dual Motor (2024 Refresh)
+id: tesla-model-s-dual-motor-2024
+name: Dual Motor AWD
+model_id: tesla-model-s
+model_year: 2024
+variant_code: MS
+
+battery:
+  usable_kwh: 100.0
+  total_kwh: 104.5
+  chemistry: NCA
+  cell_type: cylindrical
+  manufacturer: Panasonic
+  warranty_years: 8
+  warranty_km: 240000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 634
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: 652  # 405 miles
+  real_world_km: 580
+  real_world_source: ADAC Ecotest
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 250
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 210
+    - soc_percent: 40
+      power_kw: 180
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
+  time_0_to_80_min: 31
+  time_10_to_80_min: 28
+  time_20_to_80_min: 25
+  charging_speed_kmh: 1350
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: null
+      power_hp: null
+      torque_nm: null
+  total_power_kw: 493
+  total_power_hp: 670
+  total_torque_nm: null
+  acceleration_0_100_sec: 3.2
+  top_speed_kmh: 250
+
+weight:
+  curb_weight_kg: 2162
+  gross_vehicle_weight_kg: 2640
+  payload_kg: 478
+
+efficiency:
+  wltp_kwh_per_100km: 16.5
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.2
+  efficiency_rating: A
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: true
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2
+
+optional_equipment:
+  - name: Yoke Steering Wheel
+    code: YOKE
+    category: interior
+    included_in_base: false
+  - name: Enhanced Autopilot
+    code: AP
+    category: technology
+    included_in_base: false
+  - name: Full Self-Driving Capability
+    code: FSD
+    category: technology
+    included_in_base: false
+  - name: Premium Connectivity
+    code: PC
+    category: technology
+    included_in_base: false
+  - name: 21" Arachnid Wheels
+    code: W21A
+    category: exterior
+    included_in_base: false
+
+notes: |
+  The 2024 Tesla Model S with dual-motor AWD is Tesla's flagship luxury sedan,
+  featuring the Refresh design introduced in 2021. Standard equipment includes
+  air suspension, tri-zone climate control, premium audio system, and horizontal
+  17" touchscreen. The yoke steering wheel is now optional (standard round wheel
+  available). Features advanced thermal management for consistent performance.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.tesla.com/models/design
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/tesla-model-s-test/
+    - https://ev-database.org/car/1405/Tesla-Model-S
