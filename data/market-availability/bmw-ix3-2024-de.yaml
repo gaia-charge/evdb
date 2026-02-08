@@ -1,0 +1,250 @@
+# BMW iX3 2024 - German Market Availability
+# Mid-size premium electric SUV - BMW's first mass-production EV
+# Starting at €69,300, positioned between iX1 and iX
+
+id: bmw-ix3-2024-de
+variant_id: bmw-ix3-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 69300
+  price_including_vat: 69300
+  vat_rate_percent: 19
+
+availability:
+  status: available
+  release_date: "2020-09"
+  production_end: null
+  order_status: open
+  delivery_time_weeks: 16
+  notes: Built in China (Shenyang), imported to Germany
+
+trim_levels:
+  - name: Impressive
+    price_eur: 69300
+    description: Well-equipped with adaptive air suspension, LED lights, Live Cockpit Professional
+  - name: M Sport
+    price_eur: 73800
+    price_difference_eur: 4500
+    description: Sport styling, 20" M wheels, M suspension, adaptive air suspension
+
+colors:
+  - name: Alpine White
+    type: solid
+    price_eur: 0
+    notes: Free solid color
+  - name: Black Sapphire Metallic
+    type: metallic
+    price_eur: 1300
+  - name: Mineral White Metallic
+    type: metallic
+    price_eur: 1300
+  - name: Phytonic Blue Metallic
+    type: metallic
+    price_eur: 1300
+  - name: Storm Bay Metallic
+    type: metallic
+    price_eur: 1300
+  - name: Brooklyn Grey Metallic
+    type: metallic
+    price_eur: 1800
+  - name: Oxide Grey Metallic
+    type: metallic
+    price_eur: 1800
+  - name: BMW Individual Frozen Deep Grey Metallic
+    type: individual
+    price_eur: 4900
+    notes: BMW Individual matte finish
+
+wheels:
+  - size_inches: 19
+    type: Alloy wheels style 694
+    price_eur: 0
+    range_impact_km: 0
+    notes: Standard 19" aero wheels, 245/50 R19
+  - size_inches: 20
+    type: M light alloy wheels style 698 M
+    price_eur: 1800
+    range_impact_km: -20
+    notes: Standard on M Sport, optional on Impressive, 245/45 R20
+
+interior:
+  - name: Veganza Black
+    type: synthetic leather
+    price_eur: 0
+    notes: Standard sustainable interior trim
+  - name: Vernasca Leather Black
+    type: leather
+    price_eur: 1900
+    notes: Optional genuine leather
+  - name: Vernasca Leather Mocha
+    type: leather
+    price_eur: 1900
+    notes: Optional genuine leather
+
+packages:
+  - name: M Sport Package
+    price_eur: 4500
+    features:
+      - 20" M light alloy wheels style 698 M (reduces range by 20km)
+      - M aerodynamics package
+      - M Sport brake system with blue calipers
+      - Sport seats front
+      - M leather steering wheel
+      - Anthracite headliner
+      - Aluminium door sill finishers with M designation
+    notes: Included in M Sport trim
+  
+  - name: Driving Assistant Professional
+    price_eur: 2400
+    features:
+      - Highway Assistant (Level 2+ semi-autonomous)
+      - Active Cruise Control with Stop & Go
+      - Steering and lane control assistant
+      - Lane keeping assistant with active side collision protection
+      - Emergency stop assistant
+      - Evasion aid
+      - Cross-traffic warning front
+    notes: Advanced driver assistance system
+  
+  - name: Parking Assistant Plus
+    price_eur: 1900
+    features:
+      - Reversing Assistant
+      - Surround View with 3D view
+      - Parking Assistant (automated parking)
+      - Remote 3D View via smartphone
+    notes: Includes 360° camera system
+  
+  - name: Comfort Package
+    price_eur: 2200
+    features:
+      - Panoramic glass roof with electric sunblind
+      - Storage Package
+      - Comfort Access (keyless entry)
+      - Ambient lighting
+      - Alarm system
+    notes: Enhances comfort
+  
+  - name: Technology Package
+    price_eur: 3200
+    features:
+      - Head-Up Display
+      - Harman Kardon surround sound (16 speakers)
+      - Wireless smartphone charging
+      - BMW Digital Key Plus
+    notes: Premium technology features
+
+individual_options:
+  - name: Adaptive LED headlights
+    price_eur: 1590
+    description: Matrix LED with adaptive beam control
+  
+  - name: Heat pump
+    price_eur: 1190
+    description: Essential for winter efficiency (standard on 2023+ models)
+  
+  - name: Towing package
+    price_eur: 1050
+    description: Electrically detachable tow hitch, 750kg capacity
+
+popular_configurations:
+  - name: Impressive Comfort
+    description: Impressive + Heat pump + Comfort Package + Parking Assistant Plus
+    total_price_eur: 74580
+    notes: Popular configuration with comfort features
+  
+  - name: M Sport Executive
+    description: M Sport + Driving Assistant Pro + Technology Package + Parking Assistant Plus
+    total_price_eur: 81300
+    notes: Fully loaded executive configuration
+
+available_incentives:
+  - type: federal
+    name: "BAFA Umweltbonus"
+    amount:
+      amount: 0
+      currency: EUR
+    description: "German EV subsidy ended December 2023"
+    conditions: ["Ended 2023-12-17"]
+    notes: "No longer available"
+  
+  - type: company_car
+    name: "0.25% company car tax (BEV over €60k)"
+    description: "0.25% monthly taxation. €173/month vs €693/month for ICE equivalent (saves €520/month, €6,240/year)"
+    conditions: ["Price over €60,000 gross list price"]
+    notes: "Massive benefit for company car drivers"
+  
+  - type: tax_exemption
+    name: "Kfz-Steuer exemption"
+    amount:
+      amount: 380
+      currency: EUR
+    description: "Road tax exemption until 2030"
+    expires_at: "2030-12-31"
+  
+  - type: grant
+    name: "THG-Quote"
+    amount:
+      amount: 300
+      currency: EUR
+    description: "Annual CO2 certificate trading income"
+    notes: "Annual benefit"
+
+charging:
+  networks:
+    - name: BMW Charging
+      coverage: 550,000+ charging points across Europe
+      countries: 30+
+      app: My BMW app
+  
+  ionity:
+    - plan: Pay per use
+      monthly_fee_eur: 0
+      price_per_kwh: 0.79
+      charge_10_80_cost_eur: 43.96
+      notes: 10-80% charge costs €43.96
+    
+    - plan: IONITY PASSPORT Plus
+      monthly_fee_eur: 17.99
+      price_per_kwh: 0.35
+      charge_10_80_cost_eur: 19.49
+      annual_cost_eur: 215.88
+      notes: Saves €24.47 per charge
+  
+  home_charging:
+    - power_kw: 11
+      time_hours: 8
+      cost_eur: 24.00
+      notes: 11kW 3-phase wallbox (0-100%), assuming €0.30/kWh
+
+warranty:
+  vehicle:
+    duration_years: 2
+    duration_km: unlimited
+  
+  battery:
+    duration_years: 8
+    duration_km: 160000
+    capacity_guarantee_percent: 70
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
+  data_quality: verified
+  sources:
+    - https://www.bmw.de/de/neufahrzeuge/x/ix3.html
+    - https://www.bmw.de/de/neufahrzeuge/x/ix3/preise.html
+  
+  notes:
+    - Prices as of February 2026
+    - Built in China (Shenyang), longer delivery time (16 weeks vs 12 for iX1)
+    - Positioned between iX1 (€54,200) and iX (€98,000+)
+    - Company car tax benefit saves €6,240/year
+    - Heat pump became standard on 2023+ models
+    - Competes with Audi e-tron 50 (€72,000), Mercedes EQC 400 (€75,000)
+    - Real-world 395km range adequate for highway trips
+    - RWD only, no AWD variant
+    - Adaptive air suspension standard (unique feature)
+    - 150kW DC charging competitive for class
