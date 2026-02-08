@@ -1,0 +1,153 @@
+# Lexus RZ 450e (2024)
+id: lexus-rz-450e-2024
+name: RZ 450e
+model_id: lexus-rz
+model_year: 2024
+variant_code: RZ-450E
+
+battery:
+  usable_kwh: 71.4
+  total_kwh: 75.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "Panasonic"
+  warranty_years: 10
+  warranty_km: null  # Lexus offers 10-year unlimited km warranty
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 440
+  wltp_city_km: 525
+  wltp_highway_km: 385
+  epa_km: null  # Not sold in US
+  real_world_km: 370
+  real_world_source: "EV Database winter/summer average"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 150
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 20
+      power_kw: 147
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 40
+      power_kw: 140
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 15
+  time_5_to_80_percent_min: 32
+  time_10_to_80_percent_min: 30
+  charging_speed_kmh: 820
+  plug_and_charge: false
+
+bidirectional:
+  v2l: true  # Vehicle-to-Load capability
+  v2l_max_kw: 1.5
+  v2h: true  # Vehicle-to-Home
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 266
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 80
+      power_hp: 109
+      torque_nm: 169
+  total_power_kw: 230
+  total_power_hp: 313
+  total_torque_nm: 435
+  acceleration_0_100_kmh_sec: 5.3
+  acceleration_0_60_mph_sec: 5.0
+  top_speed_kmh: 160
+
+weight:
+  curb_weight_kg: 2050
+  gross_weight_kg: 2525
+  max_payload_kg: 475
+  distribution_front_percent: 54
+  distribution_rear_percent: 46
+
+efficiency:
+  wltp_kwh_per_100km: 18.1
+  wltp_kwh_per_100km_city: 15.2
+  wltp_kwh_per_100km_highway: 20.7
+  real_world_kwh_per_100km: 21.5
+  energy_efficiency_class: "A"
+
+wheels_tires:
+  standard_size_front: "235/60 R18"
+  standard_size_rear: "235/60 R18"
+  wheel_sizes_available:
+    - "18 inch (standard)"
+    - "20 inch (optional, -15km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Lexus Safety System+ 3.0"
+    - "Pre-Collision System with pedestrian/cyclist detection"
+    - "Full-Speed Dynamic Radar Cruise Control"
+    - "Lane Departure Alert with steering assist"
+    - "Lane Tracing Assist"
+    - "Road Sign Assist"
+    - "Adaptive High Beams"
+    - "Blind Spot Monitor with Rear Cross-Traffic Alert"
+    - "Parking Support Brake"
+    - "Panoramic View Monitor"
+    - "Safe Exit Assist"
+    - "Proactive Driving Assist"
+  connectivity:
+    - "Lexus Link connected services"
+    - "Remote climate control via app"
+    - "Remote door lock/unlock"
+    - "Vehicle finder"
+    - "Charging status monitoring"
+    - "OTA software updates"
+    - "Lexus Interface multimedia system"
+    - "Hey Lexus voice assistant"
+  special_features:
+    - "DIRECT4 intelligent AWD system (precise torque distribution)"
+    - "One Motion Grip yoke steering with steer-by-wire (optional)"
+    - "e-Latch electronic door release"
+    - "Radiant heating system"
+    - "Heat pump standard"
+    - "Electrochromic panoramic roof"
+    - "Head-up display (color, 8-inch)"
+    - "Mark Levinson 13-speaker premium audio"
+    - "Takumi craftsmanship interior"
+    - "Heated and ventilated front seats"
+    - "Heated rear seats"
+    - "Ultrasuede and leather upholstery"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.lexus.eu/models/rz/"
+    - "https://ev-database.org/car/1735/Lexus-RZ-450e"
+    - "https://www.autocar.co.uk/car-review/lexus/rz"
+  notes: "Lexus' first pure electric SUV. More powerful than Toyota bZ4X (313hp vs 218hp) with asymmetric motor setup (150kW front, 80kW rear). DIRECT4 AWD provides precise torque distribution for handling. Optional yoke steering with steer-by-wire (One Motion Grip, 150° lock-to-lock). Premium Lexus interior with Takumi craftsmanship. 11kW AC charging (better than bZ4X's 6.6kW). Competes with Audi Q4 e-tron 50 quattro, BMW iX1 xDrive30, Mercedes EQA 350."
