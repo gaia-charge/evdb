@@ -7,69 +7,62 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-15"
-delivery_time_weeks: 12
+available_from: "2024-01-01"
+delivery_time_weeks: 8
 
 # Pricing
 pricing:
-  base_price: 38490
-  price_including_vat: 38490
+  base_price: 37900
+  price_including_vat: 37900
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
-  - name: Diamond Black Metallic
-    code: 676
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Glacier White
-    code: 369
+    code: OV369
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Schist Grey Metallic
-    code: KQM
-    type: metallic
+  - name: Diamond Black
+    code: GNE
+    type: solid
     price_add:
-      amount: 600
+      amount: 0
       currency: EUR
-  - name: Alpine Blue Metallic
-    code: RNS
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Flame Red Metallic
+  - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 600
+      amount: 750
+      currency: EUR
+  - name: Midnight Blue
+    code: RPH
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Ionic Grey
+    code: KNA
+    type: metallic
+    price_add:
+      amount: 750
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" Alloy Wheels
+  - name: 18" Aero wheels
     size_inches: 18
     type: alloy
-    design: Ariane
     price_add:
       amount: 0
       currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Fabric
+  - name: Black fabric
     material: fabric
     color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Grey Fabric with Recycled Materials
-    material: fabric
-    color: grey
     price_add:
       amount: 0
       currency: EUR
@@ -77,66 +70,43 @@ available_interiors:
 # Incentives
 available_incentives:
   - type: federal
-    name: "Umweltbonus (Innovation Premium)"
+    name: "Umweltbonus (BAFA)"
     amount:
-      amount: 4500
+      amount: 0
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
+    conditions: ["Ended December 2023"]
+    expires_at: "2023-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Gross list price under €70,000"]
-    tax_calculation:
-      gross_list_price: 38490
-      monthly_tax_base_025_percent: 96.23
-      annual_tax_benefit_vs_1_percent: 2774.28
+    description: "Reduced taxation for electric company cars"
+    conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Solarbay Panoramic Sunroof
-    price:
-      amount: 1200
-      currency: EUR
-    features:
-      - Electrochromic tinting glass roof
-      - No need for sunshade
-      - Reduces heat buildup
-  - name: Harman Kardon Premium Audio
-    price:
-      amount: 650
-      currency: EUR
-    features:
-      - 9-speaker premium sound system
-      - Upgraded amplifier
-      - Enhanced bass response
-  - name: Advanced Driver Assistance Pack
+  - name: Tech Pack
     price:
       amount: 1500
       currency: EUR
     features:
-      - Adaptive cruise control
-      - Lane centering assist
-      - Traffic sign recognition with speed limiter
-      - Highway & Traffic Jam Assist
-
-# Charging Network Offers
-charging_offers:
-  - name: "Free IONITY charging credits"
-    description: "6 months of complimentary fast charging at IONITY network"
-    value:
-      amount: 250
+      - 12.3-inch digital instrument cluster
+      - Hands-free parking
+      - 360° camera
+      - Automatic climate control
+  - name: Comfort Pack
+    price:
+      amount: 900
       currency: EUR
-    conditions: ["New vehicle purchase", "Valid until 2024-12-31"]
+    features:
+      - Heated front seats
+      - Heated steering wheel
+      - Electric tailgate
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV40 is the entry point into the Megane E-Tech lineup. 
-  Ideal for urban and suburban use with 300 km WLTP range. 
-  Very competitive pricing makes it attractive for private buyers and fleet customers.
-  Eligible for German EV incentives (€4,500) and company car tax benefits (0.25%).
-  Delivery times are reasonable at 12 weeks.
-  Heat pump standard ensures good winter efficiency.
+  Renault Megane E-Tech EV40 is the entry-level model suitable for city and suburban driving.
+  German EV incentives ended December 2023, so no federal subsidy available.
+  Company car tax benefit (0.25%) applies for electric vehicles.
+  Delivery times are relatively short (8 weeks) due to local production in France.
 
 # Metadata
 metadata:
@@ -145,4 +115,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices and incentives as of February 2026
+  notes: Prices as of February 2024

@@ -7,74 +7,85 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-15"
-delivery_time_weeks: 14
+available_from: "2024-01-01"
+delivery_time_weeks: 10
 
 # Pricing
 pricing:
-  base_price: 43990
-  price_including_vat: 43990
+  base_price: 43400
+  price_including_vat: 43400
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
-  - name: Diamond Black Metallic
-    code: 676
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Glacier White
-    code: 369
+    code: OV369
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Schist Grey Metallic
-    code: KQM
-    type: metallic
+  - name: Diamond Black
+    code: GNE
+    type: solid
     price_add:
-      amount: 600
+      amount: 0
       currency: EUR
-  - name: Alpine Blue Metallic
-    code: RNS
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Flame Red Metallic
+  - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 600
+      amount: 750
       currency: EUR
-  - name: Midnight Blue Two-Tone
-    code: RPG
-    type: two_tone
+  - name: Midnight Blue
+    code: RPH
+    type: metallic
     price_add:
-      amount: 900
+      amount: 750
+      currency: EUR
+  - name: Ionic Grey
+    code: KNA
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Rafale Grey
+    code: KNM
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Schist Grey (bi-tone)
+    code: KNG
+    type: bi_tone
+    price_add:
+      amount: 1100
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Diamond-Cut Alloy Wheels
-    size_inches: 20
+  - name: 19" alloy wheels
+    size_inches: 19
     type: alloy
-    design: Solstice
     price_add:
       amount: 0
+      currency: EUR
+  - name: 20" diamond-cut alloy wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 650
       currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Fabric/Synthetic Leather
-    material: fabric_synthetic
+  - name: Black fabric/microfiber
+    material: fabric_microfiber
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Grey Fabric/Synthetic Leather with Wood Accent
-    material: fabric_synthetic
+  - name: Grey fabric/microfiber
+    material: fabric_microfiber
     color: grey
     price_add:
       amount: 0
@@ -83,64 +94,45 @@ available_interiors:
 # Incentives
 available_incentives:
   - type: federal
-    name: "Umweltbonus (Innovation Premium)"
+    name: "Umweltbonus (BAFA)"
     amount:
-      amount: 4500
+      amount: 0
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
+    conditions: ["Ended December 2023"]
+    expires_at: "2023-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Gross list price under €70,000"]
-    tax_calculation:
-      gross_list_price: 43990
-      monthly_tax_base_025_percent: 109.98
-      annual_tax_benefit_vs_1_percent: 3167.11
+    description: "Reduced taxation for electric company cars"
+    conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Solarbay Panoramic Sunroof
+  - name: Advanced Driver Assistance
     price:
       amount: 1200
       currency: EUR
     features:
-      - Electrochromic tinting glass roof
-      - Included in Iconic trim
-  - name: Harman Kardon Premium Audio
+      - Adaptive cruise control
+      - Lane keeping assist
+      - Blind spot warning
+      - Traffic sign recognition
+  - name: 360° Camera Pack
     price:
-      amount: 650
+      amount: 800
       currency: EUR
     features:
-      - 9-speaker premium sound system
-      - Included in Iconic trim
-  - name: 360° Camera System
-    price:
-      amount: 400
-      currency: EUR
-    features:
-      - Surround view parking camera
-      - Bird's eye view
-      - Multiple viewing angles
-
-# Charging Network Offers
-charging_offers:
-  - name: "Free IONITY charging credits"
-    description: "6 months of complimentary fast charging at IONITY network"
-    value:
-      amount: 300
-      currency: EUR
-    conditions: ["New vehicle purchase", "Valid until 2024-12-31"]
+      - 360° surround view camera
+      - Hands-free parking
+      - Parking assist
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Techno offers excellent value with 450 km WLTP range, 
-  218 hp motor, and comprehensive driver assistance features. 
-  22 kW AC charging and 130 kW DC fast charging make it suitable for longer trips.
-  Upgraded 12.3-inch digital cockpit and Matrix LED headlights.
-  Very competitive in the C-segment EV market.
-  Eligible for German EV incentives (€4,500) and company car tax benefits (0.25%).
-  Popular choice for company car drivers due to excellent range and tax benefits.
+  Renault Megane E-Tech EV60 Techno is the volume seller and winner of 2023 European Car of the Year.
+  This trim includes premium features like heat pump, Harman Kardon sound system, and 22kW AC charging.
+  German EV incentives ended December 2023, so no federal subsidy available.
+  Company car tax benefit (0.25%) applies for electric vehicles under €70,000.
+  Delivery times around 10 weeks due to high demand.
+  Popular configuration: Rafale Grey metallic with 19" wheels (~€44,150 total).
 
 # Metadata
 metadata:
@@ -149,4 +141,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices and incentives as of February 2026
+  notes: Prices as of February 2024
