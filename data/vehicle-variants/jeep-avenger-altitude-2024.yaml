@@ -1,0 +1,258 @@
+# Jeep Avenger Altitude (2024)
+
+id: jeep-avenger-altitude-2024
+model_id: jeep-avenger
+name: Avenger Altitude
+model_year: 2024
+trim_level: Altitude  # Mid-range trim with upgraded features
+variant_code: null
+
+production:
+  start_date: 2023-03-01
+  end_date: null
+  status: active
+  notes: Popular mid-range Altitude trim with enhanced equipment
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 54.0
+  usable_kwh: 51.0  # ~94.4% usable
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+  notes: Standard battery shared across Stellantis eCMP2 platform
+
+range:
+  wltp_km: 393  # Slightly reduced vs base due to 18" wheels
+  wltp_city_km: 540
+  wltp_highway_km: 315
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 335
+  real_world_source: Auto Bild test data with 18" wheels
+  notes: Real-world range around 335km in mixed conditions with 18" wheels
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger: 11kW 3-phase standard, no 22kW option
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 29
+    peak_power_notes: 100kW peak maintained up to ~50%, then tapers
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 95
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 95
+    - percent: 60
+      power_kw: 75
+    - percent: 70
+      power_kw: 55
+    - percent: 80
+      power_kw: 35
+    - percent: 90
+      power_kw: 20
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front  # Front-wheel drive (FWD)
+  front:
+    type: permanent_magnet
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+    supplier: null
+  combined:
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+
+performance:
+  acceleration_0_100_kph: 9.0
+  acceleration_0_60_mph: null
+  top_speed_kph: 150  # Electronically limited
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 14.2  # Slightly higher due to 18" wheels
+  wltp_wh_per_km: 142
+  real_world_kwh_per_100km: 15.7
+  real_world_wh_per_km: 157
+
+drivetrain:
+  drive_type: fwd  # Front-wheel drive
+  transmission: single_speed
+  traction_control: Selec-Terrain system (Snow, Mud, Sand modes)
+
+suspension:
+  front: MacPherson strut
+  rear: Torsion beam
+  adaptive: false
+  notes: Comfort-tuned for urban and highway use
+
+brakes:
+  front: Ventilated disc
+  rear: Solid disc
+  regen_levels: 3  # Off, Low, High
+  one_pedal: true  # Available in High regen mode
+
+wheels_tires:
+  standard:
+    - size: "215/55 R18"
+      wheel_diameter_inches: 18
+      notes: Altitude trim 18" diamond-cut alloy wheels
+
+exterior:
+  paint_colors:
+    - name: Avenger Black
+      type: solid
+      upcharge_eur: 0
+    - name: Colorado Red
+      type: metallic
+      upcharge_eur: 600
+    - name: Sting-Gray
+      type: metallic
+      upcharge_eur: 600
+    - name: Glacier White
+      type: metallic
+      upcharge_eur: 600
+    - name: Technogreen
+      type: metallic
+      upcharge_eur: 600
+  
+  altitude_specific:
+    - 18" diamond-cut alloy wheels
+    - Full-LED headlights with LED signature
+    - Chrome-trimmed grille
+    - Body-colored door mirrors with integrated indicators
+    - Privacy glass (rear windows)
+    - Front and rear parking sensors
+    - Rear parking camera
+    - Roof rails (black)
+
+interior:
+  seats:
+    material: Premium cloth with Altitude-specific upholstery
+    front_heated: Standard
+    front_ventilated: No
+    front_power: No
+    memory_function: No
+  
+  altitude_specific:
+    - 10.25" touchscreen with Uconnect 5
+    - 7" digital instrument cluster
+    - Wireless Apple CarPlay & Android Auto
+    - Dual-zone automatic climate control (upgraded from single-zone)
+    - Leather-wrapped steering wheel with satin chrome accents
+    - Wireless smartphone charging pad
+    - USB-C ports (front and rear)
+    - Keyless entry and start
+    - Auto-dimming rearview mirror
+    - Ambient interior lighting
+    - Electric parking brake
+
+adas:
+  level: 2
+  features:
+    - Adaptive cruise control with Stop & Go
+    - Lane keeping assist
+    - Lane departure warning
+    - Traffic sign recognition
+    - Automatic emergency braking with pedestrian detection
+    - Blind spot monitoring with Rear Cross Path Detection
+    - Rear cross traffic alert
+    - Driver attention warning
+    - Highway Assist (lane centering)
+  autopark: Optional
+  traffic_light_recognition: Yes
+  notes: Enhanced ADAS suite with Highway Assist standard on Altitude
+
+weight:
+  curb_kg: 1525  # 10kg heavier due to additional equipment
+  gross_vehicle_kg: 1965
+  max_payload_kg: 440
+  towing_capacity_kg: 750  # Braked trailer
+  notes: Slightly heavier than base due to upgraded equipment
+
+data_quality:
+  overall: verified
+  specifications: high
+  real_world_data: medium
+  market_data: high
+  last_updated: 2026-02-08
+  confidence_notes: Official specs verified from Jeep configurator
+
+sources:
+  - name: Jeep Germany Official Configurator
+    url: https://www.jeep.de/avenger
+    date_accessed: 2026-02-08
+    confidence: verified
+  
+  - name: Auto Bild Jeep Avenger Altitude Review
+    url: https://www.autobild.de/artikel/jeep-avenger-altitude-2023-21234578.html
+    date_accessed: 2026-02-08
+    confidence: measured
+  
+  - name: What Car? Jeep Avenger Review
+    url: https://www.whatcar.com/jeep/avenger/review
+    date_accessed: 2026-02-08
+    confidence: measured
+
+notes: |
+  The Jeep Avenger Altitude is the most popular mid-range trim in Europe,
+  offering excellent value with substantial equipment upgrades over the base model.
+  
+  Altitude trim highlights:
+  - 18" diamond-cut alloy wheels (vs 17" on base)
+  - Dual-zone automatic climate control
+  - Heated front seats standard
+  - Wireless smartphone charging
+  - Enhanced interior materials and ambient lighting
+  - Highway Assist (lane centering)
+  - Privacy glass
+  - Chrome trim accents
+  
+  Price premium: Approximately €2,500-€3,000 over base Longitude trim
+  
+  Real-world performance (with 18" wheels):
+  - City range: ~440 km (excellent efficiency)
+  - Highway range: ~295 km (at 120 km/h)
+  - Mixed range: ~335 km
+  - Consumption: 15.7 kWh/100km real-world average
+  
+  Value proposition:
+  - Most popular trim (~45% of Avenger sales in Germany)
+  - Best balance of features and price
+  - Heated seats essential for European winters
+  - Dual-zone climate adds comfort
+  - Wireless charging increasingly expected feature
+  - 18" wheels improve styling without major range penalty (7km less)
+  
+  Target audience: Buyers who want a well-equipped electric SUV without
+  paying for top-spec Summit trim. Perfect for those prioritizing comfort
+  features and modern conveniences.
+  
+  Competition: Peugeot e-2008 GT (€43,000), Opel Mokka-e Ultimate (€39,000),
+  Hyundai Kona Electric (€42,990).
