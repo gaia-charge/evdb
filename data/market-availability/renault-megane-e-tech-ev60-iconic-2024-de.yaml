@@ -7,28 +7,28 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2022-03-01"
-delivery_time_weeks: 14
+available_from: "2024-01-01"
+delivery_time_weeks: 12
 
 # Pricing
 pricing:
-  base_price: 49900
-  price_including_vat: 49900
+  base_price: 47990
+  price_including_vat: 47990
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
+  - name: Diamond Black
+    code: GNE
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
   - name: Glacier White
     code: QNC
     type: solid
     price_add:
       amount: 0
-      currency: EUR
-  - name: Diamond Black
-    code: GNE
-    type: metallic
-    price_add:
-      amount: 650
       currency: EUR
   - name: Flame Red
     code: NNP
@@ -36,40 +36,40 @@ available_colors:
     price_add:
       amount: 650
       currency: EUR
-  - name: Iron Blue
-    code: RPB
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Titanium Grey
-    code: KQM
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Schist Grey
+  - name: Highland Grey
     code: KNA
     type: metallic
     price_add:
       amount: 650
       currency: EUR
-  - name: Alpine White
-    code: QMA
-    type: pearlescent
-    price_add:
-      amount: 900
-      currency: EUR
-  - name: Rafale Blue
-    code: RPA
+  - name: Zanzibar Blue
+    code: RPH
     type: metallic
     price_add:
       amount: 650
       currency: EUR
+  - name: Rafale Grey
+    code: KNG
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Titanium Grey
+    code: KNM
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Midnight Blue
+    code: RPC
+    type: premium
+    price_add:
+      amount: 950
+      currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Alloy Wheels
+  - name: 20" Origami diamond-cut alloy wheels
     size_inches: 20
     type: alloy
     price_add:
@@ -78,14 +78,14 @@ available_wheels:
 
 # Interior Options
 available_interiors:
-  - name: Black Alcantara/Synthetic Leather
-    material: alcantara_synthetic_leather
+  - name: Black Alcantara with recycled materials
+    material: alcantara
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Grey Alcantara/Synthetic Leather
-    material: alcantara_synthetic_leather
+  - name: Grey Alcantara with recycled materials
+    material: alcantara
     color: grey
     price_add:
       amount: 0
@@ -98,38 +98,50 @@ available_incentives:
     amount:
       amount: 4500
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
+    conditions: ["Price under €65,000", "BEV", "First registration in Germany"]
     expires_at: "2024-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €60,000"
-    conditions: ["Gross list price under €60,000"]
+    description: "Reduced taxation for electric company cars under €60,000 gross list price"
+    conditions: ["Price under €60,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Safety Pack Plus
+  - name: Iconic Plus Pack
     price:
-      amount: 1200
+      amount: 2500
       currency: EUR
     features:
-      - Automatic parking assist
-      - Rear cross-traffic alert
-      - Emergency lane keeping
+      - Nappa leather seats
+      - Massaging front seats
+      - Panoramic glass roof
+  - name: Full Safety Suite
+    price:
+      amount: 1800
+      currency: EUR
+    features:
+      - Adaptive cruise control with Stop&Go
+      - Lane keeping assist
+      - Blind spot warning with intervention
+      - Traffic sign recognition
+      - Highway and Traffic Jam Companion
+      - Active emergency braking with pedestrian/cyclist detection
+      - Hands-free parking
+
+# Company Car Tax Calculation
+company_car_tax:
+  gross_list_price: 47990
+  monthly_taxable_amount: 119.98  # 0.25% of gross list price
+  calculation_method: "0.25% rule (BEV under €60,000)"
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Iconic is the flagship variant with premium
-  equipment and advanced technology. With 470 km WLTP (390 km real-world),
-  it offers excellent range for all scenarios. Premium features include
-  Alcantara/leather seats with heating, ventilation, and massage; head-up
-  display; LED Matrix headlights; 20-inch wheels; Harman Kardon premium
-  audio; and Solarbay electrochromic panoramic roof. Highway & Traffic
-  Jam Assist (ProPilot) provides semi-autonomous driving. Comprehensive
-  safety suite with 360-degree camera. Winner of 2023 European Car of
-  the Year. Qualifies for German environmental bonus and 0.25% company
-  car taxation (under €60,000 threshold - excellent value for premium
-  features). Delivery times currently 14 weeks. Manufactured in France
-  at ElectriCity Douai plant.
+  Renault Megane E-Tech EV60 Iconic is the premium variant with comprehensive
+  luxury and technology features as standard, including OpenR Link augmented reality
+  head-up display, Harman Kardon sound system, and heated seats. With 470 km WLTP range
+  and 22kW AC charging, it offers maximum comfort for longer trips.
+  Eligible for German EV incentives until end of 2024.
+  Company car tax benefit (0.25%) applies as the gross list price is under €60,000.
 
 # Metadata
 metadata:
@@ -138,4 +150,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices as of February 2026. Premium features at competitive price point. Popular with German company car buyers.
+  notes: Prices and incentives as of February 2024

@@ -6,13 +6,13 @@ production_years:
   start: 2022
   end: null
 
-trim_level: ev40
+trim_level: base
 market_position: base
 
 # Battery Specifications
 battery:
-  usable_kwh: 40.0
-  total_kwh: 42.0
+  usable_kwh: 40
+  total_kwh: 42
   chemistry: NMC  # Nickel Manganese Cobalt
   nominal_voltage_v: 400
   cell_type: pouch
@@ -22,14 +22,9 @@ battery:
   thermal_management: liquid-cooled
   
   pack:
-    configuration: "400V architecture, 12 modules"
-    weight_kg: 304
-    cells: 192
-  
-  notes: >
-    Compact 40 kWh battery designed for urban and suburban use. NMC chemistry
-    provides good energy density. Efficient thermal management ensures consistent
-    performance. 8-year/160,000 km warranty with 70% capacity retention guarantee.
+    configuration: "floor-mounted"
+    weight_kg: 275
+    cells: 132
 
 # Range
 range:
@@ -38,7 +33,7 @@ range:
   
   real_world_km: 260
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 15-25°C, Eco mode"
+  real_world_conditions: "Mixed driving, 10-20°C, eco mode"
 
 # Charging
 charging:
@@ -47,7 +42,7 @@ charging:
     connector_types:
       - type2
     charging_time_hours:
-      "0_100": 5.5  # 7.4kW
+      "0_100": 5.4  # 7.4kW
     onboard_charger_kw: 7.4
     phases: 1
   
@@ -56,38 +51,36 @@ charging:
     connector_types:
       - ccs2
     charging_time_minutes:
-      "10_80": 37
-      "0_100": 50
+      "15_80": 36
+      "0_100": 58
     
     charging_curve:
       - soc_percent: 0
-        power_kw: 50
+        power_kw: 70
       - soc_percent: 10
         power_kw: 85
       - soc_percent: 30
         power_kw: 85
       - soc_percent: 50
-        power_kw: 80
+        power_kw: 70
       - soc_percent: 70
-        power_kw: 55
+        power_kw: 45
       - soc_percent: 80
-        power_kw: 35
+        power_kw: 30
       - soc_percent: 90
-        power_kw: 20
+        power_kw: 18
       - soc_percent: 100
-        power_kw: 10
-    
-    notes: "Good charging curve for battery size, optimized 10-80%"
+        power_kw: 8
 
   bidirectional:
     v2l: false
-    v2g: false
+    v2g: true  # Available with specific bidirectional charger
     v2h: false
 
 # Motors & Performance
 motors:
   - position: front
-    type: permanent-magnet-synchronous
+    type: synchronous
     max_power_kw: 96
     max_torque_nm: 205
     cooling: liquid
@@ -105,60 +98,56 @@ performance:
 
 # Weight & Efficiency
 weight:
-  curb_weight_kg: 1624
-  gross_weight_kg: 2124
-  payload_kg: 500
+  curb_weight_kg: 1636
+  gross_weight_kg: 2030
+  payload_kg: 394
   towing_capacity_kg: 0  # Not rated for towing
   
 efficiency:
-  wltp_kwh_per_100km: 15.3
-  real_world_kwh_per_100km: 15.4
+  wltp_kwh_per_100km: 15.8
+  real_world_kwh_per_100km: 16.5
   
   at_speed:
-    - speed_kmh: 100
-      consumption_kwh_per_100km: 14.2
     - speed_kmh: 120
-      consumption_kwh_per_100km: 17.8
+      consumption_kwh_per_100km: 18.5
     - speed_kmh: 130
-      consumption_kwh_per_100km: 20.5
+      consumption_kwh_per_100km: 21.2
 
 # Features & Options
 standard_features:
-  - "12.3-inch digital instrument cluster"
-  - "12-inch OpenR vertical touchscreen"
+  - "12-inch vertical OpenR screen"
   - "Google built-in (Maps, Assistant, Play Store)"
-  - "Heat pump climate control"
-  - "LED headlights with automatic high beam"
+  - "7-inch digital instrument cluster"
+  - "Heat pump"
+  - "LED headlights"
   - "18-inch alloy wheels"
-  - "Cloth seats"
-  - "Manual air conditioning"
+  - "Automatic climate control"
   - "Rear parking sensors"
-  - "Cruise control with speed limiter"
-  - "Lane keeping assist"
-  - "Automatic emergency braking"
-  - "Traffic sign recognition"
-  - "Driver attention alert"
-  - "Multi-Sense driving modes (Eco, Comfort, Sport)"
+  - "Multi-Sense driving modes"
 
 optional_packages:
-  - name: "Comfort Package"
+  - name: "Tech Pack"
     features:
-      - "Automatic climate control"
-      - "Heated front seats"
-      - "Rear parking camera"
-      - "Rain-sensing wipers"
+      - "OpenR Link augmented reality head-up display"
+      - "360-degree camera"
+      - "Hands-free parking"
+  
+  - name: "Safety Pack"
+    features:
+      - "Adaptive cruise control"
+      - "Lane keeping assist"
+      - "Blind spot warning"
+      - "Traffic sign recognition"
 
 colors:
   standard:
-    - "Glacier White"
     - "Diamond Black"
+    - "Glacier White"
   premium:
     - "Flame Red"
-    - "Iron Blue"
-    - "Titanium Grey"
-
-interior_colors:
-  - "Grey fabric"
+    - "Highland Grey"
+    - "Zanzibar Blue"
+    - "Rafale Grey"
 
 # Version Information
 version:
@@ -167,14 +156,11 @@ version:
 
 # Market & Pricing Notes
 notes: >
-  The Megane E-Tech EV40 is the entry-level variant designed for budget-conscious 
-  buyers and urban drivers. With 300 km WLTP range, it covers typical daily 
-  commutes comfortably. The 130 hp motor provides adequate performance while 
-  maintaining excellent efficiency. Standard heat pump improves winter range. 
-  DC fast charging at 85 kW enables rapid top-ups on longer journeys (10-80% 
-  in 37 minutes). OpenR cockpit with Google built-in provides modern connectivity. 
-  Multi-Sense driving modes optimize efficiency and driving feel. Excellent value 
-  proposition in the compact EV segment.
+  The Megane E-Tech EV40 is the entry-level variant with a 40 kWh battery,
+  suitable for urban and suburban use. The smaller battery makes it lighter
+  and more affordable, while still offering decent efficiency. DC charging
+  is limited to 85kW, which is adequate for the battery size. Heat pump
+  is standard on all variants, improving winter range.
 
 metadata:
   created_at: "2026-02-08"
@@ -183,6 +169,6 @@ metadata:
   data_source: manufacturer
   measured_by: null
   sources:
-    - https://www.renault.com/megane-e-tech-electric/specifications
     - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://ev-database.org/car/1748/Renault-Megane-E-Tech-EV40
+    - https://ev-database.org/car/1671/Renault-Megane-E-Tech-EV40
+    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications

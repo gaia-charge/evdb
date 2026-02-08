@@ -7,28 +7,28 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2022-03-01"
-delivery_time_weeks: 12
+available_from: "2024-01-01"
+delivery_time_weeks: 8
 
 # Pricing
 pricing:
-  base_price: 38400
-  price_including_vat: 38400
+  base_price: 38490
+  price_including_vat: 38490
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
+  - name: Diamond Black
+    code: GNE
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
   - name: Glacier White
     code: QNC
     type: solid
     price_add:
       amount: 0
-      currency: EUR
-  - name: Diamond Black
-    code: GNE
-    type: metallic
-    price_add:
-      amount: 650
       currency: EUR
   - name: Flame Red
     code: NNP
@@ -36,14 +36,14 @@ available_colors:
     price_add:
       amount: 650
       currency: EUR
-  - name: Iron Blue
-    code: RPB
+  - name: Highland Grey
+    code: KNA
     type: metallic
     price_add:
       amount: 650
       currency: EUR
-  - name: Titanium Grey
-    code: KQM
+  - name: Zanzibar Blue
+    code: RPH
     type: metallic
     price_add:
       amount: 650
@@ -51,7 +51,7 @@ available_colors:
 
 # Wheel Options
 available_wheels:
-  - name: 18" Alloy Wheels
+  - name: 18" Solstice alloy wheels
     size_inches: 18
     type: alloy
     price_add:
@@ -60,7 +60,13 @@ available_wheels:
 
 # Interior Options
 available_interiors:
-  - name: Grey Fabric
+  - name: Black fabric with recycled materials
+    material: fabric
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey fabric with recycled materials
     material: fabric
     color: grey
     price_add:
@@ -74,35 +80,45 @@ available_incentives:
     amount:
       amount: 4500
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
+    conditions: ["Price under €65,000", "BEV", "First registration in Germany"]
     expires_at: "2024-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €60,000"
-    conditions: ["Gross list price under €60,000"]
+    description: "Reduced taxation for electric company cars under €60,000 gross list price"
+    conditions: ["Price under €60,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Comfort Package
+  - name: Tech Pack
     price:
-      amount: 1400
+      amount: 1200
       currency: EUR
     features:
-      - Automatic climate control
-      - Heated front seats
-      - Rear parking camera
-      - Rain-sensing wipers
+      - OpenR Link augmented reality head-up display
+      - 360-degree camera
+      - Hands-free parking
+  - name: Safety Pack
+    price:
+      amount: 950
+      currency: EUR
+    features:
+      - Adaptive cruise control
+      - Lane keeping assist
+      - Blind spot warning
+      - Traffic sign recognition
+
+# Company Car Tax Calculation
+company_car_tax:
+  gross_list_price: 38490
+  monthly_taxable_amount: 96.23  # 0.25% of gross list price
+  calculation_method: "0.25% rule (BEV under €60,000)"
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV40 is the entry-level variant, ideal for urban
-  and suburban driving. With 300 km WLTP range and efficient 130 hp motor,
-  it offers excellent value in the compact EV segment. Winner of 2023
-  European Car of the Year. Standard equipment includes innovative OpenR
-  cockpit with Google built-in, heat pump for all-season efficiency, and
-  comprehensive safety features. Delivery times currently 12 weeks.
-  Qualifies for German environmental bonus and 0.25% company car taxation
-  (under €60,000 threshold). Manufactured in France at ElectriCity Douai plant.
+  Renault Megane E-Tech EV40 is the entry-level variant with a 40 kWh battery,
+  ideal for urban and suburban use. Eligible for German EV incentives until end of 2024.
+  Company car tax benefit (0.25%) applies as the gross list price is under €60,000.
+  Delivery times are relatively short (8 weeks) due to production in France.
 
 # Metadata
 metadata:
@@ -111,4 +127,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices as of February 2026. Megane E-Tech won 2023 European Car of the Year.
+  notes: Prices and incentives as of February 2024
