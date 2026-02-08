@@ -98,6 +98,53 @@ def load_markdown_file(filename):
     except Exception as e:
         return f"⚠️ Error loading file: {str(e)}"
 
+def format_vehicle_specs(row):
+    """Format vehicle specifications into a structured dictionary"""
+    return {
+        'Manufacturer': row.get('manufacturer', 'N/A'),
+        'Model': f"{row.get('model', '')} {row.get('variant_name', '')}".strip(),
+        'Year': int(row['model_year']) if pd.notna(row.get('model_year')) else 'N/A',
+        'Body Style': row.get('body_style') if pd.notna(row.get('body_style')) else 'N/A',
+        'Drive Type': row.get('drive_type') if pd.notna(row.get('drive_type')) else 'N/A',
+        '🔋 BATTERY & RANGE': '',
+        'Battery Capacity': f"{row['battery_usable_kwh']:.1f} kWh" if pd.notna(row.get('battery_usable_kwh')) else 'N/A',
+        'Battery Chemistry': row.get('battery_chemistry') if pd.notna(row.get('battery_chemistry')) else 'N/A',
+        'Battery Architecture': row.get('battery_architecture') if pd.notna(row.get('battery_architecture')) else 'N/A',
+        'WLTP Range': f"{int(row['range_wltp_km'])} km" if pd.notna(row.get('range_wltp_km')) else 'N/A',
+        'Real-World Range': f"{int(row['range_real_world_km'])} km" if pd.notna(row.get('range_real_world_km')) else 'N/A',
+        'Consumption': f"{row['consumption_real_world_kwh_100km']:.1f} kWh/100km" if pd.notna(row.get('consumption_real_world_kwh_100km')) else 'N/A',
+        '⚡ PERFORMANCE': '',
+        'Total Power': f"{int(row['total_power_kw'])} kW ({int(row['total_power_kw'] * 1.341)} hp)" if pd.notna(row.get('total_power_kw')) else 'N/A',
+        'Total Torque': f"{int(row['total_torque_nm'])} Nm" if pd.notna(row.get('total_torque_nm')) else 'N/A',
+        '0-100 km/h': f"{row['acceleration_0_100_sec']:.1f} sec" if pd.notna(row.get('acceleration_0_100_sec')) else 'N/A',
+        'Top Speed': f"{int(row['top_speed_kph'])} km/h" if pd.notna(row.get('top_speed_kph')) else 'N/A',
+        '🔌 CHARGING': '',
+        'DC Fast Charge': f"{int(row['dc_charge_power_kw'])} kW" if pd.notna(row.get('dc_charge_power_kw')) else 'N/A',
+        'DC 10-80%': f"{int(row['dc_charge_time_10_80_min'])} min" if pd.notna(row.get('dc_charge_time_10_80_min')) else 'N/A',
+        'AC Charge': f"{row['ac_charge_power_kw']:.1f} kW" if pd.notna(row.get('ac_charge_power_kw')) else 'N/A',
+        '💰 PRICING (GERMANY)': '',
+        'Base Price': f"€{int(row['price_eur']):,}" if pd.notna(row.get('price_eur')) else 'TBD',
+        'On-the-Road Price': f"€{int(row['price_otr_eur']):,}" if pd.notna(row.get('price_otr_eur')) else 'TBD',
+    }
+
+def show_vehicle_details(vehicle_data):
+    """Display detailed vehicle specifications in a formatted table"""
+    specs = format_vehicle_specs(vehicle_data)
+    
+    # Create single-column DataFrame for display
+    specs_df = pd.DataFrame({
+        'Specification': list(specs.keys()),
+        'Value': list(specs.values())
+    })
+    
+    # Display as dataframe
+    st.dataframe(
+        specs_df,
+        hide_index=True,
+        use_container_width=True,
+        height=800
+    )
+
 @st.cache_data(ttl=3600)
 def search_vehicles(_conn, query):
     """Search vehicles by name (cached)"""
@@ -559,8 +606,8 @@ elif page == "🔍 Browse Vehicles":
             lambda x: f"€{int(x):,}" if pd.notna(x) else "TBD"
         )
         
-        # Display table
-        st.dataframe(
+        # Display table with selection
+        event = st.dataframe(
             display_df[[
                 'Vehicle', 'body_style', 'Battery', 'WLTP Range', 
                 'Real Range', 'Power', '0-100', 'DC Charge', 'drive_type', 'Price'
@@ -570,8 +617,56 @@ elif page == "🔍 Browse Vehicles":
             }),
             hide_index=True,
             use_container_width=True,
-            height=600
+            height=400,
+            on_select="rerun",
+            selection_mode="single-row"
         )
+        
+        # Show detailed specs if a vehicle is selected
+        if event and event.selection and len(event.selection.get('rows', [])) > 0:
+            selected_idx = event.selection['rows'][0]
+            selected_vehicle = filtered_df.iloc[selected_idx]
+            
+            st.markdown("---")
+            st.markdown(f"### 📋 Detailed Specifications: {selected_vehicle['manufacturer']} {selected_vehicle['model']} {selected_vehicle['variant_name']}")
+            
+            # Need to fetch complete vehicle data including pricing fields
+            @st.cache_data(ttl=3600)
+            def get_vehicle_details(_conn, vehicle_id):
+                return pd.read_sql_query("""
+                    SELECT 
+                        v.id,
+                        m.brand as manufacturer,
+                        m.name as model,
+                        v.variant_name,
+                        v.model_year,
+                        m.body_style,
+                        v.battery_usable_kwh,
+                        v.battery_chemistry,
+                        CASE WHEN v.battery_voltage >= 700 THEN '800V' 
+                             WHEN v.battery_voltage IS NOT NULL THEN '400V' END as battery_architecture,
+                        v.range_wltp_km,
+                        v.range_real_world_km,
+                        v.consumption_real_world_kwh_100km,
+                        v.total_power_kw,
+                        v.total_torque_nm,
+                        v.acceleration_0_100_sec,
+                        v.top_speed_kph,
+                        v.drive_type,
+                        v.dc_charge_power_kw,
+                        v.dc_charge_time_10_80_min,
+                        v.ac_charge_power_kw,
+                        ma.price_base as price_eur,
+                        ma.price_including_vat as price_otr_eur
+                    FROM vehicle_variants v
+                    JOIN vehicle_models m ON v.model_id = m.id
+                    LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
+                    WHERE v.id = ?
+                """, _conn, params=(vehicle_id,))
+            
+            vehicle_details_df = get_vehicle_details(conn, selected_vehicle['id'])
+            if not vehicle_details_df.empty:
+                show_vehicle_details(vehicle_details_df.iloc[0])
         
         # Export functionality
         if export_format == "CSV":
@@ -729,32 +824,7 @@ elif page == "⚖️ Compare":
         
         for _, row in selected_df.iterrows():
             vehicle_name = row['full_name']
-            comparison_data[vehicle_name] = {
-                'Manufacturer': row['manufacturer'],
-                'Model': f"{row['model']} {row['variant_name']}",
-                'Year': int(row['model_year']),
-                'Body Style': row['body_style'] if pd.notna(row['body_style']) else 'N/A',
-                'Drive Type': row['drive_type'] if pd.notna(row['drive_type']) else 'N/A',
-                '🔋 BATTERY & RANGE': '',
-                'Battery Capacity': f"{row['battery_usable_kwh']:.1f} kWh" if pd.notna(row['battery_usable_kwh']) else 'N/A',
-                'Battery Chemistry': row['battery_chemistry'] if pd.notna(row['battery_chemistry']) else 'N/A',
-                'Battery Architecture': row['battery_architecture'] if pd.notna(row['battery_architecture']) else 'N/A',
-                'WLTP Range': f"{int(row['range_wltp_km'])} km" if pd.notna(row['range_wltp_km']) else 'N/A',
-                'Real-World Range': f"{int(row['range_real_world_km'])} km" if pd.notna(row['range_real_world_km']) else 'N/A',
-                'Consumption': f"{row['consumption_real_world_kwh_100km']:.1f} kWh/100km" if pd.notna(row['consumption_real_world_kwh_100km']) else 'N/A',
-                '⚡ PERFORMANCE': '',
-                'Total Power': f"{int(row['total_power_kw'])} kW ({int(row['total_power_kw'] * 1.341)} hp)" if pd.notna(row['total_power_kw']) else 'N/A',
-                'Total Torque': f"{int(row['total_torque_nm'])} Nm" if pd.notna(row['total_torque_nm']) else 'N/A',
-                '0-100 km/h': f"{row['acceleration_0_100_sec']:.1f} sec" if pd.notna(row['acceleration_0_100_sec']) else 'N/A',
-                'Top Speed': f"{int(row['top_speed_kph'])} km/h" if pd.notna(row['top_speed_kph']) else 'N/A',
-                '🔌 CHARGING': '',
-                'DC Fast Charge': f"{int(row['dc_charge_power_kw'])} kW" if pd.notna(row['dc_charge_power_kw']) else 'N/A',
-                'DC 10-80%': f"{int(row['dc_charge_time_10_80_min'])} min" if pd.notna(row['dc_charge_time_10_80_min']) else 'N/A',
-                'AC Charge': f"{row['ac_charge_power_kw']:.1f} kW" if pd.notna(row['ac_charge_power_kw']) else 'N/A',
-                '💰 PRICING (GERMANY)': '',
-                'Base Price': f"€{int(row['price_eur']):,}" if pd.notna(row['price_eur']) else 'TBD',
-                'On-the-Road Price': f"€{int(row['price_otr_eur']):,}" if pd.notna(row['price_otr_eur']) else 'TBD',
-            }
+            comparison_data[vehicle_name] = format_vehicle_specs(row)
         
         # Create DataFrame for display
         comparison_table = pd.DataFrame(comparison_data)
