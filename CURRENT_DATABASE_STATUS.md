@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 1:45 PM  
-**Total Vehicles:** 134 variants across 67 models from 24 manufacturers  
-**Germany Market Coverage:** 128/134 variants (95.5%)
+**Last Updated:** 2026-02-08 2:00 PM  
+**Total Vehicles:** 135 variants across 68 models from 24 manufacturers  
+**Germany Market Coverage:** 129/135 variants (95.6%)
 
 ---
 
@@ -33,9 +33,9 @@
 | DS Automobiles | 1 | 1 | 🟢 Single |
 | Mazda | 1 | 1 | 🟢 Single |
 | Toyota | 1 | 2 | 🟡 Partial |
-| Lexus | 0 | 0 | 🔴 New (ready) |
+| Lexus | 1 | 1 | 🟢 Single |
 
-**Total:** 24 manufacturers, 67 models, 134 variants
+**Total:** 24 manufacturers, 68 models, 135 variants
 
 ---
 
@@ -69,6 +69,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Lexus RZ 450e**: Added 1 NEW MODEL (RZ - first Lexus BEV) + 1 variant (450e AWD 71.4kWh 230kW/313hp 440km WLTP €74,900) + Germany market data - First pure electric Lexus SUV, luxury counterpart to Toyota bZ4X - More powerful than bZ4X (313hp vs 218hp), DIRECT4 intelligent AWD system with precise torque distribution - Optional yoke steering with steer-by-wire (One Motion Grip €2,500, unique in segment) - Premium Takumi craftsmanship interior with Ultrasuede/leather, Mark Levinson 13-speaker audio (1800W) - 11kW AC charging (better than bZ4X's 6.6kW), 150kW DC fast charging - Built on e-TNGA platform, 71.4 kWh battery, 10-year unlimited km warranty - Premium positioning at €74,900 (0.5% company car tax rate, above €70k threshold) - Competes with BMW iX1 (€61,500), Audi Q4 e-tron 50 quattro (€57,990), Mercedes EQA 350 (€64,990) - Lexus now 1 model/1 variant (from 0/0) - Database now 135 variants across 68 models from 24 manufacturers - Germany coverage now 129/135 = 95.6% - *Added Feb 8, 2026 14:00*
 - ✅ **Toyota bZ4X**: Added 1 NEW MANUFACTURER (Toyota Motor Corporation, 24th manufacturer) + 1 NEW MANUFACTURER (Lexus, ready for expansion) + 1 NEW MODEL (bZ4X compact SUV) + 2 variants (FWD 71.4kWh 150kW/204hp 516km €47,000, AWD 71.4kWh 160kW/218hp 470km €52,000) + Germany market data - Toyota's first mass-market BEV with best-in-class 10-year unlimited km battery warranty, heat pump standard, X-MODE AWD system on AWD variant - Built on e-TNGA platform co-developed with Subaru, features V2L/V2H bidirectional charging - Main limitation: only 6.6kW AC charging (single-phase) but compensated by excellent build quality and Toyota reliability reputation - Competes with VW ID.4 (€46,000), Hyundai Ioniq 5 (€45,000), Tesla Model Y - Toyota NEW manufacturer entry, Lexus manufacturer ready for future expansion (RZ 450e) - Database now 134 variants across 67 models from 24 manufacturers - Germany coverage now 128/134 = 95.5% - *Added Feb 8, 2026 13:45*
 - ✅ **Polestar 3**: Added 1 NEW MODEL + 2 variants (Long Range Dual Motor 489hp 610km €83,900, Performance Pack 517hp 560km €90,900) + Germany market data - Polestar's first SUV built on Volvo SPA2 platform with 111kWh battery, LiDAR sensors for advanced driver assistance, air suspension, Bowers & Wilkins audio (25 speakers, 1610W), 250kW DC fast charging (10-80% in 30 minutes) - Performance Pack adds 20kW front motor upgrade, performance brakes (gold calipers), 22" forged wheels, sport seats, tuned suspension - Competes with BMW iX (€82,500), Audi Q8 e-tron (€77,900), Mercedes EQS SUV (€115,900) with excellent value proposition - Polestar now 3 variants (from 1, +200%) across 2 models - Germany coverage now 126/132 = 95.5% - *Added Feb 8, 2026 13:30*
 - ✅ **Mazda MX-30**: Added 1 NEW MANUFACTURER (Mazda Motor Corporation, 22nd manufacturer) + 1 NEW MODEL (MX-30) + 1 variant (35.5kWh 107kW/145hp 200km WLTP €35,990) + Germany market data - Mazda's first pure-electric vehicle with unique freestyle doors (rear-hinged rear doors), intentionally small battery (well-to-wheel emissions approach), cork interior panels from sustainable materials, recycled PET fabric seats, 2021 World Car Design of the Year winner - Lowest range of any current EV (200km WLTP) targeting urban/second car buyers who prioritize design and sustainability over range - Heat pump standard (essential), 50kW DC charging (10-80% in 36min), 145hp/271Nm (0-100 in 9.7s) - Competes with Mini Cooper Electric, Honda e, Smart #1 - Mazda NEW manufacturer entry - Germany coverage now 124/130 = 95.4% - *Added Feb 8, 2026 13:15*
@@ -171,13 +172,14 @@
 - **Feb 8, 2026 (12:00):** 123 variants (+1 Volkswagen ID.5 Pro 4MOTION: Dual-motor AWD 250kW/340hp, 77 kWh, 490km WLTP €57,000 + Germany market data - Front AC induction + rear permanent magnet, 6.3s 0-100 km/h, improved winter traction - Volkswagen Group now 13 variants - Germany coverage now 117/123 = 95.1%)
 - **Feb 8, 2026 (12:04):** 125 variants (+2 Audi Q4 e-tron + 1 NEW MODEL Q4 Sportback: Q4 40 e-tron RWD 547km €52,990, Q4 Sportback 40 e-tron 567km €54,490 - both with Germany market data - Q4 40 most popular Q4 in Germany, Q4 Sportback has best-in-class Cd 0.26 aerodynamics - Audi now 9 variants (from 7, +28.6%) across 5 models - Germany coverage now 119/125 = 95.2%)
 - **Feb 8, 2026 (13:30):** 132 variants (+2 Polestar 3: NEW MODEL - Long Range Dual Motor 489hp 610km €83,900, Performance Pack 517hp 560km €90,900 + Germany market data - Polestar's first SUV with 111kWh battery, LiDAR sensors, air suspension, Bowers & Wilkins audio (25 speakers), 250kW DC fast charging - Performance Pack adds 20kW motor upgrade, performance brakes (gold calipers), 22" forged wheels - Competes with BMW iX, Audi Q8 e-tron, Mercedes EQS SUV - Polestar now 3 variants across 2 models (from 1/1, +200%) - Germany coverage now 126/132 = 95.5%)
+- **Feb 8, 2026 (14:00):** 135 variants (+1 Lexus RZ 450e: NEW MODEL - First Lexus BEV! 71.4kWh 230kW/313hp AWD 440km WLTP €74,900 + Germany market data - Luxury counterpart to Toyota bZ4X with more powerful DIRECT4 AWD (313hp vs 218hp), optional yoke steering with steer-by-wire (One Motion Grip €2,500), Premium Takumi craftsmanship interior with Mark Levinson audio - 11kW AC charging (better than bZ4X's 6.6kW) - Built on e-TNGA platform, 10-year unlimited km warranty - Competes with BMW iX1, Audi Q4 e-tron, Mercedes EQA - Lexus now 1 model/1 variant (from 0/0) - Database now 135 variants across 68 models from 24 manufacturers - Germany coverage now 129/135 = 95.6%)
 - **Feb 8, 2026 (13:45):** 134 variants (+2 Toyota bZ4X: NEW MANUFACTURER Toyota Motor Corporation + Lexus - FWD 71.4kWh 150kW 516km €47,000, AWD 71.4kWh 160kW 470km €52,000 + Germany market data - Toyota's first mass-market BEV with best-in-class 10-year unlimited km battery warranty, heat pump standard, X-MODE AWD - Main limitation: 6.6kW AC only - Competes with VW ID.4, Hyundai Ioniq 5 - Toyota NEW manufacturer (24th), Lexus ready for expansion - Database now 134 variants across 67 models from 24 manufacturers - Germany coverage now 128/134 = 95.5%)
 - **Feb 8, 2026 (13:15):** 130 variants (+1 Mazda MX-30: NEW MANUFACTURER Mazda Motor Corporation - 35.5kWh 107kW/145hp 200km WLTP €35,990 + Germany market data - Mazda's first pure-electric vehicle with unique freestyle doors, intentionally small battery (well-to-wheel emissions approach), cork interior panels, 2021 World Car Design of the Year winner - Lowest range of any current EV (200km WLTP) targeting urban/second car buyers - Mazda NEW manufacturer entry - Germany coverage now 124/130 = 95.4%)
 - **Feb 8, 2026 (13:00):** 129 variants (+1 DS 3 E-Tense: NEW MODEL - Premium French luxury crossover 54kWh 115kW 402km €44,990 + Germany market data - First DS Automobiles model in database, Stellantis premium brand with Nappa leather, retractable door handles, DS IRIS voice assistant - Built on CMP platform, competes with MINI Cooper Electric - Stellantis now 18 variants across 12 models - Germany coverage now 123/129 = 95.3%)
 - **Feb 8, 2026 (12:45):** 128 variants (+2 MG5 Electric: NEW MODEL - Standard Range 50.3kWh 320km €33,000, Long Range 61.1kWh 400km €36,000 + Germany market data for Long Range - Europe's only affordable electric estate car, best-in-class 479L boot capacity, popular with fleet buyers and families - MG now 6 variants across 3 models (from 4/2, +50%) - Germany coverage now 122/128 = 95.3%)
 - **Feb 8, 2026 (12:24):** 126 variants (no new variants, +1 Germany market record: Volvo EX40 Single Motor €53,000 - Google built-in, 475km WLTP, Swedish safety - Volvo now 3/5 variants with DE data - Germany coverage now 121/126 = 96.0%)
 - **Feb 8, 2026 (12:15):** 126 variants (+1 MG ZS EV: NEW MODEL - Long Range 72.6kWh 440km €36,990 + Germany market data - Practical compact electric SUV, excellent value, 7-year warranty, popular family car - MG now 4 variants across 2 models (from 3/1, +33%) - Germany coverage now 120/126 = 95.2%)
-- **Growth:** +83 variants since Feb 7 (162.7% increase) | +5 manufacturers (Honda, Genesis, Mazda, Toyota, Lexus) | +13 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40, Jeep Avenger, Audi Q4 Sportback, MG ZS EV, MG5 Electric, DS 3 E-Tense, Mazda MX-30, Polestar 3, Toyota bZ4X)
+- **Growth:** +84 variants since Feb 7 (164.7% increase) | +5 manufacturers (Honda, Genesis, Mazda, Toyota, Lexus) | +14 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40, Jeep Avenger, Audi Q4 Sportback, MG ZS EV, MG5 Electric, DS 3 E-Tense, Mazda MX-30, Polestar 3, Toyota bZ4X, Lexus RZ)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
