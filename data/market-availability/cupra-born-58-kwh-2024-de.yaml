@@ -1,0 +1,282 @@
+---
+id: cupra-born-58-kwh-2024-de
+variant_id: cupra-born-58-kwh-2024
+market: DE  # Germany
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 40990
+  destination_charge: 0  # Included in base price
+  total_starting_price: 40990
+
+# Availability
+available_from: "2024-01-01"
+available_until: null
+availability_status: available
+delivery_time_weeks: 8
+pre_order_available: false
+order_book_open: true
+
+# Customization options
+available_colors:
+  - name: "Midnight Black"
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Magnetic Tech Matt"
+    type: matt
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: "Dark Camouflage Matt"
+    type: matt
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: "Enceladus Grey Matt"
+    type: matt
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: "Aurora Blue"
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: "Urban Silver"
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: "Nevada White"
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: "Fiery Red"
+    type: metallic
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: "Dark Forest"
+    type: metallic
+    price_add:
+      amount: 900
+      currency: EUR
+
+available_wheels:
+  - name: "Standard Alloy"
+    size_inches: 18
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Typhoon Alloy"
+    size_inches: 19
+    price_add:
+      amount: 850
+      currency: EUR
+  - name: "Hurricane Forged"
+    size_inches: 20
+    price_add:
+      amount: 1900
+      currency: EUR
+
+available_interiors:
+  - name: "Black microfiber with copper stitching"
+    material: microfiber
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Petrol Blue/Black microfiber with copper stitching"
+    material: microfiber
+    price_add:
+      amount: 350
+      currency: EUR
+  - name: "Grey/Black microfiber with copper stitching"
+    material: microfiber
+    price_add:
+      amount: 350
+      currency: EUR
+
+# Packages & options
+packages:
+  - name: "Cupra XL Package"
+    price: 3200
+    included_features:
+      - "Panoramic glass roof (electrochromic)"
+      - "Augmented Reality Head-Up Display"
+      - "Cupra Sound System by Sennheiser (12 speakers, 425W)"
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Wireless smartphone charging"
+      - "Ambient lighting (30 colors)"
+
+  - name: "Tech Package Plus"
+    price: 1990
+    included_features:
+      - "Matrix LED headlights"
+      - "360-degree camera system"
+      - "Park Assist Plus (automatic parking)"
+      - "Travel Assist Level 2 (hands-on highway assist)"
+      - "Adaptive cruise control with stop&go"
+      - "Traffic sign recognition"
+
+  - name: "Winter Package"
+    price: 790
+    included_features:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Heated windscreen washer nozzles"
+      - "Rain sensor"
+
+  - name: "Convenience Package"
+    price: 890
+    included_features:
+      - "Keyless entry & start"
+      - "Electric tailgate with kick sensor"
+      - "Auto-dimming interior mirror"
+      - "Power-folding exterior mirrors"
+
+additional_options:
+  - name: "Two-Tone Black Roof"
+    price: 900
+  - name: "Tow Hitch (not available)"
+    price: 0
+    availability: not_available
+  - name: "Metallic Paint"
+    price: 700
+  - name: "Matt Paint (signature Cupra)"
+    price: 1200
+
+# Incentives & taxation (Germany 2024)
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3072
+    currency: EUR
+    period: annual
+    description: >
+      Company car tax rate: 0.25% of gross list price (€40,990 x 0.25% = €102/month).
+      Savings vs ICE: €3,072/year (1% rate would be €410/month).
+      Applies to vehicles under €70,000 gross list price.
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 350
+    currency: EUR
+    period: annual
+    description: "EV exemption from Kfz-Steuer until 2030 (saves ~€350/year vs comparable ICE)"
+    eligibility: "All EV owners"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote CO2 Certificate"
+    type: grant
+    amount: 300
+    currency: EUR
+    period: annual
+    description: >
+      THG-Quote (Treibhausgasminderungs-Quote): CO2 certificate trading revenue.
+      Sell your EV's CO2 savings certificate (~€250-350/year depending on market).
+    eligibility: "All EV owners"
+    valid_until: null
+
+  - name: "KfW Wallbox Subsidy"
+    type: subsidy
+    amount: 900
+    currency: EUR
+    period: one_time
+    description: >
+      KfW 440/441 wallbox subsidy (currently exhausted, check availability).
+      Covers up to €900 for home wallbox installation.
+    eligibility: "Homeowners, limited availability"
+    valid_until: null
+
+# Distribution & sales
+distribution:
+  sales_model: dealership
+  dealerships_count: 570  # Cupra dealers across Germany (2024)
+  direct_online_sales: true
+  online_configurator_url: "https://www.cupraofficial.de/konfigurator/born"
+  test_drive_availability: true
+
+# Charging infrastructure access
+charging_networks:
+  - network: "Cupra Charging"
+    coverage: "European-wide (550,000+ charging points)"
+    preferential_pricing: true
+    notes: "Powered by SEAT/VW partnerships, IONITY preferred rates"
+  - network: "IONITY"
+    coverage: "Germany + European highways"
+    preferential_pricing: true
+    price_per_kwh: 0.35
+    notes: "Discounted from €0.79 public rate via Cupra Charging subscription"
+  - network: "EnBW"
+    coverage: "Germany"
+    preferential_pricing: false
+    price_per_kwh: 0.55
+
+# Warranty & service
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  roadside_assistance_years: 2
+  corrosion_warranty_years: 12
+
+service:
+  service_interval_months: 24  # Or 30,000 km
+  service_interval_km: 30000
+  estimated_annual_service_cost: 250  # Lower than ICE (no oil changes)
+
+# Manufacturing & environmental
+manufacturing:
+  plant_location: "Martorell, Spain"
+  plant_notes: "SEAT's main production facility, carbon-neutral by 2025"
+  production_capacity_annual: 50000  # Born + other Cupra models
+
+environmental:
+  lifecycle_co2_kg: 29000  # ~29 tonnes over 200,000 km (EU electricity mix, smaller battery)
+  lifecycle_co2_renewable_kg: 17000  # ~17 tonnes with 100% renewable electricity
+  battery_recycling_rate_percent: 96  # VW Group recycling target
+  carbon_neutral_production_year: 2025  # Martorell plant target
+
+# Market positioning & competition
+competitors:
+  - model: "Volkswagen ID.3 Pure Performance"
+    price: 42065
+    notes: "Mechanically identical, VW brand, €1,075 more expensive"
+  - model: "MG4 Long Range"
+    price: 35990
+    notes: "Cheaper, larger battery, less premium"
+  - model: "Hyundai Kona Electric"
+    price: 44990
+    notes: "Similar range, more SUV-like, €4,000 more"
+  - model: "Peugeot e-208 GT"
+    price: 39990
+    notes: "Smaller battery, less range, similar sporty image"
+
+market_notes: >
+  Cupra Born 58kWh (€40,990) is the entry-level Born offering excellent value.
+  Shares MEB platform and 58kWh battery with VW ID.3 Pure Performance but €1,075
+  cheaper while offering sportier design and Cupra brand image. 424 km WLTP range
+  is sufficient for most users. 150kW motor provides solid performance (7.3s 0-100).
+  120kW DC charging is adequate. Key advantage over VW: younger brand image,
+  sportier design, copper accents. Positioned well against premium competition
+  like Volvo EX30 while undercutting VW. Target buyers: those wanting Cupra style
+  without paying for the larger battery. Good company car choice with 0.25% tax rate.
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  source: manufacturer
+  sources:
+    - "https://www.cupraofficial.de/models/born"
+    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/cupra-born/"
+    - "https://www.dat.de/"
