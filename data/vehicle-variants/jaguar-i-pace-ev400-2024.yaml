@@ -1,0 +1,122 @@
+# Jaguar I-PACE EV400 (2024 Model Year)
+id: jaguar-i-pace-ev400-2024
+model_id: jaguar-i-pace
+name: "EV400"
+model_year: 2024
+variant_code: "EV400"
+
+# Production Info
+production_status: active
+production_start_date: "2018-03-01"
+
+# Pricing (base MSRP, market-specific pricing in market-availability files)
+base_price_eur: 78500  # Germany starting price (S trim)
+base_price_gbp: 69995  # UK starting price
+
+# Battery & Range
+battery:
+  usable_kwh: 84.7
+  total_kwh: 90.0
+  chemistry: "NMC"
+  cells_supplier: "LG Chem"
+  pack_voltage: 400
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range
+range:
+  wltp_km: 470
+  real_world_km: 390  # Mixed driving
+  highway_km: 320  # @130 km/h
+  city_km: 450
+  winter_km: 300  # Cold weather performance
+
+# Motors & Performance
+performance:
+  motors:
+    - position: front
+      type: permanent magnet
+      max_power_kw: 98
+      max_torque_nm: 228
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 197
+      max_torque_nm: 348
+  total_power_kw: 294
+  total_power_hp: 400
+  total_torque_nm: 696
+  drive_type: AWD
+  acceleration_0_100_kmh_s: 4.8
+  top_speed_kmh: 200
+  
+# Charging
+charging:
+  ac_charge_power_kw: 11
+  ac_charge_port: Type 2
+  ac_charge_time_0_100_hours: 8.6
+  
+  dc_charge_power_peak_kw: 104
+  dc_charge_port: CCS2
+  dc_charge_time_10_80_min: 40
+  dc_charge_time_20_80_min: 36
+  dc_charge_km_per_10min: 90  # Practical road trip charging
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 19.8
+  real_world_kwh_per_100km: 23.5
+  highway_kwh_per_100km: 28.5
+  city_kwh_per_100km: 20.0
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4682
+  width_mm: 1895
+  height_mm: 1565
+  wheelbase_mm: 2990
+  cargo_volume_liters: 656
+  frunk_volume_liters: 27
+
+weight:
+  curb_weight_kg: 2208
+  gross_vehicle_weight_kg: 2758
+
+# Wheels
+wheels:
+  standard_size_inches: 18
+  tire_size_front: "235/65 R18"
+  tire_size_rear: "235/65 R18"
+
+# Features (Standard on S trim)
+standard_features:
+  - "Dual-motor AWD with torque vectoring"
+  - "Air suspension with adaptive damping"
+  - "Heat pump for improved cold-weather efficiency"
+  - "LED headlights with signature DRLs"
+  - "Touch Pro Duo infotainment (10\" + 5\" screens)"
+  - "12.3\" Interactive Driver Display"
+  - "Meridian sound system (380W, 11 speakers)"
+  - "Panoramic fixed glass roof"
+  - "Leather seats (Windsor leather)"
+  - "Heated front seats and steering wheel"
+  - "Connected Navigation Pro"
+  - "Lane Keep Assist, Emergency Braking"
+
+# Metadata
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - "https://www.jaguar.com/jaguar-range/i-pace/index.html"
+    - "https://insideevs.com/reviews/353159/jaguar-i-pace-range-test/"
+    - "https://ev-database.org/car/1142/Jaguar-I-Pace-EV400"
+
+notes: |
+  Jaguar's pioneering premium electric SUV with 2019 World Car of the Year award.
+  Dual-motor AWD delivers sports car performance (4.8s 0-100 km/h) with intelligent
+  torque vectoring. Real-world range ~390 km adequate for daily use. DC charging
+  limited to 104 kW (slower than newer 800V rivals) but adequate for road trips.
+  Available in S/SE/HSE trims with mechanical specs identical. Competes with Audi
+  e-tron, BMW iX, Mercedes EQC (discontinued), and Tesla Model Y.
