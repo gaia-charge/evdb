@@ -7,79 +7,84 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-15"
-delivery_time_weeks: 16
+available_from: "2024-01-01"
+delivery_time_weeks: 12
 
 # Pricing
 pricing:
-  base_price: 47990
-  price_including_vat: 47990
+  base_price: 46900
+  price_including_vat: 46900
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
-  - name: Diamond Black Metallic
-    code: 676
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
   - name: Glacier White
-    code: 369
+    code: OV369
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Schist Grey Metallic
-    code: KQM
-    type: metallic
+  - name: Diamond Black
+    code: GNE
+    type: solid
     price_add:
-      amount: 600
+      amount: 0
       currency: EUR
-  - name: Alpine Blue Metallic
-    code: RNS
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Flame Red Metallic
+  - name: Flame Red
     code: NNP
     type: metallic
     price_add:
-      amount: 600
+      amount: 750
       currency: EUR
-  - name: Midnight Blue Two-Tone
-    code: RPG
-    type: two_tone
+  - name: Midnight Blue
+    code: RPH
+    type: metallic
     price_add:
-      amount: 900
+      amount: 750
       currency: EUR
-  - name: Satin Grey Two-Tone
-    code: KSG
-    type: two_tone
+  - name: Ionic Grey
+    code: KNA
+    type: metallic
     price_add:
-      amount: 900
+      amount: 750
+      currency: EUR
+  - name: Rafale Grey
+    code: KNM
+    type: metallic
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: Schist Grey (bi-tone)
+    code: KNG
+    type: bi_tone
+    price_add:
+      amount: 1100
+      currency: EUR
+  - name: Valencia Orange (bi-tone)
+    code: RAG
+    type: bi_tone
+    price_add:
+      amount: 1350
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Diamond-Cut Alloy Wheels Iconic Design
+  - name: 20" diamond-cut alloy wheels
     size_inches: 20
     type: alloy
-    design: Iconic
     price_add:
       amount: 0
       currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Alcantara/Leather with Iconic Stitching
+  - name: Black Alcantara/leather
     material: alcantara_leather
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Grey Alcantara/Leather with Iconic Stitching
+  - name: Grey Alcantara/leather
     material: alcantara_leather
     color: grey
     price_add:
@@ -89,75 +94,45 @@ available_interiors:
 # Incentives
 available_incentives:
   - type: federal
-    name: "Umweltbonus (Innovation Premium)"
+    name: "Umweltbonus (BAFA)"
     amount:
-      amount: 4500
+      amount: 0
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
+    conditions: ["Ended December 2023"]
+    expires_at: "2023-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Gross list price under €70,000"]
-    tax_calculation:
-      gross_list_price: 47990
-      monthly_tax_base_025_percent: 119.98
-      annual_tax_benefit_vs_1_percent: 3455.14
+    description: "Reduced taxation for electric company cars"
+    conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Exclusive Metallic/Two-Tone Colors
+  - name: Solarbay Panoramic Sunroof
     price:
-      amount: 600
+      amount: 1400
       currency: EUR
     features:
-      - Premium paint finishes
-  - name: Extended Warranty (5 years/100,000 km)
+      - Electrochromic glass roof (tint adjustable)
+      - Solar absorption coating
+  - name: Premium Driver Assistance
     price:
-      amount: 800
+      amount: 1800
       currency: EUR
     features:
-      - Additional 2 years warranty coverage
-      - Peace of mind for long-term ownership
-
-# Standard Premium Features (Included)
-included_premium_features:
-  - "Solarbay panoramic electrochromic sunroof (€1,200 value)"
-  - "Harman Kardon premium audio 9 speakers (€650 value)"
-  - "9.3-inch head-up display (€500 value)"
-  - "360° camera with hands-free parking (€600 value)"
-  - "Heated front and rear seats (€400 value)"
-  - "Highway & Traffic Jam Assist (€800 value)"
-
-# Charging Network Offers
-charging_offers:
-  - name: "Free IONITY charging credits - Premium"
-    description: "12 months of complimentary fast charging at IONITY network"
-    value:
-      amount: 500
-      currency: EUR
-    conditions: ["New vehicle purchase", "Valid until 2024-12-31"]
+      - Highway & traffic jam pilot
+      - Active emergency braking with pedestrian detection
+      - Evasive steering assist
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Iconic is the flagship trim with maximum range (470 km WLTP) 
-  and premium equipment. Best efficiency (15.5 kWh/100km) in the lineup.
-  
-  Includes over €4,150 worth of premium features standard:
-  - Solarbay panoramic sunroof
-  - Harman Kardon audio
-  - Head-up display
-  - 360° camera with hands-free parking
-  - Heated seats and steering wheel
-  - Full ADAS suite (Highway & Traffic Jam Assist)
-  
-  Excellent value proposition compared to adding these options separately.
-  Premium Alcantara/leather interior with exclusive Iconic stitching.
-  
-  Eligible for German EV incentives (€4,500) and company car tax benefits (0.25%).
-  Popular choice for executives seeking premium features with EV tax advantages.
-  
-  Longer delivery times (16 weeks) reflect higher demand for top trim.
+  Renault Megane E-Tech EV60 Iconic is the flagship variant with comprehensive premium equipment.
+  Standard features include matrix LED headlights, head-up display, 360° camera, heated seats/steering,
+  and Alcantara/leather upholstery. The unique Solarbay electrochromic panoramic roof (optional)
+  allows electronic tint adjustment without traditional sunshade.
+  German EV incentives ended December 2023, so no federal subsidy available.
+  Company car tax benefit (0.25%) applies for electric vehicles under €70,000.
+  Delivery times around 12 weeks for top trim with custom configurations.
+  Popular configuration: Rafale Grey metallic with Solarbay roof (~€49,050 total).
 
 # Metadata
 metadata:
@@ -166,4 +141,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices and incentives as of February 2026
+  notes: Prices as of February 2024
