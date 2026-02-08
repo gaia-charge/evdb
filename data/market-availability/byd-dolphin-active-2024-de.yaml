@@ -1,0 +1,126 @@
+# BYD Dolphin Active (2024) - Germany Market Availability
+
+id: byd-dolphin-active-2024-de
+variant_id: byd-dolphin-active-2024
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2023-09-01"
+delivery_time_weeks: 4
+
+# Pricing
+pricing:
+  base_price: 33990
+  price_including_vat: 33990
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Cosmos Black
+    code: BK
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Aurora White
+    code: WH
+    type: metallic
+    price_add:
+      amount: 590
+      currency: EUR
+  - name: Boulder Grey
+    code: GY
+    type: metallic
+    price_add:
+      amount: 590
+      currency: EUR
+  - name: Surf Blue
+    code: SB
+    type: metallic
+    price_add:
+      amount: 590
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 16" Steel Wheels with Covers
+    size_inches: 16
+    type: steel
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Fabric
+    material: fabric
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (Environmental Bonus)"
+    amount:
+      amount: 4500
+      currency: EUR
+    conditions: ["Price under €65,000", "BEV", "First registration"]
+    expires_at: "2024-12-31"
+  - type: manufacturer
+    name: "BYD Trade-In Bonus"
+    amount:
+      amount: 1000
+      currency: EUR
+    conditions: ["Trade-in of vehicle older than 5 years"]
+
+# Tax Information (Germany-specific)
+taxation:
+  company_car_tax_rate_percent: 0.25
+  company_car_tax_base:
+    amount: 8498
+    currency: EUR
+    calculation: "Gross list price €33,990 × 0.25 (BEV bonus)"
+  annual_road_tax:
+    amount: 0
+    currency: EUR
+    note: "EVs exempt from road tax in Germany until 2030"
+
+# Popular Configuration
+popular_configurations:
+  - name: "City Package"
+    description: "Base model with essentials for city driving"
+    base_price: 33990
+    options:
+      - "Base vehicle"
+    total_price: 33990
+    
+  - name: "Comfort Package"
+    description: "Enhanced comfort features"
+    base_price: 33990
+    options:
+      - "Aurora White metallic"
+      - "Comfort Pack (heat pump, heated seats)"
+    total_price: 36580
+
+# Notes
+market_notes: >
+  The BYD Dolphin Active is the entry-level variant, offering excellent value
+  for city driving and daily commuting. With 340 km WLTP range and a competitive
+  price point, it's an attractive option for first-time EV buyers. The 0.25%
+  company car tax rate makes it particularly appealing for business users.
+  
+  Standard equipment is comprehensive including 12.8" touchscreen, V2L capability,
+  and comprehensive safety features. The Comfort Pack adds heat pump and heated
+  seats for year-round comfort.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.byd.com/de/dolphin
+    - https://www.dat.de/ (pricing verification)

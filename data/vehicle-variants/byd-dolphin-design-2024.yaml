@@ -1,0 +1,223 @@
+id: byd-dolphin-design-2024
+name: Design
+model_id: byd-dolphin
+model_year: 2024
+production_years:
+  start: 2023
+  end: null
+
+trim_level: design
+market_position: premium
+
+# Battery Specifications
+battery:
+  usable_kwh: 60.4
+  total_kwh: 63.0
+  chemistry: LFP  # Lithium Iron Phosphate (BYD Blade Battery)
+  nominal_voltage_v: 400
+  cell_type: blade  # BYD's proprietary blade cell format
+  supplier: BYD (FinDreams Battery)
+  warranty_years: 8
+  warranty_km: 200000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "cell-to-body, blade cells"
+    weight_kg: 460
+    cells: 160
+  
+  notes: >
+    BYD Blade Battery uses LFP chemistry in long blade-shaped cells integrated
+    directly into the chassis. This larger 60.4 kWh pack provides excellent
+    range for a compact car while maintaining the safety and longevity benefits
+    of LFP chemistry.
+
+# Range
+range:
+  wltp_km: 427
+  wltp_source: manufacturer
+  
+  real_world_km: 365
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
+
+# Consumption
+consumption:
+  wltp_kwh_per_100km: 14.1
+  real_world_kwh_per_100km: 16.5
+  real_world_source: estimated
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 5.5  # 11kW
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 88
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "30_80": 28
+      "0_100": 45
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 70
+      - soc_percent: 10
+        power_kw: 88
+      - soc_percent: 30
+        power_kw: 88
+      - soc_percent: 50
+        power_kw: 85
+      - soc_percent: 70
+        power_kw: 60
+      - soc_percent: 80
+        power_kw: 35
+      - soc_percent: 90
+        power_kw: 20
+      - soc_percent: 100
+        power_kw: 12
+    
+    notes: "Conservative charging optimized for battery longevity"
+
+  bidirectional:
+    v2l: true
+    v2l_max_power_kw: 3.3
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 150
+    max_torque_nm: 310
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 150
+  total_power_hp: 204
+  total_torque_nm: 310
+
+performance:
+  acceleration_0_100_kmh_s: 7.5
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 14.1
+  wltp_source: manufacturer
+  real_world_kwh_per_100km: 16.5
+  
+  highway:
+    kmh: 120
+    kwh_per_100km: 19.5
+    range_km: 310
+  
+  city:
+    kwh_per_100km: 14.0
+    range_km: 430
+
+# Physical specs
+dimensions:
+  length_mm: 4290
+  width_mm: 1770
+  height_mm: 1550
+  wheelbase_mm: 2700
+
+weight:
+  curb_weight_kg: 1550
+  gross_vehicle_weight_kg: 1950
+  max_payload_kg: 400
+
+interior:
+  seating_capacity: 5
+  cargo_volume_l: 345
+  cargo_volume_max_l: 1310
+  frunk_volume_l: 0
+
+# Features
+features:
+  exterior:
+    - "17-inch alloy wheels (design spec)"
+    - "Full LED headlights with adaptive function"
+    - "LED taillights with sequential indicators"
+    - "Body-colored door handles"
+    - "Front and rear parking sensors"
+    - "Electric folding mirrors with puddle lights"
+    - "Roof rails (silver)"
+    - "Chrome exterior accents"
+    - "Rear privacy glass"
+  
+  interior:
+    - "12.8-inch rotating touchscreen"
+    - "5-inch digital instrument cluster"
+    - "Premium synthetic leather upholstery"
+    - "Automatic dual-zone climate control"
+    - "Heat pump"
+    - "Heated and ventilated front seats"
+    - "Heated steering wheel"
+    - "DiLink 4.0 intelligent system"
+    - "Apple CarPlay / Android Auto"
+    - "Wireless phone charging"
+    - "USB-A and USB-C ports"
+    - "Eight speakers with subwoofer"
+    - "Ambient lighting (multi-color)"
+    - "Panoramic glass roof"
+    - "Power tailgate"
+  
+  safety:
+    - "ABS with EBD"
+    - "Electronic stability control"
+    - "Traction control"
+    - "Front airbags"
+    - "Side airbags"
+    - "Curtain airbags"
+    - "ISOFIX child seat anchors"
+    - "Tire pressure monitoring"
+    - "Front and rear parking sensors"
+    - "360-degree camera system"
+  
+  driver_assistance:
+    - "Adaptive cruise control with stop & go"
+    - "Lane keeping assist"
+    - "Lane centering assist"
+    - "Lane departure warning"
+    - "Blind spot monitoring"
+    - "Rear cross-traffic alert"
+    - "Traffic sign recognition"
+    - "Forward collision warning"
+    - "Automatic emergency braking"
+    - "Pedestrian detection"
+    - "Hill start assist"
+    - "Electric parking brake with auto hold"
+    - "Remote parking assist"
+
+options_packages:
+  - name: "Pearl White Paint"
+    price_eur: 800
+  - name: "Two-tone Paint"
+    price_eur: 1200
+
+notes: >
+  The Design trim is the top-spec Dolphin variant with the 60.4 kWh battery
+  and all premium features included as standard. It offers ventilated seats,
+  panoramic glass roof, 360-degree camera, enhanced audio system, and the
+  most comprehensive driver assistance package. This variant competes directly
+  with premium compact EVs like the MINI Electric and VW ID.3 Pro S.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.byd.com/eu/dolphin
+    - https://www.byd.com/de/dolphin/design
