@@ -81,7 +81,7 @@ def get_database_stats(_conn):
         FROM vehicle_variants v
         JOIN vehicle_models m ON v.model_id = m.id
         LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-        ORDER BY v.id DESC
+        ORDER BY v.created_at DESC
         LIMIT 5
     """, _conn)
     
