@@ -1,0 +1,516 @@
+# Kia EV9 Standard Range RWD - Germany Market Data
+# Most affordable 7-seat electric SUV with premium features
+# Entry-level EV9 variant targeting large families and value-conscious buyers
+
+id: kia-ev9-standard-range-rwd-2024-de
+variant_id: kia-ev9-standard-range-rwd-2024
+market: DE
+currency: EUR
+model_year: 2024
+
+# Pricing
+pricing:
+  base_price: 71990
+  price_including_vat: 71990
+  vat_rate_percent: 19
+  on_road_price: 73615  # Includes delivery (€825), registration (€800)
+  
+  manufacturer_incentives:
+    total: 0
+    programs: []
+  
+  government_incentives:
+    federal_subsidy: 0  # Ended December 2023
+    state_incentives: []
+    total: 0
+  
+  price_after_all_incentives: 71990
+  
+  trim_levels:
+    - name: Earth
+      base_price: 71990
+      description: Entry-level trim with excellent standard equipment
+      included_features:
+        - 19" alloy wheels
+        - LED headlights with Star Map DRL
+        - Dual 12.3" displays + 5" passenger screen
+        - 12" AR head-up display
+        - Heated front seats & steering wheel
+        - Heated second-row seats
+        - Synthetic leather interior
+        - 6-speaker Meridian audio
+        - Wireless Apple CarPlay/Android Auto
+        - Highway Driving Assist 2
+        - 360° Surround View Monitor
+        - Remote Smart Parking Assist
+        - Heat pump
+        - V2L capability (3.6 kW)
+        - Panoramic glass roof
+        - Power tailgate
+        - 7-year/150,000 km warranty
+    
+    - name: Air
+      base_price: 78490
+      price_increase: 6500
+      description: Mid-range trim adds comfort and premium features
+      additional_features:
+        - 20" alloy wheels
+        - Ventilated front seats
+        - Relaxation front seats with leg extension
+        - 14-speaker Meridian Premium audio (600W)
+        - Nappa leather interior
+        - Ambient lighting (64 colors)
+        - Power-adjustable steering column
+        - Upgraded center console with sliding armrest
+    
+    - name: GT-Line
+      base_price: 80990
+      price_increase: 9000
+      description: Sport-focused trim with distinctive styling
+      additional_features:
+        - 21" GT-Line alloy wheels
+        - GT-Line exterior styling (front/rear bumpers, side sills)
+        - GT-Line interior with contrast stitching
+        - Ventilated front seats
+        - Sport seats with enhanced bolstering
+        - 14-speaker Meridian Premium audio (600W)
+        - Nappa leather & suede interior
+        - Metal pedals
+        - GT-Line steering wheel
+  
+  popular_configurations:
+    - name: Earth As-Delivered
+      total_price: 73615
+      description: Base trim with mandatory extras
+      includes:
+        - Earth trim (€71,990)
+        - Delivery charge (€825)
+        - Registration (€800)
+      notes: Best value configuration, extremely well-equipped as standard
+    
+    - name: Earth Comfort
+      total_price: 77440
+      description: Base trim with comfort upgrades
+      includes:
+        - Earth trim (€71,990)
+        - Winter Comfort Package (€1,200)
+        - Metallic paint (€825)
+        - Delivery & registration (€1,625)
+      notes: Adds ventilated seats and advanced climate control
+    
+    - name: Air Premium
+      total_price: 85790
+      description: Most popular configuration - excellent balance
+      includes:
+        - Air trim (€78,490)
+        - Technology Package (€2,900)
+        - Metallic paint (€825)
+        - Tow bar with electrics (€1,950)
+        - Delivery & registration (€1,625)
+      notes: ~40% of EV9 buyers in Germany choose Air trim
+  
+  optional_packages:
+    - name: Winter Comfort Package
+      price: 1200
+      availability: [Earth]
+      includes:
+        - Heated second-row outboard seats (upgrade)
+        - Heated third-row seats
+        - Heated windshield washer nozzles
+        - All-season floor mats
+    
+    - name: Technology Package
+      price: 2900
+      availability: [Air, GT-Line]
+      includes:
+        - Digital Side Mirrors
+        - Highway Driving Assist 2 with lane change assist
+        - Remote Smart Parking Assist 2 (enhanced)
+        - Traffic Sign Recognition
+        - Surround View Monitor 3D
+    
+    - name: Premium Package
+      price: 3500
+      availability: [Air, GT-Line]
+      includes:
+        - Nappa leather seats (if not standard)
+        - Memory seats (driver + passenger)
+        - Relaxation front seats with massage
+        - Premium ambient lighting (64 colors)
+        - UV-blocking glass
+        - Power-adjustable second-row seats
+  
+  standalone_options:
+    - name: Metallic paint
+      price: 825
+    - name: Two-tone paint (GT-Line only)
+      price: 1250
+    - name: 20" alloy wheels (Earth upgrade)
+      price: 1500
+    - name: 21" alloy wheels (Air upgrade)
+      price: 2000
+    - name: Tow bar with electrics
+      price: 1950
+    - name: 14-speaker Meridian Premium audio (Earth upgrade)
+      price: 1800
+    - name: Panoramic curved display upgrade
+      price: 900
+    - name: 22 kW three-phase AC charger
+      price: 900
+    - name: Comfort Access (keyless entry all doors)
+      price: 500
+  
+  delivery_charges:
+    delivery_fee: 825
+    registration_fee: 800
+    documentation_fee: 0
+    total_mandatory_fees: 1625
+
+# Company Car Tax (Dienstwagen)
+company_car:
+  tax_rate_percent: 0.5  # Over €70,000 threshold (not 0.25%)
+  gross_list_price: 71990
+  monthly_taxable_amount: 360  # 0.5% of €71,990
+  annual_tax_cost_at_30_percent: 1296  # €360 * 12 * 30% income tax
+  annual_tax_cost_at_42_percent: 1814  # €360 * 12 * 42% income tax
+  comparable_ice:
+    model: Mercedes-Benz GLE 350 d 4MATIC
+    price: 78500
+    monthly_taxable_at_1_percent: 785
+    annual_tax_cost_at_30_percent: 2826
+    annual_savings_with_ev: 1530  # At 30% tax rate
+  notes:
+    - Base price exceeds €70,000 threshold (0.5% rate applies)
+    - Still saves €1,530/year vs 1% ICE rate
+    - AWD Long Range (€88,000) even more expensive for company car
+    - Consider leasing to optimize tax benefits
+
+# Financing Options
+financing:
+  manufacturer_finance:
+    provider: Kia Finance
+    apr_percent: 3.99
+    term_months: 48
+    down_payment_percent: 20
+    monthly_payment_48_months: 1299  # €14,398 down, 3.99% APR
+    monthly_payment_60_months: 1069  # €14,398 down, 3.99% APR
+    final_balloon_payment: 0
+    notes:
+      - Competitive rates through Kia Bank
+      - 0% financing promotions occasionally available
+      - Typical approval for Schufa Score > 95%
+  
+  leasing:
+    provider: Kia Leasing
+    monthly_payment_36_months: 849  # 10,000 km/year, €10,000 down
+    monthly_payment_48_months: 699  # 10,000 km/year, €10,000 down
+    annual_mileage_km: 10000
+    down_payment: 10000
+    excess_mileage_cost_per_km: 0.15
+    notes:
+      - Popular for company car drivers
+      - Includes maintenance packages available
+      - Flexible mileage options (10k, 15k, 20k, 30k km/year)
+      - Strong residual values (54-57% after 3 years)
+
+# Total Cost of Ownership (3 years)
+total_cost_of_ownership:
+  period_years: 3
+  annual_mileage_km: 15000
+  
+  purchase_costs:
+    vehicle_price: 71990
+    delivery_and_fees: 1625
+    total_acquisition: 73615
+  
+  running_costs_annual:
+    electricity:
+      kwh_per_year: 2715  # 15,000 km * 18.1 kWh/100km
+      cost_home_charging: 706  # 80% home at €0.30/kWh
+      cost_public_charging: 163  # 20% public at €0.45/kWh
+      total_annual: 869
+    
+    insurance:
+      comprehensive_annual: 1250
+      notes: Large SUV, expensive to repair, safety features reduce premium
+    
+    maintenance:
+      annual_service: 300
+      tire_replacement_amortized: 150
+      brake_service: 50  # Minimal due to regen braking
+      total_annual: 500
+    
+    registration_tax:
+      annual_vehicle_tax: 0  # BEVs exempt in Germany
+    
+    depreciation:
+      purchase_price: 73615
+      residual_value_3_years: 40150  # ~54.5% retention
+      total_depreciation: 33465
+      annual_depreciation: 11155
+    
+    total_annual_running: 13774
+  
+  total_3_year_cost: 41322
+  cost_per_km_3_years: 0.92
+  
+  comparison_ice:
+    model: Mercedes-Benz GLE 350 d 4MATIC
+    purchase_price: 78500
+    fuel_annual: 2625  # 15,000 km, 8.5 L/100km, €2.05/L diesel
+    maintenance_annual: 950
+    tax_annual: 318
+    insurance_annual: 1450
+    depreciation_annual: 13167
+    total_3_year_cost: 55260
+    savings_with_ev9: 13938
+  
+  notes:
+    - Home charging at €0.30/kWh significantly reduces costs
+    - Minimal maintenance compared to combustion vehicles
+    - Strong residual values due to Kia warranty and EV9 demand
+    - Savings increase with higher annual mileage
+    - Company car benefit provides additional tax savings
+
+# Charging Infrastructure Costs
+home_charging:
+  wallbox_options:
+    - model: Kia Wallbox 11 kW
+      price: 899
+      installation_cost_typical: 800
+      total_cost: 1699
+      charging_time_0_100: 7.5h
+      notes: Official Kia charger with app integration
+    
+    - model: Wallbox Pulsar Plus 11 kW
+      price: 649
+      installation_cost_typical: 800
+      total_cost: 1449
+      features: Wi-Fi, app control, solar integration
+    
+    - model: Heidelberg Energy Control 11 kW
+      price: 499
+      installation_cost_typical: 800
+      total_cost: 1299
+      notes: Popular German-made charger, reliable
+  
+  kfw_subsidy:
+    program: KfW 440/441
+    amount: 0
+    status: Ended September 2023
+    notes: No longer available for new installations
+  
+  electricity_costs:
+    home_rate_standard_kwh: 0.30
+    home_rate_night_tariff_kwh: 0.22
+    cost_full_charge_standard: 22.83  # 76.1 kWh * €0.30
+    cost_full_charge_night: 16.74  # 76.1 kWh * €0.22
+    cost_per_100km_home: 5.43  # 18.1 kWh/100km * €0.30
+
+public_charging:
+  networks:
+    - name: EnBW mobility+
+      coverage: Nationwide, 300,000+ charge points
+      pricing: €0.45/kWh DC (€0.38 with subscription)
+      subscription: €5.99/month for reduced rates
+      notes: Largest network in Germany
+    
+    - name: Ionity
+      coverage: Pan-European highways, 400+ stations
+      pricing: €0.79/kWh (€0.35 with Kia Charge Plus)
+      max_power: 350kW
+      notes: Limited to 210 kW with EV9 Standard Range's 400V
+    
+    - name: Fastned
+      coverage: Major highways, 200+ stations in Germany
+      pricing: €0.69/kWh (Gold membership €11.99/month)
+      max_power: 300kW
+      notes: Premium network, always available
+    
+    - name: Tesla Supercharger
+      coverage: 1,000+ stalls in Germany (open to non-Tesla)
+      pricing: €0.52/kWh average (varies by location)
+      max_power: 250kW
+      notes: Now open to all EVs via app
+  
+  cost_full_charge_public: 34.25  # 76.1 kWh * €0.45/kWh average
+  cost_per_100km_public: 8.15  # 18.1 kWh/100km * €0.45
+
+# Availability & Delivery
+availability:
+  status: available
+  available_from: "2024-01-01"
+  available_until: null
+  pre_order: false
+  order_book_open: true
+  
+  delivery:
+    typical_wait_weeks: 16
+    current_wait_weeks: 12
+    factors:
+      - Standard Range production increased
+      - Georgia plant running at capacity
+      - European allocation improving
+      - Less demand than AWD variants
+    notes:
+      - Shorter wait than Long Range AWD
+      - Delivery times improving in 2024
+      - Factory orders available
+      - Some dealer stock available
+
+# Dealer Network & Support
+dealer_network:
+  dealers_count_germany: 450
+  service_centers: 450
+  coverage: Excellent nationwide coverage
+  dealer_locator: https://www.kia.com/de/haendlersuche/
+  notes:
+    - Extensive network across Germany
+    - Most dealers have EV specialists
+    - Mobile service available in major cities
+    - Test drives widely available
+
+# Market Position & Competitors
+market_analysis:
+  segment: Large SUV (7-seater)
+  price_positioning: Premium value
+  
+  competitors:
+    - model: Kia EV9 Long Range AWD
+      price: 88000
+      comparison: €16,010 more expensive, 58 km more range, dual-motor AWD, 1.6s faster acceleration
+      advantage_ev9_standard: €16k savings, adequate range, sufficient performance for most
+    
+    - model: Mercedes-Benz EQS SUV 450+
+      price: 115900
+      comparison: €43,910 more expensive, 122 km less range, more luxurious
+      advantage_ev9: €44k savings, similar practicality, longer range, better warranty
+    
+    - model: BMW iX xDrive40
+      price: 99900
+      comparison: €27,910 more expensive, only 5 seats, 80 km less range
+      advantage_ev9: €28k savings, 7 seats, more space, longer range
+    
+    - model: Volkswagen ID.Buzz Pro LWB
+      price: 65000
+      comparison: €6,990 cheaper, 26 km less range, more distinctive design, only 7 seats
+      advantage_ev9: More premium, longer range, better tech, quieter
+    
+    - model: Peugeot e-5008 Long Range
+      price: 54000
+      comparison: €17,990 cheaper, less premium, smaller, less range
+      advantage_ev9: More space, premium feel, better tech, 7-year warranty
+    
+    - model: Tesla Model X Long Range
+      price: 97990
+      comparison: €25,000 more expensive, 107 km more range, faster, Falcon Wing doors
+      advantage_ev9: €25k savings, better build quality, normal doors, longer warranty
+  
+  value_proposition:
+    - Most affordable 7-seat electric SUV with premium features
+    - Class-leading third-row space for adults
+    - Comprehensive 7-year/150,000 km warranty (best in class)
+    - Standard heat pump and V2L capability
+    - Excellent tech and safety features standard
+    - €16,010 cheaper than EV9 Long Range AWD
+    - Adequate 505 km WLTP range for most use cases
+    - Efficient single-motor RWD drivetrain
+
+# Target Buyers
+target_buyers:
+  primary:
+    - Large families needing 7 seats regularly
+    - Cost-conscious buyers wanting EV9 capability at lower price
+    - Urban and suburban families prioritizing efficiency
+    - Company car drivers (though 0.5% tax rate)
+    - Buyers who don't need AWD or extreme performance
+    - Those prioritizing practicality and value over speed
+  
+  secondary:
+    - Taxi and ride-sharing services (long range, low running costs)
+    - Fleet operators (warranty reduces risk)
+    - Empty nesters wanting spacious EV for occasional grandchildren
+    - Buyers downsizing from larger vehicles
+    - Eco-conscious families
+
+# Strengths & Weaknesses
+strengths:
+  - Most affordable EV9 variant (€16k savings vs AWD)
+  - Excellent 505 km WLTP range (420 km real-world adequate for daily use)
+  - Class-leading third-row space and practicality
+  - 7-year/150,000 km comprehensive warranty (industry-best)
+  - Standard heat pump and V2L capability (3.6 kW)
+  - Efficient single-motor RWD drivetrain (15.1 kWh/100km WLTP)
+  - Adequate performance for large SUV (9.4s 0-100 km/h)
+  - Comprehensive safety features (5-star Euro NCAP)
+  - Highway Driving Assist 2 and 360° cameras standard
+  - Strong residual values expected (~55% after 3 years)
+
+weaknesses:
+  - 1.6 seconds slower acceleration than AWD (9.4s vs 7.8s)
+  - 400V architecture limits DC charging to 210 kW (vs 240 kW AWD)
+  - 58 km less WLTP range than Long Range AWD
+  - Lower towing capacity (1,600 kg vs 1,900 kg AWD)
+  - Base Earth trim has basic 6-speaker audio
+  - No ventilated seats on Earth trim
+  - RWD only (no AWD for winter/off-road capability)
+  - Base price exceeds €70k (0.5% company car tax rate, not 0.25%)
+
+# Use Case Recommendations
+best_for:
+  - Daily family commuting (420 km real-world range adequate)
+  - Urban and suburban families (efficient city driving)
+  - Weekend road trips (210 kW DC charging enables travel)
+  - Carpooling and large family transport (7 seats)
+  - Buyers prioritizing value and efficiency over performance
+  - Home charging users (lower running costs)
+  - Those wanting premium 7-seater without extreme price
+
+not_ideal_for:
+  - Winter regions requiring AWD (consider Long Range AWD instead)
+  - Buyers needing maximum towing capacity (1,600 kg limit)
+  - Performance enthusiasts (9.4s 0-100 adequate but not sporty)
+  - Company car drivers near €70k threshold (0.5% tax rate applies)
+  - Regular long-distance highway driving at high speeds (range penalty)
+  - Those requiring fastest possible charging (210 kW vs 240-270 kW rivals)
+
+# Real-World Owner Experience
+owner_feedback:
+  common_praise:
+    - Exceptional interior space, especially third row
+    - Comfortable and quiet highway cruising
+    - Excellent build quality and materials
+    - Intuitive infotainment and technology
+    - Adequate performance for daily driving
+    - Strong real-world range (420+ km typical)
+    - Heat pump effectiveness in winter
+    - V2L feature very useful for camping/events
+  
+  common_complaints:
+    - 400V charging slower than advertised 800V competitors
+    - Basic audio system on Earth trim disappointing
+    - Large dimensions challenging in tight parking
+    - Would prefer AWD option at this price
+    - Long delivery times
+  
+  typical_real_world_range:
+    spring_autumn: 440 km
+    summer: 460 km
+    winter_mild: 380 km
+    winter_cold: 330 km
+    highway_130kph: 350 km
+
+# Additional Notes
+notes: |
+  First major 7-seat electric SUV under €75,000.
+  Standard Range uses 400V architecture (not 800V like AWD).
+  Earth trim extremely well-equipped for base model.
+  210 kW DC charging still respectable (24 min 10-80%).
+  Best value proposition in EV9 lineup for most buyers.
+  Ideal for families prioritizing space and efficiency over speed.
+  Consider Long Range AWD if you need winter capability or performance.
+  Strong residual values expected due to Kia warranty and limited competition.
+  Made in USA (Hyundai Motor Manufacturing Georgia).
+
+data_quality: comprehensive
+last_updated: "2024-02-08"
