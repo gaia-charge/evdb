@@ -1,0 +1,258 @@
+# BMW i4 M50 - German Market (2024)
+id: bmw-i4-m50-2024-de
+variant_id: bmw-i4-m50-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 74900  # € (2024 pricing, M performance variant)
+  destination_charge: 1195
+  on_the_road_price: 76095
+  price_includes:
+    - "11kW AC charging (3-phase)"
+    - "205kW DC fast charging"
+    - "M Sport Package"
+    - "Adaptive M Suspension"
+    - "M Sport Brakes"
+    - "19-inch M alloy wheels"
+    - "BMW Curved Display (12.3\" + 14.9\")"
+    - "Harman Kardon audio"
+    - "Driving Assistant Professional"
+    - "Parking Assistant Plus"
+    - "IconicSounds Electric by Hans Zimmer"
+
+trim_levels:
+  - name: "M50"
+    price: 74900
+    features:
+      - "Dual-motor AWD with 400kW (544hp)"
+      - "510 km WLTP range"
+      - "0-100 km/h in 3.9s"
+      - "225 km/h top speed"
+      - "M Sport Package included"
+      - "Adaptive M Suspension"
+      - "M Sport Brakes"
+      - "19-inch M alloy wheels"
+      - "M Sport seats"
+
+colors:
+  - name: "Alpine White"
+    type: solid
+    price: 0  # Free
+  - name: "Black metallic"
+    type: metallic
+    price: 995
+  - name: "Mineral White metallic"
+    type: metallic
+    price: 995
+  - name: "Portimao Blue metallic"
+    type: metallic
+    price: 995
+  - name: "Brooklyn Grey metallic"
+    type: metallic
+    price: 995
+  - name: "M Frozen Portimao Blue"
+    type: frozen
+    price: 4500
+    notes: "M-specific matte finish"
+  - name: "BMW Individual paint"
+    type: individual
+    price: 5500
+    notes: "Extended color palette"
+
+wheels:
+  - size: "19 inch"
+    price: 0  # Standard M wheels
+    range_impact_km: 0
+    name: "19-inch M double-spoke wheels"
+  - size: "20 inch"
+    price: 1600
+    range_impact_km: -20
+    name: "20-inch M Y-spoke wheels"
+
+interior:
+  - name: "Vernasca leather standard"
+    price: 0
+  - name: "Merino leather"
+    price: 2150
+    notes: "Full leather with extended colors"
+  - name: "BMW Individual Merino leather"
+    price: 3950
+    notes: "Premium leather with individual colors"
+
+packages:
+  - name: "Comfort Package"
+    price: 1990
+    includes:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Lumbar support (4-way)"
+  - name: "Technology Package Pro"
+    price: 3490
+    includes:
+      - "Head-up display"
+      - "BMW Parking Assistant Professional"
+      - "Surround view camera"
+      - "Remote 3D view"
+  - name: "Premium Package"
+    price: 5990
+    includes:
+      - "All Technology Package Pro features"
+      - "All Comfort Package features"
+      - "Bowers & Wilkins audio (18 speakers, 655W)"
+      - "Sky lounge panoramic glass roof"
+      - "Ambient lighting"
+      - "Saves €1,490 vs buying separately"
+
+individual_options:
+  - name: "Bowers & Wilkins audio"
+    price: 2990
+    notes: "18 speakers, 655W, Diamond surround sound"
+  - name: "Sky lounge panoramic glass roof"
+    price: 1490
+    notes: "Large glass roof with integrated LED lighting"
+  - name: "Head-up display"
+    price: 1390
+    notes: "Full-color projection with navigation"
+  - name: "Comfort Access"
+    price: 690
+    notes: "Keyless entry and start"
+  - name: "Automatic tailgate"
+    price: 490
+    notes: "Hands-free opening"
+  - name: "M Carbon exterior package"
+    price: 2990
+    notes: "Carbon fiber mirror caps, roof, and rear spoiler"
+  - name: "M Carbon interior trim"
+    price: 1590
+    notes: "Carbon fiber interior trim pieces"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 0  # Over €70k threshold
+    notes: "0.5% of gross list price per month (above €70k threshold). For €74,900 vehicle: 0.5% = €375/month = €4,500/year vs 1% = €749/month = €8,988/year. Annual savings: €4,488."
+    calculation: "€74,900 × 0.5% = €375/month. ICE: €74,900 × 1% = €749/month. Savings: €374/month = €4,488/year"
+    eligibility: "Company car drivers only. Note: 0.5% rate (not 0.25%) as base price exceeds €70,000."
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 480  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 14
+  production_status: active
+  order_url: "https://www.bmw.de/de/all-models/m-series/i4-m50/2024/bmw-i4-m50-konfigurator.html"
+  notes: "Built at BMW Munich plant. M performance variant with high demand but good availability."
+
+dealers:
+  count: 350  # BMW dealers in Germany
+  network: "BMW Deutschland"
+  service_centers: 350
+  notes: "Extensive BMW dealer network across Germany, all trained for EV servicing. M-specific service available."
+
+charging_networks:
+  - name: "BMW Charging"
+    coverage: "400,000+ charging points across Europe"
+    pricing: "Various tariffs available via My BMW app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€13.99/month + €0.35/kWh (BMW Charging tariff)"
+    notes: "205kW charging: 10-80% costs €19.76 (BMW) vs €44.80 (standard)"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2024)
+    cost_10_to_80_percent: 16.92  # € (80.7kWh × 70% × €0.30)
+    cost_per_100km: 5.40  # € (18.0 kWh/100km × €0.30)
+  - scenario: "Public AC charging"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_10_to_80_percent: 25.38
+    cost_per_100km: 8.10
+  - scenario: "DC fast charging (BMW Charging subscription)"
+    cost_per_kwh: 0.35  # €/kWh + €13.99/month
+    cost_10_to_80_percent: 19.76
+    cost_per_100km: 6.30
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_10_to_80_percent: 44.60
+    cost_per_100km: 14.22
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "2-year vehicle warranty standard, can be extended up to 5 years. Battery warranty covers capacity degradation below 70% within 8 years/160,000km."
+
+annual_costs:
+  insurance_estimate: 1400  # € per year (comprehensive, experienced driver, M variant)
+  road_tax: 0  # Exempt until 2030
+  inspection: 85  # € per year (TÜV inspection every 2 years, €170)
+  maintenance_estimate: 550  # € per year (service, tires, brakes - higher due to M performance)
+  total_estimate: 2035  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 16000  # Estimated battery production (80.7kWh battery)
+  lifecycle_co2_kg: 30000   # 200,000km with EU electricity mix
+  recyclability_percent: 90
+  battery_recycling: "BMW battery recycling program, 95% material recovery target"
+  production_site: "Munich, Germany (100% renewable energy)"
+
+popular_configurations:
+  - name: "Base M50"
+    price: 76990  # Base + typical options
+    includes:
+      - "Base M50 (€74,900)"
+      - "Metallic paint (€995)"
+      - "Comfort Access (€690)"
+      - "Destination charge (€1,195)"
+    notes: "Most affordable M50 configuration, already well-equipped"
+  - name: "M50 Premium"
+    price: 87465
+    includes:
+      - "Base M50 (€74,900)"
+      - "Premium Package (€5,990)"
+      - "Sky lounge panoramic glass roof (included in package)"
+      - "M Carbon exterior package (€2,990)"
+      - "20-inch M wheels (€1,600)"
+      - "Metallic paint (€995)"
+      - "Destination charge (€1,195)"
+    notes: "Popular configuration with premium features"
+  - name: "M50 Ultimate"
+    price: 94055
+    includes:
+      - "Base M50 (€74,900)"
+      - "Premium Package (€5,990)"
+      - "M Carbon exterior package (€2,990)"
+      - "M Carbon interior trim (€1,590)"
+      - "BMW Individual Merino leather (€3,950)"
+      - "20-inch M wheels (€1,600)"
+      - "Automatic tailgate (€490)"
+      - "BMW Individual paint (€995 metallic used)"
+      - "Destination charge (€1,195)"
+    notes: "Fully loaded configuration for enthusiasts"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.bmw.de/de/all-models/m-series/i4-m50/2024/bmw-i4-m50-preis-ausstattung.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/i4/"
+    - "https://ev-database.org/car/1668/BMW-i4-M50"
+  notes: "2024 German market pricing for BMW i4 M50. Base price at €74,900 positions it as a performance alternative to Tesla Model 3 Performance (€56,990) and Mercedes-AMG EQE 43 4MATIC (€82,000). Dual-motor AWD with 544hp delivers 0-100 km/h in 3.9s while maintaining 510 km WLTP range (430 km real-world). Features IconicSounds Electric by Hans Zimmer, M Sport suspension, and comprehensive standard equipment. Company car drivers save €4,488/year with 0.5% tax rate (above €70k threshold). Most popular configuration is with Premium Package (~€87k). Competes directly with Audi e-tron GT (€105k+) and Porsche Taycan 4S (€120k+) but at lower price point."
