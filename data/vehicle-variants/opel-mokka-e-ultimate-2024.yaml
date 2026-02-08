@@ -1,0 +1,196 @@
+# Opel Mokka-e Ultimate (2024) - Top Trim with IntelliLux Matrix LED
+
+id: opel-mokka-e-ultimate-2024
+model_id: opel-mokka-e
+name: Mokka-e Ultimate
+model_year: 2024
+trim_level: Ultimate  # Top trim with premium features
+variant_code: null
+
+production:
+  start_date: 2023-09-01
+  end_date: null
+  status: active
+  notes: 2024 model with minor efficiency improvements, mechanically identical to Peugeot e-2008
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 50.0
+  usable_kwh: 45.0  # ~90% usable (Opel doesn't publish exact, conservative estimate)
+  supplier: CATL (Contemporary Amperex Technology Co. Limited)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+  notes: Same battery as Peugeot e-2008 on CMP platform
+
+range:
+  wltp_km: 338
+  wltp_city_km: 435
+  wltp_highway_km: 270
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 290
+  real_world_source: ADAC EcoTest 2024
+  notes: Slightly lower range than e-2008 (338 vs 345 km) due to heavier weight from premium features
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.0
+    onboard_charger: 11kW 3-phase standard
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 100kW peak maintained for short duration, average ~80kW
+    preconditioning: false
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 95
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 85
+    - percent: 60
+      power_kw: 75
+    - percent: 70
+      power_kw: 60
+    - percent: 80
+      power_kw: 40
+    - percent: 90
+      power_kw: 25
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front  # Front-wheel drive (FWD)
+  front:
+    type: permanent_magnet
+    power_kw: 100
+    power_hp: 136
+    torque_nm: 260
+    supplier: null
+  combined:
+    power_kw: 100
+    power_hp: 136
+    torque_nm: 260
+
+performance:
+  acceleration_0_100_kph: 8.5
+  acceleration_0_60_mph: null
+  top_speed_kph: 150  # Electronically limited
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 17.0
+  wltp_wh_per_km: 170
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.5
+  mpge_combined: null
+  drag_coefficient: 0.32  # Higher than Corsa-e due to SUV shape
+
+weight:
+  curb_weight_kg: 1548
+  gross_weight_kg: 1950
+  weight_distribution_front_percent: 58  # FWD with front battery placement
+  
+towing:
+  max_towing_kg: 0  # No towing capability
+  max_tongue_weight_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: MacPherson strut with anti-roll bar
+  rear: Torsion beam with coil springs
+
+brakes:
+  front: Ventilated disc
+  rear: Drum (with electronic brake force distribution)
+  regenerative: true
+
+tires:
+  standard: 215/50 R18
+
+features:
+  infotainment:
+    - "Multimedia Navi Pro with 10.0\" color touchscreen"
+    - "Digital instrument cluster 12.0\" driver display (Ultimate exclusive)"
+    - "Apple CarPlay and Android Auto (wired)"
+    - "DAB+ digital radio"
+    - "Premium audio system with 8 speakers (Ultimate)"
+    - "MyOpel mobile app for remote control"
+    - "Wireless smartphone charging (Ultimate)"
+  
+  driver_assistance:
+    - "Forward Collision Alert with Automatic Emergency Braking"
+    - "Lane Keep Assist with Lane Departure Warning"
+    - "Traffic Sign Recognition"
+    - "Adaptive Cruise Control (Ultimate exclusive)"
+    - "Speed limiter and cruise control"
+    - "360-degree camera (Ultimate exclusive)"
+    - "Rear parking sensors and reversing camera"
+    - "Drowsiness alert"
+    - "Blind Spot Monitoring (Ultimate exclusive)"
+  
+  comfort_convenience:
+    - "Automatic climate control with dual-zone (Ultimate)"
+    - "Keyless entry and start (Ultimate standard)"
+    - "One-pedal driving with B-mode regenerative braking"
+    - "Heated front seats (Ultimate standard)"
+    - "Heated steering wheel (Ultimate standard)"
+    - "Leather seats (Ultimate standard)"
+    - "Electric windows front and rear"
+    - "Electric and heated mirrors"
+    - "Panoramic sunroof (Ultimate exclusive)"
+    - "Power tailgate (Ultimate exclusive)"
+  
+  exterior:
+    - "IntelliLux LED Matrix headlights (Ultimate standard)"
+    - "LED daytime running lights"
+    - "Opel Vizor design with distinctive front grille"
+    - "18\" bi-color alloy wheels (Ultimate standard)"
+    - "Two-tone black roof (optional)"
+    - "Chrome exterior accents (Ultimate)"
+  
+  interior:
+    - "Premium leather sport seats (Ultimate standard)"
+    - "Leather-wrapped steering wheel"
+    - "Ambient interior lighting (Ultimate)"
+    - "Opel Connect emergency call and vehicle diagnostics"
+    - "310L trunk (smallest in B-SUV segment due to battery)"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  source_urls:
+    - https://www.opel.com/modelle/mokka/mokka-e.html
+    - https://ev-database.org/car/1421/Opel-Mokka-e
+    - https://www.adac.de/
+  notes: |
+    The Opel Mokka-e Ultimate is the top trim level with premium features including IntelliLux 
+    LED Matrix headlights, 12\" digital cluster, leather seats, panoramic sunroof, and adaptive 
+    cruise control.
+    
+    Mechanically identical to Peugeot e-2008 GT but with Opel's distinctive "Vizor" design 
+    language and slightly lower pricing (typically €1,000-2,000 less).
+    
+    Ultimate trim adds significant premium features over base Edition, making it competitive 
+    with Peugeot e-2008 GT while maintaining Opel's value positioning.
