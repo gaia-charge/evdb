@@ -1,0 +1,268 @@
+# Kia Niro EV 64.8 kWh (2024) - Germany Market Availability
+
+id: kia-niro-ev-64kwh-2024-de
+variant_id: kia-niro-ev-64kwh-2024
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2022-11-01"
+delivery_time_weeks: 16
+
+# Pricing
+pricing:
+  base_price: 43990
+  price_including_vat: 43990
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Runway Red
+    code: RR
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Glacier White Pearl
+    code: GWP
+    type: pearl
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Aurora Black Pearl
+    code: ABP
+    type: pearl
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Mineral Blue
+    code: MB
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Cityscape Grey
+    code: CG
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Interstellar Grey
+    code: IG
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 17" Alloy Wheels
+    size_inches: 17
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 18" Alloy Wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 750
+      currency: EUR
+  - name: 19" Diamond-Cut Alloy Wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 1100
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Cloth
+    material: cloth
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Synthetic Leather
+    material: synthetic_leather
+    color: black
+    price_add:
+      amount: 1300
+      currency: EUR
+  - name: Two-tone Synthetic Leather (Black/Grey)
+    material: synthetic_leather
+    color: two-tone
+    price_add:
+      amount: 1500
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (Innovation Premium)"
+    amount:
+      amount: 4500
+      currency: EUR
+    conditions: ["Price under €65,000", "BEV", "First registration"]
+    expires_at: "2024-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV under €70k)"
+    description: "Reduced taxation for electric company cars under €70,000 gross list price"
+    calculation: "Monthly taxable benefit = 0.25% × €43,990 = €110.00/month (€1,320/year)"
+    vs_ice: "Saves €3,939/year vs 1.0% ICE rate (€5,259 annual tax on €43,990 ICE equivalent)"
+    conditions: ["Price under €70,000 gross list price"]
+
+# Options
+popular_packages:
+  - name: Vision Package
+    price:
+      amount: 2000
+      currency: EUR
+    features:
+      - Highway Driving Assist 2
+      - Blind-Spot View Monitor
+      - Parking Collision-Avoidance Assist
+      - Surround View Monitor (360° camera)
+      - Head-Up Display
+      - LED Star Map headlights
+  
+  - name: Premium Package
+    price:
+      amount: 1800
+      currency: EUR
+    features:
+      - Panoramic sunroof
+      - Bose Premium Sound System (8 speakers)
+      - Wireless phone charger
+      - Ambient lighting (64 colors)
+      - Relaxation seat with leg rest (passenger)
+
+  - name: Winter Comfort Package
+    price:
+      amount: 750
+      currency: EUR
+    features:
+      - Heated front and rear seats
+      - Heated steering wheel
+      - Heat pump (essential for German winters)
+      - Heated windshield washer nozzles
+
+popular_configurations:
+  - name: "Base (Standard Equipment)"
+    total_price:
+      amount: 43990
+      currency: EUR
+    description: "Entry-level with essential features"
+    includes:
+      - "Dual 10.25\" panoramic displays"
+      - "LED headlights with Star Map signature"
+      - "Wireless Apple CarPlay & Android Auto"
+      - "Smart Cruise Control with Stop & Go"
+      - "Lane Following Assist"
+      - "Forward Collision-Avoidance Assist"
+      - "11kW AC charging standard"
+      - "V2L capability (3.6kW)"
+      - "Flush door handles"
+
+  - name: "Popular (Base + Vision + Winter Comfort + 18\" wheels)"
+    total_price:
+      amount: 48140
+      currency: EUR
+    description: "Most popular configuration in Germany"
+    includes:
+      - "All Base features"
+      - "Vision Package (ADAS + HUD + 360° camera)"
+      - "Winter Comfort Package (heat pump essential)"
+      - "18\" alloy wheels"
+      - "Metallic paint"
+
+  - name: "Premium (Popular + Premium Package + leather + 19\" wheels)"
+    total_price:
+      amount: 52790
+      currency: EUR
+    description: "Top specification for private buyers"
+    includes:
+      - "All Popular features"
+      - "Premium Package (sunroof + Bose audio)"
+      - "Two-tone synthetic leather interior"
+      - "19\" diamond-cut alloy wheels"
+
+# Cost Analysis
+cost_of_ownership:
+  charging:
+    home_per_100km:
+      amount: 5.92
+      currency: EUR
+      rate_per_kwh: 0.32
+      consumption_kwh: 18.5
+    public_dc_per_100km:
+      amount: 9.98
+      currency: EUR
+      rate_per_kwh: 0.53
+      consumption_kwh: 18.8
+  
+  company_car:
+    monthly_benefit_025_percent:
+      amount: 110.00
+      currency: EUR
+      calculation: "0.25% × €43,990 list price"
+    annual_tax_savings_vs_ice:
+      amount: 3939
+      currency: EUR
+      description: "Saves €3,939/year vs 1.0% ICE rate"
+
+# Comparison to Competitors
+competitive_analysis:
+  direct_competitors:
+    - model: "Hyundai Kona Electric Long Range"
+      price: 42990
+      range_km: 514
+      notes: "€1,000 cheaper, 54km more range, sister model with similar platform"
+    
+    - model: "Volkswagen ID.4 Pro"
+      price: 46000
+      range_km: 521
+      notes: "€2,010 more expensive, 61km more range, larger SUV"
+    
+    - model: "Toyota bZ4X FWD"
+      price: 47000
+      range_km: 516
+      notes: "€3,010 more expensive, 56km more range, 10-year battery warranty"
+    
+    - model: "Nissan Ariya 63 kWh FWD"
+      price: 50000
+      range_km: 450
+      notes: "€6,010 more expensive, 10km less range, but more premium interior"
+
+  value_proposition: >
+    Kia Niro EV offers excellent value as a practical family electric SUV at €43,990.
+    With 460km WLTP range, comprehensive safety features, and Kia's industry-leading
+    7-year/150,000km warranty, it's positioned as a more traditional alternative to the
+    sportier EV6. Popular choice for buyers seeking proven EV technology in conventional
+    SUV packaging. Company car drivers benefit from 0.25% tax rate (saves €3,939/year
+    vs ICE). Slightly more expensive than sister model Kona Electric but offers distinctive
+    Kia design and features. Strong residual values expected based on Kia's reputation.
+    Ideal for families prioritizing practicality over cutting-edge performance.
+
+# Notes
+notes: |
+  Kia Niro EV is Kia's mainstream electric SUV, positioned between the smaller EV3 and
+  sportier EV6. Second-generation model (2022+) offers significantly improved range,
+  design, and technology compared to first generation. 400V architecture (not 800V like
+  EV6) means slower DC fast charging (85kW max vs 240kW on EV6). Heat pump available
+  as option (essential for German winters). V2L capability allows using vehicle as
+  power source (3.6kW). Distinctive design with flush door handles and Star Map LED
+  signature. Popular choice for families seeking practical electric SUV without premium
+  price tag. More conventional styling than EV6 appeals to traditional buyers. Strong
+  residual values expected (~54% after 3 years). Popular in company car segment due to
+  0.25% tax rate. Longer delivery times than EV6 due to high demand.
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.kia.com/de/modelle/niro-ev/
+  created_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  notes: Prices and incentives as of February 2026, based on Kia Germany official specifications
