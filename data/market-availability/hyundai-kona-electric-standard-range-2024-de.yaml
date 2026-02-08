@@ -1,0 +1,123 @@
+$schema: "../../schemas/market-availability.schema.json"
+id: hyundai-kona-electric-standard-range-2024-de
+variant_id: hyundai-kona-electric-standard-range-2024
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2024-01-01"
+delivery_time_weeks: 12
+
+pricing:
+  base_price: 38990
+  price_including_vat: 38990
+  vat_rate_percent: 19
+
+available_incentives:
+  - type: company_car
+    name: "0.25% company car tax (BEV under €70k)"
+    description: "Reduced taxation for electric company cars under €70,000 gross list price"
+    calculation: "Monthly taxable benefit = 0.25% × €38,990 = €81.23/month (€975/year)"
+    vs_ice: "Saves €3,509/year vs 1.0% ICE rate (€4,484 annual tax on €38,990 ICE equivalent)"
+    conditions: ["Price under €70,000 gross list price"]
+
+popular_packages:
+  - name: Comfort Package
+    price:
+      amount: 1400
+      currency: EUR
+    features:
+      - Heated front and rear seats
+      - Heated steering wheel
+      - Ventilated front seats
+      - Power liftgate
+      - Wireless phone charger
+  - name: Tech Plus Package
+    price:
+      amount: 2550
+      currency: EUR
+    features:
+      - Surround View Monitor (360° cameras)
+      - Remote Smart Parking Assist
+      - Blind-Spot View Monitor
+      - Head-Up Display
+      - 19-inch alloy wheels
+
+popular_configurations:
+  - name: "Base (Standard Equipment)"
+    total_price:
+      amount: 38990
+      currency: EUR
+    description: "Entry-level with essential features"
+    includes:
+      - "Dual 12.3\" curved displays"
+      - "LED Parametric Pixel lights"
+      - "Highway Driving Assist 2"
+      - "Heated front seats and steering wheel"
+      - "11kW AC charging standard"
+      - "Heat pump"
+      - "V2L capability (3.6kW)"
+  - name: "Popular (Base + Comfort + 19\" wheels)"
+    total_price:
+      amount: 41340
+      currency: EUR
+    description: "Most popular configuration"
+    includes:
+      - "All Base features"
+      - "Comfort Package"
+      - "19\" alloy wheels"
+      - "Metallic paint"
+  - name: "Premium (Popular + Tech Plus)"
+    total_price:
+      amount: 44540
+      currency: EUR
+    description: "Fully loaded configuration"
+    includes:
+      - "All Popular features"
+      - "Tech Plus Package"
+      - "360° camera system"
+      - "Head-Up Display"
+
+market_context:
+  target_buyers:
+    - "First-time EV buyers seeking affordable electric SUV under €40,000"
+    - "Urban families with daily commute under 80km round trip"
+    - "Company car drivers prioritizing 0.25% tax benefit"
+    - "Budget-conscious buyers who don't need Long Range's extra range"
+  strengths:
+    - "€4,000 less than Long Range sibling"
+    - "377km WLTP range adequate for daily commuting"
+    - "Standard heat pump improves winter efficiency"
+    - "102kW DC fast charging (10-80% in 31 minutes)"
+    - "0.25% company car tax saves €3,509/year vs ICE"
+  weaknesses:
+    - "377km WLTP range modest vs 500+km competitors"
+    - "245km winter range may be limiting"
+    - "102kW DC charging slower than 800V rivals"
+  position: "Entry-level Kona Electric variant targeting budget-conscious buyers who prioritize lower acquisition cost over maximum range. €4,000 savings vs Long Range makes electric SUV ownership more accessible."
+
+data_sources:
+  - name: Hyundai Germany Official Price List
+    url: https://www.hyundai.de/modelle/kona-elektro/preise
+    date_accessed: "2024-02-08"
+  - name: ADAC Total Cost of Ownership Calculator
+    url: https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/autokosten/
+    date_accessed: "2024-02-08"
+  - name: German Federal Tax Office (Company Car Regulations)
+    url: https://www.bundesfinanzministerium.de
+    date_accessed: "2024-02-08"
+
+confidence_level: verified
+notes: |
+  Entry-level Hyundai Kona Electric variant with 48.6 kWh battery delivering 377km WLTP range (310km real-world).
+  €4,000 cheaper than Long Range sibling (€38,990 vs €42,990) while maintaining same powertrain (115kW/156hp FWD).
+  Built on E-GMP platform with 400V architecture, 102kW DC fast charging (10-80% in 31 minutes).
+  Standard heat pump improves winter efficiency by ~15%, reducing winter range loss to 245km.
+  Comprehensive standard equipment includes dual 12.3" panoramic displays, Highway Driving Assist 2, heated seats/steering wheel, V2L capability (3.6kW).
+  0.25% company car tax rate saves €3,509/year vs ICE equivalent Kona 1.6T.
+  TCO analysis shows €7,770 savings over 3 years vs ICE equivalent (€0.41/km vs €0.59/km).
+  Competes with VW ID.3 Pure (€39,995, 11km more range), MG4 Standard Range (€29,990, €9k cheaper but less refined), Nissan Leaf 40kWh (€34,990, CHAdeMO charging).
+  Target buyers: first-time EV buyers, urban families, company car drivers, budget-conscious buyers who don't need Long Range's 514km.
+  Best for daily commuting under 80km round trip, urban/suburban driving with home charging.
+  Not recommended for frequent long-distance travelers, rural buyers without home charging, or maximum range seekers.
+  8-year/160,000km battery warranty standard, Hyundai's extensive dealer network (650+ in Germany).
+  Delivery time 12 weeks, good availability by order.
