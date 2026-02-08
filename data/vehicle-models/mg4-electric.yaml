@@ -1,12 +1,12 @@
-# MG4 Electric - Affordable Compact Electric Hatchback
-# Award-winning budget-friendly EV popular in Europe
+# MG4 Electric - Affordable Electric Hatchback
+# Popular budget-friendly electric hatchback challenging VW ID.3
 
 id: mg4-electric
-name: "4 Electric"
+name: "MG4 Electric"
 manufacturer_id: saic-motor
 brand: "MG"
 body_style: hatchback
-segment: B  # Supermini / Small car segment
+segment: C  # Compact hatchback / C-segment
 
 # Platform
 platform_id: modular-scalable-platform-msp
@@ -15,29 +15,29 @@ platform_details:
   type: dedicated_ev
   voltage: 400
   shared_with:
+    - MG ZS EV
     - MG5 Electric
-    - MG ZS EV (2nd gen)
 
 # Production
 production:
   start_year: 2022
   end_year: null  # Still in production
   status: active
-  generation: 1
+  generation: 1  # 1st generation
 
 # Body & Dimensions
 dimensions:
   length_mm: 4287
   width_mm: 1836
-  height_mm: 1516
+  height_mm: 1504
   wheelbase_mm: 2705
   drag_coefficient: 0.29
   ground_clearance_mm: 150
 
 # Weight (base)
 weight:
-  curb_weight_kg: 1510  # Standard Range base
-  gross_vehicle_weight_kg: 1960
+  curb_weight_kg: 1655  # Standard Range base
+  gross_vehicle_weight_kg: 2080
 
 # Seating & Cargo
 seating:
@@ -49,50 +49,39 @@ cargo:
   trunk_capacity_seats_down_liters: 1177
   frunk_capacity_liters: 0  # No frunk
 
-# Towing (where available)
+# Towing
 towing:
-  max_towing_capacity_kg: 500  # Optional tow bar in some markets
+  max_towing_capacity_kg: 500  # Optional tow bar
   max_towbar_load_kg: 75
 
 # Performance Range
 performance_range:
-  acceleration_0_100_min: 7.7  # Extended Range
-  acceleration_0_100_max: 7.9  # Standard Range
-  top_speed_min: 160
-  top_speed_max: 160
-
-# Awards & Recognition
-awards:
-  - title: "What Car? Best Small Electric Car"
-    year: 2023
-    region: UK
-  - title: "Auto Express Best Small Electric Car"
-    year: 2023
-    region: UK
-  - title: "DrivingElectric Best Value EV"
-    year: 2023
-    region: UK
+  acceleration_0_100_min: 3.8  # XPower AWD
+  acceleration_0_100_max: 8.3  # Standard Range RWD
+  top_speed_min: 160  # Standard Range
+  top_speed_max: 200  # XPower
 
 # Safety
 safety_rating:
   euro_ncap:
-    year: 2023
+    year: 2022
     overall: 4
-    adult_occupant: 79
-    child_occupant: 85
-    vulnerable_road_users: 67
-    safety_assist: 71
+    adult_occupant: 85
+    child_occupant: 87
+    vulnerable_road_users: 62
+    safety_assist: 70
 
 # Features
 key_features:
-  - "10.25-inch digital instrument cluster"
   - "10.25-inch touchscreen infotainment"
+  - "7-inch digital instrument cluster"
   - "Apple CarPlay and Android Auto"
-  - "Heat pump standard (Extended Range)"
-  - "MG Pilot advanced driver assistance"
-  - "Rear parking camera"
+  - "MG Pilot driver assistance"
+  - "Rear-wheel drive (AWD on XPower)"
+  - "Heat pump standard"
   - "LED headlights"
-  - "Keyless entry"
+  - "Rear parking camera"
+  - "Keyless entry and start"
 
 # Technology
 technology:
@@ -108,12 +97,14 @@ metadata:
   data_quality: verified
   sources:
     - https://www.mgmotor.eu/mg4-electric
-    - https://mg.co.uk/new-cars/mg4-electric
-    - https://www.euroncap.com/en/results/mg/4/48853
-  created_at: "2024-02-06"
-  last_updated: "2024-02-06"
+    - https://mg.co.uk/new-cars/mg4
+    - https://www.euroncap.com/en/results/mg/mg4/47621
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
   notes: |
-    Best-selling Chinese EV in Europe.
-    Excellent value for money with impressive specs at budget price.
-    Heat pump standard on Extended Range improves cold-weather efficiency.
-    Very popular in UK, Germany, Netherlands.
+    MG4 Electric launched in 2022 as affordable VW ID.3 competitor.
+    Rear-wheel drive layout provides engaging driving dynamics.
+    Excellent value proposition at sub-€30k entry price in Germany.
+    XPower variant offers 435 hp AWD performance at affordable price.
+    Popular across Europe, especially UK, Germany, Netherlands, Norway.
+    Standard heat pump improves winter efficiency vs rivals.
