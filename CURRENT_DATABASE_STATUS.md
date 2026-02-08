@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 3:15 PM  
-**Total Vehicles:** 141 variants across 72 models from 25 manufacturers  
-**Germany Market Coverage:** 134/141 variants (95.0%)
+**Last Updated:** 2026-02-08 3:45 PM  
+**Total Vehicles:** 142 variants across 72 models from 25 manufacturers  
+**Germany Market Coverage:** 135/142 variants (95.1%)
 
 ---
 
@@ -11,7 +11,7 @@
 | Manufacturer | Models | Variants | Status |
 |---|---|---|---|
 | Renault Group | 3 | 8 | ✅ Good |
-| BMW Group | 7 | 10 | ✅ Good |
+| BMW Group | 7 | 11 | ✅ Good |
 | Hyundai Motor Group | 5 | 9 | ✅ Good |
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 3 | 8 | ✅ Good |
@@ -70,6 +70,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **BMW i7 M70 xDrive**: Added 1 NEW VARIANT (Performance flagship 485kW/660hp dual-motor AWD, 101.7kWh, 3.7s 0-100 km/h, 560km WLTP €170,000) + Germany market data - BMW's most powerful electric flagship with M-tuned dual motors delivering supercar acceleration (0-100 in 3.7 seconds) while maintaining luxury sedan comfort - Combined 660 hp and massive 1,100 Nm torque from front (258hp) + rear (489hp) permanent magnet motors - M-tuned xDrive AWD with torque vectoring and rear-biased distribution, Executive Drive Pro air suspension, M Sport brakes - Standard equipment includes M Sport Package Pro, Bowers & Wilkins Diamond 36-speaker audio (normally €6,200 option), all flagship technology features - €35,000 premium over eDrive50 justified by M Performance hardware and additional standard equipment - Competes with Mercedes-AMG EQS 53 4MATIC+ (€148,000, 658hp) and Porsche Taycan Turbo (€161,000, 680hp) with compelling value proposition - Subject to 0.5% company car tax rate (vehicles over €70,000) - BMW Group now 11 variants (from 10, +10%) - Database now 142 variants across 72 models from 25 manufacturers - Germany coverage now 135/142 = 95.1% - *Added Feb 8, 2026 15:45*
 - ✅ **Tesla Model S**: Added 1 NEW MODEL + 2 variants (Dual Motor AWD 100kWh 493kW/670hp 634km €99,990, Plaid tri-motor 100kWh 750kW/1,020hp 600km €119,990) + Germany market data for both - Tesla's flagship luxury sedan (F-segment) with 2021 Refresh design, horizontal 17" touchscreen, yoke steering wheel option, air suspension standard - Model S Dual Motor features impressive 634km WLTP range and 3.2s 0-100 km/h - Model S Plaid is one of fastest production sedans in world with 2.1s 0-100 km/h, tri-motor AWD with torque vectoring, carbon ceramic brakes standard, Track Mode with drift mode, three radiators for thermal management - Both variants include premium features: 22-speaker audio (960W), glass roof, tri-zone climate, 8" rear touchscreen, heated/ventilated seats - Optional Enhanced Autopilot (€3,800) and Full Self-Driving (€7,500) - Subject to 0.5% company car tax (over €70k) - Competes with Porsche Taycan (€101,000+), Mercedes EQS (€115,900), BMW i7 (€135,000) - excellent value for flagship luxury EV - Tesla now 3 models/8 variants (from 2/6, +33%) - Database now 141 variants across 72 models from 25 manufacturers - Germany coverage now 134/141 = 95.0% - *Added Feb 8, 2026 15:15*
 - ✅ **Subaru Solterra**: Added 1 NEW MANUFACTURER (Subaru Corporation, 25th manufacturer) + 1 NEW MODEL + 1 variant (AWD 160kW/218hp 71.4kWh 465km WLTP €57,490) + Germany market data - Subaru's first pure electric vehicle, mechanical twin to Toyota bZ4X but with Subaru-specific tuning and enhanced features - Unique StarDrive panoramic roof with solar coating (exclusive to Solterra), Symmetrical AWD with X-MODE (Snow/Dirt, Deep Snow/Mud modes), EyeSight Driver Assist Technology, Harman Kardon premium audio (8 speakers), heated seats/steering wheel standard - Priced €5,490 higher than bZ4X (€57,490 vs €52,000) but includes significantly more standard equipment - AWD-only configuration matches Subaru brand identity (no FWD variant) - 8-year/160,000km battery warranty (less generous than Toyota's 10yr unlimited) - Main limitation: only 6.6kW AC charging (single-phase) - 150kW DC fast charging standard, heat pump included - Competes with Toyota bZ4X AWD (€52,000), VW ID.4 AWD (€51,000), Hyundai Ioniq 5 AWD (€51,000) - Excellent build quality, 5-star Euro NCAP safety, all-weather capability - Subaru NEW manufacturer entry - Database now 139 variants across 71 models from 25 manufacturers - Germany coverage now 132/139 = 95.0% - *Added Feb 8, 2026 15:00*
 - ✅ **Volvo EX90**: Added 1 NEW MODEL + 1 variant (Twin Motor Performance 300kW/408hp AWD 111kWh 600km WLTP €86,500) + Germany market data - Volvo's flagship 7-seat electric SUV built on SPA2 platform with groundbreaking LiDAR technology (Luminar Iris) for future Level 3 autonomous driving - One of first premium EVs with full bi-directional charging capability (V2L 3.7kW, V2H, V2G) - can power average home for up to one week - Air suspension standard, 250kW DC fast charging (10-80% in 30 min), panoramic glass roof with electrochromic dimming - Interior features extensive sustainable materials (Nordico textile, FSC-certified wood, recycled plastics), Bowers & Wilkins 25-speaker audio system (2460W), 14.5" touchscreen with Google built-in - Competes with Mercedes EQS SUV (€115,900), BMW iX (€99,900), Audi Q8 e-tron (€90,000) - excellent value for flagship SUV - Manufactured in Charleston, SC and Torslanda, Sweden - replaces XC90 as Volvo's flagship - Volvo now 4 models/6 variants (from 3/5, +33% variants) - Database now 138 variants across 70 models from 24 manufacturers - Germany coverage now 131/138 = 94.9% - *Added Feb 8, 2026 14:45*
