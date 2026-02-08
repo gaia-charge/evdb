@@ -1,0 +1,176 @@
+# Volkswagen ID.7 Pro S (2024)
+id: volkswagen-id7-pro-s-2024
+name: Pro S
+model_id: volkswagen-id7
+model_year: 2024
+variant_code: ID7-PRO-S
+
+battery:
+  usable_kwh: 86.0
+  total_kwh: 91.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    86 kWh usable battery (91 kWh gross). Largest battery in VW's MEB lineup.
+    400V architecture with NCM chemistry for maximum range.
+
+range:
+  wltp_km: 700
+  wltp_city_km: 915
+  wltp_highway_km: 585
+  epa_km: null
+  real_world_km: 600
+  real_world_source: ADAC EcoTest
+  notes: |
+    Outstanding WLTP range of 700 km - longest of any VW electric vehicle.
+    Real-world range around 600 km in mixed conditions. Exceptional
+    aerodynamics (Cd 0.23) enables class-leading efficiency.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 200
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 200
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 185
+    - soc_percent: 40
+      power_kw: 165
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 40
+  time_0_to_100_min: 43
+  time_10_to_80_min: 30
+  time_20_to_80_min: 26
+  charging_speed_kmh: 1200
+  notes: |
+    Fast DC charging up to 200 kW peak. 10-80% in 30 minutes despite larger
+    battery. 11 kW AC charging standard (optional 22 kW upgrade available).
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+  notes: "Bidirectional charging not supported in 2024 model"
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      power_kw: 210
+      power_hp: 286
+      torque_nm: 545
+  total_power_kw: 210
+  total_power_hp: 286
+  total_torque_nm: 545
+  acceleration_0_100_sec: 6.6
+  top_speed_kmh: 180
+  notes: |
+    Single permanent magnet motor at rear axle. Same motor as Pro variant.
+    0-100 km/h in 6.6 seconds (slightly slower due to extra battery weight).
+
+weight:
+  curb_weight_kg: 2189
+  gross_vehicle_weight_kg: 2746
+  payload_kg: 557
+  distribution_front_percent: 49
+  distribution_rear_percent: 51
+  notes: "56 kg heavier than Pro variant due to larger battery"
+
+efficiency:
+  wltp_kwh_per_100km: 14.8
+  wltp_city_kwh_per_100km: 12.9
+  wltp_highway_kwh_per_100km: 17.1
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 16.4
+  efficiency_rating: A+
+  notes: |
+    Exceptionally efficient: 14.8 kWh/100km WLTP despite larger battery.
+    Only 0.2 kWh/100km more than Pro variant. Best-in-class aerodynamics
+    (Cd 0.23) enables 700 km range with excellent highway efficiency.
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "Travel Assist with Swarm Data"
+  notes: |
+    - Heat pump standard for improved cold-weather efficiency
+    - DCC adaptive chassis control (adaptive dampers)
+    - Travel Assist Level 2+ ADAS with lane keeping and predictive ACC
+    - ID. Light ambient lighting strip for enhanced visual feedback
+    - One-pedal driving with adjustable regenerative braking
+    - AR head-up display available
+    - Climate comfort seats with massage function
+    - IQ.DRIVE package with matrix LED headlights
+
+optional_equipment:
+  - name: IQ.DRIVE Max Package
+    code: IQDMAX
+    category: safety
+    included_in_base: false
+    notes: "Full ADAS suite with lane change assist, park assist, and matrix LED"
+  - name: AR Head-Up Display
+    code: ARHUD
+    category: infotainment
+    included_in_base: false
+    notes: "Augmented reality head-up display with navigation arrows"
+  - name: ergoActive Climate Seats
+    code: ERGOACT
+    category: comfort
+    included_in_base: false
+    notes: "Front seats with massage, ventilation, and climate control"
+  - name: 22kW AC Charging
+    code: AC22
+    category: charging
+    included_in_base: false
+    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
+  - name: Panoramic Glass Roof
+    code: PGR
+    category: comfort
+    included_in_base: false
+    notes: "Large panoramic glass roof with electric sunshade"
+
+notes: |
+  The ID.7 Pro S is the long-range flagship of VW's electric sedan lineup.
+  With 86 kWh battery (largest in MEB platform) and exceptional aerodynamics
+  (Cd 0.23), it achieves 700 km WLTP range - the longest of any VW electric
+  vehicle and competitive with Tesla Model S. The Pro S features 286 hp RWD
+  powertrain, 200 kW DC fast charging, premium interior with 15" touchscreen,
+  optional AR head-up display, and climate comfort seats. Built on MEB platform
+  at VW's Emden factory. Perfect for business users and long-distance drivers
+  who prioritize maximum range without compromising efficiency.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.volkswagen.com/en/models/id-7.html
+    - https://www.volkswagen-newsroom.com/en/press-releases/id7-launch-2023
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
