@@ -1,0 +1,233 @@
+# MG ZS EV Long Range (72.6kWh) - 2024 Model Year
+# Affordable compact electric SUV with impressive range
+
+id: mg-zs-ev-long-range-2024
+model_id: mg-zs-ev
+name: MG ZS EV Long Range
+model_year: 2024
+trim_level: Long Range
+
+# Version & Updates
+version_info:
+  major_version: 2
+  minor_version: 1
+  release_date: 2023-09-01
+  changes_from_previous: "Second generation with larger 72.6kWh battery, updated design, improved technology"
+
+# Battery System
+battery:
+  chemistry: NMC  # Nickel Manganese Cobalt
+  supplier: CATL
+  usable_kwh: 68.3
+  total_kwh: 72.6
+  cells: 216
+  modules: 27
+  voltage_nominal: 403
+  voltage_max: 460
+  warranty_years: 7
+  warranty_km: 175000
+  warranty_capacity_percent: 70
+  thermal_management: liquid_cooling
+  
+# Range (WLTP)
+range:
+  wltp_km: 440
+  wltp_city_km: 580
+  wltp_highway_km: 360
+  epa_km: null  # Not sold in USA
+  real_world_km: 380
+  real_world_highway_km: 320
+  real_world_city_km: 460
+
+# Charging
+charging:
+  connectors:
+    - type2
+    - ccs2
+  ac:
+    max_power_kw: 11.0
+    phases: 3
+    onboard_charger_kw: 11.0
+    time_0_100_hours: 7.0
+  dc:
+    max_power_kw: 92
+    peak_power_kw: 92
+    time_10_80_min: 42
+    time_20_80_min: 35
+    preconditioning_available: false
+  bidirectional:
+    capabilities: []
+    max_power_kw: null
+  
+charging_curve:
+  - soc_percent: 10
+    power_kw: 90
+    current_a: 220
+  - soc_percent: 20
+    power_kw: 92
+    current_a: 225
+  - soc_percent: 30
+    power_kw: 92
+    current_a: 225
+  - soc_percent: 40
+    power_kw: 90
+    current_a: 220
+  - soc_percent: 50
+    power_kw: 85
+    current_a: 210
+  - soc_percent: 60
+    power_kw: 75
+    current_a: 185
+  - soc_percent: 70
+    power_kw: 60
+    current_a: 148
+  - soc_percent: 80
+    power_kw: 45
+    current_a: 110
+  - soc_percent: 90
+    power_kw: 25
+    current_a: 60
+
+# Motor & Performance
+motor:
+  type: permanent_magnet
+  count: 1
+  drive_type: FWD
+  power_kw: 115
+  power_hp: 156
+  torque_nm: 280
+  max_rpm: 14000
+
+performance:
+  acceleration_0_100_sec: 8.2
+  acceleration_0_60_sec: 7.8
+  top_speed_kph: 175
+  top_speed_limited: true
+
+# Weight
+weight:
+  curb_kg: 1620
+  gross_kg: 2070
+  weight_distribution_front_percent: 58
+  weight_distribution_rear_percent: 42
+
+# Wheels & Tires
+wheels_tires:
+  standard:
+    front_size: "215/55 R17"
+    rear_size: "215/55 R17"
+    wheel_size_inches: 17
+  optional:
+    - front_size: "215/50 R18"
+      rear_size: "215/50 R18"
+      wheel_size_inches: 18
+      notes: "Diamond-cut alloy wheels"
+
+# Brakes
+brakes:
+  front: "Ventilated discs"
+  rear: "Solid discs"
+  regenerative_braking: true
+  one_pedal_driving: true
+  regen_levels: 3
+
+# Suspension
+suspension:
+  front: "MacPherson strut"
+  rear: "Multi-link independent"
+
+# Technology & ADAS
+adas:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  autonomous_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_monitoring: false
+  level: 2  # SAE Level 2
+
+# Connectivity
+connectivity:
+  5g: false
+  4g: true
+  wifi_hotspot: false
+  bluetooth: true
+  smartphone_integration:
+    - apple_carplay
+    - android_auto
+  remote_services: true
+  ota_updates: true
+
+# Interior
+interior:
+  seating_material: fabric  # Leather optional
+  heated_seats_front: true
+  heated_seats_rear: false
+  heated_steering_wheel: true
+  ventilated_seats: false
+  power_adjustable_driver_seat: true
+  panoramic_roof: true  # Standard on Long Range
+  ambient_lighting: false
+
+# Climate
+climate:
+  heat_pump: true  # Standard from 2023+ models
+  heated_windshield: false
+  remote_climate_control: true
+
+# Audio
+audio:
+  speakers: 6
+  premium_audio: false
+
+# Pricing (Reference - DE market)
+pricing_reference:
+  base_price_eur: 36990
+  market: DE
+  year: 2024
+
+# Availability
+availability:
+  markets:
+    - DE
+    - GB
+    - FR
+    - NL
+    - ES
+    - IT
+    - NO
+    - SE
+    - PL
+    - AT
+    - BE
+  production_plant: "SAIC Lingang Plant, Shanghai, China"
+
+# Competitors
+competitors:
+  - Nissan Ariya 63 kWh FWD
+  - Hyundai Kona Electric
+  - Opel Mokka-e
+  - Peugeot e-2008
+  - Volkswagen ID.3 Pro
+  - Renault Megane E-Tech
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.eu/mg-zs-ev/specs
+    - https://mg.co.uk/new-cars/mg-zs-ev/specifications
+    - https://www.car.info/en-se/mg/zs-ev/
+    - https://insideevs.com/reviews/599256/mg-zs-ev-2023-test/
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
+  notes: |
+    Second-generation MG ZS EV with significantly larger battery (72.6 kWh vs 51 kWh gen 1).
+    Excellent value proposition - 440km range at €37k is very competitive.
+    Heat pump standard improves cold weather efficiency.
+    DC fast charging limited to 92kW, slower than competitors but adequate for daily use.
+    Front-wheel drive provides good traction and efficiency.
+    Practical compact SUV with higher ground clearance than MG4.
+    7-year/175,000km battery warranty among best in class.
+    Popular family car in European markets.
