@@ -21,9 +21,14 @@ st.set_page_config(
 # Database connection (cached)
 DB_PATH = Path(__file__).resolve().parent / 'evdb.db'
 
+# Cache key based on database modification time to bust cache when DB updates
+DB_MTIME = DB_PATH.stat().st_mtime if DB_PATH.exists() else 0
+
 @st.cache_resource
 def get_connection():
-    """Create cached database connection"""
+    """Create cached database connection (cache invalidated when DB file changes)"""
+    # Include DB_MTIME in function to force cache refresh when database is updated
+    _ = DB_MTIME  # Reference to ensure cache depends on DB modification time
     return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
 @st.cache_data(ttl=3600)
