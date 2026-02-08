@@ -1,7 +1,7 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 05:00 AM  
-**Total Vehicles:** 83 variants across 49 models from 19 manufacturers
+**Last Updated:** 2026-02-08 05:15 AM  
+**Total Vehicles:** 85 variants across 50 models from 19 manufacturers
 
 ---
 
@@ -14,7 +14,7 @@
 | Hyundai Motor Group | 4 | 7 | ✅ Good |
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 2 | 6 | ✅ Good |
-| Stellantis | 6 | 7 | 🟡 Partial |
+| Stellantis | 7 | 9 | 🟡 Partial |
 | Volkswagen Group | 5 | 12 | ✅ Good |
 | Audi | 4 | 6 | ✅ Good |
 | Mercedes-Benz | 5 | 10 | ✅ Good |
@@ -28,7 +28,7 @@
 | Smart | 1 | 1 | 🟢 Single |
 | Volvo | 1 | 1 | 🟢 Single |
 
-**Total:** 19 manufacturers, 49 models, 83 variants
+**Total:** 19 manufacturers, 50 models, 85 variants
 
 ---
 
@@ -62,6 +62,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Peugeot e-2008**: 2 variants (Allure 406km, GT 406km) - *Added Feb 8, 2026 05:15*
 - ✅ **Audi Q6 e-tron**: 2 variants (RWD 641km, quattro 625km) - *Added Feb 8, 2026 05:00*
 - ✅ **BMW i7**: 1 variant (eDrive50 625km) - *Added Feb 8, 2026 04:55*
 - ✅ **Volkswagen ID.5**: 1 variant (Pro RWD 520km) - *Added Feb 8, 2026 04:55*
@@ -94,7 +95,8 @@
 - **Feb 8, 2026 (04:30):** 78 variants (+2 Opel Astra Electric: Edition, GS)
 - **Feb 8, 2026 (04:55):** 81 variants (+3 BMW i7 eDrive50, VW ID.5 Pro, Nissan Ariya 63kWh FWD)
 - **Feb 8, 2026 (05:00):** 83 variants (+2 Audi Q6 e-tron: RWD, quattro)
-- **Growth:** +32 variants since Feb 7 (62.7% increase)
+- **Feb 8, 2026 (05:15):** 85 variants (+2 Peugeot e-2008: Allure, GT)
+- **Growth:** +34 variants since Feb 7 (66.7% increase)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
