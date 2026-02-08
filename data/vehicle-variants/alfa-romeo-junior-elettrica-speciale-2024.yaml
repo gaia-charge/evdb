@@ -1,0 +1,194 @@
+id: alfa-romeo-junior-elettrica-speciale-2024
+name: Speciale
+model_id: alfa-romeo-junior-elettrica
+model_year: 2024
+production_years:
+  start: 2024
+  end: null
+
+trim_level: base
+market_position: base
+
+# Battery Specifications
+battery:
+  usable_kwh: 54.0
+  total_kwh: 54.0
+  chemistry: NMC
+  nominal_voltage_v: 400
+  thermal_management: liquid-cooled
+  warranty_years: 8
+  warranty_km: 160000
+
+# Range
+range:
+  wltp_km: 410
+  wltp_source: manufacturer
+  
+  real_world_km: 340
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-20°C"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 5.5
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 100
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 26
+
+  bidirectional:
+    v2l: false
+    v2g: false
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  
+  real_world:
+    combined_kwh_per_100km: 18.5
+    highway_kwh_per_100km: 21.0
+    city_kwh_per_100km: 16.0
+
+# Drivetrain
+drivetrain:
+  configuration: fwd
+  motor_type: permanent_magnet
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 115
+      power_hp: 156
+      torque_nm: 260
+    rear: null
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 9.0
+  top_speed_kmh: 150
+  top_speed_limited: true
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4173
+  width_mm: 1781
+  width_with_mirrors_mm: 2027
+  height_mm: 1534
+  wheelbase_mm: 2560
+  ground_clearance_mm: 180
+  drag_coefficient: 0.33
+  frontal_area_m2: 2.51
+
+weight:
+  curb_weight_kg: 1590
+  gvwr_kg: 2075
+  max_payload_kg: 485
+  towing_capacity_kg: 0
+
+cargo:
+  trunk_volume_l: 400
+  trunk_max_volume_l: 1265
+  frunk_volume_l: 0
+
+# Standard Equipment
+equipment:
+  standard:
+    exterior:
+      - "LED Matrix headlights"
+      - "18\" diamond-finish alloy wheels"
+      - "Alfa Romeo Scudetto grille (closed design)"
+      - "Body-color door handles"
+      - "Rear parking sensors"
+      - "Rear camera"
+    
+    interior:
+      - "10.25\" digital instrument cluster"
+      - "10.25\" touchscreen infotainment"
+      - "Wireless Apple CarPlay and Android Auto"
+      - "Wireless smartphone charging"
+      - "Sport front seats with Alfa Romeo logo"
+      - "Dual-zone automatic climate control"
+      - "Keyless entry and start"
+      - "Electric parking brake"
+    
+    safety:
+      - "Autonomous Emergency Braking"
+      - "Lane Keep Assist"
+      - "Traffic Sign Recognition"
+      - "Blind Spot Detection"
+      - "Adaptive cruise control"
+    
+    technology:
+      - "D.N.A. drive mode selector"
+      - "Regenerative braking (multiple levels)"
+      - "Alfa Connect services"
+      - "Heat pump (standard)"
+
+  optional:
+    - name: "19\" dark alloy wheels"
+      price_eur: 800
+    - name: "Glass panoramic roof"
+      price_eur: 1200
+    - name: "Premium Harman Kardon audio (6 speakers, 480W)"
+      price_eur: 600
+    - name: "Advanced Driver Assistance Pack"
+      price_eur: 800
+    - name: "Visibility Pack"
+      price_eur: 500
+
+# Pricing
+pricing:
+  msrp_eur: 39990
+  msrp_usd: null
+
+# Colors
+colors:
+  exterior:
+    - name: "Alfa Red"
+      code: null
+      type: solid
+    - name: "Alfa White"
+      code: null
+      type: solid
+    - name: "Vulcano Black"
+      code: null
+      type: metallic
+    - name: "Alfa Grey"
+      code: null
+      type: metallic
+    - name: "Brera Blue"
+      code: null
+      type: metallic
+  
+  interior:
+    - name: "Black cloth/microfiber"
+    - name: "Black/Red cloth sport seats"
+
+# Metadata
+metadata:
+  created_at: "2026-02-08"
+  updated_at: "2026-02-08"
+  data_quality: estimated
+  confidence: medium
+  
+  sources:
+    - "https://www.alfaromeo.de/junior"
+    - "https://www.alfaromeo.com/press"
+    - "https://www.adac.de"
+
+notes: >
+  The Junior Elettrica Speciale is the launch variant of Alfa Romeo's first electric vehicle.
+  Built on the Stellantis eCMP2 platform (shared with Peugeot e-2008, Opel Mokka-e, DS 3 E-Tense),
+  it features a 54kWh battery and 156hp front motor delivering 410km WLTP range. The "Speciale"
+  trim is the entry model but comes well-equipped with heat pump, LED Matrix headlights, dual
+  10.25" screens, and comprehensive safety systems. A more powerful Veloce variant with
+  approximately 240hp is planned for 2025.
