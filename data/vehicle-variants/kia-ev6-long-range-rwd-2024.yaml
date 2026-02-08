@@ -1,0 +1,239 @@
+id: kia-ev6-long-range-rwd-2024
+name: Long Range RWD
+model_id: kia-ev6
+model_year: 2024
+production_years:
+  start: 2021
+  end: null
+
+trim_level: long-range
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 74.0
+  total_kwh: 77.4
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 800  # High-voltage E-GMP architecture
+  cell_type: pouch
+  supplier: SK On (formerly SK Innovation)
+  warranty_years: 7
+  warranty_km: 150000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, integrated into E-GMP platform"
+    weight_kg: 477
+    modules: 10
+
+# Range
+range:
+  wltp_km: 528
+  wltp_source: manufacturer
+  
+  epa_km: 499
+  epa_source: manufacturer
+  
+  real_world_km: 480
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 7.2  # 11kW
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 240
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 18
+      "0_100": 41
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 225
+      - soc_percent: 10
+        power_kw: 240
+      - soc_percent: 20
+        power_kw: 240
+      - soc_percent: 30
+        power_kw: 235
+      - soc_percent: 40
+        power_kw: 215
+      - soc_percent: 50
+        power_kw: 175
+      - soc_percent: 60
+        power_kw: 135
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 50
+      - soc_percent: 90
+        power_kw: 25
+      - soc_percent: 100
+        power_kw: 10
+
+# Bidirectional Charging (V2X)
+bidirectional_charging:
+  v2l_capable: true
+  v2l_max_power_kw: 3.6
+  v2h_capable: true
+  v2g_capable: true
+  v2g_certified_markets:
+    - KR
+    - NL
+    - UK
+  notes: "V2L adapter included, can power household appliances or other EVs"
+
+# Motors & Drivetrain
+motors:
+  configuration: single-motor
+  drive_type: RWD
+  
+  rear:
+    type: permanent-magnet-synchronous
+    max_power_kw: 168
+    max_power_hp: 229
+    max_torque_nm: 350
+
+  combined:
+    total_power_kw: 168
+    total_power_hp: 229
+    total_torque_nm: 350
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.3
+  top_speed_kmh: 185
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 16.5
+  wltp_source: manufacturer
+  
+  epa_kwh_per_100km: 17.8
+  epa_source: manufacturer
+  
+  real_world_kwh_per_100km: 18.2
+  real_world_source: measured
+  real_world_conditions: "Highway 120 km/h, 15°C"
+  
+  efficiency_rating_eu: A
+  
+# Weight
+weight:
+  curb_weight_kg: 1995
+  gross_vehicle_weight_kg: 2570
+  max_payload_kg: 575
+
+# Wheels & Tires
+wheels:
+  standard_size_front: "235/55 R19"
+  standard_size_rear: "235/55 R19"
+  wheel_options:
+    - "19-inch alloy (standard)"
+    - "20-inch alloy (optional)"
+
+# Standard Equipment (Key Features)
+standard_equipment:
+  exterior:
+    - LED headlights with DRLs
+    - LED taillights with sequential indicators
+    - Flush door handles
+    - Panoramic sunroof
+    - Privacy glass
+    - Roof rails
+  
+  interior:
+    - Dual 12.3-inch curved display (digital cockpit + infotainment)
+    - Head-up display (AR HUD)
+    - Meridian premium sound system (14 speakers)
+    - Wireless phone charging
+    - Vegan leather upholstery
+    - Heated front seats
+    - Heated steering wheel
+    - Dual-zone climate control
+    - Ambient lighting (64 colors)
+  
+  technology:
+    - Highway Driving Assist 2
+    - Smart Cruise Control
+    - Lane Keep Assist
+    - Blind Spot Monitoring
+    - Remote Smart Parking Assist
+    - Surround View Monitor
+    - Remote climate control via app
+    - OTA software updates
+  
+  charging:
+    - Type 2 charging cable
+    - V2L adapter
+    - Scheduled charging
+
+# Options & Packages
+optional_equipment:
+  - name: GT-Line Package
+    price_eur: 2500
+    includes:
+      - Sportier exterior styling
+      - 20-inch wheels
+      - Sport seats
+      - GT-Line badging
+  
+  - name: Advanced Driver Assistance
+    price_eur: 1200
+    includes:
+      - Highway Driving Assist 2
+      - Smart Parking Assist
+      - Blind Spot View Monitor
+
+# Version Information
+version:
+  facelift: false
+  mid_cycle_refresh: false
+  generation: 1
+  platform_version: "E-GMP Gen 1"
+
+# Colors Available
+colors:
+  - "Glacier White Pearl"
+  - "Aurora Black Pearl"
+  - "Moonscape Gray Matte"
+  - "Yacht Blue"
+  - "Interstellar Gray"
+  - "Runway Red"
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-08"
+  confidence_level: high
+  
+  sources:
+    - https://www.kia.com/worldwide/vehicles/ev6/
+    - https://www.kia.com/content/dam/kwcms/gt/en/spec/ev6/spec_2024/specification_ev6_2024_en.pdf
+    - https://ev-database.org/car/1420/Kia-EV6-Long-Range-RWD
+    - https://insideevs.com/reviews/563629/kia-ev6-rwd-first-drive/
+    - https://www.caranddriver.com/kia/ev6/specs
+  
+  notes: >
+    Long Range RWD variant offers best efficiency and range in EV6 lineup.
+    Popular choice for buyers who prioritize range over AWD traction/performance.
+    2024 model year includes minor updates:
+    - Improved battery thermal management
+    - Updated infotainment software (Kia Connect)
+    - Enhanced Highway Driving Assist 2
+    - Additional color options
+    - Slight efficiency improvements
+  
+  created_at: "2026-02-08T22:30:00Z"
+  created_by: Patricio
