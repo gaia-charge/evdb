@@ -1,0 +1,178 @@
+# Nissan Ariya 87 kWh FWD (2024) - Long-Range Front-Wheel Drive
+
+id: nissan-ariya-87-kwh-fwd-2024
+name: 87 kWh FWD
+model_id: nissan-ariya
+model_year: 2024
+variant_code: ARIYA-87-FWD
+
+battery:
+  usable_kwh: 87.0
+  total_kwh: 91.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    87 kWh usable battery (91 kWh gross). Envision AESC cells with NCM
+    chemistry. 400V architecture. Long-range battery option for Ariya FWD.
+
+range:
+  wltp_km: 520
+  wltp_city_km: 650
+  wltp_highway_km: 430
+  epa_km: 418
+  real_world_km: 425
+  real_world_source: InsideEVs real-world test
+  notes: |
+    WLTP range of 520 km with 87 kWh battery. EPA rated at approximately 418 km
+    (260 miles). Real-world tests show around 425 km in mixed conditions.
+    Best range in the Ariya lineup thanks to FWD efficiency and large battery.
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 130
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 130
+    - soc_percent: 30
+      power_kw: 130
+    - soc_percent: 40
+      power_kw: 125
+    - soc_percent: 50
+      power_kw: 110
+    - soc_percent: 60
+      power_kw: 90
+    - soc_percent: 70
+      power_kw: 70
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 30
+  time_0_to_100_min: 60
+  time_10_to_80_min: 45
+  time_20_to_80_min: 35
+  charging_speed_kmh: 740
+  notes: |
+    DC fast charging up to 130 kW peak. 10-80% in 45 minutes with 87 kWh
+    battery. 22 kW three-phase AC charging standard. Slightly slower charging
+    time than 63 kWh variant due to larger battery capacity.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 1.5
+  v2h: true
+  v2g: false
+  notes: |
+    V2L (vehicle-to-load) up to 1.5 kW via adapter. V2H (vehicle-to-home)
+    capable with compatible equipment. V2G not yet available in Europe.
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+  acceleration_0_100_sec: 7.6
+  top_speed_kmh: 160
+  notes: |
+    Single permanent magnet motor at front axle with 218 hp and 300 Nm.
+    0-100 km/h in 7.6 seconds (slightly slower than 63 kWh due to extra weight).
+    Top speed limited to 160 km/h. Long-range FWD powertrain.
+
+weight:
+  curb_weight_kg: 2085
+  gross_vehicle_weight_kg: 2555
+  payload_kg: 470
+  distribution_front_percent: 56
+  distribution_rear_percent: 44
+  notes: "Heavier than 63 kWh variant due to larger battery, but lighter than AWD"
+
+efficiency:
+  wltp_kwh_per_100km: 18.1
+  wltp_city_kwh_per_100km: 15.8
+  wltp_highway_kwh_per_100km: 20.5
+  epa_kwh_per_100km: 18.4
+  real_world_kwh_per_100km: 19.8
+  efficiency_rating: B
+  notes: |
+    18.1 kWh/100km WLTP - excellent efficiency for a long-range mid-size crossover.
+    Real-world efficiency around 19.8 kWh/100km in mixed conditions.
+    More efficient than AWD variant despite larger battery.
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "ProPILOT Assist 2.0"
+  notes: |
+    - Heat pump standard for improved cold-weather efficiency
+    - ProPILOT Assist 2.0 with hands-free highway driving (single-lane)
+    - ProPILOT Park for automated parking
+    - e-Pedal Step for one-pedal driving
+    - 12.3-inch digital instrument cluster
+    - 12.3-inch center touchscreen
+    - Wireless Apple CarPlay/Android Auto
+    - Premium Bose audio system (10 speakers)
+    - Panoramic glass roof
+    - Heated front seats and steering wheel
+    - Nissan Safety Shield 360 (AEB, LDW, BSW, RCTA)
+
+optional_equipment:
+  - name: ProPILOT Assist 2.0 Pack
+    code: PROPILOT2
+    category: safety
+    included_in_base: false
+    notes: "Hands-free highway driving with navigation integration"
+  - name: Premium Interior Package
+    code: PREMINT
+    category: comfort
+    included_in_base: false
+    notes: "Quilted leather seats, power driver seat, premium materials"
+  - name: ProPILOT Park Package
+    code: PROPARK
+    category: safety
+    included_in_base: false
+    notes: "Automated parking with 360-degree camera"
+  - name: Bose Premium Audio
+    code: BOSE
+    category: infotainment
+    included_in_base: false
+    notes: "10-speaker Bose audio system"
+
+notes: |
+  The Nissan Ariya 87 kWh FWD is the long-range variant with front-wheel drive,
+  offering 218 hp and 520 km WLTP range. With FWD layout and 87 kWh battery,
+  it provides the best range in the Ariya lineup while maintaining good efficiency.
+  Built on Nissan's CMF-EV platform shared with Renault. Features ProPILOT
+  Assist 2.0 for hands-free highway driving and V2H capability. Targets buyers
+  seeking maximum range without AWD performance. Competes with VW ID.4 Pro,
+  Hyundai Ioniq 5 Long Range RWD, and Kia EV6 Long Range RWD.
+
+metadata:
+  created_at: "2026-02-08"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
+    - https://insideevs.com/reviews/nissan-ariya-87kwh/
+    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
