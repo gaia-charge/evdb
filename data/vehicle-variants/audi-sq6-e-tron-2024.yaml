@@ -1,0 +1,147 @@
+# Audi SQ6 e-tron (2024)
+id: audi-sq6-e-tron-2024
+name: SQ6 e-tron
+model_id: audi-q6-e-tron
+model_year: 2024
+variant_code: SQ6
+
+battery:
+  usable_kwh: 94.9
+  total_kwh: 100.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 598
+  wltp_city_km: 780
+  wltp_highway_km: 490
+  epa_km: null  # Not yet available for US market
+  real_world_km: 515
+  real_world_source: "EV Database winter/summer average"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 270  # 800V architecture enables ultra-fast charging
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 270
+    - soc_percent: 10
+      power_kw: 270
+    - soc_percent: 20
+      power_kw: 270
+    - soc_percent: 30
+      power_kw: 250
+    - soc_percent: 40
+      power_kw: 230
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 170
+    - soc_percent: 70
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 85
+    - soc_percent: 90
+      power_kw: 45
+    - soc_percent: 100
+      power_kw: 20
+  time_5_to_80_percent_min: 21  # Ultra-fast charging
+  time_10_to_80_percent_min: 21
+  charging_speed_kmh: 1380  # Excellent charging speed
+  plug_and_charge: true  # ISO 15118 support
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 11  # Bidirectional AC charging
+  v2h: true
+  v2g: true  # Full bidirectional capability
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "AC induction"
+      power_kw: 106
+      power_hp: 144
+      torque_nm: null
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 274
+      power_hp: 373
+      torque_nm: 580
+  total_power_kw: 380
+  total_power_hp: 517
+  total_torque_nm: 820
+  acceleration_0_100_kmh_sec: 4.3
+  acceleration_0_60_mph_sec: 4.1
+  top_speed_kmh: 230
+
+weight:
+  curb_weight_kg: 2385
+  gross_weight_kg: 3010
+  max_payload_kg: 625
+  distribution_front_percent: 50
+  distribution_rear_percent: 50
+
+efficiency:
+  wltp_kwh_per_100km: 18.4  # Higher consumption due to performance orientation
+  wltp_kwh_per_100km_city: 15.6
+  wltp_kwh_per_100km_highway: 22.5
+  real_world_kwh_per_100km: 21.2
+  energy_efficiency_class: "B"  # EU energy label
+
+wheels_tires:
+  standard_size_front: "255/45 R20"
+  standard_size_rear: "285/40 R20"
+  wheel_sizes_available:
+    - "20 inch (standard)"
+    - "21 inch (optional, -15km range)"
+    - "22 inch (optional, -30km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Adaptive cruise control with lane keeping assist"
+    - "Active lane assist"
+    - "Traffic sign recognition"
+    - "Park assist plus with remote parking"
+    - "360-degree camera system (standard)"
+    - "Predictive efficiency assist"
+    - "Intersection assist"
+    - "Emergency assist"
+    - "Sport quattro all-wheel drive"
+    - "Predictive active suspension (optional)"
+  connectivity:
+    - "Audi connect navigation & infotainment plus"
+    - "myAudi app with remote functions"
+    - "OTA software updates"
+    - "e-tron route planner with charging optimization"
+    - "5G connectivity (optional)"
+  special_features:
+    - "Three-stage recuperation (0.1g, 0.15g, 0.2g)"
+    - "B mode for strong regen (one-pedal driving)"
+    - "Pre-conditioning (battery & cabin)"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+    - "Bank & Turn technology for improved dynamics"
+    - "Sport differential (torque vectoring)"
+    - "Adaptive air suspension sport (standard)"
+    - "Progressive steering"
+    - "Launch control"
+    - "S-specific sport seats"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-e-tron/technische-daten.html"
+    - "https://ev-database.org/car/1699/Audi-SQ6-e-tron"
+    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-sq6-e-tron/"
+  notes: "Performance flagship of the Q6 e-tron lineup with 380 kW (517 hp) and 4.3s 0-100 km/h. Features sport-tuned adaptive air suspension, larger brakes, and exclusive S styling. 800V PPE platform enables 270 kW peak DC charging. Slightly reduced range (598 km WLTP) compared to standard quattro due to performance focus and larger wheels. Competes with BMW iX M60, Mercedes-AMG EQE 53 SUV. Ideal for performance enthusiasts wanting electric SUV dynamics."
