@@ -7,152 +7,140 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2024-01-01"
-delivery_time_weeks: 10
+available_from: "2024-01-15"
+delivery_time_weeks: 14
 
 # Pricing
 pricing:
-  base_price: 43490
-  price_including_vat: 43490
+  base_price: 43990
+  price_including_vat: 43990
   vat_rate_percent: 19
 
 # Available Colors
 available_colors:
-  - name: Diamond Black
-    code: GNE
-    type: solid
+  - name: Diamond Black Metallic
+    code: 676
+    type: metallic
     price_add:
       amount: 0
       currency: EUR
   - name: Glacier White
-    code: QNC
+    code: 369
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Flame Red
+  - name: Schist Grey Metallic
+    code: KQM
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Alpine Blue Metallic
+    code: RNS
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Flame Red Metallic
     code: NNP
     type: metallic
     price_add:
-      amount: 650
+      amount: 600
       currency: EUR
-  - name: Highland Grey
-    code: KNA
-    type: metallic
+  - name: Midnight Blue Two-Tone
+    code: RPG
+    type: two_tone
     price_add:
-      amount: 650
-      currency: EUR
-  - name: Zanzibar Blue
-    code: RPH
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Rafale Grey
-    code: KNG
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Titanium Grey
-    code: KNM
-    type: metallic
-    price_add:
-      amount: 650
+      amount: 900
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" Aerodesign alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" Origami diamond-cut alloy wheels
+  - name: 20" Diamond-Cut Alloy Wheels
     size_inches: 20
     type: alloy
+    design: Solstice
     price_add:
-      amount: 850
+      amount: 0
       currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black fabric with recycled materials
-    material: fabric
+  - name: Black Fabric/Synthetic Leather
+    material: fabric_synthetic
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Grey fabric with recycled materials
-    material: fabric
+  - name: Grey Fabric/Synthetic Leather with Wood Accent
+    material: fabric_synthetic
     color: grey
     price_add:
       amount: 0
-      currency: EUR
-  - name: Black Alcantara with recycled materials
-    material: alcantara
-    color: black
-    price_add:
-      amount: 750
       currency: EUR
 
 # Incentives
 available_incentives:
   - type: federal
-    name: "Umweltbonus (Environmental Bonus)"
+    name: "Umweltbonus (Innovation Premium)"
     amount:
       amount: 4500
       currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration in Germany"]
+    conditions: ["Price under €65,000", "BEV", "First registration"]
     expires_at: "2024-12-31"
   - type: company_car
     name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €60,000 gross list price"
-    conditions: ["Price under €60,000 gross list price"]
+    description: "Reduced taxation for electric company cars under €70,000"
+    conditions: ["Gross list price under €70,000"]
+    tax_calculation:
+      gross_list_price: 43990
+      monthly_tax_base_025_percent: 109.98
+      annual_tax_benefit_vs_1_percent: 3167.11
 
 # Options
 popular_packages:
-  - name: Tech Pack
+  - name: Solarbay Panoramic Sunroof
     price:
       amount: 1200
       currency: EUR
     features:
-      - OpenR Link augmented reality head-up display
-      - 360-degree camera
-      - Hands-free parking
-  - name: Comfort Pack
+      - Electrochromic tinting glass roof
+      - Included in Iconic trim
+  - name: Harman Kardon Premium Audio
     price:
-      amount: 900
+      amount: 650
       currency: EUR
     features:
-      - Heated front seats
-      - Heated steering wheel
-      - Wireless phone charging
-  - name: Safety Pack Plus
+      - 9-speaker premium sound system
+      - Included in Iconic trim
+  - name: 360° Camera System
     price:
-      amount: 1450
+      amount: 400
       currency: EUR
     features:
-      - Adaptive cruise control with Stop&Go
-      - Lane keeping assist
-      - Blind spot warning
-      - Traffic sign recognition
-      - Highway and Traffic Jam Companion
+      - Surround view parking camera
+      - Bird's eye view
+      - Multiple viewing angles
 
-# Company Car Tax Calculation
-company_car_tax:
-  gross_list_price: 43490
-  monthly_taxable_amount: 108.73  # 0.25% of gross list price
-  calculation_method: "0.25% rule (BEV under €60,000)"
+# Charging Network Offers
+charging_offers:
+  - name: "Free IONITY charging credits"
+    description: "6 months of complimentary fast charging at IONITY network"
+    value:
+      amount: 300
+      currency: EUR
+    conditions: ["New vehicle purchase", "Valid until 2024-12-31"]
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Techno is the mid-range variant with a 60 kWh battery,
-  offering excellent range (450 km WLTP) and 22kW AC charging. This is the best-selling
-  variant in Germany due to its balance of range, performance, and value.
-  Eligible for German EV incentives until end of 2024.
-  Company car tax benefit (0.25%) applies as the gross list price is under €60,000.
+  Renault Megane E-Tech EV60 Techno offers excellent value with 450 km WLTP range, 
+  218 hp motor, and comprehensive driver assistance features. 
+  22 kW AC charging and 130 kW DC fast charging make it suitable for longer trips.
+  Upgraded 12.3-inch digital cockpit and Matrix LED headlights.
+  Very competitive in the C-segment EV market.
+  Eligible for German EV incentives (€4,500) and company car tax benefits (0.25%).
+  Popular choice for company car drivers due to excellent range and tax benefits.
 
 # Metadata
 metadata:
@@ -161,4 +149,4 @@ metadata:
   source_url: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prices and incentives as of February 2024
+  notes: Prices and incentives as of February 2026

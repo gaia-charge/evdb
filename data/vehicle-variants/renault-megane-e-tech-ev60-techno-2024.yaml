@@ -1,184 +1,186 @@
+# Renault Megane E-Tech EV60 Techno 2024 Variant
+# Mid-tier variant with 60 kWh battery and additional features
+
 id: renault-megane-e-tech-ev60-techno-2024
 name: EV60 Techno
 model_id: renault-megane-e-tech
 model_year: 2024
-production_years:
-  start: 2022
-  end: null
-
-trim_level: mid
-market_position: mid
+variant_code: ME-EV60-TECH
 
 # Battery Specifications
 battery:
-  usable_kwh: 60
-  total_kwh: 65
+  usable_kwh: 60.0
+  total_kwh: 65.0
   chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400
-  cell_type: pouch
-  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  
-  pack:
-    configuration: "floor-mounted"
-    weight_kg: 395
-    cells: 192
+  degradation_warranty_percent: 70
 
-# Range
+# Range (WLTP - Combined)
 range:
   wltp_km: 450
-  wltp_source: manufacturer
-  
-  real_world_km: 380
+  wltp_city_km: 580
+  wltp_highway_km: 370
+  epa_miles: null
+  real_world_km: 390
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 10-20°C, eco mode"
 
-# Charging
-charging:
-  ac:
-    max_power_kw: 22
-    connector_types:
-      - type2
-    charging_time_hours:
-      "0_100": 3.0  # 22kW three-phase
-    onboard_charger_kw: 22
-    phases: 3
-  
-  dc:
-    max_power_kw: 130
-    connector_types:
-      - ccs2
-    charging_time_minutes:
-      "15_80": 30
-      "0_100": 52
-    
-    charging_curve:
-      - soc_percent: 0
-        power_kw: 110
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 30
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 115
-      - soc_percent: 70
-        power_kw: 75
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 12
+# Range Conditions
+range_conditions:
+  - temperature_c: 20
+    speed_kmh: 120
+    estimated_range_km: 350
+    conditions: "Highway, steady speed"
+  - temperature_c: -5
+    speed_kmh: 90
+    estimated_range_km: 300
+    conditions: "Winter, heating on"
+  - temperature_c: 20
+    speed_kmh: 50
+    estimated_range_km: 560
+    conditions: "City driving"
 
-  bidirectional:
-    v2l: false
-    v2g: true  # Available with specific bidirectional charger
-    v2h: false
+# Charging - AC
+charging_ac:
+  max_power_kw: 22
+  connector_type: Type2
+  onboard_charger_kw: 22
+  charge_time_0_100_hours: 3.5
 
-# Motors & Performance
-motors:
-  - position: front
-    type: synchronous
-    max_power_kw: 160
-    max_torque_nm: 300
-    cooling: liquid
+# Charging - DC Fast Charging
+charging_dc:
+  max_power_kw: 130
+  connector_type: CCS2
+  charge_time_10_80_minutes: 30
+  charge_time_10_80_source: manufacturer
+  charging_curve_type: optimized
+  peak_charge_rate_soc_percent: 25
+  charge_speed_km_per_hour: 480
 
-drivetrain:
-  type: fwd
-  total_power_kw: 160
+# Charging Curve
+charging_curve:
+  - soc_percent: 10
+    power_kw: 120
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 130
+  - soc_percent: 40
+    power_kw: 125
+  - soc_percent: 50
+    power_kw: 115
+  - soc_percent: 60
+    power_kw: 95
+  - soc_percent: 70
+    power_kw: 70
+  - soc_percent: 80
+    power_kw: 40
+  - soc_percent: 90
+    power_kw: 20
+
+# Bidirectional Charging / V2X
+bidirectional_charging: false
+v2l_power_kw: 3.0
+v2h_capable: false
+v2g_capable: false
+
+# Performance
+performance:
+  electric_motors: 1  # Single motor FWD
+  motor_type: "Permanent Magnet Synchronous (front)"
+  total_power_kw: 160  # 218 hp
   total_power_hp: 218
   total_torque_nm: 300
-
-performance:
-  acceleration_0_100_kmh_s: 7.4
+  drive_type: FWD
+  acceleration_0_100_kmh: 7.5
   top_speed_kmh: 160
-  top_speed_limited: true
 
-# Weight & Efficiency
-weight:
-  curb_weight_kg: 1718
-  gross_weight_kg: 2112
-  payload_kg: 394
-  towing_capacity_kg: 0  # Not rated for towing
-  
+# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 15.5
-  real_world_kwh_per_100km: 16.8
-  
-  at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 19.2
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 22.5
+  wltp_kwh_per_100km: 15.8
+  epa_mpge: null
+  efficiency_rating: A
 
-# Features & Options
-standard_features:
-  - "12-inch vertical OpenR screen"
-  - "Google built-in (Maps, Assistant, Play Store)"
-  - "12.3-inch digital instrument cluster"
+# Weight
+weight:
+  curb_weight_kg: 1702
+  gross_vehicle_weight_kg: 2175
+  payload_kg: 473
+
+# Dimensions
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
+
+# Interior
+interior:
+  seating_capacity: 5
+  doors: 5
+  trunk_volume_liters: 440
+  frunk_volume_liters: 0
+
+# Production & Availability
+production_status: active
+production_start_date: "2024-01-01"
+production_end_date: null
+assembly_location: "Douai, France"
+
+# Platform
+platform_id: renault-cmf-ev
+
+# Trim Level
+trim_level: EV60 Techno
+trim_position: 2  # Mid trim
+base_trim: false
+
+# Features & Equipment
+standard_equipment:
+  - "12-inch vertical OpenR Link touchscreen"
+  - "Google built-in (Maps, Assistant, Play)"
+  - "12.3-inch digital instrument cluster (upgraded)"
   - "Heat pump"
-  - "LED Pure Vision headlights"
-  - "19-inch alloy wheels"
+  - "LED Pure Vision Matrix headlights"
   - "Automatic climate control"
-  - "Rear parking sensors"
+  - "Front and rear parking sensors"
+  - "Rear camera"
+  - "20-inch alloy wheels"
+  - "Fabric/synthetic leather seats"
   - "Multi-Sense driving modes"
-  - "Keyless entry and start"
-  - "Fabric seats with recycled materials"
+  - "E-Tech B-mode regenerative braking"
+  - "Wireless smartphone charging"
+  - "Adaptive cruise control"
+  - "Lane centering assist"
+  - "Traffic sign recognition"
 
-optional_packages:
-  - name: "Tech Pack"
-    features:
-      - "OpenR Link augmented reality head-up display"
-      - "360-degree camera"
-      - "Hands-free parking"
-  
-  - name: "Comfort Pack"
-    features:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Wireless phone charging"
-  
-  - name: "Safety Pack Plus"
-    features:
-      - "Adaptive cruise control with Stop&Go"
-      - "Lane keeping assist"
-      - "Blind spot warning"
-      - "Traffic sign recognition"
-      - "Highway and Traffic Jam Companion"
+optional_equipment:
+  - name: "Harman Kardon Premium Audio"
+    description: "Premium 9-speaker sound system"
+  - name: "Solarbay Panoramic Sunroof"
+    description: "Electrochromic tinting glass roof"
+  - name: "360° Camera"
+    description: "Surround view parking camera"
 
-colors:
-  standard:
-    - "Diamond Black"
-    - "Glacier White"
-  premium:
-    - "Flame Red"
-    - "Highland Grey"
-    - "Zanzibar Blue"
-    - "Rafale Grey"
-    - "Titanium Grey"
+# Sources
+sources:
+  - url: "https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications"
+    type: manufacturer
+    accessed_date: "2026-02-08"
+  - url: "https://ev-database.org/car/1697/Renault-Megane-E-Tech-EV60"
+    type: verified_database
+    accessed_date: "2026-02-08"
+  - url: "https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/versions.html"
+    type: manufacturer
+    accessed_date: "2026-02-08"
 
-# Version Information
-version:
-  facelift: false
-  major_changes: []
+# Notes
+notes: "Mid-tier Megane E-Tech with 60 kWh battery and 218 hp motor. Excellent range of 450 km WLTP makes it suitable for longer trips. 22 kW AC charging and 130 kW DC fast charging. More powerful than EV40 with better acceleration (7.5s 0-100). Includes advanced driver assistance features and upgraded digital cockpit."
 
-# Market & Pricing Notes
-notes: >
-  The Megane E-Tech EV60 Techno is the mid-range variant with a 60 kWh battery,
-  offering excellent range for daily use and longer trips. With 130kW DC charging
-  and 22kW AC charging (three-phase), it provides flexible charging options.
-  The 218hp motor provides spirited performance with 0-100 km/h in 7.4 seconds.
-  This variant offers the best balance of range, performance, and value.
-
+# Metadata
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-08"
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
-  sources:
-    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://ev-database.org/car/1671/Renault-Megane-E-Tech-EV60
-    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications
+  data_verified_date: "2026-02-08"
+  last_updated: "2026-02-08"
+  created_at: "2026-02-08T02:00:00Z"
+  updated_at: "2026-02-08T02:00:00Z"
