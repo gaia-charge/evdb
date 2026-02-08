@@ -1,0 +1,222 @@
+# Renault Megane E-Tech EV40 (2025) - Germany Market Availability
+
+id: renault-megane-e-tech-ev40-2025-de
+variant_id: renault-megane-e-tech-ev40-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2022-09-01"
+delivery_time_weeks: 8
+
+# Pricing
+pricing:
+  base_price: 37500
+  price_including_vat: 37500
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Glacier White
+    code: null
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Diamond Black
+    code: null
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Titanium Grey
+    code: null
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Flame Red
+    code: null
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Midnight Blue
+    code: null
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 18" aerodynamic alloy wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 19" alloy wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 800
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black cloth
+    material: cloth
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey cloth
+    material: cloth
+    color: grey
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "Umweltbonus (Federal subsidy)"
+    amount:
+      amount: 4500
+      currency: EUR
+    conditions: ["Price under €40,000", "BEV", "Private buyers only"]
+    expires_at: "2025-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €70,000"
+    conditions: ["Price under €70,000 gross list price"]
+
+# Options
+popular_packages:
+  - name: Metallic paint
+    price:
+      amount: 700
+      currency: EUR
+  - name: Two-tone paint (black roof)
+    price:
+      amount: 900
+      currency: EUR
+  - name: 19" alloy wheels
+    price:
+      amount: 800
+      currency: EUR
+  - name: Harman Kardon audio
+    price:
+      amount: 600
+      currency: EUR
+  - name: 360° camera
+    price:
+      amount: 500
+      currency: EUR
+
+# Popular Configurations
+popular_configs:
+  - name: "EV40 Base"
+    description: "Standard EV40 with all included features"
+    total_price:
+      amount: 37500
+      currency: EUR
+    includes:
+      - "40 kWh battery, 300 km range"
+      - "130 hp motor"
+      - "OpenR display system"
+      - "Google built-in"
+      - "Heat pump (standard)"
+      - "LED headlights"
+      - "18\" wheels"
+      - "Wireless charging"
+  
+  - name: "EV40 Comfort"
+    description: "EV40 with popular comfort options"
+    total_price:
+      amount: 39600
+      currency: EUR
+    includes:
+      - "All EV40 base features"
+      - "Metallic paint (€700)"
+      - "Harman Kardon audio (€600)"
+      - "360° camera (€500)"
+      - "19\" alloy wheels (€800)"
+  
+  - name: "EV40 Premium"
+    description: "Fully loaded EV40"
+    total_price:
+      amount: 40500
+      currency: EUR
+    includes:
+      - "All EV40 Comfort features"
+      - "Two-tone paint upgrade (€900)"
+
+# Charging Costs (Germany 2025)
+typical_charging_costs:
+  home_kwh: 0.35
+  public_ac_kwh: 0.55
+  public_dc_kwh: 0.75
+
+# Company Car Taxation
+company_car_tax:
+  gross_list_price: 37500
+  monthly_tax_rate: 0.25
+  monthly_benefit: 94
+  annual_benefit: 1125
+  notes: >
+    As an electric vehicle under €70,000, qualifies for reduced 0.25% monthly rate
+    vs. 1% for combustion vehicles. For 30% tax bracket: €338/year vs. €1,350/year
+    for equivalent combustion car (€1,012 annual savings).
+
+# Dealer Network
+dealer_info:
+  dealer_count: 180
+  service_center_count: 180
+  notes: >
+    Renault Germany has approximately 180 authorized dealers nationwide with
+    comprehensive coverage in all major cities and regions. All dealers are
+    trained for electric vehicle sales and service with dedicated EV specialists.
+
+# Competitors
+competitors:
+  - model_id: volkswagen-id3
+    price: 39995
+    notes: "VW badge, similar specs, slightly higher price"
+  - model_id: cupra-born
+    price: 38990
+    notes: "Sportier image, similar platform"
+  - model_id: mg-mg4
+    price: 33990
+    notes: "Chinese brand, cheaper, less premium interior"
+  - model_id: opel-astra-electric
+    price: 44000
+    notes: "Larger, more traditional design"
+  - model_id: nissan-ariya
+    price: 47000
+    notes: "Alliance partner, larger, more expensive"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://www.adac.de"
+    - "https://www.mobile.de"
+
+notes: >
+  The Renault Megane E-Tech EV40 (2025) represents excellent value in the German C-segment
+  electric market. At €37,500 (€33,000 after federal incentive), it undercuts the VW ID.3
+  while offering superior interior design with the innovative OpenR display system and Google
+  built-in. The 300 km WLTP range (250 km real-world) is adequate for most German commuters
+  (average daily 30-50 km). The 0.25% company car tax makes it attractive for fleet buyers.
+  Most buyers opt for the "EV40 Comfort" configuration (€39,600) adding metallic paint,
+  premium audio, cameras, and larger wheels. Fast 8-week delivery time is competitive
+  compared to VW Group (12-16 weeks). The EV40 is ideal for urban/suburban buyers with
+  regular charging access who prioritize interior quality and technology over maximum range.
