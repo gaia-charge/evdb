@@ -1,0 +1,205 @@
+id: renault-megane-e-tech-ev60-techno-2025
+name: EV60 Techno
+model_id: renault-megane-e-tech
+model_year: 2025
+production_years:
+  start: 2022
+  end: null
+
+trim_level: mid
+market_position: volume
+
+# Battery Specifications
+battery:
+  usable_kwh: 60.0
+  total_kwh: 65.0
+  chemistry: NMC
+  nominal_voltage_v: 400
+  thermal_management: liquid-cooled
+  warranty_years: 8
+  warranty_km: 160000
+
+# Range
+range:
+  wltp_km: 450
+  wltp_source: manufacturer
+  
+  real_world_km: 370
+  real_world_source: tested
+  real_world_conditions: "Mixed driving, 15-20°C, ADAC test"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.5
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+
+  bidirectional:
+    v2l: true
+    v2g: false
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.9
+  
+  real_world:
+    combined_kwh_per_100km: 17.8
+    highway_kwh_per_100km: 20.2
+    city_kwh_per_100km: 15.5
+
+# Drivetrain
+drivetrain:
+  configuration: fwd
+  motor_type: permanent_magnet
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+    rear: null
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  width_with_mirrors_mm: 2032
+  height_mm: 1505
+  wheelbase_mm: 2685
+  ground_clearance_mm: 170
+  drag_coefficient: 0.30
+  frontal_area_m2: 2.48
+
+weight:
+  curb_weight_kg: 1689
+  gvwr_kg: 2150
+  max_payload_kg: 461
+  towing_capacity_kg: 900
+
+cargo:
+  trunk_volume_l: 440
+  trunk_max_volume_l: 1332
+  frunk_volume_l: 0
+
+# Standard Equipment
+equipment:
+  standard:
+    exterior:
+      - "Full LED headlights with C-shape signature"
+      - "19\" aerodynamic alloy wheels"
+      - "Two-tone paint (black roof)"
+      - "Rear privacy glass"
+      - "Hands-free tailgate"
+      - "Front and rear parking sensors"
+      - "360° camera"
+    
+    interior:
+      - "12\" digital instrument cluster (OpenR L-shape)"
+      - "12\" portrait touchscreen (OpenR display, upgraded)"
+      - "Google built-in (Maps, Assistant, Play)"
+      - "Wireless Apple CarPlay and Android Auto"
+      - "Wireless smartphone charging"
+      - "Premium cloth/microfiber seats"
+      - "Dual-zone automatic climate control"
+      - "Keyless entry and start"
+      - "Multi-sense drive modes (Eco, Comfort, Sport, Perso)"
+      - "Ambient interior lighting"
+    
+    safety:
+      - "6 airbags"
+      - "Active Emergency Braking with pedestrian/cyclist detection"
+      - "Lane Departure Warning and Lane Keep Assist"
+      - "Traffic Sign Recognition with speed limit alert"
+      - "Adaptive Cruise Control with Stop & Go"
+      - "Blind Spot Warning"
+      - "Rear Cross Traffic Alert"
+      - "Driver attention warning"
+      - "Hill start assist"
+    
+    technology:
+      - "One Pedal driving mode"
+      - "Regenerative braking (multiple levels)"
+      - "Heat pump (standard)"
+      - "Pre-conditioning via app"
+      - "My Renault app connectivity"
+      - "OTA software updates"
+
+  optional:
+    - name: "Harman Kardon audio (9 speakers, 410W)"
+      price_eur: 600
+    - name: "Panoramic glass roof"
+      price_eur: 1200
+    - name: "Winter Pack (heated seats, heated steering wheel)"
+      price_eur: 500
+    - name: "20\" alloy wheels"
+      price_eur: 1000
+
+# Pricing
+pricing:
+  msrp_eur: 42900
+  msrp_usd: null
+
+# Colors
+colors:
+  exterior:
+    - name: "Diamond Black"
+      code: null
+      type: metallic
+    - name: "Glacier White"
+      code: null
+      type: solid
+    - name: "Titanium Grey"
+      code: null
+      type: metallic
+    - name: "Flame Red"
+      code: null
+      type: metallic
+    - name: "Midnight Blue"
+      code: null
+      type: metallic
+    - name: "Schist Grey"
+      code: null
+      type: metallic
+  
+  interior:
+    - name: "Black/Grey cloth"
+    - name: "Black alcantara-style microfiber"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech/"
+    - "https://ev-database.org"
+
+notes: >
+  The EV60 Techno is the mid-range Megane E-Tech variant and represents the sweet spot in the 
+  lineup. With a 60 kWh battery delivering 450 km WLTP range and a more powerful 218 hp motor, 
+  it offers significantly better performance (7.4s 0-100 km/h) and long-distance capability. 
+  Standard equipment is comprehensive, including the full OpenR display, 360° camera, adaptive 
+  cruise control, and 22 kW AC charging. DC fast charging peaks at 130 kW, enabling 30 minutes 
+  for 10-80%. The Techno trim adds premium features like ambient lighting, blind spot warning, 
+  and two-tone paint. Excellent choice for those needing longer range and better performance.

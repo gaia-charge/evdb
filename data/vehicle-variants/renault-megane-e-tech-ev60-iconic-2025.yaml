@@ -1,0 +1,215 @@
+id: renault-megane-e-tech-ev60-iconic-2025
+name: EV60 Iconic
+model_id: renault-megane-e-tech
+model_year: 2025
+production_years:
+  start: 2022
+  end: null
+
+trim_level: premium
+market_position: top
+
+# Battery Specifications
+battery:
+  usable_kwh: 60.0
+  total_kwh: 65.0
+  chemistry: NMC
+  nominal_voltage_v: 400
+  thermal_management: liquid-cooled
+  warranty_years: 8
+  warranty_km: 160000
+
+# Range
+range:
+  wltp_km: 470
+  wltp_source: manufacturer
+  
+  real_world_km: 385
+  real_world_source: tested
+  real_world_conditions: "Mixed driving, 15-20°C, ADAC test"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.5
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+
+  bidirectional:
+    v2l: true
+    v2g: false
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.5
+  
+  real_world:
+    combined_kwh_per_100km: 17.5
+    highway_kwh_per_100km: 19.8
+    city_kwh_per_100km: 15.2
+
+# Drivetrain
+drivetrain:
+  configuration: fwd
+  motor_type: permanent_magnet
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+    rear: null
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  width_with_mirrors_mm: 2032
+  height_mm: 1505
+  wheelbase_mm: 2685
+  ground_clearance_mm: 170
+  drag_coefficient: 0.30
+  frontal_area_m2: 2.48
+
+weight:
+  curb_weight_kg: 1710
+  gvwr_kg: 2171
+  max_payload_kg: 461
+  towing_capacity_kg: 900
+
+cargo:
+  trunk_volume_l: 440
+  trunk_max_volume_l: 1332
+  frunk_volume_l: 0
+
+# Standard Equipment
+equipment:
+  standard:
+    exterior:
+      - "Full LED Matrix headlights with adaptive lighting"
+      - "20\" diamond-cut alloy wheels"
+      - "Two-tone paint (black roof)"
+      - "Rear privacy glass"
+      - "Hands-free tailgate"
+      - "Front and rear parking sensors"
+      - "360° camera with bird's eye view"
+      - "Chrome exterior accents"
+    
+    interior:
+      - "12\" digital instrument cluster (OpenR L-shape)"
+      - "12\" portrait touchscreen (OpenR display, premium)"
+      - "Google built-in (Maps, Assistant, Play)"
+      - "Wireless Apple CarPlay and Android Auto"
+      - "Wireless smartphone charging (dual pads)"
+      - "Premium leather/alcantara seats"
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Dual-zone automatic climate control"
+      - "Keyless entry and start"
+      - "Multi-sense drive modes (Eco, Comfort, Sport, Perso)"
+      - "Multi-color ambient interior lighting"
+      - "Harman Kardon audio (9 speakers, 410W)"
+      - "Head-up display"
+    
+    safety:
+      - "6 airbags"
+      - "Active Emergency Braking with pedestrian/cyclist detection"
+      - "Lane Departure Warning and Lane Keep Assist"
+      - "Traffic Sign Recognition with speed limit alert"
+      - "Adaptive Cruise Control with Stop & Go"
+      - "Blind Spot Warning"
+      - "Rear Cross Traffic Alert"
+      - "Driver attention warning"
+      - "Hill start assist"
+      - "Highway and Traffic Jam Assist (Level 2 autonomy)"
+    
+    technology:
+      - "One Pedal driving mode"
+      - "Regenerative braking (multiple levels)"
+      - "Heat pump (standard)"
+      - "Pre-conditioning via app"
+      - "My Renault app connectivity"
+      - "OTA software updates"
+      - "Extended connected services (3 years)"
+
+  optional:
+    - name: "Panoramic glass roof"
+      price_eur: 1200
+    - name: "Premium Solarbay glass roof (tinting on demand)"
+      price_eur: 1800
+    - name: "Winter Pack Plus (heated rear seats)"
+      price_eur: 400
+    - name: "Exclusive two-tone colors"
+      price_eur: 1200
+
+# Pricing
+pricing:
+  msrp_eur: 46500
+  msrp_usd: null
+
+# Colors
+colors:
+  exterior:
+    - name: "Diamond Black"
+      code: null
+      type: metallic
+    - name: "Glacier White"
+      code: null
+      type: solid
+    - name: "Titanium Grey"
+      code: null
+      type: metallic
+    - name: "Flame Red"
+      code: null
+      type: metallic
+    - name: "Midnight Blue"
+      code: null
+      type: metallic
+    - name: "Schist Grey"
+      code: null
+      type: metallic
+    - name: "Arctic White with Volcanic Orange"
+      code: null
+      type: two-tone
+  
+  interior:
+    - name: "Black alcantara/leather"
+    - name: "Grey alcantara/leather"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech/"
+    - "https://ev-database.org"
+
+notes: >
+  The EV60 Iconic is the flagship Megane E-Tech variant offering the best range (470 km WLTP) 
+  thanks to optimized aerodynamics with 20\" aero wheels. It shares the 60 kWh battery and 
+  218 hp motor with the Techno but adds premium features including leather/alcantara seats, 
+  heated seats and steering wheel, Harman Kardon audio, head-up display, and Highway/Traffic 
+  Jam Assist (Level 2). The Iconic represents the full vision of the Megane E-Tech with 
+  comprehensive equipment, premium materials, and advanced technology. Perfect for buyers 
+  seeking a premium electric compact with maximum range and luxury features.
