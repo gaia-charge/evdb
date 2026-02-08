@@ -1,202 +1,227 @@
-# Renault Megane E-Tech EV60 Techno (2024) - Mid-Range Variant
 id: renault-megane-e-tech-ev60-techno-2024
-name: EV60 Techno
 model_id: renault-megane-e-tech
+name: Megane E-Tech Electric EV60 Techno
+variant_name: EV60 Techno
 model_year: 2024
-variant_code: MEGANE-EV60-TECHNO
 
-battery:
-  usable_kwh: 60.0
-  total_kwh: 65.0
-  chemistry: NCM
-  cell_type: pouch
-  manufacturer: LG Energy Solution
-  warranty_years: 8
-  warranty_km: 160000
-  warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    60 kWh usable battery (65 kWh gross). Mid-range battery option.
-    400V architecture with NCM chemistry.
-    92.3% usable capacity ratio.
+# Vehicle Classification
+vehicle_type: crossover
+segment: C  # Compact crossover
+body_style: 5-door hatchback crossover
+seats: 5
+doors: 5
 
-range:
-  wltp_km: 450
-  wltp_city_km: 575
-  wltp_highway_km: 365
-  epa_km: null
-  real_world_km: 385
-  real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 450 km. Real-world range around 385 km in mixed conditions.
-    Excellent city efficiency with 575 km city range.
-    50% more range than EV40 variant.
-
-charging:
-  ac_max_kw: 22
-  ac_phases: 3
-  ac_connector: Type2
-  dc_max_kw: 130
-  dc_connector: CCS2
-  dc_curve:
-    - soc_percent: 5
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 125
-    - soc_percent: 30
-      power_kw: 120
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 78
-    - soc_percent: 70
-      power_kw: 60
-    - soc_percent: 80
-      power_kw: 40
-    - soc_percent: 90
-      power_kw: 25
-  time_0_to_100_min: 30
-  time_5_to_80_min: 28
-  time_10_to_80_min: 26
-  time_20_to_80_min: 24
-  charging_speed_kmh: 1050
-  plug_and_charge: true
-  preconditioning: true
-  notes: |
-    DC charging up to 130 kW peak. 20-80% in 24 minutes.
-    22 kW AC charging (three-phase) - fastest in class.
-    ISO 15118 Plug & Charge support.
-    Battery preconditioning available when navigating to DC charger.
-
-bidirectional:
-  v2l: false
-  v2l_max_kw: null
-  v2h: false
-  v2g: true
-  notes: "V2G capable with compatible chargers and energy plans"
-
-performance:
-  drive_type: FWD
+# Drivetrain
+drivetrain:
+  type: fwd  # Front-wheel drive
   motors:
-    - position: front
-      type: permanent magnet
+    front:
+      type: permanent_magnet
       power_kw: 160
       power_hp: 218
       torque_nm: 300
-      manufacturer: Renault
-  max_power_kw: 160
-  max_power_hp: 218
-  max_torque_nm: 300
-  acceleration_0_100_kmh_s: 7.4
-  acceleration_0_60_mph_s: 7.0
-  acceleration_80_120_kmh_s: 5.2
+      position: front
+
+# Battery System
+battery:
+  total_kwh: 65
+  usable_kwh: 60
+  chemistry: NMC  # Nickel Manganese Cobalt
+  voltage_nominal: 400
+  cells: 216
+  modules: 12
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70  # 70% capacity retention
+  thermal_management: liquid_cooling
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22  # Three-phase 22kW standard
+    connector: type2
+    charge_time_0_100_hours: 3.0  # 0-100% at 22kW
+  dc:
+    max_power_kw: 130  # DC fast charging
+    connector: ccs2
+    charge_time_10_80_percent_minutes: 30  # 10-80% at peak power
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 40
+        power_kw: 130
+      - soc_percent: 60
+        power_kw: 110
+      - soc_percent: 80
+        power_kw: 70
+  bidirectional:
+    v2g_capable: true
+    v2h_capable: true
+    v2l_capable: true
+    max_discharge_power_kw: 3.0
+    notes: >
+      Megane E-Tech supports bidirectional charging with V2G (Vehicle-to-Grid), 
+      V2H (Vehicle-to-Home), and V2L (Vehicle-to-Load) capabilities up to 3kW discharge power.
+
+# Performance
+performance:
+  acceleration_0_100_kmh_seconds: 7.4
   top_speed_kmh: 160
-  top_speed_mph: 99
-  notes: |
-    More powerful motor with 160 kW (218 hp) and 300 Nm torque.
-    Sporty performance with 7.4s 0-100 km/h.
+  power_to_weight_ratio_kwkg: 90.4  # 160kW / ~1770kg
 
-weight:
-  curb_weight_kg: 1636
-  gross_vehicle_weight_kg: 2076
-  payload_kg: 440
-  towing_capacity_braked_kg: 900
-  towing_capacity_unbraked_kg: 650
-  notes: |
-    131 kg heavier than EV40 due to larger battery and more powerful motor.
-    Towing capacity 900 kg with optional tow hitch.
+# Range & Efficiency
+range:
+  wltp_km: 450
+  wltp_city_km: 570  # WLTP City cycle
+  wltp_highway_km: 350  # WLTP Highway
+  real_world:
+    mixed_km: 380  # Real-world mixed driving
+    highway_km: 310  # Highway at 120-130 km/h
+    city_km: 480  # City driving
+    winter_km: 300  # Winter conditions (-10°C)
 
+efficiency:
+  wltp_consumption_kwh_per_100km: 15.8
+  real_world_consumption_kwh_per_100km: 18.5
+  epa_efficiency_rating: null  # Not sold in US
+
+# Dimensions & Weight
 dimensions:
   length_mm: 4210
   width_mm: 1780
-  width_with_mirrors_mm: 2032
   height_mm: 1505
   wheelbase_mm: 2700
-  ground_clearance_mm: 170
-  drag_coefficient: 0.296
-  frontal_area_m2: 2.50
-  turning_radius_m: 10.4
-  notes: "Excellent aerodynamics with Cd 0.296"
+  ground_clearance_mm: 180  # Crossover-style raised ride height
+  drag_coefficient: 0.30  # Good aerodynamics
+  frontal_area_m2: 2.4
+
+weight:
+  curb_weight_kg: 1770
+  gross_weight_kg: 2130
+  payload_kg: 360
+  towing_capacity_braked_kg: 900
+  towing_capacity_unbraked_kg: 750
 
 cargo:
-  trunk_volume_l: 440
-  trunk_max_volume_l: 1332
-  frunk_volume_l: 0
-  notes: "Class-leading 440L trunk, expandable to 1332L with rear seats folded"
+  trunk_capacity_liters: 440
+  trunk_capacity_seats_down_liters: 1332
+  frunk_capacity_liters: 0  # No frunk
 
-consumption:
-  wltp_kwh_per_100km: 13.3
-  wltp_city_kwh_per_100km: 10.4
-  wltp_highway_kwh_per_100km: 16.4
-  real_world_kwh_per_100km: 15.6
-  real_world_city_kwh_per_100km: 14.0
-  real_world_highway_kwh_per_100km: 18.2
-  efficiency_rating: A+
-  notes: |
-    Excellent WLTP efficiency at 13.3 kWh/100km (same as EV40).
-    Real-world consumption around 15.6 kWh/100km.
-    Heat pump standard on Techno trim.
+# Platform & Production
+platform: CMF-EV  # Renault-Nissan CMF-EV dedicated electric platform
+production:
+  plant: Douai, France
+  start_year: 2022
+  end_year: null  # Still in production
 
-features:
-  infotainment_screen_inches: 12.0
-  digital_cockpit_inches: 12.3
-  head_up_display: false
-  wireless_charging: true
-  wireless_connectivity: true
-  ota_updates: true
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_assist: true
-  heat_pump: true
-  notes: |
-    12.3-inch digital cockpit + 12" portrait OpenR Link touchscreen
-    Google Automotive OS with Google Maps, Assistant, and Play Store
-    My Renault app with remote functions
-    Wireless Apple CarPlay & Android Auto
-    Wireless smartphone charging
-    OTA software updates
-    Active Driver Assist (Highway & Traffic Jam Pilot)
-    Heat pump standard (improves winter range by 15%)
-    360° camera with parking sensors
+# Technology & Features
+technology:
+  infotainment:
+    system: OpenR Link
+    screen_size_inches: 12.0  # Vertical portrait display
+    operating_system: Android Automotive
+    features:
+      - Google Built-In
+      - Google Maps
+      - Google Assistant
+      - Wireless Apple CarPlay
+      - Wireless Android Auto
+  driver_assistance:
+    level: 2  # Level 2 ADAS
+    features:
+      - Adaptive Cruise Control with Stop & Go
+      - Lane Centering Assist
+      - Traffic Sign Recognition
+      - Blind Spot Warning
+      - Rear Cross Traffic Alert
+      - Active Emergency Braking
+      - 360-degree Camera
+      - Automatic Parking Assist
+  comfort:
+    climate_zones: 2  # Dual-zone automatic climate
+    heat_pump: true  # Standard heat pump for efficiency
+    features:
+      - Heated front seats
+      - Heated steering wheel
+      - Keyless entry
+      - Wireless phone charging
+      - Ambient lighting
+      - Multi-Sense drive modes (Eco, Comfort, Sport, Perso)
 
+# Safety
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2022
-  euro_ncap_adult: 91
-  euro_ncap_child: 86
-  euro_ncap_vulnerable: 67
-  euro_ncap_safety_assist: 80
-  airbags: 6
-  adas_level: 2
-  notes: |
-    5-star Euro NCAP rating (tested 2022)
-    6 airbags (front, side, curtain)
-    SAE Level 2+ autonomous driving capability
+  euro_ncap_scores:
+    adult_occupant: 91
+    child_occupant: 86
+    vulnerable_road_users: 70
+    safety_assist: 79
 
-production:
-  plant: Douai, France (ElectriCity)
-  platform: CMF-EV
-  platform_generation: 1
-  status: active
-  notes: |
-    Built at Renault's ElectriCity production hub in Douai, France.
-    CMF-EV platform shared with Nissan Ariya.
+# Wheels & Suspension
+wheels:
+  standard_size: '18"'
+  tire_size_front: 205/55R18
+  tire_size_rear: 205/55R18
 
-metadata:
-  data_quality: verified
-  last_updated: '2026-02-08'
-  created_at: '2026-02-08'
-  source: "Renault official specifications"
-  source_urls:
-    - "https://www.renault.com/en/electric-vehicles/megane-e-tech.html"
-    - "https://www.renault.fr/vehicules-electriques/megane-e-tech.html"
-  verification_date: '2026-02-08'
-  notes: |
-    2024 model year. Mid-range Megane E-Tech with 60 kWh battery.
-    Most popular variant, balancing range, performance, and price.
-    22 kW AC charging is fastest in segment. V2G capable.
+suspension:
+  front: MacPherson strut
+  rear: Multi-link
+  adjustable: false
+
+# Market Position
+market_position:
+  target_segment: Compact electric crossover
+  competitors:
+    - Volkswagen ID.3 Pro (€39,995)
+    - Hyundai Kona Electric (€42,990)
+    - Kia EV3 Long Range (€41,990)
+    - MG4 Long Range (€35,990)
+    - Nissan Leaf e+ (€43,990)
+  key_selling_points:
+    - 2023 European Car of the Year
+    - CMF-EV dedicated electric platform
+    - 450km WLTP range adequate for daily use
+    - Standard 22kW AC charging
+    - 130kW DC fast charging
+    - Standard heat pump for efficiency
+    - Google Built-In Android Automotive
+    - V2G/V2L bidirectional charging
+    - French design with premium interior
+    - Excellent value at €43,000
+
+# Ownership & Costs (estimated)
+ownership:
+  depreciation_3_years_percent: 45  # ~55% residual value
+  insurance_group: null
+  service_interval_months: 12
+  service_interval_km: 30000
+
+# Data Sources
+data_sources:
+  specifications: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  testing:
+    - source: ADAC
+      url: https://www.adac.de/rund-ums-fahrzeug/tests/elektroauto/renault-megane-e-tech-ev60/
+      real_world_consumption: 18.5 kWh/100km
+      confidence: measured
+    - source: InsideEVs
+      url: https://insideevs.com/reviews/renault-megane-e-tech-electric/
+      real_world_range: 380 km
+      confidence: measured
+  reviews:
+    - https://www.autoexpress.co.uk/renault/megane-e-tech
+    - https://www.carwow.de/renault/megane-e-tech-electric
+
+# Notes
+notes: >
+  2023 European Car of the Year winner. Built on dedicated CMF-EV electric platform 
+  (shared with Nissan Ariya). EV60 Techno is most popular trim level with comprehensive 
+  equipment. Standard heat pump improves winter efficiency significantly. 22kW three-phase 
+  AC charging standard (faster than most rivals). V2G capability allows bidirectional 
+  charging (home backup power). 12" vertical OpenR Link display with Google Built-In. 
+  Multi-Sense drive modes customize performance and efficiency. 440L trunk adequate for 
+  compact crossover. Available with optional 20" wheels (reduces range slightly). 
+  Excellent build quality and interior materials for price point. Strong competitor to 
+  Volkswagen ID.3 with more crossover styling.
