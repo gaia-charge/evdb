@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 10:30 AM  
+**Last Updated:** 2026-02-08 10:45 AM  
 **Total Vehicles:** 117 variants across 59 models from 21 manufacturers  
-**Germany Market Coverage:** 109/117 variants (93.2%)
+**Germany Market Coverage:** 111/117 variants (94.9%)
 
 ---
 
@@ -21,7 +21,7 @@
 | Mercedes-Benz | 6 | 13 | ✅ Good |
 | Nissan | 2 | 4 | 🟡 Partial |
 | Porsche | 1 | 4 | ✅ Good |
-| Cupra | 1 | 3 | 🟡 Partial |
+| Cupra | 1 | 3 | ✅ Good |
 | Ford | 1 | 4 | 🟡 Partial |
 | Polestar | 1 | 1 | 🟢 Single |
 | MG (SAIC) | 1 | 3 | 🟡 Partial |
@@ -65,6 +65,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Cupra Born Germany Market Data**: Added DE market data for 2 variants (58kWh €40,990, VZ 77kWh €51,990) - Completes Cupra Born lineup with full pricing, packages, and company car calculations - Cupra now 100% Germany coverage (3/3 variants) - Germany database coverage now 111/117 = 94.9% (up from 93.2%) - *Added Feb 8, 2026 10:45*
 - ✅ **Volvo EC40**: 1 NEW MODEL + 2 variants (Single Motor RWD 530km WLTP 175kW €56,000, Twin Motor AWD 487km WLTP 300kW €63,000) - Coupe SUV variant of EX40 with superior aerodynamics (Cd 0.30 vs 0.33), 55km more range than equivalent EX40, leather-free interior standard - First Volvo sold online-only - *Added Feb 8, 2026 10:30*
 - ✅ **Ford Mustang Mach-E Expansion**: Added 3 NEW VARIANTS (Standard Range RWD 68kWh 440km €49,990, Extended Range RWD 88kWh 600km €56,990, GT 88kWh AWD 487hp 3.7s 0-100 €74,990) + Germany market data for all variants - Complete Mach-E lineup now available with company car tax calculations - Ford now 4 variants (from 1, +300%) - *Added Feb 8, 2026 10:15*
 - ✅ **Peugeot e-3008**: 1 NEW MODEL + 2 variants (73 kWh Allure 525km WLTP €48,990, 98 kWh GT 700km WLTP €55,990) + Germany market data - All-new ground-up electric SUV with 21" Panoramic i-Cockpit, ChatGPT integration, segment-leading 700km range - *Added Feb 8, 2026 10:00*
@@ -145,6 +146,7 @@
 - **Feb 8, 2026 (10:00):** 112 variants (+2 Peugeot e-3008: NEW MODEL - 73 kWh Allure 525km €48,990, 98 kWh GT 700km €55,990 - Ground-up electric SUV with 21" Panoramic i-Cockpit + Germany market data)
 - **Feb 8, 2026 (10:15):** 115 variants (+3 Ford Mustang Mach-E: Standard Range RWD 440km €49,990, Extended Range RWD 600km €56,990, GT AWD 487hp 3.7s €74,990 - Complete Mach-E lineup + Germany market data - Germany coverage now 109/115 = 94.8%)
 - **Feb 8, 2026 (10:30):** 117 variants (+2 Volvo EC40: NEW MODEL - Single Motor RWD 530km €56,000, Twin Motor AWD 487km €63,000 - Coupe SUV with superior aerodynamics Cd 0.30, 55km more range than EX40, leather-free interior)
+- **Feb 8, 2026 (10:45):** 117 variants (no new variants, +2 Germany market records: Cupra Born 58kWh €40,990, Cupra Born VZ €51,990 - Completes Cupra lineup - Germany coverage now 111/117 = 94.9%)
 - **Growth:** +66 variants since Feb 7 (129.4% increase) | +2 manufacturers (Honda, Genesis) | +5 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40)
 - **Target:** 300+ variants by mid-March 2026
 
