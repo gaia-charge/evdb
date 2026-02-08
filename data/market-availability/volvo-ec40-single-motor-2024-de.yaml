@@ -1,0 +1,264 @@
+# Volvo EC40 Single Motor - German Market (2024)
+id: volvo-ec40-single-motor-2024-de
+variant_id: volvo-ec40-single-motor-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 56000  # € (2024 pricing, coupe RWD variant, +€3k vs EX40 for sportier styling)
+  destination_charge: 1095  # €
+  on_the_road_price: 57095  # Includes destination
+  price_includes:
+    - "Single motor RWD 175kW (238hp)"
+    - "69 kWh battery (530 km WLTP - 55km more than EX40!)"
+    - "11 kW AC charging (3-phase)"
+    - "150 kW DC fast charging"
+    - "LED headlights with automatic high beam"
+    - "12.3-inch digital driver display"
+    - "9-inch central touchscreen with Google built-in"
+    - "Dual-zone climate control"
+    - "Heat pump (standard)"
+    - "19-inch alloy wheels"
+    - "Rear parking camera"
+    - "Pilot Assist (adaptive cruise control)"
+    - "City Safety collision avoidance"
+    - "8-year/160,000km battery warranty"
+
+trim_levels:
+  - name: "Core"
+    price: 56000
+    features:
+      - "Base RWD coupe with 175kW (238hp)"
+      - "19-inch alloy wheels"
+      - "LED headlights"
+      - "Cloth/synthetic leather seats"
+      - "530km WLTP range (best-in-class aerodynamics Cd 0.30)"
+      - "Google built-in (Maps, Assistant, Play Store)"
+  - name: "Plus"
+    price: 61000  # +€5,000
+    features:
+      - "Panoramic glass roof (fixed)"
+      - "Heated front seats and steering wheel"
+      - "Power tailgate"
+      - "Harman Kardon premium audio (13 speakers)"
+      - "Park assist (front and rear)"
+      - "Leather upholstery"
+      - "360-degree camera"
+  - name: "Ultra"
+    price: 66000  # +€10,000 over Core
+    features:
+      - "All Plus features"
+      - "Pixel LED headlights with active bending"
+      - "Head-up display"
+      - "Ventilated front seats"
+      - "20-inch diamond-cut alloy wheels"
+      - "Advanced air purifier with PM2.5 filter"
+      - "Wireless phone charging pad (15W)"
+
+colors:
+  - name: "Crystal White Pearl"
+    type: solid
+    price: 0  # Free
+  - name: "Onyx Black"
+    type: metallic
+    price: 790
+  - name: "Sage Green"
+    type: metallic
+    price: 790
+  - name: "Fjord Blue"
+    type: metallic
+    price: 790
+  - name: "Silver Dawn"
+    type: metallic
+    price: 790
+  - name: "Vapour Grey"
+    type: metallic
+    price: 790
+
+wheels:
+  - size: "19 inch"
+    price: 0  # Standard
+    range_impact_km: 0
+    name: "19-inch alloy wheels"
+  - size: "20 inch"
+    price: 1200
+    range_impact_km: -18
+    name: "20-inch diamond-cut alloy wheels"
+
+interior:
+  - name: "Cloth/synthetic leather standard"
+    price: 0
+  - name: "Full leather upholstery"
+    price: 1500
+  - name: "Wool blend upholstery"
+    price: 1800
+    notes: "Sustainable material option"
+
+packages:
+  - name: "Comfort Package"
+    price: 2200
+    includes:
+      - "Panoramic glass roof (fixed)"
+      - "Heated front seats and steering wheel"
+      - "Power tailgate"
+      - "Park assist front and rear"
+  - name: "Tech Package"
+    price: 2800
+    includes:
+      - "Pixel LED headlights"
+      - "Head-up display"
+      - "360-degree camera"
+      - "Blind spot information system (BLIS)"
+  - name: "Premium Package"
+    price: 4500
+    includes:
+      - "All Comfort Package features"
+      - "All Tech Package features"
+      - "Harman Kardon premium audio"
+      - "Ventilated front seats"
+      - "Wireless phone charging"
+      - "Saves €500 vs buying separately"
+
+individual_options:
+  - name: "Panoramic glass roof"
+    price: 1200
+    notes: "Fixed (not opening), tinted"
+  - name: "Towing package"
+    price: 950
+    notes: "1,500kg braked, 750kg unbraked, electrically foldable towbar"
+  - name: "Harman Kardon premium audio"
+    price: 950
+    notes: "13 speakers, 600W"
+  - name: "Pixel LED headlights"
+    price: 1400
+    notes: "Active bending lights, adaptive beam pattern"
+  - name: "Head-up display"
+    price: 1100
+  - name: "22kW AC charging (optional)"
+    price: 650
+    notes: "Useful for public AC chargers and workplace charging"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 4980  # Annual savings vs 1% ICE rate
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €56,000 vehicle: 0.25% = €140/month = €1,680/year vs 1% = €560/month = €6,720/year. Annual savings: €5,040."
+    calculation: "€56,000 × 0.25% = €140/month. ICE: €56,000 × 1% = €560/month. Savings: €420/month = €5,040/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 380  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 330  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€280-380/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 8  # Typical delivery time from order
+  production_status: active
+  order_url: "https://www.volvocars.com/de/cars/ec40-electric/"
+  notes: "Built at Volvo Ghent factory (Belgium). Coupe variant of EX40 with superior aerodynamics. Delivery times vary by configuration."
+
+dealers:
+  count: 180  # Volvo dealers in Germany
+  network: "Volvo Deutschland"
+  service_centers: 180
+  notes: "Extensive Volvo dealer network across Germany, all trained for EV servicing. Can be ordered online or through dealerships."
+
+charging_networks:
+  - name: "Volvo Charging Service"
+    coverage: "300,000+ charging points across Europe via Plugsurfing network"
+    pricing: "Various tariffs available via Volvo app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego, Fastned"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€11.99/month + €0.35/kWh (Volvo members)"
+    notes: "150kW charging: 10-80% costs €16.91 (Volvo subscription) vs €38.14 (standard)"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2024)
+    cost_10_to_80_percent: 14.49  # € (69kWh × 70% × €0.30)
+    cost_per_100km: 4.95  # € (16.5 kWh/100km × €0.30 - more efficient than EX40)
+  - scenario: "Public AC charging"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_10_to_80_percent: 21.74
+    cost_per_100km: 7.43
+  - scenario: "DC fast charging (IONITY Volvo subscription)"
+    cost_per_kwh: 0.35  # €/kWh + €11.99/month
+    cost_10_to_80_percent: 16.91  # € (69kWh × 70% × €0.35)
+    cost_per_100km: 5.78
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_10_to_80_percent: 38.14
+    cost_per_100km: 13.04
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "3-year unlimited km vehicle warranty. 8-year/160,000km battery warranty covering capacity degradation below 70%. Extended warranty available."
+
+annual_costs:
+  insurance_estimate: 950  # € per year (comprehensive, experienced driver, slightly higher due to coupe styling)
+  road_tax: 0  # Exempt until 2030
+  inspection: 82  # € per year (TÜV inspection every 2 years, €164)
+  maintenance_estimate: 390  # € per year (service, tires, etc.)
+  total_estimate: 1422  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 14500  # Estimated battery production
+  lifecycle_co2_kg: 28500   # 200,000km with EU electricity mix (lower than EX40 due to better efficiency)
+  recyclability_percent: 85
+  battery_recycling: "Volvo battery recycling program, 95% material recovery target"
+  production_site: "Ghent Factory, Belgium (renewable energy powered)"
+
+popular_configurations:
+  - name: "Core Base"
+    price: 57885
+    includes:
+      - "Core trim (€56,000)"
+      - "Metallic paint (€790)"
+      - "Destination charge (€1,095)"
+    notes: "Best value coupe configuration, superior aerodynamics"
+  - name: "Plus Comfort"
+    price: 64035
+    includes:
+      - "Plus trim (€61,000)"
+      - "Metallic paint (€790)"
+      - "Towing package (€950)"
+      - "22kW AC charging (€650)"
+      - "Full leather (€1,500)"
+      - "Destination charge (€1,095)"
+    notes: "Popular mid-range coupe configuration"
+  - name: "Ultra Premium"
+    price: 70635
+    includes:
+      - "Ultra trim (€66,000)"
+      - "Metallic paint (€790)"
+      - "Towing package (€950)"
+      - "22kW AC charging (€650)"
+      - "Wool blend upholstery (€1,800)"
+      - "Destination charge (€1,095)"
+    notes: "Fully loaded RWD coupe, sustainable materials, triggers 0.5% company car tax"
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.volvocars.com/de/cars/ec40-electric/"
+    - "https://ev-database.org/car/1670/Volvo-EC40-Single-Motor"
+    - "Pricing estimated based on EX40 Single Motor + typical coupe premium"
+  notes: "EC40 is the coupe version of EX40 with superior aerodynamics (Cd 0.30 vs 0.33). Single motor RWD variant offers best efficiency and range (530 km WLTP - 55km more than EX40 Single Motor!). Google built-in standard. Real-world range: 450 km mixed (85% of WLTP) - excellent for long-distance travel. 150 kW DC charging: 10-80% in 32 min. Swedish safety heritage: City Safety collision avoidance, Pilot Assist adaptive cruise standard. Coupe SUV practicality: 413L cargo (behind rear seats), slightly less than EX40 but sportier roofline. Towing: 1,500kg braked. Company car value: under €70k = 0.25% tax rate saves ~€5,000/year. Built in Belgium (Ghent factory). Competes with Tesla Model Y RWD (€49k), BMW iX1 xDrive30 (€54k), Mercedes EQA 250+ (€56k). Best aerodynamics in compact electric SUV segment. Typical price: €58-62k with popular options. Premium coupe SUV with Scandinavian design, exceptional efficiency, and strong range."
