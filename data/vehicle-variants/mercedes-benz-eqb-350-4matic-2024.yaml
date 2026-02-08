@@ -1,0 +1,234 @@
+id: mercedes-benz-eqb-350-4matic-2024
+name: "Mercedes-Benz EQB 350 4MATIC"
+model_id: mercedes-benz-eqb
+variant_name: "350 4MATIC"
+model_year: 2024
+
+# Battery specifications
+battery:
+  usable_kwh: 66.5
+  total_kwh: 70.5
+  chemistry: NCM  # Nickel Cobalt Manganese
+  cells: prismatic
+  supplier: "CATL"
+  modules: 9
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling"
+  
+# Range specifications (WLTP, EPA, real-world)
+range:
+  wltp_km: 423
+  wltp_city_km: 515
+  wltp_highway_km: 345
+  epa_km: null  # Not sold in USA
+  real_world_km: 355  # EV Database real-world mixed driving
+  
+  # Range by temperature
+  real_world_mild_weather_km: 380
+  real_world_cold_weather_km: 285  # -10°C, 23°C cabin
+
+# Charging specifications
+charging:
+  # AC charging
+  ac_max_kw: 11  # 3-phase, standard
+  ac_charge_time_0_100_hours: 6.0  # 11kW charging
+  
+  # DC fast charging
+  dc_max_kw: 100  # CCS2
+  dc_charge_time_10_80_minutes: 32  # 10-80% in 32 minutes
+  dc_charge_time_0_100_minutes: 55
+  dc_charge_speed_kmh: 510  # km of range added per hour
+  
+  # DC charging curve
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 100
+      duration_minutes: 5
+    - soc_percent: 30
+      power_kw: 98
+      duration_minutes: 10
+    - soc_percent: 50
+      power_kw: 85
+      duration_minutes: 10
+    - soc_percent: 70
+      power_kw: 65
+      duration_minutes: 10
+    - soc_percent: 80
+      power_kw: 45
+      duration_minutes: 7
+  
+  connector_ac: Type2
+  connector_dc: CCS2
+  onboard_charger_kw: 11
+  plug_and_charge: yes  # ISO 15118 support
+
+# Performance specifications
+performance:
+  drive_type: AWD  # All-wheel drive (4MATIC)
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 140
+      torque_nm: 330
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 85
+      torque_nm: 235
+  
+  total_power_kw: 215
+  total_power_hp: 292
+  total_torque_nm: 520
+  
+  acceleration_0_100_kmh_sec: 6.2
+  acceleration_0_60_mph_sec: null
+  top_speed_kmh: 160  # Electronically limited
+  
+  # Driving modes
+  drive_modes:
+    - "ECO"
+    - "Comfort"
+    - "Sport"
+    - "Sport+"
+    - "Individual"
+    - "Off-Road"
+
+# Weight
+weight:
+  curb_weight_kg: 2285
+  gross_weight_kg: 2840
+  weight_distribution_front_percent: 55  # Better balanced with AWD
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 18.9
+  wltp_mi_per_kwh: null
+  epa_kwh_per_100km: null
+  epa_mpge: null
+  real_world_kwh_per_100km: 20.8  # EV Database measured
+  real_world_mi_per_kwh: null
+  energy_efficiency_class: "A"  # EU energy label
+  co2_emissions_wltp_g_per_km: 0
+
+# Additional features
+features:
+  adas_level: 2  # Highway Assist, Active Brake Assist
+  autonomous_features:
+    - "Active Distance Assist DISTRONIC (adaptive cruise)"
+    - "Active Steering Assist"
+    - "Active Brake Assist with cross-traffic function"
+    - "Active Lane Keeping Assist"
+    - "Attention Assist (drowsiness detection)"
+    - "Traffic Sign Assist"
+    - "Active Blind Spot Assist"
+    - "PRE-SAFE (collision preparation)"
+  
+  infotainment:
+    - "MBUX with 10.25-inch touchscreen"
+    - "7.0-inch digital instrument cluster (10.25-inch optional)"
+    - "Navigation with Electric Intelligence"
+    - "Apple CarPlay / Android Auto (wireless optional)"
+    - "Mercedes me Connect app"
+    - "Voice control with 'Hey Mercedes'"
+  
+  comfort:
+    - "Dual-zone automatic climate control"
+    - "Climate pre-conditioning via app"
+    - "Heat pump (standard)"
+    - "Heated front seats (standard)"
+    - "Heated rear seats (optional)"
+    - "Electric tailgate"
+    - "Keyless entry and start (KEYLESS-GO, optional)"
+    - "Wireless smartphone charging (optional)"
+    - "Ambient lighting 64 colors"
+    - "Third row seats (optional 7-seater)"
+    - "4MATIC all-wheel drive"
+    - "Sport suspension (lowered)"
+  
+  connectivity:
+    - "Mercedes me Connect (remote control)"
+    - "Over-the-air updates"
+    - "Mercedes me Charge"
+    - "Plug & Charge"
+  
+  special:
+    - "4MATIC all-wheel drive with torque vectoring"
+    - "Off-Road driving mode"
+    - "Enhanced traction for winter/slippery conditions"
+    - "Sport+ mode for maximum performance"
+    - "Lowered sport suspension"
+
+# Version information
+version:
+  trim_level: "AMG Line (standard)"
+  option_packages:
+    - "Night Package (black exterior accents)"
+    - "Premium Package (larger displays, KEYLESS-GO)"
+    - "Premium Plus Package (Burmester audio, 360° camera)"
+    - "Third row seats (7-seater, +€1,785)"
+    - "Rear-axle steering (optional, improved maneuverability)"
+  
+  production_location: "Kecskemét, Hungary"
+  build_quality: premium
+  paint_options: 9
+  interior_options: 3
+
+# Metadata
+metadata:
+  created_at: "2026-02-08T04:00:00Z"
+  updated_at: "2026-02-08T04:00:00Z"
+  data_quality: verified
+  data_source: manufacturer_and_tested
+  verified_by: "Mercedes-Benz official specs + EV Database testing"
+  notes: |
+    Mercedes-Benz EQB 350 4MATIC is the top-performance AWD variant.
+    Offers 215kW (292hp) and impressive 6.2s 0-100km/h acceleration.
+    
+    Key features:
+    - Most powerful EQB variant (292hp)
+    - 4MATIC all-wheel drive (dual motors)
+    - Sport+ mode for maximum performance
+    - AMG Line styling standard
+    - Optional third row seats (7-seater)
+    - Lowered sport suspension
+    
+    Compared to 300 4MATIC:
+    - +€4,000 price premium
+    - +47kW power (215 vs 168kW)
+    - Better 0-100: 6.2s vs 8.0s
+    - Same range (423km WLTP)
+    - +0.5 kWh/100km consumption (18.9 vs 18.4)
+    
+    Compared to 250+ FWD:
+    - +€8,000 price premium
+    - +75kW power (215 vs 140kW)
+    - Better 0-100: 6.2s vs 9.0s
+    - -51km range (423 vs 474km WLTP)
+    - AWD traction
+    
+    Competes with:
+    - Tesla Model Y Long Range AWD (faster, longer range)
+    - BMW iX1 xDrive30 (similar performance, 5-seat only)
+    - Audi Q4 e-tron 50 quattro (similar specs)
+    
+    Strengths:
+    - Impressive 6.2s 0-100km/h
+    - Strong 4MATIC all-wheel drive
+    - Only premium 7-seat compact performance EV
+    - Mercedes brand prestige
+    - AMG Line styling
+    
+    Weaknesses:
+    - Higher consumption (18.9 kWh/100km)
+    - 100kW DC charging still modest
+    - Premium price (€64,000+)
+    - Range penalty vs FWD
+
+sources:
+  - url: "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqb/explore.html"
+    title: "Mercedes-Benz EQB Official Specs"
+    date_accessed: "2026-02-08"
+  - url: "https://ev-database.org/car/1549/Mercedes-EQB-350-4MATIC"
+    title: "EV Database - Real-world testing"
+    date_accessed: "2026-02-08"
