@@ -628,8 +628,8 @@ elif page == "⚖️ Compare":
         return pd.read_sql_query("""
             SELECT 
                 v.id,
-                mfr.name || ' ' || m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
-                mfr.name as manufacturer,
+                m.brand || ' ' || m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
+                m.brand as manufacturer,
                 m.name as model,
                 v.variant_name,
                 v.model_year,
@@ -652,9 +652,8 @@ elif page == "⚖️ Compare":
                 ma.price_including_vat as price_otr_eur
             FROM vehicle_variants v
             JOIN vehicle_models m ON v.model_id = m.id
-            JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
             LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-            ORDER BY mfr.name, m.name, v.variant_name
+            ORDER BY m.brand, m.name, v.variant_name
         """, _conn)
     
     vehicles_df = load_all_vehicles(conn)
@@ -1035,7 +1034,7 @@ elif page == "📊 Analytics":
         query = """
         SELECT 
             v.id,
-            mfr.name as manufacturer,
+            m.brand as manufacturer,
             m.name as model,
             v.variant_name,
             v.model_year,
@@ -1053,9 +1052,8 @@ elif page == "📊 Analytics":
             ma.price_base as price_eur
         FROM vehicle_variants v
         JOIN vehicle_models m ON v.model_id = m.id
-        JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
         LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-        ORDER BY mfr.name, m.name, v.variant_name
+        ORDER BY m.brand, m.name, v.variant_name
         """
         return pd.read_sql_query(query, _conn)
     
@@ -1403,12 +1401,11 @@ elif page == "💾 Data Explorer":
     ma.price_base AS price_eur
 FROM vehicle_variants v
 JOIN vehicle_models mo ON v.model_id = mo.id
-JOIN manufacturers m ON mo.manufacturer_id = m.id
 LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-ORDER BY m.name, mo.name, v.variant_name;""",
+ORDER BY mo.brand, mo.name, v.variant_name;""",
         
         "Top 10 Longest Range EVs": """SELECT 
-    m.name AS manufacturer,
+    mo.brand AS manufacturer,
     mo.name AS model,
     v.variant_name,
     v.range_wltp_km,
@@ -1416,12 +1413,11 @@ ORDER BY m.name, mo.name, v.variant_name;""",
     v.battery_usable_kwh
 FROM vehicle_variants v
 JOIN vehicle_models mo ON v.model_id = mo.id
-JOIN manufacturers m ON mo.manufacturer_id = m.id
 ORDER BY v.range_wltp_km DESC
 LIMIT 10;""",
         
         "Fastest Charging Vehicles": """SELECT 
-    m.name AS manufacturer,
+    mo.brand AS manufacturer,
     mo.name AS model,
     v.variant_name,
     v.dc_charge_power_kw,
@@ -1429,13 +1425,12 @@ LIMIT 10;""",
     v.battery_usable_kwh
 FROM vehicle_variants v
 JOIN vehicle_models mo ON v.model_id = mo.id
-JOIN manufacturers m ON mo.manufacturer_id = m.id
 WHERE v.dc_charge_power_kw IS NOT NULL
 ORDER BY v.dc_charge_power_kw DESC
 LIMIT 10;""",
         
         "Most Efficient Vehicles": """SELECT 
-    m.name AS manufacturer,
+    mo.brand AS manufacturer,
     mo.name AS model,
     v.variant_name,
     v.consumption_real_world_kwh_100km,
@@ -1443,7 +1438,6 @@ LIMIT 10;""",
     v.battery_usable_kwh
 FROM vehicle_variants v
 JOIN vehicle_models mo ON v.model_id = mo.id
-JOIN manufacturers m ON mo.manufacturer_id = m.id
 WHERE v.consumption_real_world_kwh_100km IS NOT NULL
 ORDER BY v.consumption_real_world_kwh_100km ASC
 LIMIT 10;""",
