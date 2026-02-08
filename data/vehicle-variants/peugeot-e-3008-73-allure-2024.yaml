@@ -1,0 +1,208 @@
+# Peugeot e-3008 73 kWh Allure (2024) - Mid-Range Trim
+
+id: peugeot-e-3008-73-allure-2024
+model_id: peugeot-e-3008
+name: e-3008 73 kWh Allure
+model_year: 2024
+trim_level: Allure  # Mid-range trim
+variant_code: null
+
+production:
+  start_date: 2024-02-01
+  end_date: null
+  status: active
+  notes: New generation e-3008 launched early 2024
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 73.0
+  usable_kwh: 70.0  # ~95.9% usable
+  supplier: ACC (Automotive Cells Company - Stellantis/Mercedes/TotalEnergies JV)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 264
+  modules: 22
+  voltage_nominal: 400
+  notes: Mid-size battery option for optimal balance of range and price
+
+range:
+  wltp_km: 525
+  wltp_city_km: 680
+  wltp_highway_km: 430
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 450
+  real_world_source: Estimated from early reviews
+  notes: Excellent efficiency for compact SUV at ~14.3 kWh/100km
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 7.5
+    onboard_charger: 11kW 3-phase standard, 22kW optional
+  
+  dc:
+    max_power_kw: 160
+    connector_type: CCS2
+    time_10_80_percent_minutes: 27
+    peak_power_notes: 160kW peak maintained up to ~50%, then tapers gradually
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 155
+    - percent: 10
+      power_kw: 160
+    - percent: 30
+      power_kw: 160
+    - percent: 50
+      power_kw: 155
+    - percent: 60
+      power_kw: 130
+    - percent: 70
+      power_kw: 100
+    - percent: 80
+      power_kw: 60
+    - percent: 90
+      power_kw: 35
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: true  # Vehicle-to-Load via adapter
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front  # Front-wheel drive (FWD)
+  front:
+    type: permanent_magnet
+    power_kw: 157
+    power_hp: 213
+    torque_nm: 345
+    supplier: null
+  combined:
+    power_kw: 157
+    power_hp: 213
+    torque_nm: 345
+
+performance:
+  acceleration_0_100_kph: 8.8
+  acceleration_0_60_mph: null
+  top_speed_kph: 170  # Electronically limited
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 14.3
+  wltp_wh_per_km: 143
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 16.5
+  mpge_combined: null
+  drag_coefficient: 0.28
+
+weight:
+  curb_weight_kg: 1900
+  gross_weight_kg: 2430
+  weight_distribution_front_percent: 58
+  
+towing:
+  max_towing_kg: 1250  # Braked trailer
+  max_tongue_weight_kg: 75
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: MacPherson strut with anti-roll bar and hydraulic bump stops
+  rear: Multi-link independent suspension with progressive springs
+
+brakes:
+  front: Ventilated disc (345mm)
+  rear: Disc (285mm)
+  regenerative: true
+
+tires:
+  standard: 235/55 R19
+
+features:
+  infotainment:
+    - "Peugeot Panoramic i-Cockpit with 21\" curved display"
+    - "10.0\" digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "ChatGPT voice assistant integration"
+    - "DAB+ digital radio"
+    - "6 speakers"
+    - "MyPeugeot mobile app for remote control"
+    - "Connected Navigation with real-time traffic"
+    - "i-Toggles 2.0 (10 customizable shortcut buttons)"
+    - "Plug & Charge (ISO 15118)"
+  
+  driver_assistance:
+    - "Active Safety Brake with Pedestrian and Cyclist Detection"
+    - "Lane Keep Assist with Lane Centering"
+    - "Traffic Sign Recognition with Speed Limit Adaptation"
+    - "Adaptive cruise control with Stop & Go"
+    - "Blind spot monitoring with active intervention"
+    - "360° parking camera"
+    - "Driver attention alert"
+    - "Automatic high beam assist"
+    - "Rear cross-traffic alert"
+  
+  comfort_convenience:
+    - "Automatic dual-zone climate control"
+    - "Keyless entry and start"
+    - "One-pedal driving with B-mode regenerative braking"
+    - "Heated front seats"
+    - "Power liftgate"
+    - "Electric windows front and rear"
+    - "Electric, heated, and auto-dimming mirrors"
+    - "Rain-sensing wipers"
+    - "Wireless smartphone charging (15W)"
+  
+  exterior:
+    - "Pixel LED headlights with matrix beam"
+    - "19\" Brasilia alloy wheels"
+    - "Body-colored door handles with chrome accents"
+    - "Privacy glass rear windows"
+    - "Shark fin antenna"
+    - "Roof rails (satin chrome)"
+  
+  interior:
+    - "Cloth and TEP upholstery with Météorite Grey trim"
+    - "Leather-wrapped steering wheel (compact GT style)"
+    - "Peugeot Connect emergency call and telematics"
+    - "520L trunk capacity"
+    - "60/40 split-folding rear seats"
+    - "Ambient lighting (8 colors)"
+    - "GT compact steering wheel"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  source_urls:
+    - https://www.peugeot.de/modelle/e-3008.html
+    - https://www.peugeot.fr/gamme-vehicules/e-3008.html
+    - https://www.auto-motor-und-sport.de/neuheiten/peugeot-e-3008-2024/
+  notes: |
+    The Peugeot e-3008 73 kWh Allure represents the entry point into the e-3008 range
+    with the smaller 73 kWh battery. It still offers impressive 525 km WLTP range and
+    excellent equipment including the revolutionary 21" Panoramic i-Cockpit display and
+    ChatGPT voice assistant.
+    
+    With 160kW DC fast charging, the 73 kWh battery can charge from 10-80% in just 27
+    minutes, making it highly practical for road trips despite being the "smaller" battery.
+    
+    The e-3008 is a ground-up electric design with no ICE compromises, offering best-in-
+    class interior space (520L trunk) and cutting-edge technology. The Panoramic i-Cockpit
+    with its massive curved 21" display is a segment first and provides an incredibly
+    modern, premium experience.
+    
+    Allure trim includes comprehensive equipment that would be optional or higher-trim-only
+    on German competitors, making it excellent value. The combination of French ride comfort,
+    practical space, long range, and advanced tech makes this a compelling alternative to
+    VW ID.4, Škoda Enyaq, and even Tesla Model Y.
