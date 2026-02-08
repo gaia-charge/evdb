@@ -71,17 +71,17 @@ This structure handles:
 
 ## 📋 Current Status
 
-**Progress**: 88% Complete - Ready for Deployment! 🚀  
-**Vehicles**: 51 variants across 37 models from 19 manufacturers  
-**Markets**: Germany (27 vehicles), USA (6), France, Poland, Italy  
-**Next Milestone**: Deploy Streamlit app to Streamlit Cloud  
+**Progress**: 92% Complete - Ready for Deployment! 🚀  
+**Vehicles**: 63 variants across 41 models from 19 manufacturers  
+**Markets**: Germany (primary), France, USA, Poland, Italy  
+**Next Milestone**: Continue vehicle expansion + Deploy Streamlit app  
 **Target Public Launch**: 2026-02-15
 
 ### What's Working Now ✅
 
-- ✅ **51 vehicle variants** with comprehensive specifications
+- ✅ **63 vehicle variants** with comprehensive specifications
 - ✅ **Full validation pipeline** - All YAML files validated with JSON Schema
-- ✅ **SQLite database** - Automated builds with relationships (0.25 MB)
+- ✅ **SQLite database** - Automated builds with relationships (0.27 MB)
 - ✅ **Datasette API** - 11 canned queries + full SQL access
 - ✅ **5 Datasette plugins** - Maps, charts, GraphQL, exports, search
 - ✅ **Streamlit dashboard** - 6 complete pages (Home, Browse, Compare, Analytics, Data Explorer, Documentation)
