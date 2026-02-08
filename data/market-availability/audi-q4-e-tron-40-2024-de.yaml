@@ -1,0 +1,295 @@
+# Audi Q4 40 e-tron - German Market (2024)
+id: audi-q4-e-tron-40-2024-de
+variant_id: audi-q4-e-tron-40-2024
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 52990  # € (2024 pricing, €6,000 less than quattro)
+  destination_charge: 1190  # €
+  on_the_road_price: 54180  # Includes destination
+  price_includes:
+    - "11kW AC charging (3-phase)"
+    - "135kW DC fast charging"
+    - "LED headlights"
+    - "10.25-inch Audi Virtual Cockpit"
+    - "11.6-inch MMI touch display"
+    - "Dual-zone climate control"
+    - "Heat pump (standard)"
+    - "19-inch wheels"
+    - "Rear parking sensors"
+    - "Audi pre sense front"
+    - "Lane departure warning"
+
+trim_levels:
+  - name: "Q4 40 e-tron"
+    price: 52990
+    features:
+      - "Base RWD model with 150kW (204hp)"
+      - "19-inch wheels standard"
+      - "LED headlights"
+      - "Fabric/leatherette interior"
+      - "547km WLTP range (25km more than quattro)"
+  - name: "advanced"
+    price: 57990  # +€5,000
+    features:
+      - "Matrix LED headlights"
+      - "Audi virtual cockpit plus (12.3-inch)"
+      - "Adaptive cruise control (ACC)"
+      - "Lane change assist"
+      - "Park assist plus"
+      - "360-degree cameras"
+      - "Leather seats"
+  - name: "S line"
+    price: 62990  # +€10,000 over base
+    features:
+      - "S line exterior styling"
+      - "S line interior with sport seats"
+      - "20-inch S line wheels (reduces range by 15km)"
+      - "Sport suspension (lowered 15mm)"
+      - "Matrix LED headlights"
+      - "Virtual Cockpit Plus"
+      - "Fine Nappa leather"
+
+colors:
+  - name: "Brilliant Black"
+    type: solid
+    price: 0  # Free
+  - name: "Glacier White metallic"
+    type: metallic
+    price: 795
+  - name: "Mythos Black metallic"
+    type: metallic
+    price: 795
+  - name: "Navarra Blue metallic"
+    type: metallic
+    price: 795
+  - name: "District Green metallic"
+    type: metallic
+    price: 795
+  - name: "Typhoon Gray metallic"
+    type: metallic
+    price: 795
+  - name: "Geyser Blue metallic"
+    type: metallic
+    price: 795
+  - name: "Audi exclusive paint"
+    type: exclusive
+    price: 3500
+
+wheels:
+  - size: "19 inch"
+    price: 0  # Standard
+    range_impact_km: 0
+    name: "19-inch alloy wheels"
+  - size: "20 inch"
+    price: 1400
+    range_impact_km: -15
+    name: "20-inch S line alloy wheels"
+  - size: "21 inch"
+    price: 2800
+    range_impact_km: -25
+    name: "21-inch Audi Sport alloy wheels"
+
+interior:
+  - name: "Fabric/leatherette standard"
+    price: 0
+  - name: "Leather seats"
+    price: 1650
+  - name: "Fine Nappa leather"
+    price: 2950
+
+packages:
+  - name: "Comfort Package"
+    price: 1890
+    includes:
+      - "3-zone automatic climate control"
+      - "Heated front seats"
+      - "Electric lumbar support"
+      - "Power tailgate"
+  - name: "Technology Package"
+    price: 2490
+    includes:
+      - "Adaptive cruise control (ACC) with Stop&Go"
+      - "Lane change assist"
+      - "Park assist plus"
+      - "360-degree cameras"
+  - name: "Technology Package Pro"
+    price: 3990
+    includes:
+      - "Everything in Technology Package"
+      - "Matrix LED headlights"
+      - "Heads-up display (HUD)"
+      - "Rear cross-traffic alert"
+  - name: "Comfort & Sound Package"
+    price: 2890
+    includes:
+      - "Panoramic glass roof (fixed)"
+      - "Sonos premium audio (10 speakers)"
+      - "Acoustic glazing"
+  - name: "Premium Package"
+    price: 5990
+    includes:
+      - "All Technology Package Pro features"
+      - "All Comfort & Sound features"
+      - "Fine Nappa leather"
+      - "Ventilated front seats"
+      - "Ambient lighting (30 colors)"
+      - "Saves €1,890 vs buying separately"
+  - name: "Winter Package"
+    price: 890
+    includes:
+      - "Heated steering wheel"
+      - "Heated windshield washer nozzles"
+
+individual_options:
+  - name: "Panoramic glass roof (fixed)"
+    price: 1350
+    notes: "Not opening, reduces headroom by 15mm"
+  - name: "Towing package"
+    price: 1050
+    notes: "1,200kg braked, 750kg unbraked, electrically folding towbar"
+  - name: "Sonos premium audio"
+    price: 1790
+    notes: "10 speakers, 580W"
+  - name: "Matrix LED headlights"
+    price: 1590
+    notes: "Dynamic indicators, animated coming/leaving home"
+  - name: "Heads-up display (HUD)"
+    price: 1290
+    notes: "Windshield projection with AR navigation"
+  - name: "22kW AC charging (optional)"
+    price: 690
+    notes: "Reduces DC charging time slightly, useful for public AC chargers"
+  - name: "Audi exclusive interior/exterior"
+    price_from: 2500
+    notes: "Custom colors, materials, stitching"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 4770  # Annual savings vs 1% ICE rate
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €52,990 vehicle: 0.25% = €132/month = €1,590/year vs 1% = €530/month = €6,360/year. Annual savings: €4,770."
+    calculation: "€52,990 × 0.25% = €132/month. ICE: €52,990 × 1% = €530/month. Savings: €398/month = €4,770/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 360  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 10  # Slightly faster than quattro
+  production_status: active
+  order_url: "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-e-tron/konfigurator.html"
+  notes: "Built at Zwickau, Germany. Most popular Q4 variant in Germany. Delivery times can vary by configuration."
+
+dealers:
+  count: 550  # Audi dealers in Germany
+  network: "Audi Deutschland"
+  service_centers: 550
+  notes: "Extensive Audi dealer network across Germany, all trained for EV servicing"
+
+charging_networks:
+  - name: "Audi e-tron Charging Service"
+    coverage: "400,000+ charging points across Europe, 30+ countries"
+    pricing: "Various tariffs available via Audi connect app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego, Fastned"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€17.99/month + €0.31/kWh"
+    notes: "Audi preferred partner, 135kW charging: 10-80% costs €20.20 (subscription) vs €40.90 (standard)"
+  - name: "EnBW mobility+"
+    pricing: "€0.45-0.55/kWh (depending on tariff)"
+    notes: "Popular in Germany, good coverage"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2024)
+    cost_10_to_80_percent: 16.17  # € (77kWh × 70% × €0.30)
+    cost_per_100km: 5.43  # € (18.1 kWh/100km × €0.30)
+  - scenario: "Public AC charging"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_10_to_80_percent: 24.26
+    cost_per_100km: 8.15
+  - scenario: "DC fast charging (IONITY subscription)"
+    cost_per_kwh: 0.31  # €/kWh + €17.99/month
+    cost_10_to_80_percent: 16.71  # € (77kWh × 70% × €0.31)
+    cost_per_100km: 5.61
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_10_to_80_percent: 42.59
+    cost_per_100km: 14.30
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "2-year vehicle warranty standard, can be extended up to 5 years. Battery warranty covers capacity degradation below 70% within 8 years/160,000km."
+
+annual_costs:
+  insurance_estimate: 900  # € per year (comprehensive, experienced driver, slightly less than quattro)
+  road_tax: 0  # Exempt until 2030
+  inspection: 80  # € per year (TÜV inspection every 2 years, €160)
+  maintenance_estimate: 380  # € per year (service, tires, etc. - simpler drivetrain)
+  total_estimate: 1360  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 15000  # Estimated battery production
+  lifecycle_co2_kg: 28000   # 200,000km with EU electricity mix (lighter vehicle)
+  recyclability_percent: 85
+  battery_recycling: "Audi battery recycling program, 95% material recovery target"
+  production_site: "Zwickau Factory (100% renewable energy)"
+
+popular_configurations:
+  - name: "Base RWD"
+    price: 56675  # Base + typical options
+    includes:
+      - "Base Q4 40 e-tron (€52,990)"
+      - "Metallic paint (€795)"
+      - "Comfort Package (€1,890)"
+      - "Destination charge (€1,190)"
+    notes: "Best value Q4, most efficient variant"
+  - name: "advanced Comfort"
+    price: 64565
+    includes:
+      - "advanced trim (€57,990)"
+      - "Comfort & Sound Package (€2,890)"
+      - "Towing package (€1,050)"
+      - "Metallic paint (€795)"
+      - "Leather seats (€1,650)"
+      - "Destination charge (€1,190)"
+    notes: "Popular mid-range configuration, best-selling Q4 in Germany"
+  - name: "S line Premium"
+    price: 73555
+    includes:
+      - "S line trim (€62,990)"
+      - "Premium Package (€5,990)"
+      - "Towing package (€1,050)"
+      - "22kW AC charging (€690)"
+      - "Metallic paint (€795)"
+      - "Destination charge (€1,190)"
+    notes: "Fully loaded RWD configuration"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-e-tron/preis-ausstattung.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q4-e-tron/"
+    - "https://ev-database.org/car/1365/Audi-Q4-e-tron-40"
+  notes: "Best-selling Q4 variant in Germany. €6,000 less than quattro while offering 25km more range (547km vs 522km) thanks to lighter weight and single motor efficiency. Perfect for buyers who don't need AWD. Base price €52,990 positions it between VW ID.4 Pro (€46,415) and premium alternatives. Most popular is 'advanced' trim around €64k. Company car drivers save €4,770/year with 0.25% tax rate. Excellent choice for range-conscious buyers and those in regions without harsh winters."
