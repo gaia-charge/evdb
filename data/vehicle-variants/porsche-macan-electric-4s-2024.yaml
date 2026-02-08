@@ -1,0 +1,372 @@
+# Porsche Macan Electric 4S 2024
+# Mid-range Macan Electric with dual motors and all-wheel drive
+# Built on PPE platform with 800V architecture
+# Performance AWD variant with impressive 4.1s 0-100 km/h
+
+id: porsche-macan-electric-4s-2024
+name: Macan 4S
+model_id: porsche-macan-electric
+manufacturer_id: porsche
+variant_name: Macan 4S
+model_year: 2024
+trim_level: 4S
+version: 4S
+
+description: |
+  The Porsche Macan 4S represents the sweet spot in the Macan Electric lineup,
+  combining dual-motor all-wheel drive performance with impressive efficiency and 
+  range. With 330kW (448hp) and sophisticated Porsche Traction Management (PTM), 
+  the 4S delivers exhilarating 4.1-second 0-100 km/h acceleration while maintaining 
+  578km WLTP range.
+  
+  The dual-motor setup provides intelligent torque vectoring and all-weather 
+  capability, making the 4S ideal for drivers who need AWD traction without 
+  compromising efficiency. The PPE platform's 800V architecture delivers the same 
+  flagship 270kW charging speed as the base model (10-80% in 21 minutes).
+  
+  Standard equipment is comprehensive: air suspension with PASM, sport seats, LED 
+  Matrix headlights, and the new Porsche Driver Experience cockpit. The 4S strikes 
+  the perfect balance between everyday usability (excellent range, charging speed) 
+  and sports car performance (sub-5-second acceleration, precise handling).
+  
+  For buyers seeking the complete Macan Electric experience with all-weather 
+  security and strong performance, the 4S offers exceptional value without the 
+  price premium of the Turbo variant.
+
+# ============================================================================
+# BATTERY & RANGE
+# ============================================================================
+
+battery:
+  usable_kwh: 95.0
+  total_kwh: 100.0
+  chemistry: NMC
+  cells: prismatic
+  manufacturer: Samsung SDI
+  supplier: Samsung SDI (South Korea)
+  modules: 12
+  cells_total: 180
+  nominal_voltage: 662
+  pack_voltage_range: "560-830V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    Same PPE platform 100kWh battery as RWD variant with 800V architecture.
+    Dual-motor AWD system adds weight and drag, reducing range by ~35km vs RWD.
+    Advanced thermal management optimized for high-performance driving and fast 
+    charging.
+
+range:
+  wltp_km: 578
+  wltp_city_km: 720
+  wltp_highway_km: 475
+  epa_km: 465
+  epa_miles: 289
+  real_world_km: 490
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP: 578km (95kWh battery, 19" Macan wheels, AWD)
+    EPA: ~289 miles / 465km estimated (US rating)
+    Real-world: ~490km mixed driving in good conditions
+    
+    Approximately 35km less range than RWD due to dual motors and AWD system drag.
+    Still excellent range for daily driving and road trips. Winter range: ~420km 
+    in cold conditions with heat pump.
+
+efficiency:
+  wltp_kwh_per_100km: 19.3
+  epa_kwh_per_100km: 22.5
+  real_world_kwh_per_100km: 24.0
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    Macan 4S consumes 19.3 kWh/100km WLTP (~1.2 kWh/100km more than RWD).
+    AWD efficiency penalty is typical for dual-motor systems but kept minimal 
+    through intelligent power distribution and motor disconnect capability.
+
+# ============================================================================
+# CHARGING
+# ============================================================================
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    optional_upgrade_kw: 22
+    optional_upgrade_cost: "€1,680 (22kW onboard charger)"
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 9.5
+    notes: |
+      Standard: 11kW AC (3-phase Type2) - 0-100% in ~9.5 hours
+      Optional: 22kW AC onboard charger upgrade (€1,680) - 0-100% in ~4.8 hours
+  
+  dc:
+    max_power_kw: 270
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 21
+    time_5_80_minutes: 21
+    peak_charge_time_minutes: "15-30% state of charge"
+    notes: |
+      Same industry-leading 800V fast charging as RWD variant:
+      - Peak: 270kW (achieved between 15-30% SoC at 350kW chargers)
+      - 10-80%: ~21 minutes (ideal conditions, preconditioned battery)
+      - Average 10-80%: ~23-25 minutes real-world
+      - 100km range in ~5 minutes
+      
+      4S maintains flagship charging performance - no compromise regardless of 
+      trim level.
+    
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 60
+      - soc_percent: 10
+        power_kw: 260
+      - soc_percent: 15
+        power_kw: 270
+        note: "Peak power"
+      - soc_percent: 30
+        power_kw: 268
+      - soc_percent: 50
+        power_kw: 190
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 55
+
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 11
+  v2h: true
+  v2g: true
+  notes: |
+    PPE platform supports full bidirectional charging suite:
+    - V2L: 11kW external power supply
+    - V2H: Home backup power (requires compatible charger)
+    - V2G: Grid services (market dependent)
+
+# ============================================================================
+# MOTORS & PERFORMANCE
+# ============================================================================
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD (all-wheel drive)
+  front_motor:
+    power_kw: 130
+    power_hp: 177
+    type: PMSM
+  rear_motor:
+    power_kw: 200
+    power_hp: 272
+    type: PMSM
+  combined_power_kw: 330
+  combined_power_hp: 448
+  overboost_power_kw: 360
+  overboost_power_hp: 489
+  overboost_duration_seconds: 10
+  torque_nm: 650
+  notes: |
+    Macan 4S features intelligent dual-motor AWD:
+    - Front: 130kW (177hp) permanent magnet synchronous
+    - Rear: 200kW (272hp) permanent magnet synchronous
+    - Combined: 330kW (448hp) continuous, 360kW (489hp) overboost
+    - Torque: 650 Nm (impressive for mid-range variant)
+    
+    Overboost (Launch Control): 360kW for ~10 seconds during maximum acceleration.
+    Porsche Traction Management (PTM) intelligently distributes torque between 
+    axles for optimal traction and efficiency. Front motor can disconnect during 
+    cruising to maximize efficiency.
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 4.1
+  acceleration_0_60_mph_seconds: 3.9
+  acceleration_0_200_kmh_seconds: 17.1
+  top_speed_kmh: 220
+  top_speed_electronically_limited: true
+  notes: |
+    Macan 4S with overboost (Launch Control):
+    - 0-100 km/h: 4.1 seconds (sports car territory!)
+    - 0-60 mph: 3.9 seconds
+    - 0-200 km/h: 17.1 seconds
+    - Top speed: 220 km/h (electronically limited)
+    - Quarter mile: ~12.5 seconds
+    
+    Extremely quick for an SUV. Faster than original Porsche 911 Carrera models.
+    Dual-motor AWD provides relentless traction and predictable handling in all 
+    weather conditions.
+
+weight:
+  curb_weight_kg: 2340
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+  gross_weight_kg: 2945
+  payload_kg: 605
+  towing_capacity_kg: 2000
+  towing_capacity_braked_kg: 2000
+  notes: |
+    Macan 4S weighs 2,340kg (80kg heavier than RWD due to front motor and AWD 
+    components). Near-perfect weight distribution (48/52) provides balanced 
+    handling. 2,000kg towing capacity standard.
+
+suspension:
+  front: Multi-link with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Porsche Active Suspension Management (PASM)
+  adjustable_ride_height: true
+  notes: |
+    Standard two-chamber air suspension with PASM. 4S benefits from sportier 
+    damper tuning vs RWD. Three ride height settings plus automatic lowering at 
+    speed. Optional Porsche Torque Vectoring Plus (PTV Plus, €1,890) adds 
+    electronic rear differential for even sharper cornering.
+
+brakes:
+  front: 375mm ventilated discs
+  rear: 365mm ventilated discs
+  caliper_type: Fixed aluminum monobloc calipers (white painted)
+  regenerative: true
+  regenerative_max_power_kw: 275
+  notes: |
+    Standard: Upgraded brakes vs RWD - 375mm front / 365mm rear with white calipers
+    Optional: Porsche Ceramic Composite Brake (PCCB) - €9,240
+    Optional: Porsche Surface Coated Brake (PSCB) - €3,150
+    
+    Regenerative braking: Up to 275kW recuperation (higher than RWD thanks to 
+    dual motors), one-pedal driving optional
+
+# ============================================================================
+# DIMENSIONS & CAPACITY
+# ============================================================================
+
+dimensions:
+  length_mm: 4784
+  width_mm: 1938
+  width_with_mirrors_mm: 2164
+  height_mm: 1615
+  wheelbase_mm: 2893
+  ground_clearance_mm: 185
+  drag_coefficient: 0.26
+  frontal_area_m2: 2.82
+  notes: |
+    Same dimensions as RWD except 7mm lower height (due to sportier suspension 
+    tuning). Excellent 0.26 drag coefficient maintains efficiency despite AWD.
+    185mm ground clearance provides SUV capability.
+
+cargo:
+  trunk_litres: 540
+  trunk_max_litres: 1348
+  frunk_litres: 84
+  notes: |
+    540L cargo space (seats up), 1,348L with rear seats folded
+    84L front trunk (frunk) for charging cables
+    Identical cargo capacity to RWD variant
+    Power liftgate standard
+
+# ============================================================================
+# ADDITIONAL FEATURES
+# ============================================================================
+
+tires:
+  front: "255/55 R20"
+  rear: "285/45 R20"
+  wheel_size_inches: 20
+  notes: |
+    Standard: 20" Macan 4S wheels (staggered setup for AWD performance)
+    Optional: 21" wheels available
+    Wider tires than RWD for improved traction and cornering
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+  notes: |
+    Standard: Automatic 3-zone climate control with heat pump
+    Heat pump essential for winter efficiency
+    Pre-conditioning via Porsche Connect app or navigation
+
+interior:
+  seats: 5
+  seat_material: Partial leather with alcantara inserts
+  seat_adjustment: 8-way power adjustable sport seats (standard)
+  steering_wheel: Heated GT sports steering wheel
+  display_instrument: 12.6" curved digital instrument cluster
+  display_center: 10.9" curved central touchscreen
+  display_passenger: Optional 10.9" passenger display
+  sound_system: Sound Package Plus (standard), BOSE/Burmester optional
+  ambient_lighting: true
+  notes: |
+    4S includes upgraded sport seats with alcantara/leather combination
+    GT sports steering wheel (more bolstered than base)
+    LED Matrix headlights standard (optional on RWD)
+    Sportier interior trim and badges distinguish 4S from base model
+
+adas_features:
+  - Porsche InnoDrive (adaptive cruise with predictive range optimization, optional)
+  - Lane Keeping Assist with Lane Change Assist
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control with Stop & Go
+  - Surround View with 360° cameras (optional)
+  - Park Assist Plus (optional)
+  - Night Vision Assist (optional)
+
+connectivity:
+  system: Porsche Communication Management (PCM) 6.1
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Porsche Connect (My Porsche app)
+  voice_assistant: '"Hey Porsche" voice control'
+  notes: |
+    Same PCM 6.1 system as RWD with dual curved displays.
+    Full connectivity suite with wireless smartphone integration.
+    OTA updates and My Porsche app for remote management.
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  verified_by: Porsche official specifications
+  sources:
+    - https://www.porsche.com/germany/models/macan/macan-models/
+    - https://newsroom.porsche.com
+  notes: |
+    The Macan 4S is the sweet spot variant, offering:
+    - STRONG performance: 4.1s 0-100 km/h (sports car acceleration)
+    - AWD security: Porsche Traction Management for all-weather capability
+    - EXCELLENT range: 578km WLTP (only 35km less than RWD)
+    - SAME charging: 270kW peak, 21 minutes 10-80%
+    - MORE standard equipment: LED Matrix lights, sport seats, GT steering wheel
+    - MODEST premium: ~€15k more than RWD, ~€20k less than Turbo
+    
+    For most enthusiast buyers, the 4S represents the ideal balance: genuine sports 
+    car performance (sub-5-second acceleration), all-weather capability, excellent 
+    efficiency, and comprehensive equipment without Turbo pricing.
+    
+    The intelligent PTM system provides rear-biased power distribution for engaging 
+    driving dynamics while seamlessly adding front motor torque when needed for 
+    traction or maximum acceleration.
+    
+    Competitors: Audi SQ6 e-tron (360kW, 4.3s, platform sibling), BMW iX M60 
+    (455kW, 3.8s, €120k - much more expensive), Mercedes-AMG EQE 53 SUV (460kW, 
+    3.5s, €107k), Tesla Model X Plaid (760kW, 2.5s, €119k)
+    
+    Recommended options:
+    - 22kW AC charger (€1,680)
+    - Porsche InnoDrive (€2,990)
+    - PTV Plus rear differential (€1,890) - transforms cornering
+    - Comfort seats with memory and ventilation (€2,490)
+    - Burmester audio (€5,490) - exceptional sound quality
