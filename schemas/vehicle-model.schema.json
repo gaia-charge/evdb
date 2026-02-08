@@ -4,7 +4,7 @@
   "title": "EV Vehicle Model",
   "description": "Schema for electric vehicle models (base model information)",
   "type": "object",
-  "required": ["id", "name", "manufacturer_id", "body_style", "segment"],
+  "required": ["id", "name", "manufacturer_id", "brand", "body_style", "segment"],
   "properties": {
     "id": {
       "type": "string",
@@ -21,7 +21,13 @@
     "manufacturer_id": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
-      "description": "Reference to manufacturer ID"
+      "description": "Reference to manufacturer ID (corporate parent)"
+    },
+    "brand": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Consumer-facing brand name (may differ from manufacturer for multi-brand groups)",
+      "examples": ["Tesla", "Volkswagen", "Fiat", "Peugeot", "Mercedes-Benz"]
     },
     "body_style": {
       "type": "string",

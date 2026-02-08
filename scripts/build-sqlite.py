@@ -79,6 +79,7 @@ class DatabaseBuilder:
             CREATE TABLE IF NOT EXISTS vehicle_models (
                 id TEXT PRIMARY KEY,
                 manufacturer_id TEXT NOT NULL,
+                brand TEXT NOT NULL,
                 name TEXT NOT NULL,
                 marketing_name TEXT,
                 body_style TEXT NOT NULL,
@@ -394,16 +395,17 @@ class DatabaseBuilder:
             
             self.cursor.execute("""
                 INSERT INTO vehicle_models (
-                    id, manufacturer_id, name, marketing_name, body_style, segment,
+                    id, manufacturer_id, brand, name, marketing_name, body_style, segment,
                     platform_id, production_start, production_end, seating_capacity,
                     seating_configuration, length_mm, width_mm, height_mm, wheelbase_mm,
                     ground_clearance_mm, drag_coefficient, cargo_volume_liters,
                     frunk_volume_liters, towing_capacity_kg, roof_load_kg,
                     image_url, notes, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 data['id'],
                 data['manufacturer_id'],
+                data['brand'],
                 data['name'],
                 data.get('marketing_name') or data.get('full_name'),
                 data['body_style'],
@@ -821,6 +823,7 @@ class DatabaseBuilder:
                 v.variant_name,
                 v.model_year,
                 m.id as model_id,
+                m.brand,
                 m.name as model_name,
                 m.body_style,
                 m.segment,

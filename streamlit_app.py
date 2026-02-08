@@ -64,7 +64,7 @@ def get_database_stats(_conn):
     # Get latest additions (last 5)
     stats['latest_additions'] = pd.read_sql_query("""
         SELECT 
-            mfr.name as manufacturer,
+            m.brand as manufacturer,
             m.name as model,
             v.variant_name,
             v.model_year,
@@ -72,7 +72,6 @@ def get_database_stats(_conn):
             ma.price_base as price_eur
         FROM vehicle_variants v
         JOIN vehicle_models m ON v.model_id = m.id
-        JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
         LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
         ORDER BY v.id DESC
         LIMIT 5
@@ -98,7 +97,7 @@ def search_vehicles(_conn, query):
     return pd.read_sql_query("""
         SELECT 
             v.id,
-            mfr.name as manufacturer,
+            m.brand as manufacturer,
             m.name as model,
             v.variant_name,
             v.model_year,
@@ -110,13 +109,12 @@ def search_vehicles(_conn, query):
             ma.market_code
         FROM vehicle_variants v
         JOIN vehicle_models m ON v.model_id = m.id
-        JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
         LEFT JOIN market_availability ma ON v.id = ma.variant_id
         WHERE 
-            mfr.name LIKE ? OR
+            m.brand LIKE ? OR
             m.name LIKE ? OR
             v.variant_name LIKE ?
-        ORDER BY mfr.name, m.name, v.variant_name
+        ORDER BY m.brand, m.name, v.variant_name
         LIMIT 20
     """, _conn, params=(search_query, search_query, search_query))
 
@@ -343,7 +341,7 @@ elif page == "🔍 Browse Vehicles":
         return pd.read_sql_query("""
             SELECT 
                 v.id,
-                mfr.name as manufacturer,
+                m.brand as manufacturer,
                 m.name as model,
                 v.variant_name,
                 v.model_year,
@@ -361,9 +359,8 @@ elif page == "🔍 Browse Vehicles":
                 ma.market_code
             FROM vehicle_variants v
             JOIN vehicle_models m ON v.model_id = m.id
-            JOIN manufacturers mfr ON m.manufacturer_id = mfr.id
             LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-            ORDER BY mfr.name, m.name, v.variant_name
+            ORDER BY m.brand, m.name, v.variant_name
         """, _conn)
     
     df = load_browse_data(conn)
