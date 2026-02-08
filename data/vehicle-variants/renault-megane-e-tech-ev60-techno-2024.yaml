@@ -6,13 +6,13 @@ production_years:
   start: 2022
   end: null
 
-trim_level: ev60-techno
+trim_level: mid
 market_position: mid
 
 # Battery Specifications
 battery:
-  usable_kwh: 60.0
-  total_kwh: 62.0
+  usable_kwh: 60
+  total_kwh: 65
   chemistry: NMC  # Nickel Manganese Cobalt
   nominal_voltage_v: 400
   cell_type: pouch
@@ -22,15 +22,9 @@ battery:
   thermal_management: liquid-cooled
   
   pack:
-    configuration: "400V architecture, 12 modules"
-    weight_kg: 457
-    cells: 288
-  
-  notes: >
-    60 kWh battery provides excellent range for daily use and longer trips.
-    NMC chemistry balances energy density and performance. Advanced thermal
-    management optimizes charging speed and battery longevity. 8-year/160,000 km
-    warranty with 70% capacity retention guarantee.
+    configuration: "floor-mounted"
+    weight_kg: 395
+    cells: 192
 
 # Range
 range:
@@ -39,7 +33,7 @@ range:
   
   real_world_km: 380
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 15-25°C, Comfort mode"
+  real_world_conditions: "Mixed driving, 10-20°C, eco mode"
 
 # Charging
 charging:
@@ -48,7 +42,7 @@ charging:
     connector_types:
       - type2
     charging_time_hours:
-      "0_100": 3.5  # 22kW three-phase
+      "0_100": 3.0  # 22kW three-phase
     onboard_charger_kw: 22
     phases: 3
   
@@ -57,38 +51,36 @@ charging:
     connector_types:
       - ccs2
     charging_time_minutes:
-      "10_80": 30
-      "0_100": 60
+      "15_80": 30
+      "0_100": 52
     
     charging_curve:
       - soc_percent: 0
-        power_kw: 80
+        power_kw: 110
       - soc_percent: 10
         power_kw: 130
       - soc_percent: 30
         power_kw: 130
       - soc_percent: 50
-        power_kw: 120
+        power_kw: 115
       - soc_percent: 70
-        power_kw: 85
+        power_kw: 75
       - soc_percent: 80
-        power_kw: 55
+        power_kw: 50
       - soc_percent: 90
-        power_kw: 30
+        power_kw: 25
       - soc_percent: 100
-        power_kw: 15
-    
-    notes: "Excellent 130kW peak charging enables road trip capability"
+        power_kw: 12
 
   bidirectional:
     v2l: false
-    v2g: false
+    v2g: true  # Available with specific bidirectional charger
     v2h: false
 
 # Motors & Performance
 motors:
   - position: front
-    type: permanent-magnet-synchronous
+    type: synchronous
     max_power_kw: 160
     max_torque_nm: 300
     cooling: liquid
@@ -106,68 +98,66 @@ performance:
 
 # Weight & Efficiency
 weight:
-  curb_weight_kg: 1702
-  gross_weight_kg: 2202
-  payload_kg: 500
+  curb_weight_kg: 1718
+  gross_weight_kg: 2112
+  payload_kg: 394
   towing_capacity_kg: 0  # Not rated for towing
   
 efficiency:
   wltp_kwh_per_100km: 15.5
-  real_world_kwh_per_100km: 15.8
+  real_world_kwh_per_100km: 16.8
   
   at_speed:
-    - speed_kmh: 100
-      consumption_kwh_per_100km: 14.5
     - speed_kmh: 120
-      consumption_kwh_per_100km: 18.2
+      consumption_kwh_per_100km: 19.2
     - speed_kmh: 130
-      consumption_kwh_per_100km: 21.0
+      consumption_kwh_per_100km: 22.5
 
 # Features & Options
 standard_features:
-  - "12.3-inch digital instrument cluster"
-  - "12-inch OpenR vertical touchscreen"
+  - "12-inch vertical OpenR screen"
   - "Google built-in (Maps, Assistant, Play Store)"
-  - "Heat pump climate control"
-  - "Automatic dual-zone climate control"
+  - "12.3-inch digital instrument cluster"
+  - "Heat pump"
   - "LED Pure Vision headlights"
   - "19-inch alloy wheels"
-  - "Synthetic leather seats"
-  - "Heated front seats"
-  - "Rear parking camera"
-  - "Front and rear parking sensors"
-  - "Adaptive cruise control"
-  - "Lane keeping assist"
-  - "Automatic emergency braking"
-  - "Blind spot warning"
-  - "Traffic sign recognition"
-  - "Driver attention alert"
-  - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
-  - "Hands-free tailgate"
-  - "Wireless phone charging"
-  - "9-speaker Arkamys sound system"
+  - "Automatic climate control"
+  - "Rear parking sensors"
+  - "Multi-Sense driving modes"
+  - "Keyless entry and start"
+  - "Fabric seats with recycled materials"
 
 optional_packages:
-  - name: "Tech Package"
+  - name: "Tech Pack"
     features:
+      - "OpenR Link augmented reality head-up display"
       - "360-degree camera"
-      - "Active emergency braking"
-      - "Highway & Traffic Jam Assist"
+      - "Hands-free parking"
+  
+  - name: "Comfort Pack"
+    features:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Wireless phone charging"
+  
+  - name: "Safety Pack Plus"
+    features:
+      - "Adaptive cruise control with Stop&Go"
+      - "Lane keeping assist"
+      - "Blind spot warning"
+      - "Traffic sign recognition"
+      - "Highway and Traffic Jam Companion"
 
 colors:
   standard:
-    - "Glacier White"
     - "Diamond Black"
+    - "Glacier White"
   premium:
     - "Flame Red"
-    - "Iron Blue"
+    - "Highland Grey"
+    - "Zanzibar Blue"
+    - "Rafale Grey"
     - "Titanium Grey"
-    - "Schist Grey"
-    - "Alpine White"
-
-interior_colors:
-  - "Black synthetic leather"
-  - "Grey/Black synthetic leather"
 
 # Version Information
 version:
@@ -176,16 +166,11 @@ version:
 
 # Market & Pricing Notes
 notes: >
-  The Megane E-Tech EV60 Techno is the mid-range variant balancing performance,
-  range, and features. With 450 km WLTP (380 km real-world), it handles daily
-  commutes and weekend trips confidently. The 218 hp motor delivers sporty
-  performance (7.4s 0-100 km/h) while maintaining efficiency. 22kW AC charging
-  enables fast home/workplace charging, while 130kW DC charging makes road trips
-  practical (10-80% in 30 minutes). Premium features include synthetic leather
-  heated seats, dual-zone climate, and Arkamys premium audio. Adaptive cruise
-  and blind spot monitoring enhance safety. Techno trim offers excellent value
-  with comprehensive standard equipment. Ideal for buyers seeking the best
-  balance of range, performance, and features.
+  The Megane E-Tech EV60 Techno is the mid-range variant with a 60 kWh battery,
+  offering excellent range for daily use and longer trips. With 130kW DC charging
+  and 22kW AC charging (three-phase), it provides flexible charging options.
+  The 218hp motor provides spirited performance with 0-100 km/h in 7.4 seconds.
+  This variant offers the best balance of range, performance, and value.
 
 metadata:
   created_at: "2026-02-08"
@@ -194,6 +179,6 @@ metadata:
   data_source: manufacturer
   measured_by: null
   sources:
-    - https://www.renault.com/megane-e-tech-electric/specifications
     - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://ev-database.org/car/1749/Renault-Megane-E-Tech-EV60
+    - https://ev-database.org/car/1671/Renault-Megane-E-Tech-EV60
+    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications

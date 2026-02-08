@@ -6,13 +6,13 @@ production_years:
   start: 2022
   end: null
 
-trim_level: ev60-iconic
-market_position: top
+trim_level: premium
+market_position: premium
 
 # Battery Specifications
 battery:
-  usable_kwh: 60.0
-  total_kwh: 62.0
+  usable_kwh: 60
+  total_kwh: 65
   chemistry: NMC  # Nickel Manganese Cobalt
   nominal_voltage_v: 400
   cell_type: pouch
@@ -22,24 +22,18 @@ battery:
   thermal_management: liquid-cooled
   
   pack:
-    configuration: "400V architecture, 12 modules"
-    weight_kg: 457
-    cells: 288
-  
-  notes: >
-    Same 60 kWh battery as Techno variant. NMC chemistry balances energy
-    density and performance. Advanced thermal management optimizes charging
-    speed and battery longevity. 8-year/160,000 km warranty with 70%
-    capacity retention guarantee.
+    configuration: "floor-mounted"
+    weight_kg: 395
+    cells: 192
 
 # Range
 range:
   wltp_km: 470
   wltp_source: manufacturer
   
-  real_world_km: 390
+  real_world_km: 395
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 15-25°C, Comfort mode"
+  real_world_conditions: "Mixed driving, 10-20°C, comfort mode"
 
 # Charging
 charging:
@@ -48,7 +42,7 @@ charging:
     connector_types:
       - type2
     charging_time_hours:
-      "0_100": 3.5  # 22kW three-phase
+      "0_100": 3.0  # 22kW three-phase
     onboard_charger_kw: 22
     phases: 3
   
@@ -57,38 +51,36 @@ charging:
     connector_types:
       - ccs2
     charging_time_minutes:
-      "10_80": 30
-      "0_100": 60
+      "15_80": 30
+      "0_100": 52
     
     charging_curve:
       - soc_percent: 0
-        power_kw: 80
+        power_kw: 110
       - soc_percent: 10
         power_kw: 130
       - soc_percent: 30
         power_kw: 130
       - soc_percent: 50
-        power_kw: 120
+        power_kw: 115
       - soc_percent: 70
-        power_kw: 85
+        power_kw: 75
       - soc_percent: 80
-        power_kw: 55
+        power_kw: 50
       - soc_percent: 90
-        power_kw: 30
+        power_kw: 25
       - soc_percent: 100
-        power_kw: 15
-    
-    notes: "Excellent 130kW peak charging enables road trip capability"
+        power_kw: 12
 
   bidirectional:
     v2l: false
-    v2g: false
+    v2g: true  # Available with specific bidirectional charger
     v2h: false
 
 # Motors & Performance
 motors:
   - position: front
-    type: permanent-magnet-synchronous
+    type: synchronous
     max_power_kw: 160
     max_torque_nm: 300
     cooling: liquid
@@ -106,78 +98,69 @@ performance:
 
 # Weight & Efficiency
 weight:
-  curb_weight_kg: 1711
-  gross_weight_kg: 2211
-  payload_kg: 500
+  curb_weight_kg: 1718
+  gross_weight_kg: 2112
+  payload_kg: 394
   towing_capacity_kg: 0  # Not rated for towing
   
 efficiency:
-  wltp_kwh_per_100km: 15.1
-  real_world_kwh_per_100km: 15.4
+  wltp_kwh_per_100km: 15.3
+  real_world_kwh_per_100km: 16.5
   
   at_speed:
-    - speed_kmh: 100
-      consumption_kwh_per_100km: 14.2
     - speed_kmh: 120
-      consumption_kwh_per_100km: 17.9
+      consumption_kwh_per_100km: 18.8
     - speed_kmh: 130
-      consumption_kwh_per_100km: 20.6
+      consumption_kwh_per_100km: 22.0
 
 # Features & Options
 standard_features:
-  - "12.3-inch digital instrument cluster"
-  - "12-inch OpenR vertical touchscreen with OpenR Link"
+  - "12-inch vertical OpenR screen"
   - "Google built-in (Maps, Assistant, Play Store)"
-  - "Head-up display"
-  - "Heat pump climate control"
-  - "Automatic dual-zone climate control"
-  - "LED Pure Vision Matrix headlights"
-  - "20-inch alloy wheels"
-  - "Alcantara and synthetic leather seats"
-  - "Heated and ventilated front seats"
-  - "Heated rear seats"
-  - "Heated steering wheel"
-  - "Massage function (driver seat)"
+  - "12.3-inch digital instrument cluster"
+  - "OpenR Link augmented reality head-up display"
+  - "Heat pump"
+  - "LED Pure Vision headlights with Matrix beam"
+  - "20-inch diamond-cut alloy wheels"
+  - "Dual-zone automatic climate control"
   - "360-degree camera"
   - "Front and rear parking sensors"
-  - "Highway & Traffic Jam Assist (ProPilot)"
-  - "Adaptive cruise control"
-  - "Lane keeping assist"
-  - "Automatic emergency braking"
-  - "Blind spot warning"
-  - "Traffic sign recognition"
-  - "Driver attention alert"
-  - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
-  - "Hands-free tailgate with programmable height"
+  - "Multi-Sense driving modes"
+  - "Keyless entry and start"
+  - "Alcantara and recycled fabric seats"
+  - "Heated front seats"
+  - "Heated steering wheel"
   - "Wireless phone charging"
-  - "Harman Kardon premium sound system (10 speakers)"
-  - "Ambient lighting"
-  - "Electrochromic rearview mirror"
-  - "Premium interior materials"
-  - "Solarbay panoramic glass roof with electrochromic dimming"
+  - "Harman Kardon premium sound system"
 
 optional_packages:
-  - name: "Safety Pack Plus"
+  - name: "Iconic Plus Pack"
     features:
-      - "Automatic parking assist"
-      - "Rear cross-traffic alert"
-      - "Emergency lane keeping"
+      - "Nappa leather seats"
+      - "Massaging front seats"
+      - "Panoramic glass roof"
+  
+  - name: "Full Safety Suite"
+    features:
+      - "Adaptive cruise control with Stop&Go"
+      - "Lane keeping assist"
+      - "Blind spot warning with intervention"
+      - "Traffic sign recognition"
+      - "Highway and Traffic Jam Companion"
+      - "Active emergency braking with pedestrian/cyclist detection"
+      - "Hands-free parking"
 
 colors:
   standard:
-    - "Glacier White"
     - "Diamond Black"
+    - "Glacier White"
   premium:
     - "Flame Red"
-    - "Iron Blue"
+    - "Highland Grey"
+    - "Zanzibar Blue"
+    - "Rafale Grey"
     - "Titanium Grey"
-    - "Schist Grey"
-    - "Alpine White"
-    - "Rafale Blue"
-
-interior_colors:
-  - "Black Alcantara/synthetic leather"
-  - "Grey Alcantara/synthetic leather"
+    - "Midnight Blue"
 
 # Version Information
 version:
@@ -186,18 +169,13 @@ version:
 
 # Market & Pricing Notes
 notes: >
-  The Megane E-Tech EV60 Iconic is the flagship variant featuring premium
-  equipment and advanced technology. With 470 km WLTP (390 km real-world),
-  it offers excellent range for all driving scenarios. Same powertrain as
-  Techno (218 hp, 7.4s 0-100 km/h) but slightly better efficiency due to
-  optimized aerodynamics. Premium features include Alcantara/leather seats
-  with heating, ventilation, and massage function; head-up display; 
-  LED Matrix headlights; 20-inch wheels; Harman Kardon premium audio;
-  and the revolutionary Solarbay electrochromic panoramic roof that can
-  be dimmed electronically. Highway & Traffic Jam Assist (ProPilot) provides
-  semi-autonomous driving capability. 360-degree camera and comprehensive
-  safety suite. Ideal for buyers seeking the ultimate Megane E-Tech experience
-  with luxury features, advanced driver assistance, and premium materials.
+  The Megane E-Tech EV60 Iconic is the top-of-the-line variant with comprehensive
+  luxury and technology features as standard. It includes the augmented reality
+  head-up display (OpenR Link), Harman Kardon sound system, heated seats, and
+  premium materials. With the same 60 kWh battery and 218hp motor as the Techno,
+  it offers slightly better WLTP range (470 km vs 450 km) thanks to optimized
+  aerodynamics with 20-inch wheels and efficiency-focused settings. This is the
+  ideal variant for buyers seeking maximum comfort and technology.
 
 metadata:
   created_at: "2026-02-08"
@@ -206,6 +184,6 @@ metadata:
   data_source: manufacturer
   measured_by: null
   sources:
-    - https://www.renault.com/megane-e-tech-electric/specifications
     - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://ev-database.org/car/1750/Renault-Megane-E-Tech-Iconic
+    - https://ev-database.org/car/1671/Renault-Megane-E-Tech-EV60
+    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric/specifications

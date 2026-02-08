@@ -7,82 +7,94 @@ currency: EUR
 
 # Market-Specific Details
 availability_status: available
-available_from: "2022-02-01"
-delivery_time_weeks: 8
+available_from: "2024-01-01"
+delivery_time_weeks: 6
 
 # Pricing
 pricing:
-  base_price: 41500
-  price_including_vat: 41500
+  base_price: 42000
+  price_including_vat: 42000
   vat_rate_percent: 20
 
 # Available Colors
 available_colors:
-  - name: Blanc Glacier
+  - name: Noir Étoilé (Diamond Black)
+    code: GNE
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Blanc Glacier (Glacier White)
     code: QNC
     type: solid
     price_add:
       amount: 0
       currency: EUR
-  - name: Noir Étoilé
-    code: GNE
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Rouge Flamme
+  - name: Rouge Flamme (Flame Red)
     code: NNP
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Bleu Iron
-    code: RPB
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Gris Titanium
-    code: KQM
-    type: metallic
-    price_add:
-      amount: 600
-      currency: EUR
-  - name: Gris Schiste
+  - name: Gris Highland (Highland Grey)
     code: KNA
     type: metallic
     price_add:
       amount: 600
       currency: EUR
-  - name: Blanc Nacré
-    code: QMA
-    type: pearlescent
+  - name: Bleu Zanzibar (Zanzibar Blue)
+    code: RPH
+    type: metallic
     price_add:
-      amount: 850
+      amount: 600
+      currency: EUR
+  - name: Gris Rafale (Rafale Grey)
+    code: KNG
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Gris Titane (Titanium Grey)
+    code: KNM
+    type: metallic
+    price_add:
+      amount: 600
       currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: Jantes Alliage 19"
+  - name: 19" Jantes Aerodesign
     size_inches: 19
     type: alloy
     price_add:
       amount: 0
       currency: EUR
+  - name: 20" Jantes Origami diamantées
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 800
+      currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Cuir Synthétique Noir
-    material: synthetic_leather
+  - name: Tissu noir avec matériaux recyclés
+    material: fabric
     color: black
     price_add:
       amount: 0
       currency: EUR
-  - name: Cuir Synthétique Gris/Noir
-    material: synthetic_leather
-    color: grey_black
+  - name: Tissu gris avec matériaux recyclés
+    material: fabric
+    color: grey
     price_add:
       amount: 0
+      currency: EUR
+  - name: Alcantara noir avec matériaux recyclés
+    material: alcantara
+    color: black
+    price_add:
+      amount: 700
       currency: EUR
 
 # Incentives
@@ -92,40 +104,52 @@ available_incentives:
     amount:
       amount: 5000
       currency: EUR
-    conditions: ["Price under €47,000", "BEV", "Fabrication en France", "First registration"]
+    conditions: ["Price under €47,000", "BEV", "First registration in France", "Household income under certain threshold"]
     expires_at: "2024-12-31"
   - type: regional
     name: "Prime à la conversion"
     amount:
       amount: 2500
       currency: EUR
-    conditions: ["Trade-in of old vehicle", "Household income conditions"]
+    conditions: ["Scrapping old vehicle (diesel/gasoline)", "Household income requirements"]
     expires_at: "2024-12-31"
 
 # Options
 popular_packages:
   - name: Pack Tech
     price:
-      amount: 1700
+      amount: 1100
       currency: EUR
     features:
+      - OpenR Link écran tête haute avec réalité augmentée
       - Caméra 360°
-      - Freinage d'urgence actif
-      - Aide à la conduite autoroute et embouteillages
+      - Park Assist mains libres
+  - name: Pack Confort
+    price:
+      amount: 850
+      currency: EUR
+    features:
+      - Sièges avant chauffants
+      - Volant chauffant
+      - Chargeur smartphone à induction
+  - name: Pack Sécurité Plus
+    price:
+      amount: 1350
+      currency: EUR
+    features:
+      - Régulateur de vitesse adaptatif avec Stop&Go
+      - Aide au maintien de voie
+      - Alerte angles morts
+      - Reconnaissance panneaux de signalisation
+      - Assistance autoroute et embouteillages
 
 # Notes
 notes: |
-  Renault Megane E-Tech EV60 Techno - version intermédiaire offrant
-  un excellent équilibre entre autonomie, performances et équipements.
-  Avec 450 km d'autonomie WLTP (380 km en conditions réelles) et un
-  moteur de 218 ch, elle gère sereinement les trajets quotidiens et
-  les escapades weekend. Recharge AC 22kW et DC 130kW pour une
-  flexibilité maximale. Équipements premium incluant sièges cuir
-  synthétique chauffants, climatisation bizone, régulateur adaptatif,
-  et système audio Arkamys premium. Élue Voiture de l'Année 2023 en
-  Europe. Éligible au bonus écologique français et à la prime à la
-  conversion. Délai de livraison actuellement 8 semaines. Fabriquée
-  en France à l'usine ElectriCity de Douai.
+  Renault Megane E-Tech EV60 Techno est la variante la plus populaire en France,
+  avec une autonomie de 450 km WLTP et une recharge 22kW AC. Produite à l'usine
+  ElectriCity de Douai, la livraison est rapide (6 semaines). Éligible au bonus
+  écologique de 5000€ et à la prime à la conversion jusqu'à 2500€.
+  Le véhicule a été élu Voiture de l'Année 2023 en Europe.
 
 # Metadata
 metadata:
@@ -134,4 +158,4 @@ metadata:
   source_url: https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
-  notes: Prix au février 2026. Version très populaire en France. Production française garantit bonus écologique maximal.
+  notes: Prix et aides au 8 février 2024
