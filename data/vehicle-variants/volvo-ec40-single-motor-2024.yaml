@@ -1,0 +1,134 @@
+# Volvo EC40 Single Motor (2024)
+id: volvo-ec40-single-motor-2024
+name: EC40 Single Motor
+model_id: volvo-ec40
+model_year: 2024
+variant_code: EC40-SM
+
+battery:
+  usable_kwh: 69.0
+  total_kwh: 72.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "CATL / LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 530
+  wltp_city_km: 690
+  wltp_highway_km: 430
+  epa_km: null
+  real_world_km: 450
+  real_world_source: "EV Database winter/summer average, improved vs EX40 due to better aerodynamics"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 150
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 20
+      power_kw: 148
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 40
+      power_kw: 140
+    - soc_percent: 50
+      power_kw: 125
+    - soc_percent: 60
+      power_kw: 105
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 15
+  time_5_to_80_percent_min: 37
+  time_10_to_80_percent_min: 32
+  charging_speed_kmh: 690
+  plug_and_charge: false
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 175
+      power_hp: 238
+      torque_nm: 330
+  total_power_kw: 175
+  total_power_hp: 238
+  total_torque_nm: 330
+  acceleration_0_100_kmh_sec: 7.3
+  acceleration_0_60_mph_sec: 6.9
+  top_speed_kmh: 180
+
+weight:
+  curb_weight_kg: 2015
+  gross_weight_kg: 2580
+  max_payload_kg: 565
+  distribution_front_percent: 55
+  distribution_rear_percent: 45
+
+efficiency:
+  wltp_kwh_per_100km: 15.3
+  wltp_kwh_per_100km_city: 12.5
+  wltp_kwh_per_100km_highway: 18.2
+  real_world_kwh_per_100km: 17.1
+  energy_efficiency_class: "A"
+
+wheels_tires:
+  standard_size_front: "235/50 R19"
+  standard_size_rear: "235/50 R19"
+  wheel_sizes_available:
+    - "19 inch (standard)"
+    - "20 inch (optional, -20km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Pilot Assist (adaptive cruise with lane centering)"
+    - "City Safety with collision avoidance"
+    - "Lane Keeping Aid"
+    - "Blind Spot Information System (BLIS)"
+    - "Cross Traffic Alert with autobrake"
+    - "Run-off Road Mitigation"
+    - "Oncoming Lane Mitigation"
+    - "360-degree camera"
+  connectivity:
+    - "Google built-in (Maps, Assistant, Play)"
+    - "Volvo On Call app"
+    - "OTA software updates"
+    - "4G LTE connectivity"
+    - "Wi-Fi hotspot"
+  special_features:
+    - "One-pedal driving mode"
+    - "Pre-conditioning (battery & cabin)"
+    - "Smartphone as key"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+    - "Leather-free interior as standard"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  sources:
+    - "https://www.volvocars.com/uk/v/cars/ec40/specifications"
+    - "https://ev-database.org/car/1824/Volvo-EC40-Single-Motor"
+    - "https://insideevs.com/reviews/volvo-ec40-single-motor/"
+  notes: "Rear-wheel drive variant with superior aerodynamics compared to EX40. The EC40's coupe roofline reduces drag coefficient to 0.30 (vs 0.33 for EX40), resulting in 55km more WLTP range with the same battery. Most efficient Volvo EV variant. Competes with Tesla Model Y RWD, Polestar 2 Long Range Single Motor, and BMW iX3. Shares platform with EX40 and Polestar 2. First Volvo with leather-free interior as standard."
