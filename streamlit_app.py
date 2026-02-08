@@ -287,7 +287,7 @@ if page == "🏠 Home":
     st.markdown("### 🆕 Latest Additions")
     
     latest = stats['latest_additions'].copy()
-    latest['Vehicle'] = latest['manufacturer'] + ' ' + latest['model'] + ' ' + latest['variant_name']
+    latest['Vehicle'] = latest['model'] + ' ' + latest['variant_name']
     latest['Year'] = latest['model_year'].astype(int)
     latest['Range'] = latest['range_wltp_km'].apply(lambda x: f"{int(x)} km" if pd.notna(x) else "N/A")
     latest['Price'] = latest['price_eur'].apply(
@@ -319,7 +319,6 @@ if page == "🏠 Home":
             # Format results
             display_results = results.copy()
             display_results['Vehicle'] = (
-                display_results['manufacturer'] + ' ' + 
                 display_results['model'] + ' ' + 
                 display_results['variant_name'] + ' (' + 
                 display_results['model_year'].astype(str) + ')'
@@ -628,7 +627,7 @@ elif page == "🔍 Browse Vehicles":
             selected_vehicle = filtered_df.iloc[selected_idx]
             
             st.markdown("---")
-            st.markdown(f"### 📋 Detailed Specifications: {selected_vehicle['manufacturer']} {selected_vehicle['model']} {selected_vehicle['variant_name']}")
+            st.markdown(f"### 📋 Detailed Specifications: {selected_vehicle['model']} {selected_vehicle['variant_name']}")
             
             # Need to fetch complete vehicle data including pricing fields
             @st.cache_data(ttl=3600)
@@ -731,7 +730,7 @@ elif page == "⚖️ Compare":
         return pd.read_sql_query("""
             SELECT 
                 v.id,
-                m.brand || ' ' || m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
+                m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
                 m.brand as manufacturer,
                 m.name as model,
                 v.variant_name,
@@ -1139,7 +1138,7 @@ elif page == "📊 Analytics":
     df = get_analytics_data(conn)
     
     # Create full vehicle name
-    df['vehicle_name'] = df['manufacturer'] + ' ' + df['model'] + ' ' + df['variant_name']
+    df['vehicle_name'] = df['model'] + ' ' + df['variant_name']
     
     # Create tabs for different analysis sections
     tab1, tab2, tab3, tab4 = st.tabs([
