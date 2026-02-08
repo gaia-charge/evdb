@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 2:45 PM  
-**Total Vehicles:** 138 variants across 70 models from 24 manufacturers  
-**Germany Market Coverage:** 131/138 variants (94.9%)
+**Last Updated:** 2026-02-08 3:00 PM  
+**Total Vehicles:** 139 variants across 71 models from 25 manufacturers  
+**Germany Market Coverage:** 132/139 variants (95.0%)
 
 ---
 
@@ -34,8 +34,9 @@
 | Mazda | 1 | 1 | 🟢 Single |
 | Toyota | 1 | 2 | 🟡 Partial |
 | Lexus | 1 | 1 | 🟢 Single |
+| Subaru | 1 | 1 | 🟢 Single |
 
-**Total:** 24 manufacturers, 70 models, 138 variants
+**Total:** 25 manufacturers, 71 models, 139 variants
 
 ---
 
@@ -69,6 +70,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Subaru Solterra**: Added 1 NEW MANUFACTURER (Subaru Corporation, 25th manufacturer) + 1 NEW MODEL + 1 variant (AWD 160kW/218hp 71.4kWh 465km WLTP €57,490) + Germany market data - Subaru's first pure electric vehicle, mechanical twin to Toyota bZ4X but with Subaru-specific tuning and enhanced features - Unique StarDrive panoramic roof with solar coating (exclusive to Solterra), Symmetrical AWD with X-MODE (Snow/Dirt, Deep Snow/Mud modes), EyeSight Driver Assist Technology, Harman Kardon premium audio (8 speakers), heated seats/steering wheel standard - Priced €5,490 higher than bZ4X (€57,490 vs €52,000) but includes significantly more standard equipment - AWD-only configuration matches Subaru brand identity (no FWD variant) - 8-year/160,000km battery warranty (less generous than Toyota's 10yr unlimited) - Main limitation: only 6.6kW AC charging (single-phase) - 150kW DC fast charging standard, heat pump included - Competes with Toyota bZ4X AWD (€52,000), VW ID.4 AWD (€51,000), Hyundai Ioniq 5 AWD (€51,000) - Excellent build quality, 5-star Euro NCAP safety, all-weather capability - Subaru NEW manufacturer entry - Database now 139 variants across 71 models from 25 manufacturers - Germany coverage now 132/139 = 95.0% - *Added Feb 8, 2026 15:00*
 - ✅ **Volvo EX90**: Added 1 NEW MODEL + 1 variant (Twin Motor Performance 300kW/408hp AWD 111kWh 600km WLTP €86,500) + Germany market data - Volvo's flagship 7-seat electric SUV built on SPA2 platform with groundbreaking LiDAR technology (Luminar Iris) for future Level 3 autonomous driving - One of first premium EVs with full bi-directional charging capability (V2L 3.7kW, V2H, V2G) - can power average home for up to one week - Air suspension standard, 250kW DC fast charging (10-80% in 30 min), panoramic glass roof with electrochromic dimming - Interior features extensive sustainable materials (Nordico textile, FSC-certified wood, recycled plastics), Bowers & Wilkins 25-speaker audio system (2460W), 14.5" touchscreen with Google built-in - Competes with Mercedes EQS SUV (€115,900), BMW iX (€99,900), Audi Q8 e-tron (€90,000) - excellent value for flagship SUV - Manufactured in Charleston, SC and Torslanda, Sweden - replaces XC90 as Volvo's flagship - Volvo now 4 models/6 variants (from 3/5, +33% variants) - Database now 138 variants across 70 models from 24 manufacturers - Germany coverage now 131/138 = 94.9% - *Added Feb 8, 2026 14:45*
 - ✅ **Kia EV3**: Added 1 NEW MODEL + 2 variants (Standard Range 58.3kWh 150kW/204hp 410km €38,990, Long Range 81.4kWh 150kW/204hp 600km €41,990) + Germany market data for Long Range - New 2024 compact electric SUV positioned between Niro Electric and EV6, built on modified E-GMP platform - Excellent value with 600km WLTP range in compact package (same battery as Ioniq 5/EV6 but lighter), heat pump standard, V2L capability - Targets young families and urban professionals, competes with VW ID.3 (€39,995), Hyundai Kona Electric (€42,990) - Standard equipment includes dual 10.25" panoramic displays, Highway Driving Assist 2, Meridian premium sound, heated/ventilated seats - 400V architecture (not 800V like EV6), DC fast charging up to 128kW (10-80% in 31 minutes) - 7-year/150,000km warranty best-in-class, 0.25% company car tax rate for fleet buyers - Hyundai Motor Group now 9 variants across 5 models (from 7/4, +28.6%) - Database now 137 variants across 69 models from 24 manufacturers - Germany coverage now 130/137 = 94.9% - *Added Feb 8, 2026 14:30*
 - ✅ **Lexus RZ 450e**: Added 1 NEW MODEL (RZ - first Lexus BEV) + 1 variant (450e AWD 71.4kWh 230kW/313hp 440km WLTP €74,900) + Germany market data - First pure electric Lexus SUV, luxury counterpart to Toyota bZ4X - More powerful than bZ4X (313hp vs 218hp), DIRECT4 intelligent AWD system with precise torque distribution - Optional yoke steering with steer-by-wire (One Motion Grip €2,500, unique in segment) - Premium Takumi craftsmanship interior with Ultrasuede/leather, Mark Levinson 13-speaker audio (1800W) - 11kW AC charging (better than bZ4X's 6.6kW), 150kW DC fast charging - Built on e-TNGA platform, 71.4 kWh battery, 10-year unlimited km warranty - Premium positioning at €74,900 (0.5% company car tax rate, above €70k threshold) - Competes with BMW iX1 (€61,500), Audi Q4 e-tron 50 quattro (€57,990), Mercedes EQA 350 (€64,990) - Lexus now 1 model/1 variant (from 0/0) - Database now 135 variants across 68 models from 24 manufacturers - Germany coverage now 129/135 = 95.6% - *Added Feb 8, 2026 14:00*
@@ -183,7 +185,8 @@
 - **Feb 8, 2026 (12:24):** 126 variants (no new variants, +1 Germany market record: Volvo EX40 Single Motor €53,000 - Google built-in, 475km WLTP, Swedish safety - Volvo now 3/5 variants with DE data - Germany coverage now 121/126 = 96.0%)
 - **Feb 8, 2026 (12:15):** 126 variants (+1 MG ZS EV: NEW MODEL - Long Range 72.6kWh 440km €36,990 + Germany market data - Practical compact electric SUV, excellent value, 7-year warranty, popular family car - MG now 4 variants across 2 models (from 3/1, +33%) - Germany coverage now 120/126 = 95.2%)
 - **Feb 8, 2026 (14:45):** 138 variants (+1 Volvo EX90: NEW MODEL - Flagship 7-seat SUV 300kW/408hp 111kWh 600km €86,500 + Germany market data - First production car with Luminar LiDAR, full bi-directional charging (V2H/V2G), air suspension standard, Bowers & Wilkins 25-speaker audio - Competes with Mercedes EQS SUV (€115,900), BMW iX (€99,900) - Volvo now 4 models/6 variants (from 3/5, +20%) - Database now 138 variants across 70 models from 24 manufacturers - Germany coverage now 131/138 = 94.9%)
-- **Growth:** +87 variants since Feb 7 (170.6% increase) | +5 manufacturers (Honda, Genesis, Mazda, Toyota, Lexus) | +16 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40, Jeep Avenger, Audi Q4 Sportback, MG ZS EV, MG5 Electric, DS 3 E-Tense, Mazda MX-30, Polestar 3, Toyota bZ4X, Lexus RZ, Kia EV3, Volvo EX90)
+- **Feb 8, 2026 (15:00):** 139 variants (+1 Subaru Solterra AWD: NEW MANUFACTURER Subaru Corporation (25th) + NEW MODEL - 160kW/218hp 71.4kWh 465km WLTP €57,490 + Germany market data - Subaru's first BEV, mechanical twin to Toyota bZ4X with Subaru-specific tuning, unique StarDrive panoramic roof with solar coating, Symmetrical AWD with X-MODE, EyeSight Driver Assist, Harman Kardon audio - AWD-only configuration, 8-year/160,000km battery warranty, 6.6kW AC charging limitation - Priced €5,490 higher than bZ4X but with more standard equipment - Competes with Toyota bZ4X (€52,000), VW ID.4 AWD (€51,000) - Subaru NEW manufacturer - Database now 139 variants across 71 models from 25 manufacturers - Germany coverage now 132/139 = 95.0%)
+- **Growth:** +88 variants since Feb 7 (172.5% increase) | +6 manufacturers (Honda, Genesis, Mazda, Toyota, Lexus, Subaru) | +17 new models (Peugeot e-308, Citroën ë-C3, Genesis Electrified GV70, Peugeot e-3008, Volvo EC40, Jeep Avenger, Audi Q4 Sportback, MG ZS EV, MG5 Electric, DS 3 E-Tense, Mazda MX-30, Polestar 3, Toyota bZ4X, Lexus RZ, Kia EV3, Volvo EX90, Subaru Solterra)
 - **Target:** 300+ variants by mid-March 2026
 
 ---
