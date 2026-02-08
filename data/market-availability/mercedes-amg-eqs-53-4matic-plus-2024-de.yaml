@@ -1,0 +1,407 @@
+id: mercedes-amg-eqs-53-4matic-plus-2024-de
+variant_id: mercedes-amg-eqs-53-4matic-plus-2024
+market: DE
+currency: EUR
+model_year: 2024
+
+# Pricing (2024 model year, Germany)
+pricing:
+  base_price: 148023  # €148,023 MSRP (performance flagship)
+  destination_charge: 1190
+  price_on_road: 149213
+  
+  price_excluding_vat: 124353  # €124,353 (19% VAT = €23,860)
+  
+  trims:
+    - name: "AMG EQS 53 4MATIC+"
+      price: 148023
+      description: "Performance flagship with extensive AMG equipment"
+
+# Available Colors (2024 model year)
+colors:
+  free:
+    - name: "Polar White (solid)"
+      code: 149
+  
+  metallic:  # €1,190 premium
+    - name: "Obsidian Black Metallic"
+      code: 197
+      price: 1190
+    - name: "Selenite Grey Metallic"
+      code: 775
+      price: 1190
+    - name: "High-Tech Silver Metallic"
+      code: 172
+      price: 1190
+    - name: "Graphite Grey Metallic"
+      code: 755
+      price: 1190
+  
+  amg_exclusive:  # AMG-exclusive colors
+    - name: "AMG Brilliant Blue Magno"
+      code: 9890
+      price: 8330  # €8,330 matte finish
+      description: "AMG-exclusive matte blue"
+    - name: "AMG Alpine Grey Magno"
+      code: 9775
+      price: 8330
+      description: "AMG-exclusive matte grey"
+  
+  special:  # MANUFAKTUR exclusive colors
+    - name: "MANUFAKTUR Patagonia Red Bright"
+      code: 9689
+      price: 5712
+      description: "Exclusive MANUFAKTUR color"
+    - name: "MANUFAKTUR Spectral Blue Magno"
+      code: 9359
+      price: 8330
+      description: "Exclusive MANUFAKTUR matte color"
+    - name: "MANUFAKTUR Obsidian Black Magno"
+      code: 9197
+      price: 8330
+      description: "Exclusive MANUFAKTUR matte color"
+
+# Wheel Options
+wheels:
+  standard:
+    - size_inches: 21
+      description: '21" AMG multi-spoke forged wheels (black)'
+      price: 0  # Standard on AMG
+      range_impact_km: 0
+  
+  optional:
+    - size_inches: 21
+      description: '21" AMG cross-spoke forged wheels (titanium grey)'
+      price: 1400
+      range_impact_km: 0
+    - size_inches: 22
+      description: '22" AMG multi-spoke forged wheels (black)'
+      price: 2800
+      range_impact_km: -25  # Larger wheels reduce range
+
+# Interior Options
+interior:
+  standard:
+    - name: "AMG Nappa leather black"
+      code: 251A
+      description: "AMG Performance seats in black Nappa leather with red contrast stitching"
+  
+  optional:
+    - name: "AMG Nappa leather black/red"
+      code: 251A
+      price: 1785
+      description: "AMG Performance seats with red/black two-tone Nappa leather"
+    - name: "AMG DINAMICA microfiber black"
+      code: 271A
+      price: 0
+      description: "AMG Performance seats in DINAMICA microfiber (vegan, high-grip)"
+    - name: "MANUFAKTUR Exclusive Nappa leather"
+      code: 982A
+      price: 7140
+      description: "Exclusive MANUFAKTUR leather with custom contrast stitching"
+
+# Equipment Packages
+packages:
+  - name: "AMG Dynamic Plus Package"
+    price: 11900  # €11,900 (mandatory for max performance)
+    description: "Unlocks full 680 hp power, Race Start, Drift Mode"
+    items:
+      - "Race Start function (680 hp / 950 Nm for 10 seconds)"
+      - "Drift Mode (rear-biased torque distribution)"
+      - "AMG Track Pace with drift analysis and lap timing"
+      - "AMG Performance seats with more aggressive bolstering"
+      - "AMG Performance steering wheel with Alcantara"
+  
+  - name: "Executive Rear Seat Package Plus"
+    price: 5236
+    description: "Ultimate rear passenger comfort (less common on AMG)"
+    items:
+      - "Executive rear seats (individual reclining seats)"
+      - "Rear seat massage"
+      - "Rear seat heating and ventilation"
+      - "Folding tables with wireless charging"
+      - "Calf support"
+  
+  - name: "E-Active Body Control"
+    price: 8092
+    description: "Active suspension with curve tilting"
+    items:
+      - "Active suspension with 48V system"
+      - "Curve tilting (banking in corners up to 3°)"
+      - "Individual wheel control"
+      - "Pothole detection and avoidance"
+  
+  - name: "Acoustic Comfort Package"
+    price: 1309
+    description: "Enhanced cabin noise insulation"
+    items:
+      - "Acoustic insulation glass"
+      - "Additional sound insulation"
+  
+  - name: "AMG Night Package"
+    price: 2380
+    description: "Black high-gloss styling elements"
+    items:
+      - "Black chrome grille"
+      - "Black chrome window surrounds"
+      - "Black mirror caps"
+      - "Black AMG badging"
+  
+  - name: "AMG Carbon Fiber Package"
+    price: 5950
+    description: "Carbon fiber exterior and interior elements"
+    items:
+      - "Carbon fiber front splitter"
+      - "Carbon fiber side sill panels"
+      - "Carbon fiber rear diffuser"
+      - "Carbon fiber interior trim"
+
+# Individual Options
+options:
+  display_and_controls:
+    - name: "MBUX Hyperscreen"
+      price: 0  # Standard on AMG 53 (included in base price)
+      description: "56-inch curved display (standard on AMG)"
+    
+    - name: "Augmented Reality Head-Up Display"
+      price: 0  # Standard
+      description: "AMG-specific HUD with performance data"
+  
+  comfort:
+    - name: "22kW Onboard Charger"
+      price: 0  # Standard on AMG 53 (included)
+      description: "Fast AC charging standard on AMG"
+    
+    - name: "Burmester High-End 3D Surround Sound"
+      price: 0  # Standard on AMG 53 (included)
+      description: "21-speaker 1,750W system (standard on AMG)"
+    
+    - name: "Panoramic Sliding Sunroof"
+      price: 0  # Standard
+      description: "Large panoramic glass roof with sliding shade"
+    
+    - name: "4-Zone Automatic Climate Control"
+      price: 0  # Standard
+      description: "Individual climate control for all passengers"
+    
+    - name: "ENERGIZING AIR CONTROL Plus"
+      price: 417
+      description: "Enhanced air filtration"
+  
+  lighting:
+    - name: "Digital Light"
+      price: 3808
+      description: "LED headlights with 2.6 million micro-mirrors"
+    
+    - name: "AMG-specific Ambient Lighting"
+      price: 0  # Standard on AMG
+      description: "AMG-specific lighting animations and colors"
+  
+  driver_assistance:
+    - name: "DRIVE PILOT Level 3"
+      price: 7141
+      description: "Level 3 autonomous driving (Germany only)"
+    
+    - name: "Driving Assistance Package Plus"
+      price: 0  # Standard on AMG
+      description: "Active Distance Assist, Active Steering Assist, Active Lane Change"
+  
+  towing:
+    - name: "Trailer Coupling"
+      price: 1309
+      description: "Electrically folding tow hitch, 750kg capacity"
+
+# Popular Configurations
+popular_configs:
+  - name: "AMG EQS 53 4MATIC+ Performance"
+    total_price: 170000  # ~€170,000
+    description: "Most popular AMG configuration with Dynamic Plus"
+    includes:
+      - "AMG EQS 53 4MATIC+ base (€148,023)"
+      - "AMG Dynamic Plus Package (€11,900)"
+      - "E-Active Body Control (€8,092)"
+      - "Acoustic Comfort Package (€1,309)"
+      - "AMG Night Package (€2,380)"
+  
+  - name: "AMG EQS 53 4MATIC+ Ultimate"
+    total_price: 195000  # ~€195,000
+    description: "Fully loaded AMG flagship"
+    includes:
+      - "AMG EQS 53 4MATIC+ base (€148,023)"
+      - "AMG Dynamic Plus Package (€11,900)"
+      - "E-Active Body Control (€8,092)"
+      - "AMG Carbon Fiber Package (€5,950)"
+      - "Executive Rear Seat Package Plus (€5,236)"
+      - "Acoustic Comfort Package (€1,309)"
+      - "Digital Light (€3,808)"
+      - "AMG Night Package (€2,380)"
+      - "DRIVE PILOT Level 3 (€7,141)"
+      - "AMG Brilliant Blue Magno (€8,330)"
+
+# Incentives & Tax Benefits (Germany 2024)
+incentives:
+  - name: "BAFA Umweltbonus (Environmental Bonus)"
+    amount: 0
+    type: subsidy
+    description: "Federal EV purchase incentive ended 2023-12-31"
+  
+  - name: "Company Car Tax Benefit"
+    amount: 8872  # Annual savings (reduced due to >€70k base price)
+    type: tax_credit
+    description: "0.5% monthly taxation (NOT 0.25% due to >€70k gross list price). €148,023 × 0.5% = €740/month vs €1,480/month for ICE"
+    notes: "Saves €8,872/year. Price over €70k threshold means 0.5% rate (not 0.25%). Still significant savings vs ICE 1% rate"
+  
+  - name: "Kfz-Steuer (Road Tax) Exemption"
+    amount: 500
+    type: tax_exemption
+    description: "Electric vehicles exempt from road tax until 2030"
+  
+  - name: "THG-Quote (Greenhouse Gas Quota Trading)"
+    amount: 350
+    type: rebate
+    description: "Annual income from selling CO2 certificate"
+
+# Availability
+availability:
+  status: available
+  available_from: "2021-08-01"
+  available_until: null
+  
+  order_status: open
+  delivery_time_weeks: 18  # 18-week delivery (slightly longer than 450+)
+  pre_order: no
+
+  dealers: 550
+  online_purchase: yes
+  
+  test_drive_available: yes
+  home_delivery_available: yes
+
+# Charging Infrastructure
+charging_access:
+  - network: "Mercedes me Charge"
+    description: "Mercedes-Benz charging network access"
+    access: included
+    subscription_required: no
+  
+  - network: "IONITY"
+    description: "Ultra-fast charging network"
+    standard_price_kwh: 0.79
+    subscription:
+      monthly_fee: 17.99
+      discounted_price_kwh: 0.31
+
+home_charging:
+  - name: "Mercedes-Benz Wallbox Home 22kW"
+    price: 1290
+    power_kw: 22
+    description: "22kW home wallbox (standard charger on AMG 53)"
+
+# Warranty
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  
+  battery_years: 10
+  battery_km: 250000
+  battery_guarantee: "70% capacity retention"
+  
+  roadside_assistance_years: 2
+  corrosion_warranty_years: 30
+  
+  service_interval_months: 12  # AMG requires annual service
+  service_interval_km: 25000
+  
+  extended_warranty_available: yes
+
+# Running Costs (Estimates for Germany)
+annual_costs:
+  insurance_eur: 3200  # ~€3,200/year (AMG performance sedan, higher than 450+)
+  road_tax_eur: 0
+  service_eur: 900  # ~€900/year (AMG requires more frequent service)
+  
+  electricity_100km_home: 6.60  # 22.0 kWh/100km × €0.30/kWh = €6.60
+  electricity_100km_public: 17.60  # 22.0 kWh/100km × €0.80/kWh = €17.60
+  
+  comparison_ice:
+    fuel_cost_100km: 20.00  # ~€20/100km for AMG S63 gasoline
+    annual_savings_vs_ice: 5500  # ~€5,500/year for 20,000km (home charging)
+
+notes: |
+  The Mercedes-AMG EQS 53 4MATIC+ at €148,023 is AMG's first fully electric sedan and the performance
+  flagship of the EQS lineup. It delivers 484 kW (658 hp) and 880 Nm torque, achieving 3.4s 0-100 km/h
+  acceleration while maintaining Mercedes luxury.
+  
+  **Pricing Context:**
+  - Base: €148,023 (+€33,382 vs 450+)
+  - Performance config: ~€170,000 (AMG Dynamic Plus, E-Active Body Control)
+  - Fully loaded: €195,000+ (all AMG packages, carbon fiber, DRIVE PILOT)
+  
+  **Key Advantages:**
+  - 3.4s 0-100 km/h (fastest luxury sedan, faster than S63 AMG V8)
+  - 484 kW (658 hp) base, 503 kW (680 hp) with AMG Dynamic Plus
+  - 880 Nm torque (950 Nm with Dynamic Plus) - exceptional
+  - AMG RIDE CONTROL+ air suspension with adaptive damping
+  - AMG Track Pace with lap timing, telemetry, drift mode
+  - MBUX Hyperscreen standard (€8,330 option on 450+)
+  - Burmester 3D audio standard (€5,950 option on 450+)
+  - 22kW AC charging standard (€1,190 option on 450+)
+  - 10-year/250,000km battery warranty
+  
+  **Key Weaknesses:**
+  - Only 586km WLTP range (490km real-world) vs 450+ 782km (650km real-world)
+  - Higher consumption: 20.4 kWh/100km WLTP (22.0 real-world) vs 450+ 15.6 kWh/100km
+  - Very heavy: 2,655kg (+175kg vs 450+)
+  - Price >€70k means 0.5% company car tax (not 0.25%) - still saves €8,872/year vs ICE
+  - 400V architecture: only 207kW DC charging (vs Taycan Turbo S 270kW)
+  - No V2G/V2L
+  - Limited towing: 750kg (vs iX M60 2,500kg)
+  
+  **Company Car Tax:**
+  - AMG 53 4MATIC+ gross list price: €148,023
+  - EXCEEDS €70,000 threshold → 0.5% monthly rate (NOT 0.25%)
+  - 0.5% rate: €148,023 × 0.5% = €740/month
+  - ICE 1% rate: €148,023 × 1% = €1,480/month
+  - **Annual savings: €8,872** (vs ICE, but less than 450+ €10,313 due to 0.5% rate)
+  - Over 3-year lease: €26,616 tax savings
+  
+  **Popular Configurations:**
+  - Base (€148,023): Rare, most buyers add AMG Dynamic Plus
+  - Performance (~€170,000): Dynamic Plus, E-Active Body Control, Night Package (most popular)
+  - Ultimate (~€195,000): All AMG packages, carbon fiber, DRIVE PILOT, Executive Rear Seat
+  
+  **Competitors:**
+  - Porsche Taycan Turbo S (€199,637): Faster (2.8s), 800V charging, lighter, sportier, €50k more
+  - BMW i7 M70 xDrive (€169,000): More power (485kW), 3.7s 0-100, more traditional luxury
+  - Tesla Model S Plaid (€118,990): Much faster (2.1s), €30k cheaper, less luxurious
+  - Lucid Air Sapphire (€249,000): Much faster (1.89s), more range, €100k more
+  - Audi e-tron GT RS (€142,400): Sportier, 800V charging, less luxurious, €6k cheaper
+  
+  The AMG EQS 53 4MATIC+ targets buyers wanting ultimate Mercedes luxury + AMG performance.
+  It's the fastest-accelerating Mercedes luxury sedan ever (3.4s vs S63 AMG V8: 3.5s).
+  
+  **AMG Dynamic Plus Package (€11,900) is highly recommended:**
+  - Race Start: 680 hp / 950 Nm for 10 seconds (repeated 0-100 runs)
+  - Drift Mode: rear-biased torque for controlled drifts
+  - Track Pace: lap timing, telemetry, drift analysis
+  - Performance seats with more aggressive bolstering
+  
+  Real-world consumption: 22.0 kWh/100km (higher with spirited driving).
+  Real-world range: 490km mixed (vs 586km WLTP, 451km EPA).
+  
+  Built at Factory 56, Sindelfingen, Germany (carbon-neutral production).
+
+sources:
+  - url: https://www.mercedes-amg.com/de/vehicles/eqs-sedan/eqs-53-4matic.html
+    title: Mercedes-AMG EQS 53 4MATIC+ Official Page (Germany)
+    accessed: "2026-02-08"
+  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/configure.html
+    title: Mercedes-AMG EQS Configurator
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
