@@ -1,8 +1,8 @@
 # Current Database Status
 
-**Last Updated:** 2026-02-08 4:30 PM  
-**Total Vehicles:** 144 variants across 72 models from 25 manufacturers  
-**Germany Market Coverage:** 144/144 variants (100%)
+**Last Updated:** 2026-02-08 4:50 PM  
+**Total Vehicles:** 145 variants across 73 models from 25 manufacturers  
+**Germany Market Coverage:** 145/145 variants (100%)
 
 ---
 
@@ -15,7 +15,7 @@
 | Hyundai Motor Group | 5 | 9 | ✅ Good |
 | BYD | 3 | 6 | ✅ Good |
 | Tesla | 3 | 8 | ✅ Good |
-| Stellantis | 12 | 18 | 🟡 Partial |
+| Stellantis | 13 | 19 | 🟡 Partial |
 | Volkswagen Group | 5 | 13 | ✅ Good |
 | Audi | 5 | 9 | ✅ Good |
 | Mercedes-Benz | 6 | 14 | ✅ Good |
@@ -36,7 +36,7 @@
 | Lexus | 1 | 1 | 🟢 Single |
 | Subaru | 1 | 1 | 🟢 Single |
 
-**Total:** 25 manufacturers, 72 models, 141 variants
+**Total:** 25 manufacturers, 73 models, 145 variants
 
 ---
 
@@ -70,6 +70,7 @@
 
 ## ✅ Recently Completed
 
+- ✅ **Opel Grandland Electric**: Added 1 NEW MODEL (Grandland Electric, Opel's flagship electric SUV on STLA Medium platform) + 1 variant (Long Range 82 kWh RWD 160kW/218hp 580km WLTP €49,990) + Germany market data - New 2024 model with excellent range and fast 160kW DC charging (10-80% in 26 minutes), spacious family SUV with 550L trunk and Google Automotive Services built-in, built in Eisenach Germany - Competes with VW ID.4 Pro (€50,990), Hyundai Ioniq 5 Long Range (€50,990), Peugeot e-3008 Long Range (€50,990) with competitive pricing and superior cargo space - Platform sibling to Peugeot e-3008 but with more practical German design and larger battery (82 kWh vs 73 kWh) - Stellantis now 19 variants across 13 models (from 18/12, +5.6% variants) - Database now 145 variants across 73 models from 25 manufacturers - Germany coverage maintained at 100% (145/145) - *Added Feb 8, 2026 16:50*
 - ✅ **Smart #1 Expansion + 100% Germany Coverage Achieved**: Added 2 NEW VARIANTS (Smart #1 Pro+ €41,990 entry-level with same 200kW powertrain and 440km range as Premium but reduced equipment, Smart #1 Brabus €53,490 performance flagship with 315kW/428hp delivering supercar-like 3.9s 0-100 acceleration) + Germany market data for both - Pro+ offers excellent value proposition vs Premium at €2,000 savings while maintaining core capabilities (22kW AC, 150kW DC, heat pump standard) - Brabus tuned by legendary German performance house delivers most powerful compact electric crossover under €60k with sport suspension (-10mm), Nappa leather/Alcantara interior, unique body kit, 19" Brabus wheels - Both qualify for 0.25% company car tax rate - Smart now 3 variants (from 1, +200%) - **Database now 144 variants with 100% Germany market coverage (144/144)** - *Added Feb 8, 2026 16:30*
 - ✅ **Volvo EC40 & EX40 Germany Market Data**: Added Germany market data for 3 missing Volvo variants (EC40 Single Motor €56,000 base with 530km WLTP, EC40 Twin Motor €63,000 base with 487km WLTP, EX40 Twin Motor €60,000 base with 452km WLTP) - EC40 coupe variants offer superior aerodynamics (Cd 0.30) with 55km more range than EX40, Twin Motor variants feature 300kW (408hp) dual motors for all-weather AWD capability - Comprehensive market data including trim levels (Core/Plus/Ultra), company car tax calculations (0.25% rate saves €5-5.4k annually), charging costs, popular configurations - Volvo now 6/6 variants with DE market data (100% coverage) - Database now 142 variants with 138 having Germany market data (97.2%, up from 95.1%) - Remaining 4 variants without DE data: Kia EV3 Standard Range, Renault Megane EV60 Optimum Charge, MG5 Standard Range, Fiat 500e Icon 42kWh - *Added Feb 8, 2026 16:00*
 - ✅ **BMW i7 M70 xDrive**: Added 1 NEW VARIANT (Performance flagship 485kW/660hp dual-motor AWD, 101.7kWh, 3.7s 0-100 km/h, 560km WLTP €170,000) + Germany market data - BMW's most powerful electric flagship with M-tuned dual motors delivering supercar acceleration (0-100 in 3.7 seconds) while maintaining luxury sedan comfort - Combined 660 hp and massive 1,100 Nm torque from front (258hp) + rear (489hp) permanent magnet motors - M-tuned xDrive AWD with torque vectoring and rear-biased distribution, Executive Drive Pro air suspension, M Sport brakes - Standard equipment includes M Sport Package Pro, Bowers & Wilkins Diamond 36-speaker audio (normally €6,200 option), all flagship technology features - €35,000 premium over eDrive50 justified by M Performance hardware and additional standard equipment - Competes with Mercedes-AMG EQS 53 4MATIC+ (€148,000, 658hp) and Porsche Taycan Turbo (€161,000, 680hp) with compelling value proposition - Subject to 0.5% company car tax rate (vehicles over €70,000) - BMW Group now 11 variants (from 10, +10%) - Database now 142 variants across 72 models from 25 manufacturers - Germany coverage now 135/142 = 95.1% - *Added Feb 8, 2026 15:45*
