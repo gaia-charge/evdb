@@ -1,0 +1,259 @@
+# MG4 Electric Standard Range - German Market (2024)
+# Entry-level variant with best value proposition
+
+id: mg4-electric-standard-range-2024-de
+variant_id: mg4-electric-standard-range-2024
+market: DE
+currency: EUR
+
+# Pricing
+base_price: 29990
+base_price_incl_vat: true
+vat_rate_percent: 19
+
+# Price Breakdown
+price_details:
+  msrp: 29990
+  destination_charge: 0  # Included
+  documentation_fee: 0  # Included
+  total_base: 29990
+
+# Incentives & Subsidies (Germany 2024)
+incentives:
+  - name: "Umweltbonus (BAFA)"
+    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
+    type: rebate
+    provider: federal
+    eligibility: "BEV with price ≤€45,000"
+    valid_until: "2024-12-31"
+    notes: "German federal EV subsidy - being phased out"
+    
+  - name: "Company Car Tax"
+    amount: 0  # Percentage-based benefit, not fixed amount
+    type: tax_exemption
+    provider: federal
+    description: "0.25% monthly gross list price for BEVs under €60k"
+    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+
+# Available Colors
+colors:
+  - name: "Polar White"
+    code: "solid-white"
+    type: solid
+    price_delta: 0
+    
+  - name: "Dynamic Red"
+    code: "metallic-red"
+    type: metallic
+    price_delta: 680
+    
+  - name: "Arctic Silver"
+    code: "metallic-silver"
+    type: metallic
+    price_delta: 680
+    
+  - name: "Black Pearl"
+    code: "metallic-black"
+    type: metallic
+    price_delta: 680
+    
+  - name: "Camden Grey"
+    code: "metallic-grey"
+    type: metallic
+    price_delta: 680
+
+# Wheel Options
+wheels:
+  - name: "17-inch alloy wheels"
+    size_inches: 17
+    tire_size: "215/55 R17"
+    price_delta: 0
+    standard: true
+
+# Interior Options
+interiors:
+  - name: "Grey fabric"
+    material: fabric
+    price_delta: 0
+    standard: true
+
+# Equipment Packages & Options
+packages:
+  - name: "Comfort Pack"
+    price: 1500
+    includes:
+      - "Automatic climate control"
+      - "Rear parking sensors"
+      - "Auto-dimming rear-view mirror"
+    popular: true
+    
+  - name: "Luxury Pack"
+    price: 2500
+    includes:
+      - "All Comfort Pack features"
+      - "Black faux leather seats"
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Wireless phone charging"
+    popular: true
+    recommended: true
+
+# Individual Options
+individual_options:
+  - name: "Metallic paint"
+    price: 680
+    category: exterior
+    
+  - name: "Heat pump"
+    price: 900
+    category: efficiency
+    notes: "Optional on Standard Range (standard on Extended Range)"
+    recommended: true
+    
+  - name: "Tow bar"
+    price: 650
+    category: utility
+    towing_capacity_kg: 500
+
+# Total Price Range
+price_range:
+  minimum: 29990  # Base
+  maximum: 35720  # Base + Luxury Pack + metallic + heat pump + tow bar
+  typical: 32490  # Base + Luxury Pack + metallic
+
+# Availability
+availability_status: available
+delivery_time_weeks: 8
+production_location: "Shanghai, China"
+import_duties_included: true
+
+# Market-Specific Notes
+market_notes:
+  - "Most affordable new EV in Germany under €30k"
+  - "7-year/175,000km battery warranty"
+  - "Ideal for urban commuting and short-distance driving"
+  - "Heat pump recommended for winter efficiency"
+  - "Available at 120+ MG dealers across Germany"
+  - "Direct import from China - no local assembly"
+
+# Sales & Distribution
+distribution:
+  dealer_network_size: 120
+  direct_sales: false
+  online_ordering: true
+  test_drive_available: true
+  home_delivery: false
+
+# Service & Warranty
+warranty:
+  basic_years: 7
+  basic_km: 150000
+  battery_years: 7
+  battery_km: 175000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+  
+service:
+  service_interval_months: 12
+  service_interval_km: 20000
+  average_service_cost_eur: 200
+  service_plan_available: true
+  
+# Charging Infrastructure Support
+charging_support:
+  - "Partnership with EnBW (Mobility+ card)"
+  - "Access to 200,000+ charging points in Europe"
+  - "Free RFID charging card included"
+  - "MG iSMART app for charging station locator"
+
+# Insurance
+insurance_notes:
+  typklasse_haftpflicht: 18  # Liability insurance class
+  typklasse_vollkasko: 22    # Comprehensive insurance class (slightly lower than Extended)
+  average_annual_premium_eur: 800
+
+# Financing Options
+financing_available: true
+financing_example:
+  down_payment_eur: 5000
+  monthly_payment_eur: 259
+  term_months: 48
+  final_payment_eur: 12000
+  apr_percent: 3.99
+  total_cost_eur: 29432
+
+# Leasing Options
+leasing_available: true
+leasing_example:
+  monthly_payment_eur: 209
+  down_payment_eur: 2500
+  term_months: 36
+  annual_km: 10000
+  excess_km_cost_eur: 0.15
+
+# Competitors in Market
+local_competitors:
+  - vehicle: "Dacia Spring"
+    price_eur: 20900
+    price_delta: -9090
+    notes: "Cheaper but much smaller, lower specs"
+    
+  - vehicle: "Renault Megane E-Tech EV40"
+    price_eur: 38000
+    price_delta: +8010
+    notes: "French brand, similar battery size"
+    
+  - vehicle: "Opel Corsa Electric"
+    price_eur: 35140
+    price_delta: +5150
+    notes: "German-French brand, smaller car"
+
+# Market Performance
+market_stats:
+  sales_2023: 1800  # Estimated DE registrations for Standard Range
+  market_share_segment_percent: 3.5
+  customer_satisfaction_score: 4.1  # out of 5
+  
+# Reviews & Ratings (Germany)
+reviews:
+  - source: "Auto Motor und Sport"
+    rating: 3.5
+    score_out_of: 5.0
+    summary: "Günstigster Alltagsstromer mit solidem Angebot"
+    
+  - source: "ADAC"
+    rating: 2.5  # ADAC scale (lower is better)
+    score_out_of: 5.0
+    summary: "Empfehlenswert für Kurzstrecke - günstig und zuverlässig"
+
+# Environmental
+environmental:
+  german_environmental_bonus_eligible: true
+  company_car_tax_class: 0.25  # 0.25% vs 1% for ICE
+  co2_emissions_g_per_km: 0
+  noise_level_db: 68  # At 80 km/h
+
+# Residual Value (Germany-specific)
+residual_value:
+  after_3_years_percent: 45
+  after_5_years_percent: 32
+  notes: "Slightly lower residuals than Extended Range due to lower demand"
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.de/mg4-electric
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg4-electric-test/
+    - https://www.dat.de/
+  created_at: "2024-02-08"
+  last_updated: "2024-02-08"
+  notes: |
+    MG4 Standard Range is the most affordable new EV in Germany under €30k.
+    350km WLTP range sufficient for daily commuting and urban use.
+    Single-phase AC charging (6.6kW) adequate for overnight home charging.
+    DC charging at 87kW takes ~38 min (10-80%) - decent for battery size.
+    Heat pump optional (€900) but highly recommended for winter efficiency.
+    Best choice for budget-conscious buyers or second family car.
+    With Umweltbonus (€3,000), effective price is €26,990 (ends Dec 2024).
+    7-year/175,000km warranty provides peace of mind.
