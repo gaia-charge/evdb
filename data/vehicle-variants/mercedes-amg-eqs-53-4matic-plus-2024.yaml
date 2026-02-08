@@ -1,0 +1,262 @@
+id: mercedes-amg-eqs-53-4matic-plus-2024
+name: AMG EQS 53 4MATIC+
+model_id: mercedes-benz-eqs
+model_year: 2024
+production_years:
+  start: 2021
+  end: null
+
+trim_level: amg-53-4matic-plus
+market_position: performance  # AMG performance flagship
+
+# Battery Specifications
+battery:
+  usable_kwh: 107.8  # Same battery as 450+
+  total_kwh: 108.4
+  chemistry: NCM  # Nickel Manganese Cobalt (NCM811)
+  nominal_voltage_v: 396  # 400V architecture
+  cell_type: pouch
+  supplier: CATL
+  warranty_years: 10
+  warranty_km: 250000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, 400V architecture"
+    weight_kg: 630
+    modules: 12
+    cells: 360
+
+# Range
+range:
+  wltp_km: 586  # Reduced range due to performance focus
+  wltp_source: manufacturer
+  wltp_city_km: 680
+  wltp_highway_km: 510  # Higher consumption at speed
+  
+  epa_km: 451  # 280 miles EPA
+  epa_source: manufacturer
+  
+  real_world_km: 490
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22  # 22kW AC standard on AMG
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 4.9  # 22kW AC
+      "10_80": 3.8
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 207  # Slightly higher than 450+ due to AMG optimization
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31
+      "0_100": 56
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 195
+      - soc_percent: 10
+        power_kw: 207  # Peak
+      - soc_percent: 20
+        power_kw: 207
+      - soc_percent: 30
+        power_kw: 185
+      - soc_percent: 40
+        power_kw: 165
+      - soc_percent: 50
+        power_kw: 145
+      - soc_percent: 60
+        power_kw: 125
+      - soc_percent: 70
+        power_kw: 100
+      - soc_percent: 80
+        power_kw: 75
+  
+  plug_and_charge: yes  # ISO 15118
+  
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Performance
+performance:
+  drive_type: AWD  # 4MATIC+ all-wheel drive
+  motors:
+    - position: front
+      type: permanent magnet
+      max_power_kw: 180
+      max_torque_nm: 420
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 304
+      max_torque_nm: 460
+  
+  total_power_kw: 484  # 658 hp (680 hp with AMG Dynamic Plus)
+  total_power_hp: 658
+  total_power_hp_plus: 680  # With AMG Dynamic Plus (Race Start function)
+  total_torque_nm: 880  # 950 Nm with AMG Dynamic Plus
+  total_torque_nm_plus: 950  # With AMG Dynamic Plus
+  
+  acceleration:
+    "0_100_kmh_sec": 3.4  # Very fast for luxury sedan (with Race Start)
+    "0_60_mph_sec": 3.3
+    "0_200_kmh_sec": 11.6  # Exceptional high-speed acceleration
+  
+  top_speed_kmh: 250  # Electronically limited (higher than 450+)
+  
+  energy_recovery:
+    max_regen_power_kw: 290  # AMG-tuned aggressive recuperation
+    one_pedal_driving: yes
+
+# Weight & Dimensions
+weight:
+  curb_weight_kg: 2655  # Heavier than 450+ due to dual motors and AMG equipment
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 20.4  # Higher consumption due to performance focus
+  wltp_source: manufacturer
+  epa_kwh_per_100km: 23.9
+  epa_mpge: 87
+  real_world_kwh_per_100km: 22.0  # Real-world consumption higher
+  energy_efficiency_class: B  # EU energy label
+
+# Features
+features:
+  heated_seats: "Front and rear standard"
+  ventilated_seats: "Front and rear standard (AMG exclusive)"
+  massage_seats: "Front and rear standard (AMG Performance seats)"
+  heated_steering_wheel: yes  # AMG Performance steering wheel with heating
+  panoramic_roof: yes
+  head_up_display: yes  # AMG-specific HUD with performance data
+  premium_audio: yes  # Burmester High-End 3D Surround (21 speakers, 1750W) standard
+  adaptive_suspension: yes  # AMG RIDE CONTROL+ air suspension with adaptive damping
+  air_suspension: yes
+  all_wheel_steering: yes  # Rear-axle steering up to 10° standard
+  ambient_lighting: yes  # 64 colors with AMG-specific animations
+  keyless_entry: yes
+  power_liftgate: yes
+  tow_hitch: yes  # 750kg capacity
+  
+  adas_level: 2
+  autopilot_highway: yes  # DRIVE PILOT Level 3 optional
+  
+  climate_zones: 4
+  wireless_charging: yes
+  
+  special:
+    - "MBUX Hyperscreen standard (56-inch curved display)"
+    - "AMG Performance steering wheel in Nappa leather/Dinamica with Touch Control"
+    - "AMG Performance seats with dynamic side bolsters"
+    - "AMG Track Pace with lap timing and telemetry"
+    - "AMG RIDE CONTROL+ air suspension with adaptive damping"
+    - "AMG Sound Experience (authentic AMG engine sound simulation)"
+    - "AMG Dynamic Select (Slippery, Comfort, Sport, Sport+, Individual, Race modes)"
+    - "AMG Dynamic Plus Package optional (Race Start, Drift Mode, 680hp)"
+    - "E-Active Body Control optional (active suspension, curve tilting)"
+    - "Carbon fiber trim and AMG-specific interior design"
+    - "Red-painted brake calipers with AMG lettering"
+    - "AMG-specific front apron, side skirts, rear diffuser"
+    - "21-inch AMG multi-spoke forged wheels standard, 22-inch optional"
+
+# Technology
+technology:
+  heat_pump: yes
+  preconditioning: yes
+  remote_climate: yes
+  battery_preheating: yes
+  over_the_air_updates: yes
+  digital_key: yes
+  voice_assistant: yes
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  navigation_system: yes  # MBUX with Augmented Reality
+  telematics: yes
+
+# Homologation
+homologation:
+  certification_standard: WLTP
+  energy_label_eu: B
+  co2_emissions_g_km: 0
+
+notes: |
+  The Mercedes-AMG EQS 53 4MATIC+ is the performance flagship of the EQS lineup, representing
+  AMG's first fully electric sedan. It combines Mercedes' luxury flagship with AMG's performance DNA,
+  delivering 484 kW (658 hp) and 880 Nm torque from dual permanent magnet motors.
+  
+  Key strengths:
+  - 3.4s 0-100 km/h acceleration (with Race Start function) - fastest luxury sedan
+  - 484 kW (658 hp) power, 680 hp with AMG Dynamic Plus Package
+  - 880 Nm torque (950 Nm with Dynamic Plus) - exceptional for any production car
+  - AMG RIDE CONTROL+ air suspension with adaptive damping
+  - AMG Track Pace with lap timing, telemetry, and drift mode
+  - MBUX Hyperscreen standard (€8,925 option on 450+)
+  - 22kW AC charging standard (€1,190 option on 450+)
+  - AMG Sound Experience (authentic AMG engine sound simulation)
+  - Burmester High-End 3D Surround (21 speakers, 1750W) standard
+  - 10-year/250,000km battery warranty
+  
+  Key weaknesses:
+  - Only 586km WLTP range (490km real-world) vs 450+ 782km (650km real-world)
+  - Higher consumption: 20.4 kWh/100km WLTP vs 450+ 15.6 kWh/100km
+  - Very heavy at 2,655kg (175kg more than 450+)
+  - 400V architecture limits DC charging to 207kW (vs 800V Taycan Turbo S: 270kW)
+  - No V2G/V2L bidirectional charging
+  - Limited towing: 750kg (vs BMW iX M60: 2,500kg)
+  - Expensive: ~€148,000 base price (~€30,000 more than 450+)
+  
+  Competes with:
+  - Porsche Taycan Turbo S (€199,637): Faster (2.8s 0-100), 800V charging, lighter, sportier, less luxurious
+  - BMW i7 M70 xDrive (€169,000): More power (485kW), faster (3.7s 0-100), more traditional luxury
+  - Tesla Model S Plaid (€118,990): Much faster (2.1s 0-100), better software, less luxurious
+  - Lucid Air Sapphire (€249,000): Much faster (1.89s 0-100), more range, more expensive
+  - Audi e-tron GT RS (€142,400): Sportier, lighter, 800V charging, less luxurious
+  
+  AMG EQS 53 4MATIC+ targets buyers wanting ultimate luxury + AMG performance in electric form.
+  It's the fastest-accelerating Mercedes luxury sedan ever (faster than S63 AMG V8).
+  
+  AMG Dynamic Plus Package (€11,900) adds:
+  - Race Start function: 680 hp / 950 Nm for 10 seconds
+  - Drift Mode (rear-biased torque distribution)
+  - AMG Track Pace with drift analysis
+  - AMG Performance seats with more aggressive bolstering
+  
+  Real-world efficiency: 22.0 kWh/100km (vs WLTP 20.4) - expect higher consumption with spirited driving.
+  Real-world range: 490km mixed driving (vs 586km WLTP, 451km EPA).
+  
+  The AMG EQS 53 is built at Factory 56 (carbon-neutral) alongside the 450+.
+  It's the third electric AMG after EQS 53 SUV and EQE 53.
+
+sources:
+  - url: https://www.mercedes-amg.com/en/vehicles/eqs-sedan/eqs-53-4matic.html
+    title: Mercedes-AMG EQS 53 4MATIC+ Official Page
+    accessed: "2026-02-08"
+  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/explore/amg.html
+    title: Mercedes-AMG EQS 53 Technical Data
+    accessed: "2026-02-08"
+  - url: https://ev-database.org/car/1854/Mercedes-AMG-EQS-53-4MATICplus
+    title: EV Database Mercedes-AMG EQS 53 4MATIC+ Specifications
+    accessed: "2026-02-08"
+  - url: https://insideevs.com/reviews/625847/mercedes-amg-eqs-53-4matic-plus-test/
+    title: InsideEVs Mercedes-AMG EQS 53 4MATIC+ Test
+    accessed: "2026-02-08"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-08"
+  last_updated: "2026-02-08"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
