@@ -1,221 +1,228 @@
+# Renault Megane E-Tech EV60 Techno 220hp (2025) - Popular Mid-Range Variant
+
 id: renault-megane-e-tech-ev60-techno-2025
-name: EV60 Techno
 model_id: renault-megane-e-tech
+name: Megane E-Tech EV60 Techno 220hp
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
+trim_level: Techno  # Mid-range trim with tech focus
+variant_code: EV60
 
-trim_level: techno
-market_position: mid
+production:
+  start_date: 2022-03-01
+  end_date: null
+  status: active
+  notes: Most popular Megane E-Tech variant, offering best balance of range and value
 
-# Battery Specifications
 battery:
-  usable_kwh: 60
-  total_kwh: 62
+  type: Lithium-ion
   chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400
-  cell_type: pouch
-  supplier: LG Energy Solution / Envision AESC
+  total_kwh: 60.0
+  usable_kwh: 58.0  # ~96.7% usable
+  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  
-  pack:
-    configuration: "flat underbody"
-    weight_kg: 450
-    cells: 288
-  
-  notes: >
-    The 60 kWh battery provides excellent range for daily use and longer
-    journeys. Features Renault's Optimax Charge system supporting up to
-    130 kW DC fast charging for optimal charging times.
+  warranty_capacity_percent: 70
+  cells: 288
+  modules: 12
+  voltage_nominal: 400
+  notes: Industry-leading usable capacity ratio (96.7%), excellent thermal management
 
-# Range
 range:
-  wltp_km: 450
-  wltp_source: manufacturer
-  
-  real_world_km: 385
-  real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
+  wltp_km: 470
+  wltp_city_km: 580
+  wltp_highway_km: 380
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 390
+  real_world_source: ADAC EcoTest 2024
+  notes: Excellent real-world efficiency, 83% of WLTP in mixed conditions
 
-# Consumption
-consumption:
-  wltp_kwh_per_100km: 13.3
-  real_world_kwh_per_100km: 15.6
-
-# Charging
 charging:
   ac:
-    max_power_kw: 22
-    connector_types:
-      - type2
-    charging_time_hours:
-      "0_100": 3.0  # 22kW three-phase
-    onboard_charger_kw: 22
-    phases: 3
+    max_power_kw: 7.4
+    connector_type: Type 2
+    phases: 1
+    time_0_100_hours: 9.0
+    onboard_charger: 7.4kW single-phase standard
   
   dc:
     max_power_kw: 130
-    connector_types:
-      - ccs2
-    charging_time_minutes:
-      "15_80": 30
-      "0_100": 50
-    
-    charging_curve:
-      - soc_percent: 0
-        power_kw: 85
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 30
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 120
-      - soc_percent: 70
-        power_kw: 75
-      - soc_percent: 80
-        power_kw: 42
-      - soc_percent: 90
-        power_kw: 24
-      - soc_percent: 100
-        power_kw: 12
-    
-    notes: "Optimax Charge: 130 kW peak DC fast charging, 15-80% in 30 minutes"
-
+    connector_type: CCS2
+    time_10_80_percent_minutes: 28
+    peak_power_notes: 130kW peak maintained up to 50%, excellent charge curve
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 10
+      power_kw: 130
+    - percent: 20
+      power_kw: 130
+    - percent: 30
+      power_kw: 130
+    - percent: 40
+      power_kw: 128
+    - percent: 50
+      power_kw: 120
+    - percent: 60
+      power_kw: 102
+    - percent: 70
+      power_kw: 78
+    - percent: 80
+      power_kw: 48
+    - percent: 90
+      power_kw: 22
+  
   bidirectional:
-    v2l: false
-    v2g: false
+    v2l: true  # Vehicle-to-Load via adapter
     v2h: false
+    v2g: false
 
-# Motors & Performance
 motors:
-  - position: front
-    type: permanent-magnet-synchronous
+  configuration: single_front  # Front-wheel drive
+  front_motor:
+    type: permanent_magnet
     max_power_kw: 160
+    max_power_hp: 218
     max_torque_nm: 300
-    cooling: liquid
-
-drivetrain:
-  type: fwd
+    supplier: Renault-Nissan Alliance
+  rear_motor: null
+  
+  drive_type: FWD
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
 
 performance:
-  acceleration_0_100_kmh_s: 7.4
-  top_speed_kmh: 160
-  top_speed_limited: true
+  acceleration_0_100_kmh_s: 7.5
+  acceleration_0_60_mph_s: null
+  top_speed_kmh: 160  # Electronically limited
+  quarter_mile_s: null
 
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 13.3
-  wltp_source: manufacturer
-  real_world_kwh_per_100km: 15.6
-  
-  highway:
-    kmh: 120
-    kwh_per_100km: 18.2
-    range_km: 330
-  
-  city:
-    kwh_per_100km: 13.2
-    range_km: 455
-
-# Physical specs
-dimensions:
-  length_mm: 4210
-  width_mm: 1780
-  height_mm: 1505
-  wheelbase_mm: 2700
+  wltp_kwh_per_100km: 15.8
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.9
+  efficiency_notes: Best-in-class efficiency for C-segment crossover
 
 weight:
-  curb_weight_kg: 1710
-  gross_vehicle_weight_kg: 2150
-  max_payload_kg: 440
+  curb_weight_kg: 1636
+  gross_vehicle_weight_kg: 2086
+  payload_kg: 450
+  weight_distribution_front_percent: 58
+  towing_capacity_kg: 900  # With optional tow bar
 
-interior:
-  seating_capacity: 5
-  cargo_volume_l: 440
-  cargo_volume_max_l: 1332
-  frunk_volume_l: 0
-
-# Features
-features:
-  exterior:
-    - "20-inch diamond-cut alloy wheels"
-    - "Full LED Pure Vision headlights"
-    - "LED taillights with 3D effect"
-    - "Body-colored door handles with chrome details"
-    - "Front and rear parking sensors"
-    - "Electrically folding and heated mirrors"
-    - "Panoramic glass roof with electric sunblind"
-    - "Chrome window surrounds"
+equipment:
+  wheels:
+    standard_size_inches: 18
+    available_sizes_inches: [18, 20]
+    tire_size_front: 215/55 R18
+    tire_size_rear: 215/55 R18
   
-  interior:
-    - "12-inch portrait touchscreen (OpenR Link)"
-    - "Google built-in (Maps, Assistant, Play Store)"
-    - "12.3-inch digital instrument cluster"
-    - "Leather/TEP upholstery"
-    - "Automatic dual-zone climate control"
-    - "Heat pump (standard)"
-    - "Heated front seats"
-    - "Heated steering wheel"
-    - "Wireless phone charging"
-    - "USB-A and USB-C ports (front and rear)"
-    - "Harman Kardon premium audio (9 speakers)"
-    - "Multi-Sense drive modes (Eco, Comfort, Sport, Perso)"
-    - "One Pedal driving mode"
-    - "Ambient lighting with customizable colors"
+  lighting:
+    headlights: Full LED Pure Vision with automatic high beam
+    matrix_led: false
   
-  safety:
-    - "6 airbags (front, side, curtain)"
-    - "ABS with EBD"
-    - "Electronic stability control"
-    - "Traction control"
-    - "ISOFIX child seat anchors"
-    - "Tire pressure monitoring"
-    - "Front and rear parking sensors"
-    - "360-degree camera"
+  climate:
+    heat_pump: true  # Standard on Techno trim
+    heated_seats: true  # Front seats
+    heated_steering_wheel: true
+    ac_zones: 2
   
   driver_assistance:
-    - "Adaptive Cruise Control with Stop & Go"
-    - "Active Emergency Braking System"
-    - "Lane Departure Warning and Lane Keeping Assist"
-    - "Lane Centering Assist (Highway and Traffic Jam Companion)"
-    - "Blind Spot Warning"
-    - "Traffic Sign Recognition with speed adaptation"
-    - "Driver attention alert"
-    - "High beam assist"
-    - "Hands-free parking"
-    - "Hill start assist"
-    - "Electric parking brake with auto-hold"
+    adaptive_cruise_control: true  # Adaptive Cruise Control with Stop & Go
+    lane_keeping_assist: true  # Lane Centering Assist
+    blind_spot_monitoring: true
+    parking_sensors: true  # Front and rear
+    parking_camera: true  # 360° camera
+    surround_view_camera: true
+    autonomous_level: 2
+    adas_brand: null
+    notes: Highway & Traffic Jam Companion (Level 2 hands-on autonomy)
 
-options_packages:
-  - name: "Iconic Upgrade Pack"
-    price_eur: 1200
-    items:
-      - "Alcantara dashboard trim"
-      - "Premium carpet mats"
-      - "Acoustic windshield"
+interior:
+  upholstery_material: Recycled fabric and synthetic leather
+  upholstery_color_options: [Black, Grey]
+  seat_adjustment: Manual front seats (electric optional)
+  premium_audio: false  # Harman Kardon optional
+  ambient_lighting: true  # Multi-color ambient lighting
 
-notes: >
-  The EV60 Techno represents the sweet spot in the Megane E-Tech lineup,
-  offering 450 km WLTP range (385 km real-world) with the larger 60 kWh
-  battery and more powerful 160 kW (218 hp) motor for spirited performance
-  (7.4s 0-100 km/h). The Techno trim adds premium features like 20-inch
-  wheels, Harman Kardon audio, heated seats and steering wheel, and advanced
-  driver assistance including Highway Companion. The 130 kW Optimax Charge
-  system enables rapid charging, making this variant ideal for both daily
-  commuting and longer journeys. The 22 kW AC onboard charger is a significant
-  advantage for home and public AC charging.
+exterior:
+  paint_type: Solid, Metallic, Bi-tone
+  paint_colors: 8
+  two_tone_available: true  # Black or white roof
+  roof_options: Body color, Black contrast, White contrast
+  aerodynamic_features: Active grille shutters, optimized underbody, flush door handles
 
-metadata:
-  created_at: "2026-02-09"
-  updated_at: null
-  data_quality: verified
-  sources:
-    - https://www.renault.com/megane-e-tech-electric
-    - https://www.renault.de/modelle/megane-elektro.html
-    - https://ev-database.org/car/1614/Renault-Megane-E-Tech-EV60
+data_quality:
+  overall: verified
+  battery_specs: verified
+  range_specs: verified
+  charging_specs: verified
+  performance_specs: verified
+  efficiency_specs: verified
+  source_reliability: high
+  last_updated: 2026-02-09
+
+sources:
+  - name: Renault Germany Configurator
+    url: https://www.renault.de/konfigurieren/megane-e-tech-electric.html
+    type: manufacturer
+    date_accessed: 2026-02-09
+  - name: Renault France Technical Specifications
+    url: https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/specifications.html
+    type: manufacturer
+    date_accessed: 2026-02-09
+  - name: ADAC EcoTest Renault Megane E-Tech EV60
+    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech/
+    type: measured
+    date_accessed: 2026-02-09
+
+notes: |
+  The Megane E-Tech EV60 Techno is the best-selling variant, offering the sweet spot of:
+  
+  **Why EV60 Techno is Most Popular:**
+  - 470 km WLTP range (390 km real-world) - sufficient for most users
+  - 218 hp motor - strong performance (7.5s 0-100 km/h)
+  - Heat pump standard - essential for winter efficiency
+  - Comprehensive tech features - 360° camera, Level 2 ADAS
+  - Competitive pricing vs premium competitors
+  - 130 kW DC fast charging - 10-80% in 28 minutes
+  
+  **2025 Model Year Updates:**
+  - Improved software (OpenR Link 2.0)
+  - Enhanced Google integration
+  - Refined battery thermal management
+  - Extended warranty coverage
+  
+  **Techno Trim Highlights:**
+  - OpenR Link with 12" + 12.3" dual screens
+  - Google built-in (Maps, Assistant, Play Store)
+  - Heat pump standard
+  - 360° surround view camera
+  - Highway & Traffic Jam Companion (Level 2)
+  - Heated front seats and steering wheel
+  - 18" alloy wheels (20" optional)
+  - Ambient lighting
+  - Harman Kardon audio optional
+  
+  **Competition:**
+  - VW ID.3 Pro S (77 kWh, 545 km, but €5k more expensive)
+  - Cupra Born 77kWh (540 km, similar price, sportier)
+  - Nissan Ariya 63kWh (403 km, larger but €8k more)
+  - Hyundai Kona Electric 65kWh (484 km, similar range/price)
+  
+  **Value Proposition:**
+  - European Car of the Year 2023
+  - Best infotainment in segment (Google Automotive OS)
+  - Excellent efficiency (15.8 kWh/100km WLTP)
+  - Strong DC charging (130 kW sustained curve)
+  - Heat pump standard (many competitors charge extra)
+  
+  **Target Buyers:**
+  - Tech-savvy drivers wanting best-in-class infotainment
+  - Company car drivers (0.25% tax benefit in Germany)
+  - Families needing practical 5-seater with good range
+  - VW ID.3 shoppers wanting better tech/design
+  
+  **Platform:** CMF-EV shared with Nissan Ariya
+  **Production:** Renault ElectriCity (Douai, France)
+  **Market Position:** Premium mainstream - above Zoe, below Alpine
