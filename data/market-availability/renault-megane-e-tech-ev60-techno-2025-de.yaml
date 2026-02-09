@@ -1,364 +1,249 @@
+# Renault Megane E-Tech EV60 Techno 220hp (2025) - Germany Market Availability
+
 id: renault-megane-e-tech-ev60-techno-2025-de
 variant_id: renault-megane-e-tech-ev60-techno-2025
 market: DE
-market_name: Germany
 currency: EUR
-available: true
-release_date: "2022-09-01"
-discontinued_date: null
 
-# Pricing (Germany, 2025)
+# Market-Specific Details
+availability_status: available
+available_from: "2022-03-01"
+delivery_time_weeks: 10
+
+# Pricing
 pricing:
-  base_price: 43400
-  price_including_vat: 43400
+  base_price: 43600
+  price_including_vat: 43600
   vat_rate_percent: 19
-  on_road_price: 44550
-  destination_charge: 950
-  registration_fee: 200
 
-# Trim levels and configurations available in Germany
-trim_levels:
-  - name: EV60 Techno
-    price: 43400
-    description: Mid-range variant with comprehensive technology and comfort features
-    standard_features:
-      - OpenR Screen 12" touchscreen with Android Automotive OS
-      - Google services built-in (Maps, Assistant, Play Store)
-      - 12.3" digital instrument cluster
-      - Panoramic glass roof (fixed)
-      - Full LED headlights with automatic high beam
-      - Heated front seats
-      - Dual-zone automatic climate control
-      - Wireless smartphone charging
-      - Heat pump for improved winter efficiency
-      - Multi-Sense drive modes
+# Available Colors
+available_colors:
+  - name: Glacier White
+    code: QNC
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Diamond Black
+    code: 676
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Titanium Grey
+    code: KPM
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Flame Red
+    code: NNP
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Vision Blue
+    code: RNH
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  - name: Alpine Green
+    code: RAH
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
 
-# Popular configurations
-popular_configurations:
-  - name: Base as-delivered
-    total_price: 44550
-    description: EV60 Techno with delivery and registration, no options
-    included:
-      - All standard Techno trim features
-      - Delivery charge (€950)
-      - Registration fee (€200)
-    
-  - name: Popular
-    total_price: 46950
-    description: Most popular configuration with key upgrades
-    included:
-      - Base EV60 Techno
-      - 20" Aerodynamic Wheels (€900)
-      - Metallic/Pearl Paint (€650)
-      - Harman Kardon Audio (€550)
-      - Winter Package (€350)
-    
-  - name: Premium
-    total_price: 47450
-    description: Top specification with all comfort options
-    included:
-      - Popular configuration
-      - Two-Tone Roof (€500)
+# Wheel Options
+available_wheels:
+  - name: 19" diamond-cut alloy wheels (standard)
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 20" diamond-cut alloy wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 900
+      currency: EUR
 
-# Incentives and subsidies
-incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 3468
-    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
-    notes: >
-      Company car drivers benefit from 0.25% monthly tax rate 
-      (vs 1% for combustion vehicles), saving approximately €3,468 annually. 
-      German federal EV incentive (Umweltbonus) ended December 2023.
+# Interior Options
+available_interiors:
+  - name: Grey Alcantara/TEP
+    material: alcantara
+    color: grey
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Alcantara/TEP
+    material: alcantara
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Nappa leather seats
+    material: leather
+    color: black
+    price_add:
+      amount: 1500
+      currency: EUR
 
-# Company car taxation
-company_car:
-  taxable_benefit_calculation: gross_list_price_x_0.25_percent
-  monthly_taxable_benefit_eur: 108.50
-  annual_taxable_benefit_eur: 1302
-  comparable_ice_benefit_eur: 4770
-  annual_tax_savings_eur: 3468
+# Incentives
+available_incentives:
+  - type: federal
+    name: "BAFA Umweltbonus (until 2024)"
+    amount:
+      amount: 4500
+      currency: EUR
+    conditions: ["Price under €65,000", "BEV", "Expired December 2024"]
+    expires_at: "2024-12-31"
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars under €70,000"
+    conditions: ["Price under €70,000 gross list price"]
+
+# Options
+popular_packages:
+  - name: Two-tone roof (Flame Red or Vision Blue)
+    price:
+      amount: 700
+      currency: EUR
+  - name: Harman Kardon audio system (9 speakers)
+    price:
+      amount: 650
+      currency: EUR
+  - name: Panoramic sunroof
+    price:
+      amount: 1100
+      currency: EUR
+  - name: 20" wheels
+    price:
+      amount: 900
+      currency: EUR
+  - name: Nappa leather seats
+    price:
+      amount: 1500
+      currency: EUR
+
+# Popular Configurations
+popular_configs:
+  - name: "EV60 Techno Base"
+    description: "Well-equipped mid-range variant"
+    total_price:
+      amount: 43600
+      currency: EUR
+    includes:
+      - "60 kWh battery (450 km WLTP)"
+      - "220 hp motor (7.4s 0-100 km/h)"
+      - "22 kW three-phase AC charging"
+      - "130 kW DC fast charging"
+      - "19\" diamond-cut wheels"
+      - "360° camera"
+      - "Heated seats"
+      - "Highway Companion Level 2"
+      - "Alcantara/TEP upholstery"
+  
+  - name: "EV60 Techno Premium"
+    description: "Popular configuration with comfort options"
+    total_price:
+      amount: 46750
+      currency: EUR
+    includes:
+      - "All EV60 Techno base features"
+      - "Panoramic sunroof (€1,100)"
+      - "Harman Kardon audio (€650)"
+      - "Two-tone roof (€700)"
+      - "Nappa leather seats (€1,500)"
+  
+  - name: "EV60 Techno Sport"
+    description: "Sporty configuration"
+    total_price:
+      amount: 45900
+      currency: EUR
+    includes:
+      - "All EV60 Techno base features"
+      - "20\" wheels (€900)"
+      - "Two-tone roof (€700)"
+      - "Metallic paint (€700)"
+
+# Charging Costs (Germany 2025)
+typical_charging_costs:
+  home_kwh: 0.33
+  public_ac_kwh: 0.52
+  public_dc_kwh: 0.69
+
+# Company Car Taxation
+company_car_tax:
+  gross_list_price: 43600
+  monthly_tax_rate: 0.25
+  monthly_benefit: 109
+  annual_benefit: 1308
   notes: >
-    The Renault Megane E-Tech qualifies for the advantageous 0.25% company car 
-    tax rate (vehicles under €70,000 with minimum 60km electric range). This 
-    results in annual taxable benefit of only €1,302 compared to €4,770 for 
-    equivalent combustion crossover, saving company car drivers approximately 
-    €3,468 annually in reduced tax payments.
+    As an electric vehicle under €70,000, qualifies for reduced 0.25% monthly rate
+    vs. 1% for combustion vehicles. For 30% tax bracket: €392/year vs. €1,570/year
+    for equivalent combustion car (€1,178 annual savings). The EV60 Techno offers
+    excellent value for company car users: 450 km range, 220 hp performance, and
+    premium equipment at a competitive tax burden.
 
-# Total Cost of Ownership (3-year calculation)
-tco_analysis:
-  period_months: 36
-  annual_mileage_km: 15000
-  total_mileage_km: 45000
-  
-  purchase_cost: 44550
-  
-  energy_costs:
-    home_charging_kwh: 0.35
-    public_charging_kwh: 0.55
-    home_charging_percent: 80
-    public_charging_percent: 20
-    total_energy_cost_3yr: 3281
-  
-  maintenance_costs:
-    annual_service_cost: 300
-    total_maintenance_3yr: 900
-    notes: Electric vehicles require minimal maintenance
-  
-  insurance_annual: 780
-  insurance_3yr: 2340
-  
-  depreciation:
-    residual_value_percent: 55
-    residual_value_eur: 24503
-    depreciation_3yr: 20047
-  
-  total_cost_3yr: 26568
-  cost_per_km: 0.59
-  
-  comparable_ice_costs:
-    vehicle: VW Golf 1.5 TSI
-    purchase_price: 32000
-    fuel_cost_3yr: 6525
-    maintenance_3yr: 1800
-    insurance_3yr: 2100
-    depreciation_3yr: 16640
-    total_cost_3yr: 27065
-    cost_per_km: 0.60
-  
-  savings_vs_ice: 497
-  
+# Dealer Network
+dealer_info:
+  dealer_count: 450
+  service_center_count: 450
   notes: >
-    Megane E-Tech offers competitive total ownership costs versus equivalent 
-    compact combustion crossovers. Over 3 years, costs are similar to VW Golf 
-    1.5 TSI despite higher purchase price. Energy costs are 50% lower, and 
-    maintenance is significantly reduced. Strong residual values as European 
-    Car of the Year 2023.
+    Renault Germany has approximately 450 authorized dealers nationwide. The Megane E-Tech
+    has been very successful in Germany, and dealer networks have extensive experience
+    with the model. Fast charging compatibility with all major networks (Ionity, EnBW,
+    FastNed, etc.) makes long-distance travel convenient.
 
-# Financing options
-financing:
-  typical_apr_percent: 4.49
-  typical_term_months: 48
-  typical_down_payment_percent: 20
-  typical_monthly_payment_eur: 813
-
-# Leasing options
-leasing:
-  typical_term_months: 36
-  typical_annual_mileage_km: 15000
-  typical_down_payment_eur: 2500
-  typical_monthly_payment_eur: 429
-  business_monthly_payment_eur: 369
-
-# Charging infrastructure and costs
-charging:
-  home:
-    wallbox_installation_cost_eur: 1500
-    electricity_rate_kwh: 0.35
-    cost_per_100km: 6.13
-  
-  public:
-    - network: EnBW mobility+
-      monthly_fee: 5.99
-      ac_rate_kwh: 0.49
-      dc_rate_kwh: 0.55
-      locations: 300000+
-      notes: Largest German network
-    
-    - network: Ionity
-      monthly_fee: 11.99
-      dc_rate_kwh: 0.35
-      dc_rate_kwh_payg: 0.69
-      max_power_kw: 350
-      locations: 70+
-      notes: Megane limited to 130kW
-
-# Delivery timeline
-delivery:
-  order_to_delivery_weeks: 12
-  current_wait_time_description: >
-    Renault Megane E-Tech typically available within 12-16 weeks from order. 
-    Stock units may be available for immediate delivery at select dealers.
-
-# Dealer network
-dealer_network:
-  dealer_count: 500
-  service_center_count: 480
-  coverage_notes: >
-    Renault has extensive German dealer network with 500+ sales points and 
-    480+ service centers nationwide, ensuring comprehensive support.
-
-# Warranty
-warranty:
-  vehicle_years: 5
-  vehicle_km: 100000
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  roadside_assistance_years: 5
-  notes: >
-    Renault offers competitive warranty coverage with 5-year/100,000km vehicle 
-    warranty and 8-year/160,000km battery warranty (70% capacity retention).
-
-# Market positioning and competitors
+# Competitors
 competitors:
-  - vehicle: Volkswagen ID.3 Pro
-    price: 42995
-    range_wltp_km: 434
-    power_kw: 170
-    acceleration_0_100_s: 7.3
-    charging_max_kw: 170
-    comparison: >
-      VW ID.3 Pro costs similar (€42,995 vs €43,400) with comparable range 
-      (434 vs 450 km) and performance. Megane E-Tech offers superior 
-      infotainment with Android Automotive OS built-in and more distinctive 
-      design. ID.3 has larger dealer network and slightly better charging speed.
+  - model_id: volkswagen-id4
+    price: 46500
+    notes: "Larger SUV, similar range, German brand premium"
+  - model_id: cupra-born
+    price: 41000
+    notes: "Similar specs, sportier positioning, €2,600 cheaper"
+  - model_id: hyundai-ioniq-5
+    price: 47000
+    notes: "Larger, 800V architecture, faster charging, slightly more expensive"
+  - model_id: kia-ev6
+    price: 48000
+    notes: "800V fast charging, more powerful, higher price"
+  - model_id: bmw-ix1
+    price: 56000
+    notes: "Premium badge, more power, significantly higher price"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
   
-  - vehicle: Cupra Born 58 kWh
-    price: 41490
-    range_wltp_km: 424
-    power_kw: 170
-    acceleration_0_100_s: 7.3
-    charging_max_kw: 170
-    comparison: >
-      Cupra Born costs €1,910 less (€41,490 vs €43,400) with 26 km less range 
-      (424 vs 450 km). Both offer sporty design and good technology. Megane 
-      has better infotainment integration with Google services. Born offers 
-      sportier driving dynamics.
-  
-  - vehicle: Hyundai Kona Electric 65 kWh
-    price: 45990
-    range_wltp_km: 484
-    power_kw: 160
-    acceleration_0_100_s: 7.6
-    charging_max_kw: 102
-    comparison: >
-      Kona Electric costs €2,590 more (€45,990 vs €43,400) with 34 km more 
-      range (484 vs 450 km) but slower charging (102 vs 130 kW). Megane offers 
-      more modern design and better infotainment. Kona more practical SUV shape.
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech.html"
+    - "https://www.mobile.de"
+    - "https://www.adac.de"
 
-# Target buyer profiles
-target_buyers:
-  - profile: Urban and suburban drivers
-    description: >
-      Buyers seeking practical electric mobility for daily commutes and 
-      regional travel. 450 km range adequate for most European journeys. 
-      Compact 4.21m length ideal for city parking and maneuverability.
-  
-  - profile: Technology enthusiasts
-    description: >
-      Buyers prioritizing modern infotainment with Android Automotive OS 
-      and Google services built-in. Appreciate seamless integration without 
-      smartphone dependency. OTA updates ensure system stays current.
-  
-  - profile: Design-conscious buyers
-    description: >
-      Those attracted to French design flair with distinctive coupe-like 
-      styling and slim LED headlight signature. Appreciate interior quality 
-      and attention to detail. European Car of the Year 2023 award validates 
-      design excellence.
-  
-  - profile: Company car drivers
-    description: >
-      Fleet managers and employees benefiting from 0.25% company car tax rate. 
-      €3,468 annual savings versus combustion equivalent makes business case 
-      attractive. 450 km range suitable for business travel.
-
-# Strengths
-strengths:
-  - European Car of the Year 2023 recognition
-  - Outstanding infotainment with Android Automotive OS and Google services built-in
-  - Distinctive French design with coupe-like styling
-  - Comprehensive standard equipment in Techno trim
-  - Heat pump standard improves winter efficiency
-  - Compact dimensions (4.21m) ideal for European cities
-  - Practical 440L trunk for segment
-  - 0.25% company car tax rate saves €3,468/year
-  - Extensive Renault dealer network (500+ dealers in Germany)
-  - 5-star Euro NCAP safety rating
-  - 450 km WLTP range adequate for most users
-
-# Weaknesses
-weaknesses:
-  - 130 kW DC charging slower than some competitors (VW ID.3 170 kW)
-  - 7.4 kW AC charging (single-phase) slower than 11 kW three-phase rivals
-  - Torsion beam rear suspension less sophisticated than multi-link
-  - No V2L/V2H/V2G capability
-  - Smaller battery than VW ID.3 Pro S (60 vs 77 kWh)
-  - Cloth/synthetic leather seats in Techno trim (not full leather)
-  - Fixed panoramic roof (not opening sunroof)
-  - No AWD option available
-
-# Market reception
-market_reception:
-  initial_response: very_positive
-  sales_trend: strong
-  customer_satisfaction_rating: 4.4
-  common_praise:
-    - Excellent infotainment with Google integration
-    - Attractive design and build quality
-    - Practical and comfortable for daily use
-    - Good real-world range
-    - Heat pump works well in winter
-  common_criticisms:
-    - AC charging could be faster
-    - Rear suspension could be more refined
-    - Some rivals offer more cargo space
-  
-  expert_reviews:
-    - source: Auto Motor und Sport
-      rating: 4.6
-      summary: >
-        "Megane E-Tech impresses with outstanding infotainment integration 
-        and distinctive design. 450 km range and 130 kW charging adequate 
-        for most users. European Car of the Year 2023 well deserved."
-    
-    - source: ADAC
-      rating: 4.3
-      summary: >
-        "Strong all-rounder with good range, practical interior, and 
-        excellent technology. Compact dimensions suit European cities. 
-        Android Automotive OS integration class-leading."
-
-# Best for
-best_for:
-  - Daily commuters and urban drivers
-  - Technology enthusiasts wanting Google integration
-  - Design-conscious buyers seeking French flair
-  - Company car drivers (0.25% tax benefit)
-  - Buyers wanting practical electric crossover under €50,000
-  - Those prioritizing infotainment quality
-  - European city driving with occasional longer trips
-
-# Not ideal for
-not_ideal_for:
-  - Frequent long-distance travelers needing maximum range
-  - Buyers requiring fastest charging speeds
-  - Those needing three-phase 11 kW home charging
-  - Buyers wanting V2L/V2H capability
-  - Those prioritizing maximum cargo space
-  - Buyers needing AWD capability
-
-# Additional notes
 notes: >
-  The Renault Megane E-Tech EV60 Techno represents compelling value in the 
-  compact electric crossover segment at €43,400. Named European Car of the 
-  Year 2023, it combines distinctive French design with class-leading 
-  infotainment technology (Android Automotive OS with Google services built-in).
+  The Renault Megane E-Tech EV60 Techno is the sweet spot in the lineup, offering the
+  best balance of range, performance, and value. At €43,600, it competes directly with
+  the VW ID.4 and Hyundai Ioniq 5 but undercuts them slightly while offering comparable
+  or better equipment. The 450 km WLTP range (370 km real-world) is sufficient for most
+  German use cases, including Autobahn trips. The 22 kW three-phase AC charger is a
+  significant advantage for home charging (full charge overnight) and destination charging.
+  130 kW DC fast charging is competitive, though not as fast as Korean 800V alternatives.
   
-  450 km WLTP range (380 km real-world) adequate for most European drivers, 
-  and compact 4.21m length ideal for city use while maintaining practical 
-  440L trunk. Heat pump standard ensures respectable 300 km winter range.
+  The Techno trim includes premium features as standard: 19" wheels, 360° camera, heated
+  seats, Alcantara upholstery, and Highway Companion (Level 2 semi-autonomous driving).
+  Most buyers choose this over the EV40 for the extra range and performance justifying
+  the €5,200 premium. Popular options include the panoramic sunroof (€1,100) and Harman
+  Kardon audio (€650). The two-tone roof option (€700) enhances the distinctive styling.
   
-  Main differentiator is infotainment system - OpenR Screen with Android 
-  Automotive OS provides seamless Google Maps, Assistant, and Play Store 
-  integration without smartphone dependency. This integration superior to 
-  most competitors requiring smartphone connectivity.
-  
-  0.25% company car tax rate creates €3,468 annual savings versus combustion 
-  equivalent, making Megane E-Tech increasingly popular in German fleet segment.
-  
-  Trade-offs include 7.4 kW AC charging (single-phase, slower than 11 kW rivals) 
-  and 130 kW DC charging (adequate but not class-leading). For technology-focused 
-  buyers prioritizing infotainment and design, Megane E-Tech offers excellent 
-  value as European Car of the Year 2023.
+  For company car users, the 0.25% rate keeps monthly taxation reasonable (€109/month
+  benefit) while providing a premium driving experience. The Megane E-Tech won 2023
+  European Car of the Year, which boosts resale value confidence. Renault's 10+ years
+  of EV experience (Zoe) provides reassurance on reliability and service quality.

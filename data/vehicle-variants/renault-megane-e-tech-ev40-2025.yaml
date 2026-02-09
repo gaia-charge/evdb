@@ -1,200 +1,197 @@
-# Renault Megane E-Tech Electric EV40 (2025) - Entry Level Variant
 id: renault-megane-e-tech-ev40-2025
-name: EV40
+name: EV40 130hp
 model_id: renault-megane-e-tech
 model_year: 2025
-variant_code: MEGANE-EV40
+production_years:
+  start: 2022
+  end: null
 
+trim_level: base
+market_position: entry
+
+# Battery Specifications
 battery:
   usable_kwh: 40.0
   total_kwh: 42.0
   chemistry: NMC
-  cell_type: pouch
-  manufacturer: LG Energy Solution
+  nominal_voltage_v: 400
+  thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
-  warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    40 kWh usable battery (42 kWh gross). Entry-level battery option.
-    400V architecture with NMC chemistry.
-    95.2% usable capacity ratio.
 
+# Range
 range:
   wltp_km: 300
-  wltp_city_km: 395
-  wltp_highway_km: 240
-  epa_km: null
+  wltp_source: manufacturer
+  
   real_world_km: 250
-  real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 300 km. Best for urban and suburban driving.
-    Real-world range around 250 km in mixed conditions.
-    Excellent city efficiency with 395 km city range.
+  real_world_source: verified
+  real_world_conditions: "Mixed driving, 15-20°C"
 
+# Charging
 charging:
-  ac_max_kw: 7.4
-  ac_phases: 1
-  ac_connector: Type2
-  dc_max_kw: 85
-  dc_connector: CCS2
-  dc_curve:
-    - soc_percent: 5
-      power_kw: 85
-    - soc_percent: 10
-      power_kw: 85
-    - soc_percent: 20
-      power_kw: 80
-    - soc_percent: 30
-      power_kw: 75
-    - soc_percent: 40
-      power_kw: 70
-    - soc_percent: 50
-      power_kw: 65
-    - soc_percent: 60
-      power_kw: 55
-    - soc_percent: 70
-      power_kw: 45
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 20
-  time_0_to_100_min: 35
-  time_5_to_80_min: 32
-  time_10_to_80_min: 30
-  time_20_to_80_min: 27
-  charging_speed_kmh: 620
-  plug_and_charge: true
-  preconditioning: false
-  notes: |
-    DC fast charging up to 85 kW peak (smaller battery = lower peak).
-    15-80% in approximately 36 minutes.
-    7.4 kW AC charging standard (single-phase).
-    ISO 15118 Plug & Charge support.
+  ac:
+    max_power_kw: 7.4
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 6
+    onboard_charger_kw: 7.4
+    phases: 1
+  
+  dc:
+    max_power_kw: 85
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 36
+      "0_80": 42
 
-bidirectional:
-  v2l: false
-  v2l_max_kw: null
-  v2h: false
-  v2g: false
-  notes: "Bidirectional charging not supported"
+  bidirectional:
+    v2l: true
+    v2g: true
+    v2l_max_power_kw: 3.0
 
-performance:
-  drive_type: FWD
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  
+  real_world:
+    combined_kwh_per_100km: 17.5
+    highway_kwh_per_100km: 19.8
+    city_kwh_per_100km: 15.2
+
+# Drivetrain
+drivetrain:
+  configuration: fwd
+  motor_type: permanent_magnet
   motors:
-    - position: front
-      type: permanent magnet
+    front:
+      type: permanent_magnet
       power_kw: 96
       power_hp: 130
       torque_nm: 250
-      manufacturer: Renault
-  max_power_kw: 96
-  max_power_hp: 130
-  max_torque_nm: 250
+    rear: null
+
+# Performance
+performance:
   acceleration_0_100_kmh_s: 10.0
-  acceleration_0_60_mph_s: 9.5
-  acceleration_80_120_kmh_s: 7.2
   top_speed_kmh: 150
-  top_speed_mph: 93
-  notes: |
-    Front-wheel drive with 130 hp motor. Adequate for urban driving.
-    Lower power than EV60 variants (130 hp vs 220 hp).
+  top_speed_limited: true
 
-weight:
-  curb_weight_kg: 1624
-  gross_vehicle_weight_kg: 2080
-  payload_kg: 456
-  towing_capacity_braked_kg: 900
-  towing_capacity_unbraked_kg: 750
-  notes: |
-    Lighter than EV60 variants due to smaller battery.
-    Optional tow hitch available.
-
+# Dimensions & Weight
 dimensions:
   length_mm: 4210
   width_mm: 1780
-  width_with_mirrors_mm: 2017
+  width_with_mirrors_mm: 2032
   height_mm: 1505
   wheelbase_mm: 2700
-  ground_clearance_mm: 175
+  ground_clearance_mm: 180
   drag_coefficient: 0.30
-  frontal_area_m2: 2.45
-  turning_radius_m: 10.4
-  notes: "Compact crossover dimensions, easy to maneuver in cities"
+  frontal_area_m2: 2.46
+
+weight:
+  curb_weight_kg: 1636
+  gvwr_kg: 2090
+  max_payload_kg: 454
+  towing_capacity_kg: 900
 
 cargo:
   trunk_volume_l: 440
   trunk_max_volume_l: 1332
   frunk_volume_l: 0
-  notes: "440L trunk, expandable to 1332L with rear seats folded"
 
-consumption:
-  wltp_kwh_per_100km: 13.3
-  wltp_city_kwh_per_100km: 10.1
-  wltp_highway_kwh_per_100km: 16.7
-  real_world_kwh_per_100km: 16.0
-  real_world_city_kwh_per_100km: 14.0
-  real_world_highway_kwh_per_100km: 19.5
-  efficiency_rating: A+
-  notes: |
-    Excellent WLTP efficiency at 13.3 kWh/100km.
-    Real-world consumption around 16.0 kWh/100km.
-    Heat pump standard across all variants.
+# Standard Equipment
+equipment:
+  standard:
+    exterior:
+      - "18\" Aero alloy wheels"
+      - "Full LED headlights"
+      - "LED daytime running lights"
+      - "Body-color door handles"
+      - "Rear parking sensors"
+      - "Rear camera"
+    
+    interior:
+      - "12.3\" digital instrument cluster"
+      - "12\" vertical touchscreen (OpenR)"
+      - "Google built-in (Maps, Assistant, Play Store)"
+      - "Wireless Apple CarPlay and Android Auto"
+      - "Wireless smartphone charging"
+      - "Climate control with heat pump"
+      - "Keyless entry"
+      - "Multi-Sense drive modes"
+    
+    safety:
+      - "Autonomous Emergency Braking with pedestrian detection"
+      - "Lane Keep Assist"
+      - "Traffic Sign Recognition with speed limiter"
+      - "Blind Spot Warning"
+      - "Rear Cross Traffic Alert"
+      - "6 airbags"
+    
+    technology:
+      - "One Pedal driving mode"
+      - "Regenerative braking (B-mode)"
+      - "My Renault app connectivity"
+      - "Heat pump standard"
+      - "V2L/V2G bidirectional charging capable"
 
-features:
-  infotainment_screen_inches: 12.0
-  digital_cockpit_inches: 12.3
-  head_up_display: false
-  wireless_charging: true
-  wireless_connectivity: true
-  ota_updates: true
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_assist: true
-  heat_pump: true
-  notes: |
-    12" OpenR Link touchscreen with Google built-in
-    12.3" digital instrument cluster
-    Multi-Sense driving modes
-    Heat pump climate control standard
-    Wireless Apple CarPlay & Android Auto
-    OTA software updates
-    Advanced driver assistance systems
+  optional:
+    - name: "19\" diamond-cut alloy wheels"
+      price_eur: 800
+    - name: "Two-tone roof"
+      price_eur: 600
+    - name: "Harman Kardon audio system"
+      price_eur: 650
+    - name: "Adaptive cruise control with Stop & Go"
+      price_eur: 400
 
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2022
-  euro_ncap_adult: 91
-  euro_ncap_child: 86
-  euro_ncap_vulnerable: 65
-  euro_ncap_safety_assist: 79
-  airbags: 6
-  adas_level: 2
-  notes: |
-    5-star Euro NCAP rating (tested 2022)
-    6 airbags (front, side, curtain)
-    SAE Level 2 autonomous driving capability
+# Pricing
+pricing:
+  msrp_eur: 38400
+  msrp_usd: null
 
-production:
-  plant: Douai, France (ElectriCity)
-  platform: CMF-EV
-  platform_generation: 1
-  status: active
-  notes: |
-    Built at Renault's ElectriCity production hub in Douai, France.
-    CMF-EV platform shared with Nissan Ariya and Scenic E-Tech.
+# Colors
+colors:
+  exterior:
+    - name: "Diamond Black"
+      code: 676
+      type: metallic
+    - name: "Glacier White"
+      code: QNC
+      type: solid
+    - name: "Titanium Grey"
+      code: KPM
+      type: metallic
+    - name: "Flame Red"
+      code: NNP
+      type: metallic
+    - name: "Vision Blue"
+      code: RNH
+      type: metallic
+  
+  interior:
+    - name: "Black fabric"
+    - name: "Grey TEP (vegan leather)"
 
+# Metadata
 metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
   data_quality: verified
-  last_updated: '2026-02-09'
-  created_at: '2026-02-09'
-  source: "Renault official specifications"
-  source_urls:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://www.renault.com/en/electric-vehicles/megane-e-tech-electric"
-  verification_date: '2026-02-09'
-  notes: |
-    2025 model year with updated software and minor improvements.
-    Entry-level variant with 40 kWh battery, ideal for city and suburban use.
-    Most affordable Megane E-Tech option.
+  confidence: high
+  
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech.html"
+    - "https://www.adac.de"
+    - "https://ev-database.org/car/1730/Renault-Megane-E-Tech-EV40"
+
+notes: >
+  The Megane E-Tech EV40 is the entry-level variant with a 40 kWh usable battery (42 kWh gross).
+  It offers 300 km WLTP range and 130 hp (96 kW), making it ideal for urban and suburban use.
+  Despite being the base model, it comes well-equipped with the OpenR infotainment system,
+  Google built-in, heat pump, and bidirectional charging capability. Real-world range is
+  approximately 250 km in mixed conditions. DC fast charging reaches 85 kW peak, allowing
+  10-80% charge in about 36 minutes. The single-phase AC charger (7.4 kW) is the main
+  limitation compared to the three-phase 22 kW charger on EV60 variants.

@@ -1,58 +1,70 @@
 id: renault-megane-e-tech
-name: Megane E-Tech
-brand: "Renault"
 manufacturer_id: renault-group
-model_type: crossover
-segment: C
-body_style: crossover
-production_years:
+brand: "Renault"
+name: Megane E-Tech
+full_name: Renault Megane E-Tech Electric
+generation: 1
+model_years:
   start: 2022
-  end: null  # Still in production
-platform: cmf-ev
+  end: null
+
+body_style: crossover
+segment: C
+platform: CMF-EV
+
+production:
+  status: active
+  start_date: "2021-11"
+  end_date: null
+  plants:
+    - location: Douai, France
+      name: Renault ElectriCity
+
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
+  cargo_volume_l: 440
+  seating_capacity: 5
+  drag_coefficient: 0.30
+
+weight:
+  curb_weight_min_kg: 1636
+  curb_weight_max_kg: 1719
+
 description: >
-  The Renault Megane E-Tech is a compact electric crossover that reinvents the iconic 
-  Megane nameplate for the electric era. Built on the CMF-EV platform (shared with 
-  Nissan Ariya), it was named European Car of the Year 2023, recognizing its blend 
-  of design, technology, and practicality.
-  
-  The Megane E-Tech features distinctive coupe-like styling with slim LED headlights, 
-  flush door handles, and aerodynamic 20" wheels. Inside, it showcases OpenR Screen 
-  infotainment powered by Android Automotive OS with Google services built-in.
-  
-  Available in two battery sizes (40 kWh EV40 and 60 kWh EV60), the Megane E-Tech 
-  targets urban and suburban drivers seeking stylish, practical electric mobility. 
-  The 60 kWh variants offer up to 470 km WLTP range, making them suitable for 
-  longer journeys while maintaining compact dimensions ideal for European cities.
+  The Renault Megane E-Tech Electric is a compact crossover that marked Renault's serious 
+  entry into the electric vehicle market. Built on the dedicated CMF-EV platform shared 
+  with the Nissan Ariya, it won the 2023 European Car of the Year award. The Megane E-Tech 
+  features a distinctive design with a sleek, aerodynamic profile (0.30 Cd) and a 
+  driver-centric interior with the OpenR infotainment system featuring a unique L-shaped 
+  screen combining a 12.3" instrument cluster and 12" vertical touchscreen. Available 
+  with two battery options (40 kWh and 60 kWh), it offers practical range, modern technology, 
+  and Renault's expertise in electric mobility refined from 10+ years of Zoe production.
 
-key_features:
-  - CMF-EV platform (alliance platform with Nissan)
-  - OpenR Screen with 12" portrait touchscreen and Android Automotive OS
-  - Google services built-in (Maps, Assistant, Play Store)
-  - Slim LED headlights with distinctive light signature
-  - Heat pump standard for improved winter efficiency
-  - One Pedal driving mode with strong regenerative braking
-  - Multi-Sense drive modes (Eco, Comfort, Sport, Perso)
-  - Up to 130 kW DC fast charging (EV60 variants)
-  - 5-star Euro NCAP safety rating (2022)
-  - Compact dimensions (4.21m length) with spacious interior
+notable_features:
+  - "OpenR infotainment with L-shaped display (12.3\" + 12\" vertical screen)"
+  - "Google built-in (Maps, Assistant, Play Store)"
+  - "One Pedal driving mode"
+  - "Heat pump standard on all variants"
+  - "Multi-Sense drive modes"
+  - "Bidirectional charging (V2G/V2L capable)"
+  - "Slimline LED headlights"
+  - "130 kW DC fast charging"
 
-notable_competitors:
-  - Volkswagen ID.3
-  - Cupra Born
-  - Hyundai Kona Electric
-  - Kia Niro EV
-  - MG4 Electric
-  - Peugeot e-2008
+competitors:
+  - volkswagen-id3
+  - cupra-born
+  - kia-niro-ev
+  - hyundai-kona-electric
+  - volkswagen-id4
 
-awards:
-  - "European Car of the Year 2023"
-  - "5-star Euro NCAP Safety Rating (2022)"
-  - "German Car of the Year 2023 (Compact Car Category)"
-
-market_position: >
-  Positioned as a stylish, tech-forward compact electric crossover offering 
-  premium design and technology at accessible pricing. Strong focus on user 
-  experience with Android Automotive OS integration and Google services. 
-  Targets European buyers seeking practical electric mobility with distinctive 
-  French design flair. Competes directly with VW ID.3 and Cupra Born with 
-  advantage in design differentiation and infotainment integration.
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.renault.de/elektrofahrzeuge/megane-e-tech.html
+    - https://www.renault.com/en/electric-vehicles/megane-e-tech-electric
+    - https://www.adac.de

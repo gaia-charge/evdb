@@ -1,53 +1,77 @@
 id: renault-megane-e-tech-ev60-techno-2025
+name: EV60 Techno 220hp
 model_id: renault-megane-e-tech
-name: EV60 Techno
 model_year: 2025
-trim_level: techno
-market_availability:
-  - europe
-  - germany
-  - france
-  - uk
-  - spain
-  - italy
-  - netherlands
-  - belgium
+production_years:
+  start: 2022
+  end: null
 
-# Battery specifications
+trim_level: mid
+market_position: mid
+
+# Battery Specifications
 battery:
-  total_kwh: 60
-  usable_kwh: 60
-  chemistry: NMC  # Nickel Manganese Cobalt
-  voltage: 400
-  manufacturer: lg_energy_solution
-  warranty:
-    duration_years: 8
-    duration_km: 160000
-    capacity_retention_percent: 70
-  cooling_system: liquid
-  heat_pump: true
-  preconditioning: true
-  cell_to_pack: false
+  usable_kwh: 60.0
+  total_kwh: 65.0
+  chemistry: NMC
+  nominal_voltage_v: 400
+  thermal_management: liquid-cooled
+  warranty_years: 8
+  warranty_km: 160000
 
-# Motor and drivetrain
-motors:
-  layout: fwd
-  total_count: 1
-  front:
-    type: permanent_magnet
-    power_kw: 160
-    power_hp: 218
-    torque_nm: 300
-    manufacturer: renault
+# Range
+range:
+  wltp_km: 450
+  wltp_source: manufacturer
+  
+  real_world_km: 370
+  real_world_source: verified
+  real_world_conditions: "Mixed driving, 15-20°C"
 
-  combined:
-    total_power_kw: 160
-    total_power_hp: 218
-    total_torque_nm: 300
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 30
+      "0_80": 38
 
+  bidirectional:
+    v2l: true
+    v2g: true
+    v2l_max_power_kw: 3.0
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  
+  real_world:
+    combined_kwh_per_100km: 17.8
+    highway_kwh_per_100km: 20.5
+    city_kwh_per_100km: 15.5
+
+# Drivetrain
 drivetrain:
-  drive_type: fwd
-  transmission: single_speed_reduction
+  configuration: fwd
+  motor_type: permanent_magnet
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 160
+      power_hp: 220
+      torque_nm: 300
+    rear: null
 
 # Performance
 performance:
@@ -55,204 +79,133 @@ performance:
   top_speed_kmh: 160
   top_speed_limited: true
 
-# Range and efficiency
-range:
-  wltp_km: 450
-  wltp_city_km: 550
-  wltp_highway_km: 380
-  epa_km: null
-  real_world_mixed_km: 380
-  real_world_highway_km: 330
-  real_world_winter_km: 300
-
-efficiency:
-  wltp_kwh_per_100km: 15.8
-  epa_kwh_per_100km: null
-  real_world_kwh_per_100km: 17.5
-
-# Charging
-charging:
-  ac:
-    max_power_kw: 7.4
-    phases: 1
-    time_0_100_hours: 8.1
-    onboard_charger_kw: 7.4
-  dc:
-    max_power_kw: 130
-    time_10_80_minutes: 30
-    time_10_80_km_added: 315
-    curve_description: >
-      Peak 130kW charging maintained from 10-40% SoC, tapering to 80kW 
-      at 50%, 60kW at 60%, 40kW at 70%, and 25kW at 80%. NMC chemistry 
-      provides good charging performance in moderate temperatures.
-
-# Bidirectional charging
-bidirectional_charging:
-  v2l_capable: false
-  v2h_capable: false
-  v2g_capable: false
-
-# Dimensions and weight
+# Dimensions & Weight
 dimensions:
   length_mm: 4210
   width_mm: 1780
+  width_with_mirrors_mm: 2032
   height_mm: 1505
   wheelbase_mm: 2700
-  ground_clearance_mm: 170
+  ground_clearance_mm: 180
   drag_coefficient: 0.30
-  frontal_area_m2: 2.42
+  frontal_area_m2: 2.46
 
 weight:
-  curb_weight_kg: 1636
-  gross_vehicle_weight_kg: 2060
-  payload_kg: 424
-  towing_capacity_braked_kg: 900
-  towing_capacity_unbraked_kg: 750
+  curb_weight_kg: 1702
+  gvwr_kg: 2150
+  max_payload_kg: 448
+  towing_capacity_kg: 900
 
-# Cargo and seating
-interior:
-  seating_capacity: 5
-  cargo_volume_liters: 440
-  cargo_volume_seats_down_liters: 1332
-  frunk_volume_liters: 0
+cargo:
+  trunk_volume_l: 440
+  trunk_max_volume_l: 1332
+  frunk_volume_l: 0
 
-# Wheels and tires
-wheels:
+# Standard Equipment
+equipment:
   standard:
-    size_front: "215/55 R18"
-    size_rear: "215/55 R18"
-    wheel_diameter_inches: 18
+    exterior:
+      - "19\" diamond-cut alloy wheels"
+      - "Full LED headlights with automatic high beam"
+      - "LED daytime running lights with sequential indicators"
+      - "Body-color door handles with chrome accent"
+      - "Front and rear parking sensors"
+      - "360° camera"
+      - "Hands-free powered tailgate"
+    
+    interior:
+      - "12.3\" digital instrument cluster with customizable display"
+      - "12\" vertical touchscreen (OpenR Link)"
+      - "Google built-in (Maps, Assistant, Play Store)"
+      - "Wireless Apple CarPlay and Android Auto"
+      - "Wireless smartphone charging"
+      - "Dual-zone automatic climate control with heat pump"
+      - "Keyless entry and start"
+      - "Multi-Sense drive modes (Eco, Comfort, Sport, Perso)"
+      - "Alcantara and TEP upholstery"
+      - "Heated front seats"
+      - "Electrically adjustable driver's seat"
+    
+    safety:
+      - "Autonomous Emergency Braking with pedestrian and cyclist detection"
+      - "Lane Keep Assist with Lane Centering"
+      - "Active Blind Spot Intervention"
+      - "Traffic Sign Recognition with intelligent speed assist"
+      - "Rear Cross Traffic Alert"
+      - "Driver attention alert"
+      - "6 airbags"
+    
+    technology:
+      - "One Pedal driving mode"
+      - "Regenerative braking with adjustable levels (B-mode)"
+      - "My Renault app with remote features"
+      - "Over-the-air updates"
+      - "Heat pump standard"
+      - "V2L/V2G bidirectional charging capable"
+      - "Highway and Traffic Jam Companion (semi-autonomous Level 2)"
+
   optional:
-    - size_front: "235/45 R20"
-      size_rear: "235/45 R20"
-      wheel_diameter_inches: 20
+    - name: "20\" diamond-cut alloy wheels"
+      price_eur: 900
+    - name: "Two-tone roof (Flame Red or Vision Blue)"
+      price_eur: 700
+    - name: "Harman Kardon audio system (9 speakers, 410W)"
+      price_eur: 650
+    - name: "Panoramic sunroof"
+      price_eur: 1100
+    - name: "Nappa leather seats"
+      price_eur: 1500
 
-# Suspension and brakes
-suspension:
-  front: macpherson_strut
-  rear: torsion_beam
-  adaptive: false
-  damping: fixed
+# Pricing
+pricing:
+  msrp_eur: 43600
+  msrp_usd: null
 
-brakes:
-  front: ventilated_disc
-  rear: disc
-  regenerative: true
-  regenerative_max_power_kw: 100
-  one_pedal_driving: true
-
-# Technology and features
-technology:
-  adas_level: 2
-  features:
-    - adaptive_cruise_control
-    - lane_keeping_assist
-    - lane_centering
-    - automatic_emergency_braking
-    - blind_spot_monitoring
-    - rear_cross_traffic_alert
-    - traffic_sign_recognition
-    - parking_assist
-    - rear_parking_camera
-  infotainment:
-    screen_size_inches: 12
-    rotating_screen: false
-    apple_carplay: true
-    android_auto: true
-    wireless_connectivity: true
-    ota_updates: true
-    navigation: true
-    voice_control: true
-  audio:
-    system: arkamys
-    speakers: 6
-    power_watts: 200
-
-# Standard equipment (Techno trim)
-standard_equipment:
+# Colors
+colors:
   exterior:
-    - Full LED headlights with automatic high beam
-    - LED daytime running lights with C-shape signature
-    - LED taillights
-    - Flush door handles with approach sensors
-    - Power-folding heated mirrors
-    - 18" aerodynamic alloy wheels
-    - Panoramic glass roof (fixed)
-    - Automatic wipers
-    - Shark fin antenna
+    - name: "Diamond Black"
+      code: 676
+      type: metallic
+    - name: "Glacier White"
+      code: QNC
+      type: solid
+    - name: "Titanium Grey"
+      code: KPM
+      type: metallic
+    - name: "Flame Red"
+      code: NNP
+      type: metallic
+    - name: "Vision Blue"
+      code: RNH
+      type: metallic
+    - name: "Alpine Green"
+      code: RAH
+      type: metallic
+  
   interior:
-    - OpenR Screen 12" portrait touchscreen with Android Automotive OS
-    - 12.3" digital instrument cluster
-    - Google services built-in (Maps, Assistant, Play Store)
-    - Cloth and synthetic leather seats
-    - Manual driver seat adjustment (height adjustable)
-    - Heated front seats
-    - Dual-zone automatic climate control
-    - Keyless entry and start
-    - USB-C charging ports (front and rear)
-    - Wireless smartphone charging
-    - Multi-Sense drive modes (Eco, Comfort, Sport, Perso)
-  safety:
-    - 5-star Euro NCAP rating (2022)
-    - 6 airbags (front, side, curtain)
-    - ISOFIX child seat anchors (rear)
-    - Tire pressure monitoring system (TPMS)
-    - Electronic stability control (ESC)
-    - Hill start assist
-    - Anti-lock braking system (ABS)
+    - name: "Grey Alcantara/TEP"
+    - name: "Black Alcantara/TEP"
 
-# Optional equipment
-optional_equipment:
-  - name: 20" Aerodynamic Wheels
-    price_eur: 900
-    description: Upgrade to 20" diamond-cut alloy wheels
-  - name: Metallic/Pearl Paint
-    price_eur: 650
-    description: Premium metallic or pearl paint finishes
-  - name: Two-Tone Roof
-    price_eur: 500
-    description: Contrasting black roof
-  - name: Harman Kardon Audio
-    price_eur: 550
-    description: Premium 9-speaker Harman Kardon sound system
-  - name: Winter Package
-    price_eur: 350
-    description: Heated steering wheel and rear seats
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech.html"
+    - "https://www.adac.de"
+    - "https://ev-database.org/car/1729/Renault-Megane-E-Tech-EV60"
 
-# Safety ratings
-safety:
-  euro_ncap:
-    year: 2022
-    overall_stars: 5
-    adult_occupant_percent: 91
-    child_occupant_percent: 86
-    vulnerable_road_users_percent: 64
-    safety_assist_percent: 76
-
-# Energy consumption (official)
-energy_label:
-  efficiency_class: a
-  co2_emissions_wltp_g_per_km: 0
-
-# Notes
 notes: >
-  The Renault Megane E-Tech EV60 Techno represents the sweet spot in the 
-  Megane E-Tech lineup, offering 60 kWh battery with 450 km WLTP range 
-  (380 km real-world) at accessible pricing.
-  
-  Techno trim includes comprehensive technology package with OpenR Screen 
-  (12" touchscreen running Android Automotive OS) and Google services built-in, 
-  eliminating need for smartphone connectivity for navigation and apps. This 
-  integration is among the best in the segment.
-  
-  Heat pump standard ensures improved winter efficiency (300 km winter range 
-  respectable for compact crossover). 130 kW DC fast charging enables 30-minute 
-  10-80% charging, adequate for most users.
-  
-  450 km WLTP range competitive with VW ID.3 Pro S (557 km) and Cupra Born 
-  77 kWh (548 km) but at lower price point. Compact 4.21m length makes it 
-  ideal for European city driving while offering practical 440L trunk.
-  
-  Named European Car of the Year 2023, recognizing its blend of design, 
-  technology, and practicality. Strong choice for buyers prioritizing 
-  infotainment integration and French design flair.
+  The Megane E-Tech EV60 Techno is the mid-range variant with a 60 kWh usable battery
+  (65 kWh gross) and 220 hp (160 kW) motor. It offers 450 km WLTP range and significantly
+  better performance (7.4s 0-100 km/h) compared to the EV40. The Techno trim includes
+  premium features like 19" wheels, 360° camera, heated seats, and semi-autonomous
+  Highway Companion. Real-world range is approximately 370 km in mixed conditions.
+  DC fast charging reaches 130 kW peak, allowing 10-80% charge in about 30 minutes.
+  The three-phase 22 kW AC charger is a major advantage for home and destination charging
+  in Europe. This variant offers the best value proposition in the lineup with strong
+  range, performance, and equipment.
