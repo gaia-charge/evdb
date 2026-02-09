@@ -1,0 +1,154 @@
+# Vehicle Variant: NIO EL7 75 kWh (2025)
+id: nio-el7-75kwh-2025
+model_id: nio-el7
+name: 75 kWh
+variant_name: 75 kWh
+model_year: 2025
+trim_level: Standard
+production_years: "2023-present"
+
+overview: >
+  The NIO EL7 75 kWh is the standard battery variant of NIO's premium mid-size SUV. 
+  With dual-motor AWD producing 480 kW (653 PS) and 850 Nm, it accelerates 0-100 km/h 
+  in 3.9 seconds. The 75 kWh battery provides 392 km WLTP range. The battery is 
+  swappable at NIO Power Swap stations. Standard equipment is comprehensive including 
+  active air suspension, Nappa leather, 23-speaker Dolby Atmos audio, and LiDAR ADAS.
+
+battery:
+  chemistry: NMC
+  supplier: CATL
+  total_kwh: 75.0
+  usable_kwh: 72.0
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "75 kWh NMC battery, swappable at NIO Power Swap stations"
+
+range:
+  wltp_km: 392
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_miles: null
+  real_world_km: 320
+  real_world_notes: "Estimated ~320 km mixed driving, heavy AWD SUV"
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 510
+        power_kw: 11.0
+  dc:
+    max_power_kw: 140
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 20
+        power_kw: 140
+      - soc_percent: 30
+        power_kw: 135
+      - soc_percent: 40
+        power_kw: 125
+      - soc_percent: 50
+        power_kw: 110
+      - soc_percent: 60
+        power_kw: 90
+      - soc_percent: 70
+        power_kw: 70
+      - soc_percent: 80
+        power_kw: 50
+      - soc_percent: 90
+        power_kw: 30
+      - soc_percent: 100
+        power_kw: 10
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 30
+        power_kw: 140
+        notes: "10-80% in approximately 30 minutes. Battery swap ~5 min at NIO stations"
+  battery_swap:
+    supported: true
+    swap_time_minutes: 5
+    notes: "Compatible with NIO Power Swap stations (Gen 3)"
+  bidirectional:
+    v2l: true
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: dual
+  drive_type: AWD
+  total_power_kw: 480
+  total_power_hp: 653
+  total_torque_nm: 850
+  motors:
+    - position: front
+      power_kw: 180
+      power_hp: 245
+      torque_nm: 350
+      motor_type: induction
+    - position: rear
+      power_kw: 300
+      power_hp: 408
+      torque_nm: 500
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 3.9
+  top_speed_kmh: 200
+  notes: "0-100 km/h in 3.9 seconds, electronically limited to 200 km/h"
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 22.1
+  consumption_real_world_kwh_per_100km: 25.0
+  efficiency_rating_eu: A
+  notes: "22.1 kWh/100km WLTP combined (with 20-inch wheels)"
+
+weight:
+  curb_weight_kg: 2381
+  gross_vehicle_weight_kg: 2900
+
+features:
+  standard:
+    - "12.8-inch AMOLED center touchscreen"
+    - "10.2-inch digital instrument cluster"
+    - "NOMI AI companion"
+    - "23-speaker Dolby Atmos surround sound"
+    - "Active air suspension"
+    - "Aquila Super Sensing with LiDAR"
+    - "NIO Pilot adaptive cruise + lane centering"
+    - "Nappa leather heated/ventilated/massage seats"
+    - "Panoramic sunroof"
+    - "Heat pump climate control"
+    - "Wireless phone charger"
+    - "360-degree camera"
+    - "Soft-close doors"
+    - "Powered tailgate"
+    - "V2L capability"
+    - "20-inch alloy wheels"
+  optional:
+    - "21-inch Sport wheels (€1,600)"
+    - "Electric towbar (€2,400)"
+    - "Metallic/special paint (€1,200)"
+
+version:
+  release_date: "2023-03"
+  changes_from_previous: "European launch with NIO NT 2.0 platform"
+  notes: "2025 model year, European specification"
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.nio.com/de_DE/el7
+    - https://en.wikipedia.org/wiki/NIO_ES7
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  notes: "European specification, 75 kWh standard battery"

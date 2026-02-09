@@ -1,0 +1,121 @@
+# Market Availability: NIO EL7 75 kWh - Germany
+id: nio-el7-75kwh-2025-de
+variant_id: nio-el7-75kwh-2025
+market: DE
+market_code: DE
+currency: EUR
+
+pricing:
+  base_price: 59900.00
+  base_price_vat_inclusive: true
+  vat_rate: 19.0
+  base_price_excluding_vat: 50336.13
+  baas_price: 47900.00
+  baas_battery_rental_monthly: 169.00
+  notes: >
+    €59,900 with battery. BaaS: €47,900 car + €169/month battery rental (75 kWh).
+
+colors:
+  - name: "Onyx Black"
+    type: "solid"
+    price: 0.00
+    notes: "Standard color"
+  - name: "Starry Blue"
+    type: "metallic"
+    price: 1200.00
+  - name: "Cloud White"
+    type: "metallic"
+    price: 1200.00
+  - name: "Warm Gravel"
+    type: "special"
+    price: 1200.00
+  - name: "Sync Green"
+    type: "special"
+    price: 1200.00
+
+wheels:
+  - size: "20-inch"
+    type: "Alloy"
+    price: 0.00
+  - size: "21-inch"
+    type: "Sport Alloy"
+    price: 1600.00
+
+interiors:
+  - name: "Nappa Leather"
+    material: "Nappa Leather"
+    color: "Onyx Black"
+    price: 0.00
+  - name: "Nappa Leather"
+    material: "Nappa Leather"
+    color: "Sepia Brown"
+    price: 0.00
+
+packages: []
+
+standalone_options:
+  - name: "Metallic/Special Paint"
+    price: 1200.00
+  - name: "21-inch Sport Wheels"
+    price: 1600.00
+  - name: "Electric Towbar"
+    price: 2400.00
+    notes: "Braked towing capacity 2,000 kg"
+
+incentives:
+  - type: tax_credit
+    name: "Company Car Tax (Dienstwagen-Besteuerung)"
+    amount: 0.00
+    currency: EUR
+    notes: "Only 0.25% of gross list price taxed monthly for electric company cars (vs. 1% for ICE)"
+    valid_until: "2030-12-31"
+    active: true
+
+  - type: tax_exemption
+    name: "Motor Vehicle Tax Exemption (Kfz-Steuer Befreiung)"
+    amount: 0.00
+    currency: EUR
+    notes: "Complete exemption from annual vehicle tax until 2030"
+    valid_until: "2030-12-31"
+    active: true
+
+availability:
+  status: available
+  delivery_time_weeks: null
+  notes: "Available in Germany via NIO Houses and NIO Spaces."
+
+dealers:
+  count: null
+  notes: "NIO Houses in Berlin and other cities, plus NIO Spaces."
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "5-year/150,000 km vehicle warranty. 8-year/160,000 km battery warranty."
+
+charging_networks:
+  - name: "NIO Power Swap"
+    access: "NIO app"
+    coverage: "Expanding network of battery swap stations across Europe"
+  - name: "NIO Power Charger"
+    access: "NIO app"
+    coverage: "NIO-operated DC fast chargers"
+
+market_notes: >
+  The NIO EL7 75 kWh at €59,900 (or €47,900 + €169/month BaaS) is a premium mid-size 
+  SUV with exceptional performance (3.9s 0-100). Battery-as-a-Service (BaaS) lowers 
+  entry price and enables battery upgrades. NIO Power Swap enables ~5 min battery 
+  exchanges. Competes with BMW iX xDrive40, Mercedes EQE SUV, and Audi Q8 e-tron. 
+  Qualifies for 0.25% company car tax rate.
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.nio.com/de_DE/el7
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  notes: "German market pricing, 2025 model year, 75 kWh battery."
