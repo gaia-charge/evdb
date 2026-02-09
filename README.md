@@ -79,16 +79,27 @@ This structure handles:
 
 ### What's Working Now ✅
 
-- ✅ **63 vehicle variants** with comprehensive specifications
+- ✅ **220+ vehicle variants** with comprehensive specifications across 28+ manufacturers
 - ✅ **Full validation pipeline** - All YAML files validated with JSON Schema
-- ✅ **SQLite database** - Automated builds with relationships (0.27 MB)
+- ✅ **SQLite database** - Automated builds via GitHub Actions
+- ✅ **GitHub Releases** - Pre-built database downloadable from every push
 - ✅ **Datasette API** - 11 canned queries + full SQL access
 - ✅ **5 Datasette plugins** - Maps, charts, GraphQL, exports, search
 - ✅ **Streamlit dashboard** - 6 complete pages (Home, Browse, Compare, Analytics, Data Explorer, Documentation)
-- ✅ **CI/CD pipeline** - GitHub Actions for validation + builds
-- ✅ **Comprehensive docs** - API docs, deployment guide, contributing guide, FAQ
+- ✅ **CI/CD pipeline** - GitHub Actions for validation, builds, and releases
+- ✅ **Comprehensive docs** - API docs, contributing guide, FAQ
 
-See [TODO.md](TODO.md) for detailed roadmap and [PROGRESS.md](PROGRESS.md) for recent updates.
+### 📥 Download the Database
+
+The latest pre-built SQLite database is available from [GitHub Releases](https://github.com/gaia-charge/evdb/releases/latest):
+
+```bash
+# Download latest database
+wget https://github.com/gaia-charge/evdb/releases/latest/download/evdb.db
+
+# Or with curl
+curl -L -o evdb.db https://github.com/gaia-charge/evdb/releases/latest/download/evdb.db
+```
 
 ## 🛠️ Development Setup
 
@@ -151,12 +162,9 @@ streamlit run streamlit_app.py
 
 ## 📖 Documentation
 
-- [**CONTRIBUTING.md**](CONTRIBUTING.md) - **Complete guide** to adding vehicles and data ✅
-- [**API_DOCS.md**](API_DOCS.md) - **Comprehensive API** documentation with examples ✅
-- [**DEPLOYMENT.md**](DEPLOYMENT.md) - **Deployment guide** for Vercel/Fly.io ✅
-- [**TODO.md**](TODO.md) - **Roadmap** with 10 implementation phases
-- [**PROGRESS.md**](PROGRESS.md) - **Recent updates** and session logs
-- [**SCHEMA_DESIGN.md**](SCHEMA_DESIGN.md) - **Technical details** of schema design
+- [**CONTRIBUTING.md**](CONTRIBUTING.md) - **Complete guide** to adding vehicles and data
+- [**API_DOCS.md**](API_DOCS.md) - **Comprehensive API** documentation with examples
+- [**FAQ.md**](FAQ.md) - **Frequently asked questions**
 
 ## 🤝 Contributing
 
