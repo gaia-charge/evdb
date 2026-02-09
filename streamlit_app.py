@@ -637,48 +637,59 @@ elif page == "🔍 Browse Vehicles":
     # Dimensions filters
     st.sidebar.markdown("#### Dimensions")
     
-    dim_length_max = st.sidebar.number_input(
-        "Max Length (mm):",
-        min_value=0,
-        max_value=6000,
-        value=0,
-        step=100,
-        help="0 = no filter"
-    )
+    if df['length_mm'].notna().any():
+        len_min = int(df['length_mm'].min())
+        len_max = int(df['length_mm'].max())
+        dim_length_range = st.sidebar.slider(
+            "Length (mm):",
+            min_value=len_min,
+            max_value=len_max,
+            value=(len_min, len_max),
+            step=100
+        )
+    else:
+        dim_length_range = None
     
-    dim_width_max = st.sidebar.number_input(
-        "Max Width (mm):",
-        min_value=0,
-        max_value=2500,
-        value=0,
-        step=50,
-        help="0 = no filter"
-    )
+    if df['width_mm'].notna().any():
+        w_min = int(df['width_mm'].min())
+        w_max = int(df['width_mm'].max())
+        dim_width_range = st.sidebar.slider(
+            "Width (mm):",
+            min_value=w_min,
+            max_value=w_max,
+            value=(w_min, w_max),
+            step=50
+        )
+    else:
+        dim_width_range = None
     
-    dim_height_max = st.sidebar.number_input(
-        "Max Height (mm):",
-        min_value=0,
-        max_value=2500,
-        value=0,
-        step=50,
-        help="0 = no filter"
-    )
+    if df['height_mm'].notna().any():
+        h_min = int(df['height_mm'].min())
+        h_max = int(df['height_mm'].max())
+        dim_height_range = st.sidebar.slider(
+            "Height (mm):",
+            min_value=h_min,
+            max_value=h_max,
+            value=(h_min, h_max),
+            step=50
+        )
+    else:
+        dim_height_range = None
     
     # Cargo capacity filter
     st.sidebar.markdown("#### Cargo Capacity")
     if df['trunk_capacity_liters'].notna().any():
-        trunk_min_val = int(df['trunk_capacity_liters'].min()) if df['trunk_capacity_liters'].notna().any() else 0
-        trunk_max_val = int(df['trunk_capacity_liters'].max()) if df['trunk_capacity_liters'].notna().any() else 1000
-        
-        trunk_capacity_min = st.sidebar.number_input(
-            "Min Trunk Capacity (liters):",
-            min_value=0,
+        trunk_min_val = int(df['trunk_capacity_liters'].min())
+        trunk_max_val = int(df['trunk_capacity_liters'].max())
+        trunk_range = st.sidebar.slider(
+            "Trunk Capacity (liters):",
+            min_value=trunk_min_val,
             max_value=trunk_max_val,
-            value=0,
+            value=(trunk_min_val, trunk_max_val),
             step=50
         )
     else:
-        trunk_capacity_min = 0
+        trunk_range = None
     
     # Towing capacity filter
     st.sidebar.markdown("#### Towing Capacity")
@@ -740,28 +751,36 @@ elif page == "🔍 Browse Vehicles":
     ]
     
     # Dimensions filters
-    if dim_length_max > 0:
-        filtered_df = filtered_df[
-            (filtered_df['length_mm'].isna()) |
-            (filtered_df['length_mm'] <= dim_length_max)
-        ]
-    if dim_width_max > 0:
-        filtered_df = filtered_df[
-            (filtered_df['width_mm'].isna()) |
-            (filtered_df['width_mm'] <= dim_width_max)
-        ]
-    if dim_height_max > 0:
-        filtered_df = filtered_df[
-            (filtered_df['height_mm'].isna()) |
-            (filtered_df['height_mm'] <= dim_height_max)
-        ]
+    if dim_length_range is not None:
+        len_min, len_max = dim_length_range
+        if len_min > int(df['length_mm'].min()) or len_max < int(df['length_mm'].max()):
+            filtered_df = filtered_df[
+                (filtered_df['length_mm'].isna()) |
+                ((filtered_df['length_mm'] >= len_min) & (filtered_df['length_mm'] <= len_max))
+            ]
+    if dim_width_range is not None:
+        w_min, w_max = dim_width_range
+        if w_min > int(df['width_mm'].min()) or w_max < int(df['width_mm'].max()):
+            filtered_df = filtered_df[
+                (filtered_df['width_mm'].isna()) |
+                ((filtered_df['width_mm'] >= w_min) & (filtered_df['width_mm'] <= w_max))
+            ]
+    if dim_height_range is not None:
+        h_min, h_max = dim_height_range
+        if h_min > int(df['height_mm'].min()) or h_max < int(df['height_mm'].max()):
+            filtered_df = filtered_df[
+                (filtered_df['height_mm'].isna()) |
+                ((filtered_df['height_mm'] >= h_min) & (filtered_df['height_mm'] <= h_max))
+            ]
     
     # Cargo capacity filter
-    if trunk_capacity_min > 0:
-        filtered_df = filtered_df[
-            (filtered_df['trunk_capacity_liters'].notna()) & 
-            (filtered_df['trunk_capacity_liters'] >= trunk_capacity_min)
-        ]
+    if trunk_range is not None:
+        t_min, t_max = trunk_range
+        if t_min > int(df['trunk_capacity_liters'].min()) or t_max < int(df['trunk_capacity_liters'].max()):
+            filtered_df = filtered_df[
+                (filtered_df['trunk_capacity_liters'].isna()) |
+                ((filtered_df['trunk_capacity_liters'] >= t_min) & (filtered_df['trunk_capacity_liters'] <= t_max))
+            ]
     
     # Towing capacity filter
     if has_towing_filter:
