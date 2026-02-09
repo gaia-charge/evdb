@@ -1,0 +1,233 @@
+# Renault Scenic E-Tech Comfort Range - German Market (2025)
+id: scenic-e-tech-comfort-range-2025-de
+variant_id: scenic-e-tech-comfort-range-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 42990  # € (2025 pricing)
+  destination_charge: 990  # €
+  on_the_road_price: 43980  # Includes destination
+  price_includes:
+    - "22kW AC charging (3-phase)"
+    - "130kW DC fast charging"
+    - "LED headlights"
+    - "OpenR Link 12-inch portrait touchscreen"
+    - "12.3-inch digital instrument cluster"
+    - "Google Automotive Services"
+    - "Dual-zone climate control"
+    - "Heat pump (standard)"
+    - "Solarbay panoramic glass roof with opacity control"
+    - "19-inch alloy wheels"
+    - "360° parking camera"
+    - "Adaptive cruise control with Stop&Go"
+    - "Highway assist"
+
+trim_levels:
+  - name: "Comfort Range"
+    price: 42990
+    features:
+      - "170 hp motor"
+      - "60 kWh battery (430 km WLTP)"
+      - "22kW 3-phase AC charging"
+      - "19-inch wheels"
+      - "Solarbay panoramic glass roof"
+      - "Dual-zone climate control"
+      - "360° parking camera"
+      - "Adaptive cruise control"
+      - "Highway assist"
+      - "Fabric/recycled upholstery"
+
+colors:
+  - name: "Glacier White"
+    type: solid
+    price: 0  # Free
+  - name: "Metallic Black"
+    type: metallic
+    price: 750
+  - name: "Flame Red"
+    type: metallic
+    price: 750
+  - name: "Highland Grey metallic"
+    type: metallic
+    price: 750
+  - name: "Midnight Blue metallic"
+    type: metallic
+    price: 750
+  - name: "Schist Grey metallic"
+    type: metallic
+    price: 750
+  - name: "Two-tone (Black roof)"
+    type: two-tone
+    price: 1200
+
+wheels:
+  - size: "19 inch"
+    price: 0  # Standard
+    range_impact_km: 0
+    name: "19-inch Solstice alloy wheels"
+  - size: "20 inch"
+    price: 1200
+    range_impact_km: -10
+    name: "20-inch diamond-cut alloy wheels"
+
+interior:
+  - name: "Fabric/recycled upholstery"
+    price: 0  # Standard
+  - name: "Alcantara and recycled fabric premium"
+    price: 900
+
+packages:
+  - name: "Comfort Plus Package"
+    price: 1590
+    includes:
+      - "Heated steering wheel"
+      - "Heated rear seats"
+      - "Power tailgate"
+      - "Wireless smartphone charging"
+  - name: "Premium Package"
+    price: 2690
+    includes:
+      - "Matrix LED headlights"
+      - "Harman Kardon audio system (12 speakers)"
+      - "Head-up display"
+      - "Hands-free parking"
+      - "Heated steering wheel"
+
+individual_options:
+  - name: "Towing package (750kg)"
+    price: 950
+    notes: "750kg braked, electrically folding towbar"
+  - name: "Harman Kardon audio"
+    price: 1090
+    notes: "12-speaker premium audio system"
+  - name: "Matrix LED headlights"
+    price: 1390
+    notes: "Adaptive beam pattern, auto high beam"
+  - name: "Hands-free parking"
+    price: 850
+    notes: "Automatic perpendicular and parallel parking"
+  - name: "Winter package"
+    price: 490
+    notes: "Heated steering wheel, heated rear seats"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 3867  # Annual savings
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €42,990 vehicle: 0.25% = €107/month = €1,287/year vs 1% = €430/month = €5,159/year. Annual savings: €3,872."
+    calculation: "€42,990 × 0.25% = €107/month. ICE: €42,990 × 1% = €430/month. Savings: €323/month = €3,872/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 380  # Annual road tax savings (based on weight class)
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 12
+  production_status: active
+  order_url: "https://www.renault.de/elektrofahrzeuge/scenic-e-tech-electric/konfigurator.html"
+  notes: "Built at Renault ElectriCity Douai, France. Entry-level Scenic variant with excellent equipment."
+
+dealers:
+  count: 400  # Renault dealers in Germany
+  network: "Renault Deutschland"
+  service_centers: 400
+  notes: "Extensive Renault dealer network across Germany, all trained for EV servicing"
+
+charging_networks:
+  - name: "Mobilize Charge Pass"
+    coverage: "600,000+ charging points across Europe"
+    pricing: "Various tariffs available via Mobilize app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€5.99/month + €0.35/kWh (Mobilize Power Solution)"
+    notes: "130kW charging: 15-80% costs €13.65 (subscription) vs €30.81 (standard)"
+  - name: "EnBW mobility+"
+    pricing: "€0.45-0.55/kWh (depending on tariff)"
+    notes: "Popular in Germany, good coverage"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2025)
+    cost_15_to_80_percent: 11.70  # € (60kWh × 65% × €0.30)
+    cost_per_100km: 5.19  # € (17.3 kWh/100km × €0.30)
+  - scenario: "Public AC charging (22kW)"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_15_to_80_percent: 17.55
+    cost_per_100km: 7.79
+  - scenario: "DC fast charging (IONITY subscription)"
+    cost_per_kwh: 0.35  # €/kWh + €5.99/month
+    cost_15_to_80_percent: 13.65  # € (60kWh × 65% × €0.35)
+    cost_per_100km: 6.06
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_15_to_80_percent: 30.81
+    cost_per_100km: 13.67
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "3-year vehicle warranty standard, can be extended up to 5 years. Battery warranty covers capacity degradation below 70% within 8 years/160,000km."
+
+annual_costs:
+  insurance_estimate: 890  # € per year (comprehensive, family SUV premium)
+  road_tax: 0  # Exempt until 2030
+  inspection: 80  # € per year (TÜV inspection every 2 years, €160)
+  maintenance_estimate: 420  # € per year (service, tires, etc. - larger vehicle)
+  total_estimate: 1390  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 13500  # Estimated battery production (60 kWh)
+  lifecycle_co2_kg: 28000   # 200,000km with EU electricity mix (heavier vehicle)
+  recyclability_percent: 85
+  battery_recycling: "Renault battery recycling program, 95% material recovery target"
+  production_site: "Douai Factory - Renault ElectriCity (renewable energy)"
+
+popular_configurations:
+  - name: "Comfort Range Standard"
+    price: 46080  # Base + typical options
+    includes:
+      - "Comfort Range (€42,990)"
+      - "Metallic paint (€750)"
+      - "Comfort Plus Package (€1,590)"
+      - "Alcantara upholstery (€900)"
+      - "Destination charge (€990)"
+    notes: "Well-equipped family SUV with excellent comfort features"
+  - name: "Comfort Range Premium"
+    price: 49870
+    includes:
+      - "Comfort Range (€42,990)"
+      - "Premium Package (€2,690)"
+      - "20-inch wheels (€1,200)"
+      - "Two-tone paint (€1,200)"
+      - "Towing package (€950)"
+      - "Alcantara upholstery (€900)"
+      - "Destination charge (€990)"
+    notes: "Top-spec Comfort Range with all premium features"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/scenic-e-tech-electric.html"
+    - "https://www.renault.fr/vehicules-electriques/scenic-e-tech-electric.html"
+    - "https://ev-database.org/car/2842/Renault-Scenic-E-Tech-Comfort-Range"
+  notes: "Entry-level Scenic E-Tech with 60 kWh battery providing 430 km WLTP range. At €42,990, it offers exceptional value for a family SUV with innovative Solarbay panoramic glass roof, spacious 545L trunk, and Google Automotive Services included. Real-world range of 370 km makes it suitable for family trips and daily use. Company car drivers save €3,872/year with 0.25% tax rate. Perfect for families wanting space and technology at an accessible price."
