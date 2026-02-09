@@ -1,86 +1,108 @@
+# Renault Megane E-Tech - Compact Electric Crossover
+
 id: renault-megane-e-tech
 manufacturer_id: renault-group
 brand: "Renault"
-name: Megane E-Tech
-full_name: Renault Megane E-Tech Electric
-generation: 1
-model_years:
-  start: 2022
-  end: null
-
+name: Megane E-Tech Electric
+name_full: Renault Megane E-Tech Electric
 body_style: crossover
-segment: C  # Compact crossover
-platform: CMF-EV  # Common Module Family Electric Vehicle
+segment: C  # Compact crossover / C-segment
 
 production:
-  status: active
-  start_date: "2022-03"
-  end_date: null
-  plants:
-    - location: Douai, France
-      name: Renault ElectriCity - Douai
+  start_year: 2022
+  end_year: null  # Still in production
+  generation: 5  # Fifth generation Megane, first fully electric
+  current_status: active
 
-dimensions:
-  length_mm: 4210
-  width_mm: 1780
-  height_mm: 1505
-  wheelbase_mm: 2700
-  cargo_volume_l: 440  # Rear seats up
-  seating_capacity: 5
-  drag_coefficient: 0.296
-
-weight:
-  curb_weight_min_kg: 1624  # EV40
-  curb_weight_max_kg: 1718  # EV60
-
-description: >
-  The Renault Megane E-Tech Electric marks Renault's entry into the dedicated EV platform era,
-  built on the CMF-EV architecture shared with the Nissan Ariya. Winner of the 2023 European 
-  Car of the Year, it combines a sleek, coupe-like design with practical compact crossover 
-  dimensions. The car features a minimalist interior with the innovative openR screen
-  (12-inch portrait display running Google Automotive Services), plus a 12.3-inch digital 
-  instrument cluster. Available in two battery sizes (40 kWh and 60 kWh), the Megane E-Tech
-  offers class-leading efficiency and a premium feel at an accessible price point.
-
-notable_features:
-  - "Google Automotive Services built-in (Google Maps, Assistant, Play Store)"
-  - "openR Link 12-inch portrait touchscreen"
-  - "12.3-inch digital instrument cluster"
-  - "One Pedal driving mode with strong regeneration"
-  - "Heat pump standard on all variants"
-  - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
-  - "Harman Kardon audio system (optional)"
-  - "Hands-free parking (optional)"
-  - "Optimised Charge mode (pre-conditions battery)"
-
-competitors:
-  - volkswagen-id3
-  - cupra-born
-  - mg4-electric
-  - hyundai-kona-electric
-  - peugeot-e-2008
+platform: CMF-EV  # Alliance (Renault-Nissan) electric platform
 
 awards:
-  - name: "European Car of the Year"
+  - name: European Car of the Year
     year: 2023
-  - name: "Best Family Electric Car"
-    organization: "What Car?"
+    notes: Praised for design, technology, and driving dynamics
+  - name: What Car? Best Small Electric SUV
     year: 2023
-  - name: "Golden Steering Wheel"
-    organization: "Auto Bild"
-    year: 2022
+    notes: Strong value proposition and efficiency
 
-media:
-  images:
-    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-  videos:
-    - https://www.youtube.com/watch?v=renault-megane-e-tech
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2022
+  euro_ncap_adult: 91
+  euro_ncap_child: 87
+  euro_ncap_vru: 68
+  euro_ncap_safety_assist: 82
+  notes: 5 stars under 2022 testing protocols with excellent scores
 
-metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
-  data_quality: verified
-  sources:
-    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric.html
-    - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
-    - https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60
+dimensions:
+  length_mm: 4200
+  width_mm: 1768
+  height_mm: 1505
+  wheelbase_mm: 2700
+  ground_clearance_mm: 160
+  drag_coefficient: 0.30
+  frontal_area_m2: 2.35
+
+interior:
+  seating_capacity: 5
+  cargo_volume_seats_up_l: 440
+  cargo_volume_seats_down_l: 1332
+  frunk_volume_l: 0
+  notes: Excellent boot space for a compact crossover
+
+technology:
+  infotainment: OpenR Link with Google built-in
+  screen_size_inches: 12.0
+  digital_instrument_cluster: true
+  digital_cluster_size_inches: 12.3
+  head_up_display: true
+  ota_updates: true
+  voice_assistant: Google Assistant
+  connectivity: Android Automotive OS, Google Maps, Google Play Store, wireless Apple CarPlay
+  notable_features:
+    - Google Automotive Services built-in
+    - Solarbay panoramic glass roof (electrochromic)
+    - Multi-Sense driving modes
+    - One-pedal driving with B-mode
+    - Advanced driver assistance systems
+
+build:
+  production_location: Douai, France
+  also_built_at: []
+  quality_notes: Built on new CMF-EV platform shared with Nissan Ariya
+
+data_quality:
+  overall: verified
+  last_updated: 2026-02-09
+  source_reliability: high
+  notes: Specifications verified from Renault Germany official website and press materials
+
+sources:
+  - name: Renault Germany Official Website
+    url: https://www.renault.de/
+    date_accessed: 2026-02-09
+  - name: European Car of the Year 2023
+    url: https://www.caroftheyear.org/
+    date_accessed: 2026-02-09
+  - name: Euro NCAP Safety Rating
+    url: https://www.euroncap.com/en/results/renault/megane-e-tech/49041
+    date_accessed: 2026-02-09
+
+notes: |
+  The Renault Megane E-Tech Electric is the first fully electric generation of the iconic Megane.
+  Built on the new CMF-EV platform shared with the Nissan Ariya, it represents Renault's new
+  electric vehicle design philosophy.
+  
+  Key highlights:
+  - 2023 European Car of the Year winner
+  - Excellent aerodynamics (Cd 0.30)
+  - Google Automotive Services built-in (Android Automotive OS)
+  - Innovative Solarbay panoramic roof with electrochromic dimming
+  - Two battery options: EV40 (40 kWh) and EV60 (60 kWh)
+  - Fast charging up to 130 kW (EV60 supports up to 130 kW DC)
+  - Excellent real-world efficiency
+  - Spacious interior despite compact exterior dimensions
+  
+  The Megane E-Tech competes directly with VW ID.3, Cupra Born, and Hyundai Kona Electric.
+  It stands out with its sophisticated design, tech integration, and driving dynamics.
+  
+  2025 model year continues with refinements and updated software.

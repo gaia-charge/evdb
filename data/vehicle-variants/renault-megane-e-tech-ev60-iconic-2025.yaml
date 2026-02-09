@@ -1,183 +1,196 @@
-# Renault Megane E-Tech Electric EV60 Iconic (2025 Model Year)
-# Top-spec variant with 60 kWh battery and premium features
+# Renault Megane E-Tech EV60 Iconic (2025) - Top 60 kWh Trim
 
 id: renault-megane-e-tech-ev60-iconic-2025
-name: Megane E-Tech EV60 Iconic
 model_id: renault-megane-e-tech
+name: Megane E-Tech EV60 Iconic
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: premium
-market_position: top
+trim_level: Iconic  # Premium top trim with 60 kWh battery
+variant_code: null
 
-description: |
-  The Megane E-Tech EV60 Iconic 2025 is the flagship variant with the 60 kWh battery
-  and comprehensive premium equipment. It represents the full Megane E-Tech experience
-  with all the latest technology and luxury features.
-  
-  With 470 km WLTP range and the most powerful motor option, the Iconic trim offers
-  the best range in the Megane lineup combined with premium comfort, advanced driver
-  assistance, and exclusive design elements.
-  
-  2025 model continues with proven specifications, featuring the signature Solarbay
-  panoramic roof with variable opacity and Harman Kardon premium audio system.
+production:
+  start_date: 2022-03-01
+  end_date: null
+  status: active
+  notes: 2025 model year, premium trim level
 
-production_status: active
-
-# Battery Specifications
 battery:
+  type: Lithium-ion
+  chemistry: NCM  # Nickel Cobalt Manganese
+  total_kwh: 60.0
   usable_kwh: 60.0
-  total_kwh: 62.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400
-  cell_type: pouch
-  supplier: "LG Energy Solution"
+  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  
-  pack:
-    configuration: "floor-mounted, CMF-EV platform"
-    weight_kg: 450
-    modules: 12
-    cells: 288
+  warranty_capacity_percent: 70
+  cells: 252
+  modules: 12
+  voltage_nominal: 400
+  notes: Same 60 kWh battery as Techno, different trim level
 
-# Range
 range:
   wltp_km: 470
-  wltp_source: manufacturer
-  
-  real_world_km: 400
-  real_world_source: tested
-  real_world_conditions: "Mixed driving, 15-20°C, eco mode, 18-inch wheels"
+  wltp_city_km: 600
+  wltp_highway_km: 375
+  epa_combined_km: null
+  real_world_avg_km: 395
+  real_world_source: ADAC EcoTest 2025, InsideEVs real-world testing
+  notes: Slightly better range than Techno due to optimized aerodynamics with 20" aero wheels option
 
-# Charging
 charging:
   ac:
-    max_power_kw: 22
-    connector_types:
-      - type2
-    charging_time_hours:
-      "0_100": 3.0
-      "20_80": 2.0
-    onboard_charger_kw: 22
+    max_power_kw: 22.0
+    connector_type: Type 2
     phases: 3
+    time_0_100_hours: 3.0
+    onboard_charger: 22kW 3-phase standard on EV60
   
   dc:
     max_power_kw: 130
-    connector_types:
-      - ccs2
-    charging_time_minutes:
-      "10_80": 30
-      "0_100": 50
-    
-    charging_curve:
-      - soc_percent: 0
-        power_kw: 110
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 20
-        power_kw: 130
-      - soc_percent: 30
-        power_kw: 125
-      - soc_percent: 40
-        power_kw: 115
-      - soc_percent: 50
-        power_kw: 100
-      - soc_percent: 60
-        power_kw: 80
-      - soc_percent: 70
-        power_kw: 60
-      - soc_percent: 80
-        power_kw: 35
-      - soc_percent: 90
-        power_kw: 20
-      - soc_percent: 100
-        power_kw: 12
-
-# Bidirectional Charging
-bidirectional_charging:
-  v2l: true  # Vehicle-to-Load via adapter
-  v2h: false
-  v2g: false
-
-# Motors & Drivetrain
-motors:
-  configuration: single-motor
-  drive_type: FWD
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 130kW peak maintained up to ~60% SoC
+    preconditioning: false
   
+  charge_curve:
+    - percent: 0
+      power_kw: 120
+    - percent: 10
+      power_kw: 130
+    - percent: 30
+      power_kw: 130
+    - percent: 50
+      power_kw: 125
+    - percent: 60
+      power_kw: 105
+    - percent: 70
+      power_kw: 78
+    - percent: 80
+      power_kw: 48
+    - percent: 90
+      power_kw: 30
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
   front:
-    type: permanent-magnet
+    type: permanent_magnet
     power_kw: 160
     power_hp: 218
     torque_nm: 300
-  
+    supplier: null
   combined:
     power_kw: 160
     power_hp: 218
     torque_nm: 300
 
-# Performance
 performance:
-  acceleration_0_100_kmh_s: 7.4
-  top_speed_kmh: 160
-  
-# Efficiency
+  acceleration_0_100_kph: 7.4
+  acceleration_0_60_mph: null
+  top_speed_kph: 160
+  quarter_mile_seconds: null
+
 efficiency:
-  consumption_wltp_kwh_100km: 15.5
-  consumption_real_world_kwh_100km: 15.0
-  energy_label: A
+  wltp_kwh_per_100km: 15.5
+  wltp_wh_per_km: 155
+  real_world_kwh_per_100km: 17.0
+  real_world_wh_per_km: 170
+  real_world_highway_kwh_per_100km: 19.8
+  real_world_city_kwh_per_100km: 14.8
+  notes: Slightly more efficient than Techno with aero-optimized wheels
 
-# Weight & Dimensions
-dimensions:
-  length_mm: 4200
-  width_mm: 1768
-  height_mm: 1505
-  wheelbase_mm: 2700
-  curb_weight_kg: 1760
-  cargo_volume_l: 440
-  cargo_volume_seats_down_l: 1332
+weight:
+  curb_weight_kg: 1728
+  gross_vehicle_weight_kg: 2178
+  payload_kg: 450
+  towing_capacity_braked_kg: 900
+  towing_capacity_unbraked_kg: 630
 
-# Data quality metadata
-metadata:
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  data_quality: verified
+wheels_tires:
+  standard:
+    front: "215/45 R20"
+    rear: "215/45 R20"
+    wheels: 20" Aero diamond-cut alloys
+  optional:
+    - "215/50 R19 (for comfort)"
+
+features:
+  standard:
+    - Full LED Matrix headlights with Adaptive Driving Beam
+    - 12" central touchscreen with OpenR Link
+    - 12.3" digital instrument cluster
+    - 9" head-up display (color)
+    - Google built-in (Android Automotive OS)
+    - Wireless smartphone charging
+    - Dual-zone automatic climate control
+    - Heated front seats
+    - Heated steering wheel
+    - Front and rear parking sensors
+    - 360° parking camera with bird's eye view
+    - Lane keeping assist with lane centering
+    - Adaptive cruise control with stop & go
+    - Traffic sign recognition with speed limiter
+    - Active emergency braking with pedestrian/cyclist detection
+    - Blind spot monitoring
+    - Rear cross traffic alert
+    - Hands-free parking
+    - Solarbay panoramic electrochromic glass roof
+    - Harman Kardon sound system (10 speakers, 440W)
+    - Premium Alcantara and leather interior
+    - Ambient lighting (8 colors)
+  optional:
+    - Extended leather package
+    - Massage front seats
+
+data_quality:
+  overall: verified
+  last_updated: 2026-02-09
+  source_reliability: high
+  confidence_specs: verified
+  confidence_performance: verified
+  confidence_consumption: measured
+  notes: Premium trim with comprehensive equipment
+
+sources:
+  - name: Renault Germany Official Specifications
+    url: https://www.renault.de/
+    date_accessed: 2026-02-09
+    type: manufacturer
+  - name: ADAC EcoTest 2025
+    url: https://www.adac.de/
+    date_accessed: 2026-02-09
+    type: independent_test
+  - name: InsideEVs Real-World Range Test
+    url: https://insideevs.com/
+    date_accessed: 2024-11-20
+    type: independent_test
+
+notes: |
+  The EV60 Iconic is the flagship Megane E-Tech variant, offering all available
+  features and premium materials as standard.
   
-  sources:
-    - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
-    - https://ev-database.org/car/1607/Renault-Megane-E-Tech-EV60
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-ev60/
+  Key additions over Techno:
+  - Solarbay panoramic electrochromic glass roof (standard)
+  - 9" color head-up display
+  - Harman Kardon premium sound system (440W, 10 speakers)
+  - Heated front seats and steering wheel
+  - Premium Alcantara and leather interior
+  - 20" aero-optimized alloy wheels
+  - Hands-free parking
+  - Ambient lighting with 8 colors
+  - Extended driving assistance features
   
-  verified_by: manufacturer
+  Real-world range typically 395-410 km in mixed driving, 330-350 km on highways,
+  and up to 510 km in pure city driving.
   
-  notes: |
-    The EV60 Iconic is the flagship Megane E-Tech variant with the best range (470 km WLTP,
-    400 km real-world) and all premium features. The slightly better efficiency compared to
-    Techno trim comes from optimized aerodynamics with 18-inch wheels and eco driving mode.
-    
-    Iconic trim includes everything from Techno plus:
-    - Solarbay panoramic glass roof with electrochromic dimming
-    - Harman Kardon premium audio system (10 speakers, 440W)
-    - 20-inch alloy wheels (optional, reduces range by 20 km)
-    - Full LED lighting package with animated indicators
-    - Premium Alcantara interior with heated front seats
-    - Electric adjustable driver's seat with memory
-    - Hands-free parking with 360° camera
-    - Highway & Traffic Jam Companion (Level 2 autonomy)
-    - Ambient lighting with 8 color options
-    - Premium paint options
-    
-    The Iconic represents the full vision of Renault's EV design philosophy - combining
-    French elegance with cutting-edge technology. The Solarbay roof is a standout feature,
-    allowing instant adjustment of transparency without a physical blind.
-    
-    With 400 km real-world range, it's suitable for longer trips including occasional
-    road trips with strategic charging stops. Winter range is approximately 320-340 km
-    in cold conditions (-5°C) thanks to the efficient heat pump.
-    
-    Positioned as a premium alternative to VW ID.3 Pro S and Cupra Born VZ, offering
-    more distinctive design and better interior quality at a similar price point.
-    
-    Popular with company car drivers in France and Germany who value style and technology.
+  The Iconic represents the full vision of the Megane E-Tech with all available
+  technology and comfort features. Popular among buyers who want the complete
+  package without aftermarket options.
+  
+  The electrochromic Solarbay roof is a standout feature - it can be adjusted from
+  clear to opaque via the touchscreen, eliminating the need for a sunshade.
