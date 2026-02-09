@@ -1,0 +1,166 @@
+# Citroën ë-C3 Aircross 44 kWh (2025) - Standard Range
+
+id: citroen-e-c3-aircross-44-2025
+model_id: citroen-e-c3-aircross
+name: "44 kWh"
+model_year: 2025
+trim_level: You
+variant_code: null
+
+production:
+  start_date: 2024-10-01
+  end_date: null
+  status: active
+  notes: Deliveries started late 2024
+
+battery:
+  type: Lithium-ion
+  chemistry: LFP
+  total_kwh: 44.0
+  usable_kwh: 44.0
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: null
+  modules: null
+  voltage_nominal: 400
+  notes: LFP chemistry for cost optimization and longevity
+
+range:
+  wltp_km: 307
+  wltp_city_km: 380
+  wltp_highway_km: 250
+  epa_combined_km: null
+  real_world_avg_km: 260
+  real_world_source: European driving tests
+  notes: Standard range for daily commuting
+
+charging:
+  ac:
+    max_power_kw: 7.4
+    connector_type: Type 2
+    phases: 1
+    time_0_100_hours: 7.0
+    onboard_charger: 7.4kW single-phase standard
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 26
+    peak_power_notes: 100kW peak DC charging
+    preconditioning: false
+  
+  charge_curve:
+    - percent: 10
+      power_kw: 98
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 92
+    - percent: 60
+      power_kw: 80
+    - percent: 70
+      power_kw: 65
+    - percent: 80
+      power_kw: 45
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
+  front:
+    type: permanent_magnet
+    power_kw: 83
+    power_hp: 113
+    torque_nm: 120
+    supplier: null
+  combined:
+    power_kw: 83
+    power_hp: 113
+    torque_nm: 120
+
+performance:
+  acceleration_0_100_kph: 11.0
+  acceleration_0_60_mph: null
+  top_speed_kph: 135
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 18.1
+  wltp_wh_per_km: 181
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.0
+  mpge_combined: null
+  drag_coefficient: 0.33
+
+weight:
+  curb_weight_kg: 1540
+  gross_weight_kg: 1980
+  weight_distribution_front_percent: 58
+
+towing:
+  max_towing_kg: 0
+  max_tongue_weight_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: MacPherson strut with anti-roll bar
+  rear: Torsion beam with Citroën Progressive Hydraulic Cushions
+
+brakes:
+  front: Disc (280mm)
+  rear: Drum
+  regenerative: true
+
+tires:
+  standard: 205/60 R17
+
+features:
+  infotainment:
+    - "10.25\" touchscreen"
+    - "7\" digital driver display"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "DAB+ radio"
+    - "MyCitroën app"
+  
+  driver_assistance:
+    - "Automatic emergency braking"
+    - "Lane departure warning"
+    - "Speed limit recognition"
+    - "Rear parking sensors"
+    - "Rear camera"
+  
+  comfort_convenience:
+    - "Manual climate control"
+    - "Citroën Advanced Comfort seats"
+    - "Keyless entry"
+    - "USB-C ports"
+    - "Available as 5 or 7-seater"
+  
+  exterior:
+    - "17\" wheels"
+    - "LED headlights"
+    - "Roof rails"
+    - "Two-tone roof option"
+  
+  interior:
+    - "Cloth upholstery"
+    - "460L trunk (5-seat)"
+    - "60/40 split-folding rear seats"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source_urls:
+    - https://www.citroen.de/modelle/neuer-eC3-aircross.html
+  notes: |
+    Standard range variant with 44 kWh LFP battery. 307 km WLTP range is suitable
+    for daily commuting and urban use. 18.1 kWh/100km WLTP consumption from Citroën DE.
