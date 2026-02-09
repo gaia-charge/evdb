@@ -1,0 +1,102 @@
+id: zeekr-7x-long-range-rwd-2025-de
+variant_id: zeekr-7x-long-range-rwd-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 52990
+  destination_charge: 0
+  on_road_price: 52990
+
+options:
+  packages: []
+
+  paint_options:
+    - name: "Starry White"
+      price: 0
+      code: "starry-white"
+    - name: "Stellar Black"
+      price: 800
+      code: "stellar-black"
+    - name: "Ice Blue"
+      price: 800
+      code: "ice-blue"
+
+  interior_options:
+    - name: "Black Interior"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3975
+    notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €52,990 × 0.25% = €132/month = €1,590/year vs ICE 1% = €6,359/year. Annual savings: €4,769."
+    eligibility: "Company car drivers only, BLP under €70,000"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 300
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: available
+  waiting_time_weeks: 8
+  online_configurator: yes
+  online_purchase: yes
+
+  sales_regions:
+    - Germany
+    - Netherlands
+    - Sweden
+    - Norway
+    - Denmark
+
+warranty:
+  vehicle_warranty_years: 5
+  vehicle_warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 200000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Hyundai Ioniq 5 84 kWh AWD"
+      price: 52350
+      range_wltp: 507
+      notes: "Similar price, established brand in Europe"
+
+    - model: "Tesla Model Y Long Range"
+      price: 49990
+      range_wltp: 533
+      notes: "Slightly cheaper, strong brand recognition"
+
+    - model: "Zeekr 001 Long Range RWD"
+      price: 49990
+      range_wltp: 620
+      notes: "Sibling model, shooting brake style, slightly cheaper"
+
+  market_position: |
+    The Zeekr 7X offers exceptional value in the mid-size electric SUV segment with 615 km WLTP
+    range and class-leading 480 kW DC fast charging at a competitive price point. The CATL QILIN
+    battery and 800V architecture put it technically ahead of many European competitors.
+    Under €70,000 BLP qualifies for the favorable 0.25% German company car tax rate.
+
+metadata:
+  created_at: "2026-02-09T16:00:00Z"
+  updated_at: "2026-02-09T16:00:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    MY2025 model. German pricing estimated based on Zeekr's European pricing strategy
+    (001 starts at ~€49,990, X at ~€44,990). 7X positioned slightly above 001.
+
+sources:
+  - url: "https://ev-database.org/car/3082/Zeekr-7X-Long-Range-RWD"
+    title: "EV Database - Zeekr 7X Long Range RWD"
+    date_accessed: "2026-02-09"

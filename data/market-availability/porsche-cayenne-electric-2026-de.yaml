@@ -1,0 +1,105 @@
+id: porsche-cayenne-electric-2026-de
+variant_id: porsche-cayenne-electric-2026
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 110000
+  destination_charge: 0
+  on_road_price: 110000
+
+options:
+  packages: []
+
+  paint_options:
+    - name: "White"
+      price: 0
+      code: "white"
+    - name: "Black"
+      price: 1100
+      code: "black"
+    - name: "Gentian Blue Metallic"
+      price: 1100
+      code: "gentian-blue"
+
+  interior_options:
+    - name: "Black Leather"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 5500
+    notes: "0.5% of gross list price per month for EVs over €70,000 BLP (vs 1% for ICE). €110,000 × 0.5% = €550/month = €6,600/year vs ICE 1% = €13,200/year. Annual savings: €6,600."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 450
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: announced
+  waiting_time_weeks: null
+  online_configurator: no
+  online_purchase: no
+
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - UK
+    - Norway
+    - Sweden
+
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "BMW iX M70 xDrive"
+      price: 135900
+      range_wltp: 600
+      notes: "More expensive, strong luxury competitor"
+
+    - model: "Mercedes-Benz EQS SUV 450+"
+      price: 130200
+      range_wltp: 636
+      notes: "Similar price class, luxury-focused"
+
+    - model: "Lotus Eletre"
+      price: 107990
+      range_wltp: 535
+      notes: "Slightly cheaper, sportier positioning"
+
+  market_position: |
+    The Porsche Cayenne Electric enters as a flagship electric SUV competing in the premium E-segment.
+    With 642 km WLTP range and 390 kW fast charging on the 800V PPE platform, it offers class-leading
+    charging speeds. Pricing estimated around €110,000 positions it between the Macan Electric and
+    Taycan Turbo, leveraging the Cayenne nameplate's enormous brand equity.
+
+metadata:
+  created_at: "2026-02-09T16:00:00Z"
+  updated_at: "2026-02-09T16:00:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    MY2026 model, pricing estimated based on current Cayenne lineup positioning.
+    Final German pricing TBC when order books open.
+
+sources:
+  - url: "https://ev-database.org/car/3398/Porsche-Cayenne-Electric"
+    title: "EV Database - Porsche Cayenne Electric"
+    date_accessed: "2026-02-09"
