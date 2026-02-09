@@ -1,0 +1,172 @@
+# Škoda Enyaq 85x 2025 - AWD Variant
+id: skoda-enyaq-85x-2025
+model_id: skoda-enyaq-iv
+name: "85x"
+model_year: 2025
+trim_level: "85x"
+version_name: "2025 Refresh AWD"
+
+description: |
+  The 2025 Škoda Enyaq 85x is the all-wheel-drive variant, featuring dual motors (front asynchronous + rear 
+  permanent magnet) for improved traction and all-weather capability. With 286ps total system output and 
+  the 82kWh battery, it offers 556km WLTP range (slightly less than RWD due to added weight and drivetrain 
+  losses). The AWD system provides superior grip in winter conditions and better launch traction.
+  
+  Features the same 2025 Modern Solid design refresh as the RWD 85 variant, with Tech-Deck-Face front 
+  and vertical light grille. Ideal for customers in regions with harsh winters or those who prefer 
+  the added confidence of all-wheel drive.
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cells_configuration: "288 cells (96s3p pouch cells)"
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump integration"
+  preconditioning: true
+
+range:
+  wltp_km: 556
+  wltp_city_km: 720
+  wltp_highway_km: 445
+  real_world_km: 470
+  epa_km: null
+  epa_miles: null
+
+charging:
+  ac_max_power_kw: 11
+  ac_charge_time_hours: 7.5
+  ac_ports:
+    - type: Type2
+      max_power_kw: 11
+      phases: 3
+  
+  dc_max_power_kw: 135
+  dc_charge_time_minutes: 28
+  dc_ports:
+    - type: CCS2
+      max_power_kw: 135
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 10
+    - percent: 10
+      power_kw: 135
+    - percent: 30
+      power_kw: 130
+    - percent: 50
+      power_kw: 120
+    - percent: 70
+      power_kw: 82
+    - percent: 80
+      power_kw: 48
+    - percent: 90
+      power_kw: 28
+    - percent: 100
+      power_kw: 10
+  
+  bidirectional:
+    v2l: false
+    v2l_max_kw: null
+    v2h: false
+    v2g: false
+
+motors:
+  - position: front
+    type: asynchronous
+    max_power_kw: 80
+    max_power_hp: 109
+    max_torque_nm: 162
+    description: "Front asynchronous motor (decouples when not needed for efficiency)"
+  - position: rear
+    type: permanent_magnet
+    max_power_kw: 150
+    max_power_hp: 204
+    max_torque_nm: 310
+    description: "Rear permanent magnet motor (primary drive)"
+
+drivetrain:
+  type: AWD
+  drive_type: all_wheel_drive
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.7
+  top_speed_kmh: 180
+
+efficiency:
+  wltp_kwh_per_100km: 17.2
+  real_world_kwh_per_100km: 19.8
+  co2_emissions_wltp_g_per_km: 0
+
+weights:
+  curb_weight_kg: 2170
+  gross_vehicle_weight_kg: 2700
+  max_payload_kg: 530
+  distribution_front_percent: 51
+  distribution_rear_percent: 49
+
+software:
+  version: "ME3"
+  ota_updates: true
+  features:
+    - "Laura virtual assistant (ChatGPT integration)"
+    - "Improved UI responsiveness"
+    - "Physical buttons retained"
+    - "Backlit climate control sliders"
+
+comfort:
+  climate_control: "3-zone automatic climate control"
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: true
+  heated_steering_wheel: true
+  ventilated_seats_front: false
+  massage_seats: false
+  panoramic_roof: true
+  ambient_lighting: true
+
+audio:
+  standard_speakers: 6
+  premium_system: "Canton Sound System"
+  premium_speakers: 12
+  premium_power_watts: 570
+
+driver_assistance:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  parking_camera: true
+  traffic_sign_recognition: true
+  driver_attention_warning: true
+  automatic_emergency_braking: true
+
+lighting:
+  headlights: "LED Matrix"
+  daytime_running_lights: "LED with vertical light grille"
+  taillights: "LED C-shaped with dynamic turn signals"
+  ambient_lighting: true
+
+wheels:
+  standard_size: "19-inch"
+  standard_design: "Aero"
+  optional_sizes:
+    - "20-inch"
+    - "21-inch"
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  data_sources:
+    - "Škoda official website (skoda-auto.de, 2025)"
+    - "Autocar UK specs (autocar.co.uk)"
+    - "Škoda press materials (2025 refresh)"
+  notes: |
+    AWD variant with front asynchronous + rear permanent magnet motors. Total system output 286ps (210kW).
+    Front motor decouples when not needed for better efficiency. ~15km less WLTP range vs RWD due to 
+    added weight (~90kg heavier). Premium of ~€2,500 over RWD 85 variant.
