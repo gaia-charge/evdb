@@ -1,0 +1,199 @@
+# Lotus Eletre (2025) - Germany Market Availability
+
+id: lotus-eletre-base-2025-de
+variant_id: lotus-eletre-base-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2023-09-01"
+delivery_time_weeks: 16
+
+# Pricing
+pricing:
+  base_price: 99900
+  price_including_vat: 99900
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Stellar Black
+    code: SB
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 22" alloy wheels
+    size_inches: 22
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 21" forged wheels
+    size_inches: 21
+    type: forged
+    price_add:
+      amount: 2500
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black leather
+    material: leather
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey leather with carbon trim
+    material: leather
+    color: grey
+    price_add:
+      amount: 2000
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: subsidy
+    name: "BAFA Umweltbonus"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions:
+      - "List price over €65,000"
+      - "No federal subsidy available"
+    expires_at: null
+  - type: company_car
+    name: "0.25% company car tax (BEV over €60,000)"
+    description: "Reduced taxation for electric company cars"
+    conditions:
+      - "List price over €60,000"
+      - "Battery capacity over 60 kWh"
+      - "0.25% monthly rate"
+
+# Options
+popular_packages:
+  - name: Carbon Pack
+    price:
+      amount: 8500
+      currency: EUR
+  - name: Luxury Pack
+    price:
+      amount: 12000
+      currency: EUR
+  - name: Rear-wheel steering
+    price:
+      amount: 3500
+      currency: EUR
+
+# Popular Configurations
+popular_configs:
+  - name: "Eletre Base"
+    description: "Standard Eletre with 450 kW dual motors"
+    total_price:
+      amount: 99900
+      currency: EUR
+    includes:
+      - "109 kWh battery (600 km WLTP)"
+      - "450 kW (612 hp) dual motors"
+      - "KEF Premium audio system"
+      - "Air suspension"
+      - "360-degree camera"
+      - "LIDAR sensors"
+  
+  - name: "Eletre Premium"
+    description: "Popular configuration with key options"
+    total_price:
+      amount: 115900
+      currency: EUR
+    includes:
+      - "All Eletre Base features"
+      - "Luxury Pack (€12,000)"
+      - "Rear-wheel steering (€3,500)"
+      - "Solar Yellow paint (€3,500)"
+
+# Charging Costs (Germany 2025)
+typical_charging_costs:
+  home_kwh: 0.33
+  public_ac_kwh: 0.52
+  public_dc_kwh: 0.69
+
+# Company Car Taxation
+company_car_tax:
+  gross_list_price: 99900
+  monthly_tax_rate: 0.25
+  monthly_benefit: 250
+  annual_benefit: 3000
+  notes: >
+    As an electric vehicle over €60,000 with battery over 60 kWh, qualifies for 
+    0.25% monthly rate. For 40% tax bracket: €1,200/year vs. €4,796/year for 
+    equivalent combustion car (€3,596 annual savings). Despite high list price,
+    company car taxation remains favorable.
+
+# Dealer Network
+dealer_info:
+  dealer_count: 12
+  service_center_count: 12
+  notes: >
+    Lotus Germany operates through approximately 12 authorized dealerships,
+    primarily in major cities (Munich, Hamburg, Frankfurt, Düsseldorf, Stuttgart).
+    Limited network compared to mainstream brands but dealers provide premium
+    white-glove service. Mobile service available in some regions.
+
+# Competitors
+competitors:
+  - model_id: bmw-ix-m60
+    price: 107900
+    notes: "Similar performance, more established brand, slightly higher price"
+  - model_id: porsche-cayenne-turbo-e-hybrid
+    price: 145000
+    notes: "PHEV not BEV, higher price, Porsche brand prestige"
+  - model_id: audi-e-tron-gt-quattro
+    price: 105000
+    notes: "Sports sedan vs SUV, similar performance bracket"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.lotuscars.com/en-DE/eletre"
+    - "https://www.dat.de"
+    - "German Lotus dealers"
+
+notes: >
+  The Lotus Eletre represents a bold entry into the premium electric SUV market.
+  At €99,900, it positions competitively against BMW iX M60 and significantly
+  undercuts Porsche Cayenne Turbo. The combination of 450 kW power, 600 km range,
+  350 kW DC charging, and Lotus handling dynamics creates compelling value.
+  Limited dealer network is the main concern, but white-glove service compensates.
+  0.25% company car tax makes it attractive for business users despite high list price.
+  Most buyers opt for Luxury Pack (Meridian audio, massage seats) and rear-wheel
+  steering, bringing typical transaction price to €115,000-€120,000. 16-week delivery
+  time is acceptable for this segment. LIDAR sensors future-proof for autonomous
+  driving. Lotus's first SUV backed by Geely investment provides confidence in
+  quality and support despite brand's niche positioning in Germany.
