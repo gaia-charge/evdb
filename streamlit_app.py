@@ -76,6 +76,39 @@ def get_connection():
     ensure_database()
     return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
+
+def format_vehicle_name(brand, model, variant, year=None):
+    """Format vehicle display name, avoiding duplicate brand/model prefixes.
+    
+    Examples:
+        brand='Audi', model='Q6 e-tron', variant='RWD'       → 'Audi Q6 e-tron RWD'
+        brand='MG',   model='MG4 Electric', variant='XPower'  → 'MG4 Electric XPower' (skip brand, model already has it)
+        brand='BMW',  model='i4', variant='eDrive40'          → 'BMW i4 eDrive40'
+    """
+    # Skip brand prefix if model name already starts with brand
+    if model.upper().startswith(brand.upper()):
+        name = model
+    else:
+        name = f"{brand} {model}"
+    
+    if variant and variant != 'Base':
+        name = f"{name} {variant}"
+    
+    if year:
+        name = f"{name} ({year})"
+    
+    return name
+
+
+def format_vehicle_column(df):
+    """Apply format_vehicle_name to a DataFrame with manufacturer/model/variant_name/model_year columns."""
+    return df.apply(
+        lambda r: format_vehicle_name(
+            r['manufacturer'], r['model'], r['variant_name'],
+            str(int(r['model_year'])) if pd.notna(r.get('model_year')) else None
+        ), axis=1
+    )
+
 @st.cache_data(ttl=3600)
 def get_database_stats(_conn):
     """Get database statistics (cached for 1 hour)"""
@@ -324,7 +357,7 @@ if page == "🏠 Home":
     st.markdown("### 🆕 Latest Additions")
     
     latest = stats['latest_additions'].copy()
-    latest['Vehicle'] = latest['manufacturer'] + ' ' + latest['model'] + ' ' + latest['variant_name']
+    latest['Vehicle'] = format_vehicle_column(latest)
     latest['Year'] = latest['model_year'].astype(int)
     latest['Range'] = latest['range_wltp_km'].apply(lambda x: f"{int(x)} km" if pd.notna(x) else "N/A")
     latest['Price'] = latest['price_eur'].apply(
@@ -355,12 +388,7 @@ if page == "🏠 Home":
             
             # Format results
             display_results = results.copy()
-            display_results['Vehicle'] = (
-                display_results['manufacturer'] + ' ' + 
-                display_results['model'] + ' ' + 
-                display_results['variant_name'] + ' (' + 
-                display_results['model_year'].astype(str) + ')'
-            )
+            display_results['Vehicle'] = format_vehicle_column(display_results)
             display_results['Battery'] = display_results['battery_usable_kwh'].apply(
                 lambda x: f"{x:.1f} kWh" if pd.notna(x) else "N/A"
             )
@@ -615,12 +643,7 @@ elif page == "🔍 Browse Vehicles":
         
         # Format display data
         display_df = filtered_df.copy()
-        display_df['Vehicle'] = (
-            display_df['manufacturer'] + ' ' + 
-            display_df['model'] + ' ' + 
-            display_df['variant_name'] + ' (' + 
-            display_df['model_year'].astype(str) + ')'
-        )
+        display_df['Vehicle'] = format_vehicle_column(display_df)
         display_df['Battery'] = display_df['battery_usable_kwh'].apply(
             lambda x: f"{x:.1f} kWh" if pd.notna(x) else "N/A"
         )
@@ -665,7 +688,7 @@ elif page == "🔍 Browse Vehicles":
             selected_vehicle = filtered_df.iloc[selected_idx]
             
             st.markdown("---")
-            st.markdown(f"### 📋 Detailed Specifications: {selected_vehicle['manufacturer']} {selected_vehicle['model']} {selected_vehicle['variant_name']}")
+            st.markdown(f"### 📋 Detailed Specifications: {format_vehicle_name(selected_vehicle['manufacturer'], selected_vehicle['model'], selected_vehicle['variant_name'])}")
             
             # Need to fetch complete vehicle data including pricing fields
             @st.cache_data(ttl=3600)
@@ -765,10 +788,9 @@ elif page == "⚖️ Compare":
     @st.cache_data(ttl=3600)
     def load_all_vehicles(_conn):
         """Load all vehicles for comparison"""
-        return pd.read_sql_query("""
+        df = pd.read_sql_query("""
             SELECT 
                 v.id,
-                m.brand || ' ' || m.name || ' ' || v.variant_name || ' (' || v.model_year || ')' as full_name,
                 m.brand as manufacturer,
                 m.name as model,
                 v.variant_name,
@@ -795,6 +817,8 @@ elif page == "⚖️ Compare":
             LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
             ORDER BY m.brand, m.name, v.variant_name
         """, _conn)
+        df['full_name'] = format_vehicle_column(df)
+        return df
     
     vehicles_df = load_all_vehicles(conn)
     
@@ -1176,7 +1200,9 @@ elif page == "📊 Analytics":
     df = get_analytics_data(conn)
     
     # Create full vehicle name
-    df['vehicle_name'] = df['manufacturer'] + ' ' + df['model'] + ' ' + df['variant_name']
+    df['vehicle_name'] = df.apply(
+        lambda r: format_vehicle_name(r['manufacturer'], r['model'], r['variant_name']), axis=1
+    )
     
     # Create tabs for different analysis sections
     tab1, tab2, tab3, tab4 = st.tabs([
