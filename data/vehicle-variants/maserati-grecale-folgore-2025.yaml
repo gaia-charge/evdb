@@ -1,0 +1,364 @@
+# Maserati Grecale Folgore 2025
+# Maserati's first all-electric luxury SUV
+# Built on STLA Large platform with 800V architecture
+# Dual-motor AWD with over 550 hp and Italian luxury craftsmanship
+
+id: maserati-grecale-folgore-2025
+name: Grecale Folgore
+model_id: maserati-grecale-folgore
+manufacturer_id: stellantis
+variant_name: Folgore
+model_year: 2025
+trim_level: Folgore
+version: Folgore
+
+description: |
+  The Maserati Grecale Folgore ("Folgore" means "lightning" in Italian) represents
+  Maserati's bold entry into the electric luxury SUV market. Combining Italian
+  design excellence with cutting-edge electric performance, the Grecale Folgore
+  delivers 410kW (557hp) from its dual-motor AWD system.
+  
+  Built on Stellantis' premium STLA Large platform with 800V architecture, the
+  Grecale Folgore offers rapid charging capability and impressive performance.
+  With 0-100 km/h in just 4.1 seconds, it matches sports cars while offering
+  practical SUV versatility and luxury.
+  
+  The interior showcases Maserati's signature premium materials including Nappa
+  leather, Alcantara, and carbon fiber accents. The Sonus faber audio system
+  (21 speakers, 1195W) delivers concert-hall sound quality. Advanced technology
+  includes the Maserati Intelligent Assistant (MIA) multimedia system across
+  three high-resolution displays.
+  
+  For buyers seeking Italian luxury and character in an electric SUV, the Grecale
+  Folgore offers a compelling alternative to German rivals, with distinctive
+  styling and an engaging driving experience enhanced by Maserati's performance
+  heritage.
+
+# ============================================================================
+# BATTERY & RANGE
+# ============================================================================
+
+battery:
+  usable_kwh: 105.0
+  total_kwh: 109.0
+  chemistry: NMC
+  cells: prismatic
+  manufacturer: Samsung SDI
+  supplier: Samsung SDI (South Korea)
+  modules: 12
+  nominal_voltage: 662
+  pack_voltage_range: "560-830V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    STLA Large platform battery with 800V architecture for rapid charging.
+    105kWh usable capacity provides strong real-world range for a performance SUV.
+    Advanced thermal management system optimized for fast charging and high-
+    performance driving.
+
+range:
+  wltp_km: 501
+  wltp_city_km: 620
+  wltp_highway_km: 410
+  epa_km: 435
+  epa_miles: 270
+  real_world_km: 420
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP: 501km (105kWh battery, 20" wheels, AWD)
+    EPA: ~270 miles / 435km estimated (US rating)
+    Real-world: ~420km mixed driving in good conditions
+    
+    Solid range for a high-performance luxury SUV. Winter range: ~360km in cold
+    conditions with heat pump. Competitive with Porsche Macan 4S and Audi Q6 e-tron.
+
+efficiency:
+  wltp_kwh_per_100km: 21.0
+  epa_kwh_per_100km: 24.1
+  real_world_kwh_per_100km: 25.0
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    Grecale Folgore consumes 21.0 kWh/100km WLTP - reasonable for a powerful luxury
+    SUV with emphasis on performance. Real-world consumption slightly higher due
+    to aerodynamic design prioritizing style over pure efficiency.
+
+# ============================================================================
+# CHARGING
+# ============================================================================
+
+charging:
+  ac:
+    max_power_kw: 22
+    standard: true
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 5.0
+    notes: |
+      Standard: 22kW AC (3-phase Type2) - 0-100% in ~5 hours
+      Premium specification includes 22kW onboard charger as standard
+  
+  dc:
+    max_power_kw: 150
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 30
+    time_5_80_minutes: 32
+    peak_charge_time_minutes: "10-40% state of charge"
+    notes: |
+      800V fast charging with 150kW peak:
+      - Peak: 150kW (achieved between 10-40% SoC at 350kW chargers)
+      - 10-80%: ~30 minutes (ideal conditions, preconditioned battery)
+      - Average 10-80%: ~32-35 minutes real-world
+      - 100km range in ~8 minutes
+      
+      While 150kW is lower than some competitors, it's still rapid charging and
+      practical for real-world use.
+    
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 50
+      - soc_percent: 10
+        power_kw: 148
+        note: "Peak power"
+      - soc_percent: 40
+        power_kw: 145
+      - soc_percent: 50
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 75
+      - soc_percent: 80
+        power_kw: 45
+
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 7
+  v2h: true
+  v2g: true
+  notes: |
+    STLA Large platform supports bidirectional charging:
+    - V2L: 7kW external power supply
+    - V2H: Home backup power (requires compatible charger)
+    - V2G: Grid services (market dependent)
+
+# ============================================================================
+# MOTORS & PERFORMANCE
+# ============================================================================
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD (all-wheel drive)
+  front_motor:
+    power_kw: 140
+    power_hp: 190
+    type: PMSM
+  rear_motor:
+    power_kw: 270
+    power_hp: 367
+    type: PMSM
+  combined_power_kw: 410
+  combined_power_hp: 557
+  torque_nm: 820
+  notes: |
+    Maserati Grecale Folgore features powerful dual-motor AWD:
+    - Front: 140kW (190hp) permanent magnet synchronous
+    - Rear: 270kW (367hp) permanent magnet synchronous
+    - Combined: 410kW (557hp)
+    - Torque: 820 Nm (impressive for sports-oriented SUV)
+    
+    Integrated Vehicle Control system manages torque distribution between axles
+    for optimal traction, stability, and driving dynamics. Rear-biased power
+    distribution maintains Maserati's sporting character.
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 4.1
+  acceleration_0_60_mph_seconds: 3.9
+  top_speed_kmh: 220
+  top_speed_electronically_limited: true
+  notes: |
+    Maserati Grecale Folgore performance:
+    - 0-100 km/h: 4.1 seconds (sports car acceleration!)
+    - 0-60 mph: 3.9 seconds
+    - Top speed: 220 km/h (electronically limited)
+    - Quarter mile: ~12.4 seconds
+    
+    Exceptional performance for a luxury SUV. Matches Porsche Macan 4S while
+    offering distinctive Italian character. Electronic limited-slip differential
+    enhances cornering dynamics.
+
+weight:
+  curb_weight_kg: 2480
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+  gross_weight_kg: 3080
+  payload_kg: 600
+  towing_capacity_kg: 1800
+  towing_capacity_braked_kg: 1800
+  notes: |
+    Grecale Folgore weighs 2,480kg - typical for luxury electric SUV with large
+    battery and premium materials. Near-perfect weight distribution (48/52)
+    provides balanced handling characteristic of Maserati. 1,800kg towing capacity.
+
+suspension:
+  front: Multi-link with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Maserati Active Suspension
+  adjustable_ride_height: true
+  notes: |
+    Standard adaptive air suspension with electronically controlled damping.
+    Five ride height settings for different driving modes and conditions.
+    Suspension lowers automatically at speed for improved aerodynamics and
+    stability. Tuned for Italian sports car dynamics with comfort when needed.
+
+brakes:
+  front: 380mm ventilated discs
+  rear: 360mm ventilated discs
+  caliper_type: Fixed aluminum calipers (yellow painted)
+  regenerative: true
+  regenerative_max_power_kw: 250
+  notes: |
+    Standard: 380mm front / 360mm rear ventilated discs with yellow calipers
+    Optional: Carbon ceramic brakes available
+    
+    Regenerative braking: Up to 250kW recuperation, adjustable regen levels,
+    one-pedal driving mode available
+
+# ============================================================================
+# DIMENSIONS & CAPACITY
+# ============================================================================
+
+dimensions:
+  length_mm: 4846
+  width_mm: 1979
+  width_with_mirrors_mm: 2163
+  height_mm: 1651
+  wheelbase_mm: 2901
+  ground_clearance_mm: 180
+  drag_coefficient: 0.29
+  frontal_area_m2: 2.91
+  notes: |
+    Grecale Folgore dimensions optimized for presence and style. Slightly larger
+    than Porsche Macan Electric. 0.29 drag coefficient reflects design focus on
+    Italian aesthetics over pure aerodynamic efficiency. 180mm ground clearance
+    provides practical SUV capability.
+
+cargo:
+  trunk_litres: 535
+  trunk_max_litres: 1310
+  frunk_litres: 100
+  notes: |
+    535L cargo space (seats up), 1,310L with rear seats folded (40/20/40 split)
+    100L front trunk (frunk) for charging cables and small items
+    Power liftgate with hands-free opening standard
+    Underfloor storage compartment
+
+# ============================================================================
+# ADDITIONAL FEATURES
+# ============================================================================
+
+tires:
+  front: "265/45 R20"
+  rear: "295/40 R20"
+  wheel_size_inches: 20
+  notes: |
+    Standard: 20" Anteo wheels with staggered tire setup
+    Optional: 21" Proteo wheels available
+    Performance-oriented tire sizes provide excellent grip and handling
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+  notes: |
+    Standard: Automatic 3-zone climate control with heat pump
+    Heat pump essential for winter efficiency
+    Pre-conditioning via Maserati Connect app
+    Air quality monitoring system
+
+interior:
+  seats: 5
+  seat_material: Premium Nappa leather with Alcantara inserts
+  seat_adjustment: 12-way power adjustable sport seats with memory
+  steering_wheel: Heated leather-wrapped steering wheel
+  display_instrument: 12.3" digital instrument cluster
+  display_center: 12.3" central touchscreen
+  display_passenger: 8.8" comfort display (passenger)
+  sound_system: Sonus faber Premium Sound System (21 speakers, 1195W)
+  ambient_lighting: true
+  panoramic_roof: true
+  notes: |
+    Premium Italian interior craftsmanship:
+    - Nappa leather and Alcantara sport seats with embossed Trident logo
+    - Carbon fiber interior accents available
+    - Sonus faber audio system (21 speakers, 1195W) - concert-hall quality
+    - Three high-resolution displays (12.3" + 12.3" + 8.8")
+    - Panoramic glass roof with electrochromic shading
+    - Premium ambient lighting
+    - Wireless phone charging pad
+
+adas_features:
+  - Highway Assist (Level 2 adaptive cruise with lane centering)
+  - Lane Keep Assist with Lane Change Assist
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control with Stop & Go
+  - 360° camera system (standard)
+  - Active Blind Spot Assist
+  - Autonomous Emergency Braking with pedestrian detection
+  - Traffic Jam Assist
+  - Parking sensors front and rear
+
+connectivity:
+  system: Maserati Intelligent Assistant (MIA) multimedia system
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Maserati Connect app
+  voice_assistant: Voice control with natural language processing
+  notes: |
+    Advanced MIA multimedia system across three displays.
+    Full connectivity suite with wireless smartphone integration.
+    OTA updates and Maserati Connect app for remote management, charging
+    scheduling, and vehicle status.
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  verified_by: Maserati official specifications
+  sources:
+    - https://www.maserati.com/de/de/models/grecale-folgore
+    - https://media.maserati.com/
+  notes: |
+    The Maserati Grecale Folgore offers:
+    - DISTINCTIVE Italian design and luxury craftsmanship
+    - STRONG performance: 4.1s 0-100 km/h (410kW / 557hp)
+    - PREMIUM interior: Sonus faber audio, Nappa leather, carbon fiber
+    - 800V architecture: 150kW fast charging
+    - GOOD range: 501km WLTP (105kWh battery)
+    - ALL-WEATHER capability: AWD with intelligent torque distribution
+    
+    Competitors: Porsche Macan 4S/Turbo, Audi SQ6 e-tron, BMW iX M60, Mercedes-AMG
+    EQE SUV. The Grecale Folgore differentiates through Italian design language,
+    premium audio system, and distinctive character that appeals to buyers seeking
+    something beyond German efficiency.
+    
+    Pricing premium reflects Italian luxury positioning and exclusive brand appeal.
+    For enthusiasts who value design, craftsmanship, and driving emotion alongside
+    electric performance, the Grecale Folgore delivers a unique proposition in
+    the luxury electric SUV segment.
+    
+    First deliveries began in late 2023 in Europe, with production ramping up
+    through 2024-2025 at the Cassino plant in Italy.
