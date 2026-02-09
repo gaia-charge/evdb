@@ -1,0 +1,135 @@
+# Renault Megane E-Tech EV40 130hp (2025)
+id: renault-megane-e-tech-ev40-130hp-2025
+name: Megane E-Tech EV40 130hp
+model_id: renault-megane-e-tech
+model_year: 2025
+variant_code: EV40-130
+
+battery:
+  usable_kwh: 40.0
+  total_kwh: 42.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 300
+  wltp_city_km: 400  # Good city efficiency
+  wltp_highway_km: 230
+  epa_km: null  # Not sold in US
+  real_world_km: 260
+  real_world_source: "Mixed winter/summer average estimate"
+
+charging:
+  ac_max_kw: 7.4  # Standard AC charging (22kW optional)
+  ac_phases: 1
+  ac_connector: Type2
+  dc_max_kw: 85  # Lower DC charging than 60kWh version
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 85
+    - soc_percent: 10
+      power_kw: 85
+    - soc_percent: 20
+      power_kw: 85
+    - soc_percent: 30
+      power_kw: 75
+    - soc_percent: 40
+      power_kw: 65
+    - soc_percent: 50
+      power_kw: 55
+    - soc_percent: 60
+      power_kw: 45
+    - soc_percent: 70
+      power_kw: 35
+    - soc_percent: 80
+      power_kw: 25
+    - soc_percent: 90
+      power_kw: 15
+    - soc_percent: 100
+      power_kw: 10
+  time_15_to_80_percent_min: 35
+  time_10_to_80_percent_min: 37
+  charging_speed_kmh: 430  # km of range per hour at peak
+  plug_and_charge: true  # ISO 15118 support
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 96
+      power_hp: 130
+      torque_nm: 250
+  total_power_kw: 96
+  total_power_hp: 130
+  total_torque_nm: 250
+  acceleration_0_100_kmh_sec: 10.0
+  acceleration_0_60_mph_sec: 9.5
+  top_speed_kmh: 150  # Electronically limited
+
+weight:
+  curb_weight_kg: 1505  # Lighter than 60kWh version
+  gross_weight_kg: 1965
+  max_payload_kg: 460
+  distribution_front_percent: 58
+  distribution_rear_percent: 42
+
+efficiency:
+  wltp_kwh_per_100km: 15.2  # Slightly more efficient than 60kWh
+  wltp_kwh_per_100km_city: 12.8
+  wltp_kwh_per_100km_highway: 19.5
+  real_world_kwh_per_100km: 16.8
+  energy_efficiency_class: "A"  # EU energy label
+
+wheels_tires:
+  standard_size_front: "215/55 R18"
+  standard_size_rear: "215/55 R18"
+  wheel_sizes_available:
+    - "18 inch (standard)"
+    - "20 inch (optional, -8km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Active Driver Assist (adaptive cruise + lane centering)"
+    - "Lane departure warning with active keep assist"
+    - "Traffic sign recognition with speed limit"
+    - "Blind spot warning"
+    - "Rear cross traffic alert"
+    - "360-degree camera system (optional)"
+    - "Automatic emergency braking with pedestrian/cyclist detection"
+    - "Safe exit warning (door opening alert)"
+    - "Driver attention warning"
+  connectivity:
+    - "OpenR link with Google integration"
+    - "Google Maps navigation with EV route planner"
+    - "Google Assistant voice control"
+    - "Google Play Store (100+ apps)"
+    - "My Renault app for remote control"
+    - "OTA software updates"
+    - "Wireless Apple CarPlay & Android Auto"
+  special_features:
+    - "One-pedal driving (B-mode)"
+    - "Three regeneration levels"
+    - "Pre-conditioning via app"
+    - "Heat pump for efficiency"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.renault.de/elektromodelle/megane-e-tech-elektrisch.html"
+  notes: "Entry-level Megane E-Tech variant with 40 kWh battery and 96kW motor. More affordable option for urban drivers who don't need long range. Still offers the same advanced OpenR system, European Car of the Year-winning design, and modern features. 300km WLTP range is sufficient for daily commuting and city use. Lighter weight (131kg less than EV60) provides nimble handling. Good choice for cost-conscious buyers with shorter daily routes."
