@@ -1,0 +1,99 @@
+id: kia-ev4-fastback-814-kwh-2025-de
+variant_id: kia-ev4-fastback-814-kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 42990
+  destination_charge: 0
+  on_road_price: 42990
+
+options:
+  packages: []
+  paint_options:
+    - name: "Snow White Pearl"
+      price: 0
+      code: "snow-white"
+    - name: "Aurora Black Pearl"
+      price: 590
+      code: "aurora-black"
+    - name: "Gravity Blue"
+      price: 590
+      code: "gravity-blue"
+  interior_options:
+    - name: "Black"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 2580
+    notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €42,990 × 0.25% = €107.48/month = €1,290/year vs ICE 1% = €5,159/year. Annual savings: €3,870."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 200
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: available
+  waiting_time_weeks: 12
+  online_configurator: yes
+  online_purchase: no
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - UK
+    - Norway
+    - Sweden
+
+warranty:
+  vehicle_warranty_years: 7
+  vehicle_warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Tesla Model 3 RWD"
+      price: 42990
+      range_wltp: 554
+      notes: "Direct competitor, less range but faster charging"
+    - model: "Volkswagen ID.7 Pro"
+      price: 49995
+      range_wltp: 621
+      notes: "More expensive, similar range"
+    - model: "Hyundai IONIQ 6 Long Range RWD"
+      price: 47900
+      range_wltp: 614
+      notes: "More expensive, sibling platform"
+
+  market_position: |
+    The Kia EV4 enters the competitive C-segment sedan market with an impressive
+    633 km WLTP range and competitive pricing at €42,990. Outstanding efficiency
+    of 14.4 kWh/100km makes it one of the most efficient EVs in its class.
+    7-year/150,000 km warranty is class-leading.
+
+metadata:
+  created_at: "2026-02-09T16:15:00Z"
+  updated_at: "2026-02-09T16:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    German pricing estimated based on Kia EV4 European launch pricing.
+
+sources:
+  - url: "https://ev-database.org/car/3122/Kia-EV4-Fastback-814-kWh"
+    title: "EV Database - Kia EV4 Fastback 81.4 kWh"
+    date_accessed: "2026-02-09"

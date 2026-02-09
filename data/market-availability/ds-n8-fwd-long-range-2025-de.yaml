@@ -1,0 +1,97 @@
+id: ds-n8-fwd-long-range-2025-de
+variant_id: ds-n8-fwd-long-range-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 52900
+  destination_charge: 0
+  on_road_price: 52900
+
+options:
+  packages: []
+  paint_options:
+    - name: "Pearl White"
+      price: 0
+      code: "pearl-white"
+    - name: "Perla Nera Black"
+      price: 900
+      code: "perla-nera"
+    - name: "Lacquered Grey"
+      price: 900
+      code: "lacquered-grey"
+  interior_options:
+    - name: "Basalt Black Nappa Leather"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3174
+    notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €52,900 × 0.25% = €132.25/month = €1,587/year vs ICE 1% = €6,348/year. Annual savings: €4,761."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 250
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: available
+  waiting_time_weeks: 16
+  online_configurator: yes
+  online_purchase: no
+  sales_regions:
+    - Germany
+    - France
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - UK
+
+warranty:
+  vehicle_warranty_years: 3
+  vehicle_warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Peugeot e-3008 97 kWh Long Range"
+      price: 54150
+      range_wltp: 700
+      notes: "Sister brand, similar platform, comparable range"
+    - model: "Audi Q6 e-tron performance"
+      price: 63900
+      range_wltp: 641
+      notes: "More expensive premium competitor"
+    - model: "BMW iX1 xDrive30"
+      price: 55900
+      range_wltp: 440
+      notes: "Less range, strong brand"
+
+  market_position: |
+    The DS N°8 FWD Long Range offers exceptional range (758 km WLTP) from its 101 kWh
+    battery at a competitive price point. Positions DS as a luxury alternative to the
+    Peugeot e-3008 and e-5008, with premium French craftsmanship and Night Vision technology.
+
+metadata:
+  created_at: "2026-02-09T16:15:00Z"
+  updated_at: "2026-02-09T16:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    German pricing estimated based on DS N°8 European launch positioning.
+
+sources:
+  - url: "https://ev-database.org/car/3077/DS-Automobiles-N8-FWD-Long-Range"
+    title: "EV Database - DS N°8 FWD Long Range"
+    date_accessed: "2026-02-09"
