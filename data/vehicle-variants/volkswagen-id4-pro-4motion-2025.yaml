@@ -1,0 +1,129 @@
+# Volkswagen ID.4 Pro 4MOTION (2025)
+id: volkswagen-id4-pro-4motion-2025
+name: Pro 4MOTION
+model_id: volkswagen-id4
+model_year: 2025
+variant_code: ID4-PRO-4M-2025
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 498
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: 401
+  real_world_km: 440
+  real_world_source: InsideEVs range test
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 175
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 175
+    - soc_percent: 20
+      power_kw: 175
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 40
+      power_kw: 120
+    - soc_percent: 50
+      power_kw: 100
+    - soc_percent: 60
+      power_kw: 80
+    - soc_percent: 70
+      power_kw: 60
+    - soc_percent: 80
+      power_kw: 45
+  time_10_to_80_min: 31
+  time_20_to_80_min: 28
+  charging_speed_kmh: 920
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.6
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 80
+      power_hp: 109
+      torque_nm: 162
+    - position: rear
+      type: permanent magnet
+      power_kw: 210
+      power_hp: 286
+      torque_nm: 545
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 545
+  acceleration_0_100_sec: 6.2
+  top_speed_kmh: 180
+
+weight:
+  curb_weight_kg: 2220
+  gross_vehicle_weight_kg: 2740
+  payload_kg: 520
+
+efficiency:
+  wltp_kwh_per_100km: 18.5
+  epa_kwh_per_100km: 19.2
+  real_world_kwh_per_100km: 20.3
+  efficiency_rating: A
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+
+optional_equipment:
+  - name: IQ.DRIVE Assist Plus
+    code: IQDRV+
+    category: safety
+    included_in_base: false
+  - name: Panoramic Glass Roof
+    code: PGR
+    category: comfort
+    included_in_base: false
+  - name: Premium Sound System
+    code: HARMAN
+    category: entertainment
+    included_in_base: false
+  - name: DCC Adaptive Chassis Control
+    code: DCC
+    category: performance
+    included_in_base: false
+
+notes: |
+  The 2025 ID.4 Pro 4MOTION features dual-motor AWD with 250 kW (340 hp),
+  updated styling, improved software (ID.Software 4.0), faster DC charging
+  (up to 175 kW), and bidirectional charging (V2L) capability. AWD provides
+  better traction and performance with 6.2s 0-100 km/h.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.volkswagen.com/en/models/id-4.html
+    - https://www.volkswagen.de/de/modelle/id-4.html
+    - https://insideevs.com/reviews/volkswagen/id-4/
