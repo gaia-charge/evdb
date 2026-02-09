@@ -22,12 +22,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Plausible analytics (privacy-friendly)
-components.html("""
+# Plausible analytics helper
+def track_pageview(page_name):
+    """Send a pageview to Plausible with the current tab as the URL path."""
+    page_path = "/" + page_name.split(" ", 1)[-1].lower().replace(" ", "-")
+    components.html(f"""
 <script async src="https://plausible.io/js/pa-rPKfOBHbOTq8L3IHShOcM.js"></script>
 <script>
-window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-plausible.init()
+window.plausible=window.plausible||function(){{(plausible.q=plausible.q||[]).push(arguments)}},plausible.init=plausible.init||function(i){{plausible.o=i||{{}}}};
+plausible.init({{apiHost: 'https://plausible.io'}})
+plausible('pageview', {{u: window.location.origin + '{page_path}'}})
 </script>
 """, height=0)
 
@@ -336,6 +340,9 @@ page = st.sidebar.radio(
     "Go to:",
     ["🏠 Home", "🔍 Browse Vehicles", "⚖️ Compare", "📊 Analytics", "💾 Data Explorer", "📚 Documentation"]
 )
+
+# Track page navigation
+track_pageview(page)
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### About")
