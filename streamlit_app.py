@@ -29,9 +29,8 @@ DB_DIR = Path(tempfile.gettempdir()) / "evdb"
 DB_PATH = DB_DIR / "evdb.db"
 
 
-@st.cache_data(ttl=300)
 def get_latest_release_tag():
-    """Check the latest release tag (cached 5 minutes)"""
+    """Check the latest release tag from GitHub API"""
     try:
         resp = requests.get(RELEASE_API_URL, timeout=5)
         if resp.ok:
@@ -42,7 +41,8 @@ def get_latest_release_tag():
 
 
 def ensure_database():
-    """Download database from latest GitHub release if needed"""
+    """Download database from latest GitHub release if needed.
+    Called on every page load to ensure freshness."""
     DB_DIR.mkdir(parents=True, exist_ok=True)
     tag_file = DB_DIR / ".release_tag"
 
@@ -50,7 +50,7 @@ def ensure_database():
     current_tag = tag_file.read_text().strip() if tag_file.exists() else None
 
     if DB_PATH.exists() and (latest_tag is None or latest_tag == current_tag):
-        return  # Database is up to date (or we can't check)
+        return current_tag  # Database is up to date (or we can't check)
 
     # Download new database
     try:
@@ -64,16 +64,23 @@ def ensure_database():
             tmp.rename(DB_PATH)
             if latest_tag:
                 tag_file.write_text(latest_tag)
+            # Clear cached connection so it reconnects to new DB
+            get_connection.clear()
+            return latest_tag
     except Exception as e:
         if not DB_PATH.exists():
             st.error(f"Failed to download database: {e}")
             st.stop()
+        return current_tag
+
+
+# Check for updates on every page load
+ensure_database()
 
 
 @st.cache_resource
 def get_connection():
     """Create cached database connection"""
-    ensure_database()
     return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
 
