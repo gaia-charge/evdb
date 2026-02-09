@@ -1,0 +1,217 @@
+# Lotus Emeya (2025) - Germany Market Availability
+
+id: lotus-emeya-base-2025-de
+variant_id: lotus-emeya-base-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 12
+
+# Pricing
+pricing:
+  base_price: 96950
+  price_including_vat: 96950
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Stellar Black
+    code: SB
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Blossom White
+    code: BW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 20" alloy wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 21" forged wheels
+    size_inches: 21
+    type: forged
+    price_add:
+      amount: 3000
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Alcantara and leather
+    material: alcantara_leather
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey leather with carbon trim
+    material: leather
+    color: grey
+    price_add:
+      amount: 3000
+      currency: EUR
+  - name: Tan leather with wood trim
+    material: leather
+    color: tan
+    price_add:
+      amount: 3500
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: subsidy
+    name: "BAFA Umweltbonus"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions:
+      - "List price over €65,000"
+      - "No federal subsidy available"
+    expires_at: null
+  - type: company_car
+    name: "0.25% company car tax (BEV over €60,000)"
+    description: "Reduced taxation for electric company cars"
+    conditions:
+      - "List price over €60,000"
+      - "Battery capacity over 60 kWh"
+      - "0.25% monthly rate"
+
+# Options
+popular_packages:
+  - name: Carbon Pack
+    price:
+      amount: 10000
+      currency: EUR
+  - name: Luxury Pack
+    price:
+      amount: 15000
+      currency: EUR
+  - name: Rear-wheel steering
+    price:
+      amount: 4000
+      currency: EUR
+  - name: Meridian Signature audio
+    price:
+      amount: 6500
+      currency: EUR
+
+# Popular Configurations
+popular_configs:
+  - name: "Emeya Base"
+    description: "Standard Emeya with 450 kW dual motors"
+    total_price:
+      amount: 96950
+      currency: EUR
+    includes:
+      - "102 kWh battery (610 km WLTP)"
+      - "450 kW (612 hp) dual motors"
+      - "0-100 km/h in 4.15 seconds"
+      - "KEF Premium audio system"
+      - "Air suspension"
+      - "15.1\" OLED touchscreen"
+      - "4-seat configuration"
+  
+  - name: "Emeya Premium"
+    description: "Popular configuration with key options"
+    total_price:
+      amount: 122450
+      currency: EUR
+    includes:
+      - "All Emeya Base features"
+      - "Luxury Pack (€15,000)"
+      - "Rear-wheel steering (€4,000)"
+      - "Meridian Signature audio (€6,500)"
+
+# Charging Costs (Germany 2025)
+typical_charging_costs:
+  home_kwh: 0.33
+  public_ac_kwh: 0.52
+  public_dc_kwh: 0.69
+
+# Company Car Taxation
+company_car_tax:
+  gross_list_price: 96950
+  monthly_tax_rate: 0.25
+  monthly_benefit: 242
+  annual_benefit: 2907
+  notes: >
+    As an electric vehicle over €60,000 with battery over 60 kWh, qualifies for 
+    0.25% monthly rate. For 40% tax bracket: €1,163/year vs. €4,637/year for 
+    equivalent combustion car (€3,474 annual savings). Company car taxation
+    remains very favorable despite high list price.
+
+# Dealer Network
+dealer_info:
+  dealer_count: 12
+  service_center_count: 12
+  notes: >
+    Lotus Germany operates through approximately 12 authorized dealerships,
+    primarily in major cities (Munich, Hamburg, Frankfurt, Düsseldorf, Stuttgart).
+    Limited network compared to mainstream brands but dealers provide premium
+    white-glove service. Mobile service available in some regions.
+
+# Competitors
+competitors:
+  - model_id: porsche-taycan-4s
+    price: 118000
+    notes: "Similar performance segment, Porsche brand, higher price"
+  - model_id: audi-e-tron-gt-quattro
+    price: 105000
+    notes: "Similar platform as Taycan, slightly higher price"
+  - model_id: bmw-i7-edrive50
+    price: 135000
+    notes: "More luxury-focused, higher price, less sporty"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.lotuscars.com/en-DE/emeya"
+    - "https://www.dat.de"
+    - "German Lotus dealers"
+
+notes: >
+  The Lotus Emeya represents Lotus's entry into the electric grand tourer segment.
+  At €96,950, it undercuts Porsche Taycan 4S significantly while offering comparable
+  performance (0-100 in 4.15s vs 4.0s) and superior range (610 km vs 430 km).
+  The remarkable 0.21 drag coefficient makes it one of the most aerodynamic production
+  cars ever made. The 4-seat configuration with individual sport seats creates an
+  intimate, driver-focused cockpit. 800V architecture enables 350 kW DC charging
+  (10-80% in 18 minutes). Limited dealer network is compensated by premium service.
+  0.25% company car tax makes it attractive for business users. Most buyers opt for
+  Luxury Pack (premium materials, massage seats) and rear-wheel steering, bringing
+  typical transaction price to €120,000-€125,000. 12-week delivery time is excellent
+  for this segment. The Emeya combines Lotus racing heritage with grand touring
+  refinement - a genuine hyper-GT at a relatively accessible price point.
