@@ -1,0 +1,216 @@
+# Lotus Emeya S (2025) - Germany Market Availability
+
+id: lotus-emeya-s-2025-de
+variant_id: lotus-emeya-s-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 12
+
+# Pricing
+pricing:
+  base_price: 128950
+  price_including_vat: 128950
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Stellar Black
+    code: SB
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Blossom White
+    code: BW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Racing Green
+    code: RG
+    type: metallic
+    price_add:
+      amount: 4500
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 21" forged alloy wheels
+    size_inches: 21
+    type: forged
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 22" ultra-lightweight forged wheels
+    size_inches: 22
+    type: forged
+    price_add:
+      amount: 4500
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Alcantara and leather
+    material: alcantara_leather
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Grey leather with carbon trim
+    material: leather
+    color: grey
+    price_add:
+      amount: 3000
+      currency: EUR
+  - name: Tan leather with wood trim
+    material: leather
+    color: tan
+    price_add:
+      amount: 3500
+      currency: EUR
+  - name: Red leather with Alcantara
+    material: leather_alcantara
+    color: red
+    price_add:
+      amount: 4500
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: subsidy
+    name: "BAFA Umweltbonus"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions:
+      - "List price over €65,000"
+      - "No federal subsidy available"
+    expires_at: null
+  - type: company_car
+    name: "0.25% company car tax (BEV over €60,000)"
+    description: "Reduced taxation for electric company cars"
+    conditions:
+      - "List price over €60,000"
+      - "Battery capacity over 60 kWh"
+      - "0.25% monthly rate"
+
+# Options
+popular_packages:
+  - name: Carbon Pack
+    price:
+      amount: 12000
+      currency: EUR
+  - name: Luxury Pack
+    price:
+      amount: 18000
+      currency: EUR
+  - name: Carbon ceramic brakes
+    price:
+      amount: 12000
+      currency: EUR
+
+# Popular Configurations
+popular_configs:
+  - name: "Emeya S"
+    description: "S variant with 630 kW, 2.78s 0-100 km/h"
+    total_price:
+      amount: 128950
+      currency: EUR
+    includes:
+      - "102 kWh battery (595 km WLTP)"
+      - "630 kW (857 hp) dual motors"
+      - "0-100 km/h in 2.78 seconds"
+      - "Meridian Signature audio"
+      - "Rear-wheel steering (standard)"
+      - "Carbon fiber trim"
+      - "21\" forged wheels"
+  
+  - name: "Emeya S Track"
+    description: "S with track-focused options"
+    total_price:
+      amount: 152950
+      currency: EUR
+    includes:
+      - "All Emeya S features"
+      - "Carbon Pack (€12,000)"
+      - "Carbon ceramic brakes (€12,000)"
+
+# Charging Costs (Germany 2025)
+typical_charging_costs:
+  home_kwh: 0.33
+  public_ac_kwh: 0.52
+  public_dc_kwh: 0.69
+
+# Company Car Taxation
+company_car_tax:
+  gross_list_price: 128950
+  monthly_tax_rate: 0.25
+  monthly_benefit: 322
+  annual_benefit: 3869
+  notes: >
+    As an electric vehicle over €60,000 with battery over 60 kWh, qualifies for 
+    0.25% monthly rate. For 40% tax bracket: €1,548/year vs. €6,170/year for 
+    equivalent combustion car (€4,622 annual savings). Despite hyper-performance
+    capabilities, company car taxation remains very favorable.
+
+# Dealer Network
+dealer_info:
+  dealer_count: 12
+  service_center_count: 12
+  notes: >
+    Lotus Germany operates through approximately 12 authorized dealerships,
+    primarily in major cities. White-glove service for S variant buyers.
+
+# Competitors
+competitors:
+  - model_id: porsche-taycan-turbo-s
+    price: 197000
+    notes: "Primary competitor, significantly more expensive, similar performance"
+  - model_id: audi-e-tron-gt-rs
+    price: 149000
+    notes: "Sister to Taycan, higher price, similar platform"
+  - model_id: bmw-i7-m70
+    price: 170000
+    notes: "More luxury-focused, less sporty, higher price"
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  confidence: high
+  
+  sources:
+    - "https://www.lotuscars.com/en-DE/emeya"
+    - "https://www.dat.de"
+
+notes: >
+  The Emeya S delivers hyper-car performance (0-100 in 2.78s) at €128,950 -
+  significantly undercutting Porsche Taycan Turbo S (€197,000). With 630 kW
+  (857 hp), it's one of the fastest 4-door sedans in the world. Rear-wheel
+  steering, Meridian Signature audio, carbon fiber trim, and Track Mode come
+  standard. Despite immense power, maintains 595 km WLTP range. Exceptional
+  value proposition for performance enthusiasts. Most buyers add Carbon Pack
+  and carbon ceramic brakes for track capability.
