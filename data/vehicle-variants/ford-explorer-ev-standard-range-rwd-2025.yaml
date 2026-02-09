@@ -1,0 +1,81 @@
+# Ford Explorer EV Standard Range RWD - 2025 Model Year
+
+id: ford-explorer-ev-standard-range-rwd-2025
+
+name: Standard Range RWD
+
+model_id: ford-explorer-ev
+
+model_year: 2025
+
+trim_level: "Explorer"
+
+battery:
+  usable_kwh: 52.0
+  total_kwh: 55.0
+  chemistry: NMC
+  voltage_nominal_v: 400
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 346
+  real_world_km: 290
+  real_world_conditions: "Mixed driving, moderate climate"
+
+charging:
+  ac_charging:
+    max_power_kw: 11.0
+    connector_type: Type2
+    onboard_charger_kw: 11.0
+    time_0_100_hours: 5.5
+
+  dc_charging:
+    max_power_kw: 170
+    connector_type: CCS2
+    charge_time_10_80_minutes: 25
+
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_rear
+  rear_motor:
+    type: permanent_magnet
+    power_kw: 125
+    torque_nm: 310
+  total_power_kw: 125
+  total_power_hp: 170
+  total_torque_nm: 310
+
+performance:
+  acceleration_0_100_kmh_seconds: 9.0
+  top_speed_kmh: 160
+  drive_type: RWD
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 16.2
+  co2_emissions_wltp_g_per_km: 0
+
+weight:
+  curb_weight_kg: 2060
+  gross_vehicle_weight_kg: 2530
+  payload_kg: 470
+
+notes: |
+  Entry-level Ford Explorer EV with 52 kWh usable battery and single rear motor. 
+  Based on VW MEB platform with APP 550 permanent magnet motor. Offers 346 km 
+  WLTP range, suitable for urban and short-distance commuting. DC fast charging 
+  at up to 170 kW enables 10-80% in about 25 minutes. Features Ford SYNC Move 
+  with adjustable 14.6-inch touchscreen. Built in Cologne, Germany.
+
+metadata:
+  created_at: "2026-02-09T12:30:00Z"
+  updated_at: "2026-02-09T12:30:00Z"
+  data_quality: verified
+  sources:
+    - https://en.wikipedia.org/wiki/Ford_Explorer_EV
+    - https://www.ford.de/personenwagen/explorer

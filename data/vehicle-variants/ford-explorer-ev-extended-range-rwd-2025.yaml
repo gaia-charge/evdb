@@ -1,0 +1,81 @@
+# Ford Explorer EV Extended Range RWD - 2025 Model Year
+
+id: ford-explorer-ev-extended-range-rwd-2025
+
+name: Extended Range RWD
+
+model_id: ford-explorer-ev
+
+model_year: 2025
+
+trim_level: "Explorer Premium"
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NMC
+  voltage_nominal_v: 400
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 522
+  real_world_km: 440
+  real_world_conditions: "Mixed driving, moderate climate"
+
+charging:
+  ac_charging:
+    max_power_kw: 11.0
+    connector_type: Type2
+    onboard_charger_kw: 11.0
+    time_0_100_hours: 7.5
+
+  dc_charging:
+    max_power_kw: 185
+    connector_type: CCS2
+    charge_time_10_80_minutes: 26
+
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_rear
+  rear_motor:
+    type: permanent_magnet
+    power_kw: 210
+    torque_nm: 545
+  total_power_kw: 210
+  total_power_hp: 286
+  total_torque_nm: 545
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.4
+  top_speed_kmh: 180
+  drive_type: RWD
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 15.8
+  co2_emissions_wltp_g_per_km: 0
+
+weight:
+  curb_weight_kg: 2185
+  gross_vehicle_weight_kg: 2655
+  payload_kg: 470
+
+notes: |
+  Mid-range Ford Explorer EV with 77 kWh usable battery and more powerful 210 kW 
+  rear motor. Offers the best range in the Explorer lineup at 522 km WLTP. 
+  DC fast charging at up to 185 kW. Premium trim includes additional equipment. 
+  Sweet spot of the range for most buyers - good range, strong performance, 
+  and efficient RWD layout.
+
+metadata:
+  created_at: "2026-02-09T12:30:00Z"
+  updated_at: "2026-02-09T12:30:00Z"
+  data_quality: verified
+  sources:
+    - https://en.wikipedia.org/wiki/Ford_Explorer_EV
+    - https://www.ford.de/personenwagen/explorer
