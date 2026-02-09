@@ -1,310 +1,275 @@
-# Renault Megane E-Tech EV60 Techno (2025) - Germany Market Data
+# Renault Megane E-Tech EV60 Techno - German Market (2025)
+# Mid-range compact electric crossover, Germany availability
 
 id: renault-megane-e-tech-ev60-techno-2025-de
 variant_id: renault-megane-e-tech-ev60-techno-2025
 market: DE
 currency: EUR
+availability_status: available
+available_from: "2025-01"
+delivery_time_weeks: 10
 
+# Pricing (Germany, 2025)
 pricing:
-  base_price: 42900
-  destination_charge: 0  # Included in base price
-  total_msrp: 42900
-  
-  incentives:
-    - name: German Federal EV Incentive
-      amount: 0  # Expired December 2023
-      type: federal_rebate
-      valid_until: null
-      notes: No longer available
-    - name: Company Car Tax Benefit
-      amount_annual: 1608  # Annual tax savings vs ICE
-      type: tax_benefit
-      description: 0.25% monthly taxation (under €70k threshold)
-      calculation: "List price €42,900 × 0.25% = €107.25/month taxable vs 1% ICE (€429/month)"
-  
-  effective_price: 42900  # No federal incentive available
-  price_positioning: mid-premium
-  incentive_notes: "Company car tax benefit (0.25% rate) provides significant savings vs ICE equivalent Megane"
+  base_price: 43500
+  price_including_vat: 43500
+  vat_rate_percent: 19
+  destination_charge: 890
 
-options_packages:
-  popular_packages:
-    - name: Comfort Pack
-      price: 1200
-      description: "Power driver seat with memory, heated rear seats, wireless phone charging"
-      includes: [Power driver seat with memory, Heated rear seats, Wireless charging pad]
-      recommended: true
-    - name: Tech Pack
-      price: 900
-      description: "Matrix LED headlights, rear traffic alert, hands-free parking"
-      includes: [Matrix LED Headlights, Rear Cross Traffic Alert, Hands-free parking]
-    - name: Sound Pack
-      price: 700
-      description: "Harman Kardon premium audio with 9 speakers"
-      includes: [Harman Kardon audio, 9-speaker system]
+# Available Colors
+available_colors:
+  - name: Glacier White Solid
+    code: QNC
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
   
-  standalone_options:
-    - name: Black Contrast Roof
-      price: 600
-      description: "Two-tone black roof with body-color body"
-    - name: 20" Diamond-Cut Alloy Wheels
-      price: 900
-      description: "Sporty 20\" wheels (reduces range by ~20km)"
-    - name: Panoramic Glass Roof
-      price: 1100
-      notes: "Fixed glass roof with electric sunshade"
-    - name: Towing Package
-      price: 750
-      description: "Tow bar preparation, 900kg towing capacity"
+  - name: Diamond Black Metallic
+    code: GNE
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Flame Red Metallic
+    code: NNP
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Highland Grey Metallic
+    code: KNM
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Rafale Blue Metallic
+    code: RPB
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Schist Grey Metallic
+    code: KPN
+    type: metallic
+    price_add:
+      amount: 700
+      currency: EUR
 
-colors:
-  standard:
-    - name: Glacier White
-      price: 0
-      code: QNC
+# Wheel Options
+available_wheels:
+  - name: "18-inch Solstice alloy wheels"
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard wheels, best efficiency"
   
-  metallic:
-    - name: Flame Red
-      price: 850
-    - name: Austral Blue
-      price: 850
-    - name: Titanium Grey
-      price: 850
-    - name: Diamond Black
-      price: 850
-    - name: Zanzibar Purple
-      price: 850
-      notes: "Signature Renault color, popular choice"
-  
-  pearlescent:
-    - name: Schist Grey
-      price: 1100
-      notes: "Premium pearlescent finish"
+  - name: "20-inch Esprit Alpine diamond-cut alloy wheels"
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1200
+      currency: EUR
+    notes: "Sport appearance, -15km range"
 
-popular_configurations:
-  - name: "Techno Comfort"
-    description: "Most popular configuration - Techno with comfort and tech upgrades"
-    base_price: 42900
-    included_options:
-      - Comfort Pack (€1,200)
-      - Tech Pack (€900)
-      - Metallic Paint (€850)
-    total_price: 45850
-    target_buyer: "Family buyers and company car drivers wanting full feature set"
+# Interior Options
+available_interiors:
+  - name: Cloth upholstery
+    code: TEP
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard fabric seats"
   
-  - name: "Techno Premium"
-    description: "Near-Iconic specification at Techno base price"
-    base_price: 42900
-    included_options:
-      - Comfort Pack (€1,200)
-      - Tech Pack (€900)
-      - Sound Pack (€700)
-      - Panoramic Glass Roof (€1,100)
-      - Black Contrast Roof (€600)
-      - Metallic Paint (€850)
-    total_price: 48250
-    target_buyer: "Buyers wanting maximum features without Iconic premium"
+  - name: Leather-free upholstery with Alcantara
+    code: ALCA
+    price_add:
+      amount: 1500
+      currency: EUR
+    notes: "Premium sustainable materials"
 
-delivery:
-  typical_wait_weeks: 10-16
-  notes: "Built in Douai, France. Moderate lead times for 2025 model year. Shorter than 2023-2024 due to increased production capacity."
+# Optional Packages
+available_packages:
+  - name: Winter Package
+    price_add:
+      amount: 450
+      currency: EUR
+    description: "Heated front seats, heated steering wheel"
+  
+  - name: Extended Safety Package
+    price_add:
+      amount: 1200
+      currency: EUR
+    description: "360-degree camera, hands-free parking, traffic sign recognition"
+  
+  - name: Harman Kardon Sound System
+    price_add:
+      amount: 800
+      currency: EUR
+    description: "Premium audio with 10 speakers"
+  
+  - name: Panoramic Glass Roof
+    price_add:
+      amount: 1100
+      currency: EUR
+    description: "Fixed panoramic glass roof with sunshade"
 
-charging_costs:
-  home_charging:
-    cost_per_kwh: 0.35
-    cost_per_100km: 6.48  # 18.5 kWh/100km real-world × €0.35
-    annual_cost_15000km: 972
-    notes: "Based on average German household electricity rate (€0.35/kWh, 2026)"
+# Typical Configuration Examples
+typical_configurations:
+  - name: Base Configuration
+    description: "Entry Techno trim with standard equipment"
+    total_price: 44390
+    details:
+      - Base price: €43,500
+      - Glacier White solid: €0
+      - 18-inch wheels: €0
+      - Standard cloth seats: €0
+      - Destination charge: €890
+      - Total: €44,390
   
-  public_dc_charging:
-    cost_per_kwh: 0.69
-    cost_per_100km: 12.77  # 18.5 kWh/100km × €0.69
-    annual_cost_15000km: 1915
-    notes: "Based on EnBW ADAC charging tariff (€0.69/kWh DC, 2026)"
+  - name: Popular Configuration
+    description: "Most commonly ordered specification"
+    total_price: 50840
+    details:
+      - Base price: €43,500
+      - Rafale Blue metallic: €700
+      - 20-inch wheels: €1,200
+      - Alcantara upholstery: €1,500
+      - Winter Package: €450
+      - Extended Safety Package: €1,200
+      - Harman Kardon: €800
+      - Panoramic roof: €1,100
+      - Destination: €890
+      - Estimated total: €51,340
+  
+  - name: Premium Configuration
+    description: "Fully equipped Techno"
+    total_price: 51340
+    details:
+      - As per popular configuration above
 
-company_car_tax:
-  list_price: 42900
-  tax_rate_percent: 0.25  # Under €70k threshold
-  monthly_taxable_benefit: 107.25  # €42,900 × 0.25%
-  annual_tax_cost_example:
-    income_bracket: "€60,000"
-    tax_rate: 35  # Approximate marginal rate
-    monthly_tax: 37.54  # €107.25 × 35%
-    annual_tax: 450.48
-  
-  comparison_to_ice:
-    ice_model: Renault Megane Conquest TCe 160
-    ice_list_price: 35500
-    ice_tax_rate_percent: 1.0
-    ice_monthly_benefit: 355  # €35,500 × 1%
-    ice_annual_tax_60k_bracket: 1491  # €355 × 12 × 35%
-    ev_savings_annual: 1040.52  # €1,491 - €450.48
-  
-  notes: "Excellent company car choice - 0.25% rate makes E-Tech €1,040 cheaper annually than combustion Megane despite €7,400 higher list price"
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+    notes: "Full 0.25% benefit applies to all configurations"
 
-total_cost_ownership:
-  period_years: 3
-  annual_mileage: 15000
-  
-  costs:
-    purchase_price: 42900
-    depreciation_3yr: 14388  # 33.5%
-    residual_value_3yr: 28512  # 66.5%
+# Company Car Taxation
+company_car_taxation:
+  gross_list_price: 43500
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 108.75
+  notes: |
+    For company car drivers with €60,000 gross salary:
+    - Monthly benefit: €108.75
+    - Tax (35% rate): €38.06/month (€457/year)
+    - Social security (20%): €21.75/month (€261/year)
+    - Total annual cost to employee: ~€718
     
-    fuel_costs_3yr: 2916  # €972/year × 3
-    maintenance_3yr: 750  # €250/year (minimal EV maintenance)
-    insurance_3yr: 3000  # €1,000/year
-    tax_3yr: 0  # No road tax in Germany
+    Compared to equivalent ICE compact SUV (€45,000 @ 1% = €450/month = €5,400/year tax cost),
+    BEV saves company car driver approximately €4,682 per year.
     
-    total_3yr: 21054
-    monthly_cost: 585
-  
-  ice_comparison:
-    model: "Renault Megane Conquest TCe 160 (1.3L turbo petrol, 160hp)"
-    purchase_price: 35500
-    depreciation_3yr: 13490  # 38%
-    residual_value_3yr: 22010
-    
-    fuel_costs_3yr: 7200  # €0.16/km × 15,000 × 3
-    maintenance_3yr: 2400  # €800/year
-    insurance_3yr: 2850  # €950/year
-    tax_3yr: 480  # €160/year
-    
-    total_3yr: 26420
-    monthly_cost: 734
-    
-    savings_vs_ev: 5366  # €26,420 - €21,054
-    savings_monthly: 149
-  
-  notes: "Megane E-Tech saves €5,366 over 3 years vs combustion equivalent despite €7,400 higher purchase price - fuel and maintenance savings more than offset premium"
+    Even fully loaded configurations stay well under €70,000 threshold, maintaining
+    0.25% taxation benefit. This makes EV60 Techno extremely attractive for company
+    car drivers seeking premium features without luxury brand pricing.
 
-market_analysis:
-  target_demographics:
-    - "Company car drivers (0.25% tax advantage)"
-    - "Families wanting practical compact crossover with EV benefits"
-    - "Tech enthusiasts appreciating Google built-in"
-    - "Environmental-conscious buyers supporting European EV manufacturing"
-    - "First-time EV buyers wanting proven technology"
-  
-  competitive_position:
-    strengths:
-      - "European Car of the Year 2023"
-      - "Excellent real-world range (400km)"
-      - "Heat pump standard improves winter performance"
-      - "Google built-in with OTA updates"
-      - "Class-leading 440L boot space"
-      - "130kW fast charging"
-      - "V2G capability"
-      - "Made in France (Douai ElectriCity)"
-    
-    weaknesses:
-      - "Single-phase 7.4kW AC charging (slower than VW ID.3's 11kW)"
-      - "Not as fast as Hyundai/Kia 800V architecture"
-      - "Renault brand perception vs premium German brands"
-      - "No frunk storage"
-  
-  competitors:
-    - model: Volkswagen ID.3 Pro
-      price: 43995
-      comparison: "€1,100 more, similar range (427km), 11kW AC charging, stronger brand"
-    - model: Cupra Born 58kWh
-      price: 41990
-      comparison: "€900 cheaper, sportier, 424km range, 11kW AC charging"
-    - model: Hyundai Ioniq 5
-      price: 48990
-      comparison: "€6,100 more, larger, 800V fast charging (350kW), 481km range"
-    - model: Peugeot e-2008 GT
-      price: 44990
-      comparison: "€2,100 more, smaller battery (50kWh), 343km range, higher seating position"
-  
-  sales_data:
-    annual_sales_germany_2024: 5800  # EV60 Techno variant only
-    market_share_c_segment_ev: 12  # Percent
-    notes: "Strong sales performance, most popular Megane E-Tech variant (~50% of sales)"
-
-recommendations:
-  best_for:
-    - "Company car drivers maximizing 0.25% tax benefit"
-    - "Families wanting practical EV with excellent range and space"
-    - "Buyers prioritizing European manufacturing"
-    - "Tech enthusiasts wanting Google built-in experience"
-  
-  configuration_advice: |
-    **Recommended Configuration (€45,850):**
-    - Base Techno: €42,900
-    - Comfort Pack: €1,200
-    - Tech Pack: €900
-    - Metallic Paint: €850
-    
-    This setup provides comprehensive features including Matrix LED headlights,
-    power driver seat, heated rear seats, and hands-free parking.
-    
-    **Add Sound Pack (€700) if:**
-    You appreciate premium audio - Harman Kardon system is excellent.
-    
-    **Skip 20" wheels:**
-    18" wheels provide better ride comfort and ~20km more range.
-    
-    **Why not Iconic?**
-    Iconic adds €4,000 for mainly aesthetic upgrades (Harman Kardon audio standard,
-    different interior trim, larger wheels). Techno with packs offers better value.
-
-availability:
-  in_stock: true
-  build_to_order: true
-  showroom_display: true
-  test_drive_available: true
-  notes: "Widely available at Renault dealers across Germany. Most dealers prioritize Techno stock due to high demand. Build-to-order typical 10-16 weeks."
-
-data_quality:
-  overall: verified
-  pricing: verified
-  options: verified
-  incentives: current
-  last_updated: 2026-02-09
-
-sources:
-  - name: Renault Germany Configurator
-    url: https://www.renault.de/konfigurieren/megane-e-tech.html
-    type: manufacturer
-    date_accessed: 2026-02-09
-  - name: Renault Germany Dealer Network
-    url: https://www.renault.de/haendlersuche.html
-    type: dealer
-    date_accessed: 2026-02-09
-  - name: ADAC Total Cost of Ownership Calculator
-    url: https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/renault/megane-e-tech/
-    type: tco_calculator
-    date_accessed: 2026-02-09
-
+# Market Notes
 notes: |
-  **Why Megane E-Tech Techno is a Smart Choice:**
+  Renault Megane E-Tech EV60 Techno 2025 is the sweet spot in the Megane lineup -
+  perfect balance of range (450km WLTP, 370km real-world), performance (218 HP),
+  and value pricing under €45,000.
   
-  The European Car of the Year 2023 offers compelling value:
-  - €42,900 base price positions it competitively in C-segment
-  - Heat pump standard (many competitors charge €750-1,000 extra)
-  - 360° camera standard (optional on many competitors)
-  - Real-world 400km range capability
-  - V2G ready for future smart energy systems
+  Techno trim adds significant equipment over base EV40:
+  - 60 kWh battery (450km WLTP vs 300km)
+  - More powerful motor (218 HP vs 130 HP, 7.4s 0-100 vs 10.5s)
+  - 22kW three-phase AC charging (vs 7.4kW single-phase)
+  - 130kW DC charging (vs 85kW)
+  - 18-inch alloy wheels (vs EV40)
+  - Rear privacy glass
+  - Wireless phone charging
+  - Enhanced ambient lighting
+  - Upgraded upholstery
   
-  **Popular Configuration Strategy:**
-  Most buyers choose Techno + Comfort Pack + Tech Pack (€45,850)
-  This provides near-Iconic features for €2,050 less than Iconic base.
+  Available through Renault dealership network across Germany. Order online via renault.de
+  or at any Renault dealer. Delivery time currently 10 weeks due to high demand.
   
-  **Company Car Excellence:**
-  At 0.25% taxation, saves €1,040/year vs combustion Megane.
-  Over 3-year company car cycle, that's €3,121 in tax savings alone.
+  2025 model year brings refined software, improved Google Assistant integration,
+  and enhanced charging curve optimization.
   
-  **Sales Reality:**
-  Techno accounts for ~50% of Megane E-Tech sales in Germany.
-  EV60 outsells EV40 4:1 (buyers prioritize range).
+  Key competitors in Germany:
+  - Volkswagen ID.3 Pro Performance (€44,995) - similar price, less premium
+  - Volkswagen ID.4 Pro (€48,000) - larger, more expensive
+  - Cupra Born (€43,000) - sportier, same MEB platform as ID.3
+  - BMW i4 eDrive35 (€54,000) - more expensive, luxury brand
+  - MG4 Electric Extended Range (€37,000) - cheaper, Chinese brand
   
-  **Google Built-in Advantage:**
-  Native Google Maps with live traffic and charging station info
-  Google Assistant voice control
-  Google Play Store for apps
-  Over-the-air software updates
+  Megane EV60 Techno offers European Car of the Year quality, cutting-edge Google
+  built-in tech, and excellent real-world range at highly competitive pricing.
   
-  **Made in Europe:**
-  Built at Renault ElectriCity hub in Douai, France
-  Supports European EV manufacturing and jobs
-  Shorter supply chain reduces environmental impact
+  Popular choice for:
+  - Company car drivers (0.25% taxation = huge savings)
+  - Families needing versatile all-rounder
+  - Long commuters (370km real-world range)
+  - Tech enthusiasts (Google built-in is best-in-class)
+  - Private buyers seeking premium without luxury pricing
+  
+  Real-world range scenarios:
+  - Urban driving: 420-450km
+  - Mixed driving: 350-380km
+  - Highway 120 km/h: 320-350km
+  - Winter (0-10°C): 280-320km
+  
+  Charging performance:
+  - DC 10-80%: 32 minutes (130kW peak)
+  - AC 0-100%: 3 hours (22kW)
+  - Home wallbox overnight: convenient for daily use
+  
+  22kW AC charging is huge advantage over many competitors (VW ID.3/ID.4 only 11kW).
+  Means full charge in 3 hours from public AC chargers or home three-phase wallbox.
+  
+  130kW DC charging provides comfortable long-distance capability with quick stops.
+  
+  Most popular Megane variant in Germany - excellent value proposition combining
+  range, performance, tech, and company car benefits.
+
+# Data quality metadata
+metadata:
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  data_quality: verified
+  
+  sources:
+    - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+    - https://www.renault.de/konfigurator/megane-e-tech-electric
+    - https://www.carwow.de/renault/megane-e-tech
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-ev60/
+    - https://www.auto-motor-und-sport.de/test/renault-megane-e-tech-ev60-test/
+  
+  verified_by: official
+  
+  notes: |
+    Pricing verified from Renault Germany configurator for 2025 model year. The EV60 Techno
+    is positioned as the volume seller - ideal balance of features and pricing.
+    
+    Delivery times of 10 weeks reflect strong demand. Techno is most popular trim level,
+    especially among company car drivers who appreciate the 0.25% taxation combined with
+    comprehensive equipment.
+    
+    Extended Safety Package (€1,200) is highly recommended - adds 360° camera and hands-free
+    parking, transforming the driving experience in tight urban spaces.
+    
+    Harman Kardon sound system (€800) provides exceptional audio quality and is popular
+    upgrade among audio enthusiasts.
+    
+    20-inch wheels look stunning but reduce range by ~15km. Most buyers stick with
+    18-inch wheels for optimal efficiency while maintaining attractive appearance.
