@@ -1,0 +1,331 @@
+# Porsche Taycan RWD (2026) - Germany Market Availability
+
+id: porsche-taycan-rwd-2026-de
+variant_id: porsche-taycan-rwd-2026
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-11-01"
+delivery_time_weeks: 14
+
+# Pricing
+pricing:
+  base_price: 103500
+  price_including_vat: 103500
+  vat_rate_percent: 19
+  destination_charge: 1190
+  pricing_notes: |
+    Base price includes 19% VAT. On-the-road price approximately €104,690 
+    including registration and delivery. Model year 2026 Taycan with improved 
+    efficiency launched November 2025.
+
+# Available Colors
+available_colors:
+  - name: Carrara White Metallic
+    code: 0Q
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Jet Black Metallic
+    code: C9X
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Gentian Blue Metallic
+    type: metallic
+    price_add:
+      amount: 1390
+      currency: EUR
+  - name: Frozen Blue Metallic
+    type: metallic
+    price_add:
+      amount: 1390
+      currency: EUR
+  - name: Ice Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1390
+      currency: EUR
+  - name: Volcano Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1390
+      currency: EUR
+  - name: Cherry Metallic
+    type: metallic
+    price_add:
+      amount: 1390
+      currency: EUR
+  - name: Paint to Sample
+    type: custom
+    price_add:
+      amount: 6800
+      currency: EUR
+    notes: Choose from extended Porsche color palette
+  - name: Paint to Sample Plus
+    type: custom
+    price_add:
+      amount: 11900
+      currency: EUR
+    notes: Any custom color from full Porsche spectrum
+
+# Wheel Options
+available_wheels:
+  - name: 19-inch Taycan Aero wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: Best efficiency and range
+  - name: 20-inch Taycan Design wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1840
+      currency: EUR
+    notes: Sportier look, range reduced approximately 20km
+  - name: 20-inch Taycan Turbo wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1840
+      currency: EUR
+    notes: Sportier look, range reduced approximately 20km
+  - name: 21-inch Mission E Design wheels
+    size_inches: 21
+    type: alloy
+    price_add:
+      amount: 3670
+      currency: EUR
+    notes: Most aggressive look, range reduced approximately 30km
+
+# Interior Options
+available_interiors:
+  - name: Partial Leather interior (Standard)
+    material: leather_race_tex
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Race-Tex interior
+    material: race_tex
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: Sustainable microfiber alternative
+  - name: Full Leather interior
+    material: leather
+    price_add:
+      amount: 2920
+      currency: EUR
+    notes: Multiple color options available
+
+# Incentives
+available_incentives:
+  - type: company_car
+    name: "0.5% company car tax (BEV over €70k)"
+    description: "Reduced taxation for electric company cars"
+    conditions: ["BEVs over €70,000 gross list price get 0.5% rate"]
+    notes: "Still better than 1% ICE rate, but not as favorable as under-€70k EVs (0.25%)"
+
+# Company Car Tax Calculation (Germany-specific)
+company_car_tax:
+  gross_list_price: 103500
+  tax_rate_percent: 0.5
+  calculation_method: "0.5% of gross list price per month"
+  monthly_benefit: 518  # 103500 * 0.005
+  notes: |
+    The Taycan RWD exceeds €70,000 threshold, so 0.5% rate applies instead of 
+    0.25% rate for EVs under €70k. Still significantly better than 1% rate for 
+    combustion vehicles. Annual taxable benefit: €6,216 (vs €12,420 for ICE).
+
+# Popular Options/Packages
+popular_packages:
+  - name: 22kW Onboard Charger
+    price:
+      amount: 1530
+      currency: EUR
+    features:
+      - Faster AC charging (0-100% in 4.5h vs 8.5h)
+  - name: InnoDrive with Adaptive Cruise Control
+    price:
+      amount: 4120
+      currency: EUR
+    features:
+      - Adaptive cruise control
+      - Predictive efficiency assistant
+      - Lane Keep Assist integration
+  - name: Lane Change Assist + Lane Keeping Assist
+    price:
+      amount: 1190
+      currency: EUR
+    features:
+      - Active lane change assistance
+      - Lane keeping with steering intervention
+  - name: Surround View with Remote Parking
+    price:
+      amount: 1780
+      currency: EUR
+    features:
+      - 360-degree camera system
+      - Remote-controlled parking assist
+  - name: Sport Chrono Package
+    price:
+      amount: 1090
+      currency: EUR
+    features:
+      - Performance display with lap timer
+      - Sport Plus driving mode
+      - Mode switch on steering wheel
+  - name: Bose Surround Sound System
+    price:
+      amount: 1240
+      currency: EUR
+    features:
+      - 14 speakers
+      - 710 watts total power
+  - name: Burmester 3D High-End Surround Sound
+    price:
+      amount: 6110
+      currency: EUR
+    features:
+      - 21 speakers
+      - 1,455 watts total power
+      - 3D sound experience
+  - name: Porsche Ceramic Composite Brake (PCCB)
+    price:
+      amount: 9180
+      currency: EUR
+    features:
+      - 420mm front, 410mm rear carbon ceramic rotors
+      - Extreme performance and minimal fade
+      - Longer lifespan than steel brakes
+  - name: Passenger Display
+    price:
+      amount: 1330
+      currency: EUR
+    features:
+      - 10.9-inch touchscreen for passenger
+  - name: Heat-Insulating Glass (tinted)
+    price:
+      amount: 1360
+      currency: EUR
+    features:
+      - Improved thermal insulation
+      - Privacy tinting
+
+# Typical Configuration Example
+typical_configuration:
+  description: Well-equipped Taycan RWD with practical options
+  base_price: 103500
+  options:
+    - name: 22kW Onboard Charger
+      price: 1530
+    - name: InnoDrive with Adaptive Cruise
+      price: 4120
+    - name: Lane Change Assist
+      price: 1190
+    - name: Sport Chrono Package
+      price: 1090
+    - name: Heat-Insulating Glass
+      price: 1360
+  total_options_price: 9290
+  total_price: 112790
+  notes: Most buyers add €8,000-12,000 in options
+
+# Financing Example
+financing_example:
+  provider: Porsche Financial Services
+  vehicle_price: 103500
+  down_payment_percent: 20
+  down_payment: 20700
+  loan_amount: 82800
+  term_months: 48
+  interest_rate_apr: 4.9
+  monthly_payment: 1904
+  total_cost: 112092
+
+# Leasing Example
+leasing_example:
+  provider: Porsche Financial Services
+  vehicle_price: 103500
+  down_payment: 15525
+  term_months: 36
+  annual_km: 10000
+  monthly_payment: 869
+  total_payments: 46797
+  residual_value_percent: 55
+  notes: |
+    Full comprehensive insurance (Vollkasko) required. Popular for company 
+    car tax optimization.
+
+# Market Competition
+competitors:
+  - model: Tesla Model S Long Range
+    starting_price: 92990
+    notes: More range, less sporty, better efficiency
+  - model: BMW i5 eDrive40
+    starting_price: 72000
+    notes: More practical, less performance, lower price
+  - model: Mercedes-Benz EQE 350+
+    starting_price: 77000
+    notes: Luxury focus, less sporty, good efficiency
+  - model: Audi e-tron GT
+    starting_price: 110000
+    notes: Shared platform with Taycan, similar performance
+
+# Ownership Costs (Annual Estimate)
+annual_ownership_estimate:
+  annual_km: 10000
+  electricity_kwh_per_100km: 21.0
+  electricity_cost_per_kwh: 0.40
+  electricity_cost_annual: 840
+  insurance_annual: 1800
+  road_tax_annual: 0
+  maintenance_annual: 400
+  total_annual: 3040
+  notes: |
+    Total annual cost approximately €3,040 for 10,000 km/year. Home charging 
+    at €0.30/kWh reduces electricity cost to €630/year. EVs exempt from 
+    Kfz-Steuer (road tax) until 2030.
+
+# Charging Infrastructure Notes
+charging_notes: |
+  Germany has excellent charging infrastructure with 100,000+ public charging 
+  points (2026). Taycan's 270kW charging capability fully utilizes Ionity and 
+  Porsche 350kW chargers (10-80% in 22 minutes). Porsche Charging Service 
+  provides access to 500,000+ chargers across Europe with single account.
+
+# Market Position Notes
+market_position_notes: |
+  Entry-level Porsche Taycan with 2026 improvements: better efficiency 
+  (17.6 kWh/100km WLTP), improved range (up to 566km), and 800V ultra-fast 
+  charging. Competes in luxury performance EV segment. Target: Porsche 
+  enthusiasts seeking electric sports sedan with engaging driving dynamics.
+
+# Dealer Network
+dealer_network_notes: |
+  86 authorized Porsche Centers throughout Germany (2026). All locations 
+  offer Taycan sales, service, and DC fast charging. Premium customer 
+  experience with extended warranty and maintenance packages available.
+
+# Notes
+notes: |
+  Model year 2026 Porsche Taycan RWD with improved efficiency and range.
+  Federal EV incentives (Umweltbonus) ended December 2023 - no government 
+  subsidies available. Company car tax benefits remain attractive (0.5% rate 
+  for BEVs over €70k vs 1% for ICE vehicles). Typical delivery time 12-16 weeks.
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan/
+  created_at: "2026-02-09"
+  last_verified_at: "2026-02-09"
+  notes: Official Porsche Germany pricing and specifications for 2026 model year
