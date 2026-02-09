@@ -1,0 +1,173 @@
+# Audi Q4 40 e-tron (2026 Model Year)
+# Base RWD variant with improved battery and charging
+
+id: audi-q4-e-tron-40-2026
+name: Q4 40 e-tron
+model_id: audi-q4-e-tron
+model_year: 2026
+production_years:
+  start: 2026
+  end: null
+trim_level: base
+market_position: entry-level
+
+description: |
+  The Q4 40 e-tron 2026 is Audi's base rear-wheel drive compact electric SUV,
+  featuring an upgraded 85kWh battery pack and improved charging performance.
+  
+  2026 model year updates include:
+  - Larger 85kWh battery (up from 82kWh) with 80kWh usable
+  - Improved DC charging to 150kW peak (400V architecture)
+  - Updated MMI infotainment with enhanced AI features
+  - New exterior styling with revised LED lighting
+  - Improved heat pump efficiency for winter range
+  - Enhanced matrix LED headlights (optional)
+  
+  The RWD configuration provides excellent efficiency and range while maintaining
+  good performance. Ideal for buyers who don't need AWD and want maximum range.
+
+production_status: active
+
+# Battery Specifications
+battery:
+  usable_kwh: 80.0
+  total_kwh: 85.0
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400  # 400V architecture
+  cell_type: prismatic
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, MEB platform"
+    weight_kg: 525
+    modules: 12
+    cells: 288
+
+# Range
+range:
+  wltp_km: 590
+  wltp_source: manufacturer
+  
+  real_world_km: 505
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 7.3
+      "20_80": 4.8
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 150
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 36
+      "0_100": 56
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 130
+      - soc_percent: 10
+        power_kw: 150
+      - soc_percent: 20
+        power_kw: 150
+      - soc_percent: 30
+        power_kw: 145
+      - soc_percent: 40
+        power_kw: 125
+      - soc_percent: 50
+        power_kw: 105
+      - soc_percent: 60
+        power_kw: 85
+      - soc_percent: 70
+        power_kw: 68
+      - soc_percent: 80
+        power_kw: 48
+      - soc_percent: 90
+        power_kw: 28
+      - soc_percent: 100
+        power_kw: 15
+
+# Bidirectional Charging
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+# Motors & Drivetrain
+motors:
+  configuration: single-motor
+  drive_type: RWD
+  
+  rear:
+    type: permanent-magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
+  
+  combined:
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.0
+  top_speed_kmh: 160
+  
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_100km: 13.6
+  consumption_real_world_kwh_100km: 15.8
+  energy_label: A
+
+# Weight & Dimensions
+dimensions:
+  length_mm: 4588
+  width_mm: 1865
+  height_mm: 1632
+  wheelbase_mm: 2764
+  curb_weight_kg: 2020
+  cargo_volume_l: 520
+  cargo_volume_seats_down_l: 1490
+
+# Data quality metadata
+metadata:
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  data_quality: verified
+  
+  sources:
+    - https://www.audi.com/en/models/q4-e-tron/q4-40-e-tron.html
+    - https://ev-database.org/car/2026/Audi-Q4-40-e-tron
+    - https://www.audi-mediacenter.com/en/press-releases/2026-model-year-updates
+  
+  verified_by: manufacturer
+  
+  notes: |
+    2026 model year brings improved battery capacity (85kWh total, 80kWh usable) and 
+    enhanced DC charging performance up to 150kW. The Q4 40 e-tron remains the most
+    efficient variant with excellent range and lowest cost.
+    
+    Rear motor upgraded to more powerful unit (210kW vs 150kW in 2024) with improved
+    torque (545Nm vs 310Nm) for better acceleration (7.0s vs 8.5s 0-100km/h).
+    
+    Heat pump now standard across all Q4 variants for better winter efficiency.
+    Updated MMI system with AI-powered voice assistant and improved route planning.
+    
+    Most popular Q4 variant in Germany and other European markets, particularly among
+    company car drivers seeking maximum range and efficiency without AWD premium.
+    
+    With 590km WLTP range (505km real-world), the Q4 40 2026 offers class-leading
+    efficiency in the compact premium SUV segment.
