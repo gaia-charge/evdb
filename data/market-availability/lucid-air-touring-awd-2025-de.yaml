@@ -1,0 +1,214 @@
+id: lucid-air-touring-awd-2025-de
+variant_id: lucid-air-touring-awd-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2023-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 126900
+  price_including_vat: 126900
+  vat_rate_percent: 19
+  on_road_price: 128850  # Including delivery and registration
+  destination_charge: 1750
+  registration_fee: 200
+
+# Trim levels and configurations available in Germany
+trim_levels:
+  - name: Touring AWD
+    price: 126900
+    description: Mid-range Lucid Air with 730km WLTP range, 696hp AWD, Dream Drive Pro, and premium luxury equipment
+    standard_features:
+      - 34" curved 5K Glass Cockpit display
+      - Glass Canopy roof with electrochromic dimming
+      - Premium Nappa leather seats with heating and ventilation (front and rear)
+      - Massaging front and rear seats (12-way power driver, 8-way passenger)
+      - Surreal Sound Pro 21-speaker audio (406W, Dolby Atmos) - STANDARD
+      - Dream Drive Pro ADAS (lidar, highway assist, auto lane change) - STANDARD
+      - Quad-zone automatic climate control
+      - 350kW ultra-fast DC charging capability
+      - 22kW AC charging onboard
+      - V2L and V2H hardware capability
+      - Large frunk (283L) plus rear trunk (456L)
+      - 20" Aero Blade wheels standard
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 128850
+    description: Touring AWD with delivery and registration, no options
+    included:
+      - All standard Touring trim features
+      - Delivery charge (€1,750)
+      - Registration fee (€200)
+    
+  - name: Premium
+    total_price: 135350
+    description: Popular configuration with metallic paint and stealth package
+    included:
+      - Base Touring AWD (€126,900)
+      - Metallic/Pearl Paint (€1,500)
+      - Stealth Look Package (€3,000 - black accents, dark wheels)
+      - 21" Aero Sport Wheels (€3,000 - upgraded from standard 20")
+      - Delivery and registration (€1,950)
+
+# Incentives and subsidies
+incentives:
+  - name: No Federal EV Incentive
+    type: subsidy
+    amount: 0
+    description: German federal EV incentive (Umweltbonus) ended December 2023
+    notes: >
+      Lucid Air Touring at €126,900 significantly exceeds €70,000 threshold for 
+      advantageous 0.25% company car tax rate. Standard 1% rate applies. Monthly 
+      taxable benefit €1,269 vs €317 if under €70k. German federal EV incentive 
+      (Umweltbonus) ended December 2023.
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_1_percent
+  monthly_taxable_benefit_eur: 1269  # €126,900 × 1%
+  annual_taxable_benefit_eur: 15228  # €1,269 × 12
+  comparable_ice_benefit_eur: 15228  # Same 1% rate as combustion
+  annual_tax_savings_eur: 0  # No savings vs combustion in same price range
+  notes: >
+    The Lucid Air Touring at €126,900 DOES NOT qualify for the advantageous 0.25% 
+    company car tax rate (vehicles under €70,000 threshold). Standard 1% rate 
+    applies, identical to ultra-luxury combustion vehicles. Primarily suitable 
+    for private buyers, not company car drivers.
+
+# Total Cost of Ownership (3-year calculation)
+tco_analysis:
+  period_months: 36
+  annual_mileage_km: 25000  # Higher mileage for long-range luxury sedan
+  total_mileage_km: 75000
+  
+  purchase_cost: 128850
+  
+  energy_costs:
+    home_charging_kwh: 0.35  # €/kWh average Germany
+    public_charging_kwh: 0.55  # €/kWh average
+    home_charging_percent: 70
+    public_charging_percent: 30
+    total_energy_cost_3yr: 5670  # 75,000km ÷ 7.41km/kWh × (0.7×€0.35 + 0.3×€0.55)
+  
+  maintenance_costs:
+    annual_service_cost: 500  # Slightly higher for Touring trim
+    total_maintenance_3yr: 1500
+  
+  insurance_annual: 1600  # Higher insurance for ultra-luxury vehicle
+  insurance_3yr: 4800
+  
+  depreciation:
+    residual_value_percent: 50  # 50% after 3 years
+    residual_value_eur: 63450
+    depreciation_3yr: 65400
+  
+  total_cost_3yr: 77370
+  cost_per_km: 1.03
+  
+  comparable_ice_costs:
+    vehicle: BMW 750i xDrive
+    purchase_price: 145000
+    fuel_cost_3yr: 16200  # 75,000km @ 9.0L/100km × €2.40/L
+    maintenance_3yr: 4500
+    insurance_3yr: 5400
+    depreciation_3yr: 72500  # 50% residual
+    total_cost_3yr: 98600
+    cost_per_km: 1.31
+  
+  savings_vs_ice: 21230
+
+# Financing options
+financing:
+  typical_apr_percent: 4.49
+  typical_term_months: 48
+  typical_down_payment_percent: 20
+  typical_monthly_payment_eur: 2349  # €126,900 @ 4.49% APR, 48mo, 20% down
+
+# Leasing options
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 25000
+  typical_down_payment_eur: 12000
+  typical_monthly_payment_eur: 1549  # Private lease
+  business_monthly_payment_eur: 1399  # Business lease
+
+# Charging (same as Pure)
+charging:
+  home:
+    wallbox_installation_cost_eur: 2000
+    electricity_rate_kwh: 0.35
+    cost_per_100km: 4.73  # 13.5 kWh/100km real-world × €0.35
+  
+  public:
+    - network: Ionity
+      monthly_fee: 11.99
+      dc_rate_kwh: 0.35
+      max_power_kw: 350
+      locations: 70+
+      notes: Best network for Lucid's ultra-fast charging, 300kW capable
+
+# Delivery timeline
+delivery:
+  order_to_delivery_weeks: 16
+  current_wait_time_description: >
+    Lucid Air Touring typically available within 16-20 weeks from order (imported 
+    from Arizona factory). Limited stock units may be available for faster delivery.
+
+# Warranty (same as Pure)
+warranty:
+  vehicle_years: 4
+  vehicle_km: 80000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 4
+
+# Market positioning
+competitors:
+  - vehicle: Mercedes-Benz EQS 580 4MATIC
+    price: 150300
+    range_wltp_km: 677
+    power_kw: 385
+    comparison: >
+      Mercedes EQS 580 costs €23,400 more with similar range but less power 
+      and slower charging. Lucid Touring offers better performance and value.
+
+# Strengths (enhanced over Pure)
+strengths:
+  - Exceptional 730km WLTP range (650km real-world) from 92 kWh battery
+  - Powerful 518kW/696hp dual-motor AWD (3.4s 0-100 km/h)
+  - Dream Drive Pro ADAS standard (€4,500 value vs optional on Pure)
+  - Surreal Sound Pro 21-speaker audio standard (€5,000 value vs optional on Pure)
+  - Premium Nappa leather with massaging seats standard
+  - Enhanced luxury equipment versus Pure trim
+  - Still exceptional efficiency 12.5 kWh/100km despite larger battery
+  - Compelling value versus Mercedes EQS 580 and BMW i7 xDrive60
+
+# Best for
+best_for:
+  - Private buyers seeking ultimate EV range and luxury without six-figure pricing
+  - Tech enthusiasts wanting Dream Drive Pro and premium audio standard
+  - Frequent long-distance travelers requiring 730km range
+  - Buyers valuing comprehensive luxury equipment and AWD performance
+  - Those seeking best balance of range, performance, and luxury in Lucid lineup
+
+notes: >
+  The Lucid Air Touring AWD at €126,900 represents the sweet spot in Lucid's 
+  lineup, offering 730km WLTP range, 518kW/696hp AWD performance, and comprehensive 
+  luxury equipment including Dream Drive Pro ADAS and Surreal Sound Pro audio 
+  (both standard, totaling €9,500 in options on Pure trim).
+  
+  Compared to Pure RWD (€89,900), the Touring adds €37,000 for: larger 92kWh 
+  battery (+70km range), dual-motor AWD (+266hp), Dream Drive Pro standard, 
+  Surreal Sound Pro standard, premium Nappa leather with massaging seats, and 
+  20" wheels. This represents excellent value for buyers seeking maximum luxury.
+  
+  NOT suitable for company car drivers due to 1% tax rate (over €70k threshold). 
+  Best for private buyers wanting the ultimate electric luxury sedan experience 
+  at competitive pricing versus Mercedes EQS 580 (€150,300) and BMW i7 xDrive60 
+  (€155,000+).
