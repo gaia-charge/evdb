@@ -1,0 +1,160 @@
+# Vehicle Variant: Volvo EX30 Single Motor (2025)
+id: volvo-ex30-single-motor-2025
+model_id: volvo-ex30
+name: Single Motor
+variant_name: Single Motor
+model_year: 2025
+trim_level: Core
+production_years: "2025-present"
+
+overview: >
+  The 2025 Volvo EX30 Single Motor is the entry-level variant with a smaller 51kWh LFP battery,
+  offering up to 344km WLTP range at a lower price point. Using lithium iron phosphate (LFP) chemistry
+  instead of NMC, this variant trades some range for better long-term battery durability and lower cost.
+  The same 200kW rear motor delivers identical performance to the Extended Range variant (5.3s 0-100),
+  making it an excellent value proposition for urban and suburban commuters who don't need maximum range.
+  Now also built in Ghent, Belgium for the European market.
+
+# Battery Specifications
+battery:
+  chemistry: LFP
+  supplier: CATL
+  total_kwh: 51.0
+  usable_kwh: 49.0
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "51kWh LFP battery from CATL, excellent longevity characteristics"
+
+# Range (km)
+range:
+  wltp_km: 344
+  wltp_city_km: 460
+  wltp_highway_km: 280
+  epa_miles: null
+  real_world_km: 300
+  real_world_notes: "Real-world range varies: ~300km mixed, ~440km city, ~250km highway"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 300
+        power_kw: 11.0
+  dc:
+    max_power_kw: 134
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 130
+      - soc_percent: 10
+        power_kw: 134
+      - soc_percent: 20
+        power_kw: 130
+      - soc_percent: 30
+        power_kw: 125
+      - soc_percent: 40
+        power_kw: 115
+      - soc_percent: 50
+        power_kw: 100
+      - soc_percent: 60
+        power_kw: 80
+      - soc_percent: 70
+        power_kw: 60
+      - soc_percent: 80
+        power_kw: 40
+      - soc_percent: 90
+        power_kw: 25
+      - soc_percent: 100
+        power_kw: 10
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 26
+        power_kw: 134
+        notes: "10-80% in approximately 26 minutes"
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+# Motors & Performance
+motors:
+  configuration: single
+  drive_type: RWD
+  total_power_kw: 200
+  total_power_hp: 272
+  total_torque_nm: 343
+  motor_type: permanent_magnet
+  motors:
+    - position: rear
+      power_kw: 200
+      power_hp: 272
+      torque_nm: 343
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 5.3
+  top_speed_kmh: 180
+  notes: "Same motor and performance as Extended Range variant"
+
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_per_100km: 15.0
+  consumption_real_world_kwh_per_100km: 17.0
+  efficiency_rating_eu: A
+  notes: "15.0 kWh/100km WLTP, slightly higher than Extended Range due to heavier LFP cells"
+
+# Weight
+weight:
+  curb_weight_kg: 1790
+  gross_vehicle_weight_kg: 2150
+
+# Dimensions
+dimensions:
+  length_mm: 4233
+  width_mm: 1837
+  height_mm: 1550
+  wheelbase_mm: 2650
+  cargo_volume_liters: 318
+  frunk_liters: 7
+  towing_capacity_kg: 1000
+
+# Features
+features:
+  standard:
+    - "12.3-inch portrait touchscreen"
+    - "Google built-in (Maps, Assistant, Play Store)"
+    - "Pilot Assist (semi-autonomous driving)"
+    - "City Safety with collision avoidance"
+    - "Heat pump climate control"
+    - "LED headlights"
+    - "Wireless phone charging"
+    - "Keyless entry and start"
+  optional:
+    - "Plus Pack"
+    - "Ultra Pack"
+    - "Tow hitch (€900)"
+
+# Version Information
+version:
+  release_date: "2025-01"
+  changes_from_previous: "2025 MY: European production in Ghent, Belgium. Software refinements."
+  notes: "Entry-level EX30 with LFP battery for maximum value"
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.volvocars.com/intl/v/cars/ex30/specifications
+    - https://ev-database.org/car/1827/Volvo-EX30-Single-Motor
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  notes: "2025 base variant with LFP battery"
