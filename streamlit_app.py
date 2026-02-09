@@ -29,58 +29,51 @@ DB_DIR = Path(tempfile.gettempdir()) / "evdb"
 DB_PATH = DB_DIR / "evdb.db"
 
 
-def get_latest_release_tag():
+def _get_latest_release_tag():
     """Check the latest release tag from GitHub API"""
     try:
-        resp = requests.get(RELEASE_API_URL, timeout=5)
+        resp = requests.get(RELEASE_API_URL, timeout=10,
+                            headers={"Accept": "application/vnd.github.v3+json"})
         if resp.ok:
-            return resp.json().get("tag_name", "unknown")
+            return resp.json().get("tag_name")
     except Exception:
         pass
     return None
 
 
-def ensure_database():
-    """Download database from latest GitHub release if needed.
-    Called on every page load to ensure freshness."""
+def _download_database():
+    """Download the database from the latest GitHub release."""
+    DB_DIR.mkdir(parents=True, exist_ok=True)
+    resp = requests.get(RELEASE_DB_URL, timeout=60, stream=True,
+                        allow_redirects=True)
+    resp.raise_for_status()
+    tmp = DB_PATH.with_suffix(".tmp")
+    with open(tmp, "wb") as f:
+        for chunk in resp.iter_content(chunk_size=65536):
+            f.write(chunk)
+    tmp.rename(DB_PATH)
+
+
+@st.cache_resource(ttl=300)
+def get_connection(_release_tag):
+    """Create database connection, keyed by release tag for auto-refresh.
+    When the tag changes, Streamlit creates a new connection to the new DB."""
     DB_DIR.mkdir(parents=True, exist_ok=True)
     tag_file = DB_DIR / ".release_tag"
-
-    latest_tag = get_latest_release_tag()
     current_tag = tag_file.read_text().strip() if tag_file.exists() else None
 
-    if DB_PATH.exists() and (latest_tag is None or latest_tag == current_tag):
-        return current_tag  # Database is up to date (or we can't check)
+    need_download = not DB_PATH.exists() or (_release_tag and _release_tag != current_tag)
 
-    # Download new database
-    try:
-        with st.spinner("Downloading latest database..."):
-            resp = requests.get(RELEASE_DB_URL, timeout=30, stream=True)
-            resp.raise_for_status()
-            tmp = DB_PATH.with_suffix(".tmp")
-            with open(tmp, "wb") as f:
-                for chunk in resp.iter_content(chunk_size=65536):
-                    f.write(chunk)
-            tmp.rename(DB_PATH)
-            if latest_tag:
-                tag_file.write_text(latest_tag)
-            # Clear cached connection so it reconnects to new DB
-            get_connection.clear()
-            return latest_tag
-    except Exception as e:
-        if not DB_PATH.exists():
-            st.error(f"Failed to download database: {e}")
-            st.stop()
-        return current_tag
+    if need_download:
+        try:
+            _download_database()
+            if _release_tag:
+                tag_file.write_text(_release_tag)
+        except Exception as e:
+            if not DB_PATH.exists():
+                st.error(f"⚠️ Failed to download database: {e}")
+                st.stop()
 
-
-# Check for updates on every page load
-ensure_database()
-
-
-@st.cache_resource
-def get_connection():
-    """Create cached database connection"""
     return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
 
@@ -250,8 +243,9 @@ def search_vehicles(_conn, query):
         LIMIT 20
     """, _conn, params=(search_query, search_query, search_query))
 
-# Initialize connection
-conn = get_connection()
+# Initialize connection (check for latest release on every page load)
+_current_release = _get_latest_release_tag()
+conn = get_connection(_current_release)
 
 # Sidebar navigation
 st.sidebar.title("⚡ EVDB")
@@ -1203,7 +1197,7 @@ elif page == "📊 Analytics":
         """
         return pd.read_sql_query(query, _conn)
     
-    conn = get_connection()
+    conn = get_connection(_current_release)
     df = get_analytics_data(conn)
     
     # Create full vehicle name
@@ -1678,7 +1672,7 @@ ORDER BY type, name;"""
         else:
             try:
                 # Execute query
-                conn = get_connection()
+                conn = get_connection(_current_release)
                 start_time = datetime.now()
                 df = pd.read_sql_query(query, conn)
                 end_time = datetime.now()
@@ -1752,7 +1746,7 @@ ORDER BY type, name;"""
     st.markdown("#### 📖 Database Schema Reference")
     
     with st.expander("📊 Available Tables & Columns"):
-        conn = get_connection()
+        conn = get_connection(_current_release)
         
         # Get all tables
         tables = pd.read_sql_query("""
