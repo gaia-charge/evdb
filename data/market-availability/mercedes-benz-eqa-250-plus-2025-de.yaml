@@ -1,0 +1,184 @@
+id: mercedes-benz-eqa-250-plus-2025-de
+variant_id: mercedes-benz-eqa-250-plus-2025
+market: DE
+currency: EUR
+
+# Pricing (2025 model year Germany)
+pricing:
+  base_price: 49990
+  destination_charge: 1095
+  on_road_price: 51085
+
+  trims:
+    - name: "Progressive"
+      price: 49990
+      description: "Base trim, well-equipped (replaces Electric Art)"
+    - name: "AMG Line"
+      price: 53560
+      description: "Sport styling, 19-inch wheels, sport seats"
+
+# Options and packages
+options:
+  packages:
+    - name: "AMG Line Package"
+      price: 3570
+      description: |
+        - 19-inch AMG multi-spoke alloy wheels
+        - AMG body styling
+        - Sport seats with integrated headrests
+        - Sport pedals
+        - Black roof lining
+
+    - name: "Night Package"
+      price: 1190
+      description: |
+        Black exterior accents (mirror caps, roof rails, badges).
+        Requires AMG Line.
+
+    - name: "Premium Plus Package"
+      price: 5490
+      description: |
+        - Burmester 3D Surround Sound (12 speakers, 590W)
+        - 360° camera system
+        - Head-Up Display
+        - Electrically adjustable front seats with memory
+        - MBUX Augmented Reality navigation
+
+    - name: "MBUX Superscreen"
+      price: 1990
+      description: |
+        - Dual 12.3-inch displays (instrument cluster + touchscreen)
+        - Enhanced graphics and responsiveness
+
+  individual_options:
+    - name: "Panoramic sliding sunroof"
+      price: 1190
+    - name: "Tow hitch (electrically retractable)"
+      price: 1195
+    - name: "Acoustic comfort package"
+      price: 890
+
+  wheel_options:
+    - size: "18-inch"
+      design: "5-spoke alloy wheels"
+      price: 0
+      range_impact_km: 0
+    - size: "19-inch"
+      design: "AMG multi-spoke alloy wheels"
+      price: 0
+      range_impact_km: -15
+    - size: "20-inch"
+      design: "AMG multi-spoke (black)"
+      price: 950
+      range_impact_km: -25
+
+  paint_options:
+    - name: "Polar White (non-metallic)"
+      price: 0
+    - name: "Cosmos Black metallic"
+      price: 990
+    - name: "Mountain Grey metallic"
+      price: 990
+    - name: "Digital White metallic"
+      price: 990
+    - name: "Denim Blue metallic"
+      price: 990
+    - name: "Patagonia Red metallic"
+      price: 990
+    - name: "Sage Grey metallic"
+      price: 990
+    - name: "Spectral Blue metallic"
+      price: 990
+    - name: "designo Mountain Grey Magno (matte)"
+      price: 2380
+    - name: "designo Patagonia Red Bright"
+      price: 2380
+
+  interior_options:
+    - name: "Black ARTICO / MICROCUT"
+      price: 0
+    - name: "Black nappa leather"
+      price: 1790
+    - name: "Sahara Beige / Black nappa leather"
+      price: 1790
+    - name: "Macchiato Beige / Black ARTICO"
+      price: 490
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3600
+    notes: "0.25% of gross list price per month vs 1% for ICE. €49,990 × 0.25% = €125/month."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030."
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 250
+    notes: "Annual CO2 certificate income for EV owners."
+
+# Availability
+availability:
+  status: available
+  waiting_time_weeks: 12
+  online_configurator: yes
+  online_purchase: yes
+
+  dealer_network:
+    total_dealers: 650
+    test_drive_availability: yes
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+  service_intervals:
+    inspection_km: 25000
+    inspection_years: 2
+
+# Market context
+market_context:
+  competitors:
+    - model: "BMW iX1 xDrive30"
+      price: 54200
+      range_wltp: 439
+    - model: "Audi Q4 e-tron 40"
+      price: 49500
+      range_wltp: 488
+    - model: "Volvo EX40 Single Motor"
+      price: 48050
+      range_wltp: 460
+    - model: "Tesla Model Y RWD"
+      price: 44990
+      range_wltp: 455
+
+  market_position: |
+    For 2025, Mercedes reduced the EQA 250+ base price to €49,990 (down from €54,399),
+    making it significantly more competitive against Audi Q4, BMW iX1, and Volvo EX40.
+    Standard equipment was improved (KEYLESS-GO, heated seats, wireless charging now included).
+    This positions the EQA as a strong premium compact EV at near-mainstream pricing.
+
+metadata:
+  created_at: "2026-02-09T18:30:00Z"
+  updated_at: "2026-02-09T18:30:00Z"
+  data_quality: verified
+  data_source: manufacturer_and_market
+  notes: |
+    2025 model year pricing for Germany. Significant price reduction from 2024
+    (€54,399 → €49,990, -€4,409) while adding previously optional features as standard.
+    Mercedes strategy to boost EQA sales ahead of next-gen MMA platform replacement.
+
+sources:
+  - url: "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqa/explore.html"
+    title: "Mercedes-Benz EQA Official Germany 2025"
+    date_accessed: "2026-02-09"

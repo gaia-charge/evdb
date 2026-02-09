@@ -1,0 +1,185 @@
+id: mercedes-benz-eqs-suv-450-plus-2025
+name: 450+
+model_id: mercedes-benz-eqs-suv
+model_year: 2025
+production_years:
+  start: 2022
+  end: null
+
+trim_level: 450-plus
+market_position: base
+
+# Battery Specifications
+battery:
+  usable_kwh: 118.0
+  total_kwh: 122.0
+  chemistry: NCM
+  nominal_voltage_v: 396
+  cell_type: pouch
+  supplier: CATL
+  warranty_years: 10
+  warranty_km: 250000
+  thermal_management: liquid-cooled
+
+  pack:
+    configuration: "floor-mounted, 400V architecture"
+    weight_kg: 690
+    modules: 12
+    cells: 396
+
+# Range
+range:
+  wltp_km: 660
+  wltp_source: manufacturer
+  wltp_city_km: 770
+  wltp_highway_km: 560
+  epa_km: 483
+  real_world_km: 550
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 10.7
+      "10_80": 8.3
+    onboard_charger_kw: 11
+    onboard_charger_optional_kw: 22
+    phases: 3
+
+  dc:
+    max_power_kw: 200
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31
+      "0_100": 62
+
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 190
+      - soc_percent: 10
+        power_kw: 200
+      - soc_percent: 20
+        power_kw: 200
+      - soc_percent: 30
+        power_kw: 180
+      - soc_percent: 40
+        power_kw: 160
+      - soc_percent: 50
+        power_kw: 140
+      - soc_percent: 60
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 70
+      - soc_percent: 90
+        power_kw: 40
+      - soc_percent: 100
+        power_kw: 15
+
+  plug_and_charge: true
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+# Motor
+motor:
+  count: 1
+  configuration: rear
+  drive_type: RWD
+  total_power_kw: 265
+  total_power_hp: 360
+  total_torque_nm: 580
+  motor_type: permanent_magnet_synchronous
+
+# Performance
+performance:
+  acceleration_0_100_kmh_seconds: 6.7
+  top_speed_kmh: 210
+  drive_modes:
+    - ECO
+    - Comfort
+    - Sport
+    - Individual
+    - Offroad
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 20.9
+  real_world_kwh_per_100km: 23.5
+  co2_grams_per_km: 0
+
+# Weight
+weight:
+  curb_weight_kg: 2735
+  gross_vehicle_weight_kg: 3280
+  payload_kg: 545
+
+# Features
+features:
+  standard:
+    - "AIRMATIC air suspension with adaptive damping"
+    - "Rear-axle steering (up to 4.5°, optional 10°)"
+    - "12.8-inch OLED central touchscreen"
+    - "12.3-inch digital instrument cluster"
+    - "MBUX voice assistant ('Hey Mercedes')"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "Wireless smartphone charging"
+    - "Keyless entry and start"
+    - "Heated front seats"
+    - "Heated steering wheel"
+    - "Dual-zone automatic climate control"
+    - "Heat pump"
+    - "LED Intelligent Light System"
+    - "360-degree camera"
+    - "Power tailgate"
+    - "Ambient lighting 64 colors"
+    - "Active Distance Assist DISTRONIC"
+    - "Active Steering Assist"
+    - "Active Brake Assist"
+    - "Active Lane Keeping Assist"
+
+  optional:
+    - "MBUX Hyperscreen (56-inch curved display)"
+    - "Burmester High-End 4D Surround Sound (30 speakers)"
+    - "DRIVE PILOT Level 3 (up to 95 km/h, Germany)"
+    - "Rear-axle steering 10° (vs 4.5° standard)"
+    - "Executive Rear Seat Package with reclining seats"
+    - "AMG Line exterior/interior"
+    - "Panoramic sliding sunroof"
+    - "22kW AC onboard charger"
+    - "Energizing Comfort (wellness features)"
+    - "7-seat configuration"
+    - "Trailer hitch (1800 kg towing)"
+
+  adas_level: 2_plus
+
+# Environmental
+environmental:
+  production_location: "Tuscaloosa, Alabama, USA"
+  battery_production: "Kamenz, Germany (Accumotive)"
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_sources:
+    - manufacturer
+  created_at: "2026-02-09T18:30:00Z"
+  last_updated: "2026-02-09T18:30:00Z"
+  sources:
+    - "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs-suv/"
+  notes: >
+    2025 model year update. Key changes from 2024:
+    - DRIVE PILOT speed limit increased to 95 km/h (was 60 km/h)
+    - Heated front seats and steering wheel now standard
+    - Wireless CarPlay/Android Auto standard
+    - Updated MBUX software with improved responsiveness
+    - New Energizing Comfort wellness features
+    - Powertrain unchanged (265 kW RWD, 118 kWh, 660 km WLTP)

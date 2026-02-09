@@ -1,0 +1,156 @@
+id: mercedes-benz-eqe-suv-350-plus-2025
+name: Mercedes-Benz EQE SUV 350+ (2025)
+model_id: mercedes-benz-eqe-suv
+model_year: 2025
+variant_name: "350+"
+trim_level: base
+
+battery:
+  usable_kwh: 90.6
+  total_kwh: 96.0
+  chemistry: NCM
+  cells_config: "288s2p (576 cells)"
+  supplier: CATL
+  form_factor: pouch
+  warranty_years: 10
+  warranty_km: 250000
+  warranty_capacity_percent: 70
+  notes: >
+    Large 90.6kWh usable capacity. NCM chemistry from CATL.
+    Liquid thermal management with heat pump. Battery preconditioning for DC fast charging.
+
+range:
+  wltp_km: 590
+  wltp_city_km: 760
+  wltp_highway_km: 485
+  epa_km: null
+  real_world_km: 510
+  notes: >
+    590km WLTP range unchanged from 2024. Real-world ~510km mixed driving.
+    Winter range approximately 400-430km with heat pump.
+
+charging:
+  ac:
+    max_power_kw: 11
+    plug_type: Type2
+    phases: 3
+    charge_time_0_100_hours: 9.0
+    notes: >
+      Standard 11kW AC (3-phase). Optional 22kW onboard charger available.
+
+  dc:
+    max_power_kw: 170
+    plug_type: CCS2
+    charge_time_10_80_percent_minutes: 32
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 170
+      - soc_percent: 20
+        power_kw: 170
+      - soc_percent: 30
+        power_kw: 165
+      - soc_percent: 40
+        power_kw: 150
+      - soc_percent: 50
+        power_kw: 135
+      - soc_percent: 60
+        power_kw: 115
+      - soc_percent: 70
+        power_kw: 90
+      - soc_percent: 80
+        power_kw: 65
+    notes: >
+      Peak 170kW DC fast charging. 400V architecture with battery preconditioning.
+      10-80% in 32 minutes.
+
+bidirectional:
+  v2l: false
+  v2h: false
+  v2g: false
+
+motors:
+  count: 1
+  type: permanent_magnet
+  layout: rear
+  total_power_kw: 215
+  total_power_hp: 292
+  total_torque_nm: 565
+  drive_type: RWD
+  notes: >
+    Single PSM on rear axle. Most efficient variant in EQE SUV lineup.
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.6
+  top_speed_kmh: 210
+  notes: >
+    RWD with optional rear-axle steering (up to 10°). AIRMATIC air suspension standard.
+
+efficiency:
+  wltp_kwh_per_100km: 19.4
+  real_world_kwh_per_100km: 21.8
+  energy_label_eu: B
+
+weight:
+  curb_weight_kg: 2505
+  gross_vehicle_weight_kg: 3055
+  payload_kg: 550
+
+adas:
+  level: 2_plus
+  features:
+    - Adaptive Cruise Control (DISTRONIC)
+    - Active Lane Keeping Assist
+    - Active Blind Spot Assist
+    - Active Brake Assist
+    - Traffic Sign Assist
+    - Active Steering Assist
+    - Active Emergency Stop Assist
+  notes: >
+    Level 2+ standard. Optional DRIVE PILOT (Level 3) in Germany for
+    highway driving up to 95 km/h (increased from 60 km/h for 2025).
+
+features:
+  standard:
+    - AIRMATIC air suspension
+    - Ambient lighting 64 colors
+    - Keyless entry and start
+    - Dual-zone automatic climate control
+    - Heat pump
+    - LED Intelligent Light System
+    - 12.8" OLED touchscreen
+    - Wireless smartphone charging
+    - 360-degree camera
+    - Power tailgate
+    - Wireless Apple CarPlay / Android Auto
+    - Heated front seats
+  optional:
+    - MBUX Hyperscreen (56" curved glass display)
+    - Burmester High-End 4D Surround Sound
+    - AMG Line exterior/interior
+    - Panoramic sliding sunroof
+    - Executive rear seat package
+    - DRIVE PILOT (Level 3, Germany, up to 95 km/h)
+    - 22kW AC onboard charger
+    - Rear-axle steering (up to 10°)
+    - Trailer hitch (1800kg towing)
+
+environmental:
+  production_location: "Tuscaloosa, Alabama, USA"
+  battery_production: "Kamenz, Germany (Accumotive)"
+
+metadata:
+  data_quality: verified
+  data_sources:
+    - manufacturer
+    - estimated
+  created_at: "2026-02-09T18:30:00Z"
+  last_updated: "2026-02-09T18:30:00Z"
+  sources:
+    - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe-suv/
+  notes: >
+    2025 model year. Key updates from 2024:
+    - DRIVE PILOT now supports up to 95 km/h (was 60 km/h)
+    - Heated front seats now standard
+    - Wireless CarPlay/Android Auto standard
+    - Updated MBUX software
+    - Powertrain and battery unchanged
