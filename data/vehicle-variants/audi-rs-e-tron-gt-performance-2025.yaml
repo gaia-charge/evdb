@@ -1,0 +1,137 @@
+# Audi RS e-tron GT performance 2025 - Range-topping variant
+# New for 2024 facelift: 680 kW / 925 PS, 2.5s 0-100 km/h
+# Most powerful production Audi ever
+
+id: audi-rs-e-tron-gt-performance-2025
+name: RS e-tron GT performance
+model_id: audi-e-tron-gt
+model_year: 2025
+variant_code: RSETGTP-25
+
+production:
+  status: active
+  start_date: "2024-06-01"
+  plant: "Böllinger Höfe, Neckarsulm, Germany"
+
+battery:
+  usable_kwh: 97.0
+  total_kwh: 105.0
+  chemistry: NMC
+  cells: 396
+  modules: 33
+  cell_type: pouch
+  voltage_nominal: 730
+  voltage_max: 850
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid_cooling
+  supplier: "LG Energy Solution"
+
+range:
+  wltp_km: 592
+  wltp_city_km: 740
+  wltp_highway_km: 533
+  real_world_km: 525
+  real_world_highway_km: 495
+  real_world_city_km: 740
+  real_world_winter_km: 440
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 322
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 310
+    - soc_percent: 10
+      power_kw: 322
+    - soc_percent: 30
+      power_kw: 310
+    - soc_percent: 50
+      power_kw: 260
+    - soc_percent: 70
+      power_kw: 140
+    - soc_percent: 80
+      power_kw: 80
+  time_10_to_80_min: 16
+  charging_speed_kmh: 1370
+
+bidirectional:
+  v2l: false
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 280
+      torque_nm: null
+    - position: rear
+      type: permanent magnet
+      power_kw: 500
+      torque_nm: null
+  total_power_kw: 680
+  total_power_hp: 925
+  total_torque_nm: 1027
+  acceleration_0_100_sec: 2.5
+  top_speed_kmh: 250
+
+efficiency:
+  wltp_kwh_per_100km: 18.7
+  real_world_kwh_per_100km: 18.5
+  real_world_highway_kwh_per_100km: 19.6
+  real_world_city_kwh_per_100km: 13.1
+  co2_emissions_wltp_g_per_km: 0
+
+dimensions:
+  length_mm: 5004
+  width_mm: 1964
+  width_with_mirrors_mm: 2158
+  height_mm: 1394
+  wheelbase_mm: 2900
+  ground_clearance_mm: 125
+  drag_coefficient: 0.24
+  frontal_area_m2: 2.35
+
+weight:
+  curb_weight_kg: 2397
+  gross_vehicle_weight_kg: 2860
+  payload_kg: 540
+  towing_capacity_kg: 0
+  roof_load_kg: 75
+
+interior:
+  seating_capacity: 4
+  seating_layout: "2+2"
+  cargo_volume_rear_liters: 405
+  cargo_volume_front_liters: 77
+  cargo_volume_total_liters: 482
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: true
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2
+
+platform_id: j1-performance
+
+notes: |
+  Range-topping RS e-tron GT performance. 680 kW (925 PS) with 1,027 Nm.
+  2.5s 0-100 km/h - most powerful production Audi ever made.
+  New for 2024 facelift. Ceramic brakes standard, RS-specific carbon aero.
+  592 km WLTP range despite extreme power. Launch control with overboost.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://ev-database.org/car/2221/Audi-RS-e-tron-GT-performance
+    - https://www.audi.de
