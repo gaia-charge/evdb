@@ -1,4 +1,4 @@
-name: Build Database and Deploy
+name: Build Database and Create Release
 
 on:
   push:
@@ -38,54 +38,91 @@ jobs:
         sqlite3 evdb.db "SELECT COUNT(*) FROM manufacturers;"
         sqlite3 evdb.db "SELECT COUNT(*) FROM vehicle_variants;"
         
-    - name: Upload database artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: evdb-database
-        path: evdb.db
-        retention-days: 90
-        
     - name: Generate database statistics
+      id: stats
       run: |
+        # Collect statistics
+        MANUFACTURERS=$(sqlite3 evdb.db 'SELECT COUNT(*) FROM manufacturers;')
+        MODELS=$(sqlite3 evdb.db 'SELECT COUNT(*) FROM vehicle_models;')
+        VARIANTS=$(sqlite3 evdb.db 'SELECT COUNT(*) FROM vehicle_variants;')
+        MARKETS=$(sqlite3 evdb.db 'SELECT COUNT(*) FROM market_availability;')
+        DB_SIZE=$(du -h evdb.db | cut -f1)
+        
+        # Output for GitHub Actions
+        echo "manufacturers=$MANUFACTURERS" >> $GITHUB_OUTPUT
+        echo "models=$MODELS" >> $GITHUB_OUTPUT
+        echo "variants=$VARIANTS" >> $GITHUB_OUTPUT
+        echo "markets=$MARKETS" >> $GITHUB_OUTPUT
+        echo "db_size=$DB_SIZE" >> $GITHUB_OUTPUT
+        
+        # Summary for job
         echo "## Database Statistics" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "| Category | Count |" >> $GITHUB_STEP_SUMMARY
         echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
-        echo "| Manufacturers | $(sqlite3 evdb.db 'SELECT COUNT(*) FROM manufacturers;') |" >> $GITHUB_STEP_SUMMARY
-        echo "| Vehicle Models | $(sqlite3 evdb.db 'SELECT COUNT(*) FROM vehicle_models;') |" >> $GITHUB_STEP_SUMMARY
-        echo "| Vehicle Variants | $(sqlite3 evdb.db 'SELECT COUNT(*) FROM vehicle_variants;') |" >> $GITHUB_STEP_SUMMARY
-        echo "| Market Availability | $(sqlite3 evdb.db 'SELECT COUNT(*) FROM market_availability;') |" >> $GITHUB_STEP_SUMMARY
+        echo "| Manufacturers | $MANUFACTURERS |" >> $GITHUB_STEP_SUMMARY
+        echo "| Vehicle Models | $MODELS |" >> $GITHUB_STEP_SUMMARY
+        echo "| Vehicle Variants | $VARIANTS |" >> $GITHUB_STEP_SUMMARY
+        echo "| Market Availability | $MARKETS |" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "Database size: $(du -h evdb.db | cut -f1)" >> $GITHUB_STEP_SUMMARY
-
-  # Uncomment when ready to deploy
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/main'
-  #   
-  #   steps:
-  #   - name: Checkout repository
-  #     uses: actions/checkout@v4
-  #     
-  #   - name: Download database artifact
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: evdb-database
-  #       
-  #   - name: Install Datasette
-  #     run: |
-  #       python -m pip install --upgrade pip
-  #       pip install datasette datasette-cluster-map datasette-vega datasette-graphql datasette-export-notebook datasette-configure-fts
-  #       
-  #   # Option A: Deploy to Vercel (uncomment when ready)
-  #   # - name: Deploy to Vercel
-  #   #   run: |
-  #   #     pip install datasette-publish-vercel
-  #   #     datasette publish vercel evdb.db --metadata metadata.json --token ${{ secrets.VERCEL_TOKEN }} --project evdb
-  #   
-  #   # Option B: Deploy to Fly.io (alternative)
-  #   # - name: Deploy to Fly.io
-  #   #   run: |
-  #   #     pip install datasette-publish-fly
-  #   #     datasette publish fly evdb.db --metadata metadata.json --app evdb --token ${{ secrets.FLY_TOKEN }}
+        echo "Database size: $DB_SIZE" >> $GITHUB_STEP_SUMMARY
+        
+    - name: Generate release notes
+      id: release_notes
+      run: |
+        cat > release_notes.md << EOF
+        # EVDB Database Release
+        
+        **Build Date:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+        **Commit:** ${{ github.sha }}
+        
+        ## Database Statistics
+        
+        | Category | Count |
+        |----------|-------|
+        | Manufacturers | ${{ steps.stats.outputs.manufacturers }} |
+        | Vehicle Models | ${{ steps.stats.outputs.models }} |
+        | Vehicle Variants | ${{ steps.stats.outputs.variants }} |
+        | Market Availability | ${{ steps.stats.outputs.markets }} |
+        
+        **Database Size:** ${{ steps.stats.outputs.db_size }}
+        
+        ## Download
+        
+        Download \`evdb.db\` from the assets below to use the database locally with:
+        - **Datasette:** \`datasette evdb.db --metadata metadata.json\`
+        - **Python:** \`sqlite3\` library
+        - **Any SQLite client**
+        
+        ## Usage
+        
+        \`\`\`bash
+        # Download the database
+        wget https://github.com/gaia-charge/evdb/releases/latest/download/evdb.db
+        
+        # Query with sqlite3
+        sqlite3 evdb.db "SELECT * FROM vehicle_variants LIMIT 10;"
+        
+        # Or use Datasette
+        datasette evdb.db
+        \`\`\`
+        
+        ## Documentation
+        
+        - [API Documentation](https://github.com/gaia-charge/evdb/blob/main/API_DOCS.md)
+        - [Contributing Guide](https://github.com/gaia-charge/evdb/blob/main/CONTRIBUTING.md)
+        - [FAQ](https://github.com/gaia-charge/evdb/blob/main/FAQ.md)
+        EOF
+        
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: db-${{ github.run_number }}-${{ github.sha }}
+        name: Database Build ${{ github.run_number }}
+        body_path: release_notes.md
+        files: evdb.db
+        draft: false
+        prerelease: false
+        generate_release_notes: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
