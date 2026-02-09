@@ -1,0 +1,128 @@
+# Volkswagen ID.7 Tourer GTX (2026) - Germany Market Availability
+
+id: volkswagen-id7-tourer-gtx-2026-de
+variant_id: volkswagen-id7-tourer-gtx-2026
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2025-09-01"
+delivery_time_weeks: 12
+notes: |
+  ID.7 Tourer GTX is the performance AWD estate. Available in Germany
+  from late 2024 (2025 MY), 2026 model year from autumn 2025.
+  Built at VW Emden. Price above €70,000 means higher 0.5% company
+  car tax rate (still favorable vs ICE).
+
+pricing:
+  base_price: 72460
+  price_including_vat: 72460
+  vat_rate_percent: 19
+  notes: |
+    €72,460 base price. Above €70,000 threshold so 0.5% company car
+    tax rate applies (vs 0.25% for Pro S). Premium of ~€7,000 over
+    Pro S for AWD, sport suspension, and GTX styling. Competes with
+    BMW i5 xDrive40 Touring (~€78,000).
+
+company_car:
+  taxable_benefit_rate: 0.50
+  monthly_taxable_benefit: 362.30
+  annual_taxable_benefit: 4347.60
+  comparable_ice_vehicle: Volkswagen Passat Variant R-Line 2.0 TSI
+  comparable_ice_price: 55000
+  comparable_ice_monthly_benefit: 550.00
+  annual_savings_vs_ice: 2402
+  notes: |
+    Above €70,000 threshold, 0.5% monthly rate applies. Still significantly
+    cheaper than 1% rate for combustion equivalent. Annual savings ~€2,402.
+
+incentives:
+  - name: Company Car Tax (0.5% rate)
+    type: tax_exemption
+    amount: 2402
+    description: 0.5% rate (above €70k threshold) vs 1% for combustion
+    notes: Annual savings for company car drivers vs combustion equivalent
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 320
+    description: Electric vehicles exempt from German road tax until 2030
+    notes: Valid until 2030-12-31
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+    notes: Varies by market price
+
+available_options:
+  - name: Metallic Paint
+    price: 1050
+  - name: 21" Skagen Alloy Wheels
+    price: 1350
+  - name: Tow Bar (electrically retractable)
+    price: 1200
+    notes: 1400 kg towing capacity (braked)
+  - name: Rear-View Camera Pro
+    price: 350
+  - name: Roof Rails
+    price: 290
+  - name: Winter Package
+    price: 390
+
+available_colors:
+  - name: Glacier White Metallic
+    type: metallic
+    price_add:
+      amount: 0
+  - name: Grenadilla Black Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Moonstone Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Dusk Blue Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Kings Red Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Platinum Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+
+financing:
+  typical_apr_percent: 4.99
+  typical_term_months: 48
+  typical_monthly_payment: 1130
+
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 15000
+  typical_monthly_payment: 649
+  down_payment: 3500
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  paint_years: 3
+  corrosion_years: 12
+
+service:
+  interval_months: 24
+  interval_km: 30000
+  typical_cost: 380
+  dealer_count_germany: 800
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.volkswagen.de
+    - VW Germany configurator

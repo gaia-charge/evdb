@@ -1,0 +1,132 @@
+# Volkswagen ID.7 Tourer Pro S (2026) - Germany Market Availability
+
+id: volkswagen-id7-tourer-pro-s-2026-de
+variant_id: volkswagen-id7-tourer-pro-s-2026
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2025-06-01"
+delivery_time_weeks: 10
+notes: |
+  ID.7 Tourer Pro S available in Germany since mid-2024 (2025 model year),
+  2026 model year on sale from summer 2025. Built at VW Emden factory.
+  Very popular with company car drivers due to estate practicality and
+  sub-€70k pricing for favorable 0.25% tax rate.
+
+pricing:
+  base_price: 65460
+  price_including_vat: 65460
+  vat_rate_percent: 19
+  notes: |
+    €65,460 base price for ID.7 Tourer Pro S 2026. Approximately €1,770
+    premium over sedan Pro S (€63,690) for estate body. Under €70,000
+    threshold for 0.25% company car tax rate. Competitive vs BMW i5
+    Touring eDrive40 (~€72,000) and Audi A6 Avant e-tron (~€68,000).
+
+company_car:
+  taxable_benefit_rate: 0.25
+  monthly_taxable_benefit: 163.65
+  annual_taxable_benefit: 1963.80
+  comparable_ice_vehicle: Volkswagen Passat Variant 2.0 TDI
+  comparable_ice_price: 48000
+  comparable_ice_monthly_benefit: 480.00
+  annual_savings_vs_ice: 3796
+  notes: |
+    Under €70,000 company car tax threshold. 0.25% monthly rate results
+    in €163.65/month taxable benefit vs €480/month for Passat Variant TDI
+    (1% rate). Annual tax savings of approximately €3,796. Estate body
+    makes it practical Passat Variant replacement for company car fleets.
+
+incentives:
+  - name: Company Car Tax (0.25% rate)
+    type: tax_exemption
+    amount: 3796
+    description: 0.25% vs 1% monthly rate for combustion vehicles
+    notes: Annual savings for company car drivers vs combustion equivalent
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 320
+    description: Electric vehicles exempt from German road tax until 2030
+    notes: Valid until 2030-12-31
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+    notes: Varies by market price, approximately €250-300 in 2026
+
+available_options:
+  - name: Metallic Paint
+    price: 1050
+  - name: 20" Drammen Alloy Wheels
+    price: 950
+  - name: Tow Bar (electrically retractable)
+    price: 1200
+    notes: 1400 kg towing capacity (braked)
+  - name: Rear-View Camera Pro
+    price: 350
+  - name: Roof Rails
+    price: 290
+  - name: Winter Package (heated windscreen, heated washer nozzles)
+    price: 390
+
+available_colors:
+  - name: Glacier White Metallic
+    type: metallic
+    price_add:
+      amount: 0
+  - name: Grenadilla Black Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Moonstone Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Dusk Blue Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Kings Red Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+  - name: Platinum Grey Metallic
+    type: metallic
+    price_add:
+      amount: 1050
+
+financing:
+  typical_apr_percent: 4.99
+  typical_term_months: 48
+  typical_monthly_payment: 1020
+
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 15000
+  typical_monthly_payment: 549
+  down_payment: 3000
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  paint_years: 3
+  corrosion_years: 12
+
+service:
+  interval_months: 24
+  interval_km: 30000
+  typical_cost: 350
+  dealer_count_germany: 800
+  notes: VW's extensive German dealer network ensures easy servicing
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.volkswagen.de
+    - VW Germany configurator
+    - ADAC cost calculator
