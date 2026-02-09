@@ -1,0 +1,187 @@
+id: renault-megane-e-tech-ev60-2025
+name: EV60 Techno
+model_id: renault-megane-e-tech
+model_year: 2025
+production_years:
+  start: 2022
+  end: null
+
+trim_level: techno
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 60
+  total_kwh: 65
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: pouch
+  supplier: LG Energy Solution / Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 457
+    modules: 12
+
+# Range
+range:
+  wltp_km: 450
+  wltp_source: manufacturer
+  
+  real_world_km: 380
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 10-20°C, comfort mode"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.0  # 22kW
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "15_80": 30
+      "0_100": 65
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 85
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 40
+        power_kw: 130
+      - soc_percent: 50
+        power_kw: 115
+      - soc_percent: 60
+        power_kw: 90
+      - soc_percent: 70
+        power_kw: 65
+      - soc_percent: 80
+        power_kw: 40
+      - soc_percent: 90
+        power_kw: 20
+      - soc_percent: 100
+        power_kw: 11
+    
+    notes: "Optimized charging curve for long-distance travel"
+
+  bidirectional:
+    v2l: false
+    v2g: true  # Available in select markets
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 160
+    max_torque_nm: 300
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1714
+  gross_weight_kg: 2164
+  payload_kg: 450
+  towing_capacity_kg: 0  # Not rated for towing
+  
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  real_world_kwh_per_100km: 15.8
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 18.2
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 21.0
+
+# Features & Options
+standard_features:
+  - "OpenR Link with Google built-in"
+  - "12-inch vertical touchscreen"
+  - "12-inch digital driver display"
+  - "Heat pump"
+  - "Full LED headlights with C-shaped signature"
+  - "20-inch alloy wheels"
+  - "360-degree camera"
+  - "Front and rear parking sensors"
+  - "Dual-zone climate control"
+  - "Multi-Sense drive modes (Eco, Comfort, Sport, My Sense)"
+  - "One-pedal driving (B-mode)"
+  - "Adaptive cruise control"
+  - "Lane keeping assist"
+  - "Hands-free parking"
+
+optional_packages:
+  - name: "Premium Sound"
+    features:
+      - "Harman Kardon premium audio (9 speakers)"
+  - name: "Comfort Pack"
+    features:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Massage seats"
+
+colors:
+  standard:
+    - "Glacier White"
+    - "Diamond Black"
+  premium:
+    - "Flamme Red"
+    - "Schist Grey"
+    - "Rafale Grey"
+    - "Midnight Blue"
+
+interior_colors:
+  - "Black with blue accents"
+  - "Grey with copper accents"
+
+# Version Information
+version:
+  facelift: false
+  major_changes:
+    - "2025 model year with enhanced software"
+    - "Improved battery thermal management"
+
+# Market & Pricing Notes
+notes: >
+  The Megane E-Tech EV60 Techno is the most popular variant, offering an excellent 
+  balance of range (450 km WLTP, 380 km real-world), performance (7.4s 0-100 km/h), 
+  and features. The 22 kW AC onboard charger enables full overnight charging, while 
+  130 kW DC fast charging provides 15-80% in 30 minutes - ideal for road trips. 
+  The 160 kW motor delivers spirited performance with strong mid-range acceleration. 
+  Standard equipment is comprehensive, including the impressive OpenR infotainment, 
+  360-degree camera, adaptive cruise control, and hands-free parking. V2G capability 
+  is available in select European markets. Winner of 2023 European Car of the Year.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.renault.de/elektrofahrzeuge/megane-e-tech/technische-daten.html
+    - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/caracteristiques-techniques.html
