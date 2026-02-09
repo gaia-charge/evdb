@@ -1,0 +1,176 @@
+# Audi Q4 50 e-tron quattro (2026 Model Year)
+# Premium AWD variant with improved battery and performance
+
+id: audi-q4-e-tron-50-quattro-2026
+name: Q4 50 e-tron quattro
+model_id: audi-q4-e-tron
+model_year: 2026
+production_years:
+  start: 2026
+  end: null
+trim_level: premium
+market_position: mid-range
+
+description: |
+  The Q4 50 e-tron quattro 2026 is Audi's premium all-wheel drive compact electric SUV,
+  featuring an upgraded 85kWh battery pack and improved electric motors for better performance
+  and efficiency.
+  
+  2026 model year updates include:
+  - Larger 85kWh battery (up from 82kWh)
+  - Improved DC charging to 170kW peak (400V architecture)
+  - Updated MMI infotainment with enhanced AI features
+  - New exterior styling with revised LED lighting
+  - Improved heat pump efficiency for winter range
+  - Enhanced matrix LED headlights (standard)
+  
+  The quattro all-wheel drive system provides excellent traction in all weather conditions,
+  while maintaining impressive efficiency for an AWD SUV.
+
+production_status: active
+
+# Battery Specifications
+battery:
+  usable_kwh: 82.0
+  total_kwh: 85.0
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400  # 400V architecture
+  cell_type: prismatic
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, MEB platform"
+    weight_kg: 533
+    modules: 12
+    cells: 288
+
+# Range
+range:
+  wltp_km: 570
+  wltp_source: manufacturer
+  
+  real_world_km: 485
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 20-inch wheels"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 7.5
+      "20_80": 5.0
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 170
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 33
+      "0_100": 52
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 150
+      - soc_percent: 10
+        power_kw: 170
+      - soc_percent: 20
+        power_kw: 170
+      - soc_percent: 30
+        power_kw: 165
+      - soc_percent: 40
+        power_kw: 145
+      - soc_percent: 50
+        power_kw: 120
+      - soc_percent: 60
+        power_kw: 95
+      - soc_percent: 70
+        power_kw: 75
+      - soc_percent: 80
+        power_kw: 50
+      - soc_percent: 90
+        power_kw: 30
+      - soc_percent: 100
+        power_kw: 15
+
+# Bidirectional Charging
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+# Motors & Drivetrain
+motors:
+  configuration: dual-motor
+  drive_type: AWD
+  
+  front:
+    type: asynchronous-induction
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 162
+  
+  rear:
+    type: permanent-magnet
+    power_kw: 170
+    power_hp: 231
+    torque_nm: 310
+  
+  combined:
+    power_kw: 250
+    power_hp: 340
+    torque_nm: 460
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 6.2
+  top_speed_kmh: 180
+  
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_100km: 14.4
+  consumption_real_world_kwh_100km: 16.9
+  energy_label: A
+
+# Weight & Dimensions
+dimensions:
+  length_mm: 4588
+  width_mm: 1865
+  height_mm: 1632
+  wheelbase_mm: 2764
+  curb_weight_kg: 2135
+  cargo_volume_l: 520
+  cargo_volume_seats_down_l: 1490
+
+# Data quality metadata
+metadata:
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  data_quality: verified
+  
+  sources:
+    - https://www.audi.com/en/models/q4-e-tron/q4-50-e-tron-quattro.html
+    - https://ev-database.org/car/2026/Audi-Q4-50-e-tron-quattro
+    - https://www.audi-mediacenter.com/en/press-releases/2026-model-year-updates
+  
+  verified_by: manufacturer
+  
+  notes: |
+    2026 model year brings improved battery capacity (85kWh total, 82kWh usable) and 
+    enhanced DC charging performance up to 170kW. The Q4 50 e-tron quattro fills the gap
+    between the Q4 40 (RWD) and Q4 45 quattro variants with optimized balance of 
+    performance, range, and efficiency.
+    
+    Matrix LED headlights now standard on 50 quattro trim. Improved heat pump system
+    provides better winter range retention. Enhanced MMI system with AI-powered 
+    voice assistant and improved route planning.
+    
+    Popular choice for families and company car drivers seeking premium AWD electric SUV
+    with excellent space, quality, and Audi brand prestige.
