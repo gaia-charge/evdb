@@ -1,0 +1,262 @@
+# Kia EV6 Long Range RWD (2025) - Germany Market Availability
+
+id: kia-ev6-long-range-rwd-2025-de
+variant_id: kia-ev6-long-range-rwd-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-01-01"
+delivery_time_weeks: 8
+notes: |
+  2025 model year with increased battery capacity (77.4 kWh usable),
+  improved range (546 km WLTP), and enhanced efficiency.
+  E-GMP 800V architecture enables ultra-fast charging (10-80% in 18 min).
+  Most popular EV6 variant in Germany.
+
+# Pricing
+pricing:
+  base_price: 51990
+  price_including_vat: 51990
+  vat_rate_percent: 19
+  notes: |
+    Base price for EV6 Long Range RWD with 77.4 kWh battery.
+    €1,500 increase from 2024 due to larger battery and updates.
+    Excellent value proposition with 546 km range.
+
+# Available Colors
+available_colors:
+  - name: Clear White
+    code: UD
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: pearl
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Moonscape
+    code: MS
+    type: matte
+    price_add:
+      amount: 1190
+      currency: EUR
+    notes: "Premium matte finish"
+  
+  - name: Glacier
+    code: GL
+    type: premium
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Steel Grey Metallic
+    code: SGM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Interstellar Grey
+    code: IG
+    type: premium
+    price_add:
+      amount: 1190
+      currency: EUR
+    notes: "New color for 2025"
+
+# Wheel Options
+available_wheels:
+  - name: 19" Alloy Wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard, best efficiency and range"
+  
+  - name: 20" Alloy Wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1200
+      currency: EUR
+    notes: "Reduces range by ~20km"
+
+# Equipment Packages
+available_packages:
+  - name: Comfort Package
+    price:
+      amount: 2490
+      currency: EUR
+    contents:
+      - "Heated steering wheel"
+      - "Heated & ventilated front seats"
+      - "Heated rear seats"
+      - "Premium relaxation front seats"
+      - "Smart power tailgate"
+    notes: "Popular winter package"
+  
+  - name: Tech Package Plus
+    price:
+      amount: 3290
+      currency: EUR
+    contents:
+      - "Augmented Reality Head-Up Display"
+      - "Premium Meridian sound (14 speakers)"
+      - "Surround View Monitor (360° camera)"
+      - "Remote Smart Parking Assist 2.0"
+      - "Highway Driving Assist 2"
+    notes: "Advanced tech features"
+  
+  - name: Vision Package
+    price:
+      amount: 1790
+      currency: EUR
+    contents:
+      - "Digital Matrix LED headlights"
+      - "LED rear combination lamps"
+      - "Automatic high beam"
+      - "Welcome lights"
+    notes: "Best-in-class lighting"
+
+# Individual Options
+individual_options:
+  - name: Panoramic Glass Roof
+    price:
+      amount: 1450
+      currency: EUR
+    notes: "Fixed glass roof with electric sunshade"
+  
+  - name: Tow Hitch
+    price:
+      amount: 1150
+      currency: EUR
+    notes: "1600kg braked towing capacity, trailer stability assist"
+
+# Incentives & Subsidies
+incentives:
+  - type: tax_exemption
+    name: Company Car Tax (Dienstwagen-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    notes: |
+      Company car drivers pay only 0.25% of list price per month (€130/month)
+      vs 1% for ICE cars, saving ~€4,300/year in taxes.
+      Under €70k gross list price threshold.
+  
+  - type: tax_exemption
+    name: Road Tax Exemption (Kfz-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    valid_until: "2030-12-31"
+    notes: "Full exemption from road tax until December 31, 2030"
+  
+  - type: grant
+    name: THG-Quote
+    amount: 340
+    currency: EUR
+    status: active
+    notes: "CO2 certificate trading, ~€300-380/year depending on provider"
+
+# Typical Configuration
+typical_configuration:
+  name: "EV6 Long Range Comfort Tech"
+  description: "Popular configuration with comfort and tech packages"
+  total_price: 59560
+  includes:
+    - Base Long Range RWD
+    - Aurora Black Pearl
+    - 20-inch alloy wheels
+    - Comfort Package
+    - Tech Package Plus
+  notes: "Best-selling configuration in Germany"
+
+# Charging Infrastructure
+charging_infrastructure:
+  home_charging:
+    - provider: Kia Charge
+      rate_per_kwh: 0.29
+      notes: "Kia home charging tariff"
+    - provider: Wallbox installation (Kia partner)
+      installation_cost: 950
+      power_kw: 11
+      notes: "Professional installation included"
+  
+  public_charging:
+    - provider: Kia Charge
+      network_size: "600,000+ charging points across Europe"
+      app: Kia Charge app
+      notes: "Integrated into vehicle navigation with real-time availability"
+    
+    - provider: IONITY
+      network_type: High-power DC (350kW)
+      standard_rate_per_kwh: 0.75
+      subscription_rate_per_kwh: 0.32
+      subscription_cost_monthly: 17.99
+      notes: "Kia Charge members get IONITY discount"
+
+# Warranty
+warranty:
+  vehicle_years: 7
+  vehicle_km: 150000
+  battery_years: 7
+  battery_km: 150000
+  battery_capacity_guarantee_percent: 70
+  paint_years: 5
+  perforation_years: 12
+  roadside_assistance_years: 7
+  notes: |
+    Industry-leading 7-year/150,000km warranty on vehicle AND battery.
+    Pan-European roadside assistance included.
+
+# Service & Maintenance
+service:
+  interval_years: 1
+  interval_km: 15000
+  cost_per_service: 270
+  fixed_price_5_year: 1190
+  notes: |
+    Annual service or 15,000km. No oil changes.
+    Regenerative braking extends brake life significantly.
+
+# Environmental
+environmental:
+  energy_efficiency_class: A+
+  co2_emissions_gpkm: 0
+  electricity_consumption_kwh_100km: 16.2
+  notes: "German energy label A+ rating, excellent efficiency"
+
+# Market Position
+market_position:
+  segment_rank: 3
+  monthly_sales_avg: 520
+  key_competitors:
+    - Tesla Model Y RWD
+    - Hyundai Ioniq 5 Long Range
+    - Volkswagen ID.5 Pro
+    - Ford Mustang Mach-E Extended Range
+    - Polestar 2 Long Range
+  notes: |
+    #3 in mid-size electric SUV segment in Germany.
+    Most popular EV6 variant (~60% of EV6 sales).
+    Strong resale values, excellent V2L/V2G capabilities.
+    Award-winning design (2022 World Car of the Year).
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-09'
+  created_at: '2026-02-09'
+  source: "Kia Germany official configurator"
+  source_urls:
+    - "https://www.kia.com/de/modelle/ev6/"
+  verification_date: '2026-02-09'
+  notes: "2025 model year with updated specs, pricing, and features"

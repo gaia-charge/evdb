@@ -1,0 +1,225 @@
+id: kia-ev6-long-range-rwd-2025
+name: Long Range RWD
+model_id: kia-ev6
+model_year: 2025
+production_years:
+  start: 2021
+  end: null
+
+trim_level: long-range
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 77.4
+  total_kwh: 84.0
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 800  # High-voltage E-GMP architecture
+  cell_type: pouch
+  supplier: SK On (formerly SK Innovation)
+  warranty_years: 7
+  warranty_km: 150000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, integrated into E-GMP platform"
+    weight_kg: 490
+    modules: 10
+
+# Range
+range:
+  wltp_km: 546
+  wltp_source: manufacturer
+  
+  epa_km: 512
+  epa_source: manufacturer
+  
+  real_world_km: 495
+  real_world_source: measured
+  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 7.5  # 11kW
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 240
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 18
+      "0_100": 43
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 225
+      - soc_percent: 10
+        power_kw: 240
+      - soc_percent: 20
+        power_kw: 240
+      - soc_percent: 30
+        power_kw: 238
+      - soc_percent: 40
+        power_kw: 220
+      - soc_percent: 50
+        power_kw: 180
+      - soc_percent: 60
+        power_kw: 140
+      - soc_percent: 70
+        power_kw: 100
+      - soc_percent: 80
+        power_kw: 55
+      - soc_percent: 90
+        power_kw: 28
+      - soc_percent: 100
+        power_kw: 12
+
+# Bidirectional Charging (V2X)
+bidirectional_charging:
+  v2l_capable: true
+  v2l_max_power_kw: 3.6
+  v2h_capable: true
+  v2g_capable: true
+  v2g_certified_markets:
+    - KR
+    - NL
+    - UK
+    - DE
+  notes: "V2L adapter included, can power household appliances or other EVs. 2025 adds Germany V2G certification"
+
+# Motors & Drivetrain
+motors:
+  configuration: single-motor
+  drive_type: RWD
+  
+  rear:
+    type: permanent-magnet-synchronous
+    max_power_kw: 168
+    max_power_hp: 229
+    max_torque_nm: 350
+
+  combined:
+    total_power_kw: 168
+    total_power_hp: 229
+    total_torque_nm: 350
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.3
+  top_speed_kmh: 185
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 16.2
+  wltp_source: manufacturer
+  
+  epa_kwh_per_100km: 17.5
+  epa_source: manufacturer
+  
+  real_world_kwh_per_100km: 17.9
+  real_world_source: measured
+  real_world_conditions: "Highway 120 km/h, 15°C"
+  
+  efficiency_rating_eu: A+
+  
+# Weight
+weight:
+  curb_weight_kg: 2010
+  gross_vehicle_weight_kg: 2585
+  max_payload_kg: 575
+
+# Wheels & Tires
+wheels:
+  standard_size_front: "235/55 R19"
+  standard_size_rear: "235/55 R19"
+  wheel_options:
+    - "19-inch alloy (standard)"
+    - "20-inch alloy (optional)"
+
+# Standard Equipment (Key Features)
+standard_equipment:
+  exterior:
+    - LED headlights with DRLs
+    - LED taillights with sequential indicators
+    - Heated windshield washer nozzles
+    - Power folding exterior mirrors
+  
+  interior:
+    - 12.3-inch dual curved display (digital cockpit + infotainment)
+    - Premium Meridian sound system (8 speakers)
+    - Wireless smartphone charging (15W)
+    - USB-C ports (front x2, rear x2)
+    - Heat pump climate control (standard)
+    - Heated front seats
+    - Leather-wrapped steering wheel
+  
+  technology:
+    - Kia Connect with OTA updates
+    - Navigation with EV route planner
+    - Digital key 2.0 (smartphone as key)
+    - Remote climate control via app
+    - V2L capability with included adapter
+  
+  safety:
+    - Highway Driving Assist 2 (HDA2)
+    - Forward Collision-Avoidance Assist (FCA)
+    - Blind-Spot Collision-Avoidance Assist (BCA)
+    - Lane Keeping Assist (LKA)
+    - Smart Cruise Control with Stop & Go
+    - Rear Cross-Traffic Collision-Avoidance Assist
+    - Safe Exit Warning
+    - 7 airbags
+
+# Dimensions
+dimensions:
+  length_mm: 4695
+  width_mm: 1890
+  width_with_mirrors_mm: 2095
+  height_mm: 1550
+  wheelbase_mm: 2900
+  ground_clearance_mm: 160
+  
+  cargo:
+    trunk_volume_l: 490
+    trunk_max_volume_l: 1300
+    frunk_volume_l: 52
+    notes: "RWD has larger frunk than AWD (52L vs 20L)"
+
+# Aerodynamics
+aerodynamics:
+  drag_coefficient: 0.28
+  frontal_area_m2: 2.61
+  notes: "Excellent aerodynamics for a crossover"
+
+# Production
+production:
+  plant: "Hwaseong, South Korea"
+  platform: "E-GMP (Electric Global Modular Platform)"
+  platform_generation: 1
+  status: active
+
+# Data Quality
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-09'
+  created_at: '2026-02-09'
+  source: "Kia official specifications for 2025 model year"
+  source_urls:
+    - "https://www.kia.com/de/modelle/ev6/"
+  verification_date: '2026-02-09'
+  notes: |
+    2025 model year updates:
+    - Increased usable battery capacity (77.4 vs 74.0 kWh)
+    - Improved WLTP range (546 vs 528 km)
+    - Better efficiency (16.2 vs 16.5 kWh/100km)
+    - Germany added to V2G certified markets
+    - Updated infotainment with enhanced OTA capabilities
+    - Digital Key 2.0 now standard
