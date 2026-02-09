@@ -4,6 +4,7 @@ A user-friendly Streamlit interface for exploring EV data
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import sqlite3
 import pandas as pd
 import plotly.express as px
@@ -20,6 +21,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Plausible analytics (privacy-friendly)
+components.html("""
+<script async src="https://plausible.io/js/pa-rPKfOBHbOTq8L3IHShOcM.js"></script>
+<script>
+window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init()
+</script>
+""", height=0)
 
 # GitHub release configuration
 GITHUB_REPO = "gaia-charge/evdb"
