@@ -1,0 +1,111 @@
+# Tesla Model X AWD 2026
+# Flagship luxury electric SUV - Dual Motor AWD
+
+id: tesla-model-x-awd-2026
+name: Model X AWD
+model_id: tesla-model-x
+manufacturer_id: tesla
+variant_name: AWD
+model_year: 2026
+trim_level: Standard
+version: "AWD"
+
+description: |
+  The 2026 Tesla Model X AWD is a refreshed version of Tesla's flagship luxury SUV,
+  featuring the distinctive falcon-wing rear doors, a 17" landscape touchscreen, and
+  premium 22-speaker audio system. The dual-motor AWD powertrain delivers 685 PS with
+  a 100 kWh battery providing up to 600 km WLTP range. Available with 5, 6, or 7-seat
+  configurations.
+
+battery:
+  usable_kwh: 95.0
+  total_kwh: 100.0
+  chemistry: NCA
+  cells: cylindrical
+  manufacturer: Panasonic
+  warranty_years: 8
+  warranty_km: 240000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  preconditioning: true
+
+range:
+  wltp_km: 600
+  wltp_city_km: 700
+  wltp_highway_km: 450
+  real_world_km: 490
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+
+efficiency:
+  wltp_kwh_per_100km: 18.3
+  real_world_kwh_per_100km: 19.4
+  real_world_conditions: "Mixed driving, 20°C ambient"
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 10.25
+  dc:
+    max_power_kw: 250
+    connector_type: CCS2
+    architecture_voltage: 400
+    time_10_80_minutes: 30
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD
+  combined_power_kw: 504
+  combined_power_hp: 685
+  torque_nm: 700
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 3.9
+  top_speed_kmh: 250
+  top_speed_electronically_limited: true
+
+weight:
+  curb_weight_kg: 2455
+  gross_vehicle_weight_kg: 3020
+
+dimensions:
+  length_mm: 5057
+  width_mm: 1999
+  height_mm: 1680
+  wheelbase_mm: 2965
+
+cargo:
+  trunk_litres: 2614
+  frunk_litres: 183
+
+tires:
+  front: "255/45 R20"
+  rear: "255/45 R20"
+  wheel_size_inches: 20
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+
+interior:
+  seats: 7
+  seat_material: Vegan leather
+  display_center: 17" landscape touchscreen
+  sound_system: Premium Audio 22-speaker system
+  ambient_lighting: true
+  panoramic_roof: true
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - https://www.tesla.com/modelx
+    - https://ev-database.org/car/3385/Tesla-Model-X-AWD
