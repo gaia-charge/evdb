@@ -1,0 +1,178 @@
+id: lucid-gravity-touring-awd-2025
+model_id: lucid-gravity
+name: Touring AWD
+model_year: 2025
+trim_level: touring
+market_availability:
+  - europe
+  - germany
+  - netherlands
+  - switzerland
+  - uk
+
+battery:
+  total_kwh: 112
+  usable_kwh: 107
+  chemistry: NCA
+  voltage: 924
+  manufacturer: lucid
+  warranty:
+    duration_years: 8
+    duration_km: 160000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: true
+
+motors:
+  layout: awd
+  total_count: 2
+  front:
+    type: permanent_magnet
+    power_kw: 200
+    power_hp: 268
+    torque_nm: 400
+    manufacturer: lucid
+  rear:
+    type: permanent_magnet
+    power_kw: 250
+    power_hp: 335
+    torque_nm: 530
+    manufacturer: lucid
+  combined:
+    total_power_kw: 440
+    total_power_hp: 590
+    total_torque_nm: 930
+
+drivetrain:
+  drive_type: awd
+  transmission: single_speed_reduction
+
+performance:
+  acceleration_0_100_kmh_s: 4.5
+  top_speed_kmh: 210
+  top_speed_limited: true
+
+range:
+  wltp_km: 680
+  wltp_city_km: 820
+  wltp_highway_km: 590
+  epa_km: 692  # 430 miles EPA
+  real_world_mixed_km: 600
+  real_world_highway_km: 530
+  real_world_winter_km: 480
+
+efficiency:
+  wltp_kwh_per_100km: 15.7
+  epa_kwh_per_100km: 15.4
+  real_world_kwh_per_100km: 17.8
+
+charging:
+  ac:
+    max_power_kw: 22
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger_kw: 22
+  dc:
+    max_power_kw: 300
+    time_10_80_minutes: 25
+    time_10_80_km_added: 476
+    curve_description: >
+      Peak 300kW from 10-35% SoC on 900V+ architecture, tapering to 200kW at 50%, 
+      150kW at 60%, 100kW at 70%. Approximately 25 minutes 10-80% on 350kW chargers.
+
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 9.6
+  v2h_capable: true
+  v2g_capable: false
+
+dimensions:
+  length_mm: 5030
+  width_mm: 2000
+  height_mm: 1660
+  wheelbase_mm: 3040
+  ground_clearance_mm: 178
+  drag_coefficient: 0.24
+  frontal_area_m2: 2.88
+
+weight:
+  curb_weight_kg: 2800
+  gross_vehicle_weight_kg: 3350
+  payload_kg: 550
+  towing_capacity_braked_kg: 2722
+  towing_capacity_unbraked_kg: 750
+
+interior:
+  seating_capacity: 7
+  cargo_volume_liters: 640
+  cargo_volume_seats_down_liters: 3398
+  frunk_volume_liters: 198
+
+wheels:
+  standard:
+    size_front: "255/50 R20"
+    size_rear: "255/50 R20"
+    wheel_diameter_inches: 20
+  optional:
+    - size_front: "265/40 R22"
+      size_rear: "265/40 R22"
+      wheel_diameter_inches: 22
+
+suspension:
+  front: double_wishbone
+  rear: multi_link
+  adaptive: true
+  damping: adaptive_air
+
+brakes:
+  front: ventilated_disc
+  rear: ventilated_disc
+  regenerative: true
+  regenerative_max_power_kw: 300
+  one_pedal_driving: true
+
+technology:
+  adas_level: 2
+  features:
+    - adaptive_cruise_control
+    - lane_keeping_assist
+    - lane_centering
+    - automatic_emergency_braking
+    - blind_spot_monitoring
+    - rear_cross_traffic_alert
+    - traffic_sign_recognition
+    - parking_assist
+    - surround_view_camera
+    - automatic_parking
+    - highway_assist
+  infotainment:
+    screen_size_inches: 34
+    rotating_screen: false
+    apple_carplay: true
+    android_auto: true
+    wireless_connectivity: true
+    ota_updates: true
+    navigation: true
+    voice_control: true
+  audio:
+    system: surreal_sound_pro
+    speakers: 22
+    power_watts: 1200
+
+safety:
+  euro_ncap:
+    year: 2025
+    overall_stars: 5
+
+energy_label:
+  efficiency_class: a_plus
+  co2_emissions_wltp_g_per_km: 0
+
+notes: >
+  The Lucid Gravity Touring AWD is the entry-level variant of Lucid's luxury electric SUV. 
+  With 680 km WLTP range from a 112 kWh battery, dual-motor AWD with 440 kW (590 hp), 
+  seating for 7, and 300kW DC charging, the Gravity Touring delivers exceptional capability 
+  for a luxury family SUV. Air suspension, 22-speaker Surreal Sound Pro, and 34" Glass 
+  Cockpit display are standard. Euro NCAP 5-star rated.

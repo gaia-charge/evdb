@@ -1,0 +1,179 @@
+id: lucid-gravity-grand-touring-awd-2025
+model_id: lucid-gravity
+name: Grand Touring AWD
+model_year: 2025
+trim_level: grand_touring
+market_availability:
+  - europe
+  - germany
+  - netherlands
+  - switzerland
+  - uk
+
+battery:
+  total_kwh: 118
+  usable_kwh: 113
+  chemistry: NCA
+  voltage: 924
+  manufacturer: lucid
+  warranty:
+    duration_years: 8
+    duration_km: 160000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: true
+
+motors:
+  layout: awd
+  total_count: 3
+  front:
+    type: permanent_magnet
+    power_kw: 200
+    power_hp: 268
+    torque_nm: 400
+    manufacturer: lucid
+  rear:
+    type: permanent_magnet
+    power_kw: 417
+    power_hp: 559
+    torque_nm: 700
+    manufacturer: lucid
+  combined:
+    total_power_kw: 617
+    total_power_hp: 828
+    total_torque_nm: 1100
+
+drivetrain:
+  drive_type: awd
+  transmission: single_speed_reduction
+
+performance:
+  acceleration_0_100_kmh_s: 3.5
+  top_speed_kmh: 210
+  top_speed_limited: true
+
+range:
+  wltp_km: 700
+  wltp_city_km: 850
+  wltp_highway_km: 610
+  epa_km: 724  # 450 miles EPA
+  real_world_mixed_km: 620
+  real_world_highway_km: 550
+  real_world_winter_km: 500
+
+efficiency:
+  wltp_kwh_per_100km: 16.1
+  epa_kwh_per_100km: 15.6
+  real_world_kwh_per_100km: 18.2
+
+charging:
+  ac:
+    max_power_kw: 22
+    phases: 3
+    time_0_100_hours: 6.0
+    onboard_charger_kw: 22
+  dc:
+    max_power_kw: 300
+    time_10_80_minutes: 27
+    time_10_80_km_added: 490
+    curve_description: >
+      Peak 300kW from 10-35% SoC on 900V+ architecture with larger 118 kWh battery. 
+      Approximately 27 minutes 10-80% on 350kW chargers.
+
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 9.6
+  v2h_capable: true
+  v2g_capable: false
+
+dimensions:
+  length_mm: 5030
+  width_mm: 2000
+  height_mm: 1660
+  wheelbase_mm: 3040
+  ground_clearance_mm: 178
+  drag_coefficient: 0.24
+  frontal_area_m2: 2.88
+
+weight:
+  curb_weight_kg: 2850
+  gross_vehicle_weight_kg: 3400
+  payload_kg: 550
+  towing_capacity_braked_kg: 2722
+  towing_capacity_unbraked_kg: 750
+
+interior:
+  seating_capacity: 7
+  cargo_volume_liters: 640
+  cargo_volume_seats_down_liters: 3398
+  frunk_volume_liters: 198
+
+wheels:
+  standard:
+    size_front: "265/40 R22"
+    size_rear: "265/40 R22"
+    wheel_diameter_inches: 22
+  optional:
+    - size_front: "275/35 R23"
+      size_rear: "275/35 R23"
+      wheel_diameter_inches: 23
+
+suspension:
+  front: double_wishbone
+  rear: multi_link
+  adaptive: true
+  damping: adaptive_air
+
+brakes:
+  front: ventilated_disc
+  rear: ventilated_disc
+  regenerative: true
+  regenerative_max_power_kw: 300
+  one_pedal_driving: true
+
+technology:
+  adas_level: 2
+  features:
+    - adaptive_cruise_control
+    - lane_keeping_assist
+    - lane_centering
+    - automatic_emergency_braking
+    - blind_spot_monitoring
+    - rear_cross_traffic_alert
+    - traffic_sign_recognition
+    - parking_assist
+    - surround_view_camera
+    - automatic_parking
+    - highway_assist
+  infotainment:
+    screen_size_inches: 34
+    rotating_screen: false
+    apple_carplay: true
+    android_auto: true
+    wireless_connectivity: true
+    ota_updates: true
+    navigation: true
+    voice_control: true
+  audio:
+    system: surreal_sound_pro
+    speakers: 22
+    power_watts: 1200
+
+safety:
+  euro_ncap:
+    year: 2025
+    overall_stars: 5
+
+energy_label:
+  efficiency_class: a_plus
+  co2_emissions_wltp_g_per_km: 0
+
+notes: >
+  The Lucid Gravity Grand Touring is the flagship variant with tri-motor AWD producing 
+  828 hp, 724 km EPA range (450 miles - longest in class for an SUV), and 3.5s 0-100 km/h. 
+  Named Car and Driver 10Best SUVs and MKBHD 2025 EV of the Year. The Grand Touring adds 
+  22" wheels standard, upgraded interior materials, and maximum performance from Lucid's 
+  advanced tri-motor powertrain. 300kW DC charging, air suspension, and full luxury 
+  equipment standard. Euro NCAP 5-star rated.
