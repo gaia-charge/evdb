@@ -7,6 +7,9 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import plotly.express as px
+import requests
+import tempfile
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -18,25 +21,59 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Database connection (cached)
-DB_PATH = Path(__file__).resolve().parent / 'evdb.db'
+# GitHub release configuration
+GITHUB_REPO = "gaia-charge/evdb"
+RELEASE_DB_URL = f"https://github.com/{GITHUB_REPO}/releases/latest/download/evdb.db"
+RELEASE_API_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
+DB_DIR = Path(tempfile.gettempdir()) / "evdb"
+DB_PATH = DB_DIR / "evdb.db"
 
-# Read database version for cache busting
-def get_db_version():
-    """Read database version file to bust cache when DB schema changes"""
-    version_file = Path(__file__).resolve().parent / '.db_version'
+
+@st.cache_data(ttl=300)
+def get_latest_release_tag():
+    """Check the latest release tag (cached 5 minutes)"""
     try:
-        return version_file.read_text().strip() if version_file.exists() else "v1"
-    except:
-        return "v1"
+        resp = requests.get(RELEASE_API_URL, timeout=5)
+        if resp.ok:
+            return resp.json().get("tag_name", "unknown")
+    except Exception:
+        pass
+    return None
 
-DB_VERSION = get_db_version()
+
+def ensure_database():
+    """Download database from latest GitHub release if needed"""
+    DB_DIR.mkdir(parents=True, exist_ok=True)
+    tag_file = DB_DIR / ".release_tag"
+
+    latest_tag = get_latest_release_tag()
+    current_tag = tag_file.read_text().strip() if tag_file.exists() else None
+
+    if DB_PATH.exists() and (latest_tag is None or latest_tag == current_tag):
+        return  # Database is up to date (or we can't check)
+
+    # Download new database
+    try:
+        with st.spinner("Downloading latest database..."):
+            resp = requests.get(RELEASE_DB_URL, timeout=30, stream=True)
+            resp.raise_for_status()
+            tmp = DB_PATH.with_suffix(".tmp")
+            with open(tmp, "wb") as f:
+                for chunk in resp.iter_content(chunk_size=65536):
+                    f.write(chunk)
+            tmp.rename(DB_PATH)
+            if latest_tag:
+                tag_file.write_text(latest_tag)
+    except Exception as e:
+        if not DB_PATH.exists():
+            st.error(f"Failed to download database: {e}")
+            st.stop()
+
 
 @st.cache_resource
 def get_connection():
-    """Create cached database connection (cache invalidated when DB version changes)"""
-    # Include DB_VERSION to force cache refresh when database schema is updated
-    _ = DB_VERSION
+    """Create cached database connection"""
+    ensure_database()
     return sqlite3.connect(str(DB_PATH), check_same_thread=False)
 
 @st.cache_data(ttl=3600)
