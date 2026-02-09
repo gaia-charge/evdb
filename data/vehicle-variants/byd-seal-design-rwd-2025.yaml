@@ -1,0 +1,286 @@
+id: byd-seal-design-rwd-2025
+model_id: byd-seal
+name: Design RWD
+model_year: 2025
+trim_level: design
+market_availability:
+  - europe
+  - germany
+  - france
+  - netherlands
+  - belgium
+  - spain
+  - italy
+  - uk
+
+# Battery specifications
+battery:
+  total_kwh: 82.5
+  usable_kwh: 82.5
+  chemistry: LFP  # LiFePO4 Blade Battery
+  voltage: 400  # 400V architecture on RWD
+  manufacturer: byd
+  warranty:
+    duration_years: 8
+    duration_km: 200000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: true  # Cell-to-body integration
+
+# Motor and drivetrain
+motors:
+  layout: rwd
+  total_count: 1
+  rear:
+    type: permanent_magnet
+    power_kw: 230
+    power_hp: 313
+    torque_nm: 360
+    manufacturer: byd
+
+  combined:
+    total_power_kw: 230
+    total_power_hp: 313
+    total_torque_nm: 360
+
+drivetrain:
+  drive_type: rwd
+  transmission: single_speed_reduction
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 5.9
+  top_speed_kmh: 180
+  top_speed_limited: true
+
+# Range and efficiency
+range:
+  wltp_km: 580
+  wltp_city_km: 735
+  wltp_highway_km: 490
+  epa_km: null  # Not EPA tested
+  real_world_mixed_km: 495
+  real_world_highway_km: 430
+  real_world_winter_km: 410
+
+efficiency:
+  wltp_kwh_per_100km: 15.2
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 16.7
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    time_0_100_hours: 7.5
+    onboard_charger_kw: 11
+  dc:
+    max_power_kw: 150
+    time_10_80_minutes: 26
+    time_10_80_km_added: 406
+    curve_description: >
+      Peak 150kW charging maintained from 10-50% SoC, tapering gradually to 80kW 
+      at 60%, 50kW at 70%, and 25kW at 80%. LFP chemistry enables consistent 
+      charging performance with minimal degradation over time.
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 3.3
+  v2h_capable: false  # Not standard in Europe yet
+  v2g_capable: false
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4800
+  width_mm: 1875
+  height_mm: 1460
+  wheelbase_mm: 2920
+  drag_coefficient: 0.219  # Class-leading aerodynamics
+
+weight:
+  curb_weight_kg: 1885
+  gross_vehicle_weight_kg: 2380
+  max_payload_kg: 495
+  max_towing_capacity_kg: 0  # No towing capability
+
+# Cargo and seating
+seating:
+  capacity: 5
+  configuration: 2_plus_3
+
+cargo:
+  trunk_volume_liters: 400
+  trunk_max_volume_liters: 1350  # With rear seats folded
+  frunk_volume_liters: 0
+
+# Technology and infotainment
+infotainment:
+  screen_size_inches: 15.6
+  screen_orientation: rotating  # Unique rotating display
+  system: BYD DiLink
+  features:
+    - Rotating 15.6" touchscreen (portrait/landscape)
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Voice control with AI assistant
+    - OTA software updates (2025 enhanced)
+    - 4G LTE connectivity
+    - Built-in apps (Spotify, YouTube, etc.)
+    - WiFi hotspot
+  instrument_cluster:
+    type: digital
+    size_inches: 10.25
+    customizable: true
+
+# Driver assistance (2025 updates)
+driver_assistance:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  lane_centering: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  automatic_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_attention_monitor: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  360_camera: true
+  automatic_parking: true  # 2025 addition
+  highway_assist: true  # 2025 enhanced Level 2
+  notes: "2025 model adds enhanced highway assist and automatic parking"
+
+# Safety ratings
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2023
+  adult_occupant_score: 85
+  child_occupant_score: 83
+  vulnerable_road_users_score: 70
+  safety_assist_score: 86
+  airbags: 6
+
+# Lighting
+lighting:
+  headlights: LED
+  headlights_adaptive: true
+  headlights_matrix: false
+  daytime_running_lights: LED
+  taillights: LED_animated
+  ambient_lighting: true
+  ambient_lighting_colors: 72
+
+# Climate control
+climate:
+  zones: 2
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: true
+  heated_steering_wheel: true
+  ventilated_seats_front: true
+  air_filter: PM2.5
+  notes: "Standard heat pump for efficient heating, essential for winter range"
+
+# Wheels and tires
+wheels:
+  standard:
+    size_inches: 18
+    tire_size: 235/50R18
+  optional:
+    - size_inches: 19
+      tire_size: 235/45R19
+      range_impact_km: -10
+
+# Exterior colors (2025 options)
+colors:
+  - name: Atlantis Grey
+    type: metallic
+  - name: Atto Black
+    type: solid
+  - name: Boulder Grey
+    type: metallic
+  - name: Aurora Green
+    type: metallic
+  - name: Cosmos Black
+    type: metallic
+  - name: Champion White
+    type: metallic  # New for 2025
+
+# Interior options
+interior:
+  upholstery: vegan_leather
+  trim: aluminum_accents
+  steering_wheel: leather
+  color_options:
+    - name: Black with grey accents
+    - name: Black with blue accents  # New for 2025
+
+# Standard features (2025)
+standard_features:
+  - 15.6" rotating touchscreen
+  - 10.25" digital instrument cluster
+  - Wireless phone charging
+  - Panoramic glass roof with electric sunshade
+  - Power tailgate
+  - Keyless entry and start
+  - Remote climate control via app
+  - BYD Blade Battery (LFP chemistry)
+  - Heat pump
+  - V2L (Vehicle-to-Load) 3.3kW
+  - 360° camera system
+  - Automatic parking (new for 2025)
+  - Enhanced highway assist (new for 2025)
+  - 6 airbags
+  - LED adaptive headlights
+  - 18" alloy wheels
+
+# Production information
+production:
+  start_date: "2024-08"
+  plant: BYD Zhengzhou Plant
+  country: China
+  notes: "2025 model year produced from August 2024 with software and feature updates"
+
+# Version and changelog
+version_info:
+  release_date: "2024-08"
+  changes_from_previous: "2025 model year adds automatic parking, enhanced highway assist Level 2, improved efficiency (580km WLTP vs 570km), OTA updates, Champion White color option"
+  current_production: true
+
+# Notes
+notes: >
+  2025 model year brings improved efficiency (580km WLTP), enhanced driver assistance
+  with automatic parking and Level 2 highway assist, and software improvements via OTA.
+  
+  BYD Seal Design RWD is the value-focused trim with impressive 580km range from 82.5kWh 
+  LFP Blade Battery. RWD configuration offers excellent efficiency (15.2 kWh/100km WLTP).
+  
+  Direct competitor to Tesla Model 3 RWD but significantly more affordable. Class-leading
+  0.219 drag coefficient contributes to excellent range and efficiency. Unique rotating
+  15.6" touchscreen is standout feature.
+  
+  LFP chemistry allows regular 100% charging without degradation concerns, and maintains
+  consistent performance in hot climates. Heat pump standard for winter efficiency.
+  
+  V2L capability enables use as mobile power source (3.3kW output). Perfect for camping,
+  outdoor events, or emergency home backup.
+  
+  5.9s 0-100km/h is quick for RWD sedan. 150kW DC fast charging reaches 10-80% in 26 
+  minutes, competitive for 400V architecture. Real-world range of 495km mixed driving
+  is excellent for daily use.
+  
+  Popular in Europe as Tesla Model 3 alternative with better value proposition. Strong
+  warranty (8 years/200,000km battery) provides peace of mind. 2025 updates make it
+  even more competitive with enhanced safety and convenience features.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.byd.com/eu/car/seal.html
+    - https://ev-database.org/car/1673/BYD-Seal
+    - https://www.euroncap.com/en/results/byd/seal/47130
