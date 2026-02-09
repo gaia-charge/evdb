@@ -1,0 +1,140 @@
+# BMW i4 eDrive40 (2025) - Germany Market Availability
+
+id: bmw-i4-edrive40-2025-de
+variant_id: bmw-i4-edrive40-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-01-15"
+delivery_time_weeks: 10
+
+# Pricing
+pricing:
+  base_price: 58400
+  price_including_vat: 58400
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Alpine White
+    code: 300
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Sapphire Metallic
+    code: C1M
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: Portimao Blue Metallic
+    code: C3N
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: Brooklyn Grey Metallic
+    code: C3P
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: Skyscraper Grey Metallic
+    code: C3Q
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 18" Aero wheels Style 861
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 19" Aerodynamic wheels Style 862 M
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 1250
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Sensatec
+    material: sensatec
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Mocha Sensatec/Mesh
+    material: sensatec_mesh
+    color: mocha
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Cognac Vernasca Leather
+    material: leather
+    color: cognac
+    price_add:
+      amount: 1650
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: company_car
+    name: "0.25% company car tax (BEV)"
+    description: "Reduced taxation for electric company cars"
+    conditions: ["Price under €70,000 gross list price"]
+
+# Company Car Tax Calculation (Germany-specific)
+company_car_tax:
+  gross_list_price: 58400
+  tax_rate_percent: 0.25
+  calculation_method: "0.25% of gross list price per month"
+  monthly_benefit: 146  # 58400 * 0.0025
+  notes: "Privileged 0.25% rate for BEVs under €70,000"
+
+# Options
+popular_packages:
+  - name: Driving Assistant Professional
+    price:
+      amount: 2200
+      currency: EUR
+    features:
+      - Active Cruise Control with Stop&Go
+      - Steering and lane control assistant
+      - Lane Change Warning
+      - Lane Change Assistant
+      - Side collision prevention
+      - Highway Assistant
+  - name: Comfort Package
+    price:
+      amount: 1400
+      currency: EUR
+    features:
+      - Heated front seats
+      - Heated steering wheel
+      - Electric lumbar support
+      - Ambient lighting
+
+# Notes
+notes: |
+  BMW i4 eDrive40 2025 model with updated Operating System 8.5.
+  Federal EV incentives (Umweltbonus) ended in December 2024.
+  Delivery times improved compared to 2024 model year.
+  Company car tax benefit (0.25%) applies if gross list price is under €70,000.
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2025/bmw-i4-uebersicht.html
+  created_at: "2026-02-09"
+  last_verified_at: "2026-02-09"
+  notes: Prices as of February 2026, no federal incentives available
