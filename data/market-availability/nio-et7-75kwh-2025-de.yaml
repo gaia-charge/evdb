@@ -1,0 +1,106 @@
+# Market Availability: NIO ET7 75 kWh - Germany
+id: nio-et7-75kwh-2025-de
+variant_id: nio-et7-75kwh-2025
+market: DE
+market_code: DE
+currency: EUR
+
+pricing:
+  base_price: 69900.00
+  base_price_vat_inclusive: true
+  vat_rate: 19.0
+  base_price_excluding_vat: 58739.50
+  baas_price: 57900.00
+  baas_battery_rental_monthly: 169.00
+  notes: >
+    €69,900 with battery included. BaaS: €57,900 car price + €169/month battery rental.
+
+colors:
+  - name: "Starry Blue"
+    type: "solid"
+    price: 0.00
+    notes: "Standard color"
+  - name: "Onyx Black"
+    type: "metallic"
+    price: 1200.00
+  - name: "Cloud White"
+    type: "metallic"
+    price: 1200.00
+  - name: "Midnight Black"
+    type: "metallic"
+    price: 1200.00
+  - name: "Sierra Brown"
+    type: "metallic"
+    price: 1200.00
+
+wheels:
+  - size: "20-inch"
+    type: "Alloy"
+    price: 0.00
+    notes: "Standard"
+  - size: "21-inch"
+    type: "Sport Alloy"
+    price: 1800.00
+
+interiors:
+  - name: "Nappa Leather with karuun®"
+    material: "Nappa Leather"
+    color: "Standard"
+    price: 0.00
+
+packages: []
+
+standalone_options:
+  - name: "NIO Pilot Pro"
+    price: 3400.00
+    description: "Enhanced ADAS with highway pilot"
+  - name: "Premium Interior Upgrade"
+    price: 2500.00
+    description: "Upgraded interior materials and trim"
+
+company_car:
+  gross_list_price: 69900
+  electric_vehicle: true
+  benefit_rate_percent: 0.25
+  monthly_taxable_benefit: 174.75
+  annual_taxable_benefit: 2097.00
+  notes: >
+    Under €70,000 threshold — qualifies for 0.25% company car tax rate. 
+    Monthly taxable benefit: €174.75. Very attractive as company car.
+
+incentives:
+  - name: "No Federal EV Subsidy"
+    type: "subsidy"
+    amount: 0
+    description: "German Umweltbonus ended December 2023"
+  - name: "0.25% Company Car Tax"
+    type: "tax_exemption"
+    amount: 0
+    description: "Reduced company car taxation at 0.25% of list price (under €70k threshold)"
+
+delivery:
+  lead_time_weeks: 8
+  notes: "Available from NIO Houses and NIO Spaces in Germany"
+
+sales_channels:
+  - type: "Direct"
+    name: "NIO Houses / NIO Spaces"
+    cities: ["Berlin", "Munich", "Frankfurt", "Hamburg", "Düsseldorf"]
+  - type: "Online"
+    name: "NIO Website"
+    url: "https://www.nio.com/de_DE"
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  roadside_assistance_years: 5
+
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.nio.com/de_DE/et7
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"

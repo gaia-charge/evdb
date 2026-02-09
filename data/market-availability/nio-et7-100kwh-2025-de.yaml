@@ -1,0 +1,107 @@
+# Market Availability: NIO ET7 100 kWh - Germany
+id: nio-et7-100kwh-2025-de
+variant_id: nio-et7-100kwh-2025
+market: DE
+market_code: DE
+currency: EUR
+
+pricing:
+  base_price: 81900.00
+  base_price_vat_inclusive: true
+  vat_rate: 19.0
+  base_price_excluding_vat: 68823.53
+  baas_price: 57900.00
+  baas_battery_rental_monthly: 289.00
+  notes: >
+    €81,900 with battery. BaaS: €57,900 car + €289/month battery rental.
+    BaaS especially attractive — same car price as 75 kWh, higher monthly rental.
+
+colors:
+  - name: "Starry Blue"
+    type: "solid"
+    price: 0.00
+    notes: "Standard color"
+  - name: "Onyx Black"
+    type: "metallic"
+    price: 1200.00
+  - name: "Cloud White"
+    type: "metallic"
+    price: 1200.00
+  - name: "Midnight Black"
+    type: "metallic"
+    price: 1200.00
+  - name: "Sierra Brown"
+    type: "metallic"
+    price: 1200.00
+
+wheels:
+  - size: "20-inch"
+    type: "Alloy"
+    price: 0.00
+    notes: "Standard"
+  - size: "21-inch"
+    type: "Sport Alloy"
+    price: 1800.00
+
+interiors:
+  - name: "Nappa Leather with karuun®"
+    material: "Nappa Leather"
+    color: "Standard"
+    price: 0.00
+
+packages: []
+
+standalone_options:
+  - name: "NIO Pilot Pro"
+    price: 3400.00
+    description: "Enhanced ADAS with highway pilot"
+  - name: "Premium Interior Upgrade"
+    price: 2500.00
+    description: "Upgraded interior materials and trim"
+
+company_car:
+  gross_list_price: 81900
+  electric_vehicle: true
+  benefit_rate_percent: 0.50
+  monthly_taxable_benefit: 409.50
+  annual_taxable_benefit: 4914.00
+  notes: >
+    Exceeds €70,000 threshold — 0.5% company car tax rate applies. 
+    BaaS option (€57,900 car price) qualifies for the lower 0.25% rate instead.
+
+incentives:
+  - name: "No Federal EV Subsidy"
+    type: "subsidy"
+    amount: 0
+    description: "German Umweltbonus ended December 2023"
+  - name: "0.5% Company Car Tax"
+    type: "tax_exemption"
+    amount: 0
+    description: "Reduced EV company car tax at 0.5% (over €70k threshold)"
+
+delivery:
+  lead_time_weeks: 8
+  notes: "Available from NIO Houses and NIO Spaces in Germany"
+
+sales_channels:
+  - type: "Direct"
+    name: "NIO Houses / NIO Spaces"
+    cities: ["Berlin", "Munich", "Frankfurt", "Hamburg", "Düsseldorf"]
+  - type: "Online"
+    name: "NIO Website"
+    url: "https://www.nio.com/de_DE"
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  roadside_assistance_years: 5
+
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.nio.com/de_DE/et7
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
