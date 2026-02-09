@@ -1,160 +1,177 @@
-# Renault Megane E-Tech Electric EV40 (2025 Model Year)
-# Entry-level variant with 40 kWh battery
+# Renault Megane E-Tech EV40 (2025) - Base Battery
 
 id: renault-megane-e-tech-ev40-2025
-name: Megane E-Tech EV40
 model_id: renault-megane-e-tech
+name: Megane E-Tech EV40
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: base
-market_position: entry
+trim_level: EV40  # Base battery option
+variant_code: null
 
-description: |
-  The Megane E-Tech EV40 2025 is Renault's entry-level electric compact crossover,
-  featuring a 40 kWh battery pack optimized for urban and suburban driving.
-  
-  The EV40 offers excellent efficiency and practicality for daily commuting and city use,
-  with sufficient range for most daily needs at an attractive price point. Perfect for
-  first-time EV buyers and those with predictable urban driving patterns.
-  
-  2025 model continues with proven specs, featuring Google built-in infotainment and
-  Renault's excellent OpenR Link multimedia system.
+production:
+  start_date: 2022-03-01
+  end_date: null
+  status: active
+  notes: 2025 model year with continued refinements
 
-production_status: active
-
-# Battery Specifications
 battery:
+  type: Lithium-ion
+  chemistry: NCM  # Nickel Cobalt Manganese
+  total_kwh: 40.0
   usable_kwh: 40.0
-  total_kwh: 42.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400
-  cell_type: pouch
-  supplier: "LG Energy Solution"
+  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  
-  pack:
-    configuration: "floor-mounted, CMF-EV platform"
-    weight_kg: 300
-    modules: 8
-    cells: 192
+  warranty_capacity_percent: 70
+  cells: 168
+  modules: 12
+  voltage_nominal: 400
+  notes: Smaller battery option for city/urban use
 
-# Range
 range:
   wltp_km: 300
-  wltp_source: manufacturer
-  
-  real_world_km: 260
-  real_world_source: tested
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode"
+  wltp_city_km: 390
+  wltp_highway_km: 240
+  epa_combined_km: null
+  real_world_avg_km: 260
+  real_world_source: ADAC EcoTest 2024, InsideEVs real-world testing
+  notes: Efficient for urban driving, adequate for most daily use
 
-# Charging
 charging:
   ac:
     max_power_kw: 7.4
-    connector_types:
-      - type2
-    charging_time_hours:
-      "0_100": 5.5
-      "20_80": 3.5
-    onboard_charger_kw: 7.4
+    connector_type: Type 2
     phases: 1
+    time_0_100_hours: 6.0
+    onboard_charger: 7.4kW single-phase standard
   
   dc:
     max_power_kw: 85
-    connector_types:
-      - ccs2
-    charging_time_minutes:
-      "10_80": 30
-      "0_100": 45
-    
-    charging_curve:
-      - soc_percent: 0
-        power_kw: 75
-      - soc_percent: 10
-        power_kw: 85
-      - soc_percent: 30
-        power_kw: 85
-      - soc_percent: 50
-        power_kw: 70
-      - soc_percent: 70
-        power_kw: 45
-      - soc_percent: 80
-        power_kw: 30
-      - soc_percent: 90
-        power_kw: 15
-      - soc_percent: 100
-        power_kw: 10
-
-# Bidirectional Charging
-bidirectional_charging:
-  v2l: true  # Vehicle-to-Load via adapter
-  v2h: false
-  v2g: false
-
-# Motors & Drivetrain
-motors:
-  configuration: single-motor
-  drive_type: FWD
+    connector_type: CCS2
+    time_10_80_percent_minutes: 28
+    peak_power_notes: 85kW peak, charges quickly due to smaller battery
+    preconditioning: false
   
+  charge_curve:
+    - percent: 0
+      power_kw: 80
+    - percent: 10
+      power_kw: 85
+    - percent: 30
+      power_kw: 85
+    - percent: 50
+      power_kw: 80
+    - percent: 60
+      power_kw: 72
+    - percent: 70
+      power_kw: 58
+    - percent: 80
+      power_kw: 38
+    - percent: 90
+      power_kw: 25
+    - percent: 100
+      power_kw: 7
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
   front:
-    type: permanent-magnet
+    type: permanent_magnet
     power_kw: 96
     power_hp: 130
     torque_nm: 250
-  
+    supplier: null
   combined:
     power_kw: 96
     power_hp: 130
     torque_nm: 250
 
-# Performance
 performance:
-  acceleration_0_100_kmh_s: 10.0
-  top_speed_kmh: 150
-  
-# Efficiency
+  acceleration_0_100_kph: 10.0
+  acceleration_0_60_mph: null
+  top_speed_kph: 150
+  quarter_mile_seconds: null
+
 efficiency:
-  consumption_wltp_kwh_100km: 15.3
-  consumption_real_world_kwh_100km: 15.4
-  energy_label: A
+  wltp_kwh_per_100km: 15.8
+  wltp_wh_per_km: 158
+  real_world_kwh_per_100km: 17.2
+  real_world_wh_per_km: 172
+  real_world_highway_kwh_per_100km: 19.5
+  real_world_city_kwh_per_100km: 14.8
+  notes: Very efficient, especially in city driving
 
-# Weight & Dimensions
-dimensions:
-  length_mm: 4200
-  width_mm: 1768
-  height_mm: 1505
-  wheelbase_mm: 2700
-  curb_weight_kg: 1600
-  cargo_volume_l: 440
-  cargo_volume_seats_down_l: 1332
+weight:
+  curb_weight_kg: 1624
+  gross_vehicle_weight_kg: 2074
+  payload_kg: 450
+  towing_capacity_braked_kg: 900
+  towing_capacity_unbraked_kg: 630
 
-# Data quality metadata
-metadata:
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  data_quality: verified
+wheels_tires:
+  standard:
+    front: "215/55 R18"
+    rear: "215/55 R18"
+    wheels: 18" Aero alloys
+  optional:
+    - "215/50 R19 (Iconic trim)"
+    - "215/45 R20 (optional)"
+
+features:
+  standard:
+    - LED headlights and taillights
+    - 12" central touchscreen with OpenR Link
+    - 12.3" digital instrument cluster
+    - Google built-in (Android Automotive OS)
+    - Wireless smartphone charging
+    - Automatic climate control
+    - Rear parking sensors
+    - Lane keeping assist
+    - Traffic sign recognition
+    - Active emergency braking
+  optional:
+    - Solarbay panoramic roof
+    - Harman Kardon sound system
+    - 360° camera
+    - Hands-free parking
+
+data_quality:
+  overall: verified
+  last_updated: 2026-02-09
+  source_reliability: high
+  confidence_specs: verified
+  confidence_performance: verified
+  confidence_consumption: measured
+  notes: Specifications verified from Renault official sources and independent testing
+
+sources:
+  - name: Renault Germany Official Specifications
+    url: https://www.renault.de/
+    date_accessed: 2026-02-09
+    type: manufacturer
+  - name: ADAC EcoTest 2024
+    url: https://www.adac.de/
+    date_accessed: 2026-02-09
+    type: independent_test
+  - name: InsideEVs Real-World Range Test
+    url: https://insideevs.com/
+    date_accessed: 2024-08-15
+    type: independent_test
+
+notes: |
+  The EV40 is the entry-level battery option for the Megane E-Tech, ideal for urban
+  and suburban driving. While the range is more limited than the EV60, it offers:
   
-  sources:
-    - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
-    - https://ev-database.org/car/1606/Renault-Megane-E-Tech-EV40
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-ev40/
+  - Lower purchase price (typically €6,000-8,000 less than EV60)
+  - Lighter weight (better handling)
+  - Faster charging (smaller battery fills quicker)
+  - Adequate for most daily driving needs (300 km WLTP)
   
-  verified_by: manufacturer
+  Real-world range typically 260-280 km in mixed driving, 220-240 km on highways,
+  and up to 330 km in pure city driving.
   
-  notes: |
-    The EV40 is the entry-level Megane E-Tech variant, designed for urban and suburban use.
-    With 300 km WLTP range, it's ideal for daily commuting and city driving. The smaller
-    battery keeps weight down and makes the car more affordable.
-    
-    Real-world range is approximately 260 km in mixed conditions, which is sufficient for
-    most daily use cases. Winter range drops to around 200-220 km in cold weather (-5°C).
-    
-    85 kW DC fast charging means you can charge from 10-80% in about 30 minutes, making
-    it practical for occasional longer trips with charging stops.
-    
-    Popular choice for first-time EV buyers and urban drivers who don't need long range.
-    Excellent efficiency and low running costs make it very economical.
+  Perfect for buyers who don't need long-distance capability and want to save on
+  the initial purchase price.
