@@ -1,0 +1,100 @@
+# Subaru Solterra AWD 2025 - German Market
+id: subaru-solterra-awd-2025-de
+variant_id: subaru-solterra-awd-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 49990
+  destination_charge: 890
+  on_the_road_price: 50880
+  price_includes:
+    - "Dual-motor AWD (160kW / 218hp)"
+    - "11kW 3-phase AC charging"
+    - "150kW DC fast charging"
+    - "Heat pump"
+    - "Subaru EyeSight"
+    - "X-MODE"
+    - "12.3-inch touchscreen"
+    - "Panoramic moonroof"
+    - "18-inch alloy wheels"
+
+trim_levels:
+  - name: "Comfort"
+    price: 49990
+    features:
+      - "AWD 160kW (218hp)"
+      - "466 km WLTP range"
+      - "EyeSight driver assist"
+      - "X-MODE"
+      - "Cloth/synthetic interior"
+  - name: "Style"
+    price: 53990
+    features:
+      - "Leather interior"
+      - "Heated front and rear seats"
+      - "Power driver seat with memory"
+      - "Harman Kardon audio"
+      - "360-degree camera"
+  - name: "Platinum"
+    price: 57990
+    features:
+      - "All Style features"
+      - "Ventilated front seats"
+      - "Power passenger seat"
+      - "20-inch wheels"
+      - "Premium Nappa leather"
+      - "Digital rear-view mirror"
+
+colors:
+  - name: "Crystal White Pearl"
+    type: pearl
+    price: 700
+  - name: "Ice Silver Metallic"
+    type: metallic
+    price: 600
+  - name: "Magnetite Grey Metallic"
+    type: metallic
+    price: 600
+  - name: "Crystal Black Silica"
+    type: metallic
+    price: 600
+  - name: "Harbour Mist Metallic"
+    type: metallic
+    price: 600
+
+incentives:
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 4500
+    notes: "0.25% of €49,990 = €125/month. ICE: €500/month. Savings: €375/month = €4,500/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 380
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: grant
+    amount: 300
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 10
+  production_status: active
+  order_url: "https://www.subaru.de/solterra"
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 160000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "5-year/160,000km vehicle warranty is class-leading"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.subaru.de/solterra"
+  notes: "Priced competitively against Toyota bZ4X AWD (€52,900). Subaru's 5-year warranty adds value. AWD-only simplifies lineup."

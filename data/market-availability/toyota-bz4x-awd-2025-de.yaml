@@ -1,0 +1,106 @@
+# Toyota bZ4X AWD 2025 - German Market
+id: toyota-bz4x-awd-2025-de
+variant_id: toyota-bz4x-awd-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 52900
+  destination_charge: 995
+  on_the_road_price: 53895
+  price_includes:
+    - "Dual-motor AWD (160kW / 218hp)"
+    - "11kW 3-phase AC charging"
+    - "150kW DC fast charging"
+    - "Heat pump (standard)"
+    - "X-MODE AWD"
+    - "Toyota Safety Sense 3.0"
+    - "12.3-inch touchscreen"
+    - "Panoramic glass roof"
+    - "18-inch alloy wheels"
+
+trim_levels:
+  - name: "Pure"
+    price: 52900
+    features:
+      - "AWD 160kW (218hp)"
+      - "485 km WLTP range"
+      - "X-MODE"
+      - "18-inch wheels"
+      - "Fabric interior"
+  - name: "Comfort"
+    price: 57400
+    features:
+      - "Heated front seats and steering wheel"
+      - "Power driver's seat"
+      - "Blind spot monitor"
+      - "Rear cross-traffic alert"
+      - "Synthetic leather interior"
+  - name: "Premium"
+    price: 61400
+    features:
+      - "All Comfort features"
+      - "Ventilated front seats"
+      - "360-degree camera"
+      - "Premium audio (9 speakers)"
+      - "Wireless phone charger"
+
+colors:
+  - name: "Super White"
+    type: solid
+    price: 0
+  - name: "Silver Metallic"
+    type: metallic
+    price: 650
+  - name: "Black"
+    type: solid
+    price: 0
+  - name: "Emotional Red II"
+    type: metallic
+    price: 850
+  - name: "Oxygen White Pearl"
+    type: pearl
+    price: 850
+
+individual_options:
+  - name: "Towing package"
+    price: 990
+  - name: "Solar roof"
+    price: 1500
+  - name: "20-inch alloy wheels"
+    price: 1200
+
+incentives:
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 4760
+    notes: "0.25% of €52,900 = €132/month. ICE: €529/month. Savings: €397/month = €4,764/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 380
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: grant
+    amount: 300
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 12
+  production_status: active
+  order_url: "https://www.toyota.de/modelle/bz4x"
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 10
+  battery_km: null
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.toyota.de/modelle/bz4x"
+  notes: "2025 AWD variant. €5,900 premium over FWD for AWD with X-MODE."
