@@ -1,0 +1,134 @@
+id: renault-4-e-tech-evolution-40-2025
+model_id: renault-4-e-tech
+name: Renault 4 E-Tech Electric Evolution 40
+variant_name: Evolution 40
+model_year: 2025
+
+# Vehicle Classification
+vehicle_type: suv
+segment: B
+body_style: 5-door crossover
+seats: 5
+doors: 5
+
+# Drivetrain
+drivetrain:
+  type: fwd
+  motors:
+    front:
+      type: permanent_magnet
+      power_kw: 90
+      power_hp: 122
+      torque_nm: 225
+      position: front
+
+# Battery System
+battery:
+  total_kwh: 42
+  usable_kwh: 40
+  chemistry: LFP
+  voltage_nominal: 400
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid_cooling
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector: type2
+    charge_time_0_100_hours: 4.0
+  dc:
+    max_power_kw: 80
+    connector: ccs2
+    charge_time_10_80_percent_minutes: 30
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 80
+      - soc_percent: 50
+        power_kw: 75
+      - soc_percent: 70
+        power_kw: 60
+      - soc_percent: 80
+        power_kw: 40
+  bidirectional:
+    v2g_capable: false
+    v2h_capable: false
+    v2l_capable: false
+
+# Performance
+performance:
+  acceleration_0_100_kmh_seconds: 9.5
+  top_speed_kmh: 150
+
+# Range & Efficiency
+range:
+  wltp_km: 300
+  wltp_city_km: 380
+  wltp_highway_km: 235
+  real_world:
+    mixed_km: 255
+    highway_km: 200
+    city_km: 320
+    winter_km: 200
+
+efficiency:
+  wltp_kwh_per_100km: 15.2
+  real_world_kwh_per_100km: 17.0
+
+# Weight
+weight:
+  curb_weight_kg: 1360
+  gross_vehicle_weight_kg: 1770
+  payload_kg: 410
+
+# Suspension & Brakes
+suspension:
+  front: "MacPherson strut"
+  rear: "Multi-link"
+
+brakes:
+  front: "Ventilated disc"
+  rear: "Disc"
+  regenerative: true
+
+# Wheels & Tires
+wheels:
+  standard_size: "17 inch"
+  standard_tire: "205/55 R17"
+
+# Climate
+climate:
+  heat_pump: true
+  preconditioning: true
+  zones: 1
+
+# ADAS
+adas:
+  level: 2
+  features:
+    - "Adaptive Cruise Control"
+    - "Lane Keeping Assist"
+    - "Active Emergency Braking with pedestrian/cyclist detection"
+    - "Rear parking sensors"
+    - "Speed Limit Recognition"
+    - "Driver Attention Warning"
+
+# Warranty
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  created_at: "2026-02-09"
+  sources:
+    - "Renault official specifications"
+    - "Automotive press specs"
+  notes: "Base model with 40 kWh LFP battery. Shares powertrain with Renault 5 E-Tech Evolution 40."

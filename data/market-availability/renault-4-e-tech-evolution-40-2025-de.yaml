@@ -1,0 +1,107 @@
+id: renault-4-e-tech-evolution-40-2025-de
+variant_id: renault-4-e-tech-evolution-40-2025
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2025-03-01"
+
+pricing:
+  base_price: 29500
+  price_including_vat: 29500
+  vat_rate_percent: 19
+  destination_charge: 1200
+  total_price_estimate: 30700
+  notes: >
+    Renault 4 E-Tech Evolution 40 base price in Germany €29,500.
+    Price includes 19% VAT. Destination charge approximately €1,200.
+
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 2655
+    description: >
+      EVs with list price under €70,000 qualify for 0.25% monthly tax rate
+      (vs 1.0% for combustion vehicles). Saves approximately €2,655/year vs ICE equivalent.
+    conditions:
+      - List price under €70,000
+      - Pure battery-electric vehicle (BEV)
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 0
+    description: >
+      Full exemption from annual road tax (Kfz-Steuer) until December 31, 2030.
+    valid_until: "2030-12-31"
+
+market_specific:
+  standard_equipment:
+    - 17" steel wheels with covers
+    - 10.1" OpenR Link touchscreen with Google Built-In
+    - Wireless Apple CarPlay and Android Auto
+    - Digital instrument cluster
+    - LED headlights and daytime running lights
+    - Manual air conditioning
+    - Heat pump
+    - Adaptive Cruise Control
+    - Lane Keeping Assist
+    - Active Emergency Braking
+    - Rear parking sensors
+    - Speed Limit Recognition
+    - Electric parking brake
+
+  optional_equipment:
+    - name: "Techno Pack"
+      price: 1500
+      includes:
+        - "18-inch alloy wheels"
+        - "Automatic dual-zone climate control"
+        - "Wireless smartphone charging"
+        - "Heated front seats"
+    - name: "Advanced Driving Pack"
+      price: 1200
+      includes:
+        - "Blind Spot Warning"
+        - "Rear Cross Traffic Alert"
+        - "Highway & Traffic Jam Companion"
+    - name: "Canvas roof"
+      price: 800
+      notes: "Retractable canvas roof section, homage to original 4L"
+
+  colors:
+    - name: "Alpin White"
+      type: solid
+      price: 0
+    - name: "Diamond Black"
+      type: metallic
+      price: 650
+    - name: "Urban Grey"
+      type: metallic
+      price: 650
+    - name: "Ochre Yellow"
+      type: special
+      price: 850
+      notes: "Signature color, inspired by original 4L"
+    - name: "Glacier Blue"
+      type: metallic
+      price: 650
+
+  delivery_time_weeks: 10
+
+company_car_tax:
+  gross_list_price: 29500
+  monthly_tax_base: 73.75
+  annual_tax_base: 885.00
+  comparison_ice_monthly: 295.00
+  savings_vs_ice_percent: 75
+  notes: >
+    0.25% company car tax rule applies. Monthly taxable benefit €73.75
+    vs €295.00 for equivalent ICE vehicle (1.0% rule).
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  created_at: "2026-02-09"
+  sources:
+    - "Renault Deutschland official website and configurator"
+  notes: "Base Renault 4 E-Tech with 40 kWh battery. Competitive price at €29,500."
