@@ -1,0 +1,124 @@
+id: nio-et5-touring-100kwh-2025-de
+variant_id: nio-et5-touring-100kwh-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2023-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025 model year)
+pricing:
+  base_price: 59900
+  price_including_vat: 59900
+  vat_rate_percent: 19
+  on_road_price: 61050
+  destination_charge: 950
+  registration_fee: 200
+
+# BaaS pricing
+baas_pricing:
+  purchase_price_without_battery: 38900
+  battery_subscription_monthly_100kwh: 289
+  notes: >
+    BaaS purchase price same as 75 kWh variant (€38,900). The 100 kWh battery
+    subscription is €289/month. BaaS customers can swap between battery sizes
+    at NIO Power Swap stations.
+
+# Trim levels
+trim_levels:
+  - name: ET5 Touring 100 kWh 2025
+    price: 59900
+    description: Long range with 100 kWh swappable battery and full equipment
+    standard_features:
+      - 12.8" AMOLED centre display
+      - NOMI AI companion
+      - 10.2" digital instrument cluster
+      - Head-up display
+      - 7.1.4 Dolby Atmos (23 speakers)
+      - Air suspension with adaptive damping
+      - Matrix LED headlights
+      - 256-color ambient lighting
+      - Wireless phone charging
+      - Panoramic glass roof
+      - Power tailgate
+      - Heat pump
+      - 360° camera system
+      - Automatic parking
+      - NIO Pilot Level 2+ highway assist
+      - Ventilated front seats
+      - 20" alloy wheels
+
+# Incentives
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 5990
+    description: 0.25% monthly rate vs 1% for combustion vehicles
+
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 149.75
+  annual_taxable_benefit_eur: 1797
+  comparable_ice_benefit_eur: 7787
+  annual_tax_savings_eur: 5990
+  notes: >
+    Qualifies for 0.25% company car rate (under €70,000). BaaS option reduces
+    list price basis to €38,900 for even lower company car taxation.
+
+# Delivery
+delivery:
+  typical_wait_weeks: 10
+  production_location: Hefei, China
+  import_method: sea_freight
+
+# Warranty
+warranty:
+  vehicle_years: 5
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 200000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 5
+
+# Competitors
+competitors:
+  - model: BMW i4 eDrive40
+    price_eur: 56500
+    range_km: 493
+    notes: Lower price, shorter range, established brand
+  - model: VW ID.7 Tourer Pro S
+    price_eur: 56995
+    range_km: 685
+    notes: Lower price, longer range, practical wagon
+  - model: Polestar 2 Long Range
+    price_eur: 52990
+    range_km: 551
+    notes: Lower price, comparable range
+
+notes: >
+  NIO ET5 Touring 100 kWh at €59,900 (or €38,900 + €289/month BaaS) offers
+  580 km WLTP range in a premium wagon package. The 100 kWh battery makes it
+  viable for long-distance touring with real-world range of approximately
+  490 km. Battery swap capability means a full charge equivalent in just
+  5 minutes at Power Swap stations.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: estimated
+  sources:
+    - https://www.nio.com/de/et5-touring
+    - NIO Germany configurator

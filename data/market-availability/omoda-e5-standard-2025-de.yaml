@@ -1,0 +1,126 @@
+id: omoda-e5-standard-2025-de
+variant_id: omoda-e5-standard-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2024-10-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 34990
+  price_including_vat: 34990
+  vat_rate_percent: 19
+  on_road_price: 36140
+  destination_charge: 950
+  registration_fee: 200
+
+# Trim levels
+trim_levels:
+  - name: OMODA E5 Standard 2025
+    price: 34990
+    description: Well-equipped compact electric SUV with 430 km WLTP range
+    standard_features:
+      - 15.6" central touchscreen
+      - 10.25" digital instrument cluster
+      - Wireless Apple CarPlay and Android Auto
+      - Wireless phone charging
+      - LED adaptive headlights
+      - 64-color ambient lighting
+      - Heat pump
+      - V2L (3.3 kW)
+      - 360° camera
+      - Automatic parking
+      - Heated front seats and steering wheel
+      - Dual-zone climate control
+      - Power tailgate
+      - Panoramic sunroof
+      - 18" alloy wheels
+
+# Incentives
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 3499
+    description: 0.25% monthly rate vs 1% for combustion vehicles
+    notes: >
+      Monthly taxable benefit of €87.48 vs €349.90 for equivalent ICE.
+      Savings of approximately €3,499 annually.
+
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 87.48
+  annual_taxable_benefit_eur: 1050
+  comparable_ice_benefit_eur: 4549
+  annual_tax_savings_eur: 3499
+  notes: >
+    Very attractive company car proposition at €34,990 list price.
+    Monthly taxable benefit of only €87.48, making it one of the
+    cheapest company car options in the electric SUV segment.
+
+# Delivery
+delivery:
+  typical_wait_weeks: 8
+  production_location: Wuhu, China
+  import_method: sea_freight
+
+# Warranty
+warranty:
+  vehicle_years: 7
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+
+# Competitors
+competitors:
+  - model: MG ZS EV Long Range
+    price_eur: 35990
+    range_km: 440
+    notes: Similar price and range, more established in Europe
+  - model: BYD Atto 3 Comfort
+    price_eur: 37990
+    range_km: 420
+    notes: Higher price, similar range, BYD brand recognition
+  - model: Hyundai Kona Electric
+    price_eur: 41990
+    range_km: 454
+    notes: Higher price, longer range, established brand and dealer network
+  - model: Dacia Spring
+    price_eur: 22750
+    range_km: 225
+    notes: Much cheaper, much shorter range, city car segment
+
+notes: >
+  OMODA E5 at €34,990 is one of the most affordable compact electric SUVs in
+  Germany with 430 km WLTP range. Undercuts VW ID.4 by over €12,000 and Hyundai
+  Kona Electric by €7,000 while offering similar equipment levels.
+
+  Excellent company car proposition with monthly taxable benefit of only €87.48.
+  7-year/150,000 km vehicle warranty is among the best in the segment.
+
+  Main consideration is brand recognition — OMODA/Chery is new to Germany and
+  dealer network is still developing. However, competitive pricing and generous
+  warranty help offset brand uncertainty.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: estimated
+  sources:
+    - https://www.omodaauto.eu/de/e5
+    - OMODA Germany dealer pricing
