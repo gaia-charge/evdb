@@ -1,94 +1,106 @@
-# Renault Megane E-Tech Electric (First Generation)
+# Renault Megane E-Tech - Compact Electric Crossover
+
 id: renault-megane-e-tech
-name: Megane E-Tech Electric
-name_full: Renault Megane E-Tech Electric
 manufacturer_id: renault-group
 brand: "Renault"
+name: Megane E-Tech
+name_full: Renault Megane E-Tech Electric
 body_style: crossover
 segment: C  # Compact crossover
-platform: CMF-EV  # Renault-Nissan-Mitsubishi Alliance EV platform
 
 production:
   start_year: 2022
   end_year: null  # Still in production
-  status: active
-  generation: 1
+  generation: 1  # First generation electric Megane (separate from combustion Megane)
+  current_status: active
 
-dimensions:
-  length_mm: 4210
-  width_mm: 1768
-  width_with_mirrors_mm: 2060
-  height_mm: 1505
-  wheelbase_mm: 2700
-  ground_clearance_mm: 160
-  drag_coefficient: 0.30  # Very good for crossover
-  
-seating:
-  capacity: 5
-  configuration: "2+3"
+platform: CMF-EV  # Renault-Nissan-Mitsubishi Alliance electric platform
 
-cargo:
-  trunk_capacity_liters: 440  # Good for compact crossover
-  frunk_capacity_liters: 0    # No frunk
-  max_capacity_liters: 1332   # With rear seats folded
-
-towing:
-  max_trailer_weight_braked_kg: 900   # Optional towing package
-  max_trailer_weight_unbraked_kg: 750
-  max_roof_load_kg: 80
-  max_towbar_load_kg: 60
-
-features:
-  - 12.3" OpenR Link multimedia system with Google built-in
-  - 12.3" digital instrument cluster
-  - Google Maps, Google Assistant, Google Play Store
-  - Wireless Apple CarPlay and Android Auto
-  - LED Pure Vision headlights
-  - Automatic climate control
-  - Heat pump standard (excellent for efficiency)
-  - Multi-sense drive modes (Eco, Comfort, Sport, My Sense)
-  - Keyless entry and start
-  - Wireless smartphone charging
-  - Rear parking sensors
-  - Rear parking camera
-  - Cruise control with speed limiter
-  - One-pedal driving (B-mode regeneration)
-  - Multi-Sense ambient lighting
-  - Harman Kardon premium audio system (optional)
-  - 360-degree camera (optional)
-  - Panoramic glass roof (optional)
-  - Hands-free parking assist (optional)
-  - Adaptive cruise control with Stop&Go (optional)
+awards:
+  - name: European Car of the Year
+    year: 2023
+    notes: Won against strong competition including Jeep Avenger
+  - name: Auto Express Best Family Electric Car
+    year: 2023
+  - name: What Car? Car of the Year
+    year: 2023
 
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2022
   euro_ncap_adult: 91
-  euro_ncap_child: 86
-  euro_ncap_pedestrian: 70
-  euro_ncap_safety_assist: 80
+  euro_ncap_child: 87
+  euro_ncap_vru: 70
+  euro_ncap_safety_assist: 84
+  notes: Excellent safety scores with comprehensive ADAS suite
 
-awards:
-  - name: "European Car of the Year 2023"
-    category: "Overall Winner"
-    year: 2023
-  - name: "What Car? Best Small Electric SUV"
-    category: "Best Buy"
-    year: 2023
-  - name: "Auto Express Best Electric Car"
-    category: "Design Award"
-    year: 2023
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
+  ground_clearance_mm: 180
+  drag_coefficient: 0.30
+  frontal_area_m2: 2.42
 
-manufacturing:
-  plant: "Douai Factory, France (ElectriCity hub)"
-  notes: "Built at Renault's dedicated EV production hub alongside other CMF-EV models"
+interior:
+  seating_capacity: 5
+  cargo_volume_seats_up_l: 440
+  cargo_volume_seats_down_l: 1332
+  frunk_volume_l: 0
+  notes: Class-leading boot space thanks to CMF-EV platform design
 
-metadata:
-  data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  sources:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://www.euroncap.com/en/results/renault/megane-e-tech/46835"
-    - "https://ev-database.org/car/1633/Renault-Megane-E-Tech-EV60"
-  notes: "Winner of 2023 European Car of the Year. Compact crossover built on dedicated CMF-EV platform (shared with Nissan Ariya). Modern design, excellent tech integration with Google built-in, and efficient heat pump standard. Available with 40 kWh or 60 kWh battery options."
+technology:
+  infotainment: OpenR Link with Google built-in
+  screen_size_inches: 12.0
+  digital_instrument_cluster: true
+  digital_cluster_size_inches: 12.3
+  head_up_display: false
+  ota_updates: true
+  voice_assistant: Google Assistant
+  connectivity: OpenR Link, Google Maps, Google Play Store, wireless Apple CarPlay, Android Auto
+  notable_features:
+    - Google built-in (Maps, Assistant, Play Store)
+    - OpenR interface with customizable widgets
+    - One Pedal driving mode
+    - Multi-Sense driving modes
+    - Harman Kardon premium audio (Iconic trim)
+
+build:
+  production_location: Douai, France (ElectriCity hub)
+  also_built_at: []
+  quality_notes: Built at Renault's dedicated EV facility alongside Nissan Ariya
+
+data_quality:
+  overall: verified
+  last_updated: 2026-02-09
+  source_reliability: high
+  notes: Specifications verified from Renault Germany official configurator for 2025 model year
+
+sources:
+  - name: Renault Germany Official Website
+    url: https://www.renault.de/elektrofahrzeuge/megane-e-tech.html
+    date_accessed: 2026-02-09
+  - name: Renault Megane E-Tech Technical Specifications
+    url: https://www.renault.de/elektrofahrzeuge/megane-e-tech/technische-daten.html
+    date_accessed: 2026-02-09
+  - name: Euro NCAP Safety Rating
+    url: https://www.euroncap.com/en/results/renault/megane-e-tech/46349
+    date_accessed: 2026-02-09
+
+notes: |
+  The Renault Megane E-Tech is Renault's first ground-up electric vehicle on the CMF-EV platform,
+  shared with Nissan Ariya. It won European Car of the Year 2023.
+  
+  Key highlights:
+  - Purpose-built EV platform (CMF-EV)
+  - Google built-in infotainment
+  - Class-leading interior space (440L boot)
+  - Excellent efficiency and range
+  - Built at Renault ElectriCity hub in Douai, France
+  
+  Available in two battery sizes:
+  - EV40: 40kWh battery, ~300km range, 130hp
+  - EV60: 60kWh battery, ~450km range, 220hp
+  
+  Competes with: Volkswagen ID.3, Cupra Born, Hyundai Ioniq 5, Kia EV6

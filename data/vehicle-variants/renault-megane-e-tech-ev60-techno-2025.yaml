@@ -1,141 +1,229 @@
-# Renault Megane E-Tech Electric EV60 Techno (2025)
+# Renault Megane E-Tech EV60 Techno (2025) - Popular Mid-Range Variant
+
 id: renault-megane-e-tech-ev60-techno-2025
-name: Megane E-Tech Electric EV60 Techno
 model_id: renault-megane-e-tech
+name: Megane E-Tech EV60 Techno
 model_year: 2025
-variant_code: EV60-TECHNO
+trim_level: Techno  # Mid-range trim
+variant_code: null
+
+production:
+  start_date: 2024-09-01
+  end_date: null
+  status: active
+  notes: 2025 model year with updated software and improved efficiency
 
 battery:
-  usable_kwh: 60.0
-  total_kwh: 65.0
-  chemistry: NMC
-  cell_type: pouch
-  manufacturer: "LG Energy Solution"
+  type: Lithium-ion
+  chemistry: NMC  # Nickel Manganese Cobalt
+  total_kwh: 60.0
+  usable_kwh: 58.0  # ~96.7% usable
+  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
+  cells: 192
+  modules: 12
+  voltage_nominal: 400
+  notes: Larger 60kWh battery option provides excellent range for compact crossover
 
 range:
-  wltp_km: 450
-  wltp_city_km: 610  # Excellent city efficiency
-  wltp_highway_km: 350
-  epa_km: null  # Not sold in US market
-  real_world_km: 390
-  real_world_source: "EV Database winter/summer average"
+  wltp_km: 470
+  wltp_city_km: 580
+  wltp_highway_km: 390
+  epa_combined_km: null  # Not sold in US
+  real_world_avg_km: 400
+  real_world_source: ADAC EcoTest 2025
+  notes: Excellent real-world range efficiency for C-segment crossover
 
 charging:
-  ac_max_kw: 22
-  ac_phases: 3
-  ac_connector: Type2
-  dc_max_kw: 130  # 400V architecture
-  dc_connector: CCS2
-  dc_curve:
-    - soc_percent: 0
+  ac:
+    max_power_kw: 7.4
+    connector_type: Type 2
+    phases: 1
+    time_0_100_hours: 9.0
+    onboard_charger: 7.4kW single-phase standard on Techno
+  
+  dc:
+    max_power_kw: 130
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 130kW peak maintained well, good charge curve
+    preconditioning: true
+  
+  charge_curve:
+    - percent: 10
       power_kw: 130
-    - soc_percent: 10
+    - percent: 20
       power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 115
-    - soc_percent: 50
-      power_kw: 100
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
+    - percent: 30
+      power_kw: 128
+    - percent: 40
+      power_kw: 120
+    - percent: 50
+      power_kw: 110
+    - percent: 60
+      power_kw: 95
+    - percent: 70
+      power_kw: 75
+    - percent: 80
       power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
-  time_5_to_80_percent_min: 32
-  time_10_to_80_percent_min: 30
-  charging_speed_kmh: 650  # km of range per hour at peak
-  plug_and_charge: false
+    - percent: 90
+      power_kw: 22
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: true  # V2G ready with compatible wallbox
 
-bidirectional:
-  v2l: false
-  v2l_max_kw: null
-  v2h: false
-  v2g: false
-
-performance:
+motors:
+  configuration: single_front  # Front-wheel drive
+  front_motor:
+    type: permanent_magnet
+    max_power_kw: 160
+    max_power_hp: 218
+    max_torque_nm: 300
+    supplier: null
+  rear_motor: null
+  
   drive_type: FWD
-  motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 300
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
-  acceleration_0_100_kmh_sec: 7.5
-  acceleration_0_60_mph_sec: 7.1
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  acceleration_0_60_mph_s: null
   top_speed_kmh: 160  # Electronically limited
+  quarter_mile_s: null
+
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.5
+  efficiency_notes: Excellent efficiency for crossover segment, improved in 2025 model year
 
 weight:
   curb_weight_kg: 1636
-  gross_weight_kg: 2110
-  max_payload_kg: 474
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
+  gross_vehicle_weight_kg: 2100
+  payload_kg: 464
+  weight_distribution_front_percent: 58
+  towing_capacity_kg: 900  # With optional towing package
 
-efficiency:
-  wltp_kwh_per_100km: 16.1  # Very efficient for performance
-  wltp_kwh_per_100km_city: 13.8
-  wltp_kwh_per_100km_highway: 19.8
-  real_world_kwh_per_100km: 17.8
-  energy_efficiency_class: "A+"  # EU energy label
+equipment:
+  wheels:
+    standard_size_inches: 18
+    available_sizes_inches: [18, 20]
+    tire_size_front: 215/55 R18
+    tire_size_rear: 215/55 R18
+  
+  lighting:
+    headlights: Full LED with sequential indicators
+    matrix_led: false  # Optional on Techno
+  
+  climate:
+    heat_pump: true  # Standard on Techno (essential improvement over EV40)
+    heated_seats: true  # Front seats
+    heated_steering_wheel: true
+    ac_zones: 2
+  
+  driver_assistance:
+    adaptive_cruise_control: true  # Active Driver Assist with Stop & Go
+    lane_keeping_assist: true  # Lane Centering Assist
+    blind_spot_monitoring: true
+    parking_sensors: true  # Front and rear
+    parking_camera: true  # 360° camera standard on Techno
+    surround_view_camera: true
+    autonomous_level: 2
+    adas_brand: null
+    notes: Comprehensive safety suite standard on Techno trim
 
-wheels_tires:
-  standard_size_front: "195/60 R18"
-  standard_size_rear: "195/60 R18"
-  wheel_sizes_available:
-    - "18 inch (standard)"
-    - "20 inch (optional, -15km range)"
+interior:
+  upholstery_material: Recycled fabric with TEP accents
+  upholstery_color_options: [Black, Grey]
+  seat_adjustment: Manual front seats with lumbar
+  premium_audio: false  # Harman Kardon optional (standard on Iconic)
+  ambient_lighting: true  # Multi-color ambient lighting
 
-technology:
-  adas_level: 2
-  adas_features:
-    - "Active emergency braking with pedestrian detection"
-    - "Lane departure warning"
-    - "Lane keeping assist"
-    - "Traffic sign recognition with speed alert"
-    - "Blind spot monitoring"
-    - "Rear cross-traffic alert"
-    - "Adaptive cruise control with Stop&Go"
-    - "360-degree camera"
-    - "Hands-free parking assist"
-    - "Highway assist (lane centering)"
-  connectivity:
-    - "OpenR Link with Google built-in"
-    - "Google Maps navigation with EV routing"
-    - "Google Assistant voice control"
-    - "Google Play Store apps"
-    - "My Renault app remote control"
-    - "OTA software updates"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Wireless smartphone charging"
-  special_features:
-    - "Multi-Sense drive modes (Eco, Comfort, Sport, My Sense)"
-    - "One-pedal driving (B-mode with strong regeneration)"
-    - "Pre-conditioning via app"
-    - "Heat pump for efficient climate control"
-    - "Eco-score driving feedback"
-    - "Harman Kardon premium audio (9 speakers)"
-    - "Solarbay panoramic glass roof with dimming"
+exterior:
+  paint_type: Solid, Metallic, Pearlescent
+  paint_colors: 8
+  two_tone_available: true  # Black roof option
+  roof_options: Body-color or Black contrast roof
+  aerodynamic_features: Flush door handles, active grille shutters, flat underbody
 
-metadata:
-  data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  sources:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://ev-database.org/car/1633/Renault-Megane-E-Tech-EV60"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/renault/renault-megane-e-tech/"
-  notes: "Most popular Megane E-Tech variant with 60 kWh battery and more powerful 160kW motor. Techno trim includes advanced driver assistance, premium audio, and panoramic roof. Real-world range of 390km makes it suitable for long-distance travel. 22kW AC charging is excellent for public AC stations. Best-selling configuration in European markets. 7.5s 0-100 km/h gives sporty performance while maintaining excellent efficiency."
+data_quality:
+  overall: verified
+  battery_specs: verified
+  range_specs: verified
+  charging_specs: verified
+  performance_specs: verified
+  efficiency_specs: verified
+  source_reliability: high
+  last_updated: 2026-02-09
+
+sources:
+  - name: Renault Germany Configurator
+    url: https://www.renault.de/konfigurieren/megane-e-tech.html
+    type: manufacturer
+    date_accessed: 2026-02-09
+  - name: ADAC EcoTest Renault Megane E-Tech 2025
+    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-test/
+    type: measured
+    date_accessed: 2026-02-09
+
+notes: |
+  The Megane E-Tech EV60 Techno is the most popular variant of Renault's award-winning electric crossover:
+  
+  **Why Techno is Most Popular:**
+  - Sweet spot pricing vs Iconic (€4,000 less)
+  - 60kWh battery with 470km WLTP range
+  - Heat pump standard (essential for German winters)
+  - 360° camera and comprehensive ADAS standard
+  - 130kW DC fast charging
+  - V2G capable for future home energy integration
+  
+  **2025 Model Year Improvements:**
+  - Software updates for improved efficiency
+  - Enhanced Google built-in integration
+  - Improved battery thermal management
+  - Updated charging algorithm for faster DC charging
+  
+  **Techno Trim Highlights:**
+  - 18" alloy wheels (optimal efficiency)
+  - Full LED headlights with sequential indicators
+  - Heat pump standard (improves winter range by 20%)
+  - 360° surround view camera system
+  - Two 12.3" displays (OpenR Link + digital cluster)
+  - Heated seats and steering wheel
+  - Multi-color ambient lighting
+  - Active Driver Assist Level 2 ADAS
+  
+  **Value Proposition:**
+  - Best value in Megane E-Tech range
+  - All essential features included
+  - 130kW fast charging (vs 85kW on EV40)
+  - Real-world 400km range capability
+  - Popular with both private and fleet buyers
+  
+  **Platform Benefits:**
+  - CMF-EV platform shared with Nissan Ariya
+  - Flat floor design maximizes interior space
+  - 440L boot (class-leading for compact crossover)
+  - Low center of gravity improves handling
+  
+  **Competition:**
+  - VW ID.3 Pro (similar price, less space, better brand perception)
+  - Cupra Born 58kWh (sportier, similar specs)
+  - Hyundai Ioniq 5 (larger, more expensive, faster charging)
+  - Kia EV6 (sportier, more expensive)
+  
+  **Target Buyer:**
+  - Families wanting practical EV with excellent range
+  - Company car drivers (0.25% tax rate in Germany)
+  - First-time EV buyers wanting proven technology
+  - Tech-savvy buyers appreciating Google built-in
+  
+  **Recommendation:**
+  Techno is the optimal choice for most buyers - includes all essential features,
+  excellent range, and heat pump standard. Save €4,000 vs Iconic for minimal compromise.
