@@ -1,0 +1,208 @@
+# Vehicle Variant: NIO ET5 75 kWh (2025)
+id: nio-et5-75kwh-2025
+model_id: nio-et5
+name: 75 kWh
+variant_name: 75 kWh
+model_year: 2025
+trim_level: Standard Range
+production_years: "2023-present"
+
+overview: >
+  The NIO ET5 75 kWh is the standard-range variant equipped with a 75 kWh battery pack 
+  providing 456 km WLTP range. It features the same dual-motor AWD powertrain as the 
+  100 kWh variant — 360kW (490 PS) combined output with 700 Nm torque and 4.0s 0-100 km/h. 
+  Available for purchase with battery (€59,500) or via Battery-as-a-Service at €47,500 
+  plus €169/month battery rental. DC fast charging supports up to 140kW.
+
+# Battery Specifications
+battery:
+  chemistry: NCM
+  supplier: CATL
+  total_kwh: 75
+  usable_kwh: 72
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "75 kWh NCM battery, swappable via NIO Power Swap stations"
+
+# Range (km)
+range:
+  wltp_km: 456
+  wltp_city_km: 560
+  wltp_highway_km: 390
+  epa_miles: null
+  real_world_km: 380
+  real_world_notes: "Estimated ~380km mixed driving, ~320km on autobahn at higher speeds"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 480
+        power_kw: 11.0
+  dc:
+    max_power_kw: 140
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 20
+        power_kw: 140
+      - soc_percent: 30
+        power_kw: 135
+      - soc_percent: 40
+        power_kw: 120
+      - soc_percent: 50
+        power_kw: 105
+      - soc_percent: 60
+        power_kw: 90
+      - soc_percent: 70
+        power_kw: 75
+      - soc_percent: 80
+        power_kw: 55
+      - soc_percent: 90
+        power_kw: 35
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 30
+        power_kw: 140
+    notes: "140kW peak DC charging; NIO battery swap stations offer 3-5 minute full swap as alternative"
+  battery_swap:
+    available: true
+    swap_time_minutes: 5
+    network: NIO Power Swap
+    notes: "Battery swap stations available in Germany and across Europe, expanding network"
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 18.9
+  real_world_kwh_per_100km: 20.5
+  notes: "WLTP combined 18.9 kWh/100km"
+
+# Motor Specifications
+motors:
+  - position: front
+    type: Asynchronous (Induction)
+    power_kw: 150
+    torque_nm: 350
+    manufacturer: NIO
+  - position: rear
+    type: Permanent Magnet Synchronous
+    power_kw: 210
+    torque_nm: 350
+    manufacturer: NIO
+
+# Combined Power
+power:
+  total_power_kw: 360
+  total_power_ps: 490
+  total_torque_nm: 700
+
+# Drivetrain
+drivetrain:
+  type: AWD
+  gearbox: Single-speed reduction (front and rear)
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 4.0
+  top_speed_kmh: 200
+  top_speed_limited: true
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4790
+  width_mm: 1960
+  height_mm: 1499
+  wheelbase_mm: 2888
+  ground_clearance_mm: 145
+  drag_coefficient: 0.24
+
+weight:
+  curb_weight_kg: 2080
+  gross_vehicle_weight_kg: 2530
+
+# Suspension & Brakes
+suspension:
+  front: Double wishbone
+  rear: Multi-link
+  adjustable: false
+  notes: "Passive dampers standard"
+
+brakes:
+  front: Ventilated disc (355mm)
+  rear: Ventilated disc (335mm)
+  regenerative_braking: true
+  one_pedal_driving: true
+
+# Wheels & Tires
+wheels:
+  standard:
+    size: "19-inch"
+    tire_front: "235/45 R19"
+    tire_rear: "255/40 R19"
+  optional:
+    - size: "20-inch"
+      tire_front: "235/40 R20"
+      tire_rear: "255/35 R20"
+      price_eur: 1600
+
+# Standard Equipment
+standard_equipment:
+  - "Nappa leather upholstery"
+  - "12.8-inch AMOLED center touchscreen"
+  - "10.2-inch digital instrument cluster"
+  - "NOMI AI companion"
+  - "7.1.4 Dolby Atmos surround sound (23 speakers)"
+  - "Panoramic glass roof (1.28m², 99.9% UV filtering)"
+  - "Frameless windows"
+  - "Soft-close doors"
+  - "Flush door handles"
+  - "LED matrix headlights"
+  - "Heat pump"
+  - "Wireless Apple CarPlay / Android Auto"
+  - "Wireless phone charger (15W)"
+  - "NIO Aquila Super Sensing (33 sensors incl. lidar)"
+  - "NIO Pilot ADAS"
+  - "360-degree camera"
+  - "Automated parking"
+  - "UWB digital key"
+  - "Tri-zone automatic climate control"
+  - "Ambient lighting"
+  - "Heated front seats"
+  - "Power-adjustable front seats with memory"
+
+# Optional Equipment
+optional_equipment:
+  - name: "20-inch Sport Wheels"
+    price_eur: 1600
+  - name: "Metallic/Pearl Paint"
+    price_eur: 1200
+  - name: "Premium Nappa Leather Interior"
+    price_eur: 2000
+  - name: "NIO Pilot Pro (Enhanced ADAS)"
+    price_eur: 3400
+
+notes: >
+  The NIO ET5 75 kWh offers strong performance and comprehensive standard equipment at 
+  a competitive price point. The 140kW DC charging speed is lower than some competitors, 
+  but NIO's unique battery swap capability (3-5 minutes for a full battery) compensates 
+  for this limitation. Available via BaaS (Battery-as-a-Service) at €47,500 + €169/month 
+  battery rental, which significantly reduces the upfront cost and enables flexible battery 
+  upgrades. The 75 kWh battery can be swapped for a 100 kWh battery at swap stations for 
+  longer trips (subject to availability and subscription terms).
+
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.nio.com/de_DE/et5
+    - https://www.carwow.de/nio/et5
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
