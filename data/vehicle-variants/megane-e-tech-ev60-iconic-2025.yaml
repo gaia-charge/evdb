@@ -1,0 +1,137 @@
+# Renault Megane E-Tech EV60 Iconic (2025)
+id: megane-e-tech-ev60-iconic-2025
+name: Megane E-Tech EV60 Iconic
+model_id: renault-megane-e-tech
+model_year: 2025
+variant_code: EV60-ICONIC
+
+battery:
+  usable_kwh: 60.0
+  total_kwh: 62.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 470
+  wltp_city_km: 610  # Excellent city efficiency
+  wltp_highway_km: 365
+  real_world_km: 400
+  real_world_source: "EV Database winter/summer average"
+
+charging:
+  ac_max_kw: 22.0
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130  # 400V architecture
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 130
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 130
+    - soc_percent: 30
+      power_kw: 120
+    - soc_percent: 40
+      power_kw: 105
+    - soc_percent: 50
+      power_kw: 90
+    - soc_percent: 60
+      power_kw: 75
+    - soc_percent: 70
+      power_kw: 60
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
+  time_15_to_80_percent_min: 32
+  charging_speed_kmh: 650  # km of range per hour at peak
+  plug_and_charge: true
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+  acceleration_0_100_kmh_sec: 7.4
+  top_speed_kmh: 160  # Electronically limited
+
+weight:
+  curb_weight_kg: 1718
+  gross_weight_kg: 2195
+  max_payload_kg: 477
+  distribution_front_percent: 58
+  distribution_rear_percent: 42
+
+efficiency:
+  wltp_kwh_per_100km: 15.3
+  wltp_kwh_per_100km_city: 12.6
+  wltp_kwh_per_100km_highway: 18.7
+  real_world_kwh_per_100km: 16.5
+  energy_efficiency_class: "A"  # EU energy label
+
+wheels_tires:
+  standard_size_front: "215/50 R20"
+  standard_size_rear: "215/50 R20"
+  wheel_sizes_available:
+    - "20 inch (standard)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Adaptive cruise control with Stop&Go"
+    - "Lane centering assist"
+    - "Lane departure warning"
+    - "Traffic sign recognition with speed limiter"
+    - "Blind spot warning"
+    - "Rear cross-traffic alert"
+    - "Active emergency braking with pedestrian detection"
+    - "Park assist with 360° camera"
+    - "Highway and traffic jam assist"
+    - "Automatic parking (perpendicular and parallel)"
+  connectivity:
+    - "Google Automotive Services (Maps, Assistant, Play Store)"
+    - "openR Link 12-inch portrait display"
+    - "My Renault app remote control"
+    - "OTA software updates"
+    - "E-Route planner with charging stops"
+  special_features:
+    - "One Pedal driving mode"
+    - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
+    - "Pre-conditioning (battery and cabin)"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+    - "Heat pump standard"
+    - "22kW AC charging (3-phase)"
+    - "Harman Kardon premium audio system (standard)"
+    - "Alcantara and recycled fabric upholstery"
+    - "Hands-free parking"
+    - "Matrix LED headlights with auto high beam"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/caracteristiques-techniques.html"
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60"
+  notes: "Top-spec Megane E-Tech with 60 kWh battery and premium features. The Iconic trim includes Harman Kardon audio, Matrix LED headlights, hands-free parking, and premium Alcantara interior. Offers the longest WLTP range (470 km) in the lineup with real-world range of 400 km. Perfect for buyers wanting the full Megane E-Tech experience with all the bells and whistles."

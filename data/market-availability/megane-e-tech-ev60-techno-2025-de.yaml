@@ -1,0 +1,229 @@
+# Renault Megane E-Tech EV60 Techno - German Market (2025)
+id: megane-e-tech-ev60-techno-2025-de
+variant_id: megane-e-tech-ev60-techno-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 43990  # € (2025 pricing)
+  destination_charge: 990  # €
+  on_the_road_price: 44980  # Includes destination
+  price_includes:
+    - "22kW AC charging (3-phase)"
+    - "130kW DC fast charging"
+    - "LED headlights"
+    - "openR Link 12-inch portrait touchscreen"
+    - "12.3-inch digital instrument cluster"
+    - "Google Automotive Services"
+    - "Dual-zone climate control"
+    - "Heat pump (standard)"
+    - "18-inch alloy wheels"
+    - "360° parking camera"
+    - "Adaptive cruise control with Stop&Go"
+    - "Highway assist"
+    - "Heated front seats"
+
+trim_levels:
+  - name: "EV60 techno"
+    price: 43990
+    features:
+      - "218 hp motor"
+      - "60 kWh battery (450 km WLTP)"
+      - "22kW 3-phase AC charging"
+      - "18-inch wheels"
+      - "Dual-zone climate control"
+      - "Heated front seats"
+      - "360° parking camera"
+      - "Adaptive cruise control"
+      - "Highway assist"
+      - "Fabric/TEP upholstery"
+
+colors:
+  - name: "Glacier White"
+    type: solid
+    price: 0  # Free
+  - name: "Metallic Black"
+    type: metallic
+    price: 750
+  - name: "Flame Red"
+    type: metallic
+    price: 750
+  - name: "Highland Grey metallic"
+    type: metallic
+    price: 750
+  - name: "Midnight Blue metallic"
+    type: metallic
+    price: 750
+  - name: "Schist Grey metallic"
+    type: metallic
+    price: 750
+  - name: "Two-tone (Black roof)"
+    type: two-tone
+    price: 1200
+
+wheels:
+  - size: "18 inch"
+    price: 0  # Standard
+    range_impact_km: 0
+    name: "18-inch Naos alloy wheels"
+  - size: "20 inch"
+    price: 1200
+    range_impact_km: -15
+    name: "20-inch Solstice diamond-cut alloy wheels"
+
+interior:
+  - name: "Fabric/TEP upholstery"
+    price: 0  # Standard on techno
+  - name: "Alcantara and recycled fabric"
+    price: 800
+
+packages:
+  - name: "Comfort Plus Package"
+    price: 1490
+    includes:
+      - "Heated steering wheel"
+      - "Power tailgate"
+      - "Wireless smartphone charging"
+  - name: "Premium Package"
+    price: 2490
+    includes:
+      - "Matrix LED headlights"
+      - "Harman Kardon audio system (10 speakers)"
+      - "Head-up display"
+      - "Hands-free parking"
+
+individual_options:
+  - name: "Panoramic glass roof (fixed)"
+    price: 1200
+    notes: "Not opening, reduces headroom slightly"
+  - name: "Towing package"
+    price: 850
+    notes: "900kg braked, electrically folding towbar"
+  - name: "Harman Kardon audio"
+    price: 990
+    notes: "10-speaker premium audio system"
+  - name: "Matrix LED headlights"
+    price: 1290
+    notes: "Adaptive beam pattern, auto high beam"
+  - name: "Hands-free parking"
+    price: 750
+    notes: "Automatic perpendicular and parallel parking"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+    valid_until: null
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 3957  # Annual savings
+    notes: "0.25% of gross list price per month (vs 1% for ICE). For €43,990 vehicle: 0.25% = €110/month = €1,320/year vs 1% = €440/month = €5,279/year. Annual savings: €3,959."
+    calculation: "€43,990 × 0.25% = €110/month. ICE: €43,990 × 1% = €440/month. Savings: €330/month = €3,959/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 360  # Annual road tax savings
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote (CO2 certificate)"
+    type: grant
+    amount: 300  # Annual income
+    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+    valid_until: null
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 10
+  production_status: active
+  order_url: "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric/konfigurator.html"
+  notes: "Built at Renault ElectriCity Douai, France. Most popular variant - best value for money."
+
+dealers:
+  count: 400  # Renault dealers in Germany
+  network: "Renault Deutschland"
+  service_centers: 400
+  notes: "Extensive Renault dealer network across Germany, all trained for EV servicing"
+
+charging_networks:
+  - name: "Mobilize Charge Pass"
+    coverage: "600,000+ charging points across Europe"
+    pricing: "Various tariffs available via Mobilize app"
+    notes: "Access to most major networks including IONITY, EnBW, Allego"
+  - name: "IONITY"
+    pricing_standard: "€0.79/kWh"
+    pricing_subscription: "€5.99/month + €0.35/kWh (Mobilize Power Solution)"
+    notes: "130kW charging: 15-80% costs €13.65 (subscription) vs €30.81 (standard)"
+  - name: "EnBW mobility+"
+    pricing: "€0.45-0.55/kWh (depending on tariff)"
+    notes: "Popular in Germany, good coverage"
+
+charging_costs:
+  - scenario: "Home charging (night rate)"
+    cost_per_kwh: 0.30  # €/kWh (German average night rate 2025)
+    cost_15_to_80_percent: 11.70  # € (60kWh × 65% × €0.30)
+    cost_per_100km: 5.04  # € (16.8 kWh/100km × €0.30)
+  - scenario: "Public AC charging (22kW)"
+    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
+    cost_15_to_80_percent: 17.55
+    cost_per_100km: 7.56
+  - scenario: "DC fast charging (IONITY subscription)"
+    cost_per_kwh: 0.35  # €/kWh + €5.99/month
+    cost_15_to_80_percent: 13.65  # € (60kWh × 65% × €0.35)
+    cost_per_100km: 5.88
+  - scenario: "DC fast charging (pay-as-you-go)"
+    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
+    cost_15_to_80_percent: 30.81
+    cost_per_100km: 13.27
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "3-year vehicle warranty standard, can be extended up to 5 years. Battery warranty covers capacity degradation below 70% within 8 years/160,000km."
+
+annual_costs:
+  insurance_estimate: 820  # € per year (comprehensive, experienced driver)
+  road_tax: 0  # Exempt until 2030
+  inspection: 80  # € per year (TÜV inspection every 2 years, €160)
+  maintenance_estimate: 380  # € per year (service, tires, etc.)
+  total_estimate: 1280  # € per year (excluding charging costs)
+
+environmental:
+  production_co2_kg: 13500  # Estimated battery production (60 kWh)
+  lifecycle_co2_kg: 27000   # 200,000km with EU electricity mix
+  recyclability_percent: 85
+  battery_recycling: "Renault battery recycling program, 95% material recovery target"
+  production_site: "Douai Factory - Renault ElectriCity (renewable energy)"
+
+popular_configurations:
+  - name: "EV60 techno Standard"
+    price: 46220  # Base + typical options
+    includes:
+      - "EV60 techno (€43,990)"
+      - "Metallic paint (€750)"
+      - "Comfort Plus Package (€1,490)"
+      - "Destination charge (€990)"
+    notes: "Most popular configuration - excellent value for money"
+  - name: "EV60 techno Premium"
+    price: 49440
+    includes:
+      - "EV60 techno (€43,990)"
+      - "Premium Package (€2,490)"
+      - "Panoramic roof (€1,200)"
+      - "Two-tone paint (€1,200)"
+      - "Alcantara upholstery (€800)"
+      - "Destination charge (€990)"
+    notes: "Well-equipped variant with premium features"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric/preis-ausstattung.html"
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60"
+  notes: "Best-selling Megane E-Tech variant with 60 kWh battery and 218 hp. At €43,990 base price, the techno trim offers exceptional value with 22kW 3-phase AC charging, 360° camera, adaptive cruise control, highway assist, and heated seats all included. Real-world range of 385 km makes it suitable for both daily commuting and longer trips. Company car drivers save €3,959/year with 0.25% tax rate. Perfect sweet spot between the entry-level EV40 and premium Iconic - most popular choice in Germany."
