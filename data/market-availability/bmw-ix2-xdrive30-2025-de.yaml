@@ -1,0 +1,235 @@
+---
+id: bmw-ix2-xdrive30-2025-de
+variant_id: bmw-ix2-xdrive30-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 56500
+  destination_charge: 0
+  total_starting_price: 56500
+
+available_from: "2024-03-01"
+available_until: null
+availability_status: available
+delivery_time_weeks: 8
+pre_order_available: false
+order_book_open: true
+
+available_colors:
+  - name: "Alpine White"
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Black Sapphire"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Sparkling Copper Grey"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Skyscraper Grey"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Phytonic Blue"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Cape York Green"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Fire Red"
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: "Frozen Pure Grey"
+    type: matt
+    price_add:
+      amount: 1800
+      currency: EUR
+
+available_wheels:
+  - name: "Standard Alloy"
+    size_inches: 18
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "M Sport Alloy"
+    size_inches: 19
+    price_add:
+      amount: 800
+      currency: EUR
+  - name: "M Performance Alloy"
+    size_inches: 20
+    price_add:
+      amount: 1500
+      currency: EUR
+  - name: "M Performance Forged"
+    size_inches: 21
+    price_add:
+      amount: 2800
+      currency: EUR
+
+available_interiors:
+  - name: "Sensatec Black"
+    material: synthetic_leather
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Sensatec Mocha"
+    material: synthetic_leather
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "Veganza Black"
+    material: vegan_leather
+    price_add:
+      amount: 950
+      currency: EUR
+
+packages:
+  - name: "M Sport Package"
+    price: 3500
+    included_features:
+      - "M Sport exterior styling"
+      - "M Sport suspension (10mm lower)"
+      - "M Sport seats"
+      - "M Sport steering wheel"
+      - "M Sport brakes"
+      - "19-inch M alloy wheels"
+
+  - name: "Comfort Package"
+    price: 2200
+    included_features:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Lumbar support (electric)"
+      - "Ambient lighting"
+      - "Storage package"
+
+  - name: "Driving Assistant Professional"
+    price: 1700
+    included_features:
+      - "Active cruise control with stop&go"
+      - "Steering & lane keeping assistant"
+      - "Lane change warning"
+      - "Evasion assistant"
+      - "Cross-traffic warning front"
+
+  - name: "Innovation Package"
+    price: 3900
+    included_features:
+      - "BMW Head-Up Display"
+      - "Harman Kardon surround sound"
+      - "Parking Assistant Professional"
+      - "BMW Iconic Glow kidney grille"
+      - "Adaptive LED headlights"
+
+additional_options:
+  - name: "Panoramic glass roof"
+    price: 1300
+  - name: "Tow hitch (electrically retractable)"
+    price: 950
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 4240
+    currency: EUR
+    period: annual
+    description: >
+      Company car tax rate: 0.25% of gross list price (€56,500 x 0.25% = €141/month).
+      Savings vs ICE: ~€4,240/year (1% rate would be €565/month).
+      Applies to vehicles under €70,000 gross list price.
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 350
+    currency: EUR
+    period: annual
+    description: "EV exemption from Kfz-Steuer until 2030"
+    eligibility: "All EV owners"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote CO2 Certificate"
+    type: grant
+    amount: 300
+    currency: EUR
+    period: annual
+    description: "THG-Quote: CO2 certificate trading revenue (~€250-350/year)"
+    eligibility: "All EV owners"
+    valid_until: null
+
+distribution:
+  sales_model: dealership
+  dealerships_count: 700
+  direct_online_sales: true
+  online_configurator_url: "https://www.bmw.de/de/konfigurator.html"
+  test_drive_availability: true
+
+charging_networks:
+  - network: "BMW Charging"
+    coverage: "European-wide (400,000+ charging points)"
+    preferential_pricing: true
+  - network: "IONITY"
+    coverage: "Germany + European highways"
+    preferential_pricing: true
+    price_per_kwh: 0.39
+
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  roadside_assistance_years: 2
+  corrosion_warranty_years: 12
+
+service:
+  service_interval_months: 24
+  service_interval_km: 30000
+  estimated_annual_service_cost: 350
+
+manufacturing:
+  plant_location: "Regensburg, Germany"
+  plant_notes: "BMW plant alongside X1 and iX1 production"
+
+competitors:
+  - model: "Mercedes-Benz EQA 250+"
+    price: 53538
+    notes: "Similar segment, more conservative styling, less range"
+  - model: "Audi Q4 e-tron 40"
+    price: 44600
+    notes: "Cheaper, more range, less premium interior"
+  - model: "Cupra Tavascan Endurance"
+    price: 51990
+    notes: "Cheaper, more range, sportier design"
+
+market_notes: >
+  BMW iX2 xDrive30 at €56,500 is positioned as a premium compact electric
+  coupe-SUV. More expensive than the iX1 (~€1,500 premium for coupe styling)
+  but offers more distinctive looks. Key strengths: German build quality,
+  BMW brand prestige, excellent iDrive OS9, sporty handling. Under €70k for
+  0.25% company car tax benefit. Competes well in the premium compact segment.
+  Main weakness: lower range (449 km) compared to MEB-based competitors.
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source: manufacturer
+  sources:
+    - "https://www.bmw.de/de/modelle/x-modelle/ix2/ueberblick.html"
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix2/"

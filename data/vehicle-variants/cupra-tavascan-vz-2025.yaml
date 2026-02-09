@@ -1,0 +1,118 @@
+---
+id: cupra-tavascan-vz-2025
+name: "VZ"
+model_id: cupra-tavascan
+model_year: 2025
+production_start: "2024-06-01"
+production_end: null
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "82 kWh gross (77 kWh usable). Same battery as Endurance. 400V MEB platform."
+
+range:
+  wltp_km: 520
+  wltp_city_km: 640
+  wltp_highway_km: 410
+  epa_km: null
+  real_world_km: 420
+  real_world_source: "Estimated based on MEB platform peers"
+  notes: |
+    WLTP range of 520 km. Slightly lower than Endurance due to dual-motor AWD
+    drivetrain consuming more energy. Real-world around 420 km mixed.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 135
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 135
+    - soc_percent: 20
+      power_kw: 135
+    - soc_percent: 30
+      power_kw: 130
+    - soc_percent: 40
+      power_kw: 120
+    - soc_percent: 50
+      power_kw: 105
+    - soc_percent: 60
+      power_kw: 85
+    - soc_percent: 70
+      power_kw: 65
+    - soc_percent: 80
+      power_kw: 45
+  charge_time_10_80_minutes: 28
+  notes: |
+    DC fast charging up to 135kW. 10-80% in approximately 28 minutes.
+    AC charging: 11kW standard, 0-100% in about 7.5 hours.
+
+motors:
+  - position: front
+    type: asynchronous
+    power_kw: 80
+    torque_nm: 162
+    manufacturer: Volkswagen Group
+  - position: rear
+    type: permanent_magnet
+    power_kw: 210
+    torque_nm: 545
+    manufacturer: Volkswagen Group
+
+drivetrain:
+  type: AWD
+  all_wheel_drive: true
+
+performance:
+  acceleration_0_100_kmh_seconds: 5.6
+  top_speed_kmh: 180
+  notes: "Combined 250 kW (340 hp) from dual motors. VZ = 'veloz' (fast in Spanish)."
+
+efficiency:
+  wltp_kwh_per_100km: 16.2
+  real_world_kwh_per_100km: 19.0
+  notes: "AWD drivetrain increases consumption vs Endurance RWD variant."
+
+weight:
+  curb_weight_kg: 2199
+  gross_vehicle_weight_kg: 2620
+  towing_capacity_kg: 1000
+  notes: "Heavier than Endurance due to additional front motor. 1000 kg towing."
+
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: front_and_rear
+  parking_camera: rear
+  autonomous_parking: false
+
+notes: >
+  Cupra Tavascan VZ is the performance AWD variant with dual motors producing
+  a combined 250 kW (340 hp). VZ stands for 'veloz' (fast in Spanish). 0-100
+  km/h in 5.6 seconds. Same 82 kWh battery as Endurance but with 520 km WLTP
+  range (30 km less due to AWD). Features sportier suspension tuning, larger
+  brakes, and exclusive exterior styling elements. Competes with Tesla Model Y
+  Long Range AWD, VW ID.5 GTX, BMW iX1 xDrive30.
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source: manufacturer
+  sources:
+    - "https://www.cupraofficial.com/models/tavascan"
+    - "https://en.wikipedia.org/wiki/Cupra_Tavascan"
