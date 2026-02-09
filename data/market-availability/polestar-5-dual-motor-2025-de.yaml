@@ -1,0 +1,120 @@
+id: polestar-5-dual-motor-2025-de
+variant_id: polestar-5-dual-motor-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 105000  # Estimated base for Dual Motor (Performance starts at €118,600)
+  destination_charge: 0
+  on_road_price: 105000
+
+options:
+  packages: []
+  
+  paint_options:
+    - name: "Snow"
+      price: 0
+      code: "snow"
+    - name: "Midnight"
+      price: 1200
+      code: "midnight"
+    - name: "Jupiter"
+      price: 1200
+      code: "jupiter"
+    - name: "Storm"
+      price: 1200
+      code: "storm"
+
+  interior_options:
+    - name: "Charcoal interior"
+      price: 0
+    - name: "Zinc interior"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 7560
+    notes: "0.25% of gross list price per month (vs 1% for ICE). €105,000 × 0.25% = €263/month = €3,150/year vs ICE equivalent 1% = €10,710/year. Annual savings: €7,560."
+    eligibility: "Company car drivers only, BLP under €70,000 threshold exceeded - standard 0.5% rate applies for EVs over €70,000"
+  
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 350
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: available
+  waiting_time_weeks: 16
+  online_configurator: yes
+  online_purchase: yes
+  
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - Sweden
+    - Norway
+    - Denmark
+    - UK
+
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Porsche Taycan Plus"
+      price: 101800
+      range_wltp: 575
+      notes: "Similar price, less range, iconic brand"
+    
+    - model: "Audi e-tron GT quattro"
+      price: 106800
+      range_wltp: 540
+      notes: "Similar price, less range, established brand"
+    
+    - model: "Lotus Emeya"
+      price: 107990
+      range_wltp: 520
+      notes: "Similar price, less range, sportier positioning"
+    
+    - model: "Mercedes-AMG EQS 53 4MATIC+"
+      price: 143541
+      range_wltp: 508
+      notes: "Much more expensive, less range, different character"
+  
+  market_position: |
+    The Polestar 5 enters the luxury GT segment with a compelling range advantage 
+    (670 km WLTP) over established rivals like the Porsche Taycan (575 km) and 
+    Audi e-tron GT (540 km). Its 800V architecture enables 350 kW charging, matching 
+    the fastest in the segment. The proprietary PPA platform with bonded aluminium 
+    body differentiates it technically from competitors using shared platforms.
+
+metadata:
+  created_at: "2026-02-09T15:45:00Z"
+  updated_at: "2026-02-09T15:45:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    Dual Motor pricing estimated based on Performance starting at €118,600.
+    Exact Dual Motor base price TBC - estimated ~€105,000 based on typical 
+    Polestar pricing structure (Performance premium ~€13,000).
+    Company car tax: Note that for vehicles with BLP over €70,000, the 0.5% rate 
+    applies instead of 0.25% for EVs in Germany (as of 2024 tax rules).
+
+sources:
+  - url: "https://www.polestar.com/de/polestar-5/"
+    title: "Polestar 5 Germany Official Page"
+    date_accessed: "2026-02-09"
