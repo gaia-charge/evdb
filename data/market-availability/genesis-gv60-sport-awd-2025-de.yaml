@@ -1,0 +1,143 @@
+id: genesis-gv60-sport-awd-2025-de
+variant_id: genesis-gv60-sport-awd-2025
+market: DE
+currency: EUR
+availability_status: available
+release_date: "2025-01-15"
+
+pricing:
+  base_price: 58490
+  price_including_vat: 58490
+  vat_rate_percent: 19
+  on_road_price: 59580
+  delivery_charge: 1090
+
+incentives:
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "Company Car Tax Benefit"
+    type: tax_exemption
+    amount: 5264
+    description: |
+      0.25% monthly tax rate vs 1.0% for combustion vehicles.
+      Saves ~€5,264/year vs combustion equivalent.
+      Vehicles under €70,000 qualify for 0.25% rate.
+  - name: "THG-Quote (Greenhouse Gas Certificate)"
+    type: subsidy
+    amount: 300
+    description: "Annual CO2 savings certificate (~€250-350/year)"
+
+company_car_taxation:
+  applicable: true
+  monthly_rate_percent: 0.25
+  calculation_base: "base_price"
+  taxable_benefit_calculation: |
+    Taxable benefit = €58,490 × 0.25% × distance to work (km)
+    Example (30 km commute): €58,490 × 0.25% × 30 = €438.68/month
+  annual_tax_savings_vs_ice_eur: 5264
+  ice_equivalent_model: "BMW X1 xDrive25i"
+  ice_equivalent_price_eur: 53000
+  ice_monthly_benefit_30km: 1590
+  ev_monthly_benefit_30km: 438.68
+  notes: "0.25% rate for EVs under €70,000 provides significant tax advantage"
+
+configurations:
+  - name: "Sport AWD (standard)"
+    price: 59580
+    description: >
+      2025 facelifted GV60 Sport AWD with dual OLED displays, Face Connect, Crystal Sphere,
+      Highway Driving Assist 2, Remote Smart Parking Assist 2, premium leather, heated/ventilated
+      front seats, heated rear seats, panoramic sunroof, wireless charging, V2L. Includes delivery.
+    included_features:
+      - "Dual 12.3\" OLED panoramic displays"
+      - "Crystal Sphere electronic shift dial"
+      - "Face Connect facial recognition"
+      - "Highway Driving Assist 2"
+      - "Remote Smart Parking Assist 2"
+      - "360-degree surround view camera"
+      - "Premium leather interior"
+      - "Heated/ventilated front seats"
+      - "Heated rear seats"
+      - "Heated steering wheel"
+      - "Panoramic sunroof"
+      - "Wireless phone charging"
+      - "V2L capability (3.6 kW)"
+      - "19\" alloy wheels"
+      - "Wireless Apple CarPlay/Android Auto"
+
+available_colors:
+  standard:
+    - name: "Uyuni White"
+      type: solid
+      price_eur: 0
+    - name: "Midnight Black"
+      type: metallic
+      price_eur: 0
+  metallic:
+    - name: "Mauna Red"
+      price_eur: 850
+    - name: "Atacama Grey"
+      price_eur: 850
+    - name: "Makalu Grey"
+      price_eur: 850
+    - name: "Verbier Blue"
+      price_eur: 850
+  special:
+    - name: "Matte Grey"
+      price_eur: 1250
+    - name: "Matte Green"
+      price_eur: 1250
+
+available_options:
+  exterior:
+    - name: "20\" Sport Design alloy wheels"
+      price_eur: 1500
+      notes: "Reduces range by ~16 km WLTP"
+  interior:
+    - name: "Bang & Olufsen 17-speaker audio"
+      price_eur: 2500
+    - name: "Head-up display with AR navigation"
+      price_eur: 1200
+    - name: "Extended Nappa leather package"
+      price_eur: 1200
+    - name: "Suede headliner"
+      price_eur: 800
+
+delivery_time:
+  estimated_weeks: 8
+  notes: "2025 facelift available for immediate order, 6-10 week delivery"
+
+running_costs:
+  electricity_cost_per_100km_home_eur: 6.86
+  electricity_cost_per_100km_public_eur: 10.78
+  annual_insurance_eur: 960
+  annual_maintenance_eur: 350
+  annual_road_tax_eur: 0
+  notes: "Based on 19.6 kWh/100km real-world, €0.35/kWh home, €0.55/kWh public"
+
+warranty:
+  vehicle_warranty_years: 5
+  vehicle_warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  roadside_assistance_years: 5
+  notes: "5-year complimentary maintenance included"
+
+data_sources:
+  pricing: "https://www.genesis.com/de/en/models/gv60.html"
+  market_data: "https://www.mobile.de, https://www.autoscout24.de"
+
+notes: |
+  2025 facelifted GV60 Sport AWD replaces Advanced trim with enhanced standard equipment.
+  Key updates: OLED displays, wireless charging standard, heated rear seats standard,
+  redesigned steering wheel, improved acoustic insulation. Pricing increased €500 vs
+  2024 Advanced reflecting additional equipment. Company car tax advantage remains
+  excellent at €5,264/year savings. Competitive against BMW iX1 and Audi Q4 e-tron
+  with superior 800V charging infrastructure.
+
+last_updated: "2026-02-09"
+confidence_level: verified

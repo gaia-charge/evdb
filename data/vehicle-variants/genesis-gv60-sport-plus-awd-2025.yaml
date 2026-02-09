@@ -1,0 +1,222 @@
+id: genesis-gv60-sport-plus-awd-2025
+name: "Sport Plus AWD"
+model_id: genesis-gv60
+model_year: 2025
+trim_level: Sport Plus
+
+description: |
+  Genesis GV60 Sport Plus AWD 2025 is the flagship variant of the facelifted GV60, delivering
+  exhilarating performance with 360 kW (490 PS) combined output and 4.0-second 0-100 km/h
+  acceleration via Boost mode. The 2025 facelift brings refreshed exterior with updated Two Lines
+  lighting signature, revised bumpers, new 12.3" OLED instrument cluster paired with updated 12.3"
+  center touchscreen running latest ccOS infotainment. Sport Plus adds exclusive features over
+  Sport: Bang & Olufsen 17-speaker premium audio system, Nappa leather seats with driver massage
+  function, electronically controlled suspension with Sport mode, 20" alloy wheels, and Boost mode
+  delivering additional 70 kW for 10-second bursts. The 77.4 kWh battery with 800V architecture
+  enables 10-80% DC fast charging in just 18 minutes. Despite higher performance, WLTP range
+  reaches 450 km thanks to optimized power management. Standard heads-up display with AR
+  navigation, suede headliner, and exclusive Sport Plus design elements complete the package.
+
+battery:
+  usable_kwh: 77.4
+  total_kwh: 82.0
+  chemistry: NCM
+  supplier: SK On
+  cell_type: pouch
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+motors:
+  configuration: dual_motor
+  drive_type: AWD
+  motor_type: permanent_magnet
+  front_motor:
+    power_kw: 160
+    torque_nm: 350
+  rear_motor:
+    power_kw: 200
+    torque_nm: 350
+  combined_power_kw: 360
+  combined_torque_nm: 700
+  boost_power_kw: 360
+  notes: "High-output dual-motor tune with Boost mode (360 kW for 10 seconds)"
+
+performance:
+  acceleration_0_100_kmh: 4.0
+  top_speed_kmh: 235
+  notes: "4.0s with Boost mode engaged, 4.4s in normal mode; 235 km/h top speed"
+
+range:
+  wltp_km: 450
+  wltp_city_km: 565
+  wltp_highway_kmh_130: 360
+  real_world_mixed_km: 380
+  real_world_highway_kmh_130: 310
+  real_world_winter_km: 290
+  notes: "Slightly less range than Sport due to 20\" wheels and higher performance calibration"
+
+efficiency:
+  wltp_kwh_per_100km: 19.0
+  real_world_kwh_per_100km: 20.4
+  notes: "Higher consumption vs Sport due to 20\" wheels and performance-oriented calibration"
+
+charging:
+  ac_charging:
+    max_power_kw: 11
+    phases: 3
+    charge_time_0_100_hours: 7.0
+    onboard_charger_kw: 11
+  dc_charging:
+    max_power_kw: 350
+    charge_time_10_80_minutes: 18
+    charge_speed_km_per_minute: 13.5
+    notes: "800V ultra-fast charging, identical to Sport variant"
+    curve_notes: "Maintains >200 kW from 10-50%, drops to ~100 kW at 70%"
+
+dimensions:
+  length_mm: 4515
+  width_mm: 1890
+  width_with_mirrors_mm: 2110
+  height_mm: 1580
+  wheelbase_mm: 2900
+  ground_clearance_mm: 160
+  drag_coefficient: 0.29
+  frontal_area_m2: 2.58
+
+weight:
+  curb_weight_kg: 2150
+  gross_vehicle_weight_kg: 2650
+  max_payload_kg: 500
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
+  roof_load_kg: 75
+
+cargo:
+  trunk_capacity_liters: 432
+  trunk_capacity_seats_down_liters: 1584
+  frunk_capacity_liters: 24
+  notes: "Unchanged from Sport variant"
+
+seating:
+  capacity: 5
+  configuration: "2+3"
+  seat_material: "Nappa leather"
+  front_seats_heated: true
+  front_seats_ventilated: true
+  front_seats_massage: true
+  rear_seats_heated: true
+  isofix_points: 2
+
+wheels_tires:
+  standard_wheel_size_inches: 20
+  standard_tire_size_front: "235/45 R20"
+  standard_tire_size_rear: "255/40 R20"
+  optional_wheel_sizes:
+    - 21
+  spare_wheel: "Tire repair kit"
+
+infotainment:
+  screen_size_inches: 12.3
+  screen_count: 2
+  screen_type: "Dual panoramic curved OLED displays (12.3\" cluster + 12.3\" center)"
+  apple_carplay: true
+  android_auto: true
+  wireless_smartphone_integration: true
+  navigation: true
+  ota_updates: true
+  voice_control: true
+  speakers: 17
+  audio_brand: "Bang & Olufsen"
+  digital_key: true
+  smartphone_app: true
+
+driver_assistance:
+  autonomous_level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  parking_camera: "360-degree surround view"
+  automated_parking: true
+  automated_parking_type: "Remote Smart Parking Assist 2"
+  traffic_sign_recognition: true
+  driver_attention_monitoring: true
+  automatic_emergency_braking: true
+  pedestrian_detection: true
+  cyclist_detection: true
+  notes: "Highway Driving Assist 2, Remote Smart Parking Assist 2, Multi-Collision Braking (updated 2025)"
+
+features:
+  keyless_entry: true
+  keyless_start: true
+  biometric_authentication: "Face Connect facial recognition + Fingerprint authentication"
+  heads_up_display: true
+  heads_up_display_type: "Augmented Reality HUD"
+  ambient_lighting: true
+  panoramic_roof: true
+  heated_steering_wheel: true
+  power_tailgate: true
+  hands_free_tailgate: true
+  wireless_charging: true
+  v2l_capability: true
+  v2l_power_kw: 3.6
+  heat_pump: true
+  climate_zones: 2
+  notes: "Sport Plus exclusive: B&O 17-speaker audio, Nappa leather, massage seats, AR HUD, suede headliner, Boost mode, e-LSD"
+
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2022
+  adult_occupant: 89
+  child_occupant: 86
+  vulnerable_road_users: 68
+  safety_assist: 85
+  notes: "Euro NCAP rating carried over from pre-facelift (same structure), updated safety software"
+
+price_positioning:
+  segment: "D-SUV"
+  competitors:
+    - "BMW iX xDrive40"
+    - "Audi Q4 e-tron 50 quattro S line"
+    - "Tesla Model Y Performance"
+    - "Porsche Macan Electric"
+    - "Kia EV6 GT"
+  value_proposition: |
+    GV60 Sport Plus 2025 facelift offers supercar-rivaling 4.0s acceleration with luxury
+    appointments typically found in vehicles €20,000+ more expensive. B&O audio, Nappa leather
+    massage seats, AR HUD, and 800V ultra-fast charging create a compelling flagship package.
+    Boost mode delivers visceral performance on demand. Positioned significantly below Porsche
+    Macan Electric while matching its performance credentials. Kia EV6 GT is the closest
+    platform sibling competitor but lacks Genesis luxury appointments and design cachet.
+
+data_sources:
+  manufacturer: "https://www.genesis.com/de/en/models/gv60.html"
+  specifications: "https://www.genesis.com/de/en/models/gv60/specifications.html"
+  tests:
+    - source: "ADAC"
+      url: "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/genesis/gv60/"
+      consumption_kwh_per_100km: 20.4
+      range_km: 380
+  confidence_level: verified
+
+tags:
+  - compact-crossover
+  - 800v-charging
+  - ultra-fast-charging
+  - awd
+  - dual-motor
+  - luxury
+  - performance
+  - korean
+  - e-gmp
+  - facelift
+  - face-connect
+  - v2l
+  - boost-mode
+  - bang-olufsen
+
+last_updated: "2026-02-09"
+data_quality: verified

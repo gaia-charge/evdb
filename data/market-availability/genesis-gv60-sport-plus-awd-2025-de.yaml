@@ -1,0 +1,132 @@
+id: genesis-gv60-sport-plus-awd-2025-de
+variant_id: genesis-gv60-sport-plus-awd-2025
+market: DE
+currency: EUR
+availability_status: available
+release_date: "2025-01-15"
+
+pricing:
+  base_price: 66490
+  price_including_vat: 66490
+  vat_rate_percent: 19
+  on_road_price: 67580
+  delivery_charge: 1090
+
+incentives:
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "Company Car Tax Benefit"
+    type: tax_exemption
+    amount: 5984
+    description: |
+      0.25% monthly tax rate vs 1.0% for combustion vehicles.
+      Saves ~€5,984/year vs combustion equivalent.
+      Vehicles under €70,000 qualify for 0.25% rate.
+  - name: "THG-Quote (Greenhouse Gas Certificate)"
+    type: subsidy
+    amount: 300
+    description: "Annual CO2 savings certificate (~€250-350/year)"
+
+company_car_taxation:
+  applicable: true
+  monthly_rate_percent: 0.25
+  calculation_base: "base_price"
+  taxable_benefit_calculation: |
+    Taxable benefit = €66,490 × 0.25% × distance to work (km)
+    Example (30 km commute): €66,490 × 0.25% × 30 = €498.68/month
+  annual_tax_savings_vs_ice_eur: 5984
+  ice_equivalent_model: "BMW X3 M40i"
+  ice_equivalent_price_eur: 72000
+  ice_monthly_benefit_30km: 2160
+  ev_monthly_benefit_30km: 498.68
+  notes: "0.25% rate applies as list price is under €70,000 threshold"
+
+configurations:
+  - name: "Sport Plus AWD (standard)"
+    price: 67580
+    description: >
+      Flagship GV60 with 360 kW, Boost mode, B&O 17-speaker audio, Nappa leather massage seats,
+      AR HUD, suede headliner, 20\" wheels, e-LSD, electronically controlled suspension.
+      All Sport equipment plus exclusive Sport Plus features. Includes delivery.
+    included_features:
+      - "All Sport AWD equipment"
+      - "Bang & Olufsen 17-speaker premium audio"
+      - "Nappa leather seats with driver massage"
+      - "Head-up display with AR navigation"
+      - "Suede headliner"
+      - "20\" Sport Plus alloy wheels"
+      - "Electronically controlled suspension"
+      - "Boost mode (360 kW / 490 PS)"
+      - "Electronic Limited-Slip Differential (e-LSD)"
+      - "Hands-free power tailgate"
+      - "Fingerprint authentication"
+
+available_colors:
+  standard:
+    - name: "Uyuni White"
+      type: solid
+      price_eur: 0
+    - name: "Midnight Black"
+      type: metallic
+      price_eur: 0
+  metallic:
+    - name: "Mauna Red"
+      price_eur: 850
+    - name: "Atacama Grey"
+      price_eur: 850
+    - name: "Makalu Grey"
+      price_eur: 850
+    - name: "Verbier Blue"
+      price_eur: 850
+  special:
+    - name: "Matte Grey"
+      price_eur: 1250
+    - name: "Matte Green"
+      price_eur: 1250
+
+available_options:
+  exterior:
+    - name: "21\" forged alloy wheels"
+      price_eur: 2200
+      notes: "Exclusive to Sport Plus, further reduces range"
+  interior:
+    - name: "Two-tone interior (brown/black)"
+      price_eur: 600
+
+delivery_time:
+  estimated_weeks: 10
+  notes: "Sport Plus typically 8-12 week delivery"
+
+running_costs:
+  electricity_cost_per_100km_home_eur: 7.14
+  electricity_cost_per_100km_public_eur: 11.22
+  annual_insurance_eur: 1100
+  annual_maintenance_eur: 400
+  annual_road_tax_eur: 0
+  notes: "Based on 20.4 kWh/100km real-world, higher insurance due to performance"
+
+warranty:
+  vehicle_warranty_years: 5
+  vehicle_warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  roadside_assistance_years: 5
+  notes: "5-year complimentary maintenance included"
+
+data_sources:
+  pricing: "https://www.genesis.com/de/en/models/gv60.html"
+  market_data: "https://www.mobile.de, https://www.autoscout24.de"
+
+notes: |
+  2025 facelifted GV60 Sport Plus flagship with 490 PS Boost mode and comprehensive luxury
+  equipment. Pricing increased €500 vs 2024 Sport Plus. At €66,490 still qualifies for
+  0.25% company car tax rate (under €70,000 threshold). Key value vs Porsche Macan Electric
+  (from €84,100) offering comparable performance at €17,600 less. B&O audio, massage seats,
+  and AR HUD standard features typically optional on competitors.
+
+last_updated: "2026-02-09"
+confidence_level: verified
