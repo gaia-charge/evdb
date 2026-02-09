@@ -1,0 +1,109 @@
+id: genesis-electrified-gv70-awd-2025-de
+variant_id: genesis-electrified-gv70-awd-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 76900
+  price_includes:
+    - "Dual-motor AWD (360 kW / 490 PS)"
+    - "84 kWh battery with 800V ultra-fast charging"
+    - "Vehicle-to-Load (V2L) 3.6 kW"
+    - "Adaptive air suspension"
+    - "Nappa leather quilted interior"
+    - "Heated/ventilated front seats"
+    - "Heated rear seats & steering wheel"
+    - "Head-up display with AR navigation"
+    - "Lexicon 16-speaker premium audio"
+    - "Highway Driving Assist 2"
+    - "Panoramic sunroof"
+    - "Remote Smart Parking Assist 2"
+    - "Surround-view monitor"
+    - "Wireless Apple CarPlay/Android Auto"
+    - "Wireless smartphone charging"
+  on_road_price: 78750
+  delivery_charge: 1850
+  notes: |
+    €2,000 increase over 2024 model justified by 84 kWh battery (+6.6 kWh),
+    360 kW powertrain (+80 kW), and refreshed exterior/interior design.
+    Price above €70k threshold means 1% company car tax rate (not 0.25%).
+
+company_car:
+  bev_tax_rate_percent: 1.0
+  monthly_tax_base: 769
+  notes: "Over €70,000 threshold — 1% rate applies (not 0.25%)"
+
+colors:
+  - name: "Uyuni White"
+    type: solid
+    price_eur: 0
+  - name: "Victoria Silver"
+    type: metallic
+    price_eur: 850
+  - name: "Vik Black"
+    type: metallic
+    price_eur: 850
+  - name: "Sevilla Red"
+    type: metallic
+    price_eur: 850
+  - name: "Tasman Blue"
+    type: metallic
+    price_eur: 850
+  - name: "Mauna Red"
+    type: metallic
+    price_eur: 1450
+    notes: "Premium matte finish"
+  - name: "Atacama Copper"
+    type: metallic
+    price_eur: 1450
+    notes: "Unique copper matte finish"
+
+packages:
+  - name: "Innovation Package"
+    price_eur: 2950
+    includes:
+      - "Electronically controlled suspension"
+      - "Digital side mirrors"
+      - "Advanced parking collision-avoidance"
+      - "Blind-spot view monitor"
+  - name: "Luxury Package"
+    price_eur: 3450
+    includes:
+      - "Massaging front seats"
+      - "Power rear sunshade"
+      - "Power side sunshades"
+      - "Premium ambient lighting (64 colors)"
+
+incentives:
+  - name: "Kfz-Steuer Exemption"
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: subsidy
+    amount: 300
+    description: "Annual CO2 savings certificate (~€250-350/year)"
+
+availability:
+  available_from: "2025-03-01"
+  availability_status: available
+  delivery_time_weeks: 10
+  order_book_open: true
+  notes: "2025 facelift available from Q1 2025. Built at Ulsan plant, South Korea."
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 10
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "Industry-leading warranty. Free maintenance first 5 years/100,000 km."
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.genesis.com/de/en/models/electrified-gv70.html
+    - https://www.ultimatespecs.com/car-specs/Genesis/149530/Genesis-GV70-2025-Electrified-AWD.html
