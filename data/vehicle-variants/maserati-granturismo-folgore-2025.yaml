@@ -1,0 +1,316 @@
+# Maserati GranTurismo Folgore 2025
+# World's first luxury electric grand tourer
+# Triple-motor AWD with 560 kW (761 hp) and 800V architecture
+
+id: maserati-granturismo-folgore-2025
+name: "Base"
+model_id: maserati-granturismo-folgore
+manufacturer_id: stellantis
+model_year: 2025
+trim_level: Folgore
+version: Folgore
+
+description: |
+  The Maserati GranTurismo Folgore is a groundbreaking luxury electric grand tourer that
+  marries Maserati's storied GT tradition with cutting-edge EV technology. Its triple-motor
+  powertrain delivers 560 kW (761 hp) and 1,350 Nm of torque, launching to 100 km/h in
+  just 2.7 seconds — supercar territory wrapped in elegant Italian coachwork.
+
+  The 92.5 kWh battery sits low in the chassis, creating a center of gravity lower than
+  many supercars. The 800V architecture supports 270 kW DC fast charging, with 10-80%
+  achievable in approximately 20 minutes at compatible chargers.
+
+  Inside, the GranTurismo Folgore continues Maserati's tradition of luxurious 2+2 grand
+  touring, with premium Nappa leather, Alcantara, and carbon fiber throughout. The Sonus
+  faber audio system delivers audiophile-quality sound. Three high-resolution displays
+  provide comprehensive vehicle information and infotainment.
+
+  For buyers seeking the ultimate electric grand tourer that combines Italian artistry
+  with world-class performance, the GranTurismo Folgore stands alone in its segment.
+
+# ============================================================================
+# BATTERY & RANGE
+# ============================================================================
+
+battery:
+  usable_kwh: 92.5
+  total_kwh: 96.0
+  chemistry: NMC
+  cells: prismatic
+  manufacturer: Samsung SDI
+  supplier: Samsung SDI (South Korea)
+  nominal_voltage: 800
+  pack_voltage_range: "610-870V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    T-bone battery layout positioned low in the chassis for optimal center of gravity.
+    92.5 kWh usable capacity with 800V architecture enables ultra-fast charging.
+    Advanced thermal management optimized for high-performance driving and rapid charging.
+
+range:
+  wltp_km: 450
+  wltp_city_km: 560
+  wltp_highway_km: 380
+  real_world_km: 370
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP: 450 km (92.5 kWh battery, 20" wheels, AWD triple motor)
+    Real-world: ~370 km mixed driving in good conditions
+    Range reflects high-performance GT character and aerodynamic coupe design.
+    Winter range: ~310 km in cold conditions with heat pump.
+
+efficiency:
+  wltp_kwh_per_100km: 20.6
+  real_world_kwh_per_100km: 25.0
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    20.6 kWh/100km WLTP - impressive for a 761 hp grand tourer.
+    Real-world consumption higher due to performance-oriented driving dynamics.
+
+# ============================================================================
+# CHARGING
+# ============================================================================
+
+charging:
+  ac:
+    max_power_kw: 22
+    standard: true
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 4.5
+    notes: |
+      Standard: 22 kW AC (3-phase Type2) - 0-100% in ~4.5 hours
+      Premium 22 kW onboard charger included as standard
+
+  dc:
+    max_power_kw: 270
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 20
+    time_5_80_minutes: 22
+    peak_charge_time_minutes: "10-45% state of charge"
+    notes: |
+      800V ultra-fast charging with 270 kW peak:
+      - Peak: 270 kW (achieved between 10-45% SoC)
+      - 10-80%: ~20 minutes (ideal conditions, preconditioned battery)
+      - 100 km range in ~5 minutes
+      - Significantly faster than Grecale Folgore (150 kW)
+
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 80
+      - soc_percent: 10
+        power_kw: 268
+        note: "Near peak power"
+      - soc_percent: 30
+        power_kw: 265
+      - soc_percent: 50
+        power_kw: 200
+      - soc_percent: 70
+        power_kw: 110
+      - soc_percent: 80
+        power_kw: 60
+
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 7
+  v2h: false
+  v2g: false
+  notes: |
+    V2L: 7 kW external power supply available
+
+# ============================================================================
+# MOTORS & PERFORMANCE
+# ============================================================================
+
+motors:
+  count: 3
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD (all-wheel drive)
+  front_motor:
+    power_kw: 205
+    power_hp: 279
+    type: PMSM
+  rear_motor:
+    power_kw: 355
+    power_hp: 482
+    type: "2x PMSM (individual rear motors)"
+  combined_power_kw: 560
+  combined_power_hp: 761
+  torque_nm: 1350
+  notes: |
+    Unique triple-motor configuration:
+    - Front: 1x 205 kW (279 hp) PMSM
+    - Rear: 2x individual PMSM motors (combined 355 kW / 482 hp)
+    - Combined: 560 kW (761 hp)
+    - Torque: 1,350 Nm
+    
+    The dual rear motors enable true torque vectoring for exceptional cornering
+    dynamics. Power distribution is continuously variable between all three motors
+    for optimal traction and handling.
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 2.7
+  acceleration_0_60_mph_seconds: 2.5
+  top_speed_kmh: 325
+  top_speed_electronically_limited: true
+  notes: |
+    0-100 km/h: 2.7 seconds (hypercar territory)
+    0-200 km/h: under 9 seconds
+    Top speed: 325 km/h (electronically limited)
+    Quarter mile: ~10.4 seconds
+    
+    One of the fastest electric cars in production. The triple-motor layout and
+    torque vectoring provide extraordinary acceleration and cornering capability.
+
+weight:
+  curb_weight_kg: 2260
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+  gross_weight_kg: 2700
+  payload_kg: 440
+  towing_capacity_kg: 0
+  notes: |
+    2,260 kg - remarkably light for an electric GT with this power level.
+    Near-perfect 48/52 weight distribution. Low center of gravity (lower than
+    many mid-engine supercars) thanks to T-bone battery placement.
+
+suspension:
+  front: Double wishbone with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Maserati Active Suspension
+  adjustable_ride_height: true
+  notes: |
+    Double wishbone front, multi-link rear with adaptive air suspension.
+    Electronically controlled damping adjusts per driving mode.
+    Ride height lowers at speed for aerodynamic efficiency and stability.
+
+brakes:
+  front: 390mm carbon ceramic discs
+  rear: 360mm carbon ceramic discs
+  caliper_type: Fixed aluminum calipers (yellow painted)
+  regenerative: true
+  regenerative_max_power_kw: 300
+  notes: |
+    Carbon ceramic brakes standard on GranTurismo Folgore.
+    390mm front / 360mm rear with 6-piston front, 4-piston rear calipers.
+    Regenerative braking: Up to 300 kW recuperation.
+
+# ============================================================================
+# DIMENSIONS & CAPACITY
+# ============================================================================
+
+dimensions:
+  length_mm: 4966
+  width_mm: 1957
+  width_with_mirrors_mm: 2178
+  height_mm: 1353
+  wheelbase_mm: 2929
+  ground_clearance_mm: 132
+  drag_coefficient: 0.28
+  frontal_area_m2: 2.35
+  notes: |
+    Classic grand tourer proportions with long hood and flowing roofline.
+    0.28 Cd - excellent for a GT coupe. Low 132mm ground clearance reflects
+    sporting intent and battery-low packaging.
+
+cargo:
+  trunk_litres: 310
+  trunk_max_litres: 310
+  frunk_litres: 0
+  notes: |
+    310L trunk - practical for a grand tourer (enough for weekend luggage).
+    No frunk due to front motor packaging. 2+2 rear seats for occasional passengers.
+
+# ============================================================================
+# ADDITIONAL FEATURES
+# ============================================================================
+
+tires:
+  front: "265/35 R20"
+  rear: "295/35 R20"
+  wheel_size_inches: 20
+  notes: |
+    Standard: 20" staggered wheels with performance tires
+    Optional: 21" forged wheels available
+    Performance-oriented staggered setup for maximum grip
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 2
+  notes: |
+    Dual-zone automatic climate control with heat pump standard.
+    Pre-conditioning via Maserati Connect app.
+
+interior:
+  seats: 4
+  seat_material: Premium Nappa leather with Alcantara
+  seat_adjustment: 14-way power adjustable sport seats with memory
+  steering_wheel: Heated leather and carbon fiber steering wheel
+  display_instrument: 12.3" digital instrument cluster
+  display_center: 12.3" central touchscreen
+  display_passenger: 8.8" comfort display (passenger)
+  sound_system: Sonus faber High Premium Sound System (19 speakers, 860W)
+  ambient_lighting: true
+  panoramic_roof: false
+  notes: |
+    Luxurious 2+2 grand tourer interior:
+    - Nappa leather and Alcantara sport seats with Trident logo
+    - Carbon fiber interior accents standard
+    - Sonus faber audio system (19 speakers, 860W)
+    - Three high-resolution displays
+    - Premium ambient lighting
+    - Wireless phone charging
+
+adas_features:
+  - Highway Assist (Level 2)
+  - Lane Keep Assist
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control with Stop & Go
+  - 360° camera system
+  - Active Blind Spot Assist
+  - Autonomous Emergency Braking
+  - Parking sensors front and rear
+
+connectivity:
+  system: Maserati Intelligent Assistant (MIA) multimedia system
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Maserati Connect app
+  voice_assistant: Voice control with natural language processing
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  verified_by: Maserati official specifications
+  sources:
+    - https://www.maserati.com/de/de/models/granturismo-folgore
+    - https://media.maserati.com/
+  notes: |
+    The GranTurismo Folgore is Maserati's electric flagship:
+    - SUPERCAR performance: 2.7s 0-100 km/h (560 kW / 761 hp triple motor)
+    - ULTRA-FAST charging: 270 kW DC (800V), 10-80% in ~20 min
+    - ICONIC design: Classic GT proportions with modern electric packaging
+    - PREMIUM luxury: Sonus faber audio, Nappa leather, carbon fiber
+    - 325 km/h top speed - one of the fastest electric cars
+    
+    Competes with Porsche Taycan Turbo GT, Audi RS e-tron GT, BMW i7 M70.
+    The GranTurismo Folgore differentiates through Italian design heritage,
+    triple-motor torque vectoring, and the emotional appeal of owning a Maserati GT.

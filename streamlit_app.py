@@ -170,7 +170,7 @@ def load_markdown_file(filename):
 
 def format_vehicle_specs(row):
     """Format vehicle specifications into a structured dictionary"""
-    return {
+    specs = {
         'Manufacturer': row.get('manufacturer', 'N/A'),
         'Model': f"{row.get('model', '')} {row.get('variant_name', '')}".strip(),
         'Year': int(row['model_year']) if pd.notna(row.get('model_year')) else 'N/A',
@@ -192,10 +192,77 @@ def format_vehicle_specs(row):
         'DC Fast Charge': f"{int(row['dc_charge_power_kw'])} kW" if pd.notna(row.get('dc_charge_power_kw')) else 'N/A',
         'DC 10-80%': f"{int(row['dc_charge_time_10_80_min'])} min" if pd.notna(row.get('dc_charge_time_10_80_min')) else 'N/A',
         'AC Charge': f"{row['ac_charge_power_kw']:.1f} kW" if pd.notna(row.get('ac_charge_power_kw')) else 'N/A',
-        '💰 PRICING (GERMANY)': '',
-        'Base Price': f"€{int(row['price_eur']):,}" if pd.notna(row.get('price_eur')) else 'TBD',
-        'On-the-Road Price': f"€{int(row['price_otr_eur']):,}" if pd.notna(row.get('price_otr_eur')) else 'TBD',
     }
+    
+    # Add dimensions section if any dimension data is available
+    has_dimensions = any([
+        pd.notna(row.get('length_mm')),
+        pd.notna(row.get('width_mm')),
+        pd.notna(row.get('height_mm')),
+        pd.notna(row.get('wheelbase_mm'))
+    ])
+    
+    if has_dimensions:
+        specs['📏 DIMENSIONS'] = ''
+        if pd.notna(row.get('length_mm')) or pd.notna(row.get('width_mm')) or pd.notna(row.get('height_mm')):
+            length = f"{int(row['length_mm'])} mm" if pd.notna(row.get('length_mm')) else 'N/A'
+            width = f"{int(row['width_mm'])} mm" if pd.notna(row.get('width_mm')) else 'N/A'
+            height = f"{int(row['height_mm'])} mm" if pd.notna(row.get('height_mm')) else 'N/A'
+            specs['L × W × H'] = f"{length} × {width} × {height}"
+        specs['Wheelbase'] = f"{int(row['wheelbase_mm'])} mm" if pd.notna(row.get('wheelbase_mm')) else 'N/A'
+        if pd.notna(row.get('ground_clearance_mm')):
+            specs['Ground Clearance'] = f"{int(row['ground_clearance_mm'])} mm"
+        if pd.notna(row.get('turning_circle_m')):
+            specs['Turning Circle'] = f"{row['turning_circle_m']:.1f} m"
+    
+    # Add weight section if any weight data is available
+    has_weight = any([
+        pd.notna(row.get('weight_curb_kg')),
+        pd.notna(row.get('weight_gross_kg')),
+        pd.notna(row.get('payload_kg'))
+    ])
+    
+    if has_weight:
+        specs['⚖️ WEIGHT'] = ''
+        specs['Curb Weight'] = f"{int(row['weight_curb_kg'])} kg" if pd.notna(row.get('weight_curb_kg')) else 'N/A'
+        specs['Gross Weight'] = f"{int(row['weight_gross_kg'])} kg" if pd.notna(row.get('weight_gross_kg')) else 'N/A'
+        specs['Payload'] = f"{int(row['payload_kg'])} kg" if pd.notna(row.get('payload_kg')) else 'N/A'
+    
+    # Add cargo section if any cargo data is available
+    has_cargo = any([
+        pd.notna(row.get('trunk_capacity_liters')),
+        pd.notna(row.get('frunk_capacity_liters')),
+        pd.notna(row.get('roof_load_kg'))
+    ])
+    
+    if has_cargo:
+        specs['📦 CARGO CAPACITY'] = ''
+        specs['Trunk'] = f"{int(row['trunk_capacity_liters'])} L" if pd.notna(row.get('trunk_capacity_liters')) else 'N/A'
+        if pd.notna(row.get('trunk_max_liters')):
+            specs['Trunk (Max)'] = f"{int(row['trunk_max_liters'])} L"
+        if pd.notna(row.get('frunk_capacity_liters')):
+            specs['Frunk'] = f"{int(row['frunk_capacity_liters'])} L"
+        if pd.notna(row.get('roof_load_kg')):
+            specs['Roof Load'] = f"{int(row['roof_load_kg'])} kg"
+    
+    # Add towing section if towing data is available
+    has_towing = any([
+        pd.notna(row.get('towing_capacity_braked_kg')),
+        pd.notna(row.get('towing_capacity_unbraked_kg'))
+    ])
+    
+    if has_towing:
+        specs['🚙 TOWING CAPACITY'] = ''
+        specs['Braked Trailer'] = f"{int(row['towing_capacity_braked_kg'])} kg" if pd.notna(row.get('towing_capacity_braked_kg')) else 'N/A'
+        if pd.notna(row.get('towing_capacity_unbraked_kg')):
+            specs['Unbraked Trailer'] = f"{int(row['towing_capacity_unbraked_kg'])} kg"
+    
+    # Add pricing at the end
+    specs['💰 PRICING (GERMANY)'] = ''
+    specs['Base Price'] = f"€{int(row['price_eur']):,}" if pd.notna(row.get('price_eur')) else 'TBD'
+    specs['On-the-Road Price'] = f"€{int(row['price_otr_eur']):,}" if pd.notna(row.get('price_otr_eur')) else 'TBD'
+    
+    return specs
 
 def show_vehicle_details(vehicle_data):
     """Display detailed vehicle specifications in a formatted table"""
@@ -476,6 +543,8 @@ elif page == "🔍 Browse Vehicles":
                 v.dc_charge_power_kw,
                 v.dc_charge_time_10_80_min,
                 v.drive_type,
+                v.trunk_capacity_liters,
+                v.towing_capacity_braked_kg,
                 ma.price_base as price_eur,
                 ma.market_code
             FROM vehicle_variants v
@@ -561,6 +630,44 @@ elif page == "🔍 Browse Vehicles":
         default=[]
     )
     
+    # Cargo capacity filter
+    st.sidebar.markdown("#### Cargo Capacity")
+    if df['trunk_capacity_liters'].notna().any():
+        trunk_min_val = int(df['trunk_capacity_liters'].min()) if df['trunk_capacity_liters'].notna().any() else 0
+        trunk_max_val = int(df['trunk_capacity_liters'].max()) if df['trunk_capacity_liters'].notna().any() else 1000
+        
+        trunk_capacity_min = st.sidebar.number_input(
+            "Min Trunk Capacity (liters):",
+            min_value=0,
+            max_value=trunk_max_val,
+            value=0,
+            step=50
+        )
+    else:
+        trunk_capacity_min = 0
+    
+    # Towing capacity filter
+    st.sidebar.markdown("#### Towing Capacity")
+    if df['towing_capacity_braked_kg'].notna().any():
+        has_towing_filter = st.sidebar.checkbox("Has Towing Capability", value=False)
+        
+        if has_towing_filter:
+            towing_min_val = int(df['towing_capacity_braked_kg'].min()) if df['towing_capacity_braked_kg'].notna().any() else 0
+            towing_max_val = int(df['towing_capacity_braked_kg'].max()) if df['towing_capacity_braked_kg'].notna().any() else 2500
+            
+            towing_capacity_min = st.sidebar.number_input(
+                "Min Towing Capacity (kg):",
+                min_value=0,
+                max_value=towing_max_val,
+                value=0,
+                step=250
+            )
+        else:
+            towing_capacity_min = 0
+    else:
+        has_towing_filter = False
+        towing_capacity_min = 0
+    
     # Reset filters button
     if st.sidebar.button("🔄 Reset All Filters"):
         st.rerun()
@@ -597,6 +704,23 @@ elif page == "🔍 Browse Vehicles":
         (filtered_df['dc_charge_power_kw'].isna()) | 
         ((filtered_df['dc_charge_power_kw'] >= charge_power[0]) & (filtered_df['dc_charge_power_kw'] <= charge_power[1]))
     ]
+    
+    # Cargo capacity filter
+    if trunk_capacity_min > 0:
+        filtered_df = filtered_df[
+            (filtered_df['trunk_capacity_liters'].notna()) & 
+            (filtered_df['trunk_capacity_liters'] >= trunk_capacity_min)
+        ]
+    
+    # Towing capacity filter
+    if has_towing_filter:
+        if towing_capacity_min > 0:
+            filtered_df = filtered_df[
+                (filtered_df['towing_capacity_braked_kg'].notna()) & 
+                (filtered_df['towing_capacity_braked_kg'] >= towing_capacity_min)
+            ]
+        else:
+            filtered_df = filtered_df[filtered_df['towing_capacity_braked_kg'].notna()]
     
     # Display results count
     st.markdown(f"### Found {len(filtered_df)} vehicle(s)")
@@ -717,6 +841,22 @@ elif page == "🔍 Browse Vehicles":
                         v.dc_charge_power_kw,
                         v.dc_charge_time_10_80_min,
                         v.ac_charge_power_kw,
+                        v.weight_curb_kg,
+                        v.weight_gross_kg,
+                        v.payload_kg,
+                        v.length_mm,
+                        v.width_mm,
+                        v.width_with_mirrors_mm,
+                        v.height_mm,
+                        v.wheelbase_mm,
+                        v.ground_clearance_mm,
+                        v.turning_circle_m,
+                        v.trunk_capacity_liters,
+                        v.trunk_max_liters,
+                        v.frunk_capacity_liters,
+                        v.roof_load_kg,
+                        v.towing_capacity_braked_kg,
+                        v.towing_capacity_unbraked_kg,
                         ma.price_base as price_eur,
                         ma.price_including_vat as price_otr_eur
                     FROM vehicle_variants v
@@ -811,6 +951,22 @@ elif page == "⚖️ Compare":
                 v.dc_charge_power_kw,
                 v.dc_charge_time_10_80_min,
                 v.ac_charge_power_kw,
+                v.weight_curb_kg,
+                v.weight_gross_kg,
+                v.payload_kg,
+                v.length_mm,
+                v.width_mm,
+                v.width_with_mirrors_mm,
+                v.height_mm,
+                v.wheelbase_mm,
+                v.ground_clearance_mm,
+                v.turning_circle_m,
+                v.trunk_capacity_liters,
+                v.trunk_max_liters,
+                v.frunk_capacity_liters,
+                v.roof_load_kg,
+                v.towing_capacity_braked_kg,
+                v.towing_capacity_unbraked_kg,
                 ma.price_base as price_eur,
                 ma.price_including_vat as price_otr_eur
             FROM vehicle_variants v
@@ -1179,6 +1335,7 @@ elif page == "📊 Analytics":
             v.variant_name,
             v.model_year,
             m.body_style,
+            m.segment,
             v.battery_usable_kwh,
             v.battery_chemistry,
             CASE WHEN v.battery_voltage >= 700 THEN '800V' WHEN v.battery_voltage IS NOT NULL THEN '400V' END as battery_architecture,
@@ -1189,6 +1346,12 @@ elif page == "📊 Analytics":
             v.dc_charge_time_10_80_min,
             v.total_power_kw,
             v.drive_type,
+            v.length_mm,
+            v.trunk_capacity_liters,
+            v.trunk_max_liters,
+            v.towing_capacity_braked_kg,
+            v.weight_curb_kg,
+            v.payload_kg,
             ma.price_base as price_eur
         FROM vehicle_variants v
         JOIN vehicle_models m ON v.model_id = m.id
@@ -1206,10 +1369,11 @@ elif page == "📊 Analytics":
     )
     
     # Create tabs for different analysis sections
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📏 Range Analysis",
         "⚡ Charging Speeds",
         "💰 Price Distribution",
+        "📦 Dimensions & Practicality",
         "🌍 Market Overview"
     ])
     
@@ -1431,8 +1595,202 @@ elif page == "📊 Analytics":
         else:
             st.info("Pricing data not available. Add market availability data to enable price analysis.")
     
-    # Tab 4: Market Overview
+    # Tab 4: Dimensions & Practicality
     with tab4:
+        st.markdown("### Cargo Capacity Distribution")
+        
+        cargo_df = df.dropna(subset=['trunk_capacity_liters'])
+        
+        if not cargo_df.empty:
+            # Cargo capacity histogram
+            fig_cargo_hist = px.histogram(
+                cargo_df,
+                x='trunk_capacity_liters',
+                nbins=20,
+                title='Trunk Capacity Distribution',
+                labels={'trunk_capacity_liters': 'Trunk Capacity (Liters)', 'count': 'Number of Vehicles'},
+                color_discrete_sequence=['#FF9800']
+            )
+            fig_cargo_hist.update_layout(height=400)
+            st.plotly_chart(fig_cargo_hist, use_container_width=True)
+            
+            st.markdown("---")
+            st.markdown("### Length vs. Cargo Capacity")
+            st.markdown("How does vehicle length correlate with cargo space?")
+            
+            # Length vs cargo scatter
+            length_cargo_df = df.dropna(subset=['length_mm', 'trunk_capacity_liters', 'body_style'])
+            
+            if not length_cargo_df.empty:
+                fig_length_cargo = px.scatter(
+                    length_cargo_df,
+                    x='length_mm',
+                    y='trunk_capacity_liters',
+                    color='body_style',
+                    size='trunk_max_liters',
+                    hover_data=['vehicle_name', 'trunk_max_liters'],
+                    title='Vehicle Length vs. Trunk Capacity',
+                    labels={
+                        'length_mm': 'Length (mm)',
+                        'trunk_capacity_liters': 'Trunk Capacity (Liters)',
+                        'body_style': 'Body Style',
+                        'trunk_max_liters': 'Max Capacity (L)'
+                    }
+                )
+                fig_length_cargo.update_layout(height=500)
+                st.plotly_chart(fig_length_cargo, use_container_width=True)
+            
+            st.markdown("---")
+            st.markdown("### Most Spacious Vehicles")
+            
+            # Top cargo capacity
+            top_cargo = cargo_df.nlargest(15, 'trunk_capacity_liters')
+            
+            fig_top_cargo = px.bar(
+                top_cargo,
+                x='trunk_capacity_liters',
+                y='vehicle_name',
+                orientation='h',
+                color='trunk_capacity_liters',
+                color_continuous_scale='YlOrRd',
+                title='Top 15 Vehicles by Trunk Capacity',
+                labels={
+                    'trunk_capacity_liters': 'Trunk Capacity (Liters)',
+                    'vehicle_name': 'Vehicle'
+                }
+            )
+            fig_top_cargo.update_layout(height=600, showlegend=False)
+            st.plotly_chart(fig_top_cargo, use_container_width=True)
+            
+            # Cargo statistics
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                avg_cargo = cargo_df['trunk_capacity_liters'].mean()
+                st.metric("Average Trunk", f"{avg_cargo:.0f} L")
+            with col2:
+                max_cargo = cargo_df['trunk_capacity_liters'].max()
+                max_cargo_vehicle = cargo_df.loc[cargo_df['trunk_capacity_liters'].idxmax(), 'vehicle_name']
+                st.metric("Largest Trunk", f"{max_cargo:.0f} L", delta=max_cargo_vehicle)
+            with col3:
+                avg_max = df['trunk_max_liters'].mean()
+                st.metric("Avg Max Capacity", f"{avg_max:.0f} L" if pd.notna(avg_max) else "N/A")
+        else:
+            st.info("Cargo capacity data not yet available for most vehicles.")
+        
+        st.markdown("---")
+        st.markdown("### Towing Capacity by Brand/Segment")
+        
+        towing_df = df.dropna(subset=['towing_capacity_braked_kg'])
+        
+        if not towing_df.empty:
+            # Towing by brand
+            towing_by_brand = towing_df.groupby('manufacturer')['towing_capacity_braked_kg'].agg(['mean', 'max', 'count']).reset_index()
+            towing_by_brand = towing_by_brand[towing_by_brand['count'] >= 2].sort_values('mean', ascending=False).head(15)
+            
+            fig_towing_brand = px.bar(
+                towing_by_brand,
+                x='mean',
+                y='manufacturer',
+                orientation='h',
+                title='Average Towing Capacity by Brand (brands with 2+ vehicles)',
+                labels={
+                    'mean': 'Average Towing Capacity (kg)',
+                    'manufacturer': 'Brand'
+                },
+                color='mean',
+                color_continuous_scale='Blues'
+            )
+            fig_towing_brand.update_layout(height=500, showlegend=False)
+            st.plotly_chart(fig_towing_brand, use_container_width=True)
+            
+            # Towing by segment
+            towing_by_segment = towing_df.dropna(subset=['segment']).groupby('segment')['towing_capacity_braked_kg'].agg(['mean', 'count']).reset_index()
+            towing_by_segment = towing_by_segment[towing_by_segment['count'] >= 2].sort_values('mean', ascending=False)
+            
+            if not towing_by_segment.empty:
+                fig_towing_segment = px.bar(
+                    towing_by_segment,
+                    x='segment',
+                    y='mean',
+                    title='Average Towing Capacity by Segment',
+                    labels={
+                        'segment': 'Segment',
+                        'mean': 'Average Towing Capacity (kg)'
+                    },
+                    color='mean',
+                    color_continuous_scale='Greens'
+                )
+                fig_towing_segment.update_layout(height=400, showlegend=False)
+                st.plotly_chart(fig_towing_segment, use_container_width=True)
+            
+            # Top towing vehicles
+            st.markdown("### Best Towing Capacity")
+            top_towing = towing_df.nlargest(10, 'towing_capacity_braked_kg')
+            
+            fig_top_towing = px.bar(
+                top_towing,
+                x='towing_capacity_braked_kg',
+                y='vehicle_name',
+                orientation='h',
+                color='towing_capacity_braked_kg',
+                color_continuous_scale='RdYlGn',
+                title='Top 10 Vehicles by Towing Capacity',
+                labels={
+                    'towing_capacity_braked_kg': 'Towing Capacity (kg)',
+                    'vehicle_name': 'Vehicle'
+                }
+            )
+            fig_top_towing.update_layout(height=500, showlegend=False)
+            st.plotly_chart(fig_top_towing, use_container_width=True)
+            
+            # Towing statistics
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                avg_towing = towing_df['towing_capacity_braked_kg'].mean()
+                st.metric("Average Towing", f"{avg_towing:.0f} kg")
+            with col2:
+                max_towing = towing_df['towing_capacity_braked_kg'].max()
+                st.metric("Max Towing", f"{max_towing:.0f} kg")
+            with col3:
+                pct_with_towing = (len(towing_df) / len(df)) * 100
+                st.metric("Vehicles with Towing", f"{pct_with_towing:.1f}%")
+        else:
+            st.info("Towing capacity data not yet available for most vehicles.")
+        
+        st.markdown("---")
+        st.markdown("### Weight Distribution")
+        
+        weight_df = df.dropna(subset=['weight_curb_kg'])
+        
+        if not weight_df.empty:
+            # Weight histogram
+            fig_weight = px.histogram(
+                weight_df,
+                x='weight_curb_kg',
+                nbins=20,
+                title='Curb Weight Distribution',
+                labels={'weight_curb_kg': 'Curb Weight (kg)', 'count': 'Number of Vehicles'},
+                color_discrete_sequence=['#9C27B0']
+            )
+            fig_weight.update_layout(height=400)
+            st.plotly_chart(fig_weight, use_container_width=True)
+            
+            # Weight statistics
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                avg_weight = weight_df['weight_curb_kg'].mean()
+                st.metric("Average Weight", f"{avg_weight:.0f} kg")
+            with col2:
+                lightest = weight_df['weight_curb_kg'].min()
+                st.metric("Lightest", f"{lightest:.0f} kg")
+            with col3:
+                heaviest = weight_df['weight_curb_kg'].max()
+                st.metric("Heaviest", f"{heaviest:.0f} kg")
+        else:
+            st.info("Weight data not yet available for most vehicles.")
+    
+    # Tab 5: Market Overview
+    with tab5:
         st.markdown("### Market Coverage")
         
         # Manufacturer distribution

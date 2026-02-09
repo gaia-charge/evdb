@@ -148,6 +148,20 @@ class DatabaseBuilder:
                 top_speed_kph INTEGER,
                 weight_curb_kg INTEGER,
                 weight_gross_kg INTEGER,
+                payload_kg INTEGER,
+                towing_capacity_braked_kg INTEGER,
+                towing_capacity_unbraked_kg INTEGER,
+                length_mm INTEGER,
+                width_mm INTEGER,
+                width_with_mirrors_mm INTEGER,
+                height_mm INTEGER,
+                wheelbase_mm INTEGER,
+                ground_clearance_mm INTEGER,
+                turning_circle_m REAL,
+                trunk_capacity_liters INTEGER,
+                trunk_max_liters INTEGER,
+                frunk_capacity_liters INTEGER,
+                roof_load_kg INTEGER,
                 price_base_eur INTEGER,
                 data_quality TEXT,
                 sources TEXT,  -- JSON array
@@ -460,6 +474,8 @@ class DatabaseBuilder:
             bidir = charging.get('bidirectional', {})
             performance = data.get('performance', {})
             weight = data.get('weight', {})
+            dimensions = data.get('dimensions', {})
+            cargo = data.get('cargo', {})
             pricing = data.get('pricing', {})
             metadata = data.get('metadata', {})
             
@@ -608,10 +624,14 @@ class DatabaseBuilder:
                     bidirectional_power_kw,
                     motor_type, motor_count, drive_type, total_power_kw, total_torque_nm,
                     acceleration_0_100_sec, top_speed_kph,
-                    weight_curb_kg, weight_gross_kg,
+                    weight_curb_kg, weight_gross_kg, payload_kg,
+                    towing_capacity_braked_kg, towing_capacity_unbraked_kg,
+                    length_mm, width_mm, width_with_mirrors_mm, height_mm,
+                    wheelbase_mm, ground_clearance_mm, turning_circle_m,
+                    trunk_capacity_liters, trunk_max_liters, frunk_capacity_liters, roof_load_kg,
                     price_base_eur, data_quality, sources, notes,
                     created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 data['id'],
                 data['model_id'],
@@ -653,8 +673,22 @@ class DatabaseBuilder:
                  performance.get('acceleration_0_100_kmh_seconds') or 
                  performance.get('acceleration_0_100_kmh')),  # Try multiple field name variations
                 performance.get('top_speed_kmh'),
-                weight.get('curb_kg'),
-                weight.get('gross_vehicle_kg'),
+                weight.get('curb_kg') or weight.get('curb_weight_kg'),
+                weight.get('gross_vehicle_kg') or weight.get('gross_vehicle_weight_kg'),
+                weight.get('payload_kg'),
+                weight.get('towing_capacity_braked_kg'),
+                weight.get('towing_capacity_unbraked_kg'),
+                dimensions.get('length_mm'),
+                dimensions.get('width_mm'),
+                dimensions.get('width_with_mirrors_mm'),
+                dimensions.get('height_mm'),
+                dimensions.get('wheelbase_mm'),
+                dimensions.get('ground_clearance_mm'),
+                dimensions.get('turning_circle_m'),
+                cargo.get('trunk_capacity_liters'),
+                cargo.get('trunk_max_liters'),
+                cargo.get('frunk_capacity_liters'),
+                cargo.get('roof_load_kg'),
                 pricing.get('base_price_eur'),
                 metadata.get('data_quality'),
                 json.dumps(metadata.get('sources', [])),

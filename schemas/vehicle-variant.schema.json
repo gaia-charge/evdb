@@ -321,6 +321,98 @@
           "minimum": 100,
           "maximum": 2000,
           "description": "Maximum payload in kilograms"
+        },
+        "towing_capacity_braked_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 3500,
+          "description": "Maximum towing capacity with braked trailer in kilograms"
+        },
+        "towing_capacity_unbraked_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 750,
+          "description": "Maximum towing capacity with unbraked trailer in kilograms"
+        },
+        "trailer_hitch_available": {
+          "type": ["boolean", "null"],
+          "description": "Whether a trailer hitch is available (standard or optional)"
+        }
+      }
+    },
+    "dimensions": {
+      "type": ["object", "null"],
+      "properties": {
+        "length_mm": {
+          "type": ["integer", "null"],
+          "minimum": 2000,
+          "maximum": 6000,
+          "description": "Overall length in millimeters"
+        },
+        "width_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1400,
+          "maximum": 2500,
+          "description": "Width excluding mirrors in millimeters"
+        },
+        "width_with_mirrors_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1600,
+          "maximum": 2700,
+          "description": "Width including mirrors in millimeters"
+        },
+        "height_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1200,
+          "maximum": 2500,
+          "description": "Height in millimeters"
+        },
+        "wheelbase_mm": {
+          "type": ["integer", "null"],
+          "minimum": 1800,
+          "maximum": 4000,
+          "description": "Wheelbase in millimeters"
+        },
+        "ground_clearance_mm": {
+          "type": ["integer", "null"],
+          "minimum": 80,
+          "maximum": 300,
+          "description": "Ground clearance in millimeters"
+        },
+        "turning_circle_m": {
+          "type": ["number", "null"],
+          "minimum": 8,
+          "maximum": 15,
+          "description": "Turning circle diameter in meters"
+        }
+      }
+    },
+    "cargo": {
+      "type": ["object", "null"],
+      "properties": {
+        "trunk_capacity_liters": {
+          "type": ["integer", "null"],
+          "minimum": 50,
+          "maximum": 3000,
+          "description": "Trunk/boot volume in liters"
+        },
+        "trunk_max_liters": {
+          "type": ["integer", "null"],
+          "minimum": 100,
+          "maximum": 5000,
+          "description": "Maximum trunk volume with rear seats folded in liters"
+        },
+        "frunk_capacity_liters": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 500,
+          "description": "Front trunk capacity in liters (if applicable)"
+        },
+        "roof_load_kg": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 200,
+          "description": "Maximum roof load capacity in kilograms"
         }
       }
     },
