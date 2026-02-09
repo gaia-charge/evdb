@@ -1,223 +1,179 @@
-# Renault Megane E-Tech EV60 Techno (2025) - Germany Market Availability
-
+# Renault Megane E-Tech Electric EV60 Techno 2025 - Germany Market
 id: renault-megane-e-tech-ev60-techno-2025-de
 variant_id: renault-megane-e-tech-ev60-techno-2025
 market: DE
 currency: EUR
-
-# Market-Specific Details
 availability_status: available
-available_from: "2022-09-01"
+available_from: "2024-10-01"
 delivery_time_weeks: 8
 
-# Pricing
 pricing:
-  base_price: 42900
-  price_including_vat: 42900
+  base_price: 43200
+  price_including_vat: 43200
+  destination_charge: 890
+  total_msrp: 44090
   vat_rate_percent: 19
-
-# Available Colors
-available_colors:
-  - name: Glacier White
-    code: null
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Diamond Black
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Titanium Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Flame Red
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Midnight Blue
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Schist Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-
-# Wheel Options
-available_wheels:
-  - name: 19" aerodynamic alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" alloy wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1000
-      currency: EUR
-
-# Interior Options
-available_interiors:
-  - name: Black/Grey cloth
-    material: cloth
-    color: black_grey
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black alcantara-style microfiber
-    material: alcantara
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-
-# Incentives
-available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price"]
-
-# Options
-popular_packages:
-  - name: Harman Kardon audio
-    price:
-      amount: 600
-      currency: EUR
-  - name: Panoramic glass roof
-    price:
-      amount: 1200
-      currency: EUR
-  - name: Winter Pack (heated seats, heated steering wheel)
-    price:
-      amount: 500
-      currency: EUR
-  - name: 20" alloy wheels
-    price:
-      amount: 1000
-      currency: EUR
-
-# Popular Configurations
-popular_configs:
-  - name: "EV60 Techno Base"
-    description: "Standard EV60 Techno with comprehensive equipment"
-    total_price:
-      amount: 42900
-      currency: EUR
-    includes:
-      - "60 kWh battery, 450 km range"
-      - "218 hp motor"
-      - "OpenR display system (12\" + 12\")"
-      - "Google built-in"
-      - "22 kW AC charging"
-      - "130 kW DC fast charging"
-      - "Heat pump (standard)"
-      - "Two-tone paint"
-      - "360° camera"
-      - "Adaptive cruise control"
-      - "Blind spot warning"
-      - "19\" wheels"
   
-  - name: "EV60 Techno Comfort"
-    description: "EV60 Techno with popular comfort options"
-    total_price:
-      amount: 45200
-      currency: EUR
-    includes:
-      - "All EV60 Techno base features"
-      - "Harman Kardon audio (€600)"
-      - "Panoramic glass roof (€1,200)"
-      - "Winter Pack (€500)"
+  incentives:
+    - name: "BAFA Umweltbonus (Federal EV Subsidy)"
+      amount_eur: 0
+      notes: "Federal EV subsidy ended December 2023"
+    - name: "Company Car Tax Benefit"
+      amount_eur: null
+      notes: "0.25% monthly taxation for BEVs (vs 1% for ICE)"
+
+tax:
+  vat_percent: 19
+  registration_tax_eur: 0
+  annual_road_tax_eur: 0
+  company_car_tax_rate: 0.25
+  company_car_tax_base_eur: 11023
+  notes: |
+    Electric vehicles exempt from annual road tax (Kfz-Steuer) in Germany.
+    Company car benefit: 0.25% of gross list price per month (vs 1% for ICE).
+    Monthly benefit: 0.25% × 44,090 EUR = 110.23 EUR taxable benefit.
+
+colors:
+  standard:
+    - name: "Glacier White"
+      code: "OV369"
+      price_eur: 0
+      metallic: false
+    - name: "Diamond Black"
+      code: "GNE"
+      price_eur: 0
+      metallic: false
+  metallic:
+    - name: "Urban Grey"
+      code: "KPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Flame Red"
+      code: "NNP"
+      price_eur: 690
+      metallic: true
+    - name: "Highland Grey"
+      code: "RPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Midnight Blue"
+      code: "RNF"
+      price_eur: 690
+      metallic: true
+    - name: "Titanium Grey"
+      code: "KNM"
+      price_eur: 690
+      metallic: true
+
+options:
+  packages:
+    - name: "Comfort Pack Plus"
+      price_eur: 1500
+      includes:
+        - "Heated and ventilated front seats"
+        - "Heated steering wheel"
+        - "Heated rear seats"
+        - "Rain sensor"
+        - "Auto-dimming rear-view mirror"
+    
+    - name: "Driving Assistance Pack"
+      price_eur: 900
+      includes:
+        - "360° parking camera"
+        - "Park Assist (automatic parking)"
+        - "Blind spot monitoring"
   
-  - name: "EV60 Techno Premium"
-    description: "Fully loaded EV60 Techno"
-    total_price:
-      amount: 46200
-      currency: EUR
-    includes:
-      - "All EV60 Techno Comfort features"
-      - "20\" alloy wheels (€1,000)"
+  standalone:
+    - name: "Tow hitch with electrics"
+      price_eur: 750
+    - name: "Panoramic glass roof"
+      price_eur: 1100
+    - name: "19-inch alloy wheels (upgrade)"
+      price_eur: 850
 
-# Charging Costs (Germany 2025)
-typical_charging_costs:
-  home_kwh: 0.35
-  public_ac_kwh: 0.55
-  public_dc_kwh: 0.75
+delivery:
+  typical_wait_weeks: 8
+  typical_wait_months: 2
+  delivery_notes: |
+    Built in Douai, France. Typical delivery 6-12 weeks for stock vehicles.
+    Custom orders may take 3-4 months. Most popular variant, good availability.
 
-# Company Car Taxation
-company_car_tax:
-  gross_list_price: 42900
-  monthly_tax_rate: 0.25
-  monthly_benefit: 107
-  annual_benefit: 1287
-  notes: >
-    As an electric vehicle under €70,000, qualifies for reduced 0.25% monthly rate
-    vs. 1% for combustion vehicles. For 30% tax bracket: €386/year vs. €1,545/year
-    for equivalent combustion car (€1,159 annual savings).
+dealer_network:
+  dealer_count: 450
+  service_centers: 450
+  charging_network_partnership: "Mobilize Charge Pass (access to 500,000+ chargers)"
+  notes: "Extensive Renault dealer network across Germany"
 
-# Dealer Network
-dealer_info:
-  dealer_count: 180
-  service_center_count: 180
-  notes: >
-    Renault Germany has approximately 180 authorized dealers nationwide with
-    comprehensive coverage in all major cities and regions. All dealers are
-    trained for electric vehicle sales and service with dedicated EV specialists.
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  roadside_assistance_years: 3
+  corrosion_years: 12
+  paint_years: 3
+  notes: "Comprehensive warranty with 8-year battery guarantee"
 
-# Competitors
-competitors:
-  - model_id: volkswagen-id3-pro-s
-    price: 44995
-    notes: "VW badge, similar 77 kWh battery, 550+ km range"
-  - model_id: cupra-born-58
-    price: 42990
-    notes: "Sportier image, similar platform, 58 kWh"
-  - model_id: hyundai-ioniq-5
-    price: 46900
-    notes: "Larger, 800V charging, Korean quality"
-  - model_id: nissan-ariya-63
-    price: 49000
-    notes: "Alliance partner, larger SUV, more expensive"
-  - model_id: bmw-i4
-    price: 59900
-    notes: "Premium badge, more power, significantly higher price"
+trim_details:
+  trim_level: "EV60 Techno"
+  standard_equipment:
+    - "12-inch OpenR Link touchscreen with Google built-in"
+    - "12.3-inch digital instrument cluster"
+    - "LED Pure Vision headlights"
+    - "18-inch alloy wheels"
+    - "Automatic dual-zone climate control"
+    - "Keyless entry and start"
+    - "Front and rear parking sensors"
+    - "Rear parking camera"
+    - "Heat pump"
+    - "Wireless smartphone charging"
+    - "Adaptive cruise control"
+    - "Lane Keep Assist"
+    - "Traffic Sign Recognition"
+    - "Blind spot warning"
+    - "22 kW three-phase AC charging"
+    - "Multi-Sense driving modes"
+  
+  optional_equipment:
+    - "Comfort Pack Plus (heated/ventilated seats)"
+    - "Driving Assistance Pack (360° camera, park assist)"
+    - "Panoramic glass roof"
+    - "Tow hitch with electrics"
+    - "19-inch alloy wheels upgrade"
 
-# Metadata
+financing:
+  available: true
+  typical_apr_percent: 3.99
+  lease_available: true
+  typical_lease_monthly_eur: 349
+  notes: |
+    Renault Bank offers financing and leasing.
+    Typical lease: 349 EUR/month (48 months, 10,000 km/year, 4,500 EUR down payment)
+
+charging_infrastructure:
+  public_chargers: 100000
+  fast_chargers: 15000
+  charging_networks:
+    - "Ionity"
+    - "EnBW"
+    - "Fastned"
+    - "Allego"
+  home_charging_subsidy: false
+  notes: |
+    Germany has extensive charging infrastructure with 100,000+ public chargers.
+    Mobilize Charge Pass provides access to 500,000+ chargers across Europe.
+    22 kW AC charging allows full charge in ~3 hours at home.
+
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
   data_quality: verified
-  confidence: high
-  
-  sources:
+  last_updated: "2026-02-09"
+  created_at: "2026-02-09"
+  source: "Renault Germany official pricing"
+  source_urls:
     - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://www.adac.de"
-    - "https://www.mobile.de"
-
-notes: >
-  The Renault Megane E-Tech EV60 Techno (2025) is the sweet-spot variant offering
-  excellent range (450 km WLTP / 370 km real-world) and strong performance (218 hp,
-  7.4s 0-100 km/h). At €42,900, it's positioned competitively against the VW ID.3 Pro S
-  while offering superior interior design and technology. The Techno trim is comprehensively
-  equipped with 360° camera, adaptive cruise control, two-tone paint, and 22 kW AC charging
-  as standard. The 0.25% company car tax makes it attractive for fleet buyers. Most buyers
-  opt for the "EV60 Techno Comfort" configuration (€45,200) adding Harman Kardon audio,
-  panoramic roof, and winter pack. Fast 8-week delivery is competitive. The EV60 Techno
-  is ideal for buyers needing longer range for weekend trips or occasional long-distance
-  travel while maintaining compact dimensions for urban use. The 218 hp motor provides
-  engaging performance while the 22 kW AC charger enables overnight home charging even
-  from empty. Winner of 2023 European Car of the Year.
+  verification_date: "2026-02-09"
+  notes: |
+    2025 model year pricing for Germany.
+    Mid-range Techno variant with 60 kWh battery and 218 hp.
+    Most popular Megane E-Tech variant. Best value for money.

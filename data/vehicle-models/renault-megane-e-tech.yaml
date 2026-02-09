@@ -1,70 +1,98 @@
+# Renault Megane E-Tech Electric
 id: renault-megane-e-tech
+name: Megane E-Tech Electric
 manufacturer_id: renault-group
 brand: "Renault"
-name: Megane E-Tech
-full_name: Renault Megane E-Tech Electric
-generation: 1
-model_years:
-  start: 2022
-  end: null
-
 body_style: crossover
 segment: C
+
+production_start: "2021"
+production_end: null
+production_status: active
+generation: 1
+
 platform: CMF-EV
 
-production:
-  status: active
-  start_date: "2022-03"
-  end_date: null
-  plants:
-    - location: Douai, France
-      name: Renault Douai Plant
+awards:
+  - name: "European Car of the Year"
+    year: 2023
+    category: "Overall Winner"
+  - name: "What Car? Car of the Year Awards"
+    year: 2023
+    category: "Best Family Electric Car"
+  - name: "Auto Express New Car Awards"
+    year: 2023
+    category: "Best Small Electric Car"
+
+safety_rating:
+  organization: "Euro NCAP"
+  year: 2022
+  overall_stars: 5
+  adult_occupant_percent: 91
+  child_occupant_percent: 86
+  vulnerable_road_users_percent: 65
+  safety_assist_percent: 79
+
+infotainment:
+  screen_size_inches: 12.0
+  system_name: "OpenR Link with Google built-in"
+  apple_carplay: true
+  android_auto: true
+  ota_updates: true
+  notes: |
+    12" portrait touchscreen with OpenR Link multimedia system.
+    Google built-in with Google Maps, Assistant, and Play Store.
+    12.3" digital instrument cluster. Wireless smartphone charging.
+
+aerodynamics:
+  drag_coefficient: 0.30
+  frontal_area_sqm: 2.45
+  notes: "Good aerodynamics for a compact crossover"
 
 dimensions:
   length_mm: 4210
   width_mm: 1780
+  width_with_mirrors_mm: 2017
   height_mm: 1505
-  wheelbase_mm: 2685
-  cargo_volume_l: 440
-  seating_capacity: 5
-  drag_coefficient: 0.30
+  wheelbase_mm: 2700
+  ground_clearance_mm: 175
+  turning_circle_m: 10.4
 
-weight:
-  curb_weight_min_kg: 1619
-  curb_weight_max_kg: 1710
+seating:
+  seats: 5
+  seating_configurations:
+    - 5
+  notes: "Spacious interior with 18cm legroom rear passengers"
 
-description: >
-  The Renault Megane E-Tech Electric marks Renault's entry into the mainstream electric C-segment 
-  with a dedicated EV platform. Built on the CMF-EV architecture shared with the Nissan Ariya, 
-  the Megane E-Tech combines compact crossover styling with an exceptionally efficient powertrain 
-  and aerodynamic design (Cd 0.30). Winner of the 2023 European Car of the Year award, it offers 
-  a spacious interior with a minimalist, modern design featuring the innovative OpenR display 
-  system and Google built-in infotainment. Available with two battery sizes (40 kWh and 60 kWh), 
-  the Megane E-Tech delivers up to 470 km WLTP range with class-leading efficiency and competitive 
-  pricing, positioning it as a strong alternative to the Volkswagen ID.3 and Cupra Born.
+cargo:
+  trunk_capacity_liters: 440
+  frunk_capacity_liters: 0
+  total_cargo_liters: 1332
+  notes: "440L trunk, expandable to 1332L with rear seats folded (60:40 split)"
 
-notable_features:
-  - "OpenR display system (12\" + 9\" screens in L-shape)"
-  - "Google built-in (Google Maps, Assistant, Play Store)"
-  - "Class-leading aerodynamics (Cd 0.30)"
-  - "One Pedal driving with regenerative braking"
-  - "Heat pump standard on all variants"
-  - "130 kW DC fast charging (60 kWh)"
-  - "Harman Kardon audio system available"
-  - "2023 European Car of the Year"
+towing:
+  max_towing_capacity_kg: 900
+  max_trailer_weight_braked_kg: 900
+  max_trailer_weight_unbraked_kg: 750
+  towbar_available: true
+  notes: "Optional tow hitch available, 900 kg braked capacity"
 
-competitors:
-  - volkswagen-id3
-  - cupra-born
-  - nissan-ariya
-  - hyundai-ioniq-5
-  - mg-mg4
+website: https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+image_url: null
+
+notes: |
+  The Renault Megane E-Tech Electric is Renault's first vehicle on the CMF-EV
+  platform, shared with the Nissan Ariya. Winner of the 2023 European Car of
+  the Year, it combines compact crossover styling with efficient electric
+  performance. The Megane E-Tech offers a choice of two battery sizes (40 kWh
+  and 60 kWh) with modern design, excellent interior space, and advanced
+  technology including Google built-in infotainment. Built at the ElectriCity
+  production hub in Douai, France.
 
 metadata:
   created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  updated_at: null
   data_quality: verified
   sources:
     - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
-    - https://www.renault.com/en/electric-vehicles/megane-e-tech
-    - https://www.adac.de
+    - https://www.euroncap.com/en/results/renault/megane-e-tech/46237

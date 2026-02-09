@@ -1,232 +1,175 @@
-# Renault Megane E-Tech EV60 Iconic (2025) - Germany Market Availability
-
+# Renault Megane E-Tech Electric EV60 Iconic 2025 - Germany Market
 id: renault-megane-e-tech-ev60-iconic-2025-de
 variant_id: renault-megane-e-tech-ev60-iconic-2025
 market: DE
 currency: EUR
-
-# Market-Specific Details
 availability_status: available
-available_from: "2022-09-01"
+available_from: "2024-10-01"
 delivery_time_weeks: 10
 
-# Pricing
 pricing:
-  base_price: 46500
-  price_including_vat: 46500
+  base_price: 46800
+  price_including_vat: 46800
+  destination_charge: 890
+  total_msrp: 47690
   vat_rate_percent: 19
-
-# Available Colors
-available_colors:
-  - name: Glacier White
-    code: null
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Diamond Black
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Titanium Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Flame Red
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Midnight Blue
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Schist Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Arctic White with Volcanic Orange
-    code: null
-    type: two-tone
-    price_add:
-      amount: 1200
-      currency: EUR
-
-# Wheel Options
-available_wheels:
-  - name: 20" diamond-cut alloy wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-
-# Interior Options
-available_interiors:
-  - name: Black alcantara/leather
-    material: leather_alcantara
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Grey alcantara/leather
-    material: leather_alcantara
-    color: grey
-    price_add:
-      amount: 0
-      currency: EUR
-
-# Incentives
-available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price"]
-
-# Options
-popular_packages:
-  - name: Panoramic glass roof
-    price:
-      amount: 1200
-      currency: EUR
-  - name: Premium Solarbay glass roof (tinting on demand)
-    price:
-      amount: 1800
-      currency: EUR
-  - name: Winter Pack Plus (heated rear seats)
-    price:
-      amount: 400
-      currency: EUR
-  - name: Exclusive two-tone colors
-    price:
-      amount: 1200
-      currency: EUR
-
-# Popular Configurations
-popular_configs:
-  - name: "EV60 Iconic Base"
-    description: "Standard EV60 Iconic with premium equipment"
-    total_price:
-      amount: 46500
-      currency: EUR
-    includes:
-      - "60 kWh battery, 470 km range"
-      - "218 hp motor"
-      - "OpenR display system (12\" + 12\")"
-      - "Google built-in"
-      - "22 kW AC charging"
-      - "130 kW DC fast charging"
-      - "Heat pump (standard)"
-      - "Two-tone paint (black roof)"
-      - "LED Matrix headlights"
-      - "360° camera with bird's eye view"
-      - "Adaptive cruise control"
-      - "Highway/Traffic Jam Assist"
-      - "Harman Kardon audio (9 speakers)"
-      - "Head-up display"
-      - "Heated seats and steering wheel"
-      - "Premium leather/alcantara seats"
-      - "20\" diamond-cut wheels"
   
-  - name: "EV60 Iconic Solarbay"
-    description: "EV60 Iconic with premium Solarbay roof"
-    total_price:
-      amount: 48300
-      currency: EUR
-    includes:
-      - "All EV60 Iconic base features"
-      - "Premium Solarbay glass roof (€1,800)"
+  incentives:
+    - name: "BAFA Umweltbonus (Federal EV Subsidy)"
+      amount_eur: 0
+      notes: "Federal EV subsidy ended December 2023"
+    - name: "Company Car Tax Benefit"
+      amount_eur: null
+      notes: "0.25% monthly taxation for BEVs (vs 1% for ICE)"
+
+tax:
+  vat_percent: 19
+  registration_tax_eur: 0
+  annual_road_tax_eur: 0
+  company_car_tax_rate: 0.25
+  company_car_tax_base_eur: 11923
+  notes: |
+    Electric vehicles exempt from annual road tax (Kfz-Steuer) in Germany.
+    Company car benefit: 0.25% of gross list price per month (vs 1% for ICE).
+    Monthly benefit: 0.25% × 47,690 EUR = 119.23 EUR taxable benefit.
+
+colors:
+  standard:
+    - name: "Glacier White"
+      code: "OV369"
+      price_eur: 0
+      metallic: false
+  metallic:
+    - name: "Urban Grey"
+      code: "KPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Flame Red"
+      code: "NNP"
+      price_eur: 690
+      metallic: true
+    - name: "Highland Grey"
+      code: "RPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Midnight Blue"
+      code: "RNF"
+      price_eur: 690
+      metallic: true
+    - name: "Titanium Grey"
+      code: "KNM"
+      price_eur: 690
+      metallic: true
+  two_tone:
+    - name: "Diamond Black + Flame Red roof"
+      code: "GNE+NNP"
+      price_eur: 1190
+      metallic: true
+    - name: "Midnight Blue + Diamond Black roof"
+      code: "RNF+GNE"
+      price_eur: 1190
+      metallic: true
+
+options:
+  standalone:
+    - name: "Tow hitch with electrics"
+      price_eur: 750
+    - name: "20-inch alloy wheels (upgrade from standard)"
+      price_eur: 950
+
+delivery:
+  typical_wait_weeks: 10
+  typical_wait_months: 2.5
+  delivery_notes: |
+    Built in Douai, France. Typical delivery 8-14 weeks for stock vehicles.
+    Custom orders may take 3-5 months. Top trim, lower production volume.
+
+dealer_network:
+  dealer_count: 450
+  service_centers: 450
+  charging_network_partnership: "Mobilize Charge Pass (access to 500,000+ chargers)"
+  notes: "Extensive Renault dealer network across Germany"
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  roadside_assistance_years: 3
+  corrosion_years: 12
+  paint_years: 3
+  notes: "Comprehensive warranty with 8-year battery guarantee"
+
+trim_details:
+  trim_level: "EV60 Iconic"
+  standard_equipment:
+    - "12-inch OpenR Link touchscreen with Google built-in"
+    - "12.3-inch digital instrument cluster with full customization"
+    - "Head-up display (Iconic exclusive)"
+    - "Matrix LED Pure Vision headlights"
+    - "20-inch alloy wheels"
+    - "Automatic dual-zone climate control"
+    - "Keyless entry and start"
+    - "360° parking camera (Iconic exclusive)"
+    - "Park Assist - automatic parking (Iconic exclusive)"
+    - "Front and rear parking sensors"
+    - "Heat pump"
+    - "Wireless smartphone charging (fast charging 15W)"
+    - "Adaptive cruise control with Stop & Go"
+    - "Lane Keep Assist + Lane Centering"
+    - "Traffic Sign Recognition"
+    - "Blind spot monitoring"
+    - "Rear cross-traffic alert"
+    - "22 kW three-phase AC charging"
+    - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
+    - "Harman Kardon premium audio system (Iconic exclusive)"
+    - "Alcantara and leather interior (Iconic exclusive)"
+    - "Massaging front seats (Iconic exclusive)"
+    - "Heated and ventilated front seats"
+    - "Heated rear seats"
+    - "Heated steering wheel"
+    - "Power tailgate"
+    - "Ambient lighting (multi-color)"
+    - "Panoramic glass roof"
   
-  - name: "EV60 Iconic Ultimate"
-    description: "Fully loaded EV60 Iconic"
-    total_price:
-      amount: 49900
-      currency: EUR
-    includes:
-      - "All EV60 Iconic Solarbay features"
-      - "Winter Pack Plus (€400)"
-      - "Exclusive two-tone color (€1,200)"
+  optional_equipment:
+    - "Tow hitch with electrics"
+    - "20-inch alloy wheels (different design)"
 
-# Charging Costs (Germany 2025)
-typical_charging_costs:
-  home_kwh: 0.35
-  public_ac_kwh: 0.55
-  public_dc_kwh: 0.75
+financing:
+  available: true
+  typical_apr_percent: 3.99
+  lease_available: true
+  typical_lease_monthly_eur: 399
+  notes: |
+    Renault Bank offers financing and leasing.
+    Typical lease: 399 EUR/month (48 months, 10,000 km/year, 5,000 EUR down payment)
 
-# Company Car Taxation
-company_car_tax:
-  gross_list_price: 46500
-  monthly_tax_rate: 0.25
-  monthly_benefit: 116
-  annual_benefit: 1395
-  notes: >
-    As an electric vehicle under €70,000, qualifies for reduced 0.25% monthly rate
-    vs. 1% for combustion vehicles. For 30% tax bracket: €419/year vs. €1,674/year
-    for equivalent combustion car (€1,255 annual savings).
+charging_infrastructure:
+  public_chargers: 100000
+  fast_chargers: 15000
+  charging_networks:
+    - "Ionity"
+    - "EnBW"
+    - "Fastned"
+    - "Allego"
+  home_charging_subsidy: false
+  notes: |
+    Germany has extensive charging infrastructure with 100,000+ public chargers.
+    Mobilize Charge Pass provides access to 500,000+ chargers across Europe.
+    22 kW AC charging allows full charge in ~3 hours at home.
 
-# Dealer Network
-dealer_info:
-  dealer_count: 180
-  service_center_count: 180
-  notes: >
-    Renault Germany has approximately 180 authorized dealers nationwide with
-    comprehensive coverage in all major cities and regions. All dealers are
-    trained for electric vehicle sales and service with dedicated EV specialists.
-
-# Competitors
-competitors:
-  - model_id: volkswagen-id3-pro-s
-    price: 44995
-    notes: "VW badge, larger battery, but less premium interior"
-  - model_id: cupra-born-77
-    price: 48990
-    notes: "Sportier image, larger battery, similar positioning"
-  - model_id: hyundai-ioniq-5-72
-    price: 49900
-    notes: "Larger, 800V charging, Korean quality"
-  - model_id: bmw-i4-edrive35
-    price: 59900
-    notes: "Premium badge, more power, significantly higher price"
-  - model_id: tesla-model-3
-    price: 43990
-    notes: "Tesla brand, Autopilot, minimalist interior"
-
-# Metadata
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
   data_quality: verified
-  confidence: high
-  
-  sources:
+  last_updated: "2026-02-09"
+  created_at: "2026-02-09"
+  source: "Renault Germany official pricing"
+  source_urls:
     - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://www.adac.de"
-    - "https://www.mobile.de"
-
-notes: >
-  The Renault Megane E-Tech EV60 Iconic (2025) is the flagship variant offering
-  maximum range (470 km WLTP / 385 km real-world) thanks to optimized aerodynamics
-  with 20\" aero wheels and refined efficiency. At €46,500, it represents premium
-  value against German competition while offering comprehensive luxury equipment
-  including leather/alcantara seats, Harman Kardon audio, head-up display, and
-  Highway/Traffic Jam Assist (Level 2 autonomy). The Iconic is the only trim with
-  heated seats/steering wheel as standard, making it ideal for German winters.
-  The 0.25% company car tax makes it attractive for executive fleet buyers seeking
-  a premium electric compact. Most buyers opt for the "EV60 Iconic Solarbay"
-  configuration (€48,300) adding the innovative tinting-on-demand glass roof.
-  The Iconic delivers the full vision of the 2023 European Car of the Year with
-  maximum range, luxury features, and advanced technology. Perfect for buyers
-  wanting a premium electric compact that can handle long-distance travel while
-  maintaining compact urban dimensions. The 218 hp motor provides engaging
-  performance and the comprehensive equipment list rivals German premium brands
-  at €10,000-15,000 less. 10-week delivery reflects higher demand for this
-  premium variant.
+  verification_date: "2026-02-09"
+  notes: |
+    2025 model year pricing for Germany.
+    Top-tier Iconic variant with all premium features.
+    European Car of the Year 2023 - this is the showcase trim.
+    Includes head-up display, 360° camera, Harman Kardon audio, massaging seats.

@@ -1,222 +1,166 @@
-# Renault Megane E-Tech EV40 (2025) - Germany Market Availability
-
+# Renault Megane E-Tech Electric EV40 2025 - Germany Market
 id: renault-megane-e-tech-ev40-2025-de
 variant_id: renault-megane-e-tech-ev40-2025
 market: DE
 currency: EUR
-
-# Market-Specific Details
 availability_status: available
-available_from: "2022-09-01"
+available_from: "2024-10-01"
 delivery_time_weeks: 8
 
-# Pricing
 pricing:
-  base_price: 37500
-  price_including_vat: 37500
+  base_price: 38500
+  price_including_vat: 38500
+  destination_charge: 890
+  total_msrp: 39390
   vat_rate_percent: 19
-
-# Available Colors
-available_colors:
-  - name: Glacier White
-    code: null
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Diamond Black
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Titanium Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Flame Red
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Midnight Blue
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-
-# Wheel Options
-available_wheels:
-  - name: 18" aerodynamic alloy wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 19" alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 800
-      currency: EUR
-
-# Interior Options
-available_interiors:
-  - name: Black cloth
-    material: cloth
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Grey cloth
-    material: cloth
-    color: grey
-    price_add:
-      amount: 0
-      currency: EUR
-
-# Incentives
-available_incentives:
-  - type: federal
-    name: "Umweltbonus (Federal subsidy)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €40,000", "BEV", "Private buyers only"]
-    expires_at: "2025-12-31"
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price"]
-
-# Options
-popular_packages:
-  - name: Metallic paint
-    price:
-      amount: 700
-      currency: EUR
-  - name: Two-tone paint (black roof)
-    price:
-      amount: 900
-      currency: EUR
-  - name: 19" alloy wheels
-    price:
-      amount: 800
-      currency: EUR
-  - name: Harman Kardon audio
-    price:
-      amount: 600
-      currency: EUR
-  - name: 360° camera
-    price:
-      amount: 500
-      currency: EUR
-
-# Popular Configurations
-popular_configs:
-  - name: "EV40 Base"
-    description: "Standard EV40 with all included features"
-    total_price:
-      amount: 37500
-      currency: EUR
-    includes:
-      - "40 kWh battery, 300 km range"
-      - "130 hp motor"
-      - "OpenR display system"
-      - "Google built-in"
-      - "Heat pump (standard)"
-      - "LED headlights"
-      - "18\" wheels"
-      - "Wireless charging"
   
-  - name: "EV40 Comfort"
-    description: "EV40 with popular comfort options"
-    total_price:
-      amount: 39600
-      currency: EUR
-    includes:
-      - "All EV40 base features"
-      - "Metallic paint (€700)"
-      - "Harman Kardon audio (€600)"
-      - "360° camera (€500)"
-      - "19\" alloy wheels (€800)"
+  incentives:
+    - name: "BAFA Umweltbonus (Federal EV Subsidy)"
+      amount_eur: 0
+      notes: "Federal EV subsidy ended December 2023"
+    - name: "Company Car Tax Benefit"
+      amount_eur: null
+      notes: "0.25% monthly taxation for BEVs (vs 1% for ICE)"
+
+tax:
+  vat_percent: 19
+  registration_tax_eur: 0
+  annual_road_tax_eur: 0
+  company_car_tax_rate: 0.25
+  company_car_tax_base_eur: 9848
+  notes: |
+    Electric vehicles exempt from annual road tax (Kfz-Steuer) in Germany.
+    Company car benefit: 0.25% of gross list price per month (vs 1% for ICE).
+    Monthly benefit: 0.25% × 39,390 EUR = 98.48 EUR taxable benefit.
+
+colors:
+  standard:
+    - name: "Glacier White"
+      code: "OV369"
+      price_eur: 0
+      metallic: false
+    - name: "Diamond Black"
+      code: "GNE"
+      price_eur: 0
+      metallic: false
+  metallic:
+    - name: "Urban Grey"
+      code: "KPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Flame Red"
+      code: "NNP"
+      price_eur: 690
+      metallic: true
+    - name: "Highland Grey"
+      code: "RPJ"
+      price_eur: 690
+      metallic: true
+    - name: "Midnight Blue"
+      code: "RNF"
+      price_eur: 690
+      metallic: true
+
+options:
+  packages:
+    - name: "Comfort Pack"
+      price_eur: 1200
+      includes:
+        - "Heated front seats"
+        - "Heated steering wheel"
+        - "Rain sensor"
+        - "Auto-dimming rear-view mirror"
+    
+    - name: "Winter Pack"
+      price_eur: 600
+      includes:
+        - "Heated front seats"
+        - "Heated steering wheel"
   
-  - name: "EV40 Premium"
-    description: "Fully loaded EV40"
-    total_price:
-      amount: 40500
-      currency: EUR
-    includes:
-      - "All EV40 Comfort features"
-      - "Two-tone paint upgrade (€900)"
+  standalone:
+    - name: "Tow hitch preparation"
+      price_eur: 450
+    - name: "Panoramic glass roof"
+      price_eur: 1100
+    - name: "Rear parking sensors"
+      price_eur: 350
 
-# Charging Costs (Germany 2025)
-typical_charging_costs:
-  home_kwh: 0.35
-  public_ac_kwh: 0.55
-  public_dc_kwh: 0.75
+delivery:
+  typical_wait_weeks: 8
+  typical_wait_months: 2
+  delivery_notes: |
+    Built in Douai, France. Typical delivery 6-12 weeks for stock vehicles.
+    Custom orders may take 3-4 months.
 
-# Company Car Taxation
-company_car_tax:
-  gross_list_price: 37500
-  monthly_tax_rate: 0.25
-  monthly_benefit: 94
-  annual_benefit: 1125
-  notes: >
-    As an electric vehicle under €70,000, qualifies for reduced 0.25% monthly rate
-    vs. 1% for combustion vehicles. For 30% tax bracket: €338/year vs. €1,350/year
-    for equivalent combustion car (€1,012 annual savings).
+dealer_network:
+  dealer_count: 450
+  service_centers: 450
+  charging_network_partnership: "Mobilize Charge Pass (access to 500,000+ chargers)"
+  notes: "Extensive Renault dealer network across Germany"
 
-# Dealer Network
-dealer_info:
-  dealer_count: 180
-  service_center_count: 180
-  notes: >
-    Renault Germany has approximately 180 authorized dealers nationwide with
-    comprehensive coverage in all major cities and regions. All dealers are
-    trained for electric vehicle sales and service with dedicated EV specialists.
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+  roadside_assistance_years: 3
+  corrosion_years: 12
+  paint_years: 3
+  notes: "Comprehensive warranty with 8-year battery guarantee"
 
-# Competitors
-competitors:
-  - model_id: volkswagen-id3
-    price: 39995
-    notes: "VW badge, similar specs, slightly higher price"
-  - model_id: cupra-born
-    price: 38990
-    notes: "Sportier image, similar platform"
-  - model_id: mg-mg4
-    price: 33990
-    notes: "Chinese brand, cheaper, less premium interior"
-  - model_id: opel-astra-electric
-    price: 44000
-    notes: "Larger, more traditional design"
-  - model_id: nissan-ariya
-    price: 47000
-    notes: "Alliance partner, larger, more expensive"
+trim_details:
+  trim_level: "EV40"
+  standard_equipment:
+    - "12-inch OpenR Link touchscreen with Google built-in"
+    - "12.3-inch digital instrument cluster"
+    - "LED headlights"
+    - "17-inch alloy wheels"
+    - "Automatic climate control"
+    - "Keyless entry"
+    - "Rear parking camera"
+    - "Heat pump"
+    - "Wireless smartphone charging"
+    - "Cruise control with speed limiter"
+    - "Lane Keep Assist"
+    - "Traffic Sign Recognition"
+  
+  optional_equipment:
+    - "Comfort Pack (heated seats & steering wheel)"
+    - "Panoramic glass roof"
+    - "Tow hitch preparation"
 
-# Metadata
+financing:
+  available: true
+  typical_apr_percent: 3.99
+  lease_available: true
+  typical_lease_monthly_eur: 299
+  notes: |
+    Renault Bank offers financing and leasing.
+    Typical lease: 299 EUR/month (48 months, 10,000 km/year, 4,000 EUR down payment)
+
+charging_infrastructure:
+  public_chargers: 100000
+  fast_chargers: 15000
+  charging_networks:
+    - "Ionity"
+    - "EnBW"
+    - "Fastned"
+    - "Allego"
+  home_charging_subsidy: false
+  notes: |
+    Germany has extensive charging infrastructure with 100,000+ public chargers.
+    Mobilize Charge Pass provides access to 500,000+ chargers across Europe.
+
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
   data_quality: verified
-  confidence: high
-  
-  sources:
+  last_updated: "2026-02-09"
+  created_at: "2026-02-09"
+  source: "Renault Germany official pricing"
+  source_urls:
     - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://www.adac.de"
-    - "https://www.mobile.de"
-
-notes: >
-  The Renault Megane E-Tech EV40 (2025) represents excellent value in the German C-segment
-  electric market. At €37,500 (€33,000 after federal incentive), it undercuts the VW ID.3
-  while offering superior interior design with the innovative OpenR display system and Google
-  built-in. The 300 km WLTP range (250 km real-world) is adequate for most German commuters
-  (average daily 30-50 km). The 0.25% company car tax makes it attractive for fleet buyers.
-  Most buyers opt for the "EV40 Comfort" configuration (€39,600) adding metallic paint,
-  premium audio, cameras, and larger wheels. Fast 8-week delivery time is competitive
-  compared to VW Group (12-16 weeks). The EV40 is ideal for urban/suburban buyers with
-  regular charging access who prioritize interior quality and technology over maximum range.
+  verification_date: "2026-02-09"
+  notes: |
+    2025 model year pricing for Germany.
+    Entry-level EV40 variant with 40 kWh battery.
+    Pricing updated for 2025 model year.
