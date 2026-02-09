@@ -1,0 +1,162 @@
+# Polestar 2 Single Motor (2025 Model Year)
+# Efficient rear-wheel drive variant with 69kWh battery
+
+id: polestar-2-single-motor-2025
+name: Single Motor
+model_id: polestar-2
+model_year: 2025
+production_years:
+  start: 2025
+  end: null
+trim_level: standard
+market_position: entry
+
+description: |
+  The Single Motor is the entry-level variant of the Polestar 2 for 2025, featuring 
+  rear-wheel drive with a single electric motor and a 69kWh battery pack.
+  
+  2025 model year updates include:
+  - Revised exterior styling with new front and rear design
+  - Updated interior with physical climate controls
+  - Improved Google Automotive Services integration
+  - Enhanced DC charging up to 205kW peak
+  - New Pilot Assist features with lane change assistance
+  - Improved real-world efficiency
+  
+  The single-motor RWD configuration provides excellent efficiency and engaging 
+  driving dynamics. Perfect for daily driving with lower running costs than AWD variants.
+
+production_status: active
+
+# Battery Specifications
+battery:
+  usable_kwh: 69.0
+  total_kwh: 72.0
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400  # 400V architecture
+  cell_type: prismatic
+  supplier: CATL  # Contemporary Amperex Technology Co. Limited
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted, T-shaped"
+    weight_kg: 495
+    modules: 24
+    cells: 288
+
+# Range
+range:
+  wltp_km: 548
+  wltp_source: manufacturer
+  
+  real_world_km: 480
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 6.5
+      "20_80": 4.5
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 205
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 28
+      "0_100": 48
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 180
+      - soc_percent: 10
+        power_kw: 205
+      - soc_percent: 20
+        power_kw: 205
+      - soc_percent: 30
+        power_kw: 205
+      - soc_percent: 40
+        power_kw: 200
+      - soc_percent: 50
+        power_kw: 180
+      - soc_percent: 60
+        power_kw: 150
+      - soc_percent: 70
+        power_kw: 110
+      - soc_percent: 80
+        power_kw: 65
+      - soc_percent: 90
+        power_kw: 35
+      - soc_percent: 100
+        power_kw: 15
+
+# Bidirectional Charging
+bidirectional_charging:
+  v2l: false
+  v2h: false
+  v2g: false
+
+# Motors & Drivetrain
+motors:
+  configuration: single-motor
+  drive_type: RWD
+  
+  rear:
+    type: permanent-magnet
+    power_kw: 220
+    power_hp: 299
+    torque_nm: 490
+  
+  combined:
+    power_kw: 220
+    power_hp: 299
+    torque_nm: 490
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 6.2
+  top_speed_kmh: 160
+  
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_100km: 12.6
+  consumption_real_world_kwh_100km: 14.4
+  energy_label: A
+
+# Weight & Dimensions
+dimensions:
+  length_mm: 4606
+  width_mm: 1859
+  height_mm: 1479
+  wheelbase_mm: 2735
+  curb_weight_kg: 1980
+
+# Data quality metadata
+metadata:
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  data_quality: verified
+  
+  sources:
+    - https://www.polestar.com/global/polestar-2/specifications/
+    - https://ev-database.org/car/1722/Polestar-2-Single-Motor
+    - https://insideevs.com/news/698234/polestar-2-2025-facelift-review/
+  
+  verified_by: manufacturer
+  
+  notes: |
+    2025 model year brings the "mid-cycle refresh" with updated exterior and interior design.
+    Single Motor variant offers the best efficiency and lowest price point in the Polestar 2 range.
+    Improved charging speed to 205kW peak matches the Long Range variants.
+    
+    Real-world efficiency is excellent for a vehicle of this size and performance level.
+    Popular choice for company car drivers in Germany (0.25% taxation benefit).
