@@ -1,0 +1,307 @@
+id: byd-seal-u-comfort-2025-de
+variant_id: byd-seal-u-comfort-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2024-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025 model year)
+pricing:
+  base_price: 44990
+  price_including_vat: 44990
+  vat_rate_percent: 19
+  on_road_price: 46140  # Including delivery and registration
+  destination_charge: 950
+  registration_fee: 200
+
+# Trim levels and configurations
+trim_levels:
+  - name: Comfort 2025
+    price: 44990
+    description: Entry-level trim with comprehensive equipment and 500km WLTP range
+    standard_features:
+      - 15.6" rotating touchscreen (landscape/portrait)
+      - 10.25" digital instrument cluster
+      - Highway assist Level 2 autonomous driving
+      - Automatic parking with 360° camera
+      - Wireless Apple CarPlay and Android Auto
+      - Panoramic glass roof with electric sunshade
+      - Vegan leather seats with front heating
+      - Heated steering wheel and rear seats
+      - Heat pump for winter efficiency
+      - V2L capability (3.3kW)
+      - LED adaptive headlights
+      - Power tailgate
+      - Wireless phone charging
+      - Roof rails
+      - 18" alloy wheels
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 46140
+    description: Comfort trim with delivery and registration
+    included:
+      - All standard Comfort trim features
+      - Delivery charge (€950)
+      - Registration fee (€200)
+    
+  - name: Family Package
+    total_price: 48890
+    description: Popular family configuration with practical upgrades
+    included:
+      - Base Comfort
+      - 19" Alloy Wheels (€1,200)
+      - Metallic Paint (€850)
+      - Winter Package (€450 - heated windscreen, all-season tires)
+      - Tow bar preparation (€250)
+    
+  - name: Premium
+    total_price: 50390
+    description: Fully equipped with comfort and convenience upgrades
+    included:
+      - Family Package
+      - Premium Sound System (€1,500 - 12 speakers)
+
+# Incentives and subsidies (2025/2026)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 4499
+    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
+    notes: >
+      Company car drivers benefit from 0.25% monthly tax rate (vs 1% for 
+      combustion vehicles), saving approximately €4,499 annually versus 
+      equivalent ICE SUV.
+  
+  - name: THG-Quote (Greenhouse Gas Reduction Quota)
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+    notes: >
+      Tradeable emission certificates provide annual income of approximately 
+      €250-300 in 2026 (varies by market price).
+  
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 112.48  # €44,990 × 0.25%
+  annual_taxable_benefit_eur: 1350  # €112.48 × 12
+  comparable_ice_benefit_eur: 5849  # VW Tiguan 2.0 TDI €48,740 × 1% = €487.40/mo
+  annual_tax_savings_eur: 4499  # Savings vs equivalent ICE SUV
+  notes: >
+    The BYD Seal U qualifies for the advantageous 0.25% company car tax rate 
+    (vehicles under €70,000 with minimum 80km electric range). This results 
+    in annual taxable benefit of only €1,350 compared to €5,849 for 
+    equivalent combustion SUV (VW Tiguan 2.0 TDI), saving company car 
+    drivers approximately €4,499 annually in reduced tax payments.
+
+# Total Cost of Ownership (3-year calculation, 2026 costs)
+tco_analysis:
+  period_months: 36
+  annual_mileage_km: 15000
+  total_mileage_km: 45000
+  
+  purchase_cost: 46140
+  
+  energy_costs:
+    home_charging_kwh: 0.36  # €/kWh average Germany 2026
+    public_charging_kwh: 0.58  # €/kWh average
+    home_charging_percent: 80
+    public_charging_percent: 20
+    total_energy_cost_3yr: 3415  # 45,000km @ 17.1kWh/100km × (0.8×€0.36 + 0.2×€0.58)
+  
+  maintenance_costs:
+    annual_service_cost: 290
+    total_maintenance_3yr: 870
+    notes: Electric SUVs require minimal maintenance
+  
+  insurance_annual: 950
+  insurance_3yr: 2850
+  
+  depreciation:
+    residual_value_percent: 58  # 58% after 3 years (SUVs hold value well)
+    residual_value_eur: 26761
+    depreciation_3yr: 19379
+  
+  total_cost_3yr: 26514
+  cost_per_km: 0.59
+  
+  comparable_ice_costs:
+    vehicle: VW Tiguan 2.0 TDI
+    purchase_price: 48740
+    fuel_cost_3yr: 7088  # 45,000km @ 5.8L/100km × €1.90/L (diesel 2026)
+    maintenance_3yr: 2100  # Higher maintenance for diesel
+    insurance_3yr: 3100  # Slightly higher
+    depreciation_3yr: 21859  # 55% residual
+    total_cost_3yr: 34147
+    cost_per_km: 0.76
+  
+  savings_vs_ice: 7633  # €34,147 - €26,514
+  
+  notes: >
+    BYD Seal U offers significant savings versus combustion SUVs. Over 3 years, 
+    total ownership costs are approximately €7,633 lower than VW Tiguan 2.0 TDI. 
+    Energy costs are 52% lower (€3,415 vs €7,088), and maintenance is 59% lower 
+    (€870 vs €2,100).
+
+# Financing options
+financing:
+  typical_apr_percent: 5.49
+  typical_term_months: 48
+  typical_down_payment_percent: 20
+  typical_monthly_payment_eur: 860  # €44,990 @ 5.49% APR, 48mo, 20% down
+
+# Leasing options (2026)
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 15000
+  typical_monthly_payment_eur: 399
+  down_payment_eur: 2000
+  final_payment_eur: 0
+
+# Charging infrastructure
+charging:
+  home_wallbox_installation_cost_eur: 1500
+  home_wallbox_subsidy_eur: 0  # KfW 440 subsidy ended 2023
+  
+  ionity_membership:
+    monthly_fee_eur: 17.99
+    kwh_rate_eur: 0.35
+    charge_10_80_cost_eur: 17.57  # 50.2kWh × €0.35
+    notes: Good value for frequent highway travelers
+  
+  ionity_pay_per_use:
+    kwh_rate_eur: 0.89
+    charge_10_80_cost_eur: 44.68  # 50.2kWh × €0.89
+
+# Delivery and availability
+delivery:
+  typical_wait_weeks: 6
+  production_location: Zhengzhou, China
+  import_method: sea_freight
+  
+  order_process:
+    - Visit BYD dealer or configure online at byd.com/de
+    - Test drive available at all dealers
+    - Place order with €2,000 deposit
+    - Delivery in 4-8 weeks
+    - Final payment on delivery
+
+# Warranty
+warranty:
+  vehicle_years: 6
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 200000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 6
+  
+  notes: >
+    BYD offers comprehensive 6-year/150,000km vehicle warranty and 
+    industry-leading 8-year/200,000km battery warranty with 70% 
+    capacity guarantee.
+
+# Service and maintenance
+service:
+  recommended_interval_months: 12
+  recommended_interval_km: 15000
+  typical_service_cost_eur: 290
+  dealer_count_germany: 45
+  
+  notes: >
+    BYD dealer network expanded to 45 locations in Germany as of 2026. 
+    Service intervals are 12 months/15,000km.
+
+# Competitors comparison
+competitors:
+  - model: VW ID.4 Pro
+    price_eur: 46995
+    range_km: 520
+    notes: Similar price and range, established brand, larger dealer network
+  
+  - model: Skoda Enyaq iV 60
+    price_eur: 44490
+    range_km: 413
+    notes: Lower price, shorter range, VW Group quality
+  
+  - model: Hyundai Ioniq 5 RWD
+    price_eur: 47900
+    range_km: 481
+    notes: Similar price, innovative design, 800V architecture
+  
+  - model: Kia EV6 RWD
+    price_eur: 49990
+    range_km: 528
+    notes: Higher price, sportier design, excellent warranty
+  
+  - model: Tesla Model Y RWD
+    price_eur: 44990
+    range_km: 455
+    notes: Same price, shorter range, Tesla Supercharger network
+
+# Market positioning
+market_positioning:
+  segment: compact_suv
+  target_audience: Families, company car drivers, practical EV buyers, SUV enthusiasts
+  key_selling_points:
+    - Excellent value (€44,990 for 500km range)
+    - Spacious 5-seat interior with 552L trunk
+    - Unique rotating 15.6" touchscreen
+    - LFP Blade Battery (safer, 100% charge capability)
+    - Strong warranty (6yr vehicle, 8yr battery)
+    - V2L capability (3.3kW)
+    - 1000kg towing capacity
+    - Elevated SUV driving position
+    - Comprehensive standard equipment
+    - Heat pump for winter efficiency
+  
+  considerations:
+    - BYD brand still building recognition in Europe
+    - Smaller dealer network than VW/Hyundai
+    - FWD only (no AWD option yet)
+    - No frunk storage
+    - 140kW DC charging (vs 175-240kW on some competitors)
+
+# Notes
+notes: >
+  BYD Seal U Comfort brings competitive pricing (€44,990) to the family SUV 
+  segment with solid 500km WLTP range. Directly competes with VW ID.4, Skoda 
+  Enyaq iV, and Tesla Model Y on value proposition.
+  
+  Main advantages: LFP Blade Battery allows worry-free 100% charging, unique 
+  rotating touchscreen, comprehensive standard equipment (panoramic roof, 
+  heat pump, Level 2 autonomous driving), and strong warranty. Spacious 
+  interior with 552L trunk and 1000kg towing capacity make it practical 
+  family vehicle.
+  
+  Company car tax benefit (0.25% rate) saves drivers approximately €4,499 
+  annually versus combustion SUV. Total cost of ownership significantly 
+  lower than diesel alternatives (€7,633 savings over 3 years vs VW Tiguan).
+  
+  BYD's expanding dealer network (45 locations) and improving brand 
+  recognition in Germany. Residual values strengthening as brand establishes 
+  European presence. Good choice for practical families seeking affordable, 
+  spacious electric SUV with proven technology.
+  
+  140kW DC fast charging adequate for most use cases, reaching 10-80% in 
+  28 minutes. Real-world range of 420km mixed driving excellent for daily 
+  family use. V2L capability enables camping and emergency power supply.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.byd.com/de/car/seal-u.html
+    - BYD Germany dealer pricing (February 2026)
+    - ADAC EV cost calculator
+    - German company car tax regulations
