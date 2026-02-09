@@ -1,0 +1,166 @@
+# MG4 Electric XPower - German Market (2025)
+# High-performance AWD hot hatch EV
+
+id: mg4-electric-xpower-2025-de
+variant_id: mg4-electric-xpower-2025
+market: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 39990
+  price_including_vat: 39990
+  vat_rate_percent: 19
+
+# Price Breakdown
+price_details:
+  msrp: 39990
+  destination_charge: 0
+  documentation_fee: 0
+  total_base: 39990
+
+# Incentives & Subsidies (Germany 2025)
+incentives:
+  - name: "Company Car Tax"
+    amount: 0
+    type: tax_exemption
+    provider: federal
+    description: "0.25% monthly gross list price for BEVs under €70k"
+
+# Available Colors
+colors:
+  - name: "Dover White"
+    code: "solid-white"
+    type: solid
+    price_delta: 0
+
+  - name: "Volcanic Orange"
+    code: "tri-coat-orange"
+    type: tri_coat
+    price_delta: 950
+    notes: "Signature XPower color"
+
+  - name: "Black Pearl"
+    code: "metallic-black"
+    type: metallic
+    price_delta: 680
+
+  - name: "Andes Grey"
+    code: "metallic-grey"
+    type: metallic
+    price_delta: 680
+
+# Wheel Options
+wheels:
+  - name: "18-inch sport alloy wheels"
+    size_inches: 18
+    tire_size: "235/40 R18"
+    price_delta: 0
+    standard: true
+
+# Interior Options
+interiors:
+  - name: "Black synthetic leather with orange stitching"
+    material: synthetic_leather
+    price_delta: 0
+    standard: true
+    notes: "XPower-specific interior trim"
+
+# Equipment Packages & Options
+packages: []
+
+# Individual Options
+individual_options:
+  - name: "Metallic paint"
+    price: 680
+    category: exterior
+
+  - name: "Volcanic Orange tri-coat"
+    price: 950
+    category: exterior
+
+  - name: "Tow bar"
+    price: 750
+    category: utility
+    towing_capacity_kg: 500
+
+# Total Price Range
+price_range:
+  minimum: 39990
+  maximum: 41690
+  typical: 40670
+
+# Availability
+availability_status: available
+delivery_time_weeks: 12
+production_location: "Shanghai, China"
+import_duties_included: true
+
+# Market-Specific Notes
+market_notes:
+  - "435 hp AWD performance for under €40k"
+  - "3.8s 0-100 km/h - faster than many sports cars"
+  - "Sport-tuned suspension and upgraded brakes"
+  - "All features from Extended Range included"
+  - "Limited availability - higher demand than supply"
+
+# Service & Warranty
+warranty:
+  basic_years: 7
+  basic_km: 150000
+  battery_years: 7
+  battery_km: 175000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+
+service:
+  service_interval_months: 12
+  service_interval_km: 20000
+  average_service_cost_eur: 250
+
+# Insurance
+insurance_notes:
+  typklasse_haftpflicht: 19
+  typklasse_vollkasko: 26
+  average_annual_premium_eur: 1050
+
+# Leasing Options
+leasing_available: true
+leasing_example:
+  monthly_payment_eur: 339
+  down_payment_eur: 4000
+  term_months: 36
+  annual_km: 10000
+  excess_km_cost_eur: 0.15
+
+# Company Car Calculation
+company_car_example:
+  gross_list_price: 39990
+  monthly_benefit_025_percent: 99.98
+  annual_benefit: 1199.70
+  income_tax_rate_example_percent: 30
+  monthly_tax_cost: 30.00
+
+# Environmental
+environmental:
+  company_car_tax_class: 0.25
+  co2_emissions_g_per_km: 0
+
+# Residual Value
+residual_value:
+  after_3_years_percent: 48
+  after_5_years_percent: 35
+  notes: "Performance variants tend to hold value better"
+
+# Metadata
+metadata:
+  data_quality: verified
+  sources:
+    - https://www.mgmotor.de/mg4-electric
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  notes: |
+    XPower is the performance flagship of the MG4 range.
+    Incredible value - 435hp AWD for under €40k.
+    Higher insurance costs due to performance classification.
+    Company car tax still just €30/month.
