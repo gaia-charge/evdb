@@ -204,12 +204,16 @@ def format_vehicle_specs(row):
     
     if has_dimensions:
         specs['📏 DIMENSIONS'] = ''
-        if pd.notna(row.get('length_mm')) or pd.notna(row.get('width_mm')) or pd.notna(row.get('height_mm')):
-            length = f"{int(row['length_mm'])} mm" if pd.notna(row.get('length_mm')) else 'N/A'
-            width = f"{int(row['width_mm'])} mm" if pd.notna(row.get('width_mm')) else 'N/A'
-            height = f"{int(row['height_mm'])} mm" if pd.notna(row.get('height_mm')) else 'N/A'
-            specs['L × W × H'] = f"{length} × {width} × {height}"
-        specs['Wheelbase'] = f"{int(row['wheelbase_mm'])} mm" if pd.notna(row.get('wheelbase_mm')) else 'N/A'
+        if pd.notna(row.get('length_mm')):
+            specs['Length'] = f"{int(row['length_mm'])} mm"
+        if pd.notna(row.get('width_mm')):
+            specs['Width'] = f"{int(row['width_mm'])} mm"
+        if pd.notna(row.get('width_with_mirrors_mm')):
+            specs['Width (with mirrors)'] = f"{int(row['width_with_mirrors_mm'])} mm"
+        if pd.notna(row.get('height_mm')):
+            specs['Height'] = f"{int(row['height_mm'])} mm"
+        if pd.notna(row.get('wheelbase_mm')):
+            specs['Wheelbase'] = f"{int(row['wheelbase_mm'])} mm"
         if pd.notna(row.get('ground_clearance_mm')):
             specs['Ground Clearance'] = f"{int(row['ground_clearance_mm'])} mm"
         if pd.notna(row.get('turning_circle_m')):
@@ -630,6 +634,36 @@ elif page == "🔍 Browse Vehicles":
         default=[]
     )
     
+    # Dimensions filters
+    st.sidebar.markdown("#### Dimensions")
+    
+    dim_length_max = st.sidebar.number_input(
+        "Max Length (mm):",
+        min_value=0,
+        max_value=6000,
+        value=0,
+        step=100,
+        help="0 = no filter"
+    )
+    
+    dim_width_max = st.sidebar.number_input(
+        "Max Width (mm):",
+        min_value=0,
+        max_value=2500,
+        value=0,
+        step=50,
+        help="0 = no filter"
+    )
+    
+    dim_height_max = st.sidebar.number_input(
+        "Max Height (mm):",
+        min_value=0,
+        max_value=2500,
+        value=0,
+        step=50,
+        help="0 = no filter"
+    )
+    
     # Cargo capacity filter
     st.sidebar.markdown("#### Cargo Capacity")
     if df['trunk_capacity_liters'].notna().any():
@@ -704,6 +738,23 @@ elif page == "🔍 Browse Vehicles":
         (filtered_df['dc_charge_power_kw'].isna()) | 
         ((filtered_df['dc_charge_power_kw'] >= charge_power[0]) & (filtered_df['dc_charge_power_kw'] <= charge_power[1]))
     ]
+    
+    # Dimensions filters
+    if dim_length_max > 0:
+        filtered_df = filtered_df[
+            (filtered_df['length_mm'].isna()) |
+            (filtered_df['length_mm'] <= dim_length_max)
+        ]
+    if dim_width_max > 0:
+        filtered_df = filtered_df[
+            (filtered_df['width_mm'].isna()) |
+            (filtered_df['width_mm'] <= dim_width_max)
+        ]
+    if dim_height_max > 0:
+        filtered_df = filtered_df[
+            (filtered_df['height_mm'].isna()) |
+            (filtered_df['height_mm'] <= dim_height_max)
+        ]
     
     # Cargo capacity filter
     if trunk_capacity_min > 0:
