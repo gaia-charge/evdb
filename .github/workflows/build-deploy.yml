@@ -114,11 +114,18 @@ jobs:
         - [FAQ](https://github.com/gaia-charge/evdb/blob/main/FAQ.md)
         EOF
         
+    - name: Generate timestamp
+      id: timestamp
+      run: |
+        echo "date=$(date -u +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+        echo "time=$(date -u +'%H:%M')" >> $GITHUB_OUTPUT
+        echo "tag=$(date -u +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
+
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: db-${{ github.run_number }}-${{ github.sha }}
-        name: Database Build ${{ github.run_number }}
+        tag_name: ${{ steps.timestamp.outputs.tag }}
+        name: ${{ steps.timestamp.outputs.date }} ${{ steps.timestamp.outputs.time }}
         body_path: release_notes.md
         files: evdb.db
         draft: false
