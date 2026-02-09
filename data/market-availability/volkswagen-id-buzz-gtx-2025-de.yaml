@@ -1,0 +1,156 @@
+# Volkswagen ID.Buzz GTX (2025) - Germany Market Availability
+
+id: volkswagen-id-buzz-gtx-2025-de
+variant_id: volkswagen-id-buzz-gtx-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-03-01"
+delivery_time_weeks: 14
+notes: |
+  2025 GTX updated with 86 kWh battery. Performance flagship of the ID.Buzz range.
+  Dual-motor AWD with 250 kW / 340 hp for sports car acceleration in a van.
+
+# Pricing
+pricing:
+  base_price: 69990
+  price_including_vat: 69990
+  vat_rate_percent: 19
+  notes: |
+    Base price for 2025 ID.Buzz GTX with 86 kWh battery, AWD, 5-seater.
+    ~€4,500 more than 2024 GTX (€65,490). Justified by larger battery.
+    Note: At €69,990 still under €70,000 threshold for 0.25% company car tax.
+
+# Available Colors
+available_colors:
+  - name: Candy White / Deep Black Pearl
+    code: B4B4
+    type: two-tone
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Cherry Red / Deep Black Pearl
+    code: B4R1
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+    notes: "GTX-exclusive color"
+  - name: Energetic Orange / Deep Black Pearl
+    code: B4J8
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Starlight Blue / Deep Black Pearl
+    code: B4W5
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Kings Red / Deep Black Pearl
+    code: B4X1
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Mono Silver / Deep Black Pearl
+    code: B4M1
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+
+# Options and Packages
+options:
+  packages:
+    - name: "GTX Sport Package"
+      price: 1890
+      description: |
+        21-inch Braga alloy wheels (black/machined)
+        Sport progressive steering
+        Enhanced DCC Pro adaptive damping
+        Red brake calipers
+
+    - name: "Comfort Package Plus"
+      price: 1290
+      description: |
+        Electrically adjustable front seats with memory
+        Ventilated front seats
+        Massage function driver seat
+
+    - name: "Travel Assist Max"
+      price: 1890
+      description: |
+        Travel Assist 2.0 enhanced
+        Park Assist Plus with remote parking
+        Automated lane change on motorways
+
+    - name: "Tow Package"
+      price: 1190
+      description: |
+        Electrically retractable tow hitch
+        Trailer Assist
+        1,800 kg braked towing capacity
+
+  individual_options:
+    - name: "Panoramic sliding sunroof (electric)"
+      price: 1390
+    - name: "Privacy glass"
+      price: 490
+    - name: "Auxiliary heater"
+      price: 990
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit (0.25%)"
+    type: tax_credit
+    amount: 4620
+    notes: |
+      0.25% of €69,990 = €175/month BIK.
+      ICE VW T7 Multivan R-Line (€62,000) × 1% = €620/month.
+      Annual saving: ~€4,620 in income tax.
+    eligibility: "Company car drivers. Vehicle ≤€70,000 gross list price."
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 300
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote"
+    type: grant
+    amount: 280
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+# Build Info
+build_info:
+  production_location: "Hanover Commercial Vehicle Plant, Germany"
+  delivery_time_weeks: 14
+
+# Finance
+finance:
+  notes: |
+    Leasing example (2025):
+    - €69,990 ID.Buzz GTX
+    - €8,000 down payment
+    - 48 months, 10,000 km/year
+    - ~€850/month estimated
+
+sources:
+  - https://www.volkswagen.de/de/modelle/id-buzz.html
+  - https://www.volkswagen-newsroom.com/en/id-buzz-14168
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_source: manufacturer_announced

@@ -1,0 +1,203 @@
+# Volkswagen ID.Buzz Pro S (2025) - Germany Market Availability
+
+id: volkswagen-id-buzz-pro-s-2025-de
+variant_id: volkswagen-id-buzz-pro-s-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-03-01"
+delivery_time_weeks: 12
+notes: |
+  The 2025 ID.Buzz Pro S is the new top-spec RWD variant with 86 kWh battery.
+  Replaces Pro Long as the flagship single-motor option.
+  Includes premium equipment as standard (HK audio, HUD, heated everything).
+
+# Pricing
+pricing:
+  base_price: 62990
+  price_including_vat: 62990
+  vat_rate_percent: 19
+  notes: |
+    Base price for 2025 ID.Buzz Pro S with 86 kWh battery, RWD, 5-seater.
+    ~€4,500 more than 2024 Pro Long, justified by larger battery and more standard equipment.
+    6-seater configuration adds €890. 7-seater adds €1,290.
+
+# Available Colors
+available_colors:
+  - name: Candy White / Deep Black Pearl
+    code: B4B4
+    type: two-tone
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Bay Leaf Green / Deep Black Pearl
+    code: B4P7
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Energetic Orange / Deep Black Pearl
+    code: B4J8
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Lime Yellow / Deep Black Pearl
+    code: B4N3
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Starlight Blue / Deep Black Pearl
+    code: B4W5
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Kings Red / Deep Black Pearl
+    code: B4X1
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+  - name: Mono Silver / Deep Black Pearl
+    code: B4M1
+    type: two-tone
+    price_add:
+      amount: 900
+      currency: EUR
+    notes: "New for 2025"
+
+# Options and Packages
+options:
+  packages:
+    - name: "Design Package"
+      price: 1490
+      description: |
+        21-inch Falsterbo alloy wheels (two-tone)
+        LED illuminated side panels
+        Exterior chrome accents
+
+    - name: "Comfort Package Plus"
+      price: 1290
+      description: |
+        Electrically adjustable front seats with memory
+        Ventilated front seats
+        Massage function driver seat
+
+    - name: "Travel Assist Max"
+      price: 1890
+      description: |
+        Travel Assist 2.0 enhanced
+        Park Assist Plus with remote parking
+        Automated lane change on motorways
+
+    - name: "Tow Package"
+      price: 1190
+      description: |
+        Electrically retractable tow hitch
+        Trailer Assist (reversing with trailer)
+        1,800 kg braked towing capacity
+
+  individual_options:
+    - name: "Panoramic sliding sunroof (electric)"
+      price: 1390
+    - name: "Privacy glass (rear windows tinted)"
+      price: 490
+    - name: "Auxiliary heater (standheizung)"
+      price: 990
+    - name: "Roof rails (aluminium)"
+      price: 390
+    - name: "7-seater configuration"
+      price: 1290
+    - name: "6-seater configuration (captain's chairs)"
+      price: 890
+
+# Incentives (Germany 2025)
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: grant
+    amount: 0
+    notes: "Federal EV subsidy ended December 2023. No replacement as of 2025."
+
+  - name: "Company Car Tax Benefit (0.25%)"
+    type: tax_credit
+    amount: 4200
+    notes: |
+      0.25% of gross list price per month (vs 1% for ICE).
+      €62,990 × 0.25% = €157/month BIK.
+      Comparable ICE VW T7 Multivan (€55,000) × 1% = €550/month.
+      Annual saving: ~€4,200 in reduced income tax.
+    eligibility: "Company car drivers only, vehicle price ≤€70,000 gross list"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 300
+    notes: "EVs exempt from road tax until 2030. Comparable ICE Multivan ~€300/year."
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote"
+    type: grant
+    amount: 280
+    notes: "CO2 certificate trading income ~€280/year via providers."
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+  service_intervals:
+    inspection_km: 30000
+    inspection_years: 2
+
+# Charging
+charging:
+  home_charging:
+    wallbox_options:
+      - name: "Volkswagen ID. Charger"
+        power_kw: 11
+        price: 599
+      - name: "Volkswagen ID. Charger Connect"
+        power_kw: 11
+        price: 799
+        notes: "With WiFi, app control, energy metering"
+  public_charging:
+    networks:
+      - name: "Elli / We Charge"
+        coverage: "350,000+ charging points across Europe"
+        subscription_price: 9.99
+        subscription_unit: month
+      - name: "IONITY"
+        coverage: "550+ stations on European highways"
+        subscription_rate_per_kwh: 0.35
+        payg_rate_per_kwh: 0.79
+
+# Build Info
+build_info:
+  production_location: "Hanover Commercial Vehicle Plant, Germany"
+  delivery_time_weeks: 12
+
+# Finance
+finance:
+  notes: |
+    Volkswagen Financial Services leasing example (2025):
+    - €62,990 ID.Buzz Pro S
+    - €7,000 down payment
+    - 48 months, 10,000 km/year
+    - ~€750/month estimated
+
+# Sources
+sources:
+  - https://www.volkswagen.de/de/modelle/id-buzz.html
+  - https://www.volkswagen-newsroom.com/en/id-buzz-14168
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id-buzz/
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_source: manufacturer_announced

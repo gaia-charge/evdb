@@ -1,0 +1,168 @@
+# Volkswagen ID.Buzz GTX (86kWh) 2025
+# Performance AWD variant updated with 86kWh battery
+
+id: volkswagen-id-buzz-gtx-2025
+name: GTX
+model_id: volkswagen-id-buzz
+model_year: 2025
+variant_code: null
+
+# Battery specifications
+battery:
+  usable_kwh: 86.0
+  total_kwh: 91.0
+  chemistry: NCM
+  cell_type: prismatic
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range specifications
+range:
+  wltp_km: 462  # Improved over 2024 GTX (440 km) with larger battery
+  wltp_city_km: 600
+  wltp_highway_km: 365
+  epa_km: null
+  real_world_km: 385
+  real_world_source: "Estimated based on 86 kWh battery and AWD efficiency"
+
+# Charging specifications
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    connector: Type 2
+    time_0_100_hours: 8.5
+  dc:
+    max_power_kw: 200
+    connector: CCS
+    time_10_80_minutes: 26
+    time_0_100_minutes: 48
+
+# Motor specifications - DUAL MOTOR AWD
+motors:
+  front:
+    type: asynchronous
+    power_kw: 80
+    torque_nm: 172
+  rear:
+    type: permanent_magnet
+    power_kw: 210
+    torque_nm: 390
+  combined:
+    total_power_kw: 250  # Same as 2024; some reports suggest 290 kW boost mode
+    total_torque_nm: 560
+    drivetrain: awd
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 6.4  # Marginally improved over 2024
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_100km: 21.5
+  real_world_kwh_100km: 24.0
+
+# Weight
+dimensions:
+  length_mm: 4712
+  width_mm: 1985
+  height_mm: 1937
+  wheelbase_mm: 2988
+  curb_weight_kg: 2640  # Heavier due to larger battery + dual motors
+  gross_weight_kg: 3280
+  payload_kg: 640
+  trunk_volume_l: 1121
+  trunk_volume_max_l: 2205
+  towing_capacity_braked_kg: 1800
+
+# Key features
+features:
+  heat_pump: true
+  adaptive_suspension: true  # DCC adaptive damping standard on GTX
+  air_suspension: false
+  torque_vectoring: true  # XDS electronic differential
+  one_pedal_driving: true
+  autopilot_level: 2
+
+# Infotainment
+infotainment:
+  screen_size_inches: 12.9
+  screen_type: touchscreen
+  operating_system: ID. Software 4.0
+  navigation: Yes
+  voice_assistant: Yes (IDA with ChatGPT integration)
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  ota_updates: true
+  digital_cockpit_size_inches: 5.3
+
+# ADAS
+adas:
+  - Lane Assist
+  - Travel Assist 2.0
+  - Adaptive Cruise Control with Stop & Go
+  - Front Assist with Pedestrian and Cyclist Monitoring
+  - Side Assist
+  - Rear Traffic Alert
+  - Park Assist Plus with 360° camera and memory
+  - Emergency Assist 3.0
+  - Area View 360°
+
+# Audio
+audio:
+  standard_speakers: 10  # Harman Kardon standard on GTX
+  premium_audio_system: Harman Kardon (standard)
+  premium_speakers: 10
+  premium_power_watts: 480
+
+# Climate
+climate:
+  zones: 3
+  heat_pump: true
+  air_quality_sensor: true
+  heated_seats: Front and rear (standard)
+  ventilated_seats: false
+  heated_steering_wheel: true
+
+notes: |
+  The 2025 ID.Buzz GTX receives the 86 kWh battery upgrade, improving range from 440 km
+  to 462 km WLTP (+22 km, +5%). It remains the performance flagship of the ID.Buzz range
+  with dual-motor AWD delivering 250 kW / 340 hp.
+
+  Key 2025 GTX updates:
+  - 86 kWh battery (vs 77 kWh in 2024, +11.7%)
+  - Range: 462 km WLTP (vs 440 km, +5%)
+  - ID. Software 4.0 with improved UI
+  - IDA voice assistant with ChatGPT integration
+  - Travel Assist 2.0 improved highway autonomy
+  - Slightly improved real-world range (~385 km vs ~370 km)
+
+  GTX-specific features (same as 2024):
+  - Dual-motor AWD (80 kW front + 210 kW rear = 250 kW total)
+  - DCC adaptive damping suspension (standard)
+  - XDS electronic differential (torque vectoring)
+  - GTX-specific exterior styling (red accents, GTX badges)
+  - GTX sport seats with red stitching
+  - Panoramic glass roof (standard)
+  - 21-inch alloy wheels available
+  - Harman Kardon audio (standard)
+  - Head-Up Display (standard)
+
+  Competes with:
+  - VW ID.Buzz Pro S 2025 (RWD, more range 487 km, lower price, less power)
+  - Mercedes EQV 300 (more premium, less power, less range)
+  - No direct electric van performance competitor
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_source: manufacturer_announced
+  sources:
+    - https://www.volkswagen-newsroom.com/en/id-buzz-14168
+    - https://ev-database.org

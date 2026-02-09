@@ -1,0 +1,276 @@
+# Volkswagen ID.Buzz Pro S (86kWh) 2025
+# Updated long-range variant with larger 86kWh battery
+
+id: volkswagen-id-buzz-pro-s-2025
+name: Pro S
+model_id: volkswagen-id-buzz
+model_year: 2025
+variant_code: null
+
+# Battery specifications
+battery:
+  usable_kwh: 86.0
+  total_kwh: 91.0
+  chemistry: NCM  # Nickel-Cobalt-Manganese, unified cell from PowerCo/LG
+  cell_type: prismatic
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range specifications
+range:
+  wltp_km: 487  # Improved over 2024 Pro Long (461 km) thanks to larger battery
+  wltp_city_km: 630
+  wltp_highway_km: 390
+  epa_km: null  # Not EPA-rated in Europe
+  real_world_km: 410  # Real-world mixed driving
+  real_world_source: "Estimated based on battery upgrade and MEB efficiency"
+
+# Charging specifications
+charging:
+  # AC charging
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+
+  # DC fast charging
+  dc_max_kw: 185  # Improved peak charging for 86 kWh pack
+  dc_connector: CCS2
+
+  # DC charging curve (MEB platform, 86kWh pack)
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 185
+    - soc_percent: 5
+      power_kw: 185
+    - soc_percent: 10
+      power_kw: 185
+    - soc_percent: 20
+      power_kw: 180
+    - soc_percent: 30
+      power_kw: 170
+    - soc_percent: 40
+      power_kw: 150
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 105
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 28
+    - soc_percent: 100
+      power_kw: 12
+
+  # Charging times
+  time_0_to_80_min: 30
+  time_10_to_80_min: 26
+  time_20_to_80_min: 22
+
+  # Peak charging speed
+  charging_speed_kmh: 900  # ~185kW / 19.8 kWh/100km * 60min
+
+# Bidirectional charging
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.6
+  v2h: true
+  v2g: true
+
+# Performance specifications
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      power_kw: 210
+      power_hp: 286
+      torque_nm: 550
+
+  total_power_kw: 210
+  total_power_hp: 286
+  total_torque_nm: 550
+
+  acceleration_0_100_sec: 10.0  # Slightly improved due to software refinements
+  top_speed_kmh: 145
+
+# Weight
+weight:
+  curb_weight_kg: 2560  # Slightly heavier than 2024 due to larger battery
+  gross_vehicle_weight_kg: 3080
+  payload_kg: 520
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 19.8  # Slightly higher than 77 kWh variant
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 22.5
+  efficiency_rating: B
+
+# Key features
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2  # IQ.DRIVE Travel Assist 2.0
+
+# Optional equipment in Pro S trim
+optional_equipment:
+  - name: IQ.LIGHT LED Matrix Headlights
+    code: IQL
+    category: lighting
+    included_in_base: true
+  - name: 3-zone Automatic Climate Control
+    code: 3AC
+    category: comfort
+    included_in_base: true
+  - name: Park Assist Plus with Memory Function
+    code: PAP
+    category: driver_assistance
+    included_in_base: true
+  - name: Electric Sliding Doors (both sides)
+    code: ESD
+    category: convenience
+    included_in_base: true
+  - name: Harman Kardon Premium Audio
+    code: HKA
+    category: audio
+    included_in_base: true
+  - name: Panoramic Glass Roof
+    code: PGR
+    category: comfort
+    included_in_base: true
+  - name: Head-Up Display
+    code: HUD
+    category: driver_assistance
+    included_in_base: true
+
+# Wheels and tires
+wheels_tires:
+  standard_wheel_size_inches: 20
+  standard_tire_size: 235/55 R20
+  optional_wheel_sizes: [21]
+
+# Colors
+colors:
+  - name: Candy White / Deep Black Pearl
+    code: B4B4
+    type: two-tone
+  - name: Bay Leaf Green / Deep Black Pearl
+    code: B4P7
+    type: two-tone
+  - name: Energetic Orange / Deep Black Pearl
+    code: B4J8
+    type: two-tone
+  - name: Lime Yellow / Deep Black Pearl
+    code: B4N3
+    type: two-tone
+  - name: Starlight Blue / Deep Black Pearl
+    code: B4W5
+    type: two-tone
+  - name: Kings Red / Deep Black Pearl
+    code: B4X1
+    type: two-tone
+  - name: Mono Silver / Deep Black Pearl
+    code: B4M1
+    type: two-tone
+
+# Interior
+interior:
+  standard_upholstery: Microfiber Fabric
+  optional_upholstery:
+    - Leatherette
+    - Vienna Leather (Pro S exclusive)
+
+# Infotainment
+infotainment:
+  screen_size_inches: 12.9
+  screen_type: touchscreen
+  operating_system: ID. Software 4.0  # 2025 update with improved responsiveness
+  navigation: Yes
+  voice_assistant: Yes (IDA voice assistant, improved 2025)
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  ota_updates: true
+  digital_cockpit_size_inches: 5.3
+
+# ADAS
+adas:
+  - Lane Assist
+  - Travel Assist 2.0 (improved semi-autonomous driving)
+  - Adaptive Cruise Control with Stop & Go
+  - Front Assist with Pedestrian and Cyclist Monitoring
+  - Side Assist (blind spot monitoring)
+  - Rear Traffic Alert
+  - Park Assist Plus with 360° camera and memory
+  - Emergency Assist 3.0
+
+# Audio
+audio:
+  standard_speakers: 6
+  premium_audio_system: Harman Kardon (standard on Pro S)
+  premium_speakers: 10
+  premium_power_watts: 480
+
+# Climate
+climate:
+  zones: 3
+  heat_pump: true
+  air_quality_sensor: true
+  heated_seats: Front and rear (standard on Pro S)
+  ventilated_seats: false
+  heated_steering_wheel: true  # Standard on Pro S
+
+website: https://www.volkswagen.de/de/modelle/id-buzz.html
+
+notes: |
+  The 2025 ID.Buzz Pro S is the new long-range flagship RWD variant, replacing the Pro Long
+  as the top single-motor option. The key upgrade is the 86 kWh battery (vs 77 kWh in 2024),
+  delivering 487 km WLTP range — a 26 km improvement over the 2024 Pro Long.
+
+  Key 2025 updates:
+  - 86 kWh battery (usable) replacing 77 kWh (12% increase)
+  - ID. Software 4.0 with significantly improved UI and responsiveness
+  - Improved IDA voice assistant with ChatGPT integration
+  - Travel Assist 2.0 with improved lane centering and highway driving
+  - Slightly improved DC charging peak (185 kW vs 170 kW)
+  - V2L output increased to 3.6 kW (from 3.0 kW)
+  - New Mono Silver two-tone color option
+  - Harman Kardon audio standard on Pro S
+  - Head-Up Display standard on Pro S
+  - Heated rear seats and heated steering wheel standard
+
+  Pro S vs 2024 Pro Long:
+  - Range: 487 km vs 461 km (+26 km, +5.6%)
+  - Battery: 86 kWh vs 77 kWh (+11.7%)
+  - DC charging: 185 kW vs 170 kW (+8.8%)
+  - V2L: 3.6 kW vs 3.0 kW (+20%)
+  - Software: ID. Software 4.0 vs 3.2
+  - More standard equipment (HUD, heated rear seats, HK audio)
+  - Weight: 2,560 kg vs 2,516 kg (+44 kg)
+
+  Target buyers:
+  - Families wanting maximum range in ID.Buzz form factor
+  - Long-distance commuters who need >400 km real-world range
+  - Premium buyers wanting top equipment without GTX performance premium
+  - Buyers preferring RWD efficiency over AWD capability
+
+  Competes with:
+  - VW ID.Buzz GTX 2025 (AWD, faster, less range, higher price)
+  - Mercedes EQV 300 Long (less range but larger, more premium)
+  - Hyundai Staria Electric (if available in market)
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_source: manufacturer_announced
+  sources:
+    - https://www.volkswagen-newsroom.com/en/id-buzz-14168
+    - https://ev-database.org
