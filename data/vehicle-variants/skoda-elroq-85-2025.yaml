@@ -1,0 +1,112 @@
+---
+id: skoda-elroq-85-2025
+name: "85"
+model_id: skoda-elroq
+model_year: 2025
+production_start: "2025-01-01"
+production_end: null
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "77 kWh usable (82 kWh gross). Large battery option on 400V MEB platform."
+
+range:
+  wltp_km: 560
+  wltp_city_km: 700
+  wltp_highway_km: 450
+  epa_km: null
+  real_world_km: 460
+  real_world_source: "Estimated based on MEB platform data"
+  notes: |
+    WLTP range of 560 km - class-leading for a compact SUV. Real-world range 
+    approximately 460 km in mixed conditions. Winter range ~360 km at -10°C.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 175
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 175
+    - soc_percent: 20
+      power_kw: 170
+    - soc_percent: 30
+      power_kw: 160
+    - soc_percent: 40
+      power_kw: 145
+    - soc_percent: 50
+      power_kw: 125
+    - soc_percent: 60
+      power_kw: 100
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 50
+  charge_time_10_80_minutes: 28
+  notes: |
+    DC fast charging up to 175 kW. 10-80% in approximately 28 minutes.
+    AC charging: 11 kW standard (3-phase), 0-100% in approximately 8 hours.
+
+motors:
+  - position: rear
+    type: permanent_magnet
+    power_kw: 210
+    torque_nm: 545
+    manufacturer: Volkswagen Group
+
+drivetrain:
+  type: RWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.6
+  top_speed_kmh: 180
+  notes: "Strong performance with 210 kW (286 PS) rear motor."
+
+efficiency:
+  wltp_kwh_per_100km: 15.2
+  real_world_kwh_per_100km: 17.5
+  notes: "Excellent efficiency for a compact SUV with 77 kWh battery."
+
+weight:
+  curb_weight_kg: 2100
+  gross_vehicle_weight_kg: 2600
+  towing_capacity_kg: 1200
+  notes: "Large battery Elroq RWD. Can tow up to 1,200 kg (braked trailer)."
+
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: front_and_rear
+  parking_camera: rear
+  autonomous_parking: false
+
+notes: >
+  Škoda Elroq 85 with 77 kWh usable battery offering 560 km WLTP range - the
+  long-range RWD option. Features 210 kW rear motor (286 PS) with 0-100 km/h in
+  6.6 seconds. 175 kW DC fast charging enables 10-80% in 28 minutes. Class-leading
+  range for a compact electric SUV. Euro NCAP 5-star rating (2025 test).
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source: manufacturer
+  sources:
+    - "https://en.wikipedia.org/wiki/%C5%A0koda_Elroq"
+    - "https://www.carwow.de/skoda/elroq"
+    - "https://www.skoda-auto.de/modelle/elroq"
