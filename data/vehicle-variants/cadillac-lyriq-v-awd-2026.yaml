@@ -1,0 +1,133 @@
+# Cadillac Lyriq-V AWD 2026
+# High-performance V-Series electric SUV
+# First electric Cadillac V-Series model
+
+id: cadillac-lyriq-v-awd-2026
+name: Lyriq-V AWD
+model_id: cadillac-lyriq
+manufacturer_id: general-motors
+variant_name: V Series AWD
+model_year: 2026
+trim_level: V Series
+version: V
+
+description: |
+  The Cadillac Lyriq-V is the high-performance V-Series variant, joining Cadillac's
+  legendary lineup of performance models. With 615 PS (459 kW) and 882 Nm torque from
+  enhanced dual motors, it accelerates from 0-100 km/h in just 3.3 seconds - supercar
+  territory in a luxury SUV.
+  
+  The Lyriq-V features unique performance-focused styling, enhanced brakes, sport-tuned 
+  Magnetic Ride Control suspension, and aggressive exterior design cues. It shares the
+  102 kWh NCMA battery but with slightly reduced range (460 km WLTP) due to larger wheels 
+  and performance-focused calibration.
+  
+  At approximately €94,000 in Germany, the Lyriq-V offers extraordinary performance value
+  compared to BMW iX M60 (€120,000+) and Mercedes-AMG EQE SUV (€107,000+).
+
+battery:
+  usable_kwh: 95.0
+  total_kwh: 102.0
+  chemistry: NMCA
+  cells: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  preconditioning: true
+
+range:
+  wltp_km: 460
+  wltp_city_km: 560
+  wltp_highway_km: 380
+  real_world_km: 380
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    Reduced range vs standard Lyriq due to larger wheels, performance tires,
+    and more aggressive power calibration. Still practical for daily use.
+
+efficiency:
+  wltp_kwh_per_100km: 21.8
+  real_world_kwh_per_100km: 26.0
+  real_world_conditions: "Mixed driving, 20°C ambient"
+
+charging:
+  ac:
+    max_power_kw: 22
+    standard: true
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 5.5
+  dc:
+    max_power_kw: 190
+    connector_type: CCS2
+    architecture_voltage: 400
+    time_10_80_minutes: 27
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD
+  combined_power_kw: 459
+  combined_power_hp: 615
+  torque_nm: 882
+  notes: |
+    Enhanced dual-motor setup with significantly more power and torque.
+    V-Series specific calibration and thermal management for sustained performance.
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 3.3
+  top_speed_kmh: 210
+  top_speed_electronically_limited: true
+  notes: |
+    0-100 km/h in 3.3 seconds - genuine supercar performance.
+    V-Series specific driving modes including V Mode.
+    Enhanced regenerative braking and performance traction control.
+
+weight:
+  curb_weight_kg: 2800
+  towing_capacity_braked_kg: 1588
+
+dimensions:
+  length_mm: 5005
+  width_mm: 1977
+  height_mm: 1623
+  wheelbase_mm: 3094
+
+cargo:
+  trunk_litres: 588
+  trunk_max_litres: 1751
+
+tires:
+  front: "275/40 R21"
+  rear: "275/40 R21"
+  wheel_size_inches: 21
+  notes: V-Series specific performance wheels and tires
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+
+interior:
+  seats: 5
+  seat_material: V-Series performance seats with premium leather
+  display_center: 33" diagonal LED display (9K resolution)
+  sound_system: AKG Studio 19-speaker system with Dolby Atmos
+  notes: |
+    V-Series specific interior trim with performance seats.
+    V-Series badging throughout.
+    Same 33" display and AKG audio as standard Lyriq.
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - https://www.cadillaceurope.com/de-de/lyriq
+    - https://www.carwow.de/cadillac/lyriq
+    - https://en.wikipedia.org/wiki/Cadillac_Lyriq
