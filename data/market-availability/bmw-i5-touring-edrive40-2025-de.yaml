@@ -1,0 +1,256 @@
+id: bmw-i5-touring-edrive40-2025-de
+variant_id: bmw-i5-touring-edrive40-2025
+market: DE
+currency: EUR
+model_year: 2025
+
+# Pricing
+pricing:
+  base_price: 70200  # €70,200 MSRP
+  destination_charge: 990
+  price_on_road: 71190
+  
+  price_excluding_vat: 59000
+  
+  trims:
+    - name: "i5 Touring eDrive40"
+      price: 70200
+      description: "Standard trim"
+    - name: "i5 Touring eDrive40 M Sport"
+      price: 74900
+      description: "M Sport package included"
+
+# Colors
+colors:
+  free:
+    - name: "Alpine White (solid)"
+      code: 300
+  
+  metallic:
+    - name: "Black Sapphire Metallic"
+      code: 475
+      price: 1100
+    - name: "Mineral White Metallic"
+      code: A96
+      price: 1100
+    - name: "Phytonic Blue Metallic"
+      code: C1M
+      price: 1100
+    - name: "Tanzanite Blue Metallic"
+      code: C4P
+      price: 1100
+    - name: "Sparkling Copper Grey Metallic"
+      code: C4C
+      price: 1100
+  
+  special:
+    - name: "BMW Individual Frozen Deep Grey Metallic"
+      code: C4S
+      price: 2550
+    - name: "BMW Individual Tanzanite Blue Metallic II"
+      code: C4T
+      price: 2550
+
+# Wheels
+wheels:
+  standard:
+    - size_inches: 19
+      description: '19" light-alloy wheels Styling 934'
+      price: 0
+      range_impact_km: 0
+  
+  optional:
+    - size_inches: 20
+      description: '20" M light-alloy wheels Bicolour'
+      price: 1350
+      range_impact_km: -15
+    - size_inches: 21
+      description: '21" M light-alloy wheels Bicolour Jet Black'
+      price: 2150
+      range_impact_km: -25
+
+# Interior
+interior:
+  standard:
+    - name: "Veganza/Alcantara Black"
+      description: "Sustainable vegan leather and Alcantara"
+  
+  optional:
+    - name: "Merino Leather Cognac"
+      price: 2150
+    - name: "BMW Individual Merino Leather Tartufo"
+      price: 3550
+
+# Packages
+packages:
+  - name: "M Sport Package"
+    price: 4700
+    description: "M Sport exterior and interior"
+    items:
+      - "M Aerodynamics package"
+      - "M Sport brakes"
+      - "M leather steering wheel"
+      - "M Sport seats"
+      - "20-inch M light-alloy wheels"
+  
+  - name: "Comfort Package"
+    price: 3200
+    description: "Enhanced comfort features"
+    items:
+      - "Soft-close doors"
+      - "Lumbar support"
+      - "Front seat ventilation"
+      - "Interior camera for BMW Remote 3D View"
+  
+  - name: "Driving Assistant Professional"
+    price: 2500
+    description: "Advanced driver assistance"
+    items:
+      - "Highway Assistant (hands-free driving)"
+      - "Active Cruise Control with Stop & Go"
+      - "Steering and Lane Control Assistant"
+      - "Active Lane Change Assistant"
+      - "Emergency Stop Assistant"
+  
+  - name: "Bowers & Wilkins Diamond Surround Sound"
+    price: 4300
+    description: "18-speaker premium audio (1,965W)"
+    items:
+      - "18 speakers including diamond tweeters"
+      - "1,965W amplifier"
+      - "4D surround sound"
+  
+  - name: "Innovation Package"
+    price: 3950
+    description: "Technology package"
+    items:
+      - "BMW Head-Up Display (augmented reality)"
+      - "Parking Assistant Plus with Surround View"
+      - "BMW Digital Key Plus (UWB)"
+      - "Harman Kardon Surround Sound"
+
+# Options
+options:
+  comfort:
+    - name: "22kW AC Charger"
+      price: 550
+      description: "22kW onboard AC charger"
+    - name: "Rear Air Suspension (self-leveling)"
+      price: 1200
+      description: "Self-leveling rear air suspension, ideal for towing and heavy loads"
+  
+  towing:
+    - name: "Trailer Coupling"
+      price: 1100
+      description: "Electrically folding tow hitch, 2,000 kg braked"
+
+# Popular Configurations
+popular_configs:
+  - name: "i5 Touring M Sport Well-Equipped"
+    total_price: 85000
+    description: "Most popular configuration"
+    includes:
+      - "i5 Touring eDrive40 (€70,200)"
+      - "M Sport Package (€4,700)"
+      - "Innovation Package (€3,950)"
+      - "Driving Assistant Professional (€2,500)"
+      - "22kW Charger (€550)"
+      - "Rear Air Suspension (€1,200)"
+      - "Metallic paint (€1,100)"
+
+# Incentives
+incentives:
+  - name: "BAFA Umweltbonus"
+    amount: 0
+    type: subsidy
+    description: "Ended 2023-12-31"
+  
+  - name: "Company Car Tax Benefit"
+    amount: 6318
+    type: tax_credit
+    description: "0.25% monthly: €70,200 × 0.25% = €176/month vs €702/month (ICE). Annual savings: €6,318"
+  
+  - name: "Kfz-Steuer Exemption"
+    amount: 350
+    type: tax_exemption
+    description: "Exempt until 2030"
+  
+  - name: "THG-Quote"
+    amount: 325
+    type: rebate
+
+# Availability
+availability:
+  status: available
+  available_from: "2024-06-01"
+  available_until: null
+  order_status: open
+  delivery_time_weeks: 12
+  dealers: 700
+  online_purchase: yes
+  test_drive_available: yes
+
+# Charging
+charging_access:
+  - network: "BMW Charging"
+    description: "Access to 600,000+ charging points"
+    access: included
+  
+  - network: "IONITY"
+    standard_price_kwh: 0.82
+    subscription:
+      monthly_fee: 14.99  # BMW Charging Active
+      discounted_price_kwh: 0.33
+
+home_charging:
+  - name: "BMW Wallbox Plus"
+    price: 1090
+    power_kw: 11
+  - name: "BMW Wallbox Plus 22kW"
+    price: 1390
+    power_kw: 22
+
+# Warranty
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_guarantee: "70% capacity retention"
+  service_interval_months: 24
+  service_interval_km: 30000
+  extended_warranty_available: yes
+
+# Running Costs
+annual_costs:
+  insurance_eur: 1650
+  road_tax_eur: 0
+  service_eur: 420
+  
+  electricity_100km_home: 5.83  # 18.5 kWh × €0.315
+  electricity_100km_public: 15.17  # 18.5 kWh × €0.82
+  
+  comparison_ice:
+    fuel_cost_100km: 14.40  # BMW 520i Touring ~9.6L/100km × €1.50
+    annual_savings_vs_ice: 3400
+
+notes: |
+  The 2025 BMW i5 Touring eDrive40 is priced at €70,200 in Germany.
+  It's the world's first premium electric estate, appealing to families
+  and company car drivers who need cargo space.
+  
+  **Company Car Benefit:** €6,318/year savings vs ICE equivalent.
+  **Delivery:** 12 weeks standard.
+  **Key selling point:** 570L boot, 2,000 kg towing, practical estate body.
+
+sources:
+  - url: https://www.bmw.de/de/modelle/bmw-i/i5/touring/bmw-i5-touring-ueberblick.html
+    title: BMW i5 Touring Configurator Germany
+    accessed: "2026-02-09"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
