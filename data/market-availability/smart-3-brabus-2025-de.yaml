@@ -1,0 +1,106 @@
+id: smart-3-brabus-2025-de
+variant_id: smart-3-brabus-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2024-06"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 48490
+  price_including_vat: 48490
+  vat_rate_percent: 19
+  destination_charge: 890
+
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+available_colors:
+  - name: Digital White
+    code: DW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Eclipse Black
+    code: EB
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Laser Red
+    code: LR
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+  - name: Atom Grey
+    code: AG
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+available_wheels:
+  - name: 19-inch Brabus alloy wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+
+available_interiors:
+  - name: Brabus leather/Alcantara
+    code: BLA
+    price_add:
+      amount: 0
+      currency: EUR
+
+optional_equipment:
+  - name: Brabus Signature Package
+    price: 2500
+    includes:
+      - "Carbon accents"
+      - "Premium floor mats"
+      - "Additional Brabus badging"
+
+market_info:
+  dealers_count: 85
+  service_centers_count: 120
+  warranty_years: 3
+  warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+
+company_car_tax:
+  gross_list_price: 48490
+  monthly_tax_base: 121.23
+  annual_tax_base: 1454.70
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    Smart #3 Brabus qualifies for 0.25% company car tax rate (under €70k).
+    Performance variant with 428hp AWD at under €50k is exceptional value
+    for company car drivers wanting fast EV.
+
+charging_costs:
+  home_charging:
+    electricity_rate_eur_per_kwh: 0.32
+    cost_per_100km: 6.24
+    cost_full_charge: 21.12
+  public_dc_fast_charging:
+    electricity_rate_eur_per_kwh: 0.79
+    cost_per_100km: 15.41
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  sources:
+    - https://www.smart.com/de/
+  created_at: "2026-02-09"
+  created_by: Patricio
