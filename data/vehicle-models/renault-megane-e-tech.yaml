@@ -1,64 +1,91 @@
+# Renault Megane E-Tech (First Generation)
 id: renault-megane-e-tech
 name: Megane E-Tech
-brand: renault
+name_full: Renault Megane E-Tech Electric
 manufacturer_id: renault-group
-model_type: crossover
-segment: C
+brand: "Renault"
 body_style: crossover
-production_years:
-  start: 2022
-  end: null  # Still in production
-platform: CMF-EV
-description: >
-  The Renault Megane E-Tech is a compact electric crossover that won the prestigious 
-  2023 European Car of the Year award. Built on Renault-Nissan-Mitsubishi Alliance's 
-  CMF-EV platform, it represents a bold departure from traditional Megane styling with 
-  modern coupe-SUV proportions.
-  
-  The Megane E-Tech combines French design flair with practical electric mobility, 
-  offering two battery options: 40 kWh (300km range) for urban use and 60 kWh (450-470km 
-  range) for longer journeys. Its distinctive exterior design features slim LED lighting, 
-  flush door handles, and aerodynamic wheels contributing to a 0.30 drag coefficient.
-  
-  Inside, the Megane E-Tech showcases OpenR infotainment system with Google built-in, 
-  featuring a large portrait-oriented 12" touchscreen and customizable 12.3" driver 
-  display. The interior emphasizes sustainability with extensive use of recycled materials.
-  
-  Available in Equilibre, Techno, and Iconic trim levels, the Megane E-Tech offers 
-  competitive pricing in the compact EV segment while delivering premium features and 
-  build quality typical of Renault's electric vehicle strategy.
+segment: C  # Compact crossover
 
-key_features:
-  - 2023 European Car of the Year winner
-  - CMF-EV dedicated electric platform
-  - OpenR infotainment with Google built-in (Google Maps, Assistant, Play Store)
-  - 12" portrait touchscreen and 12.3" digital driver display
-  - Two battery options (40 kWh and 60 kWh)
-  - Up to 130 kW DC fast charging
-  - Heat pump standard for improved winter range
-  - Multi-Sense driving modes (Eco, Comfort, Sport, Perso)
-  - 440-liter boot with versatile storage solutions
-  - Sustainable interior with recycled materials
-  - 5-star Euro NCAP safety rating (2022)
-  - One Pedal driving mode with adjustable regeneration
+production:
+  start_year: 2022
+  end_year: null  # Still in production
+  status: active
+  generation: 1
 
-notable_competitors:
-  - Volkswagen ID.3
-  - Cupra Born
-  - Peugeot e-2008
-  - MG4 Electric
-  - Nissan Ariya (compact variants)
-  - Kia Niro EV
+dimensions:
+  length_mm: 4200
+  width_mm: 1768
+  width_with_mirrors_mm: 2058
+  height_mm: 1505
+  wheelbase_mm: 2685
+  ground_clearance_mm: 152
+  drag_coefficient: 0.30  # Very good aerodynamics for a crossover
+  
+seating:
+  capacity: 5
+  configuration: "2+3"
+
+cargo:
+  trunk_capacity_liters: 440  # Compact but practical
+  frunk_capacity_liters: 0
+  max_capacity_liters: 1332  # With rear seats folded
+
+towing:
+  max_trailer_weight_braked_kg: 900
+  max_trailer_weight_unbraked_kg: 750
+  max_roof_load_kg: 80
+  max_towbar_load_kg: 75
+
+features:
+  - 12" OpenR infotainment system with Google Built-in
+  - 12.3" digital instrument cluster
+  - Google Maps navigation
+  - Google Assistant voice control
+  - Wireless Apple CarPlay and Android Auto
+  - Harman Kardon audio system (9 speakers) optional
+  - LED headlights standard, Matrix LED optional
+  - Multi-Sense drive modes
+  - Heat pump standard (excellent for efficiency)
+  - Dual-zone automatic climate control
+  - Keyless entry and start
+  - Electric parking brake with auto-hold
+  - Wireless phone charging
+  - 360-degree camera optional
+  - Adaptive cruise control optional
+  - Lane keeping assist
+  - Traffic sign recognition
+  - Automatic emergency braking
+
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2022
+  euro_ncap_adult: 91
+  euro_ncap_child: 86
+  euro_ncap_pedestrian: 65
+  euro_ncap_safety_assist: 79
 
 awards:
-  - "European Car of the Year 2023"
-  - "5-star Euro NCAP Safety Rating (2022)"
-  - "iF Design Award 2023"
-  - "Red Dot Design Award 2023"
+  - name: "Car of the Year 2023"
+    category: "European Car of the Year"
+    year: 2023
+  - name: "What Car? Award"
+    category: "Best Small Electric SUV"
+    year: 2023
+  - name: "Auto Express New Car Award"
+    category: "Electric Car of the Year"
+    year: 2023
 
-market_position: >
-  The Megane E-Tech competes in the highly competitive compact electric crossover segment, 
-  positioned as a stylish and practical alternative to the Volkswagen ID.3. Its European 
-  Car of the Year award validates its strong combination of design, technology, practicality, 
-  and value. The Megane E-Tech targets European buyers seeking French design flair with 
-  proven electric technology, strong warranty, and extensive dealer network.
+manufacturing:
+  plant: "Douai ElectriCity, France"
+  notes: "Built at Renault's dedicated EV production facility in northern France"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://www.euroncap.com/en/results/renault/megane-e-tech/47490"
+    - "https://ev-database.org/car/1650/Renault-Megane-E-Tech-EV60"
+  notes: "Winner of European Car of the Year 2023. Renault's first vehicle on the CMF-EV platform, designed from the ground up as an EV. Combines compact dimensions with excellent aerodynamics and Google's infotainment system. Popular choice in Europe for its value, technology, and efficiency."

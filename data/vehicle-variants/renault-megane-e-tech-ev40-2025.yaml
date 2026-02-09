@@ -1,283 +1,129 @@
+# Renault Megane E-Tech EV40 (2025)
 id: renault-megane-e-tech-ev40-2025
+name: Megane E-Tech EV40
 model_id: renault-megane-e-tech
-name: EV40 Equilibre
 model_year: 2025
-trim_level: equilibre
-market_availability:
-  - europe
-  - germany
-  - france
-  - netherlands
-  - belgium
-  - spain
-  - italy
-  - uk
+variant_code: EV40
 
-# Battery specifications
 battery:
-  total_kwh: 40
-  usable_kwh: 40
-  chemistry: NMC  # Nickel-Manganese-Cobalt
-  voltage: 400
-  manufacturer: lgchem
-  warranty:
-    duration_years: 8
-    duration_km: 160000
-    capacity_retention_percent: 70
-  cooling_system: liquid
-  heat_pump: true
-  preconditioning: true
-  cell_to_pack: false
+  usable_kwh: 40.0
+  total_kwh: 42.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
 
-# Motor and drivetrain
-motors:
-  layout: fwd
-  total_count: 1
-  front:
-    type: permanent_magnet
-    power_kw: 96
-    power_hp: 130
-    torque_nm: 250
-    manufacturer: renault
-
-  combined:
-    total_power_kw: 96
-    total_power_hp: 130
-    total_torque_nm: 250
-
-drivetrain:
-  drive_type: fwd
-  transmission: single_speed_reduction
-
-# Performance
-performance:
-  acceleration_0_100_kmh_s: 10.0
-  top_speed_kmh: 150
-  top_speed_limited: true
-
-# Range and efficiency
 range:
   wltp_km: 300
-  wltp_city_km: 390
-  wltp_highway_km: 250
-  epa_km: null  # Not EPA tested
-  real_world_mixed_km: 255
-  real_world_highway_km: 220
-  real_world_winter_km: 200
+  wltp_city_km: 410
+  wltp_highway_km: 240
+  real_world_km: 260
+  real_world_source: "EV Database winter/summer average"
 
-efficiency:
-  wltp_kwh_per_100km: 15.8
-  epa_kwh_per_100km: null
-  real_world_kwh_per_100km: 15.7
-
-# Charging
 charging:
-  ac:
-    max_power_kw: 7.4
-    phases: 1
-    time_0_100_hours: 5.5
-    onboard_charger_kw: 7.4
-  dc:
-    max_power_kw: 85
-    time_10_80_minutes: 35
-    time_10_80_km_added: 190
-    curve_description: >
-      Peak 85kW charging maintained from 10-40% SoC, tapering to 60kW at 50%, 
-      40kW at 60%, and 25kW at 70%. Smaller battery size means faster percentage 
-      charging but lower absolute range per charging session.
+  ac_max_kw: 7.4  # Single-phase 7.4kW standard
+  ac_phases: 1
+  ac_connector: Type2
+  dc_max_kw: 85
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 85
+    - soc_percent: 10
+      power_kw: 85
+    - soc_percent: 20
+      power_kw: 85
+    - soc_percent: 30
+      power_kw: 80
+    - soc_percent: 40
+      power_kw: 75
+    - soc_percent: 50
+      power_kw: 65
+    - soc_percent: 60
+      power_kw: 50
+    - soc_percent: 70
+      power_kw: 40
+    - soc_percent: 80
+      power_kw: 30
+    - soc_percent: 90
+      power_kw: 20
+    - soc_percent: 100
+      power_kw: 12
+  time_15_to_80_percent_min: 36
+  time_10_to_80_percent_min: 38
+  charging_speed_kmh: 425  # km of range per hour at peak
+  plug_and_charge: true
 
-# Bidirectional charging
-bidirectional_charging:
-  v2l_capable: false
-  v2h_capable: false
-  v2g_capable: false
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
 
-# Dimensions and weight
-dimensions:
-  length_mm: 4210
-  width_mm: 1780
-  height_mm: 1505
-  wheelbase_mm: 2700
-  drag_coefficient: 0.30
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 96
+      power_hp: 130
+      torque_nm: 250
+  total_power_kw: 96
+  total_power_hp: 130
+  total_torque_nm: 250
+  acceleration_0_100_kmh_sec: 10.0
+  acceleration_0_60_mph_sec: 9.5
+  top_speed_kmh: 150  # Electronically limited
 
 weight:
-  curb_weight_kg: 1535
-  gross_vehicle_weight_kg: 2020
-  max_payload_kg: 485
-  max_towing_capacity_kg: 900  # With optional tow hitch
+  curb_weight_kg: 1470
+  gross_weight_kg: 1920
+  max_payload_kg: 450
+  distribution_front_percent: 58
+  distribution_rear_percent: 42
 
-# Cargo and seating
-seating:
-  capacity: 5
-  configuration: 2_plus_3
+efficiency:
+  wltp_kwh_per_100km: 15.3
+  wltp_kwh_per_100km_city: 12.8
+  wltp_kwh_per_100km_highway: 18.5
+  real_world_kwh_per_100km: 16.8
+  energy_efficiency_class: "A+"  # EU energy label
 
-cargo:
-  trunk_volume_liters: 440
-  trunk_max_volume_liters: 1332  # With rear seats folded
-  frunk_volume_liters: 0
+wheels_tires:
+  standard_size_front: "205/55 R18"
+  standard_size_rear: "205/55 R18"
+  wheel_sizes_available:
+    - "18 inch (standard)"
+    - "19 inch (optional, -10km range)"
 
-# Technology and infotainment
-infotainment:
-  screen_size_inches: 12
-  screen_orientation: portrait
-  system: OpenR_Google
-  features:
-    - 12" portrait touchscreen with OpenR Link
-    - Google built-in (Maps, Assistant, Play Store)
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Voice control with Google Assistant
-    - OTA software updates
-    - 4G LTE connectivity
-    - Built-in Google apps (Maps, YouTube Music, etc.)
-    - WiFi hotspot
-  instrument_cluster:
-    type: digital
-    size_inches: 12.3
-    customizable: true
-
-# Driver assistance
-driver_assistance:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  lane_centering: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  automatic_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_attention_monitor: true
-  parking_sensors_front: true
-  parking_sensors_rear: true
-  360_camera: false  # Not standard on Equilibre
-  automatic_parking: false
-  highway_assist: false  # Only on higher trims
-  notes: "Basic safety suite standard, advanced features on Techno/Iconic trims"
-
-# Safety ratings
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2022
-  adult_occupant_score: 91
-  child_occupant_score: 86
-  vulnerable_road_users_score: 62
-  safety_assist_score: 76
-  airbags: 6
-
-# Lighting
-lighting:
-  headlights: LED
-  headlights_adaptive: false
-  headlights_matrix: false
-  daytime_running_lights: LED
-  taillights: LED
-  ambient_lighting: true
-  ambient_lighting_colors: 8
-
-# Climate control
-climate:
-  zones: 1
-  heat_pump: true
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats_front: false
-  air_filter: standard
-  notes: "Heat pump standard for efficient heating, essential for winter range"
-
-# Wheels and tires
-wheels:
-  standard:
-    size_inches: 18
-    tire_size: 205/55R18
-  optional:
-    - size_inches: 20
-      tire_size: 215/45R20
-      range_impact_km: -15
-
-# Exterior colors
-colors:
-  - name: Diamond Black
-    type: metallic
-  - name: Glacier White
-    type: solid
-  - name: Flame Red
-    type: metallic
-  - name: Highland Grey
-    type: metallic
-  - name: Midnight Blue
-    type: metallic
-  - name: Schist Grey
-    type: metallic
-
-# Interior options
-interior:
-  upholstery: fabric
-  trim: recycled_plastic
-  steering_wheel: eco_leather
-  color_options:
-    - name: Black with grey accents
-    - name: Black with blue accents
-
-# Standard features (EV40 Equilibre 2025)
-standard_features:
-  - 12" portrait touchscreen with OpenR Link
-  - 12.3" digital instrument cluster
-  - Google built-in (Maps, Assistant, Play Store)
-  - Wireless Apple CarPlay and Android Auto
-  - Heat pump
-  - LED headlights
-  - Keyless entry and start
-  - Cruise control with speed limiter
-  - Parking sensors front and rear
-  - 6 airbags
-  - Multi-Sense with Eco/Comfort/Sport/Perso modes
-  - One Pedal driving with adjustable regeneration
-  - 18" alloy wheels
-  - Automatic climate control
-  - Heated front seats and steering wheel
-
-# Production information
-production:
-  start_date: "2024-07"
-  plant: Renault Douai Plant
-  country: France
-  notes: "2025 model year produced from July 2024 with minor updates"
-
-# Version and changelog
-version_info:
-  release_date: "2024-07"
-  changes_from_previous: "2025 model year maintains specifications with software updates via OTA"
-  current_production: true
-
-# Notes
-notes: >
-  The Megane E-Tech EV40 is the entry-level variant designed primarily for urban 
-  and suburban driving. With 300km WLTP range (real-world ~255km), it's ideal for 
-  daily commuting and city use where its 40 kWh battery provides sufficient range 
-  while keeping the price competitive.
-  
-  Despite being the entry model, the EV40 Equilibre comes well-equipped with Google 
-  built-in infotainment, heat pump for winter efficiency, and comprehensive safety 
-  features that earned the Megane E-Tech its 5-star Euro NCAP rating and European 
-  Car of the Year 2023 award.
-  
-  The 96kW (130hp) motor provides adequate performance for most drivers, with 10-second 
-  0-100km/h sprint and 150km/h top speed. One Pedal driving mode with adjustable 
-  regenerative braking makes city driving particularly smooth and efficient.
-  
-  85kW DC fast charging means 10-80% in about 35 minutes, adding approximately 190km 
-  of range - sufficient for a quick lunch stop on longer journeys. 7.4kW AC charging 
-  at home fills the battery overnight (5.5 hours).
-  
-  The EV40 targets budget-conscious buyers who primarily drive shorter distances 
-  and want access to Renault's award-winning electric crossover with excellent 
-  design, technology, and safety at an attractive price point.
+technology:
+  adas_level: 2
+  adas_features:
+    - "Lane keeping assist"
+    - "Traffic sign recognition"
+    - "Automatic emergency braking"
+    - "Speed limiter with cruise control"
+    - "Rear parking sensors"
+  connectivity:
+    - "OpenR infotainment with Google Built-in"
+    - "My Renault app remote control"
+    - "OTA software updates"
+    - "4G LTE connectivity"
+    - "Wireless Apple CarPlay / Android Auto"
+  special_features:
+    - "One-pedal driving (B mode)"
+    - "Multi-Sense drive modes (Eco, Comfort, Sport)"
+    - "Pre-conditioning via app"
+    - "Optimised Eco mode"
 
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
   data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
   sources:
-    - https://www.renault.de/elektrofahrzeuge/megane-e-tech.html
-    - https://ev-database.org/car/1662/Renault-Megane-E-Tech-EV40
-    - https://www.euroncap.com/en/results/renault/megane/45664
+    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
+    - "https://ev-database.org/car/1649/Renault-Megane-E-Tech-EV40"
+    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-electric/"
+  notes: "Entry-level Megane E-Tech variant with 40kWh battery. Perfect for urban driving and commuters with shorter daily distances. 300km WLTP range is sufficient for most daily needs, and 85kW DC charging allows for reasonable road trip capability. Lighter weight (1,470kg) makes it nimble and efficient. More affordable entry point to European Car of the Year 2023 winner. Best suited for city/suburban use or as a second car."
