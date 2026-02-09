@@ -1,0 +1,290 @@
+id: byd-seal-u-comfort-2025
+model_id: byd-seal-u
+name: Comfort
+model_year: 2025
+trim_level: comfort
+market_availability:
+  - europe
+  - germany
+  - france
+  - netherlands
+  - belgium
+  - spain
+  - italy
+  - uk
+  - norway
+  - sweden
+
+# Battery specifications
+battery:
+  total_kwh: 71.8
+  usable_kwh: 71.8
+  chemistry: LFP  # LiFePO4 Blade Battery
+  voltage: 400  # 400V architecture
+  manufacturer: byd
+  warranty:
+    duration_years: 8
+    duration_km: 200000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: true  # Cell-to-body integration
+
+# Motor and drivetrain
+motors:
+  layout: fwd
+  total_count: 1
+  front:
+    type: permanent_magnet
+    power_kw: 160
+    power_hp: 218
+    torque_nm: 310
+    manufacturer: byd
+
+  combined:
+    total_power_kw: 160
+    total_power_hp: 218
+    total_torque_nm: 310
+
+drivetrain:
+  drive_type: fwd
+  transmission: single_speed_reduction
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 9.6
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Range and efficiency
+range:
+  wltp_km: 500
+  wltp_city_km: 620
+  wltp_highway_km: 420
+  epa_km: null  # Not EPA tested
+  real_world_mixed_km: 420
+  real_world_highway_km: 370
+  real_world_winter_km: 350
+
+efficiency:
+  wltp_kwh_per_100km: 16.8
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.1
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    time_0_100_hours: 6.5
+    onboard_charger_kw: 11
+  dc:
+    max_power_kw: 140
+    time_10_80_minutes: 28
+    time_10_80_km_added: 350
+    curve_description: >
+      Peak 140kW charging maintained from 10-45% SoC, tapering gradually to 75kW 
+      at 60%, 45kW at 70%, and 25kW at 80%. LFP chemistry enables consistent 
+      charging performance with minimal degradation over time.
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 3.3
+  v2h_capable: false
+  v2g_capable: false
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4775
+  width_mm: 1890
+  height_mm: 1670
+  wheelbase_mm: 2765
+  drag_coefficient: 0.29
+
+weight:
+  curb_weight_kg: 1950
+  gross_vehicle_weight_kg: 2470
+  max_payload_kg: 520
+  max_towing_capacity_kg: 1000
+
+# Cargo and seating
+seating:
+  capacity: 5
+  configuration: 2_plus_3
+
+cargo:
+  trunk_volume_liters: 552
+  trunk_max_volume_liters: 1440  # With rear seats folded
+  frunk_volume_liters: 0
+
+# Technology and infotainment
+infotainment:
+  screen_size_inches: 15.6
+  screen_orientation: rotating  # Unique rotating display
+  system: BYD DiLink 4.0
+  features:
+    - Rotating 15.6" touchscreen (portrait/landscape)
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Voice control with AI assistant
+    - OTA software updates
+    - 4G LTE connectivity
+    - Built-in apps (Spotify, navigation)
+    - WiFi hotspot
+  instrument_cluster:
+    type: digital
+    size_inches: 10.25
+    customizable: true
+
+# Driver assistance
+driver_assistance:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  lane_centering: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  automatic_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_attention_monitor: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  360_camera: true
+  automatic_parking: true
+  highway_assist: true  # Level 2 autonomous driving
+
+# Safety ratings
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2024
+  adult_occupant_score: 84
+  child_occupant_score: 86
+  vulnerable_road_users_score: 72
+  safety_assist_score: 85
+  airbags: 6
+
+# Lighting
+lighting:
+  headlights: LED
+  headlights_adaptive: true
+  headlights_matrix: false
+  daytime_running_lights: LED
+  taillights: LED_animated
+  ambient_lighting: true
+  ambient_lighting_colors: 64
+
+# Climate control
+climate:
+  zones: 2
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: true
+  heated_steering_wheel: true
+  ventilated_seats_front: false
+  air_filter: PM2.5
+
+# Wheels and tires
+wheels:
+  standard:
+    size_inches: 18
+    tire_size: 235/55R18
+  optional:
+    - size_inches: 19
+      tire_size: 235/50R19
+      range_impact_km: -15
+
+# Exterior colors
+colors:
+  - name: Atlantis Grey
+    type: metallic
+  - name: Atto Black
+    type: solid
+  - name: Boulder Grey
+    type: metallic
+  - name: Aurora Green
+    type: metallic
+  - name: Cosmos Black
+    type: metallic
+  - name: Champion White
+    type: metallic
+
+# Interior options
+interior:
+  upholstery: vegan_leather
+  trim: aluminum_accents
+  steering_wheel: leather
+  color_options:
+    - name: Black with grey accents
+    - name: Black with blue accents
+
+# Standard features
+standard_features:
+  - 15.6" rotating touchscreen
+  - 10.25" digital instrument cluster
+  - Wireless phone charging
+  - Panoramic glass roof with electric sunshade
+  - Power tailgate
+  - Keyless entry and start
+  - Remote climate control via app
+  - BYD Blade Battery (LFP chemistry)
+  - Heat pump
+  - V2L (Vehicle-to-Load) 3.3kW
+  - 360° camera system
+  - Automatic parking
+  - Highway assist Level 2
+  - 6 airbags
+  - LED adaptive headlights
+  - 18" alloy wheels
+  - Roof rails
+
+# Production information
+production:
+  start_date: "2024-06"
+  plant: BYD Zhengzhou Plant
+  country: China
+  notes: "2025 model year launched mid-2024 for European market"
+
+# Version and changelog
+version_info:
+  release_date: "2024-06"
+  changes_from_previous: "New model for 2025, launching BYD's compact SUV in Europe"
+  current_production: true
+
+# Notes
+notes: >
+  BYD Seal U Comfort is the entry-level trim bringing BYD's proven e-Platform 3.0 
+  technology to the competitive C-segment SUV market. With 500km WLTP range from 
+  71.8kWh LFP Blade Battery, it offers strong value versus VW ID.4 and similar SUVs.
+  
+  FWD configuration provides good efficiency (16.8 kWh/100km WLTP) and practical 
+  packaging with 552L trunk space. Elevated SUV driving position and 1000kg towing 
+  capacity make it ideal for families.
+  
+  Unique rotating 15.6" touchscreen inherited from Seal sedan is a standout feature 
+  in this segment. Standard equipment includes comprehensive driver assistance 
+  (Level 2 highway assist, automatic parking, 360° camera) and comfort features 
+  (panoramic roof, heat pump, wireless charging).
+  
+  LFP Blade Battery chemistry allows regular 100% charging without degradation 
+  concerns. Heat pump ensures efficient winter performance. V2L capability enables 
+  3.3kW external power supply for camping or emergency use.
+  
+  140kW DC fast charging reaches 10-80% in 28 minutes, competitive for 400V 
+  architecture. Real-world range of 420km mixed driving is excellent for daily use.
+  
+  Direct competitor to VW ID.4, Skoda Enyaq iV, and Hyundai Ioniq 5, but typically 
+  priced €3,000-5,000 lower with comparable equipment. Strong 8-year/200,000km 
+  battery warranty provides peace of mind.
+  
+  Euro NCAP 5-star rating confirms excellent safety credentials. Particularly strong 
+  child occupant score (86%) reflects family-friendly design.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.byd.com/eu/car/seal-u.html
+    - https://ev-database.org/
+    - https://www.euroncap.com/
