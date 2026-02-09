@@ -1,0 +1,257 @@
+id: lucid-air-grand-touring-awd-2025-de
+variant_id: lucid-air-grand-touring-awd-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2023-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 169900
+  price_including_vat: 169900
+  vat_rate_percent: 19
+  on_road_price: 171850  # Including delivery and registration
+  destination_charge: 1750
+  registration_fee: 200
+
+# Trim levels and configurations available in Germany
+trim_levels:
+  - name: Grand Touring AWD
+    price: 169900
+    description: Flagship Lucid Air with 830km WLTP range, 891hp AWD, adaptive air suspension, and maximum luxury
+    standard_features:
+      - 34" curved 5K Glass Cockpit display
+      - Glass Canopy roof with electrochromic dimming
+      - Premium Nappa leather seats with heating, ventilation, and massage (all positions)
+      - 18-way power driver seat with memory
+      - 12-way power passenger seat with memory
+      - 4-way power rear seats with massage
+      - Surreal Sound Pro 21-speaker audio (406W, Dolby Atmos) - STANDARD
+      - Dream Drive Pro ADAS (lidar, highway assist, auto lane change) - STANDARD
+      - Adaptive air suspension with ride height adjustment - STANDARD
+      - Quad-zone automatic climate control
+      - 350kW ultra-fast DC charging capability
+      - 22kW AC charging onboard
+      - V2L and V2H hardware capability
+      - Large frunk (283L) plus rear trunk (456L)
+      - 21" Aero Blade wheels standard
+      - Real wood trim accents
+      - LED matrix headlights
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 171850
+    description: Grand Touring AWD with delivery and registration, no options
+    included:
+      - All standard Grand Touring trim features
+      - Delivery charge (€1,750)
+      - Registration fee (€200)
+    
+  - name: Executive
+    total_price: 178350
+    description: Ultimate luxury configuration with Executive Rear Seat Package
+    included:
+      - Base Grand Touring AWD (€169,900)
+      - Executive Rear Seat Package (€5,000 - extended legroom, privacy screens)
+      - Metallic/Pearl Paint (€1,500)
+      - Delivery and registration (€1,950)
+
+# Incentives and subsidies
+incentives:
+  - name: No Federal EV Incentive
+    type: subsidy
+    amount: 0
+    description: German federal EV incentive (Umweltbonus) ended December 2023
+    notes: >
+      Lucid Air Grand Touring at €169,900 significantly exceeds €70,000 threshold 
+      for advantageous 0.25% company car tax rate. Standard 1% rate applies. Monthly 
+      taxable benefit €1,699. German federal EV incentive ended December 2023.
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_1_percent
+  monthly_taxable_benefit_eur: 1699  # €169,900 × 1%
+  annual_taxable_benefit_eur: 20388  # €1,699 × 12
+  comparable_ice_benefit_eur: 20388  # Same 1% rate as combustion
+  annual_tax_savings_eur: 0  # No savings vs combustion
+  notes: >
+    The Lucid Air Grand Touring at €169,900 DOES NOT qualify for the advantageous 
+    0.25% company car tax rate. Standard 1% rate applies. Exclusively suitable 
+    for private buyers seeking ultimate electric luxury sedan.
+
+# Total Cost of Ownership (3-year calculation)
+tco_analysis:
+  period_months: 36
+  annual_mileage_km: 30000  # Higher mileage for flagship long-range sedan
+  total_mileage_km: 90000
+  
+  purchase_cost: 171850
+  
+  energy_costs:
+    home_charging_kwh: 0.35
+    public_charging_kwh: 0.55
+    home_charging_percent: 70
+    public_charging_percent: 30
+    total_energy_cost_3yr: 7308  # 90,000km ÷ 6.90km/kWh × (0.7×€0.35 + 0.3×€0.55)
+  
+  maintenance_costs:
+    annual_service_cost: 600  # Highest for Grand Touring trim
+    total_maintenance_3yr: 1800
+  
+  insurance_annual: 1900  # Premium insurance for ultra-luxury flagship
+  insurance_3yr: 5700
+  
+  depreciation:
+    residual_value_percent: 48  # 48% after 3 years (highest trim, uncertain resale)
+    residual_value_eur: 81552
+    depreciation_3yr: 90298
+  
+  total_cost_3yr: 104956
+  cost_per_km: 1.17
+  
+  comparable_ice_costs:
+    vehicle: Mercedes-Benz S 580 4MATIC
+    purchase_price: 190000
+    fuel_cost_3yr: 19440  # 90,000km @ 9.0L/100km × €2.40/L
+    maintenance_3yr: 5400
+    insurance_3yr: 6600
+    depreciation_3yr: 95000  # 50% residual
+    total_cost_3yr: 126440
+    cost_per_km: 1.40
+  
+  savings_vs_ice: 21484
+
+# Financing options
+financing:
+  typical_apr_percent: 4.49
+  typical_term_months: 60
+  typical_down_payment_percent: 25
+  typical_monthly_payment_eur: 2549  # €169,900 @ 4.49% APR, 60mo, 25% down
+
+# Leasing options
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 30000
+  typical_down_payment_eur: 17000
+  typical_monthly_payment_eur: 2099  # Private lease
+  business_monthly_payment_eur: 1899  # Business lease
+
+# Charging (same capabilities as other Lucid Air variants)
+charging:
+  home:
+    wallbox_installation_cost_eur: 2000
+    electricity_rate_kwh: 0.35
+    cost_per_100km: 5.08  # 14.5 kWh/100km real-world × €0.35
+  
+  public:
+    - network: Ionity
+      monthly_fee: 11.99
+      dc_rate_kwh: 0.35
+      max_power_kw: 350
+      locations: 70+
+      notes: Best network for Lucid's ultra-fast 350kW charging capability
+
+# Delivery timeline
+delivery:
+  order_to_delivery_weeks: 20
+  current_wait_time_description: >
+    Lucid Air Grand Touring typically available within 20-24 weeks from order 
+    (imported from Arizona factory). Limited availability due to low production 
+    volume of flagship variant.
+
+# Warranty (same across all Lucid Air variants)
+warranty:
+  vehicle_years: 4
+  vehicle_km: 80000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 4
+
+# Market positioning
+competitors:
+  - vehicle: Mercedes-Benz EQS 580 4MATIC
+    price: 150300
+    range_wltp_km: 677
+    power_kw: 385
+    comparison: >
+      Lucid Grand Touring costs €19,600 more but offers 153km more range 
+      (830 vs 677km), 278kW more power (663 vs 385kW), faster acceleration 
+      (3.0s vs 4.5s), and ultra-fast 350kW charging (vs 200kW). Lucid 
+      provides superior EV technology; Mercedes offers traditional brand prestige.
+  
+  - vehicle: BMW i7 M70 xDrive
+    price: 180000
+    range_wltp_km: 560
+    power_kw: 485
+    comparison: >
+      BMW i7 M70 costs €10,100 more with 270km less range (560 vs 830km), 
+      178kW less power (485 vs 663kW), and slower charging (195kW vs 350kW). 
+      BMW offers iconic brand heritage and 7 Series prestige; Lucid delivers 
+      dramatically superior EV capabilities and value.
+  
+  - vehicle: Porsche Taycan Turbo S
+    price: 202456
+    range_wltp_km: 440
+    power_kw: 560
+    comparison: >
+      Porsche Taycan Turbo S costs €32,556 more with 390km less range 
+      (440 vs 830km - nearly half!), 103kW less power (560 vs 663kW), 
+      similar acceleration (2.8s vs 3.0s), and similar charging (320kW vs 350kW). 
+      Porsche offers legendary sports car dynamics and brand prestige; Lucid 
+      provides vastly superior range and daily usability at lower price.
+
+# Strengths (enhanced over Touring)
+strengths:
+  - Industry-leading 830km WLTP range (740km real-world) - highest among all luxury EVs
+  - Massive 112kWh battery enabling true long-distance travel without range anxiety
+  - Powerful 663kW/891hp dual-motor AWD (3.0s 0-100 km/h - supercar performance)
+  - Enhanced 350kW DC charging (vs 300kW on Pure/Touring) for fastest charging
+  - Adaptive air suspension standard (vs steel springs on Pure/Touring)
+  - Comprehensive ultra-luxury equipment (massaging seats all positions, real wood trim)
+  - 18-way power driver seat with 4-way power rear seats
+  - LED matrix headlights with adaptive beam
+  - Exceptional efficiency 12.9 kWh/100km despite 112kWh battery
+  - Compelling value versus BMW i7 M70 (€180k), Porsche Taycan Turbo S (€202k)
+
+# Best for
+best_for:
+  - Private buyers seeking absolute maximum electric range (830km WLTP / 740km real-world)
+  - Ultra-luxury buyers prioritizing cutting-edge EV technology over traditional brand prestige
+  - Frequent long-distance European travelers requiring minimal charging stops
+  - Performance enthusiasts wanting 891hp with luxury sedan comfort
+  - Tech-savvy affluent buyers valuing industry-leading efficiency and range
+  - Those seeking S-Class/7 Series levels of luxury with superior EV capabilities
+  - Buyers wanting adaptive air suspension and comprehensive luxury equipment
+
+notes: >
+  The Lucid Air Grand Touring AWD at €169,900 represents the pinnacle of electric 
+  luxury sedans, offering an unmatched combination of 830km WLTP range (740km 
+  real-world - highest in the segment), 663kW/891hp performance (3.0s 0-100 km/h), 
+  and comprehensive ultra-luxury equipment.
+  
+  The 112kWh battery pack enables genuine transcontinental European road trips 
+  without range anxiety. 350kW DC fast charging adds nearly 600km range in 
+  27 minutes (10-80%), making the Grand Touring the ultimate long-distance 
+  electric sedan.
+  
+  Standard adaptive air suspension, massaging seats in all positions, 18-way 
+  power driver seat, real wood trim, LED matrix headlights, and quad-zone 
+  climate create a first-class experience rivaling Mercedes S-Class and BMW 7 Series 
+  while delivering dramatically superior EV technology.
+  
+  At €169,900, the Grand Touring costs €19,600 MORE than Mercedes EQS 580 
+  (€150,300) but offers 153km more range, 278kW more power, and 150kW faster 
+  charging. Compared to BMW i7 M70 (€180,000), Lucid costs €10,100 LESS with 
+  270km more range and superior efficiency.
+  
+  This is the definitive choice for ultra-luxury buyers who want the longest-range 
+  electric sedan available (830km WLTP exceeds all competitors by 100-400km), 
+  combining S-Class levels of comfort with supercar performance (3.0s 0-100 km/h) 
+  and cutting-edge EV technology (350kW charging, 12.9 kWh/100km efficiency).
+  
+  NOT suitable for company car drivers due to 1% tax rate. Exclusively for private 
+  buyers seeking the ultimate electric luxury sedan experience without compromise.

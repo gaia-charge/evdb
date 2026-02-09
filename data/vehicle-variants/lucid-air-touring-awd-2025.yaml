@@ -1,0 +1,276 @@
+id: lucid-air-touring-awd-2025
+model_id: lucid-air
+name: Touring AWD
+model_year: 2025
+trim_level: touring
+market_availability:
+  - europe
+  - germany
+  - netherlands
+  - switzerland
+  - uk
+
+# Battery specifications
+battery:
+  total_kwh: 92
+  usable_kwh: 88
+  chemistry: NCA  # Nickel Cobalt Aluminum
+  voltage: 924  # 900V+ architecture
+  manufacturer: lucid
+  warranty:
+    duration_years: 8
+    duration_km: 160000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: true  # Advanced packaging
+
+# Motor and drivetrain
+motors:
+  layout: awd
+  total_count: 2
+  front:
+    type: permanent_magnet
+    power_kw: 198
+    power_hp: 266
+    torque_nm: 320
+    manufacturer: lucid
+  rear:
+    type: permanent_magnet
+    power_kw: 320
+    power_hp: 430
+    torque_nm: 630
+    manufacturer: lucid
+
+  combined:
+    total_power_kw: 518
+    total_power_hp: 696
+    total_torque_nm: 950
+
+drivetrain:
+  drive_type: awd
+  transmission: single_speed_reduction
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 3.4
+  top_speed_kmh: 250
+  top_speed_limited: true
+
+# Range and efficiency
+range:
+  wltp_km: 730
+  wltp_city_km: 910
+  wltp_highway_km: 640
+  epa_km: 732  # 455 miles EPA
+  real_world_mixed_km: 650
+  real_world_highway_km: 570
+  real_world_winter_km: 520
+
+efficiency:
+  wltp_kwh_per_100km: 12.5
+  epa_kwh_per_100km: 12.0  # 5.2 mi/kWh
+  real_world_kwh_per_100km: 13.5
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 22
+    phases: 3
+    time_0_100_hours: 4.2
+    onboard_charger_kw: 22
+  dc:
+    max_power_kw: 300
+    time_10_80_minutes: 24
+    time_10_80_km_added: 511  # 730km range × 70% = 511km
+    curve_description: >
+      Peak 300kW charging with 900V+ architecture maintained from 10-40% SoC, 
+      tapering to 200kW at 50%, 150kW at 60%, 100kW at 70%, and 50kW at 80%. 
+      Slightly longer charging time due to larger 92kWh battery pack. Real-world 
+      20-80% charging takes approximately 24 minutes on capable 350kW chargers.
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 9.6
+  v2h_capable: true  # Hardware capable, software-enabled
+  v2g_capable: false  # Not yet enabled in Europe
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4975
+  width_mm: 1939
+  height_mm: 1410
+  wheelbase_mm: 2960
+  ground_clearance_mm: 108
+  drag_coefficient: 0.197  # Lowest of any production car
+  frontal_area_m2: 2.53
+
+weight:
+  curb_weight_kg: 2465
+  gross_vehicle_weight_kg: 2900
+  payload_kg: 435
+  towing_capacity_braked_kg: 0  # Not rated for towing
+  towing_capacity_unbraked_kg: 0
+
+# Cargo and seating
+interior:
+  seating_capacity: 5
+  cargo_volume_liters: 456  # Rear trunk
+  cargo_volume_seats_down_liters: 627
+  frunk_volume_liters: 283  # Large frunk
+
+# Wheels and tires
+wheels:
+  standard:
+    size_front: "245/40 R20"
+    size_rear: "265/40 R20"
+    wheel_diameter_inches: 20
+  optional:
+    - size_front: "245/35 R21"
+      size_rear: "265/35 R21"
+      wheel_diameter_inches: 21
+
+# Suspension and brakes
+suspension:
+  front: double_wishbone
+  rear: multi_link
+  adaptive: false  # Steel springs standard on Touring
+  damping: passive
+
+brakes:
+  front: ventilated_disc
+  rear: ventilated_disc
+  regenerative: true
+  regenerative_max_power_kw: 300
+  one_pedal_driving: true
+
+# Technology and features
+technology:
+  adas_level: 2
+  features:
+    - adaptive_cruise_control
+    - lane_keeping_assist
+    - lane_centering
+    - automatic_emergency_braking
+    - blind_spot_monitoring
+    - rear_cross_traffic_alert
+    - traffic_sign_recognition
+    - parking_assist
+    - surround_view_camera
+    - automatic_parking
+    - highway_assist  # Dream Drive Pro standard on Touring
+  infotainment:
+    screen_size_inches: 34  # Curved 5K Glass Cockpit display
+    rotating_screen: false
+    apple_carplay: true
+    android_auto: true
+    wireless_connectivity: true
+    ota_updates: true
+    navigation: true
+    voice_control: true
+  audio:
+    system: surreal_sound_pro
+    speakers: 21  # Surreal Sound Pro standard on Touring
+    power_watts: 406
+
+# Standard equipment (Touring trim - includes Pure features plus)
+standard_equipment:
+  exterior:
+    - LED headlights with DRL
+    - LED taillights with Lucid signature light bar
+    - Glass Canopy roof (full-length electrochromic)
+    - Power-folding heated mirrors
+    - 20" Aero Blade alloy wheels (standard)
+    - Frameless windows
+    - Automatic wipers
+    - Flush door handles with proximity sensors
+    - Black brake calipers
+  interior:
+    - 34" curved 5K Glass Cockpit display
+    - 12.3" rear passenger display (retractable)
+    - Nappa leather steering wheel with heating
+    - Nappa leather seats with heating (front and rear)
+    - 12-way power driver seat with memory and massage
+    - 8-way power passenger seat with massage
+    - Wireless smartphone charging (15W)
+    - Tri-zone automatic climate control
+    - Air quality monitoring system
+    - HEPA air filtration
+    - Enhanced ambient lighting (multiple colors)
+    - Keyless entry and start
+    - Power trunk with kick sensor
+    - Spacious interior (limousine-like rear legroom)
+    - Santa Monica interior (premium Nappa leather)
+  safety:
+    - 5-star NHTSA rating (US)
+    - Top Safety Pick+ IIHS (US)
+    - 10 airbags (front, side, curtain, knee)
+    - ISOFIX child seat anchors (rear)
+    - Tire pressure monitoring system (TPMS)
+    - Electronic stability control (ESC)
+    - Traction control system (TCS)
+    - Hill start assist
+    - Anti-lock braking system (ABS)
+  technology:
+    - Dream Drive Pro (standard on Touring)
+    - Surreal Sound Pro Audio (21 speakers, Dolby Atmos)
+
+# Optional equipment
+optional_equipment:
+  - name: 21" Aero Sport Wheels
+    price_eur: 3000
+    description: Upgraded 21" wheels (slightly reduces range)
+  - name: Metallic/Pearl Paint
+    price_eur: 1500
+    description: Premium metallic or pearl paint finishes
+  - name: Stealth Look Package
+    price_eur: 3000
+    description: Black exterior accents, dark wheels, tinted glass
+  - name: Mojave Interior
+    price_eur: 2000
+    description: Alternative premium Nappa leather interior color scheme
+
+# Safety ratings
+safety:
+  nhtsa:
+    year: 2023
+    overall_stars: 5
+  iihs:
+    year: 2023
+    rating: top_safety_pick_plus
+  euro_ncap:
+    year: null  # Not yet tested by Euro NCAP
+    overall_stars: null
+
+# Energy consumption (official)
+energy_label:
+  efficiency_class: a_plus  # EU energy label A+ class
+  co2_emissions_wltp_g_per_km: 0
+
+# Notes
+notes: >
+  The Lucid Air Touring AWD represents the mid-range variant offering exceptional balance 
+  of performance, range, and luxury. With 730 km WLTP range (732 km EPA / 455 miles), 
+  518kW/696hp dual-motor AWD performance (3.4s 0-100 km/h), and comprehensive luxury 
+  equipment, the Touring delivers outstanding value in the ultra-luxury sedan segment.
+  
+  Key advantages over the Pure RWD include: larger 92kWh battery (+70km range), dual-motor 
+  AWD system (vs RWD), enhanced performance (3.4s vs 4.5s 0-100), standard Dream Drive Pro 
+  ADAS, standard Surreal Sound Pro 21-speaker audio, standard massaging front seats, and 
+  premium Nappa leather throughout.
+  
+  The Touring maintains Lucid's industry-leading efficiency (12.5 kWh/100km WLTP) and 
+  ultra-fast 300kW charging capability. The 900V+ architecture enables 24-minute 10-80% 
+  charging, adding over 500km range in a typical charging stop.
+  
+  Standard equipment is comprehensive, including features that are optional on competitors: 
+  Dream Drive Pro (€4,500 option on Mercedes EQS), Surreal Sound Pro (€5,000+ option on 
+  luxury sedans), massaging seats, and premium Nappa leather interior. This makes the 
+  Touring excellent value despite its premium positioning.
+  
+  The Touring competes directly with Mercedes-Benz EQS 450+ (€130k+), BMW i7 xDrive60 
+  (€140k+), and Tesla Model S Long Range (€105k). Lucid offers superior range (+80-100km), 
+  faster charging (300kW vs 200-250kW), better efficiency, and more standard luxury 
+  features at competitive pricing.
