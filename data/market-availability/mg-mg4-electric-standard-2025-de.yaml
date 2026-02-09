@@ -1,0 +1,134 @@
+id: mg-mg4-electric-standard-2025-de
+variant_id: mg-mg4-electric-standard-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2024-09"
+delivery_time_weeks: 4
+
+pricing:
+  base_price: 28990
+  price_including_vat: 28990
+  vat_rate_percent: 19
+  destination_charge: 890
+
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+available_colors:
+  - name: Dover White
+    code: DW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Diamond Red
+    code: DR
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Andes Grey
+    code: AG
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Holborn Blue
+    code: HB
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+  - name: Black Pearl
+    code: BP
+    type: metallic
+    price_add:
+      amount: 600
+      currency: EUR
+
+available_wheels:
+  - name: 17-inch alloy wheels
+    size_inches: 17
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+
+available_interiors:
+  - name: Black fabric
+    code: BF
+    price_add:
+      amount: 0
+      currency: EUR
+
+optional_equipment:
+  - name: Luxury Package
+    price: 1500
+    includes:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Auto climate control"
+  - name: Technology Package
+    price: 1200
+    includes:
+      - "360-degree camera"
+      - "Blind spot monitoring"
+
+market_info:
+  dealers_count: 200
+  service_centers_count: 250
+  warranty_years: 7
+  warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  free_charging_network: false
+  home_charger_included: false
+  roadside_assistance_years: 7
+
+market_notes: >
+  Entry-level MG4 at under €29,000 makes it one of the most affordable EVs in Germany.
+  LFP battery offers excellent longevity. Only 6.6 kW AC charging is a drawback.
+  7-year/150,000 km warranty is class-leading. Short delivery times due to good
+  availability. Very competitive with Dacia Spring, Citroën ë-C3, and Fiat 500e.
+
+company_car_tax:
+  gross_list_price: 28990
+  monthly_tax_base: 72.48
+  annual_tax_base: 869.70
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    MG4 Standard qualifies for 0.25% company car tax rate (well under €70k).
+    Extremely low tax base makes it one of the cheapest company cars to run.
+
+charging_costs:
+  home_charging:
+    electricity_rate_eur_per_kwh: 0.32
+    cost_per_100km: 5.60
+    cost_full_charge: 16.26
+  public_ac_charging:
+    electricity_rate_eur_per_kwh: 0.49
+    cost_per_100km: 8.58
+  public_dc_fast_charging:
+    electricity_rate_eur_per_kwh: 0.79
+    cost_per_100km: 13.83
+  comparison_ice_equivalent:
+    fuel_consumption_l_per_100km: 6.0
+    fuel_price_eur_per_liter: 1.85
+    cost_per_100km: 11.10
+    annual_savings_home_charging: 825
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  confidence_level: high
+  sources:
+    - https://www.mgmotor.eu/model/mg4
+  created_at: "2026-02-09"
+  created_by: Patricio

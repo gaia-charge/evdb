@@ -1,0 +1,117 @@
+# MG4 Electric Standard 2025
+id: mg-mg4-electric-standard-2025
+name: Standard
+model_id: mg-mg4-electric
+model_year: 2025
+variant_code: MG4STD25
+
+battery:
+  usable_kwh: 50.8
+  total_kwh: 51.0
+  chemistry: LFP
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 7
+  warranty_km: 150000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 350
+  wltp_city_km: 460
+  wltp_highway_km: 280
+  epa_km: null
+  real_world_km: 290
+  real_world_source: estimated
+
+charging:
+  ac_max_kw: 6.6
+  ac_phases: 1
+  ac_connector: Type2
+  dc_max_kw: 117
+  dc_connector: CCS2
+  dc_10_80_min: 35
+  dc_0_100_min: 65
+  dc_charge_curve:
+    - soc_percent: 10
+      power_kw: 115
+    - soc_percent: 20
+      power_kw: 117
+    - soc_percent: 30
+      power_kw: 115
+    - soc_percent: 40
+      power_kw: 100
+    - soc_percent: 50
+      power_kw: 85
+    - soc_percent: 60
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 55
+    - soc_percent: 80
+      power_kw: 40
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 12
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+motor:
+  count: 1
+  type: permanent_magnet
+  position: rear
+  total_power_kw: 125
+  total_power_hp: 170
+  total_torque_nm: 250
+
+drivetrain: RWD
+
+performance:
+  acceleration_0_100_kmh_s: 7.9
+  top_speed_kmh: 160
+
+consumption:
+  wltp_kwh_per_100km: 15.8
+  real_world_kwh_per_100km: 17.5
+  energy_efficiency_class: A
+
+weight:
+  curb_weight_kg: 1655
+  gross_weight_kg: 2079
+
+standard_equipment:
+  - 10.25" touchscreen infotainment
+  - 7" digital instrument cluster
+  - Apple CarPlay & Android Auto
+  - LED headlights
+  - Rear parking camera
+  - Rear parking sensors
+  - MG Pilot ADAS suite
+  - Lane keeping assist
+  - Automatic emergency braking
+  - Adaptive cruise control
+  - Keyless entry and start
+  - Manual air conditioning
+  - 17" alloy wheels
+
+optional_equipment:
+  - name: Luxury Package
+    description: Heated seats, heated steering wheel, auto climate
+    cost: 1500
+  - name: Technology Package
+    description: 360-degree camera, blind spot monitoring
+    cost: 1200
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  sources:
+    - https://www.mgmotor.eu/model/mg4
+    - https://ev-database.org/car/1640/MG-MG4-Electric-Standard-Range
+  last_updated: "2026-02-09"
+  notes: >
+    Entry-level MG4 Electric with 51 kWh LFP battery. One of the most affordable
+    EVs in Europe. RWD layout unique in segment. LFP battery offers excellent
+    longevity. AC charging limited to 6.6 kW single-phase. 2025 model year
+    continues with minor updates to infotainment software.
