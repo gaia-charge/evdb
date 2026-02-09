@@ -1,0 +1,146 @@
+# Vehicle Variant: XPENG G9 Performance AWD (2025)
+id: xpeng-g9-performance-awd-2025
+model_id: xpeng-g9
+name: Performance AWD
+variant_name: Performance AWD
+model_year: 2025
+trim_level: Performance
+production_years: "2025-present"
+
+overview: >
+  The XPENG G9 Performance AWD is the flagship variant with dual motors producing 423kW (575 PS) and 695 Nm torque, enabling 0-100 km/h in 4.2 seconds. It shares the 93.1kWh LFP battery with the Long Range but adds a front asynchronous motor for AWD capability. Unique to this variant: air suspension front and rear, 21-inch wheels, and a slightly lower ride height (1670mm vs 1680mm). DC charging matches the Long Range at up to 525kW. Despite the extra power, WLTP range remains a strong 540km.
+
+battery:
+  chemistry: LFP
+  supplier: CATL
+  total_kwh: 93.1
+  usable_kwh: 92.2
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 800
+  notes: "93.1kWh LFP battery from CATL, 800V SiC architecture"
+
+range:
+  wltp_km: 540
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_miles: null
+  real_world_km: 450
+  real_world_notes: "Estimated ~450km mixed driving"
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 630
+        power_kw: 11.0
+  dc:
+    max_power_kw: 525
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 480
+      - soc_percent: 20
+        power_kw: 525
+      - soc_percent: 30
+        power_kw: 510
+      - soc_percent: 40
+        power_kw: 460
+      - soc_percent: 50
+        power_kw: 400
+      - soc_percent: 60
+        power_kw: 320
+      - soc_percent: 70
+        power_kw: 230
+      - soc_percent: 80
+        power_kw: 145
+      - soc_percent: 90
+        power_kw: 70
+      - soc_percent: 100
+        power_kw: 22
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 12
+        power_kw: 525
+        notes: "10-80% in approximately 12 minutes at optimal conditions"
+  bidirectional:
+    v2l: true
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: dual
+  drive_type: AWD
+  total_power_kw: 423
+  total_power_hp: 575
+  total_torque_nm: 695
+  motor_type: mixed
+  motors:
+    - position: rear
+      power_kw: 258
+      power_hp: 351
+      torque_nm: 465
+      motor_type: asynchronous
+    - position: front
+      power_kw: 175
+      power_hp: 238
+      torque_nm: 287
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 4.2
+  top_speed_kmh: 200
+  notes: "0-100 km/h in 4.2 seconds, top speed 200 km/h"
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 20.1
+  consumption_real_world_kwh_per_100km: 22.5
+  efficiency_rating_eu: A
+  notes: "20.1 kWh/100km WLTP combined, CO2 efficiency class A"
+
+weight:
+  curb_weight_kg: 2395
+  gross_vehicle_weight_kg: 2910
+
+features:
+  standard:
+    - "14.96-inch center touchscreen with Xmart OS"
+    - "10.25-inch digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "DAB+ digital radio"
+    - "LED headlights"
+    - "Panoramic sunroof"
+    - "Heat pump climate control"
+    - "Wireless phone charger"
+    - "360-degree camera system"
+    - "XPILOT ASSIST (adaptive cruise + lane centering)"
+    - "Automatic parking assist"
+    - "Leather upholstery"
+    - "Powered tailgate"
+    - "V2L bidirectional charging"
+    - "21-inch alloy wheels"
+    - "Air suspension (front and rear)"
+    - "71-liter frunk"
+  optional:
+    - "Metallic paint (€1,000)"
+    - "Towbar electrically retractable (€1,260)"
+
+version:
+  release_date: "2025-07"
+  changes_from_previous: "2025 facelift with LFP battery, 800V architecture, dual motor AWD, air suspension"
+  notes: "2025 model year facelift (G9A), European specification, flagship variant"
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.xpeng.com/de/g9
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/xpeng/g9/1generation-facelift/341281/
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
