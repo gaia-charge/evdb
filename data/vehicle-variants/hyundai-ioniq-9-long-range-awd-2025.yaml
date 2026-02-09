@@ -1,0 +1,117 @@
+id: hyundai-ioniq-9-long-range-awd-2025
+name: Long Range AWD
+model_id: hyundai-ioniq-9
+model_year: 2025
+production_years:
+  start: 2025
+  end: null
+
+trim_level: long-range-awd
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 110.3
+  total_kwh: 116.0
+  chemistry: NCM
+  nominal_voltage_v: 697
+  cell_type: pouch
+  supplier: SK On
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+
+  pack:
+    configuration: "floor-mounted, 800V architecture"
+    weight_kg: 620
+    modules: null
+
+# Range
+range:
+  wltp_km: 570
+  wltp_source: manufacturer
+  wltp_city_km: 690
+  wltp_highway_km: 470
+
+  real_world_km: 480
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 10.5
+      "10_80": 7.0
+    onboard_charger_kw: 11
+    phases: 3
+
+  dc:
+    max_power_kw: 350
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 24
+
+# Motor & Performance
+motor:
+  type: permanent_magnet_synchronous
+  configuration: dual  # Front + Rear
+  total_power_kw: 225
+  total_power_ps: 306
+  total_torque_nm: 605
+  drive_type: awd
+
+  motors:
+    front:
+      power_kw: 65
+      torque_nm: 255
+    rear:
+      power_kw: 160
+      torque_nm: 350
+
+performance:
+  acceleration_0_100_kmh_s: 6.7
+  top_speed_kmh: 200
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 21.1
+  real_world_kwh_per_100km: 23.0
+
+# Weight & Towing
+weight:
+  curb_weight_kg: 2730
+  gross_vehicle_weight_kg: 3400
+
+towing:
+  braked_kg: 2500
+  unbraked_kg: 750
+  roof_load_kg: 100
+
+# Tires
+tires:
+  standard:
+    front: "255/50 R19"
+    rear: "255/50 R19"
+
+# Features
+v2l:
+  available: true
+  max_power_kw: 3.6
+  outlet_type: "230V socket + exterior port"
+
+heat_pump:
+  standard: true
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - "https://www.hyundai.com/eu/en/models/ioniq9.html"

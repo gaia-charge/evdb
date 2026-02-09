@@ -1,0 +1,193 @@
+# Hyundai IONIQ 9 Long Range RWD - German Market
+# Market: Germany (DE)
+# Currency: EUR (€)
+# Model Year: 2025
+
+id: hyundai-ioniq-9-long-range-rwd-2025-de
+variant_id: hyundai-ioniq-9-long-range-rwd-2025
+market: DE
+currency: EUR
+model_year: 2025
+
+# Availability
+availability:
+  status: available
+  release_date: "2025-06"
+  order_status: orderable
+  delivery_time_weeks: 16
+  production_location: "Ulsan Plant, South Korea"
+
+# Pricing
+pricing:
+  base_price: 56900
+  destination_charge: 1190
+  total_msrp: 58090
+
+  trim_levels:
+    - name: "Style"
+      price: 56900
+      description: "Entry trim with comprehensive standard equipment"
+
+    - name: "Select"
+      price: 62900
+      price_difference: 6000
+      description: "Mid-level with premium comfort and tech features"
+
+    - name: "Vertex"
+      price: 68900
+      price_difference: 12000
+      description: "Top trim with luxury appointments"
+
+# Standard Equipment
+standard_equipment:
+  exterior:
+    - "19-inch alloy wheels"
+    - "Parametric Pixel LED headlights"
+    - "Parametric Pixel LED taillights"
+    - "Dynamic Welcome Light"
+    - "Flush door handles"
+    - "Privacy glass"
+    - "Roof rails"
+    - "Power tailgate"
+
+  interior:
+    - "Dual 12-inch panoramic displays"
+    - "Hyundai AI Assistant (ChatGPT)"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "Digital Key 2.0 (NFC + UWB)"
+    - "3-row seating (6 or 7 seats)"
+    - "Heated front seats"
+    - "Dual-zone automatic climate control with heat pump"
+    - "6x 100W USB-C ports"
+    - "Wireless smartphone charging"
+    - "V2L (3.6kW)"
+    - "Ambient lighting"
+
+  technology:
+    - "Highway Driving Assist 2 (Level 2)"
+    - "Smart Cruise Control with Stop & Go"
+    - "Lane Following Assist"
+    - "Forward Collision-Avoidance Assist"
+    - "Blind-Spot Collision-Avoidance Assist"
+    - "Rear Cross-Traffic Collision-Avoidance Assist"
+    - "Parking Distance Warning (front & rear)"
+    - "Bluelink connected services"
+    - "Over-the-air software updates"
+    - "Remote Smart Parking Assist 2"
+
+# Optional Equipment
+optional_equipment:
+  packages:
+    - name: "Premium Package"
+      price: 3500
+      available_trims: ["Select", "Vertex"]
+      includes:
+        - "Ventilated front seats"
+        - "Heated 2nd row seats"
+        - "Heated steering wheel"
+        - "Bose Premium Audio"
+
+    - name: "Vision Package"
+      price: 2490
+      available_trims: ["all"]
+      includes:
+        - "Digital Side Mirrors (DSM)"
+        - "Digital Centre Mirror (DCM)"
+        - "Surround View Monitor (360°)"
+        - "Blind-Spot View Monitor"
+
+  individual_options:
+    - name: "Panoramic sunroof"
+      price: 1600
+      available_trims: ["all"]
+
+    - name: "21-inch alloy wheels"
+      price: 1800
+      available_trims: ["Select", "Vertex"]
+      impact_range_km: -40
+
+    - name: "Tow hitch (electrically foldable)"
+      price: 1250
+      available_trims: ["all"]
+      towing_capacity_kg: 2500
+
+    - name: "Premium paint (metallic/pearl)"
+      price: 1095
+      available_trims: ["all"]
+
+# Colors
+colors:
+  standard:
+    - name: "Atlas White"
+      hex: "#F5F5F5"
+      price: 0
+      type: solid
+
+  metallic:
+    - name: "Abyss Black Pearl"
+      hex: "#1C1C1C"
+      price: 895
+      type: pearl
+
+    - name: "Nocturne Gray Metallic"
+      hex: "#4A4A4A"
+      price: 895
+      type: metallic
+
+    - name: "Celadon Gray Metallic"
+      hex: "#6B7B6B"
+      price: 1095
+      type: metallic
+
+    - name: "Biophilic Blue Pearl"
+      hex: "#2B4B6B"
+      price: 1095
+      type: pearl
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit (Dienstwagen)"
+    amount: 0
+    type: tax_credit
+    description: "0.25% monthly tax rate for BEVs under €70,000 gross list price"
+    notes: "0.25% × €56,900 = €142/month vs €569/month for ICE (1% rule). Saves €5,124/year"
+
+  - name: "Kfz-Steuer (Road Tax) Exemption"
+    amount: 0
+    type: tax_exemption
+    description: "Electric vehicles exempt from road tax until 2030"
+
+  - name: "THG-Quote"
+    amount: 300
+    type: subsidy
+    description: "Annual CO2 quota trading income"
+
+# Warranty
+warranty:
+  vehicle:
+    duration_years: 5
+    duration_km: 100000
+  battery:
+    duration_years: 8
+    duration_km: 160000
+    capacity_guarantee_percent: 70
+  roadside_assistance:
+    duration_years: 5
+
+# Running Costs
+running_costs:
+  electricity_home:
+    annual_km: 15000
+    consumption_kwh_per_100km: 21.2
+    cost_per_kwh: 0.30
+    annual_cost: 954
+    cost_per_km: 0.064
+
+# Metadata
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - "https://www.hyundai.com/eu/en/models/ioniq9.html"
+  price_date: "2026-02-09"
