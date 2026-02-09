@@ -1,0 +1,148 @@
+# Vehicle Variant: Mercedes-Benz GLC 400 4MATIC (2026)
+id: mercedes-benz-glc-400-4matic-2026
+model_id: mercedes-benz-glc-electric
+name: GLC 400 4MATIC
+variant_name: "400 4MATIC"
+model_year: 2026
+trim_level: "400 4MATIC"
+production_years: "2026-present"
+
+overview: >
+  The Mercedes-Benz GLC 400 4MATIC is the launch variant of the all-electric GLC, featuring dual motors
+  with 360kW (489 PS) and 800Nm torque on the EA-M platform with 800V architecture. With a 100kWh battery
+  delivering up to 715km WLTP range and 330kW DC fast charging, it's a compelling premium electric SUV.
+  The 4MATIC AWD system provides confident all-weather traction, while 0-100 km/h in 4.3 seconds ensures
+  strong performance.
+
+battery:
+  chemistry: NMC
+  supplier: null
+  total_kwh: 100.0
+  usable_kwh: 94.0
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 800
+  notes: "800V architecture on EA-M platform, prismatic NMC cells"
+
+range:
+  wltp_km: 715
+  wltp_city_km: null
+  wltp_highway_km: 568
+  epa_miles: null
+  real_world_km: 500
+  real_world_notes: "Real-world range varies: ~500km mixed, ~715km city, ~470km highway (mild weather)"
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 615
+        power_kw: 11.0
+  dc:
+    max_power_kw: 330
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 330
+      - soc_percent: 20
+        power_kw: 310
+      - soc_percent: 30
+        power_kw: 280
+      - soc_percent: 40
+        power_kw: 240
+      - soc_percent: 50
+        power_kw: 200
+      - soc_percent: 60
+        power_kw: 160
+      - soc_percent: 70
+        power_kw: 120
+      - soc_percent: 80
+        power_kw: 80
+      - soc_percent: 90
+        power_kw: 50
+      - soc_percent: 100
+        power_kw: 20
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 22
+        power_kw: 190
+        notes: "10-80% in approximately 22 minutes at 190kW average"
+  bidirectional:
+    v2l: false
+    v2l_notes: "Announced but not yet confirmed at launch"
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: dual
+  drive_type: AWD
+  total_power_kw: 360
+  total_power_hp: 489
+  total_torque_nm: 800
+  motor_type: permanent_magnet
+  motors:
+    - position: front
+      power_kw: 140
+      torque_nm: 300
+      motor_type: permanent_magnet
+    - position: rear
+      power_kw: 220
+      torque_nm: 500
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 4.3
+  top_speed_kmh: 210
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 14.9
+  consumption_real_world_kwh_per_100km: 18.8
+  notes: "14.9 kWh/100km WLTP (TEL), real-world ~18.8 kWh/100km"
+
+weight:
+  curb_weight_kg: 2535
+  gross_vehicle_weight_kg: 3040
+
+dimensions:
+  length_mm: 4845
+  width_mm: 1913
+  height_mm: 1644
+  wheelbase_mm: 2972
+  cargo_volume_liters: 570
+  cargo_volume_max_liters: 1740
+  frunk_liters: 128
+  towing_capacity_kg: 2400
+
+features:
+  standard:
+    - "MBUX with MB.OS"
+    - "Superscreen display"
+    - "Heat pump"
+    - "AIRMATIC air suspension"
+    - "360-degree camera"
+    - "Battery preconditioning"
+    - "Roof rails"
+    - "128L frunk"
+  optional:
+    - "DRIVE PILOT (Level 3)"
+    - "Augmented reality HUD"
+    - "Burmester surround sound"
+    - "ENERGIZING Plus package"
+
+version:
+  release_date: "2026-Q1"
+  notes: "MY2026 launch variant, first all-electric GLC"
+
+metadata:
+  data_quality: estimated
+  data_source: ev-database
+  sources:
+    - https://ev-database.org/car/3296/Mercedes-Benz-GLC-400-4MATIC
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
