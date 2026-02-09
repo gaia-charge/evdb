@@ -1,0 +1,183 @@
+id: bmw-i4-edrive40-2025
+name: eDrive40
+model_id: bmw-i4
+model_year: 2025
+production_years:
+  start: 2021
+  end: null
+
+trim_level: base
+market_position: base
+
+# Battery Specifications
+battery:
+  usable_kwh: 80.7
+  total_kwh: 83.9
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: prismatic
+  supplier: CATL / Samsung SDI
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "floor-mounted"
+    weight_kg: 540
+    cells: 188
+
+# Range
+range:
+  wltp_km: 590
+  wltp_source: manufacturer
+  
+  epa_km: 486
+  epa_source: manufacturer
+  
+  real_world_km: 480
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-20°C, eco mode"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 8.25  # 11kW
+    onboard_charger_kw: 11
+    phases: 3
+  
+  dc:
+    max_power_kw: 205
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31
+      "0_100": 52
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 180
+      - soc_percent: 10
+        power_kw: 205
+      - soc_percent: 30
+        power_kw: 205
+      - soc_percent: 50
+        power_kw: 160
+      - soc_percent: 70
+        power_kw: 100
+      - soc_percent: 80
+        power_kw: 65
+      - soc_percent: 90
+        power_kw: 35
+      - soc_percent: 100
+        power_kw: 15
+
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: rear
+    type: synchronous
+    max_power_kw: 250
+    max_torque_nm: 430
+    cooling: liquid
+
+drivetrain:
+  type: rwd
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 430
+
+performance:
+  acceleration_0_100_kmh_s: 5.7
+  top_speed_kmh: 190
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 2125
+  gross_weight_kg: 2665
+  payload_kg: 540
+  towing_capacity_kg: 0  # Not rated for towing
+  
+efficiency:
+  wltp_kwh_per_100km: 16.1
+  epa_kwh_per_100km: 16.6
+  real_world_kwh_per_100km: 16.8
+  
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 19.5
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 22.1
+
+# Features & Options
+standard_features:
+  - "BMW Curved Display"
+  - "BMW Operating System 8.5"
+  - "3-zone automatic climate control"
+  - "Heat pump"
+  - "LED headlights"
+  - "18-inch alloy wheels"
+  - "Sport seats"
+  - "Parking sensors front/rear"
+  - "BMW Intelligent Personal Assistant"
+
+optional_packages:
+  - name: "M Sport Package"
+    features:
+      - "M Sport suspension"
+      - "19-inch M wheels"
+      - "M Sport steering wheel"
+      - "M Sport brakes"
+  
+  - name: "Driving Assistant Professional"
+    features:
+      - "Active cruise control with Stop & Go"
+      - "Steering and lane control assistant"
+      - "Active side collision protection"
+      - "Highway Assistant"
+
+colors:
+  standard:
+    - "Alpine White"
+    - "Mineral Grey Metallic"
+    - "Black Sapphire Metallic"
+  premium:
+    - "Portimao Blue"
+    - "Brooklyn Grey"
+    - "Tanzanite Blue II"
+    - "Skyscraper Grey Metallic"
+
+# Version Information
+version:
+  facelift: false
+  major_changes:
+    - "Updated to BMW Operating System 8.5"
+    - "Enhanced driver assistance features"
+    - "New exterior color options"
+
+# Market & Pricing Notes
+notes: >
+  The 2025 i4 eDrive40 is the base RWD model with excellent efficiency and range.
+  The 400V architecture limits DC charging to ~200kW peak. Real-world range
+  in mixed conditions is around 480km. Minor updates for 2025 include OS 8.5
+  and enhanced driver assistance features. The vehicle shares the same platform
+  as the gasoline 4-series, resulting in some compromises (smaller frunk,
+  higher weight) compared to dedicated EV platforms.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://www.bmw.com/en/all-models/i-series/i4/2025/bmw-4-series-gran-coupe-inspire.html
+    - https://www.bmw.de/de/all-models/i-series/i4/2025/bmw-i4-inspire.html
