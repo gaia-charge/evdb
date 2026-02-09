@@ -1,0 +1,216 @@
+id: renault-megane-e-tech-ev40-equilibre-2025
+name: EV40 Equilibre
+model_id: renault-megane-e-tech
+model_year: 2025
+production_years:
+  start: 2022
+  end: null
+
+trim_level: equilibre
+market_position: entry
+
+# Battery Specifications
+battery:
+  usable_kwh: 40
+  total_kwh: 42
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
+  cell_type: pouch
+  supplier: LG Energy Solution / Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "flat underbody"
+    weight_kg: 300
+    cells: 192
+  
+  notes: >
+    The 40 kWh battery is optimized for urban and suburban driving, offering
+    a practical range at an attractive price point. LG Chem NMC chemistry
+    provides good energy density in a compact package.
+
+# Range
+range:
+  wltp_km: 300
+  wltp_source: manufacturer
+  
+  real_world_km: 255
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
+
+# Consumption
+consumption:
+  wltp_kwh_per_100km: 13.3
+  real_world_kwh_per_100km: 15.7
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 7.4
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 5.5  # 7.4kW
+    onboard_charger_kw: 7.4
+    phases: 1
+  
+  dc:
+    max_power_kw: 85
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "15_80": 30
+      "0_100": 50
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 60
+      - soc_percent: 10
+        power_kw: 85
+      - soc_percent: 30
+        power_kw: 85
+      - soc_percent: 50
+        power_kw: 75
+      - soc_percent: 70
+        power_kw: 50
+      - soc_percent: 80
+        power_kw: 30
+      - soc_percent: 90
+        power_kw: 18
+      - soc_percent: 100
+        power_kw: 10
+    
+    notes: "Good charging speed for the battery size, 85 kW peak"
+
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 96
+    max_torque_nm: 250
+    cooling: liquid
+
+drivetrain:
+  type: fwd
+  total_power_kw: 96
+  total_power_hp: 130
+  total_torque_nm: 250
+
+performance:
+  acceleration_0_100_kmh_s: 10.0
+  top_speed_kmh: 150
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 13.3
+  wltp_source: manufacturer
+  real_world_kwh_per_100km: 15.7
+  
+  highway:
+    kmh: 120
+    kwh_per_100km: 18.5
+    range_km: 216
+  
+  city:
+    kwh_per_100km: 13.5
+    range_km: 296
+
+# Physical specs
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
+
+weight:
+  curb_weight_kg: 1624
+  gross_vehicle_weight_kg: 2060
+  max_payload_kg: 436
+
+interior:
+  seating_capacity: 5
+  cargo_volume_l: 440
+  cargo_volume_max_l: 1332
+  frunk_volume_l: 0
+
+# Features
+features:
+  exterior:
+    - "18-inch alloy wheels"
+    - "Full LED headlights with C-shape DRL"
+    - "LED taillights with distinctive light signature"
+    - "Body-colored door handles"
+    - "Rear parking sensors"
+    - "Electrically folding mirrors"
+    - "Panoramic glass roof"
+  
+  interior:
+    - "12-inch portrait touchscreen (OpenR Link)"
+    - "Google built-in (Maps, Assistant, Play Store)"
+    - "12.3-inch digital instrument cluster"
+    - "Fabric upholstery"
+    - "Automatic climate control"
+    - "Heat pump (standard)"
+    - "Wireless phone charging"
+    - "USB-A and USB-C ports"
+    - "Multi-Sense drive modes"
+    - "One Pedal driving mode"
+  
+  safety:
+    - "6 airbags (front, side, curtain)"
+    - "ABS with EBD"
+    - "Electronic stability control"
+    - "Traction control"
+    - "ISOFIX child seat anchors"
+    - "Tire pressure monitoring"
+    - "Rear parking sensors"
+    - "Rear view camera"
+  
+  driver_assistance:
+    - "Active Emergency Braking System"
+    - "Lane Departure Warning"
+    - "Lane Keeping Assist"
+    - "Traffic Sign Recognition with speed limiter"
+    - "Driver attention alert"
+    - "Hill start assist"
+    - "Electric parking brake with auto-hold"
+    - "Cruise control with speed limiter"
+
+options_packages:
+  - name: "Winter Pack"
+    price_eur: 450
+    items:
+      - "Heated front seats"
+      - "Heated steering wheel"
+  - name: "Comfort Pack"
+    price_eur: 800
+    items:
+      - "Hands-free parking"
+      - "360-degree camera"
+      - "Front parking sensors"
+
+notes: >
+  The EV40 Equilibre is the entry-level Megane E-Tech Electric, offering
+  excellent value with 300 km WLTP range (255 km real-world). The 40 kWh
+  battery is perfectly sized for daily commuting and urban driving, with
+  85 kW DC fast charging allowing 15-80% in just 30 minutes. Standard
+  equipment is generous, including the large 12-inch touchscreen with
+  Google built-in, heat pump, and panoramic glass roof. The Equilibre trim
+  provides a premium feel at an accessible price point.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.renault.com/megane-e-tech-electric
+    - https://www.renault.de/modelle/megane-elektro.html
+    - https://ev-database.org/car/1613/Renault-Megane-E-Tech-EV40

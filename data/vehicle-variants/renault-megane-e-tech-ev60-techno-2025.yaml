@@ -1,134 +1,221 @@
-# Renault Megane E-Tech EV60 Techno (2025)
 id: renault-megane-e-tech-ev60-techno-2025
-name: Megane E-Tech EV60 Techno
+name: EV60 Techno
 model_id: renault-megane-e-tech
 model_year: 2025
-variant_code: EV60-TECHNO
+production_years:
+  start: 2022
+  end: null
 
+trim_level: techno
+market_position: mid
+
+# Battery Specifications
 battery:
-  usable_kwh: 60.0
-  total_kwh: 62.0
-  chemistry: NMC
+  usable_kwh: 60
+  total_kwh: 62
+  chemistry: NMC  # Nickel Manganese Cobalt
+  nominal_voltage_v: 400
   cell_type: pouch
-  manufacturer: "LG Energy Solution"
+  supplier: LG Energy Solution / Envision AESC
   warranty_years: 8
   warranty_km: 160000
-  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  
+  pack:
+    configuration: "flat underbody"
+    weight_kg: 450
+    cells: 288
+  
+  notes: >
+    The 60 kWh battery provides excellent range for daily use and longer
+    journeys. Features Renault's Optimax Charge system supporting up to
+    130 kW DC fast charging for optimal charging times.
 
+# Range
 range:
   wltp_km: 450
-  wltp_city_km: 580
-  wltp_highway_km: 360
+  wltp_source: manufacturer
+  
   real_world_km: 385
-  real_world_source: "EV Database winter/summer average"
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
 
+# Consumption
+consumption:
+  wltp_kwh_per_100km: 13.3
+  real_world_kwh_per_100km: 15.6
+
+# Charging
 charging:
-  ac_max_kw: 22  # Three-phase 22kW standard
-  ac_phases: 3
-  ac_connector: Type2
-  dc_max_kw: 130
-  dc_connector: CCS2
-  dc_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 120
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 75
-    - soc_percent: 70
-      power_kw: 55
-    - soc_percent: 80
-      power_kw: 40
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
-  time_15_to_80_percent_min: 30
-  time_10_to_80_percent_min: 32
-  charging_speed_kmh: 650  # km of range per hour at peak
-  plug_and_charge: true
+  ac:
+    max_power_kw: 22
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 3.0  # 22kW three-phase
+    onboard_charger_kw: 22
+    phases: 3
+  
+  dc:
+    max_power_kw: 130
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "15_80": 30
+      "0_100": 50
+    
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 85
+      - soc_percent: 10
+        power_kw: 130
+      - soc_percent: 30
+        power_kw: 130
+      - soc_percent: 50
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 75
+      - soc_percent: 80
+        power_kw: 42
+      - soc_percent: 90
+        power_kw: 24
+      - soc_percent: 100
+        power_kw: 12
+    
+    notes: "Optimax Charge: 130 kW peak DC fast charging, 15-80% in 30 minutes"
 
-bidirectional:
-  v2l: true
-  v2l_max_kw: 3.0  # Via adapter
-  v2h: false
-  v2g: false
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
 
-performance:
-  drive_type: FWD
-  motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 300
+# Motors & Performance
+motors:
+  - position: front
+    type: permanent-magnet-synchronous
+    max_power_kw: 160
+    max_torque_nm: 300
+    cooling: liquid
+
+drivetrain:
+  type: fwd
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
-  acceleration_0_100_kmh_sec: 7.5
-  acceleration_0_60_mph_sec: 7.1
-  top_speed_kmh: 160  # Electronically limited
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 160
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 13.3
+  wltp_source: manufacturer
+  real_world_kwh_per_100km: 15.6
+  
+  highway:
+    kmh: 120
+    kwh_per_100km: 18.2
+    range_km: 330
+  
+  city:
+    kwh_per_100km: 13.2
+    range_km: 455
+
+# Physical specs
+dimensions:
+  length_mm: 4210
+  width_mm: 1780
+  height_mm: 1505
+  wheelbase_mm: 2700
 
 weight:
-  curb_weight_kg: 1636
-  gross_weight_kg: 2086
-  max_payload_kg: 450
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
+  curb_weight_kg: 1710
+  gross_vehicle_weight_kg: 2150
+  max_payload_kg: 440
 
-efficiency:
-  wltp_kwh_per_100km: 15.8
-  wltp_kwh_per_100km_city: 13.5
-  wltp_kwh_per_100km_highway: 19.2
-  real_world_kwh_per_100km: 17.2
-  energy_efficiency_class: "A+"  # EU energy label
+interior:
+  seating_capacity: 5
+  cargo_volume_l: 440
+  cargo_volume_max_l: 1332
+  frunk_volume_l: 0
 
-wheels_tires:
-  standard_size_front: "205/55 R19"
-  standard_size_rear: "205/55 R19"
-  wheel_sizes_available:
-    - "18 inch (optional, +15km range)"
-    - "19 inch (standard)"
-    - "20 inch (optional, -10km range)"
+# Features
+features:
+  exterior:
+    - "20-inch diamond-cut alloy wheels"
+    - "Full LED Pure Vision headlights"
+    - "LED taillights with 3D effect"
+    - "Body-colored door handles with chrome details"
+    - "Front and rear parking sensors"
+    - "Electrically folding and heated mirrors"
+    - "Panoramic glass roof with electric sunblind"
+    - "Chrome window surrounds"
+  
+  interior:
+    - "12-inch portrait touchscreen (OpenR Link)"
+    - "Google built-in (Maps, Assistant, Play Store)"
+    - "12.3-inch digital instrument cluster"
+    - "Leather/TEP upholstery"
+    - "Automatic dual-zone climate control"
+    - "Heat pump (standard)"
+    - "Heated front seats"
+    - "Heated steering wheel"
+    - "Wireless phone charging"
+    - "USB-A and USB-C ports (front and rear)"
+    - "Harman Kardon premium audio (9 speakers)"
+    - "Multi-Sense drive modes (Eco, Comfort, Sport, Perso)"
+    - "One Pedal driving mode"
+    - "Ambient lighting with customizable colors"
+  
+  safety:
+    - "6 airbags (front, side, curtain)"
+    - "ABS with EBD"
+    - "Electronic stability control"
+    - "Traction control"
+    - "ISOFIX child seat anchors"
+    - "Tire pressure monitoring"
+    - "Front and rear parking sensors"
+    - "360-degree camera"
+  
+  driver_assistance:
+    - "Adaptive Cruise Control with Stop & Go"
+    - "Active Emergency Braking System"
+    - "Lane Departure Warning and Lane Keeping Assist"
+    - "Lane Centering Assist (Highway and Traffic Jam Companion)"
+    - "Blind Spot Warning"
+    - "Traffic Sign Recognition with speed adaptation"
+    - "Driver attention alert"
+    - "High beam assist"
+    - "Hands-free parking"
+    - "Hill start assist"
+    - "Electric parking brake with auto-hold"
 
-technology:
-  adas_level: 2
-  adas_features:
-    - "Adaptive cruise control with Stop&Go"
-    - "Lane keeping assist"
-    - "Lane centering assist"
-    - "Traffic sign recognition"
-    - "Automatic emergency braking"
-    - "Blind spot monitoring"
-    - "Rear cross-traffic alert"
-    - "360-degree camera (optional)"
-    - "Park assist (optional)"
-  connectivity:
-    - "Google Built-in (Maps, Assistant, Play Store)"
-    - "My Renault app remote control"
-    - "OTA software updates"
-    - "4G LTE connectivity"
-    - "Wireless Apple CarPlay / Android Auto"
-  special_features:
-    - "One-pedal driving (B mode)"
-    - "Multi-Sense drive modes (Eco, Comfort, Sport, My Sense)"
-    - "Pre-conditioning via app"
-    - "Optimised Eco mode for maximum range"
+options_packages:
+  - name: "Iconic Upgrade Pack"
+    price_eur: 1200
+    items:
+      - "Alcantara dashboard trim"
+      - "Premium carpet mats"
+      - "Acoustic windshield"
+
+notes: >
+  The EV60 Techno represents the sweet spot in the Megane E-Tech lineup,
+  offering 450 km WLTP range (385 km real-world) with the larger 60 kWh
+  battery and more powerful 160 kW (218 hp) motor for spirited performance
+  (7.4s 0-100 km/h). The Techno trim adds premium features like 20-inch
+  wheels, Harman Kardon audio, heated seats and steering wheel, and advanced
+  driver assistance including Highway Companion. The 130 kW Optimax Charge
+  system enables rapid charging, making this variant ideal for both daily
+  commuting and longer journeys. The 22 kW AC onboard charger is a significant
+  advantage for home and public AC charging.
 
 metadata:
-  data_quality: verified
   created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  updated_at: null
+  data_quality: verified
   sources:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://ev-database.org/car/1650/Renault-Megane-E-Tech-EV60"
-    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-electric/"
-  notes: "Most popular Megane E-Tech variant. Excellent balance of range (450km WLTP), performance (218hp), and charging speed (130kW). European Car of the Year 2023 winner. Techno trim offers strong equipment level including Google Built-in infotainment, 22kW AC charging, heat pump, and comprehensive safety features. Highly efficient with real-world consumption around 17.2kWh/100km. Perfect for European buyers seeking a stylish, tech-forward compact EV."
+    - https://www.renault.com/megane-e-tech-electric
+    - https://www.renault.de/modelle/megane-elektro.html
+    - https://ev-database.org/car/1614/Renault-Megane-E-Tech-EV60
