@@ -1,0 +1,166 @@
+id: mercedes-benz-cla-350-4matic-2026
+name: "Mercedes-Benz CLA 350 4MATIC"
+model_id: mercedes-benz-cla
+variant_name: "350 4MATIC"
+model_year: 2026
+
+# Battery specifications
+battery:
+  usable_kwh: 85.0
+  total_kwh: 90.0
+  chemistry: NMC
+  cells: null
+  supplier: null
+  modules: null
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling"
+  architecture_volt: 800
+
+# Range specifications
+range:
+  wltp_km: 723  # Average of TEL 773 and TEH 672
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: null
+  real_world_km: 575
+
+  real_world_mild_weather_km: 670
+  real_world_cold_weather_km: 475
+
+# Charging specifications
+charging:
+  ac_max_kw: 11
+  ac_charge_time_0_100_hours: 9.25
+
+  dc_max_kw: 353
+  dc_charge_time_10_80_minutes: 16
+  dc_charge_time_0_100_minutes: null
+  dc_charge_speed_kmh: 1500
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 353
+    - soc_percent: 30
+      power_kw: 300
+    - soc_percent: 50
+      power_kw: 250
+    - soc_percent: 70
+      power_kw: 180
+    - soc_percent: 80
+      power_kw: 120
+
+  connector_ac: Type2
+  connector_dc: CCS2
+  onboard_charger_kw: 11
+  onboard_charger_optional_kw: 22
+  plug_and_charge: yes
+  preconditioning: yes
+
+# Performance specifications
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 80
+      torque_nm: 200
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 200
+      torque_nm: 335
+
+  total_power_kw: 260
+  total_power_hp: 354
+  total_torque_nm: 515
+
+  acceleration_0_100_kmh_sec: 4.9
+  top_speed_kmh: 210
+
+  drive_modes:
+    - "ECO"
+    - "Comfort"
+    - "Sport"
+    - "Individual"
+
+# Weight
+weight:
+  curb_weight_kg: 2135
+  gross_weight_kg: 2575
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 12.5  # Rated (TEL: 125 Wh/km incl. losses, vehicle: 110)
+  real_world_kwh_per_100km: 14.8
+  co2_emissions_wltp_g_per_km: 0
+
+# Additional features
+features:
+  adas_level: 2
+  autonomous_features:
+    - "Active Distance Assist DISTRONIC"
+    - "Active Steering Assist"
+    - "Active Brake Assist"
+    - "Active Lane Keeping Assist"
+    - "Active Blind Spot Assist"
+    - "Traffic Sign Assist"
+    - "Attention Assist"
+    - "PRE-SAFE"
+
+  infotainment:
+    - "MBUX Superscreen (triple display)"
+    - "MB.OS operating system"
+    - "Navigation with Electric Intelligence"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "AI-powered Voice Assistant"
+    - "Augmented Reality Head-Up Display (optional)"
+
+  comfort:
+    - "Dual-zone automatic climate control"
+    - "Climate pre-conditioning via app"
+    - "Heat pump standard"
+    - "Ambient lighting"
+    - "Electric tailgate"
+    - "Wireless smartphone charging"
+
+  connectivity:
+    - "Mercedes me Connect"
+    - "Over-the-air updates (MB.OS)"
+    - "Mercedes me Charge"
+    - "Plug & Charge (ISO 15118-2)"
+
+# Version information
+version:
+  trim_level: "350 4MATIC"
+  production_location: "Rastatt, Germany"
+  build_quality: premium
+
+# Metadata
+metadata:
+  created_at: "2026-02-09T15:15:00Z"
+  updated_at: "2026-02-09T15:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_estimated
+  verified_by: "EV Database estimates + Mercedes-Benz official announcements"
+  notes: |
+    The CLA 350 4MATIC is the performance AWD variant of the Mercedes-Benz CLA Electric.
+    Same 800V MMA platform and 90 kWh battery as the 250+, with added front motor for AWD.
+    
+    Key differences vs CLA 250+:
+    - Dual motor AWD (vs single rear motor)
+    - 260 kW / 354 PS (vs 200 kW / 272 PS)
+    - 0-100 km/h: 4.9s (vs 6.7s)
+    - 575 km real range (vs 585 km, -2% due to heavier AWD)
+    - 2,135 kg (vs 2,055 kg, +80 kg)
+    - 1,800 kg towing (vs 1,500 kg)
+    
+    Competes with:
+    - Tesla Model 3 Long Range AWD (€50,990, 629 km WLTP)
+    - BMW i4 M50 (€73,900, 521 km WLTP)
+    - Polestar 2 Long Range Dual Motor (€54,950, 487 km WLTP)
+
+sources:
+  - url: "https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC"
+    title: "EV Database - Mercedes-Benz CLA 350 4MATIC"
+    date_accessed: "2026-02-09"

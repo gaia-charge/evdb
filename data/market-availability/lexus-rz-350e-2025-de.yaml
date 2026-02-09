@@ -1,0 +1,103 @@
+# Lexus RZ 350e - German Market (2025)
+id: lexus-rz-350e-2025-de
+variant_id: lexus-rz-350e-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 57100
+  destination_charge: 1290
+  on_the_road_price: 58390
+  price_includes:
+    - "22kW AC charging (3-phase)"
+    - "150kW DC fast charging"
+    - "Heat pump (standard)"
+    - "14-inch touchscreen with Lexus Interface"
+    - "Lexus Safety System+ 3.0"
+    - "Electrochromic panoramic roof"
+    - "Mark Levinson premium audio"
+    - "Head-up display (color)"
+    - "Heated front seats"
+    - "18-inch alloy wheels"
+
+trim_levels:
+  - name: "Standard"
+    price: 57100
+    features:
+      - "FWD single motor (204hp)"
+      - "559 km WLTP range"
+      - "22kW AC / 150kW DC charging"
+      - "Full Lexus Safety System+ 3.0"
+      - "Mark Levinson premium audio"
+      - "Electrochromic panoramic roof"
+
+colors:
+  - name: "Sonic White"
+    type: solid
+    price: 0
+  - name: "Graphite Black Glass Flake"
+    type: metallic
+    price: 0
+  - name: "Sonic Copper"
+    type: metallic
+    price: 0
+  - name: "Sonic Quartz"
+    type: pearl
+    price: 0
+  - name: "Ether"
+    type: metallic
+    price: 0
+  - name: "Heat Blue Contrast Layering"
+    type: premium
+    price: 1200
+
+wheels:
+  - size: "18 inch"
+    price: 0
+    range_impact_km: 0
+    name: "18-inch alloy wheels"
+  - size: "20 inch"
+    price: 1500
+    range_impact_km: -15
+    name: "20-inch machined alloy wheels"
+
+incentives:
+  - name: "Company car tax (under €70k)"
+    type: tax_credit
+    amount: 3426
+    notes: "0.25% of gross list price per month (vs 1% for ICE). Under €70k threshold. €57,100 × 0.25% = €143/month. ICE: €571/month. Savings: €428/month = €5,136/year"
+    calculation: "€57,100 × 0.25% = €143/month vs ICE €57,100 × 1% = €571/month"
+    eligibility: "Company car drivers only. 0.25% rate applies (under €70k threshold)"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 450
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 12
+  production_status: active
+  order_url: "https://www.lexus.de/modelle/rz/"
+  notes: "New for 2025. Built in Japan. Entry-level FWD model with best range in lineup."
+
+dealers:
+  count: 55
+  network: "Lexus Deutschland"
+  service_centers: 55
+
+warranty:
+  vehicle_years: 4
+  vehicle_km: 100000
+  battery_years: 10
+  battery_km: unlimited
+  battery_capacity_guarantee_percent: 70
+  notes: "Lexus Relax extended warranty available"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.lexus.de/modelle/rz/"
+  notes: "New entry-level variant for 2025. Starting at €57,100 (down from €74,900 for old 450e). Under €70k company car tax threshold = 0.25% BIK rate. Best range in lineup at 559km WLTP. Excellent value vs competitors."

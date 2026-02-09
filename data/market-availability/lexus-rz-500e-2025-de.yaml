@@ -1,0 +1,105 @@
+# Lexus RZ 500e - German Market (2025)
+id: lexus-rz-500e-2025-de
+variant_id: lexus-rz-500e-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 65900
+  destination_charge: 1290
+  on_the_road_price: 67190
+  price_includes:
+    - "22kW AC charging (3-phase)"
+    - "150kW DC fast charging"
+    - "Heat pump (standard)"
+    - "DIRECT4 AWD"
+    - "Lexus Safety System+ 3.0"
+    - "Electrochromic panoramic roof with dimming"
+    - "Mark Levinson premium audio"
+    - "Head-up display (color)"
+    - "Heated and ventilated front seats"
+    - "Heated rear seats"
+    - "18-inch alloy wheels"
+    - "VDIM integrated dynamics management"
+
+trim_levels:
+  - name: "Premium"
+    price: 65900
+    features:
+      - "AWD DIRECT4 (354hp)"
+      - "493 km WLTP range"
+      - "22kW AC / 150kW DC charging"
+      - "Optional Steer-by-Wire with Yoke"
+      - "Full premium equipment"
+
+colors:
+  - name: "Sonic White"
+    type: solid
+    price: 0
+  - name: "Graphite Black Glass Flake"
+    type: metallic
+    price: 0
+  - name: "Sonic Copper"
+    type: metallic
+    price: 0
+  - name: "Sonic Quartz"
+    type: pearl
+    price: 0
+  - name: "Ether"
+    type: metallic
+    price: 0
+  - name: "Heat Blue Contrast Layering"
+    type: premium
+    price: 1200
+
+wheels:
+  - size: "18 inch"
+    price: 0
+    range_impact_km: 0
+  - size: "20 inch"
+    price: 1500
+    range_impact_km: -15
+
+packages:
+  - name: "Steer-by-Wire with Yoke"
+    price: 2500
+    includes:
+      - "Yoke steering wheel"
+      - "Steer-by-wire technology"
+      - "150° lock-to-lock"
+
+incentives:
+  - name: "Company car tax (under €70k)"
+    type: tax_credit
+    amount: 3954
+    notes: "0.25% of gross list price per month. €65,900 × 0.25% = €165/month vs ICE €659/month. Savings: €494/month = €5,928/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 450
+    valid_until: "2030-12-31"
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 14
+  production_status: active
+  order_url: "https://www.lexus.de/modelle/rz/"
+
+dealers:
+  count: 55
+  network: "Lexus Deutschland"
+
+warranty:
+  vehicle_years: 4
+  vehicle_km: 100000
+  battery_years: 10
+  battery_km: unlimited
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.lexus.de/modelle/rz/"
+  notes: "Mid-range AWD variant replacing 450e. Under €70k company car threshold. Optional Steer-by-Wire. Enhanced DIRECT4 AWD. Price estimated from lineup positioning."

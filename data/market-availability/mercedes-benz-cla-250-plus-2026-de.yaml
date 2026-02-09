@@ -1,0 +1,121 @@
+id: mercedes-benz-cla-250-plus-2026-de
+variant_id: mercedes-benz-cla-250-plus-2026
+market: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 49900  # Estimated starting price Germany
+  destination_charge: 1095
+  on_road_price: 50995
+
+  trims:
+    - name: "CLA 250+"
+      price: 49900
+      description: "Base with MBUX Superscreen, heat pump, 800V charging"
+
+# Options and packages
+options:
+  packages:
+    - name: "AMG Line"
+      price: 3500
+      description: "Sport styling, AMG wheels, sport seats"
+
+    - name: "Premium Package"
+      price: 3500
+      description: "AR Head-Up Display, Burmester sound, 360° camera"
+
+    - name: "22 kW AC charger upgrade"
+      price: 690
+      description: "Doubles home charging speed with compatible wallbox"
+
+  paint_options:
+    - name: "Polar White (non-metallic)"
+      price: 0
+    - name: "Cosmos Black metallic"
+      price: 990
+    - name: "Spectral Blue metallic"
+      price: 990
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3500
+    notes: "0.25% of gross list price per month (vs 1% for ICE). Estimated €3,500/year savings."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income for EV owners"
+
+# Availability
+availability:
+  status: pre_order
+  waiting_time_weeks: null
+  pre_order_date: "2025-06-01"
+  first_delivery_date: "2026-03-01"
+  online_configurator: yes
+  online_purchase: yes
+
+  dealer_network:
+    total_dealers: 650
+    test_drive_availability: no
+    notes: "Test drives expected from Q1 2026"
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: null
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+# Market context
+market_context:
+  competitors:
+    - model: "Tesla Model 3 RWD"
+      price: 42990
+      range_wltp: 513
+      notes: "€6,910 cheaper, less range, less premium, faster network"
+
+    - model: "BMW i4 eDrive40"
+      price: 57900
+      range_wltp: 590
+      notes: "€8,000 more, similar range, established model"
+
+    - model: "Polestar 2 Single Motor 2025"
+      price: 48350
+      range_wltp: 551
+      notes: "€1,550 cheaper, less range, less premium"
+
+  market_position: |
+    The CLA 250+ is positioned as Mercedes' new electric sedan for the mainstream premium
+    segment. At an estimated ~€49,900 it undercuts the BMW i4 significantly while offering
+    superior charging speed (353 kW vs 205 kW) and competitive range.
+    
+    The 800V architecture and 16-minute 10-80% charging time make it one of the fastest-
+    charging sedans on the market. Combined with the new MB.OS and MBUX Superscreen,
+    it represents a generational leap from the EQA/EQB.
+
+metadata:
+  created_at: "2026-02-09T15:15:00Z"
+  updated_at: "2026-02-09T15:15:00Z"
+  data_quality: estimated
+  notes: |
+    Pricing is estimated based on Mercedes-Benz positioning and competitor analysis.
+    Official German pricing not yet confirmed as of February 2026.
+    Expected to be priced below the outgoing EQA 250+ (€54,399) since the CLA
+    replaces the C-Class segment while the EQA is the compact SUV.
+
+sources:
+  - url: "https://www.mercedes-benz.de/"
+    title: "Mercedes-Benz Germany"
+    date_accessed: "2026-02-09"

@@ -1,0 +1,143 @@
+# Lexus RZ 500e (2025)
+id: lexus-rz-500e-2025
+name: "500e"
+model_id: lexus-rz
+model_year: 2025
+variant_code: RZ-500E
+
+battery:
+  usable_kwh: 72.0
+  total_kwh: 77.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "Panasonic"
+  warranty_years: 10
+  warranty_km: null
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 493
+  wltp_city_km: 580
+  wltp_highway_km: 425
+  epa_km: null
+  real_world_km: 415
+  real_world_source: "Estimated from WLTP and efficiency improvements"
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 150
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 20
+      power_kw: 148
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 40
+      power_kw: 140
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 115
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 28
+    - soc_percent: 100
+      power_kw: 15
+  time_10_to_80_percent_min: 30
+  charging_speed_kmh: 850
+  plug_and_charge: false
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 1.5
+  v2h: true
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 266
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 110
+      power_hp: 150
+      torque_nm: 200
+  total_power_kw: 260
+  total_power_hp: 354
+  total_torque_nm: 466
+  acceleration_0_100_kmh_sec: 4.8
+  acceleration_0_60_mph_sec: 4.5
+  top_speed_kmh: 160
+
+weight:
+  curb_weight_kg: 2080
+  gross_weight_kg: 2555
+  max_payload_kg: 475
+  distribution_front_percent: 54
+  distribution_rear_percent: 46
+
+efficiency:
+  wltp_kwh_per_100km: 16.3
+  wltp_kwh_per_100km_city: 13.8
+  wltp_kwh_per_100km_highway: 18.9
+  real_world_kwh_per_100km: 19.3
+  energy_efficiency_class: "A"
+
+wheels_tires:
+  standard_size_front: "235/60 R18"
+  standard_size_rear: "235/60 R18"
+  wheel_sizes_available:
+    - "18 inch (standard)"
+    - "20 inch (optional)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Lexus Safety System+ 3.0"
+    - "Pre-Collision System with pedestrian/cyclist detection"
+    - "Full-Speed Dynamic Radar Cruise Control"
+    - "Lane Departure Alert with steering assist"
+    - "Lane Tracing Assist"
+    - "Road Sign Assist"
+    - "Adaptive High Beams"
+    - "Blind Spot Monitor with Rear Cross-Traffic Alert"
+    - "Parking Support Brake"
+    - "Panoramic View Monitor"
+    - "VDIM integrated vehicle dynamics management"
+  connectivity:
+    - "Lexus Link connected services"
+    - "Remote climate control via app"
+    - "OTA software updates"
+    - "Lexus Interface multimedia system"
+    - "Hey Lexus voice assistant"
+  special_features:
+    - "DIRECT4 AWD with enhanced torque distribution"
+    - "22kW AC onboard charger"
+    - "Steer-by-Wire optional (with Yoke steering)"
+    - "Heat pump standard"
+    - "Electrochromic panoramic roof with dimming function"
+    - "Head-up display (color)"
+    - "Mark Levinson premium audio"
+    - "Ultrasuede door trim with laser engraving"
+    - "Multi-color ambient lighting with shadow effects"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  sources:
+    - "https://www.lexus.de/modelle/rz/"
+  notes: "2025 Lexus RZ 500e replaces the 450e as the mid-range AWD variant. More powerful than outgoing 450e (354hp vs 313hp). New 77kWh battery with 72kWh usable. 493km WLTP range (up from 440km). 22kW AC charging. Enhanced DIRECT4 AWD. Optional Steer-by-Wire with Yoke steering. VDIM integrated dynamics management."

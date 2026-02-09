@@ -1,0 +1,167 @@
+id: mercedes-benz-cla-250-plus-2026
+name: "Mercedes-Benz CLA 250+"
+model_id: mercedes-benz-cla
+variant_name: "250+"
+model_year: 2026
+
+# Battery specifications
+battery:
+  usable_kwh: 85.0
+  total_kwh: 90.0
+  chemistry: NMC
+  cells: null
+  supplier: null
+  modules: null
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling"
+  architecture_volt: 800
+
+# Range specifications
+range:
+  wltp_km: 750  # Average of TEL 792 and TEH 694
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: null
+  real_world_km: 585
+
+  real_world_mild_weather_km: 680
+  real_world_cold_weather_km: 480
+
+# Charging specifications
+charging:
+  ac_max_kw: 11
+  ac_charge_time_0_100_hours: 9.25
+
+  dc_max_kw: 353
+  dc_charge_time_10_80_minutes: 16
+  dc_charge_time_0_100_minutes: null
+  dc_charge_speed_kmh: 1530
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 353
+    - soc_percent: 30
+      power_kw: 300
+    - soc_percent: 50
+      power_kw: 250
+    - soc_percent: 70
+      power_kw: 180
+    - soc_percent: 80
+      power_kw: 120
+
+  connector_ac: Type2
+  connector_dc: CCS2
+  onboard_charger_kw: 11
+  onboard_charger_optional_kw: 22
+  plug_and_charge: yes
+  preconditioning: yes
+
+# Performance specifications
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 200
+      torque_nm: 335
+
+  total_power_kw: 200
+  total_power_hp: 272
+  total_torque_nm: 335
+
+  acceleration_0_100_kmh_sec: 6.7
+  top_speed_kmh: 210
+
+  drive_modes:
+    - "ECO"
+    - "Comfort"
+    - "Sport"
+    - "Individual"
+
+# Weight
+weight:
+  curb_weight_kg: 2055
+  gross_weight_kg: 2510
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 12.2  # Rated (TEL: 122 Wh/km incl. losses, vehicle: 107)
+  real_world_kwh_per_100km: 14.5
+  co2_emissions_wltp_g_per_km: 0
+
+# Additional features
+features:
+  adas_level: 2
+  autonomous_features:
+    - "Active Distance Assist DISTRONIC"
+    - "Active Steering Assist"
+    - "Active Brake Assist"
+    - "Active Lane Keeping Assist"
+    - "Active Blind Spot Assist"
+    - "Traffic Sign Assist"
+    - "Attention Assist"
+    - "PRE-SAFE"
+
+  infotainment:
+    - "MBUX Superscreen (triple display)"
+    - "MB.OS operating system"
+    - "Navigation with Electric Intelligence"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "AI-powered Voice Assistant"
+    - "Augmented Reality Head-Up Display (optional)"
+
+  comfort:
+    - "Dual-zone automatic climate control"
+    - "Climate pre-conditioning via app"
+    - "Heat pump standard"
+    - "Ambient lighting"
+    - "Electric tailgate"
+    - "Wireless smartphone charging"
+
+  connectivity:
+    - "Mercedes me Connect"
+    - "Over-the-air updates (MB.OS)"
+    - "Mercedes me Charge"
+    - "Plug & Charge (ISO 15118-2)"
+
+# Version information
+version:
+  trim_level: "250+"
+  production_location: "Rastatt, Germany"
+  build_quality: premium
+
+# Metadata
+metadata:
+  created_at: "2026-02-09T15:15:00Z"
+  updated_at: "2026-02-09T15:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_estimated
+  verified_by: "EV Database estimates + Mercedes-Benz official announcements"
+  notes: |
+    The CLA 250+ is the entry-level variant of the all-new Mercedes-Benz CLA Electric.
+    Built on the new MMA platform with 800V architecture, it offers a massive leap in
+    charging speed and efficiency over the outgoing EQA (which used the older MFA2 platform).
+    
+    Key highlights vs EQA 250+:
+    - Range: 585 km real-world vs 365 km (+60%)
+    - DC charging: 353 kW vs 100 kW (+253%)
+    - 10-80% charge time: 16 min vs 32 min (-50%)
+    - Efficiency: 14.5 kWh/100km vs 19.2 kWh/100km (-24%)
+    - Frunk: 101L vs 0L
+    - Trunk: 405L vs 340L (+19%)
+    
+    Competes with:
+    - Tesla Model 3 RWD (€42,990, 580 km WLTP)
+    - BMW i4 eDrive40 (€57,900, 590 km WLTP)
+    - Polestar 2 Single Motor (€48,350, 551 km WLTP)
+    - Audi A6 Sportback e-tron performance (€75,600, 756 km WLTP)
+
+sources:
+  - url: "https://ev-database.org/car/3139/Mercedes-Benz-CLA-250plus"
+    title: "EV Database - Mercedes-Benz CLA 250+"
+    date_accessed: "2026-02-09"
+  - url: "https://www.mercedes-benz.com/en/vehicles/passenger-cars/cla/"
+    title: "Mercedes-Benz CLA Official"
+    date_accessed: "2026-02-09"
