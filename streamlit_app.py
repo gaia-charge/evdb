@@ -27,11 +27,22 @@ def track_pageview(page_name):
     """Send a pageview to Plausible with the current tab as the URL path."""
     page_path = "/" + page_name.split(" ", 1)[-1].lower().replace(" ", "-")
     components.html(f"""
-<script async src="https://plausible.io/js/pa-rPKfOBHbOTq8L3IHShOcM.js"></script>
 <script>
-window.plausible=window.plausible||function(){{(plausible.q=plausible.q||[]).push(arguments)}},plausible.init=plausible.init||function(i){{plausible.o=i||{{}}}};
-plausible.init({{apiHost: 'https://plausible.io'}})
-plausible('pageview', {{u: window.location.origin + '{page_path}'}})
+// Get the parent (Streamlit) origin for proper URL tracking
+var baseUrl = 'https://evdb.streamlit.app';
+try {{ baseUrl = window.parent.location.origin || baseUrl; }} catch(e) {{}}
+var trackUrl = baseUrl + '{page_path}';
+
+// Load and init Plausible
+var s = document.createElement('script');
+s.async = true;
+s.src = 'https://plausible.io/js/pa-rPKfOBHbOTq8L3IHShOcM.js';
+s.onload = function() {{
+    if (window.plausible) {{
+        window.plausible('pageview', {{u: trackUrl}});
+    }}
+}};
+document.head.appendChild(s);
 </script>
 """, height=0)
 
