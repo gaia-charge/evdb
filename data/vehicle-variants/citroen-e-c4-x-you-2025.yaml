@@ -1,0 +1,157 @@
+# Citroën ë-C4 X You (2025)
+
+id: citroen-e-c4-x-you-2025
+model_id: citroen-e-c4-x
+name: "You"
+model_year: 2025
+trim_level: You
+variant_code: null
+
+production:
+  start_date: 2024-01-01
+  end_date: null
+  status: active
+  notes: "2025 model year, entry-level trim"
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC
+  total_kwh: 54.0
+  usable_kwh: 50.8
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage_nominal: 400
+  notes: "54 kWh battery, 400V architecture"
+
+range:
+  wltp_km: 416
+  wltp_city_km: 540
+  wltp_highway_km: 340
+  epa_combined_km: null
+  real_world_avg_km: 340
+  real_world_source: "ADAC estimates"
+  notes: "Same battery and range as Max trim"
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger: "11kW 3-phase standard"
+
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: "100kW peak"
+    preconditioning: false
+
+  charge_curve:
+    - percent: 0
+      power_kw: 95
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 87
+    - percent: 60
+      power_kw: 78
+    - percent: 70
+      power_kw: 62
+    - percent: 80
+      power_kw: 42
+    - percent: 90
+      power_kw: 28
+    - percent: 100
+      power_kw: 11
+
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
+  front:
+    type: permanent_magnet
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+  combined:
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+
+performance:
+  acceleration_0_100_kph: 9.3
+  top_speed_kph: 150
+
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  wltp_wh_per_km: 158
+  real_world_kwh_per_100km: 18.0
+  drag_coefficient: 0.29
+
+weight:
+  curb_weight_kg: 1595
+  gross_weight_kg: 2030
+
+towing:
+  max_towing_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: "MacPherson strut with Progressive Hydraulic Cushions"
+  rear: "Torsion beam with Progressive Hydraulic Cushions"
+
+brakes:
+  front: "Ventilated disc (280mm)"
+  rear: "Drum"
+  regenerative: true
+
+tires:
+  standard: "205/55 R17"
+
+features:
+  infotainment:
+    - "10-inch HD central touchscreen"
+    - "Digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "DAB+ digital radio"
+    - "6-speaker audio system"
+  driver_assistance:
+    - "Active Safety Brake"
+    - "Lane Keep Assist"
+    - "Speed Limit Recognition"
+    - "Rear parking sensors"
+    - "Reversing camera"
+    - "Driver Attention Alert"
+  comfort_convenience:
+    - "Automatic climate control"
+    - "Advanced Comfort seats"
+    - "One-pedal driving (B-mode)"
+    - "Electric windows front and rear"
+  exterior:
+    - "Full LED headlights"
+    - "17-inch alloy wheels"
+  interior:
+    - "Cloth upholstery"
+    - "510L trunk"
+    - "60/40 split-folding rear seats"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source_urls:
+    - https://www.citroen.de/modelle/e-c4-x.html
+  notes: >
+    Entry-level trim with comprehensive standard equipment. Same powertrain and range as Max
+    but with simpler equipment (17-inch wheels, no heated seats, basic ADAS).

@@ -1,0 +1,176 @@
+# Citroën ë-C4 X Max (2025)
+
+id: citroen-e-c4-x-max-2025
+model_id: citroen-e-c4-x
+name: "Max"
+model_year: 2025
+trim_level: Max
+variant_code: null
+
+production:
+  start_date: 2024-01-01
+  end_date: null
+  status: active
+  notes: "2025 model year, top trim with full equipment"
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC
+  total_kwh: 54.0
+  usable_kwh: 50.8
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: null
+  modules: null
+  voltage_nominal: 400
+  notes: "54 kWh battery, upgraded from original 50 kWh"
+
+range:
+  wltp_km: 416
+  wltp_city_km: 540
+  wltp_highway_km: 340
+  epa_combined_km: null
+  real_world_avg_km: 340
+  real_world_source: "ADAC, InsideEVs estimates"
+  notes: "Slightly better range than ë-C4 hatch due to improved aerodynamics"
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger: "11kW 3-phase standard"
+
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: "100kW peak, average ~85kW"
+    preconditioning: false
+
+  charge_curve:
+    - percent: 0
+      power_kw: 95
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 87
+    - percent: 60
+      power_kw: 78
+    - percent: 70
+      power_kw: 62
+    - percent: 80
+      power_kw: 42
+    - percent: 90
+      power_kw: 28
+    - percent: 100
+      power_kw: 11
+
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
+  front:
+    type: permanent_magnet
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+    supplier: null
+  combined:
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+
+performance:
+  acceleration_0_100_kph: 9.3
+  acceleration_0_60_mph: null
+  top_speed_kph: 150
+  quarter_mile_seconds: null
+
+efficiency:
+  wltp_kwh_per_100km: 15.8
+  wltp_wh_per_km: 158
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.0
+  mpge_combined: null
+  drag_coefficient: 0.29
+
+weight:
+  curb_weight_kg: 1611
+  gross_weight_kg: 2030
+  weight_distribution_front_percent: 60
+
+towing:
+  max_towing_kg: 0
+  max_tongue_weight_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: "MacPherson strut with Progressive Hydraulic Cushions"
+  rear: "Torsion beam with Progressive Hydraulic Cushions"
+
+brakes:
+  front: "Ventilated disc (280mm)"
+  rear: "Drum"
+  regenerative: true
+
+tires:
+  standard: "205/55 R18"
+
+features:
+  infotainment:
+    - "10-inch HD central touchscreen"
+    - "Digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Connected navigation with real-time traffic"
+    - "Wireless smartphone charging"
+    - "MyCitroën app with remote climate control"
+  driver_assistance:
+    - "Active Safety Brake with pedestrian/cyclist detection"
+    - "Lane Keep Assist"
+    - "Active Cruise Control with Stop & Go"
+    - "Blind Spot Monitoring"
+    - "Traffic Sign Recognition"
+    - "360-degree camera"
+    - "Automatic parking assist"
+    - "Driver Attention Alert"
+  comfort_convenience:
+    - "Heated front seats"
+    - "Heated steering wheel"
+    - "Keyless entry and start"
+    - "Dual-zone automatic climate control"
+    - "Electric folding mirrors"
+    - "Advanced Comfort seats"
+    - "One-pedal driving (B-mode)"
+  exterior:
+    - "Full LED headlights with LED DRLs"
+    - "18-inch alloy wheels"
+    - "Dark tinted rear windows"
+    - "Gloss black roof"
+  interior:
+    - "Advanced Comfort seats with Alcantara"
+    - "510L trunk"
+    - "60/40 split-folding rear seats"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-09"
+  last_updated: "2026-02-09"
+  source_urls:
+    - https://www.citroen.de/modelle/e-c4-x.html
+    - https://ev-database.org/car/1910/Citroen-e-C4-X
+  notes: >
+    The ë-C4 X Max is the top trim level, offering comprehensive equipment including heated
+    seats, 360-degree camera, blind spot monitoring, and Advanced Comfort seats with Alcantara.
+    The 510L trunk makes it one of the most practical compact EVs.

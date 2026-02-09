@@ -1,0 +1,125 @@
+# Opel Grandland Electric GS 73 kWh - German Market (2025)
+
+id: opel-grandland-electric-gs-73-2025-de
+variant_id: opel-grandland-electric-gs-73-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2024-09-01
+  order_status: accepting_orders
+  typical_delivery_weeks: 16
+
+pricing:
+  base_price: 46990
+  destination_charge: 990
+  total_msrp: 47980
+  pricing_date: 2025-01-15
+  price_notes: "GS is mid-range trim. Edition starts ~€44,990, Ultimate ~€51,990."
+
+options:
+  colors:
+    - name: "Quartz Silver"
+      price: 0
+      type: metallic
+    - name: "Diamond Black"
+      price: 650
+      type: metallic
+    - name: "Moonstone Grey"
+      price: 650
+      type: metallic
+    - name: "Voltaic Blue"
+      price: 850
+      type: metallic
+    - name: "Ember Red"
+      price: 850
+      type: metallic
+    - name: "Summit White"
+      price: 0
+      type: solid
+
+  wheels:
+    - name: "19-inch alloy wheels"
+      price: 0
+      size_inches: 19
+      notes: "Standard on GS"
+    - name: "20-inch alloy wheels"
+      price: 750
+      size_inches: 20
+
+  interior:
+    - name: "Sport seats with cloth/Alcantara"
+      price: 0
+      notes: "Standard GS interior"
+
+packages:
+  - name: "Winter Package"
+    price: 690
+    includes:
+      - "Heated rear seats"
+      - "Heated windshield"
+      - "Heated washer nozzles"
+
+  - name: "IntelliLux LED Pixel Light"
+    price: 1290
+    includes:
+      - "84-element LED pixel headlights"
+      - "Adaptive high beam"
+
+  - name: "Panoramic Sunroof"
+    price: 1400
+    includes:
+      - "Electrochromic panoramic glass roof"
+
+standalone_options:
+  - name: "Head-up display"
+    price: 890
+  - name: "Denon premium audio"
+    price: 690
+
+incentives:
+  - type: tax_exemption
+    name: "Company Car Tax Benefit (Dienstwagen)"
+    amount: 0
+    currency: EUR
+    notes: "0.25% monthly taxation for BEVs under €70k. €46,990 × 0.25% = €117/month taxable benefit."
+    valid_until: "2030-12-31"
+    active: true
+
+  - type: tax_exemption
+    name: "Kfz-Steuer Exemption"
+    amount: 0
+    currency: EUR
+    notes: "Complete road tax exemption for BEVs until 2030"
+    valid_until: "2030-12-31"
+    active: true
+
+  - type: grant
+    name: "THG-Quote"
+    amount: 300
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "Annual CO2 certificate sale"
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+data_quality:
+  pricing: verified
+  options: estimated
+  last_updated: "2026-02-09"
+
+sources:
+  - name: "Opel Germany"
+    url: https://www.opel.de/fahrzeuge/grandland-electric.html
+    date_accessed: "2026-02-09"
+
+notes: >
+  The Grandland Electric GS at €46,990 competes directly with VW ID.4 Pro (€44,990) and
+  Hyundai Ioniq 5 (€47,900). It offers more range (523km vs ~500km), faster charging (160kW),
+  and Made in Germany provenance. Excellent company car choice with low monthly tax benefit.
