@@ -1,0 +1,141 @@
+id: hyundai-kona-electric-long-range-2025-de
+variant_id: hyundai-kona-electric-long-range-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2025-01"
+delivery_time_weeks: 8
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 43400
+  price_including_vat: 43400
+  vat_rate_percent: 19
+  destination_charge: 950
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+  - name: Kfz-Steuer exemption
+    type: tax_exemption
+    amount: 380
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: "Sell CO2 savings certificate (€250-350/year)"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Atlas White
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Abyss Black Pearl
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+
+  - name: Cyber Gray Metallic
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+
+  - name: Shooting Star Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+
+  - name: Dive in Jeju
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+
+  - name: Neolithic Gray Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+
+  - name: Junk Blue
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+
+# Optional Equipment
+optional_equipment:
+  - name: N Line Package
+    price: 2000
+    includes:
+      - "N Line exterior styling"
+      - "19-inch N Line alloy wheels"
+      - "N Line sport seats"
+      - "Red brake calipers"
+      - "N Line badging"
+
+  - name: Technik-Paket
+    price: 1800
+    includes:
+      - "Surround View Monitor"
+      - "Remote Smart Parking Assist"
+      - "Blind Spot View Monitor (cameras)"
+      - "Head-up display"
+
+  - name: Comfort-Paket
+    price: 1400
+    includes:
+      - "Ventilated front seats"
+      - "Power driver seat with memory"
+      - "Relaxation comfort seats"
+      - "Electrochromic rear-view mirror"
+
+  - name: Solar Roof
+    price: 1000
+    includes:
+      - "Solar panel integrated in roof"
+      - "Charges 12V battery and auxiliary systems"
+
+# Company Car Calculation (Germany)
+company_car_tax:
+  gross_list_price: 43400
+  monthly_tax_base: 108.50
+  annual_tax_base: 1302.00
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    0.25% rule applies (under €70,000). At 30% bracket, saves ~€326/month
+    vs equivalent ICE. Very attractive company car proposition.
+
+market_notes: >
+  2025 Kona Electric Long Range at €43,400 in Germany. Solid mid-range
+  proposition with 514 km WLTP range and excellent efficiency. 8-week
+  delivery is among the fastest in segment. Built in Czech Republic
+  (Nošovice) reducing logistics costs. Hyundai's growing German dealer
+  network (500+ points) provides good coverage. Heat pump standard.
+  V2L capability increasingly valued. BOSE audio standard on Long Range.
+  Competes directly with Kia EV3 (more range/V2G but slightly pricier)
+  and VW ID.3 Pro S (more power, less equipment).
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  confidence_level: high
+  sources:
+    - https://www.hyundai.de/modelle/kona-elektro/
+    - https://www.hyundai.de/konfigurator/
+  created_at: "2026-02-09T14:15:00Z"
+  created_by: Patricio

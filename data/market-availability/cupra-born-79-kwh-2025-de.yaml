@@ -1,0 +1,134 @@
+id: cupra-born-79-kwh-2025-de
+variant_id: cupra-born-79-kwh-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2025-03"
+delivery_time_weeks: 14
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 44990
+  price_including_vat: 44990
+  vat_rate_percent: 19
+  destination_charge: 890
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+  - name: Kfz-Steuer exemption
+    type: tax_exemption
+    amount: 380
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: "Sell CO2 savings certificate (€250-350/year)"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Quartz Silver Matte
+    type: matte
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Aurora Blue
+    type: metallic
+    price_add:
+      amount: 690
+      currency: EUR
+
+  - name: Magnetic Tech Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+
+  - name: Midnight Black
+    type: metallic
+    price_add:
+      amount: 690
+      currency: EUR
+
+  - name: Raval Blue Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+
+  - name: Century Bronze Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+
+# Optional Equipment
+optional_equipment:
+  - name: VZ Performance Package
+    price: 3500
+    includes:
+      - "Progressive steering"
+      - "DCC adaptive chassis control"
+      - "Sport seats (Sabelt)"
+      - "19-inch copper alloy wheels"
+      - "Sport suspension (-15mm)"
+
+  - name: Technology Package
+    price: 1800
+    includes:
+      - "Augmented reality head-up display"
+      - "360-degree camera"
+      - "Automated parking (Park Assist Plus)"
+      - "Matrix LED headlights"
+
+  - name: Comfort Package
+    price: 1200
+    includes:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Power driver seat with memory"
+      - "Keyless entry"
+
+  - name: Winter Package
+    price: 590
+    includes:
+      - "Heated windshield"
+      - "Heated washer nozzles"
+      - "All-season tires"
+
+# Company Car Calculation (Germany)
+company_car_tax:
+  gross_list_price: 44990
+  monthly_tax_base: 112.48
+  annual_tax_base: 1349.70
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    0.25% rule applies (under €70,000). Attractive for company car drivers
+    wanting a sporty EV hatch. At 30% bracket, saves ~€337/month vs ICE.
+
+market_notes: >
+  2025 Cupra Born facelift brings significant improvements: larger 79 kWh
+  battery (580 km WLTP), faster 185 kW DC charging, and refreshed design.
+  Priced at €44,990 - competitive with Tesla Model 3 RWD (€42,990) and
+  Hyundai Ioniq 6 (€46,900). Built in Barcelona, strong brand appeal in
+  Germany. VW Group dealer network provides good service coverage.
+  Heat pump standard for 2025 model year.
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  confidence_level: high
+  sources:
+    - https://www.cupra.de/modelle/cupra-born
+    - https://www.cupra.de/konfigurator/cupra-born
+  created_at: "2026-02-09T14:15:00Z"
+  created_by: Patricio
