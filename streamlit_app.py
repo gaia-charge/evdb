@@ -1711,14 +1711,12 @@ elif page == "📊 Analytics":
                     x='length_mm',
                     y='trunk_capacity_liters',
                     color='body_style',
-                    size='trunk_max_liters',
-                    hover_data=['vehicle_name', 'trunk_max_liters'],
+                    hover_data=['vehicle_name'],
                     title='Vehicle Length vs. Trunk Capacity',
                     labels={
                         'length_mm': 'Length (mm)',
                         'trunk_capacity_liters': 'Trunk Capacity (Liters)',
-                        'body_style': 'Body Style',
-                        'trunk_max_liters': 'Max Capacity (L)'
+                        'body_style': 'Body Style'
                     }
                 )
                 fig_length_cargo.update_layout(height=500)
