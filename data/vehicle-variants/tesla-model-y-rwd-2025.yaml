@@ -1,0 +1,143 @@
+# Tesla Model Y RWD 2025
+# Base Variant - Single Motor Rear-Wheel Drive - Volume Seller
+# 2025 refresh with improved efficiency and range
+
+id: tesla-model-y-rwd-2025
+model_id: tesla-model-y
+name: RWD
+model_year: 2025
+variant_code: "RWD"  # Rear-Wheel Drive base variant
+
+# Production Info
+production_status: active
+production_start_date: "2024-01-01"
+
+# Pricing (base MSRP, market-specific pricing in market-availability files)
+base_price_usd: 44990  # US 2025 price
+base_price_eur: 44990  # Germany 2025 starting price
+
+# Battery
+battery:
+  usable_kwh: 62.0  # Usable capacity (slightly increased for 2025)
+  total_kwh: 64.5   # Total capacity
+  chemistry: LFP    # Lithium Iron Phosphate (CATL cells)
+  cells_supplier: "CATL"
+  pack_voltage: 400
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+# Range
+range:
+  wltp_km: 475  # WLTP combined (2025 improved rating)
+  epa_miles: 270  # EPA combined (435 km)
+  epa_km: 435
+  real_world_km: 415  # Typical real-world range (mixed driving, mild weather)
+  highway_km: 360  # Highway at 120 km/h
+  city_km: 565  # LFP excels in city with regen braking
+
+# Motors & Performance
+performance:
+  motors:
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 220
+      max_torque_nm: 420
+  total_power_kw: 220
+  total_torque_nm: 420
+  drive_type: RWD
+  acceleration_0_100_kmh_s: 6.9
+  top_speed_kmh: 217
+
+# Charging - AC
+charging:
+  ac_charge_power_kw: 11
+  ac_charge_port: Type 2
+  ac_charge_time_0_100_hours: 6.0
+  
+  # DC Charging
+  dc_charge_power_peak_kw: 175  # Slightly improved for 2025
+  dc_charge_port: CCS2
+  dc_charge_time_10_80_min: 26  # Improved charging
+  dc_charge_km_per_10min: 220
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.6  # Improved efficiency for 2025
+  epa_kwh_per_100km: 14.3
+  real_world_kwh_per_100km: 17.0  # Mixed driving
+  highway_kwh_per_100km: 19.5  # @120 km/h
+  city_kwh_per_100km: 13.8
+
+# Dimensions & Weight
+dimensions:
+  length_mm: 4751
+  width_mm: 1978
+  width_with_mirrors_mm: 2129
+  height_mm: 1624
+  wheelbase_mm: 2890
+  ground_clearance_mm: 167
+  drag_coefficient: 0.23  # Improved aerodynamics
+  frontal_area_m2: 2.53
+
+weight:
+  curb_weight_kg: 1909
+  gross_weight_kg: 2485
+  payload_kg: 576
+  weight_distribution_front_percent: 48
+  weight_distribution_rear_percent: 52
+
+# Cargo & Seating
+cargo:
+  trunk_liters: 854  # Rear trunk only
+  frunk_liters: 117
+  rear_seats_folded_liters: 2158
+
+seating:
+  seats: 5
+  seating_configuration: "2+3"
+
+# Towing
+towing:
+  max_trailer_weight_braked_kg: 1600
+  max_towbar_load_kg: 80
+
+# Technology & Features
+technology:
+  autopilot: true  # Standard
+  adaptive_cruise: true
+  lane_keeping: true
+  autonomous_level: 2
+  full_self_driving: false  # Optional upgrade
+  ota_updates: true
+  
+infotainment:
+  screen_size_inch: 15.4
+  screen_orientation: landscape
+  navigation: true
+  streaming: true
+  connectivity: "4G LTE"
+
+notes: |
+  RWD base variant - most affordable Model Y, volume seller (50%+ of sales).
+  2025 model year with improved efficiency and range (475 km WLTP, up from 455 km).
+  LFP battery (CATL): 100% charging recommended (no degradation), longer lifespan.
+  62 kWh usable - sufficient for daily use and weekend trips.
+  175 kW DC fast charging (26 min 10-80%) - practical for road trips.
+  Made at Gigafactory Berlin (Europe) and Shanghai (Asia-Pacific).
+  Access to Tesla Supercharger network (50,000+ chargers globally).
+  Over-the-air updates add new features regularly.
+  Optional 7-seater configuration available (+€3,000).
+  Optional tow hitch: €1,000 (1,600kg capacity).
+  Strong company car value in Germany: under €70k = 0.25% tax rate.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: verified
+  last_updated: "2026-02-09"
+  sources:
+    - https://www.tesla.com/model-y/design
+    - https://ev-database.org/
+  notes: "2025 model with improved efficiency and range"
+  version: "2025"
