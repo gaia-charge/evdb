@@ -1,0 +1,174 @@
+# Volvo EX90 Single Motor (2025) - 7-Seat Luxury Electric SUV
+
+id: volvo-ex90-single-motor-2025
+name: Single Motor
+model_id: volvo-ex90
+model_year: 2025
+variant_code: EX90-SM-2025
+
+battery:
+  usable_kwh: 101.0
+  total_kwh: 107.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    101 kWh usable battery (107 kWh gross). NMC chemistry from CATL.
+    400V architecture. Slightly smaller than Twin Motor variant due to
+    single motor configuration. Integrated battery pack for structural rigidity.
+
+range:
+  wltp_km: 580
+  wltp_city_km: 720
+  wltp_highway_km: 480
+  epa_km: 460
+  real_world_km: 490
+  real_world_source: Early owner reports and automotive press
+  notes: |
+    580 km WLTP range with single rear motor RWD configuration.
+    More efficient than AWD Twin Motor variant due to lower drivetrain losses.
+    Heat pump standard for cold-weather range optimization.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 245
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 240
+    - soc_percent: 40
+      power_kw: 215
+    - soc_percent: 50
+      power_kw: 195
+    - soc_percent: 60
+      power_kw: 165
+    - soc_percent: 70
+      power_kw: 125
+    - soc_percent: 80
+      power_kw: 75
+    - soc_percent: 90
+      power_kw: 38
+  time_0_to_100_min: 65
+  time_10_to_80_min: 30
+  time_20_to_80_min: 26
+  charging_speed_kmh: 1400
+  notes: |
+    250 kW DC fast charging. 11 kW AC standard (22 kW optional upgrade).
+    10-80% in approximately 30 minutes. Excellent fast charging curve.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.7
+  v2h: true
+  v2g: true
+  notes: Full bidirectional charging capability same as Twin Motor.
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      power_kw: 205
+      power_hp: 279
+      torque_nm: 490
+  total_power_kw: 205
+  total_power_hp: 279
+  total_torque_nm: 490
+  acceleration_0_100_sec: 7.8
+  top_speed_kmh: 180
+  notes: |
+    Single rear permanent magnet motor with 279 hp and 490 Nm.
+    0-100 km/h in 7.8 seconds. Top speed limited to 180 km/h.
+    RWD configuration offers more efficient driving in normal conditions.
+    Air suspension standard.
+
+weight:
+  curb_weight_kg: 2620
+  gross_vehicle_weight_kg: 3200
+  payload_kg: 580
+  distribution_front_percent: 47
+  distribution_rear_percent: 53
+  notes: "Lighter than Twin Motor due to single motor. Slightly rear-biased weight distribution."
+
+efficiency:
+  wltp_kwh_per_100km: 19.5
+  wltp_city_kwh_per_100km: 17.0
+  wltp_highway_kwh_per_100km: 22.5
+  real_world_kwh_per_100km: 22.0
+  efficiency_rating: B
+  notes: |
+    More efficient than Twin Motor thanks to single motor and lighter weight.
+    19.5 kWh/100km WLTP is very good for a large 7-seat luxury SUV.
+    Heat pump standard.
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: true
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "Pilot Assist with LiDAR"
+  notes: |
+    - Air suspension standard with adjustable ride height
+    - LiDAR sensors (Luminar Iris) standard
+    - Pilot Assist with highway pilot capabilities
+    - 14.5-inch portrait center touchscreen (Google built-in)
+    - 8.9-inch digital driver display
+    - Panoramic glass roof with electrochromic dimming
+    - 4-zone climate control
+    - Heated front seats
+    - Wireless phone charger
+    - 360-degree surround view camera
+    - Sustainable materials (Nordico textile, FSC wood)
+
+optional_equipment:
+  - name: Ultra Pack
+    code: ULTRA
+    category: comfort
+    included_in_base: false
+    notes: "B&W 25-speaker audio, Wool Blend interior, massage seats, ambient lighting"
+  - name: Plus Pack
+    code: PLUS
+    category: safety
+    included_in_base: false
+    notes: "Head-up display, advanced air purifier, Park Pilot Assist"
+  - name: 7-Seat Configuration
+    code: 7SEAT
+    category: utility
+    included_in_base: false
+    notes: "Third-row seating with climate and USB-C"
+  - name: 22kW AC Charger Upgrade
+    code: AC22
+    category: charging
+    included_in_base: false
+    notes: "Doubles AC charging speed from 11kW to 22kW"
+
+notes: |
+  The Volvo EX90 Single Motor is the more affordable entry to the EX90 range,
+  introduced for MY2025. With RWD and 279 hp it offers relaxed but adequate
+  performance for a luxury family SUV. More efficient than Twin Motor with
+  580 km WLTP range. Same LiDAR technology and safety features as Twin Motor.
+  Ideal for buyers who don't need AWD and prefer the lower price point.
+  Competes with BMW iX xDrive40, Mercedes EQE SUV 350+.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_completeness_percent: 90
+  sources:
+    - https://www.volvocars.com/de/v/cars/ex90
+    - https://www.motortrend.com/cars/volvo/ex90/

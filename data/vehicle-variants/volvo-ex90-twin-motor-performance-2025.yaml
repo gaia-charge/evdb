@@ -1,0 +1,140 @@
+# Volvo EX90 Twin Motor Performance (2025) - Top Performance Variant
+
+id: volvo-ex90-twin-motor-performance-2025
+name: Twin Motor Performance
+model_id: volvo-ex90
+model_year: 2025
+variant_code: EX90-TMP-2025
+
+battery:
+  usable_kwh: 111.0
+  total_kwh: 117.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: CATL / LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: Same 111 kWh usable / 117 kWh gross NMC battery as Twin Motor.
+
+range:
+  wltp_km: 590
+  wltp_city_km: 740
+  wltp_highway_km: 490
+  epa_km: 470
+  real_world_km: 490
+  real_world_source: Automotive press and owner reports
+  notes: |
+    Slightly lower range than standard Twin Motor due to performance tuning
+    and larger 22" wheels. 590 km WLTP still excellent for a performance SUV.
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 250
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 240
+    - soc_percent: 40
+      power_kw: 220
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 170
+    - soc_percent: 70
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 80
+    - soc_percent: 90
+      power_kw: 40
+  time_0_to_100_min: 60
+  time_10_to_80_min: 30
+  time_20_to_80_min: 25
+  charging_speed_kmh: 1450
+  notes: 22 kW AC standard on Performance. 250 kW DC fast charging.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 3.7
+  v2h: true
+  v2g: true
+  notes: Full bidirectional charging.
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 165
+      power_hp: 224
+      torque_nm: 330
+    - position: rear
+      type: permanent magnet
+      power_kw: 165
+      power_hp: 224
+      torque_nm: 370
+  total_power_kw: 330
+  total_power_hp: 449
+  total_torque_nm: 770
+  acceleration_0_100_sec: 4.9
+  top_speed_kmh: 180
+  notes: |
+    Performance variant with 449 hp combined (+41 hp over standard Twin Motor).
+    0-100 km/h in 4.9 seconds. Sport-tuned air suspension with lower ride height.
+    22" wheels standard. Performance brakes.
+
+weight:
+  curb_weight_kg: 2830
+  gross_vehicle_weight_kg: 3350
+  payload_kg: 520
+  distribution_front_percent: 50
+  distribution_rear_percent: 50
+
+efficiency:
+  wltp_kwh_per_100km: 22.5
+  wltp_city_kwh_per_100km: 20.0
+  wltp_highway_kwh_per_100km: 25.5
+  real_world_kwh_per_100km: 25.0
+  efficiency_rating: B
+  notes: Slightly less efficient due to performance tuning and 22" wheels.
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: true
+  torque_vectoring: true
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "Pilot Assist with LiDAR"
+  notes: |
+    All Twin Motor features plus:
+    - Sport-tuned air suspension
+    - 22" alloy wheels standard
+    - Performance brakes
+    - 22kW AC charging standard
+    - Sport driving mode with enhanced throttle response
+    - Brembo brakes
+    - Unique Performance design elements
+
+notes: |
+  The 2025 EX90 Twin Motor Performance is the range-topping variant with
+  449 hp, 4.9s 0-100, sport suspension, and 22" wheels. Premium over
+  standard Twin Motor for buyers wanting maximum performance from their
+  luxury family SUV. Same LiDAR safety tech and bidirectional charging.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: null
+  data_quality: estimated
+  data_completeness_percent: 90
+  sources:
+    - https://www.volvocars.com/de/v/cars/ex90
