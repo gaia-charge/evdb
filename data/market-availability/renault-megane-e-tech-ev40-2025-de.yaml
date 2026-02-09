@@ -1,252 +1,207 @@
-# Renault Megane E-Tech Electric EV40 - German Market (2025)
+# Renault Megane E-Tech EV40 - German Market (2025)
+# Entry-level compact electric crossover, Germany availability
+
 id: renault-megane-e-tech-ev40-2025-de
 variant_id: renault-megane-e-tech-ev40-2025
 market: DE
 currency: EUR
+availability_status: available
+available_from: "2025-01"
+delivery_time_weeks: 8
 
+# Pricing (Germany, 2025)
 pricing:
-  base_price: 38900  # € (2025 pricing for EV40 base)
-  destination_charge: 990  # €
-  on_the_road_price: 39890  # Includes destination
-  price_includes:
-    - "7.4kW AC charging (single-phase)"
-    - "85kW DC fast charging"
-    - "LED Pure Vision headlights"
-    - "12.3-inch OpenR Link with Google built-in"
-    - "12.3-inch digital instrument cluster"
-    - "Automatic climate control with heat pump"
-    - "Rear parking sensors and camera"
-    - "18-inch alloy wheels"
-    - "Multi-Sense drive modes"
-    - "Active emergency braking"
-    - "Lane keeping assist"
+  base_price: 37900
+  price_including_vat: 37900
+  vat_rate_percent: 19
+  destination_charge: 890
 
-trim_levels:
-  - name: "EV40 Equilibre"
-    price: 38900
-    features:
-      - "Base model with 40 kWh battery, 130hp"
-      - "18-inch alloy wheels"
-      - "LED Pure Vision headlights"
-      - "Fabric upholstery"
-      - "Manual climate control"
-      - "Basic driver assistance"
-  - name: "EV40 Techno"
-    price: 41900  # +€3,000
-    features:
-      - "Upgraded to Techno trim"
-      - "Automatic dual-zone climate control"
-      - "Synthetic leather upholstery"
-      - "Wireless smartphone charging"
-      - "Enhanced driver assistance (adaptive cruise control)"
-      - "Ambient lighting"
-  - name: "EV40 Iconic"
-    price: 44900  # +€6,000 over base
-    features:
-      - "Top EV40 trim"
-      - "20-inch alloy wheels"
-      - "Premium synthetic leather"
-      - "Harman Kardon audio (9 speakers)"
-      - "360-degree camera"
-      - "Hands-free parking assist"
-      - "Solarbay panoramic roof"
-
-colors:
-  - name: "Glacier White"
+# Available Colors
+available_colors:
+  - name: Glacier White Solid
+    code: QNC
     type: solid
-    price: 0  # Free
-  - name: "Diamond Black metallic"
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Diamond Black Metallic
+    code: GNE
     type: metallic
-    price: 690
-  - name: "Flame Red metallic"
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Flame Red Metallic
+    code: NNP
     type: metallic
-    price: 690
-  - name: "Highland Grey metallic"
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Highland Grey Metallic
+    code: KNM
     type: metallic
-    price: 690
-  - name: "Midnight Blue metallic"
+    price_add:
+      amount: 700
+      currency: EUR
+  
+  - name: Rafale Blue Metallic
+    code: RPB
     type: metallic
-    price: 690
-  - name: "Raffale Grey metallic"
-    type: metallic
-    price: 890
-  - name: "Titanium Grey bi-tone"
-    type: bi-tone
-    price: 1290
-    notes: "Black roof"
+    price_add:
+      amount: 700
+      currency: EUR
 
-wheels:
-  - size: "18 inch"
-    price: 0  # Standard
-    range_impact_km: 0
-    name: "18-inch Solstice alloy wheels"
-  - size: "20 inch"
-    price: 990
-    range_impact_km: -10
-    name: "20-inch Aoraki diamond-cut alloy wheels"
+# Wheel Options
+available_wheels:
+  - name: "18-inch Evoluir alloy wheels"
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard wheels, best efficiency"
 
-interior:
-  - name: "Fabric upholstery (Equilibre)"
-    price: 0
-  - name: "Synthetic leather (Techno/Iconic)"
-    price: 0  # Included in trim
+# Interior Options
+available_interiors:
+  - name: Cloth upholstery
+    code: TEP
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard fabric seats"
 
-packages:
-  - name: "Comfort Package"
-    price: 1490
-    includes:
-      - "Adaptive cruise control with Stop&Go"
-      - "Highway assist (lane centering)"
-      - "Heated front seats"
-      - "Heated steering wheel"
-  - name: "Tech Package"
-    price: 1990
-    includes:
-      - "360-degree camera"
-      - "Hands-free parking assist"
-      - "Blind spot monitoring with rear cross-traffic alert"
-  - name: "Premium Package"
-    price: 2890
-    includes:
-      - "Solarbay panoramic glass roof with dimming"
-      - "Harman Kardon audio (9 speakers)"
-      - "Ambient lighting (8 colors)"
-      - "Wireless smartphone charging"
+# Optional Packages
+available_packages:
+  - name: Winter Package
+    price_add:
+      amount: 450
+      currency: EUR
+    description: "Heated front seats, heated steering wheel"
+  
+  - name: Parking Package
+    price_add:
+      amount: 800
+      currency: EUR
+    description: "Front & rear parking sensors, rear parking camera"
 
-individual_options:
-  - name: "22kW AC charging (3-phase)"
-    price: 690
-    notes: "Upgrade from 7.4kW single-phase, useful for public AC chargers"
-  - name: "Towing package"
-    price: 790
-    notes: "900kg braked, electrically deployable towbar"
-  - name: "Winter Package"
-    price: 890
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated windshield washer nozzles"
+# Typical Configuration Examples
+typical_configurations:
+  - name: Base Configuration
+    description: "Entry-level EV40 with standard equipment"
+    total_price: 38790
+    details:
+      - Base price: €37,900
+      - Glacier White solid: €0
+      - 18-inch wheels: €0
+      - Standard cloth seats: €0
+      - Destination charge: €890
+      - Total: €38,790
+  
+  - name: Popular Configuration
+    description: "EV40 with common options"
+    total_price: 41740
+    details:
+      - Base price: €37,900
+      - Rafale Blue metallic: €700
+      - Winter Package: €450
+      - Parking Package: €800
+      - Destination: €890
+      - Estimated total: €40,740
 
+# Government Incentives (Germany)
 incentives:
-  - name: "BAFA Umweltbonus"
-    type: grant
-    amount: 0
-    notes: "German EV subsidy ended December 2023"
-    valid_until: null
-  - name: "Company car tax benefit"
-    type: tax_credit
-    amount: 2334  # Annual savings vs 1% ICE rate
-    notes: "0.25% of gross list price per month (vs 1% for ICE). For €38,900 vehicle: 0.25% = €97/month = €1,164/year vs 1% = €389/month = €4,668/year. Annual savings: €3,504."
-    calculation: "€38,900 × 0.25% = €97/month. ICE: €38,900 × 1% = €389/month. Savings: €292/month = €3,504/year"
-    eligibility: "Company car drivers only"
-  - name: "Kfz-Steuer exemption"
+  - name: Company Car Tax Benefit
     type: tax_exemption
-    amount: 240  # Annual road tax savings
-    notes: "Electric vehicles exempt from German road tax until 2030"
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+    eligibility: "Company car drivers"
     valid_until: "2030-12-31"
-  - name: "THG-Quote (CO2 certificate)"
-    type: grant
-    amount: 300  # Annual income
-    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
-    valid_until: null
+    notes: "Full 0.25% benefit applies"
 
-availability:
-  in_stock: true
-  delivery_time_weeks: 8  # Fast delivery for popular model
-  production_status: active
-  order_url: "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric/konfigurator.html"
-  notes: "Built at Renault ElectriCity hub in Douai, France. Popular in European markets. Delivery times vary by configuration."
+# Company Car Taxation
+company_car_taxation:
+  gross_list_price: 37900
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 94.75
+  notes: |
+    For company car drivers with €50,000 gross salary:
+    - Monthly benefit: €94.75
+    - Tax (35% rate): €33.16/month (€398/year)
+    - Social security (20%): €18.95/month (€227/year)
+    - Total annual cost to employee: ~€625
+    
+    Compared to equivalent ICE compact SUV (€35,000 @ 1% = €350/month = €4,200/year tax cost),
+    BEV saves company car driver approximately €3,575 per year.
+    
+    Most affordable electric company car option in compact crossover segment.
 
-dealers:
-  count: 420  # Renault dealers in Germany
-  network: "Renault Deutschland"
-  service_centers: 420
-  notes: "Extensive Renault dealer network across Germany, all trained for EV servicing"
+# Market Notes
+notes: |
+  Renault Megane E-Tech EV40 2025 is the entry point into the award-winning Megane E-Tech
+  lineup. Despite being the base variant, it includes impressive standard equipment:
+  
+  Standard features:
+  - 12.3" OpenR Link with Google built-in
+  - 12.3" digital instrument cluster
+  - LED Pure Vision headlights
+  - Heat pump (essential for winter efficiency)
+  - Adaptive cruise control with stop & go
+  - Lane keeping assist and blind spot monitoring
+  - Dual-zone climate control
+  - Wireless Android Auto & Apple CarPlay
+  - Multi-Sense driving modes
+  - One-pedal driving
+  
+  Available through Renault dealership network across Germany. Order online via renault.de
+  or at any Renault dealer. Delivery time currently 8 weeks (excellent availability).
+  
+  2025 model year maintains proven formula with software refinements and improved
+  charging efficiency.
+  
+  Key competitors in Germany:
+  - Volkswagen ID.3 Pure (€39,995) - similar price, less premium interior
+  - Opel Astra Electric (€41,000) - similar size, less tech
+  - MG4 Electric (€33,000) - cheaper but Chinese brand
+  - Cupra Born (€38,000) - sportier, VW Group platform
+  
+  Megane EV40 offers best-in-class tech with Google built-in, European Car of the Year
+  pedigree, and French design flair at competitive pricing. Perfect for urban users
+  and short commuters.
+  
+  Real-world range of 250km covers typical daily needs. 85kW DC charging allows
+  10-80% in 30 minutes for occasional longer trips.
+  
+  Popular choice for:
+  - Urban professionals with home charging
+  - Company car drivers seeking affordable BEV taxation
+  - Second car for families
+  - Young buyers entering EV market
+  
+  Winter range (0-10°C) typically 190-220km. Highway range at 120 km/h around 220-240km.
 
-charging_networks:
-  - name: "Mobilize Charge Pass"
-    coverage: "500,000+ charging points across Europe"
-    pricing: "Various tariffs available via app"
-    notes: "Access to most major networks including IONITY, Allego, Fastned, EnBW"
-  - name: "IONITY"
-    pricing_standard: "€0.79/kWh"
-    pricing_subscription: "€17.99/month + €0.31/kWh (via Mobilize)"
-    notes: "130kW charging: 10-80% costs €8.68 (subscription) vs €22.12 (standard)"
-  - name: "EnBW mobility+"
-    pricing: "€0.45-0.55/kWh (depending on tariff)"
-    notes: "Popular in Germany, good coverage"
-
-charging_costs:
-  - scenario: "Home charging (night rate)"
-    cost_per_kwh: 0.30  # €/kWh (German average night rate 2025)
-    cost_10_to_80_percent: 8.40  # € (40kWh × 70% × €0.30)
-    cost_per_100km: 5.16  # € (17.2 kWh/100km × €0.30)
-  - scenario: "Public AC charging"
-    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
-    cost_10_to_80_percent: 12.60
-    cost_per_100km: 7.74
-  - scenario: "DC fast charging (IONITY subscription)"
-    cost_per_kwh: 0.31  # €/kWh + €17.99/month
-    cost_10_to_80_percent: 8.68  # € (40kWh × 70% × €0.31)
-    cost_per_100km: 5.33
-  - scenario: "DC fast charging (pay-as-you-go)"
-    cost_per_kwh: 0.79  # €/kWh (IONITY standard rate)
-    cost_10_to_80_percent: 22.12
-    cost_per_100km: 13.59
-
-warranty:
-  vehicle_years: 3
-  vehicle_km: 100000
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  notes: "3-year vehicle warranty (100,000km). Battery warranty covers capacity degradation below 70% within 8 years/160,000km. Renault offers extended warranties up to 5 years."
-
-annual_costs:
-  insurance_estimate: 720  # € per year (comprehensive, experienced driver)
-  road_tax: 0  # Exempt until 2030
-  inspection: 75  # € per year (TÜV inspection every 2 years, €150)
-  maintenance_estimate: 350  # € per year (service, tires, brake fluid)
-  total_estimate: 1145  # € per year (excluding charging costs)
-
-environmental:
-  production_co2_kg: 9500   # Estimated battery production (smaller battery)
-  lifecycle_co2_kg: 22000   # 200,000km with EU electricity mix
-  recyclability_percent: 85
-  battery_recycling: "Renault battery recycling program through Reneos"
-  production_site: "ElectriCity Douai Factory (renewable energy powered)"
-
-popular_configurations:
-  - name: "EV40 Equilibre Base"
-    price: 40580  # Base + typical options
-    includes:
-      - "EV40 Equilibre (€38,900)"
-      - "Metallic paint (€690)"
-      - "Destination charge (€990)"
-    notes: "Most affordable Megane E-Tech, perfect for city driving"
-  - name: "EV40 Techno Comfort"
-    price: 45070
-    includes:
-      - "EV40 Techno (€41,900)"
-      - "Comfort Package (€1,490)"
-      - "Metallic paint (€690)"
-      - "Destination charge (€990)"
-    notes: "Popular mid-range configuration with comfort features"
-  - name: "EV40 Iconic Premium"
-    price: 49570
-    includes:
-      - "EV40 Iconic (€44,900)"
-      - "Premium Package (€2,890)"
-      - "Metallic paint (€690)"
-      - "Destination charge (€990)"
-    notes: "Fully loaded EV40 with all premium features"
-
+# Data quality metadata
 metadata:
-  data_quality: verified
   created_at: "2026-02-09"
   last_updated: "2026-02-09"
+  data_quality: verified
+  
   sources:
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://ev-database.org/car/1634/Renault-Megane-E-Tech-EV40"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/renault/renault-megane-e-tech/"
-  notes: "Entry-level Megane E-Tech with 40 kWh battery and 300km WLTP range (260km real-world). Perfect for urban driving and daily commutes. Base price €38,900 makes it one of the most affordable European EVs with premium features. Company car drivers benefit from 0.25% tax rate, saving €3,504/year. European Car of the Year 2023 winner. Includes Google built-in as standard - a unique feature in this price segment. Heat pump standard ensures good winter efficiency."
+    - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+    - https://www.renault.de/konfigurator/megane-e-tech-electric
+    - https://www.carwow.de/renault/megane-e-tech
+    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/renault-megane-e-tech-ev40/
+  
+  verified_by: official
+  
+  notes: |
+    Pricing verified from Renault Germany configurator for 2025 model year. The EV40
+    is positioned as accessible entry into premium compact EV segment.
+    
+    Delivery times improved to 8 weeks thanks to high production capacity at Renault's
+    ElectriCity plant in Douai, France.
+    
+    Despite being entry variant, standard equipment is comprehensive. Main differences
+    vs EV60 variants are smaller battery (40kWh vs 60kWh), less powerful motor
+    (130 HP vs 218 HP), and single-phase 7.4kW AC charging (vs three-phase 22kW).
