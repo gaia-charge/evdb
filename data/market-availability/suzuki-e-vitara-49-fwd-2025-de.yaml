@@ -1,0 +1,90 @@
+# Suzuki e Vitara 49 kWh FWD - German Market (2025)
+id: suzuki-e-vitara-49-fwd-2025-de
+variant_id: suzuki-e-vitara-49-fwd-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 29990
+  destination_charge: 850
+  on_the_road_price: 30840
+  price_includes:
+    - "11 kW AC charging (3-phase)"
+    - "LED headlights"
+    - "10.25-inch touchscreen"
+    - "Wireless Apple CarPlay & Android Auto"
+    - "Heat pump"
+    - "Rear parking sensors"
+    - "Rear camera"
+    - "17-inch alloy wheels"
+    - "Sliding rear bench seat"
+    - "Dual-zone climate control"
+
+trim_levels:
+  - name: "Comfort"
+    price: 29990
+    features:
+      - "106 kW (144 PS) front motor"
+      - "346 km WLTP range"
+      - "17-inch alloy wheels"
+      - "LED headlights"
+      - "10.25-inch touchscreen"
+  - name: "Comfort+"
+    price: 32490
+    features:
+      - "18-inch alloy wheels"
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "360-degree camera"
+      - "Wireless smartphone charging"
+
+colors:
+  - name: "Arctic White"
+    type: solid
+    price: 0
+  - name: "Celestial Blue metallic"
+    type: metallic
+    price: 595
+  - name: "Cosmic Black metallic"
+    type: metallic
+    price: 595
+  - name: "Galactic Grey metallic"
+    type: metallic
+    price: 595
+  - name: "Sizzling Red metallic"
+    type: metallic
+    price: 595
+
+incentives:
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 2699
+    notes: "0.25% of gross list price per month. €29,990 × 0.25% = €75/month vs 1% = €300/month. Savings: €225/month = €2,699/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 10
+  production_status: active
+  order_url: "https://www.suzuki.de/automobil/modelle/e-vitara"
+
+warranty:
+  vehicle_years: 4
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.carwow.de/suzuki/e-vitara"
+    - "https://www.suzuki.de/automobil/modelle/e-vitara"
+  notes: "Entry-level e Vitara. Very competitive pricing under €30,000 for a compact electric SUV."
