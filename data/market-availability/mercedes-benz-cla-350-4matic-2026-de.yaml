@@ -1,0 +1,132 @@
+id: mercedes-benz-cla-350-4matic-2026-de
+variant_id: mercedes-benz-cla-350-4matic-2026
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2026-03"
+delivery_time_weeks: 14
+
+# Pricing (Germany, 2026)
+pricing:
+  base_price: 57900
+  price_including_vat: 57900
+  vat_rate_percent: 19
+  destination_charge: 890
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+  - name: Kfz-Steuer exemption
+    type: tax_exemption
+    amount: 380
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: "Sell CO2 savings certificate (€250-350/year)"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Digital White
+    code: DW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Obsidian Black Metallic
+    code: OBM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: High-Tech Silver Metallic
+    code: HTSM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: Spectral Blue Metallic
+    code: SBM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: Patagonia Red Metallic
+    code: PRM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: Mojave Silver Metallic
+    code: MSM
+    type: metallic
+    price_add:
+      amount: 1190
+      currency: EUR
+
+# Optional Equipment
+optional_equipment:
+  - name: Premium Package
+    price: 4200
+    includes:
+      - "MBUX Superscreen with passenger display"
+      - "Augmented Reality navigation"
+      - "Head-up display"
+      - "Burmester 3D surround sound (15 speakers)"
+
+  - name: Advanced Plus Package
+    price: 2900
+    includes:
+      - "DRIVE PILOT (Level 3 conditional automation)"
+      - "Active Lane Change Assist"
+      - "Remote Parking Assist"
+
+  - name: 22 kW AC Onboard Charger
+    price: 590
+    includes:
+      - "Upgrade from 11 kW to 22 kW AC charging"
+
+  - name: Night Package
+    price: 1290
+    includes:
+      - "Black exterior accents"
+      - "Dark chrome trim"
+      - "21-inch AMG multi-spoke wheels in black"
+
+# Company Car Calculation (Germany)
+company_car_tax:
+  gross_list_price: 57900
+  monthly_tax_base: 144.75
+  annual_tax_base: 1737.00
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    0.25% rule for EVs under €70,000. Performance AWD sedan at
+    very attractive company car tax cost.
+
+market_notes: >
+  The CLA 350 4MATIC adds AWD performance (4.9s 0-100) for €8,000 over the 250+.
+  Still well under €60,000 makes it an excellent company car. 353 kW DC charging,
+  575 km real-world range. Competes with BMW i4 xDrive40 and Tesla Model 3 Performance.
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  confidence_level: high
+  sources:
+    - https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC
+    - https://www.mercedes-benz.de/
+  created_at: "2026-02-09T21:15:00Z"
+  created_by: Patricio

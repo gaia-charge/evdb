@@ -1,0 +1,222 @@
+id: bmw-ix3-50-xdrive-2026
+name: 50 xDrive
+model_id: bmw-ix3
+model_year: 2026
+production_years:
+  start: 2026
+  end: null
+
+trim_level: 50-xdrive
+market_position: premium
+
+# Battery Specifications
+battery:
+  usable_kwh: 108.7
+  total_kwh: 115.0
+  chemistry: NMC
+  nominal_voltage_v: 699
+  cell_type: cylindrical
+  architecture_v: 800
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+
+  pack:
+    configuration: "floor-mounted, integrated into Neue Klasse platform"
+    weight_kg: null
+
+# Range
+range:
+  wltp_km: 742
+  wltp_source: manufacturer
+  wltp_tel_km: 805
+  wltp_teh_km: 679
+
+  real_world_km: 610
+  real_world_source: ev-database.org
+  real_world_conditions: "Mixed driving, moderate climate"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 11.75
+    onboard_charger_kw: 11
+    phases: 3
+
+  dc:
+    max_power_kw: 400
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 21
+
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 350
+      - soc_percent: 20
+        power_kw: 400
+      - soc_percent: 30
+        power_kw: 380
+      - soc_percent: 40
+        power_kw: 320
+      - soc_percent: 50
+        power_kw: 260
+      - soc_percent: 60
+        power_kw: 200
+      - soc_percent: 70
+        power_kw: 150
+      - soc_percent: 80
+        power_kw: 100
+      - soc_percent: 90
+        power_kw: 60
+      - soc_percent: 100
+        power_kw: 20
+
+# Bidirectional Charging (V2X)
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 3.7
+  v2h: true
+  v2h_dc_power_kw: 11
+  v2g: true
+  v2g_dc_power_kw: 11
+  notes: "V2L via Type 2 adapter, V2H/V2G via DC only"
+
+# Motors & Drivetrain
+motors:
+  configuration: dual-motor
+  drive_type: AWD
+
+  front:
+    type: permanent-magnet-synchronous
+    max_power_kw: null
+    max_torque_nm: null
+
+  rear:
+    type: permanent-magnet-synchronous
+    max_power_kw: null
+    max_torque_nm: null
+
+  combined:
+    max_power_kw: 345
+    max_power_hp: 469
+    max_torque_nm: 645
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 4.9
+  top_speed_kmh: 210
+  top_speed_limited: true
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 15.1
+  wltp_source: manufacturer
+
+  real_world_kwh_per_100km: 17.8
+  real_world_source: ev-database.org
+  real_world_conditions: "Mixed driving, moderate climate"
+
+# Weight
+weight:
+  curb_weight_kg: 2360
+  gross_vehicle_weight_kg: 2825
+  max_payload_kg: 540
+
+# Towing
+towing:
+  max_towing_capacity_unbraked_kg: 750
+  max_towing_capacity_braked_kg: 2000
+  max_vertical_load_kg: 80
+
+# Wheels & Tires
+wheels:
+  standard_size_front: "245/50 R20"
+  standard_size_rear: "275/45 R20"
+  wheel_options:
+    - "20-inch aero alloy (standard)"
+    - "21-inch M Sport alloy (optional)"
+    - "22-inch M Performance alloy (optional)"
+
+# Standard Equipment (Key Features)
+standard_equipment:
+  exterior:
+    - BMW Panoramic iDrive display (curved)
+    - LED headlights with adaptive high beam
+    - Flush door handles
+    - Panoramic glass roof (fixed)
+    - Aero-optimized body design
+    - Roof rails
+
+  interior:
+    - BMW Panoramic Vision (head-up display across full windshield width)
+    - BMW iDrive with QuickSelect
+    - Central 14.9-inch touchscreen
+    - Harman Kardon surround sound system
+    - Wireless phone charging
+    - Heated front and rear seats
+    - Heated steering wheel
+    - Tri-zone climate control with heat pump
+    - Ambient lighting
+    - Power tailgate
+
+  technology:
+    - BMW Highway Assistant (Level 2+)
+    - Active Cruise Control with Stop & Go
+    - Lane Keep Assist with Active Lane Change
+    - Parking Assistant Plus with 360° camera
+    - Remote parking via BMW app
+    - OTA software updates
+    - Plug & Charge (ISO 15118-2 & -20)
+    - Battery preconditioning via navigation
+    - Digital Key Plus (UWB)
+
+  charging:
+    - Type 2 charging cable
+    - V2L adapter
+    - Scheduled charging
+    - Battery preconditioning
+
+# Version Information
+version:
+  facelift: false
+  mid_cycle_refresh: false
+  generation: 2
+  platform_version: "Neue Klasse"
+  notes: "Second generation iX3, first BMW SUV on Neue Klasse platform"
+
+# Colors Available
+colors:
+  - "Alpine White"
+  - "Black Sapphire Metallic"
+  - "Mineral White Metallic"
+  - "Tanzanite Blue Metallic"
+  - "Dune Grey Metallic"
+  - "Frozen Deep Grey Metallic"
+
+# Metadata
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-09"
+  confidence_level: high
+
+  sources:
+    - https://ev-database.org/car/3290/BMW-iX3-50-xDrive
+    - https://www.bmw.de/de/neufahrzeuge/x/ix3.html
+
+  notes: >
+    2026 model year BMW iX3 50 xDrive - completely new vehicle on the Neue Klasse
+    platform. This is NOT a facelift of the previous CLAR-based iX3. Features
+    800V architecture, 400kW DC fast charging, cylindrical NMC cells, and the
+    revolutionary BMW Panoramic Vision head-up display. The Neue Klasse platform
+    represents BMW's largest EV investment, with 6th generation eDrive technology.
+    Massive 115 kWh battery delivers 805 km WLTP range (TEL). Built in Debrecen, Hungary
+    (new Neue Klasse factory). Competes with Mercedes EQC successor, Audi Q6 e-tron,
+    and Tesla Model Y.
+
+  created_at: "2026-02-09T21:15:00Z"
+  created_by: Patricio
