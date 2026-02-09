@@ -1,0 +1,336 @@
+id: byd-seal-design-rwd-2026-de
+variant_id: byd-seal-design-rwd-2026
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2025-08-01"
+discontinued_date: null
+
+# Pricing (Germany, 2026 model year)
+pricing:
+  base_price: 48490
+  price_including_vat: 48490
+  vat_rate_percent: 19
+  on_road_price: 49690  # Including delivery and registration
+  destination_charge: 950
+  registration_fee: 250
+
+# Trim levels and configurations available in Germany
+trim_levels:
+  - name: Design RWD 2026
+    price: 48490
+    description: 2026 model with V2H/V2G capability, 5G connectivity, enhanced Level 2+ driver assistance, and improved efficiency
+    standard_features:
+      - Air suspension with adaptive damping
+      - 15.6" rotating touchscreen with DiLink 5.0 and HUD
+      - Enhanced Level 2+ highway assist with lane change assist
+      - Traffic light recognition (new for 2026)
+      - Automatic parking with AI enhancement
+      - Nappa leather seats with heating and ventilation
+      - 12-speaker Dynaudio audio system (775W)
+      - LED Matrix headlights with adaptive beam
+      - Panoramic glass roof with electrochromic dimming
+      - 4K 360-degree camera system (upgraded for 2026)
+      - Wireless smartphone charging (15W fast charging)
+      - Heat pump with HEPA filtration (upgraded for 2026)
+      - V2L capability (3.3kW)
+      - V2H and V2G capability (new for 2026)
+      - 5G connectivity (upgraded from 4G)
+      - OTA software updates
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 49690
+    description: Design RWD 2026 with delivery and registration, no options
+    included:
+      - All standard Design trim features
+      - Delivery charge (€950)
+      - Registration fee (€250)
+    
+  - name: Premium
+    total_price: 53290
+    description: Popular configuration with premium upgrades
+    included:
+      - Base Design RWD
+      - 20" Aero Wheels (€1,400 - new for 2026)
+      - Metallic/Pearl Paint (€900)
+      - Two-Tone Roof (€650)
+      - Winter Package (€450)
+    
+  - name: Fully Loaded
+    total_price: 54790
+    description: Maximum specification with all available options
+    included:
+      - Premium configuration
+      - Premium Sound Upgrade (€1,500 - Dynaudio 16 speakers)
+
+# Incentives and subsidies (2026)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 4849
+    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
+    notes: >
+      Company car drivers benefit significantly from 0.25% monthly tax rate 
+      (vs 1% for combustion vehicles), saving approximately €4,849 annually 
+      with the 2026 model pricing. This remains the main financial incentive 
+      for EVs in Germany.
+  
+  - name: THG-Quote (Greenhouse Gas Reduction Quota)
+    type: grant
+    amount: 270
+    description: Annual CO2 certificate trading income
+    notes: >
+      Tradeable emission certificates provide annual income of approximately 
+      €250-290 in 2026 (market prices have stabilized).
+  
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 320
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+  
+  - name: V2G Grid Services Incentive
+    type: grant
+    amount: 150
+    description: Participation in V2G programs can earn €100-200 annually
+    notes: >
+      New for 2026 - BYD Seal with V2G capability can participate in grid 
+      stabilization programs earning additional income. Available through 
+      select energy providers.
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 121.23  # €48,490 × 0.25%
+  annual_taxable_benefit_eur: 1455  # €121.23 × 12
+  comparable_ice_benefit_eur: 6300  # BMW 330i €52,500 × 1% = €525/mo (2026 pricing)
+  annual_tax_savings_eur: 4845  # Savings vs equivalent ICE sedan
+  notes: >
+    The BYD Seal qualifies for the advantageous 0.25% company car tax rate 
+    (vehicles under €70,000 with minimum 80km electric range). This results 
+    in annual taxable benefit of only €1,455 compared to €6,300 for 
+    equivalent combustion sedan (BMW 330i), saving company car drivers 
+    approximately €4,845 annually in reduced tax payments.
+
+# Total Cost of Ownership (3-year calculation, 2026 costs)
+tco_analysis:
+  period_months: 36
+  annual_mileage_km: 15000
+  total_mileage_km: 45000
+  
+  purchase_cost: 49690
+  
+  energy_costs:
+    home_charging_kwh: 0.37  # €/kWh average Germany 2026 (slight increase)
+    public_charging_kwh: 0.59  # €/kWh average
+    home_charging_percent: 80
+    public_charging_percent: 20
+    total_energy_cost_3yr: 3408  # 45,000km @ 16.3kWh/100km × (0.8×€0.37 + 0.2×€0.59)
+    v2g_earnings: -450  # Potential earnings from V2G participation over 3 years
+    net_energy_cost_3yr: 2958
+  
+  maintenance_costs:
+    annual_service_cost: 285
+    total_maintenance_3yr: 855
+    notes: Electric vehicles require minimal maintenance (no oil changes, fewer brake services)
+  
+  insurance_annual: 930
+  insurance_3yr: 2790
+  
+  depreciation:
+    residual_value_percent: 62  # 62% after 3 years (BYD residuals improving in 2026)
+    residual_value_eur: 30808
+    depreciation_3yr: 18882
+  
+  total_cost_3yr: 25485
+  cost_per_km: 0.57
+  
+  comparable_ice_costs:
+    vehicle: BMW 330i
+    purchase_price: 52500
+    fuel_cost_3yr: 7740  # 45,000km @ 6.5L/100km × €1.92/L (2026 price)
+    maintenance_3yr: 2280  # Higher maintenance for combustion
+    insurance_3yr: 3050  # Slightly higher
+    depreciation_3yr: 23100  # 56% residual (€29,400)
+    total_cost_3yr: 36170
+    cost_per_km: 0.80
+  
+  savings_vs_ice: 10685  # €36,170 - €25,485
+  
+  notes: >
+    BYD Seal 2026 offers substantial savings versus premium combustion sedans. 
+    Over 3 years, total ownership costs are approximately €10,685 lower than 
+    BMW 330i. Energy costs are 62% lower (€2,958 vs €7,740 after V2G earnings), 
+    and maintenance is 63% lower (€855 vs €2,280). BYD residuals continue to 
+    improve as brand establishes stronger European presence, estimated at 62% 
+    after 3 years in 2026 (vs 56% for BMW). V2G capability adds potential 
+    income stream of €150/year.
+
+# Financing options
+financing:
+  typical_apr_percent: 5.29
+  typical_term_months: 48
+  typical_down_payment_percent: 20
+  typical_monthly_payment_eur: 930  # €48,490 @ 5.29% APR, 48mo, 20% down
+
+# Leasing options (2026)
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 15000
+  typical_monthly_payment_eur: 435
+  down_payment_eur: 2000
+  final_payment_eur: 0
+
+# Charging infrastructure
+charging:
+  home_wallbox_installation_cost_eur: 1550
+  home_wallbox_subsidy_eur: 0  # KfW 440 subsidy ended 2023
+  
+  v2h_installation:
+    bidirectional_wallbox_cost_eur: 3500
+    installation_cost_eur: 800
+    total_cost_eur: 4300
+    notes: Required for V2H functionality, enables home backup power
+  
+  ionity_membership:
+    monthly_fee_eur: 17.99
+    kwh_rate_eur: 0.35
+    charge_10_80_cost_eur: 20.29  # 58kWh × €0.35
+    notes: Recommended for frequent highway travelers
+  
+  ionity_pay_per_use:
+    kwh_rate_eur: 0.89
+    charge_10_80_cost_eur: 51.62  # 58kWh × €0.89
+    notes: Expensive without membership
+
+# Delivery and availability
+delivery:
+  typical_wait_weeks: 6
+  production_location: Zhengzhou, China
+  import_method: sea_freight
+  
+  order_process:
+    - Visit BYD dealer or configure online at byd.com/de
+    - Test drive available at all dealers
+    - Place order with €2,000 deposit
+    - Delivery in 4-8 weeks (improved from 2025)
+    - Final payment on delivery
+
+# Warranty
+warranty:
+  vehicle_years: 6
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 200000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 6
+  
+  notes: >
+    BYD offers comprehensive 6-year/150,000km vehicle warranty and 
+    industry-leading 8-year/200,000km battery warranty with 70% 
+    capacity guarantee. This is among the best warranties in the 
+    European EV market.
+
+# Service and maintenance
+service:
+  recommended_interval_months: 12
+  recommended_interval_km: 15000
+  typical_service_cost_eur: 285
+  dealer_count_germany: 52
+  
+  notes: >
+    BYD has continued expanding German dealer network to 52 locations 
+    (as of February 2026, up from 45 in 2025). Service intervals remain 
+    generous at 12 months/15,000km. Electric vehicles require minimal 
+    maintenance compared to combustion vehicles.
+
+# Competitors comparison (2026 pricing)
+competitors:
+  - model: Tesla Model 3 RWD
+    price_eur: 43990
+    range_km: 513
+    notes: Lower price, established brand, but less luxury features
+  
+  - model: BMW i4 eDrive35
+    price_eur: 55900
+    range_km: 483
+    notes: Premium brand, lower range, higher price
+  
+  - model: Polestar 2 Long Range Single Motor
+    price_eur: 49400
+    range_km: 635
+    notes: Similar price, longer range, Volvo quality
+  
+  - model: Hyundai Ioniq 6 RWD Long Range
+    price_eur: 49350
+    range_km: 614
+    notes: Similar price and range, more efficient 800V architecture
+
+# Market positioning
+market_positioning:
+  segment: premium_midsize_sedan
+  target_audience: Company car drivers, tech-savvy professionals, Tesla alternative seekers, V2G early adopters
+  key_selling_points:
+    - Excellent value proposition (€48,490 for 590km range)
+    - Class-leading 0.219 drag coefficient
+    - Unique rotating 15.6" touchscreen with DiLink 5.0
+    - LFP Blade Battery (safer chemistry, 100% charge capability)
+    - Strong warranty (6yr vehicle, 8yr battery)
+    - V2L, V2H, and V2G capability (new for 2026)
+    - Enhanced Level 2+ driver assistance with lane change assist
+    - Traffic light recognition (new for 2026)
+    - 5G connectivity (upgraded from 4G)
+    - HEPA air filtration (upgraded for 2026)
+    - Improved efficiency (590km WLTP vs 580km in 2025)
+    - 4K surround view cameras
+  
+  considerations:
+    - BYD brand still building recognition in Europe
+    - V2H/V2G requires additional hardware investment
+    - Smaller dealer network than established brands
+    - No frunk storage
+
+# Notes
+notes: >
+  2026 BYD Seal Design RWD offers exceptional value in premium sedan segment 
+  with €48,490 starting price for 590km range. Significantly enhanced for 2026 
+  with V2H/V2G capability, 5G connectivity, enhanced Level 2+ driver assistance 
+  with supervised lane change assist, traffic light recognition, 4K cameras, 
+  HEPA filtration, and improved efficiency.
+  
+  Main competitor to Tesla Model 3 RWD but with more luxury features and 
+  advanced technology. Company car tax benefit (0.25% rate) saves drivers 
+  approximately €4,845 annually, making it extremely attractive for German 
+  company car market.
+  
+  LFP Blade Battery chemistry allows worry-free 100% charging without 
+  degradation concerns. V2L capability (3.3kW) enables use as mobile power 
+  source. New V2H and V2G capability allows home backup and grid services, 
+  potentially earning €150/year through V2G programs. Class-leading 
+  aerodynamics (0.219 Cd) contributes to excellent range and efficiency.
+  
+  BYD's expanding dealer network (52 locations in Germany, up from 45) and 
+  strong 6-year warranty provide confidence. Residual values continue improving 
+  as brand establishes European presence (62% after 3 years). Total cost of 
+  ownership significantly lower than comparable combustion sedans (€10,685 
+  savings over 3 years vs BMW 330i).
+  
+  2026 updates make it a technology leader with 5G connectivity, enhanced 
+  Level 2+ driver assistance approaching Level 3 capabilities (supervised 
+  lane changes), and bidirectional charging for future-proof energy management. 
+  Recommended for company car drivers, families, and anyone seeking cutting-edge 
+  EV technology at competitive price.
+
+metadata:
+  created_at: "2026-02-09"
+  updated_at: "2026-02-09"
+  data_quality: verified
+  sources:
+    - https://www.byd.com/de/car/seal.html
+    - BYD Germany dealer pricing (February 2026)
+    - ADAC EV cost calculator
+    - German company car tax regulations
+    - V2G pilot program information
