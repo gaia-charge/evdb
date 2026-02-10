@@ -1,0 +1,147 @@
+---
+id: bmw-ix-xdrive60-2025
+name: xDrive60
+model_id: bmw-ix
+model_year: 2025
+production_years:
+  start: 2025
+  end: null
+
+trim_level: xDrive60
+market_position: mid
+
+battery:
+  usable_kwh: 109.1
+  total_kwh: 116.5
+  chemistry: NCM
+  nominal_voltage_v: 400
+  cell_type: prismatic
+  manufacturer: Samsung SDI / CATL
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+
+range:
+  wltp_km: 701
+  wltp_source: manufacturer
+  wltp_city_km: 870
+  wltp_highway_km: 570
+  real_world_km: 600
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 20°C, highway/city 50/50"
+
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 11.0
+    onboard_charger_kw: 11
+    phases: 3
+    notes: "Optional 22kW AC charger available"
+  dc:
+    max_power_kw: 195
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 35
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 190
+      - soc_percent: 20
+        power_kw: 195
+      - soc_percent: 30
+        power_kw: 195
+      - soc_percent: 40
+        power_kw: 190
+      - soc_percent: 50
+        power_kw: 175
+      - soc_percent: 60
+        power_kw: 150
+      - soc_percent: 70
+        power_kw: 120
+      - soc_percent: 80
+        power_kw: 85
+
+  v2l: false
+  v2g: false
+  bidirectional_charging: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: AC induction
+      power_kw: 190
+      torque_nm: 350
+    - position: rear
+      type: permanent magnet
+      power_kw: 280
+      torque_nm: 415
+  total_power_kw: 400
+  total_power_hp: 544
+  total_torque_nm: 765
+  acceleration_0_100_sec: 4.6
+  top_speed_kmh: 200
+
+dimensions:
+  length_mm: 4953
+  width_mm: 1967
+  height_mm: 1696
+  wheelbase_mm: 3000
+  cargo_volume_liters: 500
+  cargo_volume_seats_down_liters: 1750
+  drag_coefficient: 0.25
+  frontal_area_m2: 2.82
+
+weight:
+  curb_weight_kg: 2585
+  gross_vehicle_weight_kg: 3135
+  payload_kg: 550
+  max_towing_capacity_kg: 2500
+
+efficiency:
+  wltp_kwh_per_100km: 17.8
+  wltp_source: manufacturer
+  real_world_kwh_per_100km: 22.5
+  real_world_source: estimated
+
+seating:
+  capacity: 5
+  configuration: "2+3"
+
+features:
+  driver_assistance:
+    - "Parking Assistant Plus (standard)"
+    - "Driving Assistant Professional"
+    - "Speed Limit Info"
+    - "iDrive 8.5 with curved display"
+  comfort:
+    - "2-zone automatic climate control"
+    - "Heated front seats (standard)"
+    - "Acoustic glass (standard)"
+    - "Panoramic glass roof with SkyLounge (standard)"
+    - "Adaptive air suspension (standard)"
+  infotainment:
+    - "Curved display: 12.3\" driver + 14.9\" central"
+    - "iDrive 8.5 with BMW Operating System 8.5"
+    - "BMW Maps navigation"
+    - "Apple CarPlay / Android Auto wireless"
+    - "Bowers & Wilkins Diamond surround sound (standard)"
+  charging_features:
+    - "11 kW AC onboard charger (standard)"
+    - "22 kW AC charger (optional)"
+    - "CCS Combo DC fast charging up to 195 kW"
+    - "Battery preconditioning"
+
+metadata:
+  created_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - "https://www.carwow.de/bmw/ix"
+    - "https://www.bmw.de"
+  notes: |
+    2025 facelift model. Replaces xDrive50 with more power (400 kW vs 385 kW)
+    and slightly larger 109.1 kWh battery. WLTP range increases to 701 km
+    (vs 630 km previously). Mid-range model with excellent range and performance.
