@@ -1,0 +1,164 @@
+id: mercedes-benz-glc-300-4matic-electric-2026
+name: "Mercedes-Benz GLC 300 4MATIC Electric"
+model_id: mercedes-benz-glc-electric
+variant_name: "300 4MATIC"
+model_year: 2026
+
+# Battery specifications
+battery:
+  usable_kwh: 95
+  total_kwh: 100
+  chemistry: NCM
+  cells: prismatic
+  supplier: "CATL"
+  warranty_years: 8
+  warranty_km: 200000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump"
+  voltage_architecture: 800
+
+# Range specifications (WLTP, real-world)
+range:
+  wltp_km: 680
+  wltp_city_km: 810
+  wltp_highway_km: 570
+  epa_km: null
+  real_world_km: 560
+
+  real_world_mild_weather_km: 590
+  real_world_cold_weather_km: 430
+
+# Charging specifications
+charging:
+  ac_max_kw: 22
+  ac_charge_time_0_100_hours: 4.5
+
+  dc_max_kw: 250
+  dc_charge_time_10_80_minutes: 26
+  dc_charge_time_0_100_minutes: 50
+  dc_charge_speed_kmh: 780
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 250
+      duration_minutes: 4
+    - soc_percent: 30
+      power_kw: 240
+      duration_minutes: 5
+    - soc_percent: 50
+      power_kw: 200
+      duration_minutes: 6
+    - soc_percent: 70
+      power_kw: 140
+      duration_minutes: 7
+    - soc_percent: 80
+      power_kw: 90
+      duration_minutes: 4
+    - soc_percent: 90
+      power_kw: 50
+      duration_minutes: 8
+    - soc_percent: 100
+      power_kw: 20
+      duration_minutes: 12
+
+# Motor and performance
+motor:
+  type: permanent_magnet
+  configuration: dual_motor
+  drive: AWD
+  total_power_kw: 190
+  total_power_hp: 258
+  total_torque_nm: 560
+
+performance:
+  acceleration_0_100_kmh_s: 6.0
+  top_speed_kmh: 210
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4845
+  width_mm: 1913
+  height_mm: 1644
+  wheelbase_mm: 2972
+  ground_clearance_mm: 175
+  drag_coefficient: 0.25
+
+weight:
+  curb_weight_kg: 2535
+  gross_vehicle_weight_kg: 3100
+  payload_kg: 565
+  towing_capacity_kg: 2400
+
+# Cargo
+cargo:
+  trunk_volume_liters: 570
+  trunk_volume_max_liters: 1740
+  frunk_volume_liters: 128
+
+# Seating
+seating:
+  capacity: 5
+  configuration: "2+3"
+
+# Standard equipment
+standard_equipment:
+  - "MBUX with MB.OS"
+  - "Superscreen display setup (12.3\" + 17.7\" displays)"
+  - "AIRMATIC air suspension"
+  - "Heat pump"
+  - "LED Intelligent Light System"
+  - "Active distance assist DISTRONIC"
+  - "Active steering assist"
+  - "360-degree camera"
+  - "Wireless Apple CarPlay and Android Auto"
+  - "Wireless smartphone charging"
+  - "Tri-zone automatic climate control"
+  - "Keyless entry and start"
+  - "Electric tailgate"
+  - "Roof rails"
+  - "19-inch alloy wheels"
+  - "Ambient lighting (64 colors)"
+  - "12-way power front seats with memory"
+  - "Heated front seats"
+  - "Parking assist with automated parking"
+
+# Safety
+safety:
+  euro_ncap_rating: null
+  airbags: 9
+  adas_level: 2
+  features:
+    - "Active distance assist DISTRONIC"
+    - "Active steering assist"
+    - "Active blind spot assist"
+    - "Active brake assist"
+    - "Active lane keeping assist"
+    - "Active lane change assist (optional)"
+    - "PRE-SAFE system"
+    - "360-degree camera"
+    - "Attention assist"
+    - "Traffic sign assist"
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 3.6
+  v2h: false
+  v2g: false
+
+notes: >
+  The Mercedes-Benz GLC 300 4MATIC Electric is the entry-level variant of the all-electric GLC,
+  built on Mercedes' new EA-M (Electric Architecture Medium) platform with 800V architecture.
+  It replaces the EQC and adopts Mercedes' new naming convention, dropping the "EQ" prefix.
+  With 190kW (258hp) dual motor AWD, 100kWh battery, and 680km WLTP range, it offers
+  competitive specs in the D-segment electric SUV market. The 800V architecture enables
+  250kW DC fast charging (10-80% in 26 minutes). DRIVE PILOT Level 3 autonomous driving
+  may be available as option where regulations permit.
+
+metadata:
+  data_quality: estimated
+  sources:
+    - https://www.mercedes-benz.com/en/vehicles/passenger-cars/glc/
+    - https://ev-database.org/car/3296/Mercedes-Benz-GLC-400-4MATIC
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"

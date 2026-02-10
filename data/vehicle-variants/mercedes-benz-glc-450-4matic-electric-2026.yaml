@@ -1,0 +1,172 @@
+id: mercedes-benz-glc-450-4matic-electric-2026
+name: "Mercedes-Benz GLC 450 4MATIC Electric"
+model_id: mercedes-benz-glc-electric
+variant_name: "450 4MATIC"
+model_year: 2026
+
+# Battery specifications
+battery:
+  usable_kwh: 95
+  total_kwh: 100
+  chemistry: NCM
+  cells: prismatic
+  supplier: "CATL"
+  warranty_years: 8
+  warranty_km: 200000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump"
+  voltage_architecture: 800
+
+# Range specifications (WLTP, real-world)
+range:
+  wltp_km: 615
+  wltp_city_km: 740
+  wltp_highway_km: 520
+  epa_km: null
+  real_world_km: 510
+
+  real_world_mild_weather_km: 540
+  real_world_cold_weather_km: 390
+
+# Charging specifications
+charging:
+  ac_max_kw: 22
+  ac_charge_time_0_100_hours: 4.5
+
+  dc_max_kw: 330
+  dc_charge_time_10_80_minutes: 22
+  dc_charge_time_0_100_minutes: 45
+  dc_charge_speed_kmh: 930
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 330
+      duration_minutes: 3
+    - soc_percent: 30
+      power_kw: 310
+      duration_minutes: 4
+    - soc_percent: 50
+      power_kw: 250
+      duration_minutes: 5
+    - soc_percent: 70
+      power_kw: 170
+      duration_minutes: 6
+    - soc_percent: 80
+      power_kw: 100
+      duration_minutes: 4
+    - soc_percent: 90
+      power_kw: 55
+      duration_minutes: 7
+    - soc_percent: 100
+      power_kw: 22
+      duration_minutes: 12
+
+# Motor and performance
+motor:
+  type: permanent_magnet
+  configuration: dual_motor
+  drive: AWD
+  total_power_kw: 300
+  total_power_hp: 408
+  total_torque_nm: 800
+
+performance:
+  acceleration_0_100_kmh_s: 4.5
+  top_speed_kmh: 240
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4845
+  width_mm: 1913
+  height_mm: 1644
+  wheelbase_mm: 2972
+  ground_clearance_mm: 175
+  drag_coefficient: 0.25
+
+weight:
+  curb_weight_kg: 2580
+  gross_vehicle_weight_kg: 3150
+  payload_kg: 570
+  towing_capacity_kg: 2400
+
+# Cargo
+cargo:
+  trunk_volume_liters: 570
+  trunk_volume_max_liters: 1740
+  frunk_volume_liters: 128
+
+# Seating
+seating:
+  capacity: 5
+  configuration: "2+3"
+
+# Standard equipment (includes everything from GLC 300 plus:)
+standard_equipment:
+  - "MBUX with MB.OS"
+  - "Superscreen display setup (12.3\" + 17.7\" displays)"
+  - "AIRMATIC air suspension with adaptive damping"
+  - "Heat pump"
+  - "DIGITAL LIGHT LED headlights"
+  - "Active distance assist DISTRONIC"
+  - "Active steering assist"
+  - "Active lane change assist"
+  - "360-degree camera with 3D view"
+  - "Wireless Apple CarPlay and Android Auto"
+  - "Wireless smartphone charging"
+  - "Tri-zone automatic climate control"
+  - "Burmester 3D surround sound system (15 speakers)"
+  - "Head-Up Display"
+  - "Keyless entry and start"
+  - "Electric tailgate with gesture control"
+  - "Roof rails"
+  - "20-inch AMG alloy wheels"
+  - "Ambient lighting (64 colors)"
+  - "14-way power front seats with memory and massage"
+  - "Heated and ventilated front seats"
+  - "Heated rear seats"
+  - "Parking assist with automated parking"
+  - "Augmented reality navigation"
+
+# Safety
+safety:
+  euro_ncap_rating: null
+  airbags: 9
+  adas_level: 2
+  features:
+    - "Active distance assist DISTRONIC"
+    - "Active steering assist"
+    - "Active blind spot assist"
+    - "Active brake assist"
+    - "Active lane keeping assist"
+    - "Active lane change assist"
+    - "PRE-SAFE system"
+    - "PRE-SAFE Sound"
+    - "360-degree camera with 3D view"
+    - "Attention assist PLUS"
+    - "Traffic sign assist"
+    - "DRIVE PILOT ready (Level 3, where available)"
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 3.6
+  v2h: true
+  v2g: false
+
+notes: >
+  The Mercedes-Benz GLC 450 4MATIC Electric is the performance variant of the all-electric GLC,
+  featuring 300kW (408hp) dual motors with 800Nm torque for a 4.5s 0-100 km/h sprint.
+  Built on the EA-M platform with 800V architecture, it achieves 330kW peak DC charging
+  (10-80% in just 22 minutes). With 615km WLTP range from the 100kWh battery, it competes
+  directly with the BMW iX xDrive50 and Audi Q6 e-tron performance. The 450 variant adds
+  adaptive AIRMATIC suspension, Burmester audio, DIGITAL LIGHT headlights, massage seats,
+  and enhanced ADAS features including DRIVE PILOT readiness. V2L and V2H bidirectional
+  charging capabilities are included.
+
+metadata:
+  data_quality: estimated
+  sources:
+    - https://www.mercedes-benz.com/en/vehicles/passenger-cars/glc/
+    - https://ev-database.org/car/3296/Mercedes-Benz-GLC-400-4MATIC
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
