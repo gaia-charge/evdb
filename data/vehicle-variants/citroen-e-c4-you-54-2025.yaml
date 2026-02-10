@@ -1,0 +1,118 @@
+# Citroën ë-C4 You 54kWh (2025)
+id: citroen-e-c4-you-54-2025
+name: "You 54kWh"
+model_id: citroen-e-c4
+model_year: 2025
+variant_code: EC4-YOU-54-2025
+
+battery:
+  usable_kwh: 51.0
+  total_kwh: 54.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "CATL"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 415
+  wltp_city_km: 530
+  wltp_highway_km: 330
+  real_world_km: 350
+  real_world_source: "Estimated based on 2024 ADAC data scaled to new battery"
+
+charging:
+  ac_max_kw: 11.0
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 100
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 85
+    - soc_percent: 10
+      power_kw: 100
+    - soc_percent: 20
+      power_kw: 100
+    - soc_percent: 30
+      power_kw: 95
+    - soc_percent: 40
+      power_kw: 88
+    - soc_percent: 50
+      power_kw: 78
+    - soc_percent: 60
+      power_kw: 65
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 30
+    - soc_percent: 90
+      power_kw: 15
+    - soc_percent: 100
+      power_kw: 8
+  time_10_to_80_percent_min: 30
+  plug_and_charge: false
+
+bidirectional:
+  v2l: false
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 115
+      power_hp: 156
+      torque_nm: 260
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_kmh_sec: 9.0
+  top_speed_kmh: 150
+
+weight:
+  curb_weight_kg: 1590
+  gross_weight_kg: 2070
+  max_payload_kg: 480
+
+efficiency:
+  wltp_kwh_per_100km: 15.2
+  real_world_kwh_per_100km: 17.5
+
+wheels_tires:
+  standard_size_front: "205/55 R17"
+  standard_size_rear: "205/55 R17"
+  wheel_sizes_available:
+    - "17 inch (standard)"
+    - "18 inch (optional)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Active Safety Brake"
+    - "Lane Keeping Assist"
+    - "Speed Limit Recognition"
+    - "Cruise Control"
+    - "Rear parking sensors"
+  connectivity:
+    - "10-inch touchscreen"
+    - "Wireless Apple CarPlay & Android Auto"
+    - "MyCitroën app"
+    - "Bluetooth"
+    - "USB-C ports"
+  special_features:
+    - "Citroën Advanced Comfort seats"
+    - "Progressive Hydraulic Cushions suspension"
+    - "Eco mode"
+    - "B-mode regenerative braking"
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.citroen.de/modelle/citroen-e-c4-elektro.html"
+  notes: "2025 model year ë-C4 with upgraded 54 kWh battery (up from 50 kWh). Motor upgraded to 115kW/156hp. WLTP range increases to 415km from 357km. Same coupe-crossover body style on updated STLA Medium platform."
