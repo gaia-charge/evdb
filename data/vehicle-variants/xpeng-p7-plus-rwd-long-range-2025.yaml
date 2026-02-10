@@ -1,0 +1,179 @@
+# XPENG P7+ RWD Long Range (2025)
+# Executive sedan with 800V architecture
+
+id: xpeng-p7-plus-rwd-long-range-2025
+name: RWD Long Range
+model_id: xpeng-p7-plus
+model_year: 2025
+production_years:
+  start: 2025
+  end: null
+
+trim_level: long-range
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 72.0
+  total_kwh: 76.3
+  chemistry: LFP  # Lithium Iron Phosphate
+  nominal_voltage_v: 800
+  cell_type: prismatic
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+
+  pack:
+    configuration: "floor-mounted, 800V SiC architecture"
+    weight_kg: 465
+    modules: null
+
+# Range
+range:
+  wltp_km: 445
+  wltp_source: estimated
+
+  epa_km: null
+  epa_source: null
+
+  real_world_km: 370
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, moderate climate"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 7.5
+    onboard_charger_kw: 11
+    phases: 3
+
+  dc:
+    max_power_kw: 280
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 20
+      "0_100": 48
+
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 230
+      - soc_percent: 10
+        power_kw: 280
+      - soc_percent: 20
+        power_kw: 275
+      - soc_percent: 40
+        power_kw: 250
+      - soc_percent: 50
+        power_kw: 210
+      - soc_percent: 60
+        power_kw: 160
+      - soc_percent: 70
+        power_kw: 110
+      - soc_percent: 80
+        power_kw: 65
+      - soc_percent: 90
+        power_kw: 35
+      - soc_percent: 100
+        power_kw: 12
+
+  bidirectional:
+    v2l: true
+    v2l_max_power_kw: 3.3
+    v2g: false
+    v2h: false
+
+  preconditioning:
+    battery_preconditioning: true
+    scheduled_charging: true
+    departure_time_climate: true
+
+# Motors & Performance
+motors:
+  - position: rear
+    type: permanent_magnet_synchronous
+    max_power_kw: 210
+    max_torque_nm: 440
+    cooling: liquid
+
+drivetrain:
+  type: rwd
+  total_power_kw: 210
+  total_power_hp: 286
+  total_torque_nm: 440
+
+performance:
+  acceleration_0_100_kmh_s: 6.4
+  top_speed_kmh: 200
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 1980
+  gross_weight_kg: 2450
+  payload_kg: 470
+  towing_capacity_kg: 0
+
+efficiency:
+  wltp_kwh_per_100km: 16.2
+  real_world_kwh_per_100km: 18.5
+
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 21.0
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 24.0
+
+# Features & Options
+standard_features:
+  - "XNGP with dual LiDAR"
+  - "15.6-inch central touchscreen"
+  - "10.25-inch digital instrument cluster"
+  - "Xmart OS 5.0"
+  - "360° camera system"
+  - "LED Matrix headlights"
+  - "Heat pump"
+  - "19-inch alloy wheels"
+  - "Dual-zone automatic climate control"
+  - "Wireless phone charging"
+  - "Dynaudio sound system"
+  - "Electric tailgate"
+  - "Parking sensors front/rear"
+
+colors:
+  standard:
+    - "Star White"
+    - "Midnight Black"
+  premium:
+    - "Interstellar Grey"
+    - "Horizon Green"
+    - "Aurora Blue"
+
+# Version Information
+version:
+  facelift: false
+  major_changes:
+    - "All-new SEPA 2.0 platform with 800V SiC"
+    - "Ultra-low 0.206 Cd drag coefficient"
+    - "Dual LiDAR XNGP standard"
+
+notes: >
+  The XPENG P7+ RWD Long Range uses an LFP battery for better value and
+  longevity. The 800V SiC architecture enables ultra-fast charging up to
+  280 kW. XNGP autonomous driving with dual LiDAR is standard equipment.
+  The exceptionally low drag coefficient of 0.206 contributes to excellent
+  highway efficiency. European deliveries expected from mid-2025.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: estimated
+  data_source: manufacturer
+  sources:
+    - https://www.xpeng.com
+    - https://ev-database.org
