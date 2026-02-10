@@ -1,0 +1,182 @@
+# Volkswagen ID.5 Pro (2025)
+id: volkswagen-id5-pro-2025
+name: Pro
+model_id: volkswagen-id5
+model_year: 2025
+variant_code: ID5-PRO
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    77 kWh usable battery (82 kWh gross). Same proven battery pack as ID.4 Pro
+    and ID.3 Pro S. NCM chemistry with 400V architecture. Liquid-cooled
+    thermal management for optimized fast charging and longevity.
+
+range:
+  wltp_km: 530
+  wltp_city_km: 670
+  wltp_highway_km: 440
+  epa_km: null
+  real_world_km: 440
+  real_world_source: ADAC EcoTest estimate
+  notes: |
+    WLTP range of 530 km with 77 kWh battery. Slightly improved over 2024
+    model (520 km) thanks to updated software and efficiency optimizations.
+    Coupe roofline provides better aerodynamics (Cd 0.26) than ID.4 (Cd 0.28).
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 175
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 175
+    - soc_percent: 10
+      power_kw: 175
+    - soc_percent: 20
+      power_kw: 170
+    - soc_percent: 30
+      power_kw: 155
+    - soc_percent: 40
+      power_kw: 135
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 90
+    - soc_percent: 70
+      power_kw: 65
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 30
+  time_0_to_100_min: 38
+  time_10_to_80_min: 27
+  time_20_to_80_min: 24
+  charging_speed_kmh: 1100
+  notes: |
+    Fast DC charging up to 175 kW peak. 10-80% in approximately 27 minutes.
+    11 kW AC charging standard (optional 22 kW three-phase available).
+    Improved charging curve management via updated software for 2025 MY.
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+  notes: "Bidirectional charging not supported in 2025 model"
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: permanent magnet
+      power_kw: 210
+      power_hp: 286
+      torque_nm: 545
+  total_power_kw: 210
+  total_power_hp: 286
+  total_torque_nm: 545
+  acceleration_0_100_sec: 6.7
+  top_speed_kmh: 160
+  notes: |
+    APP550 permanent magnet motor at rear axle with 286 hp and 545 Nm.
+    0-100 km/h in 6.7 seconds (improved from 7.4s in pre-facelift).
+    Top speed electronically limited to 160 km/h. Strong low-end torque
+    for responsive everyday driving.
+
+weight:
+  curb_weight_kg: 2119
+  gross_vehicle_weight_kg: 2640
+  payload_kg: 521
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+  notes: "Similar weight to 2024 model. Well-balanced distribution."
+
+efficiency:
+  wltp_kwh_per_100km: 16.0
+  wltp_city_kwh_per_100km: 13.9
+  wltp_highway_kwh_per_100km: 18.3
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.2
+  efficiency_rating: B
+  notes: |
+    16.0 kWh/100km WLTP - slightly improved over 2024 model thanks to
+    software optimizations. Real-world efficiency around 18.2 kWh/100km
+    in mixed conditions. Coupe styling provides aerodynamic advantage
+    over ID.4 Pro.
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "Travel Assist with Swarm Data"
+  notes: |
+    - Heat pump standard for improved cold-weather efficiency
+    - DCC adaptive chassis control available
+    - Travel Assist Level 2+ ADAS with lane keeping and predictive ACC
+    - ID. Light ambient lighting strip
+    - One-pedal driving with adjustable regenerative braking
+    - Matrix LED headlights (IQ.LIGHT)
+    - 12.9-inch touchscreen with wireless Apple CarPlay/Android Auto
+    - Digital cockpit with 5.3-inch driver display
+    - Updated ID. Software 4.0 with improved responsiveness
+    - More physical buttons vs pre-facelift models
+    - Plug & Charge support
+
+optional_equipment:
+  - name: IQ.DRIVE Max Package
+    code: IQDMAX
+    category: safety
+    included_in_base: false
+    notes: "Full ADAS suite with lane change assist, park assist, and matrix LED"
+  - name: AR Head-Up Display
+    code: ARHUD
+    category: infotainment
+    included_in_base: false
+    notes: "Augmented reality head-up display with navigation arrows"
+  - name: ergoActive Climate Seats
+    code: ERGOACT
+    category: comfort
+    included_in_base: false
+    notes: "Front seats with massage, ventilation, and climate control"
+  - name: 22kW AC Charging
+    code: AC22
+    category: charging
+    included_in_base: false
+    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
+  - name: DCC Adaptive Chassis Control
+    code: DCC
+    category: chassis
+    included_in_base: false
+    notes: "Adaptive dampers for improved comfort and handling"
+
+notes: |
+  The 2025 VW ID.5 Pro continues as the coupe SUV alternative to the ID.4.
+  Key 2025 updates include ID. Software 4.0 with improved infotainment
+  responsiveness, refined charging curve management, Plug & Charge support,
+  and continued availability of the APP550 motor (286 hp). The coupe roofline
+  delivers slightly better range than ID.4 through improved aerodynamics.
+  Built on MEB platform at VW's carbon-neutral Zwickau factory.
+  Competes with Tesla Model Y, BMW iX1, and Audi Q4 Sportback e-tron.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 90
+  sources:
+    - https://www.volkswagen.de/de/modelle/id5.html
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id5/

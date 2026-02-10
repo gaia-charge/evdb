@@ -1,0 +1,171 @@
+# Volkswagen ID.5 Pro (2025) - Germany Market Availability
+
+id: volkswagen-id5-pro-2025-de
+variant_id: volkswagen-id5-pro-2025
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 10
+notes: |
+  2025 model year ID.5 Pro available with updated software and features.
+  Built at VW's Zwickau factory. Strong demand in Germany as coupe SUV
+  alternative to ID.4.
+
+pricing:
+  base_price: 49995
+  price_including_vat: 49995
+  vat_rate_percent: 19
+  notes: |
+    German list price €49,995 for 2025 ID.5 Pro with 77 kWh battery and
+    286 hp motor. Price reduction vs 2024 model (was €52,000) due to
+    increased competition and VW's pricing strategy.
+
+incentives:
+  - type: tax_exemption
+    name: "Company Car Tax Benefit"
+    amount: 0
+    currency: EUR
+    notes: |
+      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+      Example: €49,995 × 0.25% = €125/month taxable benefit.
+      Under €70k threshold for 0.25% rate.
+
+  - type: tax_exemption
+    name: "Kfz-Steuer Exemption"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "Electric vehicles exempt from vehicle tax until 2030."
+
+equipment_packages:
+  - name: IQ.DRIVE Max Package
+    price:
+      amount: 2200
+      currency: EUR
+    items:
+      - Full ADAS suite
+      - Lane change assist
+      - Park assist
+      - Matrix LED headlights
+    notes: "Advanced driver assistance features"
+
+  - name: DCC Adaptive Chassis Control
+    price:
+      amount: 990
+      currency: EUR
+    items:
+      - Adaptive dampers
+      - Improved comfort and handling
+
+  - name: AR Head-Up Display
+    price:
+      amount: 1150
+      currency: EUR
+    items:
+      - Augmented reality HUD with navigation
+
+  - name: ergoActive Climate Seats
+    price:
+      amount: 550
+      currency: EUR
+    items:
+      - Front seats with massage and ventilation
+
+  - name: 22kW AC Charging Upgrade
+    price:
+      amount: 650
+      currency: EUR
+    items:
+      - 22 kW three-phase AC onboard charger
+
+available_colors:
+  - name: Glacier White Metallic
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Moonstone Grey
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+  - name: Kings Red Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+  - name: Grenadilla Black Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+
+sales_model: dealership
+dealerships_count: 680
+notes_sales: |
+  Available at all Volkswagen dealers across Germany and online.
+  Competitive leasing offers from VW Financial Services.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+company_car_tax:
+  rate_percent: 0.25
+  calculation_basis: list_price
+  calculation: |
+    0.25% monthly rate for EVs priced under €70,000:
+    Monthly taxable benefit: €49,995 × 0.25% = €125/month
+    Annual taxable benefit: €1,500/year
+    Income tax (42% bracket): ~€630/year
+    Excellent company car value vs ICE alternatives.
+
+charging_costs:
+  home:
+    kwh_rate: 0.32
+    currency: EUR
+    full_charge_cost: 24.64
+    cost_per_100km: 5.82
+    notes: Based on average German household rate (€0.32/kWh)
+  public_dc_fast:
+    kwh_rate: 0.79
+    currency: EUR
+    charge_10_80_cost: 42.50
+    cost_per_100km: 14.38
+    notes: IONITY/EnBW HyperNetz DC fast charging rates
+
+competitors:
+  - model: Tesla Model Y RWD
+    price: 44990
+    power_kw: 220
+    range_km: 455
+    notes: €5k cheaper, less range, different styling
+  - model: BMW iX1 xDrive30
+    price: 55900
+    power_kw: 230
+    range_km: 440
+    notes: €6k more, premium badge, less range
+  - model: Audi Q4 Sportback 45 e-tron
+    price: 52900
+    power_kw: 210
+    range_km: 540
+    notes: Similar price, premium badge, comparable specs
+
+market_notes: |
+  The 2025 ID.5 Pro offers strong value in the coupe SUV segment with its
+  price reduction to under €50,000. Excellent company car taxation at 0.25%
+  rate makes it attractive for business users. Key selling points: Made in
+  Germany, good range (530 km WLTP), fast charging (175 kW), and sporty
+  coupe styling. Main competitors are Tesla Model Y and Audi Q4 Sportback.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.volkswagen.de/de/modelle/id5.html

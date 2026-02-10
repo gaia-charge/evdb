@@ -1,0 +1,169 @@
+# Volkswagen ID.3 Pro S (2025) - Germany Market Availability
+
+id: volkswagen-id3-pro-s-2025-de
+variant_id: volkswagen-id3-pro-s-2025
+market: DE
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 8
+notes: |
+  2025 model year ID.3 Pro S with updated software and Plug & Charge.
+  Built at VW's Zwickau and Dresden factories. Strong demand in Germany
+  as long-range compact electric hatchback.
+
+pricing:
+  base_price: 43990
+  price_including_vat: 43990
+  vat_rate_percent: 19
+  notes: |
+    German list price €43,990 for 2025 ID.3 Pro S with 77 kWh battery.
+    Competitive pricing in the long-range compact EV segment.
+
+incentives:
+  - type: tax_exemption
+    name: "Company Car Tax Benefit"
+    amount: 0
+    currency: EUR
+    notes: |
+      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+      Example: €43,990 × 0.25% = €110/month taxable benefit.
+      Under €70k threshold for 0.25% rate.
+
+  - type: tax_exemption
+    name: "Kfz-Steuer Exemption"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "Electric vehicles exempt from vehicle tax until 2030."
+
+equipment_packages:
+  - name: IQ.DRIVE Assist Package
+    price:
+      amount: 1800
+      currency: EUR
+    items:
+      - Lane change assist
+      - Park assist
+      - Side Assist
+    notes: "Advanced driver assistance features"
+
+  - name: Design Package Plus
+    price:
+      amount: 1490
+      currency: EUR
+    items:
+      - 20-inch wheels
+      - Tinted windows
+      - Sport bumpers
+
+  - name: 22kW AC Charging Upgrade
+    price:
+      amount: 650
+      currency: EUR
+    items:
+      - 22 kW three-phase AC onboard charger
+
+  - name: Panoramic Glass Roof
+    price:
+      amount: 990
+      currency: EUR
+    items:
+      - Fixed panoramic glass roof
+
+available_colors:
+  - name: Glacier White Metallic
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Manganese Grey Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+  - name: Kings Red Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+  - name: Grenadilla Black Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+  - name: Stonewashed Blue Metallic
+    type: metallic
+    price_add:
+      amount: 695
+      currency: EUR
+
+sales_model: dealership
+dealerships_count: 680
+notes_sales: |
+  Available at all Volkswagen dealers across Germany and online.
+  Attractive leasing and financing offers from VW Financial Services.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+company_car_tax:
+  rate_percent: 0.25
+  calculation_basis: list_price
+  calculation: |
+    0.25% monthly rate for EVs priced under €70,000:
+    Monthly taxable benefit: €43,990 × 0.25% = €110/month
+    Annual taxable benefit: €1,320/year
+    Income tax (42% bracket): ~€554/year
+    Outstanding company car value - one of the cheapest long-range EVs to run.
+
+charging_costs:
+  home:
+    kwh_rate: 0.32
+    currency: EUR
+    full_charge_cost: 24.64
+    cost_per_100km: 5.53
+    notes: Based on average German household rate (€0.32/kWh)
+  public_dc_fast:
+    kwh_rate: 0.79
+    currency: EUR
+    charge_10_80_cost: 42.50
+    cost_per_100km: 13.67
+    notes: IONITY/EnBW HyperNetz DC fast charging rates
+
+competitors:
+  - model: Tesla Model 3 RWD
+    price: 42990
+    power_kw: 208
+    range_km: 513
+    notes: Similar price, sedan body, less practical hatchback
+  - model: BYD Dolphin Comfort 60.4 kWh
+    price: 35990
+    power_kw: 150
+    range_km: 427
+    notes: Much cheaper, shorter range, less power
+  - model: Cupra Born 77 kWh
+    price: 44990
+    power_kw: 170
+    range_km: 548
+    notes: Similar specs, sportier styling, same MEB platform
+
+market_notes: |
+  The 2025 ID.3 Pro S is VW's best-selling long-range compact EV in Germany.
+  At under €44,000 with 565 km WLTP range, it offers exceptional value.
+  Outstanding company car taxation at 0.25% rate. Key selling points:
+  Made in Germany, excellent range per euro, practical hatchback design,
+  and VW's extensive dealer/service network. Main competitors are Tesla
+  Model 3 and Cupra Born (same MEB platform sibling).
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.volkswagen.de/de/modelle/id3.html
