@@ -1,0 +1,148 @@
+id: smart-1-brabus-2025-de
+variant_id: smart-1-brabus-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2025-01"
+delivery_time_weeks: 12
+
+pricing:
+  base_price: 53990
+  price_including_vat: 53990
+  vat_rate_percent: 19
+  destination_charge: 890
+
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+available_colors:
+  - name: Brabus Star Black
+    code: BSB
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Brabus Signature Grey
+    code: BSG
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: Brabus Polar Silver
+    code: BPS
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+  - name: Brabus Pulse Red
+    code: BPR
+    type: metallic
+    price_add:
+      amount: 1200
+      currency: EUR
+
+available_wheels:
+  - name: 19-inch Brabus alloy wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 20-inch Brabus Monoblock forged wheels
+    size_inches: 20
+    type: forged
+    price_add:
+      amount: 1800
+      currency: EUR
+
+available_interiors:
+  - name: Black Nappa leather with Alcantara
+    code: BNLA
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Red/Black Nappa leather with Alcantara
+    code: RBNLA
+    price_add:
+      amount: 900
+      currency: EUR
+
+optional_equipment:
+  - name: Brabus Performance Package
+    price: 2000
+    includes:
+      - "Enhanced cooling system"
+      - "Track mode"
+      - "Performance data display"
+      - "Launch control optimization"
+  - name: Carbon Fiber Interior Package
+    price: 1200
+    includes:
+      - "Carbon fiber dashboard trim"
+      - "Carbon fiber door panels"
+      - "Carbon fiber center console"
+  - name: 20-inch Brabus Monoblock Forged Wheels
+    price: 1800
+    includes:
+      - "20-inch forged wheels"
+      - "Weight reduction 8kg"
+      - "235/40 R20 performance tires"
+
+market_info:
+  dealers_count: 85
+  service_centers_count: 120
+  warranty_years: 3
+  warranty_km: 100000
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  free_charging_network: false
+  home_charger_included: false
+  roadside_assistance_years: 3
+
+market_notes: >
+  2025 Smart #1 Brabus at €53,990 (€500 over 2024). Performance flagship
+  with 315kW/428hp and 3.9s 0-100 km/h. Brabus exterior styling, sport
+  suspension, Nappa leather & Alcantara interior. Under €70k threshold
+  for 0.25% company car tax. Most powerful compact EV crossover under €55k.
+
+company_car_tax:
+  gross_list_price: 53990
+  monthly_tax_base: 134.98
+  annual_tax_base: 1619.70
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    0.25% company car tax rate (under €70k). For driver in 30% tax bracket,
+    saves approximately €405/month vs equivalent ICE performance vehicle.
+
+charging_costs:
+  home_charging:
+    electricity_rate_eur_per_kwh: 0.32
+    cost_per_100km: 6.34
+    cost_full_charge: 21.12
+  public_ac_charging:
+    electricity_rate_eur_per_kwh: 0.49
+    cost_per_100km: 9.70
+  public_dc_fast_charging:
+    electricity_rate_eur_per_kwh: 0.79
+    cost_per_100km: 15.64
+  comparison_ice_equivalent:
+    fuel_consumption_l_per_100km: 8.0
+    fuel_price_eur_per_liter: 1.85
+    cost_per_100km: 14.80
+    annual_savings_home_charging: 2538
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-10"
+  confidence_level: high
+  sources:
+    - https://www.smart.com/de/de/modelle/1/brabus
+    - https://www.brabus.com/de/supercars/smart.html
+  created_at: "2026-02-10"
+  created_by: Patricio
