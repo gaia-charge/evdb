@@ -1,0 +1,95 @@
+# Peugeot e-208 Allure 54kWh (2025) - Germany Market Data
+
+id: peugeot-e-208-allure-54kwh-2025-de
+variant_id: peugeot-e-208-allure-54kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 37490
+  destination_charge: 0
+  total_msrp: 37490
+  
+  incentives:
+    - name: German Federal EV Incentive
+      amount: 0
+      type: federal_rebate
+      valid_until: null
+      notes: Expired December 2023
+    - name: Company Car Tax Benefit
+      amount_annual: 1125
+      type: tax_benefit
+      description: 0.25% monthly taxation (under €70k threshold)
+  
+  effective_price: 37490
+  price_positioning: mid-range
+
+options_packages:
+  popular_packages:
+    - name: Heat Pump
+      price: 750
+      description: "Essential for German winters, improves cold weather range by 15-20%"
+      recommended: true
+    - name: Driving Assistance Pack Plus
+      price: 750
+      description: "Highway Assist, Traffic Jam Assist, Extended Traffic Sign Recognition"
+    - name: Comfort Pack
+      price: 900
+      description: "Heated steering wheel, front electric seats with massage, keyless entry"
+    - name: Visibility Pack
+      price: 600
+      description: "Front parking sensors, auto-dimming mirror, rain sensor"
+  
+  standalone_options:
+    - name: Metallic Paint
+      price: 750
+    - name: 17" Alloy Wheels
+      price: 500
+    - name: Focal Premium Audio
+      price: 590
+    - name: Panoramic Glass Roof
+      price: 950
+    - name: Full LED Headlights
+      price: 850
+
+colors:
+  standard:
+    - name: Polar White
+      price: 0
+  metallic:
+    - name: Cumulus Grey
+      price: 750
+    - name: Okenite White
+      price: 750
+    - name: Nera Black
+      price: 750
+    - name: Vertigo Blue
+      price: 750
+    - name: Elixir Red
+      price: 750
+
+delivery:
+  typical_wait_weeks: 8-14
+  notes: "Built in Trnava, Slovakia. Good availability across German dealer network."
+
+company_car_tax:
+  list_price: 37490
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 93.73
+  notes: "Under €70k threshold - 0.25% rate applies. Excellent company car value."
+
+availability:
+  in_stock: true
+  build_to_order: true
+  test_drive_available: true
+
+data_quality:
+  overall: estimated
+  pricing: estimated
+  last_updated: 2025-02-10
+
+sources:
+  - name: Peugeot Germany
+    url: https://www.peugeot.de
+    type: manufacturer
+    date_accessed: 2025-02-10

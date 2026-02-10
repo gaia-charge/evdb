@@ -1,0 +1,188 @@
+# Fiat 500e Icon 42kWh 2025 Vehicle Variant
+
+id: fiat-500e-icon-42kwh-2025
+name: "Icon 42kWh"
+model_id: fiat-500e
+variant_name: "Icon 42kWh"
+model_year: 2025
+trim_level: Icon
+
+battery:
+  total_kwh: 42.0
+  usable_kwh: 37.3
+  chemistry: NMC
+  supplier: "CATL / LG Energy Solution"
+  cell_type: pouch
+  modules: 8
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid
+  architecture: "400V"
+
+range:
+  wltp_km: 325
+  wltp_city_km: 430
+  wltp_highway_km: 265
+  epa_km: null
+  real_world_km: 265
+
+range_conditions:
+  - condition: "City driving, 20°C, eco mode"
+    range_km: 430
+    avg_speed_kmh: 30
+    temperature_c: 20
+    notes: "Best-case scenario with regenerative braking"
+  - condition: "Highway driving, 20°C, 120 km/h"
+    range_km: 265
+    avg_speed_kmh: 120
+    temperature_c: 20
+    notes: "Highway range at motorway speeds"
+  - condition: "Mixed driving, 20°C"
+    range_km: 325
+    avg_speed_kmh: 50
+    temperature_c: 20
+    notes: "WLTP official test cycle"
+  - condition: "Winter driving, -5°C, heating on"
+    range_km: 225
+    avg_speed_kmh: 50
+    temperature_c: -5
+    notes: "Cold weather reduces range by ~30%"
+
+charging_dc:
+  standard: CCS2
+  max_power_kw: 85
+  time_10_80_min: 35
+  connector_position: "rear right"
+
+charging_ac:
+  standard: Type2
+  max_power_kw: 11.0
+  phases: 3
+  onboard_charger_kw: 11.0
+  time_0_100_hours: 4.0
+  connector_position: "rear right"
+
+motors:
+  count: 1
+  front:
+    type: permanent_magnet_synchronous
+    max_power_kw: 87
+    max_power_hp: 118
+    max_torque_nm: 220
+    position: front
+  combined:
+    max_power_kw: 87
+    max_power_hp: 118
+    max_torque_nm: 220
+  drivetrain: FWD
+
+performance:
+  acceleration_0_100_kmh_s: 9.0
+  top_speed_kmh: 150
+  top_speed_limited: true
+
+efficiency:
+  wltp_kwh_per_100km: 14.1
+  real_world_kwh_per_100km: 16.5
+  co2_emissions_gkm: 0
+
+dimensions:
+  length_mm: 3632
+  width_mm: 1683
+  height_mm: 1527
+  wheelbase_mm: 2322
+  ground_clearance_mm: 145
+  turning_circle_m: 9.7
+
+weight:
+  curb_weight_kg: 1365
+  gross_vehicle_weight_kg: 1665
+  payload_kg: 300
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
+
+cargo:
+  volume_liters: 185
+  volume_seats_folded_liters: 550
+  frunk_liters: 0
+
+interior:
+  seating_capacity: 4
+  doors: 3  # Also available as cabrio
+
+equipment:
+  infotainment:
+    screen_size_inches: 10.25
+    digital_cluster_inches: 7.0
+    apple_carplay: true
+    android_auto: true
+    wireless_connectivity: true
+    navigation: true
+    speakers: 6
+  
+  driver_assistance:
+    adaptive_cruise_control: true
+    lane_keeping_assist: true
+    blind_spot_monitoring: false
+    parking_sensors: true  # Rear
+    parking_camera: true  # 360° camera
+    autonomous_emergency_braking: true
+    traffic_sign_recognition: true
+    autonomous_level: 1
+  
+  comfort:
+    climate_control: automatic
+    heated_seats: true
+    heated_steering_wheel: false
+    wireless_charging: true
+    keyless_entry: true
+
+exterior:
+  led_headlights: true
+  led_taillights: true
+
+data_quality:
+  overall: estimated
+  battery_specs: verified
+  range_specs: estimated
+  charging_specs: verified
+  performance_specs: verified
+  source_reliability: medium
+  last_updated: 2025-02-10
+
+sources:
+  - name: Fiat Germany Official Website
+    url: https://www.fiat.de/500e
+    type: manufacturer
+    date_accessed: 2025-02-10
+
+notes: |
+  The 2025 Fiat 500e Icon 42kWh continues as the mid-range variant of Fiat's
+  iconic electric city car. Key updates for 2025 include:
+  
+  **2025 Updates:**
+  - Slightly improved WLTP range (320km → 325km) through software optimizations
+  - Updated infotainment with improved wireless connectivity
+  - New color options available
+  - Price adjustment to remain competitive against new entrants (Citroën ë-C3, Dacia Spring)
+  
+  **Key Strengths:**
+  - Iconic Italian design with retro-modern appeal
+  - Compact dimensions ideal for European city driving
+  - 360° parking camera standard on Icon trim
+  - Premium interior feel despite small size
+  - 11kW AC charging standard (fast home charging)
+  
+  **Limitations:**
+  - Limited range (325km WLTP) vs competitors (e-208: 420km, Corsa-e: 400km)
+  - Small cargo space (185L) - city car compromises
+  - No rear-seat access on 3-door (Cabrio and 3+1 door available separately)
+  - 85kW DC max slower than competitors (100kW for e-208/Corsa-e)
+  - No heat pump available
+  
+  **Competition in 2025:**
+  - Peugeot e-208 (more range, more practical, similar price)
+  - Citroën ë-C3 (much cheaper, new platform)
+  - Mini Cooper Electric (similar style, longer range in 2025)
+  - Renault 5 E-Tech (new competitor, strong value)

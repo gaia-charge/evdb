@@ -1,0 +1,83 @@
+# Peugeot e-208 GT 54kWh (2025) - Germany Market Data
+
+id: peugeot-e-208-gt-54kwh-2025-de
+variant_id: peugeot-e-208-gt-54kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 41490
+  destination_charge: 0
+  total_msrp: 41490
+  
+  incentives:
+    - name: German Federal EV Incentive
+      amount: 0
+      type: federal_rebate
+      notes: Expired December 2023
+    - name: Company Car Tax Benefit
+      amount_annual: 1245
+      type: tax_benefit
+      description: 0.25% monthly taxation (under €70k threshold)
+  
+  effective_price: 41490
+  price_positioning: premium
+
+options_packages:
+  popular_packages:
+    - name: Driver Sport Pack
+      price: 1200
+      description: "Sport mode mapping, dynamic stability control calibration"
+    - name: Panoramic Glass Roof
+      price: 950
+      description: "Fixed panoramic glass roof with tinted glass"
+  
+  standalone_options:
+    - name: Metallic Paint
+      price: 750
+    - name: Two-Tone Black Roof
+      price: 500
+    - name: Winter Tire Package
+      price: 890
+
+colors:
+  standard:
+    - name: Polar White
+      price: 0
+  metallic:
+    - name: Cumulus Grey
+      price: 750
+    - name: Okenite White
+      price: 750
+    - name: Nera Black
+      price: 750
+    - name: Vertigo Blue
+      price: 750
+    - name: Elixir Red
+      price: 750
+
+delivery:
+  typical_wait_weeks: 10-16
+  notes: "GT trim has longer lead times due to lower production volume vs Allure."
+
+company_car_tax:
+  list_price: 41490
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 103.73
+  notes: "Under €70k threshold - 0.25% rate applies."
+
+availability:
+  in_stock: true
+  build_to_order: true
+  test_drive_available: true
+
+data_quality:
+  overall: estimated
+  pricing: estimated
+  last_updated: 2025-02-10
+
+sources:
+  - name: Peugeot Germany
+    url: https://www.peugeot.de
+    type: manufacturer
+    date_accessed: 2025-02-10

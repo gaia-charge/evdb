@@ -1,0 +1,197 @@
+# Peugeot e-208 GT 54kWh (2025) - Top Trim Variant
+
+id: peugeot-e-208-gt-54kwh-2025
+model_id: peugeot-e-208
+name: "GT 54kWh"
+model_year: 2025
+trim_level: GT
+variant_code: null
+
+production:
+  start_date: 2024-09-01
+  end_date: null
+  status: active
+  notes: 2025 GT trim with 54kWh battery, 115kW motor, top specification
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC
+  total_kwh: 54.0
+  usable_kwh: 49.0
+  supplier: CATL (Contemporary Amperex Technology Co. Limited)
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+  notes: Same 54kWh battery as Allure trim
+
+range:
+  wltp_km: 410
+  wltp_city_km: 525
+  wltp_highway_km: 330
+  epa_combined_km: null
+  real_world_avg_km: 345
+  real_world_source: Estimated based on WLTP data
+  notes: Slightly lower range than Allure due to 17" wheels and additional equipment weight
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.3
+    onboard_charger: 11kW 3-phase standard
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    peak_power_notes: 100kW peak, same charging curve as Allure
+    preconditioning: false
+  
+  charge_curve:
+    - percent: 10
+      power_kw: 100
+    - percent: 20
+      power_kw: 100
+    - percent: 30
+      power_kw: 95
+    - percent: 40
+      power_kw: 88
+    - percent: 50
+      power_kw: 78
+    - percent: 60
+      power_kw: 65
+    - percent: 70
+      power_kw: 50
+    - percent: 80
+      power_kw: 30
+    - percent: 90
+      power_kw: 15
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
+  front_motor:
+    type: permanent_magnet
+    max_power_kw: 115
+    max_power_hp: 156
+    max_torque_nm: 260
+    supplier: null
+  rear_motor: null
+  
+  drive_type: FWD
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+
+performance:
+  acceleration_0_100_kmh_s: 8.3
+  acceleration_0_60_mph_s: null
+  top_speed_kmh: 150
+  quarter_mile_s: null
+
+efficiency:
+  wltp_kwh_per_100km: 15.6
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 18.0
+  efficiency_notes: Slightly higher consumption than Allure due to 17" wheels
+
+weight:
+  curb_weight_kg: 1475
+  gross_vehicle_weight_kg: 1890
+  payload_kg: 415
+  weight_distribution_front_percent: 60
+  towing_capacity_kg: 0
+
+equipment:
+  wheels:
+    standard_size_inches: 17
+    available_sizes_inches: [17]
+    tire_size_front: 205/45 R17
+    tire_size_rear: 205/45 R17
+  
+  lighting:
+    headlights: Full LED with Peugeot signature
+    matrix_led: true  # Matrix LED standard on GT
+  
+  climate:
+    heat_pump: true  # Standard on GT for 2025
+    heated_seats: true
+    heated_steering_wheel: true
+    ac_zones: 2
+  
+  driver_assistance:
+    adaptive_cruise_control: true
+    lane_keeping_assist: true
+    blind_spot_monitoring: true
+    parking_sensors: true  # Front and rear
+    parking_camera: true  # 180° reversing camera
+    surround_view_camera: false
+    autonomous_level: 2
+    adas_brand: null
+    notes: Drive Assist Plus standard on GT with Highway Assist and Traffic Jam Assist
+
+interior:
+  upholstery_material: Alcantara and TEP
+  upholstery_color_options: [Black, Grey/Green]
+  seat_adjustment: Electric front seats with lumbar
+  premium_audio: true  # Focal premium audio standard on GT
+  ambient_lighting: true
+
+exterior:
+  paint_type: Solid, Metallic
+  paint_colors: 9
+  two_tone_available: true  # Black roof option
+  roof_options: Standard roof, Panoramic glass roof (option)
+  aerodynamic_features: Flush door handles, active grille shutters, GT-specific body kit
+
+data_quality:
+  overall: estimated
+  battery_specs: estimated
+  range_specs: estimated
+  charging_specs: estimated
+  performance_specs: estimated
+  efficiency_specs: estimated
+  source_reliability: medium
+  last_updated: 2025-02-10
+
+sources:
+  - name: Peugeot Germany Official Website
+    url: https://www.peugeot.de/modelle/208.html
+    type: manufacturer
+    date_accessed: 2025-02-10
+
+notes: |
+  The 2025 Peugeot e-208 GT is the top-specification variant with all premium features:
+  
+  **Key 2025 GT Updates:**
+  - Battery: 51kWh → 54kWh (+5.9%)
+  - Motor: 100kW/136hp → 115kW/156hp (+15%)
+  - Range: 400km → 410km WLTP (slightly less than Allure due to 17" wheels)
+  - Heat pump now STANDARD on GT (was optional on 2024 GT)
+  - Heated steering wheel standard
+  
+  **GT-Exclusive Features:**
+  - Matrix LED headlights
+  - Alcantara sport seats with electric adjustment
+  - Focal premium audio system
+  - Drive Assist Plus with Highway Assist
+  - 17" diamond-cut alloy wheels
+  - GT body kit with specific bumpers
+  - Ambient interior lighting
+  - Panoramic glass roof (option)
+  - Two-tone black roof option
+  
+  **vs Allure Trim:**
+  - ~€3,500-4,000 premium over Allure
+  - Heat pump standard (saves €750 option cost)
+  - Sportier look with 17" wheels and body kit
+  - Better equipped cabin (Alcantara, electric seats, Focal audio)
+  - 10km less WLTP range due to larger wheels

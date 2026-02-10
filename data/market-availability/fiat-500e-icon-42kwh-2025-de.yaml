@@ -1,0 +1,86 @@
+# Fiat 500e Icon 42kWh (2025) - Germany Market Data
+
+id: fiat-500e-icon-42kwh-2025-de
+variant_id: fiat-500e-icon-42kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 36490
+  destination_charge: 0
+  total_msrp: 36490
+  
+  incentives:
+    - name: German Federal EV Incentive
+      amount: 0
+      type: federal_rebate
+      notes: Expired December 2023
+    - name: Company Car Tax Benefit
+      amount_annual: 1095
+      type: tax_benefit
+      description: 0.25% monthly taxation (under €70k threshold)
+  
+  effective_price: 36490
+  price_positioning: premium-city
+
+options_packages:
+  popular_packages:
+    - name: Winter Package
+      price: 590
+      description: "Heated steering wheel, heated windshield washer nozzles"
+    - name: Style Package
+      price: 790
+      description: "Chrome accents, specific wheel covers"
+  
+  standalone_options:
+    - name: Metallic Paint
+      price: 750
+    - name: Bi-color Paint
+      price: 1200
+    - name: 17" Alloy Wheels
+      price: 600
+    - name: JBL Premium Audio
+      price: 590
+
+colors:
+  standard:
+    - name: Gelato White
+      price: 0
+  metallic:
+    - name: Mineral Grey
+      price: 750
+    - name: Rose Gold
+      price: 750
+    - name: Celestial Blue
+      price: 750
+    - name: Onyx Black
+      price: 750
+  special:
+    - name: (RED)
+      price: 850
+
+delivery:
+  typical_wait_weeks: 6-12
+  notes: "Built in Mirafiori, Turin, Italy. Good availability."
+
+company_car_tax:
+  list_price: 36490
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 91.23
+  notes: "Under €70k threshold - 0.25% rate. Attractive for urban company car drivers."
+
+availability:
+  in_stock: true
+  build_to_order: true
+  test_drive_available: true
+
+data_quality:
+  overall: estimated
+  pricing: estimated
+  last_updated: 2025-02-10
+
+sources:
+  - name: Fiat Germany
+    url: https://www.fiat.de/500e
+    type: manufacturer
+    date_accessed: 2025-02-10
