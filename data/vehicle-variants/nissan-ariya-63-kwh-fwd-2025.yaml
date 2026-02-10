@@ -1,0 +1,150 @@
+# Nissan Ariya 63 kWh FWD (2025)
+id: nissan-ariya-63-kwh-fwd-2025
+name: 63 kWh FWD
+model_id: nissan-ariya
+model_year: 2025
+variant_code: ARIYA-63-FWD-25
+
+battery:
+  usable_kwh: 63.0
+  total_kwh: 66.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: |
+    63 kWh usable battery (66 kWh gross). Envision AESC cells with NCM
+    chemistry. 400V architecture. Unchanged from 2024 model year.
+
+range:
+  wltp_km: 450
+  wltp_city_km: 580
+  wltp_highway_km: 370
+  real_world_km: 370
+  real_world_source: EV Database / InsideEVs tests
+  notes: |
+    WLTP range of 450 km unchanged from 2024. Real-world range approximately
+    370 km in mixed driving conditions. Improved software optimisation for
+    slightly better cold-weather performance vs 2024.
+
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 130
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 125
+    - soc_percent: 30
+      power_kw: 115
+    - soc_percent: 40
+      power_kw: 100
+    - soc_percent: 50
+      power_kw: 85
+    - soc_percent: 60
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 35
+    - soc_percent: 90
+      power_kw: 25
+  time_10_to_80_min: 35
+  time_20_to_80_min: 30
+  charging_speed_kmh: 780
+  notes: |
+    DC fast charging up to 130 kW peak. 10-80% in 35 minutes. 22 kW
+    three-phase AC charging standard. Charging curve unchanged from 2024.
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 1.5
+  v2h: true
+  v2g: false
+  notes: |
+    V2L (vehicle-to-load) up to 1.5 kW via adapter. V2H capable with
+    compatible equipment. V2G not yet available in Europe.
+
+performance:
+  drive_type: FWD
+  motors:
+    - position: front
+      type: permanent magnet
+      power_kw: 160
+      power_hp: 218
+      torque_nm: 300
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+  acceleration_0_100_sec: 7.5
+  top_speed_kmh: 160
+  notes: |
+    Single front motor with 218 hp and 300 Nm. 0-100 km/h in 7.5 seconds.
+    Top speed 160 km/h. Powertrain unchanged from 2024.
+
+weight:
+  curb_weight_kg: 1990
+  gross_vehicle_weight_kg: 2460
+  payload_kg: 470
+  distribution_front_percent: 55
+  distribution_rear_percent: 45
+
+efficiency:
+  wltp_kwh_per_100km: 17.7
+  wltp_city_kwh_per_100km: 14.8
+  wltp_highway_kwh_per_100km: 19.8
+  real_world_kwh_per_100km: 18.5
+  efficiency_rating: B
+  notes: |
+    17.7 kWh/100km WLTP combined (updated from Nissan DE site).
+    Real-world around 18.5 kWh/100km in mixed driving.
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  torque_vectoring: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  autopilot_name: "ProPILOT Assist 2.0"
+  notes: |
+    - Heat pump standard
+    - ProPILOT Assist 2.0 with hands-free highway driving
+    - ProPILOT Park for automated parking
+    - e-Pedal Step for one-pedal driving
+    - 12.3-inch digital instrument cluster + 12.3-inch touchscreen
+    - Wireless Apple CarPlay/Android Auto
+    - 2025 update: Improved NissanConnect infotainment with faster processor
+    - Updated navigation with over-the-air map updates
+    - Nissan Safety Shield 360
+
+notes: |
+  The 2025 Nissan Ariya 63 kWh FWD carries over the proven CMF-EV platform
+  with minor software and infotainment updates. Key 2025 changes include
+  improved NissanConnect software, faster infotainment processor, and refined
+  ProPILOT Assist calibration. Battery and powertrain specs unchanged.
+  Still available in Germany alongside the new electric Leaf and Micra.
+
+version_changes:
+  - version: "2025"
+    changes: |
+      Updated NissanConnect infotainment with faster processor. Refined
+      ProPILOT Assist 2.0 calibration. Improved cold-weather battery
+      preconditioning software. New exterior colour options.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: verified
+  data_completeness_percent: 88
+  sources:
+    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+    - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
