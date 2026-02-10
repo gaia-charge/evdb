@@ -112,11 +112,24 @@ performance:
   top_speed_limited: true
 
 # Weight & Efficiency
+dimensions:
+  length_mm: 4855
+  width_mm: 1880
+  height_mm: 1495
+  wheelbase_mm: 2950
+  ground_clearance_mm: 150
+
+cargo:
+  trunk_capacity_liters: 401
+  trunk_max_liters: 1578
+  frunk_capacity_liters: 0
+
 weight:
   curb_weight_kg: 1855
   gross_weight_kg: 2340
   payload_kg: 485
-  towing_capacity_kg: 1600  # With braking (optional tow hitch)
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
   
 efficiency:
   wltp_kwh_per_100km: 13.9  # Best in class!
