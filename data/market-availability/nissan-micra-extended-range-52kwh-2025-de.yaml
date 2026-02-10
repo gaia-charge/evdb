@@ -1,0 +1,117 @@
+# Nissan Micra Extended Range 52 kWh 2025 - German Market
+id: nissan-micra-extended-range-52kwh-2025-de
+variant_id: nissan-micra-extended-range-52kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 29990
+  destination_charge: 890
+  on_the_road_price: 30880
+  price_includes:
+    - "110 kW (150 PS) front motor"
+    - "52 kWh NMC battery"
+    - "11 kW 3-phase AC charging"
+    - "101 kW DC fast charging"
+    - "10.1-inch infotainment touchscreen"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Integrated Google services"
+    - "Rearview camera with 12 parking sensors"
+    - "MULTI-SENSE driving modes"
+
+trim_levels:
+  - name: "Advance"
+    price: 29990
+    features:
+      - "110 kW (150 PS) front motor"
+      - "416 km WLTP range"
+      - "10.1-inch infotainment"
+      - "Wireless Apple CarPlay & Android Auto"
+      - "Integrated Google services"
+      - "Rearview camera with 12 parking sensors"
+      - "Wireless smartphone charging"
+      - "MULTI-SENSE with 4 driving modes"
+      - "18-inch alloy wheels"
+
+  - name: "N-Design"
+    price: 31990
+    features:
+      - "Everything in Advance, plus:"
+      - "Two-tone roof"
+      - "Privacy glass"
+      - "Premium interior trim"
+      - "Ambient lighting"
+
+  - name: "Tekna"
+    price: 33990
+    features:
+      - "Everything in N-Design, plus:"
+      - "19-inch alloy wheels"
+      - "BOSE audio system"
+      - "Heated steering wheel"
+      - "Heated front seats"
+      - "Around View Monitor"
+
+colors:
+  - name: "Pure White"
+    type: solid
+    price: 0
+  - name: "Mystery Black"
+    type: metallic
+    price: 550
+  - name: "Authentic Blue"
+    type: metallic
+    price: 750
+  - name: "Elegant Silver"
+    type: metallic
+    price: 750
+  - name: "Rebel Red"
+    type: metallic
+    price: 750
+  - name: "Noble Marine"
+    type: metallic
+    price: 750
+
+individual_options:
+  - name: "Two-tone roof (Mystery Black or Elegant Silver)"
+    price: 650
+  - name: "Heat pump"
+    price: 1200
+  - name: "BOSE audio system (N-Design only)"
+    price: 800
+
+incentives:
+  - name: "Company car tax benefit"
+    type: tax_credit
+    amount: 3599
+    notes: "0.25% of €29,990 = €75/month. ICE equivalent: €375/month. Savings: €300/month = €3,599/year"
+    eligibility: "Company car drivers only"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 380
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: grant
+    amount: 300
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 10
+  production_status: active
+  order_url: "https://micra.nissan.de/"
+
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://micra.nissan.de/"
+    - "https://ev-database.org/car/3203/Nissan-Micra-Extended-Range-52-kWh"
+  notes: "2025 model year. Pricing estimated based on Nissan Germany website and Renault 5 52 kWh pricing (starts ~€30,000). 110 kW motor with 416 km WLTP range."
