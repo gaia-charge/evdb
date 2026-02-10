@@ -1,0 +1,115 @@
+---
+id: cupra-born-vz-2025
+name: "VZ 79kWh"
+model_id: cupra-born
+model_year: 2025
+production_start: "2025-01-01"
+production_end: null
+
+# Battery specifications
+battery:
+  usable_kwh: 79.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cell_type: pouch
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "79 kWh usable battery (82 kWh gross). 2025 MY uses updated software for improved usable capacity. 400V MEB platform."
+
+range:
+  wltp_km: 520
+  wltp_city_km: 680
+  wltp_highway_km: 415
+  epa_km: null
+  real_world_km: 440
+  real_world_source: estimated
+  notes: |
+    WLTP range of 520 km (slight improvement over 2024 due to software optimization).
+    Real-world range around 440 km in mixed conditions. Winter range ~330km at -10°C.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 185
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 185
+    - soc_percent: 20
+      power_kw: 185
+    - soc_percent: 30
+      power_kw: 180
+    - soc_percent: 40
+      power_kw: 170
+    - soc_percent: 50
+      power_kw: 150
+    - soc_percent: 60
+      power_kw: 125
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 60
+  charge_time_10_80_minutes: 26
+  notes: |
+    DC fast charging up to 185kW (improved from 170kW in 2024 via software update).
+    10-80% in 26 minutes. AC charging: 11kW standard, 0-100% in ~7.5 hours.
+
+motors:
+  - position: rear
+    type: permanent_magnet
+    power_kw: 240
+    torque_nm: 310
+    manufacturer: Volkswagen Group
+
+drivetrain:
+  type: RWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 5.7
+  top_speed_kmh: 200
+  notes: "Performance flagship with 240kW motor. 0-100 km/h in 5.7s, top speed 200 km/h"
+
+efficiency:
+  wltp_kwh_per_100km: 16.4
+  real_world_kwh_per_100km: 19.0
+  notes: "Slightly improved efficiency over 2024 via software optimization"
+
+weight:
+  curb_weight_kg: 1970
+  gross_vehicle_weight_kg: 2330
+  towing_capacity_kg: 0
+  notes: "No towing (performance focus)"
+
+# ADAS features
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: front_and_rear
+  parking_camera: "360"
+  autonomous_parking: true
+
+notes: >
+  2025 model year Cupra Born VZ with minor updates: improved DC charging peak
+  (185kW vs 170kW), slightly better software-optimized range (520 km WLTP vs 511 km),
+  and updated infotainment software. Mechanical specs unchanged - 240kW motor,
+  5.7s 0-100 km/h, 200 km/h top speed. Still the fastest Born variant with sport
+  suspension -20mm, progressive steering, Brembo brakes, and copper VZ accents.
+  Built on MEB platform at SEAT Martorell.
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source: manufacturer
+  sources:
+    - "https://www.cupraofficial.com/models/born/vz"
+    - "https://www.cupraofficial.de/modelle/born"
