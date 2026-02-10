@@ -1,0 +1,92 @@
+# BMW i5 eDrive40 2026 - Poland Market
+id: bmw-i5-edrive40-2026-pl
+variant_id: bmw-i5-edrive40-2026
+market: PL
+currency: PLN
+
+availability_status: available
+available_from: "2025-03-01"
+
+pricing:
+  base_price: 299900
+  price_including_vat: 299900
+  vat_rate_percent: 23
+  destination_charge: 0
+  registration_fees: 500
+  total_price_estimate: 300400
+
+incentives:
+  - name: Mój Elektryk
+    type: grant
+    amount: 27000
+    description: "Mój Elektryk subsidy up to 27,000 PLN for individuals purchasing BEVs priced up to 225,000 PLN net. This vehicle likely exceeds the price cap."
+    valid_from: "2024-01-01"
+    valid_until: "2026-12-31"
+    conditions:
+      - Vehicle net price must not exceed 225,000 PLN
+      - Applicant must be a natural person
+      - Vehicle must be registered in Poland
+    source_url: https://www.nfosigw.gov.pl/oferta-finansowania/srodki-krajowe/programy-priorytetowe/moj-elektryk/
+  - name: Excise Tax Exemption
+    type: tax_exemption
+    amount: 0
+    description: BEVs are exempt from excise tax (akcyza) in Poland.
+    valid_from: "2021-01-01"
+    valid_until: "2029-12-31"
+
+market_specific:
+  standard_equipment:
+    - BMW Live Cockpit Professional
+    - Curved Display (12.3" + 14.9")
+    - Parking Assistant Plus with surround view
+    - Adaptive LED headlights
+    - 3-zone automatic climate control
+    - BMW Intelligent Personal Assistant
+    - Wireless Apple CarPlay / Android Auto
+    - Heated front seats
+    - Driving Assistant Professional
+    - Comfort Access
+
+  available_colors:
+    - name: Alpine White
+      additional_cost: 0
+    - name: Black Sapphire Metallic
+      additional_cost: 3900
+    - name: Mineral White Metallic
+      additional_cost: 3900
+    - name: Phytonic Blue Metallic
+      additional_cost: 3900
+    - name: Skyscraper Grey Metallic
+      additional_cost: 3900
+
+  available_wheels:
+    - size_inches: 19
+      design: Aerodynamic wheels
+      additional_cost: 0
+    - size_inches: 20
+      design: M light alloy wheels
+      additional_cost: 6200
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 12
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
+
+notes: |
+  BMW i5 eDrive40 in Poland. Prices include 23% VAT.
+  Vehicle likely exceeds Mój Elektryk price cap (225,000 PLN net).
+  Company car buyers may benefit from reduced income tax on BEVs.
+  Available through BMW dealer network across Poland.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-10"
+  sources:
+    - https://www.bmw.pl/pl/all-models/5-series/i5-sedan/overview.html

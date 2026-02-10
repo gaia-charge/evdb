@@ -1,0 +1,97 @@
+# Tesla Model 3 Long Range AWD 2025 - Spain Market
+id: tesla-model-3-long-range-awd-2025-es
+variant_id: tesla-model-3-long-range-awd-2025
+market: ES
+currency: EUR
+
+availability_status: available
+available_from: "2024-03-01"
+
+pricing:
+  base_price: 50970
+  price_including_vat: 50970
+  vat_rate_percent: 21
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 50970
+
+incentives:
+  - name: Plan MOVES III
+    type: grant
+    amount: 0
+    description: MOVES III program expired. No direct purchase subsidy currently available.
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
+    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+  - name: Impuesto de Matriculación Exemption
+    type: tax_exemption
+    amount: 0
+    description: Zero-emission vehicles are exempt from registration tax (Impuesto de Matriculación).
+    valid_from: "2023-01-01"
+    valid_until: "2026-12-31"
+  - name: Reduced IVTM (road tax)
+    type: tax_exemption
+    amount: 0
+    description: Up to 75% reduction on annual road tax (IVTM) depending on municipality.
+    valid_from: "2023-01-01"
+    valid_until: null
+
+market_specific:
+  standard_equipment:
+    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
+    - Dual Motor All-Wheel Drive
+    - Heat pump climate control
+    - 15.4" center touchscreen
+    - 8.0" rear display
+    - Glass roof
+    - Heated and ventilated front seats
+    - Wireless charging pad
+    - LED headlights
+    - Sentry Mode and Dashcam
+
+  available_colors:
+    - name: Pearl White Multi-Coat
+      additional_cost: 0
+    - name: Solid Black
+      additional_cost: 1200
+    - name: Midnight Silver Metallic
+      additional_cost: 1200
+    - name: Deep Blue Metallic
+      additional_cost: 1200
+    - name: Ultra Red
+      additional_cost: 2400
+
+  available_wheels:
+    - size_inches: 18
+      design: Photon Wheels
+      additional_cost: 0
+    - size_inches: 19
+      design: Sport Wheels
+      additional_cost: 1500
+
+dealer_network:
+  online_sales_available: true
+  service_centers_spain: 8
+
+delivery:
+  typical_delivery_weeks: 4
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
+  etiqueta_dgt: CERO
+
+notes: |
+  Tesla sells direct-to-consumer in Spain. Prices include 21% IVA.
+  DGT "CERO emisiones" label grants access to low-emission zones (ZBE)
+  in Madrid, Barcelona, and other cities. Exempt from registration tax.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-10"
+  sources:
+    - https://www.tesla.com/es_es/model3

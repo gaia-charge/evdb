@@ -1,0 +1,93 @@
+# Ford Mustang Mach-E GT 2024 - France Market
+id: ford-mustang-mach-e-gt-2024-fr
+variant_id: ford-mustang-mach-e-gt-2024
+market: FR
+currency: EUR
+
+availability_status: limited
+available_from: "2023-06-01"
+available_until: null
+
+pricing:
+  base_price: 74900
+  price_including_vat: 74900
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 74900
+
+incentives:
+  - name: Bonus Écologique
+    type: grant
+    amount: 0
+    description: "Bonus écologique not available — vehicle exceeds €47,000 price cap and is manufactured outside EU."
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Price must not exceed €47,000
+      - Vehicle must be manufactured in EU (environmental score)
+    source_url: https://www.service-public.fr/particuliers/vosdroits/F34014
+  - name: Prime à la Conversion
+    type: grant
+    amount: 1500
+    description: "Up to €1,500 when scrapping an old ICE vehicle (Crit'Air 3 or worse). Income-dependent."
+    valid_from: "2024-01-01"
+    valid_until: "2026-12-31"
+    conditions:
+      - Must scrap an eligible old vehicle
+      - Income thresholds apply
+
+market_specific:
+  standard_equipment:
+    - Ford BlueCruise (hands-free highway driving)
+    - MagneRide adaptive suspension
+    - Brembo front brakes
+    - 20-inch alloy wheels
+    - B&O premium audio system
+    - Ford SYNC 4A with 15.5" touchscreen
+    - Wireless Apple CarPlay / Android Auto
+    - Heated front seats and steering wheel
+    - 360-degree camera
+    - Adaptive LED headlights
+
+  available_colors:
+    - name: Star White Metallic Tri-Coat
+      additional_cost: 0
+    - name: Shadow Black
+      additional_cost: 0
+    - name: Grabber Blue Metallic
+      additional_cost: 850
+    - name: Rapid Red Metallic Tinted Clearcoat
+      additional_cost: 850
+    - name: Dark Matter Grey Metallic
+      additional_cost: 650
+
+  available_wheels:
+    - size_inches: 20
+      design: Machined-Face alloy (GT standard)
+      additional_cost: 0
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 8
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
+  crit_air: Pas de vignette requise
+
+notes: |
+  Ford Mustang Mach-E GT in France. Prices include 20% TVA.
+  Not eligible for bonus écologique (exceeds price cap + manufactured in Mexico).
+  Eligible for prime à la conversion if scrapping old vehicle.
+  French Crit'Air system: BEVs do not require a vignette.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-10"
+  sources:
+    - https://www.ford.fr/voitures/mustang-mach-e
