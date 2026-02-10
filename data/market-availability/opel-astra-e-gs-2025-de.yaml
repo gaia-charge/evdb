@@ -1,0 +1,112 @@
+# Opel Astra Electric GS - German Market (2025)
+
+id: opel-astra-e-gs-2025-de
+variant_id: opel-astra-e-gs-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2024-09-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 10
+  notes: Built at Rüsselsheim, Germany; 2025 model year update
+
+pricing:
+  base_price: 48490
+  destination_charge: 990
+  total_msrp: 49480
+  pricing_date: 2026-02-10
+  price_notes: Slight price increase over 2024 MY reflecting updated features
+
+options:
+  colors:
+    - name: Voltaic Blue (metallic)
+      price: 795
+      type: metallic
+    - name: Mataro Orange (metallic)
+      price: 795
+      type: metallic
+    - name: Moonstone Grey (metallic)
+      price: 795
+      type: metallic
+    - name: Velvet Red (metallic)
+      price: 795
+      type: metallic
+    - name: Diamond Black (pearl)
+      price: 895
+      type: pearl
+    - name: Jade White (solid)
+      price: 0
+      type: solid
+
+  wheels:
+    - name: 18" Bi-Color Alloy Wheels
+      price: 0
+      size_inches: 18
+      notes: Standard on GS trim
+    - name: 18" Black Diamond-Cut Alloy Wheels
+      price: 550
+      size_inches: 18
+
+  interior:
+    - name: Black AGR Sport Cloth Seats
+      price: 0
+    - name: Black Alcantara Sport Seats
+      price: 1400
+
+packages:
+  - name: Ultimate Premium Package
+    price: 2490
+    includes:
+      - Nappa leather sport seats (AGR-certified)
+      - Premium 10-speaker Focal audio system
+      - Adaptive damping suspension
+      - Panoramic glass roof with electric sunshade
+      - Ambient lighting (16 colors)
+
+  - name: Towing Package
+    price: 790
+    includes:
+      - Removable towbar (1000kg braked)
+      - Trailer stability control
+      - Electrical trailer connection
+
+incentives:
+  - type: tax_exemption
+    name: "Kfz-Steuer exemption for BEVs"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "BEVs exempt from vehicle tax until 2030"
+
+  - type: subsidy
+    name: "THG-Quote certificate"
+    amount: 300
+    currency: EUR
+    valid_until: null
+    notes: "Owners can sell CO2 certificates for ~€250-350/year"
+
+company_car:
+  taxation_rate: 0.25
+  list_price_for_taxation: 48490
+  monthly_tax_base: 121
+  annual_tax_savings_vs_ice: 4364
+  notes: |
+    0.25% of list price per month (vs 1% for ICE).
+    Monthly tax: €121 vs €485 for comparable ICE = saves €4,364/year.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.opel.de/modelle/astra/astra-electric.html

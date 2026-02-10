@@ -1,0 +1,110 @@
+# Opel Grandland Electric 98 kWh Long Range - German Market (2025)
+
+id: opel-grandland-electric-98-long-range-2025-de
+variant_id: opel-grandland-electric-98-long-range-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2025-01-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 16
+  notes: Flagship Long Range variant, built at Eisenach, Germany
+
+pricing:
+  base_price: 52990
+  destination_charge: 990
+  total_msrp: 53980
+  pricing_date: 2026-02-10
+  price_notes: "Premium over 73 kWh GS reflects larger battery, more power, and enhanced equipment"
+
+options:
+  colors:
+    - name: Moonstone Grey (metallic)
+      price: 795
+      type: metallic
+    - name: Voltaic Blue (metallic)
+      price: 795
+      type: metallic
+    - name: Crimson Red (metallic)
+      price: 795
+      type: metallic
+    - name: Diamond Black (pearl)
+      price: 895
+      type: pearl
+    - name: Arctic White (solid)
+      price: 0
+      type: solid
+
+  wheels:
+    - name: 20" Alloy Wheels
+      price: 0
+      size_inches: 20
+      notes: Standard on Long Range
+    - name: 20" Diamond-Cut Bi-Color Wheels
+      price: 650
+      size_inches: 20
+
+  interior:
+    - name: Black Cloth/Leatherette Seats
+      price: 0
+    - name: Black Nappa Leather Seats
+      price: 1800
+
+packages:
+  - name: Panoramic Camera Package
+    price: 990
+    includes:
+      - 360-degree bird's eye view camera (enhanced resolution)
+      - Automated parking assist
+      - Front parking sensors (additional)
+
+  - name: Towing Package
+    price: 890
+    includes:
+      - Electric retractable towbar (1500kg braked)
+      - Trailer stability control
+      - Electrical trailer connection
+    notes: "1500kg towing - excellent for an electric SUV"
+
+incentives:
+  - type: tax_exemption
+    name: "Kfz-Steuer exemption for BEVs"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "BEVs exempt from vehicle tax until 2030"
+
+  - type: subsidy
+    name: "THG-Quote certificate"
+    amount: 300
+    currency: EUR
+    valid_until: null
+    notes: "CO2 certificate sales ~€250-350/year"
+
+company_car:
+  taxation_rate: 0.25
+  list_price_for_taxation: 52990
+  monthly_tax_base: 132
+  annual_tax_savings_vs_ice: 4769
+  notes: |
+    0.25% of list price per month (vs 1% for ICE).
+    Monthly tax: €132 vs €530 for comparable ICE = saves €4,769/year.
+    Under €70k threshold for 0.25% rate.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.opel.de/fahrzeuge/grandland-electric.html
+    - https://ev-database.org/

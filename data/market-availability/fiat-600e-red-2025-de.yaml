@@ -1,0 +1,104 @@
+# Fiat 600e (RED) - German Market (2025)
+
+id: fiat-600e-red-2025-de
+variant_id: fiat-600e-red-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2024-06-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 14
+  notes: Standard trim, more accessible entry to 600e range
+
+pricing:
+  base_price: 38490
+  destination_charge: 890
+  total_msrp: 39380
+  pricing_date: 2026-02-10
+  price_notes: "(RED) is the standard trim, ~€4,000 less than La Prima"
+
+options:
+  colors:
+    - name: Cinema Black
+      price: 0
+      type: solid
+    - name: Passione Red
+      price: 600
+      type: metallic
+    - name: Sicilia Orange
+      price: 600
+      type: metallic
+    - name: Venezia Blue
+      price: 600
+      type: metallic
+    - name: Gelato White
+      price: 600
+      type: metallic
+
+  wheels:
+    - name: 17" Alloy Wheels
+      price: 0
+      size_inches: 17
+      notes: Standard
+    - name: 18" Diamond-Cut Alloy Wheels
+      price: 800
+      size_inches: 18
+
+packages:
+  - name: Comfort Package
+    price: 1290
+    includes:
+      - Heated front seats
+      - Dual-zone automatic climate control
+      - Auto-dimming rearview mirror
+      - Rear armrest
+
+  - name: Tech Package
+    price: 1490
+    includes:
+      - Wireless smartphone charging
+      - Blind spot monitoring
+      - Rear cross-traffic alert
+      - Full-LED fog lights
+
+incentives:
+  - type: tax_exemption
+    name: "Kfz-Steuer exemption for BEVs"
+    amount: 0
+    currency: EUR
+    valid_until: "2030-12-31"
+    notes: "BEVs exempt from vehicle tax until 2030"
+
+  - type: subsidy
+    name: "THG-Quote certificate"
+    amount: 300
+    currency: EUR
+    valid_until: null
+    notes: "CO2 certificate sales ~€250-350/year"
+
+company_car:
+  taxation_rate: 0.25
+  list_price_for_taxation: 38490
+  monthly_tax_base: 96
+  annual_tax_savings_vs_ice: 3464
+  notes: |
+    0.25% of list price per month (vs 1% for ICE).
+    Monthly tax: €96 vs €385 for comparable ICE = saves €3,464/year.
+    Very attractive company car due to low list price.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.fiat.de/600e
