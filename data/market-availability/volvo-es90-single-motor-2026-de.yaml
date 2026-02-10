@@ -1,0 +1,107 @@
+id: volvo-es90-single-motor-2026-de
+variant_id: volvo-es90-single-motor-2026
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 79900
+  destination_charge: 0
+  on_road_price: 79900
+
+options:
+  packages: []
+
+  paint_options:
+    - name: "Crystal White"
+      price: 0
+      code: "crystal-white"
+    - name: "Onyx Black"
+      price: 1100
+      code: "onyx-black"
+    - name: "Vapour Grey"
+      price: 1100
+      code: "vapour-grey"
+
+  interior_options:
+    - name: "Charcoal Wool Blend"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 4794
+    notes: "0.5% of gross list price per month for EVs over €70,000 BLP. €79,900 × 0.5% = €399.50/month = €4,794/year vs ICE 1% = €9,588/year. Annual savings: €4,794."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 400
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: announced
+  waiting_time_weeks: null
+  online_configurator: no
+  online_purchase: no
+
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Sweden
+    - Norway
+    - Denmark
+    - Netherlands
+    - Belgium
+    - UK
+
+warranty:
+  vehicle_warranty_years: 3
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Tesla Model S AWD"
+      price: 94990
+      range_wltp: 634
+      notes: "More expensive, slightly less range"
+
+    - model: "Mercedes-Benz EQS 350"
+      price: 101040
+      range_wltp: 758
+      notes: "Significantly more expensive, longer range"
+
+    - model: "Volvo ES90 Twin Motor"
+      price: 85000
+      range_wltp: 700
+      notes: "AWD sibling, more power, slightly more range, ~€5k more"
+
+  market_position: |
+    The Volvo ES90 Single Motor is the entry point to Volvo's flagship electric sedan.
+    With RWD and 651 km WLTP range, it offers excellent efficiency. At an estimated
+    €79,900 it undercuts the Mercedes EQS 350 by over €20,000 while offering
+    competitive range and Volvo's industry-leading safety features including lidar.
+
+metadata:
+  created_at: "2026-02-10T12:45:00Z"
+  updated_at: "2026-02-10T12:45:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_market
+  notes: |
+    MY2026 model, pricing estimated ~€5,000 below Twin Motor variant.
+    Final German pricing TBC. RWD single motor offers best range/efficiency
+    in the ES90 lineup.
+
+sources:
+  - url: "https://ev-database.org/car/3128/Volvo-ES90-Single-Motor"
+    title: "EV Database - Volvo ES90 Single Motor"
+    date_accessed: "2026-02-10"
