@@ -1,0 +1,109 @@
+id: kia-ev4-583-kwh-2025-de
+variant_id: kia-ev4-583-kwh-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 37590
+  destination_charge: 0
+  on_road_price: 37590
+
+options:
+  packages: []
+  paint_options:
+    - name: "Snow White Pearl"
+      price: 0
+      code: "snow-white"
+    - name: "Aurora Black Pearl"
+      price: 590
+      code: "aurora-black"
+    - name: "Gravity Blue"
+      price: 590
+      code: "gravity-blue"
+    - name: "Yacht Blue"
+      price: 590
+      code: "yacht-blue"
+  interior_options:
+    - name: "Black"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 1880
+    notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €37,590 × 0.25% = €93.98/month = €1,128/year vs ICE 1% = €4,511/year. Annual savings: €3,383."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 200
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+  - name: "E-Auto Förderprogramm"
+    type: grant
+    amount: 6000
+    notes: "Federal EV purchase incentive up to €6,000 for EVs under €45,000. Subject to availability and eligibility."
+    valid_until: "2026-12-31"
+
+availability:
+  status: available
+  waiting_time_weeks: 10
+  online_configurator: yes
+  online_purchase: no
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Netherlands
+    - Belgium
+    - UK
+    - Norway
+    - Sweden
+
+warranty:
+  vehicle_warranty_years: 7
+  vehicle_warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Volkswagen ID.3 Pro"
+      price: 36900
+      range_wltp: 426
+      notes: "Similar price, less range"
+    - model: "Kia EV3 Long Range"
+      price: 40990
+      range_wltp: 605
+      notes: "More expensive, crossover style, more range"
+    - model: "Tesla Model 3 RWD"
+      price: 42990
+      range_wltp: 554
+      notes: "More expensive, more range, faster charging"
+
+  market_position: |
+    The Kia EV4 58.3 kWh is the most affordable entry point to the EV4 range.
+    At €37,590 (potentially €31,590 with E-Auto Förderprogramm), it offers
+    458 km WLTP range - enough for most daily commutes and occasional trips.
+    The 7-year warranty is class-leading at this price point.
+
+metadata:
+  created_at: "2026-02-10T01:00:00Z"
+  updated_at: "2026-02-10T01:00:00Z"
+  data_quality: verified
+  data_source: manufacturer
+  notes: |
+    German pricing from Kia Deutschland website. Base Air trim at €37,590.
+    Eligible for German E-Auto Förderprogramm (up to €6,000).
+
+sources:
+  - url: "https://www.kia.com/de/ev4/"
+    title: "Kia EV4 - Kia Deutschland"
+    date_accessed: "2026-02-10"
