@@ -1,0 +1,107 @@
+---
+id: toyota-urban-cruiser-49-fwd-2025
+name: "49 kWh FWD"
+model_id: toyota-urban-cruiser
+model_year: 2025
+production_start: "2025-06-01"
+production_end: null
+
+battery:
+  usable_kwh: 49.0
+  total_kwh: 49.0
+  chemistry: LFP
+  cell_type: blade
+  manufacturer: BYD FinDreams
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "49 kWh LFP blade battery. Entry-level battery option."
+
+range:
+  wltp_km: 339
+  wltp_city_km: 430
+  wltp_highway_km: 280
+  real_world_km: 270
+  real_world_source: "Estimated based on platform data"
+  notes: |
+    WLTP range of 339 km with 49 kWh battery. Suitable for urban and suburban use.
+    Heat pump standard helps maintain winter range.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 125
+    - soc_percent: 30
+      power_kw: 110
+    - soc_percent: 50
+      power_kw: 85
+    - soc_percent: 60
+      power_kw: 60
+    - soc_percent: 70
+      power_kw: 40
+    - soc_percent: 80
+      power_kw: 30
+  charge_time_10_80_minutes: 28
+  notes: |
+    DC fast charging up to 130 kW.
+    AC charging: 11 kW standard (3-phase), 0-100% in approximately 4.5 hours.
+
+motors:
+  - position: front
+    type: permanent_magnet
+    power_kw: 106
+    torque_nm: 189
+    manufacturer: Suzuki/Toyota
+
+drivetrain:
+  type: FWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 9.5
+  top_speed_kmh: 150
+  notes: "Entry-level powertrain. 106 kW (144 PS) front motor."
+
+efficiency:
+  wltp_kwh_per_100km: 14.5
+  real_world_kwh_per_100km: 18.2
+  notes: "Good efficiency thanks to LFP battery and aerodynamic design."
+
+weight:
+  curb_weight_kg: 1710
+  gross_vehicle_weight_kg: 2200
+  towing_capacity_kg: 750
+  notes: "Lightest variant. Tows up to 750 kg."
+
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: rear
+  parking_camera: rear
+  autonomous_parking: false
+
+notes: >
+  Entry-level Toyota Urban Cruiser with 49 kWh LFP battery and front-wheel drive. 106 kW
+  (144 PS) front motor delivers 0-100 km/h in 9.5 seconds. WLTP range of 339 km.
+  130 kW DC fast charging. Heat pump standard. Same powertrain as Suzuki e Vitara 49 FWD.
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source: manufacturer
+  sources:
+    - "https://www.toyota.de/urban-cruiser"
+    - "https://en.wikipedia.org/wiki/Toyota_Urban_Cruiser_(electric)"

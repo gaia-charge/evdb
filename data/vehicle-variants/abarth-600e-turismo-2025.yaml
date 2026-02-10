@@ -1,0 +1,107 @@
+---
+id: abarth-600e-turismo-2025
+name: "Turismo"
+model_id: abarth-600e
+model_year: 2025
+production_start: "2024-10-01"
+production_end: null
+
+battery:
+  usable_kwh: 51.0
+  total_kwh: 54.0
+  chemistry: NMC
+  manufacturer: Samsung SDI
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "54 kWh NMC battery shared with Fiat 600e."
+
+range:
+  wltp_km: 334
+  wltp_city_km: 440
+  wltp_highway_km: 270
+  real_world_km: 265
+  real_world_source: "Estimated based on Fiat 600e data adjusted for higher power"
+  notes: |
+    WLTP range of 334 km. Lower range than Fiat 600e due to sportier tuning
+    and increased power consumption. Real-world range approximately 265 km.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 100
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 100
+    - soc_percent: 20
+      power_kw: 97
+    - soc_percent: 30
+      power_kw: 90
+    - soc_percent: 50
+      power_kw: 70
+    - soc_percent: 60
+      power_kw: 55
+    - soc_percent: 70
+      power_kw: 40
+    - soc_percent: 80
+      power_kw: 30
+  charge_time_10_80_minutes: 35
+  notes: |
+    DC fast charging up to 100 kW.
+    AC charging: 11 kW standard (3-phase), 0-100% in approximately 5 hours.
+
+motors:
+  - position: front
+    type: permanent_magnet
+    power_kw: 207
+    torque_nm: 345
+    manufacturer: Stellantis
+
+drivetrain:
+  type: FWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 5.9
+  top_speed_kmh: 200
+  notes: "207 kW (280 PS) motor. Scorpion mode for maximum performance. Torsen limited-slip differential."
+
+efficiency:
+  wltp_kwh_per_100km: 16.2
+  real_world_kwh_per_100km: 20.5
+  notes: "Higher consumption than Fiat 600e due to performance tuning."
+
+weight:
+  curb_weight_kg: 1635
+  gross_vehicle_weight_kg: 2100
+  towing_capacity_kg: 0
+  notes: "Not rated for towing."
+
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: rear
+  parking_camera: rear
+  autonomous_parking: false
+
+notes: >
+  Abarth 600e Turismo is the entry-level performance variant with 207 kW (280 PS) motor,
+  0-100 km/h in 5.9 seconds. Features Abarth Sound Generator, sport suspension, Torsen
+  limited-slip differential, and 20-inch alloy wheels. Scorpion driving mode for maximum
+  performance. 334 km WLTP range.
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source: manufacturer
+  sources:
+    - "https://www.abarth.com/600e"
+    - "https://ev-database.org/car/2043/Abarth-600e"
