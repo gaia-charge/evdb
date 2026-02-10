@@ -105,12 +105,28 @@ performance:
   top_speed_kmh: 230
   top_speed_limited: true
 
+# Dimensions
+dimensions:
+  length_mm: 5060
+  width_mm: 1900
+  width_with_mirrors_mm: 2156
+  height_mm: 1505
+  wheelbase_mm: 2995
+  ground_clearance_mm: 144
+
+# Cargo
+cargo:
+  trunk_capacity_liters: 490
+  trunk_max_liters: 1560
+  frunk_capacity_liters: 0
+
 # Weight & Efficiency
 weight:
   curb_weight_kg: 2350
   gross_weight_kg: 2950
   payload_kg: 600
-  towing_capacity_kg: 2000  # With braked trailer
+  towing_capacity_braked_kg: 2000
+  towing_capacity_unbraked_kg: 750
   
 efficiency:
   wltp_kwh_per_100km: 18.9
