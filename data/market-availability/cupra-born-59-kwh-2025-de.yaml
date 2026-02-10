@@ -1,0 +1,164 @@
+# CUPRA Born 59kWh (2025) - Germany Market Availability
+
+id: cupra-born-59-kwh-2025-de
+variant_id: cupra-born-59-kwh-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-02-01"
+delivery_time_weeks: 8
+notes: |
+  2025 CUPRA Born with 59 kWh battery, 170kW motor, 434 km WLTP range.
+  Popular in Germany as the sportier MEB alternative.
+
+# Pricing
+pricing:
+  base_price: 38900
+  price_including_vat: 38900
+  vat_rate_percent: 19
+  notes: |
+    Competitive pricing for a sporty compact EV with 434 km range.
+    Positioned between VW ID.3 and CUPRA Tavascan.
+
+# Available Colors
+available_colors:
+  - name: Candy White
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Blue Metallic
+    type: metallic
+    price_add:
+      amount: 690
+      currency: EUR
+  
+  - name: Magnetic Tech Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+  
+  - name: Enceladus Grey Metallic
+    type: metallic
+    price_add:
+      amount: 690
+      currency: EUR
+  
+  - name: Century Bronze Metallic
+    type: metallic
+    price_add:
+      amount: 690
+      currency: EUR
+  
+  - name: Energy Blue Matte
+    type: matte
+    price_add:
+      amount: 990
+      currency: EUR
+    notes: "CUPRA exclusive matte finish"
+
+# Wheel Options
+available_wheels:
+  - name: 18" Machined Alloy
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: 19" Performance Alloy
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: 20" Aero Alloy
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1290
+      currency: EUR
+
+# Equipment Packages
+available_packages:
+  - name: Pilot Pack L
+    price:
+      amount: 1890
+      currency: EUR
+    contents:
+      - "Adaptive Cruise Control with predictive speed"
+      - "Travel Assist"
+      - "Side Assist with Rear Traffic Alert"
+      - "Emergency Assist"
+  
+  - name: Infotainment Plus
+    price:
+      amount: 1490
+      currency: EUR
+    contents:
+      - "Beats Premium Audio (395W, 9 speakers)"
+      - "Wireless App-Connect"
+      - "Head-Up Display (AR)"
+      - "Enhanced voice control"
+  
+  - name: Winter Package
+    price:
+      amount: 590
+      currency: EUR
+    contents:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Heated windshield"
+
+# Incentives & Subsidies
+incentives:
+  - type: tax_exemption
+    name: Company Car Tax (Dienstwagen-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    notes: |
+      0.25% of list price per month (~€97/month).
+      Major savings vs ICE company cars.
+  
+  - type: tax_exemption
+    name: Road Tax Exemption (Kfz-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    valid_until: "2030-12-31"
+  
+  - type: grant
+    name: THG-Quote
+    amount: 340
+    currency: EUR
+    status: active
+
+# Warranty
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+# Service & Maintenance
+service:
+  interval_years: 2
+  interval_km: 30000
+  cost_per_service: 250
+  notes: "Flexible service interval, VW Group service network"
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-10'
+  created_at: '2026-02-10'
+  source: "CUPRA Germany official configurator"
+  source_urls:
+    - "https://www.cupraofficial.de/modelle/born"
+  verification_date: '2026-02-10'

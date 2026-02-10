@@ -1,0 +1,166 @@
+# Kia EV6 Long Range AWD (2025) - Germany Market Availability
+
+id: kia-ev6-long-range-awd-2025-de
+variant_id: kia-ev6-long-range-awd-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-01-01"
+delivery_time_weeks: 10
+notes: |
+  2025 model year with increased battery capacity (84 kWh total),
+  dual-motor AWD with 325 hp, 494 km WLTP range.
+  E-GMP 800V architecture enables ultra-fast charging (10-80% in 18 min).
+
+# Pricing
+pricing:
+  base_price: 55490
+  price_including_vat: 55490
+  vat_rate_percent: 19
+  notes: |
+    Base price for EV6 Long Range AWD with 77.4 kWh usable battery.
+    €3,500 premium over RWD for dual-motor AWD drivetrain.
+
+# Available Colors
+available_colors:
+  - name: Clear White
+    code: UD
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: pearl
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Moonscape
+    code: MS
+    type: matte
+    price_add:
+      amount: 1190
+      currency: EUR
+  
+  - name: Glacier
+    code: GL
+    type: premium
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Steel Grey Metallic
+    code: SGM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Interstellar Grey
+    code: IG
+    type: premium
+    price_add:
+      amount: 1190
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 19" Alloy Wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: 20" Alloy Wheels
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 1200
+      currency: EUR
+
+# Equipment Packages
+available_packages:
+  - name: Comfort Package
+    price:
+      amount: 2490
+      currency: EUR
+    contents:
+      - "Heated steering wheel"
+      - "Heated & ventilated front seats"
+      - "Heated rear seats"
+      - "Premium relaxation front seats"
+      - "Smart power tailgate"
+  
+  - name: Tech Package Plus
+    price:
+      amount: 3290
+      currency: EUR
+    contents:
+      - "Augmented Reality Head-Up Display"
+      - "Premium Meridian sound (14 speakers)"
+      - "Surround View Monitor (360° camera)"
+      - "Remote Smart Parking Assist 2.0"
+      - "Highway Driving Assist 2"
+  
+  - name: Vision Package
+    price:
+      amount: 1790
+      currency: EUR
+    contents:
+      - "Digital Matrix LED headlights"
+      - "LED rear combination lamps"
+      - "Automatic high beam"
+      - "Welcome lights"
+
+# Incentives & Subsidies
+incentives:
+  - type: tax_exemption
+    name: Company Car Tax (Dienstwagen-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    notes: |
+      0.25% of list price per month (€139/month) vs 1% for ICE.
+      Saves ~€4,600/year. Under €70k threshold.
+  
+  - type: tax_exemption
+    name: Road Tax Exemption (Kfz-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    valid_until: "2030-12-31"
+  
+  - type: grant
+    name: THG-Quote
+    amount: 340
+    currency: EUR
+    status: active
+
+# Warranty
+warranty:
+  vehicle_years: 7
+  vehicle_km: 150000
+  battery_years: 7
+  battery_km: 150000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+
+# Service & Maintenance
+service:
+  interval_years: 1
+  interval_km: 15000
+  cost_per_service: 270
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-10'
+  created_at: '2026-02-10'
+  source: "Kia Germany official configurator"
+  source_urls:
+    - "https://www.kia.com/de/modelle/ev6/"
+  verification_date: '2026-02-10'

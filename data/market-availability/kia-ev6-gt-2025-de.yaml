@@ -1,0 +1,151 @@
+# Kia EV6 GT (2025) - Germany Market Availability
+
+id: kia-ev6-gt-2025-de
+variant_id: kia-ev6-gt-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-03-01"
+delivery_time_weeks: 12
+notes: |
+  2025 Kia EV6 GT - flagship performance variant with 585 hp,
+  3.4s 0-100 km/h, drift mode. Updated with larger 84 kWh battery.
+  Limited allocation in Germany.
+
+# Pricing
+pricing:
+  base_price: 69990
+  price_including_vat: 69990
+  vat_rate_percent: 19
+  notes: |
+    GT comes fully loaded. Price includes all GT-specific equipment:
+    adaptive suspension, 21" wheels, Meridian sound, AR HUD,
+    Nappa leather/suede seats, drift mode, launch control.
+    Just under €70,000 company car tax threshold.
+
+# Available Colors
+available_colors:
+  - name: Clear White
+    code: UD
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Aurora Black Pearl
+    code: ABP
+    type: pearl
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: Moonscape Gray Matte
+    code: MS
+    type: matte
+    price_add:
+      amount: 1190
+      currency: EUR
+  
+  - name: Cyber Gray Matte
+    code: CG
+    type: matte
+    price_add:
+      amount: 1190
+      currency: EUR
+  
+  - name: Yacht Blue
+    code: YB
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+  
+  - name: GT Exclusive Yellow-Green
+    code: GYG
+    type: special
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "GT-exclusive color, no additional cost"
+
+# Wheel Options
+available_wheels:
+  - name: 21" GT Alloy Wheels
+    size_inches: 21
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+    notes: "Standard GT-specific wheels, 255/40R21 front, 275/35R21 rear"
+
+# Individual Options
+individual_options:
+  - name: Matte Paint Finish
+    price:
+      amount: 1190
+      currency: EUR
+    notes: "Moonscape Gray Matte or Cyber Gray Matte"
+
+# Incentives & Subsidies
+incentives:
+  - type: tax_exemption
+    name: Company Car Tax (Dienstwagen-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    notes: |
+      At €69,990 base, just under the €70,000 threshold for 0.25% rate.
+      Monthly tax: €175/month vs €700/month for comparable ICE.
+      Major savings for company car drivers!
+  
+  - type: tax_exemption
+    name: Road Tax Exemption (Kfz-Steuer)
+    amount: 0
+    currency: EUR
+    status: active
+    valid_until: "2030-12-31"
+  
+  - type: grant
+    name: THG-Quote
+    amount: 340
+    currency: EUR
+    status: active
+
+# Warranty
+warranty:
+  vehicle_years: 7
+  vehicle_km: 150000
+  battery_years: 7
+  battery_km: 150000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 7
+
+# Service & Maintenance
+service:
+  interval_years: 1
+  interval_km: 15000
+  cost_per_service: 320
+  notes: "GT-specific service slightly higher due to performance components"
+
+# Market Position
+market_position:
+  key_competitors:
+    - Tesla Model 3 Performance (€54,990)
+    - BMW i4 M50 (€72,900)
+    - Porsche Taycan RWD (€97,500)
+    - Hyundai Ioniq 5 N (€65,900)
+  notes: |
+    Performance bargain: 585 hp supercar performance under €70k.
+    Competes with cars costing €20-30k more. 7-year warranty.
+    Drift mode and launch control unique in this segment.
+
+metadata:
+  data_quality: verified
+  last_updated: '2026-02-10'
+  created_at: '2026-02-10'
+  source: "Kia Germany official configurator"
+  source_urls:
+    - "https://www.kia.com/de/modelle/ev6/"
+  verification_date: '2026-02-10'
