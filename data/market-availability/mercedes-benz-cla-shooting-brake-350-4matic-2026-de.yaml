@@ -1,0 +1,118 @@
+id: mercedes-benz-cla-shooting-brake-350-4matic-2026-de
+variant_id: mercedes-benz-cla-shooting-brake-350-4matic-2026
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2026-06"
+delivery_time_weeks: 16
+
+# Pricing (Germany, 2026)
+pricing:
+  base_price: 59900
+  price_including_vat: 59900
+  vat_rate_percent: 19
+  destination_charge: 890
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+  - name: Kfz-Steuer exemption
+    type: tax_exemption
+    amount: 380
+    description: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+  - name: THG-Quote
+    type: grant
+    amount: 280
+    description: "Sell CO2 savings certificate (€250-350/year)"
+
+# Colors (Germany Market)
+available_colors:
+  - name: Digital White
+    code: DW
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Obsidian Black Metallic
+    code: OBM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: Spectral Blue Metallic
+    code: SBM
+    type: metallic
+    price_add:
+      amount: 890
+      currency: EUR
+
+  - name: Mojave Silver Metallic
+    code: MSM
+    type: metallic
+    price_add:
+      amount: 1190
+      currency: EUR
+
+  - name: MANUFAKTUR Patagonia Red
+    code: PR
+    type: special
+    price_add:
+      amount: 1990
+      currency: EUR
+
+# Optional Equipment
+optional_equipment:
+  - name: Premium Package
+    price: 4200
+    includes:
+      - "MBUX Superscreen with passenger display"
+      - "Head-up display"
+      - "Burmester 3D surround sound"
+
+  - name: AMG Line
+    price: 2900
+    includes:
+      - "AMG body styling"
+      - "AMG-specific interior"
+      - "Sport suspension"
+
+  - name: 22 kW AC Onboard Charger
+    price: 590
+    includes:
+      - "Upgrade from 11 kW to 22 kW AC charging"
+
+# Company Car Calculation (Germany)
+company_car_tax:
+  gross_list_price: 59900
+  monthly_tax_base: 149.75
+  annual_tax_base: 1797.00
+  comparison_ice_tax_base_percent: 1.0
+  savings_vs_ice_percent: 75
+  notes: >
+    Performance AWD estate under €70,000 threshold for 0.25% company car tax.
+    Very attractive for company car drivers wanting AWD estate with performance.
+
+market_notes: >
+  The CLA Shooting Brake 350 4MATIC combines the practical estate body with
+  AWD performance. At €59,900, it's significantly cheaper than the Audi A6
+  Avant e-tron quattro (€75,600+) while offering comparable range and better
+  charging speed. Still under the €70,000 company car tax threshold.
+  Expected to launch Q2 2026 alongside the rest of the CLA range.
+
+# Metadata
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-10"
+  confidence_level: medium
+  sources:
+    - https://ev-database.org/car/3397/Mercedes-Benz-CLA-Shooting-Brake-350-4MATIC
+  created_at: "2026-02-10T02:45:00Z"
+  created_by: Patricio
