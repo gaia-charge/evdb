@@ -424,14 +424,17 @@ if page == "🏠 Home":
     
     market_names = {
         'DE': '🇩🇪 Germany',
-        'US': '🇺🇸 United States',
+        'ES': '🇪🇸 Spain',
         'FR': '🇫🇷 France',
+        'GB': '🇬🇧 United Kingdom',
+        'IT': '🇮🇹 Italy',
+        'NL': '🇳🇱 Netherlands',
         'PL': '🇵🇱 Poland',
-        'IT': '🇮🇹 Italy'
+        'US': '🇺🇸 United States',
     }
     
     market_df = stats['market_breakdown'].copy()
-    market_df['Market'] = market_df['market_code'].map(market_names)
+    market_df['Market'] = market_df['market_code'].map(market_names).fillna(market_df['market_code'])
     market_df = market_df[['Market', 'vehicles']]
     market_df.columns = ['Market', 'Vehicles']
     
