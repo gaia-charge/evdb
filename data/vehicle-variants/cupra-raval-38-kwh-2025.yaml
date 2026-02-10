@@ -1,0 +1,114 @@
+---
+id: cupra-raval-38-kwh-2025
+name: "38 kWh"
+model_id: cupra-raval
+model_year: 2025
+production_start: "2025-06-01"
+production_end: null
+
+battery:
+  usable_kwh: 38.0
+  total_kwh: 40.0
+  chemistry: LFP
+  cell_type: prismatic
+  manufacturer: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "Entry-level LFP battery for urban use. Cost-optimized chemistry."
+
+range:
+  wltp_km: 310
+  wltp_city_km: 400
+  wltp_highway_km: 250
+  epa_km: null
+  real_world_km: 260
+  real_world_source: estimated from platform data
+  notes: |
+    Entry-level range suitable for urban and suburban use. LFP chemistry
+    provides good longevity and thermal stability. Winter range ~200km at -10°C.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 128
+    - soc_percent: 30
+      power_kw: 120
+    - soc_percent: 40
+      power_kw: 110
+    - soc_percent: 50
+      power_kw: 95
+    - soc_percent: 60
+      power_kw: 80
+    - soc_percent: 70
+      power_kw: 60
+    - soc_percent: 80
+      power_kw: 40
+  charge_time_10_80_minutes: 25
+  notes: |
+    DC fast charging up to 130kW. 10-80% in ~25 minutes. LFP batteries
+    can be charged to 100% regularly without degradation concerns.
+    AC: 11kW standard, 0-100% in ~4h.
+
+motors:
+  - position: rear
+    type: permanent_magnet
+    power_kw: 170
+    torque_nm: 310
+    manufacturer: Volkswagen Group
+
+drivetrain:
+  type: RWD
+  all_wheel_drive: false
+
+performance:
+  acceleration_0_100_kmh_seconds: 8.0
+  top_speed_kmh: 160
+  notes: "Rear-mounted permanent magnet motor, same family as MEB platform"
+
+efficiency:
+  wltp_kwh_per_100km: 13.5
+  real_world_kwh_per_100km: 15.5
+  notes: "Compact size and low drag coefficient contribute to good efficiency"
+
+weight:
+  curb_weight_kg: 1500
+  gross_vehicle_weight_kg: 1900
+  towing_capacity_kg: 0
+  notes: "Lightweight thanks to LFP battery and compact dimensions"
+
+adas:
+  level: 2
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  automatic_emergency_braking: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  parking_sensors: rear
+  parking_camera: "rear"
+  autonomous_parking: false
+
+notes: >
+  Entry-level CUPRA Raval with 38 kWh LFP battery. Designed for urban
+  commuters who want a sporty, stylish small EV. 310 km WLTP range is
+  sufficient for daily use and occasional longer trips. LFP chemistry
+  allows regular charging to 100%. Competitive pricing targets the
+  Renault 5 E-Tech and Fiat 500e market segment. Heat pump standard
+  for all Raval variants.
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source: manufacturer
+  sources:
+    - "https://www.cupraofficial.com/models/raval"
+    - "https://www.cupra.de/modelle/cupra-raval"
