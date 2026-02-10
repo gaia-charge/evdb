@@ -1,0 +1,115 @@
+id: alpine-a390-gt-2026-de
+variant_id: alpine-a390-gt-2026
+market: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 46900
+  destination_charge: 890
+  on_road_price: 47790
+
+  trims:
+    - name: "GT"
+      price: 46900
+      description: "Standard AWD with 295 kW, sport seats, heat pump, V2L/V2H/V2G"
+
+# Options and packages
+options:
+  packages:
+    - name: "Premiere Edition"
+      price: 4500
+      description: "Launch edition with exclusive colors, 20-inch wheels, premium audio"
+
+    - name: "22 kW AC charger upgrade"
+      price: 600
+      description: "Upgrades onboard charger from 11 kW to 22 kW"
+
+  paint_options:
+    - name: "Blanc Alpin"
+      price: 0
+    - name: "Bleu Alpine Vision"
+      price: 900
+    - name: "Noir Profond"
+      price: 600
+    - name: "Gris Tonnerre"
+      price: 600
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 2800
+    notes: "0.25% of gross list price per month (vs 1% for ICE). Estimated €2,800/year savings."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income for EV owners"
+
+# Availability
+availability:
+  status: pre_order
+  waiting_time_weeks: null
+  pre_order_date: "2025-09-01"
+  first_delivery_date: "2026-06-01"
+  online_configurator: no
+  online_purchase: no
+
+  dealer_network:
+    total_dealers: 85
+    test_drive_availability: no
+    notes: "Alpine dealer network in Germany. Deliveries expected H2 2026."
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: null
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+# Market context
+market_context:
+  competitors:
+    - model: "Tesla Model Y Performance"
+      price: 54990
+      range_wltp: 514
+      notes: "€8,090 more, less range, faster charging network"
+
+    - model: "BMW iX1 xDrive30"
+      price: 52900
+      range_wltp: 440
+      notes: "€6,000 more, less range, less power"
+
+    - model: "Polestar 4 Long Range Dual Motor"
+      price: 59990
+      range_wltp: 590
+      notes: "€13,090 more, more range, similar power"
+
+  market_position: |
+    The Alpine A390 GT enters the German market as a sporty, well-priced electric fastback.
+    At ~€46,900 it significantly undercuts direct competitors while offering strong performance
+    (295 kW AWD, 4.8s 0-100) and V2L/V2H/V2G capabilities. Alpine's brand cachet from the
+    A110 sports car adds desirability versus mainstream alternatives.
+
+metadata:
+  created_at: "2026-02-10T12:00:00Z"
+  updated_at: "2026-02-10T12:00:00Z"
+  data_quality: estimated
+  notes: |
+    Pricing estimated based on Alpine's positioning and French market pricing.
+    Official German pricing not yet confirmed. Expected to be priced competitively
+    against Tesla Model Y and BMW iX1.
+
+sources:
+  - url: "https://ev-database.org/car/3390/Alpine-A390-GT"
+    title: "EV Database - Alpine A390 GT"
+    date_accessed: "2026-02-10"

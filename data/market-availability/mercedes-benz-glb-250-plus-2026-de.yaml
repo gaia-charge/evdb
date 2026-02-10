@@ -1,0 +1,122 @@
+id: mercedes-benz-glb-250-plus-2026-de
+variant_id: mercedes-benz-glb-250-plus-2026
+market: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 52900
+  destination_charge: 1095
+  on_road_price: 53995
+
+  trims:
+    - name: "GLB 250+"
+      price: 52900
+      description: "RWD, 200 kW, 7 seats, MBUX Superscreen, heat pump, 800V charging"
+
+# Options and packages
+options:
+  packages:
+    - name: "AMG Line"
+      price: 3500
+      description: "AMG styling, sport seats, AMG wheels"
+
+    - name: "Premium Package"
+      price: 3500
+      description: "AR Head-Up Display, Burmester sound, 360° camera"
+
+    - name: "22 kW AC charger upgrade"
+      price: 690
+      description: "Doubles home charging speed with compatible wallbox"
+
+    - name: "Advanced Package"
+      price: 2800
+      description: "Active Parking Assist, Surround View, enhanced ADAS"
+
+  paint_options:
+    - name: "Polar White (non-metallic)"
+      price: 0
+    - name: "Cosmos Black metallic"
+      price: 990
+    - name: "Spectral Blue metallic"
+      price: 990
+    - name: "High-Tech Silver metallic"
+      price: 990
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3200
+    notes: "0.25% of gross list price per month (vs 1% for ICE). Estimated €3,200/year savings."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income for EV owners"
+
+# Availability
+availability:
+  status: pre_order
+  waiting_time_weeks: null
+  pre_order_date: "2026-01-01"
+  first_delivery_date: "2026-09-01"
+  online_configurator: no
+  online_purchase: no
+
+  dealer_network:
+    total_dealers: 650
+    test_drive_availability: no
+    notes: "Expected deliveries Q3/Q4 2026"
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: null
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+# Market context
+market_context:
+  competitors:
+    - model: "BMW iX1 eDrive20"
+      price: 47500
+      range_wltp: 440
+      notes: "€5,400 cheaper, less range, slower charging"
+
+    - model: "Tesla Model Y RWD"
+      price: 44990
+      range_wltp: 490
+      notes: "€7,910 cheaper, less range, no 7 seats"
+
+    - model: "Volvo EX40 Single Motor"
+      price: 47500
+      range_wltp: 476
+      notes: "€5,400 cheaper, less range, 5 seats only"
+
+  market_position: |
+    The GLB 250+ is Mercedes' 7-seat electric compact SUV, replacing the EQB.
+    At ~€52,900 it's premium-priced but offers unique 7-seat capability, 800V ultra-fast
+    charging (353 kW, 16-min 10-80%), and the new MBUX Superscreen. The 7-seat layout
+    with no direct competitors at this charging speed makes it unique in the segment.
+
+metadata:
+  created_at: "2026-02-10T12:00:00Z"
+  updated_at: "2026-02-10T12:00:00Z"
+  data_quality: estimated
+  notes: |
+    Pricing estimated based on EQB successor positioning and MMA platform pricing.
+    Expect similar or slightly lower pricing than outgoing EQB 250+ (€52,538).
+
+sources:
+  - url: "https://ev-database.org/car/3406/Mercedes-Benz-GLB-250plus"
+    title: "EV Database - Mercedes-Benz GLB 250+"
+    date_accessed: "2026-02-10"

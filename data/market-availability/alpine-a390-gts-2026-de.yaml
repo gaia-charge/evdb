@@ -1,0 +1,108 @@
+id: alpine-a390-gts-2026-de
+variant_id: alpine-a390-gts-2026
+market: DE
+currency: EUR
+
+# Pricing
+pricing:
+  base_price: 54900
+  destination_charge: 890
+  on_road_price: 55790
+
+  trims:
+    - name: "GTS"
+      price: 54900
+      description: "High-performance AWD with 345 kW, Sabelt sport seats, track mode"
+
+# Options and packages
+options:
+  packages:
+    - name: "Premiere Edition"
+      price: 5500
+      description: "Launch edition with exclusive livery, carbon accents, 20-inch forged wheels"
+
+    - name: "22 kW AC charger upgrade"
+      price: 600
+      description: "Upgrades onboard charger from 11 kW to 22 kW"
+
+  paint_options:
+    - name: "Blanc Alpin"
+      price: 0
+    - name: "Bleu Alpine Vision"
+      price: 900
+    - name: "Noir Profond"
+      price: 600
+    - name: "Gris Tonnerre"
+      price: 600
+
+# Incentives
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 3300
+    notes: "0.25% of gross list price per month (vs 1% for ICE). Estimated €3,300/year savings."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 280
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income for EV owners"
+
+# Availability
+availability:
+  status: pre_order
+  waiting_time_weeks: null
+  pre_order_date: "2025-09-01"
+  first_delivery_date: "2026-09-01"
+  online_configurator: no
+  online_purchase: no
+
+  dealer_network:
+    total_dealers: 85
+    test_drive_availability: no
+    notes: "Alpine dealer network in Germany. GTS deliveries expected Q3 2026."
+
+# Warranty
+warranty:
+  vehicle_warranty_years: 2
+  vehicle_warranty_km: null
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+# Market context
+market_context:
+  competitors:
+    - model: "Tesla Model Y Performance"
+      price: 54990
+      range_wltp: 514
+      notes: "Similar price, less range, faster charging network"
+
+    - model: "Cupra Tavascan VZ"
+      price: 54990
+      range_wltp: 502
+      notes: "Similar price, less range, less power"
+
+  market_position: |
+    The Alpine A390 GTS is the performance flagship with 345 kW and 3.9s 0-100 km/h.
+    At ~€54,900 it matches Tesla Model Y Performance pricing while offering significantly
+    more power, V2G capabilities, and French sports car brand cachet.
+
+metadata:
+  created_at: "2026-02-10T12:00:00Z"
+  updated_at: "2026-02-10T12:00:00Z"
+  data_quality: estimated
+  notes: |
+    Pricing estimated. GTS expected to carry ~€8,000 premium over GT.
+    Not yet available - expected launch late 2026.
+
+sources:
+  - url: "https://ev-database.org/car/3391/Alpine-A390-GTS"
+    title: "EV Database - Alpine A390 GTS"
+    date_accessed: "2026-02-10"
