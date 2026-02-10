@@ -1,0 +1,170 @@
+# Hyundai Kona Electric Standard Range - German Market (2025)
+
+id: hyundai-kona-electric-standard-range-2025-de
+variant_id: hyundai-kona-electric-standard-range-2025
+market: DE
+currency: EUR
+availability_status: available
+available_from: "2025-01"
+delivery_time_weeks: 8
+
+# Pricing (Germany, 2025)
+pricing:
+  base_price: 36990
+  price_including_vat: 36990
+  vat_rate_percent: 19
+  destination_charge: 0
+
+# Available Colors
+available_colors:
+  - name: Atlas White
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Abyss Black Pearl
+    type: metallic
+    price_add:
+      amount: 550
+      currency: EUR
+  
+  - name: Cyber Gray Metallic
+    type: metallic
+    price_add:
+      amount: 550
+      currency: EUR
+  
+  - name: Shooting Star Matte
+    type: matte
+    price_add:
+      amount: 750
+      currency: EUR
+  
+  - name: Dive in Jeju
+    type: metallic
+    price_add:
+      amount: 550
+      currency: EUR
+  
+  - name: Neolithic Gray Matte
+    type: matte
+    price_add:
+      amount: 750
+      currency: EUR
+  
+  - name: Junk Blue
+    type: metallic
+    price_add:
+      amount: 550
+      currency: EUR
+    notes: "New for 2025"
+
+# Wheel Options
+available_wheels:
+  - name: "17-inch alloy wheels"
+    size_inches: 17
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: "19-inch alloy wheels"
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 600
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Cloth Standard
+    price_add:
+      amount: 0
+      currency: EUR
+  
+  - name: Leather Package
+    price_add:
+      amount: 1500
+      currency: EUR
+
+# Optional Packages
+available_packages:
+  - name: Technik-Paket
+    price_add:
+      amount: 1900
+      currency: EUR
+    description: "BOSE premium sound, surround view monitor, remote smart parking"
+  
+  - name: Assistenz-Paket
+    price_add:
+      amount: 1200
+      currency: EUR
+    description: "Highway Driving Assist 2, blind spot view monitor"
+
+# Typical Configuration Examples
+typical_configurations:
+  - name: Base Configuration
+    description: "Entry-level Kona Electric"
+    total_price: 36990
+    details:
+      - Base price: €36,990
+      - Atlas White: €0
+      - 17-inch wheels: €0
+  
+  - name: Popular Configuration
+    description: "Well-equipped daily driver"
+    total_price: 41640
+    details:
+      - Base price: €36,990
+      - Cyber Gray Metallic: €550
+      - 17-inch wheels: €0
+      - Technik-Paket: €1,900
+      - Assistenz-Paket: €1,200
+      - Leather Package: €1,500
+
+# Government Incentives (Germany)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 0
+    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+    eligibility: "Company car drivers"
+    valid_until: "2030-12-31"
+
+# Company Car Taxation
+company_car_taxation:
+  gross_list_price: 36990
+  tax_rate_percent: 0.25
+  monthly_taxable_benefit: 92.48
+  notes: |
+    Very attractive company car option at this price point.
+    Monthly benefit of €92.48 results in ~€555/year total cost.
+    One of the cheapest BEV company car options available.
+
+# Market Notes
+notes: |
+  Hyundai Kona Electric Standard Range 2025 is the affordable entry to the lineup.
+  48.4 kWh LFP battery is lower range but more durable and can be charged to 100% daily.
+  
+  Available through Hyundai dealership network across Germany.
+  
+  Key competitors:
+  - VW ID.3 Pro (€36,900) - similar price, more range (426 km WLTP)
+  - MG4 Standard Range (€28,990) - much cheaper, similar range
+  - Dacia Spring (€22,750) - much cheaper, less range/features
+  - Opel Corsa Electric (€36,990) - similar price, less range
+  
+  Strong value with V2L, heat pump, and full ADAS suite as standard.
+
+# Data quality metadata
+metadata:
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  data_quality: verified
+  
+  sources:
+    - https://www.hyundai.de/modelle/kona-elektro/
+    - https://www.hyundai.de/modelle/kona-elektro/konfigurator/
+  
+  verified_by: official
