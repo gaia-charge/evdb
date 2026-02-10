@@ -1,186 +1,152 @@
-# EVDB Cron Instructions - Vehicle Expansion
+# EVDB Cron Instructions
 
-**Updated:** 2026-02-09  
-**Status:** 🎉 **Streamlit app deployed and live!**
-
----
-
-## 🎯 MISSION: Expand Vehicle Database
-
-**Goal:** Systematically add ALL electric vehicles available in Europe
-
-**Current Status:** 174 variants across 84 models from 26 manufacturers  
-**Target:** 300-500+ variants covering every BEV sold in Europe
+**Updated:** 2026-02-10  
+**Status:** 🎉 **530+ variants, 180+ models, 45+ manufacturers**
 
 ---
 
-## ⚠️ MODEL YEAR PRIORITY
+## 🎯 CURRENT PRIORITIES (in order)
 
-**Focus on CURRENT and UPCOMING model years:**
+### Priority 1: Fill Missing Data on Existing Vehicles
+Many existing variants are missing key specs. **Before adding new vehicles**, check and update existing ones:
 
-- **2025 models** - Current model year (HIGHEST PRIORITY)
-- **2026 models** - Upcoming models (announced, available for order)
-- **2024 models** - Only if still sold new in 2026 and no 2025 refresh exists
+**Fields to fill:**
+- `dimensions`: length_mm, width_mm, height_mm, wheelbase_mm, ground_clearance_mm
+- `cargo`: trunk_capacity_liters, trunk_max_liters (seats folded), frunk_capacity_liters
+- `weight`: curb_weight_kg, gross_vehicle_weight_kg, payload_kg, towing_capacity_braked_kg, towing_capacity_unbraked_kg
+- `charging`: Verify DC and AC charging power is complete
+- `performance`: top_speed_kmh, acceleration_0_100_sec
 
-**When adding vehicles:**
-1. Check manufacturer's website for latest model year
-2. Prioritize 2025/2026 model years
-3. Filename pattern: `[model]-[variant]-2025.yaml` or `-2026.yaml`
-4. Include `model_year: 2025` or `2026` in variant YAML
+**How to find vehicles with missing data:**
+```bash
+# Check which variants lack dimensions
+grep -rL "dimensions:" data/vehicle-variants/ | head -20
 
-**Rationale:** We're in February 2026 - database should reflect current market, not outdated 2024 models
+# Check which variants lack cargo
+grep -rL "cargo:" data/vehicle-variants/ | head -20
+
+# Check which variants lack towing
+grep -rL "towing_capacity" data/vehicle-variants/ | head -20
+```
+
+**Update 5-10 existing variants per session** with missing specs. Use manufacturer websites, ADAC, ev-database.org for data.
+
+### Priority 2: Add Spain (ES), Poland (PL), and France (FR) Market Data
+Most vehicles only have Germany (DE) market data. **Add market availability files** for:
+
+1. **Spain (ES)** — Highest priority
+2. **Poland (PL)** — Second priority  
+3. **France (FR)** — Third priority
+
+**For each market, create:** `data/market-availability/[variant-id]-[country].yaml`
+- Include: base price in local currency (EUR for ES/FR, PLN for PL)
+- Include: available trims, colors, incentives/grants
+- Check: manufacturer's local website (e.g., tesla.com/es_ES, renault.pl, peugeot.fr)
+
+**Spanish market specifics:**
+- MOVES III subsidies (if still active in 2025/2026)
+- IVA (21% VAT) included in prices
+- Check: manufacturer.es websites
+
+**Polish market specifics:**
+- "Mój elektryk" subsidy program
+- Prices in PLN
+- Check: manufacturer.pl websites
+
+**French market specifics:**
+- Bonus écologique (up to €4,000-€7,000 depending on price)
+- Leasing social program
+- Check: manufacturer.fr websites
+
+**Add 3-5 market entries per session.**
+
+### Priority 3: Add New Vehicles (Lower Priority Now)
+Only if priorities 1 and 2 have been addressed in the session:
+- Focus on 2025/2026 model years
+- Add missing variants for existing models
+- Add new models not yet in the database
 
 ---
 
-## 📋 SIMPLE WORKFLOW
+## 📋 SESSION WORKFLOW
 
-### For Each Cron Session:
-
-1. **Read VEHICLE_EXPANSION_PLAN.md**
-   - Follow the week-by-week manufacturer order
-   - Current priority: **Renault** (0 models - start here!)
-
-2. **Add 1-3 vehicles per session**
-   - One manufacturer at a time
-   - Complete model + all variants + market data
-
-3. **Validate before committing**
+1. **Check what's missing:**
    ```bash
-   python scripts/validate.py
+   # Count variants without dimensions
+   grep -rL "dimensions:" data/vehicle-variants/ | wc -l
+   
+   # Count variants without ES market
+   ls data/market-availability/*-es.yaml 2>/dev/null | wc -l
    ```
-   - Must show 0 errors
 
-4. **Test database build**
-   ```bash
-   python scripts/build-sqlite.py --clean
-   ```
-   - Verify new vehicles appear
+2. **Update 5-10 existing variants** with missing specs (dimensions, cargo, towing, weight)
 
-5. **Commit and push**
+3. **Add 3-5 market entries** for ES/PL/FR markets
+
+4. **Optionally add 1-2 new vehicles** if time permits
+
+5. **Validate and commit:**
    ```bash
+   python3 scripts/validate.py --directory data/
+   python3 scripts/build-sqlite.py
    git add data/
-   git commit -m "Add [Manufacturer] [Model] ([variants]) with [markets] pricing"
+   git commit -m "Update [X] variants with dimensions/cargo data, add [Y] ES/PL/FR market entries"
    git push origin main
    ```
 
 ---
 
-## ✅ Per-Vehicle Checklist
-
-For each new vehicle, create:
-
-- [ ] **Vehicle model YAML** → `data/vehicle-models/[manufacturer]-[model].yaml`
-- [ ] **Vehicle variant YAML(s)** → `data/vehicle-variants/[model]-[variant]-2025.yaml` (or `-2026.yaml`)
-- [ ] **Market availability YAML** → `data/market-availability/[variant]-[country].yaml`
-  - Start with Germany (DE) or France (FR)
-  - Include base price, colors, options, delivery time
-  - Calculate company car tax (Germany)
-  - **Use 2025 or 2026 model year** - check manufacturer's website for latest
-
----
-
-## 📊 Session Reporting
-
-Report in this format:
+## 📊 Session Reporting Format
 
 ```
-Added [Manufacturer] [Model] with [X] variants:
-- Variants: [list variant names]
-- Markets: [DE/FR/US/etc]
-- Files: [count] created
-- Database: [new total] variants (up from [old total])
-- Validation: ✅ All files pass
-- Next: [next model to add]
-```
-
-Example:
-```
-Added Renault Megane E-Tech 2025 with 3 variants:
-- Variants: EV40 2025, EV60 Techno 2025, EV60 Iconic 2025
-- Markets: Germany (DE), France (FR)
-- Files: 7 created (1 model + 3 variants + 3 market entries)
-- Database: 54 variants (up from 51, +5.9%)
-- Validation: ✅ All 173 files pass
-- Next: Renault Scenic E-Tech 2025
+**Data enrichment:** Updated X variants with dimensions/cargo/towing data
+**Market expansion:** Added Y market entries (Z for ES, W for PL, V for FR)
+**New vehicles:** [if any]
+**Database:** X variants, Y market entries
+**Validation:** ✅ All files pass
 ```
 
 ---
 
-## 🔄 Existing 2024 Vehicles
+## ✅ Per-Variant Data Update Checklist
 
-**DO NOT update existing 2024 vehicles** unless:
-- You're adding a NEW variant that only exists in 2025/2026
-- A major refresh happened (battery upgrade, significant spec changes)
+When updating an existing variant, add ALL available data:
 
-**Focus on NEW additions** with 2025/2026 model years. The 2024 vehicles are still valid historical data.
-
----
-
-## 🚫 What NOT to Add
-
-- ❌ Plug-in hybrids (PHEVs)
-- ❌ Mild hybrids
-- ❌ Range extenders
-- ❌ Concept cars
-- ❌ Discontinued models
-- ❌ Models not available in Europe
-
-**ONLY:** Pure battery-electric vehicles (BEVs) sold in Europe
+- [ ] `dimensions.length_mm`
+- [ ] `dimensions.width_mm`  
+- [ ] `dimensions.height_mm`
+- [ ] `dimensions.wheelbase_mm`
+- [ ] `dimensions.ground_clearance_mm`
+- [ ] `cargo.trunk_capacity_liters`
+- [ ] `cargo.trunk_max_liters`
+- [ ] `cargo.frunk_capacity_liters` (if applicable)
+- [ ] `weight.curb_weight_kg`
+- [ ] `weight.gross_vehicle_weight_kg`
+- [ ] `weight.payload_kg`
+- [ ] `weight.towing_capacity_braked_kg`
+- [ ] `weight.towing_capacity_unbraked_kg`
 
 ---
 
-## 🎯 Current Priority
+## 🚫 Reminders
 
-**PRIMARY FOCUS:** Add **2025 and 2026 model years** for manufacturers with good coverage
-
-**Priority Areas:**
-1. **Update existing manufacturers** with 2025/2026 models
-   - BMW (add 2025 i4/i5/iX variants)
-   - Mercedes-Benz (add 2025 EQE/EQS variants)
-   - Volkswagen (add 2025 ID.3/ID.4/ID.5/ID.7 variants)
-   - Audi (add 2025 Q4/Q6/Q8 e-tron variants)
-   - Tesla (add 2025 Model 3/Y variants with new features)
-
-2. **Add missing 2025 manufacturers**
-   - Lucid (Air, Gravity)
-   - Lotus (Eletre, Emeya)
-   - Maserati (Grecale Folgore, GranTurismo Folgore)
-   - Cadillac (Lyriq)
-
-3. **Continue expansions from 2024** with 2025 models
-   - Expand Stellantis brands with 2025 updates
-   - BYD 2025 models (Seal U, Dolphin updates)
-
-See **VEHICLE_EXPANSION_PLAN.md** for complete roadmap, but prioritize 2025/2026 model years.
+- **BEVs only** — No PHEVs, hybrids, or range extenders
+- **European market only** — Vehicles sold in Europe
+- **Validate before committing** — Always run validate.py
+- **Quality over quantity** — Better accurate data than many incomplete entries
+- **Model name convention:** Model `name` must NOT include brand prefix
+- **Variant name convention:** Variant `name` must NOT include model name prefix
 
 ---
 
-## 💡 Quick Tips
+## 🔗 Data Sources
 
-1. **2025/2026 model years first** - Focus on current vehicles, not outdated 2024 models
-2. **Check manufacturer websites** - Verify latest specs and pricing for 2025/2026 models
-3. **Use existing vehicles as templates** - Copy similar YAML, modify specs
-4. **German market first** - Most important (company car tax calculations)
-5. **French brands = French market** - Add home market pricing
-6. **Real-world range matters** - Include real-world consumption data
-7. **ALWAYS validate before committing** - No exceptions!
+- **Manufacturer websites:** .de, .es, .pl, .fr variants
+- **ADAC:** adac.de/rund-ums-fahrzeug/autokatalog/ (excellent for dimensions/weight)
+- **ev-database.org:** Good for cross-referencing specs
+- **Euro NCAP:** euroncap.com (dimensions, weight)
 
 ---
 
-## 🔗 Key Files
-
-- **VEHICLE_EXPANSION_PLAN.md** - Complete roadmap
-- **CONTRIBUTING.md** - Field-by-field guide
-- **data/** directory - See existing vehicles for structure
-- **scripts/validate.py** - Validation tool
-- **scripts/build-sqlite.py** - Database builder
-
----
-
-**Target:** 300+ variants by mid-March  
-**Daily Target:** 2-3 vehicles per day  
-**Quality over Speed:** Better 200 well-documented vehicles than 500 incomplete entries
-
----
-
-**🚀 Remember:** Streamlit app is live and deployed! Vehicle expansion improves the database but doesn't block the launch. Work systematically and maintain quality.
+**Daily target:** 5-10 spec updates + 3-5 market entries  
+**Quality over Speed** — accurate, complete data matters more than volume
