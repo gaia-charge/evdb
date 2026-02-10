@@ -1,0 +1,146 @@
+id: nissan-ariya-e-4orce-63kwh-2025
+model_id: nissan-ariya
+name: e-4ORCE 63kWh
+full_name: Nissan Ariya e-4ORCE 63kWh
+model_year: 2025
+trim_level: Advance
+
+variant_code: null
+
+battery:
+  usable_kwh: 63.0
+  total_kwh: 66.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: Envision AESC
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 360
+  wltp_city_km: 450
+  wltp_highway_km: 310
+  epa_miles: null
+  real_world_km: 310
+  conditions:
+    temperature_c: 20
+    driving_style: mixed
+    climate_control: on
+
+charging:
+  ac:
+    max_power_kw: 22
+    connector: Type2
+    onboard_charger_kw: 22
+    charge_time_0_100_hours: 6.5
+  dc:
+    max_power_kw: 130
+    connector: CCS2
+    charge_time_10_80_percent_min: 28
+    charge_time_20_80_percent_min: 22
+  charge_curve:
+    - soc_percent: 10
+      power_kw: 125
+    - soc_percent: 20
+      power_kw: 130
+    - soc_percent: 30
+      power_kw: 130
+    - soc_percent: 40
+      power_kw: 125
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 95
+    - soc_percent: 70
+      power_kw: 72
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 12
+  bidirectional:
+    v2l: true
+    v2h: true
+    v2g: true
+    power_kw: 6.0
+    notes: V2X requires CHAdeMO adapter. CCS2 does not support bidirectional on Ariya.
+
+motors:
+  count: 2
+  type: permanent_magnet_synchronous
+  configuration:
+    - position: front
+      power_kw: 100
+      torque_nm: null
+    - position: rear
+      power_kw: 100
+      torque_nm: null
+  total_power_kw: 205
+  total_power_hp: 279
+  total_torque_nm: 460
+
+drive_type: AWD
+
+performance:
+  acceleration_0_100_kmh_s: 7.5
+  top_speed_kmh: 160
+  notes: e-4ORCE AWD with electronic torque vectoring on smaller 63kWh battery.
+
+weight:
+  curb_weight_kg: 2080
+
+efficiency:
+  wltp_kwh_per_100km: 19.4
+  real_world_kwh_per_100km: 21.2
+  eu_energy_efficiency_class: B
+
+standard_equipment:
+  - ProPILOT Assist 2.0 (hands-off highway driving)
+  - e-Pedal Step (one-pedal driving)
+  - Dual 12.3" displays
+  - NissanConnect with OTA updates
+  - Apple CarPlay & Android Auto (wireless)
+  - Heat pump climate control
+  - 360-degree camera
+  - LED headlights
+  - Zero Gravity seats
+
+optional_equipment:
+  - name: Two-tone paint
+    category: appearance
+  - name: 20" alloy wheels
+    category: appearance
+  - name: Panoramic glass roof
+    category: comfort
+  - name: Bose Premium Audio
+    category: audio
+
+colors_available: 10
+
+version:
+  release_date: 2025-01
+  end_date: null
+  changes_from_previous: >
+    2025 model year: Updated NissanConnect infotainment, improved e-4ORCE calibration,
+    new color options, enhanced ProPILOT Assist 2.0 with wider operational domain.
+
+production:
+  plant: Tochigi, Japan
+
+price_indication:
+  currency: EUR
+  base_price_estimate: 49990
+
+metadata:
+  sources:
+    - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
+  data_quality: verified
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
+  notes: >
+    2025 Ariya e-4ORCE 63kWh - the more affordable AWD option with 205kW combined
+    power and 360km WLTP range. Faster DC charging relative to battery size means
+    10-80% in about 28 minutes. Good all-weather capability at a lower price point
+    than the 87kWh e-4ORCE variant.

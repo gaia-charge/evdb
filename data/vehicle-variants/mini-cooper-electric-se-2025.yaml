@@ -1,0 +1,137 @@
+id: mini-cooper-electric-se-2025
+model_id: mini-cooper-electric
+name: SE
+variant_name: SE
+trim_level: SE
+model_year: 2025
+
+battery:
+  usable_kwh: 54.2
+  total_kwh: 57.0
+  chemistry: NMC
+  cells_configuration: null
+  supplier: CATL
+  pack_voltage_v: 400
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 402
+  wltp_city_km: 525
+  wltp_highway_km: 315
+  epa_km: null
+  epa_miles: null
+  real_world_km: 340
+  real_world_highway_km: 270
+  real_world_city_km: 410
+
+charging:
+  ac_charging:
+    max_power_kw: 11
+    onboard_charger_kw: 11
+    connector_type: Type2
+    phases: 3
+    time_0_100_percent_hours: 5.5
+  dc_charging:
+    max_power_kw: 95
+    connector_type: CCS2
+    time_10_80_percent_minutes: 30
+    time_0_80_percent_minutes: 33
+  charge_curve:
+    - soc_percent: 0
+      power_kw: 75
+    - soc_percent: 10
+      power_kw: 95
+    - soc_percent: 20
+      power_kw: 95
+    - soc_percent: 30
+      power_kw: 92
+    - soc_percent: 40
+      power_kw: 87
+    - soc_percent: 50
+      power_kw: 78
+    - soc_percent: 60
+      power_kw: 65
+    - soc_percent: 70
+      power_kw: 52
+    - soc_percent: 80
+      power_kw: 38
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 11
+  bidirectional_charging: false
+
+motors:
+  configuration: single
+  type: permanent_magnet
+  drive_type: FWD
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 330
+  front_motor:
+    power_kw: 160
+    power_hp: 218
+    torque_nm: 330
+    type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.7
+  top_speed_kmh: 170
+  top_speed_limited: true
+
+efficiency:
+  consumption_wltp_kwh_per_100km: 15.8
+  consumption_real_world_kwh_per_100km: 17.6
+  efficiency_rating_eu: B
+  co2_emissions_wltp_g_per_km: 0
+
+weight:
+  curb_weight_kg: 1600
+  gross_vehicle_weight_kg: 2000
+  payload_kg: 400
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
+
+features:
+  heat_pump: true
+  adaptive_suspension: false
+  air_suspension: false
+  all_wheel_steering: false
+  torque_vectoring: false
+  launch_control: true
+  adjustable_regen_braking: true
+  one_pedal_driving: true
+
+driving_modes:
+  - Personal
+  - Sport
+  - Green
+  - Green+
+
+interior_materials:
+  seats: Vescin (vegan synthetic leather)
+  dashboard: Recycled polyester textile
+  steering_wheel: Vegan leather
+
+version_info:
+  release_date: 2025-01-01
+  discontinuation_date: null
+  facelift: false
+  special_edition: false
+  limited_production: false
+
+metadata:
+  data_quality: verified
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
+  sources:
+    - https://www.mini.com/en_GB/home/range/mini-electric/mini-electric-se.html
+  notes: >
+    2025 model year Mini Cooper Electric SE - the sportier variant with the same 54.2kWh
+    battery and 160kW motor as the E, but with additional performance features including
+    launch control, sport-tuned suspension, and John Cooper Works-inspired styling elements.
+    Slightly higher consumption due to sportier tire/wheel setup and additional equipment
+    weight. Same 402km WLTP range but real-world figures slightly lower than the E due
+    to sportier calibration and heavier standard equipment.
