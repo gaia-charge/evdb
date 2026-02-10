@@ -1,0 +1,224 @@
+id: mazda-6e-long-range-80kwh-2025-de
+variant_id: mazda-6e-long-range-80kwh-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2025-06-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025 model year)
+pricing:
+  base_price: 46990
+  price_including_vat: 46990
+  vat_rate_percent: 19
+  on_road_price: 48140
+  destination_charge: 950
+  registration_fee: 200
+
+# Trim levels and configurations
+trim_levels:
+  - name: Long Range 80 kWh
+    price: 46990
+    description: Single trim with comprehensive standard equipment
+    standard_features:
+      - 14.6" touchscreen with Mazda Connect
+      - 10.25" digital instrument cluster
+      - Wireless Apple CarPlay and Android Auto
+      - Dual-zone climate control with heat pump
+      - Heated front seats and steering wheel
+      - Adaptive LED headlights
+      - 360° camera system
+      - Adaptive cruise control with lane centering
+      - Blind spot monitoring
+      - V2L capability (3.3 kW)
+      - 70L frunk
+      - Power liftgate
+      - Wireless phone charging
+      - Nappa leather upholstery
+      - 19" alloy wheels
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 48140
+    description: Standard trim with delivery and registration
+    included:
+      - All standard features
+      - Delivery charge (€950)
+      - Registration fee (€200)
+
+  - name: Premium Package
+    total_price: 51440
+    description: Fully equipped with premium options
+    included:
+      - Base configuration
+      - Soul Red Crystal Metallic paint (€1,100)
+      - 20" alloy wheels (€900)
+      - Premium Bose sound system (€1,300)
+
+# Incentives and subsidies (2025/2026)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 4700
+    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
+    notes: >
+      Company car drivers benefit from 0.25% monthly tax rate (vs 1% for
+      combustion vehicles), saving approximately €4,700 annually versus
+      equivalent ICE sedan.
+
+  - name: THG-Quote (Greenhouse Gas Reduction Quota)
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 117.48
+  annual_taxable_benefit_eur: 1410
+  comparable_ice_benefit_eur: 5640
+  annual_tax_savings_eur: 4230
+  notes: >
+    The Mazda 6e qualifies for the advantageous 0.25% company car tax rate
+    (vehicles under €70,000 with minimum 80km electric range). Annual taxable
+    benefit of €1,410 compared to €5,640 for equivalent combustion sedan.
+
+# Total Cost of Ownership (3-year calculation)
+tco_analysis:
+  period_months: 36
+  annual_mileage_km: 15000
+  total_mileage_km: 45000
+
+  purchase_cost: 48140
+
+  energy_costs:
+    home_charging_kwh: 0.36
+    public_charging_kwh: 0.58
+    home_charging_percent: 80
+    public_charging_percent: 20
+    total_energy_cost_3yr: 3213
+
+  maintenance_costs:
+    annual_service_cost: 320
+    total_maintenance_3yr: 960
+    notes: Mazda service network well-established in Germany
+
+  insurance_annual: 980
+  insurance_3yr: 2940
+
+  depreciation:
+    residual_value_percent: 55
+    residual_value_eur: 26477
+    depreciation_3yr: 21663
+
+  total_cost_3yr: 28776
+  cost_per_km: 0.64
+
+# Delivery and availability
+delivery:
+  typical_wait_weeks: 8
+  production_location: China (Changan-Mazda JV)
+  import_method: sea_freight
+
+  order_process:
+    - Visit Mazda dealer or configure online at mazda.de
+    - Test drive available at participating dealers
+    - Place order with deposit
+    - Delivery in 8-12 weeks
+
+# Warranty
+warranty:
+  vehicle_years: 6
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 6
+
+# Service and maintenance
+service:
+  recommended_interval_months: 12
+  recommended_interval_km: 15000
+  typical_service_cost_eur: 320
+  dealer_count_germany: 450
+
+  notes: >
+    Mazda has an extensive dealer network across Germany (450+ locations),
+    providing excellent service accessibility compared to newer EV brands.
+
+# Competitors comparison
+competitors:
+  - model: Tesla Model 3 Long Range RWD
+    price_eur: 44990
+    range_km: 580
+    notes: Lower price, longer range, Tesla Supercharger network
+
+  - model: BMW i4 eDrive40
+    price_eur: 56900
+    range_km: 525
+    notes: Higher price, established premium brand, better charging speed
+
+  - model: Hyundai Ioniq 6 Long Range RWD
+    price_eur: 47900
+    range_km: 545
+    notes: Similar price, 800V architecture with faster charging
+
+  - model: BYD Seal Design RWD
+    price_eur: 46990
+    range_km: 570
+    notes: Same price range, slightly more range, LFP battery option
+
+# Market positioning
+market_positioning:
+  segment: large_sedan
+  target_audience: Design-conscious buyers, Mazda enthusiasts, premium sedan seekers
+  key_selling_points:
+    - Mazda Kodo design (distinctive styling)
+    - Premium interior quality (Nappa leather standard)
+    - Rear-wheel drive dynamics
+    - 5-star Euro NCAP (93% adult, 93% child)
+    - Extensive dealer network (450+ in Germany)
+    - V2L capability
+    - Practical liftback with 1,074L max cargo
+    - Heat pump standard
+    - 70L frunk
+
+  considerations:
+    - 93kW DC fast charging slower than competitors
+    - Built on Changan platform (not Mazda-developed)
+    - New to electric market (less proven EV track record)
+    - No AWD option available
+    - 400V architecture (vs 800V in Hyundai/Kia)
+
+notes: >
+  The Mazda 6e enters the competitive German D-segment EV market at €46,990.
+  Strong value proposition with premium standard equipment including Nappa leather,
+  360° camera, and comprehensive ADAS. The Kodo design and Mazda build quality
+  differentiate it from mainstream competitors.
+
+  Main weakness is the 93kW DC charging speed, significantly behind 800V
+  competitors (Hyundai Ioniq 6: 240kW, BMW i4: 205kW). This makes it better
+  suited for daily commuting with home charging rather than frequent long-distance
+  travel.
+
+  Mazda's extensive German dealer network (450+ locations) provides excellent
+  service accessibility, a major advantage over Chinese and newer EV brands.
+  Company car tax benefit makes it attractive for business users at €1,410
+  annual taxable benefit vs €5,640 for equivalent ICE sedan.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://www.mazda.de/
+    - https://ev-database.org/car/3108/Mazda-6e-Long-Range-80-kWh
+    - German company car tax regulations

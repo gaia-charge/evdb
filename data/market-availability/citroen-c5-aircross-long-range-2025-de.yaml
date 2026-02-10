@@ -1,0 +1,186 @@
+id: citroen-c5-aircross-long-range-2025-de
+variant_id: citroen-c5-aircross-long-range-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2025-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025 model year)
+pricing:
+  base_price: 48490
+  price_including_vat: 48490
+  vat_rate_percent: 19
+  on_road_price: 49640
+  destination_charge: 950
+  registration_fee: 200
+
+# Trim levels and configurations
+trim_levels:
+  - name: Long Range
+    price: 48490
+    description: Long range variant with 97 kWh battery and 681 km WLTP range
+    standard_features:
+      - 10" HD touchscreen
+      - Wireless Apple CarPlay and Android Auto
+      - Citroën Advanced Comfort seats
+      - Progressive hydraulic cushion suspension
+      - Dual-zone climate control with heat pump
+      - Heated front seats and steering wheel
+      - Adaptive LED headlights
+      - Highway assist Level 2
+      - Blind spot monitoring
+      - Automatic parking assist
+      - Wireless phone charging
+      - 19" alloy wheels
+      - Battery preconditioning via navigation
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 49640
+    description: Standard trim with delivery
+    included:
+      - All standard features
+      - Delivery charge (€950)
+      - Registration fee (€200)
+
+  - name: Family Comfort
+    total_price: 52540
+    description: Family-oriented configuration
+    included:
+      - Base configuration
+      - Metallic paint (€750)
+      - Panoramic sunroof (€1,200)
+      - Premium Pack - heated rear seats, power tailgate (€950)
+
+# Incentives and subsidies
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 4849
+    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
+
+  - name: THG-Quote (Greenhouse Gas Reduction Quota)
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 121.23
+  annual_taxable_benefit_eur: 1455
+  comparable_ice_benefit_eur: 5400
+  annual_tax_savings_eur: 3945
+  notes: >
+    The C5 Aircross qualifies for the 0.25% company car tax rate. Annual
+    taxable benefit of €1,455 compared to €5,400 for equivalent combustion SUV.
+
+# Delivery and availability
+delivery:
+  typical_wait_weeks: 10
+  production_location: Rennes, France
+  import_method: road_transport
+
+  order_process:
+    - Visit Citroën dealer or configure at citroen.de
+    - Test drive available at all dealers
+    - Place order with deposit
+    - Delivery in 10-14 weeks
+
+# Warranty
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 5
+
+# Service and maintenance
+service:
+  recommended_interval_months: 24
+  recommended_interval_km: 30000
+  typical_service_cost_eur: 280
+  dealer_count_germany: 320
+
+  notes: >
+    Citroën dealer network in Germany provides good coverage. Long service
+    intervals (24 months/30,000km) reduce maintenance burden.
+
+# Competitors comparison
+competitors:
+  - model: Peugeot e-3008 98 GT Long Range
+    price_eur: 51490
+    range_km: 680
+    notes: Platform sibling, sportier positioning, higher price
+
+  - model: VW ID.4 Pro
+    price_eur: 46995
+    range_km: 520
+    notes: Shorter range, established brand, larger dealer network
+
+  - model: Skoda Enyaq iV 85
+    price_eur: 47990
+    range_km: 556
+    notes: VW Group quality, shorter range, similar pricing
+
+  - model: BYD Seal U Comfort
+    price_eur: 44990
+    range_km: 500
+    notes: Lower price, shorter range, LFP battery
+
+# Market positioning
+market_positioning:
+  segment: compact_suv
+  target_audience: Comfort-seeking families, value-oriented EV buyers
+  key_selling_points:
+    - Outstanding 681 km WLTP range
+    - Citroën Advanced Comfort seats and suspension
+    - Spacious 565L trunk (1,668L max)
+    - Competitive pricing vs segment
+    - Made in France (Rennes plant)
+    - Heat pump and battery preconditioning standard
+    - Long service intervals (24mo/30,000km)
+    - 160kW DC fast charging
+
+  considerations:
+    - Lower Euro NCAP safety assist score (62%)
+    - No V2L capability
+    - FWD only (no AWD option)
+    - 400V architecture
+    - Heavy at 2,246 kg
+    - No frunk storage
+
+notes: >
+  The Citroën C5 Aircross Long Range brings impressive 681 km WLTP range to
+  the German market at €48,490. Comfort-focused alternative to sportier platform
+  sibling Peugeot e-3008, with Citroën's trademark Advanced Comfort seats and
+  progressive hydraulic suspension.
+
+  Strong value proposition with comprehensive standard equipment. The 97 kWh
+  battery provides segment-leading range, making it practical for long-distance
+  family travel. 160kW DC fast charging is competitive for a 400V platform.
+
+  Built in France (Rennes), appealing to buyers preferring European manufacturing.
+  Citroën's 320+ German dealers provide reasonable service accessibility.
+
+  Company car tax benefit makes it attractive for business use at €1,455 annual
+  taxable benefit. Long 24-month service intervals further reduce running costs.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://www.citroen.de/
+    - https://ev-database.org/car/3231/Citroen-C5-Aircross-Long-Range
+    - German company car tax regulations

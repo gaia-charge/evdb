@@ -1,0 +1,285 @@
+id: citroen-c5-aircross-long-range-2025
+model_id: citroen-c5-aircross
+name: Long Range
+model_year: 2025
+trim_level: long_range
+market_availability:
+  - europe
+  - germany
+  - france
+  - uk
+  - spain
+  - italy
+  - netherlands
+  - belgium
+
+# Battery specifications
+battery:
+  total_kwh: 101.0
+  usable_kwh: 96.9
+  chemistry: NMC
+  voltage: 400
+  manufacturer: stellantis
+  warranty:
+    duration_years: 8
+    duration_km: 160000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: false
+
+# Motor and drivetrain
+motors:
+  layout: fwd
+  total_count: 1
+  front:
+    type: permanent_magnet
+    power_kw: 170
+    power_hp: 231
+    torque_nm: 345
+    manufacturer: stellantis
+
+  combined:
+    total_power_kw: 170
+    total_power_hp: 231
+    total_torque_nm: 345
+
+drivetrain:
+  drive_type: fwd
+  transmission: single_speed_reduction
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 8.8
+  top_speed_kmh: 170
+  top_speed_limited: true
+
+# Range and efficiency
+range:
+  wltp_km: 681
+  wltp_city_km: 820
+  wltp_highway_km: 550
+  epa_km: null
+  real_world_mixed_km: 485
+  real_world_highway_km: 400
+  real_world_winter_km: 370
+
+efficiency:
+  wltp_kwh_per_100km: 17.7
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 20.0
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    time_0_100_hours: 10.5
+    onboard_charger_kw: 11
+  dc:
+    max_power_kw: 160
+    time_10_80_minutes: 32
+    time_10_80_km_added: 340
+    curve_description: >
+      Peak 160kW DC charging from 10-30% SoC, tapering to approximately 100kW
+      at 50% and 60kW at 70%. Battery preconditioning via navigation integration
+      helps achieve optimal charging speeds on longer journeys.
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l_capable: false
+  v2l_power_kw: null
+  v2h_capable: false
+  v2g_capable: false
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4652
+  width_mm: 1936
+  height_mm: 1692
+  wheelbase_mm: 2795
+  drag_coefficient: 0.30
+
+weight:
+  curb_weight_kg: 2246
+  gross_vehicle_weight_kg: 2690
+  max_payload_kg: 519
+  max_towing_capacity_kg: 1200
+
+# Cargo and seating
+seating:
+  capacity: 5
+  configuration: 2_plus_3
+
+cargo:
+  trunk_volume_liters: 565
+  trunk_max_volume_liters: 1668
+  frunk_volume_liters: 0
+
+# Technology and infotainment
+infotainment:
+  screen_size_inches: 10.0
+  screen_orientation: landscape
+  system: Citroën Infotainment
+  features:
+    - 10" HD central touchscreen
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Connected navigation with real-time traffic
+    - Voice control
+    - OTA software updates
+    - MyCitroën app connectivity
+    - WiFi hotspot
+  instrument_cluster:
+    type: digital
+    size_inches: 7.0
+    customizable: true
+
+# Driver assistance
+driver_assistance:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  lane_centering: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  automatic_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_attention_monitor: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  360_camera: false
+  automatic_parking: true
+  highway_assist: true
+
+# Safety ratings
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2025
+  adult_occupant_score: 80
+  child_occupant_score: 85
+  vulnerable_road_users_score: 79
+  safety_assist_score: 62
+  airbags: 6
+
+# Lighting
+lighting:
+  headlights: LED
+  headlights_adaptive: true
+  headlights_matrix: false
+  daytime_running_lights: LED
+  taillights: LED
+  ambient_lighting: true
+  ambient_lighting_colors: 8
+
+# Climate control
+climate:
+  zones: 2
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: false
+  heated_steering_wheel: true
+  ventilated_seats_front: false
+  air_filter: activated_carbon
+
+# Wheels and tires
+wheels:
+  standard:
+    size_inches: 19
+    tire_size: 235/50R19
+  optional:
+    - size_inches: 20
+      tire_size: 235/45R20
+      range_impact_km: -20
+
+# Exterior colors
+colors:
+  - name: Elixir Red
+    type: metallic
+  - name: Pearl White
+    type: metallic
+  - name: Platinum Grey
+    type: metallic
+  - name: Eclipse Blue
+    type: metallic
+  - name: Perla Nera Black
+    type: metallic
+  - name: Artense Grey
+    type: metallic
+
+# Interior options
+interior:
+  upholstery: fabric_leather
+  trim: soft_touch_plastics
+  steering_wheel: leather
+  color_options:
+    - name: Basalt Black with grey accents
+    - name: Hype Grey
+
+# Standard features
+standard_features:
+  - 10" HD touchscreen
+  - 7" digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - Dual-zone climate control with heat pump
+  - Citroën Advanced Comfort seats
+  - Progressive hydraulic cushion suspension
+  - Heated front seats and steering wheel
+  - Adaptive LED headlights
+  - Front and rear parking sensors
+  - Automatic parking assist
+  - Highway assist (Level 2)
+  - Blind spot monitoring
+  - Automatic emergency braking
+  - Keyless entry and start
+  - Wireless phone charging
+  - 19" alloy wheels
+  - Battery preconditioning via navigation
+
+# Production information
+production:
+  start_date: "2025-06"
+  plant: Stellantis Rennes Plant
+  country: France
+  notes: "Built on STLA Medium platform alongside Peugeot e-3008"
+
+# Version and changelog
+version_info:
+  release_date: "2025-06"
+  changes_from_previous: "All-new BEV model replacing PHEV C5 Aircross"
+  current_production: true
+
+# Notes
+notes: >
+  The Citroën C5 Aircross Long Range offers the largest battery in the STLA Medium
+  platform family at 97 kWh (96.9 kWh usable), providing an impressive 681 km WLTP
+  range. Real-world range estimated at 485 km mixed driving.
+  
+  Citroën's comfort-focused approach sets it apart from sportier Stellantis siblings.
+  The Advanced Comfort seats and progressive hydraulic cushion suspension deliver
+  outstanding ride quality, making it ideal for families prioritizing passenger comfort.
+  
+  160kW DC fast charging reaches 10-80% in 32 minutes, competitive for the 400V
+  architecture. Battery preconditioning via navigation helps optimize charging speed.
+  
+  Spacious interior with 565L trunk (1,668L max) provides excellent family practicality.
+  The 519 kg payload and 1,200 kg towing capacity handle family duties well.
+  
+  Euro NCAP 5-star rating (2025) confirms safety, though the 62% safety assist score
+  is lower than some competitors. Standard highway assist (Level 2) provides
+  semi-autonomous driving on motorways.
+  
+  At approximately 2,246 kg, it's heavier than some competitors, reflecting the large
+  battery. FWD-only configuration keeps the drivetrain simple and efficient.
+  
+  Direct platform-sharing with Peugeot e-3008 and Opel Grandland Electric, but
+  differentiated by Citroën's comfort focus and typically lower pricing.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://ev-database.org/car/3231/Citroen-C5-Aircross-Long-Range
+    - https://www.citroen.de/
+    - https://www.euroncap.com/

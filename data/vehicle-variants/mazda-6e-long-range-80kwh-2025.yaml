@@ -1,0 +1,285 @@
+id: mazda-6e-long-range-80kwh-2025
+model_id: mazda-6e
+name: Long Range 80 kWh
+model_year: 2025
+trim_level: long_range
+market_availability:
+  - europe
+  - germany
+  - uk
+  - france
+  - spain
+  - italy
+  - netherlands
+
+# Battery specifications
+battery:
+  total_kwh: 80.0
+  usable_kwh: 78.0
+  chemistry: NMC
+  voltage: 400
+  manufacturer: changan
+  warranty:
+    duration_years: 8
+    duration_km: 160000
+    capacity_retention_percent: 70
+  cooling_system: liquid
+  heat_pump: true
+  preconditioning: true
+  cell_to_pack: false
+
+# Motor and drivetrain
+motors:
+  layout: rwd
+  total_count: 1
+  rear:
+    type: permanent_magnet
+    power_kw: 180
+    power_hp: 245
+    torque_nm: 320
+    manufacturer: changan
+
+  combined:
+    total_power_kw: 180
+    total_power_hp: 245
+    total_torque_nm: 320
+
+drivetrain:
+  drive_type: rwd
+  transmission: single_speed_reduction
+
+# Performance
+performance:
+  acceleration_0_100_kmh_s: 7.8
+  top_speed_kmh: 175
+  top_speed_limited: true
+
+# Range and efficiency
+range:
+  wltp_km: 552
+  wltp_city_km: 680
+  wltp_highway_km: 450
+  epa_km: null
+  real_world_mixed_km: 460
+  real_world_highway_km: 380
+  real_world_winter_km: 340
+
+efficiency:
+  wltp_kwh_per_100km: 16.5
+  epa_kwh_per_100km: null
+  real_world_kwh_per_100km: 17.0
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    phases: 3
+    time_0_100_hours: 8.5
+    onboard_charger_kw: 11
+  dc:
+    max_power_kw: 93
+    time_10_80_minutes: 49
+    time_10_80_km_added: 280
+    curve_description: >
+      Peak 93kW DC charging from 10-30% SoC, tapering to approximately 60kW
+      at 50% and 35kW at 70%. The 400V architecture and moderate DC charging
+      speed make it best suited for overnight AC charging with occasional
+      DC top-ups on longer trips.
+
+# Bidirectional charging
+bidirectional_charging:
+  v2l_capable: true
+  v2l_power_kw: 3.3
+  v2h_capable: false
+  v2g_capable: false
+
+# Dimensions and weight
+dimensions:
+  length_mm: 4921
+  width_mm: 1890
+  height_mm: 1491
+  wheelbase_mm: 2895
+  drag_coefficient: 0.26
+
+weight:
+  curb_weight_kg: 2037
+  gross_vehicle_weight_kg: 2387
+  max_payload_kg: 425
+  max_towing_capacity_kg: 1500
+
+# Cargo and seating
+seating:
+  capacity: 5
+  configuration: 2_plus_3
+
+cargo:
+  trunk_volume_liters: 456
+  trunk_max_volume_liters: 1074
+  frunk_volume_liters: 70
+
+# Technology and infotainment
+infotainment:
+  screen_size_inches: 14.6
+  screen_orientation: landscape
+  system: Mazda Connect
+  features:
+    - 14.6" central touchscreen
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Mazda Connected Services
+    - OTA software updates
+    - Navigation with real-time traffic
+    - Voice control
+    - WiFi hotspot
+  instrument_cluster:
+    type: digital
+    size_inches: 10.25
+    customizable: true
+
+# Driver assistance
+driver_assistance:
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  lane_centering: true
+  blind_spot_monitoring: true
+  rear_cross_traffic_alert: true
+  automatic_emergency_braking: true
+  traffic_sign_recognition: true
+  driver_attention_monitor: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  360_camera: true
+  automatic_parking: true
+  highway_assist: false
+
+# Safety ratings
+safety:
+  euro_ncap_rating: 5
+  euro_ncap_year: 2025
+  adult_occupant_score: 93
+  child_occupant_score: 93
+  vulnerable_road_users_score: 74
+  safety_assist_score: 77
+  airbags: 8
+
+# Lighting
+lighting:
+  headlights: LED
+  headlights_adaptive: true
+  headlights_matrix: false
+  daytime_running_lights: LED
+  taillights: LED
+  ambient_lighting: true
+  ambient_lighting_colors: 32
+
+# Climate control
+climate:
+  zones: 2
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: false
+  heated_steering_wheel: true
+  ventilated_seats_front: false
+  air_filter: PM2.5
+
+# Wheels and tires
+wheels:
+  standard:
+    size_inches: 19
+    tire_size: 245/45R19
+  optional:
+    - size_inches: 20
+      tire_size: 245/40R20
+      range_impact_km: -20
+
+# Exterior colors
+colors:
+  - name: Machine Grey Metallic
+    type: metallic
+  - name: Soul Red Crystal Metallic
+    type: metallic
+  - name: Jet Black Mica
+    type: metallic
+  - name: Rhodium White Premium Metallic
+    type: metallic
+  - name: Deep Crystal Blue Mica
+    type: metallic
+  - name: Zircon Sand Metallic
+    type: metallic
+
+# Interior options
+interior:
+  upholstery: leather
+  trim: real_wood_accents
+  steering_wheel: leather
+  color_options:
+    - name: Pure White Nappa Leather
+    - name: Black Nappa Leather
+
+# Standard features
+standard_features:
+  - 14.6" touchscreen with Mazda Connect
+  - 10.25" digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - Dual-zone climate control with heat pump
+  - Heated front seats and steering wheel
+  - Adaptive LED headlights
+  - 360° camera system
+  - Front and rear parking sensors
+  - Automatic parking assist
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Blind spot monitoring
+  - V2L capability (3.3 kW)
+  - 70L frunk
+  - Power liftgate
+  - Keyless entry and start
+  - Wireless phone charging
+  - 19" alloy wheels
+  - Battery preconditioning
+
+# Production information
+production:
+  start_date: "2025-03"
+  plant: Changan-Mazda Joint Venture
+  country: China
+  notes: "Built on Changan EPA1 platform through joint venture partnership"
+
+# Version and changelog
+version_info:
+  release_date: "2025-03"
+  changes_from_previous: "All-new model, Mazda's first dedicated electric sedan"
+  current_production: true
+
+# Notes
+notes: >
+  The Mazda 6e Long Range is Mazda's flagship electric sedan, reviving the beloved
+  6 nameplate as a fully electric liftback. Built on Changan's EPA1 platform, it
+  combines Mazda's design and craftsmanship with proven EV technology.
+  
+  The 80 kWh NMC battery provides 552 km WLTP range (estimated 460 km real-world),
+  competitive in the D-segment. The rear-mounted 180 kW motor delivers Mazda's
+  signature driving engagement with 7.8s 0-100 km/h acceleration.
+  
+  DC fast charging is limited to 93 kW peak, which is below segment leaders but
+  adequate for most use cases. The 49-minute 10-80% time means longer stops on
+  road trips. AC charging at 11 kW three-phase is standard.
+  
+  Excellent Euro NCAP results (93% adult, 93% child) confirm strong safety
+  credentials. Standard V2L capability and 70L frunk add practical value.
+  
+  The liftback design provides 456L trunk expanding to 1,074L with rear seats
+  folded, offering SUV-rivalling practicality in a sedan form factor.
+  
+  Competes directly with Tesla Model 3, BMW i4, and Hyundai Ioniq 6. Main
+  differentiators are Mazda's build quality, Kodo design, and rear-wheel drive
+  dynamics. Main weakness is slower DC charging versus 800V competitors.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://ev-database.org/car/3108/Mazda-6e-Long-Range-80-kWh
+    - https://www.mazda.de/
+    - https://www.euroncap.com/
