@@ -1,0 +1,138 @@
+# Audi Q6 e-tron Performance (2025)
+id: audi-q6-e-tron-performance-2025
+name: "Performance"
+model_id: audi-q6-e-tron
+model_year: 2025
+variant_code: Q6-PERF
+
+battery:
+  usable_kwh: 94.9
+  total_kwh: 100.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 800
+
+range:
+  wltp_km: 641
+  wltp_city_km: 850
+  wltp_highway_km: 530
+  epa_km: null
+  real_world_km: 565
+  real_world_source: "ADAC EcoTest"
+  notes: |
+    WLTP range of 641 km (best in Q6 lineup). ADAC tested 565 km real-world.
+    Highest range Q6 variant thanks to efficient single rear motor and large battery.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 270
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 270
+    - soc_percent: 10
+      power_kw: 270
+    - soc_percent: 20
+      power_kw: 270
+    - soc_percent: 30
+      power_kw: 250
+    - soc_percent: 40
+      power_kw: 230
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 170
+    - soc_percent: 70
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 85
+    - soc_percent: 90
+      power_kw: 45
+    - soc_percent: 100
+      power_kw: 20
+  time_10_to_80_percent_min: 21
+  charging_speed_kmh: 1380
+  plug_and_charge: true
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 11
+  v2h: true
+  v2g: true
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 240
+      power_hp: 326
+      torque_nm: 485
+  total_power_kw: 240
+  total_power_hp: 326
+  total_torque_nm: 485
+  acceleration_0_100_kmh_sec: 6.6
+  acceleration_0_60_mph_sec: 6.2
+  top_speed_kmh: 210
+
+weight:
+  curb_weight_kg: 2270
+  gross_weight_kg: 2895
+  max_payload_kg: 625
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+
+efficiency:
+  wltp_kwh_per_100km: 17.0
+  wltp_kwh_per_100km_city: 14.2
+  wltp_kwh_per_100km_highway: 20.5
+  real_world_kwh_per_100km: 18.8
+  energy_efficiency_class: "A+"
+
+wheels_tires:
+  standard_size_front: "235/55 R19"
+  standard_size_rear: "255/50 R19"
+  wheel_sizes_available:
+    - "19 inch (standard)"
+    - "20 inch (optional, -20km range)"
+    - "21 inch (optional, -35km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Adaptive cruise control with lane keeping assist"
+    - "Active lane assist"
+    - "Traffic sign recognition"
+    - "Park assist plus with remote parking"
+    - "360-degree camera system (standard)"
+    - "Predictive efficiency assist"
+    - "Intersection assist"
+    - "Emergency assist"
+  connectivity:
+    - "Audi connect navigation & infotainment plus"
+    - "myAudi app with remote functions"
+    - "OTA software updates"
+    - "e-tron route planner with charging optimization"
+    - "5G connectivity (optional)"
+  special_features:
+    - "Three-stage recuperation (0.1g, 0.15g, 0.2g)"
+    - "B mode for strong regen (one-pedal driving)"
+    - "Pre-conditioning (battery & cabin)"
+    - "Bank & Turn technology"
+    - "14.5-inch MMI panoramic display"
+    - "11.9-inch virtual cockpit plus"
+    - "10.9-inch passenger display (optional)"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/"
+  notes: "Performance variant with 240 kW (326 PS) rear motor and 100 kWh battery. ADAC tested real-world range of 565 km. Price starts at €68,800 in Germany. Best balance of range and performance in the Q6 lineup. Same 270 kW DC charging as quattro variant."

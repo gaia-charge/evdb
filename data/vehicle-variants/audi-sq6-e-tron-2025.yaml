@@ -1,0 +1,145 @@
+# Audi SQ6 e-tron (2025)
+id: audi-sq6-e-tron-2025
+name: "SQ6"
+model_id: audi-q6-e-tron
+model_year: 2025
+variant_code: SQ6
+
+battery:
+  usable_kwh: 94.9
+  total_kwh: 100.0
+  chemistry: NMC
+  cell_type: prismatic
+  manufacturer: "Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 800
+
+range:
+  wltp_km: 598
+  wltp_city_km: 770
+  wltp_highway_km: 480
+  epa_km: null
+  real_world_km: 500
+  real_world_source: "Estimated from ADAC test methodology"
+  notes: |
+    WLTP range of 598 km despite high-performance dual motors.
+    Real-world range around 500 km in mixed driving.
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 270
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 270
+    - soc_percent: 10
+      power_kw: 270
+    - soc_percent: 20
+      power_kw: 270
+    - soc_percent: 30
+      power_kw: 250
+    - soc_percent: 40
+      power_kw: 230
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 170
+    - soc_percent: 70
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 85
+    - soc_percent: 90
+      power_kw: 45
+    - soc_percent: 100
+      power_kw: 20
+  time_10_to_80_percent_min: 21
+  charging_speed_kmh: 1300
+  plug_and_charge: true
+
+bidirectional:
+  v2l: true
+  v2l_max_kw: 11
+  v2h: true
+  v2g: true
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "AC induction"
+      power_kw: 140
+      power_hp: 190
+      torque_nm: null
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 285
+      power_hp: 387
+      torque_nm: 580
+  total_power_kw: 380
+  total_power_hp: 517
+  total_torque_nm: 650
+  acceleration_0_100_kmh_sec: 4.3
+  acceleration_0_60_mph_sec: 4.0
+  top_speed_kmh: 230
+
+weight:
+  curb_weight_kg: 2460
+  gross_weight_kg: 3085
+  max_payload_kg: 625
+  distribution_front_percent: 50
+  distribution_rear_percent: 50
+
+efficiency:
+  wltp_kwh_per_100km: 18.2
+  wltp_kwh_per_100km_city: 15.5
+  wltp_kwh_per_100km_highway: 22.0
+  real_world_kwh_per_100km: 21.5
+  energy_efficiency_class: "A"
+
+wheels_tires:
+  standard_size_front: "255/45 R20"
+  standard_size_rear: "285/40 R20"
+  wheel_sizes_available:
+    - "20 inch (standard, S-specific)"
+    - "21 inch (optional, Audi Sport)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Adaptive cruise control with lane keeping assist"
+    - "Active lane assist"
+    - "Traffic sign recognition"
+    - "Park assist plus with remote parking"
+    - "360-degree camera system (standard)"
+    - "Predictive efficiency assist"
+    - "Intersection assist"
+    - "Emergency assist"
+  connectivity:
+    - "Audi connect navigation & infotainment plus"
+    - "myAudi app with remote functions"
+    - "OTA software updates"
+    - "e-tron route planner with charging optimization"
+    - "5G connectivity (optional)"
+  special_features:
+    - "S sport suspension with adaptive dampers"
+    - "Progressive steering"
+    - "quattro sport differential (rear)"
+    - "Launch control"
+    - "Three-stage recuperation"
+    - "B mode for one-pedal driving"
+    - "Pre-conditioning (battery & cabin)"
+    - "Bank & Turn technology"
+    - "S-specific exterior styling"
+    - "S sport seats with integrated headrests"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/"
+  notes: "High-performance SQ6 e-tron with 380 kW (517 PS) dual motors. 0-100 km/h in 4.3 seconds. Price starts at €93,800 in Germany. S sport suspension, progressive steering, quattro sport differential. Despite performance focus, still achieves 598 km WLTP range. Competes with BMW iX M60, Tesla Model Y Performance, Mercedes-AMG EQE SUV."
