@@ -1,0 +1,182 @@
+# Peugeot e-2008 GT 54 kWh (2025) - Premium Trim
+
+id: peugeot-e-2008-gt-54kwh-2025
+model_id: peugeot-e-2008
+name: "GT 54 kWh"
+model_year: 2025
+trim_level: GT
+variant_code: null
+
+production:
+  start_date: 2024-09-01
+  end_date: null
+  status: active
+  notes: 2025 model year GT trim with 54 kWh battery
+
+battery:
+  type: Lithium-ion
+  chemistry: NMC
+  total_kwh: 54.0
+  usable_kwh: 50.8
+  supplier: CATL
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  cells: 216
+  modules: 18
+  voltage_nominal: 400
+
+range:
+  wltp_km: 400
+  wltp_city_km: 520
+  wltp_highway_km: 325
+  real_world_avg_km: 335
+  real_world_source: estimated
+  notes: Slightly lower range than Allure due to larger 18" wheels
+
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type 2
+    phases: 3
+    time_0_100_hours: 5.5
+    onboard_charger: 11kW 3-phase standard
+  
+  dc:
+    max_power_kw: 100
+    connector_type: CCS2
+    time_10_80_percent_minutes: 32
+    preconditioning: false
+  
+  charge_curve:
+    - percent: 0
+      power_kw: 95
+    - percent: 10
+      power_kw: 100
+    - percent: 30
+      power_kw: 100
+    - percent: 50
+      power_kw: 87
+    - percent: 60
+      power_kw: 78
+    - percent: 70
+      power_kw: 62
+    - percent: 80
+      power_kw: 42
+    - percent: 90
+      power_kw: 28
+    - percent: 100
+      power_kw: 11
+  
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  configuration: single_front
+  front:
+    type: permanent_magnet
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+  combined:
+    power_kw: 115
+    power_hp: 156
+    torque_nm: 260
+
+performance:
+  acceleration_0_100_kph: 8.7
+  top_speed_kph: 150
+
+efficiency:
+  wltp_kwh_per_100km: 16.8
+  real_world_kwh_per_100km: 19.0
+  drag_coefficient: 0.32
+
+weight:
+  curb_weight_kg: 1575
+  gross_weight_kg: 1930
+
+towing:
+  max_towing_kg: 0
+
+drivetrain:
+  drive_type: FWD
+  transmission: Single-speed reduction gear
+
+suspension:
+  front: MacPherson strut with anti-roll bar
+  rear: Torsion beam with coil springs
+
+brakes:
+  front: Ventilated disc (280mm)
+  rear: Drum
+  regenerative: true
+
+tires:
+  standard: 215/55 R18
+
+features:
+  infotainment:
+    - "Peugeot i-Cockpit with 10.0\" HD touchscreen"
+    - "3D digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Connected 3D Navigation"
+    - "DAB+ digital radio"
+    - "Focal premium sound system (8 speakers)"
+    - "MyPeugeot mobile app"
+    - "Wireless phone charging"
+  
+  driver_assistance:
+    - "Active Safety Brake with Pedestrian and Cyclist Detection"
+    - "Lane Keep Assist with Lane Positioning"
+    - "Traffic Sign Recognition"
+    - "Adaptive cruise control with Stop & Go"
+    - "Semi-automated lane change"
+    - "360° Surround Vision"
+    - "Front and rear parking sensors"
+    - "Automatic parking assist"
+    - "Night Vision"
+    - "Driver attention alert"
+  
+  comfort_convenience:
+    - "Automatic dual-zone climate control"
+    - "Heat pump"
+    - "Keyless entry and start"
+    - "One-pedal driving with B-mode"
+    - "Heated and ventilated front seats"
+    - "Heated steering wheel"
+    - "Electric driver seat (8-way)"
+    - "Massage front seats"
+    - "Panoramic glass roof"
+    - "Electric tailgate with hands-free"
+  
+  exterior:
+    - "Full LED Matrix headlights"
+    - "18\" GT alloy wheels"
+    - "Gloss black roof rails"
+    - "Chrome door handles"
+    - "Black Diamond grille"
+    - "Rear LED 3D claw tail lights"
+  
+  interior:
+    - "Alcantara and TEP upholstery (GT design)"
+    - "Ambient lighting"
+    - "405L trunk"
+    - "60/40 split-folding rear seats"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source_urls:
+    - https://www.peugeot.de/modelle/e-2008.html
+  notes: |
+    2025 Peugeot e-2008 GT - top trim level. Changes vs 2024:
+    - Upgraded motor from 100kW to 115kW (156hp)
+    - Wireless Apple CarPlay/Android Auto
+    - Improved ADAS with semi-automated lane change
+    - Night Vision available
+    - Same 54 kWh battery
+    - GT gets exclusive Focal sound, massage seats, panoramic roof
