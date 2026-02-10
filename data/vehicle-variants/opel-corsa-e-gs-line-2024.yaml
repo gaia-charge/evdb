@@ -103,14 +103,26 @@ efficiency:
   mpge_combined: null
   drag_coefficient: 0.29  # Same as e-208
 
+dimensions:
+  length_mm: 4060
+  width_mm: 1765
+  width_with_mirrors_mm: 1993
+  height_mm: 1435
+  wheelbase_mm: 2538
+  ground_clearance_mm: 140
+  turning_circle_m: 10.7
+
+cargo:
+  trunk_capacity_liters: 309
+  trunk_max_liters: 1118
+  frunk_capacity_liters: 0
+
 weight:
   curb_weight_kg: 1455
   gross_weight_kg: 1830
-  weight_distribution_front_percent: 60  # FWD with front battery placement
-  
-towing:
-  max_towing_kg: 0  # No towing capability
-  max_tongue_weight_kg: 0
+  weight_distribution_front_percent: 60
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
 
 drivetrain:
   drive_type: FWD
