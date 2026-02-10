@@ -1,0 +1,142 @@
+# Nissan LEAF Extended Range 75 kWh (2025) - Germany Market Availability
+
+id: nissan-leaf-75kwh-2025-de
+variant_id: nissan-leaf-75kwh-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2025-09-01"
+delivery_time_weeks: 8
+
+# Pricing
+pricing:
+  base_price: 42990
+  price_including_vat: 42990
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Pearl Black
+    code: GAT
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Ceramic Grey
+    code: KBY
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Diamond Silver
+    code: KLO
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Optic White
+    code: QAB
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Magnetic Blue
+    code: RBY
+    type: metallic
+    price_add:
+      amount: 650
+      currency: EUR
+  - name: Sunrise Copper
+    code: EBL
+    type: metallic
+    price_add:
+      amount: 850
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 18" Alloy Wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 19" Alloy Wheels
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 800
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Fabric
+    material: fabric
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Leather/Alcantara
+    material: leather-alcantara
+    color: black
+    price_add:
+      amount: 1200
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: tax
+    name: "Kfz-Steuer Befreiung"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions: ["BEV", "Exempt from road tax until 2030"]
+
+# Tax Information (Germany-specific)
+taxation:
+  company_car_tax_rate_percent: 0.25
+  company_car_tax_base:
+    amount: 10748
+    currency: EUR
+    calculation: "Gross list price €42,990 × 0.25 (BEV bonus)"
+  annual_road_tax:
+    amount: 0
+    currency: EUR
+    note: "EVs exempt from road tax in Germany until 2030"
+
+# Popular Configuration
+popular_configurations:
+  - name: "Standard"
+    description: "Extended Range base"
+    base_price: 42990
+    options:
+      - "Base vehicle"
+    total_price: 42990
+
+  - name: "Premium Choice"
+    description: "Premium options"
+    base_price: 42990
+    options:
+      - "Sunrise Copper metallic"
+      - "Black Leather/Alcantara interior"
+      - "19-inch alloy wheels"
+    total_price: 45840
+
+# Notes
+market_notes: >
+  The Extended Range 75 kWh variant offers an impressive 622 km WLTP range,
+  making it one of the longest-range cars in its class. The 160 kW motor provides
+  strong performance, and the heat pump is included as standard. At €42,990, it
+  competes directly with the Renault Scenic E-Tech EV87 and offers significantly
+  more range than the VW ID.3 Pro S. The 0.25% company car tax rate and road tax
+  exemption make it very competitive for business users.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: estimated
+  sources:
+    - https://leaf.nissan.de/
+    - https://www.nissan.de/
