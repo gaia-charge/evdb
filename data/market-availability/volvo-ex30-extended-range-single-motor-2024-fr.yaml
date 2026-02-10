@@ -1,0 +1,71 @@
+# Market Availability: Volvo EX30 Extended Range Single Motor - France
+id: volvo-ex30-extended-range-single-motor-2024-fr
+variant_id: volvo-ex30-extended-range-single-motor-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-03-01"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 43400
+  price_including_vat: 43400
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 43400
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: "Bonus écologique for electric vehicles priced under €47,000. Subject to environmental score (made in Europe required from 2024)."
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Vehicle price under 47,000 EUR
+      - Must meet environmental score requirements
+      - China-made EX30 may not qualify; Belgium-built units eligible
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: "Additional bonus when scrapping an old ICE vehicle (up to €1,500 depending on income)."
+    conditions:
+      - Must scrap a pre-2011 petrol or pre-2015 diesel vehicle
+
+market_specific:
+  popular_options:
+    - name: Plus Pack
+      price: 2900
+    - name: Ultra Pack
+      price: 4800
+
+  available_colors:
+    - name: Cloud Blue
+      type: solid
+      price_add: 0
+    - name: Crystal White
+      type: solid
+      price_add: 0
+    - name: Onyx Black
+      type: solid
+      price_add: 700
+    - name: Vapour Grey
+      type: metallic
+      price_add: 700
+    - name: Moss Yellow
+      type: metallic
+      price_add: 700
+
+notes: |
+  Volvo EX30 available in France through Volvo dealer network.
+  Prices include 20% TVA. Belgium-built units eligible for bonus écologique.
+  China-built units may not qualify for French EV incentives due to
+  environmental score requirements. Extended Range variant with 476km WLTP range.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.volvocars.com/fr/v/cars/ex30/
+  created_at: "2026-02-10"
+  last_verified_at: "2026-02-10"
