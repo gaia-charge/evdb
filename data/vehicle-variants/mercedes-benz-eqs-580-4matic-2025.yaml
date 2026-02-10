@@ -1,0 +1,191 @@
+# Mercedes-Benz EQS 580 4MATIC (2025)
+# Flagship performance sedan variant with dual motors
+
+id: mercedes-benz-eqs-580-4matic-2025
+name: 580 4MATIC
+model_id: mercedes-benz-eqs
+model_year: 2025
+production_years:
+  start: 2025
+  end: null
+
+trim_level: 580-4matic
+market_position: flagship
+
+battery:
+  usable_kwh: 107.8
+  total_kwh: 108.4
+  chemistry: NCM
+  nominal_voltage_v: 396
+  cell_type: pouch
+  supplier: CATL
+  warranty_years: 10
+  warranty_km: 250000
+  thermal_management: liquid-cooled
+  pack:
+    configuration: "floor-mounted, 400V architecture"
+    weight_kg: 630
+    modules: 12
+    cells: 360
+
+range:
+  wltp_km: 676
+  wltp_source: manufacturer
+  wltp_city_km: 780
+  wltp_highway_km: 580
+  epa_km: 480
+  epa_source: estimated
+  real_world_km: 565
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, 20°C, moderate speed"
+
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 9.8
+      "10_80": 7.5
+    onboard_charger_kw: 11
+    onboard_charger_optional_kw: 22
+    phases: 3
+
+  dc:
+    max_power_kw: 200
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 31
+      "0_100": 57
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 190
+      - soc_percent: 10
+        power_kw: 200
+      - soc_percent: 20
+        power_kw: 200
+      - soc_percent: 30
+        power_kw: 180
+      - soc_percent: 40
+        power_kw: 160
+      - soc_percent: 50
+        power_kw: 140
+      - soc_percent: 60
+        power_kw: 120
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 70
+
+  plug_and_charge: yes
+  bidirectional:
+    v2l: false
+    v2g: false
+    v2h: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: permanent magnet
+      max_power_kw: 160
+      max_torque_nm: 350
+    - position: rear
+      type: permanent magnet
+      max_power_kw: 245
+      max_torque_nm: 550
+
+  total_power_kw: 400
+  total_power_hp: 544
+  total_torque_nm: 858
+
+  acceleration:
+    "0_100_kmh_sec": 4.3
+    "0_60_mph_sec": 4.1
+
+  top_speed_kmh: 210
+
+  energy_recovery:
+    max_regen_power_kw: 290
+    one_pedal_driving: yes
+
+weight:
+  curb_weight_kg: 2585
+  distribution_front_percent: 48
+  distribution_rear_percent: 52
+
+efficiency:
+  wltp_kwh_per_100km: 18.0
+  wltp_source: manufacturer
+  real_world_kwh_per_100km: 19.5
+  energy_efficiency_class: A
+
+features:
+  heated_seats: "Front and rear standard"
+  ventilated_seats: "Front and rear standard"
+  massage_seats: "Front standard"
+  heated_steering_wheel: yes
+  panoramic_roof: yes
+  head_up_display: yes
+  premium_audio: yes  # Burmester High-End 4D Surround standard
+  adaptive_suspension: yes  # AIRMATIC standard
+  air_suspension: yes
+  all_wheel_steering: yes  # Rear-axle steering 10°
+  ambient_lighting: yes
+  keyless_entry: yes
+  power_liftgate: yes
+  tow_hitch: yes
+
+  adas_level: 2
+  autopilot_highway: yes  # DRIVE PILOT Level 3 optional
+
+  climate_zones: 4
+  wireless_charging: yes
+
+  special:
+    - "MBUX Hyperscreen standard"
+    - "Rear-axle steering 10° standard"
+    - "AMG Line exterior standard"
+    - "E-Active Body Control optional"
+    - "Executive Rear Seat Package optional"
+    - "Digital Light LED headlights"
+    - "544 hp dual motor AWD"
+
+technology:
+  heat_pump: yes
+  preconditioning: yes
+  remote_climate: yes
+  battery_preheating: yes
+  over_the_air_updates: yes
+  digital_key: yes
+  voice_assistant: yes
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  navigation_system: yes
+  telematics: yes
+
+homologation:
+  certification_standard: WLTP
+  energy_label_eu: A
+  co2_emissions_g_km: 0
+
+notes: |
+  The 2025 Mercedes-Benz EQS 580 4MATIC is the performance flagship of the EQS range.
+  544 hp dual motor AWD with 4.3s 0-100 km/h.
+  MBUX Hyperscreen standard (56" curved display spanning dashboard).
+  107.8 kWh battery provides 676 km WLTP range despite AWD power consumption.
+  Competes with BMW i7 M70, Porsche Taycan Turbo, Tesla Model S Plaid.
+
+sources:
+  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/explore/technical-data.html
+    title: Mercedes-Benz EQS 580 4MATIC Technical Data
+    accessed: "2026-02-10"
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  contributor: OpenClaw EVDB Development
+  version: 1.0
