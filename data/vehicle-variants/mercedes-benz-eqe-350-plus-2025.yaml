@@ -1,0 +1,178 @@
+id: mercedes-benz-eqe-350-plus-2025
+name: Mercedes-Benz EQE 350+ (2025)
+model_id: mercedes-benz-eqe
+model_year: 2025
+variant_name: "350+"
+trim_level: base
+
+battery:
+  usable_kwh: 90.6
+  total_kwh: 96.0
+  chemistry: NCM
+  cells_config: "288s2p (576 cells)"
+  supplier: CATL
+  form_factor: pouch
+  warranty_years: 10
+  warranty_km: 250000
+  warranty_capacity_percent: 70
+  notes: >
+    90.6kWh usable capacity NCM battery from CATL. Liquid thermal management 
+    with heat pump standard. Battery preconditioning for optimal DC fast charging. 
+    2025 model year continues with the same proven battery pack as 2024.
+
+range:
+  wltp_km: 643
+  wltp_city_km: 845
+  wltp_highway_km: 520
+  epa_km: null
+  epa_miles: null
+  real_world_km: 555
+  notes: >
+    WLTP range of 643km, a marginal improvement over 2024 (639km) due to updated 
+    software and efficiency tuning. Real-world range around 555km in mixed driving. 
+    Highway range approximately 520km. Winter range approximately 430-455km.
+
+charging:
+  ac:
+    max_power_kw: 11
+    plug_type: Type2
+    phases: 3
+    charge_time_0_100_hours: 9.0
+    notes: >
+      Standard 11kW AC charging (3-phase, 16A). Optional 22kW onboard charger 
+      available. Mercedes me Charge provides access to over 700,000 charging 
+      points across Europe. Plug & Charge (ISO 15118) now standard for 2025.
+
+  dc:
+    max_power_kw: 170
+    plug_type: CCS2
+    charge_time_10_80_percent_minutes: 32
+    charge_curve:
+      - soc_percent: 10
+        power_kw: 170
+      - soc_percent: 20
+        power_kw: 170
+      - soc_percent: 30
+        power_kw: 165
+      - soc_percent: 40
+        power_kw: 150
+      - soc_percent: 50
+        power_kw: 135
+      - soc_percent: 60
+        power_kw: 115
+      - soc_percent: 70
+        power_kw: 90
+      - soc_percent: 80
+        power_kw: 65
+    notes: >
+      Peak DC fast charging at 170kW. 400V architecture with battery 
+      preconditioning via navigation. 10-80% in approximately 32 minutes. 
+      Plug & Charge standard for 2025 simplifies public charging sessions.
+
+bidirectional:
+  v2l: false
+  v2h: false
+  v2g: false
+  notes: >
+    Bidirectional charging not available on 2025 model. Mercedes-Benz has 
+    announced V2H/V2G capability for next-generation MMA platform vehicles.
+
+motors:
+  count: 1
+  type: permanent_magnet
+  layout: rear
+  total_power_kw: 215
+  total_power_hp: 292
+  total_torque_nm: 530
+  drive_type: RWD
+  notes: >
+    Single permanent magnet synchronous motor on rear axle. 215kW (292hp) 
+    continuous output with 530Nm torque. Efficient rear-wheel drive layout 
+    contributes to class-leading efficiency.
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.4
+  top_speed_kmh: 210
+  notes: >
+    0-100 km/h in 6.4 seconds. Top speed electronically limited to 210 km/h. 
+    Optional rear-axle steering (up to 10 degrees) improves agility and reduces 
+    turning circle to 10.7m.
+
+efficiency:
+  wltp_kwh_per_100km: 18.1
+  real_world_kwh_per_100km: 20.3
+  energy_label_eu: B
+  notes: >
+    Excellent efficiency for a luxury sedan with Cd 0.22 aerodynamics. Slightly 
+    improved over 2024 due to software optimizations. Real-world consumption 
+    around 20.3 kWh/100km in mixed driving.
+
+weight:
+  curb_weight_kg: 2355
+  gross_vehicle_weight_kg: 2855
+  payload_kg: 500
+
+adas:
+  level: 2_plus
+  features:
+    - Adaptive Cruise Control (DISTRONIC)
+    - Active Lane Keeping Assist
+    - Active Blind Spot Assist
+    - Active Brake Assist with Cross-Traffic Function
+    - Traffic Sign Assist
+    - Active Distance Assist DISTRONIC
+    - Active Steering Assist
+    - Active Emergency Stop Assist
+  notes: >
+    Level 2+ driver assistance standard. Optional DRIVE PILOT (Level 3) available 
+    in Germany for hands-free highway driving up to 60 km/h. For 2025, DRIVE PILOT 
+    operating speed increased to 95 km/h on approved Autobahn sections.
+
+features:
+  standard:
+    - Dual-zone automatic climate control
+    - Heat pump
+    - LED Intelligent Light System
+    - 12.8" OLED touchscreen with MBUX
+    - Wireless smartphone charging
+    - Keyless entry and start
+    - Ambient lighting with 64 colors
+    - Plug & Charge (ISO 15118)
+    - Navigation with Electric Intelligence
+    - Wireless Apple CarPlay and Android Auto
+  optional:
+    - MBUX Hyperscreen (56" curved glass display)
+    - AIRMATIC air suspension
+    - Rear-axle steering (up to 10°)
+    - Burmester 3D Surround Sound
+    - Burmester High-End 4D Surround Sound
+    - AMG Line exterior/interior
+    - Panoramic sliding sunroof
+    - Executive rear seat package
+    - DRIVE PILOT (Level 3 autonomy, Germany only)
+    - 22kW AC onboard charger
+    - 360-degree camera
+    - Head-Up Display
+    - Trailer hitch (750kg)
+
+environmental:
+  lifecycle_co2_kg: null
+  production_location: "Bremen, Germany"
+  battery_production: "Kamenz, Germany (Mercedes-Benz subsidiary Accumotive)"
+  notes: >
+    Built at Mercedes-Benz Bremen plant. Batteries from Accumotive in Kamenz, 
+    Germany. Mercedes-Benz aims for carbon-neutral production across all plants.
+
+metadata:
+  data_quality: verified
+  data_sources:
+    - manufacturer
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.mercedes-benz.com/en/vehicles/passenger-cars/eqe/
+    - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe/sedan-v295.html
+  notes: >
+    2025 model year EQE 350+. Minor updates over 2024 including Plug & Charge 
+    standard, improved DRIVE PILOT (95 km/h), slightly improved WLTP range 
+    through software optimizations. Core powertrain and battery unchanged.

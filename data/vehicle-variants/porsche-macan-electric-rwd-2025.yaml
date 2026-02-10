@@ -1,0 +1,229 @@
+id: porsche-macan-electric-rwd-2025
+name: Porsche Macan Electric (Base RWD) (2025)
+model_id: porsche-macan-electric
+model_year: 2025
+variant_name: "(Base RWD)"
+trim_level: Base
+
+description: |
+  The 2025 Porsche Macan Electric RWD continues as the entry-level variant of 
+  Porsche's electric compact SUV. Built on the PPE platform with 800V architecture, 
+  it offers the longest range and best efficiency of the Macan Electric lineup. 
+  2025 updates include refined software, improved charging curve management, and 
+  updated Porsche Communication Management (PCM) with enhanced route planning.
+
+battery:
+  usable_kwh: 95.0
+  total_kwh: 100.0
+  chemistry: NMC
+  cells: prismatic
+  manufacturer: Samsung SDI
+  supplier: Samsung SDI
+  modules: 12
+  cells_total: 180
+  nominal_voltage: 662
+  pack_voltage_range: "560-830V (800V architecture)"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  heating: integrated battery heating
+  preconditioning: true
+  notes: |
+    PPE platform 100kWh battery with 800V architecture. 12 modules with 15 
+    prismatic cells each. Advanced thermal management with heat pump integration. 
+    Preconditioning via navigation or Porsche Connect app.
+
+range:
+  wltp_km: 616
+  wltp_city_km: 775
+  wltp_highway_km: 503
+  epa_km: 493
+  epa_miles: 306
+  real_world_km: 525
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+  notes: |
+    WLTP 616km (marginal improvement over 2024's 613km through software tuning). 
+    Longest range of all Macan Electric variants. Real-world approximately 525km 
+    in mixed conditions. Winter range approximately 455km.
+
+efficiency:
+  wltp_kwh_per_100km: 18.0
+  epa_kwh_per_100km: 20.8
+  real_world_kwh_per_100km: 22.2
+  real_world_conditions: "Mixed driving, 20°C ambient"
+  notes: |
+    Most efficient Macan Electric variant at 18.0 kWh/100km WLTP. Single rear 
+    motor eliminates front motor drag losses.
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    optional_upgrade_kw: 22
+    optional_upgrade_cost: "€1,680"
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 9.5
+    notes: |
+      Standard 11kW AC (3-phase). Optional 22kW upgrade (€1,680) halves charge time.
+
+  dc:
+    max_power_kw: 270
+    connector_type: CCS2
+    architecture_voltage: 800
+    time_10_80_minutes: 21
+    time_5_80_minutes: 21
+    notes: |
+      800V architecture delivers 270kW peak charging (15-30% SoC). 10-80% in 
+      ~21 minutes with preconditioned battery. 100km range added in ~5 minutes. 
+      2025 software update improves charging curve consistency in cold weather.
+
+    charge_curve:
+      - soc_percent: 0
+        power_kw: 60
+      - soc_percent: 10
+        power_kw: 260
+      - soc_percent: 15
+        power_kw: 270
+        note: "Peak power"
+      - soc_percent: 30
+        power_kw: 268
+      - soc_percent: 50
+        power_kw: 190
+      - soc_percent: 70
+        power_kw: 95
+      - soc_percent: 80
+        power_kw: 55
+
+bidirectional_charging:
+  v2l: true
+  v2l_power_kw: 11
+  v2h: true
+  v2g: true
+  notes: |
+    PPE platform supports bidirectional charging: V2L (11kW), V2H, and V2G 
+    (market/region dependent).
+
+motors:
+  count: 1
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: RWD
+  rear_motor:
+    power_kw: 240
+    power_hp: 326
+    type: PMSM
+  combined_power_kw: 240
+  combined_power_hp: 326
+  overboost_power_kw: 265
+  overboost_power_hp: 360
+  overboost_duration_seconds: 10
+  torque_nm: 563
+  notes: |
+    Single rear PMSM: 240kW (326hp) continuous, 265kW (360hp) with Launch Control 
+    overboost for ~10 seconds. Pure rear-wheel drive with Porsche Traction Management.
+
+drive_type: RWD
+driven_wheels: rear
+
+performance:
+  acceleration_0_100_kmh_seconds: 6.4
+  acceleration_0_60_mph_seconds: 6.1
+  top_speed_kmh: 200
+  top_speed_electronically_limited: true
+  notes: |
+    0-100 km/h in 6.4 seconds (slight improvement over 2024's 6.5s via software). 
+    Top speed 200 km/h electronically limited.
+
+weight:
+  curb_weight_kg: 2260
+  distribution_front_percent: 47
+  distribution_rear_percent: 53
+  gross_weight_kg: 2865
+  payload_kg: 605
+  towing_capacity_kg: 2000
+  towing_capacity_braked_kg: 2000
+  notes: |
+    Lightest Macan Electric at 2,260kg. Rear-biased 47/53 weight distribution 
+    aids handling. 2,000kg towing capacity with optional tow hitch.
+
+suspension:
+  front: Multi-link with adaptive air suspension
+  rear: Multi-link with adaptive air suspension
+  adaptive_damping: Porsche Active Suspension Management (PASM)
+  adjustable_ride_height: true
+
+brakes:
+  front: 360mm ventilated discs
+  rear: 350mm ventilated discs
+  caliper_type: Fixed aluminum monobloc calipers
+  regenerative: true
+  regenerative_max_power_kw: 240
+
+dimensions:
+  length_mm: 4784
+  width_mm: 1938
+  width_with_mirrors_mm: 2164
+  height_mm: 1622
+  wheelbase_mm: 2893
+  ground_clearance_mm: 185
+  drag_coefficient: 0.25
+  frontal_area_m2: 2.82
+
+cargo:
+  trunk_litres: 540
+  trunk_max_litres: 1348
+  frunk_litres: 84
+
+tires:
+  front: "235/60 R19"
+  rear: "255/55 R19"
+  wheel_size_inches: 19
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 3
+
+interior:
+  seats: 5
+  seat_material: Partial leather
+  display_instrument: 12.6" curved digital instrument cluster
+  display_center: 10.9" curved central touchscreen
+  display_passenger: Optional 10.9" passenger display
+
+adas_features:
+  - Adaptive Cruise Control with Stop & Go
+  - Lane Keeping Assist with Lane Change Assist
+  - Traffic Sign Recognition
+  - Surround View with 360° cameras (optional)
+  - Park Assist Plus (optional)
+  - Night Vision Assist (optional)
+  - Porsche InnoDrive (optional)
+
+connectivity:
+  system: Porsche Communication Management (PCM) 6.2
+  apple_carplay: true
+  android_auto: true
+  wireless_charging: true
+  wifi_hotspot: true
+  ota_updates: true
+  remote_app: Porsche Connect (My Porsche app)
+  voice_assistant: '"Hey Porsche" voice control'
+  notes: |
+    Updated PCM 6.2 for 2025 with improved route planning, faster OTA updates, 
+    and enhanced voice assistant capabilities.
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.porsche.com/germany/models/macan/macan-models/
+    - https://newsroom.porsche.com
+  notes: |
+    2025 model year Porsche Macan Electric RWD. Minor updates over 2024: improved 
+    software (PCM 6.2), refined charging curve in cold weather, marginal range 
+    improvement (616 vs 613km WLTP), 0.1s faster 0-100. Core hardware unchanged.
+    Remains the best-value entry into electric Porsche SUV ownership with longest 
+    range, best efficiency, and same 800V charging as higher trims.
