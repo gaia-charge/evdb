@@ -1,0 +1,133 @@
+# Tesla Model 3 Performance 2025 (Highland)
+# High-performance dual-motor AWD variant
+# Track-focused with carbon fiber spoiler and upgraded brakes
+
+id: tesla-model-3-performance-2025
+name: Performance
+model_id: tesla-model-3
+manufacturer_id: tesla
+variant_name: Performance
+model_year: 2025
+trim_level: Performance
+version: "Performance AWD"
+
+description: |
+  The 2025 Tesla Model 3 Performance (Highland) is the high-performance variant of the refreshed
+  Model 3. With 461 kW (627 PS) from dual motors, it delivers a blistering 3.4s 0-100 km/h and
+  a top speed of 262 km/h - making it one of the fastest sedans under €60k. The NMC battery
+  (LG 5M cylindrical cells) provides 79 kWh usable capacity with 571 km WLTP range.
+  
+  Distinguishing features include a carbon fiber rear spoiler, lowered suspension, performance
+  brakes, 20" Warp wheels, and Track Mode. Despite the performance focus, it maintains excellent
+  efficiency at 15.3 kWh/100km real-world and supports 250 kW DC fast charging.
+
+battery:
+  usable_kwh: 79.0
+  total_kwh: 82.0
+  chemistry: NMC
+  cells: cylindrical
+  cell_reference: LG 5M
+  manufacturer: LG Energy Solution
+  warranty_years: 8
+  warranty_km: 192000
+  warranty_capacity_percent: 70
+  thermal_management: liquid-cooled
+  preconditioning: true
+  architecture_voltage: 400
+
+range:
+  wltp_km: 571
+  wltp_city_km: 680
+  wltp_highway_km: 480
+  real_world_km: 515
+  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
+
+efficiency:
+  wltp_kwh_per_100km: 13.8
+  real_world_kwh_per_100km: 15.3
+  real_world_conditions: "Mixed driving, 20°C ambient"
+
+charging:
+  ac:
+    max_power_kw: 11
+    standard: true
+    connector_type: Type2
+    phases: 3
+    time_0_100_hours: 8.5
+  dc:
+    max_power_kw: 250
+    average_power_10_80_kw: 120
+    connector_type: CCS2
+    architecture_voltage: 400
+    time_10_80_minutes: 29
+
+motors:
+  count: 2
+  type: Permanent Magnet Synchronous Motor (PMSM)
+  configuration: AWD
+  combined_power_kw: 461
+  combined_power_hp: 627
+  torque_nm: 741
+
+drive_type: AWD
+driven_wheels: all
+
+performance:
+  acceleration_0_100_kmh_seconds: 3.4
+  top_speed_kmh: 262
+  top_speed_electronically_limited: false
+
+weight:
+  curb_weight_kg: 1929
+  gross_weight_kg: 2271
+  max_payload_kg: 417
+
+dimensions:
+  length_mm: 4720
+  width_mm: 1849
+  width_with_mirrors_mm: 2089
+  height_mm: 1431
+  wheelbase_mm: 2875
+
+cargo:
+  trunk_litres: 594
+  trunk_max_litres: 977
+  frunk_litres: 88
+
+tires:
+  front: "235/35 R20"
+  rear: "265/35 R20"
+  wheel_size_inches: 20
+  notes: "20-inch Warp wheels, performance tires"
+
+climate:
+  heat_pump: true
+  auto_climate_zones: 2
+
+interior:
+  seats: 5
+  isofix: 2
+  display_center: "15.4-inch touchscreen"
+  sound_system: Premium audio system
+  ambient_lighting: true
+  panoramic_roof: true
+  notes: |
+    Performance-specific: carbon fiber rear spoiler, lowered suspension,
+    performance brakes with red calipers, Track Mode, 20" Warp wheels.
+    Highland refresh: ventilated seats, rear 8" display, ambient lighting.
+
+safety:
+  euro_ncap_year: 2025
+  euro_ncap_adult: 90
+  euro_ncap_child: 93
+  euro_ncap_pedestrian: 89
+  euro_ncap_safety_assist: 87
+
+metadata:
+  data_quality: verified
+  data_source: ev-database.org
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://ev-database.org/car/3332/Tesla-Model-3-Performance
+    - https://www.tesla.com/model3
