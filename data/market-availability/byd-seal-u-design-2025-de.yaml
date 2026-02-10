@@ -1,0 +1,163 @@
+id: byd-seal-u-design-2025-de
+variant_id: byd-seal-u-design-2025
+market: DE
+market_name: Germany
+currency: EUR
+available: true
+release_date: "2024-09-01"
+discontinued_date: null
+
+# Pricing (Germany, 2025 model year)
+pricing:
+  base_price: 47990
+  price_including_vat: 47990
+  vat_rate_percent: 19
+  on_road_price: 49140
+  destination_charge: 950
+  registration_fee: 200
+
+# Trim levels and configurations
+trim_levels:
+  - name: Design 2025
+    price: 47990
+    description: Premium trim with 87 kWh battery, 620 km WLTP range, and enhanced features
+    standard_features:
+      - 15.6" rotating touchscreen (landscape/portrait)
+      - 10.25" digital instrument cluster
+      - Head-up display
+      - Highway assist Level 2 autonomous driving
+      - Automatic parking with 360° camera
+      - Wireless Apple CarPlay and Android Auto
+      - Panoramic glass roof with electric sunshade
+      - Vegan leather seats with front heating and ventilation
+      - Heated steering wheel and rear seats
+      - Heat pump for winter efficiency
+      - V2L capability (3.3kW)
+      - LED adaptive headlights
+      - Power tailgate
+      - Wireless phone charging
+      - Roof rails
+      - 19" alloy wheels
+      - Harman Kardon premium audio (12 speakers)
+      - Electrically adjustable driver seat with memory
+
+# Popular configurations
+popular_configurations:
+  - name: Base as-delivered
+    total_price: 49140
+    description: Design trim with delivery and registration
+    included:
+      - All standard Design trim features
+      - Delivery charge (€950)
+      - Registration fee (€200)
+
+  - name: Touring Configuration
+    total_price: 50490
+    description: Optimized for long-distance travel
+    included:
+      - Base Design
+      - Metallic Paint (€850)
+      - Tow bar preparation (€250)
+      - Winter Package (€250)
+
+# Incentives and subsidies (2025/2026)
+incentives:
+  - name: Company Car Tax Benefit
+    type: tax_exemption
+    amount: 4800
+    description: Company car tax benefit - 0.25% rate vs 1% for combustion vehicles
+    notes: >
+      Company car drivers benefit from 0.25% monthly tax rate (vs 1% for
+      combustion vehicles), saving approximately €4,800 annually versus
+      equivalent ICE SUV.
+
+  - name: THG-Quote (Greenhouse Gas Reduction Quota)
+    type: grant
+    amount: 280
+    description: Annual CO2 certificate trading income
+
+  - name: Road Tax Exemption
+    type: tax_exemption
+    amount: 340
+    description: Electric vehicles exempt from German road tax until 2030
+    valid_until: "2030-12-31"
+
+# Company car taxation
+company_car:
+  taxable_benefit_calculation: gross_list_price_x_0.25_percent
+  monthly_taxable_benefit_eur: 119.98  # €47,990 × 0.25%
+  annual_taxable_benefit_eur: 1440  # €119.98 × 12
+  comparable_ice_benefit_eur: 6240  # Comparable ICE SUV €52,000 × 1% = €520/mo
+  annual_tax_savings_eur: 4800
+  notes: >
+    The BYD Seal U Design qualifies for the advantageous 0.25% company car tax rate
+    (vehicles under €70,000). Annual taxable benefit of only €1,440 compared to
+    €6,240 for an equivalent combustion SUV.
+
+# Financing options
+financing:
+  typical_apr_percent: 5.49
+  typical_term_months: 48
+  typical_down_payment_percent: 20
+  typical_monthly_payment_eur: 920
+
+# Leasing options
+leasing:
+  typical_term_months: 36
+  typical_annual_mileage_km: 15000
+  typical_monthly_payment_eur: 449
+  down_payment_eur: 2000
+  final_payment_eur: 0
+
+# Delivery and availability
+delivery:
+  typical_wait_weeks: 6
+  production_location: Zhengzhou, China
+  import_method: sea_freight
+
+# Warranty
+warranty:
+  vehicle_years: 6
+  vehicle_km: 150000
+  battery_years: 8
+  battery_km: 200000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 6
+
+# Competitors comparison
+competitors:
+  - model: VW ID.4 Pro S
+    price_eur: 52995
+    range_km: 611
+    notes: Higher price, similar range, established brand
+
+  - model: Tesla Model Y Long Range RWD
+    price_eur: 49990
+    range_km: 600
+    notes: Similar price and range, Tesla Supercharger network
+
+  - model: Hyundai Ioniq 5 Long Range RWD
+    price_eur: 51900
+    range_km: 507
+    notes: Higher price, shorter range, 800V fast charging
+
+  - model: Skoda Enyaq iV 85
+    price_eur: 49990
+    range_km: 545
+    notes: Similar price, shorter range, VW Group platform
+
+# Notes
+notes: >
+  BYD Seal U Design offers exceptional value at €47,990 with class-leading 620 km
+  WLTP range from the 87 kWh LFP Blade Battery. Only €3,000 more than the Comfort
+  trim but adds 120 km range, ventilated seats, head-up display, and Harman Kardon
+  audio. Represents one of the best range-per-euro propositions in the compact SUV
+  segment. Company car tax benefit (0.25% rate) saves ~€4,800 annually vs ICE.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://www.byd.com/de/car/seal-u.html
+    - BYD Germany dealer pricing (February 2026)
