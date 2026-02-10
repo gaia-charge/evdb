@@ -1,4 +1,4 @@
-# Peugeot e-3008 98 kWh GT 2025 - Spain Market
+# Peugeot e-3008 98 GT 2025 - Spain Market
 id: peugeot-e-3008-98-gt-2025-es
 variant_id: peugeot-e-3008-98-gt-2025
 market: ES
@@ -6,77 +6,76 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-09-01"
-available_until: null
 
 pricing:
-  base_price: 54500
-  price_including_vat: 54500
+  base_price: 52900
+  price_including_vat: 52900
   vat_rate_percent: 21
-  destination_charge: 0
-  registration_fees: 0
-  total_price_estimate: 54500
+  destination_charge: 650
+  total_price_estimate: 53550
 
 incentives:
-  - name: Plan MOVES III
+  - name: MOVES III
     type: grant
-    amount: 0
-    description: MOVES III program has expired. No active national EV subsidy currently available.
-    valid_from: null
-    valid_until: null
+    amount: 4500
+    description: >
+      Government subsidy for BEV purchase. Price exceeds €45,000 threshold
+      for maximum grant level.
     conditions:
-      - Program expired
-    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+      - Battery electric vehicle
+      - Individual buyer
+    notes: Check current MOVES program status
+
+  - name: Municipal Tax Exemption (IVTM)
+    type: tax_exemption
+    amount: 0
+    description: Up to 75% reduction on annual vehicle tax depending on municipality.
 
 market_specific:
   standard_equipment:
-    - Panoramic i-Cockpit with 21-inch curved display
+    - 21" curved Panoramic i-Cockpit display
+    - i-Connect Advanced infotainment
+    - Wireless Apple CarPlay & Android Auto
+    - Full LED headlights with matrix function
+    - Heated front seats with massage
+    - Dual-zone climate control
     - Heat pump
-    - Matrix LED headlights
+    - Alcantara/TEP upholstery
+    - 19" alloy wheels
     - Adaptive cruise control with Stop & Go
-    - Active lane positioning
-    - Wireless smartphone charging
+    - Lane positioning assist
+    - Automatic emergency braking
     - 360-degree camera
+    - Keyless entry & start
+    - Power tailgate
+    - Focal premium audio
 
-  available_colors:
-    - name: Okenite White
-      additional_cost: 0
-    - name: Obsession Blue
-      additional_cost: 650
-    - name: Titanium Grey
-      additional_cost: 650
+  colors:
     - name: Elixir Red
-      additional_cost: 900
+      type: metallic
+      price: 900
+    - name: Okenite White
+      type: pearlescent
+      price: 900
+    - name: Titanium Grey
+      type: metallic
+      price: 600
+    - name: Obsession Blue
+      type: metallic
+      price: 600
     - name: Perla Nera Black
-      additional_cost: 650
+      type: metallic
+      price: 600
 
-  available_wheels:
-    - size_inches: 19
-      design: Tacoma
-      additional_cost: 0
-    - size_inches: 20
-      design: Seattle
-      additional_cost: 800
-
-dealer_network:
-  online_sales_available: true
-
-delivery:
-  typical_delivery_weeks: 10
-
-compliance:
-  ncap_rating: 5
-  emission_class: Zero Emission
-
-notes: |
-  Peugeot e-3008 is available in Spain via peugeot.es.
-  The 98 kWh Long Range GT version offers up to 500 km WLTP range.
-  Spain has 21% IVA (VAT) included in listed prices.
-  MOVES III program has expired; no national subsidies currently apply.
+  delivery_time_weeks: 10
 
 metadata:
-  created_at: "2026-02-10"
-  updated_at: null
   data_quality: estimated
-  price_checked_at: "2026-02-10"
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
   sources:
     - https://www.peugeot.es/gama/suv-e-3008.html
+  notes: >
+    Peugeot e-3008 GT with 98 kWh battery and 700km WLTP range. Spanish
+    pricing includes 21% IVA. Strong Peugeot dealer network in Spain.
+    Very popular family SUV segment.

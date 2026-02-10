@@ -5,78 +5,73 @@ market: ES
 currency: EUR
 
 availability_status: available
-available_from: "2025-06-01"
-available_until: null
+available_from: "2025-09-01"
 
 pricing:
-  base_price: 52800
-  price_including_vat: 52800
+  base_price: 56990
+  price_including_vat: 56990
   vat_rate_percent: 21
-  destination_charge: 0
-  registration_fees: 0
-  total_price_estimate: 52800
+  destination_charge: 700
+  total_price_estimate: 57690
 
 incentives:
-  - name: Plan MOVES III
+  - name: MOVES III
     type: grant
-    amount: 0
-    description: MOVES III program has expired. No active national EV subsidy currently available.
-    valid_from: null
-    valid_until: null
+    amount: 4500
+    description: >
+      Government subsidy for BEV purchase. Base price exceeds €45,000 threshold
+      for maximum grant; reduced amount may apply depending on program rules.
     conditions:
-      - Program expired
-    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+      - Battery electric vehicle
+      - Individual buyer
+    notes: Check current MOVES program status and price thresholds
+
+  - name: Municipal Tax Exemption (IVTM)
+    type: tax_exemption
+    amount: 0
+    description: >
+      Up to 75% reduction on annual vehicle tax in many municipalities.
+    conditions:
+      - Depends on municipality
 
 market_specific:
   standard_equipment:
+    - 15" touchscreen infotainment
+    - Augmented reality head-up display
+    - LED Matrix IQ.Light headlights
+    - 30-color ambient lighting
+    - Heated front seats
+    - 3-zone climate control
     - Heat pump
-    - Navigation with electric range planning
-    - Wireless App-Connect
-    - LED Matrix headlights
-    - Adaptive cruise control
-    - Park Assist Plus
+    - Wireless Apple CarPlay & Android Auto
     - Keyless access
+    - Power tailgate
+    - Adaptive cruise control with predictive speed
+    - Lane assist
+    - Park Assist Plus
 
-  available_colors:
-    - name: Glacier White Metallic
-      additional_cost: 0
-    - name: Urano Grey
-      additional_cost: 665
-    - name: Grenadilla Black Metallic
-      additional_cost: 665
+  colors:
     - name: Kings Red Metallic
-      additional_cost: 880
+      type: metallic
+      price: 900
+    - name: Grenadilla Black Metallic
+      type: metallic
+      price: 900
+    - name: Glacier White Metallic
+      type: metallic
+      price: 900
     - name: Stonewashed Blue Metallic
-      additional_cost: 880
+      type: metallic
+      price: 900
 
-  available_wheels:
-    - size_inches: 19
-      design: Hamar
-      additional_cost: 0
-    - size_inches: 20
-      design: Drammen
-      additional_cost: 960
-
-dealer_network:
-  online_sales_available: true
-
-delivery:
-  typical_delivery_weeks: 8
-
-compliance:
-  ncap_rating: 5
-  emission_class: Zero Emission
-
-notes: |
-  Volkswagen ID.7 is available in Spain via volkswagen.es.
-  Spain has 21% IVA (VAT) included in listed prices.
-  Available in Pro, Pro S, and GTX trims.
-  MOVES III program has expired; no national subsidies currently apply.
+  delivery_time_weeks: 10
 
 metadata:
-  created_at: "2026-02-10"
-  updated_at: null
   data_quality: estimated
-  price_checked_at: "2026-02-10"
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
   sources:
     - https://www.volkswagen.es/es/modelos/id7.html
+  notes: >
+    VW ID.7 Pro with 86 kWh battery. Spanish pricing includes 21% IVA.
+    Available through VW dealer network across Spain.
