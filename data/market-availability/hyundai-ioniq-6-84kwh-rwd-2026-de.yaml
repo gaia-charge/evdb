@@ -1,0 +1,101 @@
+# Hyundai IONIQ 6 84 kWh RWD (2026) - Germany Market Availability
+
+id: hyundai-ioniq-6-84kwh-rwd-2026-de
+variant_id: hyundai-ioniq-6-84kwh-rwd-2026
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2026-01-01"
+delivery_time_weeks: 10
+
+# Pricing
+pricing:
+  base_price: 55300
+  price_including_vat: 55300
+  vat_rate_percent: 19
+
+# Available Colors
+available_colors:
+  - name: Polar White
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Gravity Gold Matte
+    type: matte
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Nocturne Gray Metallic
+    type: metallic
+    price_add:
+      amount: 895
+      currency: EUR
+  - name: Digital Teal Pearl
+    type: pearl
+    price_add:
+      amount: 1095
+      currency: EUR
+  - name: Phantom Black Pearl
+    type: pearl
+    price_add:
+      amount: 895
+      currency: EUR
+  - name: Serenity Blue Pearl
+    type: pearl
+    price_add:
+      amount: 895
+      currency: EUR
+  - name: Shooting Star Matte
+    type: matte
+    price_add:
+      amount: 1095
+      currency: EUR
+  - name: Biophilic Blue Pearl
+    type: pearl
+    price_add:
+      amount: 895
+      currency: EUR
+
+# Trim Levels
+trim_levels:
+  - name: Style
+    price: 55300
+  - name: Select
+    price: 60300
+  - name: Vertex
+    price: 64300
+
+# Incentives
+incentives:
+  - type: tax_credit
+    amount: 0
+    name: "0.25% company car tax (BEV under €70,000)"
+    description: "Reduced monthly BIK rate for electric company cars"
+    conditions: ["Price under €70,000 gross list price", "BEV only"]
+  - type: tax_exemption
+    name: "Road tax exemption until 2030"
+    amount: 0
+    description: "Electric vehicles exempt from Kfz-Steuer"
+  - type: subsidy
+    name: "THG-Quote"
+    amount: 300
+    description: "Annual CO2 quota trading income ~€300/year"
+
+# Warranty (Germany)
+warranty:
+  vehicle_years: 5
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  sources:
+    - https://www.hyundai.de/modelle/ioniq-6
+    - https://ev-database.org/de/pkw/3439/Hyundai-IONIQ-6-84-kWh

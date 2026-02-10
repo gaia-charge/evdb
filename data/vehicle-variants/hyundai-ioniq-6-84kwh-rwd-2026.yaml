@@ -1,0 +1,207 @@
+id: hyundai-ioniq-6-84kwh-rwd-2026
+name: 84 kWh RWD
+model_id: hyundai-ioniq-6
+model_year: 2026
+production_years:
+  start: 2022
+  end: null
+
+trim_level: long-range
+market_position: mid-range
+
+# Battery Specifications
+battery:
+  usable_kwh: 80.0
+  total_kwh: 84.0
+  chemistry: NMC
+  nominal_voltage_v: 697
+  cell_type: pouch
+  supplier: SK On (SK Innovation)
+  warranty_years: 8
+  warranty_km: 160000
+  thermal_management: liquid-cooled
+
+  pack:
+    configuration: "floor-mounted, 800V architecture"
+    weight_kg: 490
+    modules: null
+    cells: 384
+    cell_configuration: "192s2p"
+
+# Range
+range:
+  wltp_km: 680
+  wltp_source: manufacturer
+  wltp_city_km: null
+  wltp_highway_km: 585
+
+  epa_km: null
+  epa_source: null
+
+  real_world_km: 545
+  real_world_source: estimated
+  real_world_conditions: "Mixed driving, moderate climate"
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11
+    connector_types:
+      - type2
+    charging_time_hours:
+      "0_100": 8.75
+    onboard_charger_kw: 11
+    phases: 3
+
+  dc:
+    max_power_kw: 263
+    connector_types:
+      - ccs2
+    charging_time_minutes:
+      "10_80": 17
+      "0_100": 48
+
+    charging_curve:
+      - soc_percent: 0
+        power_kw: 230
+      - soc_percent: 10
+        power_kw: 263
+      - soc_percent: 20
+        power_kw: 260
+      - soc_percent: 40
+        power_kw: 240
+      - soc_percent: 50
+        power_kw: 200
+      - soc_percent: 60
+        power_kw: 155
+      - soc_percent: 70
+        power_kw: 105
+      - soc_percent: 80
+        power_kw: 60
+      - soc_percent: 90
+        power_kw: 28
+      - soc_percent: 100
+        power_kw: 12
+
+    notes: "Multi-charging system adapts to 400V or 800V stations. 10-80% in ~17 min at 205 kW average"
+
+  bidirectional:
+    v2l: true
+    v2l_max_power_kw: 3.6
+    v2g: false
+    v2h: false
+
+# Motors & Performance
+motors:
+  - position: rear
+    type: permanent-magnet-synchronous
+    max_power_kw: 168
+    max_torque_nm: 350
+    cooling: liquid
+
+drivetrain:
+  type: rwd
+  total_power_kw: 168
+  total_power_hp: 228
+  total_torque_nm: 350
+
+performance:
+  acceleration_0_100_kmh_s: 7.4
+  top_speed_kmh: 185
+  top_speed_limited: true
+
+# Weight & Efficiency
+weight:
+  curb_weight_kg: 2000
+  gross_weight_kg: 2420
+  payload_kg: 495
+  towing_capacity_kg: 1500
+
+efficiency:
+  wltp_kwh_per_100km: 13.5
+  real_world_kwh_per_100km: 14.7
+
+  at_speed:
+    - speed_kmh: 120
+      consumption_kwh_per_100km: 17.5
+    - speed_kmh: 130
+      consumption_kwh_per_100km: 20.3
+
+# Dimensions
+dimensions:
+  length_mm: 4925
+  width_mm: 1880
+  height_mm: 1495
+  wheelbase_mm: 2950
+  cargo_volume_l: 401
+  frunk_volume_l: 45
+
+# Features & Options
+standard_features:
+  - "12.3-inch dual curved displays"
+  - "Highway Driving Assist 2 (HDA2)"
+  - "Augmented Reality Head-Up Display"
+  - "Vehicle-to-Load (V2L) - 3.6kW"
+  - "Heat pump"
+  - "Pixel LED headlights"
+  - "18-inch alloy wheels"
+  - "Ambient lighting (64 colours)"
+  - "Bose Premium Sound system"
+  - "Wireless Apple CarPlay & Android Auto"
+  - "Smart power tailgate"
+  - "Plug & Charge (ISO 15118-2)"
+  - "Battery preconditioning via navigation"
+
+optional_packages:
+  - name: "Digital Side Mirrors"
+    features:
+      - "Camera-based side mirrors"
+      - "Interior displays"
+
+  - name: "Solar Roof"
+    features:
+      - "Solar panel integration"
+      - "Up to 2000 km/year additional range"
+
+colors:
+  standard:
+    - "Polar White"
+    - "Gravity Gold Matte"
+  premium:
+    - "Nocturne Gray Metallic"
+    - "Digital Teal Pearl"
+    - "Phantom Black Pearl"
+    - "Serenity Blue Pearl"
+    - "Shooting Star Matte"
+    - "Biophilic Blue Pearl"
+
+interior_colors:
+  - "Dark Pebble Grey / Dove Grey"
+  - "Obsidian Black"
+
+# Version Information
+version:
+  facelift: false
+  major_changes:
+    - "Increased battery capacity (84 kWh total, 80 kWh usable vs 77.4/74.0 in 2025)"
+    - "Improved DC charging peak to 263 kW"
+    - "Updated infotainment with AI assistant"
+    - "Refined interior materials"
+
+notes: >
+  The Hyundai IONIQ 6 84 kWh RWD 2026 is the updated Long Range rear-wheel-drive variant
+  with a larger 84 kWh battery (80 kWh usable), up from 77.4 kWh in the 2025 model.
+  This increases WLTP range to 680 km (from 614 km), making it one of the most efficient
+  EVs on the market at just 13.5 kWh/100km WLTP. The streamliner design with its ultra-low
+  0.21 Cd drag coefficient continues to deliver exceptional aerodynamic efficiency.
+  Fast charging via the 800V architecture reaches 263 kW peak, with 10-80% in 17 minutes.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: "2026-02-10"
+  data_quality: verified
+  data_source: manufacturer
+  measured_by: null
+  sources:
+    - https://ev-database.org/car/3439/Hyundai-IONIQ-6-84-kWh-RWD
+    - https://www.hyundai.com/worldwide/en/eco/ioniq6/specifications
