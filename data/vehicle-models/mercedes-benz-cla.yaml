@@ -1,106 +1,96 @@
 id: mercedes-benz-cla
-name: "CLA"
 manufacturer_id: mercedes-benz
 brand: "Mercedes-Benz"
-
-segment: D  # Large sedan
+name: "CLA"
 body_style: sedan
-category: electric-sedan
+segment: C
+platform: MMA
+production_years:
+  start: 2025
+  end: null
+  current: true
+generation: 1
+production_status: active
 
-production:
-  start_year: 2025
-  end_year: null
-  generation: 1
-  platform: MMA  # Mercedes Modular Architecture (new 800V platform)
+description: >
+  The Mercedes-Benz CLA is the brand's first model on the new MMA (Mercedes 
+  Modular Architecture) platform, representing a new era of electric vehicles 
+  from Stuttgart. Positioned as an entry point to the Mercedes-Benz EV lineup, 
+  the CLA replaces the previous ICE CLA and serves as a direct competitor to 
+  the BMW i4 eDrive35, Tesla Model 3, and Polestar 2.
+  
+  Built on an 800V architecture, the CLA features class-leading efficiency with 
+  consumption as low as 12.2 kWh/100km (WLTP), ultra-fast DC charging up to 
+  353 kW, and MB.OS — Mercedes' new in-house operating system. Available as a 
+  sedan and Shooting Brake (estate), with three powertrain options: CLA 200 
+  (LFP, RWD), CLA 250+ (NMC, RWD), and CLA 350 4MATIC (NMC, AWD).
 
 dimensions:
-  length_mm: 4723
-  width_mm: 1855
-  height_mm: 1468
-  wheelbase_mm: 2790
-  ground_clearance_mm: 145
-  drag_coefficient: 0.22
-  frontal_area_m2: 2.28
+  length_mm: 4688
+  width_mm: 1857
+  height_mm: 1439
+  wheelbase_mm: 2830
+  ground_clearance_mm: 130
 
 weight:
-  curb_weight_kg: 2055
-  gross_weight_kg: 2510
-  max_payload_kg: 530
+  curb_weight_kg: null
+  gross_vehicle_weight_kg: null
 
-seating:
-  seats: 5
-  rows: 2
-  isofix_points: 2
-
-cargo:
-  trunk_volume_l: 405
-  trunk_seats_down_l: null
-  frunk_volume_l: 101
+interior:
+  seating_capacity: 5
+  seating_config: "2+3"
+  cargo_capacity_liters: 460
+  cargo_capacity_seats_down_liters: null
+  frunk_liters: 0
 
 towing:
-  max_braked_kg: 1500
-  max_unbraked_kg: 750
-  towbar_available: yes
-  tongue_weight_kg: 75
+  max_towing_capacity_kg: 750
+  max_tongue_weight_kg: 75
 
-features:
-  - "MBUX Superscreen (triple display across full width)"
-  - "MB.OS operating system (new generation)"
-  - "800V electrical architecture"
-  - "Ultra-fast 353 kW DC charging"
-  - "Heat pump standard"
-  - "Plug & Charge (ISO 15118-2)"
-  - "Battery preconditioning via navigation"
-  - "Rear-wheel drive (250+) or AWD (350 4MATIC)"
-  - "101L frunk"
-  - "Over-the-air updates"
-  - "MBUX Voice Assistant with AI"
-  - "Level 2+ driver assistance"
-  - "Cd 0.22 - best-in-class aerodynamics"
-  - "LED Digital Light headlamps"
-  - "Augmented Reality Head-Up Display"
-  - "Wireless Apple CarPlay / Android Auto"
+aerodynamics:
+  drag_coefficient: 0.23
+  notes: >
+    Exceptional aerodynamics for the segment. The CLA's smooth underbody, flush 
+    door handles, and optimized rear diffuser contribute to outstanding efficiency. 
+    Cd value of 0.23 is among the best in the compact sedan segment.
 
-safety_rating:
+safety:
+  euro_ncap_rating: null
   euro_ncap_year: null
-  euro_ncap_stars: null
-  notes: "Euro NCAP testing expected 2026"
+  notes: "Euro NCAP rating expected 2026."
 
-awards: []
+infotainment:
+  screen_size_inches: 11.9
+  screen_type: OLED
+  system_name: MB.OS
+  connectivity:
+    - Apple CarPlay
+    - Android Auto
+    - Over-the-air updates
+  notes: >
+    First Mercedes model with MB.OS (Mercedes-Benz Operating System), the new 
+    in-house developed platform replacing MBUX. 11.9" OLED center touchscreen 
+    standard. Optional Superscreen adds a 12.3" passenger display. "Hey Mercedes" 
+    voice assistant with enhanced AI capabilities.
+
+notes: >
+  The CLA marks Mercedes-Benz's entry into the affordable EV segment with the 
+  all-new MMA platform. Key highlights include 800V architecture across all 
+  variants, class-leading efficiency, and the new MB.OS infotainment system.
+  
+  Three powertrain options: CLA 200 with 60 kWh LFP battery (541 km WLTP), 
+  CLA 250+ with 85 kWh NMC battery (792 km WLTP), and CLA 350 4MATIC with 
+  85 kWh NMC battery and dual motors (773 km WLTP). All feature 800V charging.
+  
+  European orders open from Q2 2025, deliveries starting late 2025. Expected 
+  starting price around €45,000 for the CLA 200 in Germany.
 
 metadata:
-  created_at: "2026-02-09T15:15:00Z"
-  updated_at: "2026-02-09T15:15:00Z"
-  data_quality: estimated
-  notes: |
-    The Mercedes-Benz CLA is an all-new electric sedan built on the MMA (Mercedes Modular
-    Architecture) platform - Mercedes' first purpose-designed EV platform for compact/mid-size
-    vehicles. Revealed in late 2024/early 2025, it represents a massive leap from the EQA/EQB
-    generation built on the older MFA2 (ICE-derived) platform.
-    
-    Key innovations:
-    - 800V architecture (vs 400V on EQA/EQB) enabling 353 kW DC charging
-    - MB.OS (new in-house operating system replacing old MBUX software stack)
-    - Cd 0.22 aerodynamics (one of the most aerodynamic production cars)
-    - 90 kWh battery (85 kWh useable) delivering up to 792 km WLTP range
-    - 101L frunk (first for a Mercedes EV in this segment)
-    
-    Available body styles:
-    - CLA Sedan (this entry)
-    - CLA Shooting Brake (estate/wagon variant)
-    
-    Variants:
-    - CLA 250+ (RWD, 200 kW / 272 PS, 585 km real range)
-    - CLA 350 4MATIC (AWD, 260 kW / 354 PS, 575 km real range)
-    
-    Competes with: BMW i4, Tesla Model 3, Polestar 2, Audi A6 e-tron
-    
-    Production: Rastatt, Germany (scheduled from 2025)
-
-sources:
-  - url: "https://www.mercedes-benz.com/en/vehicles/passenger-cars/cla/"
-    title: "Mercedes-Benz CLA Official Page"
-    date_accessed: "2026-02-09"
-  - url: "https://ev-database.org/car/3139/Mercedes-Benz-CLA-250plus"
-    title: "EV Database - Mercedes-Benz CLA 250+"
-    date_accessed: "2026-02-09"
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - https://www.mercedes-benz.com/
+    - https://ev-database.org/car/3370/Mercedes-Benz-CLA-200
+    - https://ev-database.org/car/3139/Mercedes-Benz-CLA-250plus
+    - https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC

@@ -1,57 +1,57 @@
-# Mercedes-Benz CLA 250+ 2026
-id: mercedes-benz-cla-250-plus-2026
-name: "CLA 250+"
+# Mercedes-Benz CLA 200 2026
+id: mercedes-benz-cla-200-2026
+name: "CLA 200"
 model_id: mercedes-benz-cla
 model_year: 2026
-variant_code: CLA250PLUS
+variant_code: CLA200
 
 battery:
-  usable_kwh: 85.0
-  total_kwh: 90.0
-  chemistry: NMC
+  usable_kwh: 58.0
+  total_kwh: 60.0
+  chemistry: LFP
   cell_type: prismatic
-  manufacturer: CATL
+  manufacturer: BYD
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
 
 range:
-  wltp_km: 792
-  wltp_city_km: 1000
-  wltp_highway_km: 640
+  wltp_km: 541
+  wltp_city_km: 680
+  wltp_highway_km: 440
   epa_km: null
-  real_world_km: 585
+  real_world_km: 400
   real_world_source: ev-database.org
 
 charging:
   ac_max_kw: 11
   ac_phases: 3
   ac_connector: Type2
-  dc_max_kw: 353
+  dc_max_kw: 200
   dc_connector: CCS2
-  dc_10_80_min: 16
+  dc_10_80_min: 21
   dc_charge_curve:
     - soc_percent: 10
-      power_kw: 320
+      power_kw: 180
     - soc_percent: 20
-      power_kw: 353
-    - soc_percent: 30
-      power_kw: 340
-    - soc_percent: 40
-      power_kw: 300
-    - soc_percent: 50
-      power_kw: 250
-    - soc_percent: 60
       power_kw: 200
+    - soc_percent: 30
+      power_kw: 190
+    - soc_percent: 40
+      power_kw: 160
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 100
     - soc_percent: 70
-      power_kw: 140
+      power_kw: 75
     - soc_percent: 80
-      power_kw: 90
-    - soc_percent: 90
       power_kw: 50
+    - soc_percent: 90
+      power_kw: 30
     - soc_percent: 100
-      power_kw: 20
+      power_kw: 15
   bidirectional:
     v2l: false
     v2g: false
@@ -61,45 +61,45 @@ motor:
   count: 1
   type: permanent_magnet
   position: rear
-  total_power_kw: 200
-  total_power_hp: 272
+  total_power_kw: 165
+  total_power_hp: 224
   total_torque_nm: 335
 
 drivetrain: RWD
 
 performance:
-  acceleration_0_100_kmh_s: 6.7
+  acceleration_0_100_kmh_s: 7.5
   top_speed_kmh: 210
 
 consumption:
-  wltp_kwh_per_100km: 12.2
+  wltp_kwh_per_100km: 12.3
   real_world_kwh_per_100km: 14.5
   energy_efficiency_class: A+
 
 weight:
-  curb_weight_kg: 2060
-  gross_weight_kg: 2560
+  curb_weight_kg: 1945
+  gross_weight_kg: 2445
 
 standard_equipment:
   - 11.9" OLED center touchscreen with MB.OS
   - Digital instrument cluster
   - Apple CarPlay & Android Auto
-  - LED high-performance headlights
+  - LED headlights
   - Heated front seats
   - Dual-zone climate control
   - Heat pump
-  - Synthetic leather upholstery (ARTICO)
+  - Fabric/synthetic leather upholstery
   - 18" alloy wheels
   - Adaptive cruise control
   - Lane keeping assist
   - Automatic emergency braking
-  - 360-degree parking camera
+  - Parking sensors front and rear
+  - Rearview camera
   - Keyless entry & start
   - Wireless phone charging
   - Hey Mercedes voice assistant
   - Plug & Charge (ISO 15118-2)
   - Battery preconditioning via navigation
-  - Ambient lighting
 
 optional_equipment:
   - name: Superscreen (passenger display)
@@ -108,26 +108,24 @@ optional_equipment:
     cost: 1190
   - name: AIRMATIC air suspension
     cost: 1785
-  - name: Burmester surround sound system
+  - name: Premium sound system (Burmester)
     cost: 590
   - name: 19" AMG alloy wheels
     cost: 952
-  - name: Panoramic sliding sunroof
-    cost: 1416
-  - name: Night package
-    cost: 476
-  - name: Advanced Plus package
+  - name: Advanced Plus package (360° camera, parking assist)
     cost: 2380
+  - name: Night package (black exterior accents)
+    cost: 476
 
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
   sources:
-    - https://ev-database.org/car/3139/Mercedes-Benz-CLA-250plus
+    - https://ev-database.org/car/3370/Mercedes-Benz-CLA-200
     - https://www.mercedes-benz.com/
   last_updated: "2026-02-10"
   notes: >
-    Mid-range CLA with 90 kWh NMC battery on 800V MMA platform. Outstanding 
-    792 km WLTP range — class-leading for a compact sedan. Ultra-fast 353 kW DC 
-    charging enables 10-80% in just 16 minutes. First Mercedes with MB.OS.
-    Deliveries expected late 2025 / early 2026.
+    Entry-level electric CLA with 60 kWh LFP battery on 800V MMA platform.
+    541 km WLTP range with class-leading 12.3 kWh/100km efficiency. LFP battery 
+    offers excellent longevity and cold-weather resilience. First Mercedes with 
+    MB.OS operating system. Deliveries expected late 2025 / early 2026.
