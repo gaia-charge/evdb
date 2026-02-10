@@ -1,0 +1,156 @@
+# Vehicle Variant: GWM ORA 07 Pure RWD (2025)
+id: gwm-ora-07-pure-rwd-2025
+model_id: gwm-ora-07
+name: "Pure RWD"
+variant_name: "Pure RWD"
+model_year: 2025
+trim_level: Pure
+production_years: "2024-present"
+
+overview: >
+  The GWM ORA 07 Pure RWD is the base variant with a single rear motor producing 150 kW (204 PS)
+  and a 63 kWh battery providing 340 km WLTP range. The sleek fastback design with a 0.236 Cd
+  coefficient helps efficiency. Standard equipment includes 12.3-inch touchscreen, Harman Kardon audio,
+  panoramic roof, heated/ventilated front seats, and comprehensive ADAS. DC charging at up to 90 kW
+  is acceptable but not class-leading. Starting from approximately €43,990 in Germany.
+
+# Battery Specifications
+battery:
+  chemistry: NMC
+  supplier: SVOLT
+  total_kwh: 63.0
+  usable_kwh: 59.3
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "63 kWh total, 59.3 kWh usable, 400V architecture, SVOLT NMC cells"
+
+# Range (km)
+range:
+  wltp_km: 340
+  wltp_city_km: 420
+  wltp_highway_km: null
+  epa_miles: null
+  real_world_km: 280
+  real_world_notes: "Estimated ~280 km mixed driving. Highway range approximately 240 km."
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 420
+        power_kw: 11.0
+  dc:
+    max_power_kw: 90.0
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 85
+      - soc_percent: 20
+        power_kw: 90
+      - soc_percent: 30
+        power_kw: 88
+      - soc_percent: 40
+        power_kw: 82
+      - soc_percent: 50
+        power_kw: 75
+      - soc_percent: 60
+        power_kw: 65
+      - soc_percent: 70
+        power_kw: 50
+      - soc_percent: 80
+        power_kw: 35
+      - soc_percent: 90
+        power_kw: 20
+      - soc_percent: 100
+        power_kw: 8
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 38
+        power_kw: 90.0
+        notes: "10-80% in approximately 38 minutes"
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+# Motors & Performance
+motors:
+  configuration: single
+  drive_type: RWD
+  total_power_kw: 150
+  total_power_hp: 204
+  total_torque_nm: 340
+  motor_type: permanent_magnet
+  motors:
+    - position: rear
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 340
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 7.9
+  top_speed_kmh: 180
+  notes: "Smooth rear-wheel drive with good traction"
+
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_per_100km: 17.4
+  consumption_real_world_kwh_per_100km: 21.0
+  efficiency_rating_eu: A
+  notes: "17.4 kWh/100km WLTP, benefits from excellent aerodynamics (Cd 0.236)"
+
+# Weight
+weight:
+  curb_weight_kg: 1905
+  gross_vehicle_weight_kg: 2380
+
+# Features
+features:
+  standard:
+    - "12.3-inch central touchscreen"
+    - "10.25-inch digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Harman Kardon premium sound system (8 speakers)"
+    - "Panoramic glass roof"
+    - "LED matrix headlights"
+    - "360-degree camera system"
+    - "Adaptive Cruise Control with Stop & Go"
+    - "Lane Keeping Assist"
+    - "Automatic Emergency Braking"
+    - "Blind Spot Detection"
+    - "Heated and ventilated front seats"
+    - "Heated rear seats"
+    - "Dual-zone climate control"
+    - "Heat pump"
+    - "Power liftback tailgate"
+    - "Frameless doors"
+    - "Wireless phone charger"
+    - "18-inch alloy wheels"
+  optional:
+    - "Metallic paint"
+    - "19-inch alloy wheels"
+
+# Version Information
+version:
+  release_date: "2024-06"
+  changes_from_previous: "Initial European launch"
+  notes: "2025 model year, European specification. Base RWD variant."
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.gwm-global.com/ora/ora07
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  notes: "European specification, base Pure RWD variant with 63 kWh battery"

@@ -1,0 +1,164 @@
+# Vehicle Variant: GWM ORA 07 Performance AWD (2025)
+id: gwm-ora-07-performance-awd-2025
+model_id: gwm-ora-07
+name: "Performance AWD"
+variant_name: "Performance AWD"
+model_year: 2025
+trim_level: Performance
+production_years: "2024-present"
+
+overview: >
+  The GWM ORA 07 Performance AWD is the dual-motor high-performance variant with a combined output
+  of 295 kW (401 PS) and 680 Nm torque, sprinting from 0-100 km/h in 4.3 seconds. It uses the same
+  63 kWh battery as the Pure RWD variant, resulting in a slightly reduced WLTP range of 295 km due to
+  the additional motor weight and AWD losses. Standard equipment matches the Pure with additions
+  including sport-tuned suspension, performance brakes, and 19-inch alloy wheels. DC charging remains
+  at 90 kW. Starting from approximately €49,990 in Germany.
+
+# Battery Specifications
+battery:
+  chemistry: NMC
+  supplier: SVOLT
+  total_kwh: 63.0
+  usable_kwh: 59.3
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  voltage: 400
+  notes: "63 kWh total, 59.3 kWh usable, 400V architecture, SVOLT NMC cells"
+
+# Range (km)
+range:
+  wltp_km: 295
+  wltp_city_km: 365
+  wltp_highway_km: null
+  epa_miles: null
+  real_world_km: 240
+  real_world_notes: "Estimated ~240 km mixed driving. AWD adds weight and energy consumption."
+
+# Charging
+charging:
+  ac:
+    max_power_kw: 11.0
+    connector_type: Type2
+    phases: 3
+    charging_time:
+      - percent_start: 0
+        percent_end: 100
+        time_minutes: 420
+        power_kw: 11.0
+  dc:
+    max_power_kw: 90.0
+    connector_type: CCS2
+    charging_curve:
+      - soc_percent: 10
+        power_kw: 85
+      - soc_percent: 20
+        power_kw: 90
+      - soc_percent: 30
+        power_kw: 88
+      - soc_percent: 40
+        power_kw: 82
+      - soc_percent: 50
+        power_kw: 75
+      - soc_percent: 60
+        power_kw: 65
+      - soc_percent: 70
+        power_kw: 50
+      - soc_percent: 80
+        power_kw: 35
+      - soc_percent: 90
+        power_kw: 20
+      - soc_percent: 100
+        power_kw: 8
+    charging_time:
+      - percent_start: 10
+        percent_end: 80
+        time_minutes: 38
+        power_kw: 90.0
+        notes: "10-80% in approximately 38 minutes"
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+# Motors & Performance
+motors:
+  configuration: dual
+  drive_type: AWD
+  total_power_kw: 295
+  total_power_hp: 401
+  total_torque_nm: 680
+  motor_type: permanent_magnet
+  motors:
+    - position: front
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 340
+      motor_type: permanent_magnet
+    - position: rear
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 340
+      motor_type: permanent_magnet
+
+performance:
+  acceleration_0_100_kmh_s: 4.3
+  top_speed_kmh: 205
+  notes: "Seriously quick performance sedan with AWD traction. Comparable to Tesla Model 3 Performance."
+
+# Efficiency
+efficiency:
+  consumption_wltp_kwh_per_100km: 20.1
+  consumption_real_world_kwh_per_100km: 24.5
+  efficiency_rating_eu: B
+  notes: "20.1 kWh/100km WLTP, higher consumption due to dual motors and AWD"
+
+# Weight
+weight:
+  curb_weight_kg: 2050
+  gross_vehicle_weight_kg: 2480
+
+# Features
+features:
+  standard:
+    - "12.3-inch central touchscreen"
+    - "10.25-inch digital instrument cluster"
+    - "Wireless Apple CarPlay and Android Auto"
+    - "Harman Kardon premium sound system (8 speakers)"
+    - "Panoramic glass roof"
+    - "LED matrix headlights"
+    - "360-degree camera system"
+    - "Adaptive Cruise Control with Stop & Go"
+    - "Lane Keeping Assist"
+    - "Lane Change Assist"
+    - "Automatic Emergency Braking"
+    - "Blind Spot Detection"
+    - "Heated and ventilated front seats"
+    - "Heated rear seats"
+    - "Dual-zone climate control"
+    - "Heat pump"
+    - "Power liftback tailgate"
+    - "Frameless doors"
+    - "Wireless phone charger"
+    - "19-inch alloy wheels"
+    - "Sport-tuned suspension"
+    - "Performance brakes"
+  optional:
+    - "Metallic paint"
+
+# Version Information
+version:
+  release_date: "2024-06"
+  changes_from_previous: "Initial European launch"
+  notes: "2025 model year, European specification. Performance AWD variant with dual motors."
+
+# Metadata
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  sources:
+    - https://www.gwm-global.com/ora/ora07
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  notes: "European specification, Performance AWD dual-motor variant"
