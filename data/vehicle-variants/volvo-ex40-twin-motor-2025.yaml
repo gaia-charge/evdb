@@ -1,0 +1,146 @@
+# Volvo EX40 Twin Motor (2025)
+id: volvo-ex40-twin-motor-2025
+name: "Twin Motor"
+model_id: volvo-ex40
+model_year: 2025
+variant_code: EX40-TM
+
+description: |
+  The 2025 Volvo EX40 Twin Motor is the performance-oriented AWD variant, featuring
+  dual electric motors producing 408hp and 660Nm of torque. With the 82kWh battery,
+  it offers 460km WLTP range. The 2025 model benefits from improved DC charging speeds
+  (up to 200kW), refined software, and continued Scandinavian luxury touches.
+
+battery:
+  usable_kwh: 78.0
+  total_kwh: 82.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "CATL / LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 460
+  wltp_city_km: 590
+  wltp_highway_km: 375
+  epa_km: null
+  real_world_km: 390
+  real_world_source: "EV Database / press reviews average"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 200
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 195
+    - soc_percent: 30
+      power_kw: 185
+    - soc_percent: 40
+      power_kw: 170
+    - soc_percent: 50
+      power_kw: 145
+    - soc_percent: 60
+      power_kw: 115
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 28
+    - soc_percent: 100
+      power_kw: 15
+  time_5_to_80_percent_min: 32
+  time_10_to_80_percent_min: 28
+  charging_speed_kmh: 760
+  plug_and_charge: false
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 330
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 150
+      power_hp: 204
+      torque_nm: 330
+  total_power_kw: 300
+  total_power_hp: 408
+  total_torque_nm: 660
+  acceleration_0_100_kmh_sec: 4.7
+  acceleration_0_60_mph_sec: 4.5
+  top_speed_kmh: 180
+
+weight:
+  curb_weight_kg: 2188
+  gross_weight_kg: 2750
+  max_payload_kg: 562
+  distribution_front_percent: 52
+  distribution_rear_percent: 48
+
+efficiency:
+  wltp_kwh_per_100km: 19.0
+  wltp_kwh_per_100km_city: 15.8
+  wltp_kwh_per_100km_highway: 22.2
+  real_world_kwh_per_100km: 21.2
+  energy_efficiency_class: "B"
+
+wheels_tires:
+  standard_size_front: "235/50 R19"
+  standard_size_rear: "235/50 R19"
+  wheel_sizes_available:
+    - "19 inch (standard)"
+    - "20 inch (optional, -15km range)"
+    - "21 inch (optional, -25km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Pilot Assist (adaptive cruise with lane centering)"
+    - "City Safety with collision avoidance"
+    - "Lane Keeping Aid"
+    - "Blind Spot Information System (BLIS)"
+    - "Cross Traffic Alert with autobrake"
+    - "Run-off Road Mitigation"
+    - "Oncoming Lane Mitigation"
+    - "360-degree camera"
+  connectivity:
+    - "Google built-in (Maps, Assistant, Play)"
+    - "Volvo Cars app"
+    - "OTA software updates"
+    - "5G connectivity"
+    - "Wi-Fi hotspot"
+    - "Apple CarPlay (wireless)"
+  special_features:
+    - "One-pedal driving mode"
+    - "Pre-conditioning (battery & cabin)"
+    - "Smartphone as key"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+    - "All-wheel drive with torque vectoring"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.volvocars.com/de/cars/ex40-electric/"
+    - "https://www.autoexpress.co.uk/volvo/ex40"
+  notes: "2025 Twin Motor carries over largely unchanged from 2024. DC charging upgraded to 200kW. 4.7s 0-100 km/h with AWD torque vectoring. Performance-focused buyers. Competes with Tesla Model Y Long Range AWD, BMW iX1 xDrive30."

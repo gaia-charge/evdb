@@ -1,0 +1,141 @@
+# Volvo EX40 Single Motor Extended Range (2025)
+id: volvo-ex40-single-motor-extended-range-2025
+name: "Single Motor Extended Range"
+model_id: volvo-ex40
+model_year: 2025
+variant_code: EX40-SM-ER
+
+description: |
+  The 2025 Volvo EX40 Single Motor Extended Range features the larger 78kWh battery pack,
+  offering up to 515km WLTP range - the longest-range EX40 variant. The extended range
+  battery adds approximately 40km over the standard 69kWh model while maintaining rear-wheel
+  drive efficiency. The 2025 model year brings refined software, improved Google built-in
+  integration, and continued availability of Volvo's comprehensive safety suite.
+
+battery:
+  usable_kwh: 75.0
+  total_kwh: 78.0
+  chemistry: NMC
+  cell_type: pouch
+  manufacturer: "CATL / LG Energy Solution"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+
+range:
+  wltp_km: 515
+  wltp_city_km: 670
+  wltp_highway_km: 420
+  epa_km: null
+  real_world_km: 440
+  real_world_source: "EV Database / press reviews average"
+
+charging:
+  ac_max_kw: 11
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 200
+  dc_connector: CCS2
+  dc_curve:
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 195
+    - soc_percent: 30
+      power_kw: 185
+    - soc_percent: 40
+      power_kw: 170
+    - soc_percent: 50
+      power_kw: 145
+    - soc_percent: 60
+      power_kw: 115
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 28
+    - soc_percent: 100
+      power_kw: 15
+  time_5_to_80_percent_min: 30
+  time_10_to_80_percent_min: 27
+  charging_speed_kmh: 820
+  plug_and_charge: false
+
+bidirectional:
+  v2l: false
+  v2l_max_kw: null
+  v2h: false
+  v2g: false
+
+performance:
+  drive_type: RWD
+  motors:
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 185
+      power_hp: 252
+      torque_nm: 343
+  total_power_kw: 185
+  total_power_hp: 252
+  total_torque_nm: 343
+  acceleration_0_100_kmh_sec: 7.0
+  acceleration_0_60_mph_sec: 6.6
+  top_speed_kmh: 180
+
+weight:
+  curb_weight_kg: 2060
+  gross_weight_kg: 2620
+  max_payload_kg: 560
+  distribution_front_percent: 54
+  distribution_rear_percent: 46
+
+efficiency:
+  wltp_kwh_per_100km: 16.8
+  wltp_kwh_per_100km_city: 14.0
+  wltp_kwh_per_100km_highway: 19.8
+  real_world_kwh_per_100km: 18.5
+  energy_efficiency_class: "A"
+
+wheels_tires:
+  standard_size_front: "235/50 R19"
+  standard_size_rear: "235/50 R19"
+  wheel_sizes_available:
+    - "19 inch (standard)"
+    - "20 inch (optional, -15km range)"
+
+technology:
+  adas_level: 2
+  adas_features:
+    - "Pilot Assist (adaptive cruise with lane centering)"
+    - "City Safety with collision avoidance"
+    - "Lane Keeping Aid"
+    - "Blind Spot Information System (BLIS)"
+    - "Cross Traffic Alert with autobrake"
+    - "Run-off Road Mitigation"
+    - "Oncoming Lane Mitigation"
+    - "360-degree camera"
+  connectivity:
+    - "Google built-in (Maps, Assistant, Play)"
+    - "Volvo Cars app"
+    - "OTA software updates"
+    - "5G connectivity"
+    - "Wi-Fi hotspot"
+    - "Apple CarPlay (wireless)"
+  special_features:
+    - "One-pedal driving mode"
+    - "Pre-conditioning (battery & cabin)"
+    - "Smartphone as key"
+    - "Acoustic Vehicle Alerting System (AVAS)"
+    - "Heat pump (standard from Plus trim)"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.volvocars.com/de/cars/ex40-electric/"
+    - "https://www.autoexpress.co.uk/volvo/ex40"
+  notes: "New for 2025: 78kWh Extended Range battery option with 515km WLTP range. DC charging upgraded to 200kW (from 150kW). Slightly more power at 252hp vs 238hp on standard range. Best all-round EX40 choice for most buyers - longer range with RWD efficiency."

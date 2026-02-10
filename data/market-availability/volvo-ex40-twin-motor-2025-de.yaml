@@ -1,0 +1,127 @@
+# Volvo EX40 Twin Motor 2025 - German Market
+id: volvo-ex40-twin-motor-2025-de
+variant_id: volvo-ex40-twin-motor-2025
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 58990
+
+  colors:
+    - name: "Crystal White Pearl"
+      type: solid
+      price: 0
+    - name: "Onyx Black Metallic"
+      type: metallic
+      price: 790
+    - name: "Sage Green Metallic"
+      type: metallic
+      price: 790
+    - name: "Fjord Blue Metallic"
+      type: metallic
+      price: 790
+    - name: "Silver Dawn Metallic"
+      type: metallic
+      price: 790
+    - name: "Vapour Grey Metallic"
+      type: metallic
+      price: 790
+
+  wheels:
+    - size: "19-inch alloy"
+      price: 0
+    - size: "20-inch diamond-cut alloy"
+      price: 1200
+    - size: "21-inch alloy"
+      price: 1800
+
+  interior:
+    - name: "Cloth/synthetic leather (standard)"
+      price: 0
+    - name: "Full leather upholstery"
+      price: 1500
+    - name: "Wool blend upholstery"
+      price: 1800
+
+  packages:
+    - name: "Comfort Package"
+      price: 2200
+      items:
+        - "Panoramic glass roof (fixed)"
+        - "Heated front seats and steering wheel"
+        - "Power tailgate"
+        - "Park assist front and rear"
+
+    - name: "Tech Package"
+      price: 2800
+      items:
+        - "Pixel LED headlights with active bending"
+        - "Head-up display"
+        - "360-degree camera"
+        - "Blind spot information system (BLIS)"
+
+    - name: "Premium Package"
+      price: 4500
+      items:
+        - "All Comfort and Tech Package features"
+        - "Harman Kardon premium audio (13 speakers)"
+        - "Ventilated front seats"
+        - "Wireless phone charging"
+
+  standalone_options:
+    - name: "Towing package (1,500kg braked)"
+      price: 950
+    - name: "Harman Kardon premium audio"
+      price: 950
+    - name: "22kW AC charging upgrade"
+      price: 650
+
+incentives:
+  - type: tax_exemption
+    name: "Dienstwagen-Besteuerung (Company Car Tax)"
+    amount: 1770
+    description: "BEVs under €70k: 0.25% of gross list price per month (vs 1% for ICE)"
+    eligibility: "Company cars, private use taxation"
+    valid_until: "2030-12-31"
+
+  - type: tax_exemption
+    name: "Kfz-Steuer Exemption (Road Tax)"
+    amount: 0
+    description: "BEVs exempt from annual road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - type: subsidy
+    name: "THG-Quote (Greenhouse Gas Quota)"
+    amount: 300
+    description: "Sell CO2 savings certificate annually (€250-€400/year)"
+    eligibility: "All BEV owners in Germany"
+
+availability:
+  available_from: "2025-01"
+  available_until: null
+  availability_status: available
+  delivery_time_weeks: 10
+  order_book_open: true
+
+warranties:
+  vehicle:
+    duration_years: 3
+    duration_km: unlimited
+  battery:
+    duration_years: 8
+    duration_km: 160000
+    capacity_guarantee_percent: 70
+
+total_cost_of_ownership:
+  electricity_cost_per_100km: 6.36
+  annual_electricity_cost: 954
+  annual_maintenance_cost: 390
+  annual_insurance_cost: 950
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  sources:
+    - "https://www.volvocars.com/de/cars/ex40-electric/"
+  notes: "Twin Motor AWD at €58,990. Qualifies for 0.25% company car tax. Performance variant: 4.7s 0-100 with AWD. 200kW DC charging for 2025."
