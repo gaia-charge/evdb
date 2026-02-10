@@ -1,0 +1,226 @@
+# BMW i5 eDrive40 (2025) - Germany Market Availability
+
+id: bmw-i5-edrive40-2025-de
+variant_id: bmw-i5-edrive40-2025
+market: DE
+currency: EUR
+
+# Market-Specific Details
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 12
+notes: "2025 model year with minor updates. Still available alongside incoming 2026 model."
+
+# Pricing
+pricing:
+  base_price: 70490
+  price_including_vat: 70490
+  vat_rate_percent: 19
+  destination_charge: 1190
+  total_on_the_road: 71680
+
+# Available Colors
+available_colors:
+  - name: Alpine White
+    code: 300
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Sapphire Metallic
+    code: C1M
+    type: metallic
+    price_add:
+      amount: 1330
+      currency: EUR
+  - name: Brooklyn Grey Metallic
+    code: C3P
+    type: metallic
+    price_add:
+      amount: 1330
+      currency: EUR
+  - name: Mineral White Metallic
+    code: A96
+    type: metallic
+    price_add:
+      amount: 1330
+      currency: EUR
+  - name: Portimao Blue Metallic
+    code: C3N
+    type: metallic
+    price_add:
+      amount: 1330
+      currency: EUR
+  - name: Aventurine Red Metallic
+    code: C3L
+    type: metallic
+    price_add:
+      amount: 1850
+      currency: EUR
+  - name: Tanzanite Blue II Metallic
+    code: C3M
+    type: metallic
+    price_add:
+      amount: 1850
+      currency: EUR
+  - name: Skyscraper Grey Metallic
+    code: C3S
+    type: metallic
+    price_add:
+      amount: 1850
+      currency: EUR
+  - name: Frozen Pure Grey
+    code: C3J
+    type: individual_matte
+    price_add:
+      amount: 4990
+      currency: EUR
+  - name: Frozen Deep Grey
+    code: C3K
+    type: individual_matte
+    price_add:
+      amount: 4990
+      currency: EUR
+
+# Wheel Options
+available_wheels:
+  - name: 18" Light alloy wheels Style 900
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: 19" Aerodynamic wheels Style 901 M
+    size_inches: 19
+    type: alloy
+    price_add:
+      amount: 1440
+      currency: EUR
+  - name: 20" M Performance wheels Style 902 M
+    size_inches: 20
+    type: alloy_forged
+    price_add:
+      amount: 2880
+      currency: EUR
+
+# Interior Options
+available_interiors:
+  - name: Black Vernasca Leather
+    material: leather
+    color: black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Cognac Vernasca Leather
+    material: leather
+    color: cognac
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black Merino Leather (Extended)
+    material: merino_leather
+    color: black
+    price_add:
+      amount: 2670
+      currency: EUR
+
+# Incentives
+available_incentives:
+  - type: federal
+    name: "BAFA Umweltbonus"
+    amount:
+      amount: 0
+      currency: EUR
+    conditions: ["No federal EV incentive in 2025"]
+    expires_at: null
+  - type: company_car
+    name: "0.25% company car tax benefit"
+    description: "Reduced taxation rate for electric company cars (vs 1% for ICE vehicles)"
+    benefit_monthly_eur: 176
+    benefit_annual_eur: 6348
+    conditions: ["BEV", "Gross list price used for calculation: €70,490"]
+    calculation_details: |
+      Standard ICE rate: €70,490 × 1% = €705/month
+      BEV reduced rate: €70,490 × 0.25% = €176/month
+      Monthly savings: €529
+      Annual savings: €6,348
+  - type: tax
+    name: "Kfz-Steuer exemption"
+    description: "Road tax exemption for electric vehicles until 2030"
+    benefit_annual_eur: 390
+    conditions: ["BEV", "First registration after 2016"]
+    expires_at: "2030-12-31"
+  - type: emission
+    name: "THG-Quote (Greenhouse Gas Quota)"
+    description: "Annual CO2 certificate trading revenue"
+    benefit_annual_eur: 350
+    conditions: ["BEV", "Annual application required"]
+
+# Options
+popular_packages:
+  - name: M Sport Package Pro
+    price:
+      amount: 4980
+      currency: EUR
+    features:
+      - M Sport suspension
+      - 19-inch M wheels Style 901 M
+      - M Sport steering wheel
+      - M Sport seats
+      - M Sport brakes with blue calipers
+  - name: Driving Assistant Professional
+    price:
+      amount: 2390
+      currency: EUR
+    features:
+      - Highway Assistant (Level 2+)
+      - Active Cruise Control with Stop & Go
+      - Steering and lane control assistant
+      - Active side collision protection
+      - Emergency stop assistant
+  - name: Executive Package
+    price:
+      amount: 6950
+      currency: EUR
+    features:
+      - Panoramic glass roof Sky Lounge
+      - Adaptive air suspension with self-leveling
+      - Massage seats front
+      - Heated rear seats
+      - 4-zone climate control rear
+  - name: Technology Package
+    price:
+      amount: 3890
+      currency: EUR
+    features:
+      - BMW Head-Up Display with AR
+      - Parking Assistant Professional (automated)
+      - Surround View with 3D view
+      - BMW IconicSounds Electric by Hans Zimmer
+
+# Warranty
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  roadside_assistance_years: 3
+  rust_perforation_years: 12
+
+# Production
+production:
+  plant: "BMW Group Plant Dingolfing, Germany"
+
+notes: |
+  The 2025 BMW i5 eDrive40 is a minor update to the G60-based executive EV.
+  At €70,490 it saves approximately €6,348/year vs ICE equivalent through the
+  0.25% company car tax benefit. Popular company car choice for management.
+  Most buyers configure with M Sport Package Pro and Driving Assistant Professional.
+
+metadata:
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.bmw.de/de/neufahrzeuge/5er/limousine/2023/bmw-5er-limousine-uebersicht.html
+  created_at: "2026-02-10"
+  last_verified_at: "2026-02-10"
