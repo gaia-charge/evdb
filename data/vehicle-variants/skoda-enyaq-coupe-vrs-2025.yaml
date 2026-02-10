@@ -1,0 +1,175 @@
+# Škoda Enyaq Coupé vRS 2025 - Performance Coupé AWD
+id: skoda-enyaq-coupe-vrs-2025
+model_id: skoda-enyaq-coupe-iv
+name: "Coupé vRS"
+model_year: 2025
+trim_level: "vRS"
+version_name: "2025 Refresh"
+
+description: |
+  The 2025 Škoda Enyaq Coupé vRS is the performance flagship of the Coupé range, combining the sportier
+  sloping roofline with dual-motor AWD performance. 220kW (299ps) system output, 0-100 in 6.4 seconds
+  (slightly quicker than SUV vRS thanks to lower drag), and 544km WLTP range.
+
+  Features all vRS-specific design elements plus the Coupé's improved aerodynamics (Cd 0.26).
+  The most dynamic Enyaq variant, positioned as Škoda's answer to the VW ID.5 GTX.
+
+battery:
+  usable_kwh: 77.0
+  total_kwh: 82.0
+  chemistry: NCM
+  cells_configuration: "288 cells (96s3p pouch cells)"
+  supplier: "LG Energy Solution / Samsung SDI"
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling with heat pump integration"
+  preconditioning: true
+
+range:
+  wltp_km: 544
+  wltp_city_km: 710
+  wltp_highway_km: 440
+  real_world_km: 460
+  epa_km: null
+
+charging:
+  ac_max_power_kw: 11
+  ac_charge_time_hours: 7.5
+  ac_ports:
+    - type: Type2
+      max_power_kw: 11
+      phases: 3
+
+  dc_max_power_kw: 135
+  dc_charge_time_minutes: 28
+  dc_ports:
+    - type: CCS2
+      max_power_kw: 135
+
+  charge_curve:
+    - percent: 0
+      power_kw: 10
+    - percent: 10
+      power_kw: 135
+    - percent: 30
+      power_kw: 132
+    - percent: 50
+      power_kw: 125
+    - percent: 70
+      power_kw: 85
+    - percent: 80
+      power_kw: 50
+    - percent: 90
+      power_kw: 30
+    - percent: 100
+      power_kw: 10
+
+  bidirectional:
+    v2l: false
+    v2h: false
+    v2g: false
+
+motors:
+  - position: front
+    type: asynchronous
+    max_power_kw: 80
+    max_torque_nm: 162
+  - position: rear
+    type: permanent_magnet
+    max_power_kw: 210
+    max_torque_nm: 460
+
+performance:
+  acceleration_0_100_kmh_s: 6.4
+  top_speed_kmh: 180
+  top_speed_limited: true
+  drive_type: AWD
+  system_power_kw: 220
+  system_power_ps: 299
+
+efficiency:
+  wltp_kwh_per_100km: 16.4
+  real_world_kwh_per_100km: 19.0
+
+dimensions:
+  length_mm: 4653
+  width_mm: 1879
+  height_mm: 1579
+  wheelbase_mm: 2765
+  ground_clearance_mm: 172
+  curb_weight_kg: 2200
+  gross_weight_kg: 2750
+  trunk_volume_l: 570
+  trunk_volume_max_l: 1610
+  towing_capacity_braked_kg: 1400
+
+features:
+  heat_pump: true
+  adaptive_suspension: true
+  air_suspension: false
+  one_pedal_driving: true
+  autopilot_level: 2
+  matrix_led_headlights: true
+  panoramic_roof: true
+  heated_windshield: true
+  heated_steering_wheel: true
+  sport_suspension: true
+
+infotainment:
+  screen_size_inches: 13.0
+  screen_type: touchscreen
+  operating_system: "Infotainment ME3"
+  navigation: Yes
+  voice_assistant: "Laura (with ChatGPT integration)"
+  smartphone_integration:
+    - Apple CarPlay (wireless)
+    - Android Auto (wireless)
+  ota_updates: true
+  digital_cockpit_size_inches: 5.3
+  head_up_display: true
+
+adas:
+  - Lane Assist
+  - Travel Assist (semi-autonomous driving)
+  - Adaptive Cruise Control with Stop & Go
+  - Front Assist with Pedestrian and Cyclist Detection
+  - Side Assist (blind spot)
+  - Rear Traffic Alert
+  - Park Assist with 360° camera
+  - Emergency Assist
+
+interior:
+  standard_upholstery: "vRS Sport Seats (microsuede/synthetic leather)"
+  optional_upholstery:
+    - "vRS Sport Seats (perforated leather)"
+  heated_seats: "Front and rear"
+  ventilated_seats: false
+  ambient_lighting: true
+  ambient_lighting_colors: 10
+
+vrs_specific:
+  - "vRS sport suspension (15mm lower)"
+  - "Progressive steering"
+  - "20-inch wheels standard"
+  - "Red brake calipers"
+  - "Gloss black grille surround"
+  - "vRS-specific front/rear bumpers"
+  - "Rear diffuser"
+  - "vRS steering wheel with paddles"
+  - "Carbon-effect interior trim"
+  - "vRS illuminated door sills"
+
+notes: |
+  Top-of-range Enyaq variant. Better aero than SUV vRS = ~8km more range.
+  0.1s quicker 0-100 than SUV vRS (6.4 vs 6.5s).
+  Competes with VW ID.5 GTX, Tesla Model Y Performance, BMW iX2 xDrive30.
+
+metadata:
+  created_at: "2026-02-10"
+  updated_at: null
+  data_quality: estimated
+  data_source: manufacturer_announced
+  sources:
+    - https://www.skoda-auto.de/modelle/enyaq-coupe-iv
+    - https://ev-database.org
