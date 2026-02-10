@@ -1,0 +1,110 @@
+id: volvo-ex60-p12-awd-2027-de
+variant_id: volvo-ex60-p12-awd-2027
+market: DE
+currency: EUR
+
+pricing:
+  base_price: 75000
+  destination_charge: 0
+  on_road_price: 75000
+
+options:
+  packages: []
+
+  paint_options:
+    - name: "Crystal White"
+      price: 0
+      code: "crystal-white"
+    - name: "Onyx Black"
+      price: 1100
+      code: "onyx-black"
+    - name: "Vapour Grey"
+      price: 1100
+      code: "vapour-grey"
+    - name: "Thunder Grey"
+      price: 1100
+      code: "thunder-grey"
+
+  interior_options:
+    - name: "Charcoal Wool Blend"
+      price: 0
+    - name: "Nordico Dark"
+      price: 0
+
+incentives:
+  - name: "Company Car Tax Benefit"
+    type: tax_credit
+    amount: 4500
+    notes: "0.5% of gross list price per month for EVs over €70,000 BLP. €75,000 × 0.5% = €375/month = €4,500/year vs ICE 1% = €9,000/year. Annual savings: €4,500."
+    eligibility: "Company car drivers only"
+
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 400
+    notes: "Electric vehicles exempt from German road tax until 2030"
+    valid_until: "2030-12-31"
+
+  - name: "THG-Quote (CO2 Certificate Trading)"
+    type: grant
+    amount: 300
+    notes: "Annual CO2 certificate income ~€300"
+
+availability:
+  status: announced
+  waiting_time_weeks: null
+  online_configurator: no
+  online_purchase: no
+
+  sales_regions:
+    - Germany
+    - Austria
+    - Switzerland
+    - Sweden
+    - Norway
+    - Netherlands
+    - Belgium
+    - UK
+
+warranty:
+  vehicle_warranty_years: 3
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "BMW iX M70 xDrive"
+      price: 133900
+      range_wltp: 630
+      notes: "Much more expensive performance SUV"
+
+    - model: "Mercedes-Benz EQE SUV 500 4MATIC"
+      price: 102241
+      range_wltp: 547
+      notes: "More expensive, less range"
+
+    - model: "Volvo EX90 Twin Motor Performance"
+      price: 94150
+      range_wltp: 580
+      notes: "Larger sibling, more expensive, less range"
+
+  market_position: |
+    The Volvo EX60 P12 AWD is the range-topping variant with a class-leading 810 km
+    WLTP range and 680 PS. At an estimated €75,000, it significantly undercuts the
+    BMW iX M70 while offering more range. The 117 kWh battery combined with 370 kW
+    DC charging makes it one of the most capable long-distance EVs on the market.
+
+metadata:
+  created_at: "2026-02-10T01:45:00Z"
+  updated_at: "2026-02-10T01:45:00Z"
+  data_quality: estimated
+  data_source: estimated
+  notes: |
+    Pricing estimated ~€10,000 premium over P10 variant, consistent with
+    Volvo's battery upgrade pricing on EX90. Final pricing TBC.
+
+sources:
+  - url: "https://ev-database.org/car/3443/Volvo-EX60-P12-AWD"
+    title: "EV Database - Volvo EX60 P12 AWD"
+    date_accessed: "2026-02-10"

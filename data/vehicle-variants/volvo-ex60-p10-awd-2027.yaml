@@ -1,0 +1,161 @@
+id: volvo-ex60-p10-awd-2027
+name: Volvo EX60 P10 AWD
+model_id: volvo-ex60
+variant_name: "P10 AWD"
+model_year: 2027
+
+battery:
+  usable_kwh: 91.0
+  total_kwh: 95.0
+  chemistry: NMC
+  cells: prismatic
+  supplier: null
+  modules: null
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling"
+  architecture_volts: 800
+
+range:
+  wltp_km: 660
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: null
+  real_world_km: 500
+
+  real_world_mild_weather_km: 575
+  real_world_cold_weather_km: 420
+
+charging:
+  ac_max_kw: 22
+  ac_charge_time_0_100_hours: 5.0
+
+  dc_max_kw: 370
+  dc_charge_time_10_80_minutes: 19
+  dc_charge_time_0_100_minutes: null
+  dc_charge_speed_kmh: 1100
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 370
+    - soc_percent: 30
+      power_kw: 300
+    - soc_percent: 50
+      power_kw: 220
+    - soc_percent: 70
+      power_kw: 120
+    - soc_percent: 80
+      power_kw: 70
+
+  connector_ac: Type2
+  connector_dc: CCS2
+  onboard_charger_kw: 22
+  plug_and_charge: yes
+  battery_preconditioning: yes
+
+  bidirectional:
+    v2l: true
+    v2h: true
+    v2g: true
+    v2l_max_kw: null
+    v2h_max_kw: 11
+    v2g_max_kw: 11
+
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: null
+      torque_nm: null
+    - position: rear
+      type: "permanent magnet"
+      power_kw: null
+      torque_nm: null
+
+  total_power_kw: 375
+  total_power_hp: 510
+  total_torque_nm: 710
+
+  acceleration_0_100_kmh_sec: 4.6
+  acceleration_0_60_mph_sec: null
+  top_speed_kmh: 180
+
+  drive_modes:
+    - "Comfort"
+    - "Eco"
+    - "Performance"
+    - "Individual"
+
+weight:
+  curb_weight_kg: 2350
+  gross_weight_kg: 2810
+  weight_distribution_front_percent: null
+
+efficiency:
+  wltp_kwh_per_100km: 15.7
+  wltp_mi_per_kwh: null
+  epa_kwh_per_100km: null
+  epa_mpge: null
+  real_world_kwh_per_100km: 18.2
+  real_world_mi_per_kwh: null
+  energy_efficiency_class: "A+"
+  co2_emissions_wltp_g_per_km: 0
+
+features:
+  adas_level: 2+
+  autonomous_features:
+    - "Pilot Assist with hands-free highway driving"
+    - "Lidar-based safety system (standard)"
+    - "Automatic emergency braking"
+    - "Intersection collision avoidance"
+    - "Blind spot monitoring with steer assist"
+    - "360-degree camera system"
+    - "Park Pilot Assist"
+
+  infotainment:
+    - "15-inch center touchscreen"
+    - "Digital driver display"
+    - "Head-up display"
+    - "Google Built-in (Maps, Assistant, Play)"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "Over-the-air updates"
+
+  comfort:
+    - "Air suspension"
+    - "Heat pump (standard)"
+    - "Climate pre-conditioning via Volvo Cars app"
+    - "Panoramic glass roof"
+    - "Heated front and rear seats"
+    - "4-zone climate control"
+
+  connectivity:
+    - "Google Built-in"
+    - "Volvo Cars app (remote control)"
+    - "Digital key (UWB)"
+    - "Plug & Charge"
+    - "Over-the-air updates"
+    - "5G connectivity"
+
+version:
+  trim_level: "P10 AWD"
+  option_packages: []
+  production_location: "Torslanda, Sweden"
+  build_quality: premium
+
+metadata:
+  created_at: "2026-02-10T01:45:00Z"
+  updated_at: "2026-02-10T01:45:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_estimated
+  verified_by: "EV Database"
+  notes: |
+    Volvo EX60 P10 AWD (MY2027). Mid-size electric SUV with 91 kWh usable battery.
+    660 km WLTP range, 800V architecture, 370 kW DC charging.
+    SPA3 platform, built in Sweden. Successor to Volvo's bestselling XC60.
+
+sources:
+  - url: "https://ev-database.org/car/3442/Volvo-EX60-P10-AWD"
+    title: "EV Database - Volvo EX60 P10 AWD"
+    date_accessed: "2026-02-10"
