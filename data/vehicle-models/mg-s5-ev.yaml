@@ -1,0 +1,106 @@
+# MG S5 EV - Compact Electric SUV
+# New 2025 model replacing MG ZS EV, built on MSP platform
+
+id: mg-s5-ev
+name: "MG S5 EV"
+manufacturer_id: saic-motor
+brand: "MG"
+body_style: suv
+segment: C  # Compact SUV / C-segment
+
+# Platform
+platform_id: modular-scalable-platform-msp
+platform_details:
+  name: Modular Scalable Platform (MSP)
+  type: dedicated_ev
+  voltage: 400
+  shared_with:
+    - MG4 Electric
+    - MG ZS EV
+
+# Production
+production:
+  start_year: 2025
+  end_year: null
+  status: active
+  generation: 1
+
+# Body & Dimensions
+dimensions:
+  length_mm: 4476
+  width_mm: 1849
+  height_mm: 1621
+  wheelbase_mm: 2730
+  drag_coefficient: 0.268
+  ground_clearance_mm: 165
+
+# Weight (base)
+weight:
+  curb_weight_kg: 1720
+  gross_vehicle_weight_kg: 2200
+
+# Seating & Cargo
+seating:
+  seats: 5
+  configuration: "2+3"
+
+cargo:
+  trunk_capacity_liters: 453
+  trunk_capacity_seats_down_liters: 1275
+  frunk_capacity_liters: 0
+
+# Towing
+towing:
+  max_towing_capacity_kg: 500
+  max_towbar_load_kg: 75
+
+# Performance Range
+performance_range:
+  acceleration_0_100_min: 6.3
+  acceleration_0_100_max: 6.3
+  top_speed_min: 175
+  top_speed_max: 175
+
+# Safety
+safety_rating:
+  euro_ncap:
+    year: null
+    overall: null
+
+# Features
+key_features:
+  - "12.3-inch touchscreen infotainment"
+  - "7-inch digital instrument cluster"
+  - "Apple CarPlay and Android Auto"
+  - "MG Pilot advanced driver assistance"
+  - "LED headlights with DRL"
+  - "360-degree camera"
+  - "Rear parking camera and sensors"
+  - "Keyless entry and start"
+  - "V2L vehicle-to-load capability"
+  - "Ultra-fast 28-minute 10-80% DC charging"
+
+# Technology
+technology:
+  infotainment_screen_inches: 12.3
+  digital_instrument_cluster: true
+  apple_carplay: true
+  android_auto: true
+  over_the_air_updates: true
+  mobile_app: true
+
+# Metadata
+metadata:
+  data_quality: estimated
+  sources:
+    - https://www.mgmotor.eu/model/mgs5
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  notes: |
+    MG S5 EV launched in 2025 as a compact electric SUV replacing the MG ZS EV.
+    Built on the MSP platform shared with the MG4 Electric.
+    170kW (231hp) rear motor with 6.3s 0-100 km/h.
+    Available with 60.7 kWh LFP battery offering up to 402 km WLTP combined range.
+    Ultra-fast DC charging with 150kW capability (28 min 10-80%).
+    Competitive pricing starting from around €28,990 in Germany.
+    One of the most affordable electric SUVs in Europe.
