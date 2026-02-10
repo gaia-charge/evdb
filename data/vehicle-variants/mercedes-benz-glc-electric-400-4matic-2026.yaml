@@ -1,0 +1,172 @@
+id: mercedes-benz-glc-electric-400-4matic-2026
+name: "Mercedes-Benz GLC 400 4MATIC"
+model_id: mercedes-benz-glc-electric
+variant_name: "400 4MATIC"
+model_year: 2026
+
+# Battery specifications
+battery:
+  usable_kwh: 94.0
+  total_kwh: 100.0
+  chemistry: NMC
+  cells: null
+  supplier: null
+  modules: null
+  warranty_years: 8
+  warranty_km: 160000
+  warranty_capacity_percent: 70
+  thermal_management: "Liquid cooling"
+  architecture_volt: 800
+
+# Range specifications
+range:
+  wltp_km: 641  # Average of TEL 715 and TEH 568
+  wltp_city_km: null
+  wltp_highway_km: null
+  epa_km: null
+  real_world_km: 500
+
+  real_world_mild_weather_km: 575
+  real_world_cold_weather_km: 425
+
+# Charging specifications
+charging:
+  ac_max_kw: 11
+  ac_charge_time_0_100_hours: 10.25
+
+  dc_max_kw: 330
+  dc_charge_time_10_80_minutes: 22
+  dc_charge_time_0_100_minutes: null
+  dc_charge_speed_kmh: 950
+
+  dc_curve:
+    - soc_percent: 10
+      power_kw: 330
+    - soc_percent: 30
+      power_kw: 280
+    - soc_percent: 50
+      power_kw: 220
+    - soc_percent: 70
+      power_kw: 150
+    - soc_percent: 80
+      power_kw: 100
+
+  connector_ac: Type2
+  connector_dc: CCS2
+  onboard_charger_kw: 11
+  onboard_charger_optional_kw: 22
+  plug_and_charge: yes
+  preconditioning: yes
+
+# Performance specifications
+performance:
+  drive_type: AWD
+  motors:
+    - position: front
+      type: "permanent magnet"
+      power_kw: 140
+      torque_nm: 320
+    - position: rear
+      type: "permanent magnet"
+      power_kw: 220
+      torque_nm: 480
+
+  total_power_kw: 360
+  total_power_hp: 489
+  total_torque_nm: 800
+
+  acceleration_0_100_kmh_sec: 4.3
+  top_speed_kmh: 210
+
+  drive_modes:
+    - "ECO"
+    - "Comfort"
+    - "Sport"
+    - "Individual"
+    - "Offroad"
+
+# Weight
+weight:
+  curb_weight_kg: 2535
+  gross_weight_kg: 3040
+
+# Efficiency
+efficiency:
+  wltp_kwh_per_100km: 14.9  # TEL rated
+  real_world_kwh_per_100km: 18.8
+  co2_emissions_wltp_g_per_km: 0
+
+# Additional features
+features:
+  adas_level: 2
+  autonomous_features:
+    - "DRIVE PILOT (Level 3 conditional automation, where available)"
+    - "Active Distance Assist DISTRONIC"
+    - "Active Steering Assist"
+    - "Active Brake Assist"
+    - "Active Lane Keeping Assist"
+    - "Active Blind Spot Assist"
+    - "Traffic Sign Assist"
+    - "360-degree camera"
+
+  infotainment:
+    - "MBUX with MB.OS"
+    - "Superscreen display setup"
+    - "Augmented reality navigation"
+    - "Wireless Apple CarPlay / Android Auto"
+    - "5G connectivity"
+    - "OTA updates"
+
+  comfort:
+    - "Dual-zone automatic climate control"
+    - "Climate pre-conditioning via app"
+    - "Heat pump standard"
+    - "AIRMATIC air suspension"
+    - "Ambient lighting"
+    - "Electric tailgate"
+    - "Wireless smartphone charging"
+    - "Roof rails"
+
+  connectivity:
+    - "Mercedes me Connect"
+    - "Over-the-air updates (MB.OS)"
+    - "Mercedes me Charge"
+    - "Plug & Charge (ISO 15118-2)"
+
+# Version information
+version:
+  trim_level: "400 4MATIC"
+  production_location: "Bremen, Germany"
+  build_quality: premium
+
+# Metadata
+metadata:
+  created_at: "2026-02-10T07:00:00Z"
+  updated_at: "2026-02-10T07:00:00Z"
+  data_quality: estimated
+  data_source: manufacturer_and_estimated
+  verified_by: "EV Database + Mercedes-Benz official announcements"
+  notes: |
+    The GLC 400 4MATIC is the first variant of the all-electric Mercedes-Benz GLC, built
+    on the EA-M (Electric Architecture Medium) platform with 800V architecture. It replaces
+    the EQC and is positioned as Mercedes' core electric SUV offering.
+    
+    Key highlights:
+    - 100 kWh battery (94 kWh usable) with 800V architecture
+    - 330 kW DC fast charging
+    - 500 km real-world range (641 km WLTP average)
+    - AWD with 360 kW / 489 PS combined output
+    - 570L cargo + 128L frunk
+    - AIRMATIC air suspension standard
+    - V2L / V2H announced
+    
+    Competes with:
+    - BMW iX xDrive50 (€77,300, 630 km WLTP)
+    - Audi Q8 e-tron 55 quattro (€74,400, 582 km WLTP)
+    - Tesla Model X Long Range (€99,990, 576 km WLTP)
+    - Volvo EX90 Twin Motor (€83,700, 580 km WLTP)
+
+sources:
+  - url: "https://ev-database.org/car/3296/Mercedes-Benz-GLC-400-4MATIC"
+    title: "EV Database - Mercedes-Benz GLC 400 4MATIC"
+    date_accessed: "2026-02-10"
