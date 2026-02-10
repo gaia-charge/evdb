@@ -1,0 +1,144 @@
+# Peugeot e-3008 73 kWh Allure - German Market (2025)
+
+id: peugeot-e-3008-73-allure-2025-de
+variant_id: peugeot-e-3008-73-allure-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2025-01-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 14
+  notes: 2025 model year, production at Sochaux, France
+
+pricing:
+  base_price: 48490
+  destination_charge: 1195
+  total_msrp: 49685
+  pricing_date: 2026-02-10
+  price_notes: 2025 pricing with minor increase over 2024. Allure is mid-range trim.
+
+options:
+  colors:
+    - name: Okenite White (solid)
+      price: 0
+      type: solid
+    - name: Elixir Red (solid)
+      price: 0
+      type: solid
+    - name: Perla Nera Black (pearl)
+      price: 895
+      type: pearl
+    - name: Cumulus Grey (metallic)
+      price: 895
+      type: metallic
+    - name: Vertigo Blue (metallic)
+      price: 895
+      type: metallic
+    - name: Selenium Grey (metallic)
+      price: 895
+      type: metallic
+    - name: Olivine Green (metallic)
+      price: 1195
+      type: metallic
+    - name: Ultimate Red (metallic)
+      price: 1195
+      type: metallic
+  wheels:
+    - name: 19" Brasilia diamond-cut alloy wheels
+      price: 0
+      size_inches: 19
+      notes: Standard on Allure trim
+    - name: 20" Washington GT diamond-cut alloy wheels
+      price: 1190
+      size_inches: 20
+      notes: Sportier look, slight range reduction (~8 km)
+  interior:
+    - name: Fabric/TEP standard
+      price: 0
+  packages:
+    - name: "Comfort Package"
+      price: 1490
+      includes:
+        - "Heated steering wheel"
+        - "Electric lumbar support"
+        - "Power liftgate with kick sensor"
+    - name: "Technology Package"
+      price: 2490
+      includes:
+        - "360° HD parking camera"
+        - "Blind spot monitoring"
+        - "22kW AC charging upgrade"
+    - name: "Winter Package"
+      price: 690
+      includes:
+        - "Heated windshield"
+        - "Heated steering wheel"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: subsidy
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+  - name: "Company car tax benefit (0.25%)"
+    type: tax_credit
+    amount: 5820
+    notes: "0.25% of list price/month vs 1% for ICE. €48,490 × 0.25% = €121/month vs €485/month. Savings: €364/month = €4,368/year"
+    eligibility: Company car drivers
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 370
+    notes: "EV road tax exemption until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: grant
+    amount: 300
+    notes: "CO2 certificate sale, €250-350/year depending on provider"
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+  notes: "Peugeot Allure Care warranty extensions available up to 8 years"
+
+charging_costs:
+  - scenario: "Home charging"
+    cost_per_kwh: 0.30
+    cost_per_100km: 4.65
+  - scenario: "Public AC"
+    cost_per_kwh: 0.45
+    cost_per_100km: 6.98
+  - scenario: "DC fast charging"
+    cost_per_kwh: 0.59
+    cost_per_100km: 9.15
+
+popular_configurations:
+  - name: "Base Allure"
+    price: 49685
+    includes:
+      - "Base e-3008 73 kWh Allure (€48,490)"
+      - "Destination charge (€1,195)"
+    notes: "Great value entry point with solid equipment"
+  - name: "Allure with Tech Pack"
+    price: 53365
+    includes:
+      - "Base (€48,490)"
+      - "Technology Package (€2,490)"
+      - "Metallic paint (€895)"
+      - "Destination (€1,195)"
+    notes: "Popular configuration with safety features"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source_urls:
+    - https://www.peugeot.de/modelle/e-3008.html
+  notes: |
+    2025 model year German market data. Minor price increase over 2024 (€695).
+    Excellent value proposition vs competitors - more range per euro than most.
+    Company car tax benefit makes it very attractive for fleet buyers.

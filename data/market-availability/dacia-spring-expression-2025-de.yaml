@@ -1,0 +1,117 @@
+# Dacia Spring Expression - German Market (2025)
+
+id: dacia-spring-expression-2025-de
+variant_id: dacia-spring-expression-2025
+market: DE
+currency: EUR
+
+availability:
+  status: available
+  release_date: 2025-03-01
+  discontinuation_date: null
+  order_status: accepting_orders
+  typical_delivery_weeks: 10
+  notes: 2025 facelift model, most affordable EV in Germany
+
+pricing:
+  base_price: 18900
+  destination_charge: 690
+  total_msrp: 19590
+  pricing_date: 2026-02-10
+  price_notes: Expression is mid-level trim. Essential starts at €16,900, Extreme at €20,900.
+
+options:
+  colors:
+    - name: Highland Grey (solid)
+      price: 0
+      type: solid
+    - name: Cedar Green (solid)
+      price: 0
+      type: solid
+    - name: Pearl White (pearl)
+      price: 490
+      type: pearl
+    - name: Iron Blue (metallic)
+      price: 490
+      type: metallic
+  wheels:
+    - name: 15" steel wheels with covers
+      price: 0
+      size_inches: 15
+    - name: 15" alloy wheels
+      price: 390
+      size_inches: 15
+  packages:
+    - name: "Comfort Package"
+      price: 590
+      includes:
+        - "Automatic climate control"
+        - "Rear parking camera"
+        - "Electric mirrors"
+
+incentives:
+  - name: "BAFA Umweltbonus"
+    type: subsidy
+    amount: 0
+    notes: "German EV subsidy ended December 2023"
+  - name: "Company car tax benefit (0.25%)"
+    type: tax_credit
+    amount: 2268
+    notes: "0.25% of €18,900 = €47/month vs 1% = €189/month. Savings: €142/month = €1,704/year"
+    eligibility: Company car drivers
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
+    amount: 150
+    notes: "EV road tax exemption until 2030"
+    valid_until: "2030-12-31"
+  - name: "THG-Quote"
+    type: grant
+    amount: 300
+    notes: "CO2 certificate sale, significant relative to vehicle price"
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 120000
+  battery_capacity_guarantee_percent: 70
+  notes: "Dacia offers 3-year/100,000km vehicle warranty (better than most)"
+
+charging_costs:
+  - scenario: "Home charging"
+    cost_per_kwh: 0.30
+    cost_per_100km: 4.65
+  - scenario: "Public AC"
+    cost_per_kwh: 0.45
+    cost_per_100km: 6.98
+  - scenario: "DC fast charging (30kW)"
+    cost_per_kwh: 0.59
+    cost_per_100km: 9.15
+
+popular_configurations:
+  - name: "Expression Base"
+    price: 19590
+    includes:
+      - "Spring Expression (€18,900)"
+      - "Destination (€690)"
+    notes: "Already well-equipped for a city car at this price"
+  - name: "Expression Comfort"
+    price: 20670
+    includes:
+      - "Spring Expression (€18,900)"
+      - "Comfort Package (€590)"
+      - "Metallic paint (€490)"
+      - "Destination (€690)"
+    notes: "Sweet spot with automatic climate and camera"
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-10"
+  last_updated: "2026-02-10"
+  source_urls:
+    - https://www.dacia.de/modelle/spring.html
+  notes: |
+    Europe's most affordable electric car. At under €19k, the Dacia Spring 2025
+    is unbeatable on value. Perfect second car or city commuter. THG-Quote of
+    €300/year is significant relative to the low purchase price. 3-year warranty
+    is competitive. Limited range (225 km WLTP) makes it best suited for urban use.
