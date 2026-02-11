@@ -1,0 +1,76 @@
+# Volkswagen ID.3 Pro (2025) - France Market
+id: volkswagen-id3-pro-2025-fr
+variant_id: volkswagen-id3-pro-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2025-01-15"
+delivery_time_weeks: 6
+
+pricing:
+  base_price: 43990
+  price_including_vat: 43990
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 43990
+  notes: |
+    Base price for ID.3 Pro with 59 kWh battery. French pricing slightly
+    lower than Germany due to competitive market pressure.
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: >
+      Ecological bonus for electric vehicles priced under €47,000.
+      ID.3 Pro qualifies at base price. Manufactured in EU (Zwickau).
+    conditions:
+      - Vehicle price under 47,000 EUR
+      - Must meet environmental manufacturing score
+      - Manufactured in EU — eligible
+    status: active
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+
+  - name: "Exonération carte grise"
+    type: tax_exemption
+    amount: 0
+    description: "Full or partial exemption from vehicle registration tax depending on region."
+    status: active
+
+  - name: "Prime à la conversion"
+    type: grant
+    amount: 1500
+    description: >
+      Conversion bonus when scrapping an old vehicle (Crit'Air 3 or older).
+      Amount varies based on income and vehicle scrapped.
+    conditions:
+      - Must scrap an eligible older vehicle
+      - Income-dependent amount (up to €6,000 for low income)
+    status: active
+
+market_specific:
+  malus_ecologique: 0
+  malus_notes: "BEVs exempt from CO2 malus"
+  carte_grise_notes: "50-100% exemption on carte grise fees depending on region"
+  popular_trims:
+    - "Pro base"
+    - "Pro with Tech Package"
+  popular_colors:
+    - "Pure White"
+    - "Energy Blue Metallic"
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-11"
+  sources:
+    - "https://www.volkswagen.fr/fr/modeles/id-3.html"
+  notes: "Prices based on French VW configurator. Bonus écologique subject to annual budget."

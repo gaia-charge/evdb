@@ -1,29 +1,29 @@
-# Peugeot e-208 GT 54 kWh (2025) - Poland Market
-id: peugeot-e-208-gt-54kwh-2025-pl
-variant_id: peugeot-e-208-gt-54kwh-2025
+# Volkswagen ID.3 Pro (2025) - Poland Market
+id: volkswagen-id3-pro-2025-pl
+variant_id: volkswagen-id3-pro-2025
 market: PL
 currency: PLN
 
 availability_status: available
-available_from: "2025-03-01"
-delivery_time_weeks: 8
+available_from: "2025-01-15"
+delivery_time_weeks: 6
 
 pricing:
-  base_price: 179900
-  price_including_vat: 179900
+  base_price: 194900
+  price_including_vat: 194900
   vat_rate_percent: 23
   destination_charge: 0
-  total_price_estimate: 179900
+  total_price_estimate: 194900
   notes: |
-    GT trim with 54 kWh battery and 115 kW motor. Top-spec e-208 variant
-    with full LED headlights, 10" touchscreen, and GT-specific styling.
+    Base price for ID.3 Pro with 59 kWh battery and 125 kW motor.
+    Price competitive with Cupra Born in Polish market.
 
 incentives:
   - name: "Mój Elektryk"
     type: grant
     amount: 27000
     description: >
-      Government subsidy for electric vehicle purchases.
+      Government subsidy program for electric vehicle purchases.
       Up to 27,000 PLN for individuals purchasing a BEV.
     conditions:
       - Pure battery-electric vehicle (BEV)
@@ -34,16 +34,19 @@ incentives:
   - name: "Excise Tax Exemption"
     type: tax_exemption
     amount: 0
-    description: "BEVs exempt from excise tax in Poland."
+    description: "BEVs exempt from excise tax (akcyza) in Poland."
     status: active
 
 market_specific:
   registration_tax: 0
   registration_tax_notes: "BEVs exempt from excise duty"
+  popular_trims:
+    - "Pro base"
+    - "Pro with Comfort Package"
   popular_colors:
-    - "Bianco White"
-    - "Vertigo Blue"
-    - "Pearl White"
+    - "Pure White (no extra charge)"
+    - "Moonstone Grey Metallic"
+    - "Energy Blue Metallic"
 
 warranty:
   vehicle_years: 2
@@ -56,5 +59,5 @@ metadata:
   data_quality: estimated
   created_at: "2026-02-11"
   sources:
-    - "https://www.peugeot.pl/modele/e-208.html"
-  notes: "Prices based on Polish Peugeot configurator."
+    - "https://www.volkswagen.pl/pl/modele/id-3.html"
+  notes: "Prices based on Polish VW configurator. Mój Elektryk subsidy subject to fund availability."
