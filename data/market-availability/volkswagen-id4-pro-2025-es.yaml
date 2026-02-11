@@ -1,71 +1,51 @@
 # Volkswagen ID.4 Pro (2025) - Spain Market
-
 id: volkswagen-id4-pro-2025-es
 variant_id: volkswagen-id4-pro-2025
 market: ES
 currency: EUR
 
 availability_status: available
-available_from: "2024-11-01"
-delivery_time_weeks: 14
+available_from: "2025-01-01"
+delivery_time_weeks: 12
 
 pricing:
-  base_price: 49290
-  price_including_vat: 49290
+  base_price: 46900
+  price_including_vat: 46900
   vat_rate_percent: 21
   destination_charge: 0
   registration_fees: 0
-  total_price_estimate: 49290
+  total_price_estimate: 46900
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: "MOVES III expired. Future MOVES IV pending."
-
-  - name: Impuesto de Matriculación
-    type: tax_exemption
-    amount: 0
-    description: "Zero-emission vehicles exempt from registration tax"
-
-  - name: Impuesto de Circulación
-    type: tax_exemption
-    amount: 0
-    description: "Up to 75% reduction depending on municipality"
+    description: MOVES III program expired. Potential future MOVES IV program pending.
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
 
 market_specific:
+  popular_options:
+    - name: Paquete Asistencia Plus
+      price: 1850
+
   available_colors:
-    - name: Pure White
-      type: solid
-      price_add: 0
-    - name: Stone Grey Metallic
+    - name: Glacier White Metallic
       type: metallic
-      price_add: 895
+      price_add: 0
+    - name: Moonstone Grey
+      type: metallic
+      price_add: 650
     - name: Kings Red Metallic
       type: metallic
-      price_add: 895
-    - name: Dusk Blue Metallic
-      type: metallic
-      price_add: 895
-    - name: Moonstone Grey Metallic
-      type: metallic
-      price_add: 895
-
-  popular_options:
-    - name: Tech Package Plus
-      price: 2390
-    - name: Comfort Package
-      price: 1290
-
-dealer_network:
-  dealer_count: 180
-  online_sales_available: true
+      price_add: 650
 
 notes: |
-  VW ID.4 Pro 2025 available through extensive VW dealer network in Spain.
-  Prices include 21% IVA. Zero registration tax for BEVs.
-  528 km WLTP range, 210 kW motor, V2L capability.
-  Manufactured in Zwickau, Germany.
+  Volkswagen ID.4 Pro with 77 kWh battery available in Spain.
+  Prices include 21% IVA. Updated 2025 model with improved software.
+  Popular family electric SUV with good range and practicality.
 
 metadata:
   data_quality: estimated
