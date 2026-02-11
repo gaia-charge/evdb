@@ -1,19 +1,19 @@
-# Tesla Model Y RWD - Polish Market (2025)
+# Tesla Model Y RWD - French Market (2025)
 
-id: tesla-model-y-rwd-2025-pl
+id: tesla-model-y-rwd-2025-fr
 variant_id: tesla-model-y-rwd-2025
-market: PL
-currency: PLN
+market: FR
+currency: EUR
 availability_status: available
 available_from: "2024-01-01"
 
 pricing:
-  base_price: 199990  # PLN
-  price_including_vat: 199990
-  vat_rate_percent: 23
-  destination_charge: 5000
-  registration_fees: 500
-  total_price_estimate: 205490
+  base_price: 44990
+  price_including_vat: 44990
+  vat_rate_percent: 20
+  destination_charge: 1200
+  registration_fees: 0
+  total_price_estimate: 46190
 
 market_specific:
   standard_equipment:
@@ -32,13 +32,13 @@ market_specific:
     - name: "Pearl White Multi-Coat"
       additional_cost: 0
     - name: "Solid Black"
-      additional_cost: 5400
+      additional_cost: 1200
     - name: "Midnight Silver Metallic"
-      additional_cost: 5400
+      additional_cost: 1200
     - name: "Deep Blue Metallic"
-      additional_cost: 5400
+      additional_cost: 1200
     - name: "Red Multi-Coat"
-      additional_cost: 10800
+      additional_cost: 2400
 
   available_wheels:
     - size_inches: 19
@@ -46,29 +46,30 @@ market_specific:
       additional_cost: 0
     - size_inches: 20
       design: "Induction"
-      additional_cost: 9000
+      additional_cost: 2000
 
   optional_packages:
     - name: "Full Self-Driving Capability"
-      price: 33500
+      price: 7500
     - name: "Tow Hitch"
-      price: 4500
+      price: 1000
     - name: "7-Seater Configuration"
-      price: 13400
+      price: 3000
 
 incentives:
-  - name: "Mój elektryk"
-    amount: 27000
+  - name: "Bonus écologique"
+    amount: 4000
     type: subsidy
-    description: "Government subsidy for BEV purchase (up to 27,000 PLN for individuals)"
-    valid_until: "2026-12-31"
+    description: "Government ecological bonus for BEV (€4,000 for vehicles under €47,000)"
+    valid_until: "2025-12-31"
+    notes: "Tesla Model Y qualifies as built in EU (Gigafactory Berlin)"
 
 dealer_network:
-  service_centers: 4
+  service_centers: 18
   online_sales_available: true
 
 delivery:
-  typical_delivery_weeks: 3
+  typical_delivery_weeks: 2
 
 compliance:
   ncap_rating: 5
@@ -76,13 +77,13 @@ compliance:
   emission_class: Zero Emission
 
 notes: |
-  Tesla Model Y RWD is the best-selling EV in Poland.
-  Mój elektryk subsidy reduces effective price to ~178,490 PLN.
-  Built at Gigafactory Berlin, short delivery times to Poland.
-  Supercharger network expanding in Poland (40+ locations).
+  Tesla Model Y is the best-selling car in France (all powertrains combined).
+  Eligible for €4,000 bonus écologique as it's built in EU (Gigafactory Berlin).
+  Not eligible for leasing social program (price above threshold).
+  Strong Supercharger network in France (120+ locations).
 
 metadata:
   created_at: "2026-02-11"
   data_quality: estimated
   sources:
-    - https://www.tesla.com/pl_PL/model-y/design
+    - https://www.tesla.com/fr_FR/model-y/design
