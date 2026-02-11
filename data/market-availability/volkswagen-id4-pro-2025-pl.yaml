@@ -1,0 +1,69 @@
+# Volkswagen ID.4 Pro (2025) - Poland Market
+
+id: volkswagen-id4-pro-2025-pl
+variant_id: volkswagen-id4-pro-2025
+market: PL
+currency: PLN
+
+availability_status: available
+available_from: "2024-11-01"
+delivery_time_weeks: 14
+
+pricing:
+  base_price: 219900
+  price_including_vat: 219900
+  vat_rate_percent: 23
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 219900
+
+incentives:
+  - name: "Mój elektryk"
+    type: grant
+    amount: 27000
+    description: "Subsidy up to 27,000 PLN for individual BEV buyers. Net price must be under 225,000 PLN."
+    conditions:
+      - Net price under 225,000 PLN
+      - Subject to available funding
+
+  - name: Excise Tax Exemption
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from excise tax"
+
+market_specific:
+  available_colors:
+    - name: Pure White
+      type: solid
+      price_add: 0
+    - name: Stone Grey Metallic
+      type: metallic
+      price_add: 4100
+    - name: Kings Red Metallic
+      type: metallic
+      price_add: 4100
+    - name: Dusk Blue Metallic
+      type: metallic
+      price_add: 4100
+
+  popular_options:
+    - name: Tech Package Plus
+      price: 10900
+    - name: Comfort Package
+      price: 5900
+
+dealer_network:
+  dealer_count: 65
+  online_sales_available: true
+
+notes: |
+  VW ID.4 Pro 2025 available through VW dealer network in Poland.
+  Prices include 23% VAT. May qualify for "Mój elektryk" subsidy.
+  528 km WLTP range, V2L capability. Manufactured in Zwickau, Germany.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.volkswagen.pl/pl/modele/id4.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"

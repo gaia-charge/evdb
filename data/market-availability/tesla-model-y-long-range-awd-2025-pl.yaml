@@ -1,77 +1,76 @@
+# Tesla Model Y Long Range AWD - Poland Market (2025)
+
 id: tesla-model-y-long-range-awd-2025-pl
 variant_id: tesla-model-y-long-range-awd-2025
 market: PL
 currency: PLN
 
+availability_status: available
+available_from: "2024-03-01"
+delivery_time_weeks: 4
+
 pricing:
-  base_price: 219990
-  transport_charge: 0
-  total_msrp: 219990
-  price_before_incentives: 219990
+  base_price: 239990
+  price_including_vat: 239990
+  vat_rate_percent: 23
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 239990
 
-  available_incentives:
-    - name: Mój elektryk
-      type: purchase-rebate
-      amount: 27000
-      description: Program dopłat do zakupu pojazdów elektrycznych. Dofinansowanie do 27 000 PLN dla osób fizycznych.
-      eligibility: "Osoby fizyczne, cena pojazdu do 225 000 PLN brutto"
-      status: active
-      url: https://www.nfosigw.gov.pl/moj-elektryk/
+incentives:
+  - name: "Mój elektryk"
+    type: grant
+    amount: 27000
+    description: "Subsidy up to 27,000 PLN for BEV purchase (individual buyers). Up to 70,000 PLN for large families."
+    valid_from: "2024-01-01"
+    valid_until: null
+    conditions:
+      - BEV with base price under 225,000 PLN (net) — this model may exceed threshold
+      - Subject to available funding
 
-  estimated_price_after_incentives: 192990
-
-availability:
-  status: available
-  order_status: available
-  estimated_delivery: "2-6 tygodni"
-  last_updated: "2026-02-11"
+  - name: Excise Tax Exemption
+    type: tax_exemption
+    amount: 0
+    description: "Electric vehicles exempt from excise tax (akcyza)"
 
 market_specific:
-  trim_name: "Long Range AWD"
-  standard_features:
-    - Autopilot (adaptacyjny tempomat, Autosteer)
-    - Napęd na wszystkie koła z dwoma silnikami
-    - Pompa ciepła
-    - Ekran dotykowy 15,4 cala
-    - Panoramiczny szklany dach
-    - Podgrzewane i wentylowane fotele przednie
-    - Bezprzewodowa ładowarka do smartfona
-    - Adaptacyjne reflektory LED
-    - Tryb wartownika i kamera samochodowa
-
   available_colors:
-    - name: Pearl White Multi-Coat
-      type: pearl
-      price_premium: 0
-    - name: Solid Black
+    - name: "Pearl White Multi-Coat"
       type: solid
-      price_premium: 5400
-    - name: Quicksilver
+      price_add: 0
+    - name: "Solid Black"
       type: metallic
-      price_premium: 5400
-    - name: Ultra Blue
+      price_add: 5400
+    - name: "Midnight Silver Metallic"
       type: metallic
-      price_premium: 5400
-    - name: Ultra Red
+      price_add: 5400
+    - name: "Deep Blue Metallic"
       type: metallic
-      price_premium: 10800
+      price_add: 5400
+    - name: "Red Multi-Coat"
+      type: metallic
+      price_add: 10800
 
-charging_infrastructure:
-  - Sieć Tesla Supercharger w Polsce (ponad 30 stacji)
-  - Kompatybilny z CCS2 i Type 2
-  - Szybkie ładowanie DC do 250 kW
+  popular_options:
+    - name: "Full Self-Driving Capability"
+      price: 33800
+    - name: "Tow Hitch"
+      price: 4500
 
-tax_benefits:
-  - VAT 23% zawarty w cenie
-  - Zerowy akcyz dla pojazdów elektrycznych
-  - Darmowe parkowanie w wielu miastach
-  - Możliwość jazdy buspasami w niektórych miastach
+dealer_network:
+  online_sales_available: true
+  service_centers: 4
+  supercharger_stations: 45
 
-notes: "Tesla Model Y Long Range AWD 2025 (Juniper). Produkowana w Gigafactory Berlin. Cena brutto z VAT 23%. Kwalifikuje się do programu Mój elektryk (do 27 000 PLN dopłaty). Zasięg WLTP 533 km."
+notes: |
+  Tesla Model Y Long Range AWD available in Poland via tesla.com/pl_pl.
+  Prices include 23% VAT. Exempt from excise tax (akcyza).
+  "Mój elektryk" subsidy may not apply due to price threshold.
+  Growing Supercharger network with 45+ stations across Poland.
 
 metadata:
-  created_at: "2026-02-11"
   data_quality: estimated
-  source: manufacturer
-  source_url: https://www.tesla.com/pl_pl/modely
-  last_verified: "2026-02-11"
+  data_source: manufacturer
+  source_url: https://www.tesla.com/pl_pl/model-y
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"

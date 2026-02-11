@@ -4,32 +4,41 @@ id: tesla-model-y-long-range-awd-2025-es
 variant_id: tesla-model-y-long-range-awd-2025
 market: ES
 currency: EUR
+
 availability_status: available
-available_from: "2024-01-01"
+available_from: "2024-03-01"
+delivery_time_weeks: 4
 
 pricing:
-  base_price: 54990
-  price_including_vat: 54990
+  base_price: 53490
+  price_including_vat: 53490
   vat_rate_percent: 21
-  destination_charge: 1200
+  destination_charge: 0
   registration_fees: 0
-  total_price_estimate: 56190
+  total_price_estimate: 53490
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III program expired. Potential future MOVES IV program pending.
+    description: "MOVES III program expired. Future MOVES IV pending government approval."
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
 
-  - name: Registration Tax Exemption
+  - name: Impuesto de Matriculación
     type: tax_exemption
     amount: 0
-    description: Zero-emission vehicles exempt from registration tax (Impuesto de Matriculación).
+    description: "Electric vehicles exempt from registration tax (0% rate for zero emissions)"
+    valid_until: null
 
-  - name: Municipal Road Tax Discount
+  - name: Impuesto de Circulación
     type: tax_exemption
     amount: 0
-    description: Up to 75% discount on annual road tax (IVTM) in many Spanish municipalities.
+    description: "Up to 75% reduction on local road tax depending on municipality"
+    conditions:
+      - Varies by municipality
 
 market_specific:
   available_colors:
@@ -37,7 +46,7 @@ market_specific:
       type: solid
       price_add: 0
     - name: "Solid Black"
-      type: solid
+      type: metallic
       price_add: 1200
     - name: "Midnight Silver Metallic"
       type: metallic
@@ -52,7 +61,7 @@ market_specific:
       type: metallic
       price_add: 2400
 
-  optional_packages:
+  popular_options:
     - name: "Full Self-Driving Capability"
       price: 7500
     - name: "Tow Hitch"
@@ -60,16 +69,21 @@ market_specific:
     - name: "7-Seater Configuration"
       price: 3000
 
-  delivery_time_weeks: 3
+dealer_network:
+  online_sales_available: true
+  service_centers: 8
+  supercharger_stations: 85
 
 notes: |
-  Tesla Model Y Long Range AWD available in Spain via tesla.com/es_ES.
-  Prices include 21% IVA. Built at Gigafactory Berlin.
-  NCA battery with 533 km WLTP range. AWD with dual motor.
+  Tesla Model Y Long Range AWD available in Spain via tesla.com/es_es.
+  Prices include 21% IVA. No registration tax for zero-emission vehicles.
+  Local road tax reductions vary by municipality (up to 75% in Madrid, Barcelona).
+  Built at Gigafactory Berlin for European market.
+  85+ Supercharger stations across Spain.
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/es_ES/model-y
+  source_url: https://www.tesla.com/es_es/model-y
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"

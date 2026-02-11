@@ -1,4 +1,4 @@
-# Tesla Model Y Long Range AWD - French Market (2025)
+# Tesla Model Y Long Range AWD - France Market (2025)
 
 id: tesla-model-y-long-range-awd-2025-fr
 variant_id: tesla-model-y-long-range-awd-2025
@@ -6,7 +6,7 @@ market: FR
 currency: EUR
 
 availability_status: available
-available_from: "2024-01-01"
+available_from: "2024-03-01"
 delivery_time_weeks: 4
 
 pricing:
@@ -18,55 +18,68 @@ pricing:
   total_price_estimate: 52990
 
 incentives:
-  - name: Bonus écologique
+  - name: "Bonus écologique"
     type: grant
     amount: 0
-    description: Not eligible - price exceeds €47,000 threshold
+    description: "Not eligible — manufactured outside EU (if Shanghai) or price may exceed €47,000 threshold. Gigafactory Berlin production may qualify."
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
     conditions:
       - Vehicle price must be under €47,000
+      - Must meet environmental score criteria
+      - Production origin matters for eligibility
 
-  - name: Prime à la conversion
+  - name: "Prime à la conversion"
     type: grant
     amount: 1500
-    description: Additional bonus when scrapping an old ICE vehicle (income-dependent)
+    description: "Up to €1,500 when scrapping an old diesel/petrol vehicle (income-dependent)"
     conditions:
-      - Must scrap eligible older vehicle
-      - Income-dependent eligibility
+      - Must scrap an old vehicle
+      - Income-dependent amounts
+
+  - name: Carte grise exemption
+    type: tax_exemption
+    amount: 0
+    description: "100% exemption from regional registration tax in most regions for electric vehicles"
 
 market_specific:
-  popular_options:
-    - name: Full Self-Driving
-      price: 7500
-    - name: Tow Hitch
-      price: 1000
-    - name: 7-Seater Configuration
-      price: 3000
-
   available_colors:
-    - name: Pearl White Multi-Coat
+    - name: "Pearl White Multi-Coat"
       type: solid
       price_add: 0
-    - name: Solid Black
-      type: solid
-      price_add: 1200
-    - name: Midnight Silver Metallic
+    - name: "Solid Black"
       type: metallic
       price_add: 1200
-    - name: Deep Blue Metallic
+    - name: "Midnight Silver Metallic"
       type: metallic
       price_add: 1200
-    - name: Red Multi-Coat
+    - name: "Deep Blue Metallic"
+      type: metallic
+      price_add: 1200
+    - name: "Red Multi-Coat"
       type: metallic
       price_add: 2400
-    - name: Quicksilver
+    - name: "Quicksilver"
       type: metallic
       price_add: 2400
 
+  popular_options:
+    - name: "Full Self-Driving Capability"
+      price: 7500
+    - name: "Tow Hitch"
+      price: 1000
+
+dealer_network:
+  online_sales_available: true
+  service_centers: 22
+  supercharger_stations: 160
+
 notes: |
-  Tesla Model Y Long Range AWD in France. Built at Gigafactory Berlin (EU production).
-  Not eligible for bonus écologique (price > €47,000). France's best-selling EV in 2024.
-  Access to Tesla Supercharger network (70+ locations in France).
-  Competes strongly with Renault Scenic E-Tech and Peugeot e-3008.
+  Tesla Model Y Long Range AWD available in France via tesla.com/fr_fr.
+  Prices include 20% TVA. Bonus écologique eligibility depends on
+  production origin and price threshold (€47,000 for 2025).
+  Berlin-built units may qualify; Shanghai-built do not.
+  160+ Supercharger stations across France. Strong service network.
 
 metadata:
   data_quality: estimated
