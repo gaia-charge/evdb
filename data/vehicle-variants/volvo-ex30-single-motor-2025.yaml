@@ -115,6 +115,10 @@ efficiency:
 weight:
   curb_weight_kg: 1790
   gross_vehicle_weight_kg: 2150
+  payload_kg: 360
+  towing_capacity_braked_kg: 1000
+  towing_capacity_unbraked_kg: 750
+  trailer_hitch_available: true
 
 # Dimensions
 dimensions:
@@ -122,9 +126,11 @@ dimensions:
   width_mm: 1837
   height_mm: 1550
   wheelbase_mm: 2650
-  cargo_volume_liters: 318
-  frunk_liters: 7
-  towing_capacity_kg: 1000
+
+cargo:
+  trunk_capacity_liters: 318
+  trunk_max_liters: 904
+  frunk_capacity_liters: 7
 
 # Features
 features:

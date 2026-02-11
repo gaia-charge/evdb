@@ -107,15 +107,18 @@ weight:
   curb_weight_kg: 2150
   gross_vehicle_weight_kg: 2600
   payload_kg: 450
-  towing_capacity_braked_kg: 1500  # With optional tow hitch
+  towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
+  trailer_hitch_available: true
 
-# Cargo and seating
+cargo:
+  trunk_capacity_liters: 400
+  trunk_max_liters: 1200
+  frunk_capacity_liters: 53
+
+# Seating
 interior:
   seating_capacity: 5
-  cargo_volume_liters: 400
-  cargo_volume_seats_down_liters: 1200
-  frunk_volume_liters: 53
 
 # Wheels and tires
 wheels:

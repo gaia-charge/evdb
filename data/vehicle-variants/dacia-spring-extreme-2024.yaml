@@ -72,6 +72,9 @@ weight:
   curb_weight_kg: 1005
   gross_vehicle_weight_kg: 1291
   payload_kg: 286
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
+  trailer_hitch_available: false
 
 efficiency:
   wltp_kwh_per_100km: 14.2
@@ -84,15 +87,13 @@ dimensions:
   wheelbase_mm: 2423
   ground_clearance_mm: 150
 
-towing:
-  max_weight_kg: 0
-  max_weight_braked_kg: 0
+cargo:
+  trunk_capacity_liters: 308
+  trunk_max_liters: 1004
+  frunk_capacity_liters: 0
 
 interior:
   seating_capacity: 4
-  cargo_volume_seats_up_liters: 308
-  cargo_volume_seats_down_liters: 1004
-  frunk_volume_liters: 0
 
 adas:
   level: 1
