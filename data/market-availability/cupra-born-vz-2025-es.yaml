@@ -1,4 +1,4 @@
-# Cupra Born VZ 2025 - Spain Market
+---
 id: cupra-born-vz-2025-es
 variant_id: cupra-born-vz-2025
 market: ES
@@ -6,64 +6,68 @@ currency: EUR
 
 availability_status: available
 available_from: "2025-01-01"
-available_until: null
+delivery_time_weeks: 6
 
 pricing:
-  base_price: 44900
-  price_including_vat: 44900
+  base_price: 49990
+  price_including_vat: 49990
   vat_rate_percent: 21
   destination_charge: 0
-  total_price_estimate: 44900
+  registration_fees: 0
+  total_price_estimate: 49990
 
 incentives:
-  - name: Plan MOVES III
+  - name: Plan MOVES IV
     type: grant
     amount: 0
-    description: MOVES III expired. No active national EV subsidy.
+    description: "MOVES III expired. Potential MOVES IV program pending government approval."
+    valid_from: null
+    valid_until: null
+    conditions:
+      - "Program pending"
+  - name: Impuesto de Matriculación Exemption
+    type: tax_exemption
+    amount: 0
+    description: "BEVs exempt from registration tax (Impuesto de Matriculación) - 0% rate for zero emissions."
+    valid_from: "2024-01-01"
+    valid_until: null
 
 market_specific:
-  standard_equipment:
-    - 12.9" infotainment display
-    - Digital cockpit
-    - Brembo brakes
-    - Sport suspension (-20mm)
-    - Progressive steering
-    - Heated front seats
-    - Copper VZ accents
-    - LED Matrix headlights
+  popular_options:
+    - name: Cupra XL Package
+      price: 3200
+    - name: Two-Tone Black Roof
+      price: 900
+    - name: Hurricane Forged 20" Wheels
+      price: 1100
 
   available_colors:
-    - name: Century Bronze Matt
-      additional_cost: 0
-    - name: Magnetic Tech
-      additional_cost: 590
+    - name: Midnight Black
+      type: solid
+      price_add: 0
     - name: Aurora Blue
-      additional_cost: 590
-    - name: Energy Blue
-      additional_cost: 590
-    - name: Quasar Grey
-      additional_cost: 590
-
-dealer_network:
-  online_sales_available: true
-
-delivery:
-  typical_delivery_weeks: 6
-
-compliance:
-  ncap_rating: 5
-  ncap_year: 2022
-  emission_class: Zero Emission
+      type: metallic
+      price_add: 700
+    - name: Urban Silver
+      type: metallic
+      price_add: 700
+    - name: Dark Petrol Matt (VZ exclusive)
+      type: matt
+      price_add: 1500
+    - name: Enceladus Grey Matt
+      type: matt
+      price_add: 1200
 
 notes: |
-  Cupra Born VZ is manufactured at SEAT Martorell, Spain.
-  Strong local availability. 21% IVA included in listed price.
-  Cupra has a growing dealer network in Spain with direct configuration online.
+  Cupra Born VZ available in Spain through Cupra dealers and online.
+  As a Spanish brand (SEAT/Cupra manufactured in Martorell, Barcelona),
+  strong dealer network and brand presence. Prices include 21% IVA.
+  VZ is the performance flagship with 240kW motor, 5.7s 0-100 km/h.
+  Spain is a key home market for Cupra with shorter delivery times.
 
 metadata:
-  created_at: "2026-02-10"
-  updated_at: null
   data_quality: estimated
-  price_checked_at: "2026-02-10"
-  sources:
-    - https://www.cupraofficial.es/modelos/born
+  data_source: manufacturer
+  source_url: https://www.cupraofficial.es/modelos/born
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
