@@ -1,0 +1,73 @@
+# Hyundai Ioniq 6 Standard Range RWD 2024 - Spain
+id: hyundai-ioniq-6-standard-range-rwd-2024-es
+variant_id: hyundai-ioniq-6-standard-range-rwd-2024
+market: ES
+currency: EUR
+
+availability_status: available
+available_from: "2023-03-01"
+
+pricing:
+  base_price: 45900
+  price_including_vat: 45900
+  vat_rate_percent: 21
+  destination_charge: 800
+  total_price_estimate: 46700
+  notes: >
+    Spanish pricing includes 21% IVA. Slightly higher than DE (€43,900)
+    due to higher VAT rate. Entry-level Ioniq 6 in Spain.
+
+incentives:
+  - name: "Plan MOVES III"
+    type: grant
+    amount: 7000
+    description: >
+      Government EV subsidy up to €7,000 for BEVs priced under €45,000 (before VAT).
+      Requires scrapping an old vehicle for maximum benefit. Without scrapping: €4,500.
+    conditions:
+      - "Purchase price before VAT under €45,000"
+      - "Individual buyers (not fleet)"
+      - "Vehicle must be registered in Spain"
+      - "Subject to fund availability"
+    valid_until: "2024-12-31"
+
+  - name: "Impuesto de Matriculación Exemption"
+    type: tax_exemption
+    amount: 0
+    description: >
+      Zero-emission vehicles are exempt from registration tax (Impuesto de Matriculación),
+      which can be 4.75% to 14.75% for ICE vehicles based on CO2 emissions.
+
+  - name: "Municipal Benefits"
+    type: tax_exemption
+    amount: 0
+    description: >
+      Many Spanish municipalities offer up to 75% discount on road tax (IVTM)
+      for electric vehicles. Also free or discounted parking in regulated zones.
+
+market_specific:
+  delivery_time_weeks: 10
+  colors:
+    - name: "Polar White"
+      type: solid
+      price: 0
+    - name: "Serenity Blue Pearl"
+      type: metallic
+      price: 800
+    - name: "Digital Teal Pearl"
+      type: metallic
+      price: 800
+    - name: "Shooting Star Matte"
+      type: matte
+      price: 800
+    - name: "Gravity Gold Matte"
+      type: matte
+      price: 800
+
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-11"
+  created_at: "2026-02-11"
+  sources:
+    - "https://www.hyundai.com/es/modelos/ioniq-6.html"
+  notes: "Spanish market pricing estimated based on DE pricing adjusted for 21% IVA."
