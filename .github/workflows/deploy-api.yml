@@ -1,0 +1,66 @@
+name: Deploy Static API to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Build SQLite database
+      run: python scripts/build-sqlite.py --clean
+        
+    - name: Generate static API files
+      run: python scripts/generate-api.py evdb.db _site
+    
+    - name: Add CORS headers config
+      run: |
+        # Create _headers file for GitHub Pages (Netlify-style, also works with CloudFlare)
+        cat > _site/_headers << 'EOF'
+        /*
+          Access-Control-Allow-Origin: *
+          Content-Type: application/json; charset=utf-8
+        EOF
+    
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '_site'
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
