@@ -1,0 +1,67 @@
+# Tesla Model 3 Long Range AWD (2024) - France Market
+id: tesla-model-3-long-range-awd-2024-fr
+variant_id: tesla-model-3-long-range-awd-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-03-01"
+delivery_time_weeks: 6
+
+pricing:
+  base_price: 49990
+  price_including_vat: 49990
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 49990
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 0
+    description: "Price exceeds 47,000 EUR threshold — not eligible for bonus écologique."
+    conditions:
+      - Vehicle price must be under 47,000 EUR
+
+  - name: "Prime à la conversion"
+    type: grant
+    amount: 1500
+    description: "Scrapping bonus when trading in an old ICE vehicle (Crit'Air 3 or older)."
+    conditions:
+      - Must scrap an old vehicle (pre-2006 petrol or pre-2011 diesel)
+      - Income-dependent amount
+
+  - name: "Exonération carte grise"
+    type: tax_exemption
+    amount: 0
+    description: "Full or partial exemption from vehicle registration tax depending on region."
+
+market_specific:
+  available_colors:
+    - name: Ultra White
+      type: solid
+      price_add: 0
+    - name: Solid Black
+      type: solid
+      price_add: 0
+    - name: Midnight Cherry Red
+      type: metallic
+      price_add: 2000
+    - name: Quicksilver
+      type: metallic
+      price_add: 2000
+    - name: Ultra Red
+      type: metallic
+      price_add: 2000
+
+notes: |
+  Tesla Model 3 Long Range AWD Highland (2024) available in France.
+  79 kWh NMC battery, 629 km WLTP range. Dual motor AWD, 366 kW.
+  Exceeds bonus écologique price cap. Produced at Gigafactory Shanghai.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.tesla.com/fr_fr/model-3
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
