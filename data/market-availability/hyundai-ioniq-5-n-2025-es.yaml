@@ -1,4 +1,4 @@
-# Hyundai IONIQ 5 N (2025) - Spain Market
+# Hyundai Ioniq 5 N 2025 - Spain Market
 id: hyundai-ioniq-5-n-2025-es
 variant_id: hyundai-ioniq-5-n-2025
 market: ES
@@ -6,51 +6,81 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-06-01"
-delivery_time_weeks: 12
+available_until: null
 
 pricing:
-  base_price: 69900
-  price_including_vat: 69900
+  base_price: 74900
+  price_including_vat: 74900
   vat_rate_percent: 21
   destination_charge: 0
-  total_price_estimate: 69900
+  registration_fees: 0
+  total_price_estimate: 74900
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III program expired.
+    description: MOVES III ended December 2024. No national EV subsidy for vehicles over €45,000.
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
+    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
 
 market_specific:
-  popular_options:
-    - name: Matte paint (Gravity Gold or Abyss Black)
-      price: 900
+  standard_equipment:
+    - N bucket seats with integrated headrests
+    - 12.3-inch dual curved displays
+    - Bose premium audio (8 speakers)
+    - N e-shift (simulated 8-speed)
+    - N Active Sound+
+    - N Drift Optimizer
+    - N Launch Control
+    - N Grin Boost
+    - Electronic Limited Slip Differential
+    - 21-inch forged alloy wheels
+    - N performance brakes (400mm front)
+    - Heat pump
+    - Vehicle-to-Load (V2L)
+    - 800V architecture
 
   available_colors:
     - name: Performance Blue Matte
-      type: matte
-      price_add: 0
+      additional_cost: 0
     - name: Abyss Black Pearl
-      type: metallic
-      price_add: 600
+      additional_cost: 590
     - name: Atlas White
-      type: solid
-      price_add: 0
+      additional_cost: 590
     - name: Gravity Gold Matte
-      type: matte
-      price_add: 900
-    - name: Ecotronic Grey Matte
-      type: matte
-      price_add: 900
+      additional_cost: 790
+
+  available_interiors:
+    - name: N Black with Performance Blue accents
+      color: Black/Blue
+      additional_cost: 0
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 12
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
 
 notes: |
-  Hyundai IONIQ 5 N available in Spain through Hyundai dealers.
-  Prices include 21% IVA. High-performance EV with 650 PS, N e-shift,
-  and track-focused features. Strong demand, longer delivery times.
+  Hyundai sells through authorized dealer network in Spain.
+  Spain has 21% IVA (VAT) included in the listed price.
+  No national subsidies apply for vehicles in this price range.
+  The Ioniq 5 N is a limited-production performance variant.
+  Strong demand means longer delivery times (12+ weeks typical).
+  478 kW with N Grin Boost, 3.4s 0-100 km/h.
 
 metadata:
+  created_at: "2026-02-11"
+  updated_at: null
   data_quality: estimated
-  data_source: manufacturer
-  source_url: https://www.hyundai.com/es/modelos/ioniq5-n.html
-  created_at: "2026-02-10"
-  last_verified_at: "2026-02-10"
+  price_checked_at: "2026-02-11"
+  sources:
+    - https://www.hyundai.com/es/modelos/ioniq-5-n.html
