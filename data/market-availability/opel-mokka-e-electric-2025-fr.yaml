@@ -1,0 +1,61 @@
+# Market Availability: Opel Mokka Electric 2025 - France
+id: opel-mokka-e-electric-2025-fr
+variant_id: opel-mokka-e-electric-2025
+market: FR
+market_code: FR
+currency: EUR
+
+pricing:
+  base_price: 37200.00
+  base_price_vat_inclusive: true
+  vat_rate: 20.0
+  base_price_excluding_vat: 31000.00
+  notes: "Base price €37,200 for Electric trim in France. TVA 20% included."
+
+colors:
+  - name: "Power White"
+    type: "solid"
+    price: 0.00
+    notes: "Standard color"
+  - name: "Metallic Paint"
+    type: "metallic"
+    price: 650.00
+    notes: "Various metallic colors available"
+
+incentives:
+  - type: subsidy
+    name: "Bonus écologique"
+    amount: 4000.00
+    currency: EUR
+    notes: "€4,000 bonus for BEV priced under €47,000. Vehicle must meet environmental score requirements (manufactured in Europe). Additional €3,000 for low-income households (revenu fiscal de référence < €15,400)."
+    active: true
+    conditions:
+      - "Purchase price under €47,000"
+      - "Battery-electric vehicle"
+      - "Environmental score eligible (European manufacturing preferred)"
+
+  - type: subsidy
+    name: "Prime à la conversion"
+    amount: 1500.00
+    currency: EUR
+    notes: "Up to €1,500 when scrapping an old Crit'Air 3+ vehicle. Up to €5,000 for low-income households."
+    active: true
+
+availability:
+  status: available
+  delivery_time_weeks: 8
+  notes: "Available through Opel dealer network across France."
+
+market_notes: >
+  The 2025 Opel Mokka Electric is competitively positioned in France at €37,200.
+  With bonus écologique (€4,000) and prime à la conversion (up to €1,500),
+  effective price can be as low as €31,700. Manufactured in Europe (Stellantis),
+  qualifying for full bonus écologique. Strong competitor in the B-SUV electric segment
+  alongside sister model Peugeot e-2008 and Citroën ë-C4.
+
+metadata:
+  data_quality: estimated
+  sources:
+    - "https://www.opel.fr/vehicules/mokka-electric.html"
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"

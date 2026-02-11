@@ -1,0 +1,58 @@
+# Market Availability: Peugeot e-3008 73 kWh Allure 2025 - Spain
+id: peugeot-e-3008-73-allure-2025-es
+variant_id: peugeot-e-3008-73-allure-2025
+market: ES
+market_code: ES
+currency: EUR
+
+pricing:
+  base_price: 46900.00
+  base_price_vat_inclusive: true
+  vat_rate: 21.0
+  base_price_excluding_vat: 38760.33
+  notes: "Base price €46,900 for e-3008 Allure 73 kWh in Spain. IVA 21% included."
+
+colors:
+  - name: "Bianca White"
+    type: "solid"
+    price: 0.00
+  - name: "Metallic Paint"
+    type: "metallic"
+    price: 750.00
+
+incentives:
+  - type: subsidy
+    name: "Plan MOVES III"
+    amount: 4500.00
+    currency: EUR
+    notes: "€4,500 subsidy without scrapping. Up to €7,000 with scrapping. Net price must be under €45,000 — this variant's net price (€38,760) qualifies."
+    active: true
+    conditions:
+      - "Net price under €45,000"
+      - "Battery-electric vehicle"
+
+  - type: tax_exemption
+    name: "Impuesto de Matriculación"
+    amount: 0.00
+    currency: EUR
+    notes: "Zero-emission vehicles exempt from registration tax."
+    active: true
+
+availability:
+  status: available
+  delivery_time_weeks: 10
+  notes: "Available through Peugeot dealer network across Spain."
+
+market_notes: >
+  The Peugeot e-3008 73 kWh Allure is a strong contender in Spain's electric C-SUV segment.
+  At €46,900, it qualifies for MOVES III subsidies (net price under €45,000 threshold).
+  With up to €7,000 in subsidies, effective price drops to ~€39,900. The 527 km WLTP range
+  is excellent for Spanish road trips. DGT "0 Emisiones" label provides ZBE access and
+  reduced road tax.
+
+metadata:
+  data_quality: estimated
+  sources:
+    - "https://www.peugeot.es/gama/e-3008.html"
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"

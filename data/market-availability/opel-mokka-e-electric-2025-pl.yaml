@@ -1,0 +1,53 @@
+# Market Availability: Opel Mokka Electric 2025 - Poland
+id: opel-mokka-e-electric-2025-pl
+variant_id: opel-mokka-e-electric-2025
+market: PL
+market_code: PL
+currency: PLN
+
+pricing:
+  base_price: 164900.00
+  base_price_vat_inclusive: true
+  vat_rate: 23.0
+  base_price_excluding_vat: 134065.04
+  notes: "Base price 164,900 PLN for Electric trim. VAT 23% included."
+
+colors:
+  - name: "Power White"
+    type: "solid"
+    price: 0.00
+    notes: "Standard color"
+  - name: "Metallic Paint"
+    type: "metallic"
+    price: 2900.00
+    notes: "Various metallic colors available"
+
+incentives:
+  - type: subsidy
+    name: "Mój Elektryk"
+    amount: 27000.00
+    currency: PLN
+    notes: "Up to 27,000 PLN subsidy for BEV purchase for private buyers. Up to 70,000 PLN for large families (Karta Dużej Rodziny). Vehicle price must not exceed 225,000 PLN."
+    active: true
+    conditions:
+      - "Net price under 225,000 PLN"
+      - "Battery-electric vehicle"
+      - "New vehicle"
+
+availability:
+  status: available
+  delivery_time_weeks: 12
+  notes: "Available through Opel dealer network in Poland."
+
+market_notes: >
+  The 2025 Opel Mokka Electric in Poland at 164,900 PLN is eligible for the
+  Mój Elektryk subsidy of up to 27,000 PLN, bringing effective price to ~137,900 PLN.
+  The 403 km WLTP range is practical for Polish driving conditions. Competes with
+  Peugeot e-2008 and Citroën ë-C4 on the same Stellantis platform.
+
+metadata:
+  data_quality: estimated
+  sources:
+    - "https://www.opel.pl/pojazdy/mokka-electric.html"
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"
