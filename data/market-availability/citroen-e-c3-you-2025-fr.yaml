@@ -1,0 +1,75 @@
+# Citroën ë-C3 You (2025) - France Market
+id: citroen-e-c3-you-2025-fr
+variant_id: citroen-e-c3-you-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 8
+
+pricing:
+  base_price: 23300
+  price_including_vat: 23300
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 23300
+  notes: >
+    Citroën ë-C3 You in France from €23,300.
+    Price includes 20% TVA. Eligible for bonus écologique.
+    One of the most affordable electric cars in Europe.
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: >
+      Government grant of €4,000 for electric vehicles priced under €47,000.
+      Effective price after bonus: €19,300.
+    conditions:
+      - Vehicle price under €47,000
+      - Environmental score sufficient
+    valid_until: "2025-12-31"
+
+  - name: "Prime à la conversion"
+    type: grant
+    amount: 1500
+    description: >
+      Scrapping bonus up to €1,500 when trading in an old ICE vehicle.
+    conditions:
+      - Must scrap an old vehicle (pre-2006 petrol or pre-2011 diesel)
+
+  - name: "Exonération carte grise"
+    type: tax_exemption
+    amount: 0
+    description: "Full or partial exemption from vehicle registration tax depending on region."
+
+market_specific:
+  available_colors:
+    - name: "Blanc Banquise"
+      type: solid
+      price_add: 0
+    - name: "Gris Artense"
+      type: metallic
+      price_add: 500
+    - name: "Bleu Cobalt"
+      type: metallic
+      price_add: 500
+    - name: "Rouge Elixir"
+      type: metallic
+      price_add: 500
+
+  delivery_time_weeks: 8
+
+notes: |
+  Citroën ë-C3 You — entry-level affordable EV for France.
+  44 kWh LFP battery, 320 km WLTP range. Made in Trnava, Slovakia.
+  Strong competitor to Dacia Spring and Renault 5 in the affordable EV segment.
+
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-11"
+  created_at: "2026-02-11"
+  sources:
+    - "https://www.citroen.fr/modeles/e-c3.html"
+  notes: "Price estimated based on DE pricing and typical FR market adjustments."

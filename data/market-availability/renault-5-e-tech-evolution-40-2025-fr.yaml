@@ -1,0 +1,76 @@
+# Renault 5 E-Tech Evolution 40 (2025) - France Market
+id: renault-5-e-tech-evolution-40-2025-fr
+variant_id: renault-5-e-tech-evolution-40-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-11-01"
+delivery_time_weeks: 6
+
+pricing:
+  base_price: 25000
+  price_including_vat: 25000
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 25000
+  notes: >
+    Renault 5 E-Tech Evolution 40 kWh in France from €25,000.
+    Price includes 20% TVA. Eligible for bonus écologique.
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: >
+      Government grant of €4,000 for electric vehicles priced under €47,000.
+      Effective price after bonus: €21,000.
+    conditions:
+      - Vehicle price under €47,000
+      - Environmental score sufficient (made in Europe)
+    valid_until: "2025-12-31"
+
+  - name: "Prime à la conversion"
+    type: grant
+    amount: 1500
+    description: >
+      Scrapping bonus up to €1,500 when trading in an old ICE vehicle
+      (Crit'Air 3 or older). Amount depends on household income.
+    conditions:
+      - Must scrap an old vehicle (pre-2006 petrol or pre-2011 diesel)
+      - Income-dependent amount
+
+  - name: "Exonération carte grise"
+    type: tax_exemption
+    amount: 0
+    description: "Full or partial exemption from vehicle registration tax depending on region."
+
+market_specific:
+  available_colors:
+    - name: "Bleu Iconique"
+      type: metallic
+      price_add: 0
+    - name: "Noir Étoilé"
+      type: metallic
+      price_add: 600
+    - name: "Vert Pop"
+      type: special
+      price_add: 600
+    - name: "Jaune Pop"
+      type: special
+      price_add: 600
+
+  delivery_time_weeks: 6
+
+notes: |
+  Renault 5 E-Tech Evolution with 40 kWh battery. Made in France (Douai/ElectriCity).
+  Qualifies for full bonus écologique. One of the most affordable EVs in France.
+  Strong demand — delivery times may vary.
+
+metadata:
+  data_quality: verified
+  last_updated: "2026-02-11"
+  created_at: "2026-02-11"
+  sources:
+    - "https://www.renault.fr/vehicules-electriques/r5-e-tech-electric.html"
+  notes: "Price verified from renault.fr (à partir de 25,000 EUR for Evolution trim)."
