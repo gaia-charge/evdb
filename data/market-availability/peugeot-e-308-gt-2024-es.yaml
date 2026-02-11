@@ -5,61 +5,68 @@ market: ES
 currency: EUR
 
 availability_status: available
-available_from: "2024-01-01"
+available_from: "2023-09-01"
 delivery_time_weeks: 10
 
 pricing:
-  base_price: 44600
-  price_including_vat: 44600
+  base_price: 46490
+  price_including_vat: 46490
   vat_rate_percent: 21
   destination_charge: 0
   registration_fees: 0
-  total_price_estimate: 44600
+  total_price_estimate: 46490
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III expired. Potential MOVES IV pending.
-
+    description: MOVES III program expired. Potential MOVES IV pending.
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
   - name: Impuesto de Matriculación Exemption
     type: tax_exemption
     amount: 0
-    description: "Zero-emission vehicles exempt from registration tax"
+    description: Zero-emission vehicles exempt from registration tax in Spain.
+    valid_from: "2024-01-01"
+    valid_until: null
 
 market_specific:
   popular_options:
-    - name: GT Pack (heated/massaging seats, heated rear seats)
-      price: 1500
-    - name: Metallic Paint
-      price: 800
+    - name: Driver Sport Pack
+      price: 1200
+    - name: Focal Premium Hi-Fi (standard on GT)
+      price: 0
 
   available_colors:
-    - name: Bianca White
-      type: solid
-      price_add: 0
-    - name: Elixir Red
+    - name: Noir Perla Nera
       type: metallic
-      price_add: 800
-    - name: Nera Black
+      price_add: 600
+    - name: Blanc Nacré
+      type: pearlescent
+      price_add: 850
+    - name: Bleu Vertigo
       type: metallic
-      price_add: 800
-    - name: Titanium Grey
+      price_add: 600
+    - name: Gris Artense
       type: metallic
-      price_add: 800
-    - name: Vertigo Blue
+      price_add: 600
+    - name: Rouge Elixir
       type: metallic
-      price_add: 800
+      price_add: 600
 
 notes: |
-  Peugeot e-308 GT top trim available in Spain. Prices include 21% IVA.
-  54 kWh battery, 156 hp, 410 km WLTP range. Premium C-segment electric.
-  Peugeot i-Cockpit, Focal Hi-Fi audio, Matrix LED headlights.
-  Exempt from registration tax. Strong Peugeot/Stellantis dealer network in Spain.
+  Peugeot e-308 GT available through Peugeot Spain dealer network.
+  Stellantis group - strong presence in Spanish market.
+  GT is the top trim with Focal Hi-Fi audio, Matrix LED headlights,
+  head-up display, Alcantara/leather interior, and 18" wheels.
+  Prices include 21% IVA. Spanish pricing slightly below German market.
+  Peugeot i-Cockpit design with compact steering wheel.
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.peugeot.es/gama/nuevo-peugeot-308/electrico.html
+  source_url: https://www.peugeot.es/gama/e-308.html
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
