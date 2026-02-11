@@ -1,4 +1,4 @@
-# Cupra Born 58 kWh (2024) - Poland Market
+# CUPRA Born 58 kWh (2024) - Poland Market
 id: cupra-born-58-kwh-2024-pl
 variant_id: cupra-born-58-kwh-2024
 market: PL
@@ -9,48 +9,57 @@ available_from: "2024-01-01"
 delivery_time_weeks: 8
 
 pricing:
-  base_price: 164900
-  price_including_vat: 164900
+  base_price: 159900
+  price_including_vat: 159900
   vat_rate_percent: 23
   destination_charge: 0
-  total_price_estimate: 164900
+  registration_fees: 0
+  total_price_estimate: 159900
 
 incentives:
-  - name: "Mój elektryk"
+  - name: Mój elektryk
     type: grant
     amount: 27000
-    description: >
-      Government subsidy up to 27,000 PLN for BEV purchase by individuals.
-      Vehicle gross price must not exceed 225,000 PLN.
-    valid_until: "2025-12-31"
+    description: "Mój elektryk subsidy for BEVs priced under 225,000 PLN"
+    valid_from: "2024-01-01"
+    valid_until: null
     conditions:
-      - Pure BEV
-      - Gross price under 225,000 PLN
+      - Vehicle price under 225,000 PLN
+      - New vehicle only
+      - Private buyers
 
 market_specific:
+  popular_options:
+    - name: Design Pack Plus
+      price: 7100
+    - name: Technology Pack
+      price: 9400
+
   available_colors:
-    - name: Candy White
+    - name: Magnetic Tech Matte
+      type: matte
+      price_add: 5500
+    - name: Aurora Blue Metallic
+      type: metallic
+      price_add: 3100
+    - name: Quasar Grey Metallic
+      type: metallic
+      price_add: 3100
+    - name: Glacier White Metallic
+      type: metallic
+      price_add: 2500
+    - name: Energy Blue
       type: solid
       price_add: 0
-    - name: Aurora Blue
-      type: metallic
-      price_add: 2850
-    - name: Magnetic Tech Grey
-      type: metallic
-      price_add: 2850
-    - name: Century Bronze
-      type: metallic
-      price_add: 2850
 
 notes: |
-  Cupra Born 58 kWh base variant in Poland.
-  Eligible for "Mój elektryk" subsidy (27,000 PLN).
-  Effective price after subsidy: ~137,900 PLN.
-  Built in Zwickau, Germany.
+  CUPRA Born 58 kWh available in Poland via CUPRA Studios.
+  Prices include 23% VAT. Eligible for Mój elektryk subsidy
+  (up to 27,000 PLN). Good value in the Polish EV market.
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.cupraofficial.pl
+  source_url: https://www.cupraofficial.pl/modele/born
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
