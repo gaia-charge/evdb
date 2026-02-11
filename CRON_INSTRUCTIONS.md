@@ -141,6 +141,8 @@ When updating an existing variant, add ALL available data:
 
 ## 🔗 Data Sources
 
+**⚠️ USE THE BROWSER TOOL for data lookups!** Instead of relying on web_search (which may not be configured), use the `browser` tool to navigate manufacturer websites, ADAC, ev-database.org, etc. This gives you access to real, current data. Use `browser` with `action: "navigate"` and `action: "snapshot"` to read page content.
+
 - **Manufacturer websites:** .de, .es, .pl, .fr variants
 - **ADAC:** adac.de/rund-ums-fahrzeug/autokatalog/ (excellent for dimensions/weight)
 - **ev-database.org:** Good for cross-referencing specs
