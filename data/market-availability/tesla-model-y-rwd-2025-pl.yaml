@@ -1,88 +1,60 @@
-# Tesla Model Y RWD - Polish Market (2025)
-
+# Tesla Model Y RWD (2025) - Poland Market
 id: tesla-model-y-rwd-2025-pl
 variant_id: tesla-model-y-rwd-2025
 market: PL
 currency: PLN
+
 availability_status: available
-available_from: "2024-01-01"
+available_from: "2024-03-01"
+delivery_time_weeks: 4
 
 pricing:
-  base_price: 199990  # PLN
+  base_price: 199990
   price_including_vat: 199990
   vat_rate_percent: 23
-  destination_charge: 5000
-  registration_fees: 500
-  total_price_estimate: 205490
-
-market_specific:
-  standard_equipment:
-    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
-    - Heat pump climate control
-    - Premium audio system (14 speakers)
-    - Panoramic glass roof
-    - Power liftgate
-    - Heated front and rear seats
-    - Ventilated front seats
-    - Wireless charging pad
-    - HEPA air filtration
-    - Sentry Mode and Dashcam
-
-  available_colors:
-    - name: "Pearl White Multi-Coat"
-      additional_cost: 0
-    - name: "Solid Black"
-      additional_cost: 5400
-    - name: "Midnight Silver Metallic"
-      additional_cost: 5400
-    - name: "Deep Blue Metallic"
-      additional_cost: 5400
-    - name: "Red Multi-Coat"
-      additional_cost: 10800
-
-  available_wheels:
-    - size_inches: 19
-      design: "Gemini"
-      additional_cost: 0
-    - size_inches: 20
-      design: "Induction"
-      additional_cost: 9000
-
-  optional_packages:
-    - name: "Full Self-Driving Capability"
-      price: 33500
-    - name: "Tow Hitch"
-      price: 4500
-    - name: "7-Seater Configuration"
-      price: 13400
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 199990
 
 incentives:
-  - name: "Mój elektryk"
+  - name: Mój Elektryk
+    type: grant
     amount: 27000
-    type: subsidy
-    description: "Government subsidy for BEV purchase (up to 27,000 PLN for individuals)"
+    description: Government subsidy for EVs up to 225,000 PLN (gross). Model Y RWD qualifies.
+    valid_from: "2024-01-01"
     valid_until: "2026-12-31"
+    conditions:
+      - Vehicle price up to 225,000 PLN gross
+      - Private individuals only
+      - Must keep vehicle for 2 years
 
-dealer_network:
-  service_centers: 4
-  online_sales_available: true
+market_specific:
+  popular_options:
+    - name: Enhanced Autopilot
+      price: 16900
+    - name: Tow Hitch
+      price: 4500
 
-delivery:
-  typical_delivery_weeks: 3
-
-compliance:
-  ncap_rating: 5
-  ncap_year: 2022
-  emission_class: Zero Emission
+  available_colors:
+    - name: Pearl White Multi-Coat
+      type: standard
+      price_add: 0
+    - name: Solid Black
+      type: solid
+      price_add: 5300
+    - name: Ultra Red
+      type: metallic
+      price_add: 8900
 
 notes: |
-  Tesla Model Y RWD is the best-selling EV in Poland.
-  Mój elektryk subsidy reduces effective price to ~178,490 PLN.
-  Built at Gigafactory Berlin, short delivery times to Poland.
-  Supercharger network expanding in Poland (40+ locations).
+  Tesla Model Y available in Poland through Tesla Warsaw store and online.
+  Price includes 23% VAT. Eligible for Mój Elektryk subsidy of 27,000 PLN.
+  Supercharger network expanding in Poland (30+ locations).
+  Strong demand driven by corporate fleet purchases.
 
 metadata:
-  created_at: "2026-02-11"
   data_quality: estimated
-  sources:
-    - https://www.tesla.com/pl_PL/model-y/design
+  data_source: manufacturer
+  source_url: https://www.tesla.com/pl_pl/modely
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"

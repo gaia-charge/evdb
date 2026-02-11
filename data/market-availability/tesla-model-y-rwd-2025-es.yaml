@@ -5,49 +5,66 @@ market: ES
 currency: EUR
 
 availability_status: available
-available_from: "2025-03-01"
+available_from: "2024-03-01"
 delivery_time_weeks: 4
 
 pricing:
-  base_price: 44890
-  price_including_vat: 44890
+  base_price: 44990
+  price_including_vat: 44990
   vat_rate_percent: 21
   destination_charge: 0
   registration_fees: 0
-  total_price_estimate: 44890
+  total_price_estimate: 44990
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III program expired. Potential future MOVES IV program pending.
+    description: MOVES III program expired. Awaiting potential MOVES IV.
     valid_from: null
     valid_until: null
     conditions:
       - Program expired
+  - name: Impuesto de Matriculación
+    type: tax_exemption
+    amount: 0
+    description: EVs exempt from registration tax (0% vs up to 14.75% for ICE)
+    valid_from: "2024-01-01"
+    valid_until: null
+    conditions:
+      - Zero emission vehicle
 
 market_specific:
   popular_options:
     - name: Enhanced Autopilot
       price: 3800
-    - name: Full Self-Driving Capability
-      price: 7500
+    - name: Tow Hitch
+      price: 1000
+    - name: 20" Induction Wheels
+      price: 2000
 
   available_colors:
     - name: Pearl White Multi-Coat
-      type: solid
+      type: standard
       price_add: 0
     - name: Solid Black
       type: solid
-      price_add: 1300
+      price_add: 1200
+    - name: Midnight Silver Metallic
+      type: metallic
+      price_add: 1200
+    - name: Ultra Red
+      type: metallic
+      price_add: 2000
     - name: Quicksilver
       type: metallic
       price_add: 2000
 
 notes: |
-  Tesla Model Y RWD (Juniper refresh) available in Spain via tesla.com.
-  Prices include 21% IVA. Most popular EV in Europe.
-  New 2025 design with updated front, rear light bar, and improved interior.
+  Tesla Model Y is the best-selling EV in Spain. Price includes 21% IVA.
+  Exempt from registration tax (Impuesto de Matriculación).
+  Available through Tesla stores in Madrid, Barcelona, Valencia, Málaga, Bilbao.
+  Supercharger network well-developed across Spain (80+ locations).
 
 metadata:
   data_quality: estimated
