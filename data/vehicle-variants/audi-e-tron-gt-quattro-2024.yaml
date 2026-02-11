@@ -115,17 +115,18 @@ weight:
   curb_weight_kg: 2295     # Lighter than RS (2347 kg)
   gross_vehicle_weight_kg: 2740
   payload_kg: 445
-  towing_capacity_kg: 0    # Not rated for towing
-  roof_load_kg: 0          # No roof rack
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
+
+cargo:
+  trunk_capacity_liters: 405
+  trunk_max_liters: 405
+  frunk_capacity_liters: 81
 
 # Interior
 interior:
   seating_capacity: 4      # 4-seater (2+2)
   seating_layout: "2+2"
-  cargo_volume_rear_liters: 405  # Rear trunk
-  cargo_volume_front_liters: 81  # Front trunk (frunk)
-  cargo_volume_total_liters: 486
-  cargo_volume_seats_down_liters: 0  # No folding seats
 
 # Features (Standard on quattro)
 features:

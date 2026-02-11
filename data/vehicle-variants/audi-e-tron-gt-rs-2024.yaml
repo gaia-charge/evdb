@@ -89,7 +89,8 @@ weight:
   curb_weight_kg: 2340
   gross_vehicle_weight_kg: 2840
   payload_kg: 500
-  weight_distribution_front_percent: 48
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
 
 efficiency:
   wltp_kwh_per_100km: 22.5
@@ -104,18 +105,13 @@ dimensions:
   wheelbase_mm: 2900
   ground_clearance_mm: 125
 
-towing:
-  max_weight_kg: 0
-  max_weight_braked_kg: 0
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-  notes: "Audi RS e-tron GT not rated for towing"
+cargo:
+  trunk_capacity_liters: 405
+  trunk_max_liters: 450
+  frunk_capacity_liters: 81
 
 interior:
   seating_capacity: 4  # 2+2 seating
-  cargo_volume_seats_up_liters: 405
-  cargo_volume_seats_down_liters: 450  # Minimal increase due to 2+2 seating
-  frunk_volume_liters: 81
 
 adas:
   level: 2
