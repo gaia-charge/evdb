@@ -1,0 +1,42 @@
+# BMW i4 M50 2025 - France Market
+id: bmw-i4-m50-2025-fr
+variant_id: bmw-i4-m50-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2025-01-01"
+
+pricing:
+  base_price: 79950
+  price_including_vat: 79950
+  vat_rate_percent: 20
+  total_price_estimate: 79950
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 0
+    description: "Price exceeds €47,000 cap for bonus écologique eligibility."
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - "Vehicle price must not exceed €47,000"
+      - "This vehicle exceeds the cap"
+
+market_specific:
+  malus_ecologique: 0
+  malus_notes: "BEVs exempt from CO2 malus"
+  carte_grise_notes: "50-100% exemption on carte grise fees depending on region"
+
+notes: |
+  BMW i4 M50 available through BMW France dealer network.
+  Performance variant not eligible for bonus écologique due to price.
+  Exempt from CO2 malus (weight penalty does not apply to BEVs until 2025 review).
+  Most French regions offer 50-100% carte grise fee exemption for BEVs.
+
+metadata:
+  data_quality: estimated
+  source_url: https://www.bmw.fr/fr/models/bmw-i4.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
