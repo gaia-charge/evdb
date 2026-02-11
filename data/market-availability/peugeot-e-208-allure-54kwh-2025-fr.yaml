@@ -1,0 +1,75 @@
+# Peugeot e-208 Allure 54kWh (2025) - France Market
+id: peugeot-e-208-allure-54kwh-2025-fr
+variant_id: peugeot-e-208-allure-54kwh-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-06-01"
+delivery_time_weeks: 6
+
+pricing:
+  base_price: 36800
+  price_including_vat: 36800
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 36800
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: >
+      Government bonus for BEV purchase. €4,000 for vehicles priced under €47,000.
+      Must be manufactured in Europe (environmental score).
+    valid_until: "2025-12-31"
+    conditions:
+      - Pure battery-electric vehicle (BEV)
+      - Price under €47,000
+      - Minimum environmental score (manufactured in Europe)
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: >
+      Additional €1,500 when scrapping an old combustion vehicle (Crit'Air 3 or worse).
+      Can be combined with bonus écologique.
+    conditions:
+      - Scrapping an old ICE vehicle (Crit'Air 3+)
+      - Income-dependent (higher amounts for low-income households)
+
+market_specific:
+  popular_options:
+    - name: "Pack Drive Assist Plus"
+      price: 750
+    - name: "Peinture métallisée"
+      price: 750
+
+  available_colors:
+    - name: Blanc Banquise
+      type: solid
+      price_add: 0
+    - name: Gris Artense
+      type: metallic
+      price_add: 750
+    - name: Bleu Vertigo
+      type: metallic
+      price_add: 750
+    - name: Rouge Elixir
+      type: metallic
+      price_add: 750
+    - name: Noir Perla Nera
+      type: metallic
+      price_add: 750
+
+notes: |
+  Peugeot e-208 Allure 54kWh in France. Home market for Peugeot.
+  Eligible for bonus écologique (€4,000) as manufactured in Europe (Slovakia).
+  Effective price after bonus: ~€32,800.
+  Strong dealer network across France.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.peugeot.fr
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
