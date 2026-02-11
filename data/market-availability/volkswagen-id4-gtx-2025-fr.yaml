@@ -1,0 +1,69 @@
+# Volkswagen ID.4 GTX (2025) - France Market Availability
+
+id: volkswagen-id4-gtx-2025-fr
+variant_id: volkswagen-id4-gtx-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 53990
+  price_including_vat: 53990
+  vat_rate_percent: 20
+  notes: |
+    French list price €53,990 TTC for the ID.4 GTX with 77 kWh battery
+    and 340 hp dual-motor AWD.
+
+incentives:
+  - type: grant
+    name: "Bonus écologique"
+    amount: 4000
+    currency: EUR
+    valid_until: "2025-12-31"
+    notes: |
+      Government ecological bonus for BEVs. Up to €4,000 for vehicles
+      priced under €47,000. The ID.4 GTX exceeds the price threshold
+      and is NOT eligible for the bonus écologique.
+    conditions:
+      - Battery electric vehicle
+      - Vehicle price under €47,000
+      - Manufactured in EU (environmental score)
+
+  - type: tax_exemption
+    name: "Exonération TVS"
+    amount: 0
+    currency: EUR
+    notes: |
+      BEVs exempt from company vehicle tax (Taxe sur les Véhicules de Société).
+
+  - type: tax_exemption
+    name: "Carte grise gratuite"
+    amount: 0
+    currency: EUR
+    notes: |
+      Most French regions offer free or 50% reduced vehicle registration
+      (carte grise) for electric vehicles.
+
+sales_model: dealership
+notes_sales: |
+  Available through the Volkswagen dealer network in France.
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: null
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  sources:
+    - https://www.volkswagen.fr/fr/modeles/id4.html
+  notes: |
+    Pricing estimated based on German pricing adjusted for French market.
+    The GTX exceeds the €47,000 bonus écologique threshold.

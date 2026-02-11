@@ -1,0 +1,60 @@
+# Volkswagen ID.3 Pro S (2025) - France Market Availability
+
+id: volkswagen-id3-pro-s-2025-fr
+variant_id: volkswagen-id3-pro-s-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 8
+
+pricing:
+  base_price: 44990
+  price_including_vat: 44990
+  vat_rate_percent: 20
+  notes: |
+    French list price €44,990 TTC for the ID.3 Pro S with 77 kWh battery.
+
+incentives:
+  - type: grant
+    name: "Bonus écologique"
+    amount: 4000
+    currency: EUR
+    valid_until: "2025-12-31"
+    notes: |
+      Government ecological bonus for BEVs. Up to €4,000 for vehicles
+      priced under €47,000 and meeting environmental score requirements.
+      The ID.3 Pro S qualifies as it is manufactured in Zwickau, Germany (EU).
+    conditions:
+      - Battery electric vehicle
+      - Vehicle price under €47,000
+      - Manufactured in EU (environmental score)
+
+  - type: tax_exemption
+    name: "Exonération TVS"
+    amount: 0
+    currency: EUR
+    notes: "BEVs exempt from company vehicle tax."
+
+  - type: tax_exemption
+    name: "Carte grise gratuite"
+    amount: 0
+    currency: EUR
+    notes: "Most French regions offer free or reduced carte grise for EVs."
+
+sales_model: dealership
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: null
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  sources:
+    - https://www.volkswagen.fr/fr/modeles/id3.html

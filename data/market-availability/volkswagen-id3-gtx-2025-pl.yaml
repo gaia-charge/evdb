@@ -1,0 +1,54 @@
+# Volkswagen ID.3 GTX (2025) - Poland Market Availability
+
+id: volkswagen-id3-gtx-2025-pl
+variant_id: volkswagen-id3-gtx-2025
+market: PL
+currency: PLN
+
+availability_status: available
+available_from: "2024-10-01"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 214900
+  price_including_vat: 214900
+  vat_rate_percent: 23
+  notes: |
+    Polish list price 214,900 PLN including 23% VAT for the ID.3 GTX
+    with 79 kWh battery and 210 kW motor. Performance variant.
+
+incentives:
+  - type: grant
+    name: "Mój elektryk"
+    amount: 27000
+    currency: PLN
+    valid_until: "2026-12-31"
+    notes: |
+      Government subsidy for BEV purchase for individuals via NFOŚiGW.
+      Up to 27,000 PLN for vehicles priced under 225,000 PLN net.
+    conditions:
+      - Battery electric vehicle
+      - Individual buyer
+      - Vehicle net price under 225,000 PLN
+
+  - type: tax_exemption
+    name: "Excise Tax Exemption"
+    amount: 0
+    currency: PLN
+    notes: "BEVs exempt from excise tax (akcyza) in Poland."
+
+sales_model: dealership
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: null
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  sources:
+    - https://www.volkswagen.pl/pl/modele/id3.html
