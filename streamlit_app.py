@@ -550,54 +550,140 @@ elif page == "🔍 Browse Vehicles":
     st.title("🔍 Browse Vehicles")
     st.markdown("Explore all vehicles with advanced filtering options")
     
-    # Load all data
+    # Load available markets
     @st.cache_data(ttl=3600)
-    def load_browse_data(_conn):
-        """Load all vehicle data with filters"""
+    def load_available_markets(_conn):
+        """Load list of markets with vehicle counts"""
         return pd.read_sql_query("""
-            SELECT 
-                v.id,
-                m.brand as manufacturer,
-                m.name as model,
-                v.variant_name,
-                v.model_year,
-                m.body_style,
-                v.battery_usable_kwh,
-                v.battery_chemistry,
-                v.range_wltp_km,
-                v.range_real_world_km,
-                v.total_power_kw,
-                v.acceleration_0_100_sec,
-                v.dc_charge_power_kw,
-                v.dc_charge_time_10_80_min,
-                v.drive_type,
-                v.length_mm,
-                v.width_mm,
-                v.width_with_mirrors_mm,
-                v.height_mm,
-                v.wheelbase_mm,
-                v.ground_clearance_mm,
-                v.turning_circle_m,
-                v.trunk_capacity_liters,
-                v.trunk_max_liters,
-                v.frunk_capacity_liters,
-                v.roof_load_kg,
-                v.towing_capacity_braked_kg,
-                v.towing_capacity_unbraked_kg,
-                v.payload_kg,
-                v.weight_curb_kg,
-                v.weight_gross_kg,
-                ma.price_base as price_eur,
-                ma.market_code
-            FROM vehicle_variants v
-            JOIN vehicle_models m ON v.model_id = m.id
-            LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = 'DE'
-            ORDER BY m.brand, m.name, v.variant_name
+            SELECT market_code, COUNT(DISTINCT variant_id) as count
+            FROM market_availability
+            WHERE market_code != 'US'
+            GROUP BY market_code
+            ORDER BY count DESC
         """, _conn)
     
-    df = load_browse_data(conn)
+    markets_df = load_available_markets(conn)
+    market_options = {"🇪🇺 All Europe": "ALL"}
+    market_flags = {'DE': '🇩🇪', 'ES': '🇪🇸', 'FR': '🇫🇷', 'PL': '🇵🇱', 'IT': '🇮🇹', 'NL': '🇳🇱', 'AT': '🇦🇹', 'BE': '🇧🇪', 'PT': '🇵🇹', 'SE': '🇸🇪', 'NO': '🇳🇴', 'DK': '🇩🇰', 'CH': '🇨🇭', 'GB': '🇬🇧'}
+    market_names = {'DE': 'Germany', 'ES': 'Spain', 'FR': 'France', 'PL': 'Poland', 'IT': 'Italy', 'NL': 'Netherlands', 'AT': 'Austria', 'BE': 'Belgium', 'PT': 'Portugal', 'SE': 'Sweden', 'NO': 'Norway', 'DK': 'Denmark', 'CH': 'Switzerland', 'GB': 'United Kingdom'}
+    for _, row in markets_df.iterrows():
+        code = row['market_code']
+        flag = market_flags.get(code, '🏳️')
+        name = market_names.get(code, code)
+        market_options[f"{flag} {name} ({int(row['count'])})"] = code
+    
+    # Load all data
+    @st.cache_data(ttl=3600)
+    def load_browse_data(_conn, market_code):
+        """Load all vehicle data with filters"""
+        if market_code == "ALL":
+            # Show all vehicles, use cheapest European price
+            return pd.read_sql_query("""
+                SELECT 
+                    v.id,
+                    m.brand as manufacturer,
+                    m.name as model,
+                    v.variant_name,
+                    v.model_year,
+                    m.body_style,
+                    v.battery_usable_kwh,
+                    v.battery_chemistry,
+                    v.range_wltp_km,
+                    v.range_real_world_km,
+                    v.total_power_kw,
+                    v.acceleration_0_100_sec,
+                    v.dc_charge_power_kw,
+                    v.dc_charge_time_10_80_min,
+                    v.drive_type,
+                    v.length_mm,
+                    v.width_mm,
+                    v.width_with_mirrors_mm,
+                    v.height_mm,
+                    v.wheelbase_mm,
+                    v.ground_clearance_mm,
+                    v.turning_circle_m,
+                    v.trunk_capacity_liters,
+                    v.trunk_max_liters,
+                    v.frunk_capacity_liters,
+                    v.roof_load_kg,
+                    v.towing_capacity_braked_kg,
+                    v.towing_capacity_unbraked_kg,
+                    v.payload_kg,
+                    v.weight_curb_kg,
+                    v.weight_gross_kg,
+                    COALESCE(ma_eur.min_price, ma_pln.price_eur_equiv) as price_eur,
+                    COALESCE(ma_eur.market_code, ma_pln.market_code) as market_code
+                FROM vehicle_variants v
+                JOIN vehicle_models m ON v.model_id = m.id
+                LEFT JOIN (
+                    SELECT variant_id, MIN(price_base) as min_price, 
+                           MIN(market_code) as market_code
+                    FROM market_availability 
+                    WHERE market_code IN ('DE','ES','FR','IT','NL','AT','BE','PT','SE','NO','DK','CH','GB')
+                      AND currency = 'EUR'
+                    GROUP BY variant_id
+                ) ma_eur ON v.id = ma_eur.variant_id
+                LEFT JOIN (
+                    SELECT variant_id, price_base * 0.23 as price_eur_equiv,
+                           market_code
+                    FROM market_availability 
+                    WHERE market_code = 'PL' AND currency = 'PLN'
+                ) ma_pln ON v.id = ma_pln.variant_id AND ma_eur.variant_id IS NULL
+                ORDER BY m.brand, m.name, v.variant_name
+            """, _conn)
+        else:
+            return pd.read_sql_query(f"""
+                SELECT 
+                    v.id,
+                    m.brand as manufacturer,
+                    m.name as model,
+                    v.variant_name,
+                    v.model_year,
+                    m.body_style,
+                    v.battery_usable_kwh,
+                    v.battery_chemistry,
+                    v.range_wltp_km,
+                    v.range_real_world_km,
+                    v.total_power_kw,
+                    v.acceleration_0_100_sec,
+                    v.dc_charge_power_kw,
+                    v.dc_charge_time_10_80_min,
+                    v.drive_type,
+                    v.length_mm,
+                    v.width_mm,
+                    v.width_with_mirrors_mm,
+                    v.height_mm,
+                    v.wheelbase_mm,
+                    v.ground_clearance_mm,
+                    v.turning_circle_m,
+                    v.trunk_capacity_liters,
+                    v.trunk_max_liters,
+                    v.frunk_capacity_liters,
+                    v.roof_load_kg,
+                    v.towing_capacity_braked_kg,
+                    v.towing_capacity_unbraked_kg,
+                    v.payload_kg,
+                    v.weight_curb_kg,
+                    v.weight_gross_kg,
+                    ma.price_base as price_eur,
+                    ma.market_code
+                FROM vehicle_variants v
+                JOIN vehicle_models m ON v.model_id = m.id
+                LEFT JOIN market_availability ma ON v.id = ma.variant_id AND ma.market_code = '{market_code}'
+                ORDER BY m.brand, m.name, v.variant_name
+            """, _conn)
     
     # Sidebar filters
+    st.sidebar.markdown("### 🌍 Market")
+    selected_market_label = st.sidebar.selectbox(
+        "Show prices for:",
+        options=list(market_options.keys()),
+        index=0
+    )
+    selected_market = market_options[selected_market_label]
+    
+    df = load_browse_data(conn, selected_market)
+    
     st.sidebar.markdown("### 🎚️ Filters")
     
     # Manufacturer filter
@@ -625,17 +711,20 @@ elif page == "🔍 Browse Vehicles":
     )
     
     # Price range filter
-    st.sidebar.markdown("#### Price (EUR)")
+    price_currency = "PLN" if selected_market == 'PL' else "EUR"
+    st.sidebar.markdown(f"#### Price ({price_currency})")
     price_min_val = int(df['price_eur'].min()) if df['price_eur'].notna().any() else 20000
     price_max_val = int(df['price_eur'].max()) if df['price_eur'].notna().any() else 150000
+    price_step = 10000 if selected_market == 'PL' else 5000
+    price_fmt = "%d PLN" if selected_market == 'PL' else "€%d"
     
     price_range = st.sidebar.slider(
         "Price Range:",
         min_value=price_min_val,
         max_value=price_max_val,
         value=(price_min_val, price_max_val),
-        step=5000,
-        format="€%d"
+        step=price_step,
+        format=price_fmt
     )
     
     # WLTP range filter
@@ -878,6 +967,10 @@ elif page == "🔍 Browse Vehicles":
         display_df = filtered_df.copy()
         display_df['Vehicle'] = format_vehicle_column(display_df)
         
+        # Price column label and format based on market
+        price_label = 'Price (PLN)' if selected_market == 'PL' else 'Price (EUR)'
+        price_format = "%d PLN" if selected_market == 'PL' else "€%d"
+        
         # Display table with selection — use column_config for formatting
         event = st.dataframe(
             display_df[[
@@ -896,7 +989,7 @@ elif page == "🔍 Browse Vehicles":
                 'total_power_kw': st.column_config.NumberColumn('Power', format="%d kW"),
                 'acceleration_0_100_sec': st.column_config.NumberColumn('0-100', format="%.1fs"),
                 'dc_charge_power_kw': st.column_config.NumberColumn('DC Charge', format="%d kW"),
-                'price_eur': st.column_config.NumberColumn('Price', format="€%d"),
+                'price_eur': st.column_config.NumberColumn(price_label, format=price_format),
             },
             hide_index=True,
             use_container_width=True,
