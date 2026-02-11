@@ -1,0 +1,54 @@
+# BMW i4 eDrive35 (2024) - France Market
+id: bmw-i4-edrive35-2024-fr
+variant_id: bmw-i4-edrive35-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-01-15"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 52550
+  price_including_vat: 52550
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 52550
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: "Ecological bonus for electric vehicles. BMW i4 manufactured in Munich (EU) — eligible for bonus if environmental score met."
+    conditions:
+      - Vehicle price under 47,000 EUR — may not qualify at base price
+      - Must meet environmental manufacturing score
+
+  - name: "Exonération carte grise"
+    type: tax_exemption
+    amount: 0
+    description: "Full or partial exemption from vehicle registration tax depending on region."
+
+market_specific:
+  available_colors:
+    - name: Alpine White
+      type: solid
+      price_add: 0
+    - name: Black Sapphire Metallic
+      type: metallic
+      price_add: 860
+    - name: Mineral White Metallic
+      type: metallic
+      price_add: 860
+
+notes: |
+  BMW i4 eDrive35 available in France through BMW France dealer network.
+  66 kWh battery, 483 km WLTP range. Rear-wheel drive, 210 kW.
+  Produced at BMW Munich plant. Price exceeds bonus écologique threshold.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.bmw.fr/fr/all-models/bmw-i/i4.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"

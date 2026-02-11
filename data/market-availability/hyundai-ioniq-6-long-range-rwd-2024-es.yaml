@@ -1,4 +1,4 @@
-# Hyundai Ioniq 6 Long Range RWD 2024 - Spain Market
+# Hyundai Ioniq 6 Long Range RWD (2024) - Spain Market
 id: hyundai-ioniq-6-long-range-rwd-2024-es
 variant_id: hyundai-ioniq-6-long-range-rwd-2024
 market: ES
@@ -6,60 +6,60 @@ currency: EUR
 
 availability_status: available
 available_from: "2023-06-01"
+delivery_time_weeks: 10
 
 pricing:
-  base_price: 52900
-  price_including_vat: 52900
+  base_price: 52800
+  price_including_vat: 52800
   vat_rate_percent: 21
   destination_charge: 0
-  total_price_estimate: 52900
+  registration_fees: 0
+  total_price_estimate: 52800
+
+  trim_levels:
+    - name: "Style"
+      price: 52800
+    - name: "Select"
+      price: 57800
+    - name: "Vertex"
+      price: 61900
 
 incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III ended December 2024. No active national EV subsidy.
+    description: MOVES III program expired. Potential future MOVES IV program pending.
     conditions:
       - Program expired
 
+  - name: Impuesto de Matriculación Exemption
+    type: tax_exemption
+    amount: 0
+    description: Zero-emission vehicles exempt from registration tax (0% rate applies to vehicles with CO2 emissions under 120 g/km).
+
 market_specific:
-  standard_equipment:
-    - "Dual 12-inch displays"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Highway Driving Assist 2"
-    - "Vehicle-to-Load (V2L)"
-    - "Heat pump"
-    - "LED headlights"
-    - "18-inch alloy wheels"
-    - "Heated front seats"
-
   available_colors:
-    - name: "Gravity Gold Matte"
-      additional_cost: 0
-    - name: "Nocturne Gray Metallic"
-      additional_cost: 700
-    - name: "Biophilic Blue Pearl"
-      additional_cost: 700
-    - name: "Abyss Black Pearl"
-      additional_cost: 590
-    - name: "Curated Silver Metallic"
-      additional_cost: 590
-    - name: "Serenity White Pearl"
-      additional_cost: 700
-
-  delivery_time_weeks: 8
-
-compliance:
-  ncap_rating: 5
-  emission_class: Zero Emission
+    - name: Polar White
+      type: solid
+      price_add: 0
+    - name: Nocturne Gray Metallic
+      type: metallic
+      price_add: 895
+    - name: Digital Teal Pearl
+      type: pearl
+      price_add: 1095
+    - name: Phantom Black Pearl
+      type: pearl
+      price_add: 895
 
 notes: |
-  Hyundai Ioniq 6 available in Spain via hyundai.com/es dealer network.
-  Price includes 21% IVA. World Car of the Year 2023.
-  No active national subsidies since MOVES III expired.
+  Hyundai Ioniq 6 Long Range RWD available in Spain through Hyundai España dealer network.
+  Prices include 21% IVA. 800V architecture enables 18-minute 10-80% fast charging.
+  614 km WLTP range. 5-year unlimited km warranty.
 
 metadata:
-  created_at: "2026-02-10"
   data_quality: estimated
-  sources:
-    - https://www.hyundai.com/es/modelos/ioniq-6.html
+  data_source: manufacturer
+  source_url: https://www.hyundai.com/es/modelos/ioniq6.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
