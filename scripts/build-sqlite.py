@@ -583,14 +583,20 @@ class DatabaseBuilder:
                     elif front_motor:
                         motor_type = front_motor.get('type')
                         
-            # Format 2: Old format with list of motors
+            # Format 2: List of motors (Cupra, NIO, Porsche, etc.)
             elif isinstance(motors_data, list) and len(motors_data) > 0:
                 motor_count = len(motors_data)
                 # Sum up power and torque from all motors (only if not already set from performance level)
                 if not total_power_kw:
-                    total_power_kw = sum(m.get('max_power_kw', 0) for m in motors_data)
+                    powers = [m.get('power_kw') or m.get('max_power_kw') for m in motors_data]
+                    powers = [p for p in powers if p]  # Filter out None/0
+                    if powers:
+                        total_power_kw = sum(powers)
                 if not total_torque_nm:
-                    total_torque_nm = sum(m.get('max_torque_nm', 0) for m in motors_data)
+                    torques = [m.get('torque_nm') or m.get('max_torque_nm') for m in motors_data]
+                    torques = [t for t in torques if t]
+                    if torques:
+                        total_torque_nm = sum(torques)
                 # Get primary motor type (rear for AWD, first motor otherwise)
                 primary_motor = next((m for m in motors_data if m.get('position') == 'rear'), motors_data[0])
                 motor_type = primary_motor.get('type')
@@ -603,6 +609,12 @@ class DatabaseBuilder:
                         drive_type = 'RWD'
                     elif 'front' in positions:
                         drive_type = 'FWD'
+            
+            # Sanitize: convert 0 values to None for numeric fields that shouldn't be 0
+            if total_power_kw == 0:
+                total_power_kw = None
+            if total_torque_nm == 0:
+                total_torque_nm = None
             
             # Get updated_at with proper null handling
             updated_at = metadata.get('updated_at')
