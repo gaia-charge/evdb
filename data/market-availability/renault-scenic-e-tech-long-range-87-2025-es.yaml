@@ -1,0 +1,78 @@
+# Renault Scenic E-Tech Electric Long Range 87 kWh - Spain Market (2025)
+id: renault-scenic-e-tech-long-range-87-2025-es
+variant_id: renault-scenic-e-tech-long-range-87-2025
+market: ES
+currency: EUR
+
+availability_status: available
+available_from: "2025-01"
+available_until: null
+
+pricing:
+  base_price: 49696
+  price_including_vat: 49696
+  vat_rate_percent: 21
+  destination_charge: 0
+  total_price_estimate: 49696
+
+incentives:
+  - name: Plan MOVES III
+    type: grant
+    amount: 0
+    description: "MOVES III program expired. No active national EV subsidy as of 2025."
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Program expired
+    source_url: "https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii"
+  - name: Impuesto de Matriculación Exemption
+    type: tax_exemption
+    amount: 0
+    description: "Zero-emission vehicles are exempt from registration tax (Impuesto de Matriculación) in Spain."
+    conditions:
+      - Pure battery-electric vehicle
+
+market_specific:
+  available_trims:
+    - name: "Techno"
+      price: 43696
+    - name: "Esprit Alpine"
+      price: 49696
+
+  available_colors:
+    - name: Blanc Nacré
+      additional_cost: 0
+    - name: Noir Étoilé
+      additional_cost: 900
+    - name: Gris Schiste
+      additional_cost: 900
+    - name: Bleu Rafale
+      additional_cost: 900
+    - name: Rouge Flamme
+      additional_cost: 900
+
+  dealer_network:
+    online_sales_available: true
+    notes: "Available through Renault dealer network in Spain"
+
+  delivery:
+    typical_delivery_weeks: 8
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
+
+notes: |
+  Renault Scenic E-Tech electric sold in Spain via renault.es.
+  Prices include 21% IVA. MOVES III subsidies have expired.
+  Registration tax exempt as zero-emission vehicle.
+  Starting price from €35,696 for Comfort Range 60 variant;
+  this Long Range 87 Techno starts at €43,696.
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-11"
+  sources:
+    - "https://www.renault.es/vehiculos-electricos/scenic-e-tech-electric.html"
