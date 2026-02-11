@@ -1,0 +1,87 @@
+# Citroën ë-C3 Base 2024 - France Market
+id: citroen-e-c3-base-2024-fr
+variant_id: citroen-e-c3-base-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-06-01"
+
+pricing:
+  base_price: 23300
+  price_including_vat: 23300
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 23300
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: Government EV purchase bonus. Up to €4,000 standard, up to €7,000 for low-income households.
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Manufactured in Europe (eligible - Trnava, Slovakia)
+    source_url: https://www.ecologie.gouv.fr/bonus-ecologique
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: Additional bonus when scrapping an old vehicle.
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Must scrap an eligible older vehicle
+  - name: Leasing social
+    type: subsidy
+    amount: 0
+    description: Government-backed social leasing program for low-income households. ë-C3 was flagship vehicle for this program at ~€54/month.
+    conditions:
+      - Household income below threshold
+      - Limited allocation
+
+market_specific:
+  standard_equipment:
+    - 10.25-inch touchscreen
+    - Wireless Apple CarPlay / Android Auto
+    - Automatic climate control
+    - LED headlights
+    - Rear parking sensors
+    - Lane keeping assist
+    - Automatic emergency braking
+
+  available_colors:
+    - name: Blanc Banquise
+      additional_cost: 0
+    - name: Gris Artense
+      additional_cost: 500
+    - name: Bleu Emeraude
+      additional_cost: 500
+    - name: Rouge Elixir
+      additional_cost: 500
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 12
+
+compliance:
+  ncap_rating: null
+  emission_class: Zero Emission
+
+notes: |
+  Citroën's affordable EV for the French market. At €23,300 before incentives,
+  it becomes one of the cheapest EVs available after bonus écologique.
+  Effective price from €16,300 with maximum incentives.
+  Key vehicle in France's social leasing program.
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-11"
+  sources:
+    - https://www.citroen.fr/modeles/e-c3.html

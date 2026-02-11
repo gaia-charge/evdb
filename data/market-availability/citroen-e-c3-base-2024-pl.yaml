@@ -1,0 +1,72 @@
+# Citroën ë-C3 Base 2024 - Poland Market
+id: citroen-e-c3-base-2024-pl
+variant_id: citroen-e-c3-base-2024
+market: PL
+currency: PLN
+
+availability_status: available
+available_from: "2024-09-01"
+
+pricing:
+  base_price: 104900
+  price_including_vat: 104900
+  vat_rate_percent: 23
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 104900
+
+incentives:
+  - name: Mój elektryk
+    type: grant
+    amount: 27000
+    description: Polish government EV subsidy program. Up to 27,000 PLN for BEV purchase (individual buyers). Higher amounts available for disabled persons and large families.
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Vehicle price under 225,000 PLN (gross)
+      - Individual buyer (higher for companies)
+      - Must keep vehicle for minimum 2 years
+    source_url: https://www.nfosigw.gov.pl/moj-elektryk
+
+market_specific:
+  standard_equipment:
+    - 10.25-inch touchscreen
+    - Wireless Apple CarPlay / Android Auto
+    - Automatic climate control
+    - LED headlights
+    - Rear parking sensors
+    - Lane keeping assist
+    - Automatic emergency braking
+
+  available_colors:
+    - name: Biel Banquise
+      additional_cost: 0
+    - name: Szary Artense
+      additional_cost: 2300
+    - name: Niebieski Emeraude
+      additional_cost: 2300
+    - name: Czerwony Elixir
+      additional_cost: 2300
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 12
+
+compliance:
+  ncap_rating: null
+  emission_class: Zero Emission
+
+notes: |
+  One of the most affordable EVs on the Polish market. After Mój elektryk
+  subsidy, effective price drops to ~77,900 PLN (~€18,000).
+  Strong value proposition for Polish buyers entering the EV market.
+
+metadata:
+  created_at: "2026-02-11"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-11"
+  sources:
+    - https://www.citroen.pl/modele/e-c3.html
