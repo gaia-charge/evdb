@@ -68,16 +68,26 @@ efficiency:
 
 # Dimensions & Weight
 dimensions:
-  length_mm: 4712  # Standard wheelbase
+  length_mm: 4712
   width_mm: 1985
   height_mm: 1937
   wheelbase_mm: 2988
-  curb_weight_kg: 2590  # Heavier than RWD due to dual motors
-  gross_weight_kg: 3210
+  ground_clearance_mm: 178
+
+weight:
+  curb_weight_kg: 2590
+  gross_vehicle_weight_kg: 3210
   payload_kg: 620
-  trunk_volume_l: 1121  # With 5 seats
-  trunk_volume_max_l: 2205  # Seats folded
+
+cargo:
+  trunk_capacity_liters: 1121
+  trunk_max_liters: 2205
+  frunk_capacity_liters: 0
+
+towing:
   towing_capacity_braked_kg: 1800
+  towing_capacity_unbraked_kg: 750
+  notes: "AWD GTX has higher towing capacity than RWD variants (1000 kg)."
 
 notes: |
   VW ID.Buzz GTX is the performance flagship variant with dual-motor all-wheel drive delivering
