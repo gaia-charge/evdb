@@ -1,0 +1,56 @@
+# MG4 Electric Extended Range - France Market (2025)
+id: mg4-electric-extended-range-2025-fr
+variant_id: mg4-electric-extended-range-2025
+market: FR
+currency: EUR
+
+pricing:
+  base_price: 33990
+  price_including_vat: 33990
+  vat_rate_percent: 20
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: "Ecological bonus for BEVs priced under €47,000. Reduced from €7,000 to €4,000 in 2025."
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - "Vehicle price under €47,000"
+      - "Environmental score must qualify (manufactured in EU/partner countries)"
+      - "MG4 may not qualify due to Chinese manufacturing - check current eligibility"
+
+colors:
+  - name: "Dover White"
+    type: solid
+    price_delta: 0
+  - name: "Holborn Blue"
+    type: metallic
+    price_delta: 680
+  - name: "Medal Silver"
+    type: metallic
+    price_delta: 680
+  - name: "Diamond Red"
+    type: metallic
+    price_delta: 680
+  - name: "Black Pearl"
+    type: metallic
+    price_delta: 680
+
+availability_status: available
+delivery_time_weeks: 8
+
+market_notes:
+  - "Available through MG Motor France dealer network"
+  - "Prices include 20% TVA"
+  - "May not qualify for bonus écologique due to environmental score (Chinese production)"
+  - "7-year/175,000 km battery warranty"
+  - "Strong value proposition in French market"
+
+metadata:
+  data_quality: estimated
+  sources:
+    - https://www.mgmotor.fr/mg4-electric
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"

@@ -1,0 +1,56 @@
+# Peugeot e-308 GT - France Market (2024)
+id: peugeot-e-308-gt-2024-fr
+variant_id: peugeot-e-308-gt-2024
+market: FR
+currency: EUR
+
+pricing:
+  base_price: 44230
+  price_including_vat: 44230
+  vat_rate_percent: 20
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: "Ecological bonus for BEVs priced under €47,000. Peugeot e-308 qualifies (European production)."
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - "Vehicle price under €47,000"
+      - "Produced in Europe (Mulhouse, France) - qualifies for environmental score"
+
+colors:
+  - name: "Blanc Nacré"
+    type: pearlescent
+    price_delta: 850
+  - name: "Noir Perla Nera"
+    type: metallic
+    price_delta: 650
+  - name: "Gris Artense"
+    type: metallic
+    price_delta: 650
+  - name: "Bleu Vertigo"
+    type: metallic
+    price_delta: 850
+  - name: "Rouge Elixir"
+    type: metallic
+    price_delta: 650
+
+availability_status: available
+delivery_time_weeks: 10
+
+market_notes:
+  - "Available through Peugeot France dealer network"
+  - "Prices include 20% TVA"
+  - "Qualifies for €4,000 bonus écologique (produced in Mulhouse, France)"
+  - "Effective price after bonus: ~€40,230"
+  - "GT is the top trim with Focal audio, Matrix LED, and head-up display"
+  - "Made in France - strong local appeal"
+
+metadata:
+  data_quality: estimated
+  sources:
+    - https://www.peugeot.fr/gamme-vehicules/e-308.html
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"
