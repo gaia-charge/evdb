@@ -462,15 +462,15 @@ if page == "🏠 Home":
     latest = stats['latest_additions'].copy()
     latest['Vehicle'] = format_vehicle_column(latest)
     latest['Year'] = latest['model_year'].astype(int)
-    latest['Range'] = latest['range_wltp_km'].apply(lambda x: f"{int(x)} km" if pd.notna(x) else "N/A")
-    latest['Price'] = latest['price_eur'].apply(
-        lambda x: f"€{int(x):,}" if pd.notna(x) else "TBD"
-    )
-    
-    display_latest = latest[['Vehicle', 'Year', 'Range', 'Price']]
     
     st.dataframe(
-        display_latest,
+        latest[['Vehicle', 'Year', 'range_wltp_km', 'price_eur']],
+        column_config={
+            'Vehicle': st.column_config.TextColumn('Vehicle', width='large'),
+            'Year': st.column_config.NumberColumn('Year', format="%d"),
+            'range_wltp_km': st.column_config.NumberColumn('Range', format="%d km"),
+            'price_eur': st.column_config.NumberColumn('Price', format="€%d"),
+        },
         hide_index=True,
         use_container_width=True
     )
@@ -492,25 +492,18 @@ if page == "🏠 Home":
             # Format results
             display_results = results.copy()
             display_results['Vehicle'] = format_vehicle_column(display_results)
-            display_results['Battery'] = display_results['battery_usable_kwh'].apply(
-                lambda x: f"{x:.1f} kWh" if pd.notna(x) else "N/A"
-            )
-            display_results['Range'] = display_results['range_wltp_km'].apply(
-                lambda x: f"{int(x)} km" if pd.notna(x) else "N/A"
-            )
-            display_results['Power'] = display_results['total_power_kw'].apply(
-                lambda x: f"{int(x)} kW" if pd.notna(x) else "N/A"
-            )
-            display_results['0-100'] = display_results['acceleration_0_100_sec'].apply(
-                lambda x: f"{x:.1f}s" if pd.notna(x) else "N/A"
-            )
-            display_results['Price'] = display_results['price_eur'].apply(
-                lambda x: f"€{int(x):,}" if pd.notna(x) else "TBD"
-            )
             display_results['Market'] = display_results['market_code'].fillna('N/A')
             
             st.dataframe(
-                display_results[['Vehicle', 'Battery', 'Range', 'Power', '0-100', 'Price', 'Market']],
+                display_results[['Vehicle', 'battery_usable_kwh', 'range_wltp_km', 'total_power_kw', 'acceleration_0_100_sec', 'price_eur', 'Market']],
+                column_config={
+                    'Vehicle': st.column_config.TextColumn('Vehicle', width='large'),
+                    'battery_usable_kwh': st.column_config.NumberColumn('Battery', format="%.1f kWh"),
+                    'range_wltp_km': st.column_config.NumberColumn('Range', format="%d km"),
+                    'total_power_kw': st.column_config.NumberColumn('Power', format="%d kW"),
+                    'acceleration_0_100_sec': st.column_config.NumberColumn('0-100', format="%.1fs"),
+                    'price_eur': st.column_config.NumberColumn('Price', format="€%d"),
+                },
                 hide_index=True,
                 use_container_width=True
             )
@@ -881,40 +874,30 @@ elif page == "🔍 Browse Vehicles":
         elif sort_by == "Power (High-Low)":
             filtered_df = filtered_df.sort_values('total_power_kw', ascending=False)
         
-        # Format display data
+        # Format display data — keep numeric columns for proper sorting
         display_df = filtered_df.copy()
         display_df['Vehicle'] = format_vehicle_column(display_df)
-        display_df['Battery'] = display_df['battery_usable_kwh'].apply(
-            lambda x: f"{x:.1f} kWh" if pd.notna(x) else "N/A"
-        )
-        display_df['WLTP Range'] = display_df['range_wltp_km'].apply(
-            lambda x: f"{int(x)} km" if pd.notna(x) else "N/A"
-        )
-        display_df['Real Range'] = display_df['range_real_world_km'].apply(
-            lambda x: f"{int(x)} km" if pd.notna(x) else "N/A"
-        )
-        display_df['Power'] = display_df['total_power_kw'].apply(
-            lambda x: f"{int(x)} kW" if pd.notna(x) else "N/A"
-        )
-        display_df['0-100'] = display_df['acceleration_0_100_sec'].apply(
-            lambda x: f"{x:.1f}s" if pd.notna(x) else "N/A"
-        )
-        display_df['DC Charge'] = display_df['dc_charge_power_kw'].apply(
-            lambda x: f"{int(x)} kW" if pd.notna(x) else "N/A"
-        )
-        display_df['Price'] = display_df['price_eur'].apply(
-            lambda x: f"€{int(x):,}" if pd.notna(x) else "TBD"
-        )
         
-        # Display table with selection
+        # Display table with selection — use column_config for formatting
         event = st.dataframe(
             display_df[[
-                'Vehicle', 'body_style', 'Battery', 'WLTP Range', 
-                'Real Range', 'Power', '0-100', 'DC Charge', 'drive_type', 'Price'
+                'Vehicle', 'body_style', 'battery_usable_kwh', 'range_wltp_km', 
+                'range_real_world_km', 'total_power_kw', 'acceleration_0_100_sec', 
+                'dc_charge_power_kw', 'drive_type', 'price_eur'
             ]].rename(columns={
                 'body_style': 'Body',
                 'drive_type': 'Drive'
             }),
+            column_config={
+                'Vehicle': st.column_config.TextColumn('Vehicle', width='large'),
+                'battery_usable_kwh': st.column_config.NumberColumn('Battery', format="%.1f kWh"),
+                'range_wltp_km': st.column_config.NumberColumn('WLTP Range', format="%d km"),
+                'range_real_world_km': st.column_config.NumberColumn('Real Range', format="%d km"),
+                'total_power_kw': st.column_config.NumberColumn('Power', format="%d kW"),
+                'acceleration_0_100_sec': st.column_config.NumberColumn('0-100', format="%.1fs"),
+                'dc_charge_power_kw': st.column_config.NumberColumn('DC Charge', format="%d kW"),
+                'price_eur': st.column_config.NumberColumn('Price', format="€%d"),
+            },
             hide_index=True,
             use_container_width=True,
             height=400,
