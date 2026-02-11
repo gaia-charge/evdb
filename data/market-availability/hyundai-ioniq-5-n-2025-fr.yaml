@@ -1,0 +1,95 @@
+# Hyundai Ioniq 5 N 2025 - France Market
+id: hyundai-ioniq-5-n-2025-fr
+variant_id: hyundai-ioniq-5-n-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-06-01"
+available_until: null
+
+pricing:
+  base_price: 74900
+  price_including_vat: 74900
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 74900
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 0
+    description: >
+      No bonus écologique for vehicles priced above €47,000.
+      The Ioniq 5 N exceeds the price threshold.
+    valid_from: "2024-01-01"
+    valid_until: null
+    conditions:
+      - Vehicle price must be under €47,000
+      - Not eligible due to price
+
+  - name: Malus écologique
+    type: tax_exemption
+    amount: 0
+    description: >
+      Zero-emission vehicles are exempt from the malus écologique (CO2 penalty tax).
+    conditions:
+      - Pure BEV — exempt
+
+market_specific:
+  standard_equipment:
+    - N bucket seats with integrated headrests
+    - 12.3-inch dual curved displays
+    - Bose premium audio (8 speakers)
+    - N e-shift (simulated 8-speed)
+    - N Active Sound+
+    - N Drift Optimizer
+    - N Launch Control
+    - N Grin Boost
+    - Electronic Limited Slip Differential
+    - 21-inch forged alloy wheels
+    - N performance brakes (400mm front)
+    - Heat pump
+    - Vehicle-to-Load (V2L)
+    - 800V architecture
+
+  available_colors:
+    - name: Performance Blue Matte
+      additional_cost: 0
+    - name: Abyss Black Pearl
+      additional_cost: 600
+    - name: Atlas White
+      additional_cost: 600
+    - name: Gravity Gold Matte
+      additional_cost: 800
+
+  available_interiors:
+    - name: N Black with Performance Blue accents
+      color: Black/Blue
+      additional_cost: 0
+
+dealer_network:
+  online_sales_available: true
+
+delivery:
+  typical_delivery_weeks: 12
+
+compliance:
+  ncap_rating: 5
+  emission_class: Zero Emission
+
+notes: |
+  Hyundai France sells through authorized dealer network.
+  France has 20% TVA (VAT) included in the listed price.
+  No bonus écologique for vehicles above €47,000 threshold.
+  Zero-emission vehicles exempt from malus écologique.
+  478 kW with N Grin Boost, 3.4s 0-100 km/h.
+
+metadata:
+  created_at: "2026-02-12"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-12"
+  sources:
+    - https://www.hyundai.com/fr/modeles/ioniq-5-n.html
