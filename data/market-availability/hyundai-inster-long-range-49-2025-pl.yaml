@@ -1,76 +1,54 @@
-# Hyundai Inster Long Range 49 kWh - Polish Market (2025)
+# Hyundai INSTER Long Range 49 kWh (2025) - Poland Market
 id: hyundai-inster-long-range-49-2025-pl
 variant_id: hyundai-inster-long-range-49-2025
 market: PL
 currency: PLN
 
+availability_status: available
+available_from: "2025-03-01"
+delivery_time_weeks: 12
+
 pricing:
   base_price: 119900
+  price_including_vat: 119900
+  vat_rate_percent: 23
   destination_charge: 0
-  on_the_road_price: 119900
-  price_includes:
-    - "11 kW AC charging (1-phase)"
-    - "85 kW DC fast charging"
-    - "LED headlights"
-    - "10.25-inch touchscreen"
-    - "10.25-inch digital cluster"
-    - "Rear camera"
-    - "15-inch wheels"
-
-trim_levels:
-  - name: "Smart"
-    price: 119900
-    features:
-      - "85 kW (115 PS) motor"
-      - "370 km WLTP range"
-      - "Wireless Apple CarPlay & Android Auto"
-  - name: "Style"
-    price: 134900
-    features:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Blind Spot Warning"
-      - "Sunroof"
-
-colors:
-  - name: "Atlas White"
-    type: solid
-    price: 0
-  - name: "Abyss Black Pearl"
-    type: metallic
-    price: 2500
-  - name: "Tomboy Khaki metallic"
-    type: metallic
-    price: 2500
-  - name: "Unbleached Ivory"
-    type: metallic
-    price: 2500
 
 incentives:
   - name: "Mój elektryk"
     type: grant
     amount: 27000
-    notes: "Subsidy for individuals purchasing BEVs priced up to 225,000 PLN"
-    eligibility: "Individual buyers"
+    description: "Government subsidy for BEV purchases under PLN 225,000 list price."
+    valid_from: "2024-01-01"
     valid_until: "2026-12-31"
+    conditions:
+      - Vehicle must be new
+      - List price under PLN 225,000
+      - Private individuals and businesses eligible
 
-availability:
-  in_stock: true
-  delivery_time_weeks: 12
-  production_status: active
-  order_url: "https://www.hyundai.pl/modele/inster"
+available_colors:
+  - name: Atlas White
+    type: solid
+    price_add: 0
+  - name: Abyss Black Pearl
+    type: metallic
+    price_add: 2500
+  - name: Tomboy Khaki Matte
+    type: matte
+    price_add: 3500
+  - name: Bicolor Tomboy Khaki / Atlas White
+    type: two_tone
+    price_add: 5000
 
-warranty:
-  vehicle_years: 5
-  vehicle_km: unlimited
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
+notes: |
+  Hyundai INSTER available in Poland through Hyundai dealer network.
+  Prices include 23% VAT. Eligible for Mój elektryk subsidy of PLN 27,000.
+  After subsidy, effective price from PLN 92,900 making it very competitive.
+  Strong interest in Poland due to affordable pricing and city-friendly size.
 
 metadata:
   data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.hyundai.com/pl/modele/inster.html
   created_at: "2026-02-11"
-  last_updated: "2026-02-11"
-  sources:
-    - "https://www.hyundai.pl/modele/inster"
-  notes: "Affordable city EV. With Mój elektryk subsidy, effective price drops to ~92,900 PLN."
+  last_verified_at: "2026-02-11"
