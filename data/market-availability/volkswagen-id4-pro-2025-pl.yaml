@@ -1,69 +1,79 @@
-# Volkswagen ID.4 Pro (2025) - Poland Market
-
+# Volkswagen ID.4 Pro - Poland Market (2025)
 id: volkswagen-id4-pro-2025-pl
 variant_id: volkswagen-id4-pro-2025
 market: PL
 currency: PLN
-
 availability_status: available
-available_from: "2024-11-01"
-delivery_time_weeks: 14
+available_from: "2024-09-01"
 
 pricing:
   base_price: 219900
   price_including_vat: 219900
   vat_rate_percent: 23
-  destination_charge: 0
-  registration_fees: 0
-  total_price_estimate: 219900
+  destination_charge: 3500
+  total_price_estimate: 223400
 
 incentives:
   - name: "Mój elektryk"
     type: grant
     amount: 27000
-    description: "Subsidy up to 27,000 PLN for individual BEV buyers. Net price must be under 225,000 PLN."
+    description: >
+      Government subsidy for BEV purchase for individuals.
+      Up to 27,000 PLN for vehicles priced under 225,000 PLN.
     conditions:
-      - Net price under 225,000 PLN
-      - Subject to available funding
+      - Battery electric vehicle
+      - Individual buyer
+      - Vehicle price under 225,000 PLN (net)
+    valid_from: "2024-01-01"
+    valid_until: "2026-12-31"
+    notes: "Base price within threshold. Check NFOŚiGW for current funding."
 
-  - name: Excise Tax Exemption
-    type: tax_exemption
+  - name: "Corporate Fleet Deduction"
+    type: tax_credit
     amount: 0
-    description: "Electric vehicles exempt from excise tax"
+    description: >
+      Companies can deduct up to 225,000 PLN of vehicle value for depreciation.
+    conditions:
+      - Corporate buyer
+      - Battery electric vehicle
 
 market_specific:
-  available_colors:
-    - name: Pure White
-      type: solid
-      price_add: 0
-    - name: Stone Grey Metallic
-      type: metallic
-      price_add: 4100
-    - name: Kings Red Metallic
-      type: metallic
-      price_add: 4100
-    - name: Dusk Blue Metallic
-      type: metallic
-      price_add: 4100
+  standard_equipment:
+    - 12.9" touchscreen infotainment
+    - Digital cockpit display
+    - LED headlights with IQ.Light
+    - Heated front seats
+    - 2-zone climate control
+    - Heat pump
+    - Wireless Apple CarPlay & Android Auto
+    - Adaptive cruise control
+    - Lane assist
+    - Park Assist
 
-  popular_options:
-    - name: Tech Package Plus
-      price: 10900
-    - name: Comfort Package
-      price: 5900
+  available_colors:
+    - name: "Glacier White Metallic"
+      additional_cost: 0
+    - name: "Manganese Grey Metallic"
+      additional_cost: 2700
+    - name: "Stonewashed Blue Metallic"
+      additional_cost: 2700
+    - name: "Kings Red Metallic"
+      additional_cost: 2700
+    - name: "Grenadilla Black Metallic"
+      additional_cost: 2700
+
+  delivery_time_weeks: 8
 
 dealer_network:
-  dealer_count: 65
+  dealer_count: 35
   online_sales_available: true
-
-notes: |
-  VW ID.4 Pro 2025 available through VW dealer network in Poland.
-  Prices include 23% VAT. May qualify for "Mój elektryk" subsidy.
-  528 km WLTP range, V2L capability. Manufactured in Zwickau, Germany.
 
 metadata:
   data_quality: estimated
-  data_source: manufacturer
-  source_url: https://www.volkswagen.pl/pl/modele/id4.html
   created_at: "2026-02-11"
-  last_verified_at: "2026-02-11"
+  last_updated: "2026-02-11"
+  sources:
+    - https://www.volkswagen.pl/pl/modele/id4.html
+  notes: >
+    Polish pricing includes 23% VAT. VW ID.4 is one of the most popular
+    EVs in Poland through the authorized dealer network.

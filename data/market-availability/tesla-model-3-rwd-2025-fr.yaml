@@ -1,39 +1,42 @@
-# Tesla Model Y RWD - France Market (2025)
-id: tesla-model-y-rwd-2025-fr
-variant_id: tesla-model-y-rwd-2025
+# Tesla Model 3 RWD - France Market (2025)
+id: tesla-model-3-rwd-2025-fr
+variant_id: tesla-model-3-rwd-2025
 market: FR
 currency: EUR
 availability_status: available
-available_from: "2025-03-01"
+available_from: "2024-01-15"
 
 pricing:
-  base_price: 44990
-  price_including_vat: 44990
+  base_price: 42990
+  price_including_vat: 42990
   vat_rate_percent: 20
   destination_charge: 1100
-  total_price_estimate: 46090
+  total_price_estimate: 44090
 
 incentives:
   - name: "Bonus écologique"
     type: grant
     amount: 4000
     description: >
-      Government ecological bonus for BEV purchases under €47,000.
-      2025 Model Y Juniper (made in Gigafactory Berlin) qualifies for
-      European environmental score.
+      Government ecological bonus for BEV purchases. Amount depends on
+      vehicle price and buyer income. Standard bonus €4,000 for vehicles
+      under €47,000.
     conditions:
       - Battery electric vehicle
       - Vehicle price under €47,000
-      - Environmental score (produced in Europe — Grünheide factory ✓)
+      - Environmental score requirement (produced in Europe or equivalent)
     valid_from: "2025-01-01"
     valid_until: "2025-12-31"
-    notes: "Made in Berlin — qualifies for environmental score and full bonus."
+    notes: >
+      Tesla Model 3 Highland (made in China) may not qualify for full bonus
+      due to environmental score. Check government website for current eligibility.
 
   - name: "Prime à la conversion"
     type: grant
     amount: 1500
     description: >
       Additional bonus when scrapping an old vehicle (Crit'Air 3 or worse).
+      Up to €1,500 for standard income households.
     conditions:
       - Scrapping eligible old vehicle
       - Income-dependent amount
@@ -43,13 +46,13 @@ market_specific:
     - Autopilot (Traffic-Aware Cruise Control, Autosteer)
     - Heat pump climate control
     - 15.4" center touchscreen
-    - Rear display for passengers
+    - 8.0" rear display
     - Glass roof
     - Heated front seats
+    - Ventilated front seats
     - Wireless charging pad
     - LED headlights
     - Sentry Mode and Dashcam
-    - Power tailgate
 
   available_colors:
     - name: "Pearl White Multi-Coat"
@@ -67,15 +70,15 @@ market_specific:
     - name: "Quicksilver"
       additional_cost: 2400
 
-  delivery_time_weeks: 4
+  delivery_time_weeks: 3
 
 metadata:
   data_quality: estimated
   created_at: "2026-02-11"
   last_updated: "2026-02-11"
   sources:
-    - https://www.tesla.com/fr_fr/modely
+    - https://www.tesla.com/fr_fr/model3
   notes: >
-    French pricing includes 20% TVA. 2025 Model Y Juniper refresh.
-    Made in Gigafactory Berlin — qualifies for bonus écologique.
-    One of the best-selling EVs in France.
+    French pricing includes 20% TVA. Tesla sells direct-to-consumer.
+    Bonus écologique eligibility may be affected by environmental score
+    (vehicle manufactured in China).

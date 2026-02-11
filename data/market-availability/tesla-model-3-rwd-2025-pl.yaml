@@ -1,0 +1,80 @@
+# Tesla Model 3 RWD - Poland Market (2025)
+id: tesla-model-3-rwd-2025-pl
+variant_id: tesla-model-3-rwd-2025
+market: PL
+currency: PLN
+availability_status: available
+available_from: "2024-01-15"
+
+pricing:
+  base_price: 184990
+  price_including_vat: 184990
+  vat_rate_percent: 23
+  destination_charge: 5000
+  total_price_estimate: 189990
+
+incentives:
+  - name: "Mój elektryk"
+    type: grant
+    amount: 27000
+    description: >
+      Government subsidy for BEV purchase for individuals.
+      Up to 27,000 PLN for vehicles priced under 225,000 PLN.
+    conditions:
+      - Battery electric vehicle
+      - Individual buyer
+      - Vehicle price under 225,000 PLN (net)
+    valid_from: "2024-01-01"
+    valid_until: "2026-12-31"
+    notes: "Check NFOŚiGW website for current program availability and funding"
+
+  - name: "Corporate Fleet Deduction"
+    type: tax_credit
+    amount: 0
+    description: >
+      Companies can deduct up to 225,000 PLN of vehicle value for depreciation
+      (vs 150,000 PLN for ICE vehicles).
+    conditions:
+      - Corporate buyer
+      - Battery electric vehicle
+
+market_specific:
+  standard_equipment:
+    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
+    - Heat pump climate control
+    - 15.4" center touchscreen
+    - 8.0" rear display
+    - Glass roof
+    - Heated front seats
+    - Ventilated front seats
+    - Wireless charging pad
+    - LED headlights
+    - Sentry Mode and Dashcam
+
+  available_colors:
+    - name: "Pearl White Multi-Coat"
+      additional_cost: 0
+    - name: "Solid Black"
+      additional_cost: 5400
+    - name: "Midnight Silver Metallic"
+      additional_cost: 5400
+    - name: "Deep Blue Metallic"
+      additional_cost: 5400
+    - name: "Stealth Grey"
+      additional_cost: 6800
+    - name: "Ultra Red"
+      additional_cost: 10800
+    - name: "Quicksilver"
+      additional_cost: 10800
+
+  delivery_time_weeks: 3
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"
+  sources:
+    - https://www.tesla.com/pl_pl/model3
+  notes: >
+    Polish pricing includes 23% VAT. Tesla sells direct-to-consumer.
+    Eligible for Mój elektryk subsidy if program has funding available.

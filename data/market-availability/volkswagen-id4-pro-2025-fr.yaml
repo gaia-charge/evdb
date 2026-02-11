@@ -1,0 +1,80 @@
+# Volkswagen ID.4 Pro - France Market (2025)
+id: volkswagen-id4-pro-2025-fr
+variant_id: volkswagen-id4-pro-2025
+market: FR
+currency: EUR
+availability_status: available
+available_from: "2024-09-01"
+
+pricing:
+  base_price: 47990
+  price_including_vat: 47990
+  vat_rate_percent: 20
+  destination_charge: 650
+  total_price_estimate: 48640
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 4000
+    description: >
+      Government ecological bonus for BEV purchases. €4,000 for vehicles
+      under €47,000 — ID.4 Pro is slightly above threshold, may receive
+      reduced or no bonus depending on current rules.
+    conditions:
+      - Battery electric vehicle
+      - Vehicle price threshold check required
+      - Environmental score (produced in Europe — Zwickau/Emden factory ✓)
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    notes: "Made in Germany — qualifies for environmental score. Price may exceed bonus threshold."
+
+  - name: "Prime à la conversion"
+    type: grant
+    amount: 1500
+    description: >
+      Additional bonus when scrapping an old vehicle (Crit'Air 3 or worse).
+    conditions:
+      - Scrapping eligible old vehicle
+      - Income-dependent amount
+
+market_specific:
+  standard_equipment:
+    - 12.9" touchscreen infotainment
+    - Digital cockpit display
+    - LED headlights with IQ.Light
+    - Heated front seats
+    - 2-zone climate control
+    - Heat pump
+    - Wireless Apple CarPlay & Android Auto
+    - Adaptive cruise control
+    - Lane assist
+    - Park Assist
+
+  available_colors:
+    - name: "Glacier White Metallic"
+      additional_cost: 0
+    - name: "Manganese Grey Metallic"
+      additional_cost: 600
+    - name: "Stonewashed Blue Metallic"
+      additional_cost: 600
+    - name: "Kings Red Metallic"
+      additional_cost: 600
+    - name: "Grenadilla Black Metallic"
+      additional_cost: 600
+
+  delivery_time_weeks: 8
+
+dealer_network:
+  dealer_count: 200
+  online_sales_available: true
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-11"
+  last_updated: "2026-02-11"
+  sources:
+    - https://www.volkswagen.fr/fr/modeles/id4.html
+  notes: >
+    French pricing includes 20% TVA. VW ID.4 produced in Zwickau/Emden
+    qualifies for European environmental score for bonus écologique.
