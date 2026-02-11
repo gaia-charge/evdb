@@ -90,16 +90,21 @@ dimensions:
   width_mm: 1967
   height_mm: 1696
   wheelbase_mm: 3000
-  cargo_volume_liters: 500
-  cargo_volume_seats_down_liters: 1750
+  ground_clearance_mm: 200
   drag_coefficient: 0.25
   frontal_area_m2: 2.82
+
+cargo:
+  trunk_capacity_liters: 500
+  trunk_max_liters: 1750
+  frunk_capacity_liters: 0
 
 weight:
   curb_weight_kg: 2655
   gross_vehicle_weight_kg: 3205
   payload_kg: 550
-  max_towing_capacity_kg: 2500
+  towing_capacity_braked_kg: 2500
+  towing_capacity_unbraked_kg: 750
 
 efficiency:
   wltp_kwh_per_100km: 20.5
