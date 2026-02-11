@@ -130,6 +130,7 @@ When updating an existing variant, add ALL available data:
 
 ## 🚫 Reminders
 
+- **Enum values MUST be uppercase**: `drive_type` must be `FWD`, `RWD`, or `AWD` (never lowercase `fwd`/`rwd`/`awd` or spelled out like `rear_wheel_drive`)
 - **BEVs only** — No PHEVs, hybrids, or range extenders
 - **European market only** — Vehicles sold in Europe
 - **Validate before committing** — Always run validate.py
