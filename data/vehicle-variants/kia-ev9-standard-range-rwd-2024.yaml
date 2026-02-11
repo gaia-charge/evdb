@@ -144,15 +144,12 @@ dimensions:
   frontal_area_m2: 2.88
 
 weight:
-  curb_kg: 2355  # 190 kg lighter than AWD
-  gross_vehicle_kg: 3085
+  curb_weight_kg: 2355  # 190 kg lighter than AWD
+  gross_vehicle_weight_kg: 3085
   payload_kg: 730
-  weight_distribution_front_percent: 52
-  weight_distribution_rear_percent: 48
-  towing:
-    max_braked_kg: 1600  # 300 kg less than AWD (1900 kg)
-    max_unbraked_kg: 750
-    tongue_weight_kg: 100
+  towing_capacity_braked_kg: 1600  # 300 kg less than AWD (1900 kg)
+  towing_capacity_unbraked_kg: 750
+  trailer_hitch_available: true
 
 # Interior & Seating
 interior:
@@ -178,10 +175,9 @@ interior:
 
 cargo:
   trunk_capacity_liters: 333  # Behind third row
-  max_capacity_liters: 2393   # Seats folded
+  trunk_max_liters: 2393   # Seats folded
   frunk_capacity_liters: 52
-  underfloor_storage: true
-  power_tailgate: true
+  roof_load_kg: 100
   notes:
     - Class-leading third-row space
     - Sliding second row increases cargo flexibility

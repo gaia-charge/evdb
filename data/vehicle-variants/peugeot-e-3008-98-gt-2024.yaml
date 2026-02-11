@@ -15,9 +15,10 @@ dimensions:
   ground_clearance_mm: 180
 
 cargo:
-  trunk_liters: 520
-  frunk_liters: 0
-  rear_seats_folded_liters: 1480
+  trunk_capacity_liters: 520
+  trunk_max_liters: 1480
+  frunk_capacity_liters: 0
+  roof_load_kg: 80
 
 production:
   start_date: 2024-02-01
@@ -117,12 +118,11 @@ efficiency:
 
 weight:
   curb_weight_kg: 2060
-  gross_weight_kg: 2590
-  weight_distribution_front_percent: 58
-  
-towing:
-  max_towing_kg: 1250  # Braked trailer
-  max_tongue_weight_kg: 75
+  gross_vehicle_weight_kg: 2590
+  payload_kg: 530
+  towing_capacity_braked_kg: 1250
+  towing_capacity_unbraked_kg: 750
+  trailer_hitch_available: true
 
 drivetrain:
   drive_type: FWD
