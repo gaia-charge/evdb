@@ -1,59 +1,60 @@
+# Hyundai IONIQ 6 Standard Range RWD (2025) - Poland Market
 id: hyundai-ioniq-6-standard-range-rwd-2025-pl
 variant_id: hyundai-ioniq-6-standard-range-rwd-2025
 market: PL
 currency: PLN
 
 availability_status: available
-available_from: "2024-06-01"
+available_from: "2025-01-01"
+delivery_time_weeks: 8
 
 pricing:
-  base_price: 219900
-  price_including_vat: 219900
+  base_price: 209900
+  price_including_vat: 209900
   vat_rate_percent: 23
   destination_charge: 0
-  total_price_estimate: 219900
-  notes: >
-    Hyundai Ioniq 6 Standard Range RWD in Poland at 219,900 PLN including 23% VAT.
-    Entry-level variant with 53 kWh battery and 446 km WLTP range.
+  registration_fees: 0
+  total_price_estimate: 209900
 
 incentives:
-  - name: "Mój elektryk"
+  - name: Mój elektryk
     type: grant
     amount: 27000
-    description: >
-      "Mój elektryk" (My Electric Car) program offers up to 27,000 PLN subsidy
-      for individuals purchasing BEVs. Higher amounts available for scrapping
-      old vehicles. Program subject to fund availability.
-    conditions:
-      - Pure battery-electric vehicle
-      - New vehicle registration in Poland
-      - Maximum vehicle price 225,000 PLN gross (eligible)
+    description: "Government subsidy for BEV purchase (Mój elektryk program). Up to 27,000 PLN for individuals."
+    valid_from: "2024-01-01"
     valid_until: "2025-12-31"
+    conditions:
+      - Vehicle must be new
+      - Base price under 225,000 PLN
+      - Applicant must be natural person
 
 market_specific:
-  delivery_time_weeks: 6
+  popular_options:
+    - name: Dach solarny
+      price: 7000
 
-  colors:
-    - name: "Polar White"
-      type: solid
-      price: 0
-    - name: "Phantom Black Pearl"
+  available_colors:
+    - name: Biophilic Blue Pearl
       type: metallic
-      price: 2700
-    - name: "Nocturne Gray Metallic"
+      price_add: 3000
+    - name: Abyss Black Pearl
       type: metallic
-      price: 2700
-    - name: "Digital Teal Pearl"
+      price_add: 0
+    - name: Curated Silver Metallic
       type: metallic
-      price: 2700
-    - name: "Serenity Blue Pearl"
-      type: metallic
-      price: 2700
+      price_add: 3000
+    - name: Gravity Gold Matte
+      type: matte
+      price_add: 4000
+
+notes: |
+  Hyundai IONIQ 6 Standard Range RWD available in Poland through Hyundai dealer network.
+  Prices include 23% VAT. Eligible for Mój elektryk subsidy (27,000 PLN).
+  53 kWh battery, 429 km WLTP range. 800V ultra-fast charging architecture.
 
 metadata:
   data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.hyundai.com/pl/modele/ioniq-6
   created_at: "2026-02-11"
-  last_updated: "2026-02-11"
-  sources:
-    - "https://www.hyundai.pl/modele/ioniq-6"
-  notes: "Polish market pricing estimated. Mój elektryk subsidy applicable for vehicles under 225,000 PLN."
+  last_verified_at: "2026-02-11"
