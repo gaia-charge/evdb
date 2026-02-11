@@ -20,53 +20,56 @@ incentives:
   - name: Bonus écologique
     type: grant
     amount: 4000
-    description: Government ecological bonus for EVs under €47,000. Tesla Model Y RWD qualifies.
+    description: "Bonus écologique for BEVs priced under €47,000 (manufactured in EU)"
     valid_from: "2025-01-01"
     valid_until: "2025-12-31"
     conditions:
-      - Price under €47,000
-      - Minimum environmental score required
-      - Made in Europe (Gigafactory Berlin) — qualifies
+      - Vehicle price must not exceed €47,000
+      - Vehicle must meet environmental score requirements
+      - Tesla Model Y (Berlin) qualifies as EU-manufactured
   - name: Prime à la conversion
     type: grant
     amount: 1500
-    description: Additional bonus when scrapping an old polluting vehicle.
+    description: "Additional bonus when scrapping an old vehicle (Crit'Air 3 or higher)"
     valid_from: "2025-01-01"
     valid_until: "2025-12-31"
     conditions:
-      - Must scrap eligible old vehicle
-      - Income-dependent (up to €6,000 for low-income households)
+      - Must scrap an old diesel (pre-2011) or petrol (pre-2006) vehicle
 
 market_specific:
   popular_options:
     - name: Enhanced Autopilot
       price: 3800
-    - name: Tow Hitch
-      price: 1000
+    - name: Full Self-Driving Capability
+      price: 7500
+    - name: Tow hitch
+      price: 1050
 
   available_colors:
     - name: Pearl White Multi-Coat
-      type: standard
+      type: solid
       price_add: 0
     - name: Solid Black
       type: solid
-      price_add: 1200
+      price_add: 1300
+    - name: Midnight Silver Metallic
+      type: metallic
+      price_add: 1300
     - name: Ultra Red
       type: metallic
-      price_add: 2000
+      price_add: 2600
     - name: Quicksilver
       type: metallic
-      price_add: 2000
+      price_add: 2600
 
 notes: |
-  Tesla Model Y is a top-selling EV in France. Made at Gigafactory Berlin,
-  it qualifies for the bonus écologique (Chinese-made Teslas do not).
-  Price includes 20% TVA. Available via Tesla stores in Paris, Lyon, Marseille,
-  Bordeaux, Toulouse, Nice, and more. 100+ Supercharger locations in France.
+  Tesla Model Y RWD is one of the best-selling EVs in France.
+  Eligible for €4,000 bonus écologique (Berlin-made, under €47k).
+  Prices include 20% TVA. Extensive Supercharger network in France (200+ stations).
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/fr_fr/modely
+  source_url: https://www.tesla.com/fr_FR/modely
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"

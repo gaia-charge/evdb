@@ -20,55 +20,49 @@ incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III program expired. Awaiting potential MOVES IV.
+    description: MOVES III program expired. Potential future MOVES IV program pending.
     valid_from: null
     valid_until: null
     conditions:
       - Program expired
-  - name: Impuesto de Matriculación
-    type: tax_exemption
-    amount: 0
-    description: EVs exempt from registration tax (0% vs up to 14.75% for ICE)
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - Zero emission vehicle
 
 market_specific:
   popular_options:
     - name: Enhanced Autopilot
       price: 3800
-    - name: Tow Hitch
-      price: 1000
-    - name: 20" Induction Wheels
-      price: 2000
+    - name: Full Self-Driving Capability
+      price: 7500
+    - name: Tow hitch
+      price: 1050
+    - name: 20-inch Induction Wheels
+      price: 2100
 
   available_colors:
     - name: Pearl White Multi-Coat
-      type: standard
+      type: solid
       price_add: 0
     - name: Solid Black
       type: solid
-      price_add: 1200
+      price_add: 1300
     - name: Midnight Silver Metallic
       type: metallic
-      price_add: 1200
+      price_add: 1300
     - name: Ultra Red
       type: metallic
-      price_add: 2000
+      price_add: 2600
     - name: Quicksilver
       type: metallic
-      price_add: 2000
+      price_add: 2600
 
 notes: |
-  Tesla Model Y is the best-selling EV in Spain. Price includes 21% IVA.
-  Exempt from registration tax (Impuesto de Matriculación).
-  Available through Tesla stores in Madrid, Barcelona, Valencia, Málaga, Bilbao.
-  Supercharger network well-developed across Spain (80+ locations).
+  Tesla Model Y RWD is the best-selling EV in Spain. Available through tesla.com/es_ES.
+  Prices include 21% IVA. Made at Gigafactory Berlin.
+  LFP battery allows 100% daily charging.
+  Access to Tesla Supercharger network across Spain (100+ stations).
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/es_es/modely
+  source_url: https://www.tesla.com/es_ES/modely
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
