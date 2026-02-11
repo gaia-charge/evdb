@@ -9,6 +9,19 @@ production_years:
 trim_level: base
 market_position: base
 
+dimensions:
+  length_mm: 5060
+  width_mm: 1900
+  width_with_mirrors_mm: 2144
+  height_mm: 1515
+  wheelbase_mm: 2995
+  ground_clearance_mm: 144
+
+cargo:
+  trunk_capacity_liters: 490
+  trunk_max_liters: 1560
+  frunk_capacity_liters: 0
+
 # Battery Specifications
 battery:
   usable_kwh: 81.2
@@ -104,7 +117,8 @@ weight:
   curb_weight_kg: 2230
   gross_weight_kg: 2755
   payload_kg: 525
-  towing_capacity_kg: 0
+  towing_capacity_braked_kg: 2000
+  towing_capacity_unbraked_kg: 750
 
 efficiency:
   wltp_kwh_per_100km: 15.8
