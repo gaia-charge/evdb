@@ -1554,9 +1554,9 @@ elif page == "📊 Analytics":
     conn = get_connection(_current_release)
     df = get_analytics_data(conn)
     
-    # Create full vehicle name
+    # Create full vehicle name including year to avoid duplicate aggregation
     df['vehicle_name'] = df.apply(
-        lambda r: format_vehicle_name(r['manufacturer'], r['model'], r['variant_name']), axis=1
+        lambda r: format_vehicle_name(r['manufacturer'], r['model'], r['variant_name'], int(r['model_year']) if pd.notna(r['model_year']) else None), axis=1
     )
     
     # Create tabs for different analysis sections
