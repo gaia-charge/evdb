@@ -1,0 +1,74 @@
+# Peugeot e-208 GT 54kWh - French Market (2025)
+
+id: peugeot-e-208-gt-54kwh-2025-fr
+variant_id: peugeot-e-208-gt-54kwh-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-09-01"
+delivery_time_weeks: 8
+
+pricing:
+  base_price: 38400
+  price_including_vat: 38400
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 38400
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: Government EV purchase bonus for vehicles under €47,000
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Manufactured in EU (Mulhouse/Kenitra - check eligibility)
+
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: Additional bonus when scrapping an old ICE vehicle
+    conditions:
+      - Must scrap eligible older vehicle
+      - Income-dependent
+
+market_specific:
+  popular_options:
+    - name: Pack Drive Assist Plus
+      price: 800
+    - name: Toit panoramique
+      price: 1100
+
+  available_colors:
+    - name: Blanc Banquise (solid)
+      type: solid
+      price_add: 0
+    - name: Noir Perla Nera (pearl)
+      type: pearl
+      price_add: 650
+    - name: Gris Artense (metallic)
+      type: metallic
+      price_add: 550
+    - name: Bleu Vertigo (metallic)
+      type: metallic
+      price_add: 550
+    - name: Vert Olivine (metallic)
+      type: metallic
+      price_add: 550
+
+notes: |
+  Peugeot e-208 GT 54kWh in France. Refreshed 2025 model with larger 54kWh battery
+  (up from 51kWh), 156kW motor, and ~400km WLTP range. Peugeot is a top-selling
+  domestic brand. GT trim includes i-Cockpit 3D, 10-inch touchscreen, GT styling.
+  After bonus: effectively from €34,400. Strong competitor to Renault 5.
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.peugeot.fr/nos-vehicules/e-208.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"

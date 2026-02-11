@@ -1,86 +1,83 @@
+# Renault 5 E-Tech Techno 52kWh - French Market (2025)
+
 id: renault-5-e-tech-techno-52-2025-fr
 variant_id: renault-5-e-tech-techno-52-2025
 market: FR
 currency: EUR
 
+availability_status: available
+available_from: "2025-02-01"
+delivery_time_weeks: 12
+
 pricing:
-  base_price: 33490
-  transport_charge: 600
-  total_msrp: 34090
-  price_before_incentives: 34090
+  base_price: 28370
+  price_including_vat: 28370
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 28370
 
-  available_incentives:
-    - name: Bonus écologique
-      type: purchase-rebate
-      amount: 4000
-      description: Government ecological bonus for BEVs priced under €47,000 manufactured in EU
-      eligibility: "Vehicle priced under €47,000, manufactured in EU (Douai, France — eligible)"
-      status: active
-      url: https://www.service-public.fr/particuliers/vosdroits/F34014
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: Government EV purchase bonus for vehicles under €47,000
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Manufactured in EU (Douai, France - fully eligible)
 
-  estimated_price_after_incentives: 30090
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: Additional bonus when scrapping old ICE vehicle
+    conditions:
+      - Must scrap eligible older vehicle
+      - Income-dependent (up to €6,000 for low-income)
 
-availability:
-  status: available
-  order_status: available
-  estimated_delivery: "6-10 semaines"
-  last_updated: "2026-02-10"
+  - name: Leasing social
+    type: subsidy
+    amount: 0
+    description: Government-backed leasing program from €100/month for eligible households
+    conditions:
+      - Income below threshold (RFR)
+      - Limited availability
 
 market_specific:
-  trim_name: "Techno 52 kWh"
-  standard_features:
-    - Écran multimédia 10.1 pouces openR link
-    - Google intégré (Maps, Assistant)
-    - Apple CarPlay et Android Auto sans fil
-    - Pompe à chaleur
-    - Caméra de recul 180 degrés
-    - Capteurs de stationnement avant et arrière
-    - Phares LED
-    - Climatisation automatique
-    - Sièges avant chauffants
-    - Volant chauffant
-    - Tableau de bord numérique 10 pouces
-    - Chargeur smartphone sans fil
-    - Régulateur de vitesse adaptatif
-    - Aide au maintien dans la voie
+  popular_options:
+    - name: Pack Techno Plus
+      price: 1200
+    - name: Peinture bi-ton
+      price: 600
 
   available_colors:
-    - name: Vert Pop
+    - name: Jaune Pop (solid)
       type: solid
-      price_premium: 0
-
-    - name: Jaune Iconique
+      price_add: 0
+    - name: Blanc Glacier (solid)
       type: solid
-      price_premium: 500
-
-    - name: Bleu Révolution
+      price_add: 0
+    - name: Bleu Marine (metallic)
       type: metallic
-      price_premium: 700
-
-    - name: Gris Urbain
+      price_add: 690
+    - name: Noir Etoilé (metallic)
       type: metallic
-      price_premium: 700
+      price_add: 690
+    - name: Vert Jade (metallic)
+      type: metallic
+      price_add: 690
 
-    - name: Blanc Glacier
-      type: solid
-      price_premium: 0
-
-charging_infrastructure:
-  - Compatible avec toutes les bornes CCS2 et Type 2
-  - Charge DC rapide jusqu'à 100 kW
-  - Excellent réseau de bornes en France (Ionity, TotalEnergies, Fastned, Electra)
-
-tax_benefits:
-  - TVA 20% incluse dans le prix
-  - Exonération de la taxe sur les véhicules de société
-  - Pas de malus écologique
-  - Eligible au leasing social (sous conditions de revenus)
-
-notes: "La Renault 5 E-Tech Techno 52 kWh avec 400 km d'autonomie WLTP. Prix TTC. Fabriquée à Douai (France), éligible au bonus écologique. Design rétro moderne emblématique. L'un des véhicules électriques les plus attendus de 2025."
+notes: |
+  Renault 5 E-Tech Techno 52kWh in France. The most anticipated French EV of 2025.
+  Base Evolution 40kWh from €21,370, Techno 52kWh from €28,370.
+  Built at Douai, France - fully eligible for all French incentives.
+  After bonus: effectively from €24,370. Eligible for leasing social program.
+  Massive waiting lists in France - 12+ week delivery.
 
 metadata:
-  created_at: "2026-02-10"
-  data_quality: estimated
-  source: manufacturer
-  source_url: https://www.renault.fr/vehicules-electriques/renault-5-e-tech.html
-  last_verified: "2026-02-10"
+  data_quality: verified
+  data_source: manufacturer
+  source_url: https://www.renault.fr/vehicules-electriques/renault-5-e-tech-electric.html
+  created_at: "2026-02-11"
+  last_verified_at: "2026-02-11"
