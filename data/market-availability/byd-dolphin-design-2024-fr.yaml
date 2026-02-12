@@ -1,0 +1,73 @@
+# BYD Dolphin Design (2024) - France Market Availability
+
+id: byd-dolphin-design-2024-fr
+variant_id: byd-dolphin-design-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-01-01"
+
+pricing:
+  base_price: 37990
+  price_including_vat: 37990
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 37990
+  notes: >
+    BYD Dolphin Design (60.4 kWh) in France at €37,990 including 20% TVA.
+    Not eligible for bonus écologique due to eco-score rules.
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 0
+    description: >
+      BYD Dolphin is NOT eligible for the French bonus écologique since 2024 due to
+      the environmental manufacturing score requirement. Vehicles manufactured in China
+      do not qualify under the new eco-score rules.
+    conditions:
+      - Must meet environmental manufacturing score (eco-score)
+    valid_until: "2026-12-31"
+    notes: "Ineligible since 2024 eco-score rules"
+
+market_specific:
+  standard_equipment:
+    - 12.8" rotating touchscreen
+    - Wireless Apple CarPlay and Android Auto
+    - Full LED headlights
+    - Front and rear parking sensors
+    - 360-degree camera
+    - Automatic climate control
+    - Heated front seats
+    - Keyless entry and start
+    - Vehicle-to-Load (V2L)
+    - Heat pump
+
+  colors:
+    - name: "Cosmos Black"
+      type: solid
+      price: 0
+    - name: "Aurora White"
+      type: metallic
+      price: 590
+    - name: "Boulder Grey"
+      type: metallic
+      price: 590
+    - name: "Surf Blue"
+      type: metallic
+      price: 590
+    - name: "Coral Pink"
+      type: metallic
+      price: 590
+
+  delivery_time_weeks: 4
+
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-12"
+  created_at: "2026-02-12"
+  sources:
+    - "BYD France official website"
+    - "French market pricing data"
+  notes: "Pricing estimated. Not eligible for bonus écologique due to Chinese manufacturing."
