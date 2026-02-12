@@ -1,4 +1,4 @@
-# Volkswagen ID.3 Pro (2024) - Poland Market
+---
 id: volkswagen-id3-pro-2024-pl
 variant_id: volkswagen-id3-pro-2024
 market: PL
@@ -9,53 +9,72 @@ available_from: "2024-01-01"
 delivery_time_weeks: 8
 
 pricing:
-  base_price: 189900
-  price_including_vat: 189900
+  base_price: 189990
+  price_including_vat: 189990
   vat_rate_percent: 23
-  destination_charge: 0
-  total_price_estimate: 189900
+
+available_colors:
+  - name: Pure White
+    code: B4B4
+    type: solid
+    price_add:
+      amount: 0
+      currency: PLN
+  - name: Deep Black Pearl Effect
+    code: 2T2T
+    type: pearl
+    price_add:
+      amount: 4700
+      currency: PLN
+  - name: Moonstone Grey Metallic
+    code: 8E8E
+    type: metallic
+    price_add:
+      amount: 3800
+      currency: PLN
+  - name: Energy Blue Metallic
+    code: X3X3
+    type: metallic
+    price_add:
+      amount: 3800
+      currency: PLN
+
+available_wheels:
+  - name: 17" Andoya Alloy Wheels
+    size_inches: 17
+    type: alloy
+    price_add:
+      amount: 0
+      currency: PLN
+  - name: 18" Andoya Alloy Wheels
+    size_inches: 18
+    type: alloy
+    price_add:
+      amount: 4100
+      currency: PLN
 
 incentives:
-  - name: Mój Elektryk
+  - name: "Mój elektryk"
     type: grant
     amount: 27000
-    description: >
-      Mój Elektryk subsidy for BEVs. Up to 27,000 PLN for individuals.
-      Net price must be under 225,000 PLN. ID.3 Pro qualifies.
-    conditions:
-      - Net price must be under 225,000 PLN
-      - Vehicle is eligible
+    description: "Government subsidy for BEVs priced up to 225,000 PLN net"
 
-market_specific:
-  popular_options:
-    - name: Design Package
-      price: 8900
-    - name: Infotainment Package Plus
-      price: 6500
+delivery_info:
+  production_location: "Zwickau, Germany"
+  typical_wait_weeks: 8
 
-  available_colors:
-    - name: Glacier White
-      type: metallic
-      price_add: 0
-    - name: Grenadilla Black
-      type: metallic
-      price_add: 2700
-    - name: Moonstone Grey
-      type: metallic
-      price_add: 2700
-    - name: Kings Red
-      type: metallic
-      price_add: 2700
+market_competitors:
+  - model: MG4 Electric Extended Range
+    base_price: 149900
+  - model: CUPRA Born 58 kWh
+    base_price: 169900
 
 notes: |
-  Volkswagen ID.3 Pro available in Poland via VW dealers.
-  Prices include 23% VAT. Eligible for Mój Elektryk subsidy (27,000 PLN).
-  58 kWh battery, 426 km WLTP range. Built at VW Zwickau/Dresden plants.
-  Effective price after subsidy: ~162,900 PLN.
+  VW ID.3 Pro in Poland. Eligible for Mój elektryk subsidy (27,000 PLN).
+  Net price below 225,000 PLN threshold. Popular compact EV choice in PL.
 
 metadata:
   data_quality: estimated
-  data_source: manufacturer
-  source_url: https://www.volkswagen.pl/pl/modele/id3.html
-  created_at: "2026-02-11"
-  last_verified_at: "2026-02-11"
+  last_updated: "2026-02-12"
+  created_at: "2026-02-12"
+  source: "Volkswagen Poland configurator"
