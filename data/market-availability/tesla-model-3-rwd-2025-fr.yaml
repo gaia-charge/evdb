@@ -1,84 +1,75 @@
-# Tesla Model 3 RWD - France Market (2025)
+# Tesla Model 3 RWD - French Market (2025)
+
 id: tesla-model-3-rwd-2025-fr
 variant_id: tesla-model-3-rwd-2025
 market: FR
 currency: EUR
+
 availability_status: available
-available_from: "2024-01-15"
+available_from: "2024-01-01"
+delivery_time_weeks: 4
 
 pricing:
   base_price: 42990
   price_including_vat: 42990
   vat_rate_percent: 20
-  destination_charge: 1100
-  total_price_estimate: 44090
+  destination_charge: 1200
+  registration_fees: 0
+  total_price_estimate: 44190
 
 incentives:
   - name: "Bonus écologique"
     type: grant
     amount: 4000
-    description: >
-      Government ecological bonus for BEV purchases. Amount depends on
-      vehicle price and buyer income. Standard bonus €4,000 for vehicles
-      under €47,000.
-    conditions:
-      - Battery electric vehicle
-      - Vehicle price under €47,000
-      - Environmental score requirement (produced in Europe or equivalent)
+    description: "Government ecological bonus for BEVs. €4,000 for vehicles priced under €47,000."
     valid_from: "2025-01-01"
     valid_until: "2025-12-31"
-    notes: >
-      Tesla Model 3 Highland (made in China) may not qualify for full bonus
-      due to environmental score. Check government website for current eligibility.
-
-  - name: "Prime à la conversion"
-    type: grant
-    amount: 1500
-    description: >
-      Additional bonus when scrapping an old vehicle (Crit'Air 3 or worse).
-      Up to €1,500 for standard income households.
     conditions:
-      - Scrapping eligible old vehicle
-      - Income-dependent amount
+      - "Vehicle price must not exceed €47,000"
+      - "Vehicle must meet European manufacturing requirements"
+      - "Tesla Model 3 from Shanghai may not qualify due to environmental score"
 
 market_specific:
-  standard_equipment:
-    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
-    - Heat pump climate control
-    - 15.4" center touchscreen
-    - 8.0" rear display
-    - Glass roof
-    - Heated front seats
-    - Ventilated front seats
-    - Wireless charging pad
-    - LED headlights
-    - Sentry Mode and Dashcam
-
   available_colors:
     - name: "Pearl White Multi-Coat"
-      additional_cost: 0
+      type: solid
+      price_add: 0
     - name: "Solid Black"
-      additional_cost: 1200
+      type: metallic
+      price_add: 1200
     - name: "Midnight Silver Metallic"
-      additional_cost: 1200
+      type: metallic
+      price_add: 1200
     - name: "Deep Blue Metallic"
-      additional_cost: 1200
+      type: metallic
+      price_add: 1200
     - name: "Stealth Grey"
-      additional_cost: 1500
+      type: metallic
+      price_add: 1500
     - name: "Ultra Red"
-      additional_cost: 2400
-    - name: "Quicksilver"
-      additional_cost: 2400
+      type: metallic
+      price_add: 2400
 
-  delivery_time_weeks: 3
+  popular_options:
+    - name: "Enhanced Autopilot"
+      price: 3800
+    - name: "Full Self-Driving Capability"
+      price: 7500
+
+dealer_network:
+  dealer_count: 0
+  service_centers: 18
+  online_sales_available: true
+
+notes: |
+  Tesla Model 3 RWD available in France via tesla.com/fr_FR.
+  Bonus écologique eligibility uncertain - Shanghai-built Model 3 may not meet
+  the environmental score requirements introduced in 2024. French buyers should
+  verify eligibility before purchase. No registration tax for EVs in most departments.
 
 metadata:
   data_quality: estimated
-  created_at: "2026-02-11"
-  last_updated: "2026-02-11"
-  sources:
-    - https://www.tesla.com/fr_fr/model3
-  notes: >
-    French pricing includes 20% TVA. Tesla sells direct-to-consumer.
-    Bonus écologique eligibility may be affected by environmental score
-    (vehicle manufactured in China).
+  data_source: manufacturer
+  source_url: https://www.tesla.com/fr_fr/model3
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"

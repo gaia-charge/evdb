@@ -1,4 +1,4 @@
-# Renault 5 E-Tech Evolution 40kWh - Polish Market (2025)
+# Renault 5 E-Tech Evolution 40 - Polish Market (2025)
 
 id: renault-5-e-tech-evolution-40-2025-pl
 variant_id: renault-5-e-tech-evolution-40-2025
@@ -7,49 +7,58 @@ currency: PLN
 
 availability_status: available
 available_from: "2025-03-01"
-delivery_time_weeks: 14
+delivery_time_weeks: 12
 
 pricing:
-  base_price: 121500
-  price_including_vat: 121500
+  base_price: 119900
+  price_including_vat: 119900
   vat_rate_percent: 23
-  destination_charge: 0
-  total_price_estimate: 121500
+  destination_charge: 3000
+  registration_fees: 500
+  total_price_estimate: 123400
 
 incentives:
   - name: "Mój elektryk"
     type: grant
     amount: 27000
-    description: "Government subsidy for BEV purchase under the 'Mój elektryk' program."
+    description: "Government subsidy for BEVs up to 225,000 PLN. Max 27,000 PLN for individuals."
+    valid_from: "2024-01-01"
+    valid_until: "2026-12-31"
     conditions:
-      - Pure battery-electric vehicle
-      - Maximum vehicle price 225,000 PLN net
-      - Available to individuals and businesses
+      - "Vehicle base price must not exceed 225,000 PLN"
+      - "Applicant must be a natural person"
 
 market_specific:
   available_colors:
-    - name: Jaune Pop
+    - name: "Pop Green"
       type: solid
       price_add: 0
-    - name: Blanc Glacier
+    - name: "Iconic Yellow"
       type: solid
       price_add: 0
-    - name: Bleu Marine
+    - name: "Revolution Blue"
       type: metallic
-      price_add: 3200
-    - name: Noir Etoilé
+      price_add: 2500
+    - name: "Urban Grey"
       type: metallic
-      price_add: 3200
+      price_add: 2500
+    - name: "Black"
+      type: metallic
+      price_add: 2500
+
+  popular_options:
+    - name: "Comfort Pack"
+      price: 5500
 
 notes: |
-  Renault 5 E-Tech Evolution (40 kWh battery) in Poland.
-  Entry-level R5 with ~300 km WLTP range. Base price 121,500 PLN.
-  After Mój elektryk subsidy: effectively from 94,500 PLN.
-  Very competitive pricing for the Polish market.
+  Renault 5 E-Tech Evolution 40 available in Poland through Renault dealer network.
+  Eligible for Mój elektryk subsidy (27,000 PLN). Effective price after subsidy ~96,400 PLN.
+  Strong demand expected due to retro design and competitive pricing.
+  Built in Douai, France on AmpR Small platform.
 
 metadata:
-  data_quality: verified
+  data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.renault.pl/samochody-elektryczne/renault-5-e-tech.html
+  source_url: https://www.renault.pl/pojazdy-elektryczne/renault-5-e-tech.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
