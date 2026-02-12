@@ -1,0 +1,108 @@
+# Tesla Model X AWD - Spanish Market (2026)
+# Premium electric SUV, Spain availability
+
+id: tesla-model-x-awd-2026-es
+variant_id: tesla-model-x-awd-2026
+market: ES
+currency: EUR
+availability_status: available
+available_from: "2025-10"
+delivery_time_weeks: 4
+
+pricing:
+  base_price: 117490
+  price_including_vat: 117490
+  vat_rate_percent: 21
+  destination_charge: 0
+  notes: >
+    Tesla prices include delivery in Spain. Price includes 21% IVA.
+    Tesla uses direct sales model — order via tesla.com/es_ES.
+
+incentives:
+  - name: Registro IEDMT Exemption
+    type: tax_exemption
+    amount: 0
+    description: "Zero-emission vehicles exempt from registration tax (IEDMT)"
+    valid_until: "2026-12-31"
+    notes: "Significant saving vs ICE luxury SUVs which pay 12-14.75% IEDMT"
+  - name: Municipal Road Tax Discount
+    type: tax_exemption
+    amount: 0
+    description: "Up to 75% discount on IVTM (road tax) in many municipalities"
+  - name: Madrid Central / ZBE Access
+    type: discount
+    amount: 0
+    description: "Full access to Zero Emission Zones in Spanish cities"
+
+available_colors:
+  - name: Pearl White Multi-Coat
+    type: pearl
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Solid Black
+    type: solid
+    price_add:
+      amount: 1600
+      currency: EUR
+  - name: Midnight Silver Metallic
+    type: metallic
+    price_add:
+      amount: 1600
+      currency: EUR
+  - name: Deep Blue Metallic
+    type: metallic
+    price_add:
+      amount: 1600
+      currency: EUR
+  - name: Red Multi-Coat
+    type: pearl
+    price_add:
+      amount: 3200
+      currency: EUR
+
+available_wheels:
+  - name: "20-inch Cyberstream Wheels"
+    size_inches: 20
+    type: alloy
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: "22-inch Turbine Wheels"
+    size_inches: 22
+    type: alloy
+    price_add:
+      amount: 5800
+      currency: EUR
+
+available_interiors:
+  - name: All Black
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Black and White
+    price_add:
+      amount: 2100
+      currency: EUR
+  - name: Cream
+    price_add:
+      amount: 2100
+      currency: EUR
+
+market_notes: >
+  Tesla Model X is sold directly through tesla.com/es_ES and Tesla stores
+  in Madrid, Barcelona, Málaga, Valencia, and Bilbao. No dealer markups.
+  At €117,490, far above MOVES III cap — no purchase subsidies apply.
+  However, IEDMT exemption saves €14,000-€17,000 vs equivalent ICE luxury
+  SUV (which would pay 12-14.75% registration tax). Short delivery times
+  (4 weeks) due to established supply chain. Supercharger network well
+  developed across Spain with 50+ locations.
+
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-12"
+  confidence_level: medium
+  sources:
+    - https://www.tesla.com/es_es/model-x
+  created_at: "2026-02-12T07:15:00Z"
+  created_by: Patricio

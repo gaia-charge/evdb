@@ -1,0 +1,97 @@
+# CUPRA Raval 38 kWh - Spanish Market (2025)
+# Entry-level urban EV, Spain availability
+
+id: cupra-raval-38-kwh-2025-es
+variant_id: cupra-raval-38-kwh-2025
+market: ES
+currency: EUR
+availability_status: pre-order
+available_from: "2025-06"
+delivery_time_weeks: 14
+
+pricing:
+  base_price: 24990
+  price_including_vat: 24990
+  vat_rate_percent: 21
+  destination_charge: 790
+
+incentives:
+  - name: Plan MOVES III
+    type: grant
+    amount: 7000
+    description: "Government subsidy for BEV purchase (up to €7,000 with scrapping)"
+    eligibility: "Private buyers scrapping vehicle >7 years old; €4,500 without scrapping"
+    valid_until: "2026-12-31"
+    notes: "Subject to available budget; check IDAE website for current status"
+  - name: Registro IEDMT Exemption
+    type: tax_exemption
+    amount: 0
+    description: "Zero-emission vehicles exempt from registration tax (IEDMT)"
+    valid_until: "2026-12-31"
+  - name: Municipal Road Tax Discount
+    type: tax_exemption
+    amount: 0
+    description: "Up to 75% discount on IVTM (road tax) in many municipalities"
+    notes: "Varies by municipality; check local ayuntamiento"
+
+available_colors:
+  - name: Quartz Silver Matte
+    type: matte
+    price_add:
+      amount: 0
+      currency: EUR
+  - name: Raval Blue
+    type: metallic
+    price_add:
+      amount: 590
+      currency: EUR
+  - name: Midnight Black
+    type: metallic
+    price_add:
+      amount: 590
+      currency: EUR
+  - name: Century Bronze Matte
+    type: matte
+    price_add:
+      amount: 790
+      currency: EUR
+  - name: Magnetic Tech Matte
+    type: matte
+    price_add:
+      amount: 790
+      currency: EUR
+
+optional_equipment:
+  - name: Technology Package
+    price: 1500
+    includes:
+      - "Augmented reality head-up display"
+      - "Wireless smartphone charging"
+      - "Auto-dimming rear mirror"
+      - "Matrix LED headlights"
+  - name: Comfort Package
+    price: 990
+    includes:
+      - "Heated front seats"
+      - "Heated steering wheel"
+      - "Rear parking sensors"
+      - "Keyless entry"
+
+market_notes: >
+  CUPRA Raval 38 kWh is manufactured in Martorell, Barcelona — making it a
+  Spanish-built EV. As a national product, it benefits from strong dealer
+  network (CUPRA/SEAT concesionarios) across Spain. Starting at €24,990,
+  it's one of the most affordable BEVs in Spain. With Plan MOVES III
+  subsidies, effective price can drop to €17,990 (with scrapping) or
+  €20,490 (without). Directly competes with Renault 5 E-Tech and
+  Citroën ë-C3 in the Spanish market.
+
+metadata:
+  data_quality: estimated
+  last_updated: "2026-02-12"
+  confidence_level: medium
+  sources:
+    - https://www.cupraofficial.es/modelos/raval
+    - https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+  created_at: "2026-02-12T07:15:00Z"
+  created_by: Patricio
