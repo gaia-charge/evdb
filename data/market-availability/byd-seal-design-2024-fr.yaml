@@ -1,0 +1,88 @@
+# BYD Seal Design (2024) - France Market Availability
+
+id: byd-seal-design-2024-fr
+variant_id: byd-seal-design-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2023-11-01"
+
+pricing:
+  base_price: 46990
+  price_including_vat: 46990
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 46990
+  notes: >
+    BYD Seal Design RWD in France at €46,990 including 20% TVA.
+    Exceeds €47,000 threshold so bonus écologique may not apply.
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 0
+    description: >
+      Not eligible — vehicle price exceeds €47,000 threshold.
+    conditions:
+      - Vehicle price must be under €47,000 TTC
+    valid_until: "2025-12-31"
+
+  - name: Prime à la conversion
+    type: grant
+    amount: 1500
+    description: >
+      Additional grant when scrapping an old vehicle (Crit'Air 3 or worse).
+    conditions:
+      - Must scrap an old petrol (pre-2006) or diesel (pre-2011) vehicle
+      - Income-dependent
+
+  - name: Exonération carte grise
+    type: tax_exemption
+    amount: 0
+    description: >
+      Full or partial exemption from vehicle registration tax depending on region.
+
+market_specific:
+  standard_equipment:
+    - 15.6" rotating touchscreen with navigation
+    - 10.25" digital instrument cluster
+    - Wireless Apple CarPlay and Android Auto
+    - Full LED headlights with DRL
+    - 360-degree camera
+    - Dual-zone automatic climate control
+    - Keyless entry and start
+    - Vehicle-to-Load (V2L) capability
+    - 19" alloy wheels
+    - Heat pump
+    - 11kW onboard AC charger (3-phase)
+
+  colors:
+    - name: "Cosmos Black"
+      type: solid
+      price: 0
+    - name: "Aurora White"
+      type: metallic
+      price: 890
+    - name: "Atlantis Grey"
+      type: metallic
+      price: 890
+    - name: "Dewy Blue"
+      type: metallic
+      price: 890
+
+  delivery_time_weeks: 8
+
+  warranty:
+    vehicle_years: 6
+    vehicle_km: 150000
+    battery_years: 8
+    battery_km: 200000
+
+metadata:
+  created_at: "2026-02-12"
+  data_quality: estimated
+  last_updated: "2026-02-12"
+  sources:
+    - "https://www.byd.com/fr"
+  notes: "Pricing estimated based on DE market pricing. BYD Seal competes with Tesla Model 3 in France."
