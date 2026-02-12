@@ -1,0 +1,107 @@
+# Audi Q6 e-tron Base - French Market (2025)
+id: audi-q6-e-tron-base-2025-fr
+variant_id: audi-q6-e-tron-base-2025
+market: FR
+currency: EUR
+
+pricing:
+  base_price: 65200
+  price_includes:
+    - "11kW AC charging (3-phase)"
+    - "225kW DC fast charging"
+    - "14.5-inch MMI panoramic display"
+    - "11.9-inch Audi virtual cockpit plus"
+    - "Automatic climate control"
+    - "Heat pump"
+    - "360-degree camera system"
+    - "19-inch wheels"
+    - "LED headlights"
+
+trim_levels:
+  - name: "Q6 e-tron"
+    price: 65200
+    features:
+      - "RWD with 215kW (292hp)"
+      - "529 km WLTP range"
+      - "76 kWh usable battery"
+  - name: "advanced"
+    price: 70200
+    features:
+      - "Adaptive cruise control"
+      - "Park assist plus"
+      - "Nappa leather seats"
+      - "Ambient lighting plus"
+  - name: "S line"
+    price: 75200
+    features:
+      - "S line exterior styling"
+      - "S line sport seats"
+      - "20-inch S line wheels"
+      - "Sport suspension"
+
+colors:
+  - name: "Brilliant Black"
+    type: solid
+    price: 0
+  - name: "Glacier White metallic"
+    type: metallic
+    price: 895
+  - name: "Mythos Black metallic"
+    type: metallic
+    price: 895
+  - name: "Ascari Blue metallic"
+    type: metallic
+    price: 895
+
+packages:
+  - name: "Comfort Package Plus"
+    price: 2490
+    includes:
+      - "Heated & ventilated front seats"
+      - "Heated rear seats"
+      - "Massage function front seats"
+      - "Power tailgate with sensor control"
+  - name: "Technology Package Pro"
+    price: 4990
+    includes:
+      - "Adaptive cruise control"
+      - "Active lane assist plus"
+      - "Park assist plus with remote parking"
+      - "Augmented reality head-up display"
+
+incentives:
+  - name: "Bonus écologique"
+    type: grant
+    amount: 0
+    notes: "Not eligible - price exceeds €47,000 threshold for bonus écologique"
+    eligibility: "N/A - over price cap"
+
+availability:
+  in_stock: true
+  delivery_time_weeks: 14
+  production_status: active
+  order_url: "https://www.audi.fr/fr/web/fr/modeles/q6-e-tron.html"
+  notes: "Available through Audi France dealer network. Built at Ingolstadt, Germany."
+
+charging_costs:
+  - scenario: "Home charging"
+    cost_per_kwh: 0.25
+    cost_per_100km: 4.10
+  - scenario: "Public DC fast charging (IONITY)"
+    cost_per_kwh: 0.39
+    cost_per_100km: 6.40
+
+warranty:
+  vehicle_years: 2
+  vehicle_km: unlimited
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: estimated
+  created_at: "2026-02-12"
+  last_updated: "2026-02-12"
+  sources:
+    - "https://www.audi.fr/fr/web/fr/modeles/q6-e-tron.html"
+  notes: "French pricing estimated based on DE price. Not eligible for bonus écologique due to price >€47k. Prices include 20% TVA."
