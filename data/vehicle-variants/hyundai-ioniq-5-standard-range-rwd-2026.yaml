@@ -109,9 +109,11 @@ performance:
 # Weight & Efficiency
 weight:
   curb_weight_kg: 1950
-  gross_weight_kg: 2485
+  gross_vehicle_weight_kg: 2485
   payload_kg: 535
   towing_capacity_braked_kg: 750  # With braking
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
   
 efficiency:
   wltp_kwh_per_100km: 16.8
@@ -185,10 +187,6 @@ cargo:
   trunk_max_liters: 1587
   frunk_capacity_liters: 57
 
-towing:
-  braked_kg: 1600
-  unbraked_kg: 750
-  roof_load_kg: 80
 
 # Market & Pricing Notes
 notes: >

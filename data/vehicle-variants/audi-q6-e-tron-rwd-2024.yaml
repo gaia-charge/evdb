@@ -92,10 +92,12 @@ performance:
 
 weight:
   curb_weight_kg: 2270
-  gross_weight_kg: 2895
+  gross_vehicle_weight_kg: 2895
   payload_kg: 625
   distribution_front_percent: 48
   distribution_rear_percent: 52
+  towing_capacity_braked_kg: 2100
+  towing_capacity_unbraked_kg: 750
 
 efficiency:
   wltp_kwh_per_100km: 17.0  # Very efficient for size
@@ -136,11 +138,6 @@ technology:
     - "Acoustic Vehicle Alerting System (AVAS)"
     - "Bank & Turn technology for improved dynamics"
 
-towing:
-  braked_kg: 2100
-  unbraked_kg: 750
-  roof_load_kg: 75
-  notes: "Optional tow bar available. 2100 kg braked for RWD variant."
 
 metadata:
   data_quality: verified

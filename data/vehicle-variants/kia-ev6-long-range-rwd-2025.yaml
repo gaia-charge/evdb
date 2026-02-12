@@ -137,6 +137,8 @@ weight:
   payload_kg: 575
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
 
 # Wheels & Tires
 wheels:
@@ -191,8 +193,8 @@ dimensions:
   
   cargo:
     trunk_capacity_liters: 490
-    trunk_max_volume_l: 1300
-    frunk_volume_l: 52
+    trunk_max_liters: 1300
+    frunk_capacity_liters: 52
     notes: "RWD has larger frunk than AWD (52L vs 20L)"
 
 # Aerodynamics
@@ -207,11 +209,6 @@ production:
   platform: "E-GMP (Electric Global Modular Platform)"
   platform_generation: 1
   status: active
-towing:
-  braked_kg: 1600
-  unbraked_kg: 750
-  roof_load_kg: 80
-  notes: "Good towing capacity for E-GMP platform. Optional tow hitch."
 
 # Data Quality
 metadata:

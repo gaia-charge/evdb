@@ -1,56 +1,63 @@
-# Audi Q4 e-tron 45 quattro (2024) - France Market
+# Audi Q4 45 e-tron quattro (2024) - France Market
 id: audi-q4-e-tron-45-quattro-2024-fr
 variant_id: audi-q4-e-tron-45-quattro-2024
 market: FR
 currency: EUR
 
 availability_status: available
-available_from: "2024-01-15"
-delivery_time_weeks: 12
+available_from: "2024-01-01"
+delivery_time_weeks: 10
 
 pricing:
-  base_price: 58900
-  price_including_vat: 58900
-  vat_rate_percent: 20
-  destination_charge: 0
-  total_price_estimate: 58900
-
-incentives:
-  - name: "Bonus écologique"
-    type: grant
-    amount: 0
-    description: "Price exceeds 47,000 EUR threshold — not eligible for bonus écologique."
-    conditions:
-      - Vehicle price must be under 47,000 EUR
-
-  - name: "Exonération carte grise"
-    type: tax_exemption
-    amount: 0
-    description: "Full or partial exemption from vehicle registration tax depending on region."
+  base_price: 58640
+  base_price_vat_inclusive: true
+  vat_rate: 20.0
+  base_price_excluding_vat: 48867
 
 market_specific:
+  popular_options:
+    - name: Pack Confort Plus
+      price: 2550
+    - name: Pack Assistance Plus
+      price: 1850
+
   available_colors:
-    - name: Pebble Grey
-      type: solid
-      price_add: 0
-    - name: Mythos Black Metallic
+    - name: Blanc Glacier
       type: metallic
-      price_add: 750
-    - name: Navarra Blue Metallic
+      price_add: 850
+    - name: Noir Mythic
       type: metallic
-      price_add: 750
-    - name: Glacier White Metallic
+      price_add: 850
+    - name: Bleu Navarre
       type: metallic
-      price_add: 750
+      price_add: 850
+    - name: Gris Typhon
+      type: metallic
+      price_add: 850
+
+incentives:
+  - type: grant
+    name: Bonus écologique
+    amount: 0
+    currency: EUR
+    notes: "Not eligible — vehicle price exceeds 47,000 EUR threshold for bonus écologique."
+    active: false
+
+  - type: tax_exemption
+    name: Exonération carte grise
+    amount: 0
+    currency: EUR
+    notes: "Full or partial exemption from vehicle registration tax depending on region."
+    active: true
 
 notes: |
-  Audi Q4 e-tron 45 quattro available in France.
-  77 kWh battery, 490 km WLTP range. Dual motor AWD, 195 kW.
-  Produced at Volkswagen Zwickau plant.
+  Audi Q4 45 e-tron quattro available in France through Audi dealer network.
+  Prices include 20% TVA. AWD with 286 hp, 82 kWh battery, 509 km WLTP range.
+  Exceeds bonus écologique price cap of 47,000 EUR.
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
   source_url: https://www.audi.fr/fr/web/fr/modeles/q4-e-tron.html
-  created_at: "2026-02-11"
-  last_verified_at: "2026-02-11"
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"

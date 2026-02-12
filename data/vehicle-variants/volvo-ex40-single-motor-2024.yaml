@@ -80,10 +80,12 @@ performance:
 
 weight:
   curb_weight_kg: 2018
-  gross_weight_kg: 2580
+  gross_vehicle_weight_kg: 2580
   payload_kg: 562
   distribution_front_percent: 55
   distribution_rear_percent: 45
+  towing_capacity_braked_kg: 1800
+  towing_capacity_unbraked_kg: 750
 
 efficiency:
   wltp_kwh_per_100km: 16.5
@@ -137,11 +139,6 @@ cargo:
   trunk_max_liters: 1395
   frunk_capacity_liters: 0
 
-towing:
-  braked_kg: 1800
-  unbraked_kg: 750
-  roof_load_kg: 75
-  notes: "Optional tow bar available. 1800 kg braked."
 
 metadata:
   data_quality: verified

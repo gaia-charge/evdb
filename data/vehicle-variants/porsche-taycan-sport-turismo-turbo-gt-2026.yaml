@@ -97,7 +97,7 @@ dimensions:
 
 weight:
   curb_weight_kg: 2420
-  gross_weight_kg: 2830
+  gross_vehicle_weight_kg: 2830
   payload_kg: 410
   max_towing_kg: 0
   towing_capacity_braked_kg: 0
@@ -105,6 +105,8 @@ weight:
   trailer_hitch_available: false
   weight_distribution_front_percent: 48
   weight_distribution_rear_percent: 52
+  towing_capacity_braked_kg: 0
+  towing_capacity_unbraked_kg: 0
 
 cargo:
   trunk_capacity_liters: 405
@@ -112,7 +114,7 @@ cargo:
   total_liters: 486
   rear_seats_fold: true
   rear_seats_split: 60/40
-  rear_seats_folded_liters: 1212
+  trunk_max_liters: 1212
 
 motors:
   - position: front
@@ -196,10 +198,6 @@ availability:
   order_status: available
   delivery_time_weeks: 16-20
 
-towing:
-  braked_kg: 0
-  unbraked_kg: 0
-  roof_load_kg: 75
 
 data_sources:
   - source: Porsche AG Germany official website

@@ -141,6 +141,8 @@ weight:
   payload_kg: 570
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
 
 # Wheels & Tires
 wheels:
@@ -197,8 +199,8 @@ dimensions:
   
   cargo:
     trunk_capacity_liters: 490
-    trunk_max_volume_l: 1300
-    frunk_volume_l: 20
+    trunk_max_liters: 1300
+    frunk_capacity_liters: 20
     notes: "AWD has smaller frunk than RWD (20L vs 52L) due to front motor"
 
 # Aerodynamics
@@ -213,10 +215,6 @@ production:
   platform_generation: 1
   status: active
 
-towing:
-  braked_kg: 1600
-  unbraked_kg: 750
-  roof_load_kg: 80
 
 # Data Quality
 metadata:

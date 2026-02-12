@@ -1,63 +1,64 @@
-# Volkswagen ID.4 GTX (2025) - Poland Market Availability
-
+# Volkswagen ID.4 GTX (2025) - Poland Market
 id: volkswagen-id4-gtx-2025-pl
 variant_id: volkswagen-id4-gtx-2025
 market: PL
 currency: PLN
 
 availability_status: available
-available_from: "2024-10-01"
+available_from: "2025-03-01"
 delivery_time_weeks: 10
-notes: |
-  Performance AWD variant of VW's electric SUV. Popular fleet choice in Poland.
 
 pricing:
-  base_price: 239900
-  price_including_vat: 239900
+  base_price: 249900
+  price_including_vat: 249900
   vat_rate_percent: 23
-  notes: |
-    Polish list price 239,900 PLN including 23% VAT for the ID.4 GTX
-    with 77 kWh battery and 340 hp dual-motor AWD.
+  destination_charge: 0
+  total_price_estimate: 249900
 
 incentives:
-  - type: grant
-    name: "Mój elektryk"
+  - name: Mój Elektryk
+    type: grant
     amount: 27000
-    currency: PLN
-    valid_until: "2026-12-31"
-    notes: |
-      Government subsidy for BEV purchase for individuals via NFOŚiGW.
-      Up to 27,000 PLN for vehicles priced under 225,000 PLN net.
-      The ID.4 GTX may exceed the net price threshold — check eligibility.
+    description: >
+      Government subsidy program for electric vehicle purchases.
+      Up to 27,000 PLN for individuals purchasing a BEV.
     conditions:
-      - Battery electric vehicle
+      - Pure battery-electric vehicle (BEV)
       - Individual buyer
-      - Vehicle net price under 225,000 PLN
+      - Vehicle price under 225,000 PLN gross
+    active: false
+    notes: "Vehicle exceeds the 225,000 PLN price cap for individual buyers"
 
-  - type: tax_exemption
-    name: "Excise Tax Exemption"
-    amount: 0
-    currency: PLN
-    notes: "BEVs exempt from excise tax (akcyza) in Poland."
+market_specific:
+  popular_options:
+    - name: Infotainment Plus
+      price: 5900
+    - name: Design Pack Plus
+      price: 4200
 
-sales_model: dealership
-notes_sales: |
-  Available through the Volkswagen dealer network in Poland.
-  Financing and leasing options available through VW Financial Services.
+  available_colors:
+    - name: Pure White
+      type: solid
+      price_add: 0
+    - name: Moonstone Grey
+      type: metallic
+      price_add: 2800
+    - name: Kings Red
+      type: metallic
+      price_add: 2800
+    - name: Glacier White
+      type: metallic
+      price_add: 2800
 
-warranty:
-  vehicle_years: 2
-  vehicle_km: null
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
+notes: |
+  VW ID.4 GTX 2025 refresh available in Poland. AWD with 299 hp,
+  77 kWh net battery, 520 km WLTP range. Updated interior with new
+  infotainment and improved charging curve (185 kW DC peak).
+  Exceeds Mój Elektryk price threshold.
 
 metadata:
-  created_at: "2026-02-11"
-  updated_at: null
   data_quality: estimated
-  sources:
-    - https://www.volkswagen.pl/pl/modele/id4.html
-  notes: |
-    Pricing estimated based on German pricing adjusted for Polish market.
-    Verify current pricing on volkswagen.pl configurator.
+  data_source: manufacturer
+  source_url: https://www.volkswagen.pl/pl/modele/id4.html
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"

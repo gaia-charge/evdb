@@ -92,8 +92,10 @@ cargo:
 weight:
   curb_weight_kg: 1805
   gross_vehicle_weight_kg: 2305
-  gross_weight_kg: 2305
+  gross_vehicle_weight_kg: 2305
   payload_kg: 500
+  towing_capacity_braked_kg: 1600
+  towing_capacity_unbraked_kg: 750
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
 
@@ -130,10 +132,6 @@ optional_equipment:
   - name: Electrochromic panoramic roof
     cost: 1200
 
-towing:
-  braked_kg: 1600
-  unbraked_kg: 750
-  roof_load_kg: 75
 
 metadata:
   data_quality: verified
