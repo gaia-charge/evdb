@@ -20,44 +20,35 @@ incentives:
   - name: Plan MOVES III
     type: grant
     amount: 0
-    description: MOVES III program expired. Future MOVES IV program pending.
+    description: MOVES III program expired.
     valid_from: null
     valid_until: null
     conditions:
       - Program expired
 
-  - name: Registration Tax Exemption
-    type: tax_exemption
-    amount: 0
-    description: BEVs exempt from registration tax (IEDMT) in Spain.
-
 market_specific:
-  trim_levels:
-    - name: Pro
-      price: 64490
-    - name: Pro S
-      price: 68990
-
   available_colors:
-    - name: Candy White / Energetic Orange
-      type: two_tone
+    - name: Candy White
+      type: solid
       price_add: 0
-    - name: Mono Silver Metallic
-      type: metallic
-      price_add: 990
-    - name: Starlight Blue Metallic
-      type: metallic
-      price_add: 990
     - name: Lime Yellow Metallic / Candy White
-      type: two_tone
-      price_add: 1490
+      type: two-tone
+      price_add: 1250
+    - name: Energetic Orange Metallic / Candy White
+      type: two-tone
+      price_add: 1250
+    - name: Stonewashed Blue Metallic / Candy White
+      type: two-tone
+      price_add: 1250
 
-  ordering_url: "https://www.volkswagen.es/es/modelos/id-buzz.html"
+notes: |
+  VW ID. Buzz Pro Long available in Spain through Volkswagen dealers.
+  Prices include 21% IVA. Long-wheelbase 7-seat variant with 86 kWh battery.
+  Registration tax exempt.
 
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  sources:
-    - "https://www.volkswagen.es/es/modelos/id-buzz.html"
-  notes: "ID. Buzz Pro Long with 86 kWh battery. Pricing estimated from VW Spain."
+  data_source: manufacturer
+  source_url: https://www.volkswagen.es/es/modelos/id-buzz.html
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"
