@@ -1,0 +1,72 @@
+# Citroën ë-C5 Aircross Long Range (2025) - France Market
+id: citroen-c5-aircross-long-range-2025-fr
+variant_id: citroen-c5-aircross-long-range-2025
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2025-03"
+available_until: null
+
+pricing:
+  base_price: 47990
+  price_including_vat: 47990
+  vat_rate_percent: 20
+  destination_charge: 0
+  total_price_estimate: 47990
+
+incentives:
+  - name: Bonus Écologique
+    type: grant
+    amount: 3000
+    description: "Reduced bonus for EVs priced €45,000-€47,000."
+    conditions:
+      - Vehicle base price near €47,000 threshold
+  - name: Prime à la Conversion
+    type: grant
+    amount: 1500
+    description: "Scrapping bonus when trading in older vehicle."
+    conditions:
+      - Must scrap a Crit'Air 3+ vehicle
+
+market_specific:
+  available_trims:
+    - name: "Plus"
+      price: 43990
+    - name: "Max"
+      price: 47990
+
+  available_colors:
+    - name: Blanc Banquise
+      additional_cost: 0
+    - name: Noir Perla Nera
+      additional_cost: 650
+    - name: Gris Platinium
+      additional_cost: 650
+    - name: Eclat Blue
+      additional_cost: 850
+
+  dealer_network:
+    online_sales_available: true
+    notes: "Available through Citroën dealer network in France"
+
+  delivery:
+    typical_delivery_weeks: 10
+
+compliance:
+  ncap_rating: 4
+  emission_class: Zero Emission
+
+notes: |
+  New Citroën ë-C5 Aircross Long Range in France.
+  98 kWh battery, 218 hp, FWD. STLA Medium platform.
+  Prices include 20% TVA. Up to 680 km WLTP range.
+  Home market with strong dealer presence.
+
+metadata:
+  created_at: "2026-02-12"
+  updated_at: null
+  data_quality: estimated
+  price_checked_at: "2026-02-12"
+  sources:
+    - "https://www.citroen.fr/modeles/nouveau-c5-aircross.html"
