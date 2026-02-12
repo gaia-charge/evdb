@@ -1,0 +1,61 @@
+# BMW iX3 (2024) - France Market
+id: bmw-ix3-2024-fr
+variant_id: bmw-ix3-2024
+market: FR
+currency: EUR
+
+availability_status: available
+available_from: "2024-03-01"
+delivery_time_weeks: 10
+
+pricing:
+  base_price: 69950
+  price_including_vat: 69950
+  vat_rate_percent: 20
+  destination_charge: 0
+  registration_fees: 0
+  total_price_estimate: 69950
+
+incentives:
+  - name: Bonus écologique
+    type: grant
+    amount: 0
+    description: "Price exceeds €47,000 cap for bonus écologique"
+    valid_from: null
+    valid_until: null
+    conditions:
+      - Price exceeds €47,000 cap
+      - Vehicle must be manufactured in EU (built in China, not eligible)
+
+market_specific:
+  popular_options:
+    - name: xLine Package
+      price: 2100
+    - name: M Sport Package
+      price: 3100
+    - name: Driving Assistant Professional
+      price: 1900
+
+  available_colors:
+    - name: Alpine White
+      type: solid
+      price_add: 0
+    - name: Black Sapphire Metallic
+      type: metallic
+      price_add: 850
+    - name: Mineral White Metallic
+      type: metallic
+      price_add: 850
+
+notes: |
+  BMW iX3 available in France through BMW dealer network.
+  Prices include 20% TVA. Single motor RWD, 80 kWh battery.
+  286 hp, 460 km WLTP range. Not eligible for bonus écologique
+  due to non-EU manufacturing (Shenyang, China).
+
+metadata:
+  data_quality: estimated
+  data_source: manufacturer
+  source_url: https://www.bmw.fr/fr/all-models/bmw-ix3.html
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"
