@@ -1,54 +1,64 @@
-# Volkswagen ID.3 GTX (2025) - Poland Market Availability
-
+# Volkswagen ID.3 GTX (2025) - Poland Market
 id: volkswagen-id3-gtx-2025-pl
 variant_id: volkswagen-id3-gtx-2025
 market: PL
 currency: PLN
 
 availability_status: available
-available_from: "2024-10-01"
+available_from: "2024-09-01"
 delivery_time_weeks: 10
 
 pricing:
-  base_price: 214900
-  price_including_vat: 214900
+  base_price: 199900
+  price_including_vat: 199900
   vat_rate_percent: 23
-  notes: |
-    Polish list price 214,900 PLN including 23% VAT for the ID.3 GTX
-    with 79 kWh battery and 210 kW motor. Performance variant.
+  destination_charge: 0
+  total_price_estimate: 199900
 
 incentives:
-  - type: grant
-    name: "Mój elektryk"
+  - name: "Mój elektryk"
+    type: grant
     amount: 27000
-    currency: PLN
-    valid_until: "2026-12-31"
-    notes: |
-      Government subsidy for BEV purchase for individuals via NFOŚiGW.
-      Up to 27,000 PLN for vehicles priced under 225,000 PLN net.
-    conditions:
-      - Battery electric vehicle
-      - Individual buyer
-      - Vehicle net price under 225,000 PLN
+    description: "Subsidy up to 27,000 PLN for BEVs priced under 225,000 PLN (gross). Available for individuals."
+    valid_from: "2024-01-01"
+    valid_until: "2025-12-31"
 
-  - type: tax_exemption
-    name: "Excise Tax Exemption"
-    amount: 0
-    currency: PLN
-    notes: "BEVs exempt from excise tax (akcyza) in Poland."
+  - name: NaszEauto
+    type: grant
+    amount: 40000
+    description: "Up to 40,000 PLN gross subsidy for purchase or financing of new BEV."
+    valid_from: "2025-01-01"
+    valid_until: "2025-12-31"
 
-sales_model: dealership
+market_specific:
+  popular_options:
+    - name: Pakiet IQ.DRIVE Max
+      price: 9900
+    - name: Pakiet Komfort
+      price: 7300
+    - name: Pakiet Tech
+      price: 5990
 
-warranty:
-  vehicle_years: 2
-  vehicle_km: null
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
+  available_colors:
+    - name: Glacier White Metallic
+      type: metallic
+      price_add: 0
+    - name: Kings Red Metallic
+      type: metallic
+      price_add: 2560
+    - name: Manganese Grey Metallic
+      type: metallic
+      price_add: 2560
+
+notes: |
+  Volkswagen ID.3 GTX performance variant available in Poland.
+  286 hp, 601 km WLTP range, 200 km/h top speed.
+  Prices include 23% VAT. Strong VW dealer network in Poland.
+  With NaszEauto subsidy, effective price from ~159,900 PLN.
 
 metadata:
-  created_at: "2026-02-11"
-  updated_at: null
   data_quality: estimated
-  sources:
-    - https://www.volkswagen.pl/pl/modele/id3.html
+  data_source: manufacturer
+  source_url: https://www.volkswagen.pl/pl/modele/id3.html
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"
