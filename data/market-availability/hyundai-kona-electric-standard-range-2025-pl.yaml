@@ -1,0 +1,77 @@
+id: hyundai-kona-electric-standard-range-2025-pl
+variant_id: hyundai-kona-electric-standard-range-2025
+market: PL
+currency: PLN
+
+pricing:
+  base_price: 169900
+  destination_charge: 0
+  on_road_price: 169900
+
+options:
+  packages: []
+  paint_options:
+    - name: "Atlas White"
+      price: 0
+      code: "atlas-white"
+    - name: "Abyss Black Pearl"
+      price: 2500
+      code: "abyss-black"
+    - name: "Cyber Grey Metallic"
+      price: 2500
+      code: "cyber-grey"
+  interior_options:
+    - name: "Dark Grey"
+      price: 0
+
+incentives:
+  - name: "Mój elektryk"
+    type: grant
+    amount: 27000
+    notes: "Up to PLN 27,000 subsidy for BEVs from NFOŚiGW."
+    eligibility: "Private buyers. Vehicle must be new BEV."
+    valid_until: "2026-12-31"
+
+availability:
+  status: available
+  waiting_time_weeks: 8
+  online_configurator: yes
+  online_purchase: no
+  sales_regions:
+    - Poland
+
+warranty:
+  vehicle_warranty_years: 5
+  vehicle_warranty_km: unlimited
+  battery_warranty_years: 8
+  battery_warranty_km: 160000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Kia EV3 Standard Range"
+      price: 159900
+      range_wltp: 436
+      notes: "Cheaper, similar segment"
+    - model: "Opel Mokka Electric"
+      price: 174900
+      range_wltp: 338
+      notes: "Similar price, less range"
+
+  market_position: |
+    The Hyundai Kona Electric Standard Range is a popular compact electric
+    crossover in Poland at PLN 169,900 (approx. €39,000).
+    With Mój elektryk subsidy, effective price drops to ~PLN 142,900.
+
+metadata:
+  created_at: "2026-02-12T03:15:00Z"
+  updated_at: "2026-02-12T03:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer
+  notes: |
+    Polish pricing estimated from Hyundai Polska. Prices include 23% VAT.
+
+sources:
+  - url: "https://www.hyundai.com/pl/modele/kona-electric.html"
+    title: "Hyundai Kona Electric - Hyundai Polska"
+    date_accessed: "2026-02-12"

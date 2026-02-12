@@ -1,0 +1,78 @@
+id: kia-ev3-standard-range-2025-pl
+variant_id: kia-ev3-standard-range-2025
+market: PL
+currency: PLN
+
+pricing:
+  base_price: 159900
+  destination_charge: 0
+  on_road_price: 159900
+
+options:
+  packages: []
+  paint_options:
+    - name: "Snow White Pearl"
+      price: 0
+      code: "snow-white"
+    - name: "Aurora Black Pearl"
+      price: 2500
+      code: "aurora-black"
+    - name: "Adventurine Green"
+      price: 2500
+      code: "adventurine-green"
+  interior_options:
+    - name: "Black"
+      price: 0
+
+incentives:
+  - name: "Mój elektryk"
+    type: grant
+    amount: 27000
+    notes: "Up to PLN 27,000 subsidy for BEVs from NFOŚiGW (National Fund for Environmental Protection)."
+    eligibility: "Private buyers. Vehicle must be new BEV."
+    valid_until: "2026-12-31"
+
+availability:
+  status: available
+  waiting_time_weeks: 12
+  online_configurator: yes
+  online_purchase: no
+  sales_regions:
+    - Poland
+
+warranty:
+  vehicle_warranty_years: 7
+  vehicle_warranty_km: 150000
+  battery_warranty_years: 7
+  battery_warranty_km: 150000
+  battery_warranty_capacity_percent: 70
+
+market_context:
+  competitors:
+    - model: "Volkswagen ID.3 Pure"
+      price: 149900
+      range_wltp: 388
+      notes: "Cheaper, less range"
+    - model: "BYD Atto 3"
+      price: 155900
+      range_wltp: 420
+      notes: "Similar price, crossover style"
+
+  market_position: |
+    The Kia EV3 Standard Range enters the Polish market as an affordable
+    compact electric crossover at PLN 159,900 (approx. €37,000).
+    With Mój elektryk subsidy, effective price drops to ~PLN 132,900.
+    7-year warranty is a strong selling point in price-sensitive Polish market.
+
+metadata:
+  created_at: "2026-02-12T03:15:00Z"
+  updated_at: "2026-02-12T03:15:00Z"
+  data_quality: estimated
+  data_source: manufacturer
+  notes: |
+    Polish pricing estimated from Kia Polska. Prices include 23% VAT.
+
+sources:
+  - url: "https://www.kia.com/pl/modele/ev3/"
+    title: "Kia EV3 - Kia Polska"
+    date_accessed: "2026-02-12"
