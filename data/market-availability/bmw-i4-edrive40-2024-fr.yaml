@@ -5,54 +5,51 @@ market: FR
 currency: EUR
 
 availability_status: available
-available_from: "2024-01-15"
+available_from: "2024-02-01"
 delivery_time_weeks: 12
 
 pricing:
-  base_price: 58600
-  price_including_vat: 58600
+  base_price: 57700
+  price_including_vat: 57700
   vat_rate_percent: 20
   destination_charge: 0
-  total_price_estimate: 58600
+  total_price_estimate: 57700
 
 incentives:
   - name: Bonus écologique
     type: grant
-    amount: 4000
+    amount: 0
     description: >
-      French government ecological bonus for electric vehicles.
-      Up to 4,000 EUR for vehicles priced under 47,000 EUR.
+      French ecological bonus not available — vehicle price exceeds €47,000 cap.
     conditions:
-      - Pure battery-electric vehicle (BEV)
-      - Vehicle price under 47,000 EUR
-    notes: "BMW i4 eDrive40 exceeds the 47,000 EUR price cap, so NOT eligible for bonus écologique."
+      - Vehicle price must be under 47,000 EUR
 
 market_specific:
-  popular_options:
-    - name: Driving Assistant Professional
-      price: 2100
-    - name: Comfort Package
-      price: 1300
-
   available_colors:
     - name: Alpine White
       type: solid
       price_add: 0
     - name: Black Sapphire Metallic
       type: metallic
-      price_add: 1150
+      price_add: 1050
     - name: Portimao Blue Metallic
       type: metallic
-      price_add: 1150
+      price_add: 1050
     - name: Brooklyn Grey Metallic
       type: metallic
-      price_add: 1150
+      price_add: 1050
+
+  popular_options:
+    - name: Driving Assistant Professional
+      price: 2100
+    - name: Pack Confort
+      price: 1300
 
 notes: |
-  BMW i4 eDrive40 available in France through authorized BMW dealers.
+  BMW i4 eDrive40 available in France through BMW dealer network.
   Prices include 20% TVA. 340 hp, 590 km WLTP range.
-  Exceeds 47,000 EUR threshold for bonus écologique.
-  Subject to malus écologique weight penalty (>1,800 kg).
+  Not eligible for bonus écologique due to price exceeding €47,000 cap.
+  May benefit from company car tax advantages (TVS exemption for EVs).
 
 metadata:
   data_quality: estimated

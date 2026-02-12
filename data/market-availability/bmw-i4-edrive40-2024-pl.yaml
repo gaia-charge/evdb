@@ -5,15 +5,15 @@ market: PL
 currency: PLN
 
 availability_status: available
-available_from: "2024-01-15"
+available_from: "2024-02-01"
 delivery_time_weeks: 14
 
 pricing:
-  base_price: 269900
-  price_including_vat: 269900
+  base_price: 259900
+  price_including_vat: 259900
   vat_rate_percent: 23
   destination_charge: 0
-  total_price_estimate: 269900
+  total_price_estimate: 259900
 
 incentives:
   - name: Mój Elektryk
@@ -26,34 +26,33 @@ incentives:
       - Pure battery-electric vehicle (BEV)
       - Individual buyer
       - Vehicle price under 225,000 PLN gross
-    notes: "BMW i4 eDrive40 exceeds the 225,000 PLN price cap, so NOT eligible for Mój Elektryk."
+      - "BMW i4 exceeds price cap, not eligible for this subsidy"
 
 market_specific:
-  popular_options:
-    - name: Driving Assistant Professional
-      price: 9900
-    - name: Comfort Package
-      price: 6100
-
   available_colors:
     - name: Alpine White
       type: solid
       price_add: 0
     - name: Black Sapphire Metallic
       type: metallic
-      price_add: 5400
+      price_add: 5200
     - name: Portimao Blue Metallic
       type: metallic
-      price_add: 5400
+      price_add: 5200
     - name: Brooklyn Grey Metallic
       type: metallic
-      price_add: 5400
+      price_add: 5200
+
+  popular_options:
+    - name: Driving Assistant Professional
+      price: 9500
+    - name: Comfort Package
+      price: 5900
 
 notes: |
-  BMW i4 eDrive40 available in Poland through authorized BMW dealers.
+  BMW i4 eDrive40 available in Poland through BMW dealer network.
   Prices include 23% VAT. 340 hp, 590 km WLTP range.
-  Exceeds 225,000 PLN threshold for Mój Elektryk subsidy.
-  Popular as a premium electric sedan alternative to Tesla Model 3.
+  Exceeds Mój Elektryk price cap of 225,000 PLN, so not eligible for subsidy.
 
 metadata:
   data_quality: estimated

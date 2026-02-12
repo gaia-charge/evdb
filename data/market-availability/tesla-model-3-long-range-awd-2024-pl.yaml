@@ -9,48 +9,54 @@ available_from: "2024-03-01"
 delivery_time_weeks: 6
 
 pricing:
-  base_price: 224990
-  price_including_vat: 224990
+  base_price: 219990
+  price_including_vat: 219990
   vat_rate_percent: 23
   destination_charge: 0
-  total_price_estimate: 224990
+  total_price_estimate: 219990
 
 incentives:
-  - name: "Mój elektryk"
+  - name: Mój Elektryk
     type: grant
     amount: 27000
-    description: "Government subsidy for BEV purchase under the 'Mój elektryk' program."
+    description: >
+      Government subsidy program for electric vehicle purchases.
+      Up to 27,000 PLN for individuals purchasing a BEV.
     conditions:
-      - Pure battery-electric vehicle
-      - Maximum vehicle price 225,000 PLN net — borderline eligibility
-      - Available to individuals and businesses
+      - Pure battery-electric vehicle (BEV)
+      - Individual buyer
+      - Vehicle price under 225,000 PLN gross
 
 market_specific:
   available_colors:
-    - name: Ultra White
-      type: solid
+    - name: Pearl White Multi-Coat
+      type: multi_coat
       price_add: 0
     - name: Solid Black
       type: solid
-      price_add: 0
-    - name: Midnight Cherry Red
+      price_add: 5300
+    - name: Midnight Silver Metallic
       type: metallic
-      price_add: 8600
-    - name: Quicksilver
-      type: metallic
-      price_add: 8600
+      price_add: 5300
     - name: Ultra Red
-      type: metallic
-      price_add: 8600
+      type: multi_coat
+      price_add: 8800
+
+  popular_options:
+    - name: Enhanced Autopilot
+      price: 16500
+    - name: Full Self-Driving Capability
+      price: 33000
 
 notes: |
-  Tesla Model 3 Long Range AWD Highland (2024) available in Poland.
-  79 kWh NMC battery, 629 km WLTP range. Dual motor AWD, 366 kW.
-  Borderline eligibility for Mój elektryk due to price cap.
+  Tesla Model 3 Long Range AWD (Highland refresh) available in Poland via tesla.com/pl.
+  Prices include 23% VAT. 513 hp dual motor, 629 km WLTP range.
+  Eligible for Mój Elektryk subsidy (27,000 PLN) if price under 225,000 PLN cap.
+  Orders placed online with delivery from Tesla's European Gigafactory Berlin.
 
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/pl_pl/model-3
-  created_at: "2026-02-11"
-  last_verified_at: "2026-02-11"
+  source_url: https://www.tesla.com/pl_pl/model3
+  created_at: "2026-02-12"
+  last_verified_at: "2026-02-12"
