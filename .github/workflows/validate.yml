@@ -3,8 +3,20 @@ name: Validate YAML Data
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'data/**/*.yaml'
+      - 'schemas/**/*.json'
+      - 'scripts/validate.py'
+      - 'requirements.txt'
+      - '.github/workflows/validate.yml'
   pull_request:
     branches: [ main, develop ]
+    paths:
+      - 'data/**/*.yaml'
+      - 'schemas/**/*.json'
+      - 'scripts/validate.py'
+      - 'requirements.txt'
+      - '.github/workflows/validate.yml'
 
 jobs:
   validate:
@@ -25,17 +37,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Validate all YAML files
+    - name: Validate YAML against JSON Schema
+      id: validate
       run: |
-        python scripts/validate.py --directory data
+        echo "🔍 Validating YAML files against JSON Schema..."
+        python scripts/validate.py --directory data --check-duplicates
         
-    - name: Check validation results
+    - name: Validation failed
       if: failure()
       run: |
-        echo "❌ Validation failed! Please check the errors above."
+        echo "❌ YAML validation failed!"
+        echo ""
+        echo "Schema validation errors were found. Please fix them before merging."
+        echo "Run locally: python scripts/validate.py --directory data"
         exit 1
         
     - name: Validation success
       if: success()
       run: |
-        echo "✅ All YAML files validated successfully!"
+        echo "✅ All YAML files validated successfully against JSON Schema!"
+        echo "✅ No duplicate IDs found!"
