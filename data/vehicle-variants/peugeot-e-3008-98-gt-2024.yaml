@@ -1,36 +1,30 @@
-# Peugeot e-3008 98 kWh GT (2024) - Long Range Premium Trim
-
 id: peugeot-e-3008-98-gt-2024
 model_id: peugeot-e-3008
-name: "98 kWh GT"
+name: 98 kWh GT
 model_year: 2024
-trim_level: GT  # Top trim with premium features
+trim_level: GT
 variant_code: null
-
 dimensions:
   length_mm: 4542
   width_mm: 1895
   height_mm: 1641
   wheelbase_mm: 2739
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 520
   trunk_max_liters: 1480
   frunk_capacity_liters: 0
   roof_load_kg: 80
-
 production:
   start_date: 2024-02-01
   end_date: null
   status: active
   notes: Flagship variant with maximum range
-
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 98.0
-  usable_kwh: 94.0  # ~95.9% usable
+  usable_kwh: 94.0
   supplier: ACC (Automotive Cells Company - Stellantis/Mercedes/TotalEnergies JV)
   warranty_years: 8
   warranty_km: 160000
@@ -39,58 +33,52 @@ battery:
   modules: 30
   voltage_nominal: 400
   notes: Large battery providing segment-leading 700 km range
-
 range:
   wltp_km: 700
   wltp_city_km: 900
   wltp_highway_km: 575
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 590
   real_world_source: Estimated from manufacturer data and platform benchmarks
   notes: Best-in-class range for compact electric SUV segment at ~14.0 kWh/100km
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 10.0
     onboard_charger: 11kW 3-phase standard, 22kW optional
-  
   dc:
-    max_power_kw: 160
     connector_type: CCS2
     time_10_80_percent_minutes: 32
     peak_power_notes: 160kW peak sustained longer due to larger battery thermal mass
     preconditioning: true
-  
   charge_curve:
-    - percent: 0
-      power_kw: 155
-    - percent: 10
-      power_kw: 160
-    - percent: 30
-      power_kw: 160
-    - percent: 50
-      power_kw: 160
-    - percent: 60
-      power_kw: 145
-    - percent: 70
-      power_kw: 115
-    - percent: 80
-      power_kw: 70
-    - percent: 90
-      power_kw: 40
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 155
+  - percent: 10
+    power_kw: 160
+  - percent: 30
+    power_kw: 160
+  - percent: 50
+    power_kw: 160
+  - percent: 60
+    power_kw: 145
+  - percent: 70
+    power_kw: 115
+  - percent: 80
+    power_kw: 70
+  - percent: 90
+    power_kw: 40
+  - percent: 100
+    power_kw: 11
   bidirectional:
-    v2l: true  # Vehicle-to-Load via adapter (3.7kW)
+    v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 160
 motors:
-  configuration: single_front  # Front-wheel drive (FWD)
+  configuration: single_front
   front:
     type: permanent_magnet
     power_kw: 170
@@ -101,13 +89,14 @@ motors:
     power_kw: 170
     power_hp: 231
     torque_nm: 345
-
 performance:
-  acceleration_0_100_kph: 8.3
   acceleration_0_60_mph: null
-  top_speed_kph: 170  # Electronically limited
+  top_speed_kph: 170
   quarter_mile_seconds: null
-
+  total_power_kw: 170
+  total_power_hp: 231
+  total_torque_nm: 345
+  acceleration_0_100_sec: 8.3
 efficiency:
   wltp_kwh_per_100km: 14.0
   wltp_wh_per_km: 140
@@ -115,7 +104,6 @@ efficiency:
   real_world_kwh_per_100km: 16.0
   mpge_combined: null
   drag_coefficient: 0.28
-
 weight:
   curb_weight_kg: 2060
   gross_vehicle_weight_kg: 2590
@@ -123,110 +111,129 @@ weight:
   towing_capacity_braked_kg: 1250
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar and adaptive dampers
   rear: Multi-link independent suspension with adaptive dampers
-
 brakes:
   front: Ventilated disc (345mm)
   rear: Disc (285mm)
   regenerative: true
-
 tires:
   standard: 235/50 R20
-
 features:
   infotainment:
-    - "Peugeot Panoramic i-Cockpit with 21\" curved HD display"
-    - "10.0\" digital instrument cluster with 3D display mode"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "ChatGPT voice assistant integration"
-    - "DAB+ digital radio"
-    - "10 speakers FOCAL premium audio system"
-    - "MyPeugeot mobile app for remote control"
-    - "Connected Navigation with real-time traffic and charging stations"
-    - "i-Toggles 2.0 (10 customizable shortcut buttons with haptic feedback)"
-    - "Plug & Charge (ISO 15118)"
-  
+  - Peugeot Panoramic i-Cockpit with 21" curved HD display
+  - 10.0" digital instrument cluster with 3D display mode
+  - Wireless Apple CarPlay and Android Auto
+  - ChatGPT voice assistant integration
+  - DAB+ digital radio
+  - 10 speakers FOCAL premium audio system
+  - MyPeugeot mobile app for remote control
+  - Connected Navigation with real-time traffic and charging stations
+  - i-Toggles 2.0 (10 customizable shortcut buttons with haptic feedback)
+  - Plug & Charge (ISO 15118)
   driver_assistance:
-    - "Active Safety Brake with Pedestrian and Cyclist Detection"
-    - "Lane Keep Assist with Lane Centering (Level 2 autonomy)"
-    - "Traffic Sign Recognition with Speed Limit Adaptation"
-    - "Adaptive cruise control with Stop & Go"
-    - "Blind spot monitoring with active intervention"
-    - "360° HD parking camera with 3D view"
-    - "Driver attention alert"
-    - "Automatic high beam assist"
-    - "Rear cross-traffic alert with braking"
-    - "Park Assist (automated parallel and perpendicular parking)"
-  
+  - Active Safety Brake with Pedestrian and Cyclist Detection
+  - Lane Keep Assist with Lane Centering (Level 2 autonomy)
+  - Traffic Sign Recognition with Speed Limit Adaptation
+  - Adaptive cruise control with Stop & Go
+  - Blind spot monitoring with active intervention
+  - 360° HD parking camera with 3D view
+  - Driver attention alert
+  - Automatic high beam assist
+  - Rear cross-traffic alert with braking
+  - Park Assist (automated parallel and perpendicular parking)
   comfort_convenience:
-    - "Automatic tri-zone climate control"
-    - "Keyless entry and start"
-    - "One-pedal driving with B-mode regenerative braking"
-    - "Heated and massaging front seats (Nappa leather)"
-    - "Heated rear seats"
-    - "Power liftgate with kick sensor"
-    - "Electric windows front and rear with anti-pinch"
-    - "Electric, heated, and auto-dimming mirrors"
-    - "Rain-sensing wipers"
-    - "Wireless smartphone charging (15W dual pad)"
-    - "Panoramic glass roof with electric sunshade"
-  
+  - Automatic tri-zone climate control
+  - Keyless entry and start
+  - One-pedal driving with B-mode regenerative braking
+  - Heated and massaging front seats (Nappa leather)
+  - Heated rear seats
+  - Power liftgate with kick sensor
+  - Electric windows front and rear with anti-pinch
+  - Electric, heated, and auto-dimming mirrors
+  - Rain-sensing wipers
+  - Wireless smartphone charging (15W dual pad)
+  - Panoramic glass roof with electric sunshade
   exterior:
-    - "Pixel LED headlights with matrix beam and signature lighting"
-    - "20\" Washington GT alloy wheels (diamond-cut)"
-    - "Body-colored door handles with chrome accents"
-    - "Privacy glass rear windows"
-    - "Shark fin antenna"
-    - "Roof rails (chrome)"
-    - "GT badging"
-  
+  - Pixel LED headlights with matrix beam and signature lighting
+  - 20" Washington GT alloy wheels (diamond-cut)
+  - Body-colored door handles with chrome accents
+  - Privacy glass rear windows
+  - Shark fin antenna
+  - Roof rails (chrome)
+  - GT badging
   interior:
-    - "Nappa leather upholstery with Tramontane Grey or Noir Mist trim"
-    - "Leather-wrapped GT steering wheel (compact)"
-    - "Peugeot Connect emergency call and telematics"
-    - "520L trunk capacity"
-    - "60/40 split-folding rear seats"
-    - "Ambient lighting (8 colors with zones)"
-    - "Aluminum pedals"
-    - "GT branded floor mats"
-
+  - Nappa leather upholstery with Tramontane Grey or Noir Mist trim
+  - Leather-wrapped GT steering wheel (compact)
+  - Peugeot Connect emergency call and telematics
+  - 520L trunk capacity
+  - 60/40 split-folding rear seats
+  - Ambient lighting (8 colors with zones)
+  - Aluminum pedals
+  - GT branded floor mats
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   source_urls:
-    - https://www.peugeot.de/modelle/e-3008.html
-    - https://www.peugeot.fr/gamme-vehicules/e-3008.html
-    - https://www.auto-motor-und-sport.de/neuheiten/peugeot-e-3008-2024/
-  notes: |
-    The Peugeot e-3008 98 kWh GT is the flagship variant with segment-leading 700 km WLTP
-    range, making it the longest-range compact electric SUV available. With premium GT
-    features including Nappa leather, FOCAL audio, adaptive dampers, and panoramic glass
+  - https://www.peugeot.de/modelle/e-3008.html
+  - https://www.peugeot.fr/gamme-vehicules/e-3008.html
+  - https://www.auto-motor-und-sport.de/neuheiten/peugeot-e-3008-2024/
+  notes: 'The Peugeot e-3008 98 kWh GT is the flagship variant with segment-leading
+    700 km WLTP
+
+    range, making it the longest-range compact electric SUV available. With premium
+    GT
+
+    features including Nappa leather, FOCAL audio, adaptive dampers, and panoramic
+    glass
+
     roof, it competes directly with premium German alternatives.
-    
+
+
     Key advantages:
-    - 700 km range beats VW ID.4 (550 km), Škoda Enyaq (585 km), Tesla Model Y Long Range (533 km)
+
+    - 700 km range beats VW ID.4 (550 km), Škoda Enyaq (585 km), Tesla Model Y Long
+    Range (533 km)
+
     - Revolutionary 21" Panoramic i-Cockpit with ChatGPT integration
+
     - FOCAL premium audio (10 speakers) as standard
+
     - Nappa leather and massaging seats in GT trim
+
     - Adaptive dampers for optimal comfort/sport balance
+
     - Panoramic glass roof for premium ambiance
-    
-    The 98 kWh battery maintains the same excellent 160kW DC fast charging as the 73 kWh
+
+
+    The 98 kWh battery maintains the same excellent 160kW DC fast charging as the
+    73 kWh
+
     version, charging 10-80% in just 32 minutes. Despite the large battery, efficiency
+
     remains impressive at 14.0 kWh/100km thanks to the aerodynamic 0.28 Cd body.
-    
-    GT trim represents the pinnacle of Peugeot's electric SUV offering, combining French
-    design flair, cutting-edge technology, premium materials, and unmatched range. At its
-    price point (€52,000-58,000 estimated), it undercuts German premium competitors while
+
+
+    GT trim represents the pinnacle of Peugeot''s electric SUV offering, combining
+    French
+
+    design flair, cutting-edge technology, premium materials, and unmatched range.
+    At its
+
+    price point (€52,000-58,000 estimated), it undercuts German premium competitors
+    while
+
     offering more range and technology.
-    
-    Competes with: Tesla Model Y Long Range, VW ID.4 GTX, Škoda Enyaq 85x, Mercedes EQA/EQB,
+
+
+    Competes with: Tesla Model Y Long Range, VW ID.4 GTX, Škoda Enyaq 85x, Mercedes
+    EQA/EQB,
+
     BMW iX1, Audi Q4 e-tron, Hyundai Ioniq 5, Kia EV6.
+
+    '

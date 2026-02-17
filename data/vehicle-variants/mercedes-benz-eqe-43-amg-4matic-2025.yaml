@@ -2,24 +2,23 @@ id: mercedes-benz-eqe-43-amg-4matic-2025
 name: Mercedes-Benz EQE 43 AMG 4MATIC (2025)
 model_id: mercedes-benz-eqe
 model_year: 2025
-variant_name: "43 AMG 4MATIC"
+variant_name: 43 AMG 4MATIC
 trim_level: performance
-
 battery:
   usable_kwh: 90.6
   total_kwh: 96.0
   chemistry: NCM
-  cells_config: "288s2p (576 cells)"
+  cells_config: 288s2p (576 cells)
   supplier: CATL
   form_factor: pouch
   warranty_years: 10
   warranty_km: 250000
   warranty_capacity_percent: 70
-  notes: >
-    Same 90.6kWh usable capacity as EQE 350+. NCM chemistry from CATL with 
-    enhanced thermal management tuned for AMG performance driving patterns. 
-    Battery preconditioning optimized for sustained high power output.
+  notes: 'Same 90.6kWh usable capacity as EQE 350+. NCM chemistry from CATL with  enhanced
+    thermal management tuned for AMG performance driving patterns.  Battery preconditioning
+    optimized for sustained high power output.
 
+    '
 range:
   wltp_km: 533
   wltp_city_km: 690
@@ -27,97 +26,93 @@ range:
   epa_km: null
   epa_miles: null
   real_world_km: 465
-  notes: >
-    WLTP range of 533km (vs 643km for 350+) due to dual-motor AWD, higher weight, 
-    wider performance tires, and AMG sport suspension. Real-world range around 
-    465km in mixed driving, 385-405km with spirited AMG driving. Winter range 
-    approximately 355-385km.
+  notes: 'WLTP range of 533km (vs 643km for 350+) due to dual-motor AWD, higher weight,  wider
+    performance tires, and AMG sport suspension. Real-world range around  465km in
+    mixed driving, 385-405km with spirited AMG driving. Winter range  approximately
+    355-385km.
 
+    '
 charging:
   ac:
-    max_power_kw: 11
     plug_type: Type2
     phases: 3
     charge_time_0_100_hours: 9.0
-    notes: >
-      Standard 11kW AC charging (3-phase, 16A). Optional 22kW onboard charger 
-      available. Plug & Charge (ISO 15118) standard for 2025. AMG customers get 
-      preferential IONITY pricing through Mercedes me Charge.
+    notes: 'Standard 11kW AC charging (3-phase, 16A). Optional 22kW onboard charger  available.
+      Plug & Charge (ISO 15118) standard for 2025. AMG customers get  preferential
+      IONITY pricing through Mercedes me Charge.
 
+      '
   dc:
-    max_power_kw: 170
     plug_type: CCS2
     charge_time_10_80_percent_minutes: 32
     charge_curve:
-      - soc_percent: 10
-        power_kw: 170
-      - soc_percent: 20
-        power_kw: 170
-      - soc_percent: 30
-        power_kw: 165
-      - soc_percent: 40
-        power_kw: 150
-      - soc_percent: 50
-        power_kw: 135
-      - soc_percent: 60
-        power_kw: 115
-      - soc_percent: 70
-        power_kw: 90
-      - soc_percent: 80
-        power_kw: 65
-    notes: >
-      Peak DC fast charging at 170kW. 400V architecture. 10-80% in approximately 
-      32 minutes. Plug & Charge standard for 2025.
+    - soc_percent: 10
+      power_kw: 170
+    - soc_percent: 20
+      power_kw: 170
+    - soc_percent: 30
+      power_kw: 165
+    - soc_percent: 40
+      power_kw: 150
+    - soc_percent: 50
+      power_kw: 135
+    - soc_percent: 60
+      power_kw: 115
+    - soc_percent: 70
+      power_kw: 90
+    - soc_percent: 80
+      power_kw: 65
+    notes: 'Peak DC fast charging at 170kW. 400V architecture. 10-80% in approximately  32
+      minutes. Plug & Charge standard for 2025.
 
+      '
+  ac_max_kw: 11
+  dc_max_kw: 170
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: >
-    Bidirectional charging not available on 2025 AMG EQE.
+  notes: 'Bidirectional charging not available on 2025 AMG EQE.
 
+    '
 motors:
   configuration: dual-motor
   drive_type: AWD
-
   combined:
     max_power_kw: 350
     max_torque_nm: 858
-
   front:
     type: permanent-magnet-synchronous
     max_power_kw: 135
     max_torque_nm: 330
-
   rear:
     type: permanent-magnet-synchronous
     max_power_kw: 215
     max_torque_nm: 528
+  notes: 'Dual permanent magnet synchronous motors: front 135kW + rear 215kW. AMG  4MATIC+
+    all-wheel drive with variable torque distribution. Enhanced cooling  for sustained
+    high power on track. AMG Sound Experience with 3 sound modes  (Authentic, Performance,
+    Powerful).
 
-  notes: >
-    Dual permanent magnet synchronous motors: front 135kW + rear 215kW. AMG 
-    4MATIC+ all-wheel drive with variable torque distribution. Enhanced cooling 
-    for sustained high power on track. AMG Sound Experience with 3 sound modes 
-    (Authentic, Performance, Powerful).
-
+    '
 performance:
   acceleration_0_100_kmh_seconds: 4.2
   top_speed_kmh: 210
-  notes: >
-    AMG performance: 0-100 km/h in 4.2 seconds. Top speed 210 km/h (electronically 
-    limited). Optional AMG Dynamic Plus package raises top speed to 240 km/h and 
-    adds Race mode, drift mode, and AMG Track Pace telemetry app. Rear-axle steering 
-    standard. Launch Control for optimized standing starts.
+  notes: 'AMG performance: 0-100 km/h in 4.2 seconds. Top speed 210 km/h (electronically  limited).
+    Optional AMG Dynamic Plus package raises top speed to 240 km/h and  adds Race
+    mode, drift mode, and AMG Track Pace telemetry app. Rear-axle steering  standard.
+    Launch Control for optimized standing starts.
 
+    '
 efficiency:
   wltp_kwh_per_100km: 21.4
   real_world_kwh_per_100km: 24.3
   energy_label_eu: C
-  notes: >
-    Higher consumption than 350+ due to dual motors, wider tires, and AMG tuning. 
-    Real-world consumption around 24.3 kWh/100km mixed, up to 28-30 kWh/100km 
-    with spirited driving. Cd 0.24 (vs 0.22 base) due to AMG aero components.
+  notes: 'Higher consumption than 350+ due to dual motors, wider tires, and AMG tuning.  Real-world
+    consumption around 24.3 kWh/100km mixed, up to 28-30 kWh/100km  with spirited
+    driving. Cd 0.24 (vs 0.22 base) due to AMG aero components.
 
+    '
 dimensions:
   length_mm: 4946
   width_mm: 1906
@@ -125,79 +120,76 @@ dimensions:
   height_mm: 1492
   wheelbase_mm: 3120
   ground_clearance_mm: 132
-
 cargo:
   trunk_capacity_liters: 430
   trunk_max_liters: 1320
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2430
   gross_vehicle_weight_kg: 2930
   payload_kg: 500
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-
 adas:
   level: 2_plus
   features:
-    - Adaptive Cruise Control (DISTRONIC)
-    - Active Lane Keeping Assist
-    - Active Blind Spot Assist
-    - Active Brake Assist with Cross-Traffic Function
-    - Traffic Sign Assist
-    - Active Steering Assist
-    - Active Emergency Stop Assist
-    - AMG Track Pace (lap timer and telemetry)
-  notes: >
-    Level 2+ driver assistance standard. Optional DRIVE PILOT (Level 3) available 
-    in Germany. AMG Track Pace records over 80 data points for track analysis.
+  - Adaptive Cruise Control (DISTRONIC)
+  - Active Lane Keeping Assist
+  - Active Blind Spot Assist
+  - Active Brake Assist with Cross-Traffic Function
+  - Traffic Sign Assist
+  - Active Steering Assist
+  - Active Emergency Stop Assist
+  - AMG Track Pace (lap timer and telemetry)
+  notes: 'Level 2+ driver assistance standard. Optional DRIVE PILOT (Level 3) available  in
+    Germany. AMG Track Pace records over 80 data points for track analysis.
 
+    '
 features:
   standard:
-    - AMG RIDE CONTROL+ air suspension with adaptive damping
-    - Rear-axle steering (up to 10°)
-    - AMG Performance steering wheel with Touch Control
-    - AMG brakes (front 415x36mm, rear 378x26mm)
-    - AMG 4MATIC+ all-wheel drive
-    - AMG Sound Experience (3 modes)
-    - AMG Sport seats with memory
-    - Burmester 3D Surround Sound
-    - Ambient lighting with 64 colors
-    - Heat pump
-    - 12.8" OLED touchscreen
-    - Plug & Charge (ISO 15118)
-    - AMG 20" cross-spoke forged wheels
-    - AMG exterior styling package
+  - AMG RIDE CONTROL+ air suspension with adaptive damping
+  - Rear-axle steering (up to 10°)
+  - AMG Performance steering wheel with Touch Control
+  - AMG brakes (front 415x36mm, rear 378x26mm)
+  - AMG 4MATIC+ all-wheel drive
+  - AMG Sound Experience (3 modes)
+  - AMG Sport seats with memory
+  - Burmester 3D Surround Sound
+  - Ambient lighting with 64 colors
+  - Heat pump
+  - 12.8" OLED touchscreen
+  - Plug & Charge (ISO 15118)
+  - AMG 20" cross-spoke forged wheels
+  - AMG exterior styling package
   optional:
-    - MBUX Hyperscreen (56" curved display)
-    - AMG Dynamic Plus package (240 km/h, Race/drift mode)
-    - Burmester High-End 4D Surround Sound
-    - AMG Night Package
-    - AMG Carbon Fiber package
-    - Panoramic sliding sunroof
-    - DRIVE PILOT (Level 3, Germany only)
-    - 22kW AC onboard charger
-    - AMG Ceramic High-Performance brakes
-    - AMG 21" performance wheels
-
+  - MBUX Hyperscreen (56" curved display)
+  - AMG Dynamic Plus package (240 km/h, Race/drift mode)
+  - Burmester High-End 4D Surround Sound
+  - AMG Night Package
+  - AMG Carbon Fiber package
+  - Panoramic sliding sunroof
+  - DRIVE PILOT (Level 3, Germany only)
+  - 22kW AC onboard charger
+  - AMG Ceramic High-Performance brakes
+  - AMG 21" performance wheels
 environmental:
   lifecycle_co2_kg: null
-  production_location: "Bremen, Germany"
-  battery_production: "Kamenz, Germany (Accumotive)"
-  notes: >
-    Built at Mercedes-Benz Bremen plant. AMG components from Affalterbach, Germany.
+  production_location: Bremen, Germany
+  battery_production: Kamenz, Germany (Accumotive)
+  notes: 'Built at Mercedes-Benz Bremen plant. AMG components from Affalterbach, Germany.
 
+    '
 metadata:
   data_quality: verified
   data_sources:
-    - manufacturer
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  - manufacturer
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - https://www.mercedes-amg.com/en/vehicles/eqe-43-4matic.html
-    - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe/sedan-v295/amg.html
-  notes: >
-    2025 model year AMG EQE 43 4MATIC. Updates over 2024 include Plug & Charge 
-    standard, improved DRIVE PILOT capability, minor efficiency improvements. 
-    Core powertrain unchanged: dual-motor 350kW AWD with 4.2s 0-100 km/h.
+  - https://www.mercedes-amg.com/en/vehicles/eqe-43-4matic.html
+  - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe/sedan-v295/amg.html
+  notes: '2025 model year AMG EQE 43 4MATIC. Updates over 2024 include Plug & Charge  standard,
+    improved DRIVE PILOT capability, minor efficiency improvements.  Core powertrain
+    unchanged: dual-motor 350kW AWD with 4.2s 0-100 km/h.
+
+    '

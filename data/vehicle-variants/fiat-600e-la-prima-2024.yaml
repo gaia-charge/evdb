@@ -1,23 +1,19 @@
-# Fiat 600e La Prima (2024)
-
 id: fiat-600e-la-prima-2024
 model_id: fiat-600e
-name: "La Prima"
+name: La Prima
 model_year: 2024
-trim_level: La Prima  # Premium launch edition
+trim_level: La Prima
 variant_code: null
-
 production:
   start_date: 2024-02-01
   end_date: null
   status: active
   notes: Premium launch edition with matrix LED headlights and advanced ADAS
-
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 54.0
-  usable_kwh: 51.0  # ~94.4% usable
+  usable_kwh: 51.0
   supplier: CATL
   warranty_years: 8
   warranty_km: 160000
@@ -26,58 +22,52 @@ battery:
   modules: 18
   voltage_nominal: 400
   notes: Standard battery shared across Stellantis eCMP2 platform
-
 range:
   wltp_km: 409
   wltp_city_km: 560
   wltp_highway_km: 330
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 350
   real_world_source: Automobile Magazine test data
   notes: Real-world range around 350km in mixed conditions, excellent in city
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard, no 22kW option
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 28
     peak_power_notes: 100kW peak maintained up to ~50%, then tapers
     preconditioning: true
-  
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 95
-    - percent: 60
-      power_kw: 75
-    - percent: 70
-      power_kw: 55
-    - percent: 80
-      power_kw: 35
-    - percent: 90
-      power_kw: 20
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 95
+  - percent: 60
+    power_kw: 75
+  - percent: 70
+    power_kw: 55
+  - percent: 80
+    power_kw: 35
+  - percent: 90
+    power_kw: 20
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
-  configuration: single_front  # Front-wheel drive (FWD)
+  configuration: single_front
   front:
     type: permanent_magnet
     power_kw: 115
@@ -88,129 +78,117 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 260
-
 dimensions:
   length_mm: 4171
   width_mm: 1781
   height_mm: 1523
   wheelbase_mm: 2562
   ground_clearance_mm: 200
-
 cargo:
   trunk_capacity_liters: 360
   trunk_max_liters: 1231
   frunk_capacity_liters: 0
-
 performance:
-  acceleration_0_100_kph: 9.0
   acceleration_0_60_mph: null
-  top_speed_kph: 150  # Electronically limited
+  top_speed_kph: 150
   quarter_mile_seconds: null
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_sec: 9.0
 efficiency:
   wltp_kwh_per_100km: 13.8
   wltp_wh_per_km: 138
   real_world_kwh_per_100km: 15.3
   real_world_wh_per_km: 153
-
 drivetrain:
-  drive_type: FWD  # Front-wheel drive
+  drive_type: FWD
   transmission: single_speed
   traction_control: Standard ESP with traction modes
-
 suspension:
   front: MacPherson strut
   rear: Torsion beam
   adaptive: false
   notes: Comfort-tuned for urban and highway use
-
 brakes:
   front: Ventilated disc
   rear: Solid disc
-  regen_levels: 3  # Off, Low, High
-  one_pedal: true  # Available in High regen mode
-
+  regen_levels: 3
+  one_pedal: true
 wheels_tires:
   standard:
-    - size: "215/55 R18"
-      wheel_diameter_inches: 18
-      notes: 18" diamond-cut alloy wheels standard on La Prima
+  - size: 215/55 R18
+    wheel_diameter_inches: 18
+    notes: 18" diamond-cut alloy wheels standard on La Prima
   optional:
-    - size: "215/50 R19"
-      wheel_diameter_inches: 19
-      notes: Optional 19" alloy wheels
-
+  - size: 215/50 R19
+    wheel_diameter_inches: 19
+    notes: Optional 19" alloy wheels
 exterior:
   paint_colors:
-    - name: Cinema Black
-      type: solid
-      upcharge_eur: 0
-    - name: Passione Red
-      type: metallic
-      upcharge_eur: 600
-    - name: Sicilia Orange
-      type: metallic
-      upcharge_eur: 600
-    - name: Venezia Blue
-      type: metallic
-      upcharge_eur: 600
-    - name: Gelato White
-      type: metallic
-      upcharge_eur: 600
-  
+  - name: Cinema Black
+    type: solid
+    upcharge_eur: 0
+  - name: Passione Red
+    type: metallic
+    upcharge_eur: 600
+  - name: Sicilia Orange
+    type: metallic
+    upcharge_eur: 600
+  - name: Venezia Blue
+    type: metallic
+    upcharge_eur: 600
+  - name: Gelato White
+    type: metallic
+    upcharge_eur: 600
   standard_features:
-    - Full-LED matrix headlights with automatic high beam
-    - LED daytime running lights (distinctive design)
-    - LED tail lights
-    - Body-colored door handles
-    - Black roof (two-tone available)
-    - Rear parking sensors and camera
-    - 18" diamond-cut alloy wheels
-    - Privacy glass (rear windows)
-
+  - Full-LED matrix headlights with automatic high beam
+  - LED daytime running lights (distinctive design)
+  - LED tail lights
+  - Body-colored door handles
+  - Black roof (two-tone available)
+  - Rear parking sensors and camera
+  - 18" diamond-cut alloy wheels
+  - Privacy glass (rear windows)
 interior:
   seats:
     material: Premium cloth/leatherette combination
     front_heated: Standard
-    front_ventilated: No
-    front_power: No
-    memory_function: No
-  
+    front_ventilated: false
+    front_power: false
+    memory_function: false
   standard_features:
-    - 10.25" touchscreen with Uconnect 5
-    - 7" digital instrument cluster
-    - Wireless Apple CarPlay & Android Auto
-    - Dual-zone automatic climate control
-    - Leather-wrapped steering wheel
-    - USB-C ports (front and rear)
-    - Keyless entry and start
-    - Wireless smartphone charging
-    - Ambient lighting
-
+  - 10.25" touchscreen with Uconnect 5
+  - 7" digital instrument cluster
+  - Wireless Apple CarPlay & Android Auto
+  - Dual-zone automatic climate control
+  - Leather-wrapped steering wheel
+  - USB-C ports (front and rear)
+  - Keyless entry and start
+  - Wireless smartphone charging
+  - Ambient lighting
 adas:
   level: 2
   features:
-    - Adaptive cruise control with Stop & Go
-    - Lane keeping assist
-    - Lane departure warning
-    - Traffic sign recognition
-    - Automatic emergency braking with pedestrian/cyclist detection
-    - Blind spot monitoring
-    - Rear cross traffic alert
-    - Driver attention warning
-    - Intelligent speed assist
-    - 360-degree camera system
+  - Adaptive cruise control with Stop & Go
+  - Lane keeping assist
+  - Lane departure warning
+  - Traffic sign recognition
+  - Automatic emergency braking with pedestrian/cyclist detection
+  - Blind spot monitoring
+  - Rear cross traffic alert
+  - Driver attention warning
+  - Intelligent speed assist
+  - 360-degree camera system
   autopark: Optional
-  traffic_light_recognition: Yes
+  traffic_light_recognition: true
   notes: Comprehensive Level 2 ADAS suite on La Prima trim
-
 weight:
   curb_weight_kg: 1530
   gross_vehicle_weight_kg: 1970
   payload_kg: 440
-  towing_capacity_braked_kg: 750  # Braked trailer
+  towing_capacity_braked_kg: 750
   notes: Slightly heavier than platform siblings due to additional equipment
-
 data_quality:
   overall: verified
   specifications: high
@@ -218,58 +196,85 @@ data_quality:
   market_data: high
   last_updated: 2026-02-08
   confidence_notes: Official specs verified, real-world data from early reviews
-
 sources:
-  - name: Fiat Italy Official Configurator
-    url: https://www.fiat.it/600e
-    date_accessed: 2026-02-08
-    confidence: verified
-  
-  - name: Automobile Magazine Fiat 600e Test
-    url: https://www.automobile-magazine.fr/essais-voitures/article/36124-essai-fiat-600e
-    date_accessed: 2026-02-08
-    confidence: measured
-  
-  - name: Auto Bild Fiat 600e Test
-    url: https://www.autobild.de/artikel/fiat-600e-test-2024-21567890.html
-    date_accessed: 2026-02-08
-    confidence: measured
+- name: Fiat Italy Official Configurator
+  url: https://www.fiat.it/600e
+  date_accessed: 2026-02-08
+  confidence: verified
+- name: Automobile Magazine Fiat 600e Test
+  url: https://www.automobile-magazine.fr/essais-voitures/article/36124-essai-fiat-600e
+  date_accessed: 2026-02-08
+  confidence: measured
+- name: Auto Bild Fiat 600e Test
+  url: https://www.autobild.de/artikel/fiat-600e-test-2024-21567890.html
+  date_accessed: 2026-02-08
+  confidence: measured
+notes: 'The Fiat 600e La Prima is the premium launch edition, fully equipped
 
-notes: |
-  The Fiat 600e La Prima is the premium launch edition, fully equipped
   with matrix LED headlights, Level 2 ADAS, and distinctive Italian styling.
-  
+
+
   Key highlights:
+
   - 54 kWh battery, 409 km WLTP range
+
   - 156 hp/260 Nm, 0-100 in 9.0s
+
   - 100 kW DC fast charging (10-80% in 28 min)
+
   - Matrix LED headlights (unique in segment at this price)
+
   - Premium equipment level
-  
+
+
   Real-world performance:
+
   - City range: ~470 km (excellent efficiency in urban use)
+
   - Highway range: ~310 km (at 120 km/h)
+
   - Mixed range: ~350 km
+
   - Consumption: 15.3 kWh/100km real-world average
-  
+
+
   Value proposition:
+
   - Competitive pricing around €42,000
+
   - Distinctive Italian design
+
   - Matrix LED headlights rare at this price point
+
   - Well-equipped with Level 2 ADAS
+
   - 5-star Euro NCAP safety (86% adult protection)
-  
+
+
   La Prima exclusive features vs (RED):
+
   - Matrix LED headlights (vs standard LED)
+
   - 360-degree camera (vs rear camera only)
+
   - Wireless smartphone charging
+
   - Heated front seats
+
   - Ambient lighting
+
   - 18" wheels standard
-  
+
+
   Target audience: Style-conscious buyers looking for a distinctive,
+
   well-equipped compact electric crossover with Italian flair. Perfect
+
   for urban and suburban use with occasional longer trips.
-  
+
+
   Competition: Jeep Avenger, Alfa Romeo Junior, Peugeot e-2008, Opel Mokka-e,
+
   Hyundai Kona Electric, MG ZS EV.
+
+  '

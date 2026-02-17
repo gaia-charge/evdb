@@ -5,96 +5,77 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: long-range
 market_position: entry
-
-# Battery Specifications
 battery:
   usable_kwh: 110.3
   total_kwh: 116.0
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   nominal_voltage_v: 697
   cell_type: pouch
   supplier: SK On
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, 800V architecture"
+    configuration: floor-mounted, 800V architecture
     weight_kg: 620
     modules: null
-
-# Range
 range:
   wltp_km: 620
   wltp_source: manufacturer
   wltp_city_km: 750
   wltp_highway_km: 510
-
   real_world_km: 520
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 20°C, moderate speed"
-
-# Charging
+  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 10.5
-      "10_80": 7.0
+      '0_100': 10.5
+      '10_80': 7.0
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 350
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 24
-
+      '10_80': 24
     charging_curve:
-      - soc_percent: 10
-        power_kw: 240
-      - soc_percent: 30
-        power_kw: 350
-      - soc_percent: 50
-        power_kw: 300
-      - soc_percent: 70
-        power_kw: 200
-      - soc_percent: 80
-        power_kw: 120
-
-# Motor & Performance
+    - soc_percent: 10
+      power_kw: 240
+    - soc_percent: 30
+      power_kw: 350
+    - soc_percent: 50
+      power_kw: 300
+    - soc_percent: 70
+      power_kw: 200
+    - soc_percent: 80
+      power_kw: 120
+  ac_max_kw: 11
+  dc_max_kw: 350
 motor:
   type: permanent_magnet_synchronous
-  configuration: single  # Rear motor only
+  configuration: single
   total_power_kw: 160
   total_power_ps: 218
   total_torque_nm: 350
   drive_type: RWD
-
 performance:
   acceleration_0_100_kmh_s: 9.4
   top_speed_kmh: 200
   top_speed_limited: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 19.4
   real_world_kwh_per_100km: 21.2
-
-# Weight & Towing
 weight:
   curb_weight_kg: 2620
   gross_vehicle_weight_kg: 3300
   payload_kg: 680
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-
 dimensions:
   length_mm: 5060
   width_mm: 1980
@@ -102,31 +83,23 @@ dimensions:
   height_mm: 1790
   wheelbase_mm: 3130
   ground_clearance_mm: 178
-
 cargo:
   trunk_capacity_liters: 620
   trunk_max_liters: 1923
   frunk_capacity_liters: 52
-
-# Tires
 tires:
   standard:
-    front: "255/50 R19"
-    rear: "255/50 R19"
-
-# Features
+    front: 255/50 R19
+    rear: 255/50 R19
 v2l:
   available: true
   max_power_kw: 3.6
-  outlet_type: "230V socket + exterior port"
-
+  outlet_type: 230V socket + exterior port
 heat_pump:
   standard: true
-
-# Metadata
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - "https://www.hyundai.com/eu/en/models/ioniq9.html"
+  - https://www.hyundai.com/eu/en/models/ioniq9.html

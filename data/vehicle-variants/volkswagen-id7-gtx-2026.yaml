@@ -1,34 +1,29 @@
-# Volkswagen ID.7 GTX (2026)
-# Performance AWD variant with updated software and features
 id: volkswagen-id7-gtx-2026
 name: GTX
 model_id: volkswagen-id7
 model_year: 2026
 variant_code: ID7-GTX-2026
+overview: 'The 2026 Volkswagen ID.7 GTX continues as the performance flagship of VW''s
+  electric sedan lineup. For 2026, the GTX receives updated software (ID. Software
+  4.2), improved charging curve optimization, and refined adaptive chassis tuning.
+  The dual-motor AWD system with 250 kW (340 PS) and 86 kWh usable battery delivers
+  up to 595 km WLTP range. The GTX trim includes sport-tuned DCC adaptive dampers,
+  torque vectoring, AR head-up display, and comprehensive premium equipment as standard.
 
-overview: >
-  The 2026 Volkswagen ID.7 GTX continues as the performance flagship of VW's electric sedan
-  lineup. For 2026, the GTX receives updated software (ID. Software 4.2), improved charging
-  curve optimization, and refined adaptive chassis tuning. The dual-motor AWD system with
-  250 kW (340 PS) and 86 kWh usable battery delivers up to 595 km WLTP range. The GTX
-  trim includes sport-tuned DCC adaptive dampers, torque vectoring, AR head-up display,
-  and comprehensive premium equipment as standard.
-
+  '
 dimensions:
   length_mm: 4961
   width_mm: 1862
   height_mm: 1536
   wheelbase_mm: 2971
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 532
   trunk_max_liters: 1586
   frunk_capacity_liters: 0
-
 battery:
   chemistry: NMC
-  supplier: "LG Energy Solution"
+  supplier: LG Energy Solution
   total_kwh: 91.0
   usable_kwh: 86.0
   warranty_years: 8
@@ -36,61 +31,58 @@ battery:
   warranty_capacity_percent: 70
   voltage: 400
   cell_type: pouch
-  notes: "86 kWh usable (91 kWh gross), 400V MEB architecture, NCM pouch cells"
-
+  notes: 86 kWh usable (91 kWh gross), 400V MEB architecture, NCM pouch cells
 range:
   wltp_km: 595
   wltp_city_km: 775
   wltp_highway_km: 500
   real_world_km: 510
-  real_world_notes: "ADAC EcoTest, mixed driving conditions"
-
+  real_world_notes: ADAC EcoTest, mixed driving conditions
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 555
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 555
+      power_kw: 11.0
   dc:
-    max_power_kw: 200
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 200
-      - soc_percent: 20
-        power_kw: 200
-      - soc_percent: 30
-        power_kw: 185
-      - soc_percent: 40
-        power_kw: 165
-      - soc_percent: 50
-        power_kw: 140
-      - soc_percent: 60
-        power_kw: 110
-      - soc_percent: 70
-        power_kw: 80
-      - soc_percent: 80
-        power_kw: 55
-      - soc_percent: 90
-        power_kw: 40
-      - soc_percent: 100
-        power_kw: 15
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 185
+    - soc_percent: 40
+      power_kw: 165
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 40
+    - soc_percent: 100
+      power_kw: 15
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 28
-        power_kw: 200
-        notes: "10-80% in approximately 28 minutes, slightly improved curve vs 2024"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 28
+      power_kw: 200
+      notes: 10-80% in approximately 28 minutes, slightly improved curve vs 2024
   preconditioning: true
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 200
 motors:
   configuration: dual
   drive_type: AWD
@@ -98,64 +90,59 @@ motors:
   total_power_hp: 340
   total_torque_nm: 545
   motors:
-    - position: front
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 134
-      motor_type: induction
-    - position: rear
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 545
-      motor_type: permanent_magnet
-
+  - position: front
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 134
+    motor_type: induction
+  - position: rear
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 5.4
   top_speed_kmh: 180
-
 efficiency:
   consumption_wltp_kwh_per_100km: 16.5
   consumption_real_world_kwh_per_100km: 18.0
-
 weight:
   curb_weight_kg: 2258
   gross_vehicle_weight_kg: 2815
   payload_kg: 557
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 features:
   standard:
-    - "15-inch central touchscreen with ID. Software 4.2"
-    - "AR Head-Up Display"
-    - "Matrix LED IQ.LIGHT headlights"
-    - "DCC Sport adaptive chassis control"
-    - "Climate comfort seats with massage function"
-    - "GTX sport seats and steering wheel"
-    - "ID. Light ambient lighting"
-    - "Travel Assist Level 2+ ADAS"
-    - "Heat pump climate control"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "Harman Kardon sound system"
-    - "Keyless entry and start"
-    - "Panoramic glass roof"
-    - "Powered tailgate"
+  - 15-inch central touchscreen with ID. Software 4.2
+  - AR Head-Up Display
+  - Matrix LED IQ.LIGHT headlights
+  - DCC Sport adaptive chassis control
+  - Climate comfort seats with massage function
+  - GTX sport seats and steering wheel
+  - ID. Light ambient lighting
+  - Travel Assist Level 2+ ADAS
+  - Heat pump climate control
+  - Wireless Apple CarPlay and Android Auto
+  - Harman Kardon sound system
+  - Keyless entry and start
+  - Panoramic glass roof
+  - Powered tailgate
   optional:
-    - "22 kW AC charging upgrade"
-    - "DynAudio Premium sound (700W, 14 speakers)"
-    - "Tow bar preparation (1,000 kg)"
-
+  - 22 kW AC charging upgrade
+  - DynAudio Premium sound (700W, 14 speakers)
+  - Tow bar preparation (1,000 kg)
 version:
-  release_date: "2025-06"
-  changes_from_previous: "Updated software (ID. 4.2), improved charging curve, refined DCC tuning"
-  notes: "2026 model year continuation with software and calibration improvements"
-
+  release_date: 2025-06
+  changes_from_previous: Updated software (ID. 4.2), improved charging curve, refined
+    DCC tuning
+  notes: 2026 model year continuation with software and calibration improvements
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.volkswagen.de/de/modelle/id7.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  notes: "2026 model year GTX with software updates and refined chassis tuning"
+  - https://www.volkswagen.de/de/modelle/id7.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
+  notes: 2026 model year GTX with software updates and refined chassis tuning

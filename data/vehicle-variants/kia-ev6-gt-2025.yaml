@@ -5,212 +5,172 @@ model_year: 2025
 production_years:
   start: 2022
   end: null
-
 trim_level: performance
 market_position: high-performance
-
-# Battery Specifications
 battery:
   usable_kwh: 77.4
   total_kwh: 84.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 800  # High-voltage E-GMP architecture
+  chemistry: NMC
+  nominal_voltage_v: 800
   cell_type: pouch
   supplier: SK On (formerly SK Innovation)
   warranty_years: 7
   warranty_km: 150000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, integrated into E-GMP platform"
+    configuration: floor-mounted, integrated into E-GMP platform
     weight_kg: 490
     modules: 10
-
-# Range
 range:
   wltp_km: 440
   wltp_source: manufacturer
-  
   epa_km: 420
   epa_source: estimated
-  
   real_world_km: 395
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 21-inch wheels"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, normal mode, 21-inch wheels
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 7.5
+      '0_100': 7.5
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 240
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 42
-    
+      '10_80': 18
+      '0_100': 42
     charging_curve:
-      - soc_percent: 0
-        power_kw: 225
-      - soc_percent: 10
-        power_kw: 240
-      - soc_percent: 20
-        power_kw: 240
-      - soc_percent: 30
-        power_kw: 235
-      - soc_percent: 40
-        power_kw: 215
-      - soc_percent: 50
-        power_kw: 175
-      - soc_percent: 60
-        power_kw: 135
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 10
-
-# Bidirectional Charging (V2X)
+    - soc_percent: 0
+      power_kw: 225
+    - soc_percent: 10
+      power_kw: 240
+    - soc_percent: 20
+      power_kw: 240
+    - soc_percent: 30
+      power_kw: 235
+    - soc_percent: 40
+      power_kw: 215
+    - soc_percent: 50
+      power_kw: 175
+    - soc_percent: 60
+      power_kw: 135
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 10
+  ac_max_kw: 11
+  dc_max_kw: 240
 bidirectional_charging:
   v2l_capable: true
   v2l_max_power_kw: 3.6
   v2h_capable: true
   v2g_capable: true
   v2g_certified_markets:
-    - KR
-    - NL
-    - UK
-    - DE
-  notes: "V2L adapter included, can power household appliances or other EVs"
-
-# Motors & Drivetrain
+  - KR
+  - NL
+  - UK
+  - DE
+  notes: V2L adapter included, can power household appliances or other EVs
 motors:
   configuration: dual-motor
   drive_type: AWD
-  
   front:
     type: permanent-magnet-synchronous
     max_power_kw: 160
     max_torque_nm: 350
-    
   rear:
     type: permanent-magnet-synchronous
     max_power_kw: 270
     max_torque_nm: 390
-
   combined:
     total_power_kw: 430
     total_power_hp: 585
     total_torque_nm: 740
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 3.4
   top_speed_kmh: 260
   top_speed_limited: false
   launch_control: true
   drift_mode: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 20.4
   wltp_source: manufacturer
-  
   real_world_kwh_per_100km: 22.8
   real_world_source: estimated
-  real_world_conditions: "Highway 120 km/h, 15°C, sporty driving"
-  
+  real_world_conditions: Highway 120 km/h, 15°C, sporty driving
   efficiency_rating_eu: C
-  
-# Weight
 weight:
   curb_weight_kg: 2145
   gross_vehicle_weight_kg: 2720
   payload_kg: 575
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
-# Wheels & Tires
 wheels:
-  standard_size_front: "255/40 R21"
-  standard_size_rear: "275/35 R21"
+  standard_size_front: 255/40 R21
+  standard_size_rear: 275/35 R21
   wheel_options:
-    - "21-inch GT alloy wheels (standard)"
-
-# Brakes
+  - 21-inch GT alloy wheels (standard)
 brakes:
-  front: "380mm ventilated discs (GT-specific)"
-  rear: "360mm ventilated discs (GT-specific)"
-  calipers: "4-piston front, 2-piston rear (Neon green GT calipers)"
-
-# Suspension
+  front: 380mm ventilated discs (GT-specific)
+  rear: 360mm ventilated discs (GT-specific)
+  calipers: 4-piston front, 2-piston rear (Neon green GT calipers)
 suspension:
-  front: "MacPherson strut with GT-tuned dampers"
-  rear: "Multi-link with GT-tuned dampers"
+  front: MacPherson strut with GT-tuned dampers
+  rear: Multi-link with GT-tuned dampers
   adaptive_dampers: true
-  notes: "GT-specific tuning, 15mm lower ride height vs standard"
-
-# Standard Equipment (Key Features)
+  notes: GT-specific tuning, 15mm lower ride height vs standard
 standard_equipment:
   exterior:
-    - GT-specific front bumper with larger air intakes
-    - GT rear diffuser and spoiler
-    - LED Matrix headlights
-    - LED taillights with sequential indicators
-    - Flush door handles
-    - Black panoramic sunroof
-    - Privacy glass
-    - Neon green GT brake calipers
-    - GT badging
-  
+  - GT-specific front bumper with larger air intakes
+  - GT rear diffuser and spoiler
+  - LED Matrix headlights
+  - LED taillights with sequential indicators
+  - Flush door handles
+  - Black panoramic sunroof
+  - Privacy glass
+  - Neon green GT brake calipers
+  - GT badging
   interior:
-    - Dual 12.3-inch curved display (digital cockpit + infotainment)
-    - GT-specific digital cluster with performance gauges
-    - Head-up display (AR HUD)
-    - Meridian premium sound system (14 speakers)
-    - Wireless phone charging
-    - GT Nappa leather/suede sport seats with GT embroidery
-    - Heated & ventilated front seats
-    - Heated rear seats
-    - Heated steering wheel with GT badge
-    - Dual-zone climate control
-    - Ambient lighting (64 colors) with GT neon green accents
-    - Carbon fiber interior trim
-    - GT steering wheel with paddle shifters (regen levels)
-  
+  - Dual 12.3-inch curved display (digital cockpit + infotainment)
+  - GT-specific digital cluster with performance gauges
+  - Head-up display (AR HUD)
+  - Meridian premium sound system (14 speakers)
+  - Wireless phone charging
+  - GT Nappa leather/suede sport seats with GT embroidery
+  - Heated & ventilated front seats
+  - Heated rear seats
+  - Heated steering wheel with GT badge
+  - Dual-zone climate control
+  - Ambient lighting (64 colors) with GT neon green accents
+  - Carbon fiber interior trim
+  - GT steering wheel with paddle shifters (regen levels)
   technology:
-    - Highway Driving Assist 2
-    - Smart Cruise Control with Stop & Go
-    - Lane Keep Assist with Lane Following Assist
-    - Blind Spot Monitoring with Collision Avoidance
-    - Remote Smart Parking Assist (out/in)
-    - Surround View Monitor with 3D view
-    - Remote climate control via Kia Connect app
-    - OTA software updates
-    - GT-specific drive modes (Eco, Normal, Sport, GT)
-    - Launch Control
-    - Drift Mode
-    - Electronic Limited Slip Differential (e-LSD)
-    - Digital Key 2.0
-  
+  - Highway Driving Assist 2
+  - Smart Cruise Control with Stop & Go
+  - Lane Keep Assist with Lane Following Assist
+  - Blind Spot Monitoring with Collision Avoidance
+  - Remote Smart Parking Assist (out/in)
+  - Surround View Monitor with 3D view
+  - Remote climate control via Kia Connect app
+  - OTA software updates
+  - GT-specific drive modes (Eco, Normal, Sport, GT)
+  - Launch Control
+  - Drift Mode
+  - Electronic Limited Slip Differential (e-LSD)
+  - Digital Key 2.0
   charging:
-    - Type 2 charging cable
-    - V2L adapter
-    - Scheduled charging
-    - Battery preconditioning
-
-# Dimensions
+  - Type 2 charging cable
+  - V2L adapter
+  - Scheduled charging
+  - Battery preconditioning
 dimensions:
   length_mm: 4695
   width_mm: 1890
@@ -218,50 +178,51 @@ dimensions:
   height_mm: 1545
   wheelbase_mm: 2900
   ground_clearance_mm: 145
-  
   cargo:
     trunk_capacity_liters: 490
     trunk_max_liters: 1300
     frunk_capacity_liters: 20
-
-# Aerodynamics
 aerodynamics:
   drag_coefficient: 0.28
   frontal_area_m2: 2.61
-
-# Colors Available
 colors:
-  - "Glacier White Pearl"
-  - "Aurora Black Pearl"
-  - "Moonscape Gray Matte"
-  - "Cyber Gray Matte"
-  - "Yacht Blue"
-  - "GT Exclusive Yellow-Green"
-
-# Production
+- Glacier White Pearl
+- Aurora Black Pearl
+- Moonscape Gray Matte
+- Cyber Gray Matte
+- Yacht Blue
+- GT Exclusive Yellow-Green
 production:
-  plant: "Hwaseong, South Korea"
-  platform: "E-GMP (Electric Global Modular Platform)"
+  plant: Hwaseong, South Korea
+  platform: E-GMP (Electric Global Modular Platform)
   platform_generation: 1
   status: active
-
-# Data Quality
 metadata:
   data_quality: verified
   last_updated: '2026-02-10'
   created_at: '2026-02-10'
-  source: "Kia official specifications for 2025 GT model year"
+  source: Kia official specifications for 2025 GT model year
   source_urls:
-    - "https://www.kia.com/de/modelle/ev6/"
+  - https://www.kia.com/de/modelle/ev6/
   verification_date: '2026-02-10'
-  notes: |
-    2025 Kia EV6 GT - high-performance flagship. Updates over 2024 GT:
+  notes: '2025 Kia EV6 GT - high-performance flagship. Updates over 2024 GT:
+
     - Increased total battery capacity (84.0 vs 77.4 kWh)
+
     - Slightly improved range (440 vs 424 km WLTP)
+
     - Marginally improved 0-100 (3.4s vs 3.5s) via software tuning
+
     - 585 hp (430 kW) combined power
+
     - Launch Control and Drift Mode retained
+
     - Germany added to V2G certified markets
+
     - Digital Key 2.0 now standard
+
     - Enhanced e-LSD calibration
+
     - Updated Kia Connect with improved OTA
+
+    '

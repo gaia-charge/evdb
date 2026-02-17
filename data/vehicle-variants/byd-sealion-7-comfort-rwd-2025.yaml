@@ -1,21 +1,17 @@
-# BYD Sealion 7 Comfort RWD (2025) - Standard variant
-
 id: byd-sealion-7-comfort-rwd-2025
 model_id: byd-sealion-7
 name: Comfort RWD
 model_year: 2025
 trim_level: Comfort
 variant_code: null
-
 production:
   start_date: 2024-11-01
   end_date: null
   status: active
   notes: European launch late 2024
-
 battery:
   type: Lithium-ion
-  chemistry: LFP  # BYD Blade Battery
+  chemistry: LFP
   total_kwh: 71.8
   usable_kwh: 69.0
   supplier: BYD (FinDreams)
@@ -26,7 +22,6 @@ battery:
   modules: null
   voltage_nominal: 640
   notes: BYD Blade Battery (LFP Cell-to-Pack), 800V architecture
-
 range:
   wltp_km: 502
   wltp_city_km: 600
@@ -35,41 +30,36 @@ range:
   real_world_avg_km: 420
   real_world_source: European driving reviews
   notes: Excellent efficiency due to low drag coefficient
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 7.5
     onboard_charger: 11kW three-phase
-  
   dc:
-    max_power_kw: 150
     connector_type: CCS2
     time_10_80_percent_minutes: 34
     peak_power_notes: 150kW peak DC charging
     preconditioning: true
-  
   charge_curve:
-    - percent: 10
-      power_kw: 145
-    - percent: 30
-      power_kw: 150
-    - percent: 50
-      power_kw: 130
-    - percent: 60
-      power_kw: 110
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 55
-  
+  - percent: 10
+    power_kw: 145
+  - percent: 30
+    power_kw: 150
+  - percent: 50
+    power_kw: 130
+  - percent: 60
+    power_kw: 110
+  - percent: 70
+    power_kw: 85
+  - percent: 80
+    power_kw: 55
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 150
 motors:
   configuration: single_rear
   rear:
@@ -82,13 +72,14 @@ motors:
     power_kw: 230
     power_hp: 313
     torque_nm: 380
-
 performance:
-  acceleration_0_100_kph: 6.7
   acceleration_0_60_mph: null
   top_speed_kph: 215
   quarter_mile_seconds: null
-
+  total_power_kw: 230
+  total_power_hp: 313
+  total_torque_nm: 380
+  acceleration_0_100_sec: 6.7
 efficiency:
   wltp_kwh_per_100km: 14.3
   wltp_wh_per_km: 143
@@ -96,7 +87,6 @@ efficiency:
   real_world_kwh_per_100km: 16.5
   mpge_combined: null
   drag_coefficient: 0.258
-
 dimensions:
   length_mm: 4830
   width_mm: 1925
@@ -104,12 +94,10 @@ dimensions:
   height_mm: 1620
   wheelbase_mm: 2930
   ground_clearance_mm: 155
-
 cargo:
   trunk_capacity_liters: 520
   trunk_max_liters: 1440
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2210
   gross_vehicle_weight_kg: 2665
@@ -117,73 +105,64 @@ weight:
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
   weight_distribution_front_percent: 46
-
-
 drivetrain:
   drive_type: RWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: Double wishbone
   rear: Multi-link
-
 brakes:
   front: Ventilated disc (355mm)
   rear: Ventilated disc (345mm)
   regenerative: true
-
 tires:
   standard: 255/50 R19
-
 features:
   infotainment:
-    - "15.6\" rotating touchscreen"
-    - "10.25\" digital instrument cluster"
-    - "Apple CarPlay and Android Auto"
-    - "DAB+ radio"
-    - "8-speaker sound system"
-    - "BYD app"
-    - "OTA updates"
-  
+  - 15.6" rotating touchscreen
+  - 10.25" digital instrument cluster
+  - Apple CarPlay and Android Auto
+  - DAB+ radio
+  - 8-speaker sound system
+  - BYD app
+  - OTA updates
   driver_assistance:
-    - "Automatic emergency braking"
-    - "Adaptive cruise control"
-    - "Lane centering assist"
-    - "Speed limit recognition"
-    - "360° surround view camera"
-    - "Rear cross-traffic alert"
-    - "Blind spot monitoring"
-  
+  - Automatic emergency braking
+  - Adaptive cruise control
+  - Lane centering assist
+  - Speed limit recognition
+  - 360° surround view camera
+  - Rear cross-traffic alert
+  - Blind spot monitoring
   comfort_convenience:
-    - "Dual-zone automatic climate control"
-    - "Heat pump"
-    - "Heated front seats"
-    - "Keyless entry and start"
-    - "Wireless phone charger"
-    - "USB-C ports front and rear"
-    - "V2L (Vehicle-to-Load)"
-    - "Electric tailgate"
-  
+  - Dual-zone automatic climate control
+  - Heat pump
+  - Heated front seats
+  - Keyless entry and start
+  - Wireless phone charger
+  - USB-C ports front and rear
+  - V2L (Vehicle-to-Load)
+  - Electric tailgate
   exterior:
-    - "19\" alloy wheels"
-    - "LED headlights"
-    - "LED tail lights"
-    - "Privacy glass"
-    - "Roof rails"
-  
+  - 19" alloy wheels
+  - LED headlights
+  - LED tail lights
+  - Privacy glass
+  - Roof rails
   interior:
-    - "Faux leather upholstery"
-    - "520L trunk"
-    - "58L frunk"
-    - "40/20/40 split-folding rear seats"
-    - "Power driver seat"
-
+  - Faux leather upholstery
+  - 520L trunk
+  - 58L frunk
+  - 40/20/40 split-folding rear seats
+  - Power driver seat
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://www.byd.com/eu/car/sealion-7
-  notes: |
-    Entry-level RWD variant with 71.8 kWh Blade Battery. 502 km WLTP range
+  - https://www.byd.com/eu/car/sealion-7
+  notes: 'Entry-level RWD variant with 71.8 kWh Blade Battery. 502 km WLTP range
+
     with excellent 14.3 kWh/100km efficiency. 800V architecture.
+
+    '

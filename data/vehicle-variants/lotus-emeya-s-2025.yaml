@@ -1,15 +1,12 @@
 id: lotus-emeya-s-2025
-name: "S"
+name: S
 model_id: lotus-emeya
 model_year: 2025
 production_years:
   start: 2024
   end: null
-
 trim_level: s
 market_position: mid
-
-# Battery Specifications
 battery:
   usable_kwh: 102.0
   total_kwh: 105.0
@@ -18,49 +15,37 @@ battery:
   thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
-
-# Range
 range:
   wltp_km: 595
   wltp_source: manufacturer
-  
   real_world_km: 510
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C
 charging:
   ac:
-    max_power_kw: 22.0
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 5.0
+      '0_100': 5.0
     onboard_charger_kw: 22.0
     phases: 3
-  
   dc:
-    max_power_kw: 350
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_80": 21
-
+      '10_80': 18
+      0_80: 21
   bidirectional:
     v2l: false
     v2g: false
-
-# Efficiency
+  ac_max_kw: 22.0
+  dc_max_kw: 350
 efficiency:
   wltp_kwh_per_100km: 17.1
-  
   real_world:
     combined_kwh_per_100km: 20.0
     highway_kwh_per_100km: 23.5
     city_kwh_per_100km: 17.0
-
-# Drivetrain
 drivetrain:
   configuration: awd
   motor_type: permanent_magnet
@@ -75,14 +60,10 @@ drivetrain:
       power_kw: 360
       power_hp: 490
       torque_nm: 550
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 2.78
   top_speed_kmh: 256
   top_speed_limited: true
-
-# Dimensions & Weight
 dimensions:
   length_mm: 5139
   width_mm: 2005
@@ -92,122 +73,107 @@ dimensions:
   ground_clearance_mm: 135
   drag_coefficient: 0.21
   frontal_area_m2: 2.45
-
 weight:
   curb_weight_kg: 2510
   gvwr_kg: 2985
   gross_vehicle_weight_kg: 2985
   payload_kg: 475
   towing_capacity_braked_kg: 0
-
 cargo:
   trunk_capacity_liters: 509
   trunk_max_liters: 688
   frunk_capacity_liters: 31
-
-# Standard Equipment
 equipment:
   standard:
     exterior:
-      - "21\" forged alloy wheels"
-      - "LED matrix headlights with adaptive high beam"
-      - "Animated light bar"
-      - "Deployable rear spoiler"
-      - "Active aero shutters"
-      - "Flush door handles"
-      - "Panoramic glass roof"
-      - "Carbon fiber exterior trim"
-    
+    - 21" forged alloy wheels
+    - LED matrix headlights with adaptive high beam
+    - Animated light bar
+    - Deployable rear spoiler
+    - Active aero shutters
+    - Flush door handles
+    - Panoramic glass roof
+    - Carbon fiber exterior trim
     interior:
-      - "15.1\" OLED touchscreen infotainment"
-      - "55\" augmented reality head-up display"
-      - "12.6\" digital instrument cluster"
-      - "4-zone climate control"
-      - "Heated, ventilated and massaging front seats"
-      - "Electric adjustable sport seats with memory (4 seats)"
-      - "Ambient lighting with 9 colors"
-      - "Alcantara and premium leather upholstery"
-      - "Meridian Signature audio (2160W, 23 speakers)"
-      - "Wireless phone charging"
-    
+    - 15.1" OLED touchscreen infotainment
+    - 55" augmented reality head-up display
+    - 12.6" digital instrument cluster
+    - 4-zone climate control
+    - Heated, ventilated and massaging front seats
+    - Electric adjustable sport seats with memory (4 seats)
+    - Ambient lighting with 9 colors
+    - Alcantara and premium leather upholstery
+    - Meridian Signature audio (2160W, 23 speakers)
+    - Wireless phone charging
     safety:
-      - "Autonomous Emergency Braking"
-      - "360-degree camera system with 3D view"
-      - "Adaptive cruise control with traffic jam assist"
-      - "Lane keeping assist with lane centering"
-      - "Traffic sign recognition"
-      - "Blind spot monitoring with rear cross traffic alert"
-      - "8 airbags"
-      - "Night vision with pedestrian detection"
-    
+    - Autonomous Emergency Braking
+    - 360-degree camera system with 3D view
+    - Adaptive cruise control with traffic jam assist
+    - Lane keeping assist with lane centering
+    - Traffic sign recognition
+    - Blind spot monitoring with rear cross traffic alert
+    - 8 airbags
+    - Night vision with pedestrian detection
     technology:
-      - "Apple CarPlay and Android Auto (wireless)"
-      - "Air suspension with adaptive damping and ride height adjustment"
-      - "Rear-wheel steering (standard on S)"
-      - "Multi-mode driving (Range/Tour/Sport/Individual/Track)"
-      - "Torque vectoring with electronic limited-slip differential"
-      - "Track telemetry system"
-
+    - Apple CarPlay and Android Auto (wireless)
+    - Air suspension with adaptive damping and ride height adjustment
+    - Rear-wheel steering (standard on S)
+    - Multi-mode driving (Range/Tour/Sport/Individual/Track)
+    - Torque vectoring with electronic limited-slip differential
+    - Track telemetry system
   optional:
-    - name: "Carbon Pack (carbon fiber body panels)"
-      price_eur: 12000
-    - name: "Luxury Pack with premium leather"
-      price_eur: 18000
-    - name: "22\" ultra-lightweight forged wheels"
-      price_eur: 4500
-    - name: "Carbon ceramic brakes"
-      price_eur: 12000
-
-# Pricing
+  - name: Carbon Pack (carbon fiber body panels)
+    price_eur: 12000
+  - name: Luxury Pack with premium leather
+    price_eur: 18000
+  - name: 22" ultra-lightweight forged wheels
+    price_eur: 4500
+  - name: Carbon ceramic brakes
+    price_eur: 12000
 pricing:
   msrp_eur: 128950
   msrp_usd: null
-
-# Colors
 colors:
   exterior:
-    - name: "Stellar Black"
-      code: SB
-      type: metallic
-    - name: "Kaimu Grey"
-      code: KG
-      type: metallic
-    - name: "Solar Yellow"
-      code: SY
-      type: metallic
-    - name: "Seneca Blue"
-      code: SNB
-      type: metallic
-    - name: "Blossom White"
-      code: BW
-      type: solid
-    - name: "Racing Green"
-      code: RG
-      type: metallic
-  
+  - name: Stellar Black
+    code: SB
+    type: metallic
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+  - name: Blossom White
+    code: BW
+    type: solid
+  - name: Racing Green
+    code: RG
+    type: metallic
   interior:
-    - name: "Black Alcantara and leather"
-    - name: "Grey leather with carbon trim"
-    - name: "Tan leather with wood trim"
-    - name: "Red leather with Alcantara"
-
-# Metadata
+  - name: Black Alcantara and leather
+  - name: Grey leather with carbon trim
+  - name: Tan leather with wood trim
+  - name: Red leather with Alcantara
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   confidence: high
-  
   sources:
-    - "https://www.lotuscars.com/en-GB/emeya"
-    - "https://www.lotuscars.com/en-DE/emeya"
-    - "https://www.autocar.co.uk/car-news/new-cars/lotus-emeya"
-    - "https://www.caranddriver.com/lotus/emeya"
+  - https://www.lotuscars.com/en-GB/emeya
+  - https://www.lotuscars.com/en-DE/emeya
+  - https://www.autocar.co.uk/car-news/new-cars/lotus-emeya
+  - https://www.caranddriver.com/lotus/emeya
+notes: 'The Lotus Emeya S is the mid-range performance variant with 630 kW (857 hp)
+  combined power, achieving an incredible 0-100 km/h in just 2.78 seconds - making
+  it one of the fastest 4-door production cars ever made. Despite the increased power,
+  it maintains 595 km WLTP range thanks to the exceptional 0.21 drag coefficient.
+  Standard equipment includes rear-wheel steering, Meridian Signature audio, carbon
+  fiber trim, Track Mode with telemetry, and premium 4-seat interior with massaging
+  seats. Competes directly with Porsche Taycan Turbo S.
 
-notes: >
-  The Lotus Emeya S is the mid-range performance variant with 630 kW (857 hp) combined power,
-  achieving an incredible 0-100 km/h in just 2.78 seconds - making it one of the fastest
-  4-door production cars ever made. Despite the increased power, it maintains 595 km WLTP range
-  thanks to the exceptional 0.21 drag coefficient. Standard equipment includes rear-wheel steering,
-  Meridian Signature audio, carbon fiber trim, Track Mode with telemetry, and premium 4-seat
-  interior with massaging seats. Competes directly with Porsche Taycan Turbo S.
+  '

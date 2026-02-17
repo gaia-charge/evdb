@@ -5,114 +5,92 @@ model_year: 2024
 production_years:
   start: 2022
   end: null
-
 trim_level: 450-plus
-market_position: base  # Entry-level EQS SUV, but still flagship luxury
-
-# Battery Specifications
+market_position: base
 battery:
-  usable_kwh: 118.0  # Largest battery in SUV segment
+  usable_kwh: 118.0
   total_kwh: 122.0
-  chemistry: NCM  # Nickel Manganese Cobalt (NCM811)
-  nominal_voltage_v: 396  # 400V architecture
+  chemistry: NCM
+  nominal_voltage_v: 396
   cell_type: pouch
   supplier: CATL
   warranty_years: 10
-  warranty_km: 250000  # Best-in-class warranty
+  warranty_km: 250000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, 400V architecture"
+    configuration: floor-mounted, 400V architecture
     weight_kg: 690
     modules: 12
     cells: 396
-
-# Range
 range:
-  wltp_km: 660  # Excellent range for luxury SUV
+  wltp_km: 660
   wltp_source: manufacturer
-  wltp_city_km: 770  # Exceptional city range
+  wltp_city_km: 770
   wltp_highway_km: 560
-  
-  epa_km: 483  # 300 miles (EPA more conservative)
+  epa_km: 483
   epa_source: manufacturer
-  
   real_world_km: 550
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 20°C, moderate speed"
-
-# Charging
+  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 10.7  # 11kW AC
-      "10_80": 8.3
+      '0_100': 10.7
+      '10_80': 8.3
     onboard_charger_kw: 11
-    onboard_charger_optional_kw: 22  # 22kW onboard charger optional
+    onboard_charger_optional_kw: 22
     phases: 3
-  
   dc:
-    max_power_kw: 200  # 400V architecture limits DC charging speed
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 31  # 400V limits charging speed vs 800V competitors
-      "0_100": 62
-    
+      '10_80': 31
+      '0_100': 62
     charging_curve:
-      - soc_percent: 0
-        power_kw: 190
-      - soc_percent: 10
-        power_kw: 200  # Peak
-      - soc_percent: 20
-        power_kw: 200
-      - soc_percent: 30
-        power_kw: 180
-      - soc_percent: 40
-        power_kw: 160
-      - soc_percent: 50
-        power_kw: 140
-      - soc_percent: 60
-        power_kw: 120
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 70
-  
-  plug_and_charge: yes  # ISO 15118
-  
+    - soc_percent: 0
+      power_kw: 190
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 180
+    - soc_percent: 40
+      power_kw: 160
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 120
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 70
+  plug_and_charge: true
   bidirectional:
-    v2l: false  # No Vehicle-to-Load
-    v2g: false  # No Vehicle-to-Grid
-    v2h: false  # No Vehicle-to-Home
-
-# Performance
+    v2l: false
+    v2g: false
+    v2h: false
+  ac_max_kw: 11
+  dc_max_kw: 200
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      max_power_kw: 265  # 360 hp (more power than EQS sedan 450+)
-      max_torque_nm: 568
-  
+  - position: rear
+    type: permanent magnet
+    max_power_kw: 265
+    max_torque_nm: 568
   total_power_kw: 265
   total_power_hp: 360
   total_torque_nm: 568
-  
   acceleration:
-    "0_100_kmh_sec": 6.7  # Slower than sedan due to weight
-    "0_60_mph_sec": 6.4
-  
-  top_speed_kmh: 210  # Electronically limited
-  
+    0_100_kmh_sec: 6.7
+    0_60_mph_sec: 6.4
+  top_speed_kmh: 210
   energy_recovery:
     max_regen_power_kw: 186
-    one_pedal_driving: yes  # D Auto mode with intelligent recuperation
-
-# Weight & Dimensions
+    one_pedal_driving: true
 dimensions:
   length_mm: 5125
   width_mm: 1959
@@ -121,12 +99,10 @@ dimensions:
   wheelbase_mm: 3210
   ground_clearance_mm: 181
   turning_circle_m: 11.9
-
 cargo:
   trunk_capacity_liters: 645
   trunk_max_liters: 2100
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2735
   gross_vehicle_weight_kg: 3375
@@ -135,127 +111,147 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 48
   distribution_rear_percent: 52
-  towing_capacity_braked_kg: 1800
-  towing_capacity_unbraked_kg: 750
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 19.4  # Higher than sedan due to SUV aerodynamics
+  wltp_kwh_per_100km: 19.4
   wltp_source: manufacturer
-  epa_kwh_per_100km: 24.4  # EPA testing more demanding
-  epa_mpge: 86  # EPA miles per gallon equivalent
+  epa_kwh_per_100km: 24.4
+  epa_mpge: 86
   real_world_kwh_per_100km: 21.5
-  energy_efficiency_class: A  # EU energy label (best class)
-
-# Features
+  energy_efficiency_class: A
 features:
-  heated_seats: "Front and rear standard"
-  ventilated_seats: "Front standard, rear optional"
-  massage_seats: "Front standard, rear optional (Executive Rear Seat Package)"
-  heated_steering_wheel: yes
-  panoramic_roof: yes  # Panoramic sliding sunroof standard
-  head_up_display: yes  # Augmented Reality HUD standard
-  premium_audio: yes  # Burmester High-End 4D Surround (15 speakers, 710W) standard
-  adaptive_suspension: yes  # AIRMATIC air suspension standard
-  air_suspension: yes
-  all_wheel_steering: yes  # Rear-axle steering up to 10° standard
-  ambient_lighting: yes  # 64 colors
-  keyless_entry: yes
-  power_liftgate: yes  # HANDS-FREE ACCESS
-  tow_hitch: yes  # 1,800kg capacity
-  
-  adas_level: 2  # Level 2+ with Active Distance Assist DISTRONIC and Active Steering Assist
-  autopilot_highway: yes  # DRIVE PILOT Level 3 optional (in Germany only)
-  
-  climate_zones: 4  # 4-zone automatic climate control standard
-  wireless_charging: yes  # For 2 smartphones
-  
+  heated_seats: Front and rear standard
+  ventilated_seats: Front standard, rear optional
+  massage_seats: Front standard, rear optional (Executive Rear Seat Package)
+  heated_steering_wheel: true
+  panoramic_roof: true
+  head_up_display: true
+  premium_audio: true
+  adaptive_suspension: true
+  air_suspension: true
+  all_wheel_steering: true
+  ambient_lighting: true
+  keyless_entry: true
+  power_liftgate: true
+  tow_hitch: true
+  adas_level: 2
+  autopilot_highway: true
+  climate_zones: 4
+  wireless_charging: true
   special:
-    - "MBUX Hyperscreen optional (standard on 580 4MATIC)"
-    - "Rear-axle steering up to 10° (turning circle 11.9m)"
-    - "ENERGIZING comfort control with 10 programs"
-    - "Air Balance Package with ionizer and fragrance"
-    - "Executive Rear Seat Package (reclining, massage, heating, footrests)"
-    - "E-Active Body Control optional (active suspension, curve tilting)"
-    - "Digital Light LED headlights with projection"
-    - "Acoustic Comfort Package (acoustic glass, additional insulation)"
-    - "Off-road mode with transparent hood camera"
-    - "Optional 7-seat configuration with electric-folding third row"
-
-# Technology
+  - MBUX Hyperscreen optional (standard on 580 4MATIC)
+  - Rear-axle steering up to 10° (turning circle 11.9m)
+  - ENERGIZING comfort control with 10 programs
+  - Air Balance Package with ionizer and fragrance
+  - Executive Rear Seat Package (reclining, massage, heating, footrests)
+  - E-Active Body Control optional (active suspension, curve tilting)
+  - Digital Light LED headlights with projection
+  - Acoustic Comfort Package (acoustic glass, additional insulation)
+  - Off-road mode with transparent hood camera
+  - Optional 7-seat configuration with electric-folding third row
 technology:
-  heat_pump: yes  # Standard
-  preconditioning: yes  # Battery and cabin
-  remote_climate: yes  # Via Mercedes me app
-  battery_preheating: yes  # For optimal DC fast charging
-  over_the_air_updates: yes  # MBUX OTA updates
-  digital_key: yes  # Via Mercedes me app (NFC + UWB)
-  voice_assistant: yes  # "Hey Mercedes" natural language
+  heat_pump: true
+  preconditioning: true
+  remote_climate: true
+  battery_preheating: true
+  over_the_air_updates: true
+  digital_key: true
+  voice_assistant: true
   smartphone_integration:
-    - Apple CarPlay (wireless)
-    - Android Auto (wireless)
-  navigation_system: yes  # MBUX with Augmented Reality
-  telematics: yes  # Mercedes me connect with remote services
-
-# Homologation
+  - Apple CarPlay (wireless)
+  - Android Auto (wireless)
+  navigation_system: true
+  telematics: true
 homologation:
   certification_standard: WLTP
   energy_label_eu: A
-  co2_emissions_g_km: 0  # Zero direct emissions
+  co2_emissions_g_km: 0
+notes: 'The Mercedes-Benz EQS SUV 450+ is the entry-level variant of Mercedes'' electric
+  luxury SUV flagship.
 
-notes: |
-  The Mercedes-Benz EQS SUV 450+ is the entry-level variant of Mercedes' electric luxury SUV flagship.
-  Despite being the "base" model, it offers 660km WLTP range (550km real-world) from a massive 118kWh battery
-  and includes most luxury features as standard (AIRMATIC air suspension, rear-axle steering, Burmester audio).
-  
+  Despite being the "base" model, it offers 660km WLTP range (550km real-world) from
+  a massive 118kWh battery
+
+  and includes most luxury features as standard (AIRMATIC air suspension, rear-axle
+  steering, Burmester audio).
+
+
   Key strengths:
-  - Excellent aerodynamics for luxury SUV (Cd 0.26) enables strong efficiency and range
+
+  - Excellent aerodynamics for luxury SUV (Cd 0.26) enables strong efficiency and
+  range
+
   - 660km WLTP range (550km real-world) - excellent for luxury SUV segment
+
   - 118kWh battery (largest in SUV segment, bigger than BMW iX xDrive50, Audi Q8 e-tron)
+
   - Rear-axle steering reduces turning circle to 11.9m (despite 5.1m length)
+
   - MBUX Hyperscreen optional (56-inch curved display, standard on 580 4MATIC)
+
   - 10-year/250,000km battery warranty (best-in-class)
+
   - Optional 7-seat configuration (unique in luxury EV SUV segment)
+
   - Better towing capacity than sedan: 1,800kg vs 750kg
+
   - Off-road mode with transparent hood camera (virtual view through hood)
+
   - Built in USA (Tuscaloosa, Alabama) - first Mercedes EQ model made in America
-  
+
+
   Key weaknesses:
+
   - 400V architecture limits DC charging to 200kW (vs 800V competitors: BMW iX 195kW)
+
   - 31-minute 10-80% charging slower than some rivals (BMW iX: 35 min, similar)
+
   - No V2G/V2L bidirectional charging (unlike Korean competitors)
+
   - Only 6.7s 0-100 acceleration (vs BMW iX: 4.6s, Tesla Model X: 3.9s)
+
   - Heavy at 2,735kg (vs BMW iX: 2,585kg, Tesla Model X: 2,445kg)
+
   - No 22kW AC charging standard (optional)
+
   - Expensive: €115,000 base (vs BMW iX xDrive50: €105,000, Audi Q8 e-tron 55: €90,000)
-  
+
+
   Competes with:
+
   - BMW iX xDrive50 (€105,000): 630km range, faster (4.6s), more tech-forward design
+
   - Audi Q8 e-tron 55 quattro (€90,000): 582km range, less expensive, less luxurious
-  - Tesla Model X Long Range (€105,000): 560km range, faster (3.9s), 7-seat standard, better software
+
+  - Tesla Model X Long Range (€105,000): 560km range, faster (3.9s), 7-seat standard,
+  better software
+
   - Porsche Cayenne Turbo S E-Hybrid (€181,000): PHEV not pure EV, sportier
-  
-  The EQS SUV 450+ targets buyers prioritizing ultimate luxury, space, and versatility over performance and charging speed.
+
+
+  The EQS SUV 450+ targets buyers prioritizing ultimate luxury, space, and versatility
+  over performance and charging speed.
+
   Most popular configuration: 450+ with MBUX Hyperscreen and 7-seat package (~€125,000).
-  
+
+
   Real-world efficiency: 21.5 kWh/100km (vs WLTP 19.4) confirmed by independent testing.
+
   Real-world range: 550km mixed driving (vs 660km WLTP, 483km EPA).
 
+  '
 sources:
-  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/suv-x296/explore/technical-data.html
-    title: Mercedes-Benz EQS SUV 450+ Technical Data
-    accessed: "2026-02-08"
-  - url: https://ev-database.org/car/1625/Mercedes-EQS-SUV-450plus
-    title: EV Database Mercedes EQS SUV 450+ Real-World Data
-    accessed: "2026-02-08"
-  - url: https://insideevs.com/reviews/620148/mercedes-eqs-suv-450-plus-review/
-    title: InsideEVs Mercedes EQS SUV 450+ Review
-    accessed: "2026-02-08"
-
-
+- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/suv-x296/explore/technical-data.html
+  title: Mercedes-Benz EQS SUV 450+ Technical Data
+  accessed: '2026-02-08'
+- url: https://ev-database.org/car/1625/Mercedes-EQS-SUV-450plus
+  title: EV Database Mercedes EQS SUV 450+ Real-World Data
+  accessed: '2026-02-08'
+- url: https://insideevs.com/reviews/620148/mercedes-eqs-suv-450-plus-review/
+  title: InsideEVs Mercedes EQS SUV 450+ Review
+  accessed: '2026-02-08'
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   contributor: OpenClaw EVDB Development
   version: 1.0

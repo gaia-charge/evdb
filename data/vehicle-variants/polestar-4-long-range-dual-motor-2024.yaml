@@ -1,23 +1,19 @@
-# Polestar 4 Long Range Dual Motor (2024) - Premium AWD Variant
-
 id: polestar-4-long-range-dual-motor-2024
 model_id: polestar-4
-name: "Long Range Dual Motor"
+name: Long Range Dual Motor
 model_year: 2024
 trim_level: Long Range Dual Motor
 variant_code: null
-
 production:
   start_date: 2024-04-01
   end_date: null
   status: active
   notes: Launch variant for European market, deliveries began Q2 2024
-
 battery:
   type: Lithium-ion
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   total_kwh: 102.0
-  usable_kwh: 94.0  # ~92% usable
+  usable_kwh: 94.0
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
@@ -26,58 +22,52 @@ battery:
   modules: null
   voltage_nominal: 400
   notes: Large 102 kWh battery shared with Polestar 3, 400V architecture
-
 range:
   wltp_km: 590
   wltp_city_km: 725
   wltp_highway_km: 495
-  epa_combined_km: 476  # EPA: 296 miles
+  epa_combined_km: 476
   real_world_avg_km: 490
   real_world_source: Various European automotive press 2024
   notes: Excellent efficiency for a dual-motor AWD SUV coupe
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 10.5
     onboard_charger: 11kW 3-phase standard, 22kW optional
-  
   dc:
-    max_power_kw: 200
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 200kW peak sustained well, efficient charging curve
     preconditioning: true
-  
   charge_curve:
-    - percent: 0
-      power_kw: 185
-    - percent: 10
-      power_kw: 200
-    - percent: 30
-      power_kw: 200
-    - percent: 50
-      power_kw: 185
-    - percent: 60
-      power_kw: 165
-    - percent: 70
-      power_kw: 135
-    - percent: 80
-      power_kw: 95
-    - percent: 90
-      power_kw: 55
-    - percent: 100
-      power_kw: 22
-  
+  - percent: 0
+    power_kw: 185
+  - percent: 10
+    power_kw: 200
+  - percent: 30
+    power_kw: 200
+  - percent: 50
+    power_kw: 185
+  - percent: 60
+    power_kw: 165
+  - percent: 70
+    power_kw: 135
+  - percent: 80
+    power_kw: 95
+  - percent: 90
+    power_kw: 55
+  - percent: 100
+    power_kw: 22
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 200
 motors:
-  configuration: dual  # Dual-motor AWD
+  configuration: dual
   front:
     type: permanent_magnet
     power_kw: 200
@@ -94,7 +84,6 @@ motors:
     power_kw: 400
     power_hp: 544
     torque_nm: 686
-
 dimensions:
   length_mm: 4839
   width_mm: 2139
@@ -102,26 +91,25 @@ dimensions:
   height_mm: 1544
   wheelbase_mm: 2999
   ground_clearance_mm: 166
-
 cargo:
   trunk_capacity_liters: 526
   trunk_max_liters: 1536
   frunk_capacity_liters: 15
-
 performance:
-  acceleration_0_100_kph: 3.8
   acceleration_0_60_mph: 3.6
   top_speed_kph: 200
   quarter_mile_seconds: 12.2
-
+  total_power_kw: 400
+  total_power_hp: 544
+  total_torque_nm: 686
+  acceleration_0_100_sec: 3.8
 efficiency:
   wltp_kwh_per_100km: 18.8
   wltp_wh_per_km: 188
   epa_kwh_per_100km: 19.7
   real_world_kwh_per_100km: 21.2
-  mpge_combined: 104  # EPA rating
+  mpge_combined: 104
   drag_coefficient: 0.26
-
 weight:
   curb_weight_kg: 2390
   gross_vehicle_weight_kg: 2850
@@ -129,118 +117,99 @@ weight:
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-
 drivetrain:
   drive_type: AWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: Double wishbone with air suspension
   rear: Multi-link with air suspension and adaptive dampers
-  notes: Dual-chamber air suspension with adaptive dampers standard, three modes (Comfort, Standard, Firm)
-
+  notes: Dual-chamber air suspension with adaptive dampers standard, three modes (Comfort,
+    Standard, Firm)
 brakes:
   front: Ventilated disc (390mm)
   rear: Ventilated disc (390mm)
   regenerative: true
   notes: Brembo brakes with one-pedal driving capability
-
 tires:
-  standard: 265/45 R20  # 20" forged alloy wheels standard
-
+  standard: 265/45 R20
 features:
   infotainment:
-    - "Android Automotive OS with Google built-in"
-    - "15.4\" portrait center touchscreen (largest in class)"
-    - "10.2\" digital driver display"
-    - "Google Assistant voice control"
-    - "Google Maps with real-time traffic and charging integration"
-    - "Google Play Store for apps"
-    - "Harman Kardon premium audio (16 speakers)"
-    - "Wireless Apple CarPlay"
-    - "DAB+ digital radio"
-  
+  - Android Automotive OS with Google built-in
+  - 15.4" portrait center touchscreen (largest in class)
+  - 10.2" digital driver display
+  - Google Assistant voice control
+  - Google Maps with real-time traffic and charging integration
+  - Google Play Store for apps
+  - Harman Kardon premium audio (16 speakers)
+  - Wireless Apple CarPlay
+  - DAB+ digital radio
   driver_assistance:
-    - "Polestar Pilot Assist (adaptive cruise with lane centering)"
-    - "360° surround view camera system"
-    - "Pilot Assist with advanced highway autonomy"
-    - "Blind Spot Information System (BLIS)"
-    - "Cross Traffic Alert with auto brake"
-    - "Lane Keeping Aid"
-    - "Collision Avoidance by Braking"
-    - "Run-off Road Mitigation"
-    - "Driver Alert Control"
-    - "Park Assist Pilot (automated parking)"
-  
+  - Polestar Pilot Assist (adaptive cruise with lane centering)
+  - 360° surround view camera system
+  - Pilot Assist with advanced highway autonomy
+  - Blind Spot Information System (BLIS)
+  - Cross Traffic Alert with auto brake
+  - Lane Keeping Aid
+  - Collision Avoidance by Braking
+  - Run-off Road Mitigation
+  - Driver Alert Control
+  - Park Assist Pilot (automated parking)
   comfort_convenience:
-    - "Panoramic glass roof (standard, non-opening)"
-    - "Heated front and rear seats (Nappa leather standard)"
-    - "Ventilated front seats"
-    - "Heated steering wheel (leather/vegan option)"
-    - "4-zone climate control"
-    - "Keyless entry and start"
-    - "Power tailgate with foot sensor"
-    - "Head-up display"
-    - "Wireless phone charging (dual pads)"
-    - "USB-C ports throughout (8 total)"
-    - "Polestar Digital Key (phone as key)"
-  
+  - Panoramic glass roof (standard, non-opening)
+  - Heated front and rear seats (Nappa leather standard)
+  - Ventilated front seats
+  - Heated steering wheel (leather/vegan option)
+  - 4-zone climate control
+  - Keyless entry and start
+  - Power tailgate with foot sensor
+  - Head-up display
+  - Wireless phone charging (dual pads)
+  - USB-C ports throughout (8 total)
+  - Polestar Digital Key (phone as key)
   exterior:
-    - "Pixel LED headlights with Thor's Hammer DRL"
-    - "Sequential LED turn signals"
-    - "20\" forged alloy wheels"
-    - "Frameless side mirrors"
-    - "Flush door handles"
-    - "Rear camera system (replaces rear window)"
-    - "Black exterior trim (standard)"
-  
+  - Pixel LED headlights with Thor's Hammer DRL
+  - Sequential LED turn signals
+  - 20" forged alloy wheels
+  - Frameless side mirrors
+  - Flush door handles
+  - Rear camera system (replaces rear window)
+  - Black exterior trim (standard)
   interior:
-    - "Nappa leather upholstery (animal welfare certified)"
-    - "Sustainable interior materials"
-    - "Micro-tech textile headliner"
-    - "Driftwood inlays"
-    - "Ambient lighting"
-    - "526L trunk with power tailgate"
-    - "60/40 split-folding rear seats"
-    - "Illuminated Polestar emblem"
-
+  - Nappa leather upholstery (animal welfare certified)
+  - Sustainable interior materials
+  - Micro-tech textile headliner
+  - Driftwood inlays
+  - Ambient lighting
+  - 526L trunk with power tailgate
+  - 60/40 split-folding rear seats
+  - Illuminated Polestar emblem
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://www.polestar.com/global/polestar-4/
-    - https://www.polestar.com/uk/polestar-4/specifications/
-    - https://ev-database.org/car/2876/Polestar-4-Long-Range-Dual-motor
-  notes: |
-    The Polestar 4 Long Range Dual Motor is the performance AWD variant offering 
-    exhilarating 544 hp and supercar-like 3.8s 0-100 km/h acceleration while 
-    maintaining excellent 590 km WLTP range and sophisticated Scandinavian luxury.
-    
-    Key highlights:
-    - 400 kW (544 hp) / 686 Nm torque from dual permanent magnet motors
-    - 3.8s 0-100 km/h acceleration (sports car territory!)
-    - 590 km WLTP range despite AWD performance
-    - Revolutionary no-rear-window design with HD camera system
-    - 15.4" portrait touchscreen - largest in premium SUV segment
-    - Dual-chamber air suspension standard for exceptional ride quality
-    - Harman Kardon 16-speaker premium audio standard
-    - Near-perfect 50/50 weight distribution
-    
-    The no-rear-window design is not a gimmick - it improves aerodynamics (Cd 0.26),
-    increases rear headroom, and the HD camera system provides better visibility in
-    rain/night conditions than traditional mirrors. The camera feed is displayed on
-    the interior mirror position.
-    
-    Target buyers: Performance enthusiasts seeking practical SUV coupe, tech-savvy
-    buyers wanting Android Automotive OS integration, design-conscious customers
-    appreciating Scandinavian minimalism, company car drivers benefiting from 0.25%
-    German tax rate (price under €70k).
-    
-    Competes with BMW iX2 xDrive30, Mercedes EQE SUV, Audi Q6 e-tron quattro, Tesla
-    Model Y Performance, Genesis Electrified GV70 AWD. Polestar 4 offers best
-    combination of design innovation, technology integration, and driving dynamics.
-    
-    Real-world performance: 490km mixed driving range, excellent highway efficiency
-    thanks to low drag coefficient, 200kW DC charging enables 10-80% in 30 minutes,
-    one-pedal driving with strong regenerative braking.
+  - https://www.polestar.com/global/polestar-4/
+  - https://www.polestar.com/uk/polestar-4/specifications/
+  - https://ev-database.org/car/2876/Polestar-4-Long-Range-Dual-motor
+  notes: "The Polestar 4 Long Range Dual Motor is the performance AWD variant offering\
+    \ \nexhilarating 544 hp and supercar-like 3.8s 0-100 km/h acceleration while \n\
+    maintaining excellent 590 km WLTP range and sophisticated Scandinavian luxury.\n\
+    \nKey highlights:\n- 400 kW (544 hp) / 686 Nm torque from dual permanent magnet\
+    \ motors\n- 3.8s 0-100 km/h acceleration (sports car territory!)\n- 590 km WLTP\
+    \ range despite AWD performance\n- Revolutionary no-rear-window design with HD\
+    \ camera system\n- 15.4\" portrait touchscreen - largest in premium SUV segment\n\
+    - Dual-chamber air suspension standard for exceptional ride quality\n- Harman\
+    \ Kardon 16-speaker premium audio standard\n- Near-perfect 50/50 weight distribution\n\
+    \nThe no-rear-window design is not a gimmick - it improves aerodynamics (Cd 0.26),\n\
+    increases rear headroom, and the HD camera system provides better visibility in\n\
+    rain/night conditions than traditional mirrors. The camera feed is displayed on\n\
+    the interior mirror position.\n\nTarget buyers: Performance enthusiasts seeking\
+    \ practical SUV coupe, tech-savvy\nbuyers wanting Android Automotive OS integration,\
+    \ design-conscious customers\nappreciating Scandinavian minimalism, company car\
+    \ drivers benefiting from 0.25%\nGerman tax rate (price under €70k).\n\nCompetes\
+    \ with BMW iX2 xDrive30, Mercedes EQE SUV, Audi Q6 e-tron quattro, Tesla\nModel\
+    \ Y Performance, Genesis Electrified GV70 AWD. Polestar 4 offers best\ncombination\
+    \ of design innovation, technology integration, and driving dynamics.\n\nReal-world\
+    \ performance: 490km mixed driving range, excellent highway efficiency\nthanks\
+    \ to low drag coefficient, 200kW DC charging enables 10-80% in 30 minutes,\none-pedal\
+    \ driving with strong regenerative braking.\n"

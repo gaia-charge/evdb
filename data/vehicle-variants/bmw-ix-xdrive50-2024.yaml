@@ -5,176 +5,147 @@ model_year: 2024
 production_years:
   start: 2021
   end: null
-
 trim_level: xDrive50
 market_position: premium
-
-# Battery Specifications
 battery:
   usable_kwh: 105.2
   total_kwh: 111.5
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   nominal_voltage_v: 400
   cell_type: prismatic
   manufacturer: Samsung SDI / CATL
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted"
+    configuration: floor-mounted
     weight_kg: 715
     cells: 400
-
-# Range
 range:
   wltp_km: 630
   wltp_source: manufacturer
   wltp_city_km: 830
   wltp_highway_km: 510
-  
-  epa_km: null  # Not sold in US
+  epa_km: null
   epa_source: null
-  
   real_world_km: 550
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 20°C, highway/city 50/50"
-
-# Charging
+  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 10.5  # 11kW standard
+      '0_100': 10.5
     onboard_charger_kw: 11
     phases: 3
-    notes: "Optional 22kW upgrade available (5.5h 0-100%)"
-  
+    notes: Optional 22kW upgrade available (5.5h 0-100%)
   dc:
-    max_power_kw: 200
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 35
-      "0_100": 62
-    
+      '10_80': 35
+      '0_100': 62
     charging_curve:
-      - soc_percent: 10
-        power_kw: 195
-      - soc_percent: 20
-        power_kw: 200
-      - soc_percent: 30
-        power_kw: 200
-      - soc_percent: 40
-        power_kw: 195
-      - soc_percent: 50
-        power_kw: 180
-      - soc_percent: 60
-        power_kw: 160
-      - soc_percent: 70
-        power_kw: 130
-      - soc_percent: 80
-        power_kw: 90
-      - soc_percent: 90
-        power_kw: 50
-      - soc_percent: 95
-        power_kw: 30
-
+    - soc_percent: 10
+      power_kw: 195
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 200
+    - soc_percent: 40
+      power_kw: 195
+    - soc_percent: 50
+      power_kw: 180
+    - soc_percent: 60
+      power_kw: 160
+    - soc_percent: 70
+      power_kw: 130
+    - soc_percent: 80
+      power_kw: 90
+    - soc_percent: 90
+      power_kw: 50
+    - soc_percent: 95
+      power_kw: 30
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-    notes: "Not currently available, BMW exploring for future models"
-
-# Motors & Performance
+    notes: Not currently available, BMW exploring for future models
+  ac_max_kw: 11
+  dc_max_kw: 200
 motors:
-  - position: front
-    type: asynchronous
-    max_power_kw: 190
-    max_torque_nm: 385
-    cooling: liquid
-  - position: rear
-    type: synchronous
-    max_power_kw: 195
-    max_torque_nm: 380
-    cooling: liquid
-
+- position: front
+  type: asynchronous
+  max_power_kw: 190
+  max_torque_nm: 385
+  cooling: liquid
+- position: rear
+  type: synchronous
+  max_power_kw: 195
+  max_torque_nm: 380
+  cooling: liquid
 drivetrain:
-  type: awd  # xDrive
+  type: awd
   total_power_kw: 385
   total_power_hp: 523
   total_torque_nm: 765
-
 performance:
   acceleration_0_100_kmh_s: 4.6
   top_speed_kmh: 200
   top_speed_limited: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 19.8
   wltp_source: manufacturer
   real_world_kwh_per_100km: 22.5
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 20°C, highway/city 50/50"
-
-# Weight
+  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 weight:
   curb_weight_kg: 2585
   gross_vehicle_weight_kg: 3130
   payload_kg: 545
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1750
   frunk_capacity_liters: 0
-
-# Dimensions (inherited from model but included for completeness)
 dimensions:
   length_mm: 4953
   width_mm: 1967
   height_mm: 1695
   wheelbase_mm: 3000
   ground_clearance_mm: 200
-
-# Features
 features:
   standard:
-    - "Adaptive M Suspension Professional with air springs"
-    - "Integral active steering (rear-wheel steering up to 2.5°)"
-    - "Curved display (12.3\" driver + 14.9\" touchscreen)"
-    - "iDrive 8 with QuickSelect"
-    - "BMW Natural Interaction (gesture, voice, touch)"
-    - "Harman Kardon surround sound (18 speakers, 655W)"
-    - "Panoramic glass roof with Sky Lounge LED"
-    - "BMW Driving Assistant Professional (Level 2+ ADAS)"
-    - "Parking Assistant Professional"
-    - "Remote 3D View"
-    - "4-zone automatic climate control"
-    - "Heat pump"
-    - "Heated front and rear seats"
-    - "Heated steering wheel"
-    - "Head-up display"
-    - "360-degree camera"
-    - "Soft-close doors"
-    - "BMW IconicSounds Electric by Hans Zimmer"
-    - "Hexagonal illuminated kidney grille"
-  
+  - Adaptive M Suspension Professional with air springs
+  - Integral active steering (rear-wheel steering up to 2.5°)
+  - Curved display (12.3" driver + 14.9" touchscreen)
+  - iDrive 8 with QuickSelect
+  - BMW Natural Interaction (gesture, voice, touch)
+  - Harman Kardon surround sound (18 speakers, 655W)
+  - Panoramic glass roof with Sky Lounge LED
+  - BMW Driving Assistant Professional (Level 2+ ADAS)
+  - Parking Assistant Professional
+  - Remote 3D View
+  - 4-zone automatic climate control
+  - Heat pump
+  - Heated front and rear seats
+  - Heated steering wheel
+  - Head-up display
+  - 360-degree camera
+  - Soft-close doors
+  - BMW IconicSounds Electric by Hans Zimmer
+  - Hexagonal illuminated kidney grille
   optional:
-    - name: "Bowers & Wilkins Diamond Surround Sound"
-      description: "30 speakers with Diamond tweeters, 1615W"
-    - name: "Executive Lounge rear seats"
-      description: "Luxury rear seating with massage function"
-    - name: "22kW AC onboard charger"
-      description: "Faster AC charging capability"
-    - name: "M Sport Package"
-      description: "Sporty exterior and interior package"
-
-# Safety
+  - name: Bowers & Wilkins Diamond Surround Sound
+    description: 30 speakers with Diamond tweeters, 1615W
+  - name: Executive Lounge rear seats
+    description: Luxury rear seating with massage function
+  - name: 22kW AC onboard charger
+    description: Faster AC charging capability
+  - name: M Sport Package
+    description: Sporty exterior and interior package
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2021
@@ -183,15 +154,18 @@ safety:
     child_occupant: 87
     vulnerable_road_users: 76
     safety_assist: 90
-
-# Metadata
 metadata:
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
   data_quality: verified
   data_source: manufacturer
-  source_url: "https://www.bmw.com/en/models/bmw-i/bmw-ix/technical-data.html"
-  notes: |
-    Most popular iX variant. The xDrive50 offers excellent balance between range (630km)
-    and performance (4.6s 0-100 km/h). The 105kWh battery is among the largest in the segment.
+  source_url: https://www.bmw.com/en/models/bmw-i/bmw-ix/technical-data.html
+  notes: 'Most popular iX variant. The xDrive50 offers excellent balance between range
+    (630km)
+
+    and performance (4.6s 0-100 km/h). The 105kWh battery is among the largest in
+    the segment.
+
     Class-leading towing capacity at 2,500kg.
+
+    '

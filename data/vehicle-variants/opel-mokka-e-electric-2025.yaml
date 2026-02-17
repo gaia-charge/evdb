@@ -1,18 +1,15 @@
-# Opel Mokka Electric (2025) - Updated with 54 kWh battery
-
 id: opel-mokka-e-electric-2025
 model_id: opel-mokka-e
-name: "Electric"
+name: Electric
 model_year: 2025
 trim_level: Electric
 variant_code: null
-
 production:
   start_date: 2024-09-01
   end_date: null
   status: active
-  notes: "2025 facelift with new 54 kWh battery, improved range and efficiency on updated STLA Small platform"
-
+  notes: 2025 facelift with new 54 kWh battery, improved range and efficiency on updated
+    STLA Small platform
 battery:
   type: Lithium-ion
   chemistry: LFP
@@ -25,57 +22,51 @@ battery:
   cells: null
   modules: null
   voltage_nominal: 400
-  notes: "New 54 kWh LFP battery replacing old 50 kWh NMC unit, improved energy density"
-
+  notes: New 54 kWh LFP battery replacing old 50 kWh NMC unit, improved energy density
 range:
   wltp_km: 403
   wltp_city_km: 510
   wltp_highway_km: 320
   epa_combined_km: null
   real_world_avg_km: 340
-  real_world_source: "Estimated based on 15.5 kWh/100km WLTP consumption"
-  notes: "Significant improvement from 340 km (2024) to 403 km WLTP"
-
+  real_world_source: Estimated based on 15.5 kWh/100km WLTP consumption
+  notes: Significant improvement from 340 km (2024) to 403 km WLTP
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
-    onboard_charger: "11kW 3-phase standard"
-
+    onboard_charger: 11kW 3-phase standard
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 26
-    peak_power_notes: "100kW peak, 10-80% in 26 minutes"
+    peak_power_notes: 100kW peak, 10-80% in 26 minutes
     preconditioning: false
-
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 85
-    - percent: 60
-      power_kw: 75
-    - percent: 70
-      power_kw: 60
-    - percent: 80
-      power_kw: 40
-    - percent: 90
-      power_kw: 25
-    - percent: 100
-      power_kw: 11
-
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 85
+  - percent: 60
+    power_kw: 75
+  - percent: 70
+    power_kw: 60
+  - percent: 80
+    power_kw: 40
+  - percent: 90
+    power_kw: 25
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -88,7 +79,6 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 260
-
 dimensions:
   length_mm: 4151
   width_mm: 1791
@@ -96,22 +86,21 @@ dimensions:
   height_mm: 1531
   wheelbase_mm: 2557
   ground_clearance_mm: 200
-
 cargo:
   trunk_capacity_liters: 310
   trunk_max_liters: 1060
   frunk_capacity_liters: 0
-
 performance:
-  acceleration_0_100_kph: 8.2
   top_speed_kph: 150
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_sec: 8.2
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_wh_per_km: 155
   real_world_kwh_per_100km: 17.5
   drag_coefficient: 0.32
-
 weight:
   curb_weight_kg: 1540
   gross_vehicle_weight_kg: 1990
@@ -119,74 +108,68 @@ weight:
   weight_distribution_front_percent: 60
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
-
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Torsion beam with coil springs
-
 brakes:
   front: Ventilated disc
   rear: Disc
   regenerative: true
-
 tires:
-  standard: "205/55 R17"
-
+  standard: 205/55 R17
 features:
   infotainment:
-    - "10-inch color touchscreen"
-    - "10-inch digital instrument cluster"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ digital radio"
-    - "6 speakers"
-    - "MyOpel mobile app"
-    - "OTA software updates"
-
+  - 10-inch color touchscreen
+  - 10-inch digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ digital radio
+  - 6 speakers
+  - MyOpel mobile app
+  - OTA software updates
   driver_assistance:
-    - "Forward Collision Alert with Automatic Emergency Braking"
-    - "Lane Keep Assist with Lane Departure Warning"
-    - "Traffic Sign Recognition"
-    - "Adaptive Cruise Control"
-    - "Rear parking sensors"
-    - "Rear camera"
-    - "Drowsiness alert"
-
+  - Forward Collision Alert with Automatic Emergency Braking
+  - Lane Keep Assist with Lane Departure Warning
+  - Traffic Sign Recognition
+  - Adaptive Cruise Control
+  - Rear parking sensors
+  - Rear camera
+  - Drowsiness alert
   comfort_convenience:
-    - "Automatic climate control"
-    - "One-pedal driving with B-mode"
-    - "Heat pump (standard)"
-    - "Heated front seats"
-    - "Electric windows front and rear"
-    - "Electric and heated mirrors"
-    - "Keyless entry and start"
-
+  - Automatic climate control
+  - One-pedal driving with B-mode
+  - Heat pump (standard)
+  - Heated front seats
+  - Electric windows front and rear
+  - Electric and heated mirrors
+  - Keyless entry and start
   exterior:
-    - "LED headlights"
-    - "LED daytime running lights"
-    - "LED taillights"
-    - "17-inch alloy wheels"
-    - "Body-colored door handles"
-    - "Roof rails"
-
+  - LED headlights
+  - LED daytime running lights
+  - LED taillights
+  - 17-inch alloy wheels
+  - Body-colored door handles
+  - Roof rails
   interior:
-    - "Cloth/synthetic leather seats"
-    - "310L trunk"
-    - "60/40 split-folding rear seats"
-
+  - Cloth/synthetic leather seats
+  - 310L trunk
+  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   source_urls:
-    - https://www.carwow.de/opel/mokka-e/technische-daten
-    - https://www.opel.de/fahrzeuge/mokka-electric.html
-  notes: |
-    2025 Opel Mokka Electric with new 54 kWh LFP battery, upgraded from 50 kWh NMC.
+  - https://www.carwow.de/opel/mokka-e/technische-daten
+  - https://www.opel.de/fahrzeuge/mokka-electric.html
+  notes: '2025 Opel Mokka Electric with new 54 kWh LFP battery, upgraded from 50 kWh
+    NMC.
+
     Improved range from 340 to 403 km WLTP. Motor upgraded from 100 kW to 115 kW.
+
     Improved efficiency at 15.5 kWh/100km (was 16.9). Heat pump now standard.
+
     Shares updated platform with Peugeot e-2008 2025.
+
+    '

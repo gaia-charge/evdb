@@ -1,6 +1,3 @@
-# Nissan LEAF Standard Range 52 kWh (2025)
-# All-new 3rd generation on CMF-EV platform
-
 id: nissan-leaf-52kwh-2025
 name: Standard Range 52 kWh
 model_id: nissan-leaf
@@ -8,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: engage
 market_position: base
-
-# Battery Specifications
 battery:
   usable_kwh: 52.0
   total_kwh: 55.0
@@ -23,192 +17,161 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "skateboard, CMF-EV platform"
+    configuration: skateboard, CMF-EV platform
     weight_kg: 380
+  notes: 'All-new battery pack for the 3rd generation LEAF on CMF-EV platform. Active
+    liquid cooling replaces the passive air-cooling of previous generations, significantly
+    improving charging performance and battery longevity.
 
-  notes: >
-    All-new battery pack for the 3rd generation LEAF on CMF-EV platform. Active
-    liquid cooling replaces the passive air-cooling of previous generations,
-    significantly improving charging performance and battery longevity.
-
-# Range
+    '
 range:
   wltp_km: 436
   wltp_source: manufacturer
   real_world_km: 320
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
-
-# Consumption
+  real_world_conditions: Mixed driving, 15-25°C, normal mode
 consumption:
   wltp_kwh_per_100km: 13.8
   real_world_kwh_per_100km: 16.2
   real_world_source: estimated
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 5.5
+      '0_100': 5.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 150
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 28
-      "0_100": 55
-
+      '10_80': 28
+      '0_100': 55
     charging_curve:
-      - soc_percent: 0
-        power_kw: 80
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 20
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 140
-      - soc_percent: 50
-        power_kw: 110
-      - soc_percent: 70
-        power_kw: 70
-      - soc_percent: 80
-        power_kw: 45
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 10
-
-    notes: "CCS2 replaces CHAdeMO from previous generations. Up to 150kW DC fast charging."
-
+    - soc_percent: 0
+      power_kw: 80
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 140
+    - soc_percent: 50
+      power_kw: 110
+    - soc_percent: 70
+      power_kw: 70
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 10
+    notes: CCS2 replaces CHAdeMO from previous generations. Up to 150kW DC fast charging.
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.6
     v2g: true
     v2h: true
-    notes: "Nissan continues to lead in V2G/V2H capability, now via CCS2"
-
-# Motors & Performance
+    notes: Nissan continues to lead in V2G/V2H capability, now via CCS2
+  ac_max_kw: 11
+  dc_max_kw: 150
 motors:
-  - position: front
-    type: permanent-magnet-synchronous
-    max_power_kw: 130
-    max_torque_nm: 300
-    cooling: liquid
-
+- position: front
+  type: permanent-magnet-synchronous
+  max_power_kw: 130
+  max_torque_nm: 300
+  cooling: liquid
 drivetrain:
   type: fwd
   total_power_kw: 130
   total_power_hp: 176
   total_torque_nm: 300
-
 performance:
   acceleration_0_100_kmh_s: 7.9
   top_speed_kmh: 170
   top_speed_limited: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 13.8
   wltp_source: manufacturer
   real_world_kwh_per_100km: 16.2
-
   highway:
     kmh: 120
     kwh_per_100km: 19.5
     range_km: 265
-
   city:
     kwh_per_100km: 13.0
     range_km: 400
-
-# Physical specs
 dimensions:
   length_mm: 4640
   width_mm: 1820
   height_mm: 1500
   wheelbase_mm: 2720
   ground_clearance_mm: 155
-
 weight:
   curb_weight_kg: 1640
   gross_vehicle_weight_kg: 2100
   payload_kg: 460
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  towing_notes: "New CMF-EV platform supports light towing unlike previous generation"
-
+  towing_notes: New CMF-EV platform supports light towing unlike previous generation
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1460
   frunk_capacity_liters: 0
-
 interior:
   seating_capacity: 5
   trunk_capacity_liters: 435
   trunk_max_liters: 1460
   frunk_capacity_liters: 0
-
-# Features
 features:
   exterior:
-    - "17-inch alloy wheels"
-    - "LED headlights with signature DRL"
-    - "Flush door handles"
-    - "Shark fin antenna"
-    - "Rear spoiler"
-    - "Power folding mirrors"
-
+  - 17-inch alloy wheels
+  - LED headlights with signature DRL
+  - Flush door handles
+  - Shark fin antenna
+  - Rear spoiler
+  - Power folding mirrors
   interior:
-    - "12.3-inch touchscreen with Google built-in"
-    - "12.3-inch digital instrument cluster"
-    - "Google Maps, Google Assistant, Google Play"
-    - "Wireless Apple CarPlay & Android Auto"
-    - "Dual-zone automatic climate control"
-    - "Wireless smartphone charging"
-    - "USB-C ports front and rear"
-    - "Ambient lighting"
-
+  - 12.3-inch touchscreen with Google built-in
+  - 12.3-inch digital instrument cluster
+  - Google Maps, Google Assistant, Google Play
+  - Wireless Apple CarPlay & Android Auto
+  - Dual-zone automatic climate control
+  - Wireless smartphone charging
+  - USB-C ports front and rear
+  - Ambient lighting
   safety:
-    - "ABS with EBD"
-    - "Electronic stability control"
-    - "6 airbags"
-    - "ISOFIX child seat anchors"
-    - "Tire pressure monitoring"
-    - "Rear parking sensors"
-    - "Rear view camera"
-
+  - ABS with EBD
+  - Electronic stability control
+  - 6 airbags
+  - ISOFIX child seat anchors
+  - Tire pressure monitoring
+  - Rear parking sensors
+  - Rear view camera
   driver_assistance:
-    - "ProPILOT Assist with Navi-Link"
-    - "Intelligent Cruise Control"
-    - "Lane Keep Assist"
-    - "Autonomous Emergency Braking"
-    - "Blind Spot Warning"
-    - "Rear Cross Traffic Alert"
-    - "Traffic Sign Recognition"
-    - "e-Pedal one-pedal driving"
+  - ProPILOT Assist with Navi-Link
+  - Intelligent Cruise Control
+  - Lane Keep Assist
+  - Autonomous Emergency Braking
+  - Blind Spot Warning
+  - Rear Cross Traffic Alert
+  - Traffic Sign Recognition
+  - e-Pedal one-pedal driving
+notes: 'The all-new 2025 Nissan LEAF is a complete reinvention on the CMF-EV platform,
+  shared with Renault Megane E-Tech and Scenic E-Tech. The 52 kWh Standard Range offers
+  436 km WLTP range with excellent 13.8 kWh/100km efficiency. Key upgrades over the
+  previous generation include CCS2 fast charging (up to 150kW), active liquid battery
+  cooling, Google built-in infotainment, and V2G/V2H bidirectional charging via CCS.
+  The new LEAF is larger, more refined, and far more competitive than its predecessor.
 
-notes: >
-  The all-new 2025 Nissan LEAF is a complete reinvention on the CMF-EV platform,
-  shared with Renault Megane E-Tech and Scenic E-Tech. The 52 kWh Standard Range
-  offers 436 km WLTP range with excellent 13.8 kWh/100km efficiency. Key upgrades
-  over the previous generation include CCS2 fast charging (up to 150kW), active
-  liquid battery cooling, Google built-in infotainment, and V2G/V2H bidirectional
-  charging via CCS. The new LEAF is larger, more refined, and far more competitive
-  than its predecessor.
-
+  '
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   updated_at: null
   data_quality: verified
   sources:
-    - https://leaf.nissan.de/
-    - https://www.nissan.de/
-    - https://ev-database.org/
+  - https://leaf.nissan.de/
+  - https://www.nissan.de/
+  - https://ev-database.org/

@@ -1,18 +1,15 @@
-# Opel Corsa Electric GS (2025) - Updated Powertrain with 51 kWh Battery
-
 id: opel-corsa-e-gs-2025
 model_id: opel-corsa-e
-name: "GS 51kWh"
+name: GS 51kWh
 model_year: 2025
 trim_level: GS
 variant_code: null
-
 production:
   start_date: 2024-06-01
   end_date: null
   status: active
-  notes: 2025 model year update with new 51kWh battery and 115kW motor, replacing previous 50kWh/100kW setup
-
+  notes: 2025 model year update with new 51kWh battery and 115kW motor, replacing
+    previous 50kWh/100kW setup
 battery:
   type: Lithium-ion
   chemistry: NMC
@@ -25,8 +22,8 @@ battery:
   cells: 216
   modules: 18
   voltage_nominal: 400
-  notes: Updated battery from 50kWh to 51kWh gross, with improved usable capacity (48kWh vs 45kWh) thanks to updated BMS
-
+  notes: Updated battery from 50kWh to 51kWh gross, with improved usable capacity
+    (48kWh vs 45kWh) thanks to updated BMS
 range:
   wltp_km: 402
   wltp_city_km: 520
@@ -34,48 +31,44 @@ range:
   epa_combined_km: null
   real_world_avg_km: 340
   real_world_source: ADAC EcoTest 2025 (estimated)
-  notes: Significant range improvement from 359km to 402km WLTP thanks to battery and efficiency upgrades
-
+  notes: Significant range improvement from 359km to 402km WLTP thanks to battery
+    and efficiency upgrades
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 100kW peak, average ~80kW during 10-80% session
     preconditioning: false
-  
   charge_curve:
-    - percent: 10
-      power_kw: 100
-    - percent: 20
-      power_kw: 100
-    - percent: 30
-      power_kw: 95
-    - percent: 40
-      power_kw: 88
-    - percent: 50
-      power_kw: 78
-    - percent: 60
-      power_kw: 65
-    - percent: 70
-      power_kw: 50
-    - percent: 80
-      power_kw: 30
-    - percent: 90
-      power_kw: 15
-  
+  - percent: 10
+    power_kw: 100
+  - percent: 20
+    power_kw: 100
+  - percent: 30
+    power_kw: 95
+  - percent: 40
+    power_kw: 88
+  - percent: 50
+    power_kw: 78
+  - percent: 60
+    power_kw: 65
+  - percent: 70
+    power_kw: 50
+  - percent: 80
+    power_kw: 30
+  - percent: 90
+    power_kw: 15
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -88,13 +81,14 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 260
-
 performance:
-  acceleration_0_100_kph: 8.1
   acceleration_0_60_mph: null
   top_speed_kph: 150
   quarter_mile_seconds: null
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_sec: 8.1
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_wh_per_km: 155
@@ -102,19 +96,16 @@ efficiency:
   real_world_kwh_per_100km: 17.5
   mpge_combined: null
   drag_coefficient: 0.29
-
 dimensions:
   length_mm: 4060
   width_mm: 1765
   height_mm: 1435
   wheelbase_mm: 2538
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 267
   trunk_max_liters: 1042
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1530
   gross_vehicle_weight_kg: 1900
@@ -122,84 +113,84 @@ weight:
   weight_distribution_front_percent: 60
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Torsion beam with coil springs
-
 brakes:
   front: Ventilated disc
   rear: Drum
   regenerative: true
-
 tires:
   standard: 205/45 R17
-
 features:
   infotainment:
-    - "Multimedia Navi Pro with 10.0\" color touchscreen"
-    - "Digital instrument cluster 10.0\" driver display"
-    - "Apple CarPlay and Android Auto (wireless)"
-    - "DAB+ digital radio"
-    - "6 speakers"
-    - "MyOpel mobile app"
-    - "Wireless smartphone charging"
-  
+  - Multimedia Navi Pro with 10.0" color touchscreen
+  - Digital instrument cluster 10.0" driver display
+  - Apple CarPlay and Android Auto (wireless)
+  - DAB+ digital radio
+  - 6 speakers
+  - MyOpel mobile app
+  - Wireless smartphone charging
   driver_assistance:
-    - "Forward Collision Alert with Automatic Emergency Braking"
-    - "Lane Keep Assist with Lane Departure Warning"
-    - "Traffic Sign Recognition"
-    - "Adaptive cruise control"
-    - "Rear parking sensors and reversing camera"
-    - "Drowsiness alert"
-    - "Speed sign recognition"
-  
+  - Forward Collision Alert with Automatic Emergency Braking
+  - Lane Keep Assist with Lane Departure Warning
+  - Traffic Sign Recognition
+  - Adaptive cruise control
+  - Rear parking sensors and reversing camera
+  - Drowsiness alert
+  - Speed sign recognition
   comfort_convenience:
-    - "Automatic climate control"
-    - "Heat pump (standard)"
-    - "One-pedal driving with B-mode"
-    - "Heated front seats"
-    - "Heated steering wheel"
-    - "Electric windows front and rear"
-    - "Electric and heated mirrors"
-    - "Keyless entry and start"
-  
+  - Automatic climate control
+  - Heat pump (standard)
+  - One-pedal driving with B-mode
+  - Heated front seats
+  - Heated steering wheel
+  - Electric windows front and rear
+  - Electric and heated mirrors
+  - Keyless entry and start
   exterior:
-    - "IntelliLux LED Matrix headlights (optional)"
-    - "LED daytime running lights"
-    - "GS sport body kit"
-    - "17\" bi-color alloy wheels"
-    - "Two-tone black roof (optional)"
-  
+  - IntelliLux LED Matrix headlights (optional)
+  - LED daytime running lights
+  - GS sport body kit
+  - 17" bi-color alloy wheels
+  - Two-tone black roof (optional)
   interior:
-    - "Sport front seats with side bolsters"
-    - "Leather-wrapped steering wheel"
-    - "Ambient lighting"
-    - "309L trunk"
-
+  - Sport front seats with side bolsters
+  - Leather-wrapped steering wheel
+  - Ambient lighting
+  - 309L trunk
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   source_urls:
-    - https://www.opel.de/fahrzeuge/corsa/corsa-electric.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/opel/corsa/
-  notes: |
-    The 2025 Opel Corsa Electric GS receives the same powertrain update as the
+  - https://www.opel.de/fahrzeuge/corsa/corsa-electric.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/opel/corsa/
+  notes: 'The 2025 Opel Corsa Electric GS receives the same powertrain update as the
+
     Peugeot e-208: new 51kWh battery (48kWh usable) and 115kW (156hp) motor.
-    
+
+
     Key changes vs 2024:
+
     - Battery: 50kWh → 51kWh gross, 45kWh → 48kWh usable
+
     - Motor: 100kW (136hp) → 115kW (156hp)
+
     - Range: 359km → 402km WLTP
+
     - Efficiency: 16.2 → 15.5 kWh/100km
+
     - Updated infotainment with wireless Apple CarPlay/Android Auto
+
     - Heat pump now standard on GS trim
+
     - Wireless smartphone charging standard
-    
+
+
     GS replaces "GS Line" as the sporty trim name for 2025.
+
+    '

@@ -1,6 +1,3 @@
-# Kia EV5 Air (2025) - Base variant for European market
-# 400V E-GMP platform, single motor RWD
-
 id: kia-ev5-air-2025
 name: Air
 model_id: kia-ev5
@@ -8,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: air
 market_position: entry
-
-# Battery Specifications
 battery:
   usable_kwh: 77.4
   total_kwh: 84.0
@@ -23,154 +17,123 @@ battery:
   warranty_years: 7
   warranty_km: 150000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, integrated into E-GMP platform"
+    configuration: floor-mounted, integrated into E-GMP platform
     weight_kg: 505
     modules: 10
-
-# Range
 range:
   wltp_km: 590
   wltp_source: manufacturer
-
   real_world_km: 480
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, normal mode, 19-inch wheels
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 7.5
+      '0_100': 7.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 200
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 27
-      "0_100": 55
-
+      '10_80': 27
+      '0_100': 55
     charging_curve:
-      - soc_percent: 0
-        power_kw: 150
-      - soc_percent: 10
-        power_kw: 200
-      - soc_percent: 20
-        power_kw: 200
-      - soc_percent: 30
-        power_kw: 195
-      - soc_percent: 40
-        power_kw: 175
-      - soc_percent: 50
-        power_kw: 150
-      - soc_percent: 60
-        power_kw: 120
-      - soc_percent: 70
-        power_kw: 85
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 10
-
-# Bidirectional Charging (V2X)
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 195
+    - soc_percent: 40
+      power_kw: 175
+    - soc_percent: 50
+      power_kw: 150
+    - soc_percent: 60
+      power_kw: 120
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 10
+  ac_max_kw: 11
+  dc_max_kw: 200
 bidirectional_charging:
   v2l_capable: true
   v2l_max_power_kw: 3.6
   v2h_capable: false
   v2g_capable: false
-  notes: "V2L adapter included, powers household appliances"
-
-# Motors & Drivetrain
+  notes: V2L adapter included, powers household appliances
 motors:
   configuration: single-motor
   drive_type: RWD
-
   rear:
     type: permanent-magnet-synchronous
     max_power_kw: 160
     max_power_hp: 218
     max_torque_nm: 310
-
   combined:
     total_power_kw: 160
     total_power_hp: 218
     total_torque_nm: 310
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 8.3
   top_speed_kmh: 180
   top_speed_limited: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_source: manufacturer
-
   real_world_kwh_per_100km: 18.2
   real_world_source: estimated
-  real_world_conditions: "Highway 120 km/h, 15°C"
-
+  real_world_conditions: Highway 120 km/h, 15°C
   efficiency_rating_eu: A+
-
-# Weight
 weight:
   curb_weight_kg: 1835
   gross_vehicle_weight_kg: 2380
   payload_kg: 545
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
-# Wheels & Tires
 wheels:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "235/55 R19"
+  standard_size_front: 235/55 R19
+  standard_size_rear: 235/55 R19
   wheel_options:
-    - "19-inch alloy (standard)"
-
-# Standard Equipment (Key Features)
+  - 19-inch alloy (standard)
 standard_equipment:
   exterior:
-    - LED headlights with DRLs
-    - LED taillights
-    - Flush door handles
-    - Heated exterior mirrors
-    - Rear privacy glass
-
+  - LED headlights with DRLs
+  - LED taillights
+  - Flush door handles
+  - Heated exterior mirrors
+  - Rear privacy glass
   interior:
-    - 12.3-inch dual curved displays
-    - Fabric seat upholstery
-    - Sliding center console
-    - USB-C ports (front x2, rear x2)
-    - Heat pump climate control
-    - Heated front seats
-    - 60:40 split flat-folding rear seats
-
+  - 12.3-inch dual curved displays
+  - Fabric seat upholstery
+  - Sliding center console
+  - USB-C ports (front x2, rear x2)
+  - Heat pump climate control
+  - Heated front seats
+  - 60:40 split flat-folding rear seats
   technology:
-    - Kia Connect with OTA updates
-    - Navigation with EV route planner
-    - Wireless smartphone charging
-    - V2L capability with adapter
-    - Smart key with remote start
-
+  - Kia Connect with OTA updates
+  - Navigation with EV route planner
+  - Wireless smartphone charging
+  - V2L capability with adapter
+  - Smart key with remote start
   safety:
-    - Forward Collision-Avoidance Assist
-    - Lane Keeping Assist
-    - Smart Cruise Control with Stop & Go
-    - Rear Cross-Traffic Collision-Avoidance
-    - Blind-Spot Collision-Avoidance Assist
-    - 6 airbags
-
-# Dimensions
+  - Forward Collision-Avoidance Assist
+  - Lane Keeping Assist
+  - Smart Cruise Control with Stop & Go
+  - Rear Cross-Traffic Collision-Avoidance
+  - Blind-Spot Collision-Avoidance Assist
+  - 6 airbags
 dimensions:
   length_mm: 4615
   width_mm: 1875
@@ -178,35 +141,31 @@ dimensions:
   height_mm: 1715
   wheelbase_mm: 2750
   ground_clearance_mm: 177
-
   cargo:
     trunk_capacity_liters: 566
     trunk_max_liters: 1700
     frunk_capacity_liters: 44
-    notes: "Flat-folding rear seats, 2m load floor"
-
-# Aerodynamics
+    notes: Flat-folding rear seats, 2m load floor
 aerodynamics:
   drag_coefficient: 0.29
   frontal_area_m2: 2.65
-
-# Production
 production:
-  plant: "Hwaseong, South Korea"
-  platform: "E-GMP (Electric Global Modular Platform)"
+  plant: Hwaseong, South Korea
+  platform: E-GMP (Electric Global Modular Platform)
   platform_generation: 1
   status: active
-
-# Data Quality
 metadata:
   data_quality: verified
   last_updated: '2026-02-10'
   created_at: '2026-02-10'
-  source: "Kia official specifications for European 2025 model year"
+  source: Kia official specifications for European 2025 model year
   source_urls:
-    - "https://www.kia.com/de/modelle/ev5/"
+  - https://www.kia.com/de/modelle/ev5/
   verification_date: '2026-02-10'
-  notes: |
-    European launch 2025 with 400V architecture (not 800V).
+  notes: 'European launch 2025 with 400V architecture (not 800V).
+
     Single motor RWD only. Air is the base trim level.
+
     84 kWh battery with ~590 km WLTP range.
+
+    '

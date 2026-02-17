@@ -1,17 +1,15 @@
-# Vehicle Variant: NIO EL8 100 kWh (2025)
 id: nio-el8-100kwh-2025
 model_id: nio-el8
 name: 100 kWh
 variant_name: 100 kWh
 model_year: 2025
 trim_level: Long Range
-production_years: "2023-present"
+production_years: 2023-present
+overview: 'The NIO EL8 100 kWh is the flagship full-size 6-seat luxury SUV with 465
+  km WLTP range.  Dual-motor AWD with 480kW (653 PS), 850 Nm, 4.1s 0-100 km/h. Available
+  at €79,900 with  battery or €67,900 via BaaS plus €289/month.
 
-overview: >
-  The NIO EL8 100 kWh is the flagship full-size 6-seat luxury SUV with 465 km WLTP range. 
-  Dual-motor AWD with 480kW (653 PS), 850 Nm, 4.1s 0-100 km/h. Available at €79,900 with 
-  battery or €67,900 via BaaS plus €289/month.
-
+  '
 battery:
   chemistry: NCM
   supplier: CATL
@@ -21,174 +19,158 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "100 kWh NCM battery, swappable via NIO Power Swap stations"
-
+  notes: 100 kWh NCM battery, swappable via NIO Power Swap stations
 range:
   wltp_km: 465
   wltp_city_km: 560
   wltp_highway_km: 390
   epa_miles: null
   real_world_km: 380
-  real_world_notes: "Estimated ~380km mixed driving"
-
+  real_world_notes: Estimated ~380km mixed driving
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 600
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 600
+      power_kw: 11.0
   dc:
-    max_power_kw: 140
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 20
-        power_kw: 140
-      - soc_percent: 30
-        power_kw: 140
-      - soc_percent: 40
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 115
-      - soc_percent: 60
-        power_kw: 100
-      - soc_percent: 70
-        power_kw: 80
-      - soc_percent: 80
-        power_kw: 60
-      - soc_percent: 90
-        power_kw: 40
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 140
+    - soc_percent: 30
+      power_kw: 140
+    - soc_percent: 40
+      power_kw: 130
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 100
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 90
+      power_kw: 40
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 40
-        power_kw: 140
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 40
+      power_kw: 140
   battery_swap:
     available: true
     swap_time_minutes: 5
     network: NIO Power Swap
-
+  ac_max_kw: 11.0
+  dc_max_kw: 140
 efficiency:
   wltp_kwh_per_100km: 21.2
   real_world_kwh_per_100km: 26.0
-  notes: "WLTP 21.2-23.1 kWh/100km"
-
+  notes: WLTP 21.2-23.1 kWh/100km
 motors:
-  - position: front
-    type: Asynchronous (Induction)
-    power_kw: 180
-    torque_nm: 400
-    manufacturer: NIO
-  - position: rear
-    type: Permanent Magnet Synchronous
-    power_kw: 300
-    torque_nm: 450
-    manufacturer: NIO
-
+- position: front
+  type: Asynchronous (Induction)
+  power_kw: 180
+  torque_nm: 400
+  manufacturer: NIO
+- position: rear
+  type: Permanent Magnet Synchronous
+  power_kw: 300
+  torque_nm: 450
+  manufacturer: NIO
 power:
   total_power_kw: 480
   total_power_ps: 653
   total_torque_nm: 850
-
 drivetrain:
   type: AWD
   gearbox: Single-speed reduction (front and rear)
-
 performance:
   acceleration_0_100_kmh_s: 4.1
   top_speed_kmh: 200
   top_speed_limited: true
-
 dimensions:
   length_mm: 5099
   width_mm: 1989
   height_mm: 1750
   wheelbase_mm: 3070
   ground_clearance_mm: 170
-  drag_coefficient: 0.250
-
+  drag_coefficient: 0.25
 weight:
   curb_weight_kg: 2555
   gross_vehicle_weight_kg: 3100
   payload_kg: 545
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 265
   trunk_max_liters: 810
   frunk_capacity_liters: 0
-  notes: "Third-row seating reduces cargo; 810L with third row folded"
-
+  notes: Third-row seating reduces cargo; 810L with third row folded
 suspension:
   front: Double wishbone
   rear: Multi-link
   adjustable: true
-  notes: "Air suspension with continuous damping control"
-
+  notes: Air suspension with continuous damping control
 brakes:
   front: 6-piston Brembo (ventilated disc)
   rear: Ventilated disc
   regenerative_braking: true
   one_pedal_driving: true
-
 wheels:
   standard:
-    size: "22-inch"
-    tire_front: "265/40 R22"
-    tire_rear: "265/40 R22"
-    notes: "Vibrant Forged wheels"
-
+    size: 22-inch
+    tire_front: 265/40 R22
+    tire_rear: 265/40 R22
+    notes: Vibrant Forged wheels
 standard_equipment:
-  - "Nappa leather upholstery"
-  - "12.8-inch AMOLED center touchscreen"
-  - "10.2-inch HDR digital instrument cluster"
-  - "6.6-inch HDR rear displays (x2)"
-  - "Head-up display (HUD)"
-  - "NOMI AI companion"
-  - "7.1.4 Dolby Atmos surround sound (23 speakers)"
-  - "Panoramic glass roof"
-  - "Soft-close doors"
-  - "Flush door handles"
-  - "Intelligent matrix LED headlights"
-  - "Heat pump"
-  - "Air suspension"
-  - "6-piston Brembo front brakes"
-  - "22-inch Vibrant Forged wheels"
-  - "Second-row captain chairs (heated, ventilated, massage)"
-  - "Electric third row"
-  - "Wireless Apple CarPlay / Android Auto"
-  - "Wireless phone charger (15W)"
-  - "NIO Aquila Super Sensing (33 sensors incl. lidar)"
-  - "NIO Pilot ADAS"
-  - "360-degree camera"
-  - "Automated parking"
-  - "UWB digital key"
-  - "Quad-zone climate control"
-  - "Ambient lighting (256 colors)"
-
+- Nappa leather upholstery
+- 12.8-inch AMOLED center touchscreen
+- 10.2-inch HDR digital instrument cluster
+- 6.6-inch HDR rear displays (x2)
+- Head-up display (HUD)
+- NOMI AI companion
+- 7.1.4 Dolby Atmos surround sound (23 speakers)
+- Panoramic glass roof
+- Soft-close doors
+- Flush door handles
+- Intelligent matrix LED headlights
+- Heat pump
+- Air suspension
+- 6-piston Brembo front brakes
+- 22-inch Vibrant Forged wheels
+- Second-row captain chairs (heated, ventilated, massage)
+- Electric third row
+- Wireless Apple CarPlay / Android Auto
+- Wireless phone charger (15W)
+- NIO Aquila Super Sensing (33 sensors incl. lidar)
+- NIO Pilot ADAS
+- 360-degree camera
+- Automated parking
+- UWB digital key
+- Quad-zone climate control
+- Ambient lighting (256 colors)
 optional_equipment:
-  - name: "Metallic/Pearl Paint"
-    price_eur: 1200
-  - name: "NIO Pilot Pro"
-    price_eur: 3400
-  - name: "Premium Interior Upgrade"
-    price_eur: 2500
+- name: Metallic/Pearl Paint
+  price_eur: 1200
+- name: NIO Pilot Pro
+  price_eur: 3400
+- name: Premium Interior Upgrade
+  price_eur: 2500
+notes: 'The EL8 100 kWh is the recommended variant due to the large vehicle''s energy
+  consumption.  At €79,900 it exceeds the €70,000 company car threshold (0.5% rate),
+  but BaaS at €67,900  stays under it (0.25% rate). Standard 22-inch forged wheels,
+  Brembo brakes, and air  suspension make additional options largely unnecessary.
 
-notes: >
-  The EL8 100 kWh is the recommended variant due to the large vehicle's energy consumption. 
-  At €79,900 it exceeds the €70,000 company car threshold (0.5% rate), but BaaS at €67,900 
-  stays under it (0.25% rate). Standard 22-inch forged wheels, Brembo brakes, and air 
-  suspension make additional options largely unnecessary.
-
+  '
 metadata:
   data_quality: verified
   sources:
-    - https://www.nio.com/de_DE/el8
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  - https://www.nio.com/de_DE/el8
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'

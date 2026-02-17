@@ -1,24 +1,25 @@
-# Porsche Taycan Turbo GT Sport Turismo 2026
-# Range-topping Sport Turismo with Turbo GT powertrain
-# 800V, 760 hp overboost, track-focused performance wagon
-
 id: porsche-taycan-sport-turismo-turbo-gt-2026
-name: "Turbo GT Sport Turismo"
+name: Turbo GT Sport Turismo
 model_id: porsche-taycan-sport-turismo
 manufacturer_id: porsche
 model_year: 2026
 trim_level: Turbo GT
 version: Turbo GT Sport Turismo AWD
+description: 'The 2026 Porsche Taycan Turbo GT Sport Turismo is the ultimate performance
 
-description: |
-  The 2026 Porsche Taycan Turbo GT Sport Turismo is the ultimate performance
-  estate, combining the Turbo GT's 760 hp overboost powertrain with the Sport
-  Turismo's practical body style. With 0-100 km/h in 2.2 seconds via Launch
-  Control, it's one of the fastest production wagons ever made. The 105 kWh
+  estate, combining the Turbo GT''s 760 hp overboost powertrain with the Sport
+
+  Turismo''s practical body style. With 0-100 km/h in 2.2 seconds via Launch
+
+  Control, it''s one of the fastest production wagons ever made. The 105 kWh
+
   Performance Battery Plus, 320 kW DC charging, and rear-axle steering come
+
   standard. Unique Turbo GT touches include stiffened suspension, larger brakes,
+
   and exclusive exterior elements.
 
+  '
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
@@ -34,37 +35,35 @@ battery:
   thermal_management: liquid-cooled
   heating: integrated battery heating
   preconditioning: true
-
 range:
   wltp_km: 468
   wltp_city_km: 590
   wltp_highway_km: 395
   real_world_km: 390
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    WLTP: 418-468 km depending on configuration. Lower range than 4S due to
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: 'WLTP: 418-468 km depending on configuration. Lower range than 4S due to
+
     wider tires, stiffer setup, and higher drag from aero elements.
 
+    '
 efficiency:
   wltp_kwh_per_100km: 22.4
   real_world_kwh_per_100km: 25.5
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     optional_upgrade_kw: 22
     connector_type: Type2
     phases: 3
     time_0_100_hours: 9.5
   dc:
-    max_power_kw: 320
     connector_type: CCS
     time_10_80_percent_min: 18
     time_5_80_percent_min: 20
-    peak_power_duration: "Sustained from ~5% to 50% SoC"
-
+    peak_power_duration: Sustained from ~5% to 50% SoC
+  ac_max_kw: 11
+  dc_max_kw: 320
 performance:
   power_kw: 560
   power_hp: 762
@@ -74,17 +73,14 @@ performance:
   overboost_power_ps: 762
   torque_nm: 850
   drivetrain: AWD
-  transmission: "2-speed rear, single-speed front"
-
+  transmission: 2-speed rear, single-speed front
   acceleration:
     zero_to_100_kmh_sec: 2.4
     zero_to_100_kmh_launch_control_sec: 2.2
     zero_to_200_kmh_sec: 8.8
     launch_control: true
-
   top_speed_kmh: 260
   top_speed_limited: true
-
 dimensions:
   length_mm: 4963
   width_mm: 1966
@@ -94,7 +90,6 @@ dimensions:
   ground_clearance_mm: 110
   drag_coefficient: 0.25
   frontal_area_m2: 2.36
-
 weight:
   curb_weight_kg: 2420
   gross_vehicle_weight_kg: 2830
@@ -105,9 +100,6 @@ weight:
   trailer_hitch_available: false
   weight_distribution_front_percent: 48
   weight_distribution_rear_percent: 52
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 405
   frunk_capacity_liters: 81
@@ -115,26 +107,23 @@ cargo:
   rear_seats_fold: true
   rear_seats_split: 60/40
   trunk_max_liters: 1212
-
 motors:
-  - position: front
-    type: PSM
-    power_kw: 230
-    torque_nm: 300
-    cooling: liquid
-  - position: rear
-    type: PSM
-    power_kw: 440
-    torque_nm: 550
-    cooling: liquid
-
+- position: front
+  type: PSM
+  power_kw: 230
+  torque_nm: 300
+  cooling: liquid
+- position: rear
+  type: PSM
+  power_kw: 440
+  torque_nm: 550
+  cooling: liquid
 suspension:
   front: Double wishbone, adaptive air suspension (sport-tuned)
   rear: Multi-link, adaptive air suspension (sport-tuned)
   dampers: PASM Sport (Porsche Active Suspension Management)
   adjustable: true
   rear_axle_steering: true
-
 brakes:
   front_mm: 420
   rear_mm: 410
@@ -142,29 +131,25 @@ brakes:
   rear_type: Porsche Ceramic Composite Brake (PCCB)
   caliper_pistons_front: 10
   caliper_pistons_rear: 4
-
 regenerative_braking:
   max_power_kw: 400
-  modes: "Auto, Off, Max"
+  modes: Auto, Off, Max
   one_pedal_driving: true
-
 wheels:
-  standard: "21-inch RS Spyder Design wheels"
+  standard: 21-inch RS Spyder Design wheels
   optional:
-    - "21-inch Taycan Turbo GT Magnesium wheels"
-  tire_front: "265/35 R21"
-  tire_rear: "305/30 R21"
-
+  - 21-inch Taycan Turbo GT Magnesium wheels
+  tire_front: 265/35 R21
+  tire_rear: 305/30 R21
 infotainment:
   screen_size_inches: 16.8
   system: Porsche Communication Management (PCM 6.0)
   additional_screens:
-    - "10.9-inch passenger display (standard)"
-    - "8.4-inch center console touchscreen"
+  - 10.9-inch passenger display (standard)
+  - 8.4-inch center console touchscreen
   navigation: true
   apple_carplay: true
   android_auto: true
-
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -172,38 +157,32 @@ driver_assistance:
   parking_sensors: true
   parking_camera: true
   emergency_braking: true
-
 climate:
   zones: 3
   heat_pump: true
   heated_seats: true
   ventilated_seats: true
   heated_steering_wheel: true
-
 market_availability:
-  - DE
-  - FR
-  - GB
-  - IT
-  - ES
-  - NL
-  - AT
-  - CH
-  - NO
-  - SE
-
+- DE
+- FR
+- GB
+- IT
+- ES
+- NL
+- AT
+- CH
+- false
+- SE
 availability:
-  available_since: "2025-11"
+  available_since: 2025-11
   production_status: current
   order_status: available
   delivery_time_weeks: 16-20
-
-
 data_sources:
-  - source: Porsche AG Germany official website
-    url: https://www.porsche.com/germany/models/taycan/taycan-sport-turismo-models/taycan-turbo-gt-sport-turismo/
-    date: 2026-02-10
-    confidence: verified
-
+- source: Porsche AG Germany official website
+  url: https://www.porsche.com/germany/models/taycan/taycan-sport-turismo-models/taycan-turbo-gt-sport-turismo/
+  date: 2026-02-10
+  confidence: verified
 confidence: verified
 last_updated: 2026-02-10

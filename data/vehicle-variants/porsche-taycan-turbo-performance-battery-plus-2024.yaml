@@ -1,8 +1,3 @@
-# Porsche Taycan Turbo Performance Battery Plus 2024
-# High-performance AWD variant
-# Dual motors with 500kW overboost power
-# 800V ultra-fast charging architecture
-
 id: porsche-taycan-turbo-performance-battery-plus-2024
 name: Turbo Performance Battery Plus
 model_id: porsche-taycan
@@ -11,28 +6,18 @@ variant_name: Turbo Performance Battery Plus
 model_year: 2024
 trim_level: Turbo
 version: Performance Battery Plus
-
-description: |
-  The Porsche Taycan Turbo represents the high-performance tier of the Taycan 
-  lineup, delivering supercar acceleration (0-100 km/h in 3.2s) with 500kW 
-  (680hp) in overboost mode. The Turbo bridges the gap between the 4S and 
-  flagship Turbo S, offering extreme performance while maintaining grand touring 
-  comfort and practicality.
-  
-  With the Performance Battery Plus (93.4kWh usable), the Turbo achieves up to 
-  543km WLTP range despite its blistering performance. Porsche's 800V architecture 
-  enables 270kW peak DC charging, allowing 10-80% charges in approximately 23 
-  minutes at IONITY 350kW chargers.
-  
-  The Turbo includes performance upgrades over the 4S: more powerful motors, 
-  Porsche Torque Vectoring Plus (PTV Plus) as standard, larger brakes, and more 
-  aggressive aerodynamics. It's the choice for enthusiasts who want near-Turbo S 
-  performance without the flagship price tag.
-
-# ============================================================================
-# BATTERY & RANGE
-# ============================================================================
-
+description: "The Porsche Taycan Turbo represents the high-performance tier of the\
+  \ Taycan \nlineup, delivering supercar acceleration (0-100 km/h in 3.2s) with 500kW\
+  \ \n(680hp) in overboost mode. The Turbo bridges the gap between the 4S and \nflagship\
+  \ Turbo S, offering extreme performance while maintaining grand touring \ncomfort\
+  \ and practicality.\n\nWith the Performance Battery Plus (93.4kWh usable), the Turbo\
+  \ achieves up to \n543km WLTP range despite its blistering performance. Porsche's\
+  \ 800V architecture \nenables 270kW peak DC charging, allowing 10-80% charges in\
+  \ approximately 23 \nminutes at IONITY 350kW chargers.\n\nThe Turbo includes performance\
+  \ upgrades over the 4S: more powerful motors, \nPorsche Torque Vectoring Plus (PTV\
+  \ Plus) as standard, larger brakes, and more \naggressive aerodynamics. It's the\
+  \ choice for enthusiasts who want near-Turbo S \nperformance without the flagship\
+  \ price tag.\n"
 dimensions:
   length_mm: 4963
   width_mm: 1966
@@ -41,12 +26,10 @@ dimensions:
   wheelbase_mm: 2900
   ground_clearance_mm: 119
   drag_coefficient: 0.22
-
 cargo:
   trunk_capacity_liters: 407
   trunk_max_liters: 407
   frunk_capacity_liters: 84
-
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
@@ -57,18 +40,16 @@ battery:
   modules: 33
   cells_total: 396
   nominal_voltage: 725
-  pack_voltage_range: "610-835V (800V architecture)"
+  pack_voltage_range: 610-835V (800V architecture)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid-cooled
   heating: integrated battery heating
   preconditioning: true
-  notes: |
-    Same Performance Battery Plus as the 4S and Turbo S. The 800V architecture 
-    enables ultra-fast DC charging with minimal thermal losses. Battery 
-    preconditioning via navigation ensures optimal charging temperature.
-
+  notes: "Same Performance Battery Plus as the 4S and Turbo S. The 800V architecture\
+    \ \nenables ultra-fast DC charging with minimal thermal losses. Battery \npreconditioning\
+    \ via navigation ensures optimal charging temperature.\n"
 range:
   wltp_km: 543
   wltp_city_km: 710
@@ -76,81 +57,70 @@ range:
   epa_km: 469
   epa_miles: 292
   real_world_km: 460
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    WLTP: 543km (Performance Battery Plus, 21" wheels)
-    EPA: 292 miles / 469km (US rating)
-    Real-world: ~460km mixed driving in good conditions
-    Slightly lower range than 4S due to higher power consumption and more 
-    aggressive performance tuning. Winter range penalty: ~25-30% in cold weather.
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: "WLTP: 543km (Performance Battery Plus, 21\" wheels)\nEPA: 292 miles / 469km\
+    \ (US rating)\nReal-world: ~460km mixed driving in good conditions\nSlightly lower\
+    \ range than 4S due to higher power consumption and more \naggressive performance\
+    \ tuning. Winter range penalty: ~25-30% in cold weather.\n"
 efficiency:
   wltp_kwh_per_100km: 21.7
   epa_kwh_per_100km: 24.2
   real_world_kwh_per_100km: 25.8
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    Turbo is less efficient than 4S due to more powerful motors and performance-
-    oriented tuning. Efficiency varies with driving mode - Sport Plus mode can 
-    exceed 30 kWh/100km during spirited driving.
-
-# ============================================================================
-# CHARGING
-# ============================================================================
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: "Turbo is less efficient than 4S due to more powerful motors and performance-\n\
+    oriented tuning. Efficiency varies with driving mode - Sport Plus mode can \n\
+    exceed 30 kWh/100km during spirited driving.\n"
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     optional_upgrade_kw: 22
-    optional_upgrade_cost: "€1,470 (22kW onboard charger)"
+    optional_upgrade_cost: €1,470 (22kW onboard charger)
     connector_type: Type2
     phases: 3
     time_0_100_hours: 9.0
-    notes: |
-      Standard: 11kW AC (3-phase Type2) - 0-100% in ~9 hours
+    notes: 'Standard: 11kW AC (3-phase Type2) - 0-100% in ~9 hours
+
       Optional: 22kW AC onboard charger upgrade (€1,470) - 0-100% in ~4.5 hours
-  
+
+      '
   dc:
-    max_power_kw: 270
     connector_type: CCS2
     architecture_voltage: 800
     time_10_80_minutes: 22.5
     time_5_80_minutes: 22.5
-    peak_charge_time_minutes: "18-35% state of charge"
-    notes: |
-      Identical charging performance to 4S and Turbo S:
-      - Peak: 270kW (achieved between 18-35% SoC at 350kW chargers)
-      - 10-80%: ~22.5 minutes (ideal conditions)
-      - Average 10-80%: ~23-25 minutes real-world
-    
-    charge_curve:
-      - soc_percent: 0
-        power_kw: 50
-      - soc_percent: 10
-        power_kw: 250
-      - soc_percent: 18
-        power_kw: 270
-        note: "Peak power"
-      - soc_percent: 35
-        power_kw: 265
-      - soc_percent: 50
-        power_kw: 175
-      - soc_percent: 70
-        power_kw: 80
-      - soc_percent: 80
-        power_kw: 50
+    peak_charge_time_minutes: 18-35% state of charge
+    notes: 'Identical charging performance to 4S and Turbo S:
 
+      - Peak: 270kW (achieved between 18-35% SoC at 350kW chargers)
+
+      - 10-80%: ~22.5 minutes (ideal conditions)
+
+      - Average 10-80%: ~23-25 minutes real-world
+
+      '
+    charge_curve:
+    - soc_percent: 0
+      power_kw: 50
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 18
+      power_kw: 270
+      note: Peak power
+    - soc_percent: 35
+      power_kw: 265
+    - soc_percent: 50
+      power_kw: 175
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 50
+  ac_max_kw: 11
+  dc_max_kw: 270
 bidirectional_charging:
   v2l: false
   v2h: false
   v2g: false
-  notes: "Not currently supported in production models"
-
-# ============================================================================
-# MOTORS & PERFORMANCE
-# ============================================================================
-
+  notes: Not currently supported in production models
 motors:
   count: 2
   type: Permanent Magnet Synchronous Motor (PMSM)
@@ -169,36 +139,34 @@ motors:
   overboost_power_hp: 680
   overboost_duration_seconds: 10
   torque_nm: 850
-  notes: |
-    Taycan Turbo features more powerful dual motors than 4S:
+  notes: 'Taycan Turbo features more powerful dual motors than 4S:
+
     - Front: 190kW (258hp) PMSM
+
     - Rear: 280kW (381hp) PMSM
+
     - Combined: 460kW (625hp) continuous, 500kW (680hp) overboost
-    
+
+
     Overboost (Launch Control): 500kW for ~10 seconds during hard acceleration.
+
     Significantly more torque (850 Nm) than 4S (640 Nm) for explosive acceleration.
 
+    '
 drive_type: AWD
 driven_wheels: all
-
 performance:
   acceleration_0_100_kmh_seconds: 3.2
   acceleration_0_60_mph_seconds: 3.0
   acceleration_0_200_kmh_seconds: 10.6
   top_speed_kmh: 260
   top_speed_electronically_limited: true
-  notes: |
-    Taycan Turbo Performance Battery Plus with overboost (Launch Control):
-    - 0-100 km/h: 3.2 seconds
-    - 0-60 mph: 3.0 seconds  
-    - 0-200 km/h: 10.6 seconds
-    - Top speed: 260 km/h (electronically limited)
-    - Quarter mile: ~11.5 seconds
-    
-    Supercar-level acceleration with repeatable performance thanks to excellent 
-    thermal management. Can perform multiple Launch Control runs without power 
-    reduction.
-
+  notes: "Taycan Turbo Performance Battery Plus with overboost (Launch Control):\n\
+    - 0-100 km/h: 3.2 seconds\n- 0-60 mph: 3.0 seconds  \n- 0-200 km/h: 10.6 seconds\n\
+    - Top speed: 260 km/h (electronically limited)\n- Quarter mile: ~11.5 seconds\n\
+    \nSupercar-level acceleration with repeatable performance thanks to excellent\
+    \ \nthermal management. Can perform multiple Launch Control runs without power\
+    \ \nreduction.\n"
 weight:
   curb_weight_kg: 2320
   distribution_front_percent: 48
@@ -207,52 +175,47 @@ weight:
   payload_kg: 435
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: |
-    Slightly heavier than 4S due to more powerful motor components. Near-ideal 
-    weight distribution and low center of gravity (battery in floor) provide 
-    exceptional handling dynamics.
-
-
+  notes: "Slightly heavier than 4S due to more powerful motor components. Near-ideal\
+    \ \nweight distribution and low center of gravity (battery in floor) provide \n\
+    exceptional handling dynamics.\n"
 suspension:
   front: Double-wishbone with adaptive air suspension
   rear: Multi-link with adaptive air suspension
   adaptive_damping: Porsche Active Suspension Management (PASM)
   adjustable_ride_height: true
-  notes: |
-    Standard three-chamber air suspension with PASM. Porsche Torque Vectoring 
-    Plus (PTV Plus) with electronic rear differential lock is STANDARD on Turbo 
-    (optional on 4S). This provides superior cornering performance and agility.
-
+  notes: "Standard three-chamber air suspension with PASM. Porsche Torque Vectoring\
+    \ \nPlus (PTV Plus) with electronic rear differential lock is STANDARD on Turbo\
+    \ \n(optional on 4S). This provides superior cornering performance and agility.\n"
 brakes:
   front: 420mm ventilated discs
   rear: 410mm ventilated discs
   caliper_type: Porsche Ceramic Composite Brake (PCCB)
   regenerative: true
   regenerative_max_power_kw: 290
-  notes: |
-    Standard: PCCB (Porsche Ceramic Composite Brake) - 420mm front / 410mm rear
+  notes: 'Standard: PCCB (Porsche Ceramic Composite Brake) - 420mm front / 410mm rear
+
     Larger brakes than 4S for better stopping power matching the higher performance.
+
     Ceramic brakes provide consistent performance during repeated hard braking.
 
-# ============================================================================
-# ADDITIONAL FEATURES
-# ============================================================================
-
+    '
 tires:
-  front: "265/35 R21"
-  rear: "305/30 R21"
+  front: 265/35 R21
+  rear: 305/30 R21
   wheel_size_inches: 21
-  notes: |
-    Standard Turbo wheels: 21" Taycan Turbo wheels
+  notes: 'Standard Turbo wheels: 21" Taycan Turbo wheels
+
     Wider tires than 4S for better grip and handling, especially wider rears (305mm).
 
+    '
 climate:
   heat_pump: true
   auto_climate_zones: 3
-  notes: |
-    Standard: Automatic 3-zone climate control with heat pump
+  notes: 'Standard: Automatic 3-zone climate control with heat pump
+
     Pre-conditioning via Porsche Connect app
 
+    '
 interior:
   seats: 4
   seat_material: Leather / Race-Tex
@@ -262,21 +225,21 @@ interior:
   display_passenger: Optional 10.9" passenger display
   sound_system: BOSE Surround Sound (standard), Burmester 3D High-End optional
   ambient_lighting: true
-  notes: |
-    Turbo features upgraded interior trim and GT sports steering wheel as standard.
+  notes: 'Turbo features upgraded interior trim and GT sports steering wheel as standard.
+
     More premium materials and finishes compared to 4S.
 
+    '
 adas_features:
-  - Porsche InnoDrive (adaptive cruise with predictive range optimization)
-  - Lane Keeping Assist
-  - Lane Change Assist with Turn Assist
-  - Traffic Sign Recognition
-  - Adaptive Cruise Control with Stop & Go
-  - Surround View (360° cameras)
-  - Night Vision Assist (optional, thermal imaging)
-  - Park Assist with reversing camera
-  - Remote Park Assist via smartphone (optional)
-
+- Porsche InnoDrive (adaptive cruise with predictive range optimization)
+- Lane Keeping Assist
+- Lane Change Assist with Turn Assist
+- Traffic Sign Recognition
+- Adaptive Cruise Control with Stop & Go
+- Surround View (360° cameras)
+- Night Vision Assist (optional, thermal imaging)
+- Park Assist with reversing camera
+- Remote Park Assist via smartphone (optional)
 connectivity:
   system: Porsche Communication Management (PCM) 6.0
   apple_carplay: true
@@ -286,34 +249,26 @@ connectivity:
   ota_updates: true
   remote_app: Porsche Connect (My Porsche app)
   voice_assistant: '"Hey Porsche" voice control'
-  notes: |
-    PCM 6.0 with 16.8" curved touchscreen. Wireless CarPlay/Android Auto.
+  notes: 'PCM 6.0 with 16.8" curved touchscreen. Wireless CarPlay/Android Auto.
+
     OTA updates. My Porsche app for remote control.
 
-# ============================================================================
-# METADATA
-# ============================================================================
-
+    '
 metadata:
   data_quality: verified
   data_source: manufacturer
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   verified_by: Porsche official specifications
   sources:
-    - https://www.porsche.com/germany/models/taycan/taycan-models/taycan-turbo/
-    - https://newsroom.porsche.com
-    - https://press.porsche.com
-  notes: |
-    The Taycan Turbo sits between the 4S and Turbo S, offering near-flagship 
-    performance at a more accessible price point. It includes many Turbo S features 
-    as standard (PCCB brakes, PTV Plus, larger wheels) making it excellent value 
-    for performance enthusiasts.
-    
-    Compared to 4S: ~€30k more expensive but significantly faster (3.2s vs 4.0s 
-    0-100), more powerful (500kW vs 360kW overboost), better brakes, and standard 
-    PTV Plus.
-    
-    Compared to Turbo S: ~€30k cheaper but slightly slower (3.2s vs 2.8s 0-100), 
-    less powerful (500kW vs 560kW overboost), but offers 95% of the performance 
-    for many use cases.
+  - https://www.porsche.com/germany/models/taycan/taycan-models/taycan-turbo/
+  - https://newsroom.porsche.com
+  - https://press.porsche.com
+  notes: "The Taycan Turbo sits between the 4S and Turbo S, offering near-flagship\
+    \ \nperformance at a more accessible price point. It includes many Turbo S features\
+    \ \nas standard (PCCB brakes, PTV Plus, larger wheels) making it excellent value\
+    \ \nfor performance enthusiasts.\n\nCompared to 4S: ~€30k more expensive but significantly\
+    \ faster (3.2s vs 4.0s \n0-100), more powerful (500kW vs 360kW overboost), better\
+    \ brakes, and standard \nPTV Plus.\n\nCompared to Turbo S: ~€30k cheaper but slightly\
+    \ slower (3.2s vs 2.8s 0-100), \nless powerful (500kW vs 560kW overboost), but\
+    \ offers 95% of the performance \nfor many use cases.\n"

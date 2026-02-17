@@ -1,7 +1,3 @@
-# Mitsubishi Eclipse Cross EV 87 kWh 2026
-# First pure BEV from Mitsubishi for Europe
-# Built on Alliance AmpR Medium platform
-
 id: mitsubishi-eclipse-cross-ev-87kwh-2026
 name: Eclipse Cross EV 87 kWh
 model_id: mitsubishi-eclipse-cross-ev
@@ -9,14 +5,19 @@ manufacturer_id: mitsubishi
 variant_name: 87 kWh
 model_year: 2026
 trim_level: Standard
-version: "87 kWh FWD"
+version: 87 kWh FWD
+description: 'The Mitsubishi Eclipse Cross EV is Mitsubishi''s first dedicated battery-electric
+  vehicle for
 
-description: |
-  The Mitsubishi Eclipse Cross EV is Mitsubishi's first dedicated battery-electric vehicle for
-  Europe. Built on the AmpR Medium platform shared with Renault Scenic E-Tech, it features an
-  87 kWh usable battery delivering up to 633 km WLTP range. The single front motor produces
+  Europe. Built on the AmpR Medium platform shared with Renault Scenic E-Tech, it
+  features an
+
+  87 kWh usable battery delivering up to 633 km WLTP range. The single front motor
+  produces
+
   160 kW (218 PS) with 300 Nm torque. Supports V2L with 3 kW AC output.
 
+  '
 battery:
   usable_kwh: 87.0
   total_kwh: 92.0
@@ -31,34 +32,30 @@ battery:
   thermal_management: liquid-cooled
   preconditioning: true
   architecture_voltage: 400
-
 range:
   wltp_km: 633
   wltp_city_km: 750
   wltp_highway_km: 520
   real_world_km: 480
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
 efficiency:
   wltp_kwh_per_100km: 13.7
   real_world_kwh_per_100km: 18.1
-  real_world_conditions: "Mixed driving, 20°C ambient"
-
+  real_world_conditions: Mixed driving, 20°C ambient
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     connector_type: Type2
     phases: 3
     time_0_100_hours: 9.5
     optional_22kw: true
   dc:
-    max_power_kw: 150
     average_power_10_80_kw: 95
     connector_type: CCS2
     architecture_voltage: 400
     time_10_80_minutes: 40
-
+  ac_max_kw: 11
+  dc_max_kw: 150
 motors:
   count: 1
   type: Permanent Magnet Synchronous Motor (PMSM)
@@ -66,22 +63,18 @@ motors:
   combined_power_kw: 160
   combined_power_hp: 218
   torque_nm: 300
-
 drive_type: FWD
 driven_wheels: front
-
 performance:
   acceleration_0_100_kmh_seconds: 7.9
   top_speed_kmh: 170
   top_speed_electronically_limited: true
-
 weight:
   curb_weight_kg: 1901
   gross_vehicle_weight_kg: 2335
   payload_kg: 509
   towing_capacity_braked_kg: 1100
   towing_capacity_unbraked_kg: 750
-
 dimensions:
   length_mm: 4470
   width_mm: 1864
@@ -89,38 +82,32 @@ dimensions:
   height_mm: 1571
   wheelbase_mm: 2785
   ground_clearance_mm: 185
-
 cargo:
   trunk_capacity_liters: 545
   trunk_max_liters: 1670
   frunk_capacity_liters: 0
-
 tires:
-  front: "235/55 R18"
-  rear: "235/55 R18"
+  front: 235/55 R18
+  rear: 235/55 R18
   wheel_size_inches: 18
-
 climate:
   heat_pump: true
   auto_climate_zones: 2
-
 v2x:
   v2l: true
   v2l_power_kw: 3.0
-  v2l_outlet: "Type 2 adapter"
-
+  v2l_outlet: Type 2 adapter
 interior:
   seats: 5
   isofix: 3
-  display_center: "12.3-inch touchscreen"
+  display_center: 12.3-inch touchscreen
   sound_system: Standard
   roof_rails: true
-
 metadata:
   data_quality: estimated
   data_source: ev-database.org
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - https://ev-database.org/car/3335/Mitsubishi-Eclipse-Cross-87-kWh-
-    - https://www.mitsubishi-motors.com
+  - https://ev-database.org/car/3335/Mitsubishi-Eclipse-Cross-87-kWh-
+  - https://www.mitsubishi-motors.com

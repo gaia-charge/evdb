@@ -1,15 +1,12 @@
 id: lotus-emeya-base-2025
-name: "Base"
+name: Base
 model_id: lotus-emeya
 model_year: 2025
 production_years:
   start: 2024
   end: null
-
 trim_level: base
 market_position: entry
-
-# Battery Specifications
 battery:
   usable_kwh: 102.0
   total_kwh: 105.0
@@ -18,49 +15,37 @@ battery:
   thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
-
-# Range
 range:
   wltp_km: 610
   wltp_source: manufacturer
-  
   real_world_km: 530
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C
 charging:
   ac:
-    max_power_kw: 22.0
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 5.0
+      '0_100': 5.0
     onboard_charger_kw: 22.0
     phases: 3
-  
   dc:
-    max_power_kw: 350
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_80": 21
-
+      '10_80': 18
+      0_80: 21
   bidirectional:
     v2l: false
     v2g: false
-
-# Efficiency
+  ac_max_kw: 22.0
+  dc_max_kw: 350
 efficiency:
   wltp_kwh_per_100km: 16.7
-  
   real_world:
     combined_kwh_per_100km: 19.2
     highway_kwh_per_100km: 22.0
     city_kwh_per_100km: 16.5
-
-# Drivetrain
 drivetrain:
   configuration: awd
   motor_type: permanent_magnet
@@ -75,14 +60,10 @@ drivetrain:
       power_kw: 225
       power_hp: 306
       torque_nm: 400
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 4.15
   top_speed_kmh: 250
   top_speed_limited: true
-
-# Dimensions & Weight
 dimensions:
   length_mm: 5139
   width_mm: 2005
@@ -92,114 +73,99 @@ dimensions:
   ground_clearance_mm: 135
   drag_coefficient: 0.21
   frontal_area_m2: 2.45
-
 weight:
   curb_weight_kg: 2475
   gvwr_kg: 2950
   gross_vehicle_weight_kg: 2950
   payload_kg: 475
   towing_capacity_braked_kg: 0
-
 cargo:
   trunk_capacity_liters: 509
   trunk_max_liters: 688
   frunk_capacity_liters: 31
-
-# Standard Equipment
 equipment:
   standard:
     exterior:
-      - "20\" alloy wheels"
-      - "LED matrix headlights"
-      - "Animated light bar"
-      - "Deployable rear spoiler"
-      - "Active aero shutters"
-      - "Flush door handles"
-      - "Panoramic glass roof"
-    
+    - 20" alloy wheels
+    - LED matrix headlights
+    - Animated light bar
+    - Deployable rear spoiler
+    - Active aero shutters
+    - Flush door handles
+    - Panoramic glass roof
     interior:
-      - "15.1\" OLED touchscreen infotainment"
-      - "55\" augmented reality head-up display"
-      - "12.6\" digital instrument cluster"
-      - "4-zone climate control"
-      - "Heated and ventilated front seats"
-      - "Electric adjustable sport seats (4 seats)"
-      - "Ambient lighting"
-      - "Alcantara and leather upholstery"
-      - "KEF Premium audio (1380W, 15 speakers)"
-    
+    - 15.1" OLED touchscreen infotainment
+    - 55" augmented reality head-up display
+    - 12.6" digital instrument cluster
+    - 4-zone climate control
+    - Heated and ventilated front seats
+    - Electric adjustable sport seats (4 seats)
+    - Ambient lighting
+    - Alcantara and leather upholstery
+    - KEF Premium audio (1380W, 15 speakers)
     safety:
-      - "Autonomous Emergency Braking"
-      - "360-degree camera system"
-      - "Adaptive cruise control"
-      - "Lane keeping assist"
-      - "Traffic sign recognition"
-      - "Blind spot monitoring"
-      - "8 airbags"
-    
+    - Autonomous Emergency Braking
+    - 360-degree camera system
+    - Adaptive cruise control
+    - Lane keeping assist
+    - Traffic sign recognition
+    - Blind spot monitoring
+    - 8 airbags
     technology:
-      - "Apple CarPlay and Android Auto"
-      - "Air suspension with adaptive damping"
-      - "Multi-mode driving (Range/Tour/Sport/Individual)"
-      - "Torque vectoring"
-
+    - Apple CarPlay and Android Auto
+    - Air suspension with adaptive damping
+    - Multi-mode driving (Range/Tour/Sport/Individual)
+    - Torque vectoring
   optional:
-    - name: "Carbon Pack"
-      price_eur: 10000
-    - name: "Luxury Pack"
-      price_eur: 15000
-    - name: "21\" forged wheels"
-      price_eur: 3000
-    - name: "Rear-wheel steering"
-      price_eur: 4000
-    - name: "Meridian Signature audio (2160W, 23 speakers)"
-      price_eur: 6500
-
-# Pricing
+  - name: Carbon Pack
+    price_eur: 10000
+  - name: Luxury Pack
+    price_eur: 15000
+  - name: 21" forged wheels
+    price_eur: 3000
+  - name: Rear-wheel steering
+    price_eur: 4000
+  - name: Meridian Signature audio (2160W, 23 speakers)
+    price_eur: 6500
 pricing:
   msrp_eur: 96950
   msrp_usd: null
-
-# Colors
 colors:
   exterior:
-    - name: "Stellar Black"
-      code: SB
-      type: metallic
-    - name: "Kaimu Grey"
-      code: KG
-      type: metallic
-    - name: "Solar Yellow"
-      code: SY
-      type: metallic
-    - name: "Seneca Blue"
-      code: SNB
-      type: metallic
-    - name: "Blossom White"
-      code: BW
-      type: solid
-  
+  - name: Stellar Black
+    code: SB
+    type: metallic
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+  - name: Blossom White
+    code: BW
+    type: solid
   interior:
-    - name: "Black Alcantara and leather"
-    - name: "Grey leather with carbon trim"
-    - name: "Tan leather with wood trim"
-
-# Metadata
+  - name: Black Alcantara and leather
+  - name: Grey leather with carbon trim
+  - name: Tan leather with wood trim
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   confidence: high
-  
   sources:
-    - "https://www.lotuscars.com/en-GB/emeya"
-    - "https://www.lotuscars.com/en-DE/emeya"
-    - "https://www.autocar.co.uk/car-news/new-cars/lotus-emeya"
-
-notes: >
-  The Lotus Emeya base variant offers 450 kW (612 hp) combined from dual permanent magnet motors,
-  achieving 0-100 km/h in 4.15 seconds. With a remarkable 0.21 drag coefficient and 102 kWh usable
-  battery, it delivers 610 km WLTP range. Features include 800V architecture supporting 350 kW DC
-  charging (10-80% in 18 minutes), air suspension, torque vectoring, and a luxurious 4-seat interior
-  with individual sport seats. The Emeya represents Lotus's first electric grand tourer, combining
+  - https://www.lotuscars.com/en-GB/emeya
+  - https://www.lotuscars.com/en-DE/emeya
+  - https://www.autocar.co.uk/car-news/new-cars/lotus-emeya
+notes: 'The Lotus Emeya base variant offers 450 kW (612 hp) combined from dual permanent
+  magnet motors, achieving 0-100 km/h in 4.15 seconds. With a remarkable 0.21 drag
+  coefficient and 102 kWh usable battery, it delivers 610 km WLTP range. Features
+  include 800V architecture supporting 350 kW DC charging (10-80% in 18 minutes),
+  air suspension, torque vectoring, and a luxurious 4-seat interior with individual
+  sport seats. The Emeya represents Lotus''s first electric grand tourer, combining
   performance, efficiency, and luxury.
+
+  '

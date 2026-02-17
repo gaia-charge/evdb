@@ -1,16 +1,19 @@
-# Vehicle Variant: Volvo EX30 Cross Country Twin Motor Performance (2025)
 id: volvo-ex30-cross-country-twin-motor-2025
 model_id: volvo-ex30-cross-country
 name: Twin Motor Performance
 variant_name: Twin Motor Performance
 model_year: 2025
 trim_level: Ultra
-production_years: "2025-present"
+production_years: 2025-present
+overview: 'The Volvo EX30 Cross Country Twin Motor Performance is the rugged adventure
+  variant of Volvo''s compact electric SUV. Exclusively available with the 315kW (422hp)
+  dual-motor AWD powertrain, it features raised ground clearance, black protective
+  body cladding, and unique Cross Country bumpers. The 69kWh NMC battery provides
+  up to 450km WLTP range, while the dual motors deliver all-wheel drive traction and
+  a 3.6s 0-100 km/h sprint. Now also built in Ghent, Belgium alongside the standard
+  EX30.
 
-overview: >
-  The Volvo EX30 Cross Country Twin Motor Performance is the rugged adventure variant of Volvo's compact electric SUV. Exclusively available with the 315kW (422hp) dual-motor AWD powertrain, it features raised ground clearance, black protective body cladding, and unique Cross Country bumpers. The 69kWh NMC battery provides up to 450km WLTP range, while the dual motors deliver all-wheel drive traction and a 3.6s 0-100 km/h sprint. Now also built in Ghent, Belgium alongside the standard EX30.
-
-# Battery Specifications
+  '
 battery:
   chemistry: NMC
   supplier: CATL
@@ -20,66 +23,61 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "69kWh NMC battery from CATL, 400V architecture"
-
-# Range (km)
+  notes: 69kWh NMC battery from CATL, 400V architecture
 range:
   wltp_km: 450
   wltp_city_km: 570
   wltp_highway_km: 365
   epa_miles: null
   real_world_km: 390
-  real_world_notes: "Real-world range varies: ~390km mixed driving, ~530km city, ~320km highway. Slightly less than standard EX30 Twin Motor due to raised ride height."
-
-# Charging
+  real_world_notes: 'Real-world range varies: ~390km mixed driving, ~530km city, ~320km
+    highway. Slightly less than standard EX30 Twin Motor due to raised ride height.'
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 360
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 360
+      power_kw: 11.0
   dc:
-    max_power_kw: 153
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 0
-        power_kw: 150
-      - soc_percent: 10
-        power_kw: 153
-      - soc_percent: 20
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 140
-      - soc_percent: 40
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 115
-      - soc_percent: 60
-        power_kw: 95
-      - soc_percent: 70
-        power_kw: 75
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 30
-      - soc_percent: 100
-        power_kw: 15
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 153
+    - soc_percent: 20
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 140
+    - soc_percent: 40
+      power_kw: 130
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 95
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 26
-        power_kw: 153
-        notes: "10-80% in 26 minutes at optimal conditions"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 26
+      power_kw: 153
+      notes: 10-80% in 26 minutes at optimal conditions
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
-# Motors & Performance
+  ac_max_kw: 11.0
+  dc_max_kw: 153
 motors:
   configuration: dual
   drive_type: AWD
@@ -88,86 +86,74 @@ motors:
   total_torque_nm: 543
   motor_type: permanent_magnet
   motors:
-    - position: front
-      power_kw: 115
-      power_hp: 154
-      torque_nm: 200
-      motor_type: permanent_magnet
-    - position: rear
-      power_kw: 200
-      power_hp: 272
-      torque_nm: 343
-      motor_type: permanent_magnet
-
+  - position: front
+    power_kw: 115
+    power_hp: 154
+    torque_nm: 200
+    motor_type: permanent_magnet
+  - position: rear
+    power_kw: 200
+    power_hp: 272
+    torque_nm: 343
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 3.6
   top_speed_kmh: 180
-  notes: "0-100 km/h in 3.6 seconds, electronically limited to 180 km/h. Fastest accelerating Volvo ever."
-
-# Efficiency
+  notes: 0-100 km/h in 3.6 seconds, electronically limited to 180 km/h. Fastest accelerating
+    Volvo ever.
 efficiency:
   consumption_wltp_kwh_per_100km: 15.8
   consumption_real_world_kwh_per_100km: 17.5
   efficiency_rating_eu: A
-  notes: "Slightly higher consumption than standard Twin Motor due to raised ride height and cladding"
-
-# Dimensions
+  notes: Slightly higher consumption than standard Twin Motor due to raised ride height
+    and cladding
 dimensions:
   length_mm: 4233
   width_mm: 1850
   height_mm: 1573
   wheelbase_mm: 2650
   ground_clearance_mm: 175
-
-# Cargo
 cargo:
   trunk_capacity_liters: 318
   trunk_max_liters: 904
   frunk_capacity_liters: 0
-
-# Weight
 weight:
   curb_weight_kg: 1943
   payload_kg: 307
   gross_vehicle_weight_kg: 2250
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
-# Features
 features:
   standard:
-    - "12.3-inch portrait touchscreen"
-    - "Google built-in (Maps, Assistant, Play Store)"
-    - "Pilot Assist (semi-autonomous driving)"
-    - "City Safety with collision avoidance"
-    - "Heat pump climate control"
-    - "LED headlights"
-    - "Wireless phone charging"
-    - "Keyless entry and start"
-    - "Raised ground clearance"
-    - "Black protective body cladding"
-    - "Unique Cross Country front and rear bumpers"
-    - "All-wheel drive"
+  - 12.3-inch portrait touchscreen
+  - Google built-in (Maps, Assistant, Play Store)
+  - Pilot Assist (semi-autonomous driving)
+  - City Safety with collision avoidance
+  - Heat pump climate control
+  - LED headlights
+  - Wireless phone charging
+  - Keyless entry and start
+  - Raised ground clearance
+  - Black protective body cladding
+  - Unique Cross Country front and rear bumpers
+  - All-wheel drive
   optional:
-    - "Harmon Kardon premium audio (€800)"
-    - "Panoramic sunroof (€1,200)"
-    - "Tow hitch (€900, 1000kg capacity)"
-    - "Plus Pack"
-    - "Ultra Pack with Pilot Assist and advanced safety"
-
-# Version Information
+  - Harmon Kardon premium audio (€800)
+  - Panoramic sunroof (€1,200)
+  - Tow hitch (€900, 1000kg capacity)
+  - Plus Pack
+  - Ultra Pack with Pilot Assist and advanced safety
 version:
-  release_date: "2025-09"
-  changes_from_previous: "New Cross Country variant with raised suspension and rugged styling"
-  notes: "2025 model year, first year for Cross Country variant"
-
-# Metadata
+  release_date: 2025-09
+  changes_from_previous: New Cross Country variant with raised suspension and rugged
+    styling
+  notes: 2025 model year, first year for Cross Country variant
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.topgear.com/car-reviews/volvo/ex30
-    - https://en.wikipedia.org/wiki/Volvo_EX30
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  notes: "2025 model year Cross Country variant, European specification"
+  - https://www.topgear.com/car-reviews/volvo/ex30
+  - https://en.wikipedia.org/wiki/Volvo_EX30
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
+  notes: 2025 model year Cross Country variant, European specification

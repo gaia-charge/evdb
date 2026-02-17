@@ -5,175 +5,143 @@ model_year: 2026
 production_years:
   start: 2021
   end: null
-
 trim_level: standard-range
 market_position: entry
-
-# Battery Specifications
 battery:
   usable_kwh: 58.0
   total_kwh: 63.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 800  # High-voltage architecture
+  chemistry: NMC
+  nominal_voltage_v: 800
   cell_type: pouch
   supplier: SK Innovation / LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, cell-to-pack"
+    configuration: floor-mounted, cell-to-pack
     weight_kg: 385
     modules: 8
-
-# Range
 range:
   wltp_km: 394
   wltp_source: manufacturer
-  
   epa_km: 354
   epa_source: manufacturer
-  
   real_world_km: 340
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 10-20°C, comfort mode"
-
-# Charging
+  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 6.0  # 11kW
+      '0_100': 6.0
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 220
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 41
-    
+      '10_80': 18
+      '0_100': 41
     charging_curve:
-      - soc_percent: 0
-        power_kw: 200
-      - soc_percent: 10
-        power_kw: 220
-      - soc_percent: 20
-        power_kw: 220
-      - soc_percent: 40
-        power_kw: 210
-      - soc_percent: 50
-        power_kw: 175
-      - soc_percent: 60
-        power_kw: 135
-      - soc_percent: 70
-        power_kw: 85
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 22
-      - soc_percent: 100
-        power_kw: 10
-    
-    notes: "Multi-charging system automatically adapts to 400V or 800V stations"
-
+    - soc_percent: 0
+      power_kw: 200
+    - soc_percent: 10
+      power_kw: 220
+    - soc_percent: 20
+      power_kw: 220
+    - soc_percent: 40
+      power_kw: 210
+    - soc_percent: 50
+      power_kw: 175
+    - soc_percent: 60
+      power_kw: 135
+    - soc_percent: 70
+      power_kw: 85
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 22
+    - soc_percent: 100
+      power_kw: 10
+    notes: Multi-charging system automatically adapts to 400V or 800V stations
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.6
-    v2g: false  # Hardware capable, software not enabled
+    v2g: false
     v2h: false
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 220
 motors:
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 125
-    max_torque_nm: 350
-    cooling: liquid
-
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 125
+  max_torque_nm: 350
+  cooling: liquid
 drivetrain:
   type: rwd
   total_power_kw: 125
   total_power_hp: 170
   total_torque_nm: 350
-
 performance:
   acceleration_0_100_kmh_s: 8.5
   top_speed_kmh: 170
   top_speed_limited: true
-
-# Weight & Efficiency
 weight:
   curb_weight_kg: 1950
   gross_vehicle_weight_kg: 2485
   payload_kg: 535
-  towing_capacity_braked_kg: 750  # With braking
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-  
 efficiency:
   wltp_kwh_per_100km: 16.8
   epa_kwh_per_100km: 18.2
   real_world_kwh_per_100km: 17.0
-  
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 19.5
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 22.8
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 19.5
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 22.8
 standard_features:
-  - "12.3-inch dual panoramic displays"
-  - "Highway Driving Assist 2 (HDA2)"
-  - "Vehicle-to-Load (V2L) - 3.6kW"
-  - "Heat pump"
-  - "LED headlights"
-  - "19-inch alloy wheels"
-  - "Universal Island center console"
-  - "Rear parking sensors"
-  - "Wireless phone charging"
-
+- 12.3-inch dual panoramic displays
+- Highway Driving Assist 2 (HDA2)
+- Vehicle-to-Load (V2L) - 3.6kW
+- Heat pump
+- LED headlights
+- 19-inch alloy wheels
+- Universal Island center console
+- Rear parking sensors
+- Wireless phone charging
 optional_packages:
-  - name: "Comfort Package"
-    features:
-      - "Relaxation seats (front)"
-      - "Augmented Reality Head-Up Display"
-      - "Bose Premium Sound (8 speakers)"
-  
-  - name: "Tech Package"
-    features:
-      - "Pixel LED headlights"
-      - "Surround view monitor"
-      - "Smart power tailgate"
-
+- name: Comfort Package
+  features:
+  - Relaxation seats (front)
+  - Augmented Reality Head-Up Display
+  - Bose Premium Sound (8 speakers)
+- name: Tech Package
+  features:
+  - Pixel LED headlights
+  - Surround view monitor
+  - Smart power tailgate
 colors:
   standard:
-    - "Atlas White"
-    - "Phantom Black Pearl"
-    - "Cyber Grey Metallic"
+  - Atlas White
+  - Phantom Black Pearl
+  - Cyber Grey Metallic
   premium:
-    - "Digital Teal Pearl"
-    - "Lucid Blue Pearl"
-    - "Shooting Star Matte"
-
+  - Digital Teal Pearl
+  - Lucid Blue Pearl
+  - Shooting Star Matte
 interior_colors:
-  - "Dark Pebble Grey / Dove Grey"
-  - "Obsidian Black"
-
-# Version Information
+- Dark Pebble Grey / Dove Grey
+- Obsidian Black
 version:
   facelift: false
   major_changes:
-    - "Updated battery management system for 2026"
-    - "Improved thermal management"
-    - "Enhanced software features"
-    - "Refined interior materials"
-
+  - Updated battery management system for 2026
+  - Improved thermal management
+  - Enhanced software features
+  - Refined interior materials
 dimensions:
   length_mm: 4635
   width_mm: 1890
@@ -181,29 +149,25 @@ dimensions:
   height_mm: 1605
   wheelbase_mm: 3000
   ground_clearance_mm: 160
-
 cargo:
   trunk_capacity_liters: 527
   trunk_max_liters: 1587
   frunk_capacity_liters: 57
-
-
-# Market & Pricing Notes
-notes: >
-  The Ioniq 5 Standard Range RWD 2026 is the entry-level variant, offering excellent
+notes: 'The Ioniq 5 Standard Range RWD 2026 is the entry-level variant, offering excellent
   value with the same 800V architecture and ultra-fast charging capability as higher
   trims. The RWD configuration provides better efficiency and sufficient performance
-  for most drivers. The 2026 model year includes refined battery management and
-  software updates for improved user experience. Real-world range is competitive
-  for its class, and the spacious interior with flat floor remains a key advantage.
+  for most drivers. The 2026 model year includes refined battery management and software
+  updates for improved user experience. Real-world range is competitive for its class,
+  and the spacious interior with flat floor remains a key advantage.
 
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   data_source: manufacturer
   measured_by: null
   sources:
-    - https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications
-    - https://www.hyundai.com/us/en/vehicles/ioniq-5/specs
-    - https://ev-database.org/car/1406/Hyundai-IONIQ-5
+  - https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications
+  - https://www.hyundai.com/us/en/vehicles/ioniq-5/specs
+  - https://ev-database.org/car/1406/Hyundai-IONIQ-5

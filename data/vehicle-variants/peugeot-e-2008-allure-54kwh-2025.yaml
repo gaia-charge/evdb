@@ -1,18 +1,14 @@
-# Peugeot e-2008 Allure 54 kWh (2025) - Mid-Range Trim
-
 id: peugeot-e-2008-allure-54kwh-2025
 model_id: peugeot-e-2008
-name: "Allure 54 kWh"
+name: Allure 54 kWh
 model_year: 2025
 trim_level: Allure
 variant_code: null
-
 production:
   start_date: 2024-09-01
   end_date: null
   status: active
   notes: 2025 model year continuation with 54 kWh battery, minor updates
-
 battery:
   type: Lithium-ion
   chemistry: NMC
@@ -26,7 +22,6 @@ battery:
   modules: 18
   voltage_nominal: 400
   notes: Same 54 kWh battery as 2024 model
-
 range:
   wltp_km: 406
   wltp_city_km: 530
@@ -35,47 +30,42 @@ range:
   real_world_avg_km: 340
   real_world_source: estimated
   notes: Unchanged from 2024 model
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 32
     peak_power_notes: 100kW peak maintained briefly, average ~85kW
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 87
-    - percent: 60
-      power_kw: 78
-    - percent: 70
-      power_kw: 62
-    - percent: 80
-      power_kw: 42
-    - percent: 90
-      power_kw: 28
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 87
+  - percent: 60
+    power_kw: 78
+  - percent: 70
+    power_kw: 62
+  - percent: 80
+    power_kw: 42
+  - percent: 90
+    power_kw: 28
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -88,99 +78,93 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 260
-
 performance:
-  acceleration_0_100_kph: 8.7
   top_speed_kph: 150
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_sec: 8.7
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 18.5
   drag_coefficient: 0.32
-
 dimensions:
   length_mm: 4300
   width_mm: 1815
   height_mm: 1550
   wheelbase_mm: 2605
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1467
-
 weight:
   curb_weight_kg: 1555
   gross_vehicle_weight_kg: 1930
   payload_kg: 375
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 620
-
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Torsion beam with coil springs
-
 brakes:
   front: Ventilated disc (280mm)
   rear: Drum
   regenerative: true
-
 tires:
   standard: 205/55 R17
-
 features:
   infotainment:
-    - "Peugeot i-Cockpit with 10.0\" color touchscreen"
-    - "3D digital instrument cluster"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ digital radio"
-    - "6 speakers"
-    - "MyPeugeot mobile app"
-  
+  - Peugeot i-Cockpit with 10.0" color touchscreen
+  - 3D digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ digital radio
+  - 6 speakers
+  - MyPeugeot mobile app
   driver_assistance:
-    - "Active Safety Brake with Pedestrian and Cyclist Detection"
-    - "Lane Keep Assist"
-    - "Traffic Sign Recognition"
-    - "Adaptive cruise control with Stop & Go"
-    - "Rear parking sensors and reversing camera"
-    - "Driver attention alert"
-  
+  - Active Safety Brake with Pedestrian and Cyclist Detection
+  - Lane Keep Assist
+  - Traffic Sign Recognition
+  - Adaptive cruise control with Stop & Go
+  - Rear parking sensors and reversing camera
+  - Driver attention alert
   comfort_convenience:
-    - "Automatic dual-zone climate control"
-    - "Heat pump (standard for 2025)"
-    - "Keyless entry and start"
-    - "One-pedal driving with B-mode"
-    - "Heated front seats"
-    - "Heated steering wheel"
-    - "Electric windows front and rear"
-  
+  - Automatic dual-zone climate control
+  - Heat pump (standard for 2025)
+  - Keyless entry and start
+  - One-pedal driving with B-mode
+  - Heated front seats
+  - Heated steering wheel
+  - Electric windows front and rear
   exterior:
-    - "Full LED headlights"
-    - "17\" alloy wheels"
-    - "Roof rails"
-    - "Body-colored door handles"
-  
+  - Full LED headlights
+  - 17" alloy wheels
+  - Roof rails
+  - Body-colored door handles
   interior:
-    - "Cloth and TEP upholstery"
-    - "405L trunk"
-    - "60/40 split-folding rear seats"
-
+  - Cloth and TEP upholstery
+  - 405L trunk
+  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   source_urls:
-    - https://www.peugeot.de/modelle/e-2008.html
-  notes: |
-    2025 Peugeot e-2008 Allure - model year update. Changes vs 2024:
+  - https://www.peugeot.de/modelle/e-2008.html
+  notes: '2025 Peugeot e-2008 Allure - model year update. Changes vs 2024:
+
     - Upgraded motor from 100kW to 115kW (156hp)
+
     - Slightly improved 0-100 km/h (8.7s vs 9.1s)
+
     - Wireless Apple CarPlay/Android Auto now standard
+
     - Heat pump now standard on Allure trim
+
     - Keyless entry standard on Allure
+
     - Same 54 kWh battery and 100kW DC charging
+
+    '

@@ -1,16 +1,19 @@
-# Vehicle Variant: XPENG G6 Standard Range (2025)
 id: xpeng-g6-standard-range-2025
 model_id: xpeng-g6
 name: Standard Range
 variant_name: Standard Range
 model_year: 2025
 trim_level: Standard Range
-production_years: "2025-present"
+production_years: 2025-present
+overview: 'The XPENG G6 Standard Range is the entry-level variant of the 2025 facelift
+  G6 lineup. Powered by a single rear-mounted permanent magnet synchronous motor producing
+  185kW (252 PS) and 440 Nm of torque, it offers a good balance of performance and
+  efficiency. The 68.5kWh LFP battery provides 455km WLTP range with a consumption
+  of just 17.3 kWh/100km. Despite being the base model, it features 800V architecture
+  supporting DC fast charging up to 382kW for rapid top-ups. Standard equipment includes
+  leather seats, heat pump, LED matrix headlights, and a comprehensive ADAS suite.
 
-overview: >
-  The XPENG G6 Standard Range is the entry-level variant of the 2025 facelift G6 lineup. Powered by a single rear-mounted permanent magnet synchronous motor producing 185kW (252 PS) and 440 Nm of torque, it offers a good balance of performance and efficiency. The 68.5kWh LFP battery provides 455km WLTP range with a consumption of just 17.3 kWh/100km. Despite being the base model, it features 800V architecture supporting DC fast charging up to 382kW for rapid top-ups. Standard equipment includes leather seats, heat pump, LED matrix headlights, and a comprehensive ADAS suite.
-
-# Battery Specifications
+  '
 battery:
   chemistry: LFP
   supplier: CATL
@@ -20,64 +23,58 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
-  notes: "68.5kWh LFP battery from CATL, 800V SiC architecture"
-
-# Range (km)
+  notes: 68.5kWh LFP battery from CATL, 800V SiC architecture
 range:
   wltp_km: 455
   wltp_city_km: null
   wltp_highway_km: null
   epa_miles: null
   real_world_km: 380
-  real_world_notes: "Estimated ~380km mixed driving, higher in city, lower on autobahn"
-
-# Charging
+  real_world_notes: Estimated ~380km mixed driving, higher in city, lower on autobahn
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 438
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 438
+      power_kw: 11.0
   dc:
-    max_power_kw: 382
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 350
-      - soc_percent: 20
-        power_kw: 380
-      - soc_percent: 30
-        power_kw: 370
-      - soc_percent: 40
-        power_kw: 340
-      - soc_percent: 50
-        power_kw: 300
-      - soc_percent: 60
-        power_kw: 250
-      - soc_percent: 70
-        power_kw: 180
-      - soc_percent: 80
-        power_kw: 120
-      - soc_percent: 90
-        power_kw: 60
-      - soc_percent: 100
-        power_kw: 20
+    - soc_percent: 10
+      power_kw: 350
+    - soc_percent: 20
+      power_kw: 380
+    - soc_percent: 30
+      power_kw: 370
+    - soc_percent: 40
+      power_kw: 340
+    - soc_percent: 50
+      power_kw: 300
+    - soc_percent: 60
+      power_kw: 250
+    - soc_percent: 70
+      power_kw: 180
+    - soc_percent: 80
+      power_kw: 120
+    - soc_percent: 90
+      power_kw: 60
+    - soc_percent: 100
+      power_kw: 20
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 12
-        power_kw: 382
-        notes: "10-80% in approximately 12 minutes at optimal conditions"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 12
+      power_kw: 382
+      notes: 10-80% in approximately 12 minutes at optimal conditions
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
-# Motors & Performance
+  ac_max_kw: 11.0
+  dc_max_kw: 382
 motors:
   configuration: single
   drive_type: RWD
@@ -86,24 +83,20 @@ motors:
   total_torque_nm: 440
   motor_type: permanent_magnet
   motors:
-    - position: rear
-      power_kw: 185
-      power_hp: 252
-      torque_nm: 440
-      motor_type: permanent_magnet
-
+  - position: rear
+    power_kw: 185
+    power_hp: 252
+    torque_nm: 440
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 6.9
   top_speed_kmh: 202
-  notes: "0-100 km/h in 6.9 seconds, top speed 202 km/h"
-
-# Efficiency
+  notes: 0-100 km/h in 6.9 seconds, top speed 202 km/h
 efficiency:
   consumption_wltp_kwh_per_100km: 17.3
   consumption_real_world_kwh_per_100km: 19.0
   efficiency_rating_eu: A
-  notes: "17.3 kWh/100km WLTP combined, CO2 efficiency class A"
-
+  notes: 17.3 kWh/100km WLTP combined, CO2 efficiency class A
 dimensions:
   length_mm: 4753
   width_mm: 1920
@@ -111,56 +104,47 @@ dimensions:
   height_mm: 1650
   wheelbase_mm: 2890
   ground_clearance_mm: 165
-
 cargo:
   trunk_capacity_liters: 571
   trunk_max_liters: 1374
   frunk_capacity_liters: 71
-
-
-# Weight
 weight:
   curb_weight_kg: 2065
   gross_vehicle_weight_kg: 2535
   payload_kg: 470
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
-# Features
 features:
   standard:
-    - "14.96-inch center touchscreen with Xmart OS"
-    - "10.25-inch digital instrument cluster"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ digital radio"
-    - "LED matrix headlights"
-    - "Panoramic sunroof"
-    - "Heat pump climate control"
-    - "Wireless phone charger"
-    - "360-degree camera system"
-    - "XPILOT ASSIST (adaptive cruise + lane centering)"
-    - "Automatic parking assist"
-    - "Leather upholstery"
-    - "Powered tailgate"
-    - "V2L bidirectional charging"
-    - "18-inch alloy wheels"
+  - 14.96-inch center touchscreen with Xmart OS
+  - 10.25-inch digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ digital radio
+  - LED matrix headlights
+  - Panoramic sunroof
+  - Heat pump climate control
+  - Wireless phone charger
+  - 360-degree camera system
+  - XPILOT ASSIST (adaptive cruise + lane centering)
+  - Automatic parking assist
+  - Leather upholstery
+  - Powered tailgate
+  - V2L bidirectional charging
+  - 18-inch alloy wheels
   optional:
-    - "Metallic paint (€800)"
-    - "Towbar electrically retractable (€1,190)"
-
-# Version Information
+  - Metallic paint (€800)
+  - Towbar electrically retractable (€1,190)
 version:
-  release_date: "2025-12"
-  changes_from_previous: "2025 facelift with LFP battery, 800V architecture, updated design"
-  notes: "2025 model year facelift (F30), European specification"
-
-# Metadata
+  release_date: 2025-12
+  changes_from_previous: 2025 facelift with LFP battery, 800V architecture, updated
+    design
+  notes: 2025 model year facelift (F30), European specification
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.xpeng.com/de/g6
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/xpeng/g6/1generation-facelift/347717/
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  notes: "European specification, 2025 facelift, Standard Range variant"
+  - https://www.xpeng.com/de/g6
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/xpeng/g6/1generation-facelift/347717/
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
+  notes: European specification, 2025 facelift, Standard Range variant

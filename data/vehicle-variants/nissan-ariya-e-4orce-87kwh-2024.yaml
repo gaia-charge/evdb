@@ -1,184 +1,158 @@
-# Nissan Ariya e-4ORCE 87kWh (2024)
-# https://www.nissan.com/ariya/
-
 id: nissan-ariya-e-4orce-87kwh-2024
 model_id: nissan-ariya
 name: e-4ORCE 87kWh
 full_name: Nissan Ariya e-4ORCE 87kWh
 model_year: 2024
-trim_level: Evolve+  # Top trim with e-4ORCE AWD
-
-variant_code: null  # Nissan doesn't use public variant codes
-
-# Battery
+trim_level: Evolve+
+variant_code: null
 battery:
   usable_kwh: 87.0
-  total_kwh: 91.0  # Estimated
-  chemistry: NMC  # Nickel Manganese Cobalt
-  cell_type: pouch  # Envision AESC pouch cells
+  total_kwh: 91.0
+  chemistry: NMC
+  cell_type: pouch
   manufacturer: Envision AESC
   warranty_years: 8
   warranty_km: 160000
-  warranty_capacity_percent: 70  # 70% capacity guarantee
-
-# Range
+  warranty_capacity_percent: 70
 range:
-  wltp_km: 490  # WLTP combined
-  wltp_city_km: 600  # WLTP city
-  wltp_highway_km: 420  # WLTP highway
-  epa_miles: null  # Not EPA rated in same config
-  real_world_km: 430  # Real-world mixed driving
+  wltp_km: 490
+  wltp_city_km: 600
+  wltp_highway_km: 420
+  epa_miles: null
+  real_world_km: 430
   conditions:
     temperature_c: 20
     driving_style: mixed
-    climate_control: on
-
-# Charging
+    climate_control: true
 charging:
   ac:
-    max_power_kw: 22  # 3-phase AC
     connector: Type2
     onboard_charger_kw: 22
-    charge_time_0_100_hours: 9.0  # 22kW charger (9h)
+    charge_time_0_100_hours: 9.0
   dc:
-    max_power_kw: 130  # CCS fast charging
     connector: CCS2
-    charge_time_10_80_percent_min: 45  # 10-80% in 45 min
-    charge_time_20_80_percent_min: 35  # 20-80% in 35 min
-  
-  charge_curve:  # DC fast charging curve
-    - soc_percent: 10
-      power_kw: 125
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 130
-    - soc_percent: 40
-      power_kw: 130
-    - soc_percent: 50
-      power_kw: 125
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 60
-    - soc_percent: 90
-      power_kw: 35
-    - soc_percent: 100
-      power_kw: 15
-
+    charge_time_10_80_percent_min: 45
+    charge_time_20_80_percent_min: 35
+  charge_curve:
+  - soc_percent: 10
+    power_kw: 125
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 130
+  - soc_percent: 40
+    power_kw: 130
+  - soc_percent: 50
+    power_kw: 125
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 85
+  - soc_percent: 80
+    power_kw: 60
+  - soc_percent: 90
+    power_kw: 35
+  - soc_percent: 100
+    power_kw: 15
   bidirectional:
-    v2l: true  # Vehicle-to-Load (1.5kW)
-    v2h: true  # Vehicle-to-Home (6kW via CHAdeMO)
-    v2g: true  # Vehicle-to-Grid (CHAdeMO only)
-    power_kw: 6.0  # V2H/V2G via CHAdeMO
-    notes: >
-      V2X requires CHAdeMO adapter. Nissan pioneered V2X with the LEAF in 2010.
+    v2l: true
+    v2h: true
+    v2g: true
+    power_kw: 6.0
+    notes: 'V2X requires CHAdeMO adapter. Nissan pioneered V2X with the LEAF in 2010.
       CCS2 does not support bidirectional charging on Ariya.
 
-# Motors & Performance
+      '
+  ac_max_kw: 22
+  dc_max_kw: 130
 motors:
-  count: 2  # Dual motor AWD
-  type: permanent_magnet_synchronous  # Front + rear PM motors
+  count: 2
+  type: permanent_magnet_synchronous
   configuration:
-    - position: front
-      power_kw: 160  # Front motor
-      torque_nm: null
-    - position: rear
-      power_kw: 150  # Rear motor
-      torque_nm: null
-  total_power_kw: 290  # Combined 290kW (394hp)
+  - position: front
+    power_kw: 160
+    torque_nm: null
+  - position: rear
+    power_kw: 150
+    torque_nm: null
+  total_power_kw: 290
   total_power_hp: 394
-  total_torque_nm: 600  # Combined torque
-
-drive_type: AWD  # e-4ORCE all-wheel drive
-
+  total_torque_nm: 600
+drive_type: AWD
 performance:
-  acceleration_0_100_kmh_s: 5.7  # 0-100 km/h
-  top_speed_kmh: 200  # Electronically limited
-  notes: >
-    e-4ORCE all-wheel drive provides excellent traction and stability.
-    Twin motor setup with electronic torque vectoring.
+  acceleration_0_100_kmh_s: 5.7
+  top_speed_kmh: 200
+  notes: 'e-4ORCE all-wheel drive provides excellent traction and stability. Twin
+    motor setup with electronic torque vectoring.
 
+    '
 dimensions:
   length_mm: 4595
   width_mm: 1850
   height_mm: 1660
   wheelbase_mm: 2775
   ground_clearance_mm: 185
-
 cargo:
   trunk_capacity_liters: 468
   trunk_max_liters: 1490
   frunk_capacity_liters: 0
-
-# Weight & Efficiency
 weight:
-  curb_weight_kg: 2235  # e-4ORCE 87kWh
+  curb_weight_kg: 2235
   gross_vehicle_weight_kg: 2685
   payload_kg: 450
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
 efficiency:
-  wltp_kwh_per_100km: 19.7  # WLTP combined consumption
-  real_world_kwh_per_100km: 21.5  # Real-world consumption
-  eu_energy_efficiency_class: B  # EU label
-
-# Options & Features
+  wltp_kwh_per_100km: 19.7
+  real_world_kwh_per_100km: 21.5
+  eu_energy_efficiency_class: B
 standard_equipment:
-  - ProPILOT Assist 2.0 (hands-off highway driving)
-  - e-Pedal Step (one-pedal driving)
-  - Dual 12.3" displays (digital cockpit + touchscreen)
-  - NissanConnect with OTA updates
-  - Apple CarPlay & Android Auto (wireless)
-  - Panoramic glass roof
-  - LED headlights with adaptive beam
-  - Heat pump climate control
-  - 360-degree camera
-  - ProPILOT Park (hands-free parking)
-  - Zero Gravity seats
-  - Bose Premium Audio (12 speakers)
-
+- ProPILOT Assist 2.0 (hands-off highway driving)
+- e-Pedal Step (one-pedal driving)
+- Dual 12.3" displays (digital cockpit + touchscreen)
+- NissanConnect with OTA updates
+- Apple CarPlay & Android Auto (wireless)
+- Panoramic glass roof
+- LED headlights with adaptive beam
+- Heat pump climate control
+- 360-degree camera
+- ProPILOT Park (hands-free parking)
+- Zero Gravity seats
+- Bose Premium Audio (12 speakers)
 optional_equipment:
-  - name: Two-tone paint
-    category: appearance
-  - name: 20" alloy wheels
-    category: appearance
-  - name: ProPILOT Assist 2.0 with Navi-link
-    category: technology
-    included_in_base: true
-
-colors_available: 10  # 10 exterior colors including two-tone options
-
-# Version & Metadata
+- name: Two-tone paint
+  category: appearance
+- name: 20" alloy wheels
+  category: appearance
+- name: ProPILOT Assist 2.0 with Navi-link
+  category: technology
+  included_in_base: true
+colors_available: 10
 version:
   release_date: 2024-01
   end_date: null
-  changes_from_previous: >
-    2024 model year updates: Improved DC fast charging (130kW vs 125kW MY2023),
-    enhanced ProPILOT Assist 2.0, updated NissanConnect software.
+  changes_from_previous: '2024 model year updates: Improved DC fast charging (130kW
+    vs 125kW MY2023), enhanced ProPILOT Assist 2.0, updated NissanConnect software.
 
+    '
 production:
   plant: Tochigi, Japan
-  also_produced_in: 
-    - Sunderland, UK (planned 2024)
-
+  also_produced_in:
+  - Sunderland, UK (planned 2024)
 price_indication:
   currency: EUR
-  base_price_estimate: 60000  # €60,000 estimated base (Germany)
-
+  base_price_estimate: 60000
 metadata:
   sources:
-    - https://www.nissan.com/ariya/
-    - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
-    - https://ev-database.org/car/1395/Nissan-Ariya-87kWh
-    - https://www.whatcar.com/nissan/ariya/estate/review
+  - https://www.nissan.com/ariya/
+  - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
+  - https://ev-database.org/car/1395/Nissan-Ariya-87kWh
+  - https://www.whatcar.com/nissan/ariya/estate/review
   data_quality: verified
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
-  notes: >
-    Specifications based on European (WLTP) testing. The e-4ORCE AWD system provides
-    excellent all-weather capability and dynamic handling. Nissan's longest-range EV
-    after the LEAF Plus. CMF-EV platform provides class-leading interior space.
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
+  notes: 'Specifications based on European (WLTP) testing. The e-4ORCE AWD system
+    provides excellent all-weather capability and dynamic handling. Nissan''s longest-range
+    EV after the LEAF Plus. CMF-EV platform provides class-leading interior space.
+
+    '

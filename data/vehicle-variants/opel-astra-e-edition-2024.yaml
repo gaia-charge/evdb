@@ -1,23 +1,19 @@
-# Opel Astra Electric Edition (2024) - Base Trim with Comprehensive Equipment
-
 id: opel-astra-e-edition-2024
 model_id: opel-astra-e
-name: "Edition"
+name: Edition
 model_year: 2024
-trim_level: Edition  # Base trim with comprehensive standard equipment
+trim_level: Edition
 variant_code: null
-
 production:
   start_date: 2023-06-01
   end_date: null
   status: active
   notes: First year of Astra Electric production, platform sibling to Peugeot e-308
-
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 54.0
-  usable_kwh: 51.0  # ~94% usable
+  usable_kwh: 51.0
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
@@ -26,58 +22,52 @@ battery:
   modules: 24
   voltage_nominal: 400
   notes: Same battery platform as Peugeot e-308 on EMP2 platform
-
 range:
   wltp_km: 418
   wltp_city_km: 550
   wltp_highway_km: 340
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 340
   real_world_source: ADAC EcoTest 2024
   notes: Heat pump standard improves winter range by ~15% vs non-heat pump EVs
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard (7.4kW optional for lower cost)
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 100kW peak maintained up to ~50%, then tapers
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 90
-    - percent: 60
-      power_kw: 80
-    - percent: 70
-      power_kw: 65
-    - percent: 80
-      power_kw: 45
-    - percent: 90
-      power_kw: 28
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 90
+  - percent: 60
+    power_kw: 80
+  - percent: 70
+    power_kw: 65
+  - percent: 80
+    power_kw: 45
+  - percent: 90
+    power_kw: 28
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
-  configuration: single_front  # Front-wheel drive (FWD)
+  configuration: single_front
   front:
     type: permanent_magnet
     power_kw: 115
@@ -88,7 +78,6 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 270
-
 dimensions:
   length_mm: 4374
   width_mm: 1860
@@ -96,113 +85,95 @@ dimensions:
   height_mm: 1442
   wheelbase_mm: 2675
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 352
   trunk_max_liters: 1268
   frunk_capacity_liters: 0
-
 performance:
-  acceleration_0_100_kph: 9.0
   acceleration_0_60_mph: null
-  top_speed_kph: 170  # Electronically limited
+  top_speed_kph: 170
   quarter_mile_seconds: null
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 270
+  acceleration_0_100_sec: 9.0
 efficiency:
   wltp_kwh_per_100km: 15.4
   wltp_wh_per_km: 154
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.5
   mpge_combined: null
-  drag_coefficient: 0.26  # Excellent for compact hatchback
-
+  drag_coefficient: 0.26
 weight:
   curb_weight_kg: 1620
   gross_vehicle_weight_kg: 2070
   payload_kg: 450
-  weight_distribution_front_percent: 58  # FWD with front battery placement
+  weight_distribution_front_percent: 58
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Multi-link independent suspension
-
 brakes:
   front: Ventilated disc
   rear: Solid disc
   regenerative: true
-
 tires:
   standard: 205/55 R17
-
 features:
   infotainment:
-    - "Pure Panel - dual 10\" digital displays (driver display + infotainment)"
-    - "Apple CarPlay and Android Auto (wireless)"
-    - "DAB+ digital radio"
-    - "6 speakers"
-    - "MyOpel mobile app for remote control and charging management"
-    - "Opel Connect with emergency call and vehicle diagnostics"
-  
+  - Pure Panel - dual 10" digital displays (driver display + infotainment)
+  - Apple CarPlay and Android Auto (wireless)
+  - DAB+ digital radio
+  - 6 speakers
+  - MyOpel mobile app for remote control and charging management
+  - Opel Connect with emergency call and vehicle diagnostics
   driver_assistance:
-    - "Forward Collision Alert with Automatic Emergency Braking"
-    - "Lane Keep Assist with Lane Departure Warning"
-    - "Traffic Sign Recognition with speed limit display"
-    - "Adaptive cruise control with stop & go"
-    - "Driver drowsiness alert"
-    - "Rear parking sensors and reversing camera"
-    - "Blind spot monitoring"
-  
+  - Forward Collision Alert with Automatic Emergency Braking
+  - Lane Keep Assist with Lane Departure Warning
+  - Traffic Sign Recognition with speed limit display
+  - Adaptive cruise control with stop & go
+  - Driver drowsiness alert
+  - Rear parking sensors and reversing camera
+  - Blind spot monitoring
   comfort_convenience:
-    - "Automatic climate control (dual-zone)"
-    - "Heat pump STANDARD (improves winter range)"
-    - "One-pedal driving with B-mode regenerative braking"
-    - "Keyless entry and start"
-    - "Electric windows front and rear"
-    - "Electric and heated mirrors"
-    - "Rain-sensing wipers"
-    - "Auto-dimming rearview mirror"
-  
+  - Automatic climate control (dual-zone)
+  - Heat pump STANDARD (improves winter range)
+  - One-pedal driving with B-mode regenerative braking
+  - Keyless entry and start
+  - Electric windows front and rear
+  - Electric and heated mirrors
+  - Rain-sensing wipers
+  - Auto-dimming rearview mirror
   exterior:
-    - "Full LED headlights"
-    - "LED daytime running lights"
-    - "17\" alloy wheels"
-    - "Body-colored door handles and mirrors"
-    - "Shark fin antenna"
-  
+  - Full LED headlights
+  - LED daytime running lights
+  - 17" alloy wheels
+  - Body-colored door handles and mirrors
+  - Shark fin antenna
   interior:
-    - "Ergonomic seats with lumbar support"
-    - "Leather-wrapped steering wheel and gear selector"
-    - "352L trunk (slightly reduced vs ICE due to battery)"
-    - "60/40 split-folding rear seats"
-
+  - Ergonomic seats with lumbar support
+  - Leather-wrapped steering wheel and gear selector
+  - 352L trunk (slightly reduced vs ICE due to battery)
+  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   source_urls:
-    - https://www.opel.com/modelle/astra/astra-electric.html
-    - https://www.adac.de/
-    - https://ev-database.org/
-  notes: |
-    The Opel Astra Electric Edition is the base trim of Europe's 2023 Car of the Year in 
-    electric form. Despite being the "base" model, it comes remarkably well-equipped with 
-    the Pure Panel dual displays, adaptive cruise control, and heat pump as standard.
-    
-    Platform sibling to Peugeot e-308 with identical powertrain but Opel's characteristic
-    German-engineered practicality and comprehensive standard equipment.
-    
-    Key advantages over competitors:
-    - Heat pump STANDARD (reduces winter range loss by ~15%)
-    - 100kW DC fast charging (10-80% in 30 minutes)
-    - Dual 10\" Pure Panel displays standard
-    - Adaptive cruise control standard
-    - 1000kg towing capacity (rare in this segment)
-    
-    Edition trim qualifies for German company car tax reduction (0.25% under €70,000).
+  - https://www.opel.com/modelle/astra/astra-electric.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  notes: "The Opel Astra Electric Edition is the base trim of Europe's 2023 Car of\
+    \ the Year in \nelectric form. Despite being the \"base\" model, it comes remarkably\
+    \ well-equipped with \nthe Pure Panel dual displays, adaptive cruise control,\
+    \ and heat pump as standard.\n\nPlatform sibling to Peugeot e-308 with identical\
+    \ powertrain but Opel's characteristic\nGerman-engineered practicality and comprehensive\
+    \ standard equipment.\n\nKey advantages over competitors:\n- Heat pump STANDARD\
+    \ (reduces winter range loss by ~15%)\n- 100kW DC fast charging (10-80% in 30\
+    \ minutes)\n- Dual 10\\\" Pure Panel displays standard\n- Adaptive cruise control\
+    \ standard\n- 1000kg towing capacity (rare in this segment)\n\nEdition trim qualifies\
+    \ for German company car tax reduction (0.25% under €70,000).\n"

@@ -8,7 +8,6 @@ trim_level: Tekna
 production_start: '2019-01-01'
 production_end: null
 status: current
-
 battery:
   usable_kwh: 62.0
   total_kwh: 65.0
@@ -23,7 +22,6 @@ battery:
   preconditioning: false
   supplier: Envision AESC
   pack_weight_kg: 410
-
 motors:
   front:
     type: permanent magnet
@@ -35,12 +33,10 @@ motors:
     total_power_kw: 160
     total_torque_nm: 340
     drivetrain: fwd
-
 performance:
   acceleration_0_100_kmh_s: 6.9
   top_speed_kmh: 157
   acceleration_80_120_kmh_s: 4.8
-
 range:
   wltp_km: 385
   wltp_city_km: 450
@@ -50,22 +46,18 @@ range:
   real_world_city_km: 390
   epa_combined_km: null
   winter_range_km: 240
-
 efficiency:
   wltp_consumption_kwh_per_100km: 16.1
   real_world_consumption_kwh_per_100km: 19.4
   epa_combined_kwh_per_100km: null
   energy_efficiency_class: A+
-
 charging:
   ac:
-    max_power_kw: 6.6
     phases: 1
     connector_type: Type 2
     charge_time_0_100_percent_hours: 11.5
     onboard_charger_efficiency_percent: 90
   dc:
-    max_power_kw: 100
     connector_type: CHAdeMO
     charge_time_10_80_percent_minutes: 45
     charge_time_20_80_percent_minutes: 40
@@ -76,7 +68,8 @@ charging:
     v2h_capable: true
     v2l_capable: false
     max_discharge_power_kw: 6.0
-
+  ac_max_kw: 6.6
+  dc_max_kw: 100
 dimensions:
   length_mm: 4480
   width_mm: 1790
@@ -92,38 +85,35 @@ dimensions:
   trunk_max_liters: 1176
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1176
   frunk_capacity_liters: 0
-
 features:
   standard:
-    - e-Pedal one-pedal driving system
-    - ProPILOT Assist (Nissan's advanced driver assistance)
-    - Around View Monitor 360° camera
-    - Bose premium audio system (8 speakers)
-    - LED headlights with automatic high beam
-    - Dual-zone automatic climate control
-    - Heated front seats and heated steering wheel
-    - Nissan Connect Services with remote monitoring
-    - 8" touchscreen infotainment
-    - Digital instrument cluster
-    - Keyless entry and push-button start
-    - Automatic emergency braking
-    - Lane departure warning and lane keep assist
-    - Blind spot warning
-    - Rear cross traffic alert
-    - Traffic sign recognition
-    - Intelligent cruise control
-    - 7 airbags
+  - e-Pedal one-pedal driving system
+  - ProPILOT Assist (Nissan's advanced driver assistance)
+  - Around View Monitor 360° camera
+  - Bose premium audio system (8 speakers)
+  - LED headlights with automatic high beam
+  - Dual-zone automatic climate control
+  - Heated front seats and heated steering wheel
+  - Nissan Connect Services with remote monitoring
+  - 8" touchscreen infotainment
+  - Digital instrument cluster
+  - Keyless entry and push-button start
+  - Automatic emergency braking
+  - Lane departure warning and lane keep assist
+  - Blind spot warning
+  - Rear cross traffic alert
+  - Traffic sign recognition
+  - Intelligent cruise control
+  - 7 airbags
   optional:
-    - ProPILOT Park (automated parking)
-    - Leather seats (Tekna standard)
-    - Sunroof
-    - Winter package (heated rear seats)
-
+  - ProPILOT Park (automated parking)
+  - Leather seats (Tekna standard)
+  - Sunroof
+  - Winter package (heated rear seats)
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2018
@@ -133,40 +123,32 @@ safety:
   euro_ncap_safety_assist_percent: 77
   airbags: 7
   adas_level: 2
-
 price_estimate_eur: 43990
-
-notes: |
-  Nissan Leaf e+ 62kWh is the longer-range version of the world's best-selling electric vehicle.
-  Features larger 62 kWh battery (vs 40 kWh base) delivering 385km WLTP range (115km more than base).
-  More powerful 160kW (217hp) motor vs 110kW base variant provides sporty 6.9s 0-100 km/h acceleration.
-  
-  Main limitations remain: CHAdeMO charging only (not CCS2 standard), limiting fast charging availability
-  in Europe (only ~10% of DC fast chargers vs 90%+ CCS2). Passive air cooling can lead to faster battery
-  degradation in hot climates compared to actively-cooled rivals.
-  
-  e+ only available in top Tekna trim with comprehensive standard equipment including ProPILOT Assist,
-  360° camera, Bose audio, leather seats, LED headlights.
-  
-  Strengths: Proven reliability (650,000+ LEAFs sold globally since 2010), extensive dealer network
-  (650+ in Germany), V2G/V2H bidirectional charging, comfortable e-Pedal one-pedal driving,
-  8-year/160,000km battery warranty, 385km WLTP range adequate for most use cases.
-  
-  Target buyers: Families needing more range than 40kWh variant, long-time Leaf enthusiasts upgrading,
-  company car drivers (0.25% tax benefit), those prioritizing proven EV technology over cutting-edge specs,
-  home charging users where CHAdeMO limitation less critical.
-  
-  Built in Sunderland, UK (Europe) and Oppama, Japan. Second-generation facelift (2019+) features
-  improved aerodynamics, updated front design, enhanced ProPILOT system.
-  
-  Real-world range: 320km mixed driving adequate for daily use and weekend trips, 270km highway at 130 km/h,
-  390km city driving, 240km winter conditions (no heat pump, 25% range loss typical).
-  
-  Competes with VW ID.3 Pro (€39,995, 172km more range, CCS2), Hyundai Kona Electric Long Range
-  (€42,990, 129km more range, CCS2), Kia Niro EV (€43,990, 75km more range, CCS2, 800V), 
-  Renault Megane E-Tech EV60 (€43,000, 65km more range, CCS2), MG4 Extended Range (€35,990, 
-  65km more range, CCS2, €8k cheaper).
-
+notes: "Nissan Leaf e+ 62kWh is the longer-range version of the world's best-selling\
+  \ electric vehicle.\nFeatures larger 62 kWh battery (vs 40 kWh base) delivering\
+  \ 385km WLTP range (115km more than base).\nMore powerful 160kW (217hp) motor vs\
+  \ 110kW base variant provides sporty 6.9s 0-100 km/h acceleration.\n\nMain limitations\
+  \ remain: CHAdeMO charging only (not CCS2 standard), limiting fast charging availability\n\
+  in Europe (only ~10% of DC fast chargers vs 90%+ CCS2). Passive air cooling can\
+  \ lead to faster battery\ndegradation in hot climates compared to actively-cooled\
+  \ rivals.\n\ne+ only available in top Tekna trim with comprehensive standard equipment\
+  \ including ProPILOT Assist,\n360° camera, Bose audio, leather seats, LED headlights.\n\
+  \nStrengths: Proven reliability (650,000+ LEAFs sold globally since 2010), extensive\
+  \ dealer network\n(650+ in Germany), V2G/V2H bidirectional charging, comfortable\
+  \ e-Pedal one-pedal driving,\n8-year/160,000km battery warranty, 385km WLTP range\
+  \ adequate for most use cases.\n\nTarget buyers: Families needing more range than\
+  \ 40kWh variant, long-time Leaf enthusiasts upgrading,\ncompany car drivers (0.25%\
+  \ tax benefit), those prioritizing proven EV technology over cutting-edge specs,\n\
+  home charging users where CHAdeMO limitation less critical.\n\nBuilt in Sunderland,\
+  \ UK (Europe) and Oppama, Japan. Second-generation facelift (2019+) features\nimproved\
+  \ aerodynamics, updated front design, enhanced ProPILOT system.\n\nReal-world range:\
+  \ 320km mixed driving adequate for daily use and weekend trips, 270km highway at\
+  \ 130 km/h,\n390km city driving, 240km winter conditions (no heat pump, 25% range\
+  \ loss typical).\n\nCompetes with VW ID.3 Pro (€39,995, 172km more range, CCS2),\
+  \ Hyundai Kona Electric Long Range\n(€42,990, 129km more range, CCS2), Kia Niro\
+  \ EV (€43,990, 75km more range, CCS2, 800V), \nRenault Megane E-Tech EV60 (€43,000,\
+  \ 65km more range, CCS2), MG4 Extended Range (€35,990, \n65km more range, CCS2,\
+  \ €8k cheaper).\n"
 data_source: nissan.de
 confidence_level: verified
 last_updated: '2026-02-08'

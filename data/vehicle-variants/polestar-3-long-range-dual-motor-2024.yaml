@@ -1,6 +1,3 @@
-# Polestar 3 Long Range Dual Motor (2024 Model Year)
-# Premium AWD luxury SUV with 111kWh battery
-
 id: polestar-3-long-range-dual-motor-2024
 name: Long Range Dual Motor
 model_id: polestar-3
@@ -10,167 +7,134 @@ production_years:
   end: null
 trim_level: long-range
 market_position: mainstream
-
-description: |
-  The Long Range Dual Motor is the mainstream variant of the Polestar 3, featuring 
-  all-wheel drive with dual electric motors and a large 111kWh battery pack providing 
-  up to 610km WLTP range.
-  
-  This variant combines luxury SUV comfort with strong performance (0-100 km/h in 5.0s) 
-  and practical range for long-distance travel. Standard features include air suspension, 
-  LiDAR sensors for advanced driver assistance, Bowers & Wilkins audio, and Google 
-  Automotive Services.
-  
-  The dual-motor AWD system provides excellent traction in all conditions, while the 
-  air suspension ensures a comfortable ride. Fast charging at up to 250kW allows 
-  10-80% charging in approximately 30 minutes.
-
+description: "The Long Range Dual Motor is the mainstream variant of the Polestar\
+  \ 3, featuring \nall-wheel drive with dual electric motors and a large 111kWh battery\
+  \ pack providing \nup to 610km WLTP range.\n\nThis variant combines luxury SUV comfort\
+  \ with strong performance (0-100 km/h in 5.0s) \nand practical range for long-distance\
+  \ travel. Standard features include air suspension, \nLiDAR sensors for advanced\
+  \ driver assistance, Bowers & Wilkins audio, and Google \nAutomotive Services.\n\
+  \nThe dual-motor AWD system provides excellent traction in all conditions, while\
+  \ the \nair suspension ensures a comfortable ride. Fast charging at up to 250kW\
+  \ allows \n10-80% charging in approximately 30 minutes.\n"
 production_status: active
-
-# Battery Specifications
 battery:
   usable_kwh: 107.0
   total_kwh: 111.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400  # 400V architecture
+  chemistry: NMC
+  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL  # Contemporary Amperex Technology Co. Limited
+  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted"
+    configuration: floor-mounted
     weight_kg: 650
     modules: 24
     cells: null
-
-# Range
 range:
   wltp_km: 610
   wltp_source: manufacturer
-  
   real_world_km: 520
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 21-inch wheels"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, normal mode, 21-inch wheels
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 10.0
-      "20_80": 6.5
+      '0_100': 10.0
+      '20_80': 6.5
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 250
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 30
-      "0_100": 50
-    
+      '10_80': 30
+      '0_100': 50
     charging_curve:
-      - soc_percent: 0
-        power_kw: 200
-      - soc_percent: 10
-        power_kw: 250
-      - soc_percent: 20
-        power_kw: 250
-      - soc_percent: 30
-        power_kw: 245
-      - soc_percent: 40
-        power_kw: 230
-      - soc_percent: 50
-        power_kw: 200
-      - soc_percent: 60
-        power_kw: 165
-      - soc_percent: 70
-        power_kw: 120
-      - soc_percent: 80
-        power_kw: 70
-      - soc_percent: 90
-        power_kw: 35
-      - soc_percent: 100
-        power_kw: 15
-
-# Bidirectional Charging
+    - soc_percent: 0
+      power_kw: 200
+    - soc_percent: 10
+      power_kw: 250
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 245
+    - soc_percent: 40
+      power_kw: 230
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 165
+    - soc_percent: 70
+      power_kw: 120
+    - soc_percent: 80
+      power_kw: 70
+    - soc_percent: 90
+      power_kw: 35
+    - soc_percent: 100
+      power_kw: 15
+  ac_max_kw: 11
+  dc_max_kw: 250
 bidirectional_charging:
   v2l: false
   v2h: false
   v2g: false
-
-# Motors & Drivetrain
 motors:
   configuration: dual-motor
   drive_type: AWD
-  
   front:
     type: permanent-magnet
     power_kw: 180
     power_hp: 245
     torque_nm: 400
-  
   rear:
     type: permanent-magnet
     power_kw: 180
     power_hp: 245
     torque_nm: 400
-  
   combined:
     power_kw: 360
     power_hp: 489
     torque_nm: 840
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 5.0
   top_speed_kmh: 210
-  
-# Efficiency
+  total_power_kw: 360
+  total_power_hp: 489
+  total_torque_nm: 840
 efficiency:
   consumption_wltp_kwh_100km: 17.5
   consumption_real_world_kwh_100km: 20.6
   energy_label: C
-
-# Weight & Dimensions
 dimensions:
   length_mm: 4900
   width_mm: 1968
   height_mm: 1614
   wheelbase_mm: 2985
   ground_clearance_mm: 178
-
 weight:
   curb_weight_kg: 2584
   gross_vehicle_weight_kg: 3080
   payload_kg: 496
   towing_capacity_braked_kg: 2200
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 484
   trunk_max_liters: 1411
   frunk_capacity_liters: 32
-
-# Data quality metadata
 metadata:
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   data_quality: verified
-  
   sources:
-    - https://www.polestar.com/global/polestar-3/specifications/
-    - https://www.polestar.com/se/news/polestar-3-pricing-and-specifications/
-    - https://ev-database.org/car/2057/Polestar-3-Long-Range-Dual-Motor
-  
+  - https://www.polestar.com/global/polestar-3/specifications/
+  - https://www.polestar.com/se/news/polestar-3-pricing-and-specifications/
+  - https://ev-database.org/car/2057/Polestar-3-Long-Range-Dual-Motor
   verified_by: official
-  
-  notes: |
-    First SUV from Polestar with 111kWh battery providing 610km WLTP range. Features 
-    air suspension, LiDAR sensors, Bowers & Wilkins audio. Fast DC charging at 250kW 
-    (10-80% in 30 minutes). Strong performance (489hp, 5.0s 0-100) with luxury comfort.
+  notes: "First SUV from Polestar with 111kWh battery providing 610km WLTP range.\
+    \ Features \nair suspension, LiDAR sensors, Bowers & Wilkins audio. Fast DC charging\
+    \ at 250kW \n(10-80% in 30 minutes). Strong performance (489hp, 5.0s 0-100) with\
+    \ luxury comfort.\n"

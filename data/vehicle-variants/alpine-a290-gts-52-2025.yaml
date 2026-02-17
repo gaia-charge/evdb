@@ -1,94 +1,87 @@
-# Vehicle Variant: Alpine A290 GTS 52 (2025)
 id: alpine-a290-gts-52-2025
 model_id: alpine-a290
 name: GTS 52
 variant_name: GTS 52
 model_year: 2025
 trim_level: GTS
-production_years: "2024-present"
+production_years: 2024-present
+overview: 'The Alpine A290 GTS is the top-performance variant of Alpine''s electric
+  hot hatch, featuring a more powerful 160kW (220hp) front motor that delivers a 6.4s
+  0-100 km/h time. The GTS adds Brembo front brakes, Sabelt bucket seats, a Torsen
+  limited-slip differential, and launch control. It shares the 52kWh battery with
+  the GT but trades some range for enhanced performance. The GTS is designed for driving
+  enthusiasts who want the most dynamic Alpine A290 experience.
 
-overview: >
-  The Alpine A290 GTS is the top-performance variant of Alpine's electric hot hatch, featuring a more
-  powerful 160kW (220hp) front motor that delivers a 6.4s 0-100 km/h time. The GTS adds Brembo front
-  brakes, Sabelt bucket seats, a Torsen limited-slip differential, and launch control. It shares the
-  52kWh battery with the GT but trades some range for enhanced performance. The GTS is designed for
-  driving enthusiasts who want the most dynamic Alpine A290 experience.
-
-# Battery Specifications
+  '
 battery:
   chemistry: NMC
-  supplier: "Envision AESC"
+  supplier: Envision AESC
   total_kwh: 52.0
   usable_kwh: 48.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "52kWh NMC battery, same as GT variant"
-
-# Range (km)
+  notes: 52kWh NMC battery, same as GT variant
 range:
   wltp_km: 364
   wltp_city_km: 450
   wltp_highway_km: 295
   epa_miles: null
   real_world_km: 300
-  real_world_notes: "Real-world range varies: ~300km mixed, ~400km city, ~250km highway. Spirited driving reduces range significantly."
-
-# Charging
+  real_world_notes: 'Real-world range varies: ~300km mixed, ~400km city, ~250km highway.
+    Spirited driving reduces range significantly.'
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 300
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 300
+      power_kw: 11.0
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 0
-        power_kw: 70
-      - soc_percent: 10
-        power_kw: 100
-      - soc_percent: 20
-        power_kw: 98
-      - soc_percent: 30
-        power_kw: 92
-      - soc_percent: 40
-        power_kw: 85
-      - soc_percent: 50
-        power_kw: 75
-      - soc_percent: 60
-        power_kw: 60
-      - soc_percent: 70
-        power_kw: 45
-      - soc_percent: 80
-        power_kw: 30
-      - soc_percent: 90
-        power_kw: 18
-      - soc_percent: 100
-        power_kw: 8
+    - soc_percent: 0
+      power_kw: 70
+    - soc_percent: 10
+      power_kw: 100
+    - soc_percent: 20
+      power_kw: 98
+    - soc_percent: 30
+      power_kw: 92
+    - soc_percent: 40
+      power_kw: 85
+    - soc_percent: 50
+      power_kw: 75
+    - soc_percent: 60
+      power_kw: 60
+    - soc_percent: 70
+      power_kw: 45
+    - soc_percent: 80
+      power_kw: 30
+    - soc_percent: 90
+      power_kw: 18
+    - soc_percent: 100
+      power_kw: 8
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 30
-        power_kw: 100
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 30
+      power_kw: 100
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
-# Performance
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 performance:
   motors:
-    - location: front
-      type: wound rotor
-      power_kw: 160
-      torque_nm: 300
+  - location: front
+    type: wound rotor
+    power_kw: 160
+    torque_nm: 300
   total_power_kw: 160
   total_torque_nm: 300
   drivetrain: FWD
@@ -97,43 +90,33 @@ performance:
   top_speed_kmh: 170
   braking:
     distance_100_0_km: 34.0
-    notes: "Brembo front brakes for enhanced stopping power"
-
-# Efficiency
+    notes: Brembo front brakes for enhanced stopping power
 efficiency:
   wltp_kwh_per_100km: 15.3
   real_world_kwh_per_100km: 17.5
-
 dimensions:
   length_mm: 3920
   width_mm: 1770
   height_mm: 1500
   wheelbase_mm: 2540
   ground_clearance_mm: 145
-
 cargo:
   trunk_capacity_liters: 326
   trunk_max_liters: 1106
   frunk_capacity_liters: 0
-
-
-# Weight
 weight:
   curb_weight_kg: 1490
   gross_vehicle_weight_kg: 1910
   payload_kg: 420
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-# Tires
 tires:
-  front: "225/40 R19"
-  rear: "225/40 R19"
-
+  front: 225/40 R19
+  rear: 225/40 R19
 metadata:
   data_quality: estimated
   sources:
-    - https://en.wikipedia.org/wiki/Renault_5_E-Tech
-    - https://www.alpinecars.com
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  - https://en.wikipedia.org/wiki/Renault_5_E-Tech
+  - https://www.alpinecars.com
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'

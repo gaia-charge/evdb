@@ -1,23 +1,20 @@
-# Opel Corsa-e GS Line (2024) - Sporty Trim with IntelliLux Matrix LED
-
 id: opel-corsa-e-gs-line-2024
 model_id: opel-corsa-e
-name: "GS Line"
+name: GS Line
 model_year: 2024
-trim_level: GS Line  # Sportiest trim
+trim_level: GS Line
 variant_code: null
-
 production:
   start_date: 2023-09-01
   end_date: null
   status: active
-  notes: 2024 model with minor efficiency improvements, mechanically identical to Peugeot e-208
-
+  notes: 2024 model with minor efficiency improvements, mechanically identical to
+    Peugeot e-208
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 50.0
-  usable_kwh: 45.0  # ~90% usable (Opel doesn't publish exact, conservative estimate)
+  usable_kwh: 45.0
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
@@ -26,58 +23,52 @@ battery:
   modules: 18
   voltage_nominal: 400
   notes: Same battery as Peugeot e-208 on CMP platform
-
 range:
   wltp_km: 359
   wltp_city_km: 465
   wltp_highway_km: 290
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 305
   real_world_source: ADAC EcoTest 2024
   notes: Similar efficiency to Peugeot e-208 GT on same CMP platform
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.0
     onboard_charger: 11kW 3-phase standard
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 100kW peak maintained for short duration, average ~80kW
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 85
-    - percent: 60
-      power_kw: 75
-    - percent: 70
-      power_kw: 60
-    - percent: 80
-      power_kw: 40
-    - percent: 90
-      power_kw: 25
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 85
+  - percent: 60
+    power_kw: 75
+  - percent: 70
+    power_kw: 60
+  - percent: 80
+    power_kw: 40
+  - percent: 90
+    power_kw: 25
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
-  configuration: single_front  # Front-wheel drive (FWD)
+  configuration: single_front
   front:
     type: permanent_magnet
     power_kw: 100
@@ -88,21 +79,21 @@ motors:
     power_kw: 100
     power_hp: 136
     torque_nm: 260
-
 performance:
-  acceleration_0_100_kph: 8.1
   acceleration_0_60_mph: null
-  top_speed_kph: 150  # Electronically limited
+  top_speed_kph: 150
   quarter_mile_seconds: null
-
+  total_power_kw: 100
+  total_power_hp: 136
+  total_torque_nm: 260
+  acceleration_0_100_sec: 8.1
 efficiency:
   wltp_kwh_per_100km: 16.2
   wltp_wh_per_km: 162
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.0
   mpge_combined: null
-  drag_coefficient: 0.29  # Same as e-208
-
+  drag_coefficient: 0.29
 dimensions:
   length_mm: 4060
   width_mm: 1765
@@ -111,12 +102,10 @@ dimensions:
   wheelbase_mm: 2538
   ground_clearance_mm: 140
   turning_circle_m: 10.7
-
 cargo:
   trunk_capacity_liters: 309
   trunk_max_liters: 1118
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1455
   gross_vehicle_weight_kg: 1830
@@ -124,78 +113,62 @@ weight:
   weight_distribution_front_percent: 60
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Torsion beam with coil springs
-
 brakes:
   front: Ventilated disc
   rear: Drum (with electronic brake force distribution)
   regenerative: true
-
 tires:
   standard: 205/45 R17
-
 features:
   infotainment:
-    - "Multimedia Navi Pro with 10.0\" color touchscreen"
-    - "Digital instrument cluster 7.0\" driver display"
-    - "Apple CarPlay and Android Auto (wired)"
-    - "DAB+ digital radio"
-    - "6 speakers (premium audio optional)"
-    - "MyOpel mobile app for remote control"
-  
+  - Multimedia Navi Pro with 10.0" color touchscreen
+  - Digital instrument cluster 7.0" driver display
+  - Apple CarPlay and Android Auto (wired)
+  - DAB+ digital radio
+  - 6 speakers (premium audio optional)
+  - MyOpel mobile app for remote control
   driver_assistance:
-    - "Forward Collision Alert with Automatic Emergency Braking"
-    - "Lane Keep Assist with Lane Departure Warning"
-    - "Traffic Sign Recognition"
-    - "Speed limiter and cruise control"
-    - "Rear parking sensors and reversing camera"
-    - "Drowsiness alert"
-  
+  - Forward Collision Alert with Automatic Emergency Braking
+  - Lane Keep Assist with Lane Departure Warning
+  - Traffic Sign Recognition
+  - Speed limiter and cruise control
+  - Rear parking sensors and reversing camera
+  - Drowsiness alert
   comfort_convenience:
-    - "Automatic climate control with air quality sensor"
-    - "Keyless entry and start (optional)"
-    - "One-pedal driving with B-mode regenerative braking"
-    - "Heated front seats (optional Winter Package)"
-    - "Heated steering wheel (optional Winter Package)"
-    - "Electric windows front and rear"
-    - "Electric and heated mirrors"
-  
+  - Automatic climate control with air quality sensor
+  - Keyless entry and start (optional)
+  - One-pedal driving with B-mode regenerative braking
+  - Heated front seats (optional Winter Package)
+  - Heated steering wheel (optional Winter Package)
+  - Electric windows front and rear
+  - Electric and heated mirrors
   exterior:
-    - "IntelliLux LED Matrix headlights (optional, Opel exclusive)"
-    - "LED daytime running lights"
-    - "GS Line sport body kit with black accents"
-    - "17\" bi-color alloy wheels (standard)"
-    - "Two-tone black roof (optional)"
-    - "Body-colored door handles"
-  
+  - IntelliLux LED Matrix headlights (optional, Opel exclusive)
+  - LED daytime running lights
+  - GS Line sport body kit with black accents
+  - 17" bi-color alloy wheels (standard)
+  - Two-tone black roof (optional)
+  - Body-colored door handles
   interior:
-    - "Sport front seats with side bolsters"
-    - "Leather-wrapped steering wheel"
-    - "Opel Connect emergency call and vehicle diagnostics"
-    - "309L trunk (smallest in segment due to battery)"
-
-
+  - Sport front seats with side bolsters
+  - Leather-wrapped steering wheel
+  - Opel Connect emergency call and vehicle diagnostics
+  - 309L trunk (smallest in segment due to battery)
 metadata:
   data_quality: verified
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
   source_urls:
-    - https://www.opel.com/modelle/corsa/corsa-e.html
-    - https://ev-database.org/car/1234/Opel-Corsa-e
-  notes: |
-    The Opel Corsa-e GS Line is mechanically identical to the Peugeot e-208 GT - both 
-    built on Stellantis CMP platform with same battery, motor, and performance specs.
-    
-    Key advantages: IntelliLux LED Matrix headlights (Opel exclusive technology), more 
-    conservative practical design, simpler interior, €2,500-3,000 lower price.
-    
-    GS Line is the sportiest trim level with body kit, sport seats, 17\" alloys.
+  - https://www.opel.com/modelle/corsa/corsa-e.html
+  - https://ev-database.org/car/1234/Opel-Corsa-e
+  notes: "The Opel Corsa-e GS Line is mechanically identical to the Peugeot e-208\
+    \ GT - both \nbuilt on Stellantis CMP platform with same battery, motor, and performance\
+    \ specs.\n\nKey advantages: IntelliLux LED Matrix headlights (Opel exclusive technology),\
+    \ more \nconservative practical design, simpler interior, €2,500-3,000 lower price.\n\
+    \nGS Line is the sportiest trim level with body kit, sport seats, 17\\\" alloys.\n"

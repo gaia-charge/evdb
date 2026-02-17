@@ -1,17 +1,16 @@
-# Vehicle Variant: NIO ET7 100 kWh (2025)
 id: nio-et7-100kwh-2025
 model_id: nio-et7
 name: 100 kWh
 variant_name: 100 kWh
 model_year: 2025
 trim_level: Long Range
-production_years: "2022-present"
+production_years: 2022-present
+overview: 'The NIO ET7 100 kWh is the long-range variant of NIO''s flagship sedan
+  with a 100 kWh  battery delivering 580 km WLTP range. Same 480kW dual-motor AWD
+  powertrain as the 75 kWh  variant. Available with battery (€81,900) or via BaaS
+  at €57,900 plus €289/month.
 
-overview: >
-  The NIO ET7 100 kWh is the long-range variant of NIO's flagship sedan with a 100 kWh 
-  battery delivering 580 km WLTP range. Same 480kW dual-motor AWD powertrain as the 75 kWh 
-  variant. Available with battery (€81,900) or via BaaS at €57,900 plus €289/month.
-
+  '
 battery:
   chemistry: NCM
   supplier: CATL
@@ -21,90 +20,82 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "100 kWh NCM battery, swappable via NIO Power Swap stations"
-
+  notes: 100 kWh NCM battery, swappable via NIO Power Swap stations
 range:
   wltp_km: 580
   wltp_city_km: 700
   wltp_highway_km: 480
   epa_miles: null
   real_world_km: 460
-  real_world_notes: "Estimated ~460km mixed driving, ~400km autobahn at higher speeds"
-
+  real_world_notes: Estimated ~460km mixed driving, ~400km autobahn at higher speeds
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 600
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 600
+      power_kw: 11.0
   dc:
-    max_power_kw: 140
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 130
-      - soc_percent: 20
-        power_kw: 140
-      - soc_percent: 30
-        power_kw: 140
-      - soc_percent: 40
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 115
-      - soc_percent: 60
-        power_kw: 100
-      - soc_percent: 70
-        power_kw: 80
-      - soc_percent: 80
-        power_kw: 60
-      - soc_percent: 90
-        power_kw: 40
+    - soc_percent: 10
+      power_kw: 130
+    - soc_percent: 20
+      power_kw: 140
+    - soc_percent: 30
+      power_kw: 140
+    - soc_percent: 40
+      power_kw: 130
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 100
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 90
+      power_kw: 40
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 40
-        power_kw: 140
-    notes: "140kW peak DC charging; NIO battery swap offers 3-5 minute full swap alternative"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 40
+      power_kw: 140
+    notes: 140kW peak DC charging; NIO battery swap offers 3-5 minute full swap alternative
   battery_swap:
     available: true
     swap_time_minutes: 5
     network: NIO Power Swap
-
+  ac_max_kw: 11.0
+  dc_max_kw: 140
 efficiency:
   wltp_kwh_per_100km: 19.0
   real_world_kwh_per_100km: 22.0
-  notes: "WLTP 19.0-22.3 kWh/100km depending on wheels/configuration"
-
+  notes: WLTP 19.0-22.3 kWh/100km depending on wheels/configuration
 motors:
-  - position: front
-    type: Asynchronous (Induction)
-    power_kw: 180
-    torque_nm: 400
-    manufacturer: NIO
-  - position: rear
-    type: Permanent Magnet Synchronous
-    power_kw: 300
-    torque_nm: 450
-    manufacturer: NIO
-
+- position: front
+  type: Asynchronous (Induction)
+  power_kw: 180
+  torque_nm: 400
+  manufacturer: NIO
+- position: rear
+  type: Permanent Magnet Synchronous
+  power_kw: 300
+  torque_nm: 450
+  manufacturer: NIO
 power:
   total_power_kw: 480
   total_power_ps: 653
   total_torque_nm: 850
-
 drivetrain:
   type: AWD
   gearbox: Single-speed reduction (front and rear)
-
 performance:
   acceleration_0_100_kmh_s: 3.8
   top_speed_kmh: 200
   top_speed_limited: true
-
 dimensions:
   length_mm: 5101
   width_mm: 1987
@@ -112,96 +103,86 @@ dimensions:
   wheelbase_mm: 3060
   ground_clearance_mm: 145
   drag_coefficient: 0.208
-
 weight:
   curb_weight_kg: 2379
   gross_vehicle_weight_kg: 2890
   payload_kg: 511
   towing_capacity_braked_kg: 1400
   towing_capacity_unbraked_kg: 750
-  towing_capacity_braked_kg: 1400
-  towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 363
   trunk_max_liters: 810
   frunk_capacity_liters: 0
-  notes: "Trunk capacity limited by battery swap mechanism design"
-
-
+  notes: Trunk capacity limited by battery swap mechanism design
 suspension:
   front: Double wishbone
   rear: Multi-link
   adjustable: true
-  notes: "Air suspension with continuous damping control"
-
+  notes: Air suspension with continuous damping control
 brakes:
   front: Ventilated disc (365mm)
   rear: Ventilated disc (355mm)
   regenerative_braking: true
   one_pedal_driving: true
-
 wheels:
   standard:
-    size: "20-inch"
-    tire_front: "245/45 R20"
-    tire_rear: "275/40 R20"
+    size: 20-inch
+    tire_front: 245/45 R20
+    tire_rear: 275/40 R20
   optional:
-    - size: "21-inch"
-      tire_front: "245/40 R21"
-      tire_rear: "275/35 R21"
-      price_eur: 1800
-
-standard_equipment:
-  - "Nappa leather upholstery"
-  - "karuun® sustainable rattan interior trim"
-  - "12.8-inch AMOLED center touchscreen"
-  - "10.2-inch HDR digital instrument cluster"
-  - "6.6-inch HDR rear touch display"
-  - "Head-up display (HUD)"
-  - "NOMI AI companion"
-  - "7.1.4 Dolby Atmos surround sound (23 speakers)"
-  - "Panoramic glass roof"
-  - "Frameless windows"
-  - "Soft-close doors"
-  - "Flush door handles"
-  - "Intelligent matrix LED headlights"
-  - "Heat pump"
-  - "Air suspension with continuous damping control"
-  - "Wireless Apple CarPlay / Android Auto"
-  - "Wireless phone charger (15W)"
-  - "NIO Aquila Super Sensing (33 sensors incl. lidar)"
-  - "NIO Pilot ADAS"
-  - "360-degree camera"
-  - "Automated parking"
-  - "UWB digital key"
-  - "Quad-zone automatic climate control"
-  - "Ambient lighting (256 colors)"
-  - "Heated, ventilated, and massage front seats"
-  - "Heated rear seats"
-  - "Power-adjustable front seats with memory"
-  - "Electric retractable towbar"
-
-optional_equipment:
-  - name: "21-inch Performance Wheels"
+  - size: 21-inch
+    tire_front: 245/40 R21
+    tire_rear: 275/35 R21
     price_eur: 1800
-  - name: "Metallic/Pearl Paint"
-    price_eur: 1200
-  - name: "Premium Interior Upgrade"
-    price_eur: 2500
-  - name: "NIO Pilot Pro (Enhanced ADAS)"
-    price_eur: 3400
+standard_equipment:
+- Nappa leather upholstery
+- karuun® sustainable rattan interior trim
+- 12.8-inch AMOLED center touchscreen
+- 10.2-inch HDR digital instrument cluster
+- 6.6-inch HDR rear touch display
+- Head-up display (HUD)
+- NOMI AI companion
+- 7.1.4 Dolby Atmos surround sound (23 speakers)
+- Panoramic glass roof
+- Frameless windows
+- Soft-close doors
+- Flush door handles
+- Intelligent matrix LED headlights
+- Heat pump
+- Air suspension with continuous damping control
+- Wireless Apple CarPlay / Android Auto
+- Wireless phone charger (15W)
+- NIO Aquila Super Sensing (33 sensors incl. lidar)
+- NIO Pilot ADAS
+- 360-degree camera
+- Automated parking
+- UWB digital key
+- Quad-zone automatic climate control
+- Ambient lighting (256 colors)
+- Heated, ventilated, and massage front seats
+- Heated rear seats
+- Power-adjustable front seats with memory
+- Electric retractable towbar
+optional_equipment:
+- name: 21-inch Performance Wheels
+  price_eur: 1800
+- name: Metallic/Pearl Paint
+  price_eur: 1200
+- name: Premium Interior Upgrade
+  price_eur: 2500
+- name: NIO Pilot Pro (Enhanced ADAS)
+  price_eur: 3400
+notes: 'The 100 kWh variant offers 580 km WLTP range making it suitable for long-distance
+  travel.  With BaaS, the car price is identical to the 75 kWh variant (€57,900) with
+  a higher monthly  battery rental of €289/month. At €81,900 with battery, it exceeds
+  the €70,000 company car  tax threshold, making the BaaS option particularly attractive
+  for company car users.
 
-notes: >
-  The 100 kWh variant offers 580 km WLTP range making it suitable for long-distance travel. 
-  With BaaS, the car price is identical to the 75 kWh variant (€57,900) with a higher monthly 
-  battery rental of €289/month. At €81,900 with battery, it exceeds the €70,000 company car 
-  tax threshold, making the BaaS option particularly attractive for company car users.
-
+  '
 metadata:
   data_quality: verified
   sources:
-    - https://www.nio.com/de_DE/et7
-    - https://www.carwow.de/nio/et7/technische-daten
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  - https://www.nio.com/de_DE/et7
+  - https://www.carwow.de/nio/et7/technische-daten
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'

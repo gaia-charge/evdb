@@ -4,21 +4,19 @@ name: Design RWD
 model_year: 2024
 trim_level: design
 market_availability:
-  - europe
-  - germany
-  - france
-  - netherlands
-  - belgium
-  - spain
-  - italy
-  - uk
-
-# Battery specifications
+- europe
+- germany
+- france
+- netherlands
+- belgium
+- spain
+- italy
+- uk
 battery:
   total_kwh: 82.5
   usable_kwh: 82.5
-  chemistry: LFP  # LiFePO4 Blade Battery
-  voltage: 400  # 400V architecture on RWD
+  chemistry: LFP
+  voltage: 400
   manufacturer: byd
   warranty:
     duration_years: 8
@@ -27,9 +25,7 @@ battery:
   cooling_system: liquid
   heat_pump: true
   preconditioning: true
-  cell_to_pack: true  # Cell-to-body integration
-
-# Motor and drivetrain
+  cell_to_pack: true
 motors:
   layout: rwd
   total_count: 1
@@ -39,70 +35,57 @@ motors:
     power_hp: 313
     torque_nm: 360
     manufacturer: byd
-
   combined:
     total_power_kw: 230
     total_power_hp: 313
     total_torque_nm: 360
-
 drivetrain:
   drive_type: RWD
   transmission: single_speed_reduction
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 5.9
   top_speed_kmh: 180
   top_speed_limited: true
-
-# Range and efficiency
 range:
   wltp_km: 570
   wltp_city_km: 720
   wltp_highway_km: 480
-  epa_km: null  # Not EPA tested
+  epa_km: null
   real_world_mixed_km: 485
   real_world_highway_km: 420
   real_world_winter_km: 400
-
 efficiency:
   wltp_kwh_per_100km: 15.4
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.0
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     time_0_100_hours: 7.5
     onboard_charger_kw: 11
   dc:
-    max_power_kw: 150
     time_10_80_minutes: 26
     time_10_80_km_added: 396
-    curve_description: >
-      Peak 150kW charging maintained from 10-50% SoC, tapering gradually to 80kW 
-      at 60%, 50kW at 70%, and 25kW at 80%. LFP chemistry enables consistent 
-      charging performance with minimal degradation over time.
+    curve_description: 'Peak 150kW charging maintained from 10-50% SoC, tapering gradually
+      to 80kW  at 60%, 50kW at 70%, and 25kW at 80%. LFP chemistry enables consistent  charging
+      performance with minimal degradation over time.
 
-# Bidirectional charging
+      '
+  ac_max_kw: 11
+  dc_max_kw: 150
 bidirectional_charging:
   v2l_capable: true
   v2l_power_kw: 3.3
-  v2h_capable: false  # Not standard in Europe yet
+  v2h_capable: false
   v2g_capable: false
-
-# Dimensions and weight
 dimensions:
   length_mm: 4800
   width_mm: 1875
   height_mm: 1460
   wheelbase_mm: 2920
   ground_clearance_mm: 150
-  drag_coefficient: 0.27  # Excellent aerodynamics
+  drag_coefficient: 0.27
   frontal_area_m2: 2.46
-
 weight:
   curb_weight_kg: 2150
   gross_vehicle_weight_kg: 2600
@@ -110,58 +93,48 @@ weight:
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-
 cargo:
   trunk_capacity_liters: 400
   trunk_max_liters: 1200
   frunk_capacity_liters: 53
-
-# Seating
 interior:
   seating_capacity: 5
-
-# Wheels and tires
 wheels:
   standard:
-    size_front: "235/45 R18"
-    size_rear: "235/45 R18"
+    size_front: 235/45 R18
+    size_rear: 235/45 R18
     wheel_diameter_inches: 18
   optional:
-    - size_front: "235/40 R19"
-      size_rear: "235/40 R19"
-      wheel_diameter_inches: 19
-
-# Suspension and brakes
+  - size_front: 235/40 R19
+    size_rear: 235/40 R19
+    wheel_diameter_inches: 19
 suspension:
   front: macpherson_strut
   rear: multi_link
-  adaptive: true  # Air suspension standard
+  adaptive: true
   damping: adaptive
-
 brakes:
   front: ventilated_disc
   rear: ventilated_disc
   regenerative: true
   regenerative_max_power_kw: 200
   one_pedal_driving: true
-
-# Technology and features
 technology:
   adas_level: 2
   features:
-    - adaptive_cruise_control
-    - lane_keeping_assist
-    - lane_centering
-    - automatic_emergency_braking
-    - blind_spot_monitoring
-    - rear_cross_traffic_alert
-    - traffic_sign_recognition
-    - parking_assist
-    - 360_degree_camera
-    - automatic_parking
+  - adaptive_cruise_control
+  - lane_keeping_assist
+  - lane_centering
+  - automatic_emergency_braking
+  - blind_spot_monitoring
+  - rear_cross_traffic_alert
+  - traffic_sign_recognition
+  - parking_assist
+  - 360_degree_camera
+  - automatic_parking
   infotainment:
     screen_size_inches: 15.6
-    rotating_screen: true  # Unique feature
+    rotating_screen: true
     apple_carplay: true
     android_auto: true
     wireless_connectivity: true
@@ -172,66 +145,60 @@ technology:
     system: dynaudio
     speakers: 12
     power_watts: 775
-
-# Standard equipment (Design trim)
 standard_equipment:
   exterior:
-    - LED Matrix headlights with adaptive beam
-    - LED daytime running lights
-    - LED taillights with dynamic indicators
-    - Panoramic glass roof with electrochromic dimming
-    - Power-folding heated mirrors with puddle lights
-    - 18" aerodynamic alloy wheels
-    - Frameless windows
-    - Automatic wipers
-    - Flush door handles with approach sensors
+  - LED Matrix headlights with adaptive beam
+  - LED daytime running lights
+  - LED taillights with dynamic indicators
+  - Panoramic glass roof with electrochromic dimming
+  - Power-folding heated mirrors with puddle lights
+  - 18" aerodynamic alloy wheels
+  - Frameless windows
+  - Automatic wipers
+  - Flush door handles with approach sensors
   interior:
-    - Rotating 15.6" touchscreen (landscape/portrait)
-    - 10.25" digital instrument cluster
-    - Head-up display (HUD)
-    - Nappa leather steering wheel with heating
-    - Nappa leather seats with heating and ventilation
-    - 12-way power driver seat with memory
-    - 4-way power passenger seat
-    - Wireless smartphone charging (15W)
-    - Dual-zone automatic climate control
-    - Air quality monitoring system
-    - PM2.5 air filtration
-    - Ambient lighting (multiple colors)
-    - Keyless entry and start
-    - Power tailgate with kick sensor
+  - Rotating 15.6" touchscreen (landscape/portrait)
+  - 10.25" digital instrument cluster
+  - Head-up display (HUD)
+  - Nappa leather steering wheel with heating
+  - Nappa leather seats with heating and ventilation
+  - 12-way power driver seat with memory
+  - 4-way power passenger seat
+  - Wireless smartphone charging (15W)
+  - Dual-zone automatic climate control
+  - Air quality monitoring system
+  - PM2.5 air filtration
+  - Ambient lighting (multiple colors)
+  - Keyless entry and start
+  - Power tailgate with kick sensor
   safety:
-    - 5-star Euro NCAP rating (2023)
-    - 9 airbags (front, side, curtain, driver knee)
-    - ISOFIX child seat anchors (rear)
-    - Tire pressure monitoring system (TPMS)
-    - Electronic stability control (ESC)
-    - Traction control system (TCS)
-    - Hill start assist
-    - Anti-lock braking system (ABS)
-
-# Optional equipment
+  - 5-star Euro NCAP rating (2023)
+  - 9 airbags (front, side, curtain, driver knee)
+  - ISOFIX child seat anchors (rear)
+  - Tire pressure monitoring system (TPMS)
+  - Electronic stability control (ESC)
+  - Traction control system (TCS)
+  - Hill start assist
+  - Anti-lock braking system (ABS)
 optional_equipment:
-  - name: 19" Diamond-Cut Wheels
-    price_eur: 1200
-    description: Upgrade to 19" aerodynamic design wheels
-  - name: Metallic/Pearl Paint
-    price_eur: 800
-    description: Premium metallic or pearl paint finishes
-  - name: Two-Tone Roof
-    price_eur: 600
-    description: Contrasting roof color (black or white)
-  - name: Tow Hitch
-    price_eur: 950
-    description: Detachable tow hitch (1500kg capacity)
-  - name: Winter Package
-    price_eur: 450
-    description: Heated rear seats, heated windshield, ski bag
-  - name: Premium Sound Upgrade
-    price_eur: 1500
-    description: Upgraded Dynaudio system with 16 speakers
-
-# Safety ratings
+- name: 19" Diamond-Cut Wheels
+  price_eur: 1200
+  description: Upgrade to 19" aerodynamic design wheels
+- name: Metallic/Pearl Paint
+  price_eur: 800
+  description: Premium metallic or pearl paint finishes
+- name: Two-Tone Roof
+  price_eur: 600
+  description: Contrasting roof color (black or white)
+- name: Tow Hitch
+  price_eur: 950
+  description: Detachable tow hitch (1500kg capacity)
+- name: Winter Package
+  price_eur: 450
+  description: Heated rear seats, heated windshield, ski bag
+- name: Premium Sound Upgrade
+  price_eur: 1500
+  description: Upgraded Dynaudio system with 16 speakers
 safety:
   euro_ncap:
     year: 2023
@@ -240,27 +207,25 @@ safety:
     child_occupant_percent: 87
     vulnerable_road_users_percent: 71
     safety_assist_percent: 85
-
-# Energy consumption (official)
 energy_label:
-  efficiency_class: a  # EU energy label A class
+  efficiency_class: a
   co2_emissions_wltp_g_per_km: 0
+notes: 'The BYD Seal Design RWD represents the mid-range offering in BYD''s premium
+  sedan lineup.  It features BYD''s proprietary Blade Battery (LFP chemistry) which
+  offers exceptional safety  (no thermal runaway risk), longevity (3000+ charge cycles),
+  and stable performance across  temperature ranges.
 
-# Notes
-notes: >
-  The BYD Seal Design RWD represents the mid-range offering in BYD's premium sedan lineup. 
-  It features BYD's proprietary Blade Battery (LFP chemistry) which offers exceptional safety 
-  (no thermal runaway risk), longevity (3000+ charge cycles), and stable performance across 
-  temperature ranges.
-  
-  The 400V architecture on RWD variants delivers respectable 150kW DC fast charging 
-  (26 minutes 10-80%), adequate for most users. The LFP chemistry allows regular 100% 
-  charging without degradation concerns, maximizing usable range.
-  
-  Air suspension is standard (unusual at this price point), providing excellent ride 
-  comfort and dynamic handling. The rotating 15.6" touchscreen is unique in the segment, 
-  allowing landscape mode for navigation and portrait mode for other functions.
-  
-  570km WLTP range with 485km real-world mixed driving makes the Seal competitive with 
-  Tesla Model 3 Long Range (629km WLTP) at significantly lower price point. LFP chemistry 
-  provides peace of mind for long-term ownership with minimal capacity degradation.
+  The 400V architecture on RWD variants delivers respectable 150kW DC fast charging  (26
+  minutes 10-80%), adequate for most users. The LFP chemistry allows regular 100%  charging
+  without degradation concerns, maximizing usable range.
+
+  Air suspension is standard (unusual at this price point), providing excellent ride  comfort
+  and dynamic handling. The rotating 15.6" touchscreen is unique in the segment,  allowing
+  landscape mode for navigation and portrait mode for other functions.
+
+  570km WLTP range with 485km real-world mixed driving makes the Seal competitive
+  with  Tesla Model 3 Long Range (629km WLTP) at significantly lower price point.
+  LFP chemistry  provides peace of mind for long-term ownership with minimal capacity
+  degradation.
+
+  '

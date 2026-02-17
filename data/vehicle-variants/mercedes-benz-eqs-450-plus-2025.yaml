@@ -5,114 +5,92 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: 450-plus
-market_position: base  # Entry-level EQS, but still flagship luxury
-
-# Battery Specifications
+market_position: base
 battery:
-  usable_kwh: 107.8  # Largest battery in segment
+  usable_kwh: 107.8
   total_kwh: 108.4
-  chemistry: NCM  # Nickel Manganese Cobalt (NCM811)
-  nominal_voltage_v: 396  # 400V architecture
+  chemistry: NCM
+  nominal_voltage_v: 396
   cell_type: pouch
   supplier: CATL
   warranty_years: 10
-  warranty_km: 250000  # Best-in-class warranty
+  warranty_km: 250000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, 400V architecture"
+    configuration: floor-mounted, 400V architecture
     weight_kg: 630
     modules: 12
     cells: 360
-
-# Range
 range:
-  wltp_km: 785  # Slightly improved over 2024 (782km) through software optimization
+  wltp_km: 785
   wltp_source: manufacturer
-  wltp_city_km: 915  # Exceptional city range
+  wltp_city_km: 915
   wltp_highway_km: 670
-  
-  epa_km: 550  # ~342 miles
+  epa_km: 550
   epa_source: estimated
-  
   real_world_km: 655
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 20°C, moderate speed"
-
-# Charging
+  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 9.8  # 11kW AC
-      "10_80": 7.5
+      '0_100': 9.8
+      '10_80': 7.5
     onboard_charger_kw: 11
-    onboard_charger_optional_kw: 22  # 22kW onboard charger optional
+    onboard_charger_optional_kw: 22
     phases: 3
-  
   dc:
-    max_power_kw: 200  # 400V architecture limits DC charging speed
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 31
-      "0_100": 57
-    
+      '10_80': 31
+      '0_100': 57
     charging_curve:
-      - soc_percent: 0
-        power_kw: 190
-      - soc_percent: 10
-        power_kw: 200  # Peak
-      - soc_percent: 20
-        power_kw: 200
-      - soc_percent: 30
-        power_kw: 180
-      - soc_percent: 40
-        power_kw: 160
-      - soc_percent: 50
-        power_kw: 140
-      - soc_percent: 60
-        power_kw: 120
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 70
-  
-  plug_and_charge: yes  # ISO 15118
-  
+    - soc_percent: 0
+      power_kw: 190
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 200
+    - soc_percent: 30
+      power_kw: 180
+    - soc_percent: 40
+      power_kw: 160
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 120
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 70
+  plug_and_charge: true
   bidirectional:
-    v2l: false  # No Vehicle-to-Load
-    v2g: false  # No Vehicle-to-Grid
-    v2h: false  # No Vehicle-to-Home
-
-# Performance
+    v2l: false
+    v2g: false
+    v2h: false
+  ac_max_kw: 11
+  dc_max_kw: 200
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      max_power_kw: 245  # 333 hp
-      max_torque_nm: 550
-  
+  - position: rear
+    type: permanent magnet
+    max_power_kw: 245
+    max_torque_nm: 550
   total_power_kw: 245
   total_power_hp: 333
   total_torque_nm: 550
-  
   acceleration:
-    "0_100_kmh_sec": 6.2  # Relaxed acceleration for luxury focus
-    "0_60_mph_sec": 5.9
-  
-  top_speed_kmh: 210  # Electronically limited
-  
+    0_100_kmh_sec: 6.2
+    0_60_mph_sec: 5.9
+  top_speed_kmh: 210
   energy_recovery:
     max_regen_power_kw: 186
-    one_pedal_driving: yes  # D Auto mode with intelligent recuperation
-
-# Weight & Dimensions
+    one_pedal_driving: true
 dimensions:
   length_mm: 5216
   width_mm: 1926
@@ -120,11 +98,9 @@ dimensions:
   height_mm: 1512
   wheelbase_mm: 3210
   ground_clearance_mm: 136
-
 cargo:
   trunk_capacity_liters: 610
   trunk_max_liters: 1770
-
 weight:
   curb_weight_kg: 2480
   gross_vehicle_weight_kg: 2965
@@ -133,102 +109,106 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 45
   distribution_rear_percent: 55
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 15.5  # Slight improvement over 2024 (15.6)
+  wltp_kwh_per_100km: 15.5
   wltp_source: manufacturer
   epa_kwh_per_100km: 19.6
-  epa_mpge: 108  # EPA miles per gallon equivalent
+  epa_mpge: 108
   real_world_kwh_per_100km: 16.7
-  energy_efficiency_class: A  # EU energy label (best class)
-
-# Features
+  energy_efficiency_class: A
 features:
-  heated_seats: "Front and rear standard"
-  ventilated_seats: "Front standard, rear optional"
-  massage_seats: "Front standard, rear optional (Executive Rear Seat Package)"
-  heated_steering_wheel: yes
-  panoramic_roof: yes  # Panoramic sliding sunroof standard
-  head_up_display: yes  # Augmented Reality HUD standard
-  premium_audio: yes  # Burmester High-End 4D Surround (15 speakers, 710W) standard
-  adaptive_suspension: yes  # AIRMATIC air suspension standard
-  air_suspension: yes
-  all_wheel_steering: yes  # Rear-axle steering up to 10° standard
-  ambient_lighting: yes  # 64 colors
-  keyless_entry: yes
-  power_liftgate: yes  # HANDS-FREE ACCESS
-  tow_hitch: yes  # 750kg capacity
-  
-  adas_level: 2  # Level 2+ with Active Distance Assist DISTRONIC and Active Steering Assist
-  autopilot_highway: yes  # DRIVE PILOT Level 3 optional (in Germany only)
-  
-  climate_zones: 4  # 4-zone automatic climate control standard
-  wireless_charging: yes  # For 2 smartphones
-  
+  heated_seats: Front and rear standard
+  ventilated_seats: Front standard, rear optional
+  massage_seats: Front standard, rear optional (Executive Rear Seat Package)
+  heated_steering_wheel: true
+  panoramic_roof: true
+  head_up_display: true
+  premium_audio: true
+  adaptive_suspension: true
+  air_suspension: true
+  all_wheel_steering: true
+  ambient_lighting: true
+  keyless_entry: true
+  power_liftgate: true
+  tow_hitch: true
+  adas_level: 2
+  autopilot_highway: true
+  climate_zones: 4
+  wireless_charging: true
   special:
-    - "MBUX Hyperscreen optional (standard on 580 4MATIC)"
-    - "Rear-axle steering up to 10° (turning circle 10.9m)"
-    - "ENERGIZING comfort control with 10 programs"
-    - "Air Balance Package with ionizer and fragrance"
-    - "Executive Rear Seat Package (reclining, massage, heating, footrests)"
-    - "E-Active Body Control optional (active suspension, curve tilting)"
-    - "Digital Light LED headlights with projection"
-    - "Acoustic Comfort Package (acoustic glass, additional insulation)"
-
-# Technology
+  - MBUX Hyperscreen optional (standard on 580 4MATIC)
+  - Rear-axle steering up to 10° (turning circle 10.9m)
+  - ENERGIZING comfort control with 10 programs
+  - Air Balance Package with ionizer and fragrance
+  - Executive Rear Seat Package (reclining, massage, heating, footrests)
+  - E-Active Body Control optional (active suspension, curve tilting)
+  - Digital Light LED headlights with projection
+  - Acoustic Comfort Package (acoustic glass, additional insulation)
 technology:
-  heat_pump: yes  # Standard
-  preconditioning: yes  # Battery and cabin
-  remote_climate: yes  # Via Mercedes me app
-  battery_preheating: yes  # For optimal DC fast charging
-  over_the_air_updates: yes  # MBUX OTA updates
-  digital_key: yes  # Via Mercedes me app (NFC + UWB)
-  voice_assistant: yes  # "Hey Mercedes" natural language
+  heat_pump: true
+  preconditioning: true
+  remote_climate: true
+  battery_preheating: true
+  over_the_air_updates: true
+  digital_key: true
+  voice_assistant: true
   smartphone_integration:
-    - Apple CarPlay (wireless)
-    - Android Auto (wireless)
-  navigation_system: yes  # MBUX with Augmented Reality
-  telematics: yes  # Mercedes me connect with remote services
-
-# Homologation
+  - Apple CarPlay (wireless)
+  - Android Auto (wireless)
+  navigation_system: true
+  telematics: true
 homologation:
   certification_standard: WLTP
   energy_label_eu: A
-  co2_emissions_g_km: 0  # Zero direct emissions
+  co2_emissions_g_km: 0
+notes: 'The 2025 Mercedes-Benz EQS 450+ receives minor software updates and efficiency
+  improvements.
 
-notes: |
-  The 2025 Mercedes-Benz EQS 450+ receives minor software updates and efficiency improvements.
   Main updates for 2025 model year:
+
   - Slightly improved WLTP range: 785km (up from 782km in 2024) through software optimization
+
   - Refined MBUX infotainment system with enhanced voice recognition
+
   - Updated ADAS features with improved Active Distance Assist DISTRONIC
+
   - Battery management system optimization for better cold-weather performance
-  
+
+
   Key strengths remain unchanged:
-  - World's most aerodynamic production car (Cd 0.20)
+
+  - World''s most aerodynamic production car (Cd 0.20)
+
   - 785km WLTP range (655km real-world)
+
   - 107.8kWh battery (largest in flagship sedan segment)
+
   - Rear-axle steering (10.9m turning circle despite 5.2m length)
+
   - 10-year/250,000km battery warranty
-  
+
+
   Competes with:
+
   - BMW i7 xDrive60 2025
+
   - Porsche Taycan 4S 2025
+
   - Tesla Model S Long Range 2025
+
   - Lucid Air Touring 2025
 
+  '
 sources:
-  - url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/explore/technical-data.html
-    title: Mercedes-Benz EQS 450+ 2025 Technical Data
-    accessed: "2026-02-09"
-  - url: https://ev-database.org/car/1442/Mercedes-EQS-450plus
-    title: EV Database Mercedes EQS 450+ Specifications
-    accessed: "2026-02-09"
-
+- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297/explore/technical-data.html
+  title: Mercedes-Benz EQS 450+ 2025 Technical Data
+  accessed: '2026-02-09'
+- url: https://ev-database.org/car/1442/Mercedes-EQS-450plus
+  title: EV Database Mercedes EQS 450+ Specifications
+  accessed: '2026-02-09'
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   contributor: OpenClaw EVDB Development
   version: 1.0

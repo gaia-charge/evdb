@@ -1,90 +1,89 @@
-# Vehicle Variant: Volvo EX30 Extended Range Single Motor (2024)
 id: volvo-ex30-extended-range-single-motor-2024
 model_id: volvo-ex30
 name: Extended Range Single Motor
 variant_name: Extended Range Single Motor
 model_year: 2024
 trim_level: Extended Range
-production_years: "2024-present"
+production_years: 2024-present
+overview: 'The Volvo EX30 Extended Range Single Motor is the long-range variant of
+  Volvo''s compact electric SUV, offering an excellent balance of range, efficiency,
+  and value. With a 69kWh battery providing up to 476km WLTP range, it''s the most
+  popular EX30 variant. The single rear motor provides 200kW (272hp) and rear-wheel
+  drive dynamics, making it both efficient and engaging to drive. Built on Geely''s
+  SEA platform with a 400V architecture, it features fast DC charging up to 153kW
+  and 11kW AC charging. This variant represents Volvo''s most affordable long-range
+  EV with the brand''s full safety and technology suite.
 
-overview: >
-  The Volvo EX30 Extended Range Single Motor is the long-range variant of Volvo's compact electric SUV, offering an excellent balance of range, efficiency, and value. With a 69kWh battery providing up to 476km WLTP range, it's the most popular EX30 variant. The single rear motor provides 200kW (272hp) and rear-wheel drive dynamics, making it both efficient and engaging to drive. Built on Geely's SEA platform with a 400V architecture, it features fast DC charging up to 153kW and 11kW AC charging. This variant represents Volvo's most affordable long-range EV with the brand's full safety and technology suite.
-
-# Battery Specifications
+  '
 battery:
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   supplier: CATL
   total_kwh: 69.0
-  usable_kwh: 64.0  # ~93% usable
+  usable_kwh: 64.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "69kWh NMC battery from CATL, 400V architecture"
-
-# Range (km)
+  notes: 69kWh NMC battery from CATL, 400V architecture
 range:
   wltp_km: 476
   wltp_city_km: 615
   wltp_highway_km: 385
-  epa_miles: null  # Not sold in US yet
+  epa_miles: null
   real_world_km: 420
-  real_world_notes: "Real-world range varies: ~420km mixed driving, ~600km city, ~350km highway"
-
-# Charging
+  real_world_notes: 'Real-world range varies: ~420km mixed driving, ~600km city, ~350km
+    highway'
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 360  # ~6 hours
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 360
+      power_kw: 11.0
   dc:
-    max_power_kw: 153
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 0
-        power_kw: 150
-      - soc_percent: 10
-        power_kw: 153
-      - soc_percent: 20
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 140
-      - soc_percent: 40
-        power_kw: 130
-      - soc_percent: 50
-        power_kw: 115
-      - soc_percent: 60
-        power_kw: 95
-      - soc_percent: 70
-        power_kw: 75
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 30
-      - soc_percent: 100
-        power_kw: 15
+    - soc_percent: 0
+      power_kw: 150
+    - soc_percent: 10
+      power_kw: 153
+    - soc_percent: 20
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 140
+    - soc_percent: 40
+      power_kw: 130
+    - soc_percent: 50
+      power_kw: 115
+    - soc_percent: 60
+      power_kw: 95
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 26
-        power_kw: 153
-        notes: "10-80% in 26 minutes at optimal conditions"
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 55
-        power_kw: 153
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 26
+      power_kw: 153
+      notes: 10-80% in 26 minutes at optimal conditions
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 55
+      power_kw: 153
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-    notes: "No bidirectional charging capability"
-
-# Motors & Performance
+    notes: No bidirectional charging capability
+  ac_max_kw: 11.0
+  dc_max_kw: 153
 motors:
   configuration: single
   drive_type: RWD
@@ -93,78 +92,65 @@ motors:
   total_torque_nm: 343
   motor_type: permanent_magnet
   motors:
-    - position: rear
-      power_kw: 200
-      power_hp: 272
-      torque_nm: 343
-      motor_type: permanent_magnet
-
+  - position: rear
+    power_kw: 200
+    power_hp: 272
+    torque_nm: 343
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 5.3
   top_speed_kmh: 180
-  notes: "0-100 km/h in 5.3 seconds, electronically limited to 180 km/h"
-
-# Efficiency
+  notes: 0-100 km/h in 5.3 seconds, electronically limited to 180 km/h
 efficiency:
   consumption_wltp_kwh_per_100km: 14.5
   consumption_real_world_kwh_per_100km: 16.5
   efficiency_rating_eu: A
-  notes: "Very efficient for an SUV: 14.5 kWh/100km WLTP, 16.5 real-world"
-
-# Weight
+  notes: 'Very efficient for an SUV: 14.5 kWh/100km WLTP, 16.5 real-world'
 dimensions:
   length_mm: 4233
   width_mm: 1836
   height_mm: 1550
   wheelbase_mm: 2650
   ground_clearance_mm: 177
-
 cargo:
   trunk_capacity_liters: 318
   trunk_max_liters: 904
   frunk_capacity_liters: 0
-  notes: "318L boot, 904L with rear seats folded. No frunk."
-
+  notes: 318L boot, 904L with rear seats folded. No frunk.
 weight:
   curb_weight_kg: 1760
   gross_vehicle_weight_kg: 2150
   payload_kg: 390
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
-# Features specific to this variant
 features:
   standard:
-    - "12.3-inch portrait touchscreen"
-    - "Google built-in (Maps, Assistant, Play Store)"
-    - "Pilot Assist (semi-autonomous driving)"
-    - "City Safety with collision avoidance"
-    - "Heat pump climate control"
-    - "LED headlights"
-    - "Wireless phone charging"
-    - "Keyless entry and start"
+  - 12.3-inch portrait touchscreen
+  - Google built-in (Maps, Assistant, Play Store)
+  - Pilot Assist (semi-autonomous driving)
+  - City Safety with collision avoidance
+  - Heat pump climate control
+  - LED headlights
+  - Wireless phone charging
+  - Keyless entry and start
   optional:
-    - "Harmon Kardon premium audio (€800)"
-    - "Panoramic sunroof (€1,200)"
-    - "Tow hitch (€900, 1000kg capacity)"
-    - "Plus Pack with upgraded materials and features"
-    - "Ultra Pack with Pilot Assist and advanced safety"
-
-# Version Information
+  - Harmon Kardon premium audio (€800)
+  - Panoramic sunroof (€1,200)
+  - Tow hitch (€900, 1000kg capacity)
+  - Plus Pack with upgraded materials and features
+  - Ultra Pack with Pilot Assist and advanced safety
 version:
-  release_date: "2024-01"
-  changes_from_previous: "First model year"
-  notes: "2024 model year, first generation"
-
-# Metadata
+  release_date: 2024-01
+  changes_from_previous: First model year
+  notes: 2024 model year, first generation
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.volvocars.com/intl/v/cars/ex30/specifications
-    - https://www.whatcar.com/volvo/ex30/review
-    - https://www.autoexpress.co.uk/volvo/ex30
-    - https://ev-database.org/car/1828/Volvo-EX30-Extended-Range-Single-Motor
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
-  notes: "Official Volvo specifications and verified third-party testing data"
+  - https://www.volvocars.com/intl/v/cars/ex30/specifications
+  - https://www.whatcar.com/volvo/ex30/review
+  - https://www.autoexpress.co.uk/volvo/ex30
+  - https://ev-database.org/car/1828/Volvo-EX30-Extended-Range-Single-Motor
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
+  notes: Official Volvo specifications and verified third-party testing data

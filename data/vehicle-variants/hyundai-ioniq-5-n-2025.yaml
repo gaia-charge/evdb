@@ -5,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2024
   end: null
-
 trim_level: n-performance
 market_position: performance
-
-# Battery Specifications
 battery:
   usable_kwh: 84.0
   total_kwh: 89.0
@@ -20,84 +17,71 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, cell-to-pack"
+    configuration: floor-mounted, cell-to-pack
     weight_kg: 500
     modules: 12
-
-# Range
 range:
   wltp_km: 448
   wltp_source: manufacturer
-
   real_world_km: 370
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 10-20°C, normal mode"
-
-# Charging
+  real_world_conditions: Mixed driving, 10-20°C, normal mode
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 8.5
+      '0_100': 8.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 240
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 48
-
+      '10_80': 18
+      '0_100': 48
     charging_curve:
-      - soc_percent: 0
-        power_kw: 220
-      - soc_percent: 10
-        power_kw: 240
-      - soc_percent: 20
-        power_kw: 240
-      - soc_percent: 40
-        power_kw: 225
-      - soc_percent: 50
-        power_kw: 190
-      - soc_percent: 60
-        power_kw: 145
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 55
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 11
-
-    notes: "800V architecture with multi-charging system. N-optimized battery cooling for sustained performance."
-
+    - soc_percent: 0
+      power_kw: 220
+    - soc_percent: 10
+      power_kw: 240
+    - soc_percent: 20
+      power_kw: 240
+    - soc_percent: 40
+      power_kw: 225
+    - soc_percent: 50
+      power_kw: 190
+    - soc_percent: 60
+      power_kw: 145
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 55
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 11
+    notes: 800V architecture with multi-charging system. N-optimized battery cooling
+      for sustained performance.
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.6
     v2g: false
     v2h: false
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 240
 motors:
-  - position: front
-    type: permanent-magnet-synchronous
-    max_power_kw: 166
-    max_torque_nm: 255
-    cooling: liquid
-
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 282
-    max_torque_nm: 446
-    cooling: liquid
-
+- position: front
+  type: permanent-magnet-synchronous
+  max_power_kw: 166
+  max_torque_nm: 255
+  cooling: liquid
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 282
+  max_torque_nm: 446
+  cooling: liquid
 drivetrain:
   type: awd
   total_power_kw: 448
@@ -107,13 +91,10 @@ drivetrain:
   boost_power_hp: 650
   boost_torque_nm: 770
   boost_duration_seconds: 10
-
 performance:
   acceleration_0_100_kmh_s: 3.4
   top_speed_kmh: 260
   top_speed_limited: true
-
-# Weight & Efficiency
 dimensions:
   length_mm: 4715
   width_mm: 1940
@@ -122,111 +103,95 @@ dimensions:
   wheelbase_mm: 3000
   ground_clearance_mm: 155
   turning_circle_m: 11.0
-
 cargo:
   trunk_capacity_liters: 490
   trunk_max_liters: 1587
   frunk_capacity_liters: 57
-
 weight:
   curb_weight_kg: 2231
   gross_vehicle_weight_kg: 2700
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
   payload_kg: 469
-  towing_capacity_braked_kg: 1600
-  towing_capacity_braked_kg: 1600
-  towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 21.1
   real_world_kwh_per_100km: 22.7
-
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 24.5
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 28.0
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 24.5
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 28.0
 standard_features:
-  - "12.3-inch dual panoramic displays"
-  - "N e-shift (simulated 8-speed dual-clutch)"
-  - "N Active Sound+ (interior and exterior)"
-  - "N Grin Boost (10-second overboost)"
-  - "N Launch Control"
-  - "N Drift Optimizer"
-  - "N Pedal (customizable regen)"
-  - "N Track Sense (battery/brake temperature)"
-  - "Electronic Limited-Slip Differential (e-LSD)"
-  - "N Custom mode with 8 customizable settings"
-  - "20-inch N forged alloy wheels"
-  - "N bucket seats with integrated headrests"
-  - "N Performance brakes (4-piston front)"
-  - "N sport steering wheel"
-  - "Electronically controlled suspension"
-  - "Heat pump"
-  - "V2L capability (3.6kW)"
-  - "Highway Driving Assist 2"
-  - "Augmented Reality HUD"
-  - "Bose Premium Sound System"
-  - "Surround View Monitor"
-
+- 12.3-inch dual panoramic displays
+- N e-shift (simulated 8-speed dual-clutch)
+- N Active Sound+ (interior and exterior)
+- N Grin Boost (10-second overboost)
+- N Launch Control
+- N Drift Optimizer
+- N Pedal (customizable regen)
+- N Track Sense (battery/brake temperature)
+- Electronic Limited-Slip Differential (e-LSD)
+- N Custom mode with 8 customizable settings
+- 20-inch N forged alloy wheels
+- N bucket seats with integrated headrests
+- N Performance brakes (4-piston front)
+- N sport steering wheel
+- Electronically controlled suspension
+- Heat pump
+- V2L capability (3.6kW)
+- Highway Driving Assist 2
+- Augmented Reality HUD
+- Bose Premium Sound System
+- Surround View Monitor
 optional_packages:
-  - name: "N Race Package"
-    features:
-      - "Lightweight 21-inch forged wheels"
-      - "Carbon-ceramic brakes"
-      - "N Performance lightweight battery"
-      - "Roll cage attachment points"
-
+- name: N Race Package
+  features:
+  - Lightweight 21-inch forged wheels
+  - Carbon-ceramic brakes
+  - N Performance lightweight battery
+  - Roll cage attachment points
 colors:
   standard:
-    - "Performance Blue"
-    - "Atlas White"
-    - "Phantom Black Pearl"
-    - "Cyber Grey Metallic"
+  - Performance Blue
+  - Atlas White
+  - Phantom Black Pearl
+  - Cyber Grey Metallic
   premium:
-    - "Samba Red"
-    - "Abyss Black Pearl"
-    - "Shooting Star Matte"
-
+  - Samba Red
+  - Abyss Black Pearl
+  - Shooting Star Matte
 interior_colors:
-  - "N Black with Performance Blue accents"
-  - "N Black with Red accents"
-
-# Version Information
+- N Black with Performance Blue accents
+- N Black with Red accents
 version:
   facelift: false
   major_changes:
-    - "First performance N variant of Ioniq 5"
-    - "478 kW boost power (650 PS)"
-    - "N e-shift simulated gear changes"
-    - "N Active Sound+ with internal combustion simulation"
-    - "N Drift Optimizer for controlled drifting"
-    - "Larger 84 kWh battery"
-    - "Electronically controlled suspension"
+  - First performance N variant of Ioniq 5
+  - 478 kW boost power (650 PS)
+  - N e-shift simulated gear changes
+  - N Active Sound+ with internal combustion simulation
+  - N Drift Optimizer for controlled drifting
+  - Larger 84 kWh battery
+  - Electronically controlled suspension
+notes: 'The Hyundai Ioniq 5 N is the first high-performance N variant of the Ioniq
+  5 and represents a new era for Hyundai N brand in the electric age. With 448 kW
+  continuous power (478 kW with N Grin Boost), it accelerates 0-100 km/h in 3.4 seconds
+  with a top speed of 260 km/h. Unique features include N e-shift (simulated 8-speed
+  transmission feel with jerking motion and sound), N Active Sound+ (internal and
+  external sound generation), N Drift Optimizer, and comprehensive track-focused driving
+  modes. The larger 84 kWh battery provides 448 km WLTP range while supporting sustained
+  performance driving with N-optimized thermal management. The 800V architecture enables
+  10-80% DC fast charging in 18 minutes. Despite weighing 2,231 kg, the Ioniq 5 N
+  has been praised by automotive journalists as one of the most entertaining performance
+  EVs ever made, successfully translating the fun-to-drive character of ICE N models
+  into electric form.
 
-notes: >
-  The Hyundai Ioniq 5 N is the first high-performance N variant of the Ioniq 5
-  and represents a new era for Hyundai N brand in the electric age. With 448 kW
-  continuous power (478 kW with N Grin Boost), it accelerates 0-100 km/h in 3.4
-  seconds with a top speed of 260 km/h. Unique features include N e-shift (simulated
-  8-speed transmission feel with jerking motion and sound), N Active Sound+ (internal
-  and external sound generation), N Drift Optimizer, and comprehensive track-focused
-  driving modes. The larger 84 kWh battery provides 448 km WLTP range while supporting
-  sustained performance driving with N-optimized thermal management. The 800V
-  architecture enables 10-80% DC fast charging in 18 minutes. Despite weighing 2,231 kg,
-  the Ioniq 5 N has been praised by automotive journalists as one of the most
-  entertaining performance EVs ever made, successfully translating the fun-to-drive
-  character of ICE N models into electric form.
-
-
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.hyundai.com/worldwide/en/eco/ioniq5-n
-    - https://www.hyundai-n.com/en/models/ioniq-5-n
+  - https://www.hyundai.com/worldwide/en/eco/ioniq5-n
+  - https://www.hyundai-n.com/en/models/ioniq-5-n

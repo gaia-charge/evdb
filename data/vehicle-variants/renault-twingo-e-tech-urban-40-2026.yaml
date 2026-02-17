@@ -3,17 +3,13 @@ model_id: renault-twingo-e-tech
 name: Renault Twingo E-Tech Urban 40
 variant_name: Urban 40
 model_year: 2026
-
-# Vehicle Classification
 vehicle_type: hatchback
-segment: A  # City car
+segment: A
 body_style: 5-door hatchback
 seats: 4
 doors: 5
-
-# Drivetrain
 drivetrain:
-  type: fwd  # Front-wheel drive
+  type: fwd
   motors:
     front:
       type: permanent_magnet
@@ -21,12 +17,10 @@ drivetrain:
       power_hp: 82
       torque_nm: 180
       position: front
-
-# Battery System
 battery:
   total_kwh: 40
   usable_kwh: 37
-  chemistry: LFP  # Lithium Iron Phosphate
+  chemistry: LFP
   voltage_nominal: 400
   cells: null
   modules: null
@@ -35,40 +29,34 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid_cooling
-
-# Charging
 charging:
   ac:
-    max_power_kw: 7.4  # Single-phase 7.4kW standard
     connector: type2
     charge_time_0_100_hours: 5.5
   dc:
-    max_power_kw: 80
     connector: ccs2
     charge_time_10_80_percent_minutes: 30
     charge_curve:
-      - soc_percent: 10
-        power_kw: 80
-      - soc_percent: 50
-        power_kw: 70
-      - soc_percent: 70
-        power_kw: 50
-      - soc_percent: 80
-        power_kw: 35
+    - soc_percent: 10
+      power_kw: 80
+    - soc_percent: 50
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 35
   bidirectional:
     v2g_capable: false
     v2h_capable: false
     v2l_capable: false
     max_discharge_power_kw: 0
-    notes: "No bidirectional charging"
-
-# Performance
+    notes: No bidirectional charging
+  ac_max_kw: 7.4
+  dc_max_kw: 80
 performance:
   acceleration_0_100_kmh_seconds: 12.5
   top_speed_kmh: 135
   power_to_weight_ratio_kwkg: 52.6
-
-# Range & Efficiency
 range:
   wltp_km: 300
   wltp_city_km: 400
@@ -78,13 +66,10 @@ range:
     highway_km: 195
     city_km: 340
     winter_km: 200
-
 efficiency:
   wltp_consumption_kwh_per_100km: 13.0
   real_world_consumption_kwh_per_100km: 15.5
   epa_efficiency_rating: null
-
-# Dimensions & Weight
 dimensions:
   length_mm: 3790
   width_mm: 1720
@@ -92,110 +77,92 @@ dimensions:
   wheelbase_mm: 2540
   ground_clearance_mm: 145
   drag_coefficient: 0.29
-  frontal_area_m2: 2.20
-
+  frontal_area_m2: 2.2
 weight:
   curb_weight_kg: 1140
   gross_vehicle_weight_kg: 1470
   payload_kg: 330
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 255
   trunk_max_liters: 870
   frunk_capacity_liters: 0
-
-# Platform & Production
 platform: AmpR Small
 production:
   plant: Novo Mesto, Slovenia
   start_year: 2026
   end_year: null
-
-# Technology & Features
 technology:
   infotainment:
     system: OpenR Link
     screen_size_inches: 7.0
     operating_system: Android Automotive
     features:
-      - Google Built-In
-      - Google Maps
-      - Google Assistant
-      - Wireless Apple CarPlay
-      - Wireless Android Auto
+    - Google Built-In
+    - Google Maps
+    - Google Assistant
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
   driver_assistance:
     level: 2
     features:
-      - Adaptive Cruise Control
-      - Lane Keeping Assist
-      - Traffic Sign Recognition
-      - Active Emergency Braking
-      - Rear Parking Sensors
+    - Adaptive Cruise Control
+    - Lane Keeping Assist
+    - Traffic Sign Recognition
+    - Active Emergency Braking
+    - Rear Parking Sensors
   comfort:
     climate_zones: 1
     heat_pump: false
     features:
-      - Manual air conditioning
-      - Cloth seats
-      - LED headlights
-      - Keyless entry
-      - Rear parking sensors
-
-# Safety
+    - Manual air conditioning
+    - Cloth seats
+    - LED headlights
+    - Keyless entry
+    - Rear parking sensors
 safety:
   euro_ncap_rating: null
   euro_ncap_year: null
-
-# Wheels & Suspension
 wheels:
-  standard_size: '16"'
+  standard_size: 16"
   tire_size_front: 185/60R16
   tire_size_rear: 185/60R16
-
 suspension:
   front: MacPherson strut
   rear: Torsion beam
   adjustable: false
-
-# Market Position
 market_position:
   target_segment: Ultra-affordable electric city car
   competitors:
-    - Dacia Spring (€20,900)
-    - Citroën ë-C3 (€23,300)
-    - Fiat 500e (€29,950)
-    - Renault 5 E-Tech Evolution 40 (€24,990)
+  - Dacia Spring (€20,900)
+  - Citroën ë-C3 (€23,300)
+  - Fiat 500e (€29,950)
+  - Renault 5 E-Tech Evolution 40 (€24,990)
   key_selling_points:
-    - Sub-€22,000 starting price
-    - Retro-modern design inspired by original Twingo
-    - 300km WLTP range
-    - Compact city car dimensions (3.79m)
-    - AmpR Small dedicated EV platform
-    - Google Built-In infotainment
-    - 80kW DC fast charging
-
-# Ownership & Costs
+  - Sub-€22,000 starting price
+  - Retro-modern design inspired by original Twingo
+  - 300km WLTP range
+  - Compact city car dimensions (3.79m)
+  - AmpR Small dedicated EV platform
+  - Google Built-In infotainment
+  - 80kW DC fast charging
 ownership:
   depreciation_3_years_percent: 45
   insurance_group: null
   service_interval_months: 12
   service_interval_km: 30000
-
-# Data Sources
 data_sources:
   specifications: https://www.renault.de/elektrofahrzeuge/twingo.html
   reviews:
-    - https://en.wikipedia.org/wiki/Renault_Twingo_E-Tech
+  - https://en.wikipedia.org/wiki/Renault_Twingo_E-Tech
+notes: 'The Renault Twingo E-Tech Urban 40 is the base variant of the all-new  electric
+  Twingo. Built on the AmpR Small platform shared with the Renault 5,  it''s positioned
+  as an ultra-affordable entry point to electric mobility. The  retro-inspired design
+  pays homage to the beloved 1993 original Twingo. With a  40 kWh LFP battery delivering
+  300km WLTP range and a starting price of €21,590  in Germany, it undercuts most
+  competitors. The 60 kW motor is adequate for city  driving. Compact 3.79m length
+  and tight turning circle make it ideal for urban  environments. Produced in Slovenia
+  at the Revoz plant in Novo Mesto.
 
-# Notes
-notes: >
-  The Renault Twingo E-Tech Urban 40 is the base variant of the all-new 
-  electric Twingo. Built on the AmpR Small platform shared with the Renault 5, 
-  it's positioned as an ultra-affordable entry point to electric mobility. The 
-  retro-inspired design pays homage to the beloved 1993 original Twingo. With a 
-  40 kWh LFP battery delivering 300km WLTP range and a starting price of €21,590 
-  in Germany, it undercuts most competitors. The 60 kW motor is adequate for city 
-  driving. Compact 3.79m length and tight turning circle make it ideal for urban 
-  environments. Produced in Slovenia at the Revoz plant in Novo Mesto.
+  '

@@ -4,25 +4,23 @@ name: Design RWD
 model_year: 2026
 trim_level: design
 market_availability:
-  - europe
-  - germany
-  - france
-  - netherlands
-  - belgium
-  - spain
-  - italy
-  - uk
-  - poland
-  - austria
-  - sweden
-  - norway
-
-# Battery specifications
+- europe
+- germany
+- france
+- netherlands
+- belgium
+- spain
+- italy
+- uk
+- poland
+- austria
+- sweden
+- norway
 battery:
   total_kwh: 82.5
   usable_kwh: 82.5
-  chemistry: LFP  # LiFePO4 Blade Battery
-  voltage: 400  # 400V architecture on RWD
+  chemistry: LFP
+  voltage: 400
   manufacturer: byd
   warranty:
     duration_years: 8
@@ -31,9 +29,7 @@ battery:
   cooling_system: liquid
   heat_pump: true
   preconditioning: true
-  cell_to_pack: true  # Cell-to-body integration
-
-# Motor and drivetrain
+  cell_to_pack: true
 motors:
   layout: rwd
   total_count: 1
@@ -43,108 +39,88 @@ motors:
     power_hp: 313
     torque_nm: 360
     manufacturer: byd
-
   combined:
     total_power_kw: 230
     total_power_hp: 313
     total_torque_nm: 360
-
 drivetrain:
   drive_type: RWD
   transmission: single_speed_reduction
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 5.9
   top_speed_kmh: 180
   top_speed_limited: true
-
-# Range and efficiency (2026 improvements)
 range:
   wltp_km: 590
   wltp_city_km: 745
   wltp_highway_km: 500
-  epa_km: null  # Not EPA tested
+  epa_km: null
   real_world_mixed_km: 505
   real_world_highway_km: 440
   real_world_winter_km: 420
-
 efficiency:
   wltp_kwh_per_100km: 14.8
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 16.3
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     time_0_100_hours: 7.5
     onboard_charger_kw: 11
   dc:
-    max_power_kw: 150
     time_10_80_minutes: 26
     time_10_80_km_added: 413
-    curve_description: >
-      Peak 150kW charging maintained from 10-50% SoC, tapering gradually to 80kW 
-      at 60%, 50kW at 70%, and 25kW at 80%. LFP chemistry enables consistent 
-      charging performance with minimal degradation over time. 2026 model includes
-      improved battery thermal management for more consistent charging speeds.
+    curve_description: 'Peak 150kW charging maintained from 10-50% SoC, tapering gradually
+      to 80kW  at 60%, 50kW at 70%, and 25kW at 80%. LFP chemistry enables consistent  charging
+      performance with minimal degradation over time. 2026 model includes improved
+      battery thermal management for more consistent charging speeds.
 
-# Bidirectional charging
+      '
+  ac_max_kw: 11
+  dc_max_kw: 150
 bidirectional_charging:
   v2l_capable: true
   v2l_power_kw: 3.3
-  v2h_capable: true  # Added for 2026 in select markets
-  v2g_capable: true  # Added for 2026 pilot programs
-
-# Dimensions and weight
+  v2h_capable: true
+  v2g_capable: true
 dimensions:
   length_mm: 4800
   width_mm: 1875
   height_mm: 1460
   wheelbase_mm: 2920
   ground_clearance_mm: 150
-  drag_coefficient: 0.219  # Class-leading aerodynamics
-
+  drag_coefficient: 0.219
 weight:
   curb_weight_kg: 1885
   gross_vehicle_weight_kg: 2380
   payload_kg: 495
-  towing_capacity_braked_kg: 0  # No towing capability
-
-# Cargo and seating
+  towing_capacity_braked_kg: 0
 seating:
   capacity: 5
   configuration: 2_plus_3
-
 cargo:
   trunk_capacity_liters: 400
-  trunk_max_liters: 1350  # With rear seats folded
+  trunk_max_liters: 1350
   frunk_volume_liters: 0
-
-# Technology and infotainment
 infotainment:
   screen_size_inches: 15.6
-  screen_orientation: rotating  # Unique rotating display
-  system: BYD DiLink 5.0  # Updated for 2026
+  screen_orientation: rotating
+  system: BYD DiLink 5.0
   features:
-    - Rotating 15.6" touchscreen (portrait/landscape)
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Advanced voice control with AI assistant (improved for 2026)
-    - OTA software updates
-    - 5G connectivity (upgraded from 4G)
-    - Built-in apps (Spotify, YouTube, Netflix, etc.)
-    - WiFi hotspot
-    - Cloud-based navigation with real-time traffic
+  - Rotating 15.6" touchscreen (portrait/landscape)
+  - Wireless Apple CarPlay
+  - Wireless Android Auto
+  - Advanced voice control with AI assistant (improved for 2026)
+  - OTA software updates
+  - 5G connectivity (upgraded from 4G)
+  - Built-in apps (Spotify, YouTube, Netflix, etc.)
+  - WiFi hotspot
+  - Cloud-based navigation with real-time traffic
   instrument_cluster:
     type: digital
     size_inches: 10.25
     customizable: true
-    resolution: enhanced_hd  # 2026 upgrade
-
-# Driver assistance (2026 enhanced)
+    resolution: enhanced_hd
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -157,13 +133,12 @@ driver_assistance:
   parking_sensors_front: true
   parking_sensors_rear: true
   360_camera: true
-  360_camera_resolution: 4K  # 2026 upgrade
+  360_camera_resolution: 4K
   automatic_parking: true
-  highway_assist: true  # Enhanced Level 2+
-  traffic_light_recognition: true  # New for 2026
-  notes: "2026 model adds traffic light recognition, enhanced Level 2+ highway assist with automatic lane changes (driver supervision required), 4K surround view cameras"
-
-# Safety ratings
+  highway_assist: true
+  traffic_light_recognition: true
+  notes: 2026 model adds traffic light recognition, enhanced Level 2+ highway assist
+    with automatic lane changes (driver supervision required), 4K surround view cameras
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2023
@@ -172,8 +147,6 @@ safety:
   vulnerable_road_users_score: 70
   safety_assist_score: 86
   airbags: 6
-
-# Lighting
 lighting:
   headlights: LED
   headlights_adaptive: true
@@ -182,8 +155,6 @@ lighting:
   taillights: LED_animated
   ambient_lighting: true
   ambient_lighting_colors: 72
-
-# Climate control
 climate:
   zones: 2
   heat_pump: true
@@ -191,127 +162,118 @@ climate:
   heated_seats_rear: true
   heated_steering_wheel: true
   ventilated_seats_front: true
-  air_filter: HEPA  # Upgraded from PM2.5 for 2026
-  notes: "2026 model upgrades to HEPA filtration for improved air quality"
-
-# Wheels and tires
+  air_filter: HEPA
+  notes: 2026 model upgrades to HEPA filtration for improved air quality
 wheels:
   standard:
     size_inches: 18
     tire_size: 235/50R18
   optional:
-    - size_inches: 19
-      tire_size: 235/45R19
-      range_impact_km: -10
-    - size_inches: 20
-      tire_size: 235/40R20
-      range_impact_km: -15
-      notes: "New for 2026"
-
-# Exterior colors (2026 options)
+  - size_inches: 19
+    tire_size: 235/45R19
+    range_impact_km: -10
+  - size_inches: 20
+    tire_size: 235/40R20
+    range_impact_km: -15
+    notes: New for 2026
 colors:
-  - name: Atlantis Grey
-    type: metallic
-  - name: Atto Black
-    type: solid
-  - name: Boulder Grey
-    type: metallic
-  - name: Aurora Green
-    type: metallic
-  - name: Cosmos Black
-    type: metallic
-  - name: Champion White
-    type: metallic
-  - name: Sapphire Blue
-    type: metallic  # New for 2026
-  - name: Pearl White
-    type: pearl  # New for 2026
-
-# Interior options
+- name: Atlantis Grey
+  type: metallic
+- name: Atto Black
+  type: solid
+- name: Boulder Grey
+  type: metallic
+- name: Aurora Green
+  type: metallic
+- name: Cosmos Black
+  type: metallic
+- name: Champion White
+  type: metallic
+- name: Sapphire Blue
+  type: metallic
+- name: Pearl White
+  type: pearl
 interior:
   upholstery: vegan_leather
   trim: aluminum_accents
   steering_wheel: leather
   color_options:
-    - name: Black with grey accents
-    - name: Black with blue accents
-    - name: Black with bronze accents  # New for 2026
-
-# Standard features (2026)
+  - name: Black with grey accents
+  - name: Black with blue accents
+  - name: Black with bronze accents
 standard_features:
-  - 15.6" rotating touchscreen with DiLink 5.0
-  - 10.25" enhanced HD digital instrument cluster
-  - Wireless phone charging (15W fast charging - upgraded)
-  - Panoramic glass roof with electric sunshade
-  - Power tailgate with kick sensor
-  - Keyless entry and start
-  - Remote climate control via app
-  - BYD Blade Battery (LFP chemistry)
-  - Heat pump with HEPA filtration
-  - V2L (Vehicle-to-Load) 3.3kW
-  - V2H and V2G capability (select markets)
-  - 4K 360° camera system
-  - Automatic parking with enhanced AI
-  - Enhanced Level 2+ highway assist
-  - Traffic light recognition
-  - 6 airbags
-  - LED adaptive headlights
-  - 18" alloy wheels
-  - 5G connectivity
-
-# Production information
+- 15.6" rotating touchscreen with DiLink 5.0
+- 10.25" enhanced HD digital instrument cluster
+- Wireless phone charging (15W fast charging - upgraded)
+- Panoramic glass roof with electric sunshade
+- Power tailgate with kick sensor
+- Keyless entry and start
+- Remote climate control via app
+- BYD Blade Battery (LFP chemistry)
+- Heat pump with HEPA filtration
+- V2L (Vehicle-to-Load) 3.3kW
+- V2H and V2G capability (select markets)
+- 4K 360° camera system
+- Automatic parking with enhanced AI
+- Enhanced Level 2+ highway assist
+- Traffic light recognition
+- 6 airbags
+- LED adaptive headlights
+- 18" alloy wheels
+- 5G connectivity
 production:
-  start_date: "2025-08"
+  start_date: 2025-08
   plant: BYD Zhengzhou Plant
   country: China
-  notes: "2026 model year produced from August 2025 with significant software and connectivity updates"
-
-# Version and changelog
+  notes: 2026 model year produced from August 2025 with significant software and connectivity
+    updates
 version_info:
-  release_date: "2025-08"
-  changes_from_previous: "2026 model year adds V2H/V2G capability, 5G connectivity, enhanced Level 2+ highway assist with lane change assist, traffic light recognition, 4K surround cameras, HEPA air filtration, improved efficiency (590km WLTP vs 580km), DiLink 5.0 software, new Sapphire Blue and Pearl White colors, 20-inch wheel option, 15W fast wireless charging"
+  release_date: 2025-08
+  changes_from_previous: 2026 model year adds V2H/V2G capability, 5G connectivity,
+    enhanced Level 2+ highway assist with lane change assist, traffic light recognition,
+    4K surround cameras, HEPA air filtration, improved efficiency (590km WLTP vs 580km),
+    DiLink 5.0 software, new Sapphire Blue and Pearl White colors, 20-inch wheel option,
+    15W fast wireless charging
   current_production: true
+notes: '2026 model year brings significant technology upgrades including 5G connectivity,  V2H/V2G
+  bidirectional charging capability, and enhanced Level 2+ driver assistance with
+  lane change assist and traffic light recognition. Improved efficiency reaches 590km
+  WLTP range (up 10km from 2025).
 
-# Notes
-notes: >
-  2026 model year brings significant technology upgrades including 5G connectivity, 
-  V2H/V2G bidirectional charging capability, and enhanced Level 2+ driver assistance
-  with lane change assist and traffic light recognition. Improved efficiency reaches
-  590km WLTP range (up 10km from 2025).
-  
-  BYD Seal Design RWD remains the value-focused trim with impressive range from 82.5kWh 
-  LFP Blade Battery. Best-in-class 14.8 kWh/100km WLTP efficiency rating. RWD configuration 
-  offers excellent balance of performance and range.
-  
-  Direct competitor to Tesla Model 3 RWD but significantly more affordable in European 
-  markets. Class-leading 0.219 drag coefficient contributes to excellent range and efficiency. 
-  Unique rotating 15.6" touchscreen remains standout feature with upgraded DiLink 5.0 software.
-  
+  BYD Seal Design RWD remains the value-focused trim with impressive range from 82.5kWh  LFP
+  Blade Battery. Best-in-class 14.8 kWh/100km WLTP efficiency rating. RWD configuration  offers
+  excellent balance of performance and range.
+
+  Direct competitor to Tesla Model 3 RWD but significantly more affordable in European  markets.
+  Class-leading 0.219 drag coefficient contributes to excellent range and efficiency.  Unique
+  rotating 15.6" touchscreen remains standout feature with upgraded DiLink 5.0 software.
+
   LFP chemistry allows regular 100% charging without degradation concerns, and maintains
-  consistent performance in hot climates. Heat pump with upgraded HEPA filtration standard 
-  for winter efficiency and improved cabin air quality.
-  
-  V2L capability enables use as mobile power source (3.3kW output). 2026 adds V2H and V2G
-  for home backup and grid services in select European markets. Perfect for camping,
-  outdoor events, or emergency power needs.
-  
-  5.9s 0-100km/h remains quick for RWD sedan. 150kW DC fast charging reaches 10-80% in 26 
-  minutes, competitive for 400V architecture. Real-world range of 505km mixed driving
-  is excellent for daily use and longer trips.
-  
+  consistent performance in hot climates. Heat pump with upgraded HEPA filtration
+  standard  for winter efficiency and improved cabin air quality.
+
+  V2L capability enables use as mobile power source (3.3kW output). 2026 adds V2H
+  and V2G for home backup and grid services in select European markets. Perfect for
+  camping, outdoor events, or emergency power needs.
+
+  5.9s 0-100km/h remains quick for RWD sedan. 150kW DC fast charging reaches 10-80%
+  in 26  minutes, competitive for 400V architecture. Real-world range of 505km mixed
+  driving is excellent for daily use and longer trips.
+
   Popular in Europe as Tesla Model 3 alternative with better value proposition. Strong
   warranty (8 years/200,000km battery) provides peace of mind. 2026 updates significantly
   enhance technology and connectivity, making it more competitive with premium brands.
-  
-  Enhanced Level 2+ driver assistance now includes supervised automatic lane changes on 
-  highways, putting it on par with more expensive competitors. Traffic light recognition 
-  helps with stop-and-go traffic in urban environments.
 
+  Enhanced Level 2+ driver assistance now includes supervised automatic lane changes
+  on  highways, putting it on par with more expensive competitors. Traffic light recognition  helps
+  with stop-and-go traffic in urban environments.
+
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - https://www.byd.com/eu/car/seal.html
-    - https://ev-database.org/car/1673/BYD-Seal
-    - https://www.euroncap.com/en/results/byd/seal/47130
+  - https://www.byd.com/eu/car/seal.html
+  - https://ev-database.org/car/1673/BYD-Seal
+  - https://www.euroncap.com/en/results/byd/seal/47130

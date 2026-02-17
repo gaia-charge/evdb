@@ -1,23 +1,19 @@
-# Peugeot e-208 GT 51kWh (2024) - Sporty Long-Range Variant
-
 id: peugeot-e-208-gt-51kwh-2024
 model_id: peugeot-e-208
-name: "GT 51kWh"
+name: GT 51kWh
 model_year: 2024
-trim_level: GT  # Sporty top trim
+trim_level: GT
 variant_code: null
-
 production:
   start_date: 2023-09-01
   end_date: null
   status: active
   notes: 2023 facelift introduced 51kWh battery (up from 50kWh), improved efficiency
-
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 51.0
-  usable_kwh: 46.3  # ~90.8% usable
+  usable_kwh: 46.3
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
@@ -25,59 +21,55 @@ battery:
   cells: 216
   modules: 18
   voltage_nominal: 400
-  notes: Battery upgraded from 50kWh (45kWh usable) to 51kWh (46.3kWh usable) in 2023 facelift
-
+  notes: Battery upgraded from 50kWh (45kWh usable) to 51kWh (46.3kWh usable) in 2023
+    facelift
 range:
   wltp_km: 400
   wltp_city_km: 510
   wltp_highway_km: 320
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 340
   real_world_source: ADAC EcoTest 2024
-  notes: Range improved by ~15km vs 2019-2022 model thanks to battery and efficiency upgrades
-
+  notes: Range improved by ~15km vs 2019-2022 model thanks to battery and efficiency
+    upgrades
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.0
     onboard_charger: 11kW single-phase (optional 11kW 3-phase in some markets)
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 100kW peak maintained for short duration, average ~80kW
     preconditioning: false
-  
   charge_curve:
-    - percent: 10
-      power_kw: 100
-    - percent: 20
-      power_kw: 100
-    - percent: 30
-      power_kw: 95
-    - percent: 40
-      power_kw: 88
-    - percent: 50
-      power_kw: 78
-    - percent: 60
-      power_kw: 65
-    - percent: 70
-      power_kw: 50
-    - percent: 80
-      power_kw: 30
-    - percent: 90
-      power_kw: 15
-  
+  - percent: 10
+    power_kw: 100
+  - percent: 20
+    power_kw: 100
+  - percent: 30
+    power_kw: 95
+  - percent: 40
+    power_kw: 88
+  - percent: 50
+    power_kw: 78
+  - percent: 60
+    power_kw: 65
+  - percent: 70
+    power_kw: 50
+  - percent: 80
+    power_kw: 30
+  - percent: 90
+    power_kw: 15
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
-  configuration: single_front  # Front-wheel drive
+  configuration: single_front
   front_motor:
     type: permanent_magnet
     max_power_kw: 100
@@ -85,24 +77,20 @@ motors:
     max_torque_nm: 260
     supplier: null
   rear_motor: null
-  
   drive_type: FWD
   total_power_kw: 100
   total_power_hp: 136
   total_torque_nm: 260
-
 performance:
   acceleration_0_100_kmh_s: 9.0
   acceleration_0_60_mph_s: null
-  top_speed_kmh: 150  # Electronically limited
+  top_speed_kmh: 150
   quarter_mile_s: null
-
 efficiency:
   wltp_kwh_per_100km: 15.9
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.2
   efficiency_notes: Very efficient for B-segment, improved in 2023 facelift
-
 dimensions:
   length_mm: 4055
   width_mm: 1745
@@ -110,12 +98,10 @@ dimensions:
   height_mm: 1430
   wheelbase_mm: 2540
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 309
   trunk_max_liters: 1106
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1455
   gross_vehicle_weight_kg: 1880
@@ -123,49 +109,46 @@ weight:
   weight_distribution_front_percent: 60
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 equipment:
   wheels:
     standard_size_inches: 17
-    available_sizes_inches: [17, 18]
+    available_sizes_inches:
+    - 17
+    - 18
     tire_size_front: 205/50 R17
     tire_size_rear: 205/50 R17
-  
   lighting:
     headlights: Full LED with signature "fangs"
     matrix_led: false
-  
   climate:
-    heat_pump: true  # Standard on GT trim
+    heat_pump: true
     heated_seats: true
     heated_steering_wheel: true
     ac_zones: 2
-  
   driver_assistance:
-    adaptive_cruise_control: true  # Active Safety Brake with Adaptive Cruise Control
-    lane_keeping_assist: true  # Lane Keeping Assist
+    adaptive_cruise_control: true
+    lane_keeping_assist: true
     blind_spot_monitoring: true
-    parking_sensors: true  # Front and rear
-    parking_camera: true  # 180° reversing camera
+    parking_sensors: true
+    parking_camera: true
     surround_view_camera: false
     autonomous_level: 2
     adas_brand: null
     notes: Drive Assist 2.0 package includes ACC, LKA, Traffic Sign Recognition
-
 interior:
   upholstery_material: Alcantara and TEP (premium synthetic leather)
-  upholstery_color_options: [Black with Lime Yellow stitching, Black]
+  upholstery_color_options:
+  - Black with Lime Yellow stitching
+  - Black
   seat_adjustment: Manual front seats (electric optional)
-  premium_audio: false  # Focal premium audio optional
-  ambient_lighting: true  # LED ambient lighting strips
-
+  premium_audio: false
+  ambient_lighting: true
 exterior:
   paint_type: Solid, Metallic, Special
   paint_colors: 9
   two_tone_available: false
   roof_options: Panoramic glass roof optional
   aerodynamic_features: Flush door handles, active grille shutters
-
 data_quality:
   overall: verified
   battery_specs: verified
@@ -175,52 +158,78 @@ data_quality:
   efficiency_specs: verified
   source_reliability: high
   last_updated: 2024-02-07
-
 sources:
-  - name: Peugeot Germany Configurator
-    url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-208
-    type: manufacturer
-    date_accessed: 2024-02-07
-  - name: ADAC EcoTest Peugeot e-208 2024
-    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/peugeot-e-208-gt-test/
-    type: measured
-    date_accessed: 2024-02-07
-  - name: Auto Motor und Sport Technical Data
-    url: https://www.auto-motor-und-sport.de/fahrbericht/peugeot-e-208-test-2024/
-    type: magazine_review
-    date_accessed: 2024-02-07
+- name: Peugeot Germany Configurator
+  url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-208
+  type: manufacturer
+  date_accessed: 2024-02-07
+- name: ADAC EcoTest Peugeot e-208 2024
+  url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/peugeot-e-208-gt-test/
+  type: measured
+  date_accessed: 2024-02-07
+- name: Auto Motor und Sport Technical Data
+  url: https://www.auto-motor-und-sport.de/fahrbericht/peugeot-e-208-test-2024/
+  type: magazine_review
+  date_accessed: 2024-02-07
+notes: 'The e-208 GT is the sportiest variant of Peugeot''s electric supermini, featuring:
 
-notes: |
-  The e-208 GT is the sportiest variant of Peugeot's electric supermini, featuring:
-  
+
   **2023 Facelift Improvements:**
+
   - Battery capacity: 50kWh → 51kWh (+2%)
+
   - Usable capacity: 45kWh → 46.3kWh (+2.9%)
+
   - Range: 385km → 400km WLTP (+3.9%)
+
   - Efficiency: 16.5 → 15.9 kWh/100km (-3.6%)
+
   - Improved heat pump for better cold weather performance
-  
+
+
   **GT Trim Highlights:**
+
   - Sporty body kit with GT badging
+
   - 17" diamond-cut alloy wheels (18" optional)
+
   - Full LED "fang" headlights
+
   - Lime Yellow contrast stitching throughout interior
+
   - Alcantara/TEP sport seats
+
   - Heat pump standard (optional on lower trims)
+
   - Drive Assist 2.0 with ACC and LKA
-  
+
+
   **Platform Sharing:**
+
   - Identical to Opel Corsa-e mechanically (same battery, motor, platform)
+
   - Peugeot charges ~€2,000-3,000 premium for more distinctive design
+
   - 3D i-Cockpit is unique to Peugeot (Opel has conventional layout)
-  
+
+
   **Competition:**
+
   - More expensive than MG4 (€35,990) but more premium
+
   - Similar price to Mini Cooper Electric (€39,990) but more practical
+
   - Cheaper than BMW i3 was (discontinued 2022)
-  
+
+
   **Charging Note:**
+
   100kW DC fast charging is adequate for B-segment, but slower than competition:
+
   - MG4: 135kW
+
   - Mini Electric: 95kW (similar)
+
   - Fiat 500e: 85kW (slower)
+
+  '

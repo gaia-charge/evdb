@@ -1,20 +1,16 @@
-# Fiat Grande Panda 44 kWh Electric (2025)
-
 id: fiat-grande-panda-44-electric-2025
 model_id: fiat-grande-panda
-name: "44 kWh Electric"
+name: 44 kWh Electric
 model_year: 2025
 trim_level: null
 variant_code: null
-
 production:
   start_date: 2025-03-01
   end_date: null
   status: active
-
 battery:
   type: Lithium-ion
-  chemistry: LFP  # Lithium Iron Phosphate
+  chemistry: LFP
   total_kwh: 44.0
   usable_kwh: 42.0
   supplier: CATL
@@ -23,33 +19,28 @@ battery:
   warranty_capacity_percent: 70
   voltage_nominal: 400
   notes: LFP chemistry for affordability and longevity
-
 range:
   wltp_km: 320
   wltp_city_km: 410
   wltp_highway_km: 250
   real_world_avg_km: 270
   real_world_source: Estimated based on ë-C3 platform data
-
 charging:
   ac:
-    max_power_kw: 7.4
     connector_type: Type 2
     phases: 1
     time_0_100_hours: 6.5
     onboard_charger: 7.4kW single-phase standard, 11kW 3-phase optional
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 27
     preconditioning: false
-  
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 7.4
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -61,24 +52,22 @@ motors:
     power_kw: 83
     power_hp: 113
     torque_nm: 120
-
 performance:
-  acceleration_0_100_kph: 11.0
   top_speed_kph: 132
-
+  total_power_kw: 83
+  total_power_hp: 113
+  total_torque_nm: 120
+  acceleration_0_100_sec: 11.0
 efficiency:
   wltp_kwh_per_100km: 13.7
   wltp_wh_per_km: 137
   real_world_kwh_per_100km: 16.0
-
 weight:
   curb_weight_kg: 1410
   gross_vehicle_weight_kg: 1780
   payload_kg: 370
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-
 dimensions:
   length_mm: 3990
   width_mm: 1757
@@ -86,56 +75,53 @@ dimensions:
   height_mm: 1570
   wheelbase_mm: 2560
   ground_clearance_mm: 170
-
 cargo:
   trunk_capacity_liters: 361
   trunk_max_liters: 1100
   frunk_capacity_liters: 0
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 tires:
   standard: 205/55 R17
-
 features:
   infotainment:
-    - "10.25\" central touchscreen"
-    - "10\" digital instrument cluster"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ digital radio"
-    - "Bluetooth with audio streaming"
-  
+  - 10.25" central touchscreen
+  - 10" digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ digital radio
+  - Bluetooth with audio streaming
   driver_assistance:
-    - "Automatic Emergency Braking"
-    - "Lane Keep Assist"
-    - "Speed Limit Recognition"
-    - "Driver attention alert"
-    - "Rear parking sensors"
-    - "Rear-view camera"
-  
+  - Automatic Emergency Braking
+  - Lane Keep Assist
+  - Speed Limit Recognition
+  - Driver attention alert
+  - Rear parking sensors
+  - Rear-view camera
   comfort_convenience:
-    - "Automatic climate control"
-    - "Electric windows front and rear"
-    - "Remote pre-conditioning via app"
-    - "USB-C charging ports"
-    - "Height-adjustable driver seat"
-  
+  - Automatic climate control
+  - Electric windows front and rear
+  - Remote pre-conditioning via app
+  - USB-C charging ports
+  - Height-adjustable driver seat
   exterior:
-    - "LED headlights"
-    - "17\" alloy wheels"
-    - "Body-colored bumpers"
-    - "Roof rails"
-
+  - LED headlights
+  - 17" alloy wheels
+  - Body-colored bumpers
+  - Roof rails
 metadata:
   data_quality: estimated
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://www.fiat.com/
-  notes: |
-    The Fiat Grande Panda Electric is one of the most affordable EVs in Europe, targeting
+  - https://www.fiat.com/
+  notes: 'The Fiat Grande Panda Electric is one of the most affordable EVs in Europe,
+    targeting
+
     sub-€25,000 pricing. Based on the same Smart Car platform as the Citroën ë-C3,
+
     it offers 320 km WLTP range with LFP battery chemistry for longevity and safety.
+
     Ideal urban commuter with 100 kW DC fast charging capability.
+
+    '

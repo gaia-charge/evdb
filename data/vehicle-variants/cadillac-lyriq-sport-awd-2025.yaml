@@ -1,7 +1,3 @@
-# Cadillac Lyriq Sport AWD 2025
-# Mid-size luxury electric SUV - Sport trim
-# German Car of the Year 2025 (Luxury category)
-
 id: cadillac-lyriq-sport-awd-2025
 name: Lyriq Sport AWD
 model_id: cadillac-lyriq
@@ -9,31 +5,43 @@ manufacturer_id: general-motors
 variant_name: Sport AWD
 model_year: 2025
 trim_level: Sport
-version: "600 E4"
+version: 600 E4
+description: 'The Cadillac Lyriq Sport AWD is one of two standard trims available
+  in Germany,
 
-description: |
-  The Cadillac Lyriq Sport AWD is one of two standard trims available in Germany,
   featuring sportier styling elements including unique 21-inch wheels, sport-tuned
+
   suspension, and distinctive exterior accents. It shares the same powerful dual-motor
-  AWD drivetrain with 528 PS and 102 kWh NCMA battery delivering up to 530 km WLTP range.
-  
+
+  AWD drivetrain with 528 PS and 102 kWh NCMA battery delivering up to 530 km WLTP
+  range.
+
+
   The Sport trim differentiates through its triangular laser-graved front grille pattern,
+
   sport-specific wheel designs, and slightly firmer suspension tuning. Inside, the
+
   spectacular 33-inch diagonal LED display with 9K resolution dominates the dashboard,
-  while the 19-speaker AKG Studio audio system with Dolby Atmos delivers immersive sound.
-  
+
+  while the 19-speaker AKG Studio audio system with Dolby Atmos delivers immersive
+  sound.
+
+
   Active Noise Cancellation creates a remarkably quiet cabin, complemented by premium
-  materials and Cadillac's signature American luxury approach. The Google Built-In
+
+  materials and Cadillac''s signature American luxury approach. The Google Built-In
+
   infotainment system provides seamless integration with Google Maps, Assistant, and
+
   Play Store.
-  
-  At €83,000, the Lyriq Sport undercuts comparable German competitors significantly while
+
+
+  At €83,000, the Lyriq Sport undercuts comparable German competitors significantly
+  while
+
   offering a larger battery, more standard equipment, and distinctive American character.
 
-# ============================================================================
-# BATTERY & RANGE
-# ============================================================================
-
+  '
 battery:
   usable_kwh: 95.0
   total_kwh: 102.0
@@ -42,94 +50,103 @@ battery:
   manufacturer: LG Energy Solution
   supplier: LG Energy Solution (South Korea)
   nominal_voltage: 400
-  pack_voltage_range: "340-440V (400V architecture)"
+  pack_voltage_range: 340-440V (400V architecture)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid-cooled
   heating: integrated battery heating
   preconditioning: true
-  notes: |
-    GM Ultium NCMA battery (Nickel Cobalt Manganese Aluminum).
+  notes: 'GM Ultium NCMA battery (Nickel Cobalt Manganese Aluminum).
+
     102 kWh total / ~95 kWh usable capacity.
+
     400V architecture with 190 kW peak DC charging.
+
     LG Energy Solution pouch cells.
+
     Advanced wireless battery management system (wBMS) - industry first.
 
+    '
 range:
   wltp_km: 530
   wltp_city_km: 640
   wltp_highway_km: 440
   real_world_km: 430
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    WLTP: 530 km (102 kWh battery, 21" wheels, AWD)
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: 'WLTP: 530 km (102 kWh battery, 21" wheels, AWD)
+
     Real-world: ~430 km mixed driving in good conditions
+
     Winter range: ~370 km in cold conditions (heat pump helps)
+
     Highway range at 130 km/h: ~380 km
-    
+
+
     Competitive range for segment. Slightly below BMW iX xDrive50 (611 km WLTP)
+
     but larger battery and more standard equipment at lower price.
 
+    '
 efficiency:
   wltp_kwh_per_100km: 22.5
   real_world_kwh_per_100km: 24.5
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    22.5 kWh/100km WLTP - reasonable for a 2,774 kg luxury SUV.
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: '22.5 kWh/100km WLTP - reasonable for a 2,774 kg luxury SUV.
+
     Not class-leading in efficiency but compensated by large battery.
+
     No aerodynamic wheel covers - Cadillac prioritizes style.
 
-# ============================================================================
-# CHARGING
-# ============================================================================
-
+    '
 charging:
   ac:
-    max_power_kw: 22
     standard: true
     connector_type: Type2
     phases: 3
     time_0_100_hours: 5.5
-    notes: |
-      Standard 22 kW AC onboard charger (3-phase Type2).
+    notes: 'Standard 22 kW AC onboard charger (3-phase Type2).
+
       0-100% in ~5.5 hours at 22 kW.
+
       11 kW wallbox: ~10 hours 0-100%.
 
+      '
   dc:
-    max_power_kw: 190
     connector_type: CCS2
     architecture_voltage: 400
     time_10_80_minutes: 27
     time_5_80_minutes: 30
-    notes: |
-      190 kW peak DC fast charging (CCS2):
+    notes: '190 kW peak DC fast charging (CCS2):
+
       - 10-80%: ~27 minutes (ideal conditions)
+
       - 200 km range in ~15 minutes
+
       - Real-world 10-80%: 30-35 minutes typical
-      
+
+
       Decent but not class-leading. Porsche Macan charges at 270 kW,
+
       BMW iX at 195 kW. The 400V architecture limits peak rate vs 800V vehicles.
 
+      '
     charge_curve:
-      - soc_percent: 0
-        power_kw: 60
-      - soc_percent: 10
-        power_kw: 185
-      - soc_percent: 30
-        power_kw: 190
-        note: "Peak power"
-      - soc_percent: 50
-        power_kw: 150
-      - soc_percent: 70
-        power_kw: 90
-      - soc_percent: 80
-        power_kw: 50
-
-# ============================================================================
-# MOTORS & PERFORMANCE
-# ============================================================================
-
+    - soc_percent: 0
+      power_kw: 60
+    - soc_percent: 10
+      power_kw: 185
+    - soc_percent: 30
+      power_kw: 190
+      note: Peak power
+    - soc_percent: 50
+      power_kw: 150
+    - soc_percent: 70
+      power_kw: 90
+    - soc_percent: 80
+      power_kw: 50
+  ac_max_kw: 22
+  dc_max_kw: 190
 motors:
   count: 2
   type: Permanent Magnet Synchronous Motor (PMSM)
@@ -145,57 +162,62 @@ motors:
   combined_power_kw: 394
   combined_power_hp: 528
   torque_nm: 610
-  notes: |
-    Dual PMSM motors with intelligent AWD torque distribution.
+  notes: 'Dual PMSM motors with intelligent AWD torque distribution.
+
     Front: 157 kW / Rear: 237 kW = Combined 394 kW (528 PS).
+
     610 Nm combined torque.
+
     Rear-biased power distribution for engaging driving dynamics.
 
+    '
 drive_type: AWD
 driven_wheels: all
-
 performance:
   acceleration_0_100_kmh_seconds: 5.3
   top_speed_kmh: 210
   top_speed_electronically_limited: true
-  notes: |
-    0-100 km/h: 5.3 seconds (respectable for 2,774 kg SUV)
+  notes: '0-100 km/h: 5.3 seconds (respectable for 2,774 kg SUV)
+
     Top speed: 210 km/h (electronically limited)
+
     Regen on Demand paddle for driver-controlled recuperation
+
     One-pedal driving available
 
+    '
 weight:
   curb_weight_kg: 2774
   gross_vehicle_weight_kg: 3300
   payload_kg: 526
   towing_capacity_braked_kg: 1588
-  towing_capacity_braked_kg: 1588
-  notes: |
-    2,774 kg curb weight - heavy but typical for large battery luxury SUV.
+  notes: '2,774 kg curb weight - heavy but typical for large battery luxury SUV.
+
     1,588 kg braked towing capacity.
 
+    '
 suspension:
   front: Multi-link with adaptive dampers
   rear: Multi-link with adaptive dampers
   adaptive_damping: Magnetic Ride Control 4.0
-  notes: |
-    Available Magnetic Ride Control 4.0 - GM's premium adaptive damping system.
+  notes: 'Available Magnetic Ride Control 4.0 - GM''s premium adaptive damping system.
+
     Reads road surface 1,000 times per second and adjusts damping in real-time.
+
     Sport trim features slightly firmer calibration vs Luxury trim.
 
+    '
 brakes:
   front: Ventilated discs with Brembo calipers (Sport)
   rear: Ventilated discs
   regenerative: true
-  notes: |
-    Sport trim features Brembo front brake calipers.
+  notes: 'Sport trim features Brembo front brake calipers.
+
     Regen on Demand paddle on steering wheel for active recuperation control.
+
     One-pedal driving mode available.
 
-# ============================================================================
-# DIMENSIONS & CAPACITY
-# ============================================================================
-
+    '
 dimensions:
   length_mm: 5005
   width_mm: 1977
@@ -204,39 +226,41 @@ dimensions:
   wheelbase_mm: 3094
   ground_clearance_mm: 175
   drag_coefficient: 0.32
-  notes: |
-    Over 5 meters long - among the largest in its class.
+  notes: 'Over 5 meters long - among the largest in its class.
+
     Longer than BMW iX (4,953 mm) and Mercedes EQE SUV (4,879 mm).
+
     Long wheelbase (3,094 mm) provides excellent interior space.
 
+    '
 cargo:
   trunk_capacity_liters: 588
   trunk_max_liters: 1751
   frunk_capacity_liters: 0
-  notes: |
-    588L cargo with seats up, 1,751L with rear seats folded.
+  notes: '588L cargo with seats up, 1,751L with rear seats folded.
+
     Flat load floor. No frunk (front trunk).
+
     Power liftgate standard.
 
-# ============================================================================
-# ADDITIONAL FEATURES
-# ============================================================================
-
+    '
 tires:
-  front: "275/40 R21"
-  rear: "275/40 R21"
+  front: 275/40 R21
+  rear: 275/40 R21
   wheel_size_inches: 21
-  notes: |
-    Standard 21" multi-spoke alloy wheels (Sport-specific design).
+  notes: 'Standard 21" multi-spoke alloy wheels (Sport-specific design).
+
     No aerodynamic wheel covers - Cadillac prioritizes styling.
 
+    '
 climate:
   heat_pump: true
   auto_climate_zones: 3
-  notes: |
-    Standard heat pump and 3-zone automatic climate control.
+  notes: 'Standard heat pump and 3-zone automatic climate control.
+
     Pre-conditioning via myCadillac app.
 
+    '
 interior:
   seats: 5
   seat_material: Leather with Sport accents
@@ -247,27 +271,33 @@ interior:
   sound_system: AKG Studio 19-speaker system with Dolby Atmos
   ambient_lighting: 26 color combinations
   panoramic_roof: true
-  notes: |
-    Spectacular 33" diagonal curved LED display (9K resolution, 1 billion colors).
+  notes: 'Spectacular 33" diagonal curved LED display (9K resolution, 1 billion colors).
+
     Google Built-In infotainment (Maps, Assistant, Play Store).
+
     AKG Studio 19-speaker audio with Dolby Atmos.
+
     Active Noise Cancellation for whisper-quiet cabin.
+
     26 ambient lighting color combinations.
+
     Panoramic glass roof with electric sunshade.
+
     Heated/ventilated front seats, heated rear seats.
+
     Massage function available.
 
+    '
 adas_features:
-  - Super Cruise semi-autonomous driving (Level 2+, hands-free highway driving)
-  - Adaptive Cruise Control with Stop & Go
-  - Lane Keep Assist with Lane Change Assist
-  - HD Surround Vision (360° camera)
-  - Automatic Emergency Braking
-  - Rear pedestrian alert
-  - Rear Cross-Traffic Braking
-  - Front pedestrian braking
-  - Enhanced Automatic Parking Assist
-
+- Super Cruise semi-autonomous driving (Level 2+, hands-free highway driving)
+- Adaptive Cruise Control with Stop & Go
+- Lane Keep Assist with Lane Change Assist
+- HD Surround Vision (360° camera)
+- Automatic Emergency Braking
+- Rear pedestrian alert
+- Rear Cross-Traffic Braking
+- Front pedestrian braking
+- Enhanced Automatic Parking Assist
 connectivity:
   system: Google Built-In infotainment
   apple_carplay: true
@@ -276,23 +306,22 @@ connectivity:
   wifi_hotspot: true
   ota_updates: true
   remote_app: myCadillac app
-  notes: |
-    Google Built-In with native Google Maps, Assistant, and Play Store.
+  notes: 'Google Built-In with native Google Maps, Assistant, and Play Store.
+
     Apple CarPlay and Android Auto (wired initially).
+
     OTA updates for maps, infotainment, and vehicle software.
+
     myCadillac app for remote functions.
 
-# ============================================================================
-# METADATA
-# ============================================================================
-
+    '
 metadata:
   data_quality: verified
   data_source: manufacturer
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   verified_by: Cadillac Europe official specifications, carwow.de
   sources:
-    - https://www.cadillaceurope.com/de-de/lyriq
-    - https://www.carwow.de/cadillac/lyriq
-    - https://en.wikipedia.org/wiki/Cadillac_Lyriq
+  - https://www.cadillaceurope.com/de-de/lyriq
+  - https://www.carwow.de/cadillac/lyriq
+  - https://en.wikipedia.org/wiki/Cadillac_Lyriq

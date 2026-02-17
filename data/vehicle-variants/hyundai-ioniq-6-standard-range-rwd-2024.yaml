@@ -1,397 +1,327 @@
-# Hyundai Ioniq 6 Standard Range RWD 2024
-# Entry-level Electrified Streamliner - Efficiency Champion
-# Most aerodynamic EV (Cd 0.21), 800V fast charging, 446km range
-# Competes with: Tesla Model 3 RWD, Polestar 2 Standard
-
 id: hyundai-ioniq-6-standard-range-rwd-2024
 name: Standard Range RWD
 model_id: hyundai-ioniq-6
 model_year: 2024
 production_years:
   start: 2022
-  end: null  # Still in production
-
+  end: null
 trim_level: se-standard-range
 market_position: entry-level
-
-# Battery Specifications
 battery:
   usable_kwh: 53.0
   total_kwh: 54.0
-  chemistry: NCM  # Nickel Manganese Cobalt (NMC811)
-  nominal_voltage_v: 697  # 800V architecture
+  chemistry: NCM
+  nominal_voltage_v: 697
   cell_type: pouch
   supplier: SK On (SK Innovation)
   warranty_years: 10
   warranty_km: 160000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, 800V E-GMP architecture"
+    configuration: floor-mounted, 800V E-GMP architecture
     weight_kg: 352
     modules: null
-  
-  notes: "Smaller battery but same 800V architecture as Long Range"
-
-# Range
+  notes: Smaller battery but same 800V architecture as Long Range
 range:
-  wltp_km: 446  # Excellent for 53 kWh battery
+  wltp_km: 446
   wltp_source: manufacturer
-  wltp_city_km: 590  # City efficiency advantage from regen
-  wltp_highway_km: 355  # Aerodynamics shine on highway
-  
-  epa_km: 435  # 270 miles (US market SE Standard Range)
+  wltp_city_km: 590
+  wltp_highway_km: 355
+  epa_km: 435
   epa_source: manufacturer
-  
-  real_world_km: 385  # ~86% of WLTP, excellent efficiency
+  real_world_km: 385
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 20°C, moderate speed"
-  
-  real_world_notes: >
-    The Ioniq 6 Standard Range achieves 86% of WLTP in real-world conditions,
-    exceptional for any EV. The Cd 0.21 aerodynamics deliver outstanding highway
-    efficiency (355km WLTP highway vs 495km Long Range = 72% with 72% battery).
+  real_world_conditions: Mixed driving, 20°C, moderate speed
+  real_world_notes: 'The Ioniq 6 Standard Range achieves 86% of WLTP in real-world
+    conditions, exceptional for any EV. The Cd 0.21 aerodynamics deliver outstanding
+    highway efficiency (355km WLTP highway vs 495km Long Range = 72% with 72% battery).
     City driving benefits from regenerative braking and efficient single motor.
 
-# Charging
+    '
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 4.8  # 53kWh ÷ 11kW
-      "10_80": 3.2  # 37kWh ÷ 11kW
+      '0_100': 4.8
+      '10_80': 3.2
     onboard_charger_kw: 11
     phases: 3
-    
-    notes: "Faster full charge than Long Range due to smaller battery"
-  
+    notes: Faster full charge than Long Range due to smaller battery
   dc:
-    max_power_kw: 180  # Lower than Long Range's 233kW, but still excellent
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18  # Same as Long Range! 800V advantage
-      "0_100": 32  # Faster than Long Range (41 min) due to smaller battery
-    
+      '10_80': 18
+      '0_100': 32
     charging_curve:
-      - soc_percent: 0
-        power_kw: 170
-        note: "Lower starting power than Long Range"
-      - soc_percent: 10
-        power_kw: 180  # Peak
-      - soc_percent: 20
-        power_kw: 180
-      - soc_percent: 30
-        power_kw: 165
-      - soc_percent: 40
-        power_kw: 145
-      - soc_percent: 50
-        power_kw: 130
-      - soc_percent: 60
-        power_kw: 105
-      - soc_percent: 70
-        power_kw: 80
-      - soc_percent: 80
-        power_kw: 45
-      - soc_percent: 90
-        power_kw: 22
-    
-    notes: >
-      800V E-GMP architecture enables 18-minute 10-80% charging despite
-      lower peak power than Long Range. Smaller battery charges faster
-      to 100% (32 min vs 41 min).
-    
-    km_per_hour_charging: 600  # @ 180kW peak (385 real-world range / 0.32 hour)
+    - soc_percent: 0
+      power_kw: 170
+      note: Lower starting power than Long Range
+    - soc_percent: 10
+      power_kw: 180
+    - soc_percent: 20
+      power_kw: 180
+    - soc_percent: 30
+      power_kw: 165
+    - soc_percent: 40
+      power_kw: 145
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 105
+    - soc_percent: 70
+      power_kw: 80
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 22
+    notes: '800V E-GMP architecture enables 18-minute 10-80% charging despite lower
+      peak power than Long Range. Smaller battery charges faster to 100% (32 min vs
+      41 min).
 
+      '
+    km_per_hour_charging: 600
   bidirectional:
     v2l: true
-    v2l_max_power_kw: 3.6  # Vehicle-to-Load standard on all Ioniq 6
+    v2l_max_power_kw: 3.6
     v2g: false
     v2h: false
-    
-    v2l_notes: "Power external devices via adapter in charging port"
-
-# Motors & Performance
+    v2l_notes: Power external devices via adapter in charging port
+  ac_max_kw: 11
+  dc_max_kw: 180
 motors:
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 151
-    max_power_hp: 204
-    max_torque_nm: 350  # Same torque as Long Range RWD
-    max_rpm: 13500
-    cooling: liquid
-    
-    notes: "17kW less power than Long Range RWD (151 vs 168kW)"
-
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 151
+  max_power_hp: 204
+  max_torque_nm: 350
+  max_rpm: 13500
+  cooling: liquid
+  notes: 17kW less power than Long Range RWD (151 vs 168kW)
 drivetrain:
   type: rwd
   total_power_kw: 151
   total_power_hp: 204
   total_torque_nm: 350
-  
   weight_distribution:
     front_percent: 50
     rear_percent: 50
-  
-  notes: "RWD provides balanced handling, efficient single-motor design"
-
+  notes: RWD provides balanced handling, efficient single-motor design
 dimensions:
   length_mm: 4855
   width_mm: 1880
   height_mm: 1495
   wheelbase_mm: 2950
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 401
   trunk_max_liters: 1428
   frunk_capacity_liters: 0
-
 performance:
-  acceleration_0_100_kmh_s: 8.5  # 1.1s slower than Long Range RWD (7.4s)
+  acceleration_0_100_kmh_s: 8.5
   acceleration_0_60_mph_s: 8.1
-  top_speed_kmh: 185  # Electronically limited (same as Long Range)
+  top_speed_kmh: 185
   top_speed_limited: true
-  
-  notes: "Adequate performance for entry-level, 0.7s faster than Tesla Model 3 RWD (6.1s)"
-
-# Weight & Efficiency
+  notes: Adequate performance for entry-level, 0.7s faster than Tesla Model 3 RWD
+    (6.1s)
 weight:
-  curb_weight_kg: 1730  # 125kg lighter than Long Range RWD (1855kg)
-  gross_vehicle_weight_kg: 2215  # 125kg lighter than Long Range
+  curb_weight_kg: 1730
+  gross_vehicle_weight_kg: 2215
   payload_kg: 485
-  towing_capacity_braked_kg: 1600  # With braking (optional tow hitch)
+  towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-  
   weight_distribution:
     front_kg: 865
     rear_kg: 865
-  
-  notes: "125kg weight savings vs Long Range RWD due to smaller battery"
-  
+  notes: 125kg weight savings vs Long Range RWD due to smaller battery
 efficiency:
-  wltp_kwh_per_100km: 13.9  # Same efficiency as Long Range! Lighter weight compensates
+  wltp_kwh_per_100km: 13.9
   wltp_source: manufacturer
-  
   epa_kwh_per_100km: 13.4
   epa_source: manufacturer
-  
-  real_world_kwh_per_100km: 15.0  # Excellent real-world efficiency
+  real_world_kwh_per_100km: 15.0
   real_world_source: measured
-  
   at_speed:
-    - speed_kmh: 90
-      consumption_kwh_per_100km: 14.2
-      range_km: 373
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 18.2
-      range_km: 291
-      note: "Aerodynamics (Cd 0.21) keep highway consumption low"
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 21.5
-      range_km: 246
-  
-  notes: >
-    Remarkably, the Standard Range achieves the same WLTP efficiency as Long Range
-    (13.9 kWh/100km) thanks to 125kg weight savings offsetting the smaller battery.
+  - speed_kmh: 90
+    consumption_kwh_per_100km: 14.2
+    range_km: 373
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 18.2
+    range_km: 291
+    note: Aerodynamics (Cd 0.21) keep highway consumption low
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 21.5
+    range_km: 246
+  notes: 'Remarkably, the Standard Range achieves the same WLTP efficiency as Long
+    Range (13.9 kWh/100km) thanks to 125kg weight savings offsetting the smaller battery.
     The Cd 0.21 aerodynamics deliver exceptional highway efficiency - best in class
     for a 53kWh battery. Real-world efficiency is excellent at 86% of WLTP.
 
-# Wheels & Tires
+    '
 wheels_tires:
   standard:
     wheel_size_inches: 18
-    tire_size_front: "235/55 R18"
-    tire_size_rear: "235/55 R18"
-    wheel_type: "Eco-spoke alloy"
-    notes: "Standard 18-inch wheels optimize range"
-  
+    tire_size_front: 235/55 R18
+    tire_size_rear: 235/55 R18
+    wheel_type: Eco-spoke alloy
+    notes: Standard 18-inch wheels optimize range
   optional:
-    - wheel_size_inches: 20
-      tire_size_front: "245/40 R20"
-      tire_size_rear: "245/40 R20"
-      wheel_type: "Sport alloy"
-      range_impact_km: -18  # Reduces WLTP to 428km
-      notes: "Sport wheels reduce range by 4%"
-
-# Features & Options
+  - wheel_size_inches: 20
+    tire_size_front: 245/40 R20
+    tire_size_rear: 245/40 R20
+    wheel_type: Sport alloy
+    range_impact_km: -18
+    notes: Sport wheels reduce range by 4%
 standard_features:
-  - "Dual 12-inch displays (digital cluster + touchscreen)"
-  - "Hyundai CCNC infotainment with navigation"
-  - "Over-the-air software updates"
-  - "Wireless Apple CarPlay / Android Auto"
-  - "Digital Key 2.0 (NFC + UWB)"
-  - "Highway Driving Assist 2 (Level 2 ADAS)"
-  - "Smart Cruise Control with Stop & Go"
-  - "Lane Following Assist / Lane Keeping Assist"
-  - "Forward Collision-Avoidance Assist"
-  - "Blind-Spot Collision-Avoidance Assist"
-  - "Rear Cross-Traffic Collision-Avoidance Assist"
-  - "Vehicle-to-Load (V2L) - 3.6kW"
-  - "Heat pump standard (efficiency in cold weather)"
-  - "Parametric Pixel LED headlights"
-  - "LED rear combination lamps (Parametric Pixels)"
-  - "18-inch Eco-spoke alloy wheels"
-  - "8-way power driver seat"
-  - "Heated front seats"
-  - "Dual wireless smartphone charging"
-  - "Premium cloth upholstery"
-  - "Auto-dimming rearview mirror"
-  - "Rear parking sensors"
-
+- Dual 12-inch displays (digital cluster + touchscreen)
+- Hyundai CCNC infotainment with navigation
+- Over-the-air software updates
+- Wireless Apple CarPlay / Android Auto
+- Digital Key 2.0 (NFC + UWB)
+- Highway Driving Assist 2 (Level 2 ADAS)
+- Smart Cruise Control with Stop & Go
+- Lane Following Assist / Lane Keeping Assist
+- Forward Collision-Avoidance Assist
+- Blind-Spot Collision-Avoidance Assist
+- Rear Cross-Traffic Collision-Avoidance Assist
+- Vehicle-to-Load (V2L) - 3.6kW
+- Heat pump standard (efficiency in cold weather)
+- Parametric Pixel LED headlights
+- LED rear combination lamps (Parametric Pixels)
+- 18-inch Eco-spoke alloy wheels
+- 8-way power driver seat
+- Heated front seats
+- Dual wireless smartphone charging
+- Premium cloth upholstery
+- Auto-dimming rearview mirror
+- Rear parking sensors
 optional_packages:
-  - name: "Convenience Package"
-    price_eur: 1500
-    features:
-      - "Surround View Monitor (360° camera)"
-      - "Remote Smart Parking Assist 2"
-      - "Blind-Spot View Monitor"
-      - "Highway Driving Assist 2 upgrade"
-  
-  - name: "Premium Package"
-    price_eur: 2500
-    features:
-      - "Vegan leather seating"
-      - "Ventilated front seats"
-      - "Heated rear seats"
-      - "Bose Premium Audio (8 speakers)"
-      - "Active Road Noise Cancellation"
-      - "Relaxation front seats (leg rest)"
-  
-  - name: "Winter Package"
-    price_eur: 800
-    features:
-      - "Heated steering wheel"
-      - "Heated rear seats"
-      - "Heated windshield washer nozzles"
-
+- name: Convenience Package
+  price_eur: 1500
+  features:
+  - Surround View Monitor (360° camera)
+  - Remote Smart Parking Assist 2
+  - Blind-Spot View Monitor
+  - Highway Driving Assist 2 upgrade
+- name: Premium Package
+  price_eur: 2500
+  features:
+  - Vegan leather seating
+  - Ventilated front seats
+  - Heated rear seats
+  - Bose Premium Audio (8 speakers)
+  - Active Road Noise Cancellation
+  - Relaxation front seats (leg rest)
+- name: Winter Package
+  price_eur: 800
+  features:
+  - Heated steering wheel
+  - Heated rear seats
+  - Heated windshield washer nozzles
 standalone_options:
-  - name: "Tow Hitch"
-    price_eur: 1000
-    notes: "1,600kg braked towing capacity"
-  
-  - name: "20-inch Sport Wheels"
-    price_eur: 1200
-    notes: "Reduces WLTP range by 18km to 428km"
-  
-  - name: "Premium Paint"
-    price_eur: 800
-    colors:
-      - "Digital Teal Pearl"
-      - "Shooting Star Matte"
-      - "Gravity Gold Matte"
-
+- name: Tow Hitch
+  price_eur: 1000
+  notes: 1,600kg braked towing capacity
+- name: 20-inch Sport Wheels
+  price_eur: 1200
+  notes: Reduces WLTP range by 18km to 428km
+- name: Premium Paint
+  price_eur: 800
+  colors:
+  - Digital Teal Pearl
+  - Shooting Star Matte
+  - Gravity Gold Matte
 colors:
   standard:
-    - name: "Polar White"
-      price_eur: 0
-    - name: "Phantom Black Pearl"
-      price_eur: 0
-  
-  premium:
-    - name: "Nocturne Gray Metallic"
-      price_eur: 800
-    - name: "Digital Teal Pearl"
-      price_eur: 800
-    - name: "Serenity Blue Pearl"
-      price_eur: 800
-    - name: "Shooting Star Matte"
-      price_eur: 800
-    - name: "Gravity Gold Matte"
-      price_eur: 800
-
-interior_colors:
-  - name: "Gray Eco-Fabric"
+  - name: Polar White
     price_eur: 0
-    material: "Recycled fabric"
-  - name: "Gray Vegan Leather"
-    price_eur: 1000
-    material: "Vegan leather (no animal products)"
-  - name: "Black Vegan Leather"
-    price_eur: 1000
-    material: "Vegan leather with suede headliner"
-
-# Technology Highlights
+  - name: Phantom Black Pearl
+    price_eur: 0
+  premium:
+  - name: Nocturne Gray Metallic
+    price_eur: 800
+  - name: Digital Teal Pearl
+    price_eur: 800
+  - name: Serenity Blue Pearl
+    price_eur: 800
+  - name: Shooting Star Matte
+    price_eur: 800
+  - name: Gravity Gold Matte
+    price_eur: 800
+interior_colors:
+- name: Gray Eco-Fabric
+  price_eur: 0
+  material: Recycled fabric
+- name: Gray Vegan Leather
+  price_eur: 1000
+  material: Vegan leather (no animal products)
+- name: Black Vegan Leather
+  price_eur: 1000
+  material: Vegan leather with suede headliner
 technology_highlights:
-  - "Most aerodynamic EV in production (Cd 0.21) - same as Long Range"
-  - "800V E-GMP architecture - 18-minute 10-80% charging"
-  - "Digital Key 2.0 with UWB (Ultra-Wideband)"
-  - "Over-the-air software updates"
-  - "Highway Driving Assist 2 (Level 2 autonomous)"
-  - "Plug & Charge (ISO 15118)"
-  - "V2L: Power external devices up to 3.6kW"
-  - "Heat pump standard (efficient heating/cooling)"
-  - "Parametric Pixel LED lighting (unique design)"
-
-# Market & Pricing Notes
-market_notes: >
-  The Ioniq 6 Standard Range RWD is the entry-level variant, competing directly
-  with Tesla Model 3 RWD, Polestar 2 Standard, and BMW i4 eDrive35. Despite the
-  smaller 53kWh battery, it achieves exceptional 446km WLTP range (86% real-world)
+- Most aerodynamic EV in production (Cd 0.21) - same as Long Range
+- 800V E-GMP architecture - 18-minute 10-80% charging
+- Digital Key 2.0 with UWB (Ultra-Wideband)
+- Over-the-air software updates
+- Highway Driving Assist 2 (Level 2 autonomous)
+- Plug & Charge (ISO 15118)
+- 'V2L: Power external devices up to 3.6kW'
+- Heat pump standard (efficient heating/cooling)
+- Parametric Pixel LED lighting (unique design)
+market_notes: 'The Ioniq 6 Standard Range RWD is the entry-level variant, competing
+  directly with Tesla Model 3 RWD, Polestar 2 Standard, and BMW i4 eDrive35. Despite
+  the smaller 53kWh battery, it achieves exceptional 446km WLTP range (86% real-world)
   thanks to the class-leading Cd 0.21 aerodynamics. The 800V architecture maintains
-  18-minute 10-80% charging speed (same as Long Range!), making it practical for
-  long-distance travel. The 125kg weight savings (1730 vs 1855kg) delivers the same
-  13.9 kWh/100km WLTP efficiency as the Long Range RWD.
-  
-  Key advantages:
-  - World's most aerodynamic EV (Cd 0.21)
-  - 18-minute 10-80% charging (800V architecture)
-  - Excellent 446km WLTP range from 53kWh battery
-  - 125kg lighter than Long Range (better handling)
-  - €8,000-10,000 cheaper than Long Range
-  - Same premium features and technology
-  - V2L standard (3.6kW external power)
-  - Heat pump standard (cold weather efficiency)
-  - World Car of the Year 2023 winner
-  
-  Trade-offs vs Long Range RWD:
-  - 168km less WLTP range (446 vs 614km, 73% capacity = 72% range)
-  - 17kW less power (151 vs 168kW, adequate for daily driving)
-  - 1.1s slower 0-100 km/h (8.5 vs 7.4s, still quick)
-  - Lower DC peak power (180 vs 233kW, but same 18-min charge time)
+  18-minute 10-80% charging speed (same as Long Range!), making it practical for long-distance
+  travel. The 125kg weight savings (1730 vs 1855kg) delivers the same 13.9 kWh/100km
+  WLTP efficiency as the Long Range RWD.
 
-competitive_notes: >
-  Competes favorably with:
-  - Tesla Model 3 RWD (€40,990): Similar price, Ioniq 6 has better range (446 vs 420km),
-    faster DC charging (18 vs 27 min 10-80%), V2L, more premium interior
-  - Polestar 2 Standard (€45,900): Ioniq 6 is cheaper, better range (446 vs 442km),
-    faster charging (18 vs 35 min), better aerodynamics
-  - BMW i4 eDrive35 (€52,900): Ioniq 6 is €10,000+ cheaper, similar range (446 vs 483km),
-    faster charging, more tech features
-  - Mercedes EQE 250 (€69,000): Ioniq 6 is €25,000+ cheaper, similar efficiency,
-    faster charging, better value
+  Key advantages: - World''s most aerodynamic EV (Cd 0.21) - 18-minute 10-80% charging
+  (800V architecture) - Excellent 446km WLTP range from 53kWh battery - 125kg lighter
+  than Long Range (better handling) - €8,000-10,000 cheaper than Long Range - Same
+  premium features and technology - V2L standard (3.6kW external power) - Heat pump
+  standard (cold weather efficiency) - World Car of the Year 2023 winner
 
-# Sources & References
+  Trade-offs vs Long Range RWD: - 168km less WLTP range (446 vs 614km, 73% capacity
+  = 72% range) - 17kW less power (151 vs 168kW, adequate for daily driving) - 1.1s
+  slower 0-100 km/h (8.5 vs 7.4s, still quick) - Lower DC peak power (180 vs 233kW,
+  but same 18-min charge time)
+
+  '
+competitive_notes: "Competes favorably with: - Tesla Model 3 RWD (€40,990): Similar\
+  \ price, Ioniq 6 has better range (446 vs 420km),\n  faster DC charging (18 vs 27\
+  \ min 10-80%), V2L, more premium interior\n- Polestar 2 Standard (€45,900): Ioniq\
+  \ 6 is cheaper, better range (446 vs 442km),\n  faster charging (18 vs 35 min),\
+  \ better aerodynamics\n- BMW i4 eDrive35 (€52,900): Ioniq 6 is €10,000+ cheaper,\
+  \ similar range (446 vs 483km),\n  faster charging, more tech features\n- Mercedes\
+  \ EQE 250 (€69,000): Ioniq 6 is €25,000+ cheaper, similar efficiency,\n  faster\
+  \ charging, better value\n"
 sources:
-  - url: "https://www.hyundai.com/worldwide/en/eco/ioniq-6/specifications"
-    title: "Official Hyundai Ioniq 6 Specifications"
-    date_accessed: "2024-02-07"
-  - url: "https://www.hyundai.de/modelle/ioniq-6/technische-daten"
-    title: "Hyundai Germany - Ioniq 6 Technical Data"
-    date_accessed: "2024-02-07"
-  - url: "https://www.hyundai.com/us/en/vehicles/ioniq-6/specs"
-    title: "Hyundai USA - Ioniq 6 SE Standard Range Specs"
-    date_accessed: "2024-02-07"
-  - url: "https://ev-database.org/car/1724/Hyundai-Ioniq-6-Standard-Range-2WD"
-    title: "EV Database - Ioniq 6 Standard Range"
-    date_accessed: "2024-02-07"
-
-# Metadata
+- url: https://www.hyundai.com/worldwide/en/eco/ioniq-6/specifications
+  title: Official Hyundai Ioniq 6 Specifications
+  date_accessed: '2024-02-07'
+- url: https://www.hyundai.de/modelle/ioniq-6/technische-daten
+  title: Hyundai Germany - Ioniq 6 Technical Data
+  date_accessed: '2024-02-07'
+- url: https://www.hyundai.com/us/en/vehicles/ioniq-6/specs
+  title: Hyundai USA - Ioniq 6 SE Standard Range Specs
+  date_accessed: '2024-02-07'
+- url: https://ev-database.org/car/1724/Hyundai-Ioniq-6-Standard-Range-2WD
+  title: EV Database - Ioniq 6 Standard Range
+  date_accessed: '2024-02-07'
 metadata:
-  created_at: "2024-02-07"
-  updated_at: "2024-02-07"
+  created_at: '2024-02-07'
+  updated_at: '2024-02-07'
   data_quality: verified
   data_source: manufacturer
-  verified_by: "Official Hyundai specifications + third-party measurements"
-  
-  notes: >
-    The Ioniq 6 Standard Range demonstrates that smaller batteries can deliver
-    excellent range when paired with outstanding aerodynamics. The Cd 0.21 drag
-    coefficient (best in production) enables 446km WLTP from just 53kWh - that's
-    8.4 km/kWh efficiency! The 800V E-GMP architecture maintains fast charging
-    (18 min 10-80%) despite the entry-level positioning. At 125kg lighter than
-    Long Range, it offers nimbler handling while achieving the same 13.9 kWh/100km
-    WLTP consumption. Perfect for efficiency-focused buyers who prioritize
-    aerodynamics and fast charging over maximum range.
+  verified_by: Official Hyundai specifications + third-party measurements
+  notes: 'The Ioniq 6 Standard Range demonstrates that smaller batteries can deliver
+    excellent range when paired with outstanding aerodynamics. The Cd 0.21 drag coefficient
+    (best in production) enables 446km WLTP from just 53kWh - that''s 8.4 km/kWh efficiency!
+    The 800V E-GMP architecture maintains fast charging (18 min 10-80%) despite the
+    entry-level positioning. At 125kg lighter than Long Range, it offers nimbler handling
+    while achieving the same 13.9 kWh/100km WLTP consumption. Perfect for efficiency-focused
+    buyers who prioritize aerodynamics and fast charging over maximum range.
+
+    '

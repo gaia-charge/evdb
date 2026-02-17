@@ -4,18 +4,16 @@ name: Pure RWD
 model_year: 2025
 trim_level: pure
 market_availability:
-  - europe
-  - germany
-  - netherlands
-  - switzerland
-  - uk
-
-# Battery specifications
+- europe
+- germany
+- netherlands
+- switzerland
+- uk
 battery:
   total_kwh: 88
   usable_kwh: 84
-  chemistry: NCA  # Nickel Cobalt Aluminum
-  voltage: 924  # 900V+ architecture
+  chemistry: NCA
+  voltage: 924
   manufacturer: lucid
   warranty:
     duration_years: 8
@@ -24,9 +22,7 @@ battery:
   cooling_system: liquid
   heat_pump: true
   preconditioning: true
-  cell_to_pack: true  # Advanced packaging
-
-# Motor and drivetrain
+  cell_to_pack: true
 motors:
   layout: rwd
   total_count: 1
@@ -36,130 +32,107 @@ motors:
     power_hp: 430
     torque_nm: 630
     manufacturer: lucid
-
   combined:
     total_power_kw: 320
     total_power_hp: 430
     total_torque_nm: 630
-
 drivetrain:
   drive_type: RWD
   transmission: single_speed_reduction
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 4.5
   top_speed_kmh: 200
   top_speed_limited: true
-
-# Range and efficiency
 range:
   wltp_km: 660
   wltp_city_km: 820
   wltp_highway_km: 580
-  epa_km: 676  # 420 miles EPA
+  epa_km: 676
   real_world_mixed_km: 590
   real_world_highway_km: 520
   real_world_winter_km: 480
-
 efficiency:
   wltp_kwh_per_100km: 13.1
-  epa_kwh_per_100km: 12.4  # 5.0 mi/kWh (industry-leading)
+  epa_kwh_per_100km: 12.4
   real_world_kwh_per_100km: 14.2
-
-# Charging
 charging:
   ac:
-    max_power_kw: 22
     phases: 3
     time_0_100_hours: 4.0
     onboard_charger_kw: 22
   dc:
-    max_power_kw: 300
     time_10_80_minutes: 22
-    time_10_80_km_added: 462  # 660km range × 70% = 462km
-    curve_description: >
-      Peak 300kW charging with 900V+ architecture maintained from 10-40% SoC, 
-      tapering to 200kW at 50%, 150kW at 60%, 100kW at 70%, and 50kW at 80%. 
-      Lucid's advanced thermal management enables industry-leading charging speeds 
-      with minimal degradation. Real-world 20-80% charging takes approximately 
-      22 minutes on capable 350kW chargers.
+    time_10_80_km_added: 462
+    curve_description: 'Peak 300kW charging with 900V+ architecture maintained from
+      10-40% SoC,  tapering to 200kW at 50%, 150kW at 60%, 100kW at 70%, and 50kW
+      at 80%.  Lucid''s advanced thermal management enables industry-leading charging
+      speeds  with minimal degradation. Real-world 20-80% charging takes approximately  22
+      minutes on capable 350kW chargers.
 
-# Bidirectional charging
+      '
+  ac_max_kw: 22
+  dc_max_kw: 300
 bidirectional_charging:
   v2l_capable: true
   v2l_power_kw: 9.6
-  v2h_capable: true  # Hardware capable, software-enabled
-  v2g_capable: false  # Not yet enabled in Europe
-
-# Dimensions and weight
+  v2h_capable: true
+  v2g_capable: false
 dimensions:
   length_mm: 4975
   width_mm: 1939
   height_mm: 1410
   wheelbase_mm: 2960
   ground_clearance_mm: 108
-  drag_coefficient: 0.197  # Lowest of any production car
+  drag_coefficient: 0.197
   frontal_area_m2: 2.53
-
 weight:
   curb_weight_kg: 2360
   gross_vehicle_weight_kg: 2800
   payload_kg: 440
-  towing_capacity_braked_kg: 0  # Not rated for towing
+  towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 456
   trunk_max_liters: 627
   frunk_capacity_liters: 283
-
-# Seating
 interior:
   seating_capacity: 5
-
-# Wheels and tires
 wheels:
   standard:
-    size_front: "245/45 R19"
-    size_rear: "245/45 R19"
+    size_front: 245/45 R19
+    size_rear: 245/45 R19
     wheel_diameter_inches: 19
   optional:
-    - size_front: "245/40 R20"
-      size_rear: "265/40 R20"
-      wheel_diameter_inches: 20
-
-# Suspension and brakes
+  - size_front: 245/40 R20
+    size_rear: 265/40 R20
+    wheel_diameter_inches: 20
 suspension:
   front: double_wishbone
   rear: multi_link
-  adaptive: false  # Steel springs standard on Pure
+  adaptive: false
   damping: passive
-
 brakes:
   front: ventilated_disc
   rear: ventilated_disc
   regenerative: true
   regenerative_max_power_kw: 300
   one_pedal_driving: true
-
-# Technology and features
 technology:
   adas_level: 2
   features:
-    - adaptive_cruise_control
-    - lane_keeping_assist
-    - lane_centering
-    - automatic_emergency_braking
-    - blind_spot_monitoring
-    - rear_cross_traffic_alert
-    - traffic_sign_recognition
-    - parking_assist
-    - surround_view_camera
-    - automatic_parking
-    - highway_assist  # Dream Drive Pro available
+  - adaptive_cruise_control
+  - lane_keeping_assist
+  - lane_centering
+  - automatic_emergency_braking
+  - blind_spot_monitoring
+  - rear_cross_traffic_alert
+  - traffic_sign_recognition
+  - parking_assist
+  - surround_view_camera
+  - automatic_parking
+  - highway_assist
   infotainment:
-    screen_size_inches: 34  # Curved 5K Glass Cockpit display
+    screen_size_inches: 34
     rotating_screen: false
     apple_carplay: true
     android_auto: true
@@ -169,71 +142,66 @@ technology:
     voice_control: true
   audio:
     system: surreal_sound
-    speakers: 12  # Base system (21-speaker Surreal Sound Pro optional)
+    speakers: 12
     power_watts: 406
-
-# Standard equipment (Pure trim)
 standard_equipment:
   exterior:
-    - LED headlights with DRL
-    - LED taillights with Lucid signature light bar
-    - Glass Canopy roof (full-length electrochromic)
-    - Power-folding heated mirrors
-    - 19" aerodynamic alloy wheels
-    - Frameless windows
-    - Automatic wipers
-    - Flush door handles with proximity sensors
+  - LED headlights with DRL
+  - LED taillights with Lucid signature light bar
+  - Glass Canopy roof (full-length electrochromic)
+  - Power-folding heated mirrors
+  - 19" aerodynamic alloy wheels
+  - Frameless windows
+  - Automatic wipers
+  - Flush door handles with proximity sensors
   interior:
-    - 34" curved 5K Glass Cockpit display
-    - 12.3" rear passenger display (retractable)
-    - Nappa leather steering wheel with heating
-    - Synthetic leather seats with heating
-    - 12-way power driver seat with memory
-    - 8-way power passenger seat
-    - Wireless smartphone charging (15W)
-    - Tri-zone automatic climate control
-    - Air quality monitoring system
-    - HEPA air filtration
-    - Ambient lighting (multiple colors)
-    - Keyless entry and start
-    - Power trunk with kick sensor
-    - Spacious interior (limousine-like rear legroom)
+  - 34" curved 5K Glass Cockpit display
+  - 12.3" rear passenger display (retractable)
+  - Nappa leather steering wheel with heating
+  - Synthetic leather seats with heating
+  - 12-way power driver seat with memory
+  - 8-way power passenger seat
+  - Wireless smartphone charging (15W)
+  - Tri-zone automatic climate control
+  - Air quality monitoring system
+  - HEPA air filtration
+  - Ambient lighting (multiple colors)
+  - Keyless entry and start
+  - Power trunk with kick sensor
+  - Spacious interior (limousine-like rear legroom)
   safety:
-    - 5-star NHTSA rating (US)
-    - Top Safety Pick+ IIHS (US)
-    - 10 airbags (front, side, curtain, knee)
-    - ISOFIX child seat anchors (rear)
-    - Tire pressure monitoring system (TPMS)
-    - Electronic stability control (ESC)
-    - Traction control system (TCS)
-    - Hill start assist
-    - Anti-lock braking system (ABS)
-
-# Optional equipment
+  - 5-star NHTSA rating (US)
+  - Top Safety Pick+ IIHS (US)
+  - 10 airbags (front, side, curtain, knee)
+  - ISOFIX child seat anchors (rear)
+  - Tire pressure monitoring system (TPMS)
+  - Electronic stability control (ESC)
+  - Traction control system (TCS)
+  - Hill start assist
+  - Anti-lock braking system (ABS)
 optional_equipment:
-  - name: Dream Drive Pro
-    price_eur: 4500
-    description: Advanced ADAS with highway assist, lidar, 32 sensors, automatic lane changing
-  - name: Surreal Sound Pro Audio
-    price_eur: 5000
-    description: 21-speaker Dolby Atmos system with 406W amplifier
-  - name: 20" Aero Blade Wheels
-    price_eur: 2500
-    description: Upgraded 20" wheels (slightly reduces range)
-  - name: Metallic/Pearl Paint
-    price_eur: 1500
-    description: Premium metallic or pearl paint finishes
-  - name: Santa Monica Interior
-    price_eur: 3500
-    description: Premium Nappa leather seats with contrast stitching
-  - name: Massaging Front Seats
-    price_eur: 2000
-    description: 12-way power seats with massage function
-  - name: Stealth Look Package
-    price_eur: 3000
-    description: Black exterior accents, dark wheels, tinted glass
-
-# Safety ratings
+- name: Dream Drive Pro
+  price_eur: 4500
+  description: Advanced ADAS with highway assist, lidar, 32 sensors, automatic lane
+    changing
+- name: Surreal Sound Pro Audio
+  price_eur: 5000
+  description: 21-speaker Dolby Atmos system with 406W amplifier
+- name: 20" Aero Blade Wheels
+  price_eur: 2500
+  description: Upgraded 20" wheels (slightly reduces range)
+- name: Metallic/Pearl Paint
+  price_eur: 1500
+  description: Premium metallic or pearl paint finishes
+- name: Santa Monica Interior
+  price_eur: 3500
+  description: Premium Nappa leather seats with contrast stitching
+- name: Massaging Front Seats
+  price_eur: 2000
+  description: 12-way power seats with massage function
+- name: Stealth Look Package
+  price_eur: 3000
+  description: Black exterior accents, dark wheels, tinted glass
 safety:
   nhtsa:
     year: 2023
@@ -242,36 +210,35 @@ safety:
     year: 2023
     rating: top_safety_pick_plus
   euro_ncap:
-    year: null  # Not yet tested by Euro NCAP
+    year: null
     overall_stars: null
-
-# Energy consumption (official)
 energy_label:
-  efficiency_class: a_plus  # EU energy label A+ class
+  efficiency_class: a_plus
   co2_emissions_wltp_g_per_km: 0
+notes: 'The Lucid Air Pure RWD represents the entry point to Lucid''s ultra-luxury
+  electric  sedan lineup. With 660 km WLTP range (676 km EPA / 420 miles), industry-leading  efficiency
+  (13.1 kWh/100km WLTP, 12.4 kWh/100km EPA / 5.0 mi/kWh), and impressive  320kW/430hp
+  performance (4.5s 0-100 km/h), the Air Pure delivers exceptional value  in the F-segment
+  luxury sedan category.
 
-# Notes
-notes: >
-  The Lucid Air Pure RWD represents the entry point to Lucid's ultra-luxury electric 
-  sedan lineup. With 660 km WLTP range (676 km EPA / 420 miles), industry-leading 
-  efficiency (13.1 kWh/100km WLTP, 12.4 kWh/100km EPA / 5.0 mi/kWh), and impressive 
-  320kW/430hp performance (4.5s 0-100 km/h), the Air Pure delivers exceptional value 
-  in the F-segment luxury sedan category.
-  
-  The 900V+ architecture enables ultra-fast 300kW DC charging (22 minutes 10-80%), 
-  significantly faster than Mercedes EQS (200kW), BMW i7 (195kW), or Tesla Model S 
-  (250kW). Lucid's miniaturized drive units and advanced packaging create limousine-like 
-  interior space (especially rear legroom) in a mid-size sedan footprint.
-  
-  The Air Pure's 0.197 Cd drag coefficient is the lowest of any production car, 
-  contributing to industry-leading efficiency and enabling 660km real-world range from 
-  just 84 kWh usable battery. Competitors require 90-100+ kWh for similar range.
-  
-  Standard equipment includes Glass Canopy roof (electrochromic dimming), 34" curved 5K 
-  Glass Cockpit display, tri-zone climate control, and comprehensive ADAS suite. Dream 
-  Drive Pro (optional €4,500) adds lidar-based highway assist with automatic lane changing.
-  
-  Lucid's challenge in Europe remains brand awareness and service infrastructure versus 
-  established German luxury marques. However, for tech-savvy luxury buyers prioritizing 
-  cutting-edge EV technology, range, and efficiency over traditional brand prestige, 
-  the Air Pure offers compelling value at competitive pricing versus EQS/i7/Model S.
+  The 900V+ architecture enables ultra-fast 300kW DC charging (22 minutes 10-80%),  significantly
+  faster than Mercedes EQS (200kW), BMW i7 (195kW), or Tesla Model S  (250kW). Lucid''s
+  miniaturized drive units and advanced packaging create limousine-like  interior
+  space (especially rear legroom) in a mid-size sedan footprint.
+
+  The Air Pure''s 0.197 Cd drag coefficient is the lowest of any production car,  contributing
+  to industry-leading efficiency and enabling 660km real-world range from  just 84
+  kWh usable battery. Competitors require 90-100+ kWh for similar range.
+
+  Standard equipment includes Glass Canopy roof (electrochromic dimming), 34" curved
+  5K  Glass Cockpit display, tri-zone climate control, and comprehensive ADAS suite.
+  Dream  Drive Pro (optional €4,500) adds lidar-based highway assist with automatic
+  lane changing.
+
+  Lucid''s challenge in Europe remains brand awareness and service infrastructure
+  versus  established German luxury marques. However, for tech-savvy luxury buyers
+  prioritizing  cutting-edge EV technology, range, and efficiency over traditional
+  brand prestige,  the Air Pure offers compelling value at competitive pricing versus
+  EQS/i7/Model S.
+
+  '

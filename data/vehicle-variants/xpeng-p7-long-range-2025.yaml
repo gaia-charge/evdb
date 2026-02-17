@@ -1,19 +1,18 @@
-# Vehicle Variant: XPENG P7 Long Range (2025)
 id: xpeng-p7-long-range-2025
 model_id: xpeng-p7
 name: Long Range
 variant_name: Long Range
 model_year: 2025
 trim_level: Long Range
-production_years: "2024-present"
+production_years: 2024-present
+overview: 'The XPENG P7 Long Range is the primary European variant, offering the P7i''s
+  full  capability with an 86.2 kWh NMC battery providing approximately 505 km WLTP
+  range.  The single rear-mounted permanent magnet synchronous motor produces 203
+  kW (276 PS)  and 440 Nm, delivering 0-100 km/h in 6.4 seconds. Standard equipment
+  includes Dynaudio  Dolby Atmos audio, heat pump, panoramic roof, and comprehensive
+  ADAS.
 
-overview: >
-  The XPENG P7 Long Range is the primary European variant, offering the P7i's full 
-  capability with an 86.2 kWh NMC battery providing approximately 505 km WLTP range. 
-  The single rear-mounted permanent magnet synchronous motor produces 203 kW (276 PS) 
-  and 440 Nm, delivering 0-100 km/h in 6.4 seconds. Standard equipment includes Dynaudio 
-  Dolby Atmos audio, heat pump, panoramic roof, and comprehensive ADAS.
-
+  '
 battery:
   chemistry: NMC
   supplier: CALB
@@ -23,61 +22,58 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "86.2 kWh NMC battery from CALB, 400V architecture"
-
+  notes: 86.2 kWh NMC battery from CALB, 400V architecture
 range:
   wltp_km: 505
   wltp_city_km: null
   wltp_highway_km: null
   epa_miles: null
   real_world_km: 420
-  real_world_notes: "Estimated ~420 km mixed driving"
-
+  real_world_notes: Estimated ~420 km mixed driving
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 590
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 590
+      power_kw: 11.0
   dc:
-    max_power_kw: 175
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 160
-      - soc_percent: 20
-        power_kw: 175
-      - soc_percent: 30
-        power_kw: 170
-      - soc_percent: 40
-        power_kw: 160
-      - soc_percent: 50
-        power_kw: 140
-      - soc_percent: 60
-        power_kw: 120
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 70
-      - soc_percent: 90
-        power_kw: 40
-      - soc_percent: 100
-        power_kw: 15
+    - soc_percent: 10
+      power_kw: 160
+    - soc_percent: 20
+      power_kw: 175
+    - soc_percent: 30
+      power_kw: 170
+    - soc_percent: 40
+      power_kw: 160
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 60
+      power_kw: 120
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 70
+    - soc_percent: 90
+      power_kw: 40
+    - soc_percent: 100
+      power_kw: 15
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 29
-        power_kw: 175
-        notes: "10-80% in approximately 29 minutes"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 29
+      power_kw: 175
+      notes: 10-80% in approximately 29 minutes
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 175
 motors:
   configuration: single
   drive_type: RWD
@@ -86,23 +82,20 @@ motors:
   total_torque_nm: 440
   motor_type: permanent_magnet
   motors:
-    - position: rear
-      power_kw: 203
-      power_hp: 276
-      torque_nm: 440
-      motor_type: permanent_magnet
-
+  - position: rear
+    power_kw: 203
+    power_hp: 276
+    torque_nm: 440
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 6.4
   top_speed_kmh: 200
-  notes: "0-100 km/h in 6.4 seconds, top speed electronically limited to 200 km/h"
-
+  notes: 0-100 km/h in 6.4 seconds, top speed electronically limited to 200 km/h
 efficiency:
   consumption_wltp_kwh_per_100km: 17.0
   consumption_real_world_kwh_per_100km: 19.0
   efficiency_rating_eu: A
-  notes: "17.0 kWh/100km WLTP combined"
-
+  notes: 17.0 kWh/100km WLTP combined
 dimensions:
   length_mm: 4880
   width_mm: 1896
@@ -110,52 +103,48 @@ dimensions:
   height_mm: 1450
   wheelbase_mm: 2998
   ground_clearance_mm: 135
-
 cargo:
   trunk_capacity_liters: 440
   trunk_max_liters: 440
-
 weight:
   curb_weight_kg: 1910
   gross_vehicle_weight_kg: 2350
   payload_kg: 440
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 features:
   standard:
-    - "14.96-inch center touchscreen"
-    - "10.25-inch digital instrument cluster"
-    - "Dynaudio 20-speaker Dolby Atmos sound system"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ digital radio"
-    - "LED matrix headlights"
-    - "Panoramic glass roof"
-    - "Heat pump climate control"
-    - "Wireless phone charger"
-    - "360-degree camera system"
-    - "XPILOT ASSIST (adaptive cruise + lane centering)"
-    - "Automatic parking assist"
-    - "Heated Nappa leather seats"
-    - "Powered front seats with memory"
-    - "Powered tailgate"
-    - "Privacy glass"
-    - "19-inch alloy wheels"
+  - 14.96-inch center touchscreen
+  - 10.25-inch digital instrument cluster
+  - Dynaudio 20-speaker Dolby Atmos sound system
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ digital radio
+  - LED matrix headlights
+  - Panoramic glass roof
+  - Heat pump climate control
+  - Wireless phone charger
+  - 360-degree camera system
+  - XPILOT ASSIST (adaptive cruise + lane centering)
+  - Automatic parking assist
+  - Heated Nappa leather seats
+  - Powered front seats with memory
+  - Powered tailgate
+  - Privacy glass
+  - 19-inch alloy wheels
   optional:
-    - "Metallic paint (€800)"
-    - "20-inch alloy wheels"
-
+  - Metallic paint (€800)
+  - 20-inch alloy wheels
 version:
-  release_date: "2024-06"
-  changes_from_previous: "P7i facelift with updated powertrain, LiDAR ADAS, Dynaudio audio"
-  notes: "European specification P7i, 2025 model year"
-
+  release_date: 2024-06
+  changes_from_previous: P7i facelift with updated powertrain, LiDAR ADAS, Dynaudio
+    audio
+  notes: European specification P7i, 2025 model year
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.xpeng.com/de/p7
-    - https://en.wikipedia.org/wiki/Xpeng_P7
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  notes: "European specification, P7i Long Range variant"
+  - https://www.xpeng.com/de/p7
+  - https://en.wikipedia.org/wiki/Xpeng_P7
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
+  notes: European specification, P7i Long Range variant

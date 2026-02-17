@@ -1,18 +1,14 @@
-# Opel Grandland Electric Long Range (2024) - Single Motor RWD
-
 id: opel-grandland-electric-long-range-2024
 model_id: opel-grandland-electric
-name: "Long Range"
+name: Long Range
 model_year: 2024
-trim_level: Long Range  # Mid-range single motor variant
+trim_level: Long Range
 variant_code: null
-
 production:
   start_date: 2024-03-01
   end_date: null
   status: active
   notes: New 2024 model on STLA Medium platform, single motor RWD configuration
-
 dimensions:
   length_mm: 4650
   width_mm: 1905
@@ -20,77 +16,70 @@ dimensions:
   height_mm: 1665
   wheelbase_mm: 2784
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 550
   trunk_max_liters: 1645
   frunk_capacity_liters: 0
-
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt (73 kWh base uses LFP)
+  chemistry: NMC
   total_kwh: 82.0
-  usable_kwh: 77.0  # ~94% usable
+  usable_kwh: 77.0
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: null  # Not publicly disclosed
+  cells: null
   modules: null
   voltage_nominal: 400
-  notes: 82 kWh NMC battery for Long Range variants (73 kWh LFP available on base model)
-
+  notes: 82 kWh NMC battery for Long Range variants (73 kWh LFP available on base
+    model)
 range:
   wltp_km: 580
   wltp_city_km: 710
   wltp_highway_km: 485
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 490
   real_world_source: Expected based on STLA Medium platform efficiency
   notes: Excellent range for C-SUV segment, benefits from aerodynamic design (Cd 0.28)
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 8.5
     onboard_charger: 11kW 3-phase standard (22kW optional)
-  
   dc:
-    max_power_kw: 160
     connector_type: CCS2
     time_10_80_percent_minutes: 26
     peak_power_notes: 160kW peak maintained up to 50%, excellent charging curve
-    preconditioning: true  # Battery preconditioning via navigation
-  
+    preconditioning: true
   charge_curve:
-    - percent: 0
-      power_kw: 155
-    - percent: 10
-      power_kw: 160
-    - percent: 30
-      power_kw: 160
-    - percent: 50
-      power_kw: 160
-    - percent: 60
-      power_kw: 145
-    - percent: 70
-      power_kw: 120
-    - percent: 80
-      power_kw: 80
-    - percent: 90
-      power_kw: 40
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 155
+  - percent: 10
+    power_kw: 160
+  - percent: 30
+    power_kw: 160
+  - percent: 50
+    power_kw: 160
+  - percent: 60
+    power_kw: 145
+  - percent: 70
+    power_kw: 120
+  - percent: 80
+    power_kw: 80
+  - percent: 90
+    power_kw: 40
+  - percent: 100
+    power_kw: 11
   bidirectional:
-    v2l: true  # 3.7 kW vehicle-to-load
-    v2h: false  # Not available at launch
-    v2g: false  # Future capability via OTA update
-
+    v2l: true
+    v2h: false
+    v2g: false
+  ac_max_kw: 11.0
+  dc_max_kw: 160
 motors:
-  configuration: single_rear  # Rear-wheel drive (RWD)
+  configuration: single_rear
   rear:
     type: permanent_magnet
     power_kw: 160
@@ -101,21 +90,21 @@ motors:
     power_kw: 160
     power_hp: 218
     torque_nm: 345
-
 performance:
-  acceleration_0_100_kph: 8.8
   acceleration_0_60_mph: null
-  top_speed_kph: 170  # Electronically limited
+  top_speed_kph: 170
   quarter_mile_seconds: null
-
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 345
+  acceleration_0_100_sec: 8.8
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_wh_per_km: 155
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.8
   mpge_combined: null
-  drag_coefficient: 0.28  # Excellent for SUV
-
+  drag_coefficient: 0.28
 weight:
   curb_weight_kg: 1950
   gross_vehicle_weight_kg: 2500
@@ -124,95 +113,78 @@ weight:
   towing_capacity_unbraked_kg: 750
   roof_load_kg: 75
   weight_distribution_front_percent: 48
-
 drivetrain:
   drive_type: RWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Multi-link with adaptive dampers (optional)
-
 brakes:
   front: Ventilated disc (360mm)
   rear: Ventilated disc (310mm)
-  regenerative: true  # Strong regeneration with one-pedal driving
-
+  regenerative: true
 tires:
-  standard: 235/50 R20  # 20" wheels standard on Long Range
-
+  standard: 235/50 R20
 features:
   infotainment:
-    - "Dual 16\" panoramic widescreen displays"
-    - "Digital cockpit 16\" driver display"
-    - "Infotainment 16\" touchscreen with STLA Brain OS"
-    - "Google Automotive Services built-in (Assistant, Maps, Play Store)"
-    - "Apple CarPlay and Android Auto (wireless)"
-    - "DAB+ digital radio"
-    - "8 speakers audio system"
-    - "Navigation with real-time traffic and charging station finder"
-    - "Over-the-air (OTA) software updates"
-    - "MyOpel mobile app for remote control"
-  
+  - Dual 16" panoramic widescreen displays
+  - Digital cockpit 16" driver display
+  - Infotainment 16" touchscreen with STLA Brain OS
+  - Google Automotive Services built-in (Assistant, Maps, Play Store)
+  - Apple CarPlay and Android Auto (wireless)
+  - DAB+ digital radio
+  - 8 speakers audio system
+  - Navigation with real-time traffic and charging station finder
+  - Over-the-air (OTA) software updates
+  - MyOpel mobile app for remote control
   driver_assistance:
-    - "Intelli-Drive 2.0 semi-autonomous driving (Level 2+)"
-    - "Adaptive cruise control with traffic jam assist"
-    - "Lane keep assist with lane centering"
-    - "Automatic emergency braking with pedestrian/cyclist detection"
-    - "Traffic sign recognition with speed limit display"
-    - "Blind spot monitoring with rear cross-traffic alert"
-    - "Driver attention monitoring"
-    - "360-degree camera system"
-    - "Front and rear parking sensors"
-    - "Park Assist (automatic parking)"
-  
+  - Intelli-Drive 2.0 semi-autonomous driving (Level 2+)
+  - Adaptive cruise control with traffic jam assist
+  - Lane keep assist with lane centering
+  - Automatic emergency braking with pedestrian/cyclist detection
+  - Traffic sign recognition with speed limit display
+  - Blind spot monitoring with rear cross-traffic alert
+  - Driver attention monitoring
+  - 360-degree camera system
+  - Front and rear parking sensors
+  - Park Assist (automatic parking)
   comfort_convenience:
-    - "Automatic dual-zone climate control"
-    - "Heat pump (standard, improves winter range)"
-    - "One-pedal driving with B-mode regenerative braking"
-    - "Keyless entry and start"
-    - "Electric tailgate with gesture control"
-    - "Wireless smartphone charging (15W)"
-    - "USB-C ports (4x - front and rear)"
-    - "Ambient lighting with 8 colors"
-  
+  - Automatic dual-zone climate control
+  - Heat pump (standard, improves winter range)
+  - One-pedal driving with B-mode regenerative braking
+  - Keyless entry and start
+  - Electric tailgate with gesture control
+  - Wireless smartphone charging (15W)
+  - USB-C ports (4x - front and rear)
+  - Ambient lighting with 8 colors
   exterior:
-    - "Opel Vizor 3D front design"
-    - "IntelliLux LED headlights (16 elements)"
-    - "LED taillights with 3D light signature"
-    - "20\" alloy wheels"
-    - "Panoramic sunroof with electrochromic glass"
-    - "Flush door handles"
-    - "Roof rails"
-  
+  - Opel Vizor 3D front design
+  - IntelliLux LED headlights (16 elements)
+  - LED taillights with 3D light signature
+  - 20" alloy wheels
+  - Panoramic sunroof with electrochromic glass
+  - Flush door handles
+  - Roof rails
   interior:
-    - "Alcantara/leather seats with heating"
-    - "Power-adjustable driver seat with memory"
-    - "Heated steering wheel"
-    - "60/40 split-folding rear seats"
-    - "550L trunk (excellent for C-SUV segment)"
-    - "Opel Connect emergency call and diagnostics"
-
+  - Alcantara/leather seats with heating
+  - Power-adjustable driver seat with memory
+  - Heated steering wheel
+  - 60/40 split-folding rear seats
+  - 550L trunk (excellent for C-SUV segment)
+  - Opel Connect emergency call and diagnostics
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   source_urls:
-    - https://www.opel.com/modelle/grandland-electric.html
-    - https://ev-database.org/
-    - https://www.auto-motor-und-sport.de/
-  notes: |
-    The Opel Grandland Electric Long Range is the popular mid-range variant with 
-    excellent 580km WLTP range, 160kW rear motor, and 82 kWh NMC battery.
-    
-    Key advantages:
-    - Excellent range (580km WLTP) for family road trips
-    - Fast 160kW DC charging (10-80% in 26 minutes)
-    - Spacious interior with 550L trunk
-    - RWD configuration for balanced handling
-    - Google Automotive Services built-in
-    - OTA updates for continuous improvement
-    - V2L capability (3.7kW) for external power
-    
-    Positioned as Opel's flagship electric SUV, competing with VW ID.4 Pro, 
-    Hyundai Ioniq 5, and Peugeot e-3008 Long Range.
+  - https://www.opel.com/modelle/grandland-electric.html
+  - https://ev-database.org/
+  - https://www.auto-motor-und-sport.de/
+  notes: "The Opel Grandland Electric Long Range is the popular mid-range variant\
+    \ with \nexcellent 580km WLTP range, 160kW rear motor, and 82 kWh NMC battery.\n\
+    \nKey advantages:\n- Excellent range (580km WLTP) for family road trips\n- Fast\
+    \ 160kW DC charging (10-80% in 26 minutes)\n- Spacious interior with 550L trunk\n\
+    - RWD configuration for balanced handling\n- Google Automotive Services built-in\n\
+    - OTA updates for continuous improvement\n- V2L capability (3.7kW) for external\
+    \ power\n\nPositioned as Opel's flagship electric SUV, competing with VW ID.4\
+    \ Pro, \nHyundai Ioniq 5, and Peugeot e-3008 Long Range.\n"

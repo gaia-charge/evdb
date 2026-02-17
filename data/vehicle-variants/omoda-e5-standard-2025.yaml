@@ -4,13 +4,11 @@ name: Standard
 model_year: 2025
 trim_level: standard
 market_availability:
-  - europe
-  - germany
-  - spain
-  - italy
-  - uk
-
-# Battery specifications
+- europe
+- germany
+- spain
+- italy
+- uk
 battery:
   total_kwh: 61
   usable_kwh: 58.5
@@ -25,8 +23,6 @@ battery:
   heat_pump: true
   preconditioning: true
   cell_to_pack: false
-
-# Motor and drivetrain
 motors:
   layout: fwd
   total_count: 1
@@ -40,18 +36,13 @@ motors:
     total_power_kw: 150
     total_power_hp: 204
     total_torque_nm: 340
-
 drivetrain:
   drive_type: FWD
   transmission: single_speed_reduction
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 7.6
   top_speed_kmh: 170
   top_speed_limited: true
-
-# Range and efficiency
 range:
   wltp_km: 430
   wltp_city_km: 530
@@ -60,35 +51,29 @@ range:
   real_world_mixed_km: 360
   real_world_highway_km: 310
   real_world_winter_km: 280
-
 efficiency:
   wltp_kwh_per_100km: 15.8
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 16.3
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     time_0_100_hours: 6.0
     onboard_charger_kw: 11
   dc:
-    max_power_kw: 120
     time_10_80_minutes: 28
     time_10_80_km_added: 301
-    curve_description: >
-      Peak 120kW from 10-40% SoC, tapering to 75kW at 55%, 40kW at 70%.
-      LFP chemistry provides consistent charging across temperature range.
+    curve_description: 'Peak 120kW from 10-40% SoC, tapering to 75kW at 55%, 40kW
+      at 70%. LFP chemistry provides consistent charging across temperature range.
 
-# Bidirectional charging
+      '
+  ac_max_kw: 11
+  dc_max_kw: 120
 bidirectional_charging:
   v2l_capable: true
   v2l_power_kw: 3.3
   v2h_capable: false
   v2g_capable: false
-
-# Dimensions and weight
 dimensions:
   length_mm: 4424
   width_mm: 1830
@@ -96,44 +81,36 @@ dimensions:
   wheelbase_mm: 2630
   ground_clearance_mm: 170
   drag_coefficient: 0.28
-
 weight:
   curb_weight_kg: 1750
   gross_vehicle_weight_kg: 2200
   payload_kg: 450
   towing_capacity_braked_kg: 750
-
-# Cargo and seating
 seating:
   capacity: 5
   configuration: 2_plus_3
-
 cargo:
   trunk_capacity_liters: 380
   trunk_max_liters: 1075
   frunk_volume_liters: 0
-
-# Technology and infotainment
 infotainment:
   screen_size_inches: 15.6
   screen_orientation: landscape
   system: Chery Lion 5.0
   features:
-    - 15.6" central touchscreen
-    - 10.25" digital instrument cluster
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Voice control
-    - OTA software updates
-    - 4G LTE connectivity
-    - Built-in navigation
-    - WiFi hotspot
+  - 15.6" central touchscreen
+  - 10.25" digital instrument cluster
+  - Wireless Apple CarPlay
+  - Wireless Android Auto
+  - Voice control
+  - OTA software updates
+  - 4G LTE connectivity
+  - Built-in navigation
+  - WiFi hotspot
   instrument_cluster:
     type: digital
     size_inches: 10.25
     customizable: true
-
-# Driver assistance
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -148,8 +125,6 @@ driver_assistance:
   360_camera: true
   automatic_parking: true
   highway_assist: false
-
-# Safety ratings
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2024
@@ -158,8 +133,6 @@ safety:
   vulnerable_road_users_score: 69
   safety_assist_score: 79
   airbags: 6
-
-# Lighting
 lighting:
   headlights: LED
   headlights_adaptive: true
@@ -168,8 +141,6 @@ lighting:
   taillights: LED
   ambient_lighting: true
   ambient_lighting_colors: 64
-
-# Climate control
 climate:
   zones: 2
   heat_pump: true
@@ -178,94 +149,80 @@ climate:
   heated_steering_wheel: true
   ventilated_seats_front: false
   air_filter: PM2.5
-
-# Wheels and tires
 wheels:
   standard:
     size_inches: 18
     tire_size: 225/55R18
   optional:
-    - size_inches: 19
-      tire_size: 225/50R19
-      range_impact_km: -15
-
-# Exterior colors
+  - size_inches: 19
+    tire_size: 225/50R19
+    range_impact_km: -15
 colors:
-  - name: Pearl White
-    type: metallic
-  - name: Midnight Black
-    type: solid
-  - name: Stellar Grey
-    type: metallic
-  - name: Aurora Blue
-    type: metallic
-  - name: Copper Bronze
-    type: metallic
-
-# Interior options
+- name: Pearl White
+  type: metallic
+- name: Midnight Black
+  type: solid
+- name: Stellar Grey
+  type: metallic
+- name: Aurora Blue
+  type: metallic
+- name: Copper Bronze
+  type: metallic
 interior:
   upholstery: vegan_leather
   trim: soft_touch_plastics
   steering_wheel: leather
   color_options:
-    - name: Black
-    - name: Black with blue accents
-
-# Standard features
+  - name: Black
+  - name: Black with blue accents
 standard_features:
-  - 15.6" central touchscreen
-  - 10.25" digital instrument cluster
-  - Wireless Apple CarPlay and Android Auto
-  - Wireless phone charging
-  - LED adaptive headlights
-  - 64-color ambient lighting
-  - Heat pump
-  - V2L (3.3 kW)
-  - 360° camera
-  - Automatic parking
-  - Heated front seats and steering wheel
-  - Dual-zone climate control
-  - Power tailgate
-  - Keyless entry and start
-  - 18" alloy wheels
-  - Panoramic sunroof
-  - 6 airbags
-
-# Production information
+- 15.6" central touchscreen
+- 10.25" digital instrument cluster
+- Wireless Apple CarPlay and Android Auto
+- Wireless phone charging
+- LED adaptive headlights
+- 64-color ambient lighting
+- Heat pump
+- V2L (3.3 kW)
+- 360° camera
+- Automatic parking
+- Heated front seats and steering wheel
+- Dual-zone climate control
+- Power tailgate
+- Keyless entry and start
+- 18" alloy wheels
+- Panoramic sunroof
+- 6 airbags
 production:
-  start_date: "2024-06"
+  start_date: 2024-06
   plant: Chery Wuhu Plant
   country: China
-  notes: "European deliveries began Q3 2024"
-
-# Version and changelog
+  notes: European deliveries began Q3 2024
 version_info:
-  release_date: "2024-09"
-  changes_from_previous: "First model year for European market"
+  release_date: 2024-09
+  changes_from_previous: First model year for European market
   current_production: true
+notes: 'The OMODA E5 is Chery''s first BEV for the European market, offering strong
+  value in the compact SUV segment. With 430 km WLTP range from a 61 kWh LFP battery,
+  it provides adequate range for most daily use cases.
 
-# Notes
-notes: >
-  The OMODA E5 is Chery's first BEV for the European market, offering strong
-  value in the compact SUV segment. With 430 km WLTP range from a 61 kWh LFP
-  battery, it provides adequate range for most daily use cases.
+  Pricing is aggressive, targeting a lower entry point than VW ID.4 and Hyundai Kona
+  Electric while offering generous standard equipment (panoramic sunroof, 360° camera,
+  wireless CarPlay/Android Auto, heat pump).
 
-  Pricing is aggressive, targeting a lower entry point than VW ID.4 and Hyundai
-  Kona Electric while offering generous standard equipment (panoramic sunroof,
-  360° camera, wireless CarPlay/Android Auto, heat pump).
+  LFP battery chemistry allows worry-free charging to 100% without degradation concerns.
+  120kW DC fast charging is adequate for occasional long trips. V2L capability adds
+  practical value for outdoor activities.
 
-  LFP battery chemistry allows worry-free charging to 100% without degradation
-  concerns. 120kW DC fast charging is adequate for occasional long trips.
-  V2L capability adds practical value for outdoor activities.
+  The E5 competes directly with MG ZS EV, BYD Atto 3, and Kia Niro EV on value proposition.
+  Chery''s 25+ years of automotive manufacturing experience and global export record
+  provide some reassurance on build quality.
 
-  The E5 competes directly with MG ZS EV, BYD Atto 3, and Kia Niro EV on
-  value proposition. Chery's 25+ years of automotive manufacturing experience
-  and global export record provide some reassurance on build quality.
-
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: estimated
   sources:
-    - https://www.omodaauto.eu/e5
-    - https://ev-database.org/
+  - https://www.omodaauto.eu/e5
+  - https://ev-database.org/

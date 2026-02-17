@@ -1,21 +1,33 @@
 id: genesis-gv60-sport-plus-awd-2024
-name: "Sport Plus AWD"
+name: Sport Plus AWD
 model_id: genesis-gv60
 model_year: 2024
 trim_level: Sport Plus
+description: 'Genesis GV60 Sport Plus AWD is the most popular mid-range variant, offering
+  excellent
 
-description: |
-  Genesis GV60 Sport Plus AWD is the most popular mid-range variant, offering excellent
-  balance of performance, luxury, and technology. Features dual-motor AWD with 365 hp
+  balance of performance, luxury, and technology. Features dual-motor AWD with 365
+  hp
+
   (270 kW) combined output delivering exhilarating 5.0-second 0-100 km/h acceleration
-  while maintaining respectable 466 km WLTP range. Sport Plus includes comprehensive
-  standard equipment: Bang & Olufsen 17-speaker premium audio, Nappa leather quilted
-  seats with heating/ventilation/massage, panoramic sunroof, AR head-up display, Face
-  Connect biometric authentication, Crystal Sphere electronic shift dial, Highway Driving
-  Assist 2, Remote Smart Parking Assist 2, and Vehicle-to-Load capability. E-GMP platform
-  with 800V architecture enables 10-80% charging in just 18 minutes at 350 kW DC stations.
-  Electronic Limited Slip Differential enhances cornering dynamics and all-weather traction.
 
+  while maintaining respectable 466 km WLTP range. Sport Plus includes comprehensive
+
+  standard equipment: Bang & Olufsen 17-speaker premium audio, Nappa leather quilted
+
+  seats with heating/ventilation/massage, panoramic sunroof, AR head-up display, Face
+
+  Connect biometric authentication, Crystal Sphere electronic shift dial, Highway
+  Driving
+
+  Assist 2, Remote Smart Parking Assist 2, and Vehicle-to-Load capability. E-GMP platform
+
+  with 800V architecture enables 10-80% charging in just 18 minutes at 350 kW DC stations.
+
+  Electronic Limited Slip Differential enhances cornering dynamics and all-weather
+  traction.
+
+  '
 battery:
   usable_kwh: 77.4
   total_kwh: 82.0
@@ -25,7 +37,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 motors:
   configuration: dual_motor
   drive_type: AWD
@@ -38,136 +49,137 @@ motors:
     torque_nm: 350
   combined_power_kw: 270
   combined_torque_nm: 605
-  notes: "Boost mode increases power from 234 kW to 270 kW for 10 seconds"
-
+  notes: Boost mode increases power from 234 kW to 270 kW for 10 seconds
 performance:
   acceleration_0_100_kmh: 5.0
   top_speed_kmh: 185
-  notes: "5.0 seconds with Boost mode engaged"
-
+  notes: 5.0 seconds with Boost mode engaged
 range:
   wltp_km: 466
   wltp_city_km: 590
   wltp_highway_km: 390
-  epa_km: null  # Not sold in USA
+  epa_km: null
   real_world_mixed_km: 385
   real_world_highway_130kmh_km: 320
   real_world_city_km: 460
-  real_world_winter_km: 310  # -20% with heat pump
-
+  real_world_winter_km: 310
 efficiency:
   wltp_kwh_per_100km: 18.8
   real_world_kwh_per_100km: 20.5
-  mpge_combined: null  # Not sold in USA
-
+  mpge_combined: null
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     connector_type: Type2
     charge_time_0_100_hours: 7.0
-    notes: "Standard 11kW AC charging for home/workplace"
+    notes: Standard 11kW AC charging for home/workplace
   dc:
-    max_power_kw: 235
     connector_type: CCS2
     charge_time_10_80_percent_minutes: 18
     charge_curve:
-      - soc_percent: 10
-        power_kw: 235
-      - soc_percent: 20
-        power_kw: 235
-      - soc_percent: 30
-        power_kw: 225
-      - soc_percent: 40
-        power_kw: 210
-      - soc_percent: 50
-        power_kw: 185
-      - soc_percent: 60
-        power_kw: 150
-      - soc_percent: 70
-        power_kw: 110
-      - soc_percent: 80
-        power_kw: 75
-    notes: |
-      800V ultra-fast charging architecture (235kW peak).
+    - soc_percent: 10
+      power_kw: 235
+    - soc_percent: 20
+      power_kw: 235
+    - soc_percent: 30
+      power_kw: 225
+    - soc_percent: 40
+      power_kw: 210
+    - soc_percent: 50
+      power_kw: 185
+    - soc_percent: 60
+      power_kw: 150
+    - soc_percent: 70
+      power_kw: 110
+    - soc_percent: 80
+      power_kw: 75
+    notes: '800V ultra-fast charging architecture (235kW peak).
+
       10-80% in ~18 minutes with 350kW DC charger.
+
       Battery preconditioning when navigation set to charging station.
 
+      '
+  ac_max_kw: 11
+  dc_max_kw: 235
 bidirectional_charging:
   v2l: true
   v2h: false
   v2g: false
   v2l_power_kw: 3.6
-  v2l_notes: |
-    Vehicle-to-Load (V2L) capability standard.
+  v2l_notes: 'Vehicle-to-Load (V2L) capability standard.
+
     Can power external devices up to 3.6kW.
+
     V2L adapter included with vehicle.
 
+    '
 dimensions:
   length_mm: 4515
   width_mm: 1890
   height_mm: 1580
   wheelbase_mm: 2900
   ground_clearance_mm: 160
-
 weight:
   curb_weight_kg: 2155
   gross_vehicle_weight_kg: 2700
   payload_kg: 545
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 432
   trunk_max_liters: 1550
   frunk_capacity_liters: 0
-
 wheels_tires:
   standard_wheel_size_inches: 20
-  optional_wheel_sizes: [21]
-
+  optional_wheel_sizes:
+  - 21
 standard_features:
-  - "Crystal Sphere electronic shift dial"
-  - "Face Connect facial recognition"
-  - "Fingerprint authentication"
-  - "Bang & Olufsen 17-speaker audio"
-  - "Nappa leather quilted seats"
-  - "Highway Driving Assist 2"
-  - "Remote Smart Parking Assist 2"
-  - "Surround View Monitor"
-  - "V2L 3.6 kW"
-  - "Electronic Limited Slip Differential"
-
+- Crystal Sphere electronic shift dial
+- Face Connect facial recognition
+- Fingerprint authentication
+- Bang & Olufsen 17-speaker audio
+- Nappa leather quilted seats
+- Highway Driving Assist 2
+- Remote Smart Parking Assist 2
+- Surround View Monitor
+- V2L 3.6 kW
+- Electronic Limited Slip Differential
 optional_features:
-  - "21-inch forged wheels (€2,500)"
-  - "Matte paint (€3,000)"
-  - "Advanced lighting package (€1,200)"
-  - "Winter package (€800)"
-
+- 21-inch forged wheels (€2,500)
+- Matte paint (€3,000)
+- Advanced lighting package (€1,200)
+- Winter package (€800)
 competitors:
-  - "BMW iX1 xDrive30"
-  - "Mercedes EQA 350"
-  - "Audi Q4 e-tron 50 quattro"
-  - "Polestar 2 Long Range Dual Motor"
-  - "Tesla Model Y Long Range"
+- BMW iX1 xDrive30
+- Mercedes EQA 350
+- Audi Q4 e-tron 50 quattro
+- Polestar 2 Long Range Dual Motor
+- Tesla Model Y Long Range
+notes: 'Most popular GV60 variant (~60% of German sales).
 
-notes: |
-  Most popular GV60 variant (~60% of German sales).
   Crystal Sphere shift dial rotates when vehicle starts.
+
   Face Connect biometric authentication for personalized settings.
+
   800V E-GMP architecture: 10-80% in 18 minutes.
+
   Electronic Limited Slip Differential enhances AWD dynamics.
+
   Boost mode increases power to 367 hp for 10 seconds.
+
   Real-world range: 385 km mixed, 310 km winter.
+
   Excellent company car choice with 0.25% tax rate.
 
+  '
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-08"
+  created_at: '2026-02-08'
+  updated_at: '2026-02-08'
   data_quality: verified
   sources:
-    - https://www.genesis.com/de/de/models/gv60/specifications.html
-    - https://insideevs.com/reviews/615892/genesis-gv60-review/
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/genesis-gv60/
-    - https://ev-database.org/car/1541/Genesis-GV60-Sport-Plus-AWD
-    - Real-world test data from InsideEVs, ADAC, Auto Bild
+  - https://www.genesis.com/de/de/models/gv60/specifications.html
+  - https://insideevs.com/reviews/615892/genesis-gv60-review/
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/genesis-gv60/
+  - https://ev-database.org/car/1541/Genesis-GV60-Sport-Plus-AWD
+  - Real-world test data from InsideEVs, ADAC, Auto Bild

@@ -1,6 +1,3 @@
-# Hyundai IONIQ 6 N 2025
-# High-performance variant with dual motor AWD
-
 id: hyundai-ioniq-6-n-2025
 name: N
 model_id: hyundai-ioniq-6
@@ -8,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: performance
 market_position: performance
-
-# Battery Specifications
 battery:
   usable_kwh: 80.0
   total_kwh: 84.0
@@ -23,91 +17,77 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, 800V E-GMP architecture"
+    configuration: floor-mounted, 800V E-GMP architecture
     weight_kg: 490
     modules: null
     cells: 384
-    cell_configuration: "192s2p"
-
-# Range
+    cell_configuration: 192s2p
 range:
   wltp_km: 440
   wltp_source: manufacturer
-
   epa_km: null
   epa_source: null
-
   real_world_km: 360
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, moderate climate, sport mode"
-
-# Charging
+  real_world_conditions: Mixed driving, moderate climate, sport mode
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 8.75
+      '0_100': 8.75
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 240
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 50
-
+      '10_80': 18
+      '0_100': 50
     charging_curve:
-      - soc_percent: 0
-        power_kw: 200
-      - soc_percent: 10
-        power_kw: 240
-      - soc_percent: 20
-        power_kw: 235
-      - soc_percent: 40
-        power_kw: 210
-      - soc_percent: 50
-        power_kw: 180
-      - soc_percent: 60
-        power_kw: 140
-      - soc_percent: 70
-        power_kw: 100
-      - soc_percent: 80
-        power_kw: 60
-      - soc_percent: 90
-        power_kw: 35
-      - soc_percent: 100
-        power_kw: 12
-
+    - soc_percent: 0
+      power_kw: 200
+    - soc_percent: 10
+      power_kw: 240
+    - soc_percent: 20
+      power_kw: 235
+    - soc_percent: 40
+      power_kw: 210
+    - soc_percent: 50
+      power_kw: 180
+    - soc_percent: 60
+      power_kw: 140
+    - soc_percent: 70
+      power_kw: 100
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 90
+      power_kw: 35
+    - soc_percent: 100
+      power_kw: 12
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.6
     v2g: false
     v2h: false
-
   preconditioning:
     battery_preconditioning: true
     scheduled_charging: true
     departure_time_climate: true
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 240
 motors:
-  - position: front
-    type: permanent_magnet_synchronous
-    max_power_kw: 160
-    max_torque_nm: 255
-    cooling: liquid
-  - position: rear
-    type: permanent_magnet_synchronous
-    max_power_kw: 320
-    max_torque_nm: 446
-    cooling: liquid
-
+- position: front
+  type: permanent_magnet_synchronous
+  max_power_kw: 160
+  max_torque_nm: 255
+  cooling: liquid
+- position: rear
+  type: permanent_magnet_synchronous
+  max_power_kw: 320
+  max_torque_nm: 446
+  cooling: liquid
 drivetrain:
   type: awd
   total_power_kw: 478
@@ -115,13 +95,10 @@ drivetrain:
   total_torque_nm: 770
   boost_power_kw: 478
   boost_duration_s: 10
-
 performance:
   acceleration_0_100_kmh_s: 3.4
   top_speed_kmh: 260
   top_speed_limited: true
-
-# Weight & Efficiency
 dimensions:
   length_mm: 4855
   width_mm: 1880
@@ -129,81 +106,70 @@ dimensions:
   height_mm: 1495
   wheelbase_mm: 2950
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 401
   trunk_max_liters: 1578
   frunk_capacity_liters: 15
-
 weight:
   curb_weight_kg: 2150
   gross_vehicle_weight_kg: 2610
   payload_kg: 460
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 19.5
   real_world_kwh_per_100km: 22.2
-
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 24.0
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 27.0
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 24.0
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 27.0
 standard_features:
-  - "N e-shift (simulated gear shifts)"
-  - "N Active Sound+ (virtual engine sound)"
-  - "N Grin Boost (overboost function)"
-  - "N Race (track mode)"
-  - "N Drift Optimizer"
-  - "N Launch Control"
-  - "N Torque Distribution (electronic LSD)"
-  - "N Track Sense Recorder"
-  - "20-inch forged alloy wheels"
-  - "N sport bucket seats (Alcantara)"
-  - "Performance braking system (380mm front, 340mm rear)"
-  - "Electronic controlled suspension (ECS)"
-  - "N steering wheel with N buttons"
-  - "Dual 12.3-inch displays"
-  - "Head-up display"
-  - "Bose Premium Sound system"
-  - "Matrix LED headlights"
-  - "Heat pump"
-
+- N e-shift (simulated gear shifts)
+- N Active Sound+ (virtual engine sound)
+- N Grin Boost (overboost function)
+- N Race (track mode)
+- N Drift Optimizer
+- N Launch Control
+- N Torque Distribution (electronic LSD)
+- N Track Sense Recorder
+- 20-inch forged alloy wheels
+- N sport bucket seats (Alcantara)
+- Performance braking system (380mm front, 340mm rear)
+- Electronic controlled suspension (ECS)
+- N steering wheel with N buttons
+- Dual 12.3-inch displays
+- Head-up display
+- Bose Premium Sound system
+- Matrix LED headlights
+- Heat pump
 colors:
   standard:
-    - "Performance Blue"
+  - Performance Blue
   premium:
-    - "Abyss Black Pearl"
-    - "Ecotronic Grey Matte"
-    - "Gravity Gold Matte"
-    - "Serenity White Pearl"
-    - "Nocturne Grey Metallic"
-
-# Version Information
+  - Abyss Black Pearl
+  - Ecotronic Grey Matte
+  - Gravity Gold Matte
+  - Serenity White Pearl
+  - Nocturne Grey Metallic
 version:
   facelift: false
   major_changes:
-    - "First N performance variant of IONIQ 6"
+  - First N performance variant of IONIQ 6
+notes: 'The IONIQ 6 N is Hyundai''s high-performance electric sedan, following the
+  IONIQ 5 N formula. It features 478 kW (650 PS) from dual motors, N e-shift simulated
+  gear shifts with virtual vibration feedback, N Active Sound+ interior/exterior sound,
+  and N Grin Boost overboost. The vehicle includes track-focused features like N Drift
+  Optimizer and N Track Sense Recorder. Despite its performance focus, it retains
+  the 800V architecture for ultra-fast charging. The streamliner design gives it better
+  aero efficiency than the IONIQ 5 N despite similar powertrain.
 
-notes: >
-  The IONIQ 6 N is Hyundai's high-performance electric sedan, following the
-  IONIQ 5 N formula. It features 478 kW (650 PS) from dual motors, N e-shift
-  simulated gear shifts with virtual vibration feedback, N Active Sound+
-  interior/exterior sound, and N Grin Boost overboost. The vehicle includes
-  track-focused features like N Drift Optimizer and N Track Sense Recorder.
-  Despite its performance focus, it retains the 800V architecture for ultra-fast
-  charging. The streamliner design gives it better aero efficiency than the
-  IONIQ 5 N despite similar powertrain.
-
+  '
 metadata:
-  created_at: "2026-02-10"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-10'
+  updated_at: '2026-02-10'
   data_quality: estimated
   data_source: manufacturer
   sources:
-    - https://www.hyundai.com/worldwide/en/eco/ioniq-6
-    - https://ev-database.org
+  - https://www.hyundai.com/worldwide/en/eco/ioniq-6
+  - https://ev-database.org

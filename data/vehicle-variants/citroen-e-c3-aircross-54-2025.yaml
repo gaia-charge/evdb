@@ -1,30 +1,24 @@
-# Citroën ë-C3 Aircross 54 kWh (2025) - Extended Range
-
 id: citroen-e-c3-aircross-54-2025
 model_id: citroen-e-c3-aircross
-name: "54 kWh"
+name: 54 kWh
 model_year: 2025
 trim_level: Max
 variant_code: null
-
 dimensions:
   length_mm: 4390
   width_mm: 1795
   height_mm: 1660
   wheelbase_mm: 2670
   ground_clearance_mm: 200
-
 cargo:
   trunk_capacity_liters: 460
   trunk_max_liters: 1600
   frunk_capacity_liters: 0
-
 production:
   start_date: 2024-12-01
   end_date: null
   status: active
   notes: Extended range variant launched late 2024
-
 battery:
   type: Lithium-ion
   chemistry: NMC
@@ -38,7 +32,6 @@ battery:
   modules: null
   voltage_nominal: 400
   notes: NMC chemistry for higher energy density and longer range
-
 range:
   wltp_km: 400
   wltp_city_km: 490
@@ -47,41 +40,36 @@ range:
   real_world_avg_km: 340
   real_world_source: European driving tests
   notes: Extended range for longer trips and weekend use
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW three-phase
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 28
     peak_power_notes: 100kW peak DC charging
     preconditioning: false
-  
   charge_curve:
-    - percent: 10
-      power_kw: 95
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 90
-    - percent: 60
-      power_kw: 78
-    - percent: 70
-      power_kw: 62
-    - percent: 80
-      power_kw: 42
-  
+  - percent: 10
+    power_kw: 95
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 90
+  - percent: 60
+    power_kw: 78
+  - percent: 70
+    power_kw: 62
+  - percent: 80
+    power_kw: 42
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -94,13 +82,14 @@ motors:
     power_kw: 83
     power_hp: 113
     torque_nm: 120
-
 performance:
-  acceleration_0_100_kph: 11.0
   acceleration_0_60_mph: null
   top_speed_kph: 135
   quarter_mile_seconds: null
-
+  total_power_kw: 83
+  total_power_hp: 113
+  total_torque_nm: 120
+  acceleration_0_100_sec: 11.0
 efficiency:
   wltp_kwh_per_100km: 18.4
   wltp_wh_per_km: 184
@@ -108,7 +97,6 @@ efficiency:
   real_world_kwh_per_100km: 17.5
   mpge_combined: null
   drag_coefficient: 0.33
-
 weight:
   curb_weight_kg: 1610
   gross_vehicle_weight_kg: 2050
@@ -116,69 +104,62 @@ weight:
   weight_distribution_front_percent: 58
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar
   rear: Torsion beam with Citroën Progressive Hydraulic Cushions
-
 brakes:
   front: Disc (280mm)
   rear: Drum
   regenerative: true
-
 tires:
   standard: 205/60 R17
-
 features:
   infotainment:
-    - "10.25\" touchscreen"
-    - "7\" digital driver display"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "DAB+ radio"
-    - "MyCitroën app"
-    - "Connected navigation"
-  
+  - 10.25" touchscreen
+  - 7" digital driver display
+  - Wireless Apple CarPlay and Android Auto
+  - DAB+ radio
+  - MyCitroën app
+  - Connected navigation
   driver_assistance:
-    - "Automatic emergency braking"
-    - "Lane departure warning"
-    - "Speed limit recognition"
-    - "Rear and front parking sensors"
-    - "Rear camera"
-    - "Blind spot monitoring"
-  
+  - Automatic emergency braking
+  - Lane departure warning
+  - Speed limit recognition
+  - Rear and front parking sensors
+  - Rear camera
+  - Blind spot monitoring
   comfort_convenience:
-    - "Automatic climate control"
-    - "Citroën Advanced Comfort seats"
-    - "Keyless entry and start"
-    - "USB-C ports"
-    - "Wireless phone charger"
-    - "Available as 5 or 7-seater"
-  
+  - Automatic climate control
+  - Citroën Advanced Comfort seats
+  - Keyless entry and start
+  - USB-C ports
+  - Wireless phone charger
+  - Available as 5 or 7-seater
   exterior:
-    - "17\" alloy wheels"
-    - "LED headlights"
-    - "Roof rails"
-    - "Two-tone roof"
-    - "Privacy glass"
-  
+  - 17" alloy wheels
+  - LED headlights
+  - Roof rails
+  - Two-tone roof
+  - Privacy glass
   interior:
-    - "Premium cloth upholstery"
-    - "460L trunk (5-seat)"
-    - "60/40 split-folding rear seats"
-    - "Adjustable boot floor"
-
+  - Premium cloth upholstery
+  - 460L trunk (5-seat)
+  - 60/40 split-folding rear seats
+  - Adjustable boot floor
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://www.citroen.de/modelle/neuer-eC3-aircross.html
-  notes: |
-    Extended range variant with 54 kWh NMC battery. 400 km WLTP range makes it
+  - https://www.citroen.de/modelle/neuer-eC3-aircross.html
+  notes: 'Extended range variant with 54 kWh NMC battery. 400 km WLTP range makes
+    it
+
     suitable for longer trips. Includes 11kW 3-phase AC charging.
+
     18.1-18.4 kWh/100km WLTP from Citroën DE official sources.
+
+    '

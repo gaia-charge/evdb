@@ -4,9 +4,7 @@ name: e-4ORCE 87kWh
 full_name: Nissan Ariya e-4ORCE 87kWh
 model_year: 2025
 trim_level: Evolve+
-
 variant_code: null
-
 battery:
   usable_kwh: 87.0
   total_kwh: 91.0
@@ -16,7 +14,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 493
   wltp_city_km: 605
@@ -26,70 +23,66 @@ range:
   conditions:
     temperature_c: 20
     driving_style: mixed
-    climate_control: on
-
+    climate_control: true
 charging:
   ac:
-    max_power_kw: 22
     connector: Type2
     onboard_charger_kw: 22
     charge_time_0_100_hours: 9.0
   dc:
-    max_power_kw: 130
     connector: CCS2
     charge_time_10_80_percent_min: 45
     charge_time_20_80_percent_min: 35
   charge_curve:
-    - soc_percent: 10
-      power_kw: 125
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 130
-    - soc_percent: 40
-      power_kw: 130
-    - soc_percent: 50
-      power_kw: 125
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 60
-    - soc_percent: 90
-      power_kw: 35
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 10
+    power_kw: 125
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 130
+  - soc_percent: 40
+    power_kw: 130
+  - soc_percent: 50
+    power_kw: 125
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 85
+  - soc_percent: 80
+    power_kw: 60
+  - soc_percent: 90
+    power_kw: 35
+  - soc_percent: 100
+    power_kw: 15
   bidirectional:
     v2l: true
     v2h: true
     v2g: true
     power_kw: 6.0
     notes: V2X requires CHAdeMO adapter. CCS2 does not support bidirectional on Ariya.
-
+  ac_max_kw: 22
+  dc_max_kw: 130
 motors:
   count: 2
   type: permanent_magnet_synchronous
   configuration:
-    - position: front
-      power_kw: 160
-      torque_nm: null
-    - position: rear
-      power_kw: 150
-      torque_nm: null
+  - position: front
+    power_kw: 160
+    torque_nm: null
+  - position: rear
+    power_kw: 150
+    torque_nm: null
   total_power_kw: 290
   total_power_hp: 394
   total_torque_nm: 600
-
 drive_type: AWD
-
 performance:
   acceleration_0_100_kmh_s: 5.7
   top_speed_kmh: 200
-  notes: >
-    e-4ORCE all-wheel drive with electronic torque vectoring. Flagship powertrain
+  notes: 'e-4ORCE all-wheel drive with electronic torque vectoring. Flagship powertrain
     combining 290kW with 87kWh battery for best range and performance.
 
+    '
 dimensions:
   length_mm: 4595
   width_mm: 1850
@@ -98,73 +91,64 @@ dimensions:
   wheelbase_mm: 2775
   ground_clearance_mm: 185
   turning_circle_m: 11.1
-
 cargo:
   trunk_capacity_liters: 468
   trunk_max_liters: 1350
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2235
   gross_vehicle_weight_kg: 2750
   payload_kg: 515
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
-
 efficiency:
   wltp_kwh_per_100km: 19.5
   real_world_kwh_per_100km: 21.3
   eu_energy_efficiency_class: B
-
 standard_equipment:
-  - ProPILOT Assist 2.0 (hands-off highway driving)
-  - e-Pedal Step (one-pedal driving)
-  - Dual 12.3" displays (digital cockpit + touchscreen)
-  - NissanConnect with OTA updates
-  - Apple CarPlay & Android Auto (wireless)
-  - Panoramic glass roof
-  - LED headlights with adaptive beam
-  - Heat pump climate control
-  - 360-degree camera
-  - ProPILOT Park (hands-free parking)
-  - Zero Gravity seats
-  - Bose Premium Audio (12 speakers)
-
+- ProPILOT Assist 2.0 (hands-off highway driving)
+- e-Pedal Step (one-pedal driving)
+- Dual 12.3" displays (digital cockpit + touchscreen)
+- NissanConnect with OTA updates
+- Apple CarPlay & Android Auto (wireless)
+- Panoramic glass roof
+- LED headlights with adaptive beam
+- Heat pump climate control
+- 360-degree camera
+- ProPILOT Park (hands-free parking)
+- Zero Gravity seats
+- Bose Premium Audio (12 speakers)
 optional_equipment:
-  - name: Two-tone paint
-    category: appearance
-  - name: 20" alloy wheels
-    category: appearance
-  - name: ProPILOT Assist 2.0 with Navi-link
-    category: technology
-    included_in_base: true
-
+- name: Two-tone paint
+  category: appearance
+- name: 20" alloy wheels
+  category: appearance
+- name: ProPILOT Assist 2.0 with Navi-link
+  category: technology
+  included_in_base: true
 colors_available: 10
-
 version:
   release_date: 2025-01
   end_date: null
-  changes_from_previous: >
-    2025 model year: Improved DC charging consistency, enhanced ProPILOT Assist 2.0
-    with wider operational domain, updated NissanConnect with faster processor,
-    new Aurora Green and Ceramic Grey color options.
+  changes_from_previous: '2025 model year: Improved DC charging consistency, enhanced
+    ProPILOT Assist 2.0 with wider operational domain, updated NissanConnect with
+    faster processor, new Aurora Green and Ceramic Grey color options.
 
+    '
 production:
   plant: Tochigi, Japan
-
 price_indication:
   currency: EUR
   base_price_estimate: 60490
-
 metadata:
   sources:
-    - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
+  - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
   data_quality: verified
   created_at: '2026-02-10'
   last_updated: '2026-02-10'
-  notes: >
-    2025 Nissan Ariya e-4ORCE 87kWh - flagship variant with 290kW dual motors and
-    493km WLTP range. Minor updates for 2025 MY including improved software and new
-    colors. Remains one of the more spacious and comfortable electric crossovers in
-    its segment thanks to the flat-floor CMF-EV platform.
+  notes: '2025 Nissan Ariya e-4ORCE 87kWh - flagship variant with 290kW dual motors
+    and 493km WLTP range. Minor updates for 2025 MY including improved software and
+    new colors. Remains one of the more spacious and comfortable electric crossovers
+    in its segment thanks to the flat-floor CMF-EV platform.
+
+    '

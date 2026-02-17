@@ -1,153 +1,180 @@
-# Volkswagen ID.Buzz GTX (77kWh) 2024
-# Performance AWD variant with dual motors
-
 id: volkswagen-id-buzz-gtx-2024
 name: GTX
 model_id: volkswagen-id-buzz
 model_year: 2024
 variant_code: null
-
-# Battery specifications
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
-  chemistry: NCM  # Nickel-Cobalt-Manganese
+  chemistry: NCM
   cell_type: prismatic
   manufacturer: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
-# Range specifications
 range:
-  wltp_km: 440  # Slightly less than RWD due to AWD efficiency penalty
+  wltp_km: 440
   wltp_city_km: 580
   wltp_highway_km: 350
   epa_km: null
-  real_world_km: 370  # Real-world mixed driving
-  real_world_source: "ADAC estimates, VW official data"
-
-# Charging specifications
+  real_world_km: 370
+  real_world_source: ADAC estimates, VW official data
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     connector: Type 2
     time_0_100_hours: 7.5
   dc:
-    max_power_kw: 200
     connector: CCS
     time_10_80_minutes: 28
     time_0_100_minutes: 50
-
-# Motor specifications - DUAL MOTOR AWD
+  ac_max_kw: 11
+  dc_max_kw: 200
 motors:
   front:
-    type: asynchronous  # AC induction motor
+    type: asynchronous
     power_kw: 80
     torque_nm: 172
   rear:
-    type: permanent_magnet  # More efficient rear motor
+    type: permanent_magnet
     power_kw: 170
     torque_nm: 310
   combined:
     total_power_kw: 250
     total_torque_nm: 550
     drivetrain: awd
-
-# Performance
 performance:
-  acceleration_0_100_kmh_s: 6.5  # Sports car territory for a van!
+  acceleration_0_100_kmh_s: 6.5
   top_speed_kmh: 160
   top_speed_limited: true
-
-# Efficiency
 efficiency:
-  wltp_kwh_100km: 21.0  # Higher than RWD due to AWD and more power
+  wltp_kwh_100km: 21.0
   real_world_kwh_100km: 23.5
-
-# Dimensions & Weight
 dimensions:
   length_mm: 4712
   width_mm: 1985
   height_mm: 1937
   wheelbase_mm: 2988
   ground_clearance_mm: 178
-
 weight:
   curb_weight_kg: 2590
   gross_vehicle_weight_kg: 3210
   payload_kg: 620
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 1121
   trunk_max_liters: 2205
   frunk_capacity_liters: 0
+notes: 'VW ID.Buzz GTX is the performance flagship variant with dual-motor all-wheel
+  drive delivering
 
-
-notes: |
-  VW ID.Buzz GTX is the performance flagship variant with dual-motor all-wheel drive delivering
   sports car acceleration (6.5s 0-100 km/h) in a practical electric van/MPV form factor.
-  
+
+
   GTX variant features:
-  - Dual-motor AWD system (80kW front AC induction + 170kW rear permanent magnet = 250kW/340hp total)
+
+  - Dual-motor AWD system (80kW front AC induction + 170kW rear permanent magnet =
+  250kW/340hp total)
+
   - Sport-tuned suspension with adaptive damping (DCC)
+
   - GTX-specific exterior styling (red accents, GTX badges, 20"/21" wheels)
+
   - GTX interior with sport seats, red stitching, aluminum pedals
+
   - Enhanced stability control optimized for performance driving
+
   - Standard panoramic glass roof
+
   - Matrix LED headlights with IQ.Light
-  
+
+
   Performance highlights:
+
   - 6.5s 0-100 km/h acceleration (fastest ID.Buzz variant)
+
   - 550Nm combined torque provides strong mid-range acceleration
+
   - AWD traction excellent for all-weather capability and family safety
+
   - 1,800kg towing capacity (same as RWD Pro Long)
-  
+
+
   Efficiency trade-offs:
+
   - 21km less WLTP range vs RWD Pro Long (440km vs 461km) due to AWD efficiency penalty
+
   - 21.0 kWh/100km WLTP consumption vs 19.5 kWh/100km RWD (+7.7% penalty)
+
   - Real-world 370km mixed range still adequate for daily family use
+
   - 200kW DC fast charging same as RWD (28 minutes 10-80%)
-  
+
+
   Target buyers:
+
   - Performance-oriented families wanting sports car acceleration in practical MPV
+
   - Winter region residents (Alps, Bavaria, Scandinavia) needing AWD safety
+
   - Enthusiasts who want GTX badge on electric van
+
   - Families prioritizing safety and all-weather capability over maximum range
+
   - Company car drivers who can justify GTX premium with 0.25% tax benefit
-  
+
+
   Competes with:
+
   - Mercedes EQV 300 Long (€71,388, 351km range, less power 150kW/204hp)
+
   - VW ID.Buzz Pro Long RWD (€54,122, 21km more range, €11k cheaper, less power)
+
   - Opel/Vauxhall Vivaro-e Life (€51,000, shorter range but cheaper)
+
   - Ford E-Transit Custom (€55,000, commercial focus)
-  
+
+
   GTX premium justified by:
+
   - Sports car acceleration (6.5s vs 10.2s RWD)
+
   - AWD all-weather capability vs FWD
+
   - Enhanced standard equipment (DCC suspension, sport seats, premium audio)
+
   - GTX brand cachet and exclusivity
+
   - Superior towing stability with AWD
-  
-  Ideal for: Performance-oriented families, winter region residents, enthusiasts wanting fastest
-  electric van, company car drivers, those prioritizing acceleration and AWD over maximum range.
-  
-  Not ideal for: Budget-conscious buyers (€11k premium over RWD Pro Long), maximum range seekers
+
+
+  Ideal for: Performance-oriented families, winter region residents, enthusiasts wanting
+  fastest
+
+  electric van, company car drivers, those prioritizing acceleration and AWD over
+  maximum range.
+
+
+  Not ideal for: Budget-conscious buyers (€11k premium over RWD Pro Long), maximum
+  range seekers
+
   (440km WLTP vs 461km RWD), efficiency-focused drivers (higher consumption).
-  
-  Built on MEB platform at VW Hannover factory, Germany. Standard wheelbase only (no long
+
+
+  Built on MEB platform at VW Hannover factory, Germany. Standard wheelbase only (no
+  long
+
   wheelbase GTX variant currently available). Available in 5-seat, 6-seat, and 7-seat
+
   configurations.
 
+  '
 production:
   status: active
   start_year: 2024
   start_month: 3
   plant: Hannover, Germany
-
 last_updated: '2026-02-08'
 data_source: volkswagen.de
 confidence_level: verified

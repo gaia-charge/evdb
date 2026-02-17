@@ -5,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2022
   end: null
-
 trim_level: se-long-range-awd
 market_position: mid-range-performance
-
-# Battery Specifications
 battery:
   usable_kwh: 74.0
   total_kwh: 77.4
@@ -20,190 +17,162 @@ battery:
   warranty_years: 10
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, 800V architecture"
+    configuration: floor-mounted, 800V architecture
     weight_kg: 477
     modules: null
-
-# Range
 range:
   wltp_km: 519
   wltp_source: manufacturer
   wltp_city_km: 665
   wltp_highway_km: 420
-
   epa_km: 491
   epa_source: manufacturer
-
   real_world_km: 440
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 20°C, moderate speed"
-
-# Charging
+  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 6.7
-      "10_80": 4.5
+      '0_100': 6.7
+      '10_80': 4.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 233
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 41
-
+      '10_80': 18
+      '0_100': 41
     charging_curve:
-      - soc_percent: 0
-        power_kw: 225
-      - soc_percent: 10
-        power_kw: 233
-      - soc_percent: 20
-        power_kw: 233
-      - soc_percent: 30
-        power_kw: 195
-      - soc_percent: 40
-        power_kw: 175
-      - soc_percent: 50
-        power_kw: 155
-      - soc_percent: 60
-        power_kw: 125
-      - soc_percent: 70
-        power_kw: 95
-      - soc_percent: 80
-        power_kw: 50
-      - soc_percent: 90
-        power_kw: 25
-
-    notes: "800V E-GMP architecture enables class-leading charging speed"
-
+    - soc_percent: 0
+      power_kw: 225
+    - soc_percent: 10
+      power_kw: 233
+    - soc_percent: 20
+      power_kw: 233
+    - soc_percent: 30
+      power_kw: 195
+    - soc_percent: 40
+      power_kw: 175
+    - soc_percent: 50
+      power_kw: 155
+    - soc_percent: 60
+      power_kw: 125
+    - soc_percent: 70
+      power_kw: 95
+    - soc_percent: 80
+      power_kw: 50
+    - soc_percent: 90
+      power_kw: 25
+    notes: 800V E-GMP architecture enables class-leading charging speed
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.6
     v2g: false
     v2h: false
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 233
 motors:
-  - position: front
-    type: ac-induction
-    max_power_kw: 70
-    max_torque_nm: 255
-    max_rpm: 13000
-    cooling: liquid
-
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 165
-    max_torque_nm: 350
-    max_rpm: 13500
-    cooling: liquid
-
+- position: front
+  type: ac-induction
+  max_power_kw: 70
+  max_torque_nm: 255
+  max_rpm: 13000
+  cooling: liquid
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 165
+  max_torque_nm: 350
+  max_rpm: 13500
+  cooling: liquid
 drivetrain:
   type: awd
   total_power_kw: 235
   total_power_hp: 320
   total_torque_nm: 605
   torque_distribution: electronic-awd
-
 performance:
   acceleration_0_100_kmh_s: 5.1
   acceleration_0_60_mph_s: 4.8
   top_speed_kmh: 185
   top_speed_limited: true
-
-# Weight & Efficiency
 weight:
   curb_weight_kg: 1951
   gross_vehicle_weight_kg: 2440
   payload_kg: 489
   towing_capacity_braked_kg: 1600
-
 efficiency:
   wltp_kwh_per_100km: 16.3
   epa_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 18.0
-
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 21.5
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 25.2
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 21.5
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 25.2
 standard_features:
-  - "Dual 12.3-inch displays (digital cluster + touchscreen)"
-  - "Hyundai CCNC infotainment with OTA updates"
-  - "Wireless Apple CarPlay / Android Auto"
-  - "Digital Key 2.0 (NFC + UWB)"
-  - "Highway Driving Assist 2 (Level 2 ADAS)"
-  - "Vehicle-to-Load (V2L) - 3.6kW"
-  - "Heat pump standard"
-  - "Parametric Pixel LED headlights"
-  - "18-inch alloy wheels"
-  - "8-way power driver seat"
-  - "Heated front seats"
-  - "Wireless smartphone charging (dual)"
-  - "Electronic AWD with torque vectoring"
-  - "Snow/Mud drive mode"
-
+- Dual 12.3-inch displays (digital cluster + touchscreen)
+- Hyundai CCNC infotainment with OTA updates
+- Wireless Apple CarPlay / Android Auto
+- Digital Key 2.0 (NFC + UWB)
+- Highway Driving Assist 2 (Level 2 ADAS)
+- Vehicle-to-Load (V2L) - 3.6kW
+- Heat pump standard
+- Parametric Pixel LED headlights
+- 18-inch alloy wheels
+- 8-way power driver seat
+- Heated front seats
+- Wireless smartphone charging (dual)
+- Electronic AWD with torque vectoring
+- Snow/Mud drive mode
 optional_packages:
-  - name: "Relaxation Package"
-    features:
-      - "Relaxation seats with leg support"
-      - "Massage function (driver)"
-
-  - name: "Premium Package"
-    features:
-      - "Ventilated front seats"
-      - "Heated rear seats"
-      - "Bose Premium Audio"
-      - "Active Road Noise Cancellation"
-      - "Surround View Monitor"
-
+- name: Relaxation Package
+  features:
+  - Relaxation seats with leg support
+  - Massage function (driver)
+- name: Premium Package
+  features:
+  - Ventilated front seats
+  - Heated rear seats
+  - Bose Premium Audio
+  - Active Road Noise Cancellation
+  - Surround View Monitor
 colors:
   standard:
-    - "Gravity Gold Matte"
-    - "Polar White"
+  - Gravity Gold Matte
+  - Polar White
   premium:
-    - "Nocturne Gray Metallic"
-    - "Digital Teal Pearl"
-    - "Shooting Star Matte"
-    - "Phantom Black Pearl"
-    - "Serenity Blue Pearl"
-    - "Biophilic Blue Pearl"
-
+  - Nocturne Gray Metallic
+  - Digital Teal Pearl
+  - Shooting Star Matte
+  - Phantom Black Pearl
+  - Serenity Blue Pearl
+  - Biophilic Blue Pearl
 interior_colors:
-  - "Gray Eco-Fabric"
-  - "Gray Vegan Leather"
-  - "Black Vegan Leather with Suede Headliner"
-
+- Gray Eco-Fabric
+- Gray Vegan Leather
+- Black Vegan Leather with Suede Headliner
 technology_highlights:
-  - "Dual-motor AWD with electronic torque distribution"
-  - "800V E-GMP architecture"
-  - "18-minute 10-80% DC fast charging"
-  - "5.1s 0-100 km/h acceleration"
-  - "Digital Key 2.0 with UWB"
-  - "Over-the-air software updates"
-  - "Plug & Charge (ISO 15118)"
-  - "V2L: Power external devices up to 3.6kW"
-  - "Aerodynamic design (Cd 0.21)"
+- Dual-motor AWD with electronic torque distribution
+- 800V E-GMP architecture
+- 18-minute 10-80% DC fast charging
+- 5.1s 0-100 km/h acceleration
+- Digital Key 2.0 with UWB
+- Over-the-air software updates
+- Plug & Charge (ISO 15118)
+- 'V2L: Power external devices up to 3.6kW'
+- Aerodynamic design (Cd 0.21)
+notes: 'The 2025 Ioniq 6 Long Range AWD offers dual-motor all-wheel drive with 320
+  hp and 5.1s 0-100 km/h. The 2025 model year brings refined software, improved OTA
+  updates, new Biophilic Blue Pearl color, and updated connected services. The electronic
+  AWD distributes torque between front and rear for optimal grip. Trade-off vs RWD:
+  95km less range (519 vs 614km) and higher consumption (16.3 vs 13.9 kWh/100km).
+  Powertrain unchanged from 2024.
 
-notes: >
-  The 2025 Ioniq 6 Long Range AWD offers dual-motor all-wheel drive with 320 hp
-  and 5.1s 0-100 km/h. The 2025 model year brings refined software, improved OTA
-  updates, new Biophilic Blue Pearl color, and updated connected services. The
-  electronic AWD distributes torque between front and rear for optimal grip.
-  Trade-off vs RWD: 95km less range (519 vs 614km) and higher consumption
-  (16.3 vs 13.9 kWh/100km). Powertrain unchanged from 2024.
-
+  '
 dimensions:
   length_mm: 4855
   width_mm: 1880
@@ -213,17 +182,15 @@ dimensions:
   ground_clearance_mm: 140
   drag_coefficient: 0.21
   frontal_area_m2: 2.29
-
 cargo:
   trunk_capacity_liters: 401
   trunk_max_liters: 1578
   frunk_capacity_liters: 15
-
 metadata:
-  created_at: "2026-02-10"
-  updated_at: "2026-02-11"
+  created_at: '2026-02-10'
+  updated_at: '2026-02-11'
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.hyundai.de/modelle/ioniq-6
-    - https://www.hyundai.com/worldwide/en/eco/ioniq-6
+  - https://www.hyundai.de/modelle/ioniq-6
+  - https://www.hyundai.com/worldwide/en/eco/ioniq-6

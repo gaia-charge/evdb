@@ -1,4 +1,3 @@
----
 id: bmw-ix-xdrive45-2025
 name: xDrive45
 model_id: bmw-ix
@@ -6,10 +5,8 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: xDrive45
 market_position: base
-
 battery:
   usable_kwh: 94.8
   total_kwh: 105.7
@@ -20,7 +17,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
 range:
   wltp_km: 602
   wltp_source: manufacturer
@@ -28,63 +24,59 @@ range:
   wltp_highway_km: 490
   real_world_km: 520
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 20°C, highway/city 50/50"
-
+  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 9.5
+      '0_100': 9.5
     onboard_charger_kw: 11
     phases: 3
-    notes: "Optional 22kW AC charger available"
+    notes: Optional 22kW AC charger available
   dc:
-    max_power_kw: 175
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 35
+      '10_80': 35
     charging_curve:
-      - soc_percent: 10
-        power_kw: 170
-      - soc_percent: 20
-        power_kw: 175
-      - soc_percent: 30
-        power_kw: 175
-      - soc_percent: 40
-        power_kw: 170
-      - soc_percent: 50
-        power_kw: 155
-      - soc_percent: 60
-        power_kw: 135
-      - soc_percent: 70
-        power_kw: 110
-      - soc_percent: 80
-        power_kw: 80
-
+    - soc_percent: 10
+      power_kw: 170
+    - soc_percent: 20
+      power_kw: 175
+    - soc_percent: 30
+      power_kw: 175
+    - soc_percent: 40
+      power_kw: 170
+    - soc_percent: 50
+      power_kw: 155
+    - soc_percent: 60
+      power_kw: 135
+    - soc_percent: 70
+      power_kw: 110
+    - soc_percent: 80
+      power_kw: 80
   v2l: false
   v2g: false
   bidirectional_charging: false
-
+  ac_max_kw: 11
+  dc_max_kw: 175
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: 140
-      torque_nm: 290
-    - position: rear
-      type: permanent magnet
-      power_kw: 230
-      torque_nm: 410
+  - position: front
+    type: AC induction
+    power_kw: 140
+    torque_nm: 290
+  - position: rear
+    type: permanent magnet
+    power_kw: 230
+    torque_nm: 410
   total_power_kw: 300
   total_power_hp: 408
   total_torque_nm: 700
   acceleration_0_100_sec: 5.1
   top_speed_kmh: 200
-
 dimensions:
   length_mm: 4953
   width_mm: 1967
@@ -93,7 +85,6 @@ dimensions:
   ground_clearance_mm: 200
   drag_coefficient: 0.25
   frontal_area_m2: 2.82
-
 weight:
   curb_weight_kg: 2440
   gross_vehicle_weight_kg: 2990
@@ -101,53 +92,52 @@ weight:
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1750
   frunk_capacity_liters: 0
-
 efficiency:
   wltp_kwh_per_100km: 17.9
   wltp_source: manufacturer
   real_world_kwh_per_100km: 22.0
   real_world_source: estimated
-
 seating:
   capacity: 5
-  configuration: "2+3"
-
+  configuration: 2+3
 features:
   driver_assistance:
-    - "Parking Assistant Plus (standard)"
-    - "Driving Assistant Professional"
-    - "Speed Limit Info"
-    - "iDrive 8.5 with curved display"
+  - Parking Assistant Plus (standard)
+  - Driving Assistant Professional
+  - Speed Limit Info
+  - iDrive 8.5 with curved display
   comfort:
-    - "2-zone automatic climate control"
-    - "Heated front seats (standard)"
-    - "Acoustic glass (standard)"
-    - "Panoramic glass roof with SkyLounge (standard)"
+  - 2-zone automatic climate control
+  - Heated front seats (standard)
+  - Acoustic glass (standard)
+  - Panoramic glass roof with SkyLounge (standard)
   infotainment:
-    - "Curved display: 12.3\" driver + 14.9\" central"
-    - "iDrive 8.5 with BMW Operating System 8.5"
-    - "BMW Maps navigation"
-    - "Apple CarPlay / Android Auto wireless"
-    - "Harman Kardon surround sound (standard)"
+  - 'Curved display: 12.3" driver + 14.9" central'
+  - iDrive 8.5 with BMW Operating System 8.5
+  - BMW Maps navigation
+  - Apple CarPlay / Android Auto wireless
+  - Harman Kardon surround sound (standard)
   charging_features:
-    - "11 kW AC onboard charger (standard)"
-    - "22 kW AC charger (optional)"
-    - "CCS Combo DC fast charging up to 175 kW"
-    - "Battery preconditioning"
-
+  - 11 kW AC onboard charger (standard)
+  - 22 kW AC charger (optional)
+  - CCS Combo DC fast charging up to 175 kW
+  - Battery preconditioning
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   data_quality: verified
   sources:
-    - "https://www.carwow.de/bmw/ix"
-    - "https://www.bmw.de"
-  notes: |
-    2025 facelift model with improved efficiency and larger battery.
+  - https://www.carwow.de/bmw/ix
+  - https://www.bmw.de
+  notes: '2025 facelift model with improved efficiency and larger battery.
+
     Replaces xDrive40 with more power (300 kW vs 240 kW) and larger
+
     94.8 kWh battery (vs 71 kWh). WLTP range jumps from 425 km to 602 km.
+
     Best value in the iX lineup.
+
+    '

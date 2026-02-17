@@ -1,21 +1,17 @@
-# BYD Dolphin Surf Design (2025) - Long Range variant
-
 id: byd-dolphin-surf-design-2025
 model_id: byd-dolphin-surf
 name: Design
 model_year: 2025
 trim_level: Design
 variant_code: null
-
 production:
   start_date: 2025-03-01
   end_date: null
   status: active
   notes: European launch Q1 2025
-
 battery:
   type: Lithium-ion
-  chemistry: LFP  # BYD Blade Battery
+  chemistry: LFP
   total_kwh: 60.4
   usable_kwh: 58.0
   supplier: BYD (FinDreams)
@@ -26,7 +22,6 @@ battery:
   modules: null
   voltage_nominal: 403
   notes: BYD Blade Battery (LFP Cell-to-Pack), larger capacity
-
 range:
   wltp_km: 420
   wltp_city_km: 530
@@ -35,41 +30,36 @@ range:
   real_world_avg_km: 355
   real_world_source: Estimated based on BYD Dolphin performance
   notes: Long range variant suitable for longer trips
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 6.0
     onboard_charger: 11kW three-phase
-
   dc:
-    max_power_kw: 115
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 115kW peak DC charging
     preconditioning: true
-
   charge_curve:
-    - percent: 10
-      power_kw: 110
-    - percent: 30
-      power_kw: 115
-    - percent: 50
-      power_kw: 95
-    - percent: 60
-      power_kw: 75
-    - percent: 70
-      power_kw: 55
-    - percent: 80
-      power_kw: 35
-
+  - percent: 10
+    power_kw: 110
+  - percent: 30
+    power_kw: 115
+  - percent: 50
+    power_kw: 95
+  - percent: 60
+    power_kw: 75
+  - percent: 70
+    power_kw: 55
+  - percent: 80
+    power_kw: 35
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 115
 motors:
   configuration: single_front
   front:
@@ -82,22 +72,18 @@ motors:
     total_power_kw: 150
     total_power_hp: 204
     total_torque_nm: 310
-
 drivetrain:
   type: fwd
   drive_type: FWD
   transmission: single_speed
   notes: Front-wheel drive
-
 performance:
   acceleration_0_100_kmh_s: 7.8
   top_speed_kmh: 165
   top_speed_electronically_limited: true
-
 efficiency:
   wltp_kwh_per_100km: 14.4
   real_world_kwh_per_100km: 16.3
-
 weight:
   curb_weight_kg: 1720
   gross_vehicle_weight_kg: 2150
@@ -106,7 +92,6 @@ weight:
   distribution_rear_percent: 45
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 dimensions:
   length_mm: 4530
   width_mm: 1830
@@ -115,39 +100,32 @@ dimensions:
   ground_clearance_mm: 155
   drag_coefficient: 0.268
   frontal_area_m2: 2.45
-
 cargo:
   trunk_capacity_liters: 425
   trunk_max_liters: 1440
   frunk_capacity_liters: 0
-
-
 wheels:
   standard:
-    size: "215/50 R18"
+    size: 215/50 R18
     diameter_inches: 18
   optional: []
-
 suspension:
   front: MacPherson strut
   rear: torsion beam
   adaptive: false
   air_suspension: false
   notes: Standard steel spring suspension
-
 brakes:
   front: ventilated disc
   rear: disc
   regenerative: true
   one_pedal_driving: true
-
 interior:
   seating_capacity: 5
-  seating_configuration: "2+3"
+  seating_configuration: 2+3
   trunk_capacity_liters: 425
   cargo_volume_max_liters: 1440
   frunk_capacity_liters: 32
-
 technology:
   infotainment_screen_inches: 12.8
   instrument_cluster_inches: 10.25
@@ -162,44 +140,42 @@ technology:
   heated_steering_wheel: true
   ventilated_seats: false
   panoramic_roof: true
-
 adas:
   level: 2
   features:
-    - adaptive_cruise_control
-    - lane_keeping_assist
-    - lane_centering
-    - automatic_emergency_braking
-    - blind_spot_monitoring
-    - rear_cross_traffic_alert
-    - traffic_sign_recognition
-    - parking_assist
-    - surround_view_camera
-    - automatic_parking
-
+  - adaptive_cruise_control
+  - lane_keeping_assist
+  - lane_centering
+  - automatic_emergency_braking
+  - blind_spot_monitoring
+  - rear_cross_traffic_alert
+  - traffic_sign_recognition
+  - parking_assist
+  - surround_view_camera
+  - automatic_parking
 safety:
   euro_ncap:
     year: null
     overall: null
-
 energy_label:
   efficiency_class: a
   co2_emissions_g_per_km: 0
-
-
 data_quality:
   overall: estimated
   last_updated: 2026-02-11
   source_reliability: medium
   notes: Specs estimated from Paris Motor Show reveal and BYD platform data
-
 sources:
-  - name: BYD Europe
-    url: https://www.byd.com/eu/car/dolphin-surf
-    date_accessed: 2026-02-09
+- name: BYD Europe
+  url: https://www.byd.com/eu/car/dolphin-surf
+  date_accessed: 2026-02-09
+notes: 'The BYD Dolphin Surf Design is the long-range variant with 60.4 kWh Blade
+  Battery
 
-notes: |
-  The BYD Dolphin Surf Design is the long-range variant with 60.4 kWh Blade Battery
   and 420 km WLTP range. Includes panoramic roof, 11kW 3-phase charger, surround
+
   view camera, and heated rear seats. Competes directly with the VW ID.3 Pro S
+
   and Cupra Born 79 kWh at competitive pricing.
+
+  '

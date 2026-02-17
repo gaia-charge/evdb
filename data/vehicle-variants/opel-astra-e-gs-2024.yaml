@@ -1,23 +1,20 @@
-# Opel Astra Electric GS (2024) - Sporty Trim with IntelliLux Pixel Matrix LED
-
 id: opel-astra-e-gs-2024
 model_id: opel-astra-e
-name: "GS"
+name: GS
 model_year: 2024
-trim_level: GS  # Sporty trim with premium tech and styling
+trim_level: GS
 variant_code: null
-
 production:
   start_date: 2023-06-01
   end_date: null
   status: active
-  notes: Sporty variant with IntelliLux Pixel Matrix LED, sport body kit, and premium equipment
-
+  notes: Sporty variant with IntelliLux Pixel Matrix LED, sport body kit, and premium
+    equipment
 battery:
   type: Lithium-ion
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   total_kwh: 54.0
-  usable_kwh: 51.0  # ~94% usable
+  usable_kwh: 51.0
   supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
@@ -26,58 +23,53 @@ battery:
   modules: 24
   voltage_nominal: 400
   notes: Same battery platform as Peugeot e-308 on EMP2 platform
-
 range:
   wltp_km: 416
   wltp_city_km: 545
   wltp_highway_km: 335
-  epa_combined_km: null  # Not sold in US
+  epa_combined_km: null
   real_world_avg_km: 335
   real_world_source: ADAC EcoTest 2024
-  notes: Slightly lower range than Edition due to 18" wheels and sport body kit (increased drag)
-
+  notes: Slightly lower range than Edition due to 18" wheels and sport body kit (increased
+    drag)
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard
-  
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 100kW peak maintained up to ~50%, then tapers
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 90
-    - percent: 60
-      power_kw: 80
-    - percent: 70
-      power_kw: 65
-    - percent: 80
-      power_kw: 45
-    - percent: 90
-      power_kw: 28
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 90
+  - percent: 60
+    power_kw: 80
+  - percent: 70
+    power_kw: 65
+  - percent: 80
+    power_kw: 45
+  - percent: 90
+    power_kw: 28
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
-  configuration: single_front  # Front-wheel drive (FWD)
+  configuration: single_front
   front:
     type: permanent_magnet
     power_kw: 115
@@ -88,7 +80,6 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 270
-
 dimensions:
   length_mm: 4374
   width_mm: 1860
@@ -96,130 +87,139 @@ dimensions:
   height_mm: 1442
   wheelbase_mm: 2675
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 352
   trunk_max_liters: 1268
   frunk_capacity_liters: 0
-
 performance:
-  acceleration_0_100_kph: 9.0
   acceleration_0_60_mph: null
-  top_speed_kph: 170  # Electronically limited
+  top_speed_kph: 170
   quarter_mile_seconds: null
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 270
+  acceleration_0_100_sec: 9.0
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_wh_per_km: 155
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.7
   mpge_combined: null
-  drag_coefficient: 0.27  # Slightly higher than Edition due to sport body kit
-
+  drag_coefficient: 0.27
 weight:
   curb_weight_kg: 1635
   gross_vehicle_weight_kg: 2085
   payload_kg: 450
-  weight_distribution_front_percent: 58  # FWD with front battery placement
+  weight_distribution_front_percent: 58
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
   front: MacPherson strut with anti-roll bar (sport tuning)
   rear: Multi-link independent suspension (sport tuning)
-
 brakes:
   front: Ventilated disc (larger than Edition)
   rear: Solid disc
   regenerative: true
-
 tires:
   standard: 225/45 R18
-
 features:
   infotainment:
-    - "Pure Panel - dual 10\" digital displays (driver display + infotainment)"
-    - "Apple CarPlay and Android Auto (wireless)"
-    - "DAB+ digital radio"
-    - "8 speakers premium audio system"
-    - "MyOpel mobile app for remote control and charging management"
-    - "Opel Connect with emergency call and vehicle diagnostics"
-    - "Head-up display (10\")"
-  
+  - Pure Panel - dual 10" digital displays (driver display + infotainment)
+  - Apple CarPlay and Android Auto (wireless)
+  - DAB+ digital radio
+  - 8 speakers premium audio system
+  - MyOpel mobile app for remote control and charging management
+  - Opel Connect with emergency call and vehicle diagnostics
+  - Head-up display (10")
   driver_assistance:
-    - "IntelliLux LED Pixel Matrix headlights (84 LED elements) STANDARD"
-    - "Forward Collision Alert with Automatic Emergency Braking"
-    - "Lane Keep Assist with Lane Departure Warning"
-    - "Traffic Sign Recognition with speed limit display"
-    - "Adaptive cruise control with stop & go"
-    - "Driver drowsiness alert"
-    - "360-degree camera system"
-    - "Blind spot monitoring"
-    - "Rear cross-traffic alert"
-  
+  - IntelliLux LED Pixel Matrix headlights (84 LED elements) STANDARD
+  - Forward Collision Alert with Automatic Emergency Braking
+  - Lane Keep Assist with Lane Departure Warning
+  - Traffic Sign Recognition with speed limit display
+  - Adaptive cruise control with stop & go
+  - Driver drowsiness alert
+  - 360-degree camera system
+  - Blind spot monitoring
+  - Rear cross-traffic alert
   comfort_convenience:
-    - "Automatic climate control (dual-zone)"
-    - "Heat pump STANDARD (improves winter range)"
-    - "One-pedal driving with B-mode regenerative braking"
-    - "Keyless entry and start"
-    - "Heated front seats and steering wheel"
-    - "Electric windows front and rear"
-    - "Electric, heated, and auto-folding mirrors"
-    - "Rain-sensing wipers"
-    - "Auto-dimming rearview mirror"
-    - "Wireless phone charging"
-  
+  - Automatic climate control (dual-zone)
+  - Heat pump STANDARD (improves winter range)
+  - One-pedal driving with B-mode regenerative braking
+  - Keyless entry and start
+  - Heated front seats and steering wheel
+  - Electric windows front and rear
+  - Electric, heated, and auto-folding mirrors
+  - Rain-sensing wipers
+  - Auto-dimming rearview mirror
+  - Wireless phone charging
   exterior:
-    - "IntelliLux LED Pixel Matrix headlights with 84 LED elements"
-    - "LED daytime running lights"
-    - "18\" bi-color alloy wheels"
-    - "GS sport body kit with black accents"
-    - "Black roof (two-tone)"
-    - "Body-colored door handles and mirrors"
-    - "Shark fin antenna"
-    - "Privacy glass (rear windows)"
-  
+  - IntelliLux LED Pixel Matrix headlights with 84 LED elements
+  - LED daytime running lights
+  - 18" bi-color alloy wheels
+  - GS sport body kit with black accents
+  - Black roof (two-tone)
+  - Body-colored door handles and mirrors
+  - Shark fin antenna
+  - Privacy glass (rear windows)
   interior:
-    - "AGR-certified ergonomic sport seats with enhanced side bolsters"
-    - "Leather-wrapped steering wheel and gear selector"
-    - "Aluminum sport pedals"
-    - "Black headliner"
-    - "352L trunk (slightly reduced vs ICE due to battery)"
-    - "60/40 split-folding rear seats"
-
+  - AGR-certified ergonomic sport seats with enhanced side bolsters
+  - Leather-wrapped steering wheel and gear selector
+  - Aluminum sport pedals
+  - Black headliner
+  - 352L trunk (slightly reduced vs ICE due to battery)
+  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   source_urls:
-    - https://www.opel.com/modelle/astra/astra-electric.html
-    - https://www.adac.de/
-    - https://ev-database.org/
-  notes: |
-    The Opel Astra Electric GS is the sporty flagship trim of Europe's 2023 Car of the Year
-    in electric form. It adds Opel's signature IntelliLux LED Pixel Matrix headlights with
+  - https://www.opel.com/modelle/astra/astra-electric.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  notes: 'The Opel Astra Electric GS is the sporty flagship trim of Europe''s 2023
+    Car of the Year
+
+    in electric form. It adds Opel''s signature IntelliLux LED Pixel Matrix headlights
+    with
+
     84 LED elements as standard - the most advanced lighting technology in the segment.
-    
-    GS trim includes sport body kit, 18\" wheels, two-tone black roof, AGR-certified sport
+
+
+    GS trim includes sport body kit, 18\" wheels, two-tone black roof, AGR-certified
+    sport
+
     seats, premium 8-speaker audio, 10\" head-up display, and 360-degree camera system.
-    
+
+
     Key advantages over Edition:
+
     - IntelliLux LED Pixel Matrix headlights STANDARD (€1,200 option on Edition)
+
     - Sport body kit and two-tone black roof
+
     - 18\" bi-color alloy wheels (vs 17\" on Edition)
+
     - AGR-certified sport seats with enhanced bolsters
+
     - Premium 8-speaker audio (vs 6 speakers)
+
     - 10\" head-up display
+
     - 360-degree camera system
+
     - Heated seats and steering wheel standard
+
     - Wireless phone charging
-    
-    Platform sibling to Peugeot e-308 GT with identical powertrain but Opel's characteristic
+
+
+    Platform sibling to Peugeot e-308 GT with identical powertrain but Opel''s characteristic
+
     German engineering and comprehensive technology package.
-    
+
+
     GS trim qualifies for German company car tax reduction (0.25% under €70,000).
+
+    '

@@ -1,94 +1,87 @@
-# Vehicle Variant: Alpine A290 GT 52 (2025)
 id: alpine-a290-gt-52-2025
 model_id: alpine-a290
 name: GT 52
 variant_name: GT 52
 model_year: 2025
 trim_level: GT
-production_years: "2024-present"
+production_years: 2024-present
+overview: 'The Alpine A290 GT is the standard variant of Alpine''s electric hot hatch,
+  featuring a 52kWh NMC battery and a 130kW (180hp) front-mounted electric motor.
+  It delivers a 0-100 km/h time of 7.4 seconds and up to 380km WLTP range. The GT
+  trim includes sport seats, Alpine Blue accents, 19-inch alloy wheels, and the full
+  infotainment suite with Alpine Telemetrics performance data logging.
 
-overview: >
-  The Alpine A290 GT is the standard variant of Alpine's electric hot hatch, featuring a 52kWh NMC
-  battery and a 130kW (180hp) front-mounted electric motor. It delivers a 0-100 km/h time of 7.4
-  seconds and up to 380km WLTP range. The GT trim includes sport seats, Alpine Blue accents, 19-inch
-  alloy wheels, and the full infotainment suite with Alpine Telemetrics performance data logging.
-
-# Battery Specifications
+  '
 battery:
   chemistry: NMC
-  supplier: "Envision AESC"
+  supplier: Envision AESC
   total_kwh: 52.0
   usable_kwh: 48.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "52kWh NMC battery from Envision AESC, shared with Renault 5 E-Tech"
-
-# Range (km)
+  notes: 52kWh NMC battery from Envision AESC, shared with Renault 5 E-Tech
 range:
   wltp_km: 380
   wltp_city_km: 470
   wltp_highway_km: 310
   epa_miles: null
   real_world_km: 320
-  real_world_notes: "Real-world range varies: ~320km mixed driving, ~430km city, ~270km highway"
-
-# Charging
+  real_world_notes: 'Real-world range varies: ~320km mixed driving, ~430km city, ~270km
+    highway'
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 300
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 300
+      power_kw: 11.0
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 0
-        power_kw: 70
-      - soc_percent: 10
-        power_kw: 100
-      - soc_percent: 20
-        power_kw: 98
-      - soc_percent: 30
-        power_kw: 92
-      - soc_percent: 40
-        power_kw: 85
-      - soc_percent: 50
-        power_kw: 75
-      - soc_percent: 60
-        power_kw: 60
-      - soc_percent: 70
-        power_kw: 45
-      - soc_percent: 80
-        power_kw: 30
-      - soc_percent: 90
-        power_kw: 18
-      - soc_percent: 100
-        power_kw: 8
+    - soc_percent: 0
+      power_kw: 70
+    - soc_percent: 10
+      power_kw: 100
+    - soc_percent: 20
+      power_kw: 98
+    - soc_percent: 30
+      power_kw: 92
+    - soc_percent: 40
+      power_kw: 85
+    - soc_percent: 50
+      power_kw: 75
+    - soc_percent: 60
+      power_kw: 60
+    - soc_percent: 70
+      power_kw: 45
+    - soc_percent: 80
+      power_kw: 30
+    - soc_percent: 90
+      power_kw: 18
+    - soc_percent: 100
+      power_kw: 8
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 30
-        power_kw: 100
-        notes: "10-80% in approximately 30 minutes"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 30
+      power_kw: 100
+      notes: 10-80% in approximately 30 minutes
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
-# Performance
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 performance:
   motors:
-    - location: front
-      type: wound rotor
-      power_kw: 130
-      torque_nm: 285
+  - location: front
+    type: wound rotor
+    power_kw: 130
+    torque_nm: 285
   total_power_kw: 130
   total_torque_nm: 285
   drivetrain: FWD
@@ -97,43 +90,32 @@ performance:
   top_speed_kmh: 160
   braking:
     distance_100_0_km: 37.0
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 14.6
   real_world_kwh_per_100km: 16.5
-
-# Dimensions
 dimensions:
   length_mm: 3990
   width_mm: 1820
   height_mm: 1520
   wheelbase_mm: 2540
   ground_clearance_mm: 140
-
-# Cargo
 cargo:
   trunk_capacity_liters: 326
   trunk_max_liters: 1106
   frunk_capacity_liters: 0
-
-# Weight
 weight:
   curb_weight_kg: 1479
   gross_vehicle_weight_kg: 1900
   payload_kg: 421
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-# Tires
 tires:
-  front: "215/45 R19"
-  rear: "215/45 R19"
-
+  front: 215/45 R19
+  rear: 215/45 R19
 metadata:
   data_quality: estimated
   sources:
-    - https://en.wikipedia.org/wiki/Renault_5_E-Tech
-    - https://www.alpinecars.com
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  - https://en.wikipedia.org/wiki/Renault_5_E-Tech
+  - https://www.alpinecars.com
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'

@@ -1,12 +1,9 @@
-# Renault Megane E-Tech EV40 (2025) - Base Battery
-
 id: renault-megane-e-tech-ev40-2025
 model_id: renault-megane-e-tech
 name: Megane E-Tech EV40
 model_year: 2025
-trim_level: EV40  # Base battery option
+trim_level: EV40
 variant_code: null
-
 dimensions:
   length_mm: 4200
   width_mm: 1768
@@ -14,21 +11,18 @@ dimensions:
   height_mm: 1505
   wheelbase_mm: 2685
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 440
   trunk_max_liters: 1245
   frunk_capacity_liters: 0
-
 production:
   start_date: 2022-03-01
   end_date: null
   status: active
   notes: 2025 model year with continued refinements
-
 battery:
   type: Lithium-ion
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   total_kwh: 40.0
   usable_kwh: 40.0
   supplier: LG Energy Solution
@@ -39,7 +33,6 @@ battery:
   modules: 12
   voltage_nominal: 400
   notes: Smaller battery option for city/urban use
-
 range:
   wltp_km: 300
   wltp_city_km: 390
@@ -48,47 +41,42 @@ range:
   real_world_avg_km: 260
   real_world_source: ADAC EcoTest 2024, InsideEVs real-world testing
   notes: Efficient for urban driving, adequate for most daily use
-
 charging:
   ac:
-    max_power_kw: 7.4
     connector_type: Type 2
     phases: 1
     time_0_100_hours: 6.0
     onboard_charger: 7.4kW single-phase standard
-  
   dc:
-    max_power_kw: 85
     connector_type: CCS2
     time_10_80_percent_minutes: 28
     peak_power_notes: 85kW peak, charges quickly due to smaller battery
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 80
-    - percent: 10
-      power_kw: 85
-    - percent: 30
-      power_kw: 85
-    - percent: 50
-      power_kw: 80
-    - percent: 60
-      power_kw: 72
-    - percent: 70
-      power_kw: 58
-    - percent: 80
-      power_kw: 38
-    - percent: 90
-      power_kw: 25
-    - percent: 100
-      power_kw: 7
-  
+  - percent: 0
+    power_kw: 80
+  - percent: 10
+    power_kw: 85
+  - percent: 30
+    power_kw: 85
+  - percent: 50
+    power_kw: 80
+  - percent: 60
+    power_kw: 72
+  - percent: 70
+    power_kw: 58
+  - percent: 80
+    power_kw: 38
+  - percent: 90
+    power_kw: 25
+  - percent: 100
+    power_kw: 7
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 7.4
+  dc_max_kw: 85
 motors:
   configuration: single_front
   front:
@@ -101,13 +89,14 @@ motors:
     power_kw: 96
     power_hp: 130
     torque_nm: 250
-
 performance:
-  acceleration_0_100_kph: 10.0
   acceleration_0_60_mph: null
   top_speed_kph: 150
   quarter_mile_seconds: null
-
+  total_power_kw: 96
+  total_power_hp: 130
+  total_torque_nm: 250
+  acceleration_0_100_sec: 10.0
 efficiency:
   wltp_kwh_per_100km: 15.8
   wltp_wh_per_km: 158
@@ -116,41 +105,37 @@ efficiency:
   real_world_highway_kwh_per_100km: 19.5
   real_world_city_kwh_per_100km: 14.8
   notes: Very efficient, especially in city driving
-
 weight:
   curb_weight_kg: 1624
   gross_vehicle_weight_kg: 2074
   payload_kg: 450
   towing_capacity_braked_kg: 900
   towing_capacity_unbraked_kg: 630
-
 wheels_tires:
   standard:
-    front: "215/55 R18"
-    rear: "215/55 R18"
+    front: 215/55 R18
+    rear: 215/55 R18
     wheels: 18" Aero alloys
   optional:
-    - "215/50 R19 (Iconic trim)"
-    - "215/45 R20 (optional)"
-
+  - 215/50 R19 (Iconic trim)
+  - 215/45 R20 (optional)
 features:
   standard:
-    - LED headlights and taillights
-    - 12" central touchscreen with OpenR Link
-    - 12.3" digital instrument cluster
-    - Google built-in (Android Automotive OS)
-    - Wireless smartphone charging
-    - Automatic climate control
-    - Rear parking sensors
-    - Lane keeping assist
-    - Traffic sign recognition
-    - Active emergency braking
+  - LED headlights and taillights
+  - 12" central touchscreen with OpenR Link
+  - 12.3" digital instrument cluster
+  - Google built-in (Android Automotive OS)
+  - Wireless smartphone charging
+  - Automatic climate control
+  - Rear parking sensors
+  - Lane keeping assist
+  - Traffic sign recognition
+  - Active emergency braking
   optional:
-    - Solarbay panoramic roof
-    - Harman Kardon sound system
-    - 360° camera
-    - Hands-free parking
-
+  - Solarbay panoramic roof
+  - Harman Kardon sound system
+  - 360° camera
+  - Hands-free parking
 data_quality:
   overall: verified
   last_updated: 2026-02-09
@@ -159,32 +144,41 @@ data_quality:
   confidence_performance: verified
   confidence_consumption: measured
   notes: Specifications verified from Renault official sources and independent testing
-
 sources:
-  - name: Renault Germany Official Specifications
-    url: https://www.renault.de/
-    date_accessed: 2026-02-09
-    type: manufacturer
-  - name: ADAC EcoTest 2024
-    url: https://www.adac.de/
-    date_accessed: 2026-02-09
-    type: independent_test
-  - name: InsideEVs Real-World Range Test
-    url: https://insideevs.com/
-    date_accessed: 2024-08-15
-    type: independent_test
+- name: Renault Germany Official Specifications
+  url: https://www.renault.de/
+  date_accessed: 2026-02-09
+  type: manufacturer
+- name: ADAC EcoTest 2024
+  url: https://www.adac.de/
+  date_accessed: 2026-02-09
+  type: independent_test
+- name: InsideEVs Real-World Range Test
+  url: https://insideevs.com/
+  date_accessed: 2024-08-15
+  type: independent_test
+notes: 'The EV40 is the entry-level battery option for the Megane E-Tech, ideal for
+  urban
 
-notes: |
-  The EV40 is the entry-level battery option for the Megane E-Tech, ideal for urban
   and suburban driving. While the range is more limited than the EV60, it offers:
-  
+
+
   - Lower purchase price (typically €6,000-8,000 less than EV60)
+
   - Lighter weight (better handling)
+
   - Faster charging (smaller battery fills quicker)
+
   - Adequate for most daily driving needs (300 km WLTP)
-  
+
+
   Real-world range typically 260-280 km in mixed driving, 220-240 km on highways,
+
   and up to 330 km in pure city driving.
-  
-  Perfect for buyers who don't need long-distance capability and want to save on
+
+
+  Perfect for buyers who don''t need long-distance capability and want to save on
+
   the initial purchase price.
+
+  '

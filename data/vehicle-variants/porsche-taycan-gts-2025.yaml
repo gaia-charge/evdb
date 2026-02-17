@@ -1,15 +1,12 @@
 id: porsche-taycan-gts-2025
-name: "GTS"
+name: GTS
 model_id: porsche-taycan
 model_year: 2025
 production_years:
   start: 2024
   end: null
-
 trim_level: gts
 market_position: performance
-
-# Battery Specifications
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
@@ -20,85 +17,72 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted Performance Battery Plus"
+    configuration: floor-mounted Performance Battery Plus
     weight_kg: 570
     modules: 33
-
-# Range
 range:
   wltp_km: 535
   wltp_source: manufacturer
-
   real_world_km: 440
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 10-20°C, comfort mode"
-
-# Charging
+  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 9.5
+      '0_100': 9.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 320
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 18
-      "0_100": 50
-
+      '10_80': 18
+      '0_100': 50
     charging_curve:
-      - soc_percent: 0
-        power_kw: 280
-      - soc_percent: 10
-        power_kw: 320
-      - soc_percent: 20
-        power_kw: 310
-      - soc_percent: 30
-        power_kw: 295
-      - soc_percent: 40
-        power_kw: 270
-      - soc_percent: 50
-        power_kw: 240
-      - soc_percent: 60
-        power_kw: 195
-      - soc_percent: 70
-        power_kw: 140
-      - soc_percent: 80
-        power_kw: 80
-      - soc_percent: 90
-        power_kw: 40
-      - soc_percent: 100
-        power_kw: 15
-
-    notes: "800V architecture with bank charging. 2025 model features improved charging curve with 320 kW peak."
-
+    - soc_percent: 0
+      power_kw: 280
+    - soc_percent: 10
+      power_kw: 320
+    - soc_percent: 20
+      power_kw: 310
+    - soc_percent: 30
+      power_kw: 295
+    - soc_percent: 40
+      power_kw: 270
+    - soc_percent: 50
+      power_kw: 240
+    - soc_percent: 60
+      power_kw: 195
+    - soc_percent: 70
+      power_kw: 140
+    - soc_percent: 80
+      power_kw: 80
+    - soc_percent: 90
+      power_kw: 40
+    - soc_percent: 100
+      power_kw: 15
+    notes: 800V architecture with bank charging. 2025 model features improved charging
+      curve with 320 kW peak.
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 320
 motors:
-  - position: front
-    type: permanent-magnet-synchronous
-    max_power_kw: 190
-    max_torque_nm: 220
-    cooling: liquid
-
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 370
-    max_torque_nm: 440
-    cooling: liquid
-
+- position: front
+  type: permanent-magnet-synchronous
+  max_power_kw: 190
+  max_torque_nm: 220
+  cooling: liquid
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 370
+  max_torque_nm: 440
+  cooling: liquid
 drivetrain:
   type: awd
   total_power_kw: 440
@@ -108,119 +92,105 @@ drivetrain:
   boost_power_hp: 700
   boost_torque_nm: 850
   boost_duration_seconds: 2.5
-
 performance:
   acceleration_0_100_kmh_s: 3.7
   top_speed_kmh: 250
   top_speed_limited: true
-
-# Weight & Efficiency
 weight:
   curb_weight_kg: 2340
   gross_vehicle_weight_kg: 2810
   payload_kg: 470
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  towing_notes: "Porsche Taycan sedan is not rated for towing"
-
+  towing_notes: Porsche Taycan sedan is not rated for towing
 efficiency:
   wltp_kwh_per_100km: 19.6
   real_world_kwh_per_100km: 21.2
-
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 23.0
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 26.5
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 23.0
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 26.5
 standard_features:
-  - "Performance Battery Plus (105 kWh)"
-  - "Porsche Active Suspension Management (PASM)"
-  - "Adaptive air suspension with sport tuning"
-  - "Sport Chrono Package"
-  - "GTS Sport Design package (black accents)"
-  - "20-inch Taycan S Aero wheels in Satin Black"
-  - "Porsche Electric Sport Sound"
-  - "PCM 6.0 with 16.8-inch curved display"
-  - "Porsche InnoDrive"
-  - "GTS interior with Race-Tex upholstery"
-  - "Sport Seats Plus (18-way electric)"
-  - "Heated front seats"
-  - "4-zone climate control"
-  - "LED Matrix headlights"
-  - "Porsche Torque Vectoring Plus"
-
+- Performance Battery Plus (105 kWh)
+- Porsche Active Suspension Management (PASM)
+- Adaptive air suspension with sport tuning
+- Sport Chrono Package
+- GTS Sport Design package (black accents)
+- 20-inch Taycan S Aero wheels in Satin Black
+- Porsche Electric Sport Sound
+- PCM 6.0 with 16.8-inch curved display
+- Porsche InnoDrive
+- GTS interior with Race-Tex upholstery
+- Sport Seats Plus (18-way electric)
+- Heated front seats
+- 4-zone climate control
+- LED Matrix headlights
+- Porsche Torque Vectoring Plus
 optional_packages:
-  - name: "Porsche Dynamic Chassis Control Sport (PDCC Sport)"
-    features:
-      - "Active anti-roll stabilization"
-      - "Rear-axle steering"
-  - name: "Burmester 3D High-End Surround Sound"
-    features:
-      - "21 speakers"
-      - "1,455 watts"
-      - "3D surround sound"
-  - name: "Night Vision Assist"
-    features:
-      - "Thermal imaging camera"
-      - "Pedestrian and animal detection"
-
+- name: Porsche Dynamic Chassis Control Sport (PDCC Sport)
+  features:
+  - Active anti-roll stabilization
+  - Rear-axle steering
+- name: Burmester 3D High-End Surround Sound
+  features:
+  - 21 speakers
+  - 1,455 watts
+  - 3D surround sound
+- name: Night Vision Assist
+  features:
+  - Thermal imaging camera
+  - Pedestrian and animal detection
 colors:
   standard:
-    - "Black"
-    - "White"
-    - "Carrara White Metallic"
+  - Black
+  - White
+  - Carrara White Metallic
   premium:
-    - "Crayon"
-    - "Aventurine Green Metallic"
-    - "Neptune Blue"
-    - "Frozen Blue Metallic"
-    - "Turbonite"
-    - "Mahogany Metallic"
-    - "Ice Grey Metallic"
-
+  - Crayon
+  - Aventurine Green Metallic
+  - Neptune Blue
+  - Frozen Blue Metallic
+  - Turbonite
+  - Mahogany Metallic
+  - Ice Grey Metallic
 interior_colors:
-  - "Black Race-Tex with Carmine Red accents"
-  - "Black Race-Tex"
-  - "Slate Grey Race-Tex"
-
+- Black Race-Tex with Carmine Red accents
+- Black Race-Tex
+- Slate Grey Race-Tex
 version:
   facelift: true
   major_changes:
-    - "Updated 2025 model with improved battery (105 kWh total)"
-    - "Increased peak DC charging to 320 kW"
-    - "New PCM 6.0 infotainment with curved display"
-    - "Improved range (535 km WLTP for sedan)"
-    - "515 kW overboost power (up from 440 kW)"
-    - "Revised exterior design with new front and rear"
-
+  - Updated 2025 model with improved battery (105 kWh total)
+  - Increased peak DC charging to 320 kW
+  - New PCM 6.0 infotainment with curved display
+  - Improved range (535 km WLTP for sedan)
+  - 515 kW overboost power (up from 440 kW)
+  - Revised exterior design with new front and rear
 dimensions:
   length_mm: 4963
   width_mm: 1966
   height_mm: 1381
   wheelbase_mm: 2900
   ground_clearance_mm: 127
-
 cargo:
   trunk_capacity_liters: 407
   trunk_max_liters: 407
   frunk_capacity_liters: 84
+notes: 'The 2025 Porsche Taycan GTS sedan offers the same thrilling GTS driving experience
+  as the Sport Turismo in the more aerodynamic sedan body. With 535 km WLTP range
+  (vs 504 km for Sport Turismo), the sedan benefits from its sleeker silhouette. The
+  GTS is widely considered the sweet spot of the Taycan range, offering sport-tuned
+  suspension, 515 kW overboost, 0-100 in 3.7 seconds, and the comprehensive 2025 facelift
+  improvements including the larger 105 kWh battery, 320 kW DC charging, and new PCM
+  6.0 infotainment.
 
-notes: >
-  The 2025 Porsche Taycan GTS sedan offers the same thrilling GTS driving
-  experience as the Sport Turismo in the more aerodynamic sedan body. With
-  535 km WLTP range (vs 504 km for Sport Turismo), the sedan benefits from
-  its sleeker silhouette. The GTS is widely considered the sweet spot of the
-  Taycan range, offering sport-tuned suspension, 515 kW overboost, 0-100 in
-  3.7 seconds, and the comprehensive 2025 facelift improvements including
-  the larger 105 kWh battery, 320 kW DC charging, and new PCM 6.0 infotainment.
-
+  '
 metadata:
-  created_at: "2026-02-10"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-10'
+  updated_at: '2026-02-10'
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.porsche.com/germany/models/taycan/taycan-gts/
-    - https://newsroom.porsche.com
+  - https://www.porsche.com/germany/models/taycan/taycan-gts/
+  - https://newsroom.porsche.com

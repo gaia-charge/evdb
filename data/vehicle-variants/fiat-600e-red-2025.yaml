@@ -1,18 +1,14 @@
-# Fiat 600e (RED) (2025) - Standard Trim
-
 id: fiat-600e-red-2025
 model_id: fiat-600e
-name: "(RED)"
+name: (RED)
 model_year: 2025
-trim_level: "(RED)"
+trim_level: (RED)
 variant_code: null
-
 production:
   start_date: 2024-06-01
   end_date: null
   status: active
   notes: Standard trim replacing initial launch editions for 2025 model year
-
 battery:
   type: Lithium-ion
   chemistry: NMC
@@ -26,7 +22,6 @@ battery:
   modules: 18
   voltage_nominal: 400
   notes: Standard 54 kWh battery shared across Stellantis eCMP2 platform
-
 range:
   wltp_km: 409
   wltp_city_km: 560
@@ -35,47 +30,42 @@ range:
   real_world_avg_km: 345
   real_world_source: Auto Motor und Sport test 2025
   notes: Same range as La Prima, lighter equipment may slightly improve real-world
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 5.5
     onboard_charger: 11kW 3-phase standard
-
   dc:
-    max_power_kw: 100
     connector_type: CCS2
     time_10_80_percent_minutes: 28
     peak_power_notes: 100kW peak, good curve maintained through mid-SOC
     preconditioning: true
-
   charge_curve:
-    - percent: 0
-      power_kw: 95
-    - percent: 10
-      power_kw: 100
-    - percent: 30
-      power_kw: 100
-    - percent: 50
-      power_kw: 95
-    - percent: 60
-      power_kw: 75
-    - percent: 70
-      power_kw: 55
-    - percent: 80
-      power_kw: 35
-    - percent: 90
-      power_kw: 20
-    - percent: 100
-      power_kw: 11
-
+  - percent: 0
+    power_kw: 95
+  - percent: 10
+    power_kw: 100
+  - percent: 30
+    power_kw: 100
+  - percent: 50
+    power_kw: 95
+  - percent: 60
+    power_kw: 75
+  - percent: 70
+    power_kw: 55
+  - percent: 80
+    power_kw: 35
+  - percent: 90
+    power_kw: 20
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 motors:
   configuration: single_front
   front:
@@ -88,103 +78,94 @@ motors:
     power_kw: 115
     power_hp: 156
     torque_nm: 260
-
 performance:
-  acceleration_0_100_kph: 9.0
   acceleration_0_60_mph: null
   top_speed_kph: 150
   quarter_mile_seconds: null
-
+  total_power_kw: 115
+  total_power_hp: 156
+  total_torque_nm: 260
+  acceleration_0_100_sec: 9.0
 efficiency:
   wltp_kwh_per_100km: 13.8
   wltp_wh_per_km: 138
   real_world_kwh_per_100km: 15.5
   real_world_wh_per_km: 155
-
 drivetrain:
   drive_type: FWD
   transmission: single_speed
   traction_control: Standard ESP with traction modes
-
 suspension:
   front: MacPherson strut
   rear: Torsion beam
   adaptive: false
   notes: Comfort-tuned for urban and highway use
-
 brakes:
   front: Ventilated disc
   rear: Solid disc
   regen_levels: 3
   one_pedal: true
-
 wheels_tires:
   standard:
-    - size: "205/55 R17"
-      wheel_diameter_inches: 17
-      notes: 17" alloy wheels standard on (RED)
+  - size: 205/55 R17
+    wheel_diameter_inches: 17
+    notes: 17" alloy wheels standard on (RED)
   optional:
-    - size: "215/55 R18"
-      wheel_diameter_inches: 18
-      notes: Optional 18" alloy wheels
-
+  - size: 215/55 R18
+    wheel_diameter_inches: 18
+    notes: Optional 18" alloy wheels
 exterior:
   paint_colors:
-    - name: Cinema Black
-      type: solid
-      upcharge_eur: 0
-    - name: Passione Red
-      type: metallic
-      upcharge_eur: 600
-    - name: Sicilia Orange
-      type: metallic
-      upcharge_eur: 600
-    - name: Venezia Blue
-      type: metallic
-      upcharge_eur: 600
-    - name: Gelato White
-      type: metallic
-      upcharge_eur: 600
-
+  - name: Cinema Black
+    type: solid
+    upcharge_eur: 0
+  - name: Passione Red
+    type: metallic
+    upcharge_eur: 600
+  - name: Sicilia Orange
+    type: metallic
+    upcharge_eur: 600
+  - name: Venezia Blue
+    type: metallic
+    upcharge_eur: 600
+  - name: Gelato White
+    type: metallic
+    upcharge_eur: 600
   standard_features:
-    - Full-LED headlights
-    - LED daytime running lights
-    - LED tail lights
-    - Body-colored door handles
-    - Rear parking sensors and camera
-    - 17" alloy wheels
-
+  - Full-LED headlights
+  - LED daytime running lights
+  - LED tail lights
+  - Body-colored door handles
+  - Rear parking sensors and camera
+  - 17" alloy wheels
 interior:
   seats:
     material: Cloth
-    front_heated: No
-    front_ventilated: No
-    front_power: No
-    memory_function: No
-
+    front_heated: false
+    front_ventilated: false
+    front_power: false
+    memory_function: false
   standard_features:
-    - 10.25" touchscreen with Uconnect 5
-    - 7" digital instrument cluster
-    - Wireless Apple CarPlay & Android Auto
-    - Manual climate control
-    - USB-C ports (front and rear)
-    - Keyless entry and start
-
+  - 10.25" touchscreen with Uconnect 5
+  - 7" digital instrument cluster
+  - Wireless Apple CarPlay & Android Auto
+  - Manual climate control
+  - USB-C ports (front and rear)
+  - Keyless entry and start
 adas:
   level: 2
   features:
-    - Adaptive cruise control
-    - Lane keeping assist
-    - Lane departure warning
-    - Traffic sign recognition
-    - Automatic emergency braking with pedestrian/cyclist detection
-    - Driver attention warning
-    - Intelligent speed assist
-    - Rear parking sensors
-    - Rear-view camera
-  autopark: No
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Lane departure warning
+  - Traffic sign recognition
+  - Automatic emergency braking with pedestrian/cyclist detection
+  - Driver attention warning
+  - Intelligent speed assist
+  - Rear parking sensors
+  - Rear-view camera
+  autopark: false
   notes: Standard Level 2 ADAS, fewer features than La Prima
-
 dimensions:
   length_mm: 4171
   width_mm: 1781
@@ -193,12 +174,10 @@ dimensions:
   wheelbase_mm: 2561
   ground_clearance_mm: 155
   turning_circle_m: 10.5
-
 cargo:
   trunk_capacity_liters: 360
   trunk_max_liters: 1231
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1505
   gross_vehicle_weight_kg: 1970
@@ -206,8 +185,6 @@ weight:
   notes: Slightly lighter than La Prima due to simpler equipment
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 620
-
-
 data_quality:
   overall: verified
   specifications: high
@@ -215,28 +192,37 @@ data_quality:
   market_data: high
   last_updated: 2026-02-10
   confidence_notes: Official specs verified against Fiat configurator
-
 sources:
-  - name: Fiat Germany Official Configurator
-    url: https://www.fiat.de/600e
-    date_accessed: 2026-02-10
-    confidence: verified
+- name: Fiat Germany Official Configurator
+  url: https://www.fiat.de/600e
+  date_accessed: 2026-02-10
+  confidence: verified
+- name: Auto Motor und Sport Fiat 600e Test
+  url: https://www.auto-motor-und-sport.de/
+  date_accessed: 2026-02-10
+  confidence: measured
+notes: 'The Fiat 600e (RED) is the standard trim, positioned as the accessible entry
+  point
 
-  - name: Auto Motor und Sport Fiat 600e Test
-    url: https://www.auto-motor-und-sport.de/
-    date_accessed: 2026-02-10
-    confidence: measured
-
-notes: |
-  The Fiat 600e (RED) is the standard trim, positioned as the accessible entry point
   to the 600e range. Key differences vs La Prima:
+
   - Standard LED headlights (not matrix)
+
   - 17" wheels (vs 18")
+
   - Manual climate control (vs dual-zone auto)
+
   - No heated seats, wireless charging, or 360-degree camera
+
   - Cloth seats (vs premium cloth/leatherette)
+
   - No blind spot monitoring or rear cross-traffic alert
-  
+
+
   Same powertrain: 156 hp, 260 Nm, 54 kWh battery, 409 km WLTP range.
+
   Approximately €4,000 less than La Prima, making it competitive with
+
   Opel Mokka Electric and Peugeot e-2008 base trims.
+
+  '

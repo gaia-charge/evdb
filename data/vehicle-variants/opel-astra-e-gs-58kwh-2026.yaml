@@ -1,25 +1,21 @@
-# Opel Astra Electric GS 58 kWh (2026) - Updated Battery
-
 id: opel-astra-e-gs-58kwh-2026
 model_id: opel-astra-e
-name: "GS 58 kWh"
+name: GS 58 kWh
 model_year: 2026
 trim_level: GS
 variant_code: ASTRA-E-58-2026
-
 production:
   start_date: 2025-09-01
   end_date: null
   status: active
-  notes: "2026 model year with larger 58 kWh battery replacing the 54 kWh pack"
-
+  notes: 2026 model year with larger 58 kWh battery replacing the 54 kWh pack
 battery:
   type: Lithium-ion
   chemistry: NMC
   total_kwh: 58.4
   usable_kwh: 55.4
   cells: 102
-  pack_configuration: "102s1p"
+  pack_configuration: 102s1p
   voltage_nominal: 377
   cell_type: prismatic
   architecture_v: 400
@@ -27,77 +23,68 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid-cooled
-
 range:
   wltp_km: 454
   wltp_tel_km: 454
   wltp_source: manufacturer
   real_world_km: 345
   real_world_source: ev-database.org
-  real_world_conditions: "Mixed driving, moderate climate"
-
+  real_world_conditions: Mixed driving, moderate climate
 charging:
   ac:
-    max_power_kw: 11.0
     connector_types:
-      - type2
+    - type2
     phases: 3
     charging_time_hours:
-      "0_100": 6.0
+      '0_100': 6.0
     onboard_charger_kw: 11
-
   dc:
-    max_power_kw: 100
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 33
+      '10_80': 33
     avg_power_10_80_kw: 75
-
     charging_curve:
-      - soc_percent: 10
-        power_kw: 95
-      - soc_percent: 20
-        power_kw: 100
-      - soc_percent: 30
-        power_kw: 100
-      - soc_percent: 40
-        power_kw: 90
-      - soc_percent: 50
-        power_kw: 80
-      - soc_percent: 60
-        power_kw: 65
-      - soc_percent: 70
-        power_kw: 50
-      - soc_percent: 80
-        power_kw: 35
-      - soc_percent: 90
-        power_kw: 22
-      - soc_percent: 100
-        power_kw: 10
-
+    - soc_percent: 10
+      power_kw: 95
+    - soc_percent: 20
+      power_kw: 100
+    - soc_percent: 30
+      power_kw: 100
+    - soc_percent: 40
+      power_kw: 90
+    - soc_percent: 50
+      power_kw: 80
+    - soc_percent: 60
+      power_kw: 65
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 35
+    - soc_percent: 90
+      power_kw: 22
+    - soc_percent: 100
+      power_kw: 10
+  ac_max_kw: 11.0
+  dc_max_kw: 100
 bidirectional_charging:
   v2l: true
   v2l_power_kw: 3.5
   v2h: false
   v2g: false
-  notes: "V2L via Type 2 adapter"
-
+  notes: V2L via Type 2 adapter
 motors:
   configuration: single-motor
   drive_type: FWD
-
   front:
     type: permanent-magnet-synchronous
     max_power_kw: 115
     max_power_hp: 156
     max_torque_nm: 270
-
   combined:
     max_power_kw: 115
     max_power_hp: 156
     max_torque_nm: 270
-
 dimensions:
   length_mm: 4374
   width_mm: 1860
@@ -105,85 +92,75 @@ dimensions:
   height_mm: 1442
   wheelbase_mm: 2675
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 352
   trunk_max_liters: 1268
   frunk_capacity_liters: 0
-
 performance:
   acceleration_0_100_kmh_s: 9.3
   top_speed_kmh: 170
   top_speed_limited: true
-
 efficiency:
   wltp_kwh_per_100km: 15.3
   wltp_source: manufacturer
   real_world_kwh_per_100km: 16.1
   real_world_source: ev-database.org
-  real_world_conditions: "Mixed driving, moderate climate"
-
+  real_world_conditions: Mixed driving, moderate climate
 weight:
   curb_weight_kg: 1680
   gross_vehicle_weight_kg: 2120
   payload_kg: 440
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-
 wheels:
-  standard_size_front: "225/45 R18"
-  standard_size_rear: "225/45 R18"
-
+  standard_size_front: 225/45 R18
+  standard_size_rear: 225/45 R18
 standard_equipment:
   exterior:
-    - IntelliLux LED Pixel Matrix headlights (84 LED elements)
-    - GS sport body kit with black accents
-    - 18-inch bi-color alloy wheels
-    - Privacy glass
-
+  - IntelliLux LED Pixel Matrix headlights (84 LED elements)
+  - GS sport body kit with black accents
+  - 18-inch bi-color alloy wheels
+  - Privacy glass
   interior:
-    - Pure Panel Pro dual 10-inch displays
-    - Wireless Apple CarPlay and Android Auto
-    - AGR-certified ergonomic sport seats
-    - Heat pump (standard)
-    - Wireless phone charging
-    - Head-up display
-
+  - Pure Panel Pro dual 10-inch displays
+  - Wireless Apple CarPlay and Android Auto
+  - AGR-certified ergonomic sport seats
+  - Heat pump (standard)
+  - Wireless phone charging
+  - Head-up display
   technology:
-    - Battery preconditioning via navigation
-    - Plug & Charge (ISO 15118-2)
-    - V2L capability
-    - Adaptive cruise control with stop & go
-    - 360-degree camera
-    - Blind spot monitoring
-    - Over-the-air updates
-
+  - Battery preconditioning via navigation
+  - Plug & Charge (ISO 15118-2)
+  - V2L capability
+  - Adaptive cruise control with stop & go
+  - 360-degree camera
+  - Blind spot monitoring
+  - Over-the-air updates
 colors:
-  - "Power White"
-  - "Onyx Black"
-  - "Mondstein Grau"
-  - "Quarz Silber"
-  - "Ruby Red"
-  - "Voltaic Blue"
-
+- Power White
+- Onyx Black
+- Mondstein Grau
+- Quarz Silber
+- Ruby Red
+- Voltaic Blue
 version:
   facelift: false
   mid_cycle_refresh: true
   generation: 1
-  platform_version: "EMP2"
-  notes: "Updated 58 kWh battery (from 54 kWh), adds V2L, improved range to 454 km WLTP"
-
+  platform_version: EMP2
+  notes: Updated 58 kWh battery (from 54 kWh), adds V2L, improved range to 454 km
+    WLTP
 metadata:
   data_quality: verified
-  last_updated: "2026-02-10"
+  last_updated: '2026-02-10'
   confidence_level: high
   sources:
-    - https://ev-database.org/car/3450/Opel-Astra-Electric-58-kWh
-    - https://www.opel.de/modelle/astra/astra-electric.html
-  notes: >
-    2026 model year update with larger 58.4 kWh battery (55.4 kWh usable), 
-    up from 54 kWh (51 kWh usable). Range increases to 454 km WLTP from 418 km.
-    Now includes V2L capability. Same 115 kW motor.
-  created_at: "2026-02-10T12:22:00Z"
+  - https://ev-database.org/car/3450/Opel-Astra-Electric-58-kWh
+  - https://www.opel.de/modelle/astra/astra-electric.html
+  notes: '2026 model year update with larger 58.4 kWh battery (55.4 kWh usable),  up
+    from 54 kWh (51 kWh usable). Range increases to 454 km WLTP from 418 km. Now includes
+    V2L capability. Same 115 kW motor.
+
+    '
+  created_at: '2026-02-10T12:22:00Z'
   created_by: Patricio

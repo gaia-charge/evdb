@@ -5,232 +5,186 @@ model_year: 2024
 production_years:
   start: 2024
   end: null
-
 trim_level: standard
 market_position: entry-level
-
-# Battery Specifications
 battery:
   usable_kwh: 58.3
   total_kwh: 60.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400  # Standard voltage (not 800V like EV6)
+  chemistry: NMC
+  nominal_voltage_v: 400
   cell_type: pouch
   supplier: SK On (formerly SK Innovation)
   warranty_years: 7
   warranty_km: 150000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, integrated into E-GMP platform"
+    configuration: floor-mounted, integrated into E-GMP platform
     weight_kg: 380
     modules: 8
-
-# Range
 range:
   wltp_km: 410
   wltp_source: manufacturer
-  
   real_world_km: 360
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 19-inch wheels"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, normal mode, 19-inch wheels
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 6.0  # 11kW
+      '0_100': 6.0
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 102
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 31
-      "0_100": 50
-    
+      '10_80': 31
+      '0_100': 50
     charging_curve:
-      - soc_percent: 0
-        power_kw: 95
-      - soc_percent: 10
-        power_kw: 102
-      - soc_percent: 20
-        power_kw: 102
-      - soc_percent: 30
-        power_kw: 100
-      - soc_percent: 40
-        power_kw: 95
-      - soc_percent: 50
-        power_kw: 85
-      - soc_percent: 60
-        power_kw: 70
-      - soc_percent: 70
-        power_kw: 55
-      - soc_percent: 80
-        power_kw: 35
-      - soc_percent: 90
-        power_kw: 20
-      - soc_percent: 100
-        power_kw: 10
-
-# Bidirectional Charging (V2X)
+    - soc_percent: 0
+      power_kw: 95
+    - soc_percent: 10
+      power_kw: 102
+    - soc_percent: 20
+      power_kw: 102
+    - soc_percent: 30
+      power_kw: 100
+    - soc_percent: 40
+      power_kw: 95
+    - soc_percent: 50
+      power_kw: 85
+    - soc_percent: 60
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 55
+    - soc_percent: 80
+      power_kw: 35
+    - soc_percent: 90
+      power_kw: 20
+    - soc_percent: 100
+      power_kw: 10
+  ac_max_kw: 11
+  dc_max_kw: 102
 bidirectional_charging:
   v2l: true
   v2l_power_kw: 3.6
   v2h: true
   v2g: true
   v2g_certified_markets:
-    - KR
-    - DE
-    - NL
-  notes: "V2L adapter included, can power household appliances or other EVs"
-
-# Motors & Drivetrain
+  - KR
+  - DE
+  - NL
+  notes: V2L adapter included, can power household appliances or other EVs
 motors:
   configuration: single-motor
   drive_type: RWD
-  
   rear:
     type: permanent-magnet-synchronous
     max_power_kw: 150
     max_torque_nm: 283
-
   combined:
     max_power_kw: 150
     max_power_hp: 204
     max_torque_nm: 283
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 7.5
   top_speed_kmh: 170
   top_speed_limited: true
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 15.8
   wltp_source: manufacturer
-  
   real_world_kwh_per_100km: 17.5
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode"
-  
+  real_world_conditions: Mixed driving, 15-20°C, normal mode
   efficiency_rating_eu: A
-  
-# Weight
 weight:
   curb_weight_kg: 1650
   gross_vehicle_weight_kg: 2200
   payload_kg: 550
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 600
-
-# Wheels & Tires
 wheels:
-  standard_size_front: "215/55 R18"
-  standard_size_rear: "215/55 R18"
+  standard_size_front: 215/55 R18
+  standard_size_rear: 215/55 R18
   wheel_options:
-    - "18-inch alloy (standard)"
-    - "19-inch alloy (optional)"
-
-# Standard Equipment (Key Features)
+  - 18-inch alloy (standard)
+  - 19-inch alloy (optional)
 standard_equipment:
   exterior:
-    - LED headlights with DRLs
-    - LED taillights with sequential indicators
-    - Body-colored door handles
-    - Solar glass windscreen
-    - Roof rails
-  
+  - LED headlights with DRLs
+  - LED taillights with sequential indicators
+  - Body-colored door handles
+  - Solar glass windscreen
+  - Roof rails
   interior:
-    - Dual 10.25-inch panoramic displays (digital cockpit + infotainment)
-    - Wireless phone charging
-    - Cloth upholstery
-    - Heated front seats
-    - Heated steering wheel
-    - Dual-zone climate control with heat pump
-    - Ambient lighting
-  
+  - Dual 10.25-inch panoramic displays (digital cockpit + infotainment)
+  - Wireless phone charging
+  - Cloth upholstery
+  - Heated front seats
+  - Heated steering wheel
+  - Dual-zone climate control with heat pump
+  - Ambient lighting
   technology:
-    - Forward Collision Avoidance Assist
-    - Lane Keep Assist
-    - Blind Spot Monitoring
-    - Rear Cross-Traffic Collision Avoidance Assist
-    - Remote climate control via Kia Connect app
-    - OTA software updates
-  
+  - Forward Collision Avoidance Assist
+  - Lane Keep Assist
+  - Blind Spot Monitoring
+  - Rear Cross-Traffic Collision Avoidance Assist
+  - Remote climate control via Kia Connect app
+  - OTA software updates
   charging:
-    - Type 2 charging cable
-    - V2L adapter
-    - Scheduled charging
-
-# Options & Packages
+  - Type 2 charging cable
+  - V2L adapter
+  - Scheduled charging
 optional_equipment:
-  - name: GT-Line Package
-    price_eur: 2000
-    includes:
-      - Sportier exterior styling
-      - 19-inch wheels
-      - Sport seats
-      - GT-Line badging
-  
-  - name: Advanced Driver Assistance
-    price_eur: 1000
-    includes:
-      - Highway Driving Assist
-      - Smart Parking Assist
-      - Surround View Monitor
-
-# Version Information
+- name: GT-Line Package
+  price_eur: 2000
+  includes:
+  - Sportier exterior styling
+  - 19-inch wheels
+  - Sport seats
+  - GT-Line badging
+- name: Advanced Driver Assistance
+  price_eur: 1000
+  includes:
+  - Highway Driving Assist
+  - Smart Parking Assist
+  - Surround View Monitor
 version:
   facelift: false
   mid_cycle_refresh: false
   generation: 1
-  platform_version: "E-GMP Compact"
-
+  platform_version: E-GMP Compact
 dimensions:
   length_mm: 4300
   width_mm: 1850
   height_mm: 1560
   wheelbase_mm: 2680
   ground_clearance_mm: 171
-
 cargo:
   trunk_capacity_liters: 460
   trunk_max_liters: 1251
   frunk_capacity_liters: 0
-
-
-# Colors Available
 colors:
-  - "Clear White"
-  - "Aurora Black Pearl"
-  - "Steel Gray Metallic"
-  - "Twilight Blue"
-  - "Terra Brown"
-
-# Metadata
+- Clear White
+- Aurora Black Pearl
+- Steel Gray Metallic
+- Twilight Blue
+- Terra Brown
 metadata:
   data_quality: verified
-  last_updated: "2026-02-08"
+  last_updated: '2026-02-08'
   confidence_level: high
-  
   sources:
-    - https://www.kia.com/worldwide/vehicles/ev3/
-    - https://ev-database.org/car/1850/Kia-EV3-Standard-Range
-    - https://www.autocar.co.uk/car-news/new-cars/kia-ev3
-  
-  notes: >
-    Kia EV3 Standard Range offers excellent value for money with competitive
-    range, standard heat pump, and V2L capability. Positioned as an affordable
-    compact electric SUV targeting young families and urban buyers. The 400V
-    architecture (vs 800V in EV6) means slower DC charging but still respectable
-    at 102kW peak power.
-  
-  created_at: "2026-02-08T14:32:00Z"
+  - https://www.kia.com/worldwide/vehicles/ev3/
+  - https://ev-database.org/car/1850/Kia-EV3-Standard-Range
+  - https://www.autocar.co.uk/car-news/new-cars/kia-ev3
+  notes: 'Kia EV3 Standard Range offers excellent value for money with competitive
+    range, standard heat pump, and V2L capability. Positioned as an affordable compact
+    electric SUV targeting young families and urban buyers. The 400V architecture
+    (vs 800V in EV6) means slower DC charging but still respectable at 102kW peak
+    power.
+
+    '
+  created_at: '2026-02-08T14:32:00Z'
   created_by: Patricio

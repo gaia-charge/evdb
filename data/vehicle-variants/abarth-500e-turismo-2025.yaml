@@ -3,14 +3,11 @@ model_id: abarth-500e
 name: Abarth 500e Turismo 42 kWh
 variant_name: Turismo
 model_year: 2025
-
-# Vehicle Classification
 vehicle_type: hatchback
 segment: A
 body_style: 3-door hatchback
 seats: 4
 doors: 3
-
 dimensions:
   length_mm: 3632
   width_mm: 1683
@@ -18,14 +15,10 @@ dimensions:
   height_mm: 1527
   wheelbase_mm: 2322
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 185
   trunk_max_liters: 550
   frunk_capacity_liters: 0
-
-
-# Drivetrain
 drivetrain:
   type: fwd
   motors:
@@ -35,51 +28,43 @@ drivetrain:
       power_hp: 155
       torque_nm: 235
       position: front
-
-# Battery System
 battery:
   total_kwh: 42.0
   usable_kwh: 37.3
   chemistry: NMC
   voltage_nominal: 400
-  manufacturer: "Samsung SDI"
+  manufacturer: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid_cooling
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     connector: type2
     charge_time_0_100_hours: 4.0
   dc:
-    max_power_kw: 85
     connector: ccs2
     charge_time_10_80_percent_minutes: 35
     charge_curve:
-      - soc_percent: 10
-        power_kw: 85
-      - soc_percent: 30
-        power_kw: 85
-      - soc_percent: 50
-        power_kw: 78
-      - soc_percent: 70
-        power_kw: 52
-      - soc_percent: 80
-        power_kw: 35
+    - soc_percent: 10
+      power_kw: 85
+    - soc_percent: 30
+      power_kw: 85
+    - soc_percent: 50
+      power_kw: 78
+    - soc_percent: 70
+      power_kw: 52
+    - soc_percent: 80
+      power_kw: 35
   bidirectional:
     v2g_capable: false
     v2h_capable: false
     v2l_capable: false
-
-# Performance
+  ac_max_kw: 11
+  dc_max_kw: 85
 performance:
   acceleration_0_100_kmh_seconds: 7.0
   top_speed_kmh: 155
-
-# Range & Efficiency
 range:
   wltp_km: 265
   wltp_city_km: 340
@@ -89,68 +74,54 @@ range:
     highway_km: 175
     city_km: 290
     winter_km: 180
-
 efficiency:
   wltp_kwh_per_100km: 16.4
   real_world_kwh_per_100km: 18.5
-
-# Weight
 weight:
   curb_weight_kg: 1380
   gross_vehicle_weight_kg: 1680
   payload_kg: 300
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
-# Suspension & Brakes
 suspension:
-  front: "MacPherson strut, sport-tuned"
-  rear: "Torsion beam, sport-tuned"
-
+  front: MacPherson strut, sport-tuned
+  rear: Torsion beam, sport-tuned
 brakes:
-  front: "Ventilated disc, 284mm"
-  rear: "Drum"
+  front: Ventilated disc, 284mm
+  rear: Drum
   regenerative: true
-  notes: "Sport-calibrated regenerative braking with stronger deceleration"
-
-# Wheels & Tires
+  notes: Sport-calibrated regenerative braking with stronger deceleration
 wheels:
-  standard_size: "18 inch"
-  standard_tire: "205/40 R18"
-
-# Climate
+  standard_size: 18 inch
+  standard_tire: 205/40 R18
 climate:
   heat_pump: true
   preconditioning: true
   zones: 1
-
-# ADAS
 adas:
   level: 2
   features:
-    - "Autonomous Emergency Braking (AEB)"
-    - "Adaptive Cruise Control"
-    - "Lane Keeping Assist"
-    - "Blind Spot Monitoring"
-    - "Traffic Sign Recognition"
-    - "Intelligent Speed Assist"
-    - "Drowsiness Detection"
-    - "Rear parking sensors"
-    - "Rear-view camera"
-
-# Warranty
+  - Autonomous Emergency Braking (AEB)
+  - Adaptive Cruise Control
+  - Lane Keeping Assist
+  - Blind Spot Monitoring
+  - Traffic Sign Recognition
+  - Intelligent Speed Assist
+  - Drowsiness Detection
+  - Rear parking sensors
+  - Rear-view camera
 warranty:
   vehicle_years: 2
   vehicle_km: null
   battery_years: 8
   battery_km: 160000
   battery_capacity_percent: 70
-
 metadata:
   data_quality: verified
-  last_updated: "2026-02-09"
-  created_at: "2026-02-09"
+  last_updated: '2026-02-09'
+  created_at: '2026-02-09'
   sources:
-    - "Abarth official specifications"
-    - "Automotive press reviews"
-  notes: "Turismo trim is the standard Abarth 500e. 155 hp performance motor, sport suspension, Abarth Sound Generator."
+  - Abarth official specifications
+  - Automotive press reviews
+  notes: Turismo trim is the standard Abarth 500e. 155 hp performance motor, sport
+    suspension, Abarth Sound Generator.

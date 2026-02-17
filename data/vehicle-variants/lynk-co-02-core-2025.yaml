@@ -1,23 +1,17 @@
-# Lynk & Co 02 Core 2025
-# Compact electric crossover-coupé - entry trim
-# Built on Geely SEA platform (shared with Volvo EX30, Zeekr X)
-
 id: lynk-co-02-core-2025
-name: "02 Core"
+name: 02 Core
 model_id: lynk-co-02
 manufacturer_id: lynk-co
 variant_name: Core
 model_year: 2025
 trim_level: Core
-version: "200 kW"
-
-description: |
-  The Lynk & Co 02 Core is the entry-level trim of this compact electric crossover-coupé.
-  It features the same 200 kW rear-mounted PMSM motor and 66 kWh NCM battery as the More 
-  trim, with 435 km WLTP range. Standard equipment includes 11 kW 3-phase AC charging, 
-  19" alloy wheels, V2L bidirectional charging, wireless Apple CarPlay/Android Auto, 
-  and comprehensive ADAS. An excellent value proposition in the compact EV segment.
-
+version: 200 kW
+description: "The Lynk & Co 02 Core is the entry-level trim of this compact electric\
+  \ crossover-coupé.\nIt features the same 200 kW rear-mounted PMSM motor and 66 kWh\
+  \ NCM battery as the More \ntrim, with 435 km WLTP range. Standard equipment includes\
+  \ 11 kW 3-phase AC charging, \n19\" alloy wheels, V2L bidirectional charging, wireless\
+  \ Apple CarPlay/Android Auto, \nand comprehensive ADAS. An excellent value proposition\
+  \ in the compact EV segment.\n"
 battery:
   usable_kwh: 62.0
   total_kwh: 66.0
@@ -29,32 +23,28 @@ battery:
   warranty_capacity_percent: 70
   thermal_management: liquid-cooled
   preconditioning: true
-
 range:
   wltp_km: 435
   wltp_city_km: 564
   wltp_highway_km: 360
   real_world_km: 370
-  real_world_conditions: "Mixed driving, 15°C ambient, normal driving style"
-
+  real_world_conditions: Mixed driving, 15°C ambient, normal driving style
 efficiency:
   wltp_kwh_per_100km: 17.6
   real_world_kwh_per_100km: 19.5
-  real_world_conditions: "Mixed driving, 15°C ambient"
-
+  real_world_conditions: Mixed driving, 15°C ambient
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     connector_type: Type2
     phases: 3
     time_0_100_hours: 7.5
   dc:
-    max_power_kw: 150
     connector_type: CCS2
     architecture_voltage: 400
     time_10_80_minutes: 30
-
+  ac_max_kw: 11
+  dc_max_kw: 150
 motors:
   count: 1
   type: Permanent Magnet Synchronous Motor (PMSM)
@@ -62,43 +52,35 @@ motors:
   combined_power_kw: 200
   combined_power_hp: 272
   torque_nm: 343
-
 drive_type: RWD
 driven_wheels: rear
-
 performance:
   acceleration_0_100_kmh_seconds: 5.5
   top_speed_kmh: 180
   top_speed_electronically_limited: true
-
 weight:
   curb_weight_kg: 1895
   payload_kg: 375
   gross_vehicle_weight_kg: 2270
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
 dimensions:
   length_mm: 4460
   width_mm: 1845
   height_mm: 1573
   wheelbase_mm: 2755
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 410
   trunk_max_liters: 1349
   frunk_capacity_liters: 15
-
 tires:
-  front: "235/50 R19"
-  rear: "235/50 R19"
+  front: 235/50 R19
+  rear: 235/50 R19
   wheel_size_inches: 19
-
 climate:
   heat_pump: true
   auto_climate_zones: 2
-
 interior:
   seats: 5
   seat_material: Fabric/synthetic
@@ -106,16 +88,18 @@ interior:
   sound_system: Standard audio system
   ambient_lighting: true
   panoramic_roof: false
-  notes: |
-    Core trim includes wireless Apple CarPlay/Android Auto, DAB+ radio,
+  notes: 'Core trim includes wireless Apple CarPlay/Android Auto, DAB+ radio,
+
     wireless smartphone charging, WLAN hotspot, built-in navigation.
+
     V2L bidirectional charging standard.
 
+    '
 metadata:
   data_quality: verified
   data_source: manufacturer
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - https://www.lynkco.com/de-de/cars/02
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lynk--co/02/1generation/337164/
+  - https://www.lynkco.com/de-de/cars/02
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lynk--co/02/1generation/337164/

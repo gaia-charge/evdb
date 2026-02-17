@@ -5,223 +5,186 @@ model_year: 2024
 production_years:
   start: 2023
   end: null
-
 trim_level: excellence
 market_position: top
-
-# Battery Specifications
 battery:
   usable_kwh: 82.5
   total_kwh: 85.0
-  chemistry: LFP  # Lithium Iron Phosphate (BYD Blade Battery)
+  chemistry: LFP
   nominal_voltage_v: 400
-  cell_type: blade  # BYD's proprietary blade cell format
+  cell_type: blade
   supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 200000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "cell-to-body, blade cells"
+    configuration: cell-to-body, blade cells
     weight_kg: 540
     cells: 180
-  
-  notes: >
-    Same 82.5 kWh Blade Battery as Design variant, but with dual-motor AWD
-    configuration for enhanced performance and all-weather capability. LFP
-    chemistry provides exceptional safety, thermal stability, and long cycle
-    life exceeding 3000 charge cycles with minimal degradation.
+  notes: 'Same 82.5 kWh Blade Battery as Design variant, but with dual-motor AWD configuration
+    for enhanced performance and all-weather capability. LFP chemistry provides exceptional
+    safety, thermal stability, and long cycle life exceeding 3000 charge cycles with
+    minimal degradation.
 
-# Range
+    '
 range:
   wltp_km: 520
   wltp_source: manufacturer
-  
   real_world_km: 450
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-25°C, normal mode"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-25°C, normal mode
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 8.0  # 11kW
+      '0_100': 8.0
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 150
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "30_80": 26
-      "0_100": 45
-    
+      '30_80': 26
+      '0_100': 45
     charging_curve:
-      - soc_percent: 0
-        power_kw: 110
-      - soc_percent: 10
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 150
-      - soc_percent: 50
-        power_kw: 140
-      - soc_percent: 70
-        power_kw: 100
-      - soc_percent: 80
-        power_kw: 60
-      - soc_percent: 90
-        power_kw: 30
-      - soc_percent: 100
-        power_kw: 15
-    
-    notes: "Conservative charging curve optimized for LFP battery longevity"
-
+    - soc_percent: 0
+      power_kw: 110
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 150
+    - soc_percent: 50
+      power_kw: 140
+    - soc_percent: 70
+      power_kw: 100
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
+    notes: Conservative charging curve optimized for LFP battery longevity
   bidirectional:
     v2l: true
     v2l_max_power_kw: 3.3
     v2g: false
     v2h: false
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 150
 motors:
-  - position: front
-    type: permanent-magnet-synchronous
-    max_power_kw: 160
-    max_torque_nm: 310
-    cooling: liquid
-  - position: rear
-    type: permanent-magnet-synchronous
-    max_power_kw: 230
-    max_torque_nm: 360
-    cooling: liquid
-
+- position: front
+  type: permanent-magnet-synchronous
+  max_power_kw: 160
+  max_torque_nm: 310
+  cooling: liquid
+- position: rear
+  type: permanent-magnet-synchronous
+  max_power_kw: 230
+  max_torque_nm: 360
+  cooling: liquid
 drivetrain:
   type: awd
   total_power_kw: 390
   total_power_hp: 530
   total_torque_nm: 670
-
 performance:
   acceleration_0_100_kmh_s: 3.8
   top_speed_kmh: 180
   top_speed_limited: true
-
-# Dimensions
 dimensions:
   length_mm: 4800
   width_mm: 1875
   height_mm: 1460
   wheelbase_mm: 2920
   ground_clearance_mm: 150
-
-# Cargo
 cargo:
   trunk_capacity_liters: 400
   trunk_max_liters: 400
   frunk_capacity_liters: 50
-
-# Weight & Efficiency
 weight:
   curb_weight_kg: 2150
   gross_vehicle_weight_kg: 2650
-  gross_vehicle_weight_kg: 2650
   payload_kg: 500
   towing_capacity_braked_kg: 0
-  towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  
 efficiency:
   wltp_kwh_per_100km: 17.3
   real_world_kwh_per_100km: 18.3
-  
   at_speed:
-    - speed_kmh: 100
-      consumption_kwh_per_100km: 15.8
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 19.2
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 22.5
-
-# Features & Options
+  - speed_kmh: 100
+    consumption_kwh_per_100km: 15.8
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 19.2
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 22.5
 standard_features:
-  - "15.6-inch rotating touchscreen"
-  - "10.25-inch digital instrument cluster"
-  - "DiLink 4.0 intelligent connectivity"
-  - "Voice control with AI assistant"
-  - "Heat pump climate control"
-  - "Panoramic glass roof"
-  - "Matrix LED headlights"
-  - "20-inch alloy wheels"
-  - "Nappa leather seats"
-  - "12-way power driver and passenger seats"
-  - "Ventilated and heated front seats"
-  - "Heated rear seats"
-  - "Memory function driver seat"
-  - "Wireless phone charging"
-  - "Keyless entry and start"
-  - "8 airbags"
-  - "Advanced driver assistance (DiPilot)"
-  - "Adaptive cruise control with stop & go"
-  - "Lane keeping assist"
-  - "Lane centering"
-  - "Automatic emergency braking"
-  - "360-degree camera system with 3D view"
-  - "Blind spot monitoring"
-  - "Rear cross traffic alert"
-  - "Parking assist"
-  - "12-speaker Dynaudio sound system"
-  - "Ambient lighting (31 colors)"
-  - "Head-up display"
-  - "Vehicle-to-Load (V2L)"
-  - "OTA updates"
-
+- 15.6-inch rotating touchscreen
+- 10.25-inch digital instrument cluster
+- DiLink 4.0 intelligent connectivity
+- Voice control with AI assistant
+- Heat pump climate control
+- Panoramic glass roof
+- Matrix LED headlights
+- 20-inch alloy wheels
+- Nappa leather seats
+- 12-way power driver and passenger seats
+- Ventilated and heated front seats
+- Heated rear seats
+- Memory function driver seat
+- Wireless phone charging
+- Keyless entry and start
+- 8 airbags
+- Advanced driver assistance (DiPilot)
+- Adaptive cruise control with stop & go
+- Lane keeping assist
+- Lane centering
+- Automatic emergency braking
+- 360-degree camera system with 3D view
+- Blind spot monitoring
+- Rear cross traffic alert
+- Parking assist
+- 12-speaker Dynaudio sound system
+- Ambient lighting (31 colors)
+- Head-up display
+- Vehicle-to-Load (V2L)
+- OTA updates
 optional_packages: []
-
 colors:
   standard:
-    - "Cosmos Black"
-    - "Aurora White"
-    - "Deep Blue"
+  - Cosmos Black
+  - Aurora White
+  - Deep Blue
   premium:
-    - "Boulder Grey"
-    - "Atlantis Grey"
-    - "Adventure Green"
-
+  - Boulder Grey
+  - Atlantis Grey
+  - Adventure Green
 interior_colors:
-  - "Black Nappa"
-  - "Brown Nappa"
-
-# Version Information
+- Black Nappa
+- Brown Nappa
 version:
   facelift: false
   major_changes: []
+notes: 'The BYD Seal Excellence AWD represents BYD''s high-performance sedan offering,
+  delivering supercar-level acceleration (3.8s 0-100 km/h) at a mid-range price point.
+  The dual-motor all-wheel-drive system provides exceptional traction and handling
+  in all weather conditions while maintaining impressive efficiency. With 530 hp and
+  670 Nm of torque, it rivals or exceeds the Tesla Model 3 Performance and BMW i4
+  M50 in straight-line performance. The 0.219 drag coefficient helps maintain competitive
+  range despite the added weight of the dual motors. Standard equipment is comprehensive,
+  including premium features like Nappa leather, Dynaudio sound system, and advanced
+  DiPilot driver assistance. The Blade Battery''s LFP chemistry ensures long-term
+  reliability with minimal degradation over 3000+ charge cycles, making it an excellent
+  choice for high-mileage drivers.
 
-# Market & Pricing Notes
-notes: >
-  The BYD Seal Excellence AWD represents BYD's high-performance sedan offering,
-  delivering supercar-level acceleration (3.8s 0-100 km/h) at a mid-range price
-  point. The dual-motor all-wheel-drive system provides exceptional traction and
-  handling in all weather conditions while maintaining impressive efficiency. With
-  530 hp and 670 Nm of torque, it rivals or exceeds the Tesla Model 3 Performance
-  and BMW i4 M50 in straight-line performance. The 0.219 drag coefficient helps
-  maintain competitive range despite the added weight of the dual motors. Standard
-  equipment is comprehensive, including premium features like Nappa leather, Dynaudio
-  sound system, and advanced DiPilot driver assistance. The Blade Battery's LFP
-  chemistry ensures long-term reliability with minimal degradation over 3000+
-  charge cycles, making it an excellent choice for high-mileage drivers.
-
-
+  '
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-08"
+  created_at: '2026-02-08'
+  updated_at: '2026-02-08'
   data_quality: verified
   data_source: manufacturer
   measured_by: null
   sources:
-    - https://www.byd.com/eu/seal/specifications
-    - https://www.byd.com/de/seal
-    - https://ev-database.org/car/2031/BYD-Seal
+  - https://www.byd.com/eu/seal/specifications
+  - https://www.byd.com/de/seal
+  - https://ev-database.org/car/2031/BYD-Seal

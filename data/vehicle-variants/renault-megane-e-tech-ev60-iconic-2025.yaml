@@ -1,21 +1,17 @@
-# Renault Megane E-Tech EV60 Iconic (2025) - Top 60 kWh Trim
-
 id: renault-megane-e-tech-ev60-iconic-2025
 model_id: renault-megane-e-tech
 name: Megane E-Tech EV60 Iconic
 model_year: 2025
-trim_level: Iconic  # Premium top trim with 60 kWh battery
+trim_level: Iconic
 variant_code: null
-
 production:
   start_date: 2022-03-01
   end_date: null
   status: active
   notes: 2025 model year, premium trim level
-
 battery:
   type: Lithium-ion
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   total_kwh: 60.0
   usable_kwh: 60.0
   supplier: LG Energy Solution
@@ -26,7 +22,6 @@ battery:
   modules: 12
   voltage_nominal: 400
   notes: Same 60 kWh battery as Techno, different trim level
-
 range:
   wltp_km: 470
   wltp_city_km: 600
@@ -34,48 +29,44 @@ range:
   epa_combined_km: null
   real_world_avg_km: 395
   real_world_source: ADAC EcoTest 2025, InsideEVs real-world testing
-  notes: Slightly better range than Techno due to optimized aerodynamics with 20" aero wheels option
-
+  notes: Slightly better range than Techno due to optimized aerodynamics with 20"
+    aero wheels option
 charging:
   ac:
-    max_power_kw: 22.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 3.0
     onboard_charger: 22kW 3-phase standard on EV60
-  
   dc:
-    max_power_kw: 130
     connector_type: CCS2
     time_10_80_percent_minutes: 30
     peak_power_notes: 130kW peak maintained up to ~60% SoC
     preconditioning: false
-  
   charge_curve:
-    - percent: 0
-      power_kw: 120
-    - percent: 10
-      power_kw: 130
-    - percent: 30
-      power_kw: 130
-    - percent: 50
-      power_kw: 125
-    - percent: 60
-      power_kw: 105
-    - percent: 70
-      power_kw: 78
-    - percent: 80
-      power_kw: 48
-    - percent: 90
-      power_kw: 30
-    - percent: 100
-      power_kw: 11
-  
+  - percent: 0
+    power_kw: 120
+  - percent: 10
+    power_kw: 130
+  - percent: 30
+    power_kw: 130
+  - percent: 50
+    power_kw: 125
+  - percent: 60
+    power_kw: 105
+  - percent: 70
+    power_kw: 78
+  - percent: 80
+    power_kw: 48
+  - percent: 90
+    power_kw: 30
+  - percent: 100
+    power_kw: 11
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 22.0
+  dc_max_kw: 130
 motors:
   configuration: single_front
   front:
@@ -88,13 +79,14 @@ motors:
     power_kw: 160
     power_hp: 218
     torque_nm: 300
-
 performance:
-  acceleration_0_100_kph: 7.4
   acceleration_0_60_mph: null
   top_speed_kph: 160
   quarter_mile_seconds: null
-
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 300
+  acceleration_0_100_sec: 7.4
 efficiency:
   wltp_kwh_per_100km: 15.5
   wltp_wh_per_km: 155
@@ -103,7 +95,6 @@ efficiency:
   real_world_highway_kwh_per_100km: 19.8
   real_world_city_kwh_per_100km: 14.8
   notes: Slightly more efficient than Techno with aero-optimized wheels
-
 dimensions:
   length_mm: 4200
   width_mm: 1768
@@ -111,55 +102,50 @@ dimensions:
   height_mm: 1505
   wheelbase_mm: 2685
   ground_clearance_mm: 140
-
 cargo:
   trunk_capacity_liters: 440
   trunk_max_liters: 1332
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1728
   gross_vehicle_weight_kg: 2178
   payload_kg: 450
   towing_capacity_braked_kg: 900
   towing_capacity_unbraked_kg: 630
-
 wheels_tires:
   standard:
-    front: "215/45 R20"
-    rear: "215/45 R20"
+    front: 215/45 R20
+    rear: 215/45 R20
     wheels: 20" Aero diamond-cut alloys
   optional:
-    - "215/50 R19 (for comfort)"
-
+  - 215/50 R19 (for comfort)
 features:
   standard:
-    - Full LED Matrix headlights with Adaptive Driving Beam
-    - 12" central touchscreen with OpenR Link
-    - 12.3" digital instrument cluster
-    - 9" head-up display (color)
-    - Google built-in (Android Automotive OS)
-    - Wireless smartphone charging
-    - Dual-zone automatic climate control
-    - Heated front seats
-    - Heated steering wheel
-    - Front and rear parking sensors
-    - 360° parking camera with bird's eye view
-    - Lane keeping assist with lane centering
-    - Adaptive cruise control with stop & go
-    - Traffic sign recognition with speed limiter
-    - Active emergency braking with pedestrian/cyclist detection
-    - Blind spot monitoring
-    - Rear cross traffic alert
-    - Hands-free parking
-    - Solarbay panoramic electrochromic glass roof
-    - Harman Kardon sound system (10 speakers, 440W)
-    - Premium Alcantara and leather interior
-    - Ambient lighting (8 colors)
+  - Full LED Matrix headlights with Adaptive Driving Beam
+  - 12" central touchscreen with OpenR Link
+  - 12.3" digital instrument cluster
+  - 9" head-up display (color)
+  - Google built-in (Android Automotive OS)
+  - Wireless smartphone charging
+  - Dual-zone automatic climate control
+  - Heated front seats
+  - Heated steering wheel
+  - Front and rear parking sensors
+  - 360° parking camera with bird's eye view
+  - Lane keeping assist with lane centering
+  - Adaptive cruise control with stop & go
+  - Traffic sign recognition with speed limiter
+  - Active emergency braking with pedestrian/cyclist detection
+  - Blind spot monitoring
+  - Rear cross traffic alert
+  - Hands-free parking
+  - Solarbay panoramic electrochromic glass roof
+  - Harman Kardon sound system (10 speakers, 440W)
+  - Premium Alcantara and leather interior
+  - Ambient lighting (8 colors)
   optional:
-    - Extended leather package
-    - Massage front seats
-
+  - Extended leather package
+  - Massage front seats
 data_quality:
   overall: verified
   last_updated: 2026-02-09
@@ -168,42 +154,59 @@ data_quality:
   confidence_performance: verified
   confidence_consumption: measured
   notes: Premium trim with comprehensive equipment
-
 sources:
-  - name: Renault Germany Official Specifications
-    url: https://www.renault.de/
-    date_accessed: 2026-02-09
-    type: manufacturer
-  - name: ADAC EcoTest 2025
-    url: https://www.adac.de/
-    date_accessed: 2026-02-09
-    type: independent_test
-  - name: InsideEVs Real-World Range Test
-    url: https://insideevs.com/
-    date_accessed: 2024-11-20
-    type: independent_test
+- name: Renault Germany Official Specifications
+  url: https://www.renault.de/
+  date_accessed: 2026-02-09
+  type: manufacturer
+- name: ADAC EcoTest 2025
+  url: https://www.adac.de/
+  date_accessed: 2026-02-09
+  type: independent_test
+- name: InsideEVs Real-World Range Test
+  url: https://insideevs.com/
+  date_accessed: 2024-11-20
+  type: independent_test
+notes: 'The EV60 Iconic is the flagship Megane E-Tech variant, offering all available
 
-notes: |
-  The EV60 Iconic is the flagship Megane E-Tech variant, offering all available
   features and premium materials as standard.
-  
+
+
   Key additions over Techno:
+
   - Solarbay panoramic electrochromic glass roof (standard)
+
   - 9" color head-up display
+
   - Harman Kardon premium sound system (440W, 10 speakers)
+
   - Heated front seats and steering wheel
+
   - Premium Alcantara and leather interior
+
   - 20" aero-optimized alloy wheels
+
   - Hands-free parking
+
   - Ambient lighting with 8 colors
+
   - Extended driving assistance features
-  
+
+
   Real-world range typically 395-410 km in mixed driving, 330-350 km on highways,
+
   and up to 510 km in pure city driving.
-  
+
+
   The Iconic represents the full vision of the Megane E-Tech with all available
+
   technology and comfort features. Popular among buyers who want the complete
+
   package without aftermarket options.
-  
+
+
   The electrochromic Solarbay roof is a standout feature - it can be adjusted from
+
   clear to opaque via the touchscreen, eliminating the need for a sunshade.
+
+  '

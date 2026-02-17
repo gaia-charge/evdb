@@ -1,17 +1,13 @@
-# Peugeot e-5008 97 kWh GT Long Range (2025)
-
 id: peugeot-e-5008-97-gt-long-range-2025
 model_id: peugeot-e-5008
-name: "97 kWh GT Long Range"
+name: 97 kWh GT Long Range
 model_year: 2025
 trim_level: GT
 variant_code: null
-
 production:
   start_date: 2024-06-01
   end_date: null
   status: active
-
 battery:
   type: Lithium-ion
   chemistry: NMC
@@ -22,7 +18,6 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage_nominal: 400
-
 range:
   wltp_km: 668
   wltp_city_km: null
@@ -30,27 +25,23 @@ range:
   real_world_avg_km: 485
   real_world_source: EV Database estimation
   notes: 668 km WLTP (TEL), 637 km (TEH); real-world ~485 km combined
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 10.5
     onboard_charger: 11kW 3-phase standard
-  
   dc:
-    max_power_kw: 160
     connector_type: CCS2
     time_10_80_percent_minutes: 32
     peak_power_notes: 160kW peak, average 135kW 10-80%
     preconditioning: true
-  
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 160
 motors:
   configuration: single_front
   front:
@@ -62,28 +53,26 @@ motors:
     power_kw: 170
     power_hp: 231
     torque_nm: 345
-
 performance:
-  acceleration_0_100_kph: 9.6
   top_speed_kph: 170
-
+  total_power_kw: 170
+  total_power_hp: 231
+  total_torque_nm: 345
+  acceleration_0_100_sec: 9.6
 efficiency:
   wltp_kwh_per_100km: 14.5
   wltp_wh_per_km: 145
   real_world_kwh_per_100km: 20.0
-
 dimensions:
   length_mm: 4791
   width_mm: 1895
   height_mm: 1694
   wheelbase_mm: 2900
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 348
   trunk_max_liters: 2232
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2316
   gross_vehicle_weight_kg: 2940
@@ -91,55 +80,53 @@ weight:
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
   roof_load_kg: 75
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 tires:
   standard: 235/50 R20
-
 features:
   infotainment:
-    - "Peugeot Panoramic i-Cockpit with 21\" curved display"
-    - "10\" digital instrument cluster"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "ChatGPT voice assistant"
-    - "FOCAL premium audio system"
-    - "Head-up display"
-    - "Connected Navigation with real-time traffic"
-  
+  - Peugeot Panoramic i-Cockpit with 21" curved display
+  - 10" digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - ChatGPT voice assistant
+  - FOCAL premium audio system
+  - Head-up display
+  - Connected Navigation with real-time traffic
   driver_assistance:
-    - "Active Safety Brake with Pedestrian and Cyclist Detection"
-    - "Lane Keep Assist with Lane Centering"
-    - "Adaptive cruise control with Stop & Go"
-    - "360° parking camera"
-    - "Blind spot monitoring"
-    - "Rear cross-traffic alert"
-    - "Traffic Sign Recognition"
-  
+  - Active Safety Brake with Pedestrian and Cyclist Detection
+  - Lane Keep Assist with Lane Centering
+  - Adaptive cruise control with Stop & Go
+  - 360° parking camera
+  - Blind spot monitoring
+  - Rear cross-traffic alert
+  - Traffic Sign Recognition
   comfort_convenience:
-    - "7-seat configuration"
-    - "Automatic dual-zone climate control"
-    - "Heated front seats"
-    - "Power liftgate"
-    - "Keyless entry and start"
-    - "Wireless smartphone charging"
-    - "Heat pump (standard on GT)"
-  
+  - 7-seat configuration
+  - Automatic dual-zone climate control
+  - Heated front seats
+  - Power liftgate
+  - Keyless entry and start
+  - Wireless smartphone charging
+  - Heat pump (standard on GT)
   exterior:
-    - "Pixel LED headlights with matrix beam"
-    - "20\" alloy wheels"
-    - "Panoramic glass roof"
-    - "Privacy glass"
-
+  - Pixel LED headlights with matrix beam
+  - 20" alloy wheels
+  - Panoramic glass roof
+  - Privacy glass
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://ev-database.org/car/2151/Peugeot-e-5008-97-kWh-Long-Range
-  notes: |
-    The e-5008 97 kWh GT Long Range is the flagship variant offering up to 668 km WLTP range.
-    As a 7-seat electric SUV with class-leading range, it competes primarily with the Kia EV9
+  - https://ev-database.org/car/2151/Peugeot-e-5008-97-kWh-Long-Range
+  notes: 'The e-5008 97 kWh GT Long Range is the flagship variant offering up to 668
+    km WLTP range.
+
+    As a 7-seat electric SUV with class-leading range, it competes primarily with
+    the Kia EV9
+
     but at a significantly lower price point.
+
+    '

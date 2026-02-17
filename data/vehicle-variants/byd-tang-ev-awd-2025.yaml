@@ -1,21 +1,17 @@
-# BYD Tang EV AWD (2025) - Facelifted European variant
-
 id: byd-tang-ev-awd-2025
 model_id: byd-tang
 name: EV AWD
 model_year: 2025
 trim_level: Design
 variant_code: null
-
 production:
   start_date: 2024-10-01
   end_date: null
   status: active
   notes: Facelifted model launched in Europe Q4 2024
-
 battery:
   type: Lithium-ion
-  chemistry: LFP  # BYD Blade Battery
+  chemistry: LFP
   total_kwh: 108.8
   usable_kwh: 104.0
   supplier: BYD (FinDreams)
@@ -26,7 +22,6 @@ battery:
   modules: null
   voltage_nominal: 570
   notes: BYD Blade Battery (LFP Cell-to-Pack), large capacity for 7-seat SUV
-
 range:
   wltp_km: 530
   wltp_city_km: 630
@@ -35,41 +30,36 @@ range:
   real_world_avg_km: 430
   real_world_source: European driving reviews
   notes: Real-world range varies with 7-passenger loads
-
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 11.0
     onboard_charger: 11kW three-phase
-
   dc:
-    max_power_kw: 170
     connector_type: CCS2
     time_10_80_percent_minutes: 38
     peak_power_notes: 170kW peak DC charging
     preconditioning: true
-
   charge_curve:
-    - percent: 10
-      power_kw: 160
-    - percent: 30
-      power_kw: 170
-    - percent: 50
-      power_kw: 140
-    - percent: 60
-      power_kw: 110
-    - percent: 70
-      power_kw: 80
-    - percent: 80
-      power_kw: 50
-
+  - percent: 10
+    power_kw: 160
+  - percent: 30
+    power_kw: 170
+  - percent: 50
+    power_kw: 140
+  - percent: 60
+    power_kw: 110
+  - percent: 70
+    power_kw: 80
+  - percent: 80
+    power_kw: 50
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 170
 motors:
   configuration: dual_motor
   front:
@@ -88,22 +78,18 @@ motors:
     total_power_kw: 380
     total_power_hp: 517
     total_torque_nm: 680
-
 drivetrain:
   type: awd
   drive_type: AWD
   transmission: single_speed
   notes: Permanent AWD with dual motors
-
 performance:
   acceleration_0_100_kmh_s: 4.9
   top_speed_kmh: 190
   top_speed_electronically_limited: true
-
 efficiency:
   wltp_kwh_per_100km: 20.5
   real_world_kwh_per_100km: 24.2
-
 weight:
   curb_weight_kg: 2640
   gross_vehicle_weight_kg: 3200
@@ -112,7 +98,6 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 50
   distribution_rear_percent: 50
-
 dimensions:
   length_mm: 4970
   width_mm: 1955
@@ -121,33 +106,28 @@ dimensions:
   ground_clearance_mm: 175
   drag_coefficient: 0.29
   frontal_area_m2: 2.88
-
 wheels:
   standard:
-    size: "255/50 R20"
+    size: 255/50 R20
     diameter_inches: 20
   optional: []
-
 suspension:
   front: MacPherson strut
   rear: multi-link
   adaptive: false
   air_suspension: false
   notes: Steel spring suspension with adaptive dampers
-
 brakes:
   front: ventilated disc
   rear: ventilated disc
   regenerative: true
   one_pedal_driving: true
-
 interior:
   seating_capacity: 7
-  seating_configuration: "2+3+2"
+  seating_configuration: 2+3+2
   trunk_capacity_liters: 235
   cargo_volume_max_liters: 1655
   frunk_capacity_liters: 0
-
 technology:
   infotainment_screen_inches: 15.6
   instrument_cluster_inches: 12.3
@@ -162,48 +142,45 @@ technology:
   heated_steering_wheel: true
   ventilated_seats: true
   panoramic_roof: true
-
 adas:
   level: 2
   features:
-    - adaptive_cruise_control
-    - lane_keeping_assist
-    - lane_centering
-    - automatic_emergency_braking
-    - blind_spot_monitoring
-    - rear_cross_traffic_alert
-    - traffic_sign_recognition
-    - parking_assist
-    - surround_view_camera
-    - automatic_parking
-
+  - adaptive_cruise_control
+  - lane_keeping_assist
+  - lane_centering
+  - automatic_emergency_braking
+  - blind_spot_monitoring
+  - rear_cross_traffic_alert
+  - traffic_sign_recognition
+  - parking_assist
+  - surround_view_camera
+  - automatic_parking
 safety:
   euro_ncap:
     year: 2023
     overall: 5
-
 cargo:
   trunk_capacity_liters: 235
   trunk_max_liters: 1655
   frunk_capacity_liters: 0
-
 energy_label:
   efficiency_class: b
   co2_emissions_g_per_km: 0
-
 data_quality:
   overall: estimated
   last_updated: 2026-02-09
   source_reliability: medium
   notes: Specs based on BYD Europe press materials and reviews
-
 sources:
-  - name: BYD Europe Official
-    url: https://www.byd.com/de/car/tang
-    date_accessed: 2026-02-09
+- name: BYD Europe Official
+  url: https://www.byd.com/de/car/tang
+  date_accessed: 2026-02-09
+notes: 'The BYD Tang EV is the facelifted 2024/2025 model with 108.8 kWh Blade Battery,
 
-notes: |
-  The BYD Tang EV is the facelifted 2024/2025 model with 108.8 kWh Blade Battery,
-  offering 530 km WLTP range. As BYD's only 7-seat BEV in Europe, it fills a unique
+  offering 530 km WLTP range. As BYD''s only 7-seat BEV in Europe, it fills a unique
+
   niche competing with the much more expensive Tesla Model X and Kia EV9.
+
   Standard AWD, V2L capability, and comprehensive equipment make it good value.
+
+  '

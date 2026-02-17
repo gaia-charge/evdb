@@ -1,12 +1,9 @@
-# Opel Grandland Electric GS 73 kWh (2025)
-
 id: opel-grandland-electric-gs-73-2025
 model_id: opel-grandland-electric
-name: "GS 73 kWh"
+name: GS 73 kWh
 model_year: 2025
 trim_level: GS
 variant_code: null
-
 dimensions:
   length_mm: 4650
   width_mm: 1905
@@ -14,18 +11,15 @@ dimensions:
   height_mm: 1665
   wheelbase_mm: 2784
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 550
   trunk_max_liters: 1645
   frunk_capacity_liters: 0
-
 production:
   start_date: 2024-09-01
   end_date: null
   status: active
-  notes: "2025 model year, new STLA Medium platform"
-
+  notes: 2025 model year, new STLA Medium platform
 battery:
   type: Lithium-ion
   chemistry: LFP
@@ -36,59 +30,53 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage_nominal: 400
-  notes: "73 kWh LFP battery, cost-effective option"
-
+  notes: 73 kWh LFP battery, cost-effective option
 range:
   wltp_km: 523
   wltp_city_km: 650
   wltp_highway_km: 420
   epa_combined_km: null
   real_world_avg_km: 420
-  real_world_source: "ADAC estimates based on platform data"
-  notes: "Excellent range for a compact SUV with LFP battery"
-
+  real_world_source: ADAC estimates based on platform data
+  notes: Excellent range for a compact SUV with LFP battery
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type 2
     phases: 3
     time_0_100_hours: 7.5
-    onboard_charger: "11kW 3-phase standard"
-
+    onboard_charger: 11kW 3-phase standard
   dc:
-    max_power_kw: 160
     connector_type: CCS2
     time_10_80_percent_minutes: 30
-    peak_power_notes: "160kW peak, sustained well through mid-SOC"
+    peak_power_notes: 160kW peak, sustained well through mid-SOC
     preconditioning: true
-
   charge_curve:
-    - percent: 10
-      power_kw: 155
-    - percent: 20
-      power_kw: 160
-    - percent: 30
-      power_kw: 155
-    - percent: 40
-      power_kw: 145
-    - percent: 50
-      power_kw: 130
-    - percent: 60
-      power_kw: 110
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 55
-    - percent: 90
-      power_kw: 30
-    - percent: 100
-      power_kw: 10
-
+  - percent: 10
+    power_kw: 155
+  - percent: 20
+    power_kw: 160
+  - percent: 30
+    power_kw: 155
+  - percent: 40
+    power_kw: 145
+  - percent: 50
+    power_kw: 130
+  - percent: 60
+    power_kw: 110
+  - percent: 70
+    power_kw: 85
+  - percent: 80
+    power_kw: 55
+  - percent: 90
+    power_kw: 30
+  - percent: 100
+    power_kw: 10
   bidirectional:
     v2l: true
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 160
 motors:
   configuration: single_front
   front:
@@ -100,87 +88,81 @@ motors:
     power_kw: 157
     power_hp: 213
     torque_nm: 260
-
 performance:
-  acceleration_0_100_kph: 8.8
   top_speed_kph: 170
-
+  total_power_kw: 157
+  total_power_hp: 213
+  total_torque_nm: 260
+  acceleration_0_100_sec: 8.8
 efficiency:
   wltp_kwh_per_100km: 16.2
   wltp_wh_per_km: 162
   real_world_kwh_per_100km: 19.0
   drag_coefficient: 0.28
-
 weight:
   curb_weight_kg: 1895
   gross_vehicle_weight_kg: 2400
   payload_kg: 505
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
-
 drivetrain:
   drive_type: FWD
   transmission: Single-speed reduction gear
-
 suspension:
-  front: "MacPherson strut"
-  rear: "Multi-link"
-
+  front: MacPherson strut
+  rear: Multi-link
 brakes:
-  front: "Ventilated disc (330mm)"
-  rear: "Disc (290mm)"
+  front: Ventilated disc (330mm)
+  rear: Disc (290mm)
   regenerative: true
-
 tires:
-  standard: "225/55 R19"
-
+  standard: 225/55 R19
 features:
   infotainment:
-    - "Dual 16-inch widescreen displays"
-    - "STLA Brain operating system"
-    - "Google built-in (Assistant, Maps, Play Store)"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "Wireless smartphone charging"
-    - "DAB+ digital radio"
-    - "8-speaker audio system"
-    - "MyOpel app"
+  - Dual 16-inch widescreen displays
+  - STLA Brain operating system
+  - Google built-in (Assistant, Maps, Play Store)
+  - Wireless Apple CarPlay and Android Auto
+  - Wireless smartphone charging
+  - DAB+ digital radio
+  - 8-speaker audio system
+  - MyOpel app
   driver_assistance:
-    - "Intelli-Drive 2.0"
-    - "Adaptive cruise control with traffic jam assist"
-    - "Lane centering assist"
-    - "Active Safety Brake with pedestrian/cyclist detection"
-    - "Blind Spot Monitoring"
-    - "Rear Cross Traffic Alert"
-    - "360-degree camera"
-    - "Traffic Sign Recognition"
-    - "Speed limit assist"
+  - Intelli-Drive 2.0
+  - Adaptive cruise control with traffic jam assist
+  - Lane centering assist
+  - Active Safety Brake with pedestrian/cyclist detection
+  - Blind Spot Monitoring
+  - Rear Cross Traffic Alert
+  - 360-degree camera
+  - Traffic Sign Recognition
+  - Speed limit assist
   comfort_convenience:
-    - "Dual-zone automatic climate control"
-    - "Heated front seats"
-    - "Heated steering wheel"
-    - "Keyless entry and start"
-    - "Electric tailgate"
-    - "One-pedal driving"
-    - "V2L bidirectional charging outlet"
+  - Dual-zone automatic climate control
+  - Heated front seats
+  - Heated steering wheel
+  - Keyless entry and start
+  - Electric tailgate
+  - One-pedal driving
+  - V2L bidirectional charging outlet
   exterior:
-    - "Full LED headlights"
-    - "19-inch alloy wheels"
-    - "LED rear lights"
+  - Full LED headlights
+  - 19-inch alloy wheels
+  - LED rear lights
   interior:
-    - "Ergonomic sport seats"
-    - "550L trunk"
-    - "25L frunk"
-    - "40/20/40 split-folding rear seats"
-
+  - Ergonomic sport seats
+  - 550L trunk
+  - 25L frunk
+  - 40/20/40 split-folding rear seats
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source_urls:
-    - https://www.opel.de/fahrzeuge/grandland-electric.html
-    - https://ev-database.org/
-  notes: >
-    The Grandland Electric GS 73 kWh is the mid-range sweet spot - well equipped with
-    good range (523km WLTP) and fast charging (160kW). Built at Eisenach, Germany.
+  - https://www.opel.de/fahrzeuge/grandland-electric.html
+  - https://ev-database.org/
+  notes: 'The Grandland Electric GS 73 kWh is the mid-range sweet spot - well equipped
+    with good range (523km WLTP) and fast charging (160kW). Built at Eisenach, Germany.
     The LFP battery provides excellent longevity and safety characteristics.
+
+    '

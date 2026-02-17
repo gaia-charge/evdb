@@ -1,32 +1,28 @@
-# Vehicle Variant: Hongqi EH7 111 kWh Long Range (2025)
 id: hongqi-eh7-111kwh-long-range-2025
 model_id: hongqi-eh7
 name: 111 kWh Long Range
 variant_name: 111 kWh Long Range
 model_year: 2025
 trim_level: Long Range
-production_years: "2024-present"
+production_years: 2024-present
+overview: 'The Hongqi EH7 111 kWh Long Range is the flagship variant of Hongqi''s
+  first European model. With a massive 111 kWh battery (95.3 kWh usable) and an ultra-low
+  drag coefficient of 0.205, it achieves an impressive 655 km WLTP range. The single
+  rear motor produces 253 kW (344 PS) and 450 Nm of torque. The car features a premium
+  interior with a large center display, heads-up display, and comprehensive standard
+  equipment.
 
-overview: >
-  The Hongqi EH7 111 kWh Long Range is the flagship variant of Hongqi's first European model.
-  With a massive 111 kWh battery (95.3 kWh usable) and an ultra-low drag coefficient of 0.205,
-  it achieves an impressive 655 km WLTP range. The single rear motor produces 253 kW (344 PS)
-  and 450 Nm of torque. The car features a premium interior with a large center display,
-  heads-up display, and comprehensive standard equipment.
-
+  '
 dimensions:
   length_mm: 4980
   width_mm: 1915
   height_mm: 1490
   wheelbase_mm: 3000
   ground_clearance_mm: 130
-
 cargo:
   trunk_capacity_liters: 420
   trunk_max_liters: 1263
   frunk_capacity_liters: 48
-
-
 battery:
   chemistry: NMC
   supplier: null
@@ -36,61 +32,58 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "111 kWh NMC battery, 400V architecture"
-
+  notes: 111 kWh NMC battery, 400V architecture
 range:
   wltp_km: 655
   wltp_city_km: null
   wltp_highway_km: null
   epa_miles: null
   real_world_km: 550
-  real_world_notes: "Estimated ~550 km mixed driving based on ev-database estimates"
-
+  real_world_notes: Estimated ~550 km mixed driving based on ev-database estimates
 charging:
   ac:
-    max_power_kw: 11.0
     connector_type: Type2
     phases: 3
     charging_time:
-      - percent_start: 0
-        percent_end: 100
-        time_minutes: 615
-        power_kw: 11.0
+    - percent_start: 0
+      percent_end: 100
+      time_minutes: 615
+      power_kw: 11.0
   dc:
-    max_power_kw: 250
     connector_type: CCS2
     charging_curve:
-      - soc_percent: 10
-        power_kw: 200
-      - soc_percent: 20
-        power_kw: 250
-      - soc_percent: 30
-        power_kw: 240
-      - soc_percent: 40
-        power_kw: 220
-      - soc_percent: 50
-        power_kw: 200
-      - soc_percent: 60
-        power_kw: 180
-      - soc_percent: 70
-        power_kw: 150
-      - soc_percent: 80
-        power_kw: 100
-      - soc_percent: 90
-        power_kw: 50
-      - soc_percent: 100
-        power_kw: 20
+    - soc_percent: 10
+      power_kw: 200
+    - soc_percent: 20
+      power_kw: 250
+    - soc_percent: 30
+      power_kw: 240
+    - soc_percent: 40
+      power_kw: 220
+    - soc_percent: 50
+      power_kw: 200
+    - soc_percent: 60
+      power_kw: 180
+    - soc_percent: 70
+      power_kw: 150
+    - soc_percent: 80
+      power_kw: 100
+    - soc_percent: 90
+      power_kw: 50
+    - soc_percent: 100
+      power_kw: 20
     charging_time:
-      - percent_start: 10
-        percent_end: 80
-        time_minutes: 20
-        power_kw: 210
-        notes: "10-80% in approximately 20 minutes at 210 kW average"
+    - percent_start: 10
+      percent_end: 80
+      time_minutes: 20
+      power_kw: 210
+      notes: 10-80% in approximately 20 minutes at 210 kW average
   bidirectional:
     v2l: false
     v2h: false
     v2g: false
-
+  ac_max_kw: 11.0
+  dc_max_kw: 250
 motors:
   configuration: single
   drive_type: RWD
@@ -99,62 +92,56 @@ motors:
   total_torque_nm: 450
   motor_type: permanent_magnet
   motors:
-    - position: rear
-      power_kw: 253
-      power_hp: 344
-      torque_nm: 450
-      motor_type: permanent_magnet
-
+  - position: rear
+    power_kw: 253
+    power_hp: 344
+    torque_nm: 450
+    motor_type: permanent_magnet
 performance:
   acceleration_0_100_kmh_s: 5.8
   top_speed_kmh: 190
-  notes: "0-100 km/h in 5.8 seconds, top speed 190 km/h"
-
+  notes: 0-100 km/h in 5.8 seconds, top speed 190 km/h
 efficiency:
   consumption_wltp_kwh_per_100km: 16.6
   consumption_real_world_kwh_per_100km: 17.3
   efficiency_rating_eu: null
-  notes: "16.6 kWh/100km WLTP rated consumption"
-
+  notes: 16.6 kWh/100km WLTP rated consumption
 weight:
   curb_weight_kg: 2390
   gross_vehicle_weight_kg: 2819
   payload_kg: 504
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 features:
   standard:
-    - "15.5-inch center touchscreen"
-    - "10.25-inch digital instrument cluster"
-    - "Heads-up display"
-    - "Premium sound system"
-    - "Heated and ventilated front seats"
-    - "Heated rear seats"
-    - "Panoramic glass roof"
-    - "Heat pump climate control"
-    - "Wireless phone charger"
-    - "360-degree camera system"
-    - "Adaptive cruise control with lane centering"
-    - "Automatic emergency braking"
-    - "Powered tailgate"
-    - "LED matrix headlights"
-    - "20-inch alloy wheels"
-    - "Ambient lighting"
+  - 15.5-inch center touchscreen
+  - 10.25-inch digital instrument cluster
+  - Heads-up display
+  - Premium sound system
+  - Heated and ventilated front seats
+  - Heated rear seats
+  - Panoramic glass roof
+  - Heat pump climate control
+  - Wireless phone charger
+  - 360-degree camera system
+  - Adaptive cruise control with lane centering
+  - Automatic emergency braking
+  - Powered tailgate
+  - LED matrix headlights
+  - 20-inch alloy wheels
+  - Ambient lighting
   optional:
-    - "Metallic paint options"
-
+  - Metallic paint options
 version:
-  release_date: "2025-01"
-  changes_from_previous: "First European launch"
-  notes: "European specification, 2025 model year"
-
+  release_date: 2025-01
+  changes_from_previous: First European launch
+  notes: European specification, 2025 model year
 metadata:
   data_quality: verified
   data_source: manufacturer
   sources:
-    - https://www.hongqi-auto.com/
-    - https://ev-database.org/car/3138/Hongqi-EH7-111-kWh-Long-Range
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  notes: "European specification Hongqi EH7 Long Range"
+  - https://www.hongqi-auto.com/
+  - https://ev-database.org/car/3138/Hongqi-EH7-111-kWh-Long-Range
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
+  notes: European specification Hongqi EH7 Long Range

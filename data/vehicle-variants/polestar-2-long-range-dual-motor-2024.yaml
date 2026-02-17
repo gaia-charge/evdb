@@ -1,6 +1,3 @@
-# Polestar 2 Long Range Dual Motor (2024 Model Year)
-# Premium all-wheel drive variant with 82kWh battery
-
 id: polestar-2-long-range-dual-motor-2024
 name: Long Range Dual Motor
 model_id: polestar-2
@@ -10,172 +7,136 @@ production_years:
   end: null
 trim_level: long-range
 market_position: flagship
-
-description: |
-  The Long Range Dual Motor is the flagship variant of the Polestar 2, featuring 
-  all-wheel drive with dual electric motors and the largest 82kWh battery pack.
-  
-  This 2024 model year includes significant improvements over earlier versions:
-  - Increased range (+70km WLTP vs 2023)
-  - Improved heat pump efficiency
-  - Faster DC charging (205kW peak)
-  - Updated Google Automotive Services
-  - Enhanced Pilot Assist features
-  
-  The dual-motor AWD system provides excellent traction and performance while 
-  maintaining impressive efficiency. The vehicle features progressive steering 
-  and performance-oriented chassis tuning.
-
+description: "The Long Range Dual Motor is the flagship variant of the Polestar 2,\
+  \ featuring \nall-wheel drive with dual electric motors and the largest 82kWh battery\
+  \ pack.\n\nThis 2024 model year includes significant improvements over earlier versions:\n\
+  - Increased range (+70km WLTP vs 2023)\n- Improved heat pump efficiency\n- Faster\
+  \ DC charging (205kW peak)\n- Updated Google Automotive Services\n- Enhanced Pilot\
+  \ Assist features\n\nThe dual-motor AWD system provides excellent traction and performance\
+  \ while \nmaintaining impressive efficiency. The vehicle features progressive steering\
+  \ \nand performance-oriented chassis tuning.\n"
 production_status: active
-
-# Battery Specifications
 battery:
   usable_kwh: 78.0
   total_kwh: 82.0
-  chemistry: NMC  # Nickel Manganese Cobalt
-  nominal_voltage_v: 400  # 400V architecture
+  chemistry: NMC
+  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL  # Contemporary Amperex Technology Co. Limited
+  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-  
   pack:
-    configuration: "floor-mounted, T-shaped"
+    configuration: floor-mounted, T-shaped
     weight_kg: 538
     modules: 27
     cells: 324
-
-# Range
 range:
   wltp_km: 635
   wltp_source: manufacturer
-  
   real_world_km: 550
   real_world_source: measured
-  real_world_conditions: "Mixed driving, 15-20°C, normal mode, 20-inch wheels"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, normal mode, 20-inch wheels
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 7.5
-      "20_80": 5.0
+      '0_100': 7.5
+      '20_80': 5.0
     onboard_charger_kw: 11
     phases: 3
-  
   dc:
-    max_power_kw: 205
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 32
-      "0_100": 55
-    
+      '10_80': 32
+      '0_100': 55
     charging_curve:
-      - soc_percent: 0
-        power_kw: 180
-      - soc_percent: 10
-        power_kw: 205
-      - soc_percent: 20
-        power_kw: 205
-      - soc_percent: 30
-        power_kw: 205
-      - soc_percent: 40
-        power_kw: 195
-      - soc_percent: 50
-        power_kw: 170
-      - soc_percent: 60
-        power_kw: 140
-      - soc_percent: 70
-        power_kw: 100
-      - soc_percent: 80
-        power_kw: 60
-      - soc_percent: 90
-        power_kw: 30
-      - soc_percent: 100
-        power_kw: 15
-
-# Bidirectional Charging
+    - soc_percent: 0
+      power_kw: 180
+    - soc_percent: 10
+      power_kw: 205
+    - soc_percent: 20
+      power_kw: 205
+    - soc_percent: 30
+      power_kw: 205
+    - soc_percent: 40
+      power_kw: 195
+    - soc_percent: 50
+      power_kw: 170
+    - soc_percent: 60
+      power_kw: 140
+    - soc_percent: 70
+      power_kw: 100
+    - soc_percent: 80
+      power_kw: 60
+    - soc_percent: 90
+      power_kw: 30
+    - soc_percent: 100
+      power_kw: 15
+  ac_max_kw: 11
+  dc_max_kw: 205
 bidirectional_charging:
   v2l: false
   v2h: false
   v2g: false
-
-# Motors & Drivetrain
 motors:
   configuration: dual-motor
   drive_type: AWD
-  
   front:
     type: permanent-magnet
     power_kw: 150
     power_hp: 204
     torque_nm: 330
-  
   rear:
     type: permanent-magnet
     power_kw: 150
     power_hp: 204
     torque_nm: 330
-  
   combined:
     power_kw: 300
     power_hp: 408
     torque_nm: 660
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 4.5
   top_speed_kmh: 205
-  
-# Efficiency
+  total_power_kw: 300
+  total_power_hp: 408
+  total_torque_nm: 660
 efficiency:
   consumption_wltp_kwh_100km: 12.3
   consumption_real_world_kwh_100km: 14.2
   energy_label: B
-
-# Weight & Dimensions
 dimensions:
   length_mm: 4606
   width_mm: 1859
   height_mm: 1479
   wheelbase_mm: 2735
   ground_clearance_mm: 151
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1095
   frunk_capacity_liters: 31
-
 weight:
   curb_weight_kg: 2123
   gross_vehicle_weight_kg: 2550
   payload_kg: 427
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
-# Data quality metadata
 metadata:
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
   data_quality: verified
-  
   sources:
-    - https://www.polestar.com/global/polestar-2/specifications/
-    - https://www.polestar.com/dato-assets/11286/1677682951-20220630-lca-report-polestar-2.pdf
-    - https://insideevs.com/news/598234/polestar-2-2024-charging-test/
-    - https://ev-database.org/car/1722/Polestar-2-Long-Range-Dual-Motor
-  
+  - https://www.polestar.com/global/polestar-2/specifications/
+  - https://www.polestar.com/dato-assets/11286/1677682951-20220630-lca-report-polestar-2.pdf
+  - https://insideevs.com/news/598234/polestar-2-2024-charging-test/
+  - https://ev-database.org/car/1722/Polestar-2-Long-Range-Dual-Motor
   verified_by: official
-  
-  notes: |
-    2024 model year brings significant improvements: +70km range, faster DC charging (205kW), 
-    improved heat pump. Long Range Dual Motor is the flagship variant with best performance 
-    and range. Google Automotive Services deeply integrated (no CarPlay needed).
-    
-    Real-world range is excellent, with many owners reporting 550-600km in mixed conditions.
-    Charging speed improved significantly in 2024 model.
+  notes: "2024 model year brings significant improvements: +70km range, faster DC\
+    \ charging (205kW), \nimproved heat pump. Long Range Dual Motor is the flagship\
+    \ variant with best performance \nand range. Google Automotive Services deeply\
+    \ integrated (no CarPlay needed).\n\nReal-world range is excellent, with many\
+    \ owners reporting 550-600km in mixed conditions.\nCharging speed improved significantly\
+    \ in 2024 model.\n"

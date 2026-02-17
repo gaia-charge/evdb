@@ -1,6 +1,3 @@
-# Toyota C-HR+ 77 kWh (2025)
-# Fully electric compact crossover
-
 id: toyota-c-hr-plus-77kwh-2025
 name: 77 kWh
 model_id: toyota-c-hr-plus
@@ -8,11 +5,8 @@ model_year: 2025
 production_years:
   start: 2025
   end: null
-
 trim_level: base
 market_position: mid-range
-
-# Battery Specifications
 battery:
   usable_kwh: 74.6
   total_kwh: 77.0
@@ -23,172 +17,144 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   thermal_management: liquid-cooled
-
   pack:
-    configuration: "floor-mounted, e-TNGA platform"
+    configuration: floor-mounted, e-TNGA platform
     weight_kg: 480
     modules: null
-
-# Range
 range:
   wltp_km: 430
   wltp_source: manufacturer
-
   epa_km: null
   epa_source: null
-
   real_world_km: 355
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, moderate climate"
-
-# Charging
+  real_world_conditions: Mixed driving, moderate climate
 charging:
   ac:
-    max_power_kw: 11
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 7.5
+      '0_100': 7.5
     onboard_charger_kw: 11
     phases: 3
-
   dc:
-    max_power_kw: 150
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 30
-      "0_100": 60
-
+      '10_80': 30
+      '0_100': 60
     charging_curve:
-      - soc_percent: 0
-        power_kw: 120
-      - soc_percent: 10
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 145
-      - soc_percent: 50
-        power_kw: 120
-      - soc_percent: 60
-        power_kw: 95
-      - soc_percent: 70
-        power_kw: 70
-      - soc_percent: 80
-        power_kw: 45
-      - soc_percent: 90
-        power_kw: 25
-      - soc_percent: 100
-        power_kw: 10
-
+    - soc_percent: 0
+      power_kw: 120
+    - soc_percent: 10
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 145
+    - soc_percent: 50
+      power_kw: 120
+    - soc_percent: 60
+      power_kw: 95
+    - soc_percent: 70
+      power_kw: 70
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 25
+    - soc_percent: 100
+      power_kw: 10
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
   preconditioning:
     battery_preconditioning: true
     scheduled_charging: true
     departure_time_climate: true
-
-# Motors & Performance
+  ac_max_kw: 11
+  dc_max_kw: 150
 motors:
-  - position: front
-    type: permanent_magnet_synchronous
-    max_power_kw: 160
-    max_torque_nm: 300
-    cooling: liquid
-
+- position: front
+  type: permanent_magnet_synchronous
+  max_power_kw: 160
+  max_torque_nm: 300
+  cooling: liquid
 drivetrain:
   type: fwd
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
-
 performance:
   acceleration_0_100_kmh_s: 7.5
   top_speed_kmh: 170
   top_speed_limited: true
-
-# Weight & Efficiency
 dimensions:
   length_mm: 4360
   width_mm: 1831
   height_mm: 1560
   wheelbase_mm: 2640
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 388
   trunk_max_liters: 1160
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1890
   gross_vehicle_weight_kg: 2330
   payload_kg: 440
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 650
-
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 19.0
-
   at_speed:
-    - speed_kmh: 120
-      consumption_kwh_per_100km: 22.0
-    - speed_kmh: 130
-      consumption_kwh_per_100km: 25.0
-
-# Features & Options
+  - speed_kmh: 120
+    consumption_kwh_per_100km: 22.0
+  - speed_kmh: 130
+    consumption_kwh_per_100km: 25.0
 standard_features:
-  - "Toyota Safety Sense 3.0"
-  - "12.3-inch touchscreen"
-  - "Digital instrument cluster"
-  - "Wireless Apple CarPlay / Android Auto"
-  - "LED headlights"
-  - "Heat pump"
-  - "18-inch alloy wheels"
-  - "Dual-zone automatic climate control"
-  - "Rear parking camera"
-  - "Parking sensors front/rear"
-
+- Toyota Safety Sense 3.0
+- 12.3-inch touchscreen
+- Digital instrument cluster
+- Wireless Apple CarPlay / Android Auto
+- LED headlights
+- Heat pump
+- 18-inch alloy wheels
+- Dual-zone automatic climate control
+- Rear parking camera
+- Parking sensors front/rear
 optional_packages:
-  - name: "Premium Package"
-    features:
-      - "Head-up display"
-      - "JBL premium audio system"
-      - "Panoramic roof"
-      - "Wireless charging pad"
-
+- name: Premium Package
+  features:
+  - Head-up display
+  - JBL premium audio system
+  - Panoramic roof
+  - Wireless charging pad
 colors:
   standard:
-    - "Platinum White Pearl"
-    - "Emotional Red"
+  - Platinum White Pearl
+  - Emotional Red
   premium:
-    - "Precious Silver Metallic"
-    - "Attitude Black Mica"
-    - "Urban Khaki"
-    - "Dark Blue Mica"
-
-# Version Information
+  - Precious Silver Metallic
+  - Attitude Black Mica
+  - Urban Khaki
+  - Dark Blue Mica
 version:
   facelift: false
   major_changes:
-    - "First fully electric C-HR variant"
+  - First fully electric C-HR variant
+notes: 'The Toyota C-HR+ is the fully electric version of the third-generation C-HR,
+  positioned as a compact crossover BEV for the European market. It shares the e-TNGA
+  platform with the bZ4X but in a more compact, stylish package. The 77 kWh battery
+  provides competitive range while the compact dimensions make it practical for urban
+  use. This is Toyota''s answer to the VW ID.3 and Kia EV3 in the European compact
+  BEV segment.
 
-notes: >
-  The Toyota C-HR+ is the fully electric version of the third-generation C-HR,
-  positioned as a compact crossover BEV for the European market. It shares the
-  e-TNGA platform with the bZ4X but in a more compact, stylish package. The
-  77 kWh battery provides competitive range while the compact dimensions make
-  it practical for urban use. This is Toyota's answer to the VW ID.3 and
-  Kia EV3 in the European compact BEV segment.
-
+  '
 metadata:
-  created_at: "2026-02-10"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-10'
+  updated_at: '2026-02-10'
   data_quality: estimated
   data_source: manufacturer
   sources:
-    - https://www.toyota.de
-    - https://ev-database.org
+  - https://www.toyota.de
+  - https://ev-database.org

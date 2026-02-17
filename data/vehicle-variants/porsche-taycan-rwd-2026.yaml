@@ -1,132 +1,92 @@
-# Porsche Taycan RWD 2026
-# Base Taycan with rear-wheel drive and updated 2026 specs
-# Improved range and efficiency for model year 2026
-# 800V ultra-fast charging architecture
-
 id: porsche-taycan-rwd-2026
-name: "RWD"
+name: RWD
 model_id: porsche-taycan
 manufacturer_id: porsche
 model_year: 2026
 trim_level: Base
 version: RWD
-
-description: |
-  The 2026 Porsche Taycan RWD (rear-wheel drive) is the entry-level Taycan 
-  model, offering exceptional value while maintaining the core Taycan experience. 
-  With 300kW (408hp) continuous power and improved efficiency for 2026, the base 
-  Taycan delivers sports car performance with a WLTP range of up to 566km.
-  
-  For model year 2026, Porsche improved the Taycan's efficiency and range through 
-  optimized motor control, improved aerodynamics, and updated battery management. 
-  The base RWD model now achieves 17.6 kWh/100km in optimal conditions - excellent 
-  efficiency for a performance sports sedan.
-  
-  Despite being the "base" model, the Taycan RWD includes Porsche's 800V architecture 
-  enabling 270kW peak DC charging, rear-wheel drive for engaging driving dynamics, 
-  adaptive air suspension, and the complete Porsche sports car experience. It's the 
-  most efficient and longest-range Taycan variant for 2026.
-
-# ============================================================================
-# BATTERY & RANGE
-# ============================================================================
-
+description: "The 2026 Porsche Taycan RWD (rear-wheel drive) is the entry-level Taycan\
+  \ \nmodel, offering exceptional value while maintaining the core Taycan experience.\
+  \ \nWith 300kW (408hp) continuous power and improved efficiency for 2026, the base\
+  \ \nTaycan delivers sports car performance with a WLTP range of up to 566km.\n\n\
+  For model year 2026, Porsche improved the Taycan's efficiency and range through\
+  \ \noptimized motor control, improved aerodynamics, and updated battery management.\
+  \ \nThe base RWD model now achieves 17.6 kWh/100km in optimal conditions - excellent\
+  \ \nefficiency for a performance sports sedan.\n\nDespite being the \"base\" model,\
+  \ the Taycan RWD includes Porsche's 800V architecture \nenabling 270kW peak DC charging,\
+  \ rear-wheel drive for engaging driving dynamics, \nadaptive air suspension, and\
+  \ the complete Porsche sports car experience. It's the \nmost efficient and longest-range\
+  \ Taycan variant for 2026.\n"
 battery:
   usable_kwh: 89.0
   total_kwh: 97.0
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   cells: pouch
   manufacturer: LG Energy Solution
   supplier: LG Energy Solution (South Korea)
   modules: 33
   cells_total: 396
   nominal_voltage: 725
-  pack_voltage_range: "610-835V (800V architecture)"
+  pack_voltage_range: 610-835V (800V architecture)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid-cooled
   heating: integrated battery heating
   preconditioning: true
-  notes: |
-    The 2026 Taycan uses Porsche's Performance Battery Plus as standard equipment 
-    across the range. The 800V architecture enables ultra-fast DC charging with 
-    minimal thermal losses. Battery preconditioning via navigation ensures optimal 
-    charging temperature at arrival to DC fast charger.
-
+  notes: "The 2026 Taycan uses Porsche's Performance Battery Plus as standard equipment\
+    \ \nacross the range. The 800V architecture enables ultra-fast DC charging with\
+    \ \nminimal thermal losses. Battery preconditioning via navigation ensures optimal\
+    \ \ncharging temperature at arrival to DC fast charger.\n"
 range:
   wltp_km: 566
   wltp_city_km: 730
   wltp_highway_km: 475
   real_world_km: 485
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    WLTP: 495-566km (depending on wheel/tire configuration)
-    Real-world: ~485km mixed driving in good conditions
-    Winter range penalty: ~25-30% in cold weather (battery heating, cabin heating)
-    Highway at 130 km/h: ~410km range (high speeds reduce efficiency)
-    
-    The 2026 model year brings improved efficiency through optimized motor control 
-    and better aerodynamics, resulting in best-in-class Taycan range.
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: "WLTP: 495-566km (depending on wheel/tire configuration)\nReal-world: ~485km\
+    \ mixed driving in good conditions\nWinter range penalty: ~25-30% in cold weather\
+    \ (battery heating, cabin heating)\nHighway at 130 km/h: ~410km range (high speeds\
+    \ reduce efficiency)\n\nThe 2026 model year brings improved efficiency through\
+    \ optimized motor control \nand better aerodynamics, resulting in best-in-class\
+    \ Taycan range.\n"
 efficiency:
   wltp_kwh_per_100km: 17.6
   real_world_kwh_per_100km: 21.0
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    The 2026 Taycan RWD achieves 17.6 kWh/100km WLTP in optimal configuration - 
-    a significant improvement over the 2024 model (19.6 kWh/100km). Porsche achieved 
-    this through improved motor efficiency, optimized thermal management, and better 
-    aerodynamics.
-    
-    Efficiency varies with driving style:
-    - Eco mode, gentle: ~16.5 kWh/100km
-    - Normal mode: ~19-21 kWh/100km
-    - Sport/Sport Plus: ~25+ kWh/100km
-
-# ============================================================================
-# CHARGING
-# ============================================================================
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: "The 2026 Taycan RWD achieves 17.6 kWh/100km WLTP in optimal configuration\
+    \ - \na significant improvement over the 2024 model (19.6 kWh/100km). Porsche\
+    \ achieved \nthis through improved motor efficiency, optimized thermal management,\
+    \ and better \naerodynamics.\n\nEfficiency varies with driving style:\n- Eco mode,\
+    \ gentle: ~16.5 kWh/100km\n- Normal mode: ~19-21 kWh/100km\n- Sport/Sport Plus:\
+    \ ~25+ kWh/100km\n"
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     optional_upgrade_kw: 22
-    optional_upgrade_cost: "€1,530 (22kW onboard charger)"
+    optional_upgrade_cost: €1,530 (22kW onboard charger)
     connector_type: Type2
     phases: 3
     time_0_100_hours: 8.5
     time_10_80_hours: 7.0
-    notes: |
-      Standard: 11kW 3-phase AC (0-100% in ~8.5 hours)
-      Optional: 22kW 3-phase AC (0-100% in ~4.5 hours)
-      
-      22kW charging recommended for home charging convenience, though most public 
-      AC chargers in Europe are limited to 11kW.
-
+    notes: "Standard: 11kW 3-phase AC (0-100% in ~8.5 hours)\nOptional: 22kW 3-phase\
+      \ AC (0-100% in ~4.5 hours)\n\n22kW charging recommended for home charging convenience,\
+      \ though most public \nAC chargers in Europe are limited to 11kW.\n"
   dc:
-    max_power_kw: 270
-    curve: "Flat curve from 10-80% thanks to 800V architecture"
+    curve: Flat curve from 10-80% thanks to 800V architecture
     connector_type: CCS
     time_10_80_percent_min: 22
     time_5_80_percent_min: 23
-    peak_power_duration: "Sustained from ~5% to 55% SoC"
-    notes: |
-      Peak: 270kW DC (800V architecture, Porsche/Ionity chargers)
-      10-80%: 22 minutes (ideal conditions, 350kW charger)
-      
-      The 800V architecture is Taycan's key advantage: minimal thermal losses during 
-      charging enable sustained high charging power. Most EVs with 400V systems can't 
-      maintain high power due to heat buildup - Taycan sustains 200+kW from 10-55% SoC.
-      
-      Porsche's Battery Temperature Management actively preconditions the battery when 
-      navigating to a DC charger, ensuring optimal temperature for maximum charging speed.
-
-# ============================================================================
-# PERFORMANCE
-# ============================================================================
-
+    peak_power_duration: Sustained from ~5% to 55% SoC
+    notes: "Peak: 270kW DC (800V architecture, Porsche/Ionity chargers)\n10-80%: 22\
+      \ minutes (ideal conditions, 350kW charger)\n\nThe 800V architecture is Taycan's\
+      \ key advantage: minimal thermal losses during \ncharging enable sustained high\
+      \ charging power. Most EVs with 400V systems can't \nmaintain high power due\
+      \ to heat buildup - Taycan sustains 200+kW from 10-55% SoC.\n\nPorsche's Battery\
+      \ Temperature Management actively preconditions the battery when \nnavigating\
+      \ to a DC charger, ensuring optimal temperature for maximum charging speed.\n"
+  ac_max_kw: 11
+  dc_max_kw: 270
 performance:
   power_kw: 300
   power_hp: 408
@@ -136,31 +96,20 @@ performance:
   overboost_power_ps: 408
   torque_nm: 345
   drivetrain: RWD
-  transmission: "2-speed automatic (1st: acceleration, 2nd: efficiency/top speed)"
-  
+  transmission: '2-speed automatic (1st: acceleration, 2nd: efficiency/top speed)'
   acceleration:
     zero_to_100_kmh_sec: 4.8
     zero_to_100_kmh_launch_control_sec: 4.8
     zero_to_200_kmh_sec: null
     launch_control: true
-    notes: |
-      0-100 km/h: 4.8 seconds (with Launch Control)
-      Launch Control standard on all Taycan models
-      
-      Despite being the "base" Taycan, 4.8s 0-100 km/h is supercar territory and 
-      faster than most sports cars on the road.
-
+    notes: "0-100 km/h: 4.8 seconds (with Launch Control)\nLaunch Control standard\
+      \ on all Taycan models\n\nDespite being the \"base\" Taycan, 4.8s 0-100 km/h\
+      \ is supercar territory and \nfaster than most sports cars on the road.\n"
   top_speed_kmh: 230
   top_speed_limited: true
-  notes: |
-    Top speed electronically limited to 230 km/h.
-    The 2-speed transmission enables strong acceleration (1st gear) while maintaining 
-    efficiency and top speed capability (2nd gear) - unique among EVs.
-
-# ============================================================================
-# CHASSIS & DIMENSIONS
-# ============================================================================
-
+  notes: "Top speed electronically limited to 230 km/h.\nThe 2-speed transmission\
+    \ enables strong acceleration (1st gear) while maintaining \nefficiency and top\
+    \ speed capability (2nd gear) - unique among EVs.\n"
 dimensions:
   length_mm: 4963
   width_mm: 1966
@@ -172,7 +121,6 @@ dimensions:
   ground_clearance_mm: 119
   drag_coefficient: 0.22
   frontal_area_m2: 2.33
-  
 weight:
   curb_weight_kg: 2215
   gross_vehicle_weight_kg: 2600
@@ -183,11 +131,13 @@ weight:
   trailer_hitch_available: false
   weight_distribution_front_percent: 48
   weight_distribution_rear_percent: 52
-  notes: |
-    Curb weight: 2,215 kg (relatively light for a performance EV)
+  notes: 'Curb weight: 2,215 kg (relatively light for a performance EV)
+
     Weight distribution: 48/52 front/rear (near-ideal for RWD sports car)
+
     No towing capacity (Porsche prioritizes driving dynamics)
 
+    '
 cargo:
   trunk_capacity_liters: 366
   trunk_max_liters: 1171
@@ -195,38 +145,32 @@ cargo:
   total_liters: 447
   rear_seats_fold: true
   rear_seats_split: 60/40
-  notes: |
-    Trunk: 366L (larger than typical sports sedan)
+  notes: 'Trunk: 366L (larger than typical sports sedan)
+
     Frunk: 81L (front trunk thanks to compact electric motors)
+
     Total: 447L usable cargo space
+
     Rear seats fold 60/40 for long items
 
-# ============================================================================
-# MOTOR & DRIVETRAIN
-# ============================================================================
-
+    '
 motors:
-  - position: rear
-    type: PSM  # Permanent Magnet Synchronous Motor
-    power_kw: 300
-    power_hp: 408
-    torque_nm: 345
-    max_rpm: 16000
-    cooling: liquid
-
+- position: rear
+  type: PSM
+  power_kw: 300
+  power_hp: 408
+  torque_nm: 345
+  max_rpm: 16000
+  cooling: liquid
 suspension:
   front: Double wishbone, adaptive air suspension
   rear: Multi-link, adaptive air suspension
   dampers: PASM (Porsche Active Suspension Management) with adaptive dampers
   adjustable: true
-  notes: |
-    Adaptive air suspension standard (three-chamber system)
-    PASM adaptive dampers with Normal, Sport, Sport Plus modes
-    Ride height adjustable: Normal, Low (-22mm), High (+20mm for obstacles)
-    
-    Porsche sports car DNA: double wishbone front suspension (like 911) provides 
-    precise steering and excellent handling dynamics.
-
+  notes: "Adaptive air suspension standard (three-chamber system)\nPASM adaptive dampers\
+    \ with Normal, Sport, Sport Plus modes\nRide height adjustable: Normal, Low (-22mm),\
+    \ High (+20mm for obstacles)\n\nPorsche sports car DNA: double wishbone front\
+    \ suspension (like 911) provides \nprecise steering and excellent handling dynamics.\n"
 brakes:
   front_mm: 360
   rear_mm: 358
@@ -234,57 +178,63 @@ brakes:
   rear_type: Ventilated disc
   caliper_pistons_front: 6
   caliper_pistons_rear: 4
-  optional_upgrade: |
-    Porsche Ceramic Composite Brake (PCCB): €9,180
+  optional_upgrade: 'Porsche Ceramic Composite Brake (PCCB): €9,180
+
     - Front: 420mm, 10-piston calipers
+
     - Rear: 410mm, 4-piston calipers
+
     - Carbon ceramic rotors (extreme performance, minimal fade)
 
+    '
 regenerative_braking:
   max_power_kw: 275
-  modes: "Auto, Off, Max"
+  modes: Auto, Off, Max
   one_pedal_driving: true
-  notes: |
-    Regenerative braking: up to 275kW (exceptional for an EV)
+  notes: 'Regenerative braking: up to 275kW (exceptional for an EV)
+
     Porsche Recuperation Management blends regen + friction braking seamlessly
+
     Auto mode: coasting when lifting, regen when braking (natural feel)
+
     Max mode: aggressive one-pedal driving with strong lift-off regen
 
+    '
 wheels:
-  standard: "19-inch Taycan Aero wheels"
+  standard: 19-inch Taycan Aero wheels
   optional:
-    - "20-inch Taycan Design wheels"
-    - "20-inch Taycan Turbo wheels"
-    - "21-inch Mission E Design wheels"
-  tire_front: "225/55 R19 (standard)"
-  tire_rear: "275/45 R19 (standard)"
-  notes: |
-    Standard: 19" Aero wheels (best efficiency and range)
+  - 20-inch Taycan Design wheels
+  - 20-inch Taycan Turbo wheels
+  - 21-inch Mission E Design wheels
+  tire_front: 225/55 R19 (standard)
+  tire_rear: 275/45 R19 (standard)
+  notes: 'Standard: 19" Aero wheels (best efficiency and range)
+
     Optional: 20-21" wheels (sportier look, reduced range ~15-30km)
 
-# ============================================================================
-# TECHNOLOGY & FEATURES
-# ============================================================================
-
+    '
 infotainment:
   screen_size_inches: 16.8
   system: Porsche Communication Management (PCM 6.0)
   additional_screens:
-    - "10.9-inch passenger display (optional)"
-    - "8.4-inch center console touchscreen"
+  - 10.9-inch passenger display (optional)
+  - 8.4-inch center console touchscreen
   navigation: true
   apple_carplay: true
   android_auto: true
   wifi: true
   bluetooth: true
-  speakers: "10-speaker system (standard)"
-  premium_audio: "Bose Surround Sound System (€1,240) or Burmester 3D High-End (€6,110)"
-  notes: |
-    PCM 6.0 with curved 16.8" display, excellent UI design
+  speakers: 10-speaker system (standard)
+  premium_audio: Bose Surround Sound System (€1,240) or Burmester 3D High-End (€6,110)
+  notes: 'PCM 6.0 with curved 16.8" display, excellent UI design
+
     Apple CarPlay wireless (no Android Auto for Porsche as of 2026)
+
     Optional passenger display: 10.9" touchscreen for co-pilot
+
     Voice control: "Hey Porsche" activation
 
+    '
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -294,75 +244,69 @@ driver_assistance:
   surround_view_camera: optional
   traffic_sign_recognition: true
   emergency_braking: true
-  notes: |
-    InnoDrive including adaptive cruise control with Porsche Track Precision: €4,120
+  notes: 'InnoDrive including adaptive cruise control with Porsche Track Precision:
+    €4,120
+
     Lane Change Assist + Lane Keeping Assist: €1,190
+
     Surround View with remote-controlled parking: €1,780
 
+    '
 lighting:
   headlights: LED Matrix
   daytime_running_lights: LED
   taillights: LED
-  optional_upgrade: "Porsche Dynamic Light System Plus (LED Matrix with 84 LEDs per light)"
-  
+  optional_upgrade: Porsche Dynamic Light System Plus (LED Matrix with 84 LEDs per
+    light)
 climate:
   zones: 3
   heat_pump: true
   heated_seats: true
   ventilated_seats: optional
   heated_steering_wheel: true
-  notes: |
-    3-zone automatic climate control standard
+  notes: '3-zone automatic climate control standard
+
     Heat pump standard (improves winter range significantly)
+
     Heated front seats + steering wheel standard
 
-# ============================================================================
-# MARKET & PRICING
-# ============================================================================
-
+    '
 market_availability:
-  - DE
-  - FR
-  - GB
-  - IT
-  - ES
-  - NL
-  - AT
-  - CH
-  - NO
-  - SE
-  - US
-
+- DE
+- FR
+- GB
+- IT
+- ES
+- NL
+- AT
+- CH
+- false
+- SE
+- US
 availability:
-  available_since: "2025-11"
+  available_since: 2025-11
   production_status: current
   order_status: available
   delivery_time_weeks: 12-16
-  notes: |
-    Model year 2026 Taycan launched November 2025 with updated specs
+  notes: 'Model year 2026 Taycan launched November 2025 with updated specs
+
     Order-to-delivery: 12-16 weeks typical (varies by country/spec)
 
-# ============================================================================
-# DATA SOURCES
-# ============================================================================
-
+    '
 data_sources:
-  - source: Porsche AG Germany official website
-    url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan/
-    date: 2026-02-09
-    confidence: verified
-    notes: Official German configurator and specifications
-    
-  - source: Porsche Press Database
-    date: 2026-02-09
-    confidence: verified
-    notes: Official technical specifications for 2026 model year
-
-  - source: WLTP Database Germany
-    url: https://www.dat.de/
-    date: 2026-02-09
-    confidence: verified
-    notes: Official WLTP homologation data
-
+- source: Porsche AG Germany official website
+  url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan/
+  date: 2026-02-09
+  confidence: verified
+  notes: Official German configurator and specifications
+- source: Porsche Press Database
+  date: 2026-02-09
+  confidence: verified
+  notes: Official technical specifications for 2026 model year
+- source: WLTP Database Germany
+  url: https://www.dat.de/
+  date: 2026-02-09
+  confidence: verified
+  notes: Official WLTP homologation data
 confidence: verified
 last_updated: 2026-02-09

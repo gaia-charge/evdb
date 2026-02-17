@@ -4,14 +4,12 @@ name: 75 kWh
 model_year: 2025
 trim_level: standard
 market_availability:
-  - europe
-  - germany
-  - netherlands
-  - norway
-  - sweden
-  - denmark
-
-# Battery specifications
+- europe
+- germany
+- netherlands
+- norway
+- sweden
+- denmark
 battery:
   total_kwh: 75
   usable_kwh: 72
@@ -27,8 +25,6 @@ battery:
   preconditioning: true
   cell_to_pack: false
   swappable: true
-
-# Motor and drivetrain
 motors:
   layout: awd
   total_count: 2
@@ -48,18 +44,13 @@ motors:
     total_power_kw: 360
     total_power_hp: 490
     total_torque_nm: 670
-
 drivetrain:
   drive_type: AWD
   transmission: single_speed_reduction
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 4.0
   top_speed_kmh: 200
   top_speed_limited: true
-
-# Range and efficiency
 range:
   wltp_km: 456
   wltp_city_km: 560
@@ -68,34 +59,29 @@ range:
   real_world_mixed_km: 380
   real_world_highway_km: 330
   real_world_winter_km: 300
-
 efficiency:
   wltp_kwh_per_100km: 17.5
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 19.0
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11
     phases: 3
     time_0_100_hours: 7.5
     onboard_charger_kw: 11
   dc:
-    max_power_kw: 140
     time_10_80_minutes: 30
     time_10_80_km_added: 319
-    curve_description: >
-      Peak 140kW from 10-40% SoC, tapering to 90kW at 50%, 60kW at 70%.
-      Battery swap alternative: 5 minutes for full battery at NIO Power Swap stations.
+    curve_description: 'Peak 140kW from 10-40% SoC, tapering to 90kW at 50%, 60kW
+      at 70%. Battery swap alternative: 5 minutes for full battery at NIO Power Swap
+      stations.
 
-# Bidirectional charging
+      '
+  ac_max_kw: 11
+  dc_max_kw: 140
 bidirectional_charging:
   v2l_capable: false
   v2h_capable: false
   v2g_capable: false
-
-# Dimensions and weight
 dimensions:
   length_mm: 4790
   width_mm: 1960
@@ -103,45 +89,37 @@ dimensions:
   wheelbase_mm: 2888
   ground_clearance_mm: 152
   drag_coefficient: 0.24
-
 weight:
   curb_weight_kg: 2175
   gross_vehicle_weight_kg: 2625
   payload_kg: 450
   towing_capacity_braked_kg: 1400
-
-# Cargo and seating
 seating:
   capacity: 5
   configuration: 2_plus_3
-
 cargo:
   trunk_capacity_liters: 450
   trunk_max_liters: 1300
   frunk_volume_liters: 0
-
-# Technology and infotainment
 infotainment:
   screen_size_inches: 12.8
   screen_orientation: landscape
   system: NIO Sky OS
   features:
-    - 12.8" AMOLED centre display
-    - NOMI AI companion (dashboard-mounted)
-    - 10.2" digital instrument cluster
-    - Head-up display (HUD)
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - 7.1.4 Dolby Atmos surround sound (23 speakers)
-    - OTA software updates
-    - 5G connectivity
-    - NIO app remote control
+  - 12.8" AMOLED centre display
+  - NOMI AI companion (dashboard-mounted)
+  - 10.2" digital instrument cluster
+  - Head-up display (HUD)
+  - Wireless Apple CarPlay
+  - Wireless Android Auto
+  - 7.1.4 Dolby Atmos surround sound (23 speakers)
+  - OTA software updates
+  - 5G connectivity
+  - NIO app remote control
   instrument_cluster:
     type: digital
     size_inches: 10.2
     customizable: true
-
-# Driver assistance
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -156,8 +134,6 @@ driver_assistance:
   360_camera: true
   automatic_parking: true
   highway_assist: true
-
-# Safety ratings
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2023
@@ -166,8 +142,6 @@ safety:
   vulnerable_road_users_score: 73
   safety_assist_score: 95
   airbags: 7
-
-# Lighting
 lighting:
   headlights: LED
   headlights_adaptive: true
@@ -176,8 +150,6 @@ lighting:
   taillights: LED_animated
   ambient_lighting: true
   ambient_lighting_colors: 256
-
-# Climate control
 climate:
   zones: 2
   heat_pump: true
@@ -186,97 +158,84 @@ climate:
   heated_steering_wheel: true
   ventilated_seats_front: true
   air_filter: PM2.5
-
-# Wheels and tires
 wheels:
   standard:
     size_inches: 20
     tire_size: 245/45R20
   optional:
-    - size_inches: 21
-      tire_size: 245/40R21
-      range_impact_km: -20
-
-# Exterior colors
+  - size_inches: 21
+    tire_size: 245/40R21
+    range_impact_km: -20
 colors:
-  - name: Starlight Silver
-    type: metallic
-  - name: Deep Black
-    type: metallic
-  - name: Cloud White
-    type: solid
-  - name: Sync Grey
-    type: metallic
-  - name: Space Blue
-    type: metallic
-
-# Interior options
+- name: Starlight Silver
+  type: metallic
+- name: Deep Black
+  type: metallic
+- name: Cloud White
+  type: solid
+- name: Sync Grey
+  type: metallic
+- name: Space Blue
+  type: metallic
 interior:
   upholstery: vegan_leather
   trim: microfibre_and_wood
   steering_wheel: leather
   color_options:
-    - name: Black
-    - name: Grey with orange accents
-
-# Standard features
+  - name: Black
+  - name: Grey with orange accents
 standard_features:
-  - 12.8" AMOLED centre display
-  - NOMI AI companion
-  - 10.2" digital instrument cluster
-  - Head-up display
-  - 7.1.4 Dolby Atmos (23 speakers)
-  - Air suspension with adaptive damping
-  - Matrix LED headlights
-  - 256-color ambient lighting
-  - Wireless phone charging (15W)
-  - Panoramic glass roof
-  - Power tailgate
-  - Keyless entry and start
-  - Heat pump
-  - 360° camera system
-  - Automatic parking
-  - NIO Pilot (Level 2+) highway assist
-  - 7 airbags
-  - 20" alloy wheels
-  - Ventilated front seats
-
-# Production information
+- 12.8" AMOLED centre display
+- NOMI AI companion
+- 10.2" digital instrument cluster
+- Head-up display
+- 7.1.4 Dolby Atmos (23 speakers)
+- Air suspension with adaptive damping
+- Matrix LED headlights
+- 256-color ambient lighting
+- Wireless phone charging (15W)
+- Panoramic glass roof
+- Power tailgate
+- Keyless entry and start
+- Heat pump
+- 360° camera system
+- Automatic parking
+- NIO Pilot (Level 2+) highway assist
+- 7 airbags
+- 20" alloy wheels
+- Ventilated front seats
 production:
-  start_date: "2023-06"
+  start_date: 2023-06
   plant: NIO NeoPark, Hefei
   country: China
-  notes: "2025 model year with software updates and improved battery management"
-
-# Version and changelog
+  notes: 2025 model year with software updates and improved battery management
 version_info:
-  release_date: "2024-09"
-  changes_from_previous: "2025 update: improved NAD software, new color options, battery management optimizations"
+  release_date: 2024-09
+  changes_from_previous: '2025 update: improved NAD software, new color options, battery
+    management optimizations'
   current_production: true
+notes: 'NIO ET5 Touring 75 kWh is the standard-range wagon variant offering 456 km
+  WLTP range with AWD performance (360 kW, 0-100 in 4.0s). The swappable battery system
+  is unique in the market — owners can swap to a 100 kWh battery at NIO Power Swap
+  stations in approximately 5 minutes.
 
-# Notes
-notes: >
-  NIO ET5 Touring 75 kWh is the standard-range wagon variant offering 456 km
-  WLTP range with AWD performance (360 kW, 0-100 in 4.0s). The swappable battery
-  system is unique in the market — owners can swap to a 100 kWh battery at NIO
-  Power Swap stations in approximately 5 minutes.
+  Battery-as-a-Service (BaaS) allows purchasing the car without the battery (saving
+  approximately €12,000-15,000 upfront) and subscribing to battery use monthly. This
+  reduces the entry price significantly.
 
-  Battery-as-a-Service (BaaS) allows purchasing the car without the battery
-  (saving approximately €12,000-15,000 upfront) and subscribing to battery use
-  monthly. This reduces the entry price significantly.
+  Premium standard equipment includes air suspension, 23-speaker Dolby Atmos system,
+  NOMI AI companion, ventilated seats, and matrix LED headlights. Strong Euro NCAP
+  safety rating (91% adult occupant, 95% safety assist).
 
-  Premium standard equipment includes air suspension, 23-speaker Dolby Atmos
-  system, NOMI AI companion, ventilated seats, and matrix LED headlights.
-  Strong Euro NCAP safety rating (91% adult occupant, 95% safety assist).
+  1400 kg towing capacity and 1300L cargo space (seats folded) make it a practical
+  family wagon. Cd of 0.24 is excellent for a wagon body style.
 
-  1400 kg towing capacity and 1300L cargo space (seats folded) make it a
-  practical family wagon. Cd of 0.24 is excellent for a wagon body style.
-
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - https://www.nio.com/et5-touring
-    - https://ev-database.org/
-    - https://www.euroncap.com/
+  - https://www.nio.com/et5-touring
+  - https://ev-database.org/
+  - https://www.euroncap.com/

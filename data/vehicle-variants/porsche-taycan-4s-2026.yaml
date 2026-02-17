@@ -1,28 +1,32 @@
-# Porsche Taycan 4S 2026
-# All-wheel drive mid-range Taycan with Performance Battery Plus
-# 800V ultra-fast charging architecture
-
 id: porsche-taycan-4s-2026
-name: "4S"
+name: 4S
 model_id: porsche-taycan
 manufacturer_id: porsche
 model_year: 2026
 trim_level: 4S
 version: 4S AWD
+description: 'The 2026 Porsche Taycan 4S is the sweet spot of the Taycan range, combining
 
-description: |
-  The 2026 Porsche Taycan 4S is the sweet spot of the Taycan range, combining
   all-wheel drive performance with everyday usability. With 400 kW (544 hp)
+
   continuous power and up to 440 kW (598 hp) with overboost via Launch Control,
+
   the 4S delivers supercar-level acceleration (0-100 km/h in 3.7 seconds) while
+
   maintaining a practical WLTP range of up to 536 km.
 
+
   The 2026 model year brings the updated Performance Battery Plus (105 kWh total,
+
   93.4 kWh usable) with improved cell chemistry, 320 kW peak DC charging, and
+
   the new PCM 6.0 infotainment system with a curved 16.8-inch display. The 4S
-  also features Porsche's signature 2-speed rear transmission, 800V architecture,
+
+  also features Porsche''s signature 2-speed rear transmission, 800V architecture,
+
   and standard adaptive air suspension with PASM.
 
+  '
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
@@ -38,50 +42,56 @@ battery:
   thermal_management: liquid-cooled
   heating: integrated battery heating
   preconditioning: true
-  notes: |
-    Performance Battery Plus standard on 4S for 2026. 800V architecture enables
+  notes: 'Performance Battery Plus standard on 4S for 2026. 800V architecture enables
+
     320 kW peak DC charging. Updated cell chemistry for improved energy density
+
     and longevity compared to 2024 model.
 
+    '
 range:
   wltp_km: 536
   wltp_city_km: 680
   wltp_highway_km: 450
   real_world_km: 450
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-  notes: |
-    WLTP: 467-536 km depending on wheel/tire configuration.
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
+  notes: 'WLTP: 467-536 km depending on wheel/tire configuration.
+
     Real-world: ~450 km mixed driving in good conditions.
+
     Highway at 130 km/h: ~380 km.
+
     Winter range penalty: ~25-30%.
 
+    '
 efficiency:
   wltp_kwh_per_100km: 19.6
   real_world_kwh_per_100km: 22.5
-  real_world_conditions: "Mixed driving, 20°C ambient, normal driving style"
-
+  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
 charging:
   ac:
-    max_power_kw: 11
     standard: true
     optional_upgrade_kw: 22
     connector_type: Type2
     phases: 3
     time_0_100_hours: 9.5
-    notes: |
-      Standard: 11 kW 3-phase AC. Optional: 22 kW (€1,530).
+    notes: 'Standard: 11 kW 3-phase AC. Optional: 22 kW (€1,530).
 
+      '
   dc:
-    max_power_kw: 320
     connector_type: CCS
     time_10_80_percent_min: 18
     time_5_80_percent_min: 20
-    peak_power_duration: "Sustained from ~5% to 50% SoC"
-    notes: |
-      Peak: 320 kW DC (800V architecture). 10-80% in 18 minutes.
+    peak_power_duration: Sustained from ~5% to 50% SoC
+    notes: 'Peak: 320 kW DC (800V architecture). 10-80% in 18 minutes.
+
       Improved over 2024 model (270 kW peak). Battery preconditioning via
+
       navigation ensures optimal charging temperature.
 
+      '
+  ac_max_kw: 11
+  dc_max_kw: 320
 performance:
   power_kw: 400
   power_hp: 544
@@ -91,17 +101,14 @@ performance:
   overboost_power_ps: 598
   torque_nm: 710
   drivetrain: AWD
-  transmission: "2-speed rear, single-speed front"
-
+  transmission: 2-speed rear, single-speed front
   acceleration:
     zero_to_100_kmh_sec: 3.7
     zero_to_100_kmh_launch_control_sec: 3.7
     zero_to_200_kmh_sec: 13.1
     launch_control: true
-
   top_speed_kmh: 250
   top_speed_limited: true
-
 dimensions:
   length_mm: 4963
   width_mm: 1966
@@ -111,7 +118,6 @@ dimensions:
   ground_clearance_mm: 119
   drag_coefficient: 0.22
   frontal_area_m2: 2.33
-
 weight:
   curb_weight_kg: 2370
   gross_vehicle_weight_kg: 2790
@@ -119,33 +125,27 @@ weight:
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
   trailer_hitch_available: false
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 366
   trunk_max_liters: 1171
   frunk_capacity_liters: 81
   roof_load_kg: 75
-
 motors:
-  - position: front
-    type: PSM
-    power_kw: 190
-    torque_nm: 220
-    cooling: liquid
-  - position: rear
-    type: PSM
-    power_kw: 320
-    torque_nm: 440
-    cooling: liquid
-
+- position: front
+  type: PSM
+  power_kw: 190
+  torque_nm: 220
+  cooling: liquid
+- position: rear
+  type: PSM
+  power_kw: 320
+  torque_nm: 440
+  cooling: liquid
 suspension:
   front: Double wishbone, adaptive air suspension
   rear: Multi-link, adaptive air suspension
   dampers: PASM (Porsche Active Suspension Management)
   adjustable: true
-
 brakes:
   front_mm: 390
   rear_mm: 358
@@ -153,31 +153,27 @@ brakes:
   rear_type: Ventilated disc
   caliper_pistons_front: 6
   caliper_pistons_rear: 4
-
 regenerative_braking:
   max_power_kw: 290
-  modes: "Auto, Off, Max"
+  modes: Auto, Off, Max
   one_pedal_driving: true
-
 wheels:
-  standard: "19-inch Taycan Aero wheels"
+  standard: 19-inch Taycan Aero wheels
   optional:
-    - "20-inch Taycan S Aero wheels"
-    - "20-inch Taycan Turbo S wheels"
-    - "21-inch Mission E Design wheels"
-  tire_front: "225/55 R19 (standard)"
-  tire_rear: "275/45 R19 (standard)"
-
+  - 20-inch Taycan S Aero wheels
+  - 20-inch Taycan Turbo S wheels
+  - 21-inch Mission E Design wheels
+  tire_front: 225/55 R19 (standard)
+  tire_rear: 275/45 R19 (standard)
 infotainment:
   screen_size_inches: 16.8
   system: Porsche Communication Management (PCM 6.0)
   additional_screens:
-    - "10.9-inch passenger display (optional)"
-    - "8.4-inch center console touchscreen"
+  - 10.9-inch passenger display (optional)
+  - 8.4-inch center console touchscreen
   navigation: true
   apple_carplay: true
   android_auto: true
-
 driver_assistance:
   adaptive_cruise_control: optional
   lane_keeping_assist: true
@@ -185,41 +181,35 @@ driver_assistance:
   parking_sensors: true
   parking_camera: true
   emergency_braking: true
-
 climate:
   zones: 3
   heat_pump: true
   heated_seats: true
   ventilated_seats: optional
   heated_steering_wheel: true
-
 market_availability:
-  - DE
-  - FR
-  - GB
-  - IT
-  - ES
-  - NL
-  - AT
-  - CH
-  - NO
-  - SE
-
+- DE
+- FR
+- GB
+- IT
+- ES
+- NL
+- AT
+- CH
+- false
+- SE
 availability:
-  available_since: "2025-11"
+  available_since: 2025-11
   production_status: current
   order_status: available
   delivery_time_weeks: 12-16
-
-
 data_sources:
-  - source: Porsche AG Germany official website
-    url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan-4s/
-    date: 2026-02-09
-    confidence: verified
-  - source: Porsche Press Database
-    date: 2026-02-09
-    confidence: verified
-
+- source: Porsche AG Germany official website
+  url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan-4s/
+  date: 2026-02-09
+  confidence: verified
+- source: Porsche Press Database
+  date: 2026-02-09
+  confidence: verified
 confidence: verified
 last_updated: 2026-02-09

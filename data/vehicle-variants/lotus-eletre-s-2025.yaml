@@ -1,15 +1,12 @@
 id: lotus-eletre-s-2025
-name: "S"
+name: S
 model_id: lotus-eletre
 model_year: 2025
 production_years:
   start: 2023
   end: null
-
 trim_level: performance
 market_position: premium
-
-# Battery Specifications
 battery:
   usable_kwh: 109.0
   total_kwh: 112.0
@@ -18,49 +15,37 @@ battery:
   thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
-
-# Range
 range:
   wltp_km: 490
   wltp_source: manufacturer
-  
   real_world_km: 420
   real_world_source: estimated
-  real_world_conditions: "Mixed driving, 15-20°C, performance usage"
-
-# Charging
+  real_world_conditions: Mixed driving, 15-20°C, performance usage
 charging:
   ac:
-    max_power_kw: 22.0
     connector_types:
-      - type2
+    - type2
     charging_time_hours:
-      "0_100": 5.5
+      '0_100': 5.5
     onboard_charger_kw: 22.0
     phases: 3
-  
   dc:
-    max_power_kw: 350
     connector_types:
-      - ccs2
+    - ccs2
     charging_time_minutes:
-      "10_80": 20
-      "0_80": 23
-
+      '10_80': 20
+      0_80: 23
   bidirectional:
     v2l: false
     v2g: false
-
-# Efficiency
+  ac_max_kw: 22.0
+  dc_max_kw: 350
 efficiency:
   wltp_kwh_per_100km: 22.3
-  
   real_world:
     combined_kwh_per_100km: 26.0
     highway_kwh_per_100km: 29.5
     city_kwh_per_100km: 22.0
-
-# Drivetrain
 drivetrain:
   configuration: awd
   motor_type: permanent_magnet
@@ -75,14 +60,10 @@ drivetrain:
       power_kw: 450
       power_hp: 612
       torque_nm: 710
-
-# Performance
 performance:
   acceleration_0_100_kmh_s: 2.95
   top_speed_kmh: 265
   top_speed_limited: true
-
-# Dimensions & Weight
 dimensions:
   length_mm: 5103
   width_mm: 2019
@@ -92,113 +73,98 @@ dimensions:
   ground_clearance_mm: 215
   drag_coefficient: 0.26
   frontal_area_m2: 2.75
-
 weight:
   curb_weight_kg: 2710
   gross_vehicle_weight_kg: 3200
   payload_kg: 490
   towing_capacity_braked_kg: 2250
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 688
   trunk_max_liters: 1532
   frunk_capacity_liters: 46
-
-# Standard Equipment
 equipment:
   standard:
     exterior:
-      - "23\" forged lightweight alloy wheels"
-      - "LED matrix headlights with laser assist"
-      - "Animated light bar"
-      - "Deployable rear spoiler (carbon fiber)"
-      - "Active aero shutters"
-      - "Carbon fiber front splitter"
-      - "Carbon fiber rear diffuser"
-      - "Frameless doors with soft-close"
-    
+    - 23" forged lightweight alloy wheels
+    - LED matrix headlights with laser assist
+    - Animated light bar
+    - Deployable rear spoiler (carbon fiber)
+    - Active aero shutters
+    - Carbon fiber front splitter
+    - Carbon fiber rear diffuser
+    - Frameless doors with soft-close
     interior:
-      - "12.6\" touchscreen infotainment"
-      - "29\" augmented reality head-up display"
-      - "Digital instrument cluster"
-      - "4-zone climate control"
-      - "Heated & ventilated front seats with massage"
-      - "Heated rear seats"
-      - "Electric adjustable seats with memory"
-      - "Ambient lighting (9 colors)"
-      - "Panoramic glass roof"
-      - "Alcantara sport steering wheel"
-      - "Carbon fiber interior trim"
-      - "Meridian 3D audio (2160W, 23 speakers)"
-    
+    - 12.6" touchscreen infotainment
+    - 29" augmented reality head-up display
+    - Digital instrument cluster
+    - 4-zone climate control
+    - Heated & ventilated front seats with massage
+    - Heated rear seats
+    - Electric adjustable seats with memory
+    - Ambient lighting (9 colors)
+    - Panoramic glass roof
+    - Alcantara sport steering wheel
+    - Carbon fiber interior trim
+    - Meridian 3D audio (2160W, 23 speakers)
     safety:
-      - "Autonomous Emergency Braking"
-      - "360-degree camera with track recorder"
-      - "Adaptive cruise control with stop & go"
-      - "Lane keeping assist"
-      - "Traffic sign recognition"
-      - "Blind spot monitoring"
-      - "Rear cross traffic alert"
-      - "8 airbags"
-    
+    - Autonomous Emergency Braking
+    - 360-degree camera with track recorder
+    - Adaptive cruise control with stop & go
+    - Lane keeping assist
+    - Traffic sign recognition
+    - Blind spot monitoring
+    - Rear cross traffic alert
+    - 8 airbags
     technology:
-      - "LIDAR autonomous driving sensors"
-      - "Apple CarPlay and Android Auto"
-      - "Air suspension with torque vectoring"
-      - "Rear-wheel steering (5 degrees)"
-      - "Carbon ceramic brakes"
-      - "Multi-mode driving (Range/Tour/Sport/Off-Road/Track)"
-
+    - LIDAR autonomous driving sensors
+    - Apple CarPlay and Android Auto
+    - Air suspension with torque vectoring
+    - Rear-wheel steering (5 degrees)
+    - Carbon ceramic brakes
+    - Multi-mode driving (Range/Tour/Sport/Off-Road/Track)
   optional:
-    - name: "R Package"
-      price_eur: 15000
-    - name: "Extended leather package"
-      price_eur: 5000
-
-# Pricing
+  - name: R Package
+    price_eur: 15000
+  - name: Extended leather package
+    price_eur: 5000
 pricing:
   msrp_eur: 139900
   msrp_usd: null
-
-# Colors
 colors:
   exterior:
-    - name: "Stellar Black"
-      code: SB
-      type: metallic
-    - name: "Kaimu Grey"
-      code: KG
-      type: metallic
-    - name: "Solar Yellow"
-      code: SY
-      type: metallic
-    - name: "Seneca Blue"
-      code: SNB
-      type: metallic
-    - name: "Racing Green"
-      code: RG
-      type: metallic
-  
+  - name: Stellar Black
+    code: SB
+    type: metallic
+  - name: Kaimu Grey
+    code: KG
+    type: metallic
+  - name: Solar Yellow
+    code: SY
+    type: metallic
+  - name: Seneca Blue
+    code: SNB
+    type: metallic
+  - name: Racing Green
+    code: RG
+    type: metallic
   interior:
-    - name: "Black leather with carbon trim"
-    - name: "Grey leather with carbon trim"
-
-# Metadata
+  - name: Black leather with carbon trim
+  - name: Grey leather with carbon trim
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   confidence: high
-  
   sources:
-    - "https://www.lotuscars.com/en-DE/eletre"
-    - "https://www.adac.de"
+  - https://www.lotuscars.com/en-DE/eletre
+  - https://www.adac.de
+notes: 'The Lotus Eletre S is the high-performance variant with 675 kW (918 hp) combined
+  power, achieving 0-100 km/h in just 2.95 seconds - making it one of the fastest
+  SUVs in the world. Features rear-wheel steering, carbon ceramic brakes, torque vectoring,
+  and track-focused dynamics. Despite the performance, WLTP range is 490 km. Includes
+  premium Meridian 3D audio, carbon fiber accents throughout, and track recorder.
+  Competes with Porsche Cayenne Turbo S E-Hybrid and represents Lotus''s commitment
+  to performance even in SUV form.
 
-notes: >
-  The Lotus Eletre S is the high-performance variant with 675 kW (918 hp) combined power,
-  achieving 0-100 km/h in just 2.95 seconds - making it one of the fastest SUVs in the world.
-  Features rear-wheel steering, carbon ceramic brakes, torque vectoring, and track-focused
-  dynamics. Despite the performance, WLTP range is 490 km. Includes premium Meridian 3D audio,
-  carbon fiber accents throughout, and track recorder. Competes with Porsche Cayenne Turbo S E-Hybrid
-  and represents Lotus's commitment to performance even in SUV form.
+  '

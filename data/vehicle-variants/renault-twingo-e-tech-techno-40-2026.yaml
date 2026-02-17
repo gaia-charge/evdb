@@ -3,15 +3,11 @@ model_id: renault-twingo-e-tech
 name: Renault Twingo E-Tech Techno 40
 variant_name: Techno 40
 model_year: 2026
-
-# Vehicle Classification
 vehicle_type: hatchback
 segment: A
 body_style: 5-door hatchback
 seats: 4
 doors: 5
-
-# Drivetrain
 drivetrain:
   type: fwd
   motors:
@@ -21,8 +17,6 @@ drivetrain:
       power_hp: 82
       torque_nm: 180
       position: front
-
-# Battery System
 battery:
   total_kwh: 40
   usable_kwh: 37
@@ -35,40 +29,34 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   thermal_management: liquid_cooling
-
-# Charging
 charging:
   ac:
-    max_power_kw: 11  # Upgraded AC charger on Techno trim
     connector: type2
     charge_time_0_100_hours: 3.8
   dc:
-    max_power_kw: 80
     connector: ccs2
     charge_time_10_80_percent_minutes: 30
     charge_curve:
-      - soc_percent: 10
-        power_kw: 80
-      - soc_percent: 50
-        power_kw: 70
-      - soc_percent: 70
-        power_kw: 50
-      - soc_percent: 80
-        power_kw: 35
+    - soc_percent: 10
+      power_kw: 80
+    - soc_percent: 50
+      power_kw: 70
+    - soc_percent: 70
+      power_kw: 50
+    - soc_percent: 80
+      power_kw: 35
   bidirectional:
     v2g_capable: false
     v2h_capable: false
     v2l_capable: false
     max_discharge_power_kw: 0
-    notes: "No bidirectional charging"
-
-# Performance
+    notes: No bidirectional charging
+  ac_max_kw: 11
+  dc_max_kw: 80
 performance:
   acceleration_0_100_kmh_seconds: 12.5
   top_speed_kmh: 135
   power_to_weight_ratio_kwkg: 51.7
-
-# Range & Efficiency
 range:
   wltp_km: 295
   wltp_city_km: 395
@@ -78,13 +66,10 @@ range:
     highway_km: 190
     city_km: 335
     winter_km: 195
-
 efficiency:
   wltp_consumption_kwh_per_100km: 13.2
   real_world_consumption_kwh_per_100km: 15.8
   epa_efficiency_rating: null
-
-# Dimensions & Weight
 dimensions:
   length_mm: 3790
   width_mm: 1720
@@ -92,116 +77,98 @@ dimensions:
   wheelbase_mm: 2540
   ground_clearance_mm: 145
   drag_coefficient: 0.29
-  frontal_area_m2: 2.20
-
+  frontal_area_m2: 2.2
 weight:
   curb_weight_kg: 1160
   gross_vehicle_weight_kg: 1490
   payload_kg: 330
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 255
   trunk_max_liters: 870
   frunk_capacity_liters: 0
-
-# Platform & Production
 platform: AmpR Small
 production:
   plant: Novo Mesto, Slovenia
   start_year: 2026
   end_year: null
-
-# Technology & Features
 technology:
   infotainment:
     system: OpenR Link
     screen_size_inches: 7.0
     operating_system: Android Automotive
     features:
-      - Google Built-In
-      - Google Maps
-      - Google Assistant
-      - Wireless Apple CarPlay
-      - Wireless Android Auto
-      - Reno avatar assistant
+    - Google Built-In
+    - Google Maps
+    - Google Assistant
+    - Wireless Apple CarPlay
+    - Wireless Android Auto
+    - Reno avatar assistant
   driver_assistance:
     level: 2
     features:
-      - Adaptive Cruise Control
-      - Lane Keeping Assist
-      - Traffic Sign Recognition
-      - Active Emergency Braking
-      - Blind Spot Warning
-      - Rear Parking Sensors
-      - Rear View Camera
+    - Adaptive Cruise Control
+    - Lane Keeping Assist
+    - Traffic Sign Recognition
+    - Active Emergency Braking
+    - Blind Spot Warning
+    - Rear Parking Sensors
+    - Rear View Camera
   comfort:
     climate_zones: 1
-    heat_pump: true  # Heat pump standard on Techno
+    heat_pump: true
     features:
-      - Automatic air conditioning
-      - Cloth/TEP seats
-      - Heated front seats
-      - LED headlights
-      - Keyless entry and start
-      - Rear parking sensors
-      - Rear view camera
-      - Wireless phone charger
-
-# Safety
+    - Automatic air conditioning
+    - Cloth/TEP seats
+    - Heated front seats
+    - LED headlights
+    - Keyless entry and start
+    - Rear parking sensors
+    - Rear view camera
+    - Wireless phone charger
 safety:
   euro_ncap_rating: null
   euro_ncap_year: null
-
-# Wheels & Suspension
 wheels:
-  standard_size: '16"'
+  standard_size: 16"
   tire_size_front: 185/60R16
   tire_size_rear: 185/60R16
-
 suspension:
   front: MacPherson strut
   rear: Torsion beam
   adjustable: false
-
-# Market Position
 market_position:
   target_segment: Well-equipped electric city car
   competitors:
-    - Dacia Spring Extreme (€23,500)
-    - Citroën ë-C3 (€23,300)
-    - Fiat 500e (€29,950)
-    - Renault 5 E-Tech Evolution 40 (€24,990)
+  - Dacia Spring Extreme (€23,500)
+  - Citroën ë-C3 (€23,300)
+  - Fiat 500e (€29,950)
+  - Renault 5 E-Tech Evolution 40 (€24,990)
   key_selling_points:
-    - Heat pump for better winter efficiency
-    - 11kW AC charging (faster home charging)
-    - Heated front seats
-    - Wireless phone charger
-    - Blind spot warning
-    - Rear view camera
-    - All Twingo retro charm with more features
-
-# Ownership & Costs
+  - Heat pump for better winter efficiency
+  - 11kW AC charging (faster home charging)
+  - Heated front seats
+  - Wireless phone charger
+  - Blind spot warning
+  - Rear view camera
+  - All Twingo retro charm with more features
 ownership:
   depreciation_3_years_percent: 43
   insurance_group: null
   service_interval_months: 12
   service_interval_km: 30000
-
-# Data Sources
 data_sources:
   specifications: https://www.renault.de/elektrofahrzeuge/twingo.html
   reviews:
-    - https://en.wikipedia.org/wiki/Renault_Twingo_E-Tech
+  - https://en.wikipedia.org/wiki/Renault_Twingo_E-Tech
+notes: 'The Techno 40 is the higher-trim Twingo E-Tech with notable upgrades including  a
+  heat pump for better winter range, 11kW AC charging (vs 7.4kW on Urban),  heated
+  front seats, wireless phone charger, and blind spot warning. Same 60 kW  motor and
+  40 kWh LFP battery as the Urban trim. Slightly heavier due to  additional equipment,
+  resulting in marginally lower range. The heat pump is  especially valuable in northern
+  European climates, improving winter range by  up to 15%. Priced around €24,590 in
+  Germany, offering strong value versus  competitors like the Fiat 500e which costs
+  significantly more.
 
-# Notes
-notes: >
-  The Techno 40 is the higher-trim Twingo E-Tech with notable upgrades including 
-  a heat pump for better winter range, 11kW AC charging (vs 7.4kW on Urban), 
-  heated front seats, wireless phone charger, and blind spot warning. Same 60 kW 
-  motor and 40 kWh LFP battery as the Urban trim. Slightly heavier due to 
-  additional equipment, resulting in marginally lower range. The heat pump is 
-  especially valuable in northern European climates, improving winter range by 
-  up to 15%. Priced around €24,590 in Germany, offering strong value versus 
-  competitors like the Fiat 500e which costs significantly more.
+  '
