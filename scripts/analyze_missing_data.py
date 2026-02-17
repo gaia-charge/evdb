@@ -34,28 +34,28 @@ def analyze_variant(file_path: Path) -> Dict[str, List[str]]:
     missing = defaultdict(list)
     variant_id = data.get('id', file_path.stem)
     
-    # Critical fields that should always be present
+    # Critical fields that should always be present (using canonical schema names)
     critical_fields = {
-        'battery.usable_capacity_kwh': 'Battery usable capacity',
-        'battery.total_capacity_kwh': 'Battery total capacity',
-        'range.wltp_combined_km': 'WLTP range',
-        'charging.ac_charging.max_power_kw': 'AC charging power',
-        'charging.dc_charging.max_power_kw': 'DC charging power',
-        'performance.acceleration_0_100_kmh_sec': 'Acceleration 0-100',
+        'battery.usable_kwh': 'Battery usable capacity',
+        'battery.total_kwh': 'Battery total capacity',
+        'range.wltp_km': 'WLTP range',
+        'charging.ac_max_kw': 'AC charging power',
+        'charging.dc_max_kw': 'DC charging power',
+        'performance.acceleration_0_100_sec': 'Acceleration 0-100',
         'performance.top_speed_kmh': 'Top speed',
-        'motor.total_power_kw': 'Motor power',
-        'motor.total_torque_nm': 'Motor torque',
+        'performance.total_power_kw': 'Motor power',
+        'performance.total_torque_nm': 'Motor torque',
     }
     
-    # Important fields (nice to have)
+    # Important fields (nice to have) - using canonical schema names
     important_fields = {
         'range.wltp_city_km': 'WLTP city range',
         'range.wltp_highway_km': 'WLTP highway range',
-        'range.real_world_mixed_km': 'Real-world range',
-        'consumption.wltp_combined_kwh_100km': 'WLTP consumption',
-        'consumption.real_world_mixed_kwh_100km': 'Real-world consumption',
-        'charging.dc_charging.time_10_80_min': 'DC charging time 10-80%',
-        'charging.ac_charging.time_0_100_hours': 'AC charging time 0-100%',
+        'range.real_world_km': 'Real-world range',
+        'efficiency.wltp_kwh_per_100km': 'WLTP consumption',
+        'efficiency.real_world_kwh_per_100km': 'Real-world consumption',
+        'charging.time_10_to_80_min': 'DC charging time 10-80%',
+        'charging.time_0_to_100_min': 'AC charging time 0-100%',
         'dimensions.length_mm': 'Length',
         'dimensions.width_mm': 'Width',
         'dimensions.height_mm': 'Height',
@@ -65,7 +65,7 @@ def analyze_variant(file_path: Path) -> Dict[str, List[str]]:
         'weight.towing_capacity_braked_kg': 'Towing capacity (braked)',
     }
     
-    # Optional/advanced fields
+    # Optional/advanced fields - using canonical schema names
     optional_fields = {
         'dimensions.ground_clearance_mm': 'Ground clearance',
         'cargo.trunk_max_liters': 'Trunk max (seats down)',
@@ -73,11 +73,12 @@ def analyze_variant(file_path: Path) -> Dict[str, List[str]]:
         'weight.gross_vehicle_weight_kg': 'Gross vehicle weight',
         'weight.payload_kg': 'Payload',
         'weight.towing_capacity_unbraked_kg': 'Towing capacity (unbraked)',
-        'battery.architecture_voltage': 'Battery voltage',
         'battery.chemistry': 'Battery chemistry',
-        'charging.dc_charging.curve_description': 'DC charging curve',
-        'efficiency.heat_pump': 'Heat pump availability',
-        'efficiency.recuperation_power_max_kw': 'Max recuperation power',
+        'battery.cell_type': 'Battery cell type',
+        'battery.manufacturer': 'Battery manufacturer',
+        'charging.dc_curve': 'DC charging curve',
+        'features.heat_pump': 'Heat pump availability',
+        'features.adaptive_suspension': 'Adaptive suspension',
     }
     
     # Check each category
