@@ -1,6 +1,6 @@
 # EVDB Data Quality Analysis
 
-**Generated:** 2026-02-17  
+**Generated:** 2026-02-17 (Updated after schema normalization)  
 **Analysis Tool:** `scripts/analyze_missing_data.py`
 
 ---
@@ -8,15 +8,25 @@
 ## 📊 Executive Summary
 
 **Database Scale:** 534 vehicle variants  
-**Overall Completeness:** ~60% (all variants have some missing data)
+**Overall Completeness:** ~75% (509 variants have some missing data)
 
-### Missing Data Breakdown
-- 🔴 **Critical fields:** 4,155 missing (~7.8 per variant)
+### Missing Data Breakdown (After Schema Normalization)
+- 🔴 **Critical fields:** 1,191 missing (~2.2 per variant) ⬇️ 71% reduction
   - Battery capacity, WLTP range, charging specs, performance
-- 🟡 **Important fields:** 2,990 missing (~5.6 per variant)  
+- 🟡 **Important fields:** 1,654 missing (~3.1 per variant) ⬇️ 45% reduction
   - Consumption, city/highway range, charging times
-- ⚪ **Optional fields:** 2,280 missing (~4.3 per variant)
+- ⚪ **Optional fields:** 1,983 missing (~3.7 per variant)
   - Battery voltage, charging curves, recuperation specs
+
+### ✅ Schema Normalization Complete (2026-02-17)
+The database has been normalized to use canonical flat field names:
+- `charging.ac.max_power_kw` → `charging.ac_max_kw` (279 files)
+- `charging.dc.max_power_kw` → `charging.dc_max_kw` (279 files)
+- `motors.combined.*` → `performance.total_*` (50 files)
+- **Total:** 776 transformations across 279 files
+- **Backups:** Saved in `/home/ada/Projects/evdb/backups/20260217_214649/`
+
+This resolved false positives where data existed but couldn't be detected due to nested vs flat naming differences.
 
 ### Market Coverage (Geographic)
 | Market | Coverage | Missing |
@@ -33,19 +43,19 @@
 ## 🎯 Prioritized Action Plan
 
 ### Phase 1: Critical Data Fill (HIGHEST PRIORITY)
-**Target:** 4,155 critical missing fields  
-**Impact:** Makes database usable for core comparisons
+**Target:** 1,191 critical missing fields (~2.2 per variant)  
+**Impact:** Achieves 98%+ critical data completeness
 
-**Critical fields to fill:**
-1. `battery.usable_capacity_kwh` — Battery capacity (usable)
-2. `battery.total_capacity_kwh` — Battery capacity (total)
-3. `range.wltp_combined_km` — Official WLTP range
-4. `charging.ac_charging.max_power_kw` — AC charging power
-5. `charging.dc_charging.max_power_kw` — DC fast charging power
-6. `performance.acceleration_0_100_kmh_sec` — 0-100 km/h time
+**Critical fields to fill (canonical schema names):**
+1. `battery.usable_kwh` — Battery capacity (usable)
+2. `battery.total_kwh` — Battery capacity (total)
+3. `range.wltp_km` — Official WLTP range
+4. `charging.ac_max_kw` — AC charging power
+5. `charging.dc_max_kw` — DC fast charging power
+6. `performance.acceleration_0_100_sec` — 0-100 km/h time
 7. `performance.top_speed_kmh` — Top speed
-8. `motor.total_power_kw` — Motor power (kW)
-9. `motor.total_torque_nm` — Motor torque (Nm)
+8. `performance.total_power_kw` — Motor power (kW)
+9. `performance.total_torque_nm` — Motor torque (Nm)
 
 **Methodology:**
 - Use manufacturer websites (official spec sheets)
@@ -58,17 +68,17 @@
 ---
 
 ### Phase 2: Important Data Enhancement
-**Target:** 2,990 important missing fields  
+**Target:** 1,654 important missing fields (~3.1 per variant)  
 **Impact:** Enables real-world comparisons and detailed analysis
 
-**Important fields to add:**
+**Important fields to add (canonical schema names):**
 1. `range.wltp_city_km` — WLTP city range
 2. `range.wltp_highway_km` — WLTP highway range
-3. `range.real_world_mixed_km` — Real-world mixed range
-4. `consumption.wltp_combined_kwh_100km` — WLTP consumption
-5. `consumption.real_world_mixed_kwh_100km` — Real-world consumption
-6. `charging.dc_charging.time_10_80_min` — DC charging time
-7. `charging.ac_charging.time_0_100_hours` — AC charging time
+3. `range.real_world_km` — Real-world mixed range
+4. `efficiency.wltp_kwh_per_100km` — WLTP consumption
+5. `efficiency.real_world_kwh_per_100km` — Real-world consumption
+6. `charging.time_10_to_80_min` — DC charging time
+7. `charging.time_0_to_100_min` — AC charging time
 
 **Session target:** 3-5 variants per session = 21-35 important fields
 
@@ -121,7 +131,7 @@
 4. Validate: `python3 scripts/validate.py --directory data/`
 5. Commit: `git commit -m "Fill critical data for [variants]"`
 
-**Expected output:** 5 variants, 45 critical fields filled
+**Expected output:** 5 variants, ~11 critical fields filled (avg 2.2 per variant)
 
 ---
 
@@ -139,28 +149,30 @@
 ---
 
 **Option C: Balanced Approach (RECOMMENDED)**
-1. Fill critical data for 3 variants (27 critical fields)
+1. Fill critical data for 3 variants (~7 critical fields)
 2. Add 3 market entries (ES/PL/FR)
 3. Validate and commit
 
-**Expected output:** 3 variants improved, 3 market entries added
+**Expected output:** 3 variants improved, 3 market entries added, ~45-60 minutes per session
 
 ---
 
-## 🎯 Top 20 Variants Needing Attention
+## 🎯 Top 20 Variants Needing Attention (Updated Post-Normalization)
 
 Use this prioritized list to focus efforts:
 
-1. `kia-ev9-standard-range-rwd-2024` — 9 critical, 7 important missing
-2. `peugeot-e-5008-73-allure-2025` — 9 critical, 7 important missing
-3. `peugeot-e-5008-97-gt-long-range-2025` — 9 critical, 7 important missing
-4. `bmw-ix-xdrive50-2026` — 9 critical, 5 important missing
-5. `bmw-ix1-edrive20-2025` — 9 critical, 5 important missing
-6. `kia-ev4-standard-range-2025` — 9 critical, 5 important missing
-7. `kia-ev4-long-range-2025` — 9 critical, 5 important missing
-8. `mercedes-eqe-43-4matic-2025` — 9 critical, 5 important missing
-9. `mercedes-eqe-53-4matic-plus-2025` — 9 critical, 5 important missing
-10. `mercedes-eqs-43-4matic-2025` — 9 critical, 5 important missing
+1. `ford-capri-ev-extended-range-awd-2025` — 5 critical, 6 important missing
+2. `ford-capri-ev-extended-range-rwd-2025` — 5 critical, 6 important missing
+3. `ford-capri-ev-standard-range-rwd-2025` — 5 critical, 6 important missing
+4. `ford-explorer-ev-extended-range-awd-2025` — 5 critical, 6 important missing
+5. `ford-explorer-ev-extended-range-rwd-2025` — 5 critical, 6 important missing
+6. `ford-explorer-ev-standard-range-rwd-2025` — 5 critical, 6 important missing
+7. `kia-ev4-long-range-2025` — 4 critical, 5 important missing
+8. `kia-ev4-standard-range-2025` — 4 critical, 5 important missing
+9. `opel-frontera-ev-long-range-2025` — 4 critical, 5 important missing
+10. `smart-hashtag3-pro-plus-2024` — 4 critical, 5 important missing
+
+**Note:** Most variants now have 0-4 critical fields missing (avg 2.2), a dramatic improvement from the original 7.8 average after schema normalization.
 
 *(Run `python3 scripts/analyze_missing_data.py` for full list)*
 
@@ -191,13 +203,18 @@ python3 scripts/analyze_missing_data.py | grep -A 10 "MARKET COVERAGE"
 
 ## 📈 Success Metrics
 
+### ✅ Completed (2026-02-17)
+- [x] Schema normalization complete (776 transformations, 279 files)
+- [x] Reduced critical missing from 4,155 to 1,191 (71% reduction!)
+- [x] Reduced important missing from 2,990 to 1,654 (45% reduction!)
+
 ### Short-term (Next 2 weeks)
-- [ ] Reduce critical missing fields from 4,155 to <2,000 (50% reduction)
+- [ ] Reduce critical missing fields from 1,191 to <600 (50% reduction)
 - [ ] Increase Spain (ES) coverage from 61.8% to 80%+
 - [ ] Increase Poland (PL) coverage from 30% to 50%+
 
 ### Medium-term (Next month)
-- [ ] Reduce critical missing fields to <500 (90% reduction)
+- [ ] Reduce critical missing fields to <250 (80% reduction)
 - [ ] Achieve 90%+ coverage for ES, PL, FR markets
 - [ ] Start filling important fields systematically
 
