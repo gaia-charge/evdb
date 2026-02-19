@@ -48,6 +48,12 @@ range:
     range_km: 195
     notes: Highway driving at 130 km/h
 charging:
+  # Canonical schema fields
+  ac_max_kw: 6.6
+  dc_max_kw: 50
+  time_0_to_100_min: 360  # 6 hours * 60 minutes
+  time_10_to_80_min: 40
+  
   dc_fast_charge:
     port_type: CHAdeMO
     max_power_kw: 50
@@ -104,11 +110,16 @@ motors:
   drive_type: FWD
   notes: Base 40kWh has 110kW motor (vs 160kW in e+ 62kWh). Adequate for city driving.
 performance:
-  acceleration_0_60_mph_s: 7.5
+  # Canonical schema fields
+  acceleration_0_100_sec: 7.9
   top_speed_kmh: 144
+  total_power_kw: 110  # From motors.front_motor.power_kw
+  total_power_hp: 150  # From motors.front_motor.power_hp
+  total_torque_nm: 320  # From motors.front_motor.torque_nm
+  
+  acceleration_0_60_mph_s: 7.5
   notes: Adequate performance for city driving, but noticeably slower than e+ 62kWh
     variant
-  acceleration_0_100_sec: 7.9
 efficiency:
   wltp_kwh_per_100km: 16.5
   epa_kwh_per_100km: 17.2

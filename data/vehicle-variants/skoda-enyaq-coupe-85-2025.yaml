@@ -42,6 +42,12 @@ range:
   real_world_km: 500
   epa_km: null
 charging:
+  # Canonical schema fields
+  ac_max_kw: 11
+  dc_max_kw: 135
+  time_0_to_100_min: 450  # 7.5 hours * 60 minutes
+  time_10_to_80_min: 28
+  
   ac_max_power_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
@@ -81,10 +87,14 @@ motors:
   max_power_ps: 286
   max_torque_nm: 545
 performance:
+  # Canonical schema fields
+  acceleration_0_100_sec: 6.7
   top_speed_kmh: 160
+  total_power_kw: 210  # From motors[0].max_power_kw
+  total_torque_nm: 545  # From motors[0].max_torque_nm
+  
   top_speed_limited: true
   drive_type: RWD
-  acceleration_0_100_sec: 6.7
 efficiency:
   wltp_kwh_per_100km: 15.4
   real_world_kwh_per_100km: 17.5
