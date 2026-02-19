@@ -1,16 +1,8 @@
-# Ford Mustang Mach-E Standard Range RWD - 2024 Model Year
-# Entry-level Mach-E with rear-wheel drive and smaller battery
-
 id: ford-mustang-mach-e-standard-range-rwd-2024
-
 name: Standard Range RWD
-
 model_id: ford-mustang-mach-e
-
 model_year: 2024
-
-trim_level: "Select"
-
+trim_level: Select
 battery:
   usable_kwh: 68.0
   total_kwh: 70.0
@@ -20,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 440
   wltp_city_km: null
@@ -28,49 +19,47 @@ range:
   epa_km: 362
   epa_miles: 225
   real_world_km: 380
-  real_world_conditions: "Mixed driving, moderate climate, 120 km/h highway"
-
+  real_world_conditions: Mixed driving, moderate climate, 120 km/h highway
 charging:
   ac_charging:
     max_power_kw: 11.0
     connector_type: Type2
     onboard_charger_kw: 11.0
     time_0_100_hours: 6.2
-  
   dc_charging:
     max_power_kw: 150
     connector_type: CCS2
     charge_time_10_80_minutes: 32
     charge_time_20_80_minutes: 26
     charge_curve:
-      - soc_percent: 10
-        power_kw: 145
-      - soc_percent: 20
-        power_kw: 150
-      - soc_percent: 30
-        power_kw: 150
-      - soc_percent: 40
-        power_kw: 145
-      - soc_percent: 50
-        power_kw: 130
-      - soc_percent: 60
-        power_kw: 105
-      - soc_percent: 70
-        power_kw: 75
-      - soc_percent: 80
-        power_kw: 45
-      - soc_percent: 90
-        power_kw: 22
-      - soc_percent: 100
-        power_kw: 10
-  
+    - soc_percent: 10
+      power_kw: 145
+    - soc_percent: 20
+      power_kw: 150
+    - soc_percent: 30
+      power_kw: 150
+    - soc_percent: 40
+      power_kw: 145
+    - soc_percent: 50
+      power_kw: 130
+    - soc_percent: 60
+      power_kw: 105
+    - soc_percent: 70
+      power_kw: 75
+    - soc_percent: 80
+      power_kw: 45
+    - soc_percent: 90
+      power_kw: 22
+    - soc_percent: 100
+      power_kw: 10
   bidirectional:
     v2l: false
     v2h: true
     v2g: true
     max_discharge_power_kw: 9.6
-    notes: "Ford Intelligent Backup Power with 80A Ford Charge Station Pro"
-
+    notes: Ford Intelligent Backup Power with 80A Ford Charge Station Pro
+  ac_max_kw: 11.0
+  dc_max_kw: 150
 motors:
   configuration: single_rear
   rear_motor:
@@ -80,18 +69,18 @@ motors:
   total_power_kw: 198
   total_power_hp: 269
   total_torque_nm: 430
-
 performance:
-  acceleration_0_100_kmh_seconds: 7.0
   top_speed_kmh: 180
   drive_type: RWD
-
+  total_power_kw: 198
+  total_power_hp: 269
+  total_torque_nm: 430
+  acceleration_0_100_sec: 7.0
 efficiency:
   consumption_wltp_kwh_per_100km: 16.5
   consumption_epa_kwh_per_100km: 18.8
   efficiency_rating_eu: B
   co2_emissions_wltp_g_per_km: 0
-
 dimensions:
   length_mm: 4713
   width_mm: 1881
@@ -99,44 +88,34 @@ dimensions:
   height_mm: 1624
   wheelbase_mm: 2984
   ground_clearance_mm: 147
-
 cargo:
   trunk_capacity_liters: 402
   trunk_max_liters: 1420
   frunk_capacity_liters: 100
-
 weight:
   curb_weight_kg: 2060
   gross_vehicle_weight_kg: 2540
   payload_kg: 480
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  towing_capacity_braked_kg: 750
-  towing_capacity_unbraked_kg: 750
-
-notes: |
-  The Standard Range RWD is the most affordable Mach-E variant, offering a 
-  balanced combination of range, performance, and price. Rear-wheel drive with 
-  a single permanent magnet motor provides efficient operation and spirited 
-  performance. 68 kWh battery enables 440 km WLTP range, sufficient for most 
-  daily driving needs. DC fast charging peaks at 150 kW. Includes Ford's 
-  Intelligent Backup Power for V2H/V2G capability. Standard features include 
-  SYNC 4A with 15.5-inch vertical touchscreen, Ford Co-Pilot360 driver assist.
-
+notes: "The Standard Range RWD is the most affordable Mach-E variant, offering a \n\
+  balanced combination of range, performance, and price. Rear-wheel drive with \n\
+  a single permanent magnet motor provides efficient operation and spirited \nperformance.\
+  \ 68 kWh battery enables 440 km WLTP range, sufficient for most \ndaily driving\
+  \ needs. DC fast charging peaks at 150 kW. Includes Ford's \nIntelligent Backup\
+  \ Power for V2H/V2G capability. Standard features include \nSYNC 4A with 15.5-inch\
+  \ vertical touchscreen, Ford Co-Pilot360 driver assist.\n"
 version_changes:
-  - version: "2024"
-    changes: |
-      Model year 2024 updates: Improved SYNC 4A software with Google integration, 
-      added Digital Experience pack, enhanced charging optimization, updated 
-      Battery Management System for better cold-weather performance.
-
-
+- version: '2024'
+  changes: "Model year 2024 updates: Improved SYNC 4A software with Google integration,\
+    \ \nadded Digital Experience pack, enhanced charging optimization, updated \n\
+    Battery Management System for better cold-weather performance.\n"
 metadata:
-  created_at: "2026-02-08T10:10:00Z"
-  updated_at: "2026-02-08T10:10:00Z"
+  created_at: '2026-02-08T10:10:00Z'
+  updated_at: '2026-02-08T10:10:00Z'
   data_quality: verified
   sources:
-    - https://www.ford.com/suvs-crossovers/mach-e/2024/
-    - https://www.ford.de/personenwagen/mustang-mach-e/spezifikationen
-    - https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&year=2024&make=Ford&model=Mustang%20Mach-E
-    - https://insideevs.com/reviews/443791/ford-mustang-mach-e-first-drive/
+  - https://www.ford.com/suvs-crossovers/mach-e/2024/
+  - https://www.ford.de/personenwagen/mustang-mach-e/spezifikationen
+  - https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&year=2024&make=Ford&model=Mustang%20Mach-E
+  - https://insideevs.com/reviews/443791/ford-mustang-mach-e-first-drive/

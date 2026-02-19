@@ -1,22 +1,15 @@
-# Hyundai Ioniq 5 Standard Range 2024 Variant
-# Entry-level RWD variant with smaller battery
-
 id: hyundai-ioniq-5-standard-range-2024
 name: Standard Range
 model_id: hyundai-ioniq-5
 model_year: 2024
 variant_code: I5-SR-58
-
-# Battery Specifications
 battery:
-  usable_kwh: 58.0  # Smaller battery than Long Range
+  usable_kwh: 58.0
   total_kwh: 63.0
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   warranty_years: 8
   warranty_km: 160000
   degradation_warranty_percent: 70
-
-# Range (WLTP - Combined)
 range:
   wltp_km: 384
   wltp_city_km: null
@@ -24,160 +17,129 @@ range:
   epa_miles: 220
   real_world_km: 320
   real_world_source: measured
-
-# Range Conditions
 range_conditions:
-  - temperature_c: 20
-    speed_kmh: 120
-    estimated_range_km: 300
-    conditions: "Highway, steady speed"
-  - temperature_c: -5
-    speed_kmh: 90
-    estimated_range_km: 260
-    conditions: "Winter, heating on"
-
-# Charging - AC
+- temperature_c: 20
+  speed_kmh: 120
+  estimated_range_km: 300
+  conditions: Highway, steady speed
+- temperature_c: -5
+  speed_kmh: 90
+  estimated_range_km: 260
+  conditions: Winter, heating on
 charging_ac:
   max_power_kw: 11
   connector_type: Type2
   onboard_charger_kw: 11
   charge_time_0_100_hours: 6.0
-
-# Charging - DC Fast Charging
 charging_dc:
-  max_power_kw: 220  # Same 800V architecture
+  max_power_kw: 220
   connector_type: CCS2
-  charge_time_10_80_minutes: 18  # Faster due to smaller battery
+  charge_time_10_80_minutes: 18
   charge_time_10_80_source: manufacturer
   charging_curve_type: optimized_800v
   peak_charge_rate_soc_percent: 20
   charge_speed_km_per_hour: 850
-
-# Charging Curve (800V advantage)
 charging_curve:
-  - soc_percent: 10
-    power_kw: 210
-  - soc_percent: 20
-    power_kw: 220
-  - soc_percent: 30
-    power_kw: 220
-  - soc_percent: 40
-    power_kw: 215
-  - soc_percent: 50
-    power_kw: 200
-  - soc_percent: 60
-    power_kw: 170
-  - soc_percent: 70
-    power_kw: 130
-  - soc_percent: 80
-    power_kw: 80
-  - soc_percent: 90
-    power_kw: 40
-
-# Bidirectional Charging / V2X
+- soc_percent: 10
+  power_kw: 210
+- soc_percent: 20
+  power_kw: 220
+- soc_percent: 30
+  power_kw: 220
+- soc_percent: 40
+  power_kw: 215
+- soc_percent: 50
+  power_kw: 200
+- soc_percent: 60
+  power_kw: 170
+- soc_percent: 70
+  power_kw: 130
+- soc_percent: 80
+  power_kw: 80
+- soc_percent: 90
+  power_kw: 40
 bidirectional_charging: true
 v2l_power_kw: 3.6
 v2h_capable: true
 v2g_capable: true
-
-# Performance
 performance:
-  electric_motors: 1  # Single motor RWD
-  motor_type: "Permanent Magnet Synchronous (rear)"
-  total_power_kw: 125  # 170 hp
+  electric_motors: 1
+  motor_type: Permanent Magnet Synchronous (rear)
+  total_power_kw: 125
   total_power_hp: 170
   total_torque_nm: 350
   drive_type: RWD
   acceleration_0_100_kmh: 8.5
   top_speed_kmh: 185
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 16.8
   epa_mpge: null
   efficiency_rating: B
-
-# Weight
 weight:
-  curb_weight_kg: 1890  # Lighter than Long Range AWD
+  curb_weight_kg: 1890
   gross_vehicle_weight_kg: 2400
   payload_kg: 510
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
-# Dimensions (same as Long Range)
 dimensions:
   length_mm: 4635
   width_mm: 1890
   height_mm: 1605
   wheelbase_mm: 3000
   ground_clearance_mm: 160
-
-# Cargo
 cargo:
   trunk_capacity_liters: 527
   trunk_max_liters: 1587
   frunk_capacity_liters: 24
-
-# Interior
 interior:
   seating_capacity: 5
   doors: 5
   trunk_capacity_liters: 527
   frunk_volume_liters: 24
-
-# Production & Availability
 production_status: active
-production_start_date: "2024-01-01"
+production_start_date: '2024-01-01'
 production_end_date: null
-assembly_location: "Ulsan, South Korea"
-
-# Platform
+assembly_location: Ulsan, South Korea
 platform_id: hyundai-e-gmp
-
-# Trim Level
 trim_level: Standard Range
-trim_position: 1  # Entry trim
+trim_position: 1
 base_trim: true
-
-# Features & Equipment
 standard_equipment:
-  - "12.3-inch digital cluster"
-  - "12.3-inch infotainment display"
-  - "V2L (Vehicle-to-Load) capability"
-  - "Highway Driving Assist 2"
-  - "Smart Cruise Control"
-  - "Lane Following Assist"
-  - "LED headlights"
-  - "17-inch alloy wheels"
-  - "Fabric seats"
-  - "Dual-zone climate control"
-  - "Rear parking sensors"
-
+- 12.3-inch digital cluster
+- 12.3-inch infotainment display
+- V2L (Vehicle-to-Load) capability
+- Highway Driving Assist 2
+- Smart Cruise Control
+- Lane Following Assist
+- LED headlights
+- 17-inch alloy wheels
+- Fabric seats
+- Dual-zone climate control
+- Rear parking sensors
 optional_equipment:
-  - name: "Vision Roof"
-    description: "Solar panel glass roof"
-  - name: "Relaxation Comfort Seats"
-    description: "Power-adjustable with leg rest"
-  - name: "BOSE Premium Sound"
-    description: "8-speaker system"
-
-# Sources
+- name: Vision Roof
+  description: Solar panel glass roof
+- name: Relaxation Comfort Seats
+  description: Power-adjustable with leg rest
+- name: BOSE Premium Sound
+  description: 8-speaker system
 sources:
-  - url: "https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications"
-    type: manufacturer
-    accessed_date: "2024-02-06"
-  - url: "https://ev-database.org/car/1443/Hyundai-IONIQ-5-58-kWh"
-    type: verified_database
-    accessed_date: "2024-02-06"
-
-# Notes
-notes: "Entry-level Ioniq 5 with smaller 58kWh battery and single motor RWD configuration. Still benefits from E-GMP 800V architecture for fast charging (10-80% in 18 min). More affordable option while maintaining key features like V2L capability. Good efficiency despite lower range."
-
-# Metadata
+- url: https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications
+  type: manufacturer
+  accessed_date: '2024-02-06'
+- url: https://ev-database.org/car/1443/Hyundai-IONIQ-5-58-kWh
+  type: verified_database
+  accessed_date: '2024-02-06'
+notes: Entry-level Ioniq 5 with smaller 58kWh battery and single motor RWD configuration.
+  Still benefits from E-GMP 800V architecture for fast charging (10-80% in 18 min).
+  More affordable option while maintaining key features like V2L capability. Good
+  efficiency despite lower range.
 metadata:
   data_quality: verified
-  data_verified_date: "2024-02-01"
-  last_updated: "2024-02-06"
-  created_at: "2024-02-06T23:22:00Z"
-  updated_at: "2024-02-06T23:22:00Z"
+  data_verified_date: '2024-02-01'
+  last_updated: '2024-02-06'
+  created_at: '2024-02-06T23:22:00Z'
+  updated_at: '2024-02-06T23:22:00Z'
+charging:
+  ac_max_kw: 11
+  dc_max_kw: 220

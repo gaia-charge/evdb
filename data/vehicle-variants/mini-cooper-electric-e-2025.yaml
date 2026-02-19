@@ -4,19 +4,16 @@ name: E
 variant_name: E
 trim_level: E
 model_year: 2025
-
 dimensions:
   length_mm: 3900
   width_mm: 1748
   height_mm: 1460
   wheelbase_mm: 2526
   ground_clearance_mm: 142
-
 cargo:
   trunk_capacity_liters: 200
   frunk_capacity_liters: 0
   trunk_max_liters: 800
-
 battery:
   usable_kwh: 54.2
   total_kwh: 57.0
@@ -27,7 +24,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 402
   wltp_city_km: 530
@@ -37,7 +33,6 @@ range:
   real_world_km: 350
   real_world_highway_km: 280
   real_world_city_km: 420
-
 charging:
   ac_charging:
     max_power_kw: 11
@@ -51,30 +46,31 @@ charging:
     time_10_80_percent_minutes: 30
     time_0_80_percent_minutes: 33
   charge_curve:
-    - soc_percent: 0
-      power_kw: 75
-    - soc_percent: 10
-      power_kw: 95
-    - soc_percent: 20
-      power_kw: 95
-    - soc_percent: 30
-      power_kw: 92
-    - soc_percent: 40
-      power_kw: 87
-    - soc_percent: 50
-      power_kw: 78
-    - soc_percent: 60
-      power_kw: 65
-    - soc_percent: 70
-      power_kw: 52
-    - soc_percent: 80
-      power_kw: 38
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 11
+  - soc_percent: 0
+    power_kw: 75
+  - soc_percent: 10
+    power_kw: 95
+  - soc_percent: 20
+    power_kw: 95
+  - soc_percent: 30
+    power_kw: 92
+  - soc_percent: 40
+    power_kw: 87
+  - soc_percent: 50
+    power_kw: 78
+  - soc_percent: 60
+    power_kw: 65
+  - soc_percent: 70
+    power_kw: 52
+  - soc_percent: 80
+    power_kw: 38
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 11
   bidirectional_charging: false
-
+  ac_max_kw: 11
+  dc_max_kw: 95
 motors:
   configuration: single
   type: permanent_magnet
@@ -87,25 +83,24 @@ motors:
     power_hp: 218
     torque_nm: 330
     type: permanent_magnet
-
 performance:
-  acceleration_0_100_kmh_seconds: 6.7
   top_speed_kmh: 170
   top_speed_limited: true
-
+  total_power_kw: 160
+  total_power_hp: 218
+  total_torque_nm: 330
+  acceleration_0_100_sec: 6.7
 efficiency:
   consumption_wltp_kwh_per_100km: 15.7
   consumption_real_world_kwh_per_100km: 17.4
   efficiency_rating_eu: B
   co2_emissions_wltp_g_per_km: 0
-
 weight:
   curb_weight_kg: 1590
   gross_vehicle_weight_kg: 1990
   payload_kg: 400
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -115,34 +110,31 @@ features:
   launch_control: false
   adjustable_regen_braking: true
   one_pedal_driving: true
-
 driving_modes:
-  - Personal
-  - Sport
-  - Green
-  - Green+
-
+- Personal
+- Sport
+- Green
+- Green+
 interior_materials:
   seats: Vescin (vegan synthetic leather)
   dashboard: Recycled polyester textile
   steering_wheel: Vegan leather
-
 version_info:
   release_date: 2025-01-01
   discontinuation_date: null
   facelift: false
   special_edition: false
   limited_production: false
-
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
   last_updated: '2026-02-10'
   sources:
-    - https://www.mini.com/en_GB/home/range/mini-electric/mini-electric-e.html
-  notes: >
-    2025 model year continuation of the Mini Cooper Electric E with the larger 54.2kWh
-    usable battery. Specs remain largely unchanged from the 2024 model year. 402km WLTP
-    range with 160kW (218hp) front motor. DC charging up to 95kW achieves 10-80% in
-    approximately 30 minutes. The E variant remains the most popular choice for customers
-    wanting more range from the Cooper Electric lineup.
+  - https://www.mini.com/en_GB/home/range/mini-electric/mini-electric-e.html
+  notes: '2025 model year continuation of the Mini Cooper Electric E with the larger
+    54.2kWh usable battery. Specs remain largely unchanged from the 2024 model year.
+    402km WLTP range with 160kW (218hp) front motor. DC charging up to 95kW achieves
+    10-80% in approximately 30 minutes. The E variant remains the most popular choice
+    for customers wanting more range from the Cooper Electric lineup.
+
+    '

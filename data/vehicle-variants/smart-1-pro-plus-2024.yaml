@@ -1,10 +1,8 @@
-# Smart #1 Pro+ 2024
 id: smart-1-pro-plus-2024
 name: Pro+
 model_id: smart-1
 model_year: 2024
 variant_code: S1PP
-
 battery:
   usable_kwh: 66.0
   total_kwh: 70.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 440
   wltp_city_km: 580
@@ -22,7 +19,6 @@ range:
   epa_km: null
   real_world_km: 380
   real_world_source: estimated
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -32,31 +28,30 @@ charging:
   dc_10_80_min: 29
   dc_0_100_min: 55
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 148
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 149
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 110
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 10
+    power_kw: 148
+  - soc_percent: 20
+    power_kw: 150
+  - soc_percent: 30
+    power_kw: 149
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 110
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 15
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 1
   type: permanent_magnet
@@ -64,18 +59,14 @@ motor:
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
-
 drivetrain: RWD
-
 performance:
-  acceleration_0_100_kmh_s: 6.7
   top_speed_kmh: 180
-
+  acceleration_0_100_sec: 6.7
 consumption:
   wltp_kwh_per_100km: 16.3
   real_world_kwh_per_100km: 18.5
   energy_efficiency_class: B
-
 dimensions:
   length_mm: 4270
   width_mm: 1822
@@ -83,65 +74,57 @@ dimensions:
   height_mm: 1636
   wheelbase_mm: 2750
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 313
   trunk_max_liters: 976
   frunk_capacity_liters: 15
-
 weight:
   curb_weight_kg: 1805
-  gross_vehicle_weight_kg: 2305
   gross_vehicle_weight_kg: 2305
   payload_kg: 500
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-  towing_capacity_braked_kg: 1600
-  towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 12.8" portrait touchscreen
-  - 9.2" digital driver display
-  - Smart OS with OTA updates
-  - Apple CarPlay & Android Auto
-  - LED headlights
-  - Panoramic glass roof (fixed)
-  - Heated front seats
-  - Dual-zone climate control
-  - Heat pump
-  - Synthetic leather upholstery
-  - 18" alloy wheels
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Blind spot monitoring
-  - Rear parking sensors
-  - Keyless entry
-  - Manual tailgate
-
+- 12.8" portrait touchscreen
+- 9.2" digital driver display
+- Smart OS with OTA updates
+- Apple CarPlay & Android Auto
+- LED headlights
+- Panoramic glass roof (fixed)
+- Heated front seats
+- Dual-zone climate control
+- Heat pump
+- Synthetic leather upholstery
+- 18" alloy wheels
+- Adaptive cruise control
+- Lane keeping assist
+- Automatic emergency braking
+- Blind spot monitoring
+- Rear parking sensors
+- Keyless entry
+- Manual tailgate
 optional_equipment:
-  - name: 19" alloy wheels
-    cost: 900
-  - name: Pulse Package
-    description: Premium sound and ambient lighting
-    cost: 1500
-  - name: 360-degree camera
-    cost: 600
-  - name: Power tailgate
-    cost: 500
-  - name: Electrochromic panoramic roof
-    cost: 1200
-
-
+- name: 19" alloy wheels
+  cost: 900
+- name: Pulse Package
+  description: Premium sound and ambient lighting
+  cost: 1500
+- name: 360-degree camera
+  cost: 600
+- name: Power tailgate
+  cost: 500
+- name: Electrochromic panoramic roof
+  cost: 1200
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   sources:
-    - https://www.smart.com/de/de/modelle/1/pro-plus
-    - https://ev-database.org/car/1873/Smart-1-Pro-Plus
-  last_updated: "2026-02-08"
-  notes: >
-    Entry-level Smart #1 variant offering excellent value at lower price point. 
-    Same 66kWh battery and 200kW motor as Premium but with slightly reduced equipment. 
-    Still includes heat pump, 22kW AC charging, and core safety features. 
-    Perfect for buyers wanting Smart #1 performance and range without Premium luxury features.
+  - https://www.smart.com/de/de/modelle/1/pro-plus
+  - https://ev-database.org/car/1873/Smart-1-Pro-Plus
+  last_updated: '2026-02-08'
+  notes: 'Entry-level Smart #1 variant offering excellent value at lower price point.  Same
+    66kWh battery and 200kW motor as Premium but with slightly reduced equipment.  Still
+    includes heat pump, 22kW AC charging, and core safety features.  Perfect for buyers
+    wanting Smart #1 performance and range without Premium luxury features.
+
+    '

@@ -1,103 +1,88 @@
-# Škoda Enyaq iV 80 2024 - Most Popular Long-Range Variant
 id: skoda-enyaq-iv-80-2024
 model_id: skoda-enyaq-iv
-name: "80"
+name: '80'
 model_year: 2024
-trim_level: "80"
-version_name: "2024 Facelift"
-
-description: |
-  The Škoda Enyaq iV 80 is the most popular variant in the lineup, offering the largest 82kWh battery 
-  for excellent range (up to 570km WLTP) combined with competitive pricing. The 2024 facelift brought 
-  updated exterior styling, improved Infotainment ME3 software with ChatGPT-powered Laura assistant, 
-  and slightly enhanced efficiency.
-  
-  This RWD variant prioritizes efficiency and range over performance, making it ideal for families 
-  and long-distance travel. It offers class-leading interior space (best-in-class rear legroom), 
-  a huge 585L boot, and Škoda's signature "Simply Clever" practical features.
-  
-  The iV 80 competes directly with VW ID.4 Pro and Audi Q4 e-tron 50, but typically costs €3,000-5,000 
-  less while offering similar or better equipment levels and more space.
-
+trim_level: '80'
+version_name: 2024 Facelift
+description: "The Škoda Enyaq iV 80 is the most popular variant in the lineup, offering\
+  \ the largest 82kWh battery \nfor excellent range (up to 570km WLTP) combined with\
+  \ competitive pricing. The 2024 facelift brought \nupdated exterior styling, improved\
+  \ Infotainment ME3 software with ChatGPT-powered Laura assistant, \nand slightly\
+  \ enhanced efficiency.\n\nThis RWD variant prioritizes efficiency and range over\
+  \ performance, making it ideal for families \nand long-distance travel. It offers\
+  \ class-leading interior space (best-in-class rear legroom), \na huge 585L boot,\
+  \ and Škoda's signature \"Simply Clever\" practical features.\n\nThe iV 80 competes\
+  \ directly with VW ID.4 Pro and Audi Q4 e-tron 50, but typically costs €3,000-5,000\
+  \ \nless while offering similar or better equipment levels and more space.\n"
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
-  chemistry: NCM  # Nickel-Cobalt-Manganese
-  cells_configuration: "288 cells (96s3p pouch cells)"
-  supplier: "LG Energy Solution / Samsung SDI"
+  chemistry: NCM
+  cells_configuration: 288 cells (96s3p pouch cells)
+  supplier: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling with heat pump integration"
+  thermal_management: Liquid cooling with heat pump integration
   preconditioning: true
-
 range:
-  wltp_km: 570  # 2024 facelift (2023: 558km)
+  wltp_km: 570
   wltp_city_km: 750
   wltp_highway_km: 460
-  real_world_km: 490  # Realistic combined cycle
-  epa_km: null  # Not sold in US
+  real_world_km: 490
+  epa_km: null
   epa_miles: null
-
 charging:
-  ac_max_power_kw: 11  # Standard 3-phase Type2 (optional 22kW upgrade available)
-  ac_charge_time_hours: 7.5  # 0-100% at 11kW
+  ac_max_power_kw: 11
+  ac_charge_time_hours: 7.5
   ac_ports:
-    - type: Type2
-      max_power_kw: 11
-      phases: 3
-  
-  dc_max_power_kw: 135  # 2024 facelift (2023: 125kW)
-  dc_charge_time_minutes: 29  # 10-80% at 135kW
+  - type: Type2
+    max_power_kw: 11
+    phases: 3
+  dc_max_power_kw: 135
+  dc_charge_time_minutes: 29
   dc_ports:
-    - type: CCS2
-      max_power_kw: 135
-  
+  - type: CCS2
+    max_power_kw: 135
   charge_curve:
-    - percent: 0
-      power_kw: 10
-    - percent: 10
-      power_kw: 135
-    - percent: 30
-      power_kw: 132
-    - percent: 50
-      power_kw: 125
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 50
-    - percent: 90
-      power_kw: 30
-    - percent: 100
-      power_kw: 10
-  
+  - percent: 0
+    power_kw: 10
+  - percent: 10
+    power_kw: 135
+  - percent: 30
+    power_kw: 132
+  - percent: 50
+    power_kw: 125
+  - percent: 70
+    power_kw: 85
+  - percent: 80
+    power_kw: 50
+  - percent: 90
+    power_kw: 30
+  - percent: 100
+    power_kw: 10
   bidirectional:
     v2l: false
     v2l_max_kw: null
     v2h: false
     v2g: false
-
 motors:
-  - position: rear
-    type: permanent_magnet  # Permanent magnet synchronous motor (PSM)
-    max_power_kw: 210
-    max_power_hp: 286
-    max_torque_nm: 545
-    description: "APP310 motor (shared with VW ID.4 Pro)"
-
+- position: rear
+  type: permanent_magnet
+  max_power_kw: 210
+  max_power_hp: 286
+  max_torque_nm: 545
+  description: APP310 motor (shared with VW ID.4 Pro)
 drivetrain:
   type: RWD
   drive_type: RWD
-
 performance:
-  acceleration_0_100_kmh_seconds: 8.5  # 2024 (2023: 8.7s, slight improvement)
-  top_speed_kmh: 160  # Electronically limited
-  
+  top_speed_kmh: 160
+  acceleration_0_100_sec: 8.5
 efficiency:
-  wltp_kwh_per_100km: 16.8  # 2024 facelift (2023: 17.2)
+  wltp_kwh_per_100km: 16.8
   real_world_kwh_per_100km: 19.0
   co2_emissions_wltp_g_per_km: 0
-
 weights:
   curb_weight_kg: 2050
   gross_vehicle_weight_kg: 2600
@@ -106,67 +91,60 @@ weights:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 50
   distribution_rear_percent: 50
-
 software:
-  version: "ME3"  # 2024 facelift, major upgrade from ME2
+  version: ME3
   ota_updates: true
   features:
-    - "Laura virtual assistant (ChatGPT integration)"
-    - "Improved UI responsiveness"
-    - "Faster boot time"
-    - "More physical buttons vs touchscreen (customer feedback)"
-    - "Backlit climate control sliders"
-    - "Improved voice control"
-
+  - Laura virtual assistant (ChatGPT integration)
+  - Improved UI responsiveness
+  - Faster boot time
+  - More physical buttons vs touchscreen (customer feedback)
+  - Backlit climate control sliders
+  - Improved voice control
 comfort:
-  climate_control: "3-zone automatic climate control"
-  heat_pump: true  # Standard, improves winter efficiency
-  heated_seats_front: true  # Standard
-  heated_seats_rear: true  # Optional
-  heated_steering_wheel: true  # Optional
-  ventilated_seats_front: false  # Not available
-  massage_seats: false  # Not available
-  panoramic_roof: true  # Optional
-  ambient_lighting: true  # Standard (10 colors)
-
+  climate_control: 3-zone automatic climate control
+  heat_pump: true
+  heated_seats_front: true
+  heated_seats_rear: true
+  heated_steering_wheel: true
+  ventilated_seats_front: false
+  massage_seats: false
+  panoramic_roof: true
+  ambient_lighting: true
 audio:
   standard_speakers: 6
-  premium_system: "Canton Sound System"
+  premium_system: Canton Sound System
   premium_speakers: 12
   premium_power_watts: 570
-  
 driver_assistance:
-  adaptive_cruise_control: true  # Optional (part of Travel Assist)
-  lane_keeping_assist: true  # Standard (Lane Assist)
-  blind_spot_monitoring: true  # Standard (Side Assist)
-  parking_sensors_front: true  # Standard
-  parking_sensors_rear: true  # Standard
-  parking_camera: true  # Optional (rear camera standard, 360° optional)
-  traffic_sign_recognition: true  # Standard
-  driver_attention_warning: true  # Standard
-  automatic_emergency_braking: true  # Standard (Front Assist)
-  
+  adaptive_cruise_control: true
+  lane_keeping_assist: true
+  blind_spot_monitoring: true
+  parking_sensors_front: true
+  parking_sensors_rear: true
+  parking_camera: true
+  traffic_sign_recognition: true
+  driver_attention_warning: true
+  automatic_emergency_braking: true
 lighting:
-  headlights: "LED Matrix"  # Optional (standard LED)
-  daytime_running_lights: "LED"
-  taillights: "LED with dynamic turn signals"
+  headlights: LED Matrix
+  daytime_running_lights: LED
+  taillights: LED with dynamic turn signals
   ambient_lighting: true
   features:
-    - "LED Matrix with Crystalline elements"
-    - "Dynamic turn signals front and rear"
-    - "Coming/Leaving Home function"
-    - "LED puddle lights in doors"
-
+  - LED Matrix with Crystalline elements
+  - Dynamic turn signals front and rear
+  - Coming/Leaving Home function
+  - LED puddle lights in doors
 wheels:
-  standard_size: "19-inch"
-  standard_design: "Vela Aero"
+  standard_size: 19-inch
+  standard_design: Vela Aero
   optional_sizes:
-    - "20-inch"
-    - "21-inch"
+  - 20-inch
+  - 21-inch
   optional_designs:
-    - "Procyon (20-inch)"
-    - "Taurus (21-inch, vRS design)"
-
+  - Procyon (20-inch)
+  - Taurus (21-inch, vRS design)
 dimensions:
   length_mm: 4649
   width_mm: 1879
@@ -174,28 +152,34 @@ dimensions:
   height_mm: 1616
   wheelbase_mm: 2770
   ground_clearance_mm: 178
-
 cargo:
   trunk_capacity_liters: 585
   trunk_max_liters: 1710
   frunk_capacity_liters: 0
-
-
 metadata:
-  created_at: "2026-02-07"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-07'
+  updated_at: '2026-02-10'
   data_quality: verified
   data_sources:
-    - "Škoda official specifications (skoda-auto.com, 2024)"
-    - "Škoda press materials (2024 facelift)"
-    - "What Car? independent testing (whatcar.com)"
-    - "Auto Express road test (autoexpress.co.uk)"
-    - "Carwow review (carwow.co.uk)"
-    - "InsideEVs range test"
-    - "ADAC Ecotest (Germany)"
-  notes: |
-    2024 facelift brings significant software improvements (ME3 vs ME2). 135kW DC charging is upgrade from 125kW in 2023 models.
-    Range improved from 558km to 570km WLTP (2% efficiency gain). More physical buttons vs full-touch (response to customer feedback).
-    Laura AI assistant powered by ChatGPT (industry-first integration). Shares APP310 motor and 82kWh battery with VW ID.4 Pro.
-    Typically €3,000-5,000 cheaper than equivalent VW ID.4 Pro. Class-leading rear legroom (more than VW ID.4).
+  - Škoda official specifications (skoda-auto.com, 2024)
+  - Škoda press materials (2024 facelift)
+  - What Car? independent testing (whatcar.com)
+  - Auto Express road test (autoexpress.co.uk)
+  - Carwow review (carwow.co.uk)
+  - InsideEVs range test
+  - ADAC Ecotest (Germany)
+  notes: '2024 facelift brings significant software improvements (ME3 vs ME2). 135kW
+    DC charging is upgrade from 125kW in 2023 models.
+
+    Range improved from 558km to 570km WLTP (2% efficiency gain). More physical buttons
+    vs full-touch (response to customer feedback).
+
+    Laura AI assistant powered by ChatGPT (industry-first integration). Shares APP310
+    motor and 82kWh battery with VW ID.4 Pro.
+
+    Typically €3,000-5,000 cheaper than equivalent VW ID.4 Pro. Class-leading rear
+    legroom (more than VW ID.4).
+
     Best-in-class boot: 585L (ID.4: 543L, Model Y: 854L but less rear legroom).
+
+    '

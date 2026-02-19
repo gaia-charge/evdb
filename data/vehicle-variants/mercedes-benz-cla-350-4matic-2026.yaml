@@ -1,10 +1,8 @@
-# Mercedes-Benz CLA 350 4MATIC 2026
 id: mercedes-benz-cla-350-4matic-2026
-name: "CLA 350 4MATIC"
+name: CLA 350 4MATIC
 model_id: mercedes-benz-cla
 model_year: 2026
 variant_code: CLA350
-
 battery:
   usable_kwh: 85.0
   total_kwh: 90.0
@@ -15,7 +13,6 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
-
 range:
   wltp_km: 773
   wltp_city_km: 970
@@ -23,7 +20,6 @@ range:
   epa_km: null
   real_world_km: 575
   real_world_source: ev-database.org
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -32,31 +28,30 @@ charging:
   dc_connector: CCS2
   dc_10_80_min: 16
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 320
-    - soc_percent: 20
-      power_kw: 353
-    - soc_percent: 30
-      power_kw: 340
-    - soc_percent: 40
-      power_kw: 300
-    - soc_percent: 50
-      power_kw: 250
-    - soc_percent: 60
-      power_kw: 200
-    - soc_percent: 70
-      power_kw: 140
-    - soc_percent: 80
-      power_kw: 90
-    - soc_percent: 90
-      power_kw: 50
-    - soc_percent: 100
-      power_kw: 20
+  - soc_percent: 10
+    power_kw: 320
+  - soc_percent: 20
+    power_kw: 353
+  - soc_percent: 30
+    power_kw: 340
+  - soc_percent: 40
+    power_kw: 300
+  - soc_percent: 50
+    power_kw: 250
+  - soc_percent: 60
+    power_kw: 200
+  - soc_percent: 70
+    power_kw: 140
+  - soc_percent: 80
+    power_kw: 90
+  - soc_percent: 90
+    power_kw: 50
+  - soc_percent: 100
+    power_kw: 20
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 2
   type: permanent_magnet
@@ -64,18 +59,14 @@ motor:
   total_power_kw: 260
   total_power_hp: 354
   total_torque_nm: 515
-
 drivetrain: AWD
-
 performance:
-  acceleration_0_100_kmh_s: 4.9
   top_speed_kmh: 210
-
+  acceleration_0_100_sec: 4.9
 consumption:
   wltp_kwh_per_100km: 12.5
   real_world_kwh_per_100km: 14.8
   energy_efficiency_class: A+
-
 dimensions:
   length_mm: 4723
   width_mm: 1855
@@ -83,70 +74,65 @@ dimensions:
   wheelbase_mm: 2790
   ground_clearance_mm: 140
   drag_coefficient: 0.22
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1300
   frunk_capacity_liters: 101
-
-
 weight:
   curb_weight_kg: 2130
   gross_vehicle_weight_kg: 2630
   payload_kg: 500
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 11.9" OLED center touchscreen with MB.OS
-  - Digital instrument cluster
-  - Apple CarPlay & Android Auto
-  - LED high-performance headlights
-  - Heated front seats
-  - Dual-zone climate control
-  - Heat pump
-  - Synthetic leather upholstery (ARTICO)
-  - 19" alloy wheels
-  - Adaptive cruise control with active lane change assist
-  - Lane keeping assist
-  - Automatic emergency braking
-  - 360-degree parking camera
-  - Parking assist with remote parking
-  - Keyless entry & start
-  - Wireless phone charging
-  - Hey Mercedes voice assistant
-  - Plug & Charge (ISO 15118-2)
-  - Battery preconditioning via navigation
-  - Ambient lighting (64 colors)
-  - Sport suspension
-
+- 11.9" OLED center touchscreen with MB.OS
+- Digital instrument cluster
+- Apple CarPlay & Android Auto
+- LED high-performance headlights
+- Heated front seats
+- Dual-zone climate control
+- Heat pump
+- Synthetic leather upholstery (ARTICO)
+- 19" alloy wheels
+- Adaptive cruise control with active lane change assist
+- Lane keeping assist
+- Automatic emergency braking
+- 360-degree parking camera
+- Parking assist with remote parking
+- Keyless entry & start
+- Wireless phone charging
+- Hey Mercedes voice assistant
+- Plug & Charge (ISO 15118-2)
+- Battery preconditioning via navigation
+- Ambient lighting (64 colors)
+- Sport suspension
 optional_equipment:
-  - name: Superscreen (passenger display)
-    cost: 1490
-  - name: Augmented Reality Head-Up Display
-    cost: 1190
-  - name: AIRMATIC air suspension
-    cost: 1785
-  - name: Burmester surround sound system
-    cost: 590
-  - name: 20" AMG alloy wheels
-    cost: 1428
-  - name: Panoramic sliding sunroof
-    cost: 1416
-  - name: AMG Line Exterior
-    cost: 1547
-  - name: Night package
-    cost: 476
-
+- name: Superscreen (passenger display)
+  cost: 1490
+- name: Augmented Reality Head-Up Display
+  cost: 1190
+- name: AIRMATIC air suspension
+  cost: 1785
+- name: Burmester surround sound system
+  cost: 590
+- name: 20" AMG alloy wheels
+  cost: 1428
+- name: Panoramic sliding sunroof
+  cost: 1416
+- name: AMG Line Exterior
+  cost: 1547
+- name: Night package
+  cost: 476
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   sources:
-    - https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC
-    - https://www.mercedes-benz.com/
-  last_updated: "2026-02-10"
-  notes: >
-    Top-spec CLA with dual-motor AWD and 90 kWh NMC battery on 800V MMA platform.
-    260 kW (354 hp) combined output, 0-100 km/h in 4.9 seconds. 773 km WLTP range 
-    despite AWD. Ultra-fast 353 kW DC charging enables 10-80% in 16 minutes.
-    Deliveries expected late 2025 / early 2026.
+  - https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC
+  - https://www.mercedes-benz.com/
+  last_updated: '2026-02-10'
+  notes: 'Top-spec CLA with dual-motor AWD and 90 kWh NMC battery on 800V MMA platform.
+    260 kW (354 hp) combined output, 0-100 km/h in 4.9 seconds. 773 km WLTP range  despite
+    AWD. Ultra-fast 353 kW DC charging enables 10-80% in 16 minutes. Deliveries expected
+    late 2025 / early 2026.
+
+    '

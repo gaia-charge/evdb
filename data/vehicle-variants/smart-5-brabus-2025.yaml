@@ -1,10 +1,8 @@
-# Smart #5 Brabus 2025
 id: smart-5-brabus-2025
 name: Brabus
 model_id: smart-5
 model_year: 2025
 variant_code: S5BRB
-
 battery:
   usable_kwh: 94.0
   total_kwh: 100.0
@@ -15,7 +13,6 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
-
 range:
   wltp_km: 540
   wltp_city_km: 620
@@ -23,7 +20,6 @@ range:
   epa_km: null
   real_world_km: 450
   real_world_source: estimated
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -33,32 +29,31 @@ charging:
   dc_10_80_min: 17
   dc_0_100_min: 48
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 380
-    - soc_percent: 20
-      power_kw: 400
-    - soc_percent: 30
-      power_kw: 390
-    - soc_percent: 40
-      power_kw: 340
-    - soc_percent: 50
-      power_kw: 270
-    - soc_percent: 60
-      power_kw: 200
-    - soc_percent: 70
-      power_kw: 140
-    - soc_percent: 80
-      power_kw: 90
-    - soc_percent: 90
-      power_kw: 50
-    - soc_percent: 100
-      power_kw: 25
+  - soc_percent: 10
+    power_kw: 380
+  - soc_percent: 20
+    power_kw: 400
+  - soc_percent: 30
+    power_kw: 390
+  - soc_percent: 40
+    power_kw: 340
+  - soc_percent: 50
+    power_kw: 270
+  - soc_percent: 60
+    power_kw: 200
+  - soc_percent: 70
+    power_kw: 140
+  - soc_percent: 80
+    power_kw: 90
+  - soc_percent: 90
+    power_kw: 50
+  - soc_percent: 100
+    power_kw: 25
   bidirectional:
     v2l: true
     v2l_power_kw: 3.3
     v2g: false
     v2h: false
-
 motor:
   count: 2
   type: permanent_magnet
@@ -66,18 +61,14 @@ motor:
   total_power_kw: 475
   total_power_hp: 646
   total_torque_nm: 710
-
 drivetrain: AWD
-
 performance:
-  acceleration_0_100_kmh_s: 3.8
   top_speed_kmh: 210
-
+  acceleration_0_100_sec: 3.8
 consumption:
   wltp_kwh_per_100km: 19.9
   real_world_kwh_per_100km: 22.5
   energy_efficiency_class: C
-
 dimensions:
   length_mm: 4705
   width_mm: 1920
@@ -85,63 +76,59 @@ dimensions:
   height_mm: 1705
   wheelbase_mm: 2900
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 530
   trunk_max_liters: 1530
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2378
   gross_vehicle_weight_kg: 2850
   payload_kg: 472
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 13" touchscreen with Smart OS 2.0
-  - 10.3" digital driver display
-  - Head-up display
-  - Apple CarPlay & Android Auto
-  - LED matrix headlights
-  - Heated front and rear seats
-  - Ventilated front seats
-  - Tri-zone climate control
-  - Heat pump
-  - Nappa leather upholstery with Brabus branding
-  - 21" Brabus alloy wheels
-  - Adaptive cruise control with highway assist
-  - Lane keeping assist
-  - Automatic emergency braking
-  - 360-degree parking camera
-  - Remote parking
-  - Keyless entry & start
-  - V2L outlet (3.3 kW)
-  - Wireless phone charging
-  - Power tailgate with gesture control
-  - Ambient lighting (64 colors)
-  - Brabus premium sound system
-  - Panoramic glass roof
-  - Air suspension
-  - Brabus sport suspension tuning
-  - Brabus exterior styling package
-  - Performance brakes
-
+- 13" touchscreen with Smart OS 2.0
+- 10.3" digital driver display
+- Head-up display
+- Apple CarPlay & Android Auto
+- LED matrix headlights
+- Heated front and rear seats
+- Ventilated front seats
+- Tri-zone climate control
+- Heat pump
+- Nappa leather upholstery with Brabus branding
+- 21" Brabus alloy wheels
+- Adaptive cruise control with highway assist
+- Lane keeping assist
+- Automatic emergency braking
+- 360-degree parking camera
+- Remote parking
+- Keyless entry & start
+- V2L outlet (3.3 kW)
+- Wireless phone charging
+- Power tailgate with gesture control
+- Ambient lighting (64 colors)
+- Brabus premium sound system
+- Panoramic glass roof
+- Air suspension
+- Brabus sport suspension tuning
+- Brabus exterior styling package
+- Performance brakes
 optional_equipment:
-  - name: Rear-seat entertainment screens
-    cost: 2000
-  - name: Carbon fiber exterior accents
-    cost: 2500
-
+- name: Rear-seat entertainment screens
+  cost: 2000
+- name: Carbon fiber exterior accents
+  cost: 2500
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   sources:
-    - https://en.wikipedia.org/wiki/Smart_5
-    - https://www.smart.com/
-  last_updated: "2026-02-09"
-  notes: >
-    Performance flagship of Smart #5 range. Dual motor AWD with 475kW/646hp.
+  - https://en.wikipedia.org/wiki/Smart_5
+  - https://www.smart.com/
+  last_updated: '2026-02-09'
+  notes: 'Performance flagship of Smart #5 range. Dual motor AWD with 475kW/646hp.
     3.8s 0-100 km/h. 100kWh battery with 800V architecture and 400kW DC charging.
-    Brabus styling, sport suspension, and premium interior. 540km WLTP range.
-    European deliveries from September 2025.
+    Brabus styling, sport suspension, and premium interior. 540km WLTP range. European
+    deliveries from September 2025.
+
+    '

@@ -1,49 +1,36 @@
-# BMW i4 M50 2025 Variant
-# High-performance dual-motor AWD variant
-
 id: bmw-i4-m50-2025
 name: M50
 model_id: bmw-i4
 model_year: 2025
 variant_code: M50
-
-# Battery Specifications
 battery:
   usable_kwh: 80.7
   total_kwh: 83.9
-  chemistry: NMC  # Nickel Manganese Cobalt
+  chemistry: NMC
   warranty_years: 8
   warranty_km: 160000
   degradation_warranty_percent: 70
-
-# Range (WLTP - Combined)
 range:
-  wltp_km: 510  # Reduced vs eDrive40 due to higher performance
+  wltp_km: 510
   wltp_city_km: null
   wltp_highway_km: null
   epa_miles: 271
   real_world_km: 430
   real_world_source: estimated
-
-# Range Conditions
 range_conditions:
-  - temperature_c: 20
-    speed_kmh: 120
-    estimated_range_km: 400
-    conditions: "Highway, steady speed"
-  - temperature_c: -5
-    speed_kmh: 90
-    estimated_range_km: 340
-    conditions: "Winter, heating on"
-
-# Charging - AC
+- temperature_c: 20
+  speed_kmh: 120
+  estimated_range_km: 400
+  conditions: Highway, steady speed
+- temperature_c: -5
+  speed_kmh: 90
+  estimated_range_km: 340
+  conditions: Winter, heating on
 charging_ac:
   max_power_kw: 11
   connector_type: Type2
   onboard_charger_kw: 11
   charge_time_0_100_hours: 8.25
-
-# Charging - DC Fast Charging
 charging_dc:
   max_power_kw: 205
   connector_type: CCS2
@@ -52,134 +39,110 @@ charging_dc:
   charging_curve_type: standard
   peak_charge_rate_soc_percent: 30
   charge_speed_km_per_hour: 900
-
-# Charging Curve
 charging_curve:
-  - soc_percent: 10
-    power_kw: 195
-  - soc_percent: 20
-    power_kw: 205
-  - soc_percent: 30
-    power_kw: 205
-  - soc_percent: 40
-    power_kw: 190
-  - soc_percent: 50
-    power_kw: 170
-  - soc_percent: 60
-    power_kw: 140
-  - soc_percent: 70
-    power_kw: 105
-  - soc_percent: 80
-    power_kw: 70
-  - soc_percent: 90
-    power_kw: 35
-
-# Bidirectional Charging / V2X
+- soc_percent: 10
+  power_kw: 195
+- soc_percent: 20
+  power_kw: 205
+- soc_percent: 30
+  power_kw: 205
+- soc_percent: 40
+  power_kw: 190
+- soc_percent: 50
+  power_kw: 170
+- soc_percent: 60
+  power_kw: 140
+- soc_percent: 70
+  power_kw: 105
+- soc_percent: 80
+  power_kw: 70
+- soc_percent: 90
+  power_kw: 35
 bidirectional_charging: false
 v2l_power_kw: null
 v2h_capable: false
 v2g_capable: false
-
-# Performance
 performance:
-  electric_motors: 2  # Dual motor AWD
-  motor_type: "Synchronous (front + rear)"
-  total_power_kw: 400  # 544 hp
+  electric_motors: 2
+  motor_type: Synchronous (front + rear)
+  total_power_kw: 400
   total_power_hp: 544
   total_torque_nm: 795
   drive_type: AWD
   acceleration_0_100_kmh: 3.9
   top_speed_kmh: 225
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 18.0  # Higher than eDrive40
+  wltp_kwh_per_100km: 18.0
   epa_mpge: null
   efficiency_rating: C
-
-# Weight
 weight:
-  curb_weight_kg: 2215  # Heavier than eDrive40
+  curb_weight_kg: 2215
   gross_vehicle_weight_kg: 2720
   payload_kg: 505
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
-# Dimensions (same as base i4)
 cargo:
   trunk_capacity_liters: 470
   trunk_max_liters: 1290
   frunk_capacity_liters: 0
-
 dimensions:
   length_mm: 4783
   width_mm: 1852
   height_mm: 1448
   wheelbase_mm: 2856
   ground_clearance_mm: 126
-
-# Interior
 interior:
   seating_capacity: 5
   doors: 4
   trunk_capacity_liters: 470
   frunk_volume_liters: null
-
-# Production & Availability
 production_status: active
-production_start_date: "2023-11-01"
+production_start_date: '2023-11-01'
 production_end_date: null
-assembly_location: "Munich, Germany"
-
-# Platform
+assembly_location: Munich, Germany
 platform_id: bmw-clar-ev
-
-# Trim Level
 trim_level: M50
-trim_position: 2  # Performance trim (above eDrive40)
+trim_position: 2
 base_trim: false
-
-# Features & Equipment
 standard_equipment:
-  - "M Sport Package"
-  - "Adaptive M Suspension"
-  - "M Sport Brakes"
-  - "19-inch M alloy wheels"
-  - "M Sport steering wheel"
-  - "M Sport seats"
-  - "BMW Live Cockpit Plus"
-  - "BMW Curved Display (12.3\" + 14.9\")"
-  - "BMW Operating System 8.5"
-  - "Harman Kardon audio"
-  - "Driving Assistant Professional"
-  - "Parking Assistant Plus"
-  - "BMW IconicSounds Electric by Hans Zimmer"
-  - "Highway Assistant"
-
+- M Sport Package
+- Adaptive M Suspension
+- M Sport Brakes
+- 19-inch M alloy wheels
+- M Sport steering wheel
+- M Sport seats
+- BMW Live Cockpit Plus
+- BMW Curved Display (12.3" + 14.9")
+- BMW Operating System 8.5
+- Harman Kardon audio
+- Driving Assistant Professional
+- Parking Assistant Plus
+- BMW IconicSounds Electric by Hans Zimmer
+- Highway Assistant
 optional_equipment:
-  - name: "BMW Individual paint"
-    description: "Extended color palette"
-  - name: "Comfort Access"
-    description: "Keyless entry and start"
-  - name: "Bowers & Wilkins audio"
-    description: "Premium audio upgrade"
-
-# Sources
+- name: BMW Individual paint
+  description: Extended color palette
+- name: Comfort Access
+  description: Keyless entry and start
+- name: Bowers & Wilkins audio
+  description: Premium audio upgrade
 sources:
-  - url: "https://www.bmw.com/en/all-models/m-series/i4-m50/2025/bmw-i4-m50-overview.html"
-    type: manufacturer
-    accessed_date: "2026-02-09"
-  - url: "https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2025/bmw-i4-m50.html"
-    type: manufacturer
-    accessed_date: "2026-02-09"
-
-# Notes
-notes: "M50 is the performance variant with dual motors and AWD. 2025 model features updated OS 8.5 and enhanced Highway Assistant. M-specific suspension, brakes, and styling. Sound design by Hans Zimmer creates artificial engine sound. Slightly reduced range compared to eDrive40 due to higher power output and weight."
-
-# Metadata
+- url: https://www.bmw.com/en/all-models/m-series/i4-m50/2025/bmw-i4-m50-overview.html
+  type: manufacturer
+  accessed_date: '2026-02-09'
+- url: https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2025/bmw-i4-m50.html
+  type: manufacturer
+  accessed_date: '2026-02-09'
+notes: M50 is the performance variant with dual motors and AWD. 2025 model features
+  updated OS 8.5 and enhanced Highway Assistant. M-specific suspension, brakes, and
+  styling. Sound design by Hans Zimmer creates artificial engine sound. Slightly reduced
+  range compared to eDrive40 due to higher power output and weight.
 metadata:
   data_quality: verified
-  data_verified_date: "2026-02-09"
-  last_updated: "2026-02-09"
-  created_at: "2026-02-09T04:00:00Z"
-  updated_at: "2026-02-09T04:00:00Z"
+  data_verified_date: '2026-02-09'
+  last_updated: '2026-02-09'
+  created_at: '2026-02-09T04:00:00Z'
+  updated_at: '2026-02-09T04:00:00Z'
+charging:
+  ac_max_kw: 11
+  dc_max_kw: 205

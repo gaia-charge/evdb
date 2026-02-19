@@ -1,10 +1,8 @@
-# Mercedes-Benz CLA 200 2026
 id: mercedes-benz-cla-200-2026
-name: "CLA 200"
+name: CLA 200
 model_id: mercedes-benz-cla
 model_year: 2026
 variant_code: CLA200
-
 battery:
   usable_kwh: 58.0
   total_kwh: 60.0
@@ -15,7 +13,6 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
-
 range:
   wltp_km: 541
   wltp_city_km: 680
@@ -23,7 +20,6 @@ range:
   epa_km: null
   real_world_km: 400
   real_world_source: ev-database.org
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -32,31 +28,30 @@ charging:
   dc_connector: CCS2
   dc_10_80_min: 21
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 180
-    - soc_percent: 20
-      power_kw: 200
-    - soc_percent: 30
-      power_kw: 190
-    - soc_percent: 40
-      power_kw: 160
-    - soc_percent: 50
-      power_kw: 130
-    - soc_percent: 60
-      power_kw: 100
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 10
+    power_kw: 180
+  - soc_percent: 20
+    power_kw: 200
+  - soc_percent: 30
+    power_kw: 190
+  - soc_percent: 40
+    power_kw: 160
+  - soc_percent: 50
+    power_kw: 130
+  - soc_percent: 60
+    power_kw: 100
+  - soc_percent: 70
+    power_kw: 75
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 30
+  - soc_percent: 100
+    power_kw: 15
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 1
   type: permanent_magnet
@@ -64,18 +59,14 @@ motor:
   total_power_kw: 165
   total_power_hp: 224
   total_torque_nm: 335
-
 drivetrain: RWD
-
 performance:
-  acceleration_0_100_kmh_s: 7.5
   top_speed_kmh: 210
-
+  acceleration_0_100_sec: 7.5
 consumption:
   wltp_kwh_per_100km: 12.3
   real_world_kwh_per_100km: 14.5
   energy_efficiency_class: A+
-
 dimensions:
   length_mm: 4723
   width_mm: 1855
@@ -83,66 +74,61 @@ dimensions:
   wheelbase_mm: 2790
   ground_clearance_mm: 140
   drag_coefficient: 0.22
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1300
   frunk_capacity_liters: 101
-
-
 weight:
   curb_weight_kg: 2045
   gross_vehicle_weight_kg: 2500
   payload_kg: 530
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 11.9" OLED center touchscreen with MB.OS
-  - Digital instrument cluster
-  - Apple CarPlay & Android Auto
-  - LED headlights
-  - Heated front seats
-  - Dual-zone climate control
-  - Heat pump
-  - Fabric/synthetic leather upholstery
-  - 18" alloy wheels
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Parking sensors front and rear
-  - Rearview camera
-  - Keyless entry & start
-  - Wireless phone charging
-  - Hey Mercedes voice assistant
-  - Plug & Charge (ISO 15118-2)
-  - Battery preconditioning via navigation
-
+- 11.9" OLED center touchscreen with MB.OS
+- Digital instrument cluster
+- Apple CarPlay & Android Auto
+- LED headlights
+- Heated front seats
+- Dual-zone climate control
+- Heat pump
+- Fabric/synthetic leather upholstery
+- 18" alloy wheels
+- Adaptive cruise control
+- Lane keeping assist
+- Automatic emergency braking
+- Parking sensors front and rear
+- Rearview camera
+- Keyless entry & start
+- Wireless phone charging
+- Hey Mercedes voice assistant
+- Plug & Charge (ISO 15118-2)
+- Battery preconditioning via navigation
 optional_equipment:
-  - name: Superscreen (passenger display)
-    cost: 1490
-  - name: Augmented Reality Head-Up Display
-    cost: 1190
-  - name: AIRMATIC air suspension
-    cost: 1785
-  - name: Premium sound system (Burmester)
-    cost: 590
-  - name: 19" AMG alloy wheels
-    cost: 952
-  - name: Advanced Plus package (360° camera, parking assist)
-    cost: 2380
-  - name: Night package (black exterior accents)
-    cost: 476
-
+- name: Superscreen (passenger display)
+  cost: 1490
+- name: Augmented Reality Head-Up Display
+  cost: 1190
+- name: AIRMATIC air suspension
+  cost: 1785
+- name: Premium sound system (Burmester)
+  cost: 590
+- name: 19" AMG alloy wheels
+  cost: 952
+- name: Advanced Plus package (360° camera, parking assist)
+  cost: 2380
+- name: Night package (black exterior accents)
+  cost: 476
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   sources:
-    - https://ev-database.org/car/3370/Mercedes-Benz-CLA-200
-    - https://www.mercedes-benz.com/
-  last_updated: "2026-02-10"
-  notes: >
-    Entry-level electric CLA with 60 kWh LFP battery on 800V MMA platform.
-    541 km WLTP range with class-leading 12.3 kWh/100km efficiency. LFP battery 
-    offers excellent longevity and cold-weather resilience. First Mercedes with 
-    MB.OS operating system. Deliveries expected late 2025 / early 2026.
+  - https://ev-database.org/car/3370/Mercedes-Benz-CLA-200
+  - https://www.mercedes-benz.com/
+  last_updated: '2026-02-10'
+  notes: 'Entry-level electric CLA with 60 kWh LFP battery on 800V MMA platform. 541
+    km WLTP range with class-leading 12.3 kWh/100km efficiency. LFP battery  offers
+    excellent longevity and cold-weather resilience. First Mercedes with  MB.OS operating
+    system. Deliveries expected late 2025 / early 2026.
+
+    '

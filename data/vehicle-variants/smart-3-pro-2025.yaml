@@ -1,10 +1,8 @@
-# Smart #3 Pro 2025
 id: smart-3-pro-2025
 name: Pro
 model_id: smart-3
 model_year: 2025
 variant_code: S3P
-
 battery:
   usable_kwh: 47.0
   total_kwh: 49.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 325
   wltp_city_km: 420
@@ -22,7 +19,6 @@ range:
   epa_km: null
   real_world_km: 280
   real_world_source: estimated
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -32,31 +28,30 @@ charging:
   dc_10_80_min: 28
   dc_0_100_min: 52
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 128
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 90
-    - soc_percent: 60
-      power_kw: 70
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 35
-    - soc_percent: 90
-      power_kw: 20
-    - soc_percent: 100
-      power_kw: 10
+  - soc_percent: 10
+    power_kw: 128
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 90
+  - soc_percent: 60
+    power_kw: 70
+  - soc_percent: 70
+    power_kw: 50
+  - soc_percent: 80
+    power_kw: 35
+  - soc_percent: 90
+    power_kw: 20
+  - soc_percent: 100
+    power_kw: 10
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 1
   type: permanent_magnet
@@ -64,69 +59,61 @@ motor:
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
-
 drivetrain: RWD
-
 performance:
-  acceleration_0_100_kmh_s: 5.8
   top_speed_kmh: 180
-
+  acceleration_0_100_sec: 5.8
 consumption:
   wltp_kwh_per_100km: 15.1
   real_world_kwh_per_100km: 17.5
   energy_efficiency_class: B
-
 dimensions:
   length_mm: 4440
   width_mm: 1844
   height_mm: 1556
   wheelbase_mm: 2785
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 370
   trunk_max_liters: 1160
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1780
   gross_vehicle_weight_kg: 2280
   payload_kg: 500
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 12.8" portrait touchscreen
-  - 9.2" digital driver display
-  - Smart OS with OTA updates
-  - Apple CarPlay & Android Auto
-  - LED headlights
-  - Heated front seats
-  - Single-zone climate control
-  - Heat pump
-  - Cloth/synthetic upholstery
-  - 18" alloy wheels
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Rear parking sensors
-  - Keyless entry
-
+- 12.8" portrait touchscreen
+- 9.2" digital driver display
+- Smart OS with OTA updates
+- Apple CarPlay & Android Auto
+- LED headlights
+- Heated front seats
+- Single-zone climate control
+- Heat pump
+- Cloth/synthetic upholstery
+- 18" alloy wheels
+- Adaptive cruise control
+- Lane keeping assist
+- Automatic emergency braking
+- Rear parking sensors
+- Keyless entry
 optional_equipment:
-  - name: 19" alloy wheels
-    cost: 900
-  - name: Panoramic glass roof
-    cost: 1200
-  - name: Rear parking camera
-    cost: 400
-
+- name: 19" alloy wheels
+  cost: 900
+- name: Panoramic glass roof
+  cost: 1200
+- name: Rear parking camera
+  cost: 400
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   sources:
-    - https://www.smart.com/
-    - https://www.topgear.com/car-reviews/smart/3
-  last_updated: "2026-02-09"
-  notes: >
-    Entry-level Smart #3 with smaller 49kWh LFP battery. 325km WLTP range suits
+  - https://www.smart.com/
+  - https://www.topgear.com/car-reviews/smart/3
+  last_updated: '2026-02-09'
+  notes: 'Entry-level Smart #3 with smaller 49kWh LFP battery. 325km WLTP range suits
     urban and suburban use. Same 200kW motor as higher trims. Good value entry point.
+
+    '

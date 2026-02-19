@@ -1,10 +1,8 @@
-# MG Cyberster Trophy AWD 2025
 id: mg-cyberster-trophy-awd-2025
 name: Trophy AWD
 model_id: mg-cyberster
 model_year: 2025
 variant_code: MGCYBTAWD25
-
 dimensions:
   length_mm: 4535
   width_mm: 1913
@@ -12,12 +10,10 @@ dimensions:
   height_mm: 1329
   wheelbase_mm: 2690
   ground_clearance_mm: 120
-
 cargo:
   trunk_capacity_liters: 249
   trunk_max_liters: 249
   frunk_capacity_liters: null
-
 battery:
   usable_kwh: 74.4
   total_kwh: 77.0
@@ -27,7 +23,6 @@ battery:
   warranty_years: 7
   warranty_km: 150000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 507
   wltp_city_km: 620
@@ -35,7 +30,6 @@ range:
   epa_km: null
   real_world_km: 420
   real_world_source: estimated
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -45,31 +39,30 @@ charging:
   dc_10_80_min: 38
   dc_0_100_min: 75
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 140
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 40
-      power_kw: 125
-    - soc_percent: 50
-      power_kw: 105
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 60
-    - soc_percent: 80
-      power_kw: 40
-    - soc_percent: 90
-      power_kw: 22
-    - soc_percent: 100
-      power_kw: 10
+  - soc_percent: 10
+    power_kw: 140
+  - soc_percent: 20
+    power_kw: 150
+  - soc_percent: 30
+    power_kw: 145
+  - soc_percent: 40
+    power_kw: 125
+  - soc_percent: 50
+    power_kw: 105
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 70
+    power_kw: 60
+  - soc_percent: 80
+    power_kw: 40
+  - soc_percent: 90
+    power_kw: 22
+  - soc_percent: 100
+    power_kw: 10
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 2
   type: permanent_magnet
@@ -77,64 +70,57 @@ motor:
   total_power_kw: 375
   total_power_hp: 510
   total_torque_nm: 725
-
 drivetrain: AWD
-
 performance:
-  acceleration_0_100_kmh_s: 3.2
   top_speed_kmh: 195
-
+  acceleration_0_100_sec: 3.2
 consumption:
   wltp_kwh_per_100km: 15.2
   real_world_kwh_per_100km: 17.7
   energy_efficiency_class: A
-
 weight:
   curb_weight_kg: 1985
   gross_vehicle_weight_kg: 2300
   payload_kg: 315
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: "Roadster not rated for towing"
-
+  notes: Roadster not rated for towing
 standard_equipment:
-  - 10.25" touchscreen infotainment
-  - 7" digital instrument cluster
-  - Apple CarPlay & Android Auto
-  - Bose premium audio system (8 speakers)
-  - Scissor doors
-  - Electrically operated soft top
-  - LED headlights with dynamic turn signals
-  - LED daytime running lights
-  - MG Pilot ADAS suite
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Adaptive cruise control
-  - Heated and ventilated front seats
-  - Leather upholstery
-  - Automatic dual-zone climate control
-  - 20" forged alloy wheels
-  - Performance braking system (Brembo)
-  - Drive mode selector (Comfort/Sport/Super Sport)
-  - Rear parking camera and sensors
-  - Keyless entry and start
-
+- 10.25" touchscreen infotainment
+- 7" digital instrument cluster
+- Apple CarPlay & Android Auto
+- Bose premium audio system (8 speakers)
+- Scissor doors
+- Electrically operated soft top
+- LED headlights with dynamic turn signals
+- LED daytime running lights
+- MG Pilot ADAS suite
+- Lane keeping assist
+- Automatic emergency braking
+- Adaptive cruise control
+- Heated and ventilated front seats
+- Leather upholstery
+- Automatic dual-zone climate control
+- 20" forged alloy wheels
+- Performance braking system (Brembo)
+- Drive mode selector (Comfort/Sport/Super Sport)
+- Rear parking camera and sensors
+- Keyless entry and start
 optional_equipment:
-  - name: Carbon Fibre Package
-    description: Carbon fibre mirror caps, diffuser, and spoiler
-    cost: 2500
-
+- name: Carbon Fibre Package
+  description: Carbon fibre mirror caps, diffuser, and spoiler
+  cost: 2500
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   sources:
-    - https://www.mgmotor.eu/model/cyberster
-  last_updated: "2026-02-10"
-  notes: >
-    MG Cyberster Trophy AWD is the flagship variant with dual motors producing
-    375kW (510hp) and 725Nm. 3.2s 0-100 km/h makes it one of the fastest
-    affordable electric sports cars. 77 kWh NMC battery provides 507 km WLTP range.
-    800V architecture supports 150kW DC fast charging.
-    Scissor doors and electric soft top make it a unique proposition in the market.
-    One of very few electric roadsters available in Europe alongside the
-    BMW i8 successor (when available).
+  - https://www.mgmotor.eu/model/cyberster
+  last_updated: '2026-02-10'
+  notes: 'MG Cyberster Trophy AWD is the flagship variant with dual motors producing
+    375kW (510hp) and 725Nm. 3.2s 0-100 km/h makes it one of the fastest affordable
+    electric sports cars. 77 kWh NMC battery provides 507 km WLTP range. 800V architecture
+    supports 150kW DC fast charging. Scissor doors and electric soft top make it a
+    unique proposition in the market. One of very few electric roadsters available
+    in Europe alongside the BMW i8 successor (when available).
+
+    '

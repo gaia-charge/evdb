@@ -1,32 +1,27 @@
-# Tesla Model 3 Premium AWD (2026 Highland)
-# Dual motor AWD premium variant with 82 kWh NMC battery
-
 id: tesla-model-3-premium-awd-2026
 model_id: tesla-model-3
 name: Premium AWD
 model_year: 2026
-variant_code: "PREM-AWD"
-
+variant_code: PREM-AWD
 production_status: active
-production_start_date: "2025-10-01"
-
+production_start_date: '2025-10-01'
 base_price_eur: 52990
-
 battery:
   usable_kwh: 79.0
   total_kwh: 82.0
-  chemistry: "NMC"
-  cells_supplier: "LG Energy Solution"
+  chemistry: NMC
+  cells_supplier: LG Energy Solution
   cell_type: cylindrical
-  cell_reference: "LG 5M"
+  cell_reference: LG 5M
   pack_voltage: 400
   warranty_years: 8
   warranty_km: 192000
   warranty_capacity_percent: 70
-  notes: |
-    82 kWh NMC battery with LG 5M cylindrical cells. 400V architecture.
+  notes: '82 kWh NMC battery with LG 5M cylindrical cells. 400V architecture.
+
     Same pack as Premium RWD, shared with Model Y platform.
 
+    '
 range:
   wltp_km: 691
   wltp_city_km: 790
@@ -35,59 +30,54 @@ range:
   real_world_km: 555
   highway_km: 475
   city_km: 665
-  real_world_source: "EV Database estimated real-world range"
-
+  real_world_source: EV Database estimated real-world range
 performance:
   motors:
-    - position: front
-      type: AC induction
-      max_power_kw: 137
-      max_torque_nm: 200
-    - position: rear
-      type: permanent magnet
-      max_power_kw: 235
-      max_torque_nm: 450
+  - position: front
+    type: AC induction
+    max_power_kw: 137
+    max_torque_nm: 200
+  - position: rear
+    type: permanent magnet
+    max_power_kw: 235
+    max_torque_nm: 450
   total_power_kw: 340
   total_torque_nm: 560
   drive_type: AWD
-  acceleration_0_100_kmh_s: 4.4
   top_speed_kmh: 201
-
+  acceleration_0_100_sec: 4.4
 charging:
   ac_charge_power_kw: 11
   ac_charge_port: Type 2
   ac_phases: 3
   ac_charge_time_0_100_hours: 8.5
-
   dc_charge_power_peak_kw: 250
   dc_charge_port: CCS2
   dc_charge_time_10_80_min: 29
   dc_charge_km_per_10min: 270
   preconditioning: true
   charge_curve:
-    - percent: 10
-      power_kw: 245
-    - percent: 20
-      power_kw: 250
-    - percent: 30
-      power_kw: 210
-    - percent: 40
-      power_kw: 180
-    - percent: 50
-      power_kw: 150
-    - percent: 60
-      power_kw: 120
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 55
-
+  - percent: 10
+    power_kw: 245
+  - percent: 20
+    power_kw: 250
+  - percent: 30
+    power_kw: 210
+  - percent: 40
+    power_kw: 180
+  - percent: 50
+    power_kw: 150
+  - percent: 60
+    power_kw: 120
+  - percent: 70
+    power_kw: 85
+  - percent: 80
+    power_kw: 55
 efficiency:
   wltp_kwh_per_100km: 11.4
   real_world_kwh_per_100km: 14.2
   highway_kwh_per_100km: 16.6
   city_kwh_per_100km: 11.9
-
 dimensions:
   length_mm: 4720
   width_mm: 1850
@@ -97,58 +87,54 @@ dimensions:
   ground_clearance_mm: 138
   drag_coefficient: 0.219
   frontal_area_m2: 2.22
-
 towing:
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-  notes: "1,000 kg braked, 750 kg unbraked. Tow hitch optional (Highland refresh)."
-
+  notes: 1,000 kg braked, 750 kg unbraked. Tow hitch optional (Highland refresh).
 weight:
   curb_weight_kg: 1880
   gross_vehicle_weight_kg: 2330
   payload_kg: 450
-
 cargo:
   trunk_capacity_liters: 594
   frunk_capacity_liters: 88
   trunk_max_liters: 1148
-
 seating:
   seats: 5
-  seating_configuration: "2+3"
-
-
+  seating_configuration: 2+3
 technology:
   autopilot: true
   adaptive_cruise: true
   lane_keeping: true
   autonomous_level: 2
   ota_updates: true
-
 infotainment:
   screen_size_inch: 15.4
   screen_orientation: landscape
   rear_screen_size_inch: 8.0
   navigation: true
   streaming: true
-  connectivity: "4G LTE"
-
+  connectivity: 4G LTE
 features: null
+notes: '2026 Tesla Model 3 Premium AWD - dual motor variant with 82 kWh NMC battery.
 
-notes: |
-  2026 Tesla Model 3 Premium AWD - dual motor variant with 82 kWh NMC battery.
   691 km WLTP range with AWD traction.
+
   4.4s 0-100 km/h - sportier than Long Range while maintaining excellent range.
+
   340 kW combined output (front induction + rear PM motors).
+
   250 kW DC fast charging with battery preconditioning.
+
   Highland refresh features: ventilated seats, rear display, ambient lighting.
 
+  '
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   updated_at: null
   data_quality: estimated
-  last_updated: "2026-02-10"
+  last_updated: '2026-02-10'
   sources:
-    - https://ev-database.org/car/3405/Tesla-Model-3-Premium-AWD
-  notes: "2026 model year - new Premium AWD trim with 82 kWh NMC battery"
+  - https://ev-database.org/car/3405/Tesla-Model-3-Premium-AWD
+  notes: 2026 model year - new Premium AWD trim with 82 kWh NMC battery

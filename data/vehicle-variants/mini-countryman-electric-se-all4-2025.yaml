@@ -4,7 +4,6 @@ name: SE ALL4
 variant_name: SE ALL4
 trim_level: SE ALL4
 model_year: 2025
-
 battery:
   usable_kwh: 64.7
   total_kwh: 66.5
@@ -15,7 +14,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 433
   wltp_city_km: 540
@@ -25,7 +23,6 @@ range:
   real_world_km: 360
   real_world_highway_km: 300
   real_world_city_km: 440
-
 charging:
   ac_charging:
     max_power_kw: 22
@@ -39,30 +36,31 @@ charging:
     time_10_80_percent_minutes: 29
     time_0_80_percent_minutes: 32
   charge_curve:
-    - soc_percent: 0
-      power_kw: 90
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 115
-    - soc_percent: 50
-      power_kw: 100
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 28
-    - soc_percent: 100
-      power_kw: 11
+  - soc_percent: 0
+    power_kw: 90
+  - soc_percent: 10
+    power_kw: 130
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 115
+  - soc_percent: 50
+    power_kw: 100
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 28
+  - soc_percent: 100
+    power_kw: 11
   bidirectional_charging: false
-
+  ac_max_kw: 22
+  dc_max_kw: 130
 motors:
   configuration: dual
   type: permanent_magnet
@@ -80,18 +78,18 @@ motors:
     power_hp: 109
     torque_nm: 244
     type: permanent_magnet
-
 performance:
-  acceleration_0_100_kmh_seconds: 5.6
   top_speed_kmh: 180
   top_speed_limited: true
-
+  total_power_kw: 230
+  total_power_hp: 313
+  total_torque_nm: 494
+  acceleration_0_100_sec: 5.6
 efficiency:
   consumption_wltp_kwh_per_100km: 17.4
   consumption_real_world_kwh_per_100km: 19.8
   efficiency_rating_eu: C
   co2_emissions_wltp_g_per_km: 0
-
 dimensions:
   length_mm: 4433
   width_mm: 1843
@@ -99,18 +97,15 @@ dimensions:
   height_mm: 1656
   wheelbase_mm: 2692
   ground_clearance_mm: 170
-
 cargo:
   trunk_capacity_liters: 460
   trunk_max_liters: 1450
-
 weight:
   curb_weight_kg: 2145
   gross_vehicle_weight_kg: 2620
   payload_kg: 475
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -120,35 +115,33 @@ features:
   launch_control: true
   adjustable_regen_braking: true
   one_pedal_driving: true
-
 driving_modes:
-  - Personal
-  - Sport
-  - Green
-  - Green+
-
+- Personal
+- Sport
+- Green
+- Green+
 interior_materials:
   seats: Vescin (vegan synthetic leather)
   dashboard: Recycled polyester textile
   steering_wheel: Vegan leather
-
 version_info:
   release_date: 2024-02-01
   discontinuation_date: null
   facelift: false
   special_edition: false
   limited_production: false
-
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
   last_updated: '2026-02-09'
   sources:
-    - https://www.mini.com/en_GB/home/range/mini-countryman/mini-countryman-se-all4.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mini/countryman/
-  notes: >
-    The Countryman SE ALL4 is the dual-motor AWD performance variant with 230kW (313hp)
-    combined output. Same 64.7kWh usable battery but slightly lower range due to higher
-    weight and AWD losses. 22kW AC charging is a significant upgrade over the E variant's
-    11kW. 5.6s 0-100km/h makes it one of the sportier compact SUVs. ALL4 branding
-    denotes Mini's traditional all-wheel drive system. Shares platform with BMW iX1 xDrive30.
+  - https://www.mini.com/en_GB/home/range/mini-countryman/mini-countryman-se-all4.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mini/countryman/
+  notes: 'The Countryman SE ALL4 is the dual-motor AWD performance variant with 230kW
+    (313hp) combined output. Same 64.7kWh usable battery but slightly lower range
+    due to higher weight and AWD losses. 22kW AC charging is a significant upgrade
+    over the E variant''s 11kW. 5.6s 0-100km/h makes it one of the sportier compact
+    SUVs. ALL4 branding denotes Mini''s traditional all-wheel drive system. Shares
+    platform with BMW iX1 xDrive30.
+
+    '

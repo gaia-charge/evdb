@@ -1,10 +1,8 @@
-# Smart #3 Brabus 2025
 id: smart-3-brabus-2025
 name: Brabus
 model_id: smart-3
 model_year: 2025
 variant_code: S3BR
-
 battery:
   usable_kwh: 66.0
   total_kwh: 70.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 415
   wltp_city_km: 540
@@ -22,7 +19,6 @@ range:
   epa_km: null
   real_world_km: 350
   real_world_source: estimated
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -32,31 +28,30 @@ charging:
   dc_10_80_min: 29
   dc_0_100_min: 55
   dc_charge_curve:
-    - soc_percent: 10
-      power_kw: 148
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 149
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 110
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 10
+    power_kw: 148
+  - soc_percent: 20
+    power_kw: 150
+  - soc_percent: 30
+    power_kw: 149
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 110
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 15
   bidirectional:
     v2l: false
     v2g: false
     v2h: false
-
 motor:
   count: 2
   type: permanent_magnet
@@ -66,77 +61,69 @@ motor:
   total_power_kw: 315
   total_power_hp: 428
   total_torque_nm: 543
-
 drivetrain: AWD
-
 performance:
-  acceleration_0_100_kmh_s: 3.7
   top_speed_kmh: 180
-
+  acceleration_0_100_sec: 3.7
 consumption:
   wltp_kwh_per_100km: 17.0
   real_world_kwh_per_100km: 19.5
   energy_efficiency_class: C
-
 dimensions:
   length_mm: 4400
   width_mm: 1844
   height_mm: 1556
   wheelbase_mm: 2785
   ground_clearance_mm: 170
-
 cargo:
   trunk_capacity_liters: 370
   trunk_max_liters: 1160
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1910
   gross_vehicle_weight_kg: 2410
   payload_kg: 500
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
 standard_equipment:
-  - 12.8" portrait touchscreen
-  - 9.2" digital driver display
-  - Smart OS with OTA updates
-  - Apple CarPlay & Android Auto
-  - LED headlights with matrix function
-  - Panoramic glass roof (electrochromic)
-  - Heated front seats
-  - Dual-zone climate control
-  - Heat pump
-  - Brabus leather/Alcantara upholstery
-  - 19" Brabus alloy wheels
-  - Adaptive cruise control with stop & go
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Blind spot monitoring
-  - 360-degree camera
-  - Rear parking sensors
-  - Power tailgate
-  - Keyless entry
-  - Ambient lighting (64 colors)
-  - Beats premium audio system
-  - Head-up display
-  - Brabus sport suspension
-  - Brabus exterior styling package
-
+- 12.8" portrait touchscreen
+- 9.2" digital driver display
+- Smart OS with OTA updates
+- Apple CarPlay & Android Auto
+- LED headlights with matrix function
+- Panoramic glass roof (electrochromic)
+- Heated front seats
+- Dual-zone climate control
+- Heat pump
+- Brabus leather/Alcantara upholstery
+- 19" Brabus alloy wheels
+- Adaptive cruise control with stop & go
+- Lane keeping assist
+- Automatic emergency braking
+- Blind spot monitoring
+- 360-degree camera
+- Rear parking sensors
+- Power tailgate
+- Keyless entry
+- Ambient lighting (64 colors)
+- Beats premium audio system
+- Head-up display
+- Brabus sport suspension
+- Brabus exterior styling package
 optional_equipment:
-  - name: Brabus Signature Package
-    cost: 2500
-    description: "Additional Brabus badging, carbon accents, and premium floor mats"
-
+- name: Brabus Signature Package
+  cost: 2500
+  description: Additional Brabus badging, carbon accents, and premium floor mats
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   sources:
-    - https://www.smart.com/
-    - https://www.topgear.com/car-reviews/smart/3
-  last_updated: "2026-02-09"
-  notes: >
-    Performance-oriented Smart #3 Brabus with dual-motor AWD producing 315kW/428hp.
-    3.7s 0-100 km/h makes it one of the quickest compact SUVs available.
-    Same 66kWh battery but reduced range (415km WLTP) due to AWD and performance focus.
-    Brabus styling, sport suspension, and premium interior distinguish it from lesser trims.
+  - https://www.smart.com/
+  - https://www.topgear.com/car-reviews/smart/3
+  last_updated: '2026-02-09'
+  notes: 'Performance-oriented Smart #3 Brabus with dual-motor AWD producing 315kW/428hp.
+    3.7s 0-100 km/h makes it one of the quickest compact SUVs available. Same 66kWh
+    battery but reduced range (415km WLTP) due to AWD and performance focus. Brabus
+    styling, sport suspension, and premium interior distinguish it from lesser trims.
+
+    '

@@ -1,12 +1,9 @@
----
 id: cupra-born-79-kwh-2025
-name: "79kWh"
+name: 79kWh
 model_id: cupra-born
 model_year: 2025
-production_start: "2025-01-01"
+production_start: '2025-01-01'
 production_end: null
-
-# Battery specifications
 battery:
   usable_kwh: 79.0
   total_kwh: 82.0
@@ -17,8 +14,8 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "New 79 kWh usable battery (82 kWh gross) for 2025 facelift. Replaces 77kWh pack. Updated MEB+ platform with improved cell chemistry."
-
+  notes: New 79 kWh usable battery (82 kWh gross) for 2025 facelift. Replaces 77kWh
+    pack. Updated MEB+ platform with improved cell chemistry.
 range:
   wltp_km: 580
   wltp_city_km: 720
@@ -26,10 +23,12 @@ range:
   epa_km: null
   real_world_km: 490
   real_world_source: estimated from early reviews
-  notes: |
-    Significant range improvement over 2024 77kWh model (557km). New battery chemistry
+  notes: 'Significant range improvement over 2024 77kWh model (557km). New battery
+    chemistry
+
     and improved efficiency from updated MEB+ platform. Winter range ~370km at -10°C.
 
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -37,56 +36,52 @@ charging:
   dc_max_kw: 185
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 185
-    - soc_percent: 20
-      power_kw: 185
-    - soc_percent: 30
-      power_kw: 180
-    - soc_percent: 40
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 145
-    - soc_percent: 60
-      power_kw: 120
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 55
+  - soc_percent: 10
+    power_kw: 185
+  - soc_percent: 20
+    power_kw: 185
+  - soc_percent: 30
+    power_kw: 180
+  - soc_percent: 40
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 145
+  - soc_percent: 60
+    power_kw: 120
+  - soc_percent: 70
+    power_kw: 90
+  - soc_percent: 80
+    power_kw: 55
   charge_time_10_80_minutes: 28
-  notes: |
-    DC fast charging up to 185kW (up from 170kW in 2024). 10-80% in 28 minutes.
-    Battery preconditioning via navigation standard. AC: 11kW standard, 0-100% in ~8h.
+  notes: 'DC fast charging up to 185kW (up from 170kW in 2024). 10-80% in 28 minutes.
 
+    Battery preconditioning via navigation standard. AC: 11kW standard, 0-100% in
+    ~8h.
+
+    '
 motors:
-  - position: rear
-    type: permanent_magnet
-    power_kw: 170
-    torque_nm: 545
-    manufacturer: Volkswagen Group
-
+- position: rear
+  type: permanent_magnet
+  power_kw: 170
+  torque_nm: 545
+  manufacturer: Volkswagen Group
 drivetrain:
   type: RWD
   all_wheel_drive: false
-
 performance:
-  acceleration_0_100_kmh_seconds: 6.6
   top_speed_kmh: 160
-  notes: "Updated APP550 motor with 170kW for 2025 model year"
-
+  notes: Updated APP550 motor with 170kW for 2025 model year
+  acceleration_0_100_sec: 6.6
 efficiency:
   wltp_kwh_per_100km: 15.3
   real_world_kwh_per_100km: 17.2
-  notes: "Improved efficiency from updated powertrain and aero improvements (Cd 0.27)"
-
+  notes: Improved efficiency from updated powertrain and aero improvements (Cd 0.27)
 weight:
   curb_weight_kg: 1945
   gross_vehicle_weight_kg: 2310
   payload_kg: 365
   towing_capacity_braked_kg: 0
-  notes: "Slightly heavier than 2024 model. No towing capability."
-
-# ADAS features
+  notes: Slightly heavier than 2024 model. No towing capability.
 adas:
   level: 2
   adaptive_cruise_control: true
@@ -95,35 +90,32 @@ adas:
   blind_spot_monitoring: true
   rear_cross_traffic_alert: true
   parking_sensors: front_and_rear
-  parking_camera: "360-degree surround view"
+  parking_camera: 360-degree surround view
   autonomous_parking: true
-
 dimensions:
   length_mm: 4322
   width_mm: 1809
   height_mm: 1537
   wheelbase_mm: 2765
   ground_clearance_mm: 151
-
 cargo:
   trunk_capacity_liters: 385
   trunk_max_liters: 1267
   frunk_capacity_liters: 0
+notes: '2025 Cupra Born facelift with larger 79 kWh battery, updated APP550 motor
+  (170kW), and improved DC charging up to 185kW. Exterior refresh with new front design,
+  updated lighting signature, and improved interior with latest CUPRA OS infotainment.
+  Battery preconditioning now standard. 580 km WLTP range makes it competitive with
+  Hyundai Ioniq 6 and Tesla Model 3. 360-degree camera and auto-parking now available.
+  Still built on MEB+ platform at SEAT Martorell. Strong option for sporty EV hatch
+  buyers.
 
-notes: >
-  2025 Cupra Born facelift with larger 79 kWh battery, updated APP550 motor
-  (170kW), and improved DC charging up to 185kW. Exterior refresh with new
-  front design, updated lighting signature, and improved interior with latest
-  CUPRA OS infotainment. Battery preconditioning now standard. 580 km WLTP
-  range makes it competitive with Hyundai Ioniq 6 and Tesla Model 3.
-  360-degree camera and auto-parking now available. Still built on MEB+
-  platform at SEAT Martorell. Strong option for sporty EV hatch buyers.
-
+  '
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   source: manufacturer
   sources:
-    - "https://www.cupraofficial.com/models/born"
-    - "https://www.cupra.de/modelle/cupra-born"
+  - https://www.cupraofficial.com/models/born
+  - https://www.cupra.de/modelle/cupra-born

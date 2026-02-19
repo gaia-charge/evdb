@@ -1,24 +1,21 @@
----
 id: alfa-romeo-junior-veloce-2025
-name: "Veloce"
+name: Veloce
 model_id: alfa-romeo-junior-elettrica
 model_year: 2025
-production_start: "2025-01-01"
+production_start: '2025-01-01'
 production_end: null
-
-# Battery specifications
 battery:
   usable_kwh: 54.0
   total_kwh: 54.0
   chemistry: NMC
   cell_type: pouch
-  manufacturer: "CATL"
+  manufacturer: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "Same 54 kWh battery as Speciale but paired with more powerful dual-motor setup."
-
+  notes: Same 54 kWh battery as Speciale but paired with more powerful dual-motor
+    setup.
 range:
   wltp_km: 334
   wltp_city_km: 420
@@ -26,10 +23,12 @@ range:
   epa_km: null
   real_world_km: 280
   real_world_source: estimated
-  notes: |
-    WLTP range of 334 km, reduced vs Speciale (410 km) due to higher power consumption
-    from dual motors and sportier driving dynamics. Real-world approximately 280 km mixed.
+  notes: 'WLTP range of 334 km, reduced vs Speciale (410 km) due to higher power consumption
 
+    from dual motors and sportier driving dynamics. Real-world approximately 280 km
+    mixed.
+
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -37,73 +36,67 @@ charging:
   dc_max_kw: 100
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 100
-    - soc_percent: 20
-      power_kw: 100
-    - soc_percent: 30
-      power_kw: 95
-    - soc_percent: 40
-      power_kw: 88
-    - soc_percent: 50
-      power_kw: 78
-    - soc_percent: 60
-      power_kw: 65
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 35
+  - soc_percent: 10
+    power_kw: 100
+  - soc_percent: 20
+    power_kw: 100
+  - soc_percent: 30
+    power_kw: 95
+  - soc_percent: 40
+    power_kw: 88
+  - soc_percent: 50
+    power_kw: 78
+  - soc_percent: 60
+    power_kw: 65
+  - soc_percent: 70
+    power_kw: 50
+  - soc_percent: 80
+    power_kw: 35
   charge_time_10_80_minutes: 30
-  notes: |
-    DC fast charging up to 100 kW. 10-80% in approximately 30 minutes.
+  notes: 'DC fast charging up to 100 kW. 10-80% in approximately 30 minutes.
+
     AC charging: 11 kW standard, 0-100% in approximately 5.5 hours.
 
+    '
 motors:
-  - position: front
-    type: permanent_magnet
-    power_kw: 83
-    torque_nm: 170
-    manufacturer: Stellantis
-  - position: rear
-    type: permanent_magnet
-    power_kw: 124
-    torque_nm: 255
-    manufacturer: Stellantis
-
+- position: front
+  type: permanent_magnet
+  power_kw: 83
+  torque_nm: 170
+  manufacturer: Stellantis
+- position: rear
+  type: permanent_magnet
+  power_kw: 124
+  torque_nm: 255
+  manufacturer: Stellantis
 drivetrain:
   type: AWD
   all_wheel_drive: true
-
 performance:
-  acceleration_0_100_kmh_seconds: 5.9
   top_speed_kmh: 200
-  notes: "Sportiest Alfa Romeo Junior variant. AWD with torque vectoring via D.N.A. selector."
-
+  notes: Sportiest Alfa Romeo Junior variant. AWD with torque vectoring via D.N.A.
+    selector.
+  acceleration_0_100_sec: 5.9
 efficiency:
   wltp_kwh_per_100km: 18.5
   real_world_kwh_per_100km: 22.0
-  notes: "Higher consumption due to AWD and performance-oriented tuning"
-
+  notes: Higher consumption due to AWD and performance-oriented tuning
 weight:
   curb_weight_kg: 1680
   gross_vehicle_weight_kg: 2150
   payload_kg: 470
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 dimensions:
   length_mm: 4173
   width_mm: 1781
   height_mm: 1534
   wheelbase_mm: 2560
   ground_clearance_mm: 155
-
 cargo:
   trunk_capacity_liters: 400
   trunk_max_liters: 1100
   frunk_capacity_liters: 0
-
-# ADAS features
 adas:
   level: 2
   adaptive_cruise_control: true
@@ -112,56 +105,55 @@ adas:
   blind_spot_monitoring: true
   rear_cross_traffic_alert: true
   parking_sensors: front_and_rear
-  parking_camera: "360_degree"
+  parking_camera: 360_degree
   autonomous_parking: true
-
 equipment:
   standard:
     exterior:
-      - "LED Matrix headlights"
-      - "19\" dark alloy wheels"
-      - "Sport body kit with front splitter"
-      - "Dark chrome Scudetto grille"
-      - "Quad exhaust-style rear diffuser"
-      - "Red brake calipers"
+    - LED Matrix headlights
+    - 19" dark alloy wheels
+    - Sport body kit with front splitter
+    - Dark chrome Scudetto grille
+    - Quad exhaust-style rear diffuser
+    - Red brake calipers
     interior:
-      - "10.25\" digital instrument cluster"
-      - "10.25\" touchscreen infotainment"
-      - "Wireless Apple CarPlay and Android Auto"
-      - "Wireless smartphone charging"
-      - "Alcantara sport seats with Veloce logo"
-      - "Flat-bottom sport steering wheel"
-      - "Dual-zone automatic climate control"
-      - "Aluminium pedals and kick plates"
+    - 10.25" digital instrument cluster
+    - 10.25" touchscreen infotainment
+    - Wireless Apple CarPlay and Android Auto
+    - Wireless smartphone charging
+    - Alcantara sport seats with Veloce logo
+    - Flat-bottom sport steering wheel
+    - Dual-zone automatic climate control
+    - Aluminium pedals and kick plates
     safety:
-      - "Autonomous Emergency Braking"
-      - "Lane Keep Assist"
-      - "Traffic Sign Recognition"
-      - "Blind Spot Detection"
-      - "Adaptive cruise control"
-      - "360-degree camera"
-      - "Autonomous parking"
+    - Autonomous Emergency Braking
+    - Lane Keep Assist
+    - Traffic Sign Recognition
+    - Blind Spot Detection
+    - Adaptive cruise control
+    - 360-degree camera
+    - Autonomous parking
     technology:
-      - "D.N.A. drive mode selector (Dynamic, Natural, Advanced Efficiency)"
-      - "Enhanced regenerative braking"
-      - "Torque vectoring"
-      - "Heat pump (standard)"
-      - "Alfa Connect services"
+    - D.N.A. drive mode selector (Dynamic, Natural, Advanced Efficiency)
+    - Enhanced regenerative braking
+    - Torque vectoring
+    - Heat pump (standard)
+    - Alfa Connect services
+notes: 'The Alfa Romeo Junior Veloce is the performance variant of Alfa Romeo''s first
+  electric vehicle. Featuring a dual-motor AWD setup producing 280 hp combined, it
+  accelerates from 0-100 km/h in 5.9 seconds and reaches 200 km/h. Built on the Stellantis
+  eCMP2 platform with enhanced suspension tuning and torque vectoring, the Veloce
+  delivers the sportiest driving experience in the B-SUV electric segment. Standard
+  Alcantara sport seats, 19" dark wheels, sport body kit, and 360-degree camera differentiate
+  it from the Speciale. Competes with MINI Cooper SE, Cupra Born VZ, and Abarth 500e
+  in the sporty electric compact segment.
 
-notes: >
-  The Alfa Romeo Junior Veloce is the performance variant of Alfa Romeo's first electric vehicle.
-  Featuring a dual-motor AWD setup producing 280 hp combined, it accelerates from 0-100 km/h in
-  5.9 seconds and reaches 200 km/h. Built on the Stellantis eCMP2 platform with enhanced
-  suspension tuning and torque vectoring, the Veloce delivers the sportiest driving experience
-  in the B-SUV electric segment. Standard Alcantara sport seats, 19" dark wheels, sport body kit,
-  and 360-degree camera differentiate it from the Speciale. Competes with MINI Cooper SE,
-  Cupra Born VZ, and Abarth 500e in the sporty electric compact segment.
-
+  '
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   source: manufacturer
   sources:
-    - "https://www.alfaromeo.de/junior"
-    - "https://www.alfaromeo.com/press"
+  - https://www.alfaromeo.de/junior
+  - https://www.alfaromeo.com/press

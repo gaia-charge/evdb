@@ -1,11 +1,9 @@
----
 id: cupra-raval-58-kwh-2025
-name: "58 kWh"
+name: 58 kWh
 model_id: cupra-raval
 model_year: 2025
-production_start: "2025-09-01"
+production_start: '2025-09-01'
 production_end: null
-
 battery:
   usable_kwh: 58.0
   total_kwh: 60.0
@@ -16,8 +14,7 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "Larger NCM battery for extended range. Higher energy density than LFP variant."
-
+  notes: Larger NCM battery for extended range. Higher energy density than LFP variant.
 range:
   wltp_km: 440
   wltp_city_km: 560
@@ -25,11 +22,13 @@ range:
   epa_km: null
   real_world_km: 370
   real_world_source: estimated from platform data
-  notes: |
-    Long-range variant with 440 km WLTP. Suitable for longer trips and
+  notes: 'Long-range variant with 440 km WLTP. Suitable for longer trips and
+
     mixed-use driving. Winter range ~280km at -10°C. Battery preconditioning
+
     via navigation available.
 
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -37,68 +36,63 @@ charging:
   dc_max_kw: 175
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 175
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 160
-    - soc_percent: 40
-      power_kw: 140
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
+  - soc_percent: 10
+    power_kw: 175
+  - soc_percent: 20
+    power_kw: 170
+  - soc_percent: 30
+    power_kw: 160
+  - soc_percent: 40
+    power_kw: 140
+  - soc_percent: 50
+    power_kw: 120
+  - soc_percent: 60
+    power_kw: 95
+  - soc_percent: 70
+    power_kw: 70
+  - soc_percent: 80
+    power_kw: 45
   charge_time_10_80_minutes: 26
-  notes: |
-    DC fast charging up to 175kW. 10-80% in ~26 minutes. Battery
+  notes: 'DC fast charging up to 175kW. 10-80% in ~26 minutes. Battery
+
     preconditioning standard for optimal fast-charging. AC: 11kW, 0-100% ~6h.
 
+    '
 motors:
-  - position: rear
-    type: permanent_magnet
-    power_kw: 170
-    torque_nm: 310
-    manufacturer: Volkswagen Group
-
+- position: rear
+  type: permanent_magnet
+  power_kw: 170
+  torque_nm: 310
+  manufacturer: Volkswagen Group
 drivetrain:
   type: RWD
   all_wheel_drive: false
-
 performance:
-  acceleration_0_100_kmh_seconds: 7.5
   top_speed_kmh: 160
-  notes: "Same motor as 38 kWh variant, slightly quicker due to higher voltage NCM battery"
-
+  notes: Same motor as 38 kWh variant, slightly quicker due to higher voltage NCM
+    battery
+  acceleration_0_100_sec: 7.5
 efficiency:
   wltp_kwh_per_100km: 14.5
   real_world_kwh_per_100km: 16.5
-  notes: "Slightly higher consumption than 38 kWh variant due to added weight"
-
+  notes: Slightly higher consumption than 38 kWh variant due to added weight
 dimensions:
   length_mm: 4036
   width_mm: 1788
   height_mm: 1534
   wheelbase_mm: 2600
   ground_clearance_mm: 145
-
 cargo:
   trunk_capacity_liters: 300
   trunk_max_liters: 940
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1600
   gross_vehicle_weight_kg: 2000
   payload_kg: 400
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: "~100kg heavier than 38 kWh variant due to larger battery"
-
+  notes: ~100kg heavier than 38 kWh variant due to larger battery
 adas:
   level: 2
   adaptive_cruise_control: true
@@ -107,22 +101,20 @@ adas:
   blind_spot_monitoring: true
   rear_cross_traffic_alert: true
   parking_sensors: front_and_rear
-  parking_camera: "360-degree surround view"
+  parking_camera: 360-degree surround view
   autonomous_parking: true
+notes: 'Long-range CUPRA Raval with 58 kWh NCM battery. 440 km WLTP range makes it
+  viable for longer journeys. Includes upgraded ADAS with 360-degree camera and automated
+  parking. Faster DC charging at 175kW. Positioned against Renault 5 E-Tech Techno
+  52 and Mini Cooper SE. Battery preconditioning and heat pump standard. Expected
+  to be the higher-volume variant for buyers wanting more range flexibility.
 
-notes: >
-  Long-range CUPRA Raval with 58 kWh NCM battery. 440 km WLTP range makes
-  it viable for longer journeys. Includes upgraded ADAS with 360-degree
-  camera and automated parking. Faster DC charging at 175kW. Positioned
-  against Renault 5 E-Tech Techno 52 and Mini Cooper SE. Battery
-  preconditioning and heat pump standard. Expected to be the higher-volume
-  variant for buyers wanting more range flexibility.
-
+  '
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   source: manufacturer
   sources:
-    - "https://www.cupraofficial.com/models/raval"
-    - "https://www.cupra.de/modelle/cupra-raval"
+  - https://www.cupraofficial.com/models/raval
+  - https://www.cupra.de/modelle/cupra-raval

@@ -1,12 +1,9 @@
----
 id: skoda-enyaq-iv-60-2024
-name: "60"
+name: '60'
 model_id: skoda-enyaq-iv
 model_year: 2024
-production_start: "2024-01-01"
+production_start: '2024-01-01'
 production_end: null
-
-# Battery specifications
 battery:
   usable_kwh: 62.0
   total_kwh: 65.0
@@ -17,8 +14,8 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: "62 kWh usable battery (65 kWh gross). Entry-level Enyaq battery. 400V MEB platform."
-
+  notes: 62 kWh usable battery (65 kWh gross). Entry-level Enyaq battery. 400V MEB
+    platform.
 range:
   wltp_km: 413
   wltp_city_km: 540
@@ -26,10 +23,11 @@ range:
   epa_km: null
   real_world_km: 350
   real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 413 km. Real-world range around 350 km in mixed conditions.
+  notes: 'WLTP range of 413 km. Real-world range around 350 km in mixed conditions.
+
     Good for daily driving and moderate road trips. Winter range ~260km at -10°C.
 
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -37,69 +35,63 @@ charging:
   dc_max_kw: 120
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 120
-    - soc_percent: 20
-      power_kw: 120
-    - soc_percent: 30
-      power_kw: 115
-    - soc_percent: 40
-      power_kw: 108
-    - soc_percent: 50
-      power_kw: 98
-    - soc_percent: 60
-      power_kw: 82
-    - soc_percent: 70
-      power_kw: 62
-    - soc_percent: 80
-      power_kw: 42
+  - soc_percent: 10
+    power_kw: 120
+  - soc_percent: 20
+    power_kw: 120
+  - soc_percent: 30
+    power_kw: 115
+  - soc_percent: 40
+    power_kw: 108
+  - soc_percent: 50
+    power_kw: 98
+  - soc_percent: 60
+    power_kw: 82
+  - soc_percent: 70
+    power_kw: 62
+  - soc_percent: 80
+    power_kw: 42
   charge_time_10_80_minutes: 36
-  notes: |
-    DC fast charging up to 120kW. 10-80% in 36 minutes.
+  notes: 'DC fast charging up to 120kW. 10-80% in 36 minutes.
+
     AC charging: 11kW standard, 0-100% in 6.5 hours.
 
+    '
 motors:
-  - position: rear
-    type: permanent_magnet
-    power_kw: 132
-    torque_nm: 310
-    manufacturer: Volkswagen Group
-
+- position: rear
+  type: permanent_magnet
+  power_kw: 132
+  torque_nm: 310
+  manufacturer: Volkswagen Group
 drivetrain:
   type: RWD
   all_wheel_drive: false
-
 performance:
-  acceleration_0_100_kmh_seconds: 9.0
   top_speed_kmh: 160
-  notes: "Adequate performance for a family SUV. 0-100 km/h in 9.0s"
-
+  notes: Adequate performance for a family SUV. 0-100 km/h in 9.0s
+  acceleration_0_100_sec: 9.0
 efficiency:
   wltp_kwh_per_100km: 17.4
   real_world_kwh_per_100km: 19.5
-  notes: "Good efficiency for SUV size, slightly higher than smaller EVs due to weight and aerodynamics"
-
+  notes: Good efficiency for SUV size, slightly higher than smaller EVs due to weight
+    and aerodynamics
 dimensions:
   length_mm: 4649
   width_mm: 1879
   height_mm: 1616
   wheelbase_mm: 2770
   ground_clearance_mm: 171
-
 cargo:
   trunk_capacity_liters: 585
   trunk_max_liters: 1710
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2015
   gross_vehicle_weight_kg: 2540
   payload_kg: 525
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  notes: "Entry-level Enyaq. Can tow up to 1000kg (braked trailer)."
-
-# ADAS features
+  notes: Entry-level Enyaq. Can tow up to 1000kg (braked trailer).
 adas:
   level: 2
   adaptive_cruise_control: true
@@ -110,22 +102,21 @@ adas:
   parking_sensors: front_and_rear
   parking_camera: rear
   autonomous_parking: false
+notes: 'Entry-level Škoda Enyaq iV 60 with 62 kWh battery offering 413 km WLTP range
+  (350 km real-world). Features 132kW rear motor with 9.0s 0-100 km/h. Practical family
+  SUV with 585-liter boot and spacious interior. Built on VW MEB platform at Škoda
+  Mladá Boleslav plant. Shares platform with VW ID.4 but with Škoda''s practical approach
+  and value proposition. 120kW DC charging (36 min 10-80%). Can tow 1000kg. Target
+  buyers: families wanting affordable electric SUV with good space and range without
+  paying premium for larger battery.
 
-notes: >
-  Entry-level Škoda Enyaq iV 60 with 62 kWh battery offering 413 km WLTP range
-  (350 km real-world). Features 132kW rear motor with 9.0s 0-100 km/h. Practical
-  family SUV with 585-liter boot and spacious interior. Built on VW MEB platform
-  at Škoda Mladá Boleslav plant. Shares platform with VW ID.4 but with Škoda's
-  practical approach and value proposition. 120kW DC charging (36 min 10-80%).
-  Can tow 1000kg. Target buyers: families wanting affordable electric SUV with
-  good space and range without paying premium for larger battery.
-
+  '
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   source: manufacturer
   sources:
-    - "https://www.skoda-auto.com/models/enyaq-iv"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/enyaq/"
-    - "https://ev-database.org/car/1653/Skoda-Enyaq-iV-60"
+  - https://www.skoda-auto.com/models/enyaq-iv
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/enyaq/
+  - https://ev-database.org/car/1653/Skoda-Enyaq-iV-60

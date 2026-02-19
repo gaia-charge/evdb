@@ -1,112 +1,90 @@
-# Tesla Model X Long Range AWD (2024)
-# Standard Variant - Dual Motor All-Wheel Drive
-
 id: tesla-model-x-long-range-awd-2024
 model_id: tesla-model-x
 name: Long Range AWD
 model_year: 2024
-variant_code: "LR-AWD"  # Long Range All-Wheel Drive
-
-# Battery
+variant_code: LR-AWD
 battery:
-  usable_kwh: 95.0  # Usable capacity (estimated)
-  total_kwh: 100.0  # Total capacity (estimated)
-  chemistry: NCA    # Nickel-Cobalt-Aluminum (Panasonic cells)
-  cells: cylindrical  # 18650 cells
-  pack_voltage_v: 400  # Nominal voltage
-  supplier: 
-    - "Panasonic"
+  usable_kwh: 95.0
+  total_kwh: 100.0
+  chemistry: NCA
+  cells: cylindrical
+  pack_voltage_v: 400
+  supplier:
+  - Panasonic
   warranty_years: 8
   warranty_km: 240000
   warranty_capacity_percent: 70
-
-# Range
 range:
-  wltp_km: 543  # WLTP combined (2024 spec)
-  wltp_city_km: 640  # Estimated city range
-  wltp_highway_km: 465  # Estimated highway range
-  epa_miles: 335  # EPA combined
+  wltp_km: 543
+  wltp_city_km: 640
+  wltp_highway_km: 465
+  epa_miles: 335
   epa_km: 539
-  real_world_km: 460  # Typical real-world range (mixed driving, mild weather)
-  real_world_highway_km: 400  # Highway at 120 km/h
-  real_world_winter_km: 360  # Cold weather (-5°C to 5°C)
-
-# Charging - AC
+  real_world_km: 460
+  real_world_highway_km: 400
+  real_world_winter_km: 360
 charging_ac:
-  max_power_kw: 11  # 3-phase Type 2
+  max_power_kw: 11
   connector_type: Type2
   onboard_charger_kw: 11
-  charge_time_0_100_hours: 9.5  # 11kW charging (95 kWh / 11 kW)
-  
-# Charging - DC
+  charge_time_0_100_hours: 9.5
 charging_dc:
-  max_power_kw: 250  # Tesla Supercharger V3 peak
-  connector_type: CCS2  # Europe
-  charge_time_10_80_percent_min: 32  # Estimated (larger battery)
+  max_power_kw: 250
+  connector_type: CCS2
+  charge_time_10_80_percent_min: 32
   charge_time_0_100_percent_min: 52
-  km_per_10min: 255  # At peak charging speed
-
-# Charging Curve (DC Fast Charging)
+  km_per_10min: 255
 charging_curve:
-  - soc_percent: 0
-    power_kw: 180
-  - soc_percent: 10
-    power_kw: 250  # Peak power
-  - soc_percent: 20
-    power_kw: 250
-  - soc_percent: 30
-    power_kw: 230
-  - soc_percent: 40
-    power_kw: 190
-  - soc_percent: 50
-    power_kw: 160
-  - soc_percent: 60
-    power_kw: 125
-  - soc_percent: 70
-    power_kw: 95
-  - soc_percent: 80
-    power_kw: 70
-  - soc_percent: 90
-    power_kw: 40
-  - soc_percent: 100
-    power_kw: 20
-
-# Bidirectional Charging
-bidirectional_charging: false  # Not currently supported
+- soc_percent: 0
+  power_kw: 180
+- soc_percent: 10
+  power_kw: 250
+- soc_percent: 20
+  power_kw: 250
+- soc_percent: 30
+  power_kw: 230
+- soc_percent: 40
+  power_kw: 190
+- soc_percent: 50
+  power_kw: 160
+- soc_percent: 60
+  power_kw: 125
+- soc_percent: 70
+  power_kw: 95
+- soc_percent: 80
+  power_kw: 70
+- soc_percent: 90
+  power_kw: 40
+- soc_percent: 100
+  power_kw: 20
+bidirectional_charging: false
 v2l: false
 v2h: false
 v2g: false
-
-# Motors & Drivetrain
 motors:
-  count: 2  # Dual motor AWD
-  type: "Permanent Magnet Synchronous"  # Both front and rear
+  count: 2
+  type: Permanent Magnet Synchronous
   combined:
-    total_power_kw: 493  # Combined power (670 hp)
-    total_power_hp: 670  # Combined power
-    total_torque_nm: 700  # Estimated combined torque
+    total_power_kw: 493
+    total_power_hp: 670
+    total_torque_nm: 700
   front:
-    motor_type: "Permanent Magnet"
-    power_kw: 193  # Front motor (estimated)
+    motor_type: Permanent Magnet
+    power_kw: 193
     torque_nm: 280
   rear:
-    motor_type: "Permanent Magnet"  
-    power_kw: 300   # Rear motor (estimated)
+    motor_type: Permanent Magnet
+    power_kw: 300
     torque_nm: 420
-  
 drivetrain:
-  type: AWD  # All-Wheel Drive
-  drive_config: "Dual Motor AWD"
+  type: AWD
+  drive_config: Dual Motor AWD
   differential: electronic
-
-# Performance
 performance:
-  acceleration_0_100_kmh_s: 3.9  # 2024 spec
   acceleration_0_60_mph_s: 3.8
   top_speed_kmh: 250
-  quarter_mile_s: 12.1  # Estimated
-  
-# Dimensions
+  quarter_mile_s: 12.1
+  acceleration_0_100_sec: 3.9
 dimensions:
   length_mm: 5057
   width_mm: 1999
@@ -114,63 +92,47 @@ dimensions:
   height_mm: 1680
   wheelbase_mm: 2965
   ground_clearance_mm: 163
-
-# Cargo
 cargo:
   trunk_capacity_liters: 935
   trunk_max_liters: 2614
   frunk_capacity_liters: 183
-
-# Weight
 weight:
-  curb_weight_kg: 2455  # Without passengers/cargo
+  curb_weight_kg: 2455
   gross_vehicle_weight_kg: 3020
   payload_kg: 565
   towing_capacity_braked_kg: 2250
   towing_capacity_unbraked_kg: 750
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 17.5  # WLTP combined (95 kWh / 543 km * 100)
+  wltp_kwh_per_100km: 17.5
   wltp_consumption_mi_per_kwh: 3.5
-  real_world_kwh_per_100km: 20.7  # Real-world mixed (95 / 460 * 100)
-  energy_efficiency_class: "B"  # EU energy label
-
-# Brakes
+  real_world_kwh_per_100km: 20.7
+  energy_efficiency_class: B
 brakes:
-  front_type: "Ventilated disc"
+  front_type: Ventilated disc
   front_diameter_mm: 355
-  rear_type: "Ventilated disc"
+  rear_type: Ventilated disc
   rear_diameter_mm: 350
   regenerative_braking: true
-  regenerative_max_power_kw: 70  # Estimated
-
-# Suspension
+  regenerative_max_power_kw: 70
 suspension:
-  front: "Double wishbone with air suspension"
-  rear: "Multi-link with air suspension"
+  front: Double wishbone with air suspension
+  rear: Multi-link with air suspension
   adaptive_damping: true
-
-# Tires & Wheels
 tires_wheels:
-  standard_tire_size: "255/45 R20"
+  standard_tire_size: 255/45 R20
   standard_wheel_size_inches: 20
   optional_tire_sizes:
-    - "265/45 R20"  # 20" Cyberstream wheels
-    - "275/35 R22"  # 22" Turbine wheels
+  - 265/45 R20
+  - 275/35 R22
   optional_wheel_sizes_inches:
-    - 20
-    - 22
-
-# Steering
+  - 20
+  - 22
 steering:
-  type: "Electric power steering"
-  turning_circle_m: 12.5  # Estimated
-
-# Driver Assistance
+  type: Electric power steering
+  turning_circle_m: 12.5
 driver_assistance:
   autopilot_standard: true
-  full_self_driving_available: true  # Optional
+  full_self_driving_available: true
   adaptive_cruise_control: true
   lane_keeping_assist: true
   blind_spot_monitoring: true
@@ -178,69 +140,55 @@ driver_assistance:
   parking_sensors: true
   surround_view_camera: true
   automatic_emergency_braking: true
-
-# Safety Rating
 safety:
-  euro_ncap_rating: null  # Not rated (tested in 2019 - 5 stars)
+  euro_ncap_rating: null
   euro_ncap_adult_percent: null
   euro_ncap_child_percent: null
-  nhtsa_rating: 5  # US rating
-  airbags: 12  # Front, side, curtain, knee airbags
-
-# Features & Equipment
+  nhtsa_rating: 5
+  airbags: 12
 features:
-  infotainment_screen_inches: 17  # Landscape touchscreen
-  instrument_cluster_type: digital  # No separate cluster (HUD-style display)
-  sound_system: "Premium Audio (22 speakers)"
-  premium_sound_option: null  # Premium is standard
+  infotainment_screen_inches: 17
+  instrument_cluster_type: digital
+  sound_system: Premium Audio (22 speakers)
+  premium_sound_option: null
   heated_seats: true
-  ventilated_seats: true  # Front seats
+  ventilated_seats: true
   heated_steering_wheel: true
-  panoramic_roof: true  # Glass roof standard
+  panoramic_roof: true
   ambient_lighting: true
   wireless_charging: true
-  usb_ports: 6  # USB-C
-  apple_carplay: false  # Tesla doesn't support CarPlay
-  android_auto: false   # Tesla doesn't support Android Auto
+  usb_ports: 6
+  apple_carplay: false
+  android_auto: false
   over_the_air_updates: true
-
-# Interior
 interior:
-  seats: 7  # 7-seater configuration standard (5/6 optional)
-  upholstery_material: "Vegan leather"
+  seats: 7
+  upholstery_material: Vegan leather
   upholstery_color_options:
-    - "Black"
-    - "Cream"
-
-# Exterior Colors
+  - Black
+  - Cream
 colors:
-  - name: "Pearl White Multi-Coat"
-    cost_eur: 0  # Standard
-  - name: "Solid Black"
-    cost_eur: 1500
-  - name: "Midnight Silver Metallic"
-    cost_eur: 1500
-  - name: "Deep Blue Metallic"
-    cost_eur: 1500
-  - name: "Red Multi-Coat"
-    cost_eur: 2500
-
-# Lighting
+- name: Pearl White Multi-Coat
+  cost_eur: 0
+- name: Solid Black
+  cost_eur: 1500
+- name: Midnight Silver Metallic
+  cost_eur: 1500
+- name: Deep Blue Metallic
+  cost_eur: 1500
+- name: Red Multi-Coat
+  cost_eur: 2500
 lighting:
   headlights: LED
   daytime_running_lights: LED
   tail_lights: LED
   adaptive_headlights: true
   automatic_high_beam: true
-
-# Climate Control
 climate:
   air_conditioning: true
   climate_zones: 3
-  heat_pump: true  # Standard on all Tesla vehicles
+  heat_pump: true
   preconditioning: true
-
-# Warranty
 warranty:
   basic_years: 4
   basic_km: 80000
@@ -249,18 +197,24 @@ warranty:
   battery_years: 8
   battery_km: 240000
   battery_capacity_guarantee_percent: 70
-
-# Metadata
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   sources:
-    - https://www.tesla.com/modelx
-    - https://www.tesla.com/support/european-union-end-of-series-information
-    - https://ev-database.org/car/1594/Tesla-Model-X-Long-Range
-  notes: |
-    Specifications for 2024 Tesla Model X Long Range AWD (refreshed design from 2021).
+  - https://www.tesla.com/modelx
+  - https://www.tesla.com/support/european-union-end-of-series-information
+  - https://ev-database.org/car/1594/Tesla-Model-X-Long-Range
+  notes: 'Specifications for 2024 Tesla Model X Long Range AWD (refreshed design from
+    2021).
+
     Features distinctive falcon-wing rear doors, 7-seat configuration as standard,
+
     and premium interior with 17" landscape touchscreen. Peak Supercharger V3 charging
-    at 250kW enables ~255km in 10 minutes. Model X is Tesla's flagship luxury SUV.
+
+    at 250kW enables ~255km in 10 minutes. Model X is Tesla''s flagship luxury SUV.
+
+    '
+charging:
+  ac_max_kw: 11
+  dc_max_kw: 250

@@ -1,45 +1,40 @@
-# Škoda Enyaq 85 2025 - Refreshed Model (dropped "iV" branding)
 id: skoda-enyaq-85-2025
 model_id: skoda-enyaq-iv
-name: "85"
+name: '85'
 model_year: 2025
-trim_level: "85"
-version_name: "2025 Refresh"
-
-description: |
-  The 2025 Škoda Enyaq 85 is the refreshed version of Škoda's best-selling electric SUV, now dropping the "iV" 
-  suffix. The 85 variant features the larger 82kWh battery with 286ps rear motor, offering up to 571km WLTP range. 
-  The 2025 model brings the new Modern Solid design language with Tech-Deck-Face front, updated LED light signature 
-  with vertical light grille connecting the upper headlight units, and refined interior with improved materials.
-  
-  Key updates include optimized aerodynamics, refined suspension tuning for improved comfort, and continued 
-  ME3 infotainment system improvements. The Enyaq remains one of the best-value electric SUVs in Europe, 
-  consistently undercutting the VW ID.4 while offering more interior space and equipment.
-
+trim_level: '85'
+version_name: 2025 Refresh
+description: "The 2025 Škoda Enyaq 85 is the refreshed version of Škoda's best-selling\
+  \ electric SUV, now dropping the \"iV\" \nsuffix. The 85 variant features the larger\
+  \ 82kWh battery with 286ps rear motor, offering up to 571km WLTP range. \nThe 2025\
+  \ model brings the new Modern Solid design language with Tech-Deck-Face front, updated\
+  \ LED light signature \nwith vertical light grille connecting the upper headlight\
+  \ units, and refined interior with improved materials.\n\nKey updates include optimized\
+  \ aerodynamics, refined suspension tuning for improved comfort, and continued \n\
+  ME3 infotainment system improvements. The Enyaq remains one of the best-value electric\
+  \ SUVs in Europe, \nconsistently undercutting the VW ID.4 while offering more interior\
+  \ space and equipment.\n"
 dimensions:
   length_mm: 4649
   width_mm: 1879
   height_mm: 1616
   wheelbase_mm: 2770
   ground_clearance_mm: 172
-
 cargo:
   trunk_capacity_liters: 585
   trunk_max_liters: 1710
   frunk_capacity_liters: 0
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NCM
-  cells_configuration: "288 cells (96s3p pouch cells)"
-  supplier: "LG Energy Solution / Samsung SDI"
+  cells_configuration: 288 cells (96s3p pouch cells)
+  supplier: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling with heat pump integration"
+  thermal_management: Liquid cooling with heat pump integration
   preconditioning: true
-
 range:
   wltp_km: 571
   wltp_city_km: 750
@@ -47,66 +42,57 @@ range:
   real_world_km: 490
   epa_km: null
   epa_miles: null
-
 charging:
   ac_max_power_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
-    - type: Type2
-      max_power_kw: 11
-      phases: 3
-  
+  - type: Type2
+    max_power_kw: 11
+    phases: 3
   dc_max_power_kw: 135
   dc_charge_time_minutes: 28
   dc_ports:
-    - type: CCS2
-      max_power_kw: 135
-  
+  - type: CCS2
+    max_power_kw: 135
   charge_curve:
-    - percent: 0
-      power_kw: 10
-    - percent: 10
-      power_kw: 135
-    - percent: 30
-      power_kw: 132
-    - percent: 50
-      power_kw: 125
-    - percent: 70
-      power_kw: 85
-    - percent: 80
-      power_kw: 50
-    - percent: 90
-      power_kw: 30
-    - percent: 100
-      power_kw: 10
-  
+  - percent: 0
+    power_kw: 10
+  - percent: 10
+    power_kw: 135
+  - percent: 30
+    power_kw: 132
+  - percent: 50
+    power_kw: 125
+  - percent: 70
+    power_kw: 85
+  - percent: 80
+    power_kw: 50
+  - percent: 90
+    power_kw: 30
+  - percent: 100
+    power_kw: 10
   bidirectional:
     v2l: false
     v2l_max_kw: null
     v2h: false
     v2g: false
-
 motors:
-  - position: rear
-    type: permanent_magnet
-    max_power_kw: 210
-    max_power_hp: 286
-    max_torque_nm: 545
-    description: "APP310 rear motor"
-
+- position: rear
+  type: permanent_magnet
+  max_power_kw: 210
+  max_power_hp: 286
+  max_torque_nm: 545
+  description: APP310 rear motor
 drivetrain:
   type: RWD
   drive_type: RWD
-
 performance:
-  acceleration_0_100_kmh_seconds: 6.7
   top_speed_kmh: 180
-
+  acceleration_0_100_sec: 6.7
 efficiency:
   wltp_kwh_per_100km: 16.7
   real_world_kwh_per_100km: 19.0
   co2_emissions_wltp_g_per_km: 0
-
 weights:
   curb_weight_kg: 2080
   gross_vehicle_weight_kg: 2600
@@ -115,19 +101,17 @@ weights:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 49
   distribution_rear_percent: 51
-
 software:
-  version: "ME3"
+  version: ME3
   ota_updates: true
   features:
-    - "Laura virtual assistant (ChatGPT integration)"
-    - "Improved UI responsiveness"
-    - "Faster boot time"
-    - "Physical buttons retained (customer feedback)"
-    - "Backlit climate control sliders"
-
+  - Laura virtual assistant (ChatGPT integration)
+  - Improved UI responsiveness
+  - Faster boot time
+  - Physical buttons retained (customer feedback)
+  - Backlit climate control sliders
 comfort:
-  climate_control: "3-zone automatic climate control"
+  climate_control: 3-zone automatic climate control
   heat_pump: true
   heated_seats_front: true
   heated_seats_rear: true
@@ -136,13 +120,11 @@ comfort:
   massage_seats: false
   panoramic_roof: true
   ambient_lighting: true
-
 audio:
   standard_speakers: 6
-  premium_system: "Canton Sound System"
+  premium_system: Canton Sound System
   premium_speakers: 12
   premium_power_watts: 570
-
 driver_assistance:
   adaptive_cruise_control: true
   lane_keeping_assist: true
@@ -153,34 +135,37 @@ driver_assistance:
   traffic_sign_recognition: true
   driver_attention_warning: true
   automatic_emergency_braking: true
-
 lighting:
-  headlights: "LED Matrix"
-  daytime_running_lights: "LED with vertical light grille"
-  taillights: "LED C-shaped with dynamic turn signals"
+  headlights: LED Matrix
+  daytime_running_lights: LED with vertical light grille
+  taillights: LED C-shaped with dynamic turn signals
   ambient_lighting: true
   features:
-    - "LED Matrix with Crystalline elements"
-    - "Vertical light grille connecting upper headlights"
-    - "Dynamic turn signals front and rear"
-    - "Coming/Leaving Home function"
-
+  - LED Matrix with Crystalline elements
+  - Vertical light grille connecting upper headlights
+  - Dynamic turn signals front and rear
+  - Coming/Leaving Home function
 wheels:
-  standard_size: "19-inch"
-  standard_design: "Aero"
+  standard_size: 19-inch
+  standard_design: Aero
   optional_sizes:
-    - "20-inch"
-    - "21-inch"
-
+  - 20-inch
+  - 21-inch
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   data_sources:
-    - "Škoda official website (skoda-auto.de, 2025)"
-    - "Autocar UK specs (autocar.co.uk)"
-    - "Škoda press materials (2025 refresh)"
-  notes: |
-    2025 refresh drops "iV" branding. New Modern Solid design language with Tech-Deck-Face front.
-    Vertical light grille is distinctive new design element. Performance improved to 6.7s 0-100 and 180 km/h top speed.
-    Base price starts at €48,900 in Germany. Shares MEB platform with VW ID.4, Audi Q4 e-tron.
+  - Škoda official website (skoda-auto.de, 2025)
+  - Autocar UK specs (autocar.co.uk)
+  - Škoda press materials (2025 refresh)
+  notes: '2025 refresh drops "iV" branding. New Modern Solid design language with
+    Tech-Deck-Face front.
+
+    Vertical light grille is distinctive new design element. Performance improved
+    to 6.7s 0-100 and 180 km/h top speed.
+
+    Base price starts at €48,900 in Germany. Shares MEB platform with VW ID.4, Audi
+    Q4 e-tron.
+
+    '

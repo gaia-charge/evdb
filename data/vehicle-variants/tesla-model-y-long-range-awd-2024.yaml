@@ -1,12 +1,8 @@
-# Tesla Model Y Long Range AWD (2024)
-# Most Popular Variant - Dual Motor All-Wheel Drive
-
 id: tesla-model-y-long-range-awd-2024
 model_id: tesla-model-y
 name: Long Range AWD
 model_year: 2024
-variant_code: "LR-AWD"  # Long Range All-Wheel Drive
-
+variant_code: LR-AWD
 dimensions:
   length_mm: 4751
   width_mm: 1921
@@ -14,155 +10,141 @@ dimensions:
   height_mm: 1624
   wheelbase_mm: 2890
   ground_clearance_mm: 167
-
 cargo:
   trunk_capacity_liters: 854
   trunk_max_liters: 2158
   frunk_capacity_liters: 117
-
-# Battery
 battery:
-  usable_kwh: 75.0  # Usable capacity
-  total_kwh: 78.1   # Total capacity (estimate)
-  chemistry: NCA    # Nickel-Cobalt-Aluminum (Panasonic cells)
-  cells: prismatic  # 4680 cells (newer production) or 2170 (older)
-  pack_voltage_v: 400  # Nominal voltage
-  supplier: 
-    - "Panasonic"
-    - "LG Energy Solution"  # Depending on factory
+  usable_kwh: 75.0
+  total_kwh: 78.1
+  chemistry: NCA
+  cells: prismatic
+  pack_voltage_v: 400
+  supplier:
+  - Panasonic
+  - LG Energy Solution
   warranty_years: 8
   warranty_km: 192000
   warranty_capacity_percent: 70
-
-# Range
 range:
-  wltp_km: 565  # WLTP combined (2024 refresh improved from 533km)
-  wltp_city_km: 670  # Estimated city range
-  wltp_highway_km: 485  # Estimated highway range
-  epa_miles: 330  # EPA combined (531 km)
+  wltp_km: 565
+  wltp_city_km: 670
+  wltp_highway_km: 485
+  epa_miles: 330
   epa_km: 531
-  real_world_km: 480  # Typical real-world range (mixed driving, mild weather)
-  real_world_highway_km: 420  # Highway at 120 km/h
-  real_world_winter_km: 380  # Cold weather (-5°C to 5°C)
-
-# Charging - AC
+  real_world_km: 480
+  real_world_highway_km: 420
+  real_world_winter_km: 380
 charging_ac:
-  max_power_kw: 11  # 3-phase Type 2
+  max_power_kw: 11
   connector_type: Type2
   onboard_charger_kw: 11
-  charge_time_0_100_hours: 7.5  # 11kW charging
-  
-# Charging - DC
+  charge_time_0_100_hours: 7.5
 charging_dc:
-  max_power_kw: 250  # Tesla Supercharger V3 peak
-  connector_type: CCS2  # Europe
-  charge_time_10_80_percent_min: 27  # Official Tesla spec
+  max_power_kw: 250
+  connector_type: CCS2
+  charge_time_10_80_percent_min: 27
   charge_time_0_100_percent_min: 44
-  km_per_10min: 270  # At peak charging speed
-
-# Charging Curve (DC Fast Charging)
+  km_per_10min: 270
 charging_curve:
-  - soc_percent: 0
-    power_kw: 180
-  - soc_percent: 10
-    power_kw: 250  # Peak power
-  - soc_percent: 20
-    power_kw: 250
-  - soc_percent: 30
-    power_kw: 230
-  - soc_percent: 40
-    power_kw: 190
-  - soc_percent: 50
-    power_kw: 160
-  - soc_percent: 60
-    power_kw: 125
-  - soc_percent: 70
-    power_kw: 95
-  - soc_percent: 80
-    power_kw: 70
-  - soc_percent: 90
-    power_kw: 40
-  - soc_percent: 100
-    power_kw: 20
-
-# Bidirectional Charging
-bidirectional_charging: false  # Not currently supported
+- soc_percent: 0
+  power_kw: 180
+- soc_percent: 10
+  power_kw: 250
+- soc_percent: 20
+  power_kw: 250
+- soc_percent: 30
+  power_kw: 230
+- soc_percent: 40
+  power_kw: 190
+- soc_percent: 50
+  power_kw: 160
+- soc_percent: 60
+  power_kw: 125
+- soc_percent: 70
+  power_kw: 95
+- soc_percent: 80
+  power_kw: 70
+- soc_percent: 90
+  power_kw: 40
+- soc_percent: 100
+  power_kw: 20
+bidirectional_charging: false
 v2l: false
 v2h: false
 v2g: false
-
-# Motors & Drivetrain
 motors:
-  count: 2  # Dual motor AWD
-  type: "Permanent Magnet Synchronous"  # Both front and rear
-  total_power_kw: 393  # Combined power (estimated)
-  total_power_hp: 534  # Combined power
-  front_motor_kw: 147  # Front motor (estimated)
-  rear_motor_kw: 246   # Rear motor (estimated)
-  
+  count: 2
+  type: Permanent Magnet Synchronous
+  total_power_kw: 393
+  total_power_hp: 534
+  front_motor_kw: 147
+  rear_motor_kw: 246
 drivetrain:
-  type: AWD  # All-Wheel Drive
-  drive_config: "Dual Motor AWD"
-
-# Performance
+  type: AWD
+  drive_config: Dual Motor AWD
 performance:
-  acceleration_0_100_kmh_s: 5.0  # 2024 refresh (improved from 5.1s)
   top_speed_kmh: 217
-  
-# Weight
+  total_power_kw: 393
+  total_power_hp: 534
+  acceleration_0_100_sec: 5.0
 weight:
   curb_weight_kg: 1979
   gross_vehicle_weight_kg: 2555
   payload_kg: 576
   towing_capacity_braked_kg: 1600
   towing_capacity_unbraked_kg: 750
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 16.9  # 2024 refresh (improved from 17.1)
-  epa_mpge: 122  # Miles per gallon equivalent
-  real_world_kwh_per_100km: 18.5  # Typical real-world consumption
-  energy_efficiency_class: B  # EU energy label
-
-# Technology & Features
+  wltp_kwh_per_100km: 16.9
+  epa_mpge: 122
+  real_world_kwh_per_100km: 18.5
+  energy_efficiency_class: B
 technology:
-  autopilot: true  # Standard
+  autopilot: true
   adaptive_cruise: true
   lane_keeping: true
-  autonomous_level: 2  # SAE Level 2 (Autopilot standard)
-  full_self_driving: false  # Optional €7,500 upgrade
+  autonomous_level: 2
+  full_self_driving: false
   ota_updates: true
-  
 infotainment:
   screen_size_inch: 15.4
   screen_orientation: landscape
   navigation: true
   streaming: true
-  connectivity: "4G LTE"
+  connectivity: 4G LTE
+features: null
+notes: '2024 ''Juniper'' refresh: ~5% efficiency improvement (16.9 vs 17.1 kWh/100km).
 
-# Standard Features (2024 Model Year)
-features: null  # Use standard_equipment in market files for detailed lists
-
-notes: |
-  2024 'Juniper' refresh: ~5% efficiency improvement (16.9 vs 17.1 kWh/100km).
   2024 refresh: improved interior with ambient lighting, ventilated seats.
+
   2024 refresh: enhanced suspension for better ride quality.
+
   250kW peak charging on Tesla Supercharger V3.
+
   Access to Tesla Supercharger network (50,000+ chargers globally).
+
   Over-the-air updates add new features regularly.
+
   Full Self-Driving Capability available as €7,500 option or €99/month subscription.
+
   Made in Germany at Gigafactory Berlin (Europe deliveries).
+
   Optional tow hitch: €1,000 (1,600kg capacity).
+
   Optional 7-seater: €3,000 (third row).
 
+  '
 metadata:
-  created_at: "2026-02-07"
+  created_at: '2026-02-07'
   updated_at: null
   data_quality: verified
-  last_updated: "2026-02-07"
+  last_updated: '2026-02-07'
   sources:
-    - https://www.tesla.com/model-y/design
-    - https://ev-database.org/car/1440/Tesla-Model-Y-Long-Range-AWD
-    - https://www.fastned.nl/en/support/charge-speed-reference-list
-  notes: "2024 model with Juniper refresh improvements"
-  version: "2024-juniper"
+  - https://www.tesla.com/model-y/design
+  - https://ev-database.org/car/1440/Tesla-Model-Y-Long-Range-AWD
+  - https://www.fastned.nl/en/support/charge-speed-reference-list
+  notes: 2024 model with Juniper refresh improvements
+  version: 2024-juniper
+charging:
+  ac_max_kw: 11
+  dc_max_kw: 250

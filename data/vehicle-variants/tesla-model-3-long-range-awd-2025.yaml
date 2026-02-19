@@ -1,10 +1,8 @@
-# Tesla Model 3 Long Range AWD (2025 - Highland)
 id: tesla-model-3-long-range-awd-2025
 name: Long Range AWD
 model_id: tesla-model-3
 model_year: 2025
 variant_code: M3LR
-
 battery:
   usable_kwh: 78.1
   total_kwh: 82.0
@@ -14,15 +12,13 @@ battery:
   warranty_years: 8
   warranty_km: 192000
   warranty_capacity_percent: 70
-
 range:
-  wltp_km: 678  # Improved 2025 rating (up from 629 km)
+  wltp_km: 678
   wltp_city_km: null
   wltp_highway_km: null
-  epa_km: 567  # 352 miles
-  real_world_km: 580  # Improved efficiency
+  epa_km: 567
+  real_world_km: 580
   real_world_source: InsideEVs 70mph range test
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,67 +26,63 @@ charging:
   dc_max_kw: 250
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 250
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 20
-      power_kw: 250
-    - soc_percent: 30
-      power_kw: 200
-    - soc_percent: 40
-      power_kw: 170
-    - soc_percent: 50
-      power_kw: 130
-    - soc_percent: 60
-      power_kw: 100
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 250
+  - soc_percent: 10
+    power_kw: 250
+  - soc_percent: 20
+    power_kw: 250
+  - soc_percent: 30
+    power_kw: 200
+  - soc_percent: 40
+    power_kw: 170
+  - soc_percent: 50
+    power_kw: 130
+  - soc_percent: 60
+    power_kw: 100
+  - soc_percent: 70
+    power_kw: 75
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 15
   time_0_to_80_min: 27
   time_10_to_80_min: 24
   time_20_to_80_min: 21
   charging_speed_kmh: 1280
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: null
-      power_hp: null
-      torque_nm: null
-    - position: rear
-      type: permanent magnet
-      power_kw: null
-      power_hp: null
-      torque_nm: null
+  - position: front
+    type: AC induction
+    power_kw: null
+    power_hp: null
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: null
+    power_hp: null
+    torque_nm: null
   total_power_kw: 366
   total_power_hp: 498
   total_torque_nm: 493
-  acceleration_0_100_kmh_s: 4.4
   acceleration_0_60_mph_s: 4.2
   top_speed_kmh: 201
   top_speed_mph: 125
-
+  acceleration_0_100_sec: 4.4
 efficiency:
-  wltp_kwh_per_100km: 13.0  # Improved efficiency (2025 software)
+  wltp_kwh_per_100km: 13.0
   epa_kwh_per_100km: 13.8
-  real_world_kwh_per_100km: 15.2  # Mixed driving
+  real_world_kwh_per_100km: 15.2
   highway_130kmh_kwh_per_100km: 17.5
   city_kwh_per_100km: 12.8
-
 dimensions:
   length_mm: 4720
   width_mm: 1850
@@ -100,23 +92,19 @@ dimensions:
   ground_clearance_mm: 138
   drag_coefficient: 0.219
   frontal_area_m2: 2.22
-
 weight:
   curb_weight_kg: 1830
   gross_vehicle_weight_kg: 2280
   payload_kg: 450
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 594
   trunk_max_liters: 1148
   frunk_capacity_liters: 88
-
 seating:
   capacity: 5
-  configuration: "2+3"
-
+  configuration: 2+3
 technology:
   autopilot_standard: true
   autopilot_level: 2
@@ -124,7 +112,6 @@ technology:
   dashcam: true
   sentry_mode: true
   mobile_app: true
-
 infotainment:
   main_screen_inches: 15.4
   main_screen_orientation: landscape
@@ -135,7 +122,6 @@ infotainment:
   bluetooth: true
   wifi: true
   navigation: true
-
 safety:
   euro_ncap_rating: 5
   euro_ncap_year: 2019
@@ -143,33 +129,37 @@ safety:
   euro_ncap_child_protection: 86
   euro_ncap_vulnerable_road_users: 74
   euro_ncap_safety_assist: 94
-
 production:
   status: active
-  start_date: "2023-09-01"
+  start_date: '2023-09-01'
   end_date: null
   factory:
-    - "Fremont, California (US market)"
-    - "Gigafactory Shanghai (EU/Asia markets)"
+  - Fremont, California (US market)
+  - Gigafactory Shanghai (EU/Asia markets)
+base_price_usd: 47490
+base_price_eur: 52990
+notes: '2025 Tesla Model 3 Long Range AWD with Highland refresh.
 
-base_price_usd: 47490  # 2025 US pricing
-base_price_eur: 52990  # 2025 Germany pricing
-
-notes: |
-  2025 Tesla Model 3 Long Range AWD with Highland refresh.
   678 km WLTP range (up from 629 km in 2024) thanks to improved efficiency.
+
   Dual motor AWD with 366 kW (498 hp) and 4.4s 0-100 km/h.
+
   250 kW peak DC fast charging - excellent road trip capability.
+
   Superior real-world efficiency: 15.2 kWh/100km mixed, 580 km range.
+
   Highland improvements: 0.219 Cd aerodynamics, ventilated seats, rear 8" display.
+
   NCA battery chemistry with 8-year/192,000 km warranty.
+
   €52,990 in Germany - premium mid-size EV sedan with AWD and long range.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   data_quality: verified
-  last_updated: "2026-02-09"
+  last_updated: '2026-02-09'
   sources:
-    - https://www.tesla.com/model3
-    - https://ev-database.org
-  version: "2025-highland"
+  - https://www.tesla.com/model3
+  - https://ev-database.org
+  version: 2025-highland
