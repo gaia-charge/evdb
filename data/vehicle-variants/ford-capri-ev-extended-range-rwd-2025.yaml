@@ -25,6 +25,10 @@ range:
   real_world_conditions: "Mixed driving, moderate climate"
 
 charging:
+  # Canonical flat schema fields
+  ac_max_kw: 11.0
+  dc_max_kw: 185
+  
   ac_charging:
     max_power_kw: 11.0
     connector_type: Type2
@@ -52,8 +56,14 @@ motors:
   total_torque_nm: 545
 
 performance:
-  acceleration_0_100_kmh_seconds: 6.4
+  # Canonical flat schema fields
+  acceleration_0_100_sec: 6.4
   top_speed_kmh: 180
+  total_power_kw: 210
+  total_torque_nm: 545
+  
+  # Legacy fields (kept for compatibility)
+  acceleration_0_100_kmh_seconds: 6.4
   drive_type: RWD
 
 efficiency:
@@ -88,7 +98,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-09T12:30:00Z"
-  updated_at: "2026-02-09T12:30:00Z"
+  updated_at: "2026-02-19T23:14:00Z"
   data_quality: verified
   sources:
     - https://en.wikipedia.org/wiki/Ford_Capri_EV
