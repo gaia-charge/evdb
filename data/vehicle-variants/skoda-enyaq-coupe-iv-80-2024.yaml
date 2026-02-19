@@ -34,12 +34,14 @@ range:
   epa_km: null
   epa_miles: null
 charging:
+  ac_max_kw: 11
   ac_max_power_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
   - type: Type2
     max_power_kw: 11
     phases: 3
+  dc_max_kw: 135
   dc_max_power_kw: 135
   dc_charge_time_minutes: 29
   dc_ports:
@@ -78,6 +80,8 @@ drivetrain:
   type: RWD
   drive_type: RWD
 performance:
+  total_power_kw: 210
+  total_torque_nm: 545
   top_speed_kmh: 160
   acceleration_0_100_sec: 8.7
 efficiency:
@@ -159,7 +163,7 @@ cargo:
   frunk_capacity_liters: 0
 metadata:
   created_at: '2026-02-08'
-  updated_at: '2026-02-10'
+  updated_at: '2026-02-19'
   data_quality: verified
   data_sources:
   - Škoda official specifications (skoda-auto.com, 2024)
@@ -176,4 +180,5 @@ metadata:
     \ Coupé (panoramic roof not available). Black roof standard. Typically priced\
     \ \n€2,000-3,000 above SUV but €5,000-7,000 below Audi Q4 Sportback e-tron 50.\
     \ 20-inch wheels \nstandard (vs 19\" on SUV). Shares APP310 motor and 82kWh battery\
-    \ with VW ID.5 and ID.4 Pro.\n"
+    \ with VW ID.5 and ID.4 Pro.\nCanonical schema fields added 2026-02-19: total_power_kw,\
+    \ total_torque_nm, ac_max_kw, dc_max_kw from motor specs.\n"

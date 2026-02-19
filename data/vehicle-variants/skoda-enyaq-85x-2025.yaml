@@ -43,12 +43,14 @@ range:
   epa_km: null
   epa_miles: null
 charging:
+  ac_max_kw: 11
   ac_max_power_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
   - type: Type2
     max_power_kw: 11
     phases: 3
+  dc_max_kw: 135
   dc_max_power_kw: 135
   dc_charge_time_minutes: 28
   dc_ports:
@@ -93,6 +95,8 @@ drivetrain:
   type: AWD
   drive_type: AWD
 performance:
+  total_power_kw: 230
+  total_torque_nm: 472
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.7
 efficiency:
@@ -151,15 +155,17 @@ wheels:
   - 21-inch
 metadata:
   created_at: '2026-02-09'
-  updated_at: '2026-02-11'
+  updated_at: '2026-02-19'
   data_quality: verified
   data_sources:
   - Škoda official website (skoda-auto.de, 2025)
   - Autocar UK specs (autocar.co.uk)
   - Škoda press materials (2025 refresh)
   notes: "AWD variant with front asynchronous + rear permanent magnet motors. Total\
-    \ system output 286ps (210kW).\nFront motor decouples when not needed for better\
-    \ efficiency. ~15km less WLTP range vs RWD due to \nadded weight (~90kg heavier).\
-    \ Premium of ~€2,500 over RWD 85 variant.\n"
+    \ system output 286ps (210kW / 230kW combined motors).\nFront motor decouples\
+    \ when not needed for better efficiency. ~15km less WLTP range vs RWD due to \n\
+    added weight (~90kg heavier). Premium of ~€2,500 over RWD 85 variant.\nCanonical\
+    \ schema fields added 2026-02-19: total_power_kw (80+150), total_torque_nm (162+310),\
+    \ ac_max_kw, dc_max_kw.\n"
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
