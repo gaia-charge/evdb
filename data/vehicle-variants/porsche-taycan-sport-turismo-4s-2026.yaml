@@ -66,20 +66,19 @@ charging:
   ac_max_kw: 11
   dc_max_kw: 320
 performance:
-  power_kw: 400
+  total_power_kw: 400
   power_hp: 544
   power_ps: 544
   overboost_power_kw: 440
   overboost_power_hp: 598
   overboost_power_ps: 598
-  torque_nm: 710
+  total_torque_nm: 710
   drivetrain: AWD
   transmission: 2-speed rear, single-speed front
-  acceleration:
-    zero_to_100_kmh_sec: 3.7
-    zero_to_100_kmh_launch_control_sec: 3.7
-    zero_to_200_kmh_sec: 13.2
-    launch_control: true
+  acceleration_0_100_sec: 3.7
+  acceleration_launch_control_sec: 3.7
+  acceleration_0_200_sec: 13.2
+  launch_control: true
   top_speed_kmh: 250
   top_speed_limited: true
 dimensions:

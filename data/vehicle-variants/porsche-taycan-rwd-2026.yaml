@@ -88,28 +88,26 @@ charging:
   ac_max_kw: 11
   dc_max_kw: 270
 performance:
-  power_kw: 300
+  total_power_kw: 300
   power_hp: 408
   power_ps: 408
   overboost_power_kw: 300
   overboost_power_hp: 408
   overboost_power_ps: 408
-  torque_nm: 345
+  total_torque_nm: 345
   drivetrain: RWD
   transmission: '2-speed automatic (1st: acceleration, 2nd: efficiency/top speed)'
-  acceleration:
-    zero_to_100_kmh_sec: 4.8
-    zero_to_100_kmh_launch_control_sec: 4.8
-    zero_to_200_kmh_sec: null
-    launch_control: true
-    notes: "0-100 km/h: 4.8 seconds (with Launch Control)\nLaunch Control standard\
-      \ on all Taycan models\n\nDespite being the \"base\" Taycan, 4.8s 0-100 km/h\
-      \ is supercar territory and \nfaster than most sports cars on the road.\n"
+  acceleration_0_100_sec: 4.8
+  acceleration_launch_control_sec: 4.8
+  acceleration_0_200_sec: null
+  launch_control: true
   top_speed_kmh: 230
   top_speed_limited: true
   notes: "Top speed electronically limited to 230 km/h.\nThe 2-speed transmission\
     \ enables strong acceleration (1st gear) while maintaining \nefficiency and top\
-    \ speed capability (2nd gear) - unique among EVs.\n"
+    \ speed capability (2nd gear) - unique among EVs.\n0-100 km/h: 4.8 seconds (with\
+    \ Launch Control) - despite being the \"base\" Taycan,\nthis is supercar territory\
+    \ and faster than most sports cars on the road.\n"
 dimensions:
   length_mm: 4963
   width_mm: 1966
