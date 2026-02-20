@@ -1,88 +1,82 @@
-# Subaru Solterra AWD (2024)
 id: subaru-solterra-awd-2024
-name: "AWD"
+name: AWD
 model_id: subaru-solterra
 model_year: 2024
 variant_code: SOLTERRA-AWD
-
 battery:
   usable_kwh: 71.4
   total_kwh: 75.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "Panasonic"
+  manufacturer: Panasonic
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 465
   wltp_city_km: 555
   wltp_highway_km: 405
-  epa_km: 383  # 228 miles EPA
+  epa_km: 383
   real_world_km: 390
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
-  ac_max_kw: 6.6  # Single-phase only (same limitation as bZ4X)
+  ac_max_kw: 6.6
   ac_phases: 1
   ac_connector: Type2
   dc_max_kw: 150
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 150
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 147
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 40
-      power_kw: 140
-    - soc_percent: 50
-      power_kw: 130
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 150
+  - soc_percent: 10
+    power_kw: 150
+  - soc_percent: 20
+    power_kw: 147
+  - soc_percent: 30
+    power_kw: 145
+  - soc_percent: 40
+    power_kw: 140
+  - soc_percent: 50
+    power_kw: 130
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 15
   time_5_to_80_percent_min: 32
   time_10_to_80_percent_min: 30
   charging_speed_kmh: 810
   plug_and_charge: false
-
 bidirectional:
-  v2l: true  # Vehicle-to-Load capability
+  v2l: true
   v2l_max_kw: 1.5
-  v2h: false  # Not available in Europe
+  v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 169
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 169
+  - position: front
+    type: permanent magnet
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 169
+  - position: rear
+    type: permanent magnet
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 169
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 338
   acceleration_0_100_kmh_sec: 6.9
   acceleration_0_60_mph_sec: 6.5
   top_speed_kmh: 160
-
+  acceleration_0_100_sec: 6.9
 dimensions:
   length_mm: 4690
   width_mm: 1860
@@ -90,12 +84,10 @@ dimensions:
   height_mm: 1650
   wheelbase_mm: 2850
   ground_clearance_mm: 210
-
 cargo:
   trunk_capacity_liters: 452
   trunk_max_liters: 1490
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2020
   gross_vehicle_weight_kg: 2500
@@ -104,60 +96,61 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 52
   distribution_rear_percent: 48
-
 efficiency:
   wltp_kwh_per_100km: 16.3
   wltp_kwh_per_100km_city: 14.0
   wltp_kwh_per_100km_highway: 18.8
   real_world_kwh_per_100km: 19.5
-  energy_efficiency_class: "A"
-
+  energy_efficiency_class: A
 wheels_tires:
-  standard_size_front: "235/60 R18"
-  standard_size_rear: "235/60 R18"
+  standard_size_front: 235/60 R18
+  standard_size_rear: 235/60 R18
   wheel_sizes_available:
-    - "18 inch (standard)"
-    - "20 inch (optional, -20km range)"
-
+  - 18 inch (standard)
+  - 20 inch (optional, -20km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Subaru EyeSight Driver Assist Technology"
-    - "Pre-Collision Braking with pedestrian/cyclist detection"
-    - "Adaptive Cruise Control with Lane Centering"
-    - "Lane Departure Warning and Lane Keep Assist"
-    - "Automatic Emergency Steering"
-    - "Traffic Sign Recognition"
-    - "Automatic High Beam Assist"
-    - "Blind Spot Detection with Rear Cross-Traffic Alert"
-    - "Reverse Automatic Braking"
-    - "Driver Monitoring System (DMS)"
+  - Subaru EyeSight Driver Assist Technology
+  - Pre-Collision Braking with pedestrian/cyclist detection
+  - Adaptive Cruise Control with Lane Centering
+  - Lane Departure Warning and Lane Keep Assist
+  - Automatic Emergency Steering
+  - Traffic Sign Recognition
+  - Automatic High Beam Assist
+  - Blind Spot Detection with Rear Cross-Traffic Alert
+  - Reverse Automatic Braking
+  - Driver Monitoring System (DMS)
   connectivity:
-    - "Subaru Starlink Connected Services"
-    - "Remote climate control via app"
-    - "Remote door lock/unlock"
-    - "Vehicle locator"
-    - "Geofencing and alerts"
-    - "OTA software updates"
-    - "Digital key (smartphone)"
+  - Subaru Starlink Connected Services
+  - Remote climate control via app
+  - Remote door lock/unlock
+  - Vehicle locator
+  - Geofencing and alerts
+  - OTA software updates
+  - Digital key (smartphone)
   special_features:
-    - "Symmetrical AWD (Subaru's signature AWD system)"
-    - "X-MODE with Grip Control (Snow/Dirt, Deep Snow/Mud modes)"
-    - "Hill Descent Control"
-    - "Radiant heating system (more efficient)"
-    - "Heat pump standard"
-    - "StarDrive panoramic roof with solar coating (unique to Solterra)"
-    - "Paddle-style regen control"
-    - "Harman Kardon premium audio (8 speakers)"
-    - "Driver Monitoring System"
-
+  - Symmetrical AWD (Subaru's signature AWD system)
+  - X-MODE with Grip Control (Snow/Dirt, Deep Snow/Mud modes)
+  - Hill Descent Control
+  - Radiant heating system (more efficient)
+  - Heat pump standard
+  - StarDrive panoramic roof with solar coating (unique to Solterra)
+  - Paddle-style regen control
+  - Harman Kardon premium audio (8 speakers)
+  - Driver Monitoring System
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   sources:
-    - "https://www.subaru.com/solterra.html"
-    - "https://ev-database.org/car/1563/Subaru-Solterra"
-    - "https://www.edmunds.com/subaru/solterra/"
-    - "https://www.euroncap.com/en/results/subaru/solterra/45964"
-  notes: "Subaru's first BEV, AWD-only (no FWD variant). Mechanical twin to Toyota bZ4X but with Subaru-specific tuning, unique StarDrive panoramic roof, enhanced X-MODE, and EyeSight safety. Only 6.6kW AC charging is limitation. 8-year/160,000km battery warranty (less generous than Toyota's 10yr unlimited). Excellent build quality, safety (5-star Euro NCAP), and all-weather capability. Competes with Toyota bZ4X, VW ID.4 AWD, Hyundai Ioniq 5 AWD."
+  - https://www.subaru.com/solterra.html
+  - https://ev-database.org/car/1563/Subaru-Solterra
+  - https://www.edmunds.com/subaru/solterra/
+  - https://www.euroncap.com/en/results/subaru/solterra/45964
+  notes: Subaru's first BEV, AWD-only (no FWD variant). Mechanical twin to Toyota
+    bZ4X but with Subaru-specific tuning, unique StarDrive panoramic roof, enhanced
+    X-MODE, and EyeSight safety. Only 6.6kW AC charging is limitation. 8-year/160,000km
+    battery warranty (less generous than Toyota's 10yr unlimited). Excellent build
+    quality, safety (5-star Euro NCAP), and all-weather capability. Competes with
+    Toyota bZ4X, VW ID.4 AWD, Hyundai Ioniq 5 AWD.

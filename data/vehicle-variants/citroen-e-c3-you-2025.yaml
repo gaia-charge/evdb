@@ -1,27 +1,23 @@
-# Citroën ë-C3 You (2025)
 id: citroen-e-c3-you-2025
-name: "You 44kWh"
+name: You 44kWh
 model_id: citroen-e-c3
 model_year: 2025
 variant_code: EC3-YOU-2025
-
 battery:
   usable_kwh: 44.0
   total_kwh: 44.0
   chemistry: LFP
   cell_type: prismatic
-  manufacturer: "CATL"
+  manufacturer: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 326
   wltp_city_km: 440
   wltp_highway_km: 260
   real_world_km: 280
-  real_world_source: "Estimated based on platform data"
-
+  real_world_source: Estimated based on platform data
 charging:
   ac_max_kw: 7.4
   ac_phases: 1
@@ -29,106 +25,100 @@ charging:
   dc_max_kw: 100
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 85
-    - soc_percent: 10
-      power_kw: 100
-    - soc_percent: 20
-      power_kw: 100
-    - soc_percent: 30
-      power_kw: 98
-    - soc_percent: 40
-      power_kw: 90
-    - soc_percent: 50
-      power_kw: 80
-    - soc_percent: 60
-      power_kw: 65
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 18
-    - soc_percent: 100
-      power_kw: 8
+  - soc_percent: 0
+    power_kw: 85
+  - soc_percent: 10
+    power_kw: 100
+  - soc_percent: 20
+    power_kw: 100
+  - soc_percent: 30
+    power_kw: 98
+  - soc_percent: 40
+    power_kw: 90
+  - soc_percent: 50
+    power_kw: 80
+  - soc_percent: 60
+    power_kw: 65
+  - soc_percent: 70
+    power_kw: 50
+  - soc_percent: 80
+    power_kw: 30
+  - soc_percent: 90
+    power_kw: 18
+  - soc_percent: 100
+    power_kw: 8
   time_10_to_80_percent_min: 26
   plug_and_charge: false
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 83
-      power_hp: 113
-      torque_nm: 120
+  - position: front
+    type: permanent magnet
+    power_kw: 83
+    power_hp: 113
+    torque_nm: 120
   total_power_kw: 83
   total_power_hp: 113
   total_torque_nm: 120
   acceleration_0_100_kmh_sec: 11.0
   top_speed_kmh: 135
-
+  acceleration_0_100_sec: 11.0
 dimensions:
   length_mm: 4015
   width_mm: 1755
   height_mm: 1577
   wheelbase_mm: 2540
   ground_clearance_mm: 230
-
 cargo:
   trunk_capacity_liters: 310
   trunk_max_liters: 1200
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1416
   gross_vehicle_weight_kg: 1800
   payload_kg: 384
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 14.6
   real_world_kwh_per_100km: 16.5
-
 wheels_tires:
-  standard_size_front: "195/60 R16"
-  standard_size_rear: "195/60 R16"
+  standard_size_front: 195/60 R16
+  standard_size_rear: 195/60 R16
   wheel_sizes_available:
-    - "16 inch (standard)"
-    - "17 inch (optional)"
-
+  - 16 inch (standard)
+  - 17 inch (optional)
 technology:
   adas_level: 2
   adas_features:
-    - "Active Safety Brake"
-    - "Lane Keeping Assist"
-    - "Speed Limit Recognition"
-    - "Cruise Control"
-    - "Rear parking camera"
-    - "Rear parking sensors"
+  - Active Safety Brake
+  - Lane Keeping Assist
+  - Speed Limit Recognition
+  - Cruise Control
+  - Rear parking camera
+  - Rear parking sensors
   connectivity:
-    - "10.25-inch touchscreen"
-    - "Wireless Apple CarPlay & Android Auto"
-    - "MyCitroën app"
-    - "Bluetooth"
-    - "USB-C ports"
+  - 10.25-inch touchscreen
+  - Wireless Apple CarPlay & Android Auto
+  - MyCitroën app
+  - Bluetooth
+  - USB-C ports
   special_features:
-    - "Citroën Advanced Comfort suspension"
-    - "Eco mode"
-    - "B-mode regenerative braking"
-    - "Heat pump (optional)"
-
+  - Citroën Advanced Comfort suspension
+  - Eco mode
+  - B-mode regenerative braking
+  - Heat pump (optional)
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - "https://www.citroen.de/modelle/e-c3.html"
-    - "https://ev-database.org/car/2060/Citroen-e-C3"
-  notes: "2025 model year ë-C3 with 44 kWh LFP battery. You trim level. Most affordable electric car from a European manufacturer at under €24,000. 7.4kW single-phase AC only (no 3-phase option). 100kW DC fast charging."
+  - https://www.citroen.de/modelle/e-c3.html
+  - https://ev-database.org/car/2060/Citroen-e-C3
+  notes: 2025 model year ë-C3 with 44 kWh LFP battery. You trim level. Most affordable
+    electric car from a European manufacturer at under €24,000. 7.4kW single-phase
+    AC only (no 3-phase option). 100kW DC fast charging.

@@ -1,88 +1,82 @@
-# Audi Q4 45 e-tron quattro (2024)
 id: audi-q4-e-tron-45-quattro-2024
-name: "45 quattro"
+name: 45 quattro
 model_id: audi-q4-e-tron
 model_year: 2024
 variant_code: Q4-45Q
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "LG Energy Solution / Samsung SDI"
+  manufacturer: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 522
-  wltp_city_km: 680  # Excellent city range
+  wltp_city_km: 680
   wltp_highway_km: 410
-  epa_km: 423  # 263 miles (US market)
+  epa_km: 423
   real_world_km: 440
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
   ac_max_kw: 11
   ac_phases: 3
   ac_connector: Type2
-  dc_max_kw: 135  # 400V architecture limits DC charging
+  dc_max_kw: 135
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 135
-    - soc_percent: 10
-      power_kw: 135
-    - soc_percent: 20
-      power_kw: 135
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 80
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 135
+  - soc_percent: 10
+    power_kw: 135
+  - soc_percent: 20
+    power_kw: 135
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 95
+  - soc_percent: 60
+    power_kw: 80
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 30
+  - soc_percent: 100
+    power_kw: 15
   time_5_to_80_percent_min: 38
   time_10_to_80_percent_min: 36
-  charging_speed_kmh: 690  # km of range per hour at peak
-  plug_and_charge: true  # ISO 15118 support
-
+  charging_speed_kmh: 690
+  plug_and_charge: true
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "AC induction"
-      power_kw: 80
-      power_hp: 109
-      torque_nm: null
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 310
+  - position: front
+    type: AC induction
+    power_kw: 80
+    power_hp: 109
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 310
   total_power_kw: 220
   total_power_hp: 299
   total_torque_nm: 460
   acceleration_0_100_kmh_sec: 6.9
   acceleration_0_60_mph_sec: 6.5
-  top_speed_kmh: 180  # Electronically limited
-
+  top_speed_kmh: 180
+  acceleration_0_100_sec: 6.9
 dimensions:
   length_mm: 4588
   width_mm: 1865
@@ -90,13 +84,10 @@ dimensions:
   height_mm: 1632
   wheelbase_mm: 2764
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 520
   trunk_max_liters: 1490
   frunk_capacity_liters: 0
-
-
 weight:
   curb_weight_kg: 2135
   gross_vehicle_weight_kg: 2655
@@ -105,49 +96,48 @@ weight:
   distribution_rear_percent: 50
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
-
 efficiency:
-  wltp_kwh_per_100km: 19.3  # Heavier than RWD variant
+  wltp_kwh_per_100km: 19.3
   wltp_kwh_per_100km_city: 16.5
   wltp_kwh_per_100km_highway: 23.1
   real_world_kwh_per_100km: 20.8
-  energy_efficiency_class: "B"  # EU energy label
-
+  energy_efficiency_class: B
 wheels_tires:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "255/50 R19"
+  standard_size_front: 235/55 R19
+  standard_size_rear: 255/50 R19
   wheel_sizes_available:
-    - "19 inch (standard)"
-    - "20 inch (optional, -15km range)"
-    - "21 inch (optional, -25km range)"
-
+  - 19 inch (standard)
+  - 20 inch (optional, -15km range)
+  - 21 inch (optional, -25km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise control (ACC) with Stop&Go"
-    - "Lane departure warning"
-    - "Lane keeping assist"
-    - "Traffic sign recognition"
-    - "Park assist (optional)"
-    - "360-degree camera (optional)"
-    - "Rear cross-traffic alert (optional)"
+  - Adaptive cruise control (ACC) with Stop&Go
+  - Lane departure warning
+  - Lane keeping assist
+  - Traffic sign recognition
+  - Park assist (optional)
+  - 360-degree camera (optional)
+  - Rear cross-traffic alert (optional)
   connectivity:
-    - "Audi connect navigation & infotainment"
-    - "myAudi app remote control"
-    - "OTA software updates"
-    - "e-tron route planner with charging stops"
+  - Audi connect navigation & infotainment
+  - myAudi app remote control
+  - OTA software updates
+  - e-tron route planner with charging stops
   special_features:
-    - "Recuperation levels (3 modes: off, auto, manual)"
-    - "B mode for strong regen (one-pedal driving)"
-    - "Pre-conditioning when navigating to charger"
-    - "Acoustic Vehicle Alerting System (AVAS)"
-
+  - 'Recuperation levels (3 modes: off, auto, manual)'
+  - B mode for strong regen (one-pedal driving)
+  - Pre-conditioning when navigating to charger
+  - Acoustic Vehicle Alerting System (AVAS)
 metadata:
   data_quality: verified
-  created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  created_at: '2026-02-07'
+  last_updated: '2026-02-07'
   sources:
-    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-e-tron/technische-daten.html"
-    - "https://ev-database.org/car/1366/Audi-Q4-e-tron-45-quattro"
-    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q4-e-tron/"
-  notes: "AWD variant of Q4 e-tron with 220kW total power. Built on MEB platform with 400V architecture (vs 800V in e-tron GT). More powerful than RWD 40 variant but less efficient due to dual motors and extra weight (+135kg). Popular choice for buyers wanting AWD capability and better traction in winter conditions."
+  - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-e-tron/technische-daten.html
+  - https://ev-database.org/car/1366/Audi-Q4-e-tron-45-quattro
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q4-e-tron/
+  notes: AWD variant of Q4 e-tron with 220kW total power. Built on MEB platform with
+    400V architecture (vs 800V in e-tron GT). More powerful than RWD 40 variant but
+    less efficient due to dual motors and extra weight (+135kg). Popular choice for
+    buyers wanting AWD capability and better traction in winter conditions.

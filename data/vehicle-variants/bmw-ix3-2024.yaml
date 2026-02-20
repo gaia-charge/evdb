@@ -1,13 +1,8 @@
-# BMW iX3 2024 Vehicle Variant
-# RWD mid-size SUV with 80kWh battery
-# 461km WLTP range, 150kW DC fast charging
-
 id: bmw-ix3-2024
-name: "Base"
+name: Base
 model_id: bmw-ix3
 model_year: 2024
 trim_level: Base
-
 dimensions:
   length_mm: 4734
   width_mm: 1891
@@ -15,12 +10,10 @@ dimensions:
   height_mm: 1668
   wheelbase_mm: 2864
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 510
   trunk_max_liters: 1560
   frunk_capacity_liters: 0
-
 battery:
   usable_kwh: 80.0
   total_kwh: 83.9
@@ -30,26 +23,24 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 461
   wltp_city_km: 590
   wltp_highway_km: 380
-  epa_km: null # Not sold in US
+  epa_km: null
   real_world_km: 395
   conditions:
-    - test: WLTP Combined
-      result_km: 461
-      temperature_c: 23
-    - test: Real-world mixed
-      result_km: 395
-      temperature_c: 15
-      notes: "Mixed city/highway driving"
-    - test: Real-world winter
-      result_km: 310
-      temperature_c: -5
-      notes: "Cold weather with heating, 22% loss"
-
+  - test: WLTP Combined
+    result_km: 461
+    temperature_c: 23
+  - test: Real-world mixed
+    result_km: 395
+    temperature_c: 15
+    notes: Mixed city/highway driving
+  - test: Real-world winter
+    result_km: 310
+    temperature_c: -5
+    notes: Cold weather with heating, 22% loss
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -57,42 +48,41 @@ charging:
   dc_max_kw: 150
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 45
+  - soc_percent: 10
+    power_kw: 150
+  - soc_percent: 20
+    power_kw: 150
+  - soc_percent: 40
+    power_kw: 145
+  - soc_percent: 60
+    power_kw: 95
+  - soc_percent: 80
+    power_kw: 45
   charge_times:
-    - type: DC fast charging
-      power_kw: 150
-      soc_from: 10
-      soc_to: 80
-      time_minutes: 34
-      notes: "CCS2 DC fast charging"
-    - type: AC home charging
-      power_kw: 11
-      soc_from: 0
-      soc_to: 100
-      time_minutes: 480
-      notes: "11kW 3-phase wallbox (8 hours)"
+  - type: DC fast charging
+    power_kw: 150
+    soc_from: 10
+    soc_to: 80
+    time_minutes: 34
+    notes: CCS2 DC fast charging
+  - type: AC home charging
+    power_kw: 11
+    soc_from: 0
+    soc_to: 100
+    time_minutes: 480
+    notes: 11kW 3-phase wallbox (8 hours)
   plug_and_charge: true
   bidirectional:
     v2l: false
     v2g: false
   preconditioning: true
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 210
-      torque_nm: 400
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    torque_nm: 400
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 400
@@ -100,7 +90,7 @@ performance:
   acceleration_0_60_mph_sec: 6.5
   top_speed_kph: 180
   top_speed_mph: 112
-
+  top_speed_kmh: 180
 weight:
   curb_weight_kg: 2260
   gross_vehicle_weight_kg: 2780
@@ -108,54 +98,58 @@ weight:
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
   roof_load_kg: 75
-
 efficiency:
   wltp_kwh_per_100km: 18.5
   wltp_city_kwh_per_100km: 15.2
   wltp_highway_kwh_per_100km: 22.4
   real_world_kwh_per_100km: 21.2
-  energy_efficiency_class: A # EU energy label
-
+  energy_efficiency_class: A
 features:
   standard:
-    - LED headlights
-    - Dual-zone automatic climate control
-    - BMW Live Cockpit Professional
-    - 12.3" instrument cluster + 10.25" central display
-    - BMW iDrive 7.0
-    - Apple CarPlay & Android Auto wireless
-    - BMW Intelligent Personal Assistant
-    - Parking sensors front and rear
-    - Reversing camera
-    - Adaptive cruise control
-    - Lane departure warning
-    - Speed limit information
-    - Adaptive air suspension
-    - 19" aero wheels
+  - LED headlights
+  - Dual-zone automatic climate control
+  - BMW Live Cockpit Professional
+  - 12.3" instrument cluster + 10.25" central display
+  - BMW iDrive 7.0
+  - Apple CarPlay & Android Auto wireless
+  - BMW Intelligent Personal Assistant
+  - Parking sensors front and rear
+  - Reversing camera
+  - Adaptive cruise control
+  - Lane departure warning
+  - Speed limit information
+  - Adaptive air suspension
+  - 19" aero wheels
   optional:
-    - Heat pump (standard on 2023+ models)
-    - M Sport Package (sport styling, 20" wheels)
-    - Driving Assistant Professional (Highway Assistant)
-    - Parking Assistant Plus with 360° camera
-    - Harman Kardon surround sound
-    - Panoramic glass roof
-    - Adaptive LED headlights
-    - Head-Up Display
-    - Comfort Access (keyless entry)
-
+  - Heat pump (standard on 2023+ models)
+  - M Sport Package (sport styling, 20" wheels)
+  - Driving Assistant Professional (Highway Assistant)
+  - Parking Assistant Plus with 360° camera
+  - Harman Kardon surround sound
+  - Panoramic glass roof
+  - Adaptive LED headlights
+  - Head-Up Display
+  - Comfort Access (keyless entry)
 version_info:
-  release_date: "2020-09"
-  changes_from_previous: "2024 model adds heat pump as standard"
+  release_date: 2020-09
+  changes_from_previous: 2024 model adds heat pump as standard
   current_production: true
-
-notes: "BMW's first mass-production electric SUV. RWD only (no AWD variant available). Built on CLAR platform (shared with X3). 400V architecture with 150kW DC fast charging. Adaptive air suspension standard (unique in segment). Heavier than iX1 (2,260kg vs 2,085kg) due to larger battery. Real-world 395km range adequate for most journeys. 0-100 in 6.8s slower than iX1 xDrive30 (single motor vs dual). Popular in Europe and China, not sold in US. Competes with Audi e-tron 50, Mercedes EQC 400, Volvo XC40 Recharge. Heat pump became standard on 2023+ models (was optional on 2020-2022). Fifth-generation BMW eDrive technology. Towing capacity only 750kg (lower than iX1's 1,200kg). Good highway range for road trips. Premium SUV buyers seeking familiar X3 space with electric drivetrain."
-
+notes: BMW's first mass-production electric SUV. RWD only (no AWD variant available).
+  Built on CLAR platform (shared with X3). 400V architecture with 150kW DC fast charging.
+  Adaptive air suspension standard (unique in segment). Heavier than iX1 (2,260kg
+  vs 2,085kg) due to larger battery. Real-world 395km range adequate for most journeys.
+  0-100 in 6.8s slower than iX1 xDrive30 (single motor vs dual). Popular in Europe
+  and China, not sold in US. Competes with Audi e-tron 50, Mercedes EQC 400, Volvo
+  XC40 Recharge. Heat pump became standard on 2023+ models (was optional on 2020-2022).
+  Fifth-generation BMW eDrive technology. Towing capacity only 750kg (lower than iX1's
+  1,200kg). Good highway range for road trips. Premium SUV buyers seeking familiar
+  X3 space with electric drivetrain.
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-08"
+  created_at: '2026-02-08'
+  updated_at: '2026-02-08'
   data_quality: verified
   sources:
-    - https://www.bmw.de/de/neufahrzeuge/x/ix3/technische-daten.html
-    - https://ev-database.org/car/1118/BMW-iX3
-    - https://insideevs.com/reviews/445123/bmw-ix3-first-drive/
-    - https://www.whatcar.com/bmw/ix3/estate/review
+  - https://www.bmw.de/de/neufahrzeuge/x/ix3/technische-daten.html
+  - https://ev-database.org/car/1118/BMW-iX3
+  - https://insideevs.com/reviews/445123/bmw-ix3-first-drive/
+  - https://www.whatcar.com/bmw/ix3/estate/review

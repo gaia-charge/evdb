@@ -1,10 +1,8 @@
-# Dacia Spring Expression 2025 (Facelift)
 id: dacia-spring-expression-2025
-name: "Expression"
+name: Expression
 model_id: dacia-spring
 model_year: 2025
 variant_code: EXPRESSION
-
 battery:
   usable_kwh: 26.8
   total_kwh: 27.4
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 120000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 225
   wltp_city_km: 310
@@ -22,7 +19,6 @@ range:
   epa_km: null
   real_world_km: 175
   real_world_source: Estimated from 2024 data with efficiency improvements
-
 charging:
   ac_max_kw: 7
   ac_phases: 1
@@ -30,104 +26,101 @@ charging:
   dc_max_kw: 30
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 28
-    - soc_percent: 10
-      power_kw: 30
-    - soc_percent: 30
-      power_kw: 30
-    - soc_percent: 50
-      power_kw: 28
-    - soc_percent: 60
-      power_kw: 25
-    - soc_percent: 70
-      power_kw: 22
-    - soc_percent: 80
-      power_kw: 18
-    - soc_percent: 90
-      power_kw: 12
-    - soc_percent: 100
-      power_kw: 5
+  - soc_percent: 0
+    power_kw: 28
+  - soc_percent: 10
+    power_kw: 30
+  - soc_percent: 30
+    power_kw: 30
+  - soc_percent: 50
+    power_kw: 28
+  - soc_percent: 60
+    power_kw: 25
+  - soc_percent: 70
+    power_kw: 22
+  - soc_percent: 80
+    power_kw: 18
+  - soc_percent: 90
+    power_kw: 12
+  - soc_percent: 100
+    power_kw: 5
   time_5_to_80_percent_min: 45
   time_10_to_80_percent_min: 40
   plug_and_charge: false
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 48
-      power_hp: 65
-      torque_nm: 113
+  - position: front
+    type: permanent magnet
+    power_kw: 48
+    power_hp: 65
+    torque_nm: 113
   total_power_kw: 48
   total_power_hp: 65
   total_torque_nm: 113
   acceleration_0_100_kmh_sec: 13.7
   top_speed_kmh: 125
-
+  acceleration_0_100_sec: 13.7
 dimensions:
   length_mm: 3701
   width_mm: 1622
   height_mm: 1519
   wheelbase_mm: 2423
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 308
   trunk_max_liters: 1004
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 984
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
   gross_vehicle_weight_kg: 1384
   payload_kg: 400
-
 efficiency:
   wltp_kwh_per_100km: 13.9
   real_world_kwh_per_100km: 15.5
-  energy_efficiency_class: "A+"
-
+  energy_efficiency_class: A+
 wheels_tires:
-  standard_size_front: "185/65 R15"
+  standard_size_front: 185/65 R15
   wheel_sizes_available:
-    - "15 inch (standard)"
-
+  - 15 inch (standard)
 technology:
   adas_level: 1
   adas_features:
-    - "Automatic emergency braking"
-    - "Lane departure warning"
-    - "Speed limiter"
-    - "Rear parking sensors"
-    - "Reversing camera"
-    - "Hill start assist"
+  - Automatic emergency braking
+  - Lane departure warning
+  - Speed limiter
+  - Rear parking sensors
+  - Reversing camera
+  - Hill start assist
   connectivity:
-    - "Dacia Media Display 10\" touchscreen"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "MY Dacia app"
-    - "DAB+ digital radio"
+  - Dacia Media Display 10" touchscreen
+  - Wireless Apple CarPlay and Android Auto
+  - MY Dacia app
+  - DAB+ digital radio
   special_features:
-    - "New Dacia design language (2025 facelift)"
-    - "Improved interior materials"
-    - "LED headlights (standard from 2025)"
-    - "Updated infotainment system"
-
+  - New Dacia design language (2025 facelift)
+  - Improved interior materials
+  - LED headlights (standard from 2025)
+  - Updated infotainment system
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - "https://www.dacia.de/modelle/spring.html"
-  notes: |
-    2025 facelift Dacia Spring with updated Dacia design language, improved interior,
-    LED headlights as standard. Remains Europe's most affordable electric car.
+  - https://www.dacia.de/modelle/spring.html
+  notes: '2025 facelift Dacia Spring with updated Dacia design language, improved
+    interior,
+
+    LED headlights as standard. Remains Europe''s most affordable electric car.
+
     Perfect city car with 225 km WLTP range. LFP battery chemistry for longevity.
+
     Expression is the mid-level trim with good standard equipment.
+
+    '

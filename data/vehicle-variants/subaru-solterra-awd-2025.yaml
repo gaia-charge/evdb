@@ -1,27 +1,23 @@
-# Subaru Solterra AWD (2025)
 id: subaru-solterra-awd-2025
-name: "AWD"
+name: AWD
 model_id: subaru-solterra
 model_year: 2025
 variant_code: SOLTERRA-AWD-2025
-
 battery:
   usable_kwh: 71.4
   total_kwh: 75.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "Panasonic"
+  manufacturer: Panasonic
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 466
   wltp_city_km: 555
   wltp_highway_km: 400
   real_world_km: 385
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -29,55 +25,53 @@ charging:
   dc_max_kw: 150
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 150
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 147
-    - soc_percent: 30
-      power_kw: 143
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 60
-      power_kw: 100
-    - soc_percent: 70
-      power_kw: 72
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 22
+  - soc_percent: 0
+    power_kw: 150
+  - soc_percent: 10
+    power_kw: 150
+  - soc_percent: 20
+    power_kw: 147
+  - soc_percent: 30
+    power_kw: 143
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 120
+  - soc_percent: 60
+    power_kw: 100
+  - soc_percent: 70
+    power_kw: 72
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 22
   time_10_to_80_percent_min: 31
   charging_speed_kmh: 830
   plug_and_charge: false
-
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
   v2h: true
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 169
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 169
+  - position: front
+    type: permanent magnet
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 169
+  - position: rear
+    type: permanent magnet
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 169
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 338
   acceleration_0_100_kmh_sec: 6.9
   top_speed_kmh: 160
-
+  acceleration_0_100_sec: 6.9
 dimensions:
   length_mm: 4690
   width_mm: 1860
@@ -85,66 +79,61 @@ dimensions:
   height_mm: 1650
   wheelbase_mm: 2850
   ground_clearance_mm: 210
-
 cargo:
   trunk_capacity_liters: 452
   trunk_max_liters: 1490
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2020
   gross_vehicle_weight_kg: 2500
   payload_kg: 480
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 16.2
   wltp_kwh_per_100km_city: 13.8
   wltp_kwh_per_100km_highway: 18.8
   real_world_kwh_per_100km: 19.5
-  energy_efficiency_class: "A"
-
+  energy_efficiency_class: A
 wheels_tires:
-  standard_size_front: "235/60 R18"
-  standard_size_rear: "235/60 R18"
+  standard_size_front: 235/60 R18
+  standard_size_rear: 235/60 R18
   wheel_sizes_available:
-    - "18 inch (standard)"
-    - "20 inch (optional)"
-
+  - 18 inch (standard)
+  - 20 inch (optional)
 technology:
   adas_level: 2
   adas_features:
-    - "Subaru EyeSight driver assist"
-    - "Pre-collision braking"
-    - "Adaptive cruise control"
-    - "Lane centering"
-    - "Lane departure prevention"
-    - "Lead vehicle start alert"
-    - "Blind spot detection"
-    - "Rear cross-traffic alert"
+  - Subaru EyeSight driver assist
+  - Pre-collision braking
+  - Adaptive cruise control
+  - Lane centering
+  - Lane departure prevention
+  - Lead vehicle start alert
+  - Blind spot detection
+  - Rear cross-traffic alert
   connectivity:
-    - "Subaru STARLINK"
-    - "Remote climate control"
-    - "Remote lock/unlock"
-    - "OTA updates"
-    - "Wireless Apple CarPlay"
-    - "Wireless Android Auto"
+  - Subaru STARLINK
+  - Remote climate control
+  - Remote lock/unlock
+  - OTA updates
+  - Wireless Apple CarPlay
+  - Wireless Android Auto
   special_features:
-    - "11kW 3-phase AC charging (upgraded for 2025)"
-    - "Subaru Symmetrical AWD (electric)"
-    - "X-MODE with Grip Control"
-    - "Heat pump standard"
-    - "V2L and V2H capability"
-    - "12.3-inch touchscreen"
-    - "Panoramic moonroof"
-    - "Harman Kardon audio (optional)"
-
+  - 11kW 3-phase AC charging (upgraded for 2025)
+  - Subaru Symmetrical AWD (electric)
+  - X-MODE with Grip Control
+  - Heat pump standard
+  - V2L and V2H capability
+  - 12.3-inch touchscreen
+  - Panoramic moonroof
+  - Harman Kardon audio (optional)
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   sources:
-    - "https://www.subaru.de/solterra"
-    - "https://ev-database.org/car/1550/Subaru-Solterra-AWD"
-  notes: "2025 update with 11kW AC charging. Twin of Toyota bZ4X AWD. Subaru's EyeSight and Symmetrical AWD heritage distinguish it. AWD-only offering."
+  - https://www.subaru.de/solterra
+  - https://ev-database.org/car/1550/Subaru-Solterra-AWD
+  notes: 2025 update with 11kW AC charging. Twin of Toyota bZ4X AWD. Subaru's EyeSight
+    and Symmetrical AWD heritage distinguish it. AWD-only offering.

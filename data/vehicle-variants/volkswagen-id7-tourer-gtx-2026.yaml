@@ -1,10 +1,8 @@
-# Volkswagen ID.7 Tourer GTX (2026)
 id: volkswagen-id7-tourer-gtx-2026
 name: GTX
 model_id: volkswagen-id7-tourer
 model_year: 2026
 variant_code: ID7T-GTX-26
-
 battery:
   usable_kwh: 86.0
   total_kwh: 91.0
@@ -15,10 +13,11 @@ battery:
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 400
-  notes: |
-    86 kWh usable (91 kWh gross). Same battery as Pro S but paired with
+  notes: '86 kWh usable (91 kWh gross). Same battery as Pro S but paired with
+
     dual-motor AWD drivetrain for improved traction and performance.
 
+    '
 range:
   wltp_km: 584
   wltp_city_km: 760
@@ -26,10 +25,11 @@ range:
   epa_km: null
   real_world_km: 500
   real_world_source: ev-database.org estimation
-  notes: |
-    584 km WLTP range. AWD drivetrain reduces range vs Pro S but adds
+  notes: '584 km WLTP range. AWD drivetrain reduces range vs Pro S but adds
+
     traction and performance. Real-world mixed approximately 500 km.
 
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -40,33 +40,35 @@ charging:
   dc_curve_peak_kw: 200
   plug_and_charge: true
   preconditioning: true
-  notes: |
-    200 kW peak DC charging, identical to Pro S. 10-80% in 26 minutes.
+  notes: '200 kW peak DC charging, identical to Pro S. 10-80% in 26 minutes.
+
     Plug & Charge supported. Navigation-based preconditioning.
 
+    '
 motors:
-  - location: front
-    type: asynchronous
-    power_kw: 80
-    torque_nm: 162
-    manufacturer: Volkswagen
-  - location: rear
-    type: permanent_magnet
-    power_kw: 210
-    power_hp: 286
-    torque_nm: 560
-    manufacturer: Volkswagen
-
+- location: front
+  type: asynchronous
+  power_kw: 80
+  torque_nm: 162
+  manufacturer: Volkswagen
+- location: rear
+  type: permanent_magnet
+  power_kw: 210
+  power_hp: 286
+  torque_nm: 560
+  manufacturer: Volkswagen
 drivetrain: awd
 total_power_kw: 250
 total_power_hp: 340
 total_torque_nm: 560
-
 performance:
   acceleration_0_100_kmh: 5.5
   top_speed_kmh: 180
   top_speed_limited: true
-
+  total_power_kw: 250
+  total_power_hp: 340
+  total_torque_nm: 560
+  acceleration_0_100_sec: 5.5
 dimensions:
   length_mm: 4961
   width_mm: 1862
@@ -74,31 +76,25 @@ dimensions:
   wheelbase_mm: 2965
   ground_clearance_mm: 152
   drag_coefficient: 0.24
-
 weight:
   curb_weight_kg: 2289
   gross_vehicle_weight_kg: 2750
   payload_kg: 461
   towing_capacity_braked_kg: 1400
   towing_capacity_unbraked_kg: 750
-
 cargo:
   trunk_capacity_liters: 605
   trunk_max_liters: 1714
   frunk_capacity_liters: 0
-
 seating:
   seats: 5
   isofix: true
-
 efficiency:
   wltp_kwh_per_100km: 16.6
   real_world_kwh_per_100km: 17.2
-
 safety:
   euro_ncap_stars: 5
   euro_ncap_year: 2024
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -106,42 +102,55 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist 2.0 with Swarm Data"
-  notes: |
-    - ID. Software 5.0 with enhanced voice control
+  autopilot_name: Travel Assist 2.0 with Swarm Data
+  notes: '- ID. Software 5.0 with enhanced voice control
+
     - 15" infotainment touchscreen
+
     - Augmented reality head-up display
+
     - Matrix LED headlights (IQ.LIGHT)
+
     - DCC adaptive chassis control (sport-tuned)
+
     - GTX sport suspension and progressive steering
+
     - GTX exterior styling (unique bumpers, 20" wheels)
+
     - Heat pump standard
+
     - Wireless Apple CarPlay and Android Auto
+
     - 360° area view cameras
+
     - Park Assist Plus with memory function
+
     - Heated front and rear seats
+
     - 3-zone climate control
+
     - Panoramic glass roof
+
     - Powered tailgate with gesture control
+
     - Harman Kardon sound system (700W, 14 speakers)
 
+    '
 production:
   plant: Emden
   country: Germany
-  start_date: "2024-09"
-
-notes: >
-  The ID.7 Tourer GTX is the performance AWD estate variant with 250 kW combined
+  start_date: 2024-09
+notes: 'The ID.7 Tourer GTX is the performance AWD estate variant with 250 kW combined
   power and 5.5s 0-100 km/h. Sport-tuned suspension and GTX styling differentiate
   it from the Pro S. Despite AWD, still achieves 584 km WLTP range. Targets buyers
   wanting estate practicality with sporty character. Competes with BMW i5 xDrive40
   Touring at more competitive pricing.
 
-
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-11"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-11'
   data_quality: verified
   sources:
-    - https://ev-database.org/car/3261/Volkswagen-ID7-Tourer-GTX
-    - https://www.volkswagen.de
+  - https://ev-database.org/car/3261/Volkswagen-ID7-Tourer-GTX
+  - https://www.volkswagen.de

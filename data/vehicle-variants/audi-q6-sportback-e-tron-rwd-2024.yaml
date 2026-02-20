@@ -1,28 +1,24 @@
-# Audi Q6 Sportback e-tron RWD (2024)
 id: audi-q6-sportback-e-tron-rwd-2024
-name: "RWD"
+name: RWD
 model_id: audi-q6-sportback-e-tron
 model_year: 2024
 variant_code: Q6-SB-RWD
-
 battery:
   usable_kwh: 94.9
   total_kwh: 100.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "Samsung SDI / LG Energy Solution"
+  manufacturer: Samsung SDI / LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 641
   wltp_city_km: 850
   wltp_highway_km: 535
   epa_km: null
   real_world_km: 540
-  real_world_source: "EV Database estimation based on PPE platform efficiency"
-
+  real_world_source: EV Database estimation based on PPE platform efficiency
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,66 +26,62 @@ charging:
   dc_max_kw: 270
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 270
-    - soc_percent: 10
-      power_kw: 270
-    - soc_percent: 20
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 250
-    - soc_percent: 40
-      power_kw: 230
-    - soc_percent: 50
-      power_kw: 200
-    - soc_percent: 60
-      power_kw: 170
-    - soc_percent: 70
-      power_kw: 130
-    - soc_percent: 80
-      power_kw: 85
-    - soc_percent: 90
-      power_kw: 45
-    - soc_percent: 100
-      power_kw: 20
+  - soc_percent: 0
+    power_kw: 270
+  - soc_percent: 10
+    power_kw: 270
+  - soc_percent: 20
+    power_kw: 270
+  - soc_percent: 30
+    power_kw: 250
+  - soc_percent: 40
+    power_kw: 230
+  - soc_percent: 50
+    power_kw: 200
+  - soc_percent: 60
+    power_kw: 170
+  - soc_percent: 70
+    power_kw: 130
+  - soc_percent: 80
+    power_kw: 85
+  - soc_percent: 90
+    power_kw: 45
+  - soc_percent: 100
+    power_kw: 20
   time_5_to_80_percent_min: 21
   time_10_to_80_percent_min: 21
   charging_speed_kmh: 1380
   plug_and_charge: true
-
 bidirectional:
   v2l: true
   v2l_max_kw: 12
   v2h: true
   v2g: true
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 185
-      power_hp: 252
-      torque_nm: 400
+  - position: rear
+    type: permanent magnet
+    power_kw: 185
+    power_hp: 252
+    torque_nm: 400
   total_power_kw: 185
   total_power_hp: 252
   total_torque_nm: 400
   acceleration_0_100_kmh_sec: 6.6
   acceleration_0_60_mph_sec: 6.3
   top_speed_kmh: 210
-
+  acceleration_0_100_sec: 6.6
 dimensions:
   length_mm: 4771
   width_mm: 1965
   height_mm: 1648
   wheelbase_mm: 2899
   ground_clearance_mm: 184
-
 cargo:
   trunk_capacity_liters: 511
   trunk_max_liters: 1373
   frunk_capacity_liters: 64
-
 weight:
   curb_weight_kg: 2150
   gross_vehicle_weight_kg: 2790
@@ -98,82 +90,85 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 48
   distribution_rear_percent: 52
-
 efficiency:
   wltp_kwh_per_100km: 16.8
   wltp_kwh_per_100km_city: 14.0
   wltp_kwh_per_100km_highway: 20.0
   real_world_kwh_per_100km: 19.5
-  energy_efficiency_class: "A+"
-
+  energy_efficiency_class: A+
 wheels_tires:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "255/50 R19"
+  standard_size_front: 235/55 R19
+  standard_size_rear: 255/50 R19
   wheel_sizes_available:
-    - "19 inch (standard)"
-    - "20 inch (optional, -20km range)"
-    - "21 inch (optional, -35km range)"
-    - "22 inch (optional, -50km range)"
-
+  - 19 inch (standard)
+  - 20 inch (optional, -20km range)
+  - 21 inch (optional, -35km range)
+  - 22 inch (optional, -50km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise control with lane keeping assist"
-    - "Active lane assist"
-    - "Traffic sign recognition"
-    - "Park assist plus with remote parking"
-    - "360-degree camera system"
-    - "Predictive efficiency assist"
-    - "Intersection assist"
-    - "Emergency assist"
-    - "Augmented reality head-up display"
+  - Adaptive cruise control with lane keeping assist
+  - Active lane assist
+  - Traffic sign recognition
+  - Park assist plus with remote parking
+  - 360-degree camera system
+  - Predictive efficiency assist
+  - Intersection assist
+  - Emergency assist
+  - Augmented reality head-up display
   connectivity:
-    - "Audi connect navigation & infotainment plus"
-    - "myAudi app with remote functions"
-    - "OTA software updates"
-    - "e-tron route planner with charging optimization"
-    - "5G connectivity (optional)"
+  - Audi connect navigation & infotainment plus
+  - myAudi app with remote functions
+  - OTA software updates
+  - e-tron route planner with charging optimization
+  - 5G connectivity (optional)
   special_features:
-    - "Three-stage recuperation (0.1g, 0.15g, 0.2g)"
-    - "B mode for strong regen (one-pedal driving)"
-    - "Pre-conditioning (battery & cabin)"
-    - "Bank & Turn technology"
-    - "Acoustic Vehicle Alerting System (AVAS)"
-    - "Air suspension with adaptive dampers standard"
-    - "Matrix LED headlights standard"
-
+  - Three-stage recuperation (0.1g, 0.15g, 0.2g)
+  - B mode for strong regen (one-pedal driving)
+  - Pre-conditioning (battery & cabin)
+  - Bank & Turn technology
+  - Acoustic Vehicle Alerting System (AVAS)
+  - Air suspension with adaptive dampers standard
+  - Matrix LED headlights standard
 features:
   interior:
-    - "14.9-inch MMI panoramic display (curved OLED)"
-    - "11.9-inch Audi virtual cockpit plus"
-    - "10.9-inch MMI front passenger display"
-    - "Sonos premium sound system (20 speakers, 830W)"
-    - "Ambient lighting plus (30 colors)"
-    - "4-zone automatic climate control"
-    - "Heated front seats"
-    - "Panoramic glass roof with electrochromic dimming"
-    - "Wireless smartphone charging (15W)"
-    - "Synthetic leather upholstery standard"
-    - "Sport steering wheel with multifunction buttons"
+  - 14.9-inch MMI panoramic display (curved OLED)
+  - 11.9-inch Audi virtual cockpit plus
+  - 10.9-inch MMI front passenger display
+  - Sonos premium sound system (20 speakers, 830W)
+  - Ambient lighting plus (30 colors)
+  - 4-zone automatic climate control
+  - Heated front seats
+  - Panoramic glass roof with electrochromic dimming
+  - Wireless smartphone charging (15W)
+  - Synthetic leather upholstery standard
+  - Sport steering wheel with multifunction buttons
   exterior:
-    - "Digital Matrix LED headlights"
-    - "Digital OLED rear lights"
-    - "19-inch aero wheels (standard)"
-    - "Power tailgate"
-    - "Aluminum roof rails"
-    - "Flush door handles"
+  - Digital Matrix LED headlights
+  - Digital OLED rear lights
+  - 19-inch aero wheels (standard)
+  - Power tailgate
+  - Aluminum roof rails
+  - Flush door handles
   comfort:
-    - "Heat pump standard"
-    - "Remote climatization"
-    - "Power-adjustable front seats with memory"
-    - "Keyless entry and start"
-    - "Electric parking brake with auto-hold"
-
+  - Heat pump standard
+  - Remote climatization
+  - Power-adjustable front seats with memory
+  - Keyless entry and start
+  - Electric parking brake with auto-hold
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   sources:
-    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-sportback-e-tron.html"
-    - "https://ev-database.org/"
-  notes: "Sportback coupe variant of Q6 e-tron with improved aerodynamics (Cd 0.26) delivering same 641km WLTP range as SUV variant despite coupe styling. Built on PPE platform with 800V architecture enabling 270kW peak DC charging (10-80% in 21 minutes). Entry-level RWD powertrain offers excellent efficiency and rear-biased driving dynamics. At €68,900 base price, it undercuts BMW iX xDrive40 by €19,100 while offering superior range and charging performance. Standard air suspension, heat pump, matrix LED, Sonos sound, and bi-directional charging provide comprehensive equipment. Target buyers: efficiency-focused premium buyers, company car drivers (0.25% tax rate), long-distance travelers."
+  - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-sportback-e-tron.html
+  - https://ev-database.org/
+  notes: 'Sportback coupe variant of Q6 e-tron with improved aerodynamics (Cd 0.26)
+    delivering same 641km WLTP range as SUV variant despite coupe styling. Built on
+    PPE platform with 800V architecture enabling 270kW peak DC charging (10-80% in
+    21 minutes). Entry-level RWD powertrain offers excellent efficiency and rear-biased
+    driving dynamics. At €68,900 base price, it undercuts BMW iX xDrive40 by €19,100
+    while offering superior range and charging performance. Standard air suspension,
+    heat pump, matrix LED, Sonos sound, and bi-directional charging provide comprehensive
+    equipment. Target buyers: efficiency-focused premium buyers, company car drivers
+    (0.25% tax rate), long-distance travelers.'

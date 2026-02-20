@@ -1,9 +1,8 @@
 id: ds-n8-awd-long-range-2025
 name: DS N°8 AWD Long Range
 model_id: ds-n8
-variant_name: "AWD Long Range"
+variant_name: AWD Long Range
 model_year: 2025
-
 battery:
   usable_kwh: 97.2
   total_kwh: 101.0
@@ -14,9 +13,8 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volts: 400
-
 range:
   wltp_km: 688
   wltp_city_km: null
@@ -25,7 +23,6 @@ range:
   real_world_km: 530
   real_world_mild_weather_km: 605
   real_world_cold_weather_km: 445
-
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 10.5
@@ -34,33 +31,32 @@ charging:
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 670
   dc_curve:
-    - soc_percent: 10
-      power_kw: 160
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 130
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 55
+  - soc_percent: 10
+    power_kw: 160
+  - soc_percent: 30
+    power_kw: 150
+  - soc_percent: 50
+    power_kw: 130
+  - soc_percent: 70
+    power_kw: 90
+  - soc_percent: 80
+    power_kw: 55
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes
-  battery_preconditioning: yes
-
+  plug_and_charge: true
+  battery_preconditioning: true
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 157
-      torque_nm: 260
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 119
-      torque_nm: 251
+  - position: front
+    type: permanent magnet
+    power_kw: 157
+    torque_nm: 260
+  - position: rear
+    type: permanent magnet
+    power_kw: 119
+    torque_nm: 251
   total_power_kw: 276
   total_power_hp: 375
   total_torque_nm: 511
@@ -68,29 +64,26 @@ performance:
   acceleration_0_60_mph_sec: null
   top_speed_kmh: 190
   drive_modes:
-    - "Eco"
-    - "Comfort"
-    - "Sport"
-
+  - Eco
+  - Comfort
+  - Sport
+  acceleration_0_100_sec: 5.4
 dimensions:
   length_mm: 4820
   width_mm: 1900
   height_mm: 1580
   wheelbase_mm: 2900
   ground_clearance_mm: 170
-
 cargo:
   trunk_capacity_liters: 620
   trunk_max_liters: 1500
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2289
   gross_vehicle_weight_kg: 2789
   payload_kg: 500
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 17.4
   wltp_mi_per_kwh: null
@@ -98,58 +91,56 @@ efficiency:
   epa_mpge: null
   real_world_kwh_per_100km: 18.3
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A"
+  energy_efficiency_class: A
   co2_emissions_wltp_g_per_km: 0
-
 features:
   adas_level: 2
   autonomous_features:
-    - "DS Drive Assist 2.0"
-    - "Active safety brake"
-    - "Lane keeping assist"
-    - "Blind spot monitoring"
-    - "Night Vision infrared camera"
-    - "360° camera"
-    - "Traffic sign recognition"
+  - DS Drive Assist 2.0
+  - Active safety brake
+  - Lane keeping assist
+  - Blind spot monitoring
+  - Night Vision infrared camera
+  - 360° camera
+  - Traffic sign recognition
   infotainment:
-    - "DS Iris System (21-inch curved display)"
-    - "Head-up display"
-    - "Apple CarPlay / Android Auto"
-    - "Over-the-air updates"
+  - DS Iris System (21-inch curved display)
+  - Head-up display
+  - Apple CarPlay / Android Auto
+  - Over-the-air updates
   comfort:
-    - "Heat pump"
-    - "Climate pre-conditioning via app"
-    - "DS Advanced Traction Control"
-    - "Heated and ventilated front seats"
-    - "Massaging front seats"
-    - "Panoramic glass roof"
-    - "Ambient lighting"
-    - "V2L (Vehicle-to-Load) 3.3 kW"
+  - Heat pump
+  - Climate pre-conditioning via app
+  - DS Advanced Traction Control
+  - Heated and ventilated front seats
+  - Massaging front seats
+  - Panoramic glass roof
+  - Ambient lighting
+  - V2L (Vehicle-to-Load) 3.3 kW
   connectivity:
-    - "DS Connect"
-    - "Remote services via app"
-    - "Plug & Charge"
-    - "Over-the-air updates"
+  - DS Connect
+  - Remote services via app
+  - Plug & Charge
+  - Over-the-air updates
   audio:
-    - "Focal Electra premium audio system"
-
+  - Focal Electra premium audio system
 version:
-  trim_level: "AWD Long Range"
+  trim_level: AWD Long Range
   option_packages: []
-  production_location: "Mulhouse, France"
+  production_location: Mulhouse, France
   build_quality: premium
-
 metadata:
-  created_at: "2026-02-09T16:15:00Z"
-  updated_at: "2026-02-09T16:15:00Z"
+  created_at: '2026-02-09T16:15:00Z'
+  updated_at: '2026-02-09T16:15:00Z'
   data_quality: verified
   data_source: manufacturer_and_tested
-  verified_by: "EV Database"
-  notes: |
-    DS N°8 AWD Long Range with dual motors (276 kW / 375 PS).
+  verified_by: EV Database
+  notes: 'DS N°8 AWD Long Range with dual motors (276 kW / 375 PS).
+
     688 km WLTP range, 5.4s 0-100 km/h.
 
+    '
 sources:
-  - url: "https://ev-database.org/car/3078/DS-Automobiles-N8-AWD-Long-Range"
-    title: "EV Database - DS N°8 AWD Long Range"
-    date_accessed: "2026-02-09"
+- url: https://ev-database.org/car/3078/DS-Automobiles-N8-AWD-Long-Range
+  title: EV Database - DS N°8 AWD Long Range
+  date_accessed: '2026-02-09'

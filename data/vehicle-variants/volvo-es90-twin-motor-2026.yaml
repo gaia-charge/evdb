@@ -1,9 +1,8 @@
 id: volvo-es90-twin-motor-2026
 name: Volvo ES90 Twin Motor
 model_id: volvo-es90
-variant_name: "Twin Motor"
+variant_name: Twin Motor
 model_year: 2026
-
 battery:
   usable_kwh: 102.0
   total_kwh: 106.0
@@ -14,72 +13,62 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volts: 800
-
 range:
   wltp_km: 700
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 535
-
   real_world_mild_weather_km: 610
   real_world_cold_weather_km: 450
-
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 11.0
-
   dc_max_kw: 350
   dc_charge_time_10_80_minutes: 23
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 970
-
   dc_curve:
-    - soc_percent: 10
-      power_kw: 350
-    - soc_percent: 30
-      power_kw: 280
-    - soc_percent: 50
-      power_kw: 200
-    - soc_percent: 70
-      power_kw: 130
-    - soc_percent: 80
-      power_kw: 80
-
+  - soc_percent: 10
+    power_kw: 350
+  - soc_percent: 30
+    power_kw: 280
+  - soc_percent: 50
+    power_kw: 200
+  - soc_percent: 70
+    power_kw: 130
+  - soc_percent: 80
+    power_kw: 80
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes
-  battery_preconditioning: yes
-
+  plug_and_charge: true
+  battery_preconditioning: true
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-    - position: rear
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-
+  - position: front
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
   total_power_kw: 335
   total_power_hp: 455
   total_torque_nm: 670
-
   acceleration_0_100_kmh_sec: 5.5
   acceleration_0_60_mph_sec: null
   top_speed_kmh: 180
-
   drive_modes:
-    - "Comfort"
-    - "Eco"
-    - "Performance"
-    - "Individual"
-
+  - Comfort
+  - Eco
+  - Performance
+  - Individual
+  acceleration_0_100_sec: 5.5
 dimensions:
   length_mm: 5000
   width_mm: 1942
@@ -87,13 +76,10 @@ dimensions:
   height_mm: 1546
   wheelbase_mm: 3102
   ground_clearance_mm: 145
-
-
 cargo:
   trunk_capacity_liters: 446
   trunk_max_liters: 1256
   frunk_capacity_liters: 22
-
 weight:
   curb_weight_kg: 2610
   gross_vehicle_weight_kg: 3070
@@ -101,7 +87,6 @@ weight:
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
   weight_distribution_front_percent: null
-
 efficiency:
   wltp_kwh_per_100km: 14.6
   wltp_mi_per_kwh: null
@@ -109,68 +94,63 @@ efficiency:
   epa_mpge: null
   real_world_kwh_per_100km: 19.1
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A+"
+  energy_efficiency_class: A+
   co2_emissions_wltp_g_per_km: 0
-
 features:
   adas_level: 2+
   autonomous_features:
-    - "Pilot Assist with hands-free highway driving"
-    - "Automatic emergency braking"
-    - "Intersection collision avoidance"
-    - "Blind spot monitoring with steer assist"
-    - "360-degree camera system"
-    - "Park Pilot Assist"
-    - "Lidar-based safety system"
-
+  - Pilot Assist with hands-free highway driving
+  - Automatic emergency braking
+  - Intersection collision avoidance
+  - Blind spot monitoring with steer assist
+  - 360-degree camera system
+  - Park Pilot Assist
+  - Lidar-based safety system
   infotainment:
-    - "15-inch center touchscreen"
-    - "Digital driver display"
-    - "Head-up display"
-    - "Google Built-in (Maps, Assistant, Play)"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Over-the-air updates"
-
+  - 15-inch center touchscreen
+  - Digital driver display
+  - Head-up display
+  - Google Built-in (Maps, Assistant, Play)
+  - Wireless Apple CarPlay / Android Auto
+  - Over-the-air updates
   comfort:
-    - "Air suspension"
-    - "Heat pump (standard)"
-    - "Climate pre-conditioning via Volvo Cars app"
-    - "Panoramic glass roof"
-    - "Heated front and rear seats"
-    - "Ventilated front seats"
-    - "Multi-adjustable front seats with massage"
-    - "4-zone climate control"
-    - "Ambient lighting"
-
+  - Air suspension
+  - Heat pump (standard)
+  - Climate pre-conditioning via Volvo Cars app
+  - Panoramic glass roof
+  - Heated front and rear seats
+  - Ventilated front seats
+  - Multi-adjustable front seats with massage
+  - 4-zone climate control
+  - Ambient lighting
   connectivity:
-    - "Google Built-in"
-    - "Volvo Cars app (remote control)"
-    - "Digital key (UWB)"
-    - "Plug & Charge"
-    - "Over-the-air updates"
-    - "5G connectivity"
-
+  - Google Built-in
+  - Volvo Cars app (remote control)
+  - Digital key (UWB)
+  - Plug & Charge
+  - Over-the-air updates
+  - 5G connectivity
   audio:
-    - "Bowers & Wilkins premium audio"
-
+  - Bowers & Wilkins premium audio
 version:
-  trim_level: "Twin Motor"
+  trim_level: Twin Motor
   option_packages: []
-  production_location: "Torslanda, Sweden"
+  production_location: Torslanda, Sweden
   build_quality: premium
-
 metadata:
-  created_at: "2026-02-09T16:00:00Z"
-  updated_at: "2026-02-09T16:00:00Z"
+  created_at: '2026-02-09T16:00:00Z'
+  updated_at: '2026-02-09T16:00:00Z'
   data_quality: verified
   data_source: manufacturer_and_tested
-  verified_by: "EV Database + Volvo official specs"
-  notes: |
-    Volvo ES90 Twin Motor (MY2026). Flagship electric sedan.
+  verified_by: EV Database + Volvo official specs
+  notes: 'Volvo ES90 Twin Motor (MY2026). Flagship electric sedan.
+
     700 km WLTP range with 102 kWh usable battery, 800V architecture.
+
     SPA3 platform, built in Sweden. Competes with EQS, i7, Model S.
 
+    '
 sources:
-  - url: "https://ev-database.org/car/3129/Volvo-ES90-Twin-Motor"
-    title: "EV Database - Volvo ES90 Twin Motor"
-    date_accessed: "2026-02-09"
+- url: https://ev-database.org/car/3129/Volvo-ES90-Twin-Motor
+  title: EV Database - Volvo ES90 Twin Motor
+  date_accessed: '2026-02-09'

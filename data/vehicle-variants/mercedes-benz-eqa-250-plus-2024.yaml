@@ -1,261 +1,268 @@
 id: mercedes-benz-eqa-250-plus-2024
-name: "Mercedes-Benz EQA 250+"
+name: Mercedes-Benz EQA 250+
 model_id: mercedes-benz-eqa
-variant_name: "250+"
+variant_name: 250+
 model_year: 2024
-
-# Battery specifications
 battery:
   usable_kwh: 66.5
   total_kwh: 70.5
-  chemistry: NCM  # Nickel Cobalt Manganese (high nickel content NCM811)
+  chemistry: NCM
   cells: prismatic
-  supplier: "CATL"
+  supplier: CATL
   modules: 9
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
-  
-# Range specifications (WLTP, EPA, real-world)
+  thermal_management: Liquid cooling
 range:
   wltp_km: 426
   wltp_city_km: 525
   wltp_highway_km: 360
-  epa_km: null  # Not sold in USA
-  real_world_km: 365  # EV Database real-world mixed driving
-  
-  # Range by temperature
+  epa_km: null
+  real_world_km: 365
   real_world_mild_weather_km: 390
-  real_world_cold_weather_km: 290  # -10°C, 23°C cabin, significant loss
-
-# Charging specifications
+  real_world_cold_weather_km: 290
 charging:
-  # AC charging
-  ac_max_kw: 11  # 3-phase, standard
-  ac_charge_time_0_100_hours: 6.0  # 11kW charging (66.5kWh / 11kW)
-  
-  # DC fast charging
-  dc_max_kw: 100  # CCS2, modest for compact SUV
-  dc_charge_time_10_80_minutes: 32  # 10-80% in 32 minutes
+  ac_max_kw: 11
+  ac_charge_time_0_100_hours: 6.0
+  dc_max_kw: 100
+  dc_charge_time_10_80_minutes: 32
   dc_charge_time_0_100_minutes: 55
-  dc_charge_speed_kmh: 520  # km of range added per hour (70% SoC avg, ~70kWh)
-  
-  # DC charging curve (measured)
+  dc_charge_speed_kmh: 520
   dc_curve:
-    - soc_percent: 10
-      power_kw: 100
-      duration_minutes: 5
-    - soc_percent: 30
-      power_kw: 98
-      duration_minutes: 10
-    - soc_percent: 50
-      power_kw: 85
-      duration_minutes: 10
-    - soc_percent: 70
-      power_kw: 65
-      duration_minutes: 10
-    - soc_percent: 80
-      power_kw: 45
-      duration_minutes: 7
-    - soc_percent: 90
-      power_kw: 25
-      duration_minutes: 10
-    - soc_percent: 100
-      power_kw: 10
-      duration_minutes: 20
-  
+  - soc_percent: 10
+    power_kw: 100
+    duration_minutes: 5
+  - soc_percent: 30
+    power_kw: 98
+    duration_minutes: 10
+  - soc_percent: 50
+    power_kw: 85
+    duration_minutes: 10
+  - soc_percent: 70
+    power_kw: 65
+    duration_minutes: 10
+  - soc_percent: 80
+    power_kw: 45
+    duration_minutes: 7
+  - soc_percent: 90
+    power_kw: 25
+    duration_minutes: 10
+  - soc_percent: 100
+    power_kw: 10
+    duration_minutes: 20
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes  # ISO 15118 support
-
-# Performance specifications
+  plug_and_charge: true
 performance:
-  drive_type: FWD  # Front-wheel drive
+  drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 140
-      torque_nm: 375
-  
+  - position: front
+    type: permanent magnet
+    power_kw: 140
+    torque_nm: 375
   total_power_kw: 140
   total_power_hp: 190
   total_torque_nm: 375
-  
   acceleration_0_100_kmh_sec: 8.6
   acceleration_0_60_mph_sec: null
-  top_speed_kmh: 160  # Electronically limited
-  
-  # Driving modes
+  top_speed_kmh: 160
   drive_modes:
-    - "ECO"
-    - "Comfort"
-    - "Sport"
-    - "Individual"
-
-# Weight
+  - ECO
+  - Comfort
+  - Sport
+  - Individual
+  acceleration_0_100_sec: 8.6
 dimensions:
   length_mm: 4463
   width_mm: 1834
   height_mm: 1620
   wheelbase_mm: 2729
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 340
   trunk_max_liters: 1320
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2040
   gross_vehicle_weight_kg: 2560
   payload_kg: 520
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: 58  # Front-heavy due to FWD, battery under floor
-
-# Efficiency
+  weight_distribution_front_percent: 58
 efficiency:
   wltp_kwh_per_100km: 17.7
   wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
   epa_mpge: null
-  real_world_kwh_per_100km: 19.2  # EV Database measured
+  real_world_kwh_per_100km: 19.2
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A"  # EU energy label
+  energy_efficiency_class: A
   co2_emissions_wltp_g_per_km: 0
-
-# Additional features
 features:
-  adas_level: 2  # Highway Assist, Active Brake Assist
+  adas_level: 2
   autonomous_features:
-    - "Active Distance Assist DISTRONIC (adaptive cruise)"
-    - "Active Steering Assist"
-    - "Active Brake Assist with cross-traffic function"
-    - "Active Lane Keeping Assist"
-    - "Attention Assist (drowsiness detection)"
-    - "Traffic Sign Assist"
-    - "Active Blind Spot Assist"
-    - "PRE-SAFE (collision preparation)"
-  
+  - Active Distance Assist DISTRONIC (adaptive cruise)
+  - Active Steering Assist
+  - Active Brake Assist with cross-traffic function
+  - Active Lane Keeping Assist
+  - Attention Assist (drowsiness detection)
+  - Traffic Sign Assist
+  - Active Blind Spot Assist
+  - PRE-SAFE (collision preparation)
   infotainment:
-    - "MBUX with 10.25-inch touchscreen"
-    - "7.0-inch digital instrument cluster (10.25-inch optional)"
-    - "Navigation with Electric Intelligence"
-    - "Apple CarPlay / Android Auto (wireless optional)"
-    - "Mercedes me Connect app"
-    - "Voice control with 'Hey Mercedes'"
-    - "Augmented Reality navigation (optional)"
-  
+  - MBUX with 10.25-inch touchscreen
+  - 7.0-inch digital instrument cluster (10.25-inch optional)
+  - Navigation with Electric Intelligence
+  - Apple CarPlay / Android Auto (wireless optional)
+  - Mercedes me Connect app
+  - Voice control with 'Hey Mercedes'
+  - Augmented Reality navigation (optional)
   comfort:
-    - "Dual-zone automatic climate control"
-    - "Climate pre-conditioning via app"
-    - "Heat pump (standard, essential for winter)"
-    - "Heated front seats (optional)"
-    - "Electric tailgate"
-    - "Keyless entry and start (KEYLESS-GO, optional)"
-    - "Wireless smartphone charging (optional)"
-    - "Ambient lighting 64 colors"
-    - "Acoustic comfort package (sound insulation)"
-  
+  - Dual-zone automatic climate control
+  - Climate pre-conditioning via app
+  - Heat pump (standard, essential for winter)
+  - Heated front seats (optional)
+  - Electric tailgate
+  - Keyless entry and start (KEYLESS-GO, optional)
+  - Wireless smartphone charging (optional)
+  - Ambient lighting 64 colors
+  - Acoustic comfort package (sound insulation)
   connectivity:
-    - "Mercedes me Connect (remote control)"
-    - "Over-the-air updates (limited scope)"
-    - "Mercedes me Charge (450,000+ charging points)"
-    - "Plug & Charge (automatic payment at compatible chargers)"
-  
+  - Mercedes me Connect (remote control)
+  - Over-the-air updates (limited scope)
+  - Mercedes me Charge (450,000+ charging points)
+  - Plug & Charge (automatic payment at compatible chargers)
   special:
-    - "ECO Assist (intelligent recuperation)"
-    - "Recuperation paddles on steering wheel (3 levels)"
-    - "Hill Start Assist"
-    - "Crosswind Assist"
-
-# Version information
+  - ECO Assist (intelligent recuperation)
+  - Recuperation paddles on steering wheel (3 levels)
+  - Hill Start Assist
+  - Crosswind Assist
 version:
-  trim_level: "Base (Electric Art)"
+  trim_level: Base (Electric Art)
   option_packages:
-    - "AMG Line (sport styling, 19-inch wheels)"
-    - "Night Package (black exterior accents)"
-    - "Premium Package (larger displays, KEYLESS-GO, wireless charging)"
-    - "Premium Plus Package (adds Burmester audio, 360° camera)"
-    - "MBUX High-End Rear Seat Entertainment (rear screens)"
-  
-  production_location: "Rastatt, Germany"
+  - AMG Line (sport styling, 19-inch wheels)
+  - Night Package (black exterior accents)
+  - Premium Package (larger displays, KEYLESS-GO, wireless charging)
+  - Premium Plus Package (adds Burmester audio, 360° camera)
+  - MBUX High-End Rear Seat Entertainment (rear screens)
+  production_location: Rastatt, Germany
   build_quality: premium
-  paint_options: 9  # Including MANUFAKTUR options
+  paint_options: 9
   interior_options: 3
-
-# Metadata
 metadata:
-  created_at: "2026-02-07T08:30:00Z"
-  updated_at: "2026-02-07T08:30:00Z"
+  created_at: '2026-02-07T08:30:00Z'
+  updated_at: '2026-02-07T08:30:00Z'
   data_quality: verified
   data_source: manufacturer_and_tested
-  verified_by: "Mercedes-Benz official specs + EV Database real-world testing"
-  notes: |
-    Mercedes-Benz EQA 250+ is the 2023+ updated variant with larger 66.5kWh battery
+  verified_by: Mercedes-Benz official specs + EV Database real-world testing
+  notes: 'Mercedes-Benz EQA 250+ is the 2023+ updated variant with larger 66.5kWh
+    battery
+
     (vs original 250 with 60.0kWh from 2021-2022). The "+" designation indicates
+
     the battery upgrade which added +86km range (426 vs 340km WLTP).
-    
+
+
     Key improvements over original EQA 250:
+
     - Battery: 66.5kWh vs 60.0kWh (+10.8% capacity)
+
     - Range: 426km vs 340km WLTP (+86km, +25.3%)
+
     - Efficiency: 17.7 vs 18.0 kWh/100km (improved)
-    
-    Positioned as Mercedes' entry-level electric SUV:
+
+
+    Positioned as Mercedes'' entry-level electric SUV:
+
     - Below EQB (7-seater, €60,845)
+
     - Below EQE SUV (executive, €81,229)
+
     - Above Smart #1 (compact crossover, €41,490)
-    
+
+
     Competes with:
+
     - BMW iX1 xDrive30 (€54,200, 439km range, 150kW charging)
+
     - Audi Q4 e-tron 40 (€49,500, 488km range, 125kW charging)
+
     - Volvo XC40 Recharge Single Motor (€48,050, 460km range, 150kW charging)
+
     - Tesla Model Y RWD (€44,990, 455km range, 170kW charging)
-    
+
+
     Strengths:
+
     - Premium Mercedes brand prestige and build quality
+
     - Proven MFA2 platform (shared with GLA - over 500,000 sold)
+
     - Excellent dealer network (650+ in Germany)
+
     - Good warranty: 2 years + 8 years battery (160,000km)
+
     - Standard heat pump (essential for winter efficiency)
-    - MBUX infotainment system (user-friendly, 'Hey Mercedes' voice)
+
+    - MBUX infotainment system (user-friendly, ''Hey Mercedes'' voice)
+
     - Plug & Charge automatic payment (ISO 15118)
-    
+
+
     Weaknesses:
+
     - Modest 100kW DC charging (vs 135-150kW competitors)
+
     - 426km range adequate but not class-leading
+
     - Small 340L trunk (vs 405L Q4, 452L iX1, 854L Model Y)
+
     - No frunk (missed storage opportunity)
+
     - Higher price than non-premium competitors (MG4, Enyaq)
+
     - Charging curve drops quickly after 50% SoC
-    
+
+
     Real-world performance:
+
     - Range: ~365km mixed driving (426km WLTP, 86% efficiency)
+
     - Consumption: 19.2 kWh/100km real-world (vs 17.7 WLTP)
+
     - Cold weather: ~290km at -10°C (32% loss, heat pump helps)
+
     - Highway: ~300km at 120km/h (high drag Cd 0.28)
-    
+
+
     Popular configurations:
+
     - Base "Electric Art": €54,399 (well-equipped)
+
     - AMG Line: +€3,570 (sport styling, 19" wheels, -15km range)
+
     - Premium Plus: +€6,190 (Burmester audio, 360° camera, 10.25" displays)
+
     - Fully loaded: ~€68,000 (AMG Line + Premium Plus + options)
-    
+
+
     Built at Rastatt plant alongside GLA (carbon-neutral production goal by 2039).
+
     Over 50,000 units sold in 2023 (strong sales in Germany, Norway, UK).
 
+    '
 sources:
-  - url: "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqa/explore.html"
-    title: "Mercedes-Benz EQA 250+ Official Specs Germany"
-    date_accessed: "2026-02-07"
-  - url: "https://ev-database.org/car/1459/Mercedes-EQA-250plus"
-    title: "EV Database - Real-world testing data"
-    date_accessed: "2026-02-07"
-  - url: "https://insideevs.com/reviews/567421/mercedes-eqa-250-review/"
-    title: "InsideEVs - Mercedes-Benz EQA 250+ Review"
-    date_accessed: "2026-02-07"
-  - url: "https://www.autoexpress.co.uk/mercedes/eqa/363093/mercedes-eqa-review"
-    title: "Auto Express - Mercedes EQA Long-term Review"
-    date_accessed: "2026-02-07"
+- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqa/explore.html
+  title: Mercedes-Benz EQA 250+ Official Specs Germany
+  date_accessed: '2026-02-07'
+- url: https://ev-database.org/car/1459/Mercedes-EQA-250plus
+  title: EV Database - Real-world testing data
+  date_accessed: '2026-02-07'
+- url: https://insideevs.com/reviews/567421/mercedes-eqa-250-review/
+  title: InsideEVs - Mercedes-Benz EQA 250+ Review
+  date_accessed: '2026-02-07'
+- url: https://www.autoexpress.co.uk/mercedes/eqa/363093/mercedes-eqa-review
+  title: Auto Express - Mercedes EQA Long-term Review
+  date_accessed: '2026-02-07'

@@ -2,14 +2,28 @@
 """
 Normalize EVDB schema from nested to flat canonical format.
 
-Transformations:
-- charging.ac.max_power_kw → charging.ac_max_kw
-- charging.dc.max_power_kw → charging.dc_max_kw
-- motors.combined.power_kw → performance.total_power_kw
-- motors.combined.power_hp → performance.total_power_hp
-- motors.combined.torque_nm → performance.total_torque_nm
-- performance.acceleration_0_100_kph → performance.acceleration_0_100_sec
-- performance.acceleration_0_100_kph_sec → performance.acceleration_0_100_sec
+Canonical field names:
+- charging.ac_max_kw (max AC charging power)
+- charging.dc_max_kw (max DC charging power)
+- performance.total_power_kw (total system power)
+- performance.total_power_hp (total system power in HP)
+- performance.total_torque_nm (total system torque)
+- performance.acceleration_0_100_sec (0-100 km/h time)
+- performance.top_speed_kmh (top speed)
+
+Source field patterns handled:
+- charging.ac.max_power_kw, charging.ac_charging.max_power_kw,
+  charging.ac_max_power_kw, charging_ac.max_power_kw → charging.ac_max_kw
+- charging.dc.max_power_kw, charging.dc_charging.max_power_kw,
+  charging.dc_max_power_kw, charging_dc.max_power_kw → charging.dc_max_kw
+- motors.combined.power_kw, motors.combined.max_power_kw,
+  motors.combined_power_kw, motors.total_power_kw,
+  motor.power_kw, performance.power_kw, performance.system_power_kw,
+  top-level total_power_kw → performance.total_power_kw
+- (same patterns for torque_nm and power_hp)
+- performance.acceleration_0_100_kph, _kph_sec, _kmh, _kmh_s, _kmh_seconds,
+  performance.acceleration.zero_to_100_kmh_sec → performance.acceleration_0_100_sec
+- performance.top_speed_kph → performance.top_speed_kmh
 """
 
 import yaml
@@ -106,92 +120,108 @@ def normalize_variant(data: dict) -> tuple[dict, List[str]]:
             changes.append(f"charging_dc.max_power_kw ({dc_section['max_power_kw']}) → charging.dc_max_kw")
         # Keep charging_dc section for other fields
     
-    # 2. Normalize motor/performance fields
+    # 2. Charging field name fixes (ac_max_power_kw → ac_max_kw)
+    if 'charging' in data and isinstance(data['charging'], dict):
+        charging = data['charging']
+        if 'ac_max_power_kw' in charging and 'ac_max_kw' not in charging:
+            charging['ac_max_kw'] = charging['ac_max_power_kw']
+            changes.append(f"charging.ac_max_power_kw ({charging['ac_max_power_kw']}) → charging.ac_max_kw")
+        if 'dc_max_power_kw' in charging and 'dc_max_kw' not in charging:
+            charging['dc_max_kw'] = charging['dc_max_power_kw']
+            changes.append(f"charging.dc_max_power_kw ({charging['dc_max_power_kw']}) → charging.dc_max_kw")
+    
+    # 3. Ensure performance section exists for motor/perf migrations
+    if 'performance' not in data:
+        data['performance'] = {}
+    perf = data['performance']
+    
+    # 4. Normalize motor fields → performance.total_*
+    # Source: motors section (various structures)
     if 'motors' in data and isinstance(data['motors'], dict):
         motors = data['motors']
         
-        # Ensure performance section exists
-        if 'performance' not in data:
-            data['performance'] = {}
-        perf = data['performance']
+        # motors.total_power_kw / motors.total_torque_nm
+        for src, dst in [('total_power_kw', 'total_power_kw'), ('total_power_hp', 'total_power_hp'), ('total_torque_nm', 'total_torque_nm')]:
+            if src in motors and dst not in perf:
+                perf[dst] = motors[src]
+                changes.append(f"motors.{src} ({motors[src]}) → performance.{dst}")
         
-        # motors.total_power_kw → performance.total_power_kw
-        if 'total_power_kw' in motors and 'total_power_kw' not in perf:
-            perf['total_power_kw'] = motors['total_power_kw']
-            changes.append(f"motors.total_power_kw ({motors['total_power_kw']}) → performance.total_power_kw")
+        # motors.combined_power_kw (underscore variant)
+        for src, dst in [('combined_power_kw', 'total_power_kw'), ('combined_torque_nm', 'total_torque_nm')]:
+            if src in motors and dst not in perf:
+                perf[dst] = motors[src]
+                changes.append(f"motors.{src} ({motors[src]}) → performance.{dst}")
         
-        # motors.total_power_hp → performance.total_power_hp
-        if 'total_power_hp' in motors and 'total_power_hp' not in perf:
-            perf['total_power_hp'] = motors['total_power_hp']
-            changes.append(f"motors.total_power_hp ({motors['total_power_hp']}) → performance.total_power_hp")
+        # motors.max_power_kw / motors.max_torque_nm
+        for src, dst in [('max_power_kw', 'total_power_kw'), ('max_torque_nm', 'total_torque_nm')]:
+            if src in motors and dst not in perf:
+                perf[dst] = motors[src]
+                changes.append(f"motors.{src} ({motors[src]}) → performance.{dst}")
         
-        # motors.total_torque_nm → performance.total_torque_nm
-        if 'total_torque_nm' in motors and 'total_torque_nm' not in perf:
-            perf['total_torque_nm'] = motors['total_torque_nm']
-            changes.append(f"motors.total_torque_nm ({motors['total_torque_nm']}) → performance.total_torque_nm")
-        
-        # motors.combined.power_kw → performance.total_power_kw
+        # motors.combined.* (nested dict)
         if 'combined' in motors and isinstance(motors['combined'], dict):
             combined = motors['combined']
-            
-            if 'power_kw' in combined and 'total_power_kw' not in perf:
-                perf['total_power_kw'] = combined['power_kw']
-                changes.append(f"motors.combined.power_kw ({combined['power_kw']}) → performance.total_power_kw")
-            
-            # motors.combined.max_power_kw → performance.total_power_kw (alternative naming)
-            if 'max_power_kw' in combined and 'total_power_kw' not in perf:
-                perf['total_power_kw'] = combined['max_power_kw']
-                changes.append(f"motors.combined.max_power_kw ({combined['max_power_kw']}) → performance.total_power_kw")
-            
-            if 'power_hp' in combined and 'total_power_hp' not in perf:
-                perf['total_power_hp'] = combined['power_hp']
-                changes.append(f"motors.combined.power_hp ({combined['power_hp']}) → performance.total_power_hp")
-            
-            # motors.combined.max_power_hp → performance.total_power_hp (alternative naming)
-            if 'max_power_hp' in combined and 'total_power_hp' not in perf:
-                perf['total_power_hp'] = combined['max_power_hp']
-                changes.append(f"motors.combined.max_power_hp ({combined['max_power_hp']}) → performance.total_power_hp")
-            
-            if 'torque_nm' in combined and 'total_torque_nm' not in perf:
-                perf['total_torque_nm'] = combined['torque_nm']
-                changes.append(f"motors.combined.torque_nm ({combined['torque_nm']}) → performance.total_torque_nm")
-            
-            # motors.combined.max_torque_nm → performance.total_torque_nm (alternative naming)
-            if 'max_torque_nm' in combined and 'total_torque_nm' not in perf:
-                perf['total_torque_nm'] = combined['max_torque_nm']
-                changes.append(f"motors.combined.max_torque_nm ({combined['max_torque_nm']}) → performance.total_torque_nm")
-            
-            # Remove combined section if it's now empty
-            if not combined or not any(combined.values()):
-                del motors['combined']
+            for src, dst in [
+                ('power_kw', 'total_power_kw'), ('max_power_kw', 'total_power_kw'),
+                ('power_hp', 'total_power_hp'), ('max_power_hp', 'total_power_hp'),
+                ('torque_nm', 'total_torque_nm'), ('max_torque_nm', 'total_torque_nm'),
+            ]:
+                if src in combined and dst not in perf:
+                    perf[dst] = combined[src]
+                    changes.append(f"motors.combined.{src} ({combined[src]}) → performance.{dst}")
     
-    # 3. Normalize performance fields
-    if 'performance' in data and isinstance(data['performance'], dict):
-        perf = data['performance']
-        
-        # acceleration_0_100_kph → acceleration_0_100_sec
-        if 'acceleration_0_100_kph' in perf and 'acceleration_0_100_sec' not in perf:
-            perf['acceleration_0_100_sec'] = perf['acceleration_0_100_kph']
-            changes.append(f"performance.acceleration_0_100_kph ({perf['acceleration_0_100_kph']}) → performance.acceleration_0_100_sec")
-            del perf['acceleration_0_100_kph']
-        
-        # acceleration_0_100_kph_sec → acceleration_0_100_sec
-        if 'acceleration_0_100_kph_sec' in perf and 'acceleration_0_100_sec' not in perf:
-            perf['acceleration_0_100_sec'] = perf['acceleration_0_100_kph_sec']
-            changes.append(f"performance.acceleration_0_100_kph_sec ({perf['acceleration_0_100_kph_sec']}) → performance.acceleration_0_100_sec")
-            del perf['acceleration_0_100_kph_sec']
-        
-        # acceleration_0_100_kmh_seconds → acceleration_0_100_sec
-        if 'acceleration_0_100_kmh_seconds' in perf and 'acceleration_0_100_sec' not in perf:
-            perf['acceleration_0_100_sec'] = perf['acceleration_0_100_kmh_seconds']
-            changes.append(f"performance.acceleration_0_100_kmh_seconds ({perf['acceleration_0_100_kmh_seconds']}) → performance.acceleration_0_100_sec")
-            del perf['acceleration_0_100_kmh_seconds']
-        
-        # acceleration_0_100_kmh_s → acceleration_0_100_sec
-        if 'acceleration_0_100_kmh_s' in perf and 'acceleration_0_100_sec' not in perf:
-            perf['acceleration_0_100_sec'] = perf['acceleration_0_100_kmh_s']
-            changes.append(f"performance.acceleration_0_100_kmh_s ({perf['acceleration_0_100_kmh_s']}) → performance.acceleration_0_100_sec")
-            del perf['acceleration_0_100_kmh_s']
+    # Source: singular motor section
+    if 'motor' in data and isinstance(data['motor'], dict):
+        motor = data['motor']
+        for src, dst in [('power_kw', 'total_power_kw'), ('torque_nm', 'total_torque_nm')]:
+            if src in motor and dst not in perf:
+                perf[dst] = motor[src]
+                changes.append(f"motor.{src} ({motor[src]}) → performance.{dst}")
+    
+    # Source: top-level total_power_kw / total_torque_nm
+    for src, dst in [('total_power_kw', 'total_power_kw'), ('total_power_hp', 'total_power_hp'), ('total_torque_nm', 'total_torque_nm')]:
+        if src in data and dst not in perf:
+            perf[dst] = data[src]
+            changes.append(f"(top-level) {src} ({data[src]}) → performance.{dst}")
+    
+    # Source: performance section non-canonical names
+    for src, dst in [
+        ('power_kw', 'total_power_kw'), ('system_power_kw', 'total_power_kw'),
+        ('torque_nm', 'total_torque_nm'),
+        ('power_hp', 'total_power_hp'),
+    ]:
+        if src in perf and dst not in perf:
+            perf[dst] = perf[src]
+            changes.append(f"performance.{src} ({perf[src]}) → performance.{dst}")
+    
+    # 5. Normalize acceleration fields
+    # Nested: performance.acceleration.zero_to_100_kmh_sec
+    if 'acceleration' in perf and isinstance(perf['acceleration'], dict):
+        accel = perf['acceleration']
+        for key in ['zero_to_100_kmh_sec', 'zero_to_100_kmh_launch_control_sec']:
+            if key == 'zero_to_100_kmh_sec' and key in accel and 'acceleration_0_100_sec' not in perf:
+                perf['acceleration_0_100_sec'] = accel[key]
+                changes.append(f"performance.acceleration.{key} ({accel[key]}) → performance.acceleration_0_100_sec")
+    
+    # Flat variants
+    accel_variants = [
+        'acceleration_0_100_kph', 'acceleration_0_100_kph_sec',
+        'acceleration_0_100_kmh', 'acceleration_0_100_kmh_s',
+        'acceleration_0_100_kmh_seconds', 'acceleration_0_100_kmh_sec',
+    ]
+    for src in accel_variants:
+        if src in perf and 'acceleration_0_100_sec' not in perf:
+            perf['acceleration_0_100_sec'] = perf[src]
+            changes.append(f"performance.{src} ({perf[src]}) → performance.acceleration_0_100_sec")
+    
+    # 6. Normalize top_speed_kph → top_speed_kmh
+    if 'top_speed_kph' in perf and 'top_speed_kmh' not in perf:
+        perf['top_speed_kmh'] = perf['top_speed_kph']
+        changes.append(f"performance.top_speed_kph ({perf['top_speed_kph']}) → performance.top_speed_kmh")
+    
+    # Clean up empty performance section
+    if not perf:
+        del data['performance']
     
     return data, changes
 

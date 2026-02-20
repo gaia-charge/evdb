@@ -1,80 +1,74 @@
-# Renault Megane E-Tech EV40 (2025)
 id: megane-e-tech-ev40-2025
 name: Megane E-Tech EV40
 model_id: renault-megane-e-tech
 model_year: 2025
 variant_code: EV40
-
 battery:
   usable_kwh: 40.0
   total_kwh: 42.0
   chemistry: NMC
   cell_type: pouch
-  manufacturer: "LG Energy Solution"
+  manufacturer: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 300
-  wltp_city_km: 400  # Excellent city efficiency
+  wltp_city_km: 400
   wltp_highway_km: 240
   real_world_km: 260
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
   ac_max_kw: 7.4
   ac_phases: 1
   ac_connector: Type2
-  dc_max_kw: 85  # 400V architecture
+  dc_max_kw: 85
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 85
-    - soc_percent: 10
-      power_kw: 85
-    - soc_percent: 20
-      power_kw: 85
-    - soc_percent: 30
-      power_kw: 78
-    - soc_percent: 40
-      power_kw: 70
-    - soc_percent: 50
-      power_kw: 60
-    - soc_percent: 60
-      power_kw: 50
-    - soc_percent: 70
-      power_kw: 40
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 20
-    - soc_percent: 100
-      power_kw: 10
+  - soc_percent: 0
+    power_kw: 85
+  - soc_percent: 10
+    power_kw: 85
+  - soc_percent: 20
+    power_kw: 85
+  - soc_percent: 30
+    power_kw: 78
+  - soc_percent: 40
+    power_kw: 70
+  - soc_percent: 50
+    power_kw: 60
+  - soc_percent: 60
+    power_kw: 50
+  - soc_percent: 70
+    power_kw: 40
+  - soc_percent: 80
+    power_kw: 30
+  - soc_percent: 90
+    power_kw: 20
+  - soc_percent: 100
+    power_kw: 10
   time_15_to_80_percent_min: 30
-  charging_speed_kmh: 450  # km of range per hour at peak
+  charging_speed_kmh: 450
   plug_and_charge: true
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 96
-      power_hp: 130
-      torque_nm: 250
+  - position: front
+    type: permanent magnet
+    power_kw: 96
+    power_hp: 130
+    torque_nm: 250
   total_power_kw: 96
   total_power_hp: 130
   total_torque_nm: 250
   acceleration_0_100_kmh_sec: 10.0
-  top_speed_kmh: 150  # Electronically limited
-
+  top_speed_kmh: 150
+  acceleration_0_100_sec: 10.0
 dimensions:
   length_mm: 4200
   width_mm: 1768
@@ -83,66 +77,62 @@ dimensions:
   wheelbase_mm: 2685
   ground_clearance_mm: 140
   turning_circle_m: 10.4
-
 cargo:
   trunk_capacity_liters: 440
   trunk_max_liters: 1245
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1624
-  gross_vehicle_weight_kg: 2100
   gross_vehicle_weight_kg: 2100
   payload_kg: 476
   towing_capacity_braked_kg: 900
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 58
   distribution_rear_percent: 42
-
 efficiency:
   wltp_kwh_per_100km: 15.8
   wltp_kwh_per_100km_city: 13.0
   wltp_kwh_per_100km_highway: 19.5
   real_world_kwh_per_100km: 16.5
-  energy_efficiency_class: "A"  # EU energy label
-
+  energy_efficiency_class: A
 wheels_tires:
-  standard_size_front: "215/55 R18"
-  standard_size_rear: "215/55 R18"
+  standard_size_front: 215/55 R18
+  standard_size_rear: 215/55 R18
   wheel_sizes_available:
-    - "18 inch (standard)"
-    - "20 inch (optional, -10km range)"
-
+  - 18 inch (standard)
+  - 20 inch (optional, -10km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise control with Stop&Go"
-    - "Lane centering assist"
-    - "Lane departure warning"
-    - "Traffic sign recognition with speed limiter"
-    - "Blind spot warning"
-    - "Rear cross-traffic alert"
-    - "Active emergency braking with pedestrian detection"
-    - "Park assist (optional)"
+  - Adaptive cruise control with Stop&Go
+  - Lane centering assist
+  - Lane departure warning
+  - Traffic sign recognition with speed limiter
+  - Blind spot warning
+  - Rear cross-traffic alert
+  - Active emergency braking with pedestrian detection
+  - Park assist (optional)
   connectivity:
-    - "Google Automotive Services (Maps, Assistant, Play Store)"
-    - "openR Link 12-inch portrait display"
-    - "My Renault app remote control"
-    - "OTA software updates"
-    - "E-Route planner with charging stops"
+  - Google Automotive Services (Maps, Assistant, Play Store)
+  - openR Link 12-inch portrait display
+  - My Renault app remote control
+  - OTA software updates
+  - E-Route planner with charging stops
   special_features:
-    - "One Pedal driving mode"
-    - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
-    - "Pre-conditioning (battery and cabin)"
-    - "Acoustic Vehicle Alerting System (AVAS)"
-    - "Heat pump standard"
-
+  - One Pedal driving mode
+  - Multi-Sense driving modes (Eco, Comfort, Sport, Perso)
+  - Pre-conditioning (battery and cabin)
+  - Acoustic Vehicle Alerting System (AVAS)
+  - Heat pump standard
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   sources:
-    - "https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/caracteristiques-techniques.html"
-    - "https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html"
-    - "https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60"
-  notes: "Entry-level Megane E-Tech with 40 kWh battery. Perfect for urban driving and daily commutes up to 260 km. Lighter and more efficient than EV60 variants, making it ideal for city use. Most affordable way to get the award-winning Megane E-Tech package."
+  - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/caracteristiques-techniques.html
+  - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
+  - https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60
+  notes: Entry-level Megane E-Tech with 40 kWh battery. Perfect for urban driving
+    and daily commutes up to 260 km. Lighter and more efficient than EV60 variants,
+    making it ideal for city use. Most affordable way to get the award-winning Megane
+    E-Tech package.

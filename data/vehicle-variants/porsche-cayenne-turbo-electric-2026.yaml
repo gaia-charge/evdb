@@ -1,9 +1,8 @@
 id: porsche-cayenne-turbo-electric-2026
 name: Porsche Cayenne Turbo Electric
 model_id: porsche-cayenne-electric
-variant_name: "Cayenne Turbo Electric"
+variant_name: Cayenne Turbo Electric
 model_year: 2026
-
 battery:
   usable_kwh: 108.0
   total_kwh: 113.0
@@ -14,73 +13,63 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volts: 800
-
 range:
   wltp_km: 623
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 495
-
   real_world_mild_weather_km: 560
   real_world_cold_weather_km: 425
-
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 11.75
-
   dc_max_kw: 390
   dc_charge_time_10_80_minutes: 16
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 1290
-
   dc_curve:
-    - soc_percent: 10
-      power_kw: 390
-    - soc_percent: 30
-      power_kw: 350
-    - soc_percent: 50
-      power_kw: 280
-    - soc_percent: 70
-      power_kw: 200
-    - soc_percent: 80
-      power_kw: 120
-
+  - soc_percent: 10
+    power_kw: 390
+  - soc_percent: 30
+    power_kw: 350
+  - soc_percent: 50
+    power_kw: 280
+  - soc_percent: 70
+    power_kw: 200
+  - soc_percent: 80
+    power_kw: 120
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes
-  battery_preconditioning: yes
-
+  plug_and_charge: true
+  battery_preconditioning: true
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-    - position: rear
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-
+  - position: front
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
   total_power_kw: 850
   total_power_hp: 1156
   total_torque_nm: 1500
-
   acceleration_0_100_kmh_sec: 2.5
   acceleration_0_60_mph_sec: null
   top_speed_kmh: 260
-
   drive_modes:
-    - "Normal"
-    - "Sport"
-    - "Sport Plus"
-    - "Individual"
-    - "Off-Road"
-
+  - Normal
+  - Sport
+  - Sport Plus
+  - Individual
+  - Off-Road
+  acceleration_0_100_sec: 2.5
 dimensions:
   length_mm: 4985
   width_mm: 1980
@@ -88,13 +77,10 @@ dimensions:
   height_mm: 1674
   wheelbase_mm: 3023
   ground_clearance_mm: 190
-
-
 cargo:
   trunk_capacity_liters: 747
   trunk_max_liters: 1554
   frunk_capacity_liters: 90
-
 weight:
   curb_weight_kg: 2720
   gross_vehicle_weight_kg: 3270
@@ -102,7 +88,6 @@ weight:
   towing_capacity_braked_kg: 3000
   towing_capacity_unbraked_kg: 750
   weight_distribution_front_percent: null
-
 efficiency:
   wltp_kwh_per_100km: 17.3
   wltp_mi_per_kwh: null
@@ -110,69 +95,65 @@ efficiency:
   epa_mpge: null
   real_world_kwh_per_100km: 21.8
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A"
+  energy_efficiency_class: A
   co2_emissions_wltp_g_per_km: 0
-
 features:
   adas_level: 2
   autonomous_features:
-    - "Adaptive cruise control"
-    - "Lane keeping assist"
-    - "Automatic emergency braking"
-    - "Blind spot monitoring"
-    - "Surround view cameras"
-    - "Traffic sign recognition"
-    - "Park Assist"
-
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Automatic emergency braking
+  - Blind spot monitoring
+  - Surround view cameras
+  - Traffic sign recognition
+  - Park Assist
   infotainment:
-    - "12.6-inch curved driver display"
-    - "12.6-inch central touchscreen"
-    - "10.9-inch passenger display (optional)"
-    - "Head-up display"
-    - "Apple CarPlay / Android Auto"
-    - "Porsche Communication Management (PCM)"
-    - "Over-the-air updates"
-
+  - 12.6-inch curved driver display
+  - 12.6-inch central touchscreen
+  - 10.9-inch passenger display (optional)
+  - Head-up display
+  - Apple CarPlay / Android Auto
+  - Porsche Communication Management (PCM)
+  - Over-the-air updates
   comfort:
-    - "Adaptive air suspension (PASM)"
-    - "Porsche Dynamic Chassis Control (PDCC)"
-    - "Heat pump"
-    - "Climate pre-conditioning via app"
-    - "Panoramic glass roof"
-    - "Heated and ventilated front seats"
-    - "Heated rear seats"
-    - "18-way Sport Seats Plus"
-    - "4-zone climate control"
-    - "Ambient lighting"
-    - "Powered tailgate"
-
+  - Adaptive air suspension (PASM)
+  - Porsche Dynamic Chassis Control (PDCC)
+  - Heat pump
+  - Climate pre-conditioning via app
+  - Panoramic glass roof
+  - Heated and ventilated front seats
+  - Heated rear seats
+  - 18-way Sport Seats Plus
+  - 4-zone climate control
+  - Ambient lighting
+  - Powered tailgate
   connectivity:
-    - "Porsche Connect"
-    - "Remote services via app"
-    - "Plug & Charge"
-    - "Over-the-air updates"
-
+  - Porsche Connect
+  - Remote services via app
+  - Plug & Charge
+  - Over-the-air updates
   audio:
-    - "Burmester 3D High-End Surround Sound (standard on Turbo)"
-
+  - Burmester 3D High-End Surround Sound (standard on Turbo)
 version:
-  trim_level: "Cayenne Turbo Electric"
+  trim_level: Cayenne Turbo Electric
   option_packages: []
-  production_location: "Bratislava, Slovakia"
+  production_location: Bratislava, Slovakia
   build_quality: premium
-
 metadata:
-  created_at: "2026-02-09T16:00:00Z"
-  updated_at: "2026-02-09T16:00:00Z"
+  created_at: '2026-02-09T16:00:00Z'
+  updated_at: '2026-02-09T16:00:00Z'
   data_quality: verified
   data_source: manufacturer_and_tested
-  verified_by: "EV Database + Porsche official specs"
-  notes: |
-    Porsche Cayenne Turbo Electric (MY2026). Flagship variant with 850 kW / 1,156 PS.
+  verified_by: EV Database + Porsche official specs
+  notes: 'Porsche Cayenne Turbo Electric (MY2026). Flagship variant with 850 kW /
+    1,156 PS.
+
     0-100 km/h in 2.5 seconds - one of the fastest SUVs ever made.
+
     Same 113 kWh battery and 800V platform as base Cayenne Electric.
 
+    '
 sources:
-  - url: "https://ev-database.org/car/3399/Porsche-Cayenne-Turbo-Electric"
-    title: "EV Database - Porsche Cayenne Turbo Electric"
-    date_accessed: "2026-02-09"
+- url: https://ev-database.org/car/3399/Porsche-Cayenne-Turbo-Electric
+  title: EV Database - Porsche Cayenne Turbo Electric
+  date_accessed: '2026-02-09'

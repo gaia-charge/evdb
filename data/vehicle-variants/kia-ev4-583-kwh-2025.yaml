@@ -1,9 +1,8 @@
 id: kia-ev4-583-kwh-2025
 name: Kia EV4 58.3 kWh
 model_id: kia-ev4
-variant_name: "58.3 kWh"
+variant_name: 58.3 kWh
 model_year: 2025
-
 dimensions:
   length_mm: 4610
   width_mm: 1830
@@ -11,13 +10,10 @@ dimensions:
   height_mm: 1475
   wheelbase_mm: 2830
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 490
   trunk_max_liters: 1380
   frunk_capacity_liters: 25
-
-
 battery:
   usable_kwh: 55.9
   total_kwh: 58.3
@@ -28,9 +24,8 @@ battery:
   warranty_years: 7
   warranty_km: 150000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volts: 400
-
 range:
   wltp_km: 458
   wltp_city_km: null
@@ -39,7 +34,6 @@ range:
   real_world_km: 360
   real_world_mild_weather_km: 410
   real_world_cold_weather_km: 300
-
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 6.0
@@ -48,29 +42,28 @@ charging:
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 620
   dc_curve:
-    - soc_percent: 10
-      power_kw: 135
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 50
-      power_kw: 100
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
+  - soc_percent: 10
+    power_kw: 135
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 50
+    power_kw: 100
+  - soc_percent: 70
+    power_kw: 70
+  - soc_percent: 80
+    power_kw: 45
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes
-  battery_preconditioning: yes
-
+  plug_and_charge: true
+  battery_preconditioning: true
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 150
-      torque_nm: 283
+  - position: front
+    type: permanent magnet
+    power_kw: 150
+    torque_nm: 283
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 283
@@ -78,10 +71,10 @@ performance:
   acceleration_0_60_mph_sec: null
   top_speed_kmh: 170
   drive_modes:
-    - "Eco"
-    - "Normal"
-    - "Sport"
-
+  - Eco
+  - Normal
+  - Sport
+  acceleration_0_100_sec: 8.3
 weight:
   curb_weight_kg: 1620
   gross_vehicle_weight_kg: 2070
@@ -89,7 +82,6 @@ weight:
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 600
   weight_distribution_front_percent: null
-
 efficiency:
   wltp_kwh_per_100km: 14.1
   wltp_mi_per_kwh: null
@@ -97,55 +89,54 @@ efficiency:
   epa_mpge: null
   real_world_kwh_per_100km: 15.5
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A+"
+  energy_efficiency_class: A+
   co2_emissions_wltp_g_per_km: 0
-
 features:
   adas_level: 2
   autonomous_features:
-    - "Forward collision avoidance"
-    - "Lane keeping assist"
-    - "Blind spot monitoring"
-    - "Smart cruise control with stop & go"
-    - "Rear cross-traffic collision avoidance"
-    - "Parking distance warning"
+  - Forward collision avoidance
+  - Lane keeping assist
+  - Blind spot monitoring
+  - Smart cruise control with stop & go
+  - Rear cross-traffic collision avoidance
+  - Parking distance warning
   infotainment:
-    - "Dual 12.3-inch curved displays"
-    - "Kia Connect navigation"
-    - "Apple CarPlay / Android Auto"
-    - "Over-the-air updates"
-    - "Digital key"
+  - Dual 12.3-inch curved displays
+  - Kia Connect navigation
+  - Apple CarPlay / Android Auto
+  - Over-the-air updates
+  - Digital key
   comfort:
-    - "Heat pump"
-    - "Climate pre-conditioning via app"
-    - "Heated front seats"
-    - "V2L (Vehicle-to-Load) 3.6 kW"
+  - Heat pump
+  - Climate pre-conditioning via app
+  - Heated front seats
+  - V2L (Vehicle-to-Load) 3.6 kW
   connectivity:
-    - "Kia Connect"
-    - "Remote services via app"
-    - "Plug & Charge"
-    - "Over-the-air updates"
+  - Kia Connect
+  - Remote services via app
+  - Plug & Charge
+  - Over-the-air updates
   audio:
-    - "6-speaker system"
-
+  - 6-speaker system
 version:
-  trim_level: "Air"
+  trim_level: Air
   option_packages: []
-  production_location: "Hwaseong, South Korea"
+  production_location: Hwaseong, South Korea
   build_quality: standard
-
 metadata:
-  created_at: "2026-02-10T01:00:00Z"
-  updated_at: "2026-02-10T01:00:00Z"
+  created_at: '2026-02-10T01:00:00Z'
+  updated_at: '2026-02-10T01:00:00Z'
   data_quality: verified
   data_source: manufacturer
-  verified_by: "Kia Germany website"
-  notes: |
-    Kia EV4 sedan with 58.3 kWh standard range battery. E-GMP platform, FWD.
+  verified_by: Kia Germany website
+  notes: 'Kia EV4 sedan with 58.3 kWh standard range battery. E-GMP platform, FWD.
+
     The entry-level EV4, offering good range at an affordable price point.
+
     150 kW (204 PS) motor, 458 km WLTP range. Base Air trim.
 
+    '
 sources:
-  - url: "https://www.kia.com/de/ev4/"
-    title: "Kia EV4 - Kia Deutschland"
-    date_accessed: "2026-02-10"
+- url: https://www.kia.com/de/ev4/
+  title: Kia EV4 - Kia Deutschland
+  date_accessed: '2026-02-10'

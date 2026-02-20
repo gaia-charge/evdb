@@ -1,10 +1,8 @@
-# Renault Scenic E-Tech Comfort Range (2025)
 id: scenic-e-tech-comfort-range-2025
 name: Scenic E-Tech Comfort Range
 model_id: renault-scenic-e-tech
 model_year: 2025
 variant_code: COMFORT-RANGE
-
 dimensions:
   length_mm: 4470
   width_mm: 1863
@@ -12,30 +10,25 @@ dimensions:
   height_mm: 1571
   wheelbase_mm: 2785
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 545
   trunk_max_liters: 1670
   frunk_capacity_liters: 0
-
-
 battery:
   usable_kwh: 60.0
   total_kwh: 62.0
   chemistry: NMC
   cell_type: pouch
-  manufacturer: "LG Energy Solution"
+  manufacturer: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 430
   wltp_city_km: 550
   wltp_highway_km: 335
   real_world_km: 370
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
   ac_max_kw: 22.0
   ac_phases: 3
@@ -43,52 +36,50 @@ charging:
   dc_max_kw: 130
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 120
-    - soc_percent: 40
-      power_kw: 105
-    - soc_percent: 50
-      power_kw: 90
-    - soc_percent: 60
-      power_kw: 75
-    - soc_percent: 70
-      power_kw: 60
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 130
+  - soc_percent: 10
+    power_kw: 130
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 120
+  - soc_percent: 40
+    power_kw: 105
+  - soc_percent: 50
+    power_kw: 90
+  - soc_percent: 60
+    power_kw: 75
+  - soc_percent: 70
+    power_kw: 60
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 30
+  - soc_percent: 100
+    power_kw: 15
   time_15_to_80_percent_min: 32
   charging_speed_kmh: 650
   plug_and_charge: true
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 125
-      power_hp: 170
-      torque_nm: 245
+  - position: front
+    type: permanent magnet
+    power_kw: 125
+    power_hp: 170
+    torque_nm: 245
   total_power_kw: 125
   total_power_hp: 170
   total_torque_nm: 245
   acceleration_0_100_kmh_sec: 8.6
   top_speed_kmh: 150
-
+  acceleration_0_100_sec: 8.6
 weight:
   curb_weight_kg: 1775
   gross_vehicle_weight_kg: 2350
@@ -97,55 +88,56 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 58
   distribution_rear_percent: 42
-
 efficiency:
   wltp_kwh_per_100km: 16.0
   wltp_kwh_per_100km_city: 13.2
   wltp_kwh_per_100km_highway: 19.5
   real_world_kwh_per_100km: 17.3
-  energy_efficiency_class: "A"
-
+  energy_efficiency_class: A
 wheels_tires:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "235/55 R19"
+  standard_size_front: 235/55 R19
+  standard_size_rear: 235/55 R19
   wheel_sizes_available:
-    - "19 inch (standard)"
-    - "20 inch (optional)"
-
+  - 19 inch (standard)
+  - 20 inch (optional)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise control with Stop&Go"
-    - "Lane centering assist"
-    - "Lane departure warning"
-    - "Traffic sign recognition with speed limiter"
-    - "Blind spot warning"
-    - "Rear cross-traffic alert"
-    - "Active emergency braking with pedestrian/cyclist detection"
-    - "Park assist with 360° camera"
-    - "Highway and traffic jam assist"
+  - Adaptive cruise control with Stop&Go
+  - Lane centering assist
+  - Lane departure warning
+  - Traffic sign recognition with speed limiter
+  - Blind spot warning
+  - Rear cross-traffic alert
+  - Active emergency braking with pedestrian/cyclist detection
+  - Park assist with 360° camera
+  - Highway and traffic jam assist
   connectivity:
-    - "Google Automotive Services (Maps, Assistant, Play Store)"
-    - "OpenR Link 12-inch portrait touchscreen"
-    - "12.3-inch digital instrument cluster"
-    - "My Renault app remote control"
-    - "OTA software updates"
-    - "E-Route planner with charging stops"
+  - Google Automotive Services (Maps, Assistant, Play Store)
+  - OpenR Link 12-inch portrait touchscreen
+  - 12.3-inch digital instrument cluster
+  - My Renault app remote control
+  - OTA software updates
+  - E-Route planner with charging stops
   special_features:
-    - "One Pedal driving mode"
-    - "Multi-Sense driving modes (Eco, Comfort, Sport, Perso)"
-    - "Pre-conditioning (battery and cabin)"
-    - "Heat pump standard"
-    - "Solarbay panoramic glass roof with adjustable opacity"
-    - "22kW AC charging (3-phase)"
-    - "Optimised Charge mode"
-
+  - One Pedal driving mode
+  - Multi-Sense driving modes (Eco, Comfort, Sport, Perso)
+  - Pre-conditioning (battery and cabin)
+  - Heat pump standard
+  - Solarbay panoramic glass roof with adjustable opacity
+  - 22kW AC charging (3-phase)
+  - Optimised Charge mode
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
+  created_at: '2026-02-09'
+  last_updated: '2026-02-09'
   sources:
-    - "https://www.renault.fr/vehicules-electriques/scenic-e-tech-electric.html"
-    - "https://www.renault.de/elektrofahrzeuge/scenic-e-tech-electric.html"
-    - "https://ev-database.org/car/2842/Renault-Scenic-E-Tech-Comfort-Range"
-  notes: "Base battery option for the Scenic E-Tech Electric family SUV. With 60 kWh usable capacity providing 430 km WLTP range, the Comfort Range variant offers excellent efficiency for daily driving and weekend trips. Features the innovative Solarbay panoramic glass roof with adjustable opacity, spacious 545L trunk, and Google Automotive Services. Ideal for families prioritizing space and technology at an accessible price point."
+  - https://www.renault.fr/vehicules-electriques/scenic-e-tech-electric.html
+  - https://www.renault.de/elektrofahrzeuge/scenic-e-tech-electric.html
+  - https://ev-database.org/car/2842/Renault-Scenic-E-Tech-Comfort-Range
+  notes: Base battery option for the Scenic E-Tech Electric family SUV. With 60 kWh
+    usable capacity providing 430 km WLTP range, the Comfort Range variant offers
+    excellent efficiency for daily driving and weekend trips. Features the innovative
+    Solarbay panoramic glass roof with adjustable opacity, spacious 545L trunk, and
+    Google Automotive Services. Ideal for families prioritizing space and technology
+    at an accessible price point.

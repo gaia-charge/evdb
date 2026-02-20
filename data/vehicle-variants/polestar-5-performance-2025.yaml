@@ -1,9 +1,8 @@
 id: polestar-5-performance-2025
-name: "Polestar 5 Performance"
+name: Polestar 5 Performance
 model_id: polestar-5
-variant_name: "Performance"
+variant_name: Performance
 model_year: 2025
-
 battery:
   usable_kwh: 106.0
   total_kwh: 112.0
@@ -14,94 +13,82 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volts: 800
-
 range:
   wltp_km: 565
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 530
-  
   real_world_mild_weather_km: 605
   real_world_cold_weather_km: 450
-
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 11.5
-  
   dc_max_kw: 350
   dc_charge_time_10_80_minutes: 22
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 1010
-  
   dc_curve:
-    - soc_percent: 10
-      power_kw: 350
-      duration_minutes: 3
-    - soc_percent: 30
-      power_kw: 280
-      duration_minutes: 5
-    - soc_percent: 50
-      power_kw: 220
-      duration_minutes: 5
-    - soc_percent: 70
-      power_kw: 160
-      duration_minutes: 5
-    - soc_percent: 80
-      power_kw: 100
-      duration_minutes: 4
-    - soc_percent: 90
-      power_kw: 60
-      duration_minutes: 8
-    - soc_percent: 100
-      power_kw: 20
-      duration_minutes: 15
-  
+  - soc_percent: 10
+    power_kw: 350
+    duration_minutes: 3
+  - soc_percent: 30
+    power_kw: 280
+    duration_minutes: 5
+  - soc_percent: 50
+    power_kw: 220
+    duration_minutes: 5
+  - soc_percent: 70
+    power_kw: 160
+    duration_minutes: 5
+  - soc_percent: 80
+    power_kw: 100
+    duration_minutes: 4
+  - soc_percent: 90
+    power_kw: 60
+    duration_minutes: 8
+  - soc_percent: 100
+    power_kw: 20
+    duration_minutes: 15
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: no
-  battery_preconditioning: yes
-
+  plug_and_charge: false
+  battery_preconditioning: true
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-    - position: rear
-      type: "permanent magnet"
-      power_kw: null
-      torque_nm: null
-  
+  - position: front
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: null
+    torque_nm: null
   total_power_kw: 650
   total_power_hp: 884
   total_torque_nm: 1015
-  
   acceleration_0_100_kmh_sec: 3.2
   acceleration_0_60_mph_sec: null
   top_speed_kmh: 250
-  
   drive_modes:
-    - "Comfort"
-    - "Sport"
-    - "Individual"
-
+  - Comfort
+  - Sport
+  - Individual
+  acceleration_0_100_sec: 3.2
 dimensions:
   length_mm: 5087
   width_mm: 2015
   height_mm: 1425
   wheelbase_mm: 3054
   ground_clearance_mm: 130
-
 cargo:
   trunk_capacity_liters: 484
   trunk_max_liters: 484
   frunk_capacity_liters: 37
-
 weight:
   curb_weight_kg: 2465
   gross_vehicle_weight_kg: 2950
@@ -109,7 +96,6 @@ weight:
   towing_capacity_braked_kg: 2200
   towing_capacity_unbraked_kg: 750
   weight_distribution_front_percent: 49
-
 efficiency:
   wltp_kwh_per_100km: 18.8
   wltp_mi_per_kwh: null
@@ -117,80 +103,77 @@ efficiency:
   epa_mpge: null
   real_world_kwh_per_100km: 20.0
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A"
+  energy_efficiency_class: A
   co2_emissions_wltp_g_per_km: 0
-
 features:
   adas_level: 2
   autonomous_features:
-    - "Pilot Assist (adaptive cruise + lane keeping)"
-    - "Automatic emergency braking"
-    - "Blind spot monitoring"
-    - "Rear cross-traffic alert"
-    - "360-degree camera system"
-    - "Traffic sign recognition"
-    - "Park Assist"
-  
+  - Pilot Assist (adaptive cruise + lane keeping)
+  - Automatic emergency braking
+  - Blind spot monitoring
+  - Rear cross-traffic alert
+  - 360-degree camera system
+  - Traffic sign recognition
+  - Park Assist
   infotainment:
-    - "15.4-inch central touchscreen"
-    - "10.2-inch driver display"
-    - "Head-up display with augmented reality"
-    - "Google Automotive Services (Maps, Assistant, Play)"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Over-the-air software updates"
-  
+  - 15.4-inch central touchscreen
+  - 10.2-inch driver display
+  - Head-up display with augmented reality
+  - Google Automotive Services (Maps, Assistant, Play)
+  - Wireless Apple CarPlay / Android Auto
+  - Over-the-air software updates
   comfort:
-    - "Adaptive air suspension (Performance-tuned)"
-    - "Heat pump (standard)"
-    - "Climate pre-conditioning via app"
-    - "Panoramic glass roof"
-    - "Heated front and rear seats"
-    - "Ventilated front seats"
-    - "Electrically adjustable sport seats with memory"
-    - "4-zone climate control"
-    - "Ambient lighting"
-    - "Powered tailgate"
-  
+  - Adaptive air suspension (Performance-tuned)
+  - Heat pump (standard)
+  - Climate pre-conditioning via app
+  - Panoramic glass roof
+  - Heated front and rear seats
+  - Ventilated front seats
+  - Electrically adjustable sport seats with memory
+  - 4-zone climate control
+  - Ambient lighting
+  - Powered tailgate
   connectivity:
-    - "Google built-in (native integration)"
-    - "Polestar Connect app (remote control)"
-    - "Digital key (smartphone)"
-    - "Over-the-air updates"
-  
+  - Google built-in (native integration)
+  - Polestar Connect app (remote control)
+  - Digital key (smartphone)
+  - Over-the-air updates
   audio:
-    - "Bowers & Wilkins premium audio (21 speakers)"
-  
+  - Bowers & Wilkins premium audio (21 speakers)
   special:
-    - "Performance-tuned suspension"
-    - "Torque vectoring dual clutch rear axle"
-    - "Performance brake system"
-    - "22-inch forged alloy wheels"
-
+  - Performance-tuned suspension
+  - Torque vectoring dual clutch rear axle
+  - Performance brake system
+  - 22-inch forged alloy wheels
 version:
-  trim_level: "Performance"
+  trim_level: Performance
   option_packages: []
-  
-  production_location: "Chengdu, China"
+  production_location: Chengdu, China
   build_quality: premium
   paint_options: null
   interior_options: null
-
 metadata:
-  created_at: "2026-02-09T15:45:00Z"
-  updated_at: "2026-02-09T15:45:00Z"
+  created_at: '2026-02-09T15:45:00Z'
+  updated_at: '2026-02-09T15:45:00Z'
   data_quality: verified
   data_source: manufacturer_and_tested
-  verified_by: "Polestar official specs + EV Database real-world estimates"
-  notes: |
-    Polestar 5 Performance is the top-tier variant with 650 kW (884 PS) and 1,015 Nm.
-    0-100 km/h in 3.2 seconds, making it one of the fastest electric GTs.
-    Same 112 kWh battery but higher consumption due to performance tuning (565 vs 670 km WLTP).
-    Price starts at €118,600 in Germany (base price for Performance; Dual Motor pricing TBC).
+  verified_by: Polestar official specs + EV Database real-world estimates
+  notes: 'Polestar 5 Performance is the top-tier variant with 650 kW (884 PS) and
+    1,015 Nm.
 
+    0-100 km/h in 3.2 seconds, making it one of the fastest electric GTs.
+
+    Same 112 kWh battery but higher consumption due to performance tuning (565 vs
+    670 km WLTP).
+
+    Price starts at €118,600 in Germany (base price for Performance; Dual Motor pricing
+    TBC).
+
+    '
 sources:
-  - url: "https://www.polestar.com/de/polestar-5/"
-    title: "Polestar 5 Official Germany"
-    date_accessed: "2026-02-09"
-  - url: "https://ev-database.org/car/3299/Polestar-5-Performance"
-    title: "EV Database - Polestar 5 Performance"
-    date_accessed: "2026-02-09"
+- url: https://www.polestar.com/de/polestar-5/
+  title: Polestar 5 Official Germany
+  date_accessed: '2026-02-09'
+- url: https://ev-database.org/car/3299/Polestar-5-Performance
+  title: EV Database - Polestar 5 Performance
+  date_accessed: '2026-02-09'

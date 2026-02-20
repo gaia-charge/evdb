@@ -1,35 +1,26 @@
-# Kia EV9 Long Range AWD 2024
-# Flagship 3-Row Electric SUV - Most Popular Variant
-
 id: kia-ev9-long-range-awd-2024
 name: Long Range AWD
 model_id: kia-ev9
 model_year: 2024
 variant_code: null
-
-# Production
 production_status: active
 market_availability:
-  - DE
-  - US
-  - KR
-  - GB
-  - NO
-  - NL
-  - FR
-
-# Battery System
+- DE
+- US
+- KR
+- GB
+- false
+- NL
+- FR
 battery:
   usable_kwh: 99.8
   total_kwh: 99.8
-  chemistry: NCM # Nickel Cobalt Manganese
+  chemistry: NCM
   cell_type: prismatic
   manufacturer: SK On
   warranty_years: 10
   warranty_km: 160000
   warranty_capacity_percent: 70
-
-# Range
 range:
   wltp_km: 563
   wltp_city_km: 680
@@ -37,24 +28,21 @@ range:
   epa_miles: 304
   epa_km: 489
   real_world_km: 450
-  real_world_notes: |
-    Real-world range highly dependent on temperature and driving style.
+  real_world_notes: 'Real-world range highly dependent on temperature and driving
+    style.
+
     Winter range (0°C): ~350-380km
+
     Summer range (20°C): ~480-510km
+
     Highway (130 km/h): ~420km
 
-# Efficiency
+    '
 efficiency:
   wltp_kwh_per_100km: 23.0
   epa_kwh_per_100km: 25.5
   real_world_kwh_per_100km: 24.5
   energy_label_eu: B
-  notes: |
-    Higher consumption than EV6/Ioniq 5 due to larger size, weight, and aerodynamics.
-    Cd 0.28 is excellent for a 3-row SUV (better than Model X's 0.25).
-    Heat pump standard improves winter efficiency.
-
-# Charging
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -62,158 +50,131 @@ charging:
   dc_max_kw: 233
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 233
-    - soc_percent: 20
-      power_kw: 233
-    - soc_percent: 30
-      power_kw: 233
-    - soc_percent: 40
-      power_kw: 215
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 60
-      power_kw: 160
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 85
+  - soc_percent: 10
+    power_kw: 233
+  - soc_percent: 20
+    power_kw: 233
+  - soc_percent: 30
+    power_kw: 233
+  - soc_percent: 40
+    power_kw: 215
+  - soc_percent: 50
+    power_kw: 190
+  - soc_percent: 60
+    power_kw: 160
+  - soc_percent: 70
+    power_kw: 120
+  - soc_percent: 80
+    power_kw: 85
   time_10_to_80_min: 24
   charging_speed_kmh: 985
-
-# Performance & Motors
-# Performance & Motors
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 70
-      torque_nm: 350
-    - position: rear
-      type: permanent magnet
-      power_kw: 160
-      torque_nm: 350
+  - position: front
+    type: permanent magnet
+    power_kw: 70
+    torque_nm: 350
+  - position: rear
+    type: permanent magnet
+    power_kw: 160
+    torque_nm: 350
   total_power_kw: 283
   total_power_hp: 385
   total_torque_nm: 700
   acceleration_0_100_kmh: 5.3
   acceleration_0_60_mph: 5.0
   top_speed_kmh: 200
-  notes: |
-    Impressive 5.3s 0-100 km/h for a 2,740kg 7-seater.
+  notes: 'Impressive 5.3s 0-100 km/h for a 2,740kg 7-seater.
+
     Rear-biased AWD system (160kW rear, 70kW front) for better efficiency.
+
     Adaptive suspension with auto-leveling standard.
 
+    '
+  acceleration_0_100_sec: 5.3
 dimensions:
   length_mm: 5010
   width_mm: 1980
   height_mm: 1755
   wheelbase_mm: 3100
   ground_clearance_mm: 178
-
 cargo:
   trunk_capacity_liters: 333
   trunk_max_liters: 2318
   frunk_capacity_liters: 90
-
-
-# Weight
 weight:
   curb_weight_kg: 2740
   gross_vehicle_weight_kg: 3280
   payload_kg: 540
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-
-# Tires
 tires:
-  front_standard: "255/55 R19"
-  rear_standard: "255/55 R19"
-
-# Bidirectional Charging
+  front_standard: 255/55 R19
+  rear_standard: 255/55 R19
 bidirectional:
   v2l: true
   v2l_max_kw: 3.6
   v2h: false
   v2g: false
-
-# Optional Equipment
 optional_equipment:
-  - name: Panoramic curved glass roof
-    category: comfort
-  - name: 20-inch alloy wheels
-    category: wheels
-  - name: 21-inch alloy wheels
-    category: wheels
-  - name: 6-seat configuration
-    category: interior
-  - name: Meridian Premium Audio
-    category: audio
-  - name: Augmented Reality HUD
-    category: technology
-  - name: Relaxation seats
-    category: comfort
-  - name: Towing package
-    category: utility
+- name: Panoramic curved glass roof
+  category: comfort
+- name: 20-inch alloy wheels
+  category: wheels
+- name: 21-inch alloy wheels
+  category: wheels
+- name: 6-seat configuration
+  category: interior
+- name: Meridian Premium Audio
+  category: audio
+- name: Augmented Reality HUD
+  category: technology
+- name: Relaxation seats
+  category: comfort
+- name: Towing package
+  category: utility
+pricing_notes: 'Target pricing:
 
-# Efficiency
-efficiency:
-  wltp_kwh_per_100km: 23.0
-  epa_kwh_per_100km: 25.5
-  real_world_kwh_per_100km: 24.5
-  energy_label_eu: B
-
-# Pricing Context
-pricing_notes: |
-  Target pricing:
   - Germany: €73,990-€87,990 (Earth to GT-Line)
+
   - USA: $54,900-$73,900 (Light to GT-Line)
+
   - UK: £64,995-£76,995
-  
+
+
   Significantly undercuts German luxury competitors:
+
   - vs Tesla Model X Long Range ($79,990): €20k+ cheaper in EU
+
   - vs Mercedes EQS SUV (€114,641): €27k-40k cheaper
+
   - vs BMW iX xDrive50 (€109,900): €22k-36k cheaper
 
-# Notes
-notes: |
-  The Kia EV9 Long Range AWD is the most popular variant, offering the best 
-  balance of range, performance, and practicality. Key highlights:
-  
-  **Strengths:**
-  - Fastest-charging 3-row SUV: 800V enables 10-80% in 24 minutes
-  - Spacious 3-row seating with adult-usable 3rd row
-  - Premium features: triple screens, swiveling seats, V2L
-  - Class-leading towing: 2,500kg (best for electric SUVs)
-  - Strong real-world range: ~450km mixed driving
-  - Excellent value vs German luxury competitors
-  
-  **Considerations:**
-  - Heavy at 2,740kg (impacts efficiency and tire wear)
-  - Higher consumption than EV6/Ioniq 5 (23.0 vs 18.0 kWh/100km)
-  - 3rd row best for children/shorter adults on long journeys
-  - Large size may be challenging in European city centers
-  
-  **Target Buyers:**
-  - Families needing 6-7 seats
-  - Road trippers prioritizing fast charging
-  - Towing needs (trailers, boats, caravans)
-  - Premium features without luxury brand premium
-
-# Metadata
+  '
+notes: "The Kia EV9 Long Range AWD is the most popular variant, offering the best\
+  \ \nbalance of range, performance, and practicality. Key highlights:\n\n**Strengths:**\n\
+  - Fastest-charging 3-row SUV: 800V enables 10-80% in 24 minutes\n- Spacious 3-row\
+  \ seating with adult-usable 3rd row\n- Premium features: triple screens, swiveling\
+  \ seats, V2L\n- Class-leading towing: 2,500kg (best for electric SUVs)\n- Strong\
+  \ real-world range: ~450km mixed driving\n- Excellent value vs German luxury competitors\n\
+  \n**Considerations:**\n- Heavy at 2,740kg (impacts efficiency and tire wear)\n-\
+  \ Higher consumption than EV6/Ioniq 5 (23.0 vs 18.0 kWh/100km)\n- 3rd row best for\
+  \ children/shorter adults on long journeys\n- Large size may be challenging in European\
+  \ city centers\n\n**Target Buyers:**\n- Families needing 6-7 seats\n- Road trippers\
+  \ prioritizing fast charging\n- Towing needs (trailers, boats, caravans)\n- Premium\
+  \ features without luxury brand premium\n"
 data_quality: verified
 data_sources:
-  - Kia official specifications
-  - Kia USA configurator
-  - Real-world testing (Car and Driver, Edmunds, InsideEVs)
-  - IIHS safety testing
-  - Bjørn Nyland 1,000km challenge (800km in 9h 28min)
+- Kia official specifications
+- Kia USA configurator
+- Real-world testing (Car and Driver, Edmunds, InsideEVs)
+- IIHS safety testing
+- Bjørn Nyland 1,000km challenge (800km in 9h 28min)
 source_urls:
-  - https://www.kia.com/de/modelle/ev9/
-  - https://www.kia.com/us/en/ev9
-  - https://insideevs.com/reviews/701221/kia-ev9-long-range-range-test/
-  - https://www.caranddriver.com/kia/ev9
-
+- https://www.kia.com/de/modelle/ev9/
+- https://www.kia.com/us/en/ev9
+- https://insideevs.com/reviews/701221/kia-ev9-long-range-range-test/
+- https://www.caranddriver.com/kia/ev9
 created_at: 2024-02-07
 updated_at: 2024-02-07

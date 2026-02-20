@@ -1,13 +1,8 @@
-# Hyundai INSTER Standard Range (42 kWh) 2025
-# Affordable compact city EV with 327 km WLTP range
-# 71 kW motor, FWD, DC fast charging
-
 id: hyundai-inster-standard-42-2025
 name: Standard 42 kWh
 model_id: hyundai-inster
 model_year: 2025
 trim_level: Select
-
 battery:
   usable_kwh: 42.0
   total_kwh: 44.6
@@ -17,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 327
   wltp_city_km: 440
@@ -25,22 +19,21 @@ range:
   epa_km: null
   real_world_km: 280
   conditions:
-    - test: WLTP Combined
-      result_km: 327
-      temperature_c: 23
-    - test: Real-world mixed
-      result_km: 280
-      temperature_c: 15
-      notes: "Mixed city/highway driving"
-    - test: Real-world winter
-      result_km: 220
-      temperature_c: -5
-      notes: "Cold weather with heating, ~21% loss"
-    - test: Real-world city
-      result_km: 340
-      temperature_c: 20
-      notes: "Pure city driving with regeneration"
-
+  - test: WLTP Combined
+    result_km: 327
+    temperature_c: 23
+  - test: Real-world mixed
+    result_km: 280
+    temperature_c: 15
+    notes: Mixed city/highway driving
+  - test: Real-world winter
+    result_km: 220
+    temperature_c: -5
+    notes: Cold weather with heating, ~21% loss
+  - test: Real-world city
+    result_km: 340
+    temperature_c: 20
+    notes: Pure city driving with regeneration
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -48,55 +41,54 @@ charging:
   dc_max_kw: 120
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 100
-    - soc_percent: 20
-      power_kw: 110
-    - soc_percent: 30
-      power_kw: 115
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 100
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 40
+  - soc_percent: 10
+    power_kw: 100
+  - soc_percent: 20
+    power_kw: 110
+  - soc_percent: 30
+    power_kw: 115
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 100
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 40
   charge_times:
-    - type: DC fast charging
-      power_kw: 120
-      soc_from: 10
-      soc_to: 80
-      time_minutes: 30
-      notes: "CCS2 DC fast charging, peak ~120 kW"
-    - type: AC home charging
-      power_kw: 11
-      soc_from: 0
-      soc_to: 100
-      time_minutes: 255
-      notes: "11 kW 3-phase wallbox (~4.25 hours)"
-    - type: AC home charging (single phase)
-      power_kw: 2.3
-      soc_from: 0
-      soc_to: 100
-      time_minutes: 1100
-      notes: "Standard household outlet (~18.3 hours)"
+  - type: DC fast charging
+    power_kw: 120
+    soc_from: 10
+    soc_to: 80
+    time_minutes: 30
+    notes: CCS2 DC fast charging, peak ~120 kW
+  - type: AC home charging
+    power_kw: 11
+    soc_from: 0
+    soc_to: 100
+    time_minutes: 255
+    notes: 11 kW 3-phase wallbox (~4.25 hours)
+  - type: AC home charging (single phase)
+    power_kw: 2.3
+    soc_from: 0
+    soc_to: 100
+    time_minutes: 1100
+    notes: Standard household outlet (~18.3 hours)
   plug_and_charge: false
   bidirectional:
     v2l: true
     v2g: false
     v2h: false
   preconditioning: true
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 71
-      torque_nm: 147
+  - position: front
+    type: permanent magnet
+    power_kw: 71
+    torque_nm: 147
   total_power_kw: 71
   total_power_hp: 97
   total_torque_nm: 147
@@ -104,7 +96,7 @@ performance:
   acceleration_0_60_mph_sec: 11.2
   top_speed_kph: 150
   top_speed_mph: 93
-
+  top_speed_kmh: 150
 dimensions:
   length_mm: 3825
   width_mm: 1610
@@ -113,75 +105,70 @@ dimensions:
   wheelbase_mm: 2580
   ground_clearance_mm: 178
   turning_circle_m: 9.8
-
 cargo:
   trunk_capacity_liters: 280
   trunk_max_liters: 1059
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1350
   gross_vehicle_weight_kg: 1710
   payload_kg: 360
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  towing_capacity_unbraked_kg: 0
   roof_load_kg: 80
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 14.3
   wltp_city_kwh_per_100km: 11.5
   wltp_highway_kwh_per_100km: 17.8
   real_world_kwh_per_100km: 15.5
   energy_efficiency_class: A
-
 features:
   standard:
-    - 10.25" digital instrument cluster
-    - 10.25" touchscreen infotainment with navigation
-    - Hyundai SmartSense ADAS suite
-    - Forward Collision-Avoidance Assist with junction turning
-    - Highway Driving Assist 1.5
-    - Lane Keeping Assist
-    - Driver Attention Warning
-    - Rear parking sensors with rearview camera
-    - i-Pedal one-pedal driving
-    - ECO/NORMAL/SPORT drive modes
-    - Regenerative braking paddle shifters
-    - Bluetooth with Apple CarPlay and Android Auto
-    - USB-C charging ports
-    - Automatic headlights
-    - Electronic stability control
+  - 10.25" digital instrument cluster
+  - 10.25" touchscreen infotainment with navigation
+  - Hyundai SmartSense ADAS suite
+  - Forward Collision-Avoidance Assist with junction turning
+  - Highway Driving Assist 1.5
+  - Lane Keeping Assist
+  - Driver Attention Warning
+  - Rear parking sensors with rearview camera
+  - i-Pedal one-pedal driving
+  - ECO/NORMAL/SPORT drive modes
+  - Regenerative braking paddle shifters
+  - Bluetooth with Apple CarPlay and Android Auto
+  - USB-C charging ports
+  - Automatic headlights
+  - Electronic stability control
   optional:
-    - Vehicle-to-Load (V2L) 3.6 kW exterior adapter
-    - Interior 230V outlet
-    - Heated front seats
-    - Sliding rear seats (16 cm adjustment)
-    - Fold-flat front passenger and rear seats
-    - Heat pump with battery heating system
-    - Wärmepumpe (heat pump)
-    - 360-degree camera (SVM)
-    - Blind-Spot Monitor with display
-    - Rear Cross-Traffic Collision-Avoidance Assist
-    - 17" alloy wheels
-    - LED projection headlights
-    - Steering wheel with illuminated LED pixels
-    - Roof rails (Cross variant)
-
+  - Vehicle-to-Load (V2L) 3.6 kW exterior adapter
+  - Interior 230V outlet
+  - Heated front seats
+  - Sliding rear seats (16 cm adjustment)
+  - Fold-flat front passenger and rear seats
+  - Heat pump with battery heating system
+  - Wärmepumpe (heat pump)
+  - 360-degree camera (SVM)
+  - Blind-Spot Monitor with display
+  - Rear Cross-Traffic Collision-Avoidance Assist
+  - 17" alloy wheels
+  - LED projection headlights
+  - Steering wheel with illuminated LED pixels
+  - Roof rails (Cross variant)
 version_info:
-  release_date: "2024-09"
-  changes_from_previous: "First model year - all new vehicle"
+  release_date: 2024-09
+  changes_from_previous: First model year - all new vehicle
   current_production: true
-
-notes: "The Hyundai INSTER Standard Range with 42 kWh LFP battery offers 327 km WLTP range at an accessible price point. With 71 kW (97 PS) it's designed primarily for city and suburban driving. The 14.3 kWh/100km consumption is class-leading. Despite the small battery, DC fast charging at up to 120 kW means 10-80% in just 30 minutes. Winner of Goldenes Lenkrad 2025 in the 'Best Car Under €25,000' category. Excellent value proposition against Dacia Spring (less range/tech) and Fiat 500e (less space). LFP battery chemistry provides excellent longevity and thermal stability."
-
-
+notes: The Hyundai INSTER Standard Range with 42 kWh LFP battery offers 327 km WLTP
+  range at an accessible price point. With 71 kW (97 PS) it's designed primarily for
+  city and suburban driving. The 14.3 kWh/100km consumption is class-leading. Despite
+  the small battery, DC fast charging at up to 120 kW means 10-80% in just 30 minutes.
+  Winner of Goldenes Lenkrad 2025 in the 'Best Car Under €25,000' category. Excellent
+  value proposition against Dacia Spring (less range/tech) and Fiat 500e (less space).
+  LFP battery chemistry provides excellent longevity and thermal stability.
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - https://www.hyundai.com/de/de/modelle/inster/antriebe.html
-    - https://www.hyundai.com/eu/models/inster.html
+  - https://www.hyundai.com/de/de/modelle/inster/antriebe.html
+  - https://www.hyundai.com/eu/models/inster.html

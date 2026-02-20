@@ -1,14 +1,8 @@
-# BMW iX1 eDrive20 2025 Vehicle Variant
-# Single-motor FWD compact SUV with 64.7kWh battery
-# 475km WLTP range, 130kW DC fast charging
-# 2025 model year - entry-level iX1
-
 id: bmw-ix1-edrive20-2025
 name: eDrive20
 model_id: bmw-ix1
 model_year: 2025
 trim_level: Base
-
 battery:
   usable_kwh: 64.7
   total_kwh: 66.5
@@ -18,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 475
   wltp_city_km: 605
@@ -26,18 +19,17 @@ range:
   epa_km: null
   real_world_km: 390
   conditions:
-    - test: WLTP Combined
-      result_km: 475
-      temperature_c: 23
-    - test: Real-world mixed
-      result_km: 390
-      temperature_c: 15
-      notes: "Mixed city/highway driving"
-    - test: Real-world winter
-      result_km: 310
-      temperature_c: -5
-      notes: "Cold weather with heating, ~35% loss"
-
+  - test: WLTP Combined
+    result_km: 475
+    temperature_c: 23
+  - test: Real-world mixed
+    result_km: 390
+    temperature_c: 15
+    notes: Mixed city/highway driving
+  - test: Real-world winter
+    result_km: 310
+    temperature_c: -5
+    notes: Cold weather with heating, ~35% loss
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -45,42 +37,41 @@ charging:
   dc_max_kw: 130
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 40
-      power_kw: 125
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 40
+  - soc_percent: 10
+    power_kw: 130
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 40
+    power_kw: 125
+  - soc_percent: 60
+    power_kw: 85
+  - soc_percent: 80
+    power_kw: 40
   charge_times:
-    - type: DC fast charging
-      power_kw: 130
-      soc_from: 10
-      soc_to: 80
-      time_minutes: 29
-      notes: "CCS2 DC fast charging"
-    - type: AC home charging
-      power_kw: 11
-      soc_from: 0
-      soc_to: 100
-      time_minutes: 390
-      notes: "11kW 3-phase wallbox (6.5 hours)"
+  - type: DC fast charging
+    power_kw: 130
+    soc_from: 10
+    soc_to: 80
+    time_minutes: 29
+    notes: CCS2 DC fast charging
+  - type: AC home charging
+    power_kw: 11
+    soc_from: 0
+    soc_to: 100
+    time_minutes: 390
+    notes: 11kW 3-phase wallbox (6.5 hours)
   plug_and_charge: true
   bidirectional:
     v2l: false
     v2g: false
   preconditioning: true
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 150
-      torque_nm: 250
+  - position: front
+    type: permanent magnet
+    power_kw: 150
+    torque_nm: 250
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 250
@@ -88,7 +79,7 @@ performance:
   acceleration_0_60_mph_sec: 8.2
   top_speed_kph: 170
   top_speed_mph: 106
-
+  top_speed_kmh: 170
 dimensions:
   length_mm: 4500
   width_mm: 1845
@@ -96,12 +87,10 @@ dimensions:
   height_mm: 1642
   wheelbase_mm: 2692
   ground_clearance_mm: 170
-
 cargo:
   trunk_capacity_liters: 490
   trunk_max_liters: 1495
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1950
   gross_vehicle_weight_kg: 2500
@@ -109,51 +98,52 @@ weight:
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
   roof_load_kg: 75
-
 efficiency:
   wltp_kwh_per_100km: 15.8
   wltp_city_kwh_per_100km: 12.9
   wltp_highway_kwh_per_100km: 19.2
   real_world_kwh_per_100km: 17.8
   energy_efficiency_class: A
-
 features:
   standard:
-    - Heat pump (essential for winter efficiency)
-    - LED headlights
-    - Dual-zone automatic climate control
-    - BMW Live Cockpit Professional (Curved Display)
-    - 10.25" instrument cluster + 10.7" central display
-    - BMW Operating System 9.0 (updated for 2025)
-    - Apple CarPlay & Android Auto wireless
-    - Digital Key Plus with UWB
-    - Parking sensors front and rear
-    - Reversing camera
-    - Adaptive cruise control
-    - Lane departure warning with lane keeping
-    - Speed limit information
-    - BMW IconicSounds Electric by Hans Zimmer
+  - Heat pump (essential for winter efficiency)
+  - LED headlights
+  - Dual-zone automatic climate control
+  - BMW Live Cockpit Professional (Curved Display)
+  - 10.25" instrument cluster + 10.7" central display
+  - BMW Operating System 9.0 (updated for 2025)
+  - Apple CarPlay & Android Auto wireless
+  - Digital Key Plus with UWB
+  - Parking sensors front and rear
+  - Reversing camera
+  - Adaptive cruise control
+  - Lane departure warning with lane keeping
+  - Speed limit information
+  - BMW IconicSounds Electric by Hans Zimmer
   optional:
-    - M Sport Package (sport styling, 19" wheels)
-    - Driving Assistant Professional (Highway Assistant Level 2+)
-    - Parking Assistant Professional with 360° camera
-    - Harman Kardon surround sound (16 speakers)
-    - Panoramic glass roof
-    - Adaptive LED headlights
-    - Head-Up Display
-    - Comfort Access (keyless entry)
-
+  - M Sport Package (sport styling, 19" wheels)
+  - Driving Assistant Professional (Highway Assistant Level 2+)
+  - Parking Assistant Professional with 360° camera
+  - Harman Kardon surround sound (16 speakers)
+  - Panoramic glass roof
+  - Adaptive LED headlights
+  - Head-Up Display
+  - Comfort Access (keyless entry)
 version_info:
-  release_date: "2024-09"
-  changes_from_previous: "2025 model year: BMW Operating System 9.0, improved driver assistance"
+  release_date: 2024-09
+  changes_from_previous: '2025 model year: BMW Operating System 9.0, improved driver
+    assistance'
   current_production: true
-
-notes: "BMW iX1 eDrive20 is the entry-level variant with a single front motor producing 150 kW (204 hp). Front-wheel drive only. Same 64.7 kWh usable battery as xDrive30 but better efficiency and range (475 km WLTP vs 439 km). Lighter and more affordable than the AWD variant. Ideal for buyers who don't need all-wheel drive. Built on FAAR platform at BMW Plant Regensburg. Heat pump standard. Competes with Mercedes EQA 250, Volvo EX30 Extended Range, Audi Q4 e-tron 35."
-
+notes: BMW iX1 eDrive20 is the entry-level variant with a single front motor producing
+  150 kW (204 hp). Front-wheel drive only. Same 64.7 kWh usable battery as xDrive30
+  but better efficiency and range (475 km WLTP vs 439 km). Lighter and more affordable
+  than the AWD variant. Ideal for buyers who don't need all-wheel drive. Built on
+  FAAR platform at BMW Plant Regensburg. Heat pump standard. Competes with Mercedes
+  EQA 250, Volvo EX30 Extended Range, Audi Q4 e-tron 35.
 metadata:
-  created_at: "2026-02-10"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-10'
+  updated_at: '2026-02-10'
   data_quality: verified
   sources:
-    - https://www.bmw.de/de/neufahrzeuge/x/ix1/technische-daten.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/
+  - https://www.bmw.de/de/neufahrzeuge/x/ix1/technische-daten.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/ix1/

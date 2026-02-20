@@ -1,10 +1,8 @@
 id: alpine-a390-gts-2026
-name: "Alpine A390 GTS"
+name: Alpine A390 GTS
 model_id: alpine-a390
-variant_name: "GTS"
+variant_name: GTS
 model_year: 2026
-
-# Battery specifications
 battery:
   usable_kwh: 89.0
   total_kwh: 94.0
@@ -15,83 +13,68 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
+  thermal_management: Liquid cooling
   architecture_volt: 400
-
-# Range specifications
 range:
   wltp_km: 555
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 470
-
   real_world_mild_weather_km: 535
   real_world_cold_weather_km: 400
-
-# Charging specifications
 charging:
   ac_max_kw: 11
   ac_charge_time_0_100_hours: 9.75
-
   dc_max_kw: 190
   dc_charge_time_10_80_minutes: 28
   dc_charge_time_0_100_minutes: null
   dc_charge_speed_kmh: 700
-
   dc_curve:
-    - soc_percent: 10
-      power_kw: 190
-    - soc_percent: 30
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 55
-
+  - soc_percent: 10
+    power_kw: 190
+  - soc_percent: 30
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 135
+  - soc_percent: 70
+    power_kw: 90
+  - soc_percent: 80
+    power_kw: 55
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
   onboard_charger_optional_kw: 22
   plug_and_charge: null
-  preconditioning: yes
-
-# Performance specifications
+  preconditioning: true
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 160
-      torque_nm: 350
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 185
-      torque_nm: 474
-
+  - position: front
+    type: permanent magnet
+    power_kw: 160
+    torque_nm: 350
+  - position: rear
+    type: permanent magnet
+    power_kw: 185
+    torque_nm: 474
   total_power_kw: 345
   total_power_hp: 469
   total_torque_nm: 824
-
   acceleration_0_100_kmh_sec: 3.9
   top_speed_kmh: 220
-
   drive_modes:
-    - "Normal"
-    - "Sport"
-    - "Track"
-    - "Individual"
-
-# Weight
+  - Normal
+  - Sport
+  - Track
+  - Individual
+  acceleration_0_100_sec: 3.9
 weight:
   curb_weight_kg: 2199
   gross_vehicle_weight_kg: 2605
   payload_kg: 406
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-
 dimensions:
   length_mm: 4520
   width_mm: 1900
@@ -99,76 +82,66 @@ dimensions:
   height_mm: 1550
   wheelbase_mm: 2700
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1100
   frunk_capacity_liters: 0
-
-
-# Efficiency
 efficiency:
   wltp_kwh_per_100km: 16.0
   real_world_kwh_per_100km: 18.9
   co2_emissions_wltp_g_per_km: 0
-
-# Additional features
 features:
   adas_level: 2
   autonomous_features:
-    - "Adaptive cruise control"
-    - "Lane keeping assist"
-    - "Automatic emergency braking"
-    - "Blind spot warning"
-    - "Traffic sign recognition"
-
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Automatic emergency braking
+  - Blind spot warning
+  - Traffic sign recognition
   infotainment:
-    - "Alpine Infotainment System"
-    - "Alpine Telemetrics"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Navigation with EV route planning"
-
+  - Alpine Infotainment System
+  - Alpine Telemetrics
+  - Wireless Apple CarPlay / Android Auto
+  - Navigation with EV route planning
   comfort:
-    - "Dual-zone automatic climate control"
-    - "Heat pump (standard)"
-    - "Ambient lighting"
-    - "Sabelt sport seats"
-    - "Wireless smartphone charging"
-
+  - Dual-zone automatic climate control
+  - Heat pump (standard)
+  - Ambient lighting
+  - Sabelt sport seats
+  - Wireless smartphone charging
   connectivity:
-    - "OTA updates"
-    - "Connected services"
-    - "Remote climate control"
-
+  - OTA updates
+  - Connected services
+  - Remote climate control
   bidirectional:
     v2l: true
     v2l_power_kw: null
-    v2l_outlet: "1 x Type 2 (Adapter)"
+    v2l_outlet: 1 x Type 2 (Adapter)
     v2h: true
     v2h_power_kw: 22
     v2g: true
     v2g_power_kw: 22
-
-# Version information
 version:
-  trim_level: "GTS"
-  production_location: "Douai, France"
+  trim_level: GTS
+  production_location: Douai, France
   build_quality: premium
-
-# Metadata
 metadata:
-  created_at: "2026-02-10T12:00:00Z"
-  updated_at: "2026-02-10T12:00:00Z"
+  created_at: '2026-02-10T12:00:00Z'
+  updated_at: '2026-02-10T12:00:00Z'
   data_quality: estimated
   data_source: manufacturer_and_estimated
-  verified_by: "EV Database estimates + Alpine official announcements"
-  notes: |
-    The Alpine A390 GTS is the high-performance variant with 345 kW (469 PS) and 3.9s 0-100.
+  verified_by: EV Database estimates + Alpine official announcements
+  notes: 'The Alpine A390 GTS is the high-performance variant with 345 kW (469 PS)
+    and 3.9s 0-100.
+
     Features enhanced DC charging at 190 kW (vs 150 kW on GT) for 28-minute 10-80%.
+
     Sabelt sport seats, track drive mode, and enhanced torque vectoring.
+
     Not yet available - expected launch 2026.
 
+    '
 sources:
-  - url: "https://ev-database.org/car/3391/Alpine-A390-GTS"
-    title: "EV Database - Alpine A390 GTS"
-    date_accessed: "2026-02-10"
+- url: https://ev-database.org/car/3391/Alpine-A390-GTS
+  title: EV Database - Alpine A390 GTS
+  date_accessed: '2026-02-10'

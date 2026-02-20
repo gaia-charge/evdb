@@ -1,253 +1,248 @@
 id: mercedes-benz-eqb-300-4matic-2025
-name: "Mercedes-Benz EQB 300 4MATIC 2025"
+name: Mercedes-Benz EQB 300 4MATIC 2025
 model_id: mercedes-benz-eqb
-variant_name: "300 4MATIC"
+variant_name: 300 4MATIC
 model_year: 2025
-
-# Battery specifications
 battery:
   usable_kwh: 66.5
   total_kwh: 70.5
-  chemistry: NCM  # Nickel Cobalt Manganese
+  chemistry: NCM
   cells: prismatic
-  supplier: "CATL"
+  supplier: CATL
   modules: 9
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: "Liquid cooling"
-  
-# Range specifications (WLTP, EPA, real-world)
+  thermal_management: Liquid cooling
 range:
   wltp_km: 423
   wltp_city_km: 520
   wltp_highway_km: 350
-  epa_km: null  # Not sold in USA
-  real_world_km: 360  # EV Database real-world mixed driving
-  
-  # Range by temperature
+  epa_km: null
+  real_world_km: 360
   real_world_mild_weather_km: 385
-  real_world_cold_weather_km: 290  # -10°C, 23°C cabin
-
-# Charging specifications
+  real_world_cold_weather_km: 290
 charging:
-  # AC charging
-  ac_max_kw: 11  # 3-phase, standard
-  ac_charge_time_0_100_hours: 6.0  # 11kW charging
-  
-  # DC fast charging
-  dc_max_kw: 100  # CCS2
-  dc_charge_time_10_80_minutes: 32  # 10-80% in 32 minutes
+  ac_max_kw: 11
+  ac_charge_time_0_100_hours: 6.0
+  dc_max_kw: 100
+  dc_charge_time_10_80_minutes: 32
   dc_charge_time_0_100_minutes: 55
-  dc_charge_speed_kmh: 510  # km of range added per hour
-  
-  # DC charging curve
+  dc_charge_speed_kmh: 510
   dc_curve:
-    - soc_percent: 10
-      power_kw: 100
-      duration_minutes: 5
-    - soc_percent: 30
-      power_kw: 98
-      duration_minutes: 10
-    - soc_percent: 50
-      power_kw: 85
-      duration_minutes: 10
-    - soc_percent: 70
-      power_kw: 65
-      duration_minutes: 10
-    - soc_percent: 80
-      power_kw: 45
-      duration_minutes: 7
-  
+  - soc_percent: 10
+    power_kw: 100
+    duration_minutes: 5
+  - soc_percent: 30
+    power_kw: 98
+    duration_minutes: 10
+  - soc_percent: 50
+    power_kw: 85
+    duration_minutes: 10
+  - soc_percent: 70
+    power_kw: 65
+    duration_minutes: 10
+  - soc_percent: 80
+    power_kw: 45
+    duration_minutes: 7
   connector_ac: Type2
   connector_dc: CCS2
   onboard_charger_kw: 11
-  plug_and_charge: yes  # ISO 15118 support
-
-# Performance specifications
+  plug_and_charge: true
 performance:
-  drive_type: AWD  # All-wheel drive (4MATIC)
+  drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 100
-      torque_nm: 265
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 68
-      torque_nm: 180
-  
+  - position: front
+    type: permanent magnet
+    power_kw: 100
+    torque_nm: 265
+  - position: rear
+    type: permanent magnet
+    power_kw: 68
+    torque_nm: 180
   total_power_kw: 168
   total_power_hp: 228
   total_torque_nm: 445
-  
   acceleration_0_100_kmh_sec: 8.0
   acceleration_0_60_mph_sec: null
-  top_speed_kmh: 160  # Electronically limited
-  
-  # Driving modes
+  top_speed_kmh: 160
   drive_modes:
-    - "ECO"
-    - "Comfort"
-    - "Sport"
-    - "Individual"
-    - "Off-Road" # 4MATIC adds off-road mode
-
-# Dimensions
+  - ECO
+  - Comfort
+  - Sport
+  - Individual
+  - Off-Road
+  acceleration_0_100_sec: 8.0
 dimensions:
   length_mm: 4684
   width_mm: 1834
   height_mm: 1667
   wheelbase_mm: 2829
   ground_clearance_mm: 180
-
-# Cargo
 cargo:
   trunk_capacity_liters: 495
   trunk_max_liters: 1620
   frunk_capacity_liters: 0
-
-# Weight
 weight:
   curb_weight_kg: 2260
   gross_vehicle_weight_kg: 2815
-  gross_vehicle_weight_kg: 2815
   payload_kg: 555
-  towing_capacity_braked_kg: 1800
-  towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: 55  # Better balanced with AWD
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-
-# Efficiency
+  weight_distribution_front_percent: 55
 efficiency:
   wltp_kwh_per_100km: 18.4
   wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
   epa_mpge: null
-  real_world_kwh_per_100km: 20.2  # EV Database measured
+  real_world_kwh_per_100km: 20.2
   real_world_mi_per_kwh: null
-  energy_efficiency_class: "A"  # EU energy label
+  energy_efficiency_class: A
   co2_emissions_wltp_g_per_km: 0
-
-# Additional features
 features:
-  adas_level: 2  # Highway Assist, Active Brake Assist
+  adas_level: 2
   autonomous_features:
-    - "Active Distance Assist DISTRONIC (adaptive cruise)"
-    - "Active Steering Assist"
-    - "Active Brake Assist with cross-traffic function"
-    - "Active Lane Keeping Assist"
-    - "Attention Assist (drowsiness detection)"
-    - "Traffic Sign Assist"
-    - "Active Blind Spot Assist"
-    - "PRE-SAFE (collision preparation)"
-  
+  - Active Distance Assist DISTRONIC (adaptive cruise)
+  - Active Steering Assist
+  - Active Brake Assist with cross-traffic function
+  - Active Lane Keeping Assist
+  - Attention Assist (drowsiness detection)
+  - Traffic Sign Assist
+  - Active Blind Spot Assist
+  - PRE-SAFE (collision preparation)
   infotainment:
-    - "MBUX with 11.9-inch touchscreen (updated for 2025)"
-    - "10.25-inch digital instrument cluster"
-    - "Navigation with Electric Intelligence"
-    - "Apple CarPlay / Android Auto wireless"
-    - "Mercedes me Connect app"
-    - "Voice control with 'Hey Mercedes'"
-  
+  - MBUX with 11.9-inch touchscreen (updated for 2025)
+  - 10.25-inch digital instrument cluster
+  - Navigation with Electric Intelligence
+  - Apple CarPlay / Android Auto wireless
+  - Mercedes me Connect app
+  - Voice control with 'Hey Mercedes'
   comfort:
-    - "Dual-zone automatic climate control"
-    - "Climate pre-conditioning via app"
-    - "Heat pump (standard)"
-    - "Heated front seats (optional)"
-    - "Electric tailgate"
-    - "Keyless entry and start (KEYLESS-GO, optional)"
-    - "Wireless smartphone charging (standard on 2025)"
-    - "Ambient lighting 64 colors"
-    - "Third row seats (optional 7-seater)"
-    - "4MATIC all-wheel drive"
-  
+  - Dual-zone automatic climate control
+  - Climate pre-conditioning via app
+  - Heat pump (standard)
+  - Heated front seats (optional)
+  - Electric tailgate
+  - Keyless entry and start (KEYLESS-GO, optional)
+  - Wireless smartphone charging (standard on 2025)
+  - Ambient lighting 64 colors
+  - Third row seats (optional 7-seater)
+  - 4MATIC all-wheel drive
   connectivity:
-    - "Mercedes me Connect (remote control)"
-    - "Over-the-air updates"
-    - "Mercedes me Charge"
-    - "Plug & Charge"
-  
+  - Mercedes me Connect (remote control)
+  - Over-the-air updates
+  - Mercedes me Charge
+  - Plug & Charge
   special:
-    - "4MATIC all-wheel drive with torque vectoring"
-    - "Off-Road driving mode"
-    - "Enhanced traction for winter/slippery conditions"
-
-# Version information
+  - 4MATIC all-wheel drive with torque vectoring
+  - Off-Road driving mode
+  - Enhanced traction for winter/slippery conditions
 version:
-  trim_level: "Progressive"
+  trim_level: Progressive
   option_packages:
-    - "AMG Line (sport styling, 19-inch wheels)"
-    - "Night Package (black exterior accents)"
-    - "Premium Package (larger displays, KEYLESS-GO)"
-    - "Premium Plus Package (Burmester audio, 360° camera)"
-    - "Third row seats (7-seater, +€1,850)"
-  
-  production_location: "Kecskemét, Hungary"
+  - AMG Line (sport styling, 19-inch wheels)
+  - Night Package (black exterior accents)
+  - Premium Package (larger displays, KEYLESS-GO)
+  - Premium Plus Package (Burmester audio, 360° camera)
+  - Third row seats (7-seater, +€1,850)
+  production_location: Kecskemét, Hungary
   build_quality: premium
   paint_options: 9
   interior_options: 3
-
-
-# Metadata
 metadata:
-  created_at: "2026-02-09T08:25:00Z"
-  updated_at: "2026-02-09T08:25:00Z"
+  created_at: '2026-02-09T08:25:00Z'
+  updated_at: '2026-02-09T08:25:00Z'
   data_quality: verified
   data_source: manufacturer_specs
-  verified_by: "Mercedes-Benz official 2025 model year specs"
-  notes: |
-    2025 model year update for Mercedes-Benz EQB 300 4MATIC.
-    
+  verified_by: Mercedes-Benz official 2025 model year specs
+  notes: '2025 model year update for Mercedes-Benz EQB 300 4MATIC.
+
+
     Updates for 2025:
+
     - Updated MBUX infotainment with 11.9-inch touchscreen
+
     - Wireless smartphone charging now standard
+
     - Enhanced voice control
+
     - Minor interior trim updates
+
     - Refreshed exterior color options
-    
+
+
     Specs remain largely unchanged from 2024:
+
     - Same 70.5kWh battery
+
     - Same 423km WLTP range
+
     - Same 100kW DC charging
+
     - Same 4MATIC AWD powertrain
-    
+
+
     Key features:
+
     - 4MATIC all-wheel drive (dual motors)
+
     - 168kW (228hp) combined power
+
     - Optional third row seats (7-seater)
+
     - Good for winter/slippery conditions
-    
+
+
     Compared to 250+ FWD:
+
     - +€4,000 price premium
+
     - -51km range (423 vs 474km WLTP)
+
     - +28kW power (168 vs 140kW)
+
     - +85kg weight (2260 vs 2175kg)
+
     - Better 0-100: 8.0s vs 9.0s
-    
+
+
     Competes with:
+
     - Tesla Model Y Long Range AWD (better performance/range)
+
     - BMW iX1 xDrive30 (similar specs, 5-seat only)
+
     - Audi Q4 e-tron quattro (better value, 5-seat)
-    
+
+
     Strengths:
+
     - 4MATIC all-wheel drive
+
     - Good winter traction
+
     - Only premium 7-seat compact AWD EV
+
     - Mercedes brand prestige
+
     - Updated infotainment for 2025
-    
+
+
     Weaknesses:
+
     - Higher consumption than FWD (18.4 vs 16.8 kWh/100km)
+
     - Shorter range than FWD
+
     - 100kW DC charging still modest
+
     - Premium price
 
+    '
 sources:
-  - url: "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqb/explore.html"
-    title: "Mercedes-Benz EQB Official Specs 2025"
-    date_accessed: "2026-02-09"
-  - url: "https://ev-database.org/car/1548/Mercedes-EQB-300-4MATIC"
-    title: "EV Database - Real-world testing"
-    date_accessed: "2026-02-09"
+- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqb/explore.html
+  title: Mercedes-Benz EQB Official Specs 2025
+  date_accessed: '2026-02-09'
+- url: https://ev-database.org/car/1548/Mercedes-EQB-300-4MATIC
+  title: EV Database - Real-world testing
+  date_accessed: '2026-02-09'

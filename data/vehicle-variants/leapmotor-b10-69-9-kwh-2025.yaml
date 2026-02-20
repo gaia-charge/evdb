@@ -1,10 +1,8 @@
-# Leapmotor B10 69.9 kWh (2025)
 id: leapmotor-b10-69-9-kwh-2025
-name: "69.9 kWh"
+name: 69.9 kWh
 model_id: leapmotor-b10
 model_year: 2025
 variant_code: B10-BEV-2025
-
 dimensions:
   length_mm: 4456
   width_mm: 1876
@@ -12,30 +10,25 @@ dimensions:
   height_mm: 1610
   wheelbase_mm: 2720
   ground_clearance_mm: 165
-
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1300
   frunk_capacity_liters: 0
-
-
 battery:
   usable_kwh: 66.0
   total_kwh: 69.9
   chemistry: LFP
   cell_type: prismatic
-  manufacturer: "CATL"
+  manufacturer: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 400
   wltp_city_km: 500
   wltp_highway_km: 330
   real_world_km: 340
-  real_world_source: "Estimated based on platform"
-
+  real_world_source: Estimated based on platform
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -43,95 +36,90 @@ charging:
   dc_max_kw: 150
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 148
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
+  - soc_percent: 0
+    power_kw: 130
+  - soc_percent: 10
+    power_kw: 150
+  - soc_percent: 20
+    power_kw: 148
+  - soc_percent: 30
+    power_kw: 145
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 120
+  - soc_percent: 60
+    power_kw: 95
+  - soc_percent: 70
+    power_kw: 70
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 10
   time_10_to_80_percent_min: 30
   plug_and_charge: false
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.3
   v2h: false
   v2g: false
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 170
-      power_hp: 231
-      torque_nm: 320
+  - position: rear
+    type: permanent magnet
+    power_kw: 170
+    power_hp: 231
+    torque_nm: 320
   total_power_kw: 170
   total_power_hp: 231
   total_torque_nm: 320
   acceleration_0_100_kmh_sec: 7.5
   top_speed_kmh: 170
-
+  acceleration_0_100_sec: 7.5
 weight:
   curb_weight_kg: 1850
   gross_vehicle_weight_kg: 2280
   payload_kg: 430
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 19.5
-
 wheels_tires:
-  standard_size_front: "215/55 R18"
-  standard_size_rear: "215/55 R18"
+  standard_size_front: 215/55 R18
+  standard_size_rear: 215/55 R18
   wheel_sizes_available:
-    - "18 inch (standard)"
-    - "19 inch (optional)"
-
+  - 18 inch (standard)
+  - 19 inch (optional)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive Cruise Control"
-    - "Lane Keeping Assist"
-    - "Automatic Emergency Braking"
-    - "Blind Spot Detection"
-    - "Rear Cross Traffic Alert"
-    - "360-degree camera"
-    - "Traffic Sign Recognition"
+  - Adaptive Cruise Control
+  - Lane Keeping Assist
+  - Automatic Emergency Braking
+  - Blind Spot Detection
+  - Rear Cross Traffic Alert
+  - 360-degree camera
+  - Traffic Sign Recognition
   connectivity:
-    - "Leapmotor App"
-    - "Remote climate control"
-    - "Remote door lock/unlock"
-    - "OTA software updates"
+  - Leapmotor App
+  - Remote climate control
+  - Remote door lock/unlock
+  - OTA software updates
   special_features:
-    - "LEAP 3.5 platform"
-    - "150kW DC fast charging"
-    - "Heat pump standard"
-    - "V2L capable (3.3kW)"
-
+  - LEAP 3.5 platform
+  - 150kW DC fast charging
+  - Heat pump standard
+  - V2L capable (3.3kW)
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - "https://www.leapmotor.com"
-    - "https://www.autocar.co.uk/car-news/new-cars/leapmotor-b10-unveiled-paris-affordable-electric-suv"
-  notes: "European launch mid-2025. Specs estimated from Paris Motor Show reveal and platform data. 150kW DC charging is major improvement over C10's 84.4kW."
+  - https://www.leapmotor.com
+  - https://www.autocar.co.uk/car-news/new-cars/leapmotor-b10-unveiled-paris-affordable-electric-suv
+  notes: European launch mid-2025. Specs estimated from Paris Motor Show reveal and
+    platform data. 150kW DC charging is major improvement over C10's 84.4kW.

@@ -1,28 +1,25 @@
-# Volvo EC40 Twin Motor (2024)
 id: volvo-ec40-twin-motor-2024
-name: "Twin Motor"
+name: Twin Motor
 model_id: volvo-ec40
 model_year: 2024
 variant_code: EC40-TM
-
 battery:
   usable_kwh: 78.0
   total_kwh: 82.0
   chemistry: NMC
   cell_type: pouch
-  manufacturer: "CATL / LG Energy Solution"
+  manufacturer: CATL / LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 487
   wltp_city_km: 630
   wltp_highway_km: 400
   epa_km: null
   real_world_km: 420
-  real_world_source: "EV Database winter/summer average, improved vs EX40 due to better aerodynamics"
-
+  real_world_source: EV Database winter/summer average, improved vs EX40 due to better
+    aerodynamics
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,71 +27,67 @@ charging:
   dc_max_kw: 150
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 150
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 148
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 40
-      power_kw: 140
-    - soc_percent: 50
-      power_kw: 125
-    - soc_percent: 60
-      power_kw: 105
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 150
+  - soc_percent: 10
+    power_kw: 150
+  - soc_percent: 20
+    power_kw: 148
+  - soc_percent: 30
+    power_kw: 145
+  - soc_percent: 40
+    power_kw: 140
+  - soc_percent: 50
+    power_kw: 125
+  - soc_percent: 60
+    power_kw: 105
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 15
   time_5_to_80_percent_min: 40
   time_10_to_80_percent_min: 35
   charging_speed_kmh: 640
   plug_and_charge: false
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 330
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 330
+  - position: front
+    type: permanent magnet
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 330
+  - position: rear
+    type: permanent magnet
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 330
   total_power_kw: 300
   total_power_hp: 408
   total_torque_nm: 660
   acceleration_0_100_kmh_sec: 4.7
   acceleration_0_60_mph_sec: 4.5
   top_speed_kmh: 180
-
+  acceleration_0_100_sec: 4.7
 dimensions:
   length_mm: 4440
   width_mm: 1873
   height_mm: 1582
   wheelbase_mm: 2702
   ground_clearance_mm: 176
-
 cargo:
   trunk_capacity_liters: 413
   trunk_max_liters: 1205
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2185
   gross_vehicle_weight_kg: 2750
@@ -103,52 +96,53 @@ weight:
   towing_capacity_unbraked_kg: 750
   distribution_front_percent: 52
   distribution_rear_percent: 48
-
 efficiency:
   wltp_kwh_per_100km: 18.2
   wltp_kwh_per_100km_city: 14.8
   wltp_kwh_per_100km_highway: 21.5
   real_world_kwh_per_100km: 20.3
-  energy_efficiency_class: "B"
-
+  energy_efficiency_class: B
 wheels_tires:
-  standard_size_front: "235/50 R19"
-  standard_size_rear: "235/50 R19"
+  standard_size_front: 235/50 R19
+  standard_size_rear: 235/50 R19
   wheel_sizes_available:
-    - "19 inch (standard)"
-    - "20 inch (optional, -20km range)"
-
+  - 19 inch (standard)
+  - 20 inch (optional, -20km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Pilot Assist (adaptive cruise with lane centering)"
-    - "City Safety with collision avoidance"
-    - "Lane Keeping Aid"
-    - "Blind Spot Information System (BLIS)"
-    - "Cross Traffic Alert with autobrake"
-    - "Run-off Road Mitigation"
-    - "Oncoming Lane Mitigation"
-    - "360-degree camera"
+  - Pilot Assist (adaptive cruise with lane centering)
+  - City Safety with collision avoidance
+  - Lane Keeping Aid
+  - Blind Spot Information System (BLIS)
+  - Cross Traffic Alert with autobrake
+  - Run-off Road Mitigation
+  - Oncoming Lane Mitigation
+  - 360-degree camera
   connectivity:
-    - "Google built-in (Maps, Assistant, Play)"
-    - "Volvo On Call app"
-    - "OTA software updates"
-    - "4G LTE connectivity"
-    - "Wi-Fi hotspot"
+  - Google built-in (Maps, Assistant, Play)
+  - Volvo On Call app
+  - OTA software updates
+  - 4G LTE connectivity
+  - Wi-Fi hotspot
   special_features:
-    - "One-pedal driving mode"
-    - "Pre-conditioning (battery & cabin)"
-    - "Smartphone as key"
-    - "Acoustic Vehicle Alerting System (AVAS)"
-    - "Torque vectoring (AWD)"
-    - "Leather-free interior as standard"
-
+  - One-pedal driving mode
+  - Pre-conditioning (battery & cabin)
+  - Smartphone as key
+  - Acoustic Vehicle Alerting System (AVAS)
+  - Torque vectoring (AWD)
+  - Leather-free interior as standard
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   sources:
-    - "https://www.volvocars.com/uk/v/cars/ec40/specifications"
-    - "https://ev-database.org/car/1825/Volvo-EC40-Twin-Motor"
-    - "https://insideevs.com/reviews/volvo-ec40-twin-motor/"
-  notes: "All-wheel drive performance variant with dual motors producing 408hp combined. The EC40's coupe roofline improves aerodynamics (Cd 0.30 vs 0.33 for EX40), giving it 35km more WLTP range than the equivalent EX40 Twin Motor with the same battery. Faster acceleration than the Single Motor (4.7s vs 7.3s 0-100). Competes with Tesla Model Y Long Range AWD, Polestar 2 Long Range Dual Motor, and BMW iX3. Shares platform with EX40 and Polestar 2. First Volvo with leather-free interior as standard."
+  - https://www.volvocars.com/uk/v/cars/ec40/specifications
+  - https://ev-database.org/car/1825/Volvo-EC40-Twin-Motor
+  - https://insideevs.com/reviews/volvo-ec40-twin-motor/
+  notes: All-wheel drive performance variant with dual motors producing 408hp combined.
+    The EC40's coupe roofline improves aerodynamics (Cd 0.30 vs 0.33 for EX40), giving
+    it 35km more WLTP range than the equivalent EX40 Twin Motor with the same battery.
+    Faster acceleration than the Single Motor (4.7s vs 7.3s 0-100). Competes with
+    Tesla Model Y Long Range AWD, Polestar 2 Long Range Dual Motor, and BMW iX3. Shares
+    platform with EX40 and Polestar 2. First Volvo with leather-free interior as standard.

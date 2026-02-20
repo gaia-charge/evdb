@@ -1,68 +1,62 @@
-# Audi Q4 Sportback 40 e-tron (2024)
 id: audi-q4-sportback-e-tron-40-2024
-name: "40"
+name: '40'
 model_id: audi-q4-sportback-e-tron
 model_year: 2024
 variant_code: Q4SB-40
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "LG Energy Solution / Samsung SDI"
+  manufacturer: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
-  wltp_km: 567  # +20km vs standard Q4 40 thanks to Cd 0.26 aerodynamics
+  wltp_km: 567
   wltp_city_km: 740
   wltp_highway_km: 445
-  epa_km: 458  # 285 miles (US market)
+  epa_km: 458
   real_world_km: 480
-  real_world_source: "EV Database winter/summer average"
-
+  real_world_source: EV Database winter/summer average
 charging:
   ac_max_kw: 11
   ac_phases: 3
   ac_connector: Type2
-  dc_max_kw: 135  # 400V architecture limits DC charging
+  dc_max_kw: 135
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 135
-    - soc_percent: 10
-      power_kw: 135
-    - soc_percent: 20
-      power_kw: 135
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 80
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 135
+  - soc_percent: 10
+    power_kw: 135
+  - soc_percent: 20
+    power_kw: 135
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 95
+  - soc_percent: 60
+    power_kw: 80
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 50
+  - soc_percent: 90
+    power_kw: 30
+  - soc_percent: 100
+    power_kw: 15
   time_5_to_80_percent_min: 38
   time_10_to_80_percent_min: 36
-  charging_speed_kmh: 690  # km of range per hour at peak
-  plug_and_charge: true  # ISO 15118 support
-
+  charging_speed_kmh: 690
+  plug_and_charge: true
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 dimensions:
   length_mm: 4588
   width_mm: 1865
@@ -70,83 +64,79 @@ dimensions:
   wheelbase_mm: 2764
   ground_clearance_mm: 180
   drag_coefficient: 0.26
-
 cargo:
   trunk_capacity_liters: 535
   trunk_max_liters: 1460
   frunk_capacity_liters: 0
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 310
+  - position: rear
+    type: permanent magnet
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 310
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 310
   acceleration_0_100_kmh_sec: 8.5
   acceleration_0_60_mph_sec: 8.1
-  top_speed_kmh: 160  # Electronically limited
-
+  top_speed_kmh: 160
+  acceleration_0_100_sec: 8.5
 towing:
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-  notes: "1,000 kg braked (8% gradient), 750 kg unbraked. MEB platform."
-
+  notes: 1,000 kg braked (8% gradient), 750 kg unbraked. MEB platform.
 weight:
-  curb_weight_kg: 2010  # +10kg vs standard Q4 40 (reinforced roof structure)
+  curb_weight_kg: 2010
   gross_vehicle_weight_kg: 2530
   payload_kg: 520
   distribution_front_percent: 48
   distribution_rear_percent: 52
-
-
 efficiency:
-  wltp_kwh_per_100km: 17.4  # More efficient than standard Q4 thanks to aerodynamics
+  wltp_kwh_per_100km: 17.4
   wltp_kwh_per_100km_city: 14.8
   wltp_kwh_per_100km_highway: 20.8
   real_world_kwh_per_100km: 18.8
-  energy_efficiency_class: "A"  # EU energy label
-
+  energy_efficiency_class: A
 wheels_tires:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "235/55 R19"
+  standard_size_front: 235/55 R19
+  standard_size_rear: 235/55 R19
   wheel_sizes_available:
-    - "19 inch (standard)"
-    - "20 inch (optional, -15km range)"
-    - "21 inch (optional, -25km range)"
-
+  - 19 inch (standard)
+  - 20 inch (optional, -15km range)
+  - 21 inch (optional, -25km range)
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise control (ACC) with Stop&Go"
-    - "Lane departure warning"
-    - "Lane keeping assist"
-    - "Traffic sign recognition"
-    - "Park assist (optional)"
-    - "360-degree camera (optional)"
-    - "Rear cross-traffic alert (optional)"
+  - Adaptive cruise control (ACC) with Stop&Go
+  - Lane departure warning
+  - Lane keeping assist
+  - Traffic sign recognition
+  - Park assist (optional)
+  - 360-degree camera (optional)
+  - Rear cross-traffic alert (optional)
   connectivity:
-    - "Audi connect navigation & infotainment"
-    - "myAudi app remote control"
-    - "OTA software updates"
-    - "e-tron route planner with charging stops"
+  - Audi connect navigation & infotainment
+  - myAudi app remote control
+  - OTA software updates
+  - e-tron route planner with charging stops
   special_features:
-    - "Recuperation levels (3 modes: off, auto, manual)"
-    - "B mode for strong regen (one-pedal driving)"
-    - "Pre-conditioning when navigating to charger"
-    - "Acoustic Vehicle Alerting System (AVAS)"
-
+  - 'Recuperation levels (3 modes: off, auto, manual)'
+  - B mode for strong regen (one-pedal driving)
+  - Pre-conditioning when navigating to charger
+  - Acoustic Vehicle Alerting System (AVAS)
 metadata:
   data_quality: verified
-  created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  created_at: '2026-02-08'
+  last_updated: '2026-02-08'
   sources:
-    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-sportback-e-tron/technische-daten.html"
-    - "https://ev-database.org/car/1367/Audi-Q4-Sportback-e-tron-40"
-    - "https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q4-sportback-e-tron/"
-  notes: "Sportback (coupe-SUV) variant with superior aerodynamics (Cd 0.26) delivering 567km WLTP range - 20km more than standard Q4 40 e-tron. Best-in-class drag coefficient for compact electric SUVs. Sportier styling with sloping roofline, yet trunk capacity increases to 535L (+15L). Premium of €1,500 over standard Q4 justified by better range and design. Popular with buyers wanting maximum range and style."
+  - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-sportback-e-tron/technische-daten.html
+  - https://ev-database.org/car/1367/Audi-Q4-Sportback-e-tron-40
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q4-sportback-e-tron/
+  notes: Sportback (coupe-SUV) variant with superior aerodynamics (Cd 0.26) delivering
+    567km WLTP range - 20km more than standard Q4 40 e-tron. Best-in-class drag coefficient
+    for compact electric SUVs. Sportier styling with sloping roofline, yet trunk capacity
+    increases to 535L (+15L). Premium of €1,500 over standard Q4 justified by better
+    range and design. Popular with buyers wanting maximum range and style.

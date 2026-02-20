@@ -1,27 +1,23 @@
-# Dongfeng Nammi Box Comfort (2025)
 id: dongfeng-nammi-box-comfort-2025
-name: "Comfort 42kWh"
+name: Comfort 42kWh
 model_id: dongfeng-nammi-box
 model_year: 2025
 variant_code: NAMMI-BOX-COMFORT-2025
-
 battery:
   usable_kwh: 42.3
   total_kwh: 42.3
   chemistry: LFP
   cell_type: prismatic
-  manufacturer: "SVOLT"
+  manufacturer: SVOLT
   warranty_years: 8
   warranty_km: 150000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 320
   wltp_city_km: 430
   wltp_highway_km: 250
   real_world_km: 270
-  real_world_source: "Estimated based on similar segment vehicles"
-
+  real_world_source: Estimated based on similar segment vehicles
 charging:
   ac_max_kw: 6.6
   ac_phases: 1
@@ -29,105 +25,96 @@ charging:
   dc_max_kw: 70
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 60
-    - soc_percent: 10
-      power_kw: 70
-    - soc_percent: 20
-      power_kw: 70
-    - soc_percent: 30
-      power_kw: 68
-    - soc_percent: 40
-      power_kw: 62
-    - soc_percent: 50
-      power_kw: 55
-    - soc_percent: 60
-      power_kw: 45
-    - soc_percent: 70
-      power_kw: 35
-    - soc_percent: 80
-      power_kw: 25
-    - soc_percent: 90
-      power_kw: 15
-    - soc_percent: 100
-      power_kw: 8
+  - soc_percent: 0
+    power_kw: 60
+  - soc_percent: 10
+    power_kw: 70
+  - soc_percent: 20
+    power_kw: 70
+  - soc_percent: 30
+    power_kw: 68
+  - soc_percent: 40
+    power_kw: 62
+  - soc_percent: 50
+    power_kw: 55
+  - soc_percent: 60
+    power_kw: 45
+  - soc_percent: 70
+    power_kw: 35
+  - soc_percent: 80
+    power_kw: 25
+  - soc_percent: 90
+    power_kw: 15
+  - soc_percent: 100
+    power_kw: 8
   time_10_to_80_percent_min: 30
   plug_and_charge: false
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: "permanent magnet"
-      power_kw: 70
-      power_hp: 95
-      torque_nm: 160
+  - position: front
+    type: permanent magnet
+    power_kw: 70
+    power_hp: 95
+    torque_nm: 160
   total_power_kw: 70
   total_power_hp: 95
   total_torque_nm: 160
   acceleration_0_100_kmh_sec: 12.0
   top_speed_kmh: 140
-
+  acceleration_0_100_sec: 12.0
 dimensions:
   length_mm: 4030
   width_mm: 1810
   height_mm: 1570
   wheelbase_mm: 2660
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 326
   trunk_max_liters: 926
   frunk_capacity_liters: 0
-
-
 weight:
   curb_weight_kg: 1410
   gross_vehicle_weight_kg: 1830
   payload_kg: 420
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 14.0
   real_world_kwh_per_100km: 16.0
-
 wheels_tires:
-  standard_size_front: "195/60 R16"
-  standard_size_rear: "195/60 R16"
+  standard_size_front: 195/60 R16
+  standard_size_rear: 195/60 R16
   wheel_sizes_available:
-    - "16 inch (standard)"
-
+  - 16 inch (standard)
 technology:
   adas_level: 1
   adas_features:
-    - "Forward Collision Warning"
-    - "Automatic Emergency Braking"
-    - "Lane Departure Warning"
-    - "Rear parking sensors"
-    - "Rear parking camera"
+  - Forward Collision Warning
+  - Automatic Emergency Braking
+  - Lane Departure Warning
+  - Rear parking sensors
+  - Rear parking camera
   connectivity:
-    - "12.8-inch touchscreen"
-    - "Apple CarPlay & Android Auto"
-    - "Bluetooth"
-    - "USB ports"
+  - 12.8-inch touchscreen
+  - Apple CarPlay & Android Auto
+  - Bluetooth
+  - USB ports
   special_features:
-    - "Wireless phone charging"
-    - "360-degree camera"
-    - "Eco mode"
-    - "Regenerative braking"
-
+  - Wireless phone charging
+  - 360-degree camera
+  - Eco mode
+  - Regenerative braking
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - "https://www.dongfeng-global.com"
-  notes: "2025 model year Nammi Box with 42.3 kWh LFP battery. Affordable city EV positioned as one of the cheapest electric cars in Europe. 70kW DC fast charging. Single-phase AC charging only."
+  - https://www.dongfeng-global.com
+  notes: 2025 model year Nammi Box with 42.3 kWh LFP battery. Affordable city EV positioned
+    as one of the cheapest electric cars in Europe. 70kW DC fast charging. Single-phase
+    AC charging only.

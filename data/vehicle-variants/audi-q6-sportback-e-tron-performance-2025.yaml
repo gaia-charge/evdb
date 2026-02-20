@@ -1,22 +1,19 @@
----
 id: audi-q6-sportback-e-tron-performance-2025
-name: "Performance"
+name: Performance
 model_id: audi-q6-sportback-e-tron
 model_year: 2025
 variant_code: Q6SB-PERF-2025
-
 battery:
   usable_kwh: 94.9
   total_kwh: 100.0
   chemistry: NMC
   cell_type: prismatic
-  manufacturer: "Samsung SDI"
+  manufacturer: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
   voltage: 800
-  notes: "100 kWh battery on 800V PPE platform. Same pack as Q6 e-tron SUV Performance."
-
+  notes: 100 kWh battery on 800V PPE platform. Same pack as Q6 e-tron SUV Performance.
 range:
   wltp_km: 656
   wltp_city_km: 870
@@ -24,10 +21,11 @@ range:
   epa_km: null
   real_world_km: 575
   real_world_source: estimated
-  notes: |
-    WLTP range of 656 km — best in Q6 lineup thanks to Sportback's improved
+  notes: 'WLTP range of 656 km — best in Q6 lineup thanks to Sportback''s improved
+
     aerodynamics (Cd 0.26 vs 0.28 for SUV). ~15 km more than SUV Performance variant.
 
+    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -35,67 +33,66 @@ charging:
   dc_max_kw: 270
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 270
-    - soc_percent: 10
-      power_kw: 270
-    - soc_percent: 20
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 250
-    - soc_percent: 40
-      power_kw: 230
-    - soc_percent: 50
-      power_kw: 200
-    - soc_percent: 60
-      power_kw: 170
-    - soc_percent: 70
-      power_kw: 130
-    - soc_percent: 80
-      power_kw: 85
-    - soc_percent: 90
-      power_kw: 45
-    - soc_percent: 100
-      power_kw: 20
+  - soc_percent: 0
+    power_kw: 270
+  - soc_percent: 10
+    power_kw: 270
+  - soc_percent: 20
+    power_kw: 270
+  - soc_percent: 30
+    power_kw: 250
+  - soc_percent: 40
+    power_kw: 230
+  - soc_percent: 50
+    power_kw: 200
+  - soc_percent: 60
+    power_kw: 170
+  - soc_percent: 70
+    power_kw: 130
+  - soc_percent: 80
+    power_kw: 85
+  - soc_percent: 90
+    power_kw: 45
+  - soc_percent: 100
+    power_kw: 20
   time_10_to_80_percent_min: 21
   charging_speed_kmh: 1420
   plug_and_charge: true
-  notes: |
-    800V architecture enables ultra-fast 270 kW DC charging.
+  notes: '800V architecture enables ultra-fast 270 kW DC charging.
+
     10-80% in just 21 minutes. 10 minutes adds ~255 km range.
+
     AC 11 kW standard, optional 22 kW AC upgrade.
 
+    '
 bidirectional:
   v2l: true
   v2l_max_kw: 11
   v2h: true
   v2g: true
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: "permanent magnet"
-      power_kw: 240
-      power_hp: 326
-      torque_nm: 485
+  - position: rear
+    type: permanent magnet
+    power_kw: 240
+    power_hp: 326
+    torque_nm: 485
   total_power_kw: 240
   total_power_hp: 326
   total_torque_nm: 485
   acceleration_0_100_kmh_sec: 6.6
   top_speed_kmh: 210
-
+  acceleration_0_100_sec: 6.6
 weight:
   curb_weight_kg: 2200
   gross_vehicle_weight_kg: 2750
   payload_kg: 550
   towing_capacity_braked_kg: 2400
-
 efficiency:
   wltp_kwh_per_100km: 16.2
   real_world_kwh_per_100km: 18.5
-  notes: "Slightly better efficiency than SUV variant due to lower Cd (0.26 vs 0.28)"
-
+  notes: Slightly better efficiency than SUV variant due to lower Cd (0.26 vs 0.28)
 dimensions:
   length_mm: 4771
   width_mm: 1939
@@ -104,59 +101,56 @@ dimensions:
   ground_clearance_mm: 184
   trunk_capacity_liters: 511
   frunk_capacity_liters: 64
-
 cargo:
   trunk_capacity_liters: 511
   trunk_max_liters: 1373
   frunk_capacity_liters: 64
-
 wheels_tires:
-  standard_size_front: "235/55 R19"
-  standard_size_rear: "255/50 R19"
-
+  standard_size_front: 235/55 R19
+  standard_size_rear: 255/50 R19
 technology:
   adas_level: 2
   adas_features:
-    - "Adaptive cruise assist with traffic jam assist"
-    - "Active lane keeping"
-    - "Turn assist"
-    - "Collision avoidance assist"
-    - "360-degree camera system"
-    - "Park assist plus with remote parking"
+  - Adaptive cruise assist with traffic jam assist
+  - Active lane keeping
+  - Turn assist
+  - Collision avoidance assist
+  - 360-degree camera system
+  - Park assist plus with remote parking
   connectivity:
-    - "MMI Navigation plus"
-    - "Audi connect services"
-    - "OTA software updates"
-    - "Wireless Apple CarPlay and Android Auto"
-    - "5G connectivity"
+  - MMI Navigation plus
+  - Audi connect services
+  - OTA software updates
+  - Wireless Apple CarPlay and Android Auto
+  - 5G connectivity
   displays:
-    - "14.9\" MMI panoramic curved OLED display"
-    - "11.9\" Audi virtual cockpit plus"
-    - "10.9\" MMI front passenger display"
-    - "Augmented reality head-up display"
+  - 14.9" MMI panoramic curved OLED display
+  - 11.9" Audi virtual cockpit plus
+  - 10.9" MMI front passenger display
+  - Augmented reality head-up display
   special_features:
-    - "Digital Matrix LED headlights"
-    - "Digital OLED rear lights"
-    - "Air suspension with adaptive dampers"
-    - "Heat pump standard"
-    - "4-zone automatic climate control"
-    - "Panoramic glass roof with electrochromic dimming"
-    - "Sonos premium sound system (20 speakers, 830W)"
-    - "Bi-directional charging (V2L, V2H, V2G)"
+  - Digital Matrix LED headlights
+  - Digital OLED rear lights
+  - Air suspension with adaptive dampers
+  - Heat pump standard
+  - 4-zone automatic climate control
+  - Panoramic glass roof with electrochromic dimming
+  - Sonos premium sound system (20 speakers, 830W)
+  - Bi-directional charging (V2L, V2H, V2G)
+notes: 'The 2025 Audi Q6 Sportback e-tron Performance is the most efficient variant
+  in the Q6 lineup, combining the large 100 kWh battery with a single rear motor and
+  the Sportback''s superior aerodynamics (Cd 0.26). At 656 km WLTP, it offers best-in-class
+  range for a premium mid-size coupe SUV. 800V architecture enables 270 kW DC charging
+  with 10-80% in 21 minutes. Features Audi''s latest triple-screen MMI system, standard
+  air suspension, and bi-directional charging (V2L/V2H/V2G). Built on the PPE platform
+  co-developed with Porsche at Audi''s Ingolstadt plant. Competes with BMW iX xDrive50,
+  Mercedes EQE SUV, and Tesla Model Y Long Range.
 
-notes: >
-  The 2025 Audi Q6 Sportback e-tron Performance is the most efficient variant in the Q6 lineup,
-  combining the large 100 kWh battery with a single rear motor and the Sportback's superior
-  aerodynamics (Cd 0.26). At 656 km WLTP, it offers best-in-class range for a premium mid-size
-  coupe SUV. 800V architecture enables 270 kW DC charging with 10-80% in 21 minutes. Features
-  Audi's latest triple-screen MMI system, standard air suspension, and bi-directional charging
-  (V2L/V2H/V2G). Built on the PPE platform co-developed with Porsche at Audi's Ingolstadt plant.
-  Competes with BMW iX xDrive50, Mercedes EQE SUV, and Tesla Model Y Long Range.
-
+  '
 metadata:
   data_quality: estimated
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
+  created_at: '2026-02-10'
+  last_updated: '2026-02-10'
   sources:
-    - "https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-sportback-e-tron.html"
-    - "https://media.audi.com"
+  - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-sportback-e-tron.html
+  - https://media.audi.com
