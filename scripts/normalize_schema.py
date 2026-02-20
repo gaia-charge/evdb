@@ -163,17 +163,45 @@ def normalize_variant(data: dict) -> tuple[dict, List[str]]:
             combined = motors['combined']
             for src, dst in [
                 ('power_kw', 'total_power_kw'), ('max_power_kw', 'total_power_kw'),
+                ('total_power_kw', 'total_power_kw'),
                 ('power_hp', 'total_power_hp'), ('max_power_hp', 'total_power_hp'),
+                ('total_power_hp', 'total_power_hp'),
                 ('torque_nm', 'total_torque_nm'), ('max_torque_nm', 'total_torque_nm'),
+                ('total_torque_nm', 'total_torque_nm'),
             ]:
                 if src in combined and dst not in perf:
                     perf[dst] = combined[src]
                     changes.append(f"motors.combined.{src} ({combined[src]}) → performance.{dst}")
     
+    # Single-motor vehicles: if only one motor defined (front OR rear, not both),
+    # use its values as total system power/torque
+    if 'motors' in data and isinstance(data['motors'], dict):
+        motors = data['motors']
+        motor_sections = [k for k in motors if isinstance(motors.get(k), dict) and k not in ('combined',)]
+        # Only derive from single motor if there's exactly one motor and no combined
+        if len(motor_sections) == 1 and 'combined' not in motors:
+            single = motors[motor_sections[0]]
+            section_name = motor_sections[0]
+            for src, dst in [
+                ('power_kw', 'total_power_kw'), ('max_power_kw', 'total_power_kw'),
+                ('power_hp', 'total_power_hp'), ('max_power_hp', 'total_power_hp'),
+                ('torque_nm', 'total_torque_nm'), ('max_torque_nm', 'total_torque_nm'),
+            ]:
+                if src in single and dst not in perf:
+                    perf[dst] = single[src]
+                    changes.append(f"motors.{section_name}.{src} ({single[src]}) → performance.{dst} (single motor)")
+    
     # Source: singular motor section
     if 'motor' in data and isinstance(data['motor'], dict):
         motor = data['motor']
-        for src, dst in [('power_kw', 'total_power_kw'), ('torque_nm', 'total_torque_nm')]:
+        for src, dst in [
+            ('power_kw', 'total_power_kw'), ('max_power_kw', 'total_power_kw'),
+            ('total_power_kw', 'total_power_kw'),
+            ('power_hp', 'total_power_hp'), ('max_power_hp', 'total_power_hp'),
+            ('total_power_hp', 'total_power_hp'),
+            ('torque_nm', 'total_torque_nm'), ('max_torque_nm', 'total_torque_nm'),
+            ('total_torque_nm', 'total_torque_nm'),
+        ]:
             if src in motor and dst not in perf:
                 perf[dst] = motor[src]
                 changes.append(f"motor.{src} ({motor[src]}) → performance.{dst}")
