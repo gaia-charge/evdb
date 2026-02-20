@@ -55,6 +55,9 @@ motors:
   notes: Dual permanent magnet synchronous motors, same output as 2024
 performance:
   acceleration_0_100_kmh: 5.1
+  acceleration_0_100_sec: 5.1  # Canonical field for analysis
+  total_power_kw: 272  # Canonical field (from motors.combined_power_kw)
+  total_torque_nm: 700  # Canonical field (from motors.combined_torque_nm)
   top_speed_kmh: 225
   notes: Refined executive sedan acceleration, unchanged from 2024
 range:

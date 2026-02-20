@@ -82,8 +82,11 @@ performance:
   acceleration:
     0_100_kmh_s: 7.8
     0_60_mph_s: 7.4
+  acceleration_0_100_sec: 7.8  # Canonical field for analysis
   top_speed_kmh: 167
   top_speed_limited: true
+  total_power_kw: 150  # Canonical field (from motors[0].max_power_kw)
+  total_torque_nm: 255  # Canonical field (from motors[0].max_torque_nm)
 consumption:
   wltp_kwh_per_100km: 16.2
   wltp_source: manufacturer
