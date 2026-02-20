@@ -191,6 +191,35 @@ def normalize_variant(data: dict) -> tuple[dict, List[str]]:
                     perf[dst] = single[src]
                     changes.append(f"motors.{section_name}.{src} ({single[src]}) → performance.{dst} (single motor)")
     
+    # Source: drivetrain.motors section
+    dt = data.get('drivetrain', {})
+    if isinstance(dt, dict) and 'motors' in dt and isinstance(dt['motors'], dict):
+        dt_motors = dt['motors']
+        # Check for combined section
+        if 'combined' in dt_motors and isinstance(dt_motors['combined'], dict):
+            combined = dt_motors['combined']
+            for src, dst in [
+                ('power_kw', 'total_power_kw'), ('total_power_kw', 'total_power_kw'),
+                ('power_hp', 'total_power_hp'), ('total_power_hp', 'total_power_hp'),
+                ('torque_nm', 'total_torque_nm'), ('total_torque_nm', 'total_torque_nm'),
+            ]:
+                if src in combined and dst not in perf:
+                    perf[dst] = combined[src]
+                    changes.append(f"drivetrain.motors.combined.{src} ({combined[src]}) → performance.{dst}")
+        # Single motor derivation from drivetrain.motors
+        dt_motor_sections = [k for k in dt_motors if isinstance(dt_motors.get(k), dict)]
+        active_motors = [k for k in dt_motor_sections if dt_motors[k] is not None and dt_motors[k].get('power_kw')]
+        if len(active_motors) == 1:
+            single = dt_motors[active_motors[0]]
+            sname = active_motors[0]
+            for src, dst in [
+                ('power_kw', 'total_power_kw'), ('power_hp', 'total_power_hp'),
+                ('torque_nm', 'total_torque_nm'),
+            ]:
+                if src in single and dst not in perf:
+                    perf[dst] = single[src]
+                    changes.append(f"drivetrain.motors.{sname}.{src} ({single[src]}) → performance.{dst} (single motor)")
+    
     # Source: singular motor section
     if 'motor' in data and isinstance(data['motor'], dict):
         motor = data['motor']
