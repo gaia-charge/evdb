@@ -98,7 +98,10 @@ performance:
   acceleration_0_100_sec: 8.3
   acceleration_0_60_sec: 7.8
   top_speed_kph: 185
+  top_speed_kmh: 185  # Canonical schema field name
   top_speed_limited: true
+  total_power_kw: 115  # From motor section, canonical schema field
+  total_torque_nm: 260  # From motor section, canonical schema field
 weight:
   curb_weight_kg: 1578
   gross_vehicle_weight_kg: 2028
@@ -189,7 +192,7 @@ metadata:
   - https://mg.co.uk/new-cars/mg5-electric/specifications
   - https://www.car.info/en-se/mg/5-electric/
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
+  last_updated: '2026-02-20'
   notes: 'Entry-level electric estate car in Europe.
 
     50.3kWh LFP battery provides decent 320km WLTP range.

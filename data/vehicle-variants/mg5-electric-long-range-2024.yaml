@@ -98,7 +98,10 @@ performance:
   acceleration_0_100_sec: 7.3
   acceleration_0_60_sec: 6.9
   top_speed_kph: 185
+  top_speed_kmh: 185  # Canonical schema field name
   top_speed_limited: true
+  total_power_kw: 115  # From motor section, canonical schema field
+  total_torque_nm: 260  # From motor section, canonical schema field
 weight:
   curb_weight_kg: 1620
   gross_vehicle_weight_kg: 2070
@@ -190,7 +193,7 @@ metadata:
   - https://www.car.info/en-se/mg/5-electric/
   - https://www.autoexpress.co.uk/mg/5-electric
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
+  last_updated: '2026-02-20'
   notes: 'Long Range is the most popular MG5 variant (61.1kWh battery).
 
     Heat pump standard improves cold weather efficiency.

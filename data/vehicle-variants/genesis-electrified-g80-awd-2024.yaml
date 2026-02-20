@@ -51,7 +51,10 @@ motors:
   notes: Dual permanent magnet synchronous motors with intelligent AWD torque distribution
 performance:
   acceleration_0_100_kmh: 4.9
+  acceleration_0_100_sec: 4.9  # Canonical schema field name
   top_speed_kmh: 225
+  total_power_kw: 272  # From motors.combined_power_kw, canonical schema field
+  total_torque_nm: 700  # From motors.combined_torque_nm, canonical schema field
   notes: Refined acceleration with executive sedan comfort
 range:
   wltp_km: 520
@@ -186,7 +189,7 @@ notes: 'Genesis'' flagship electric sedan with traditional executive proportions
   '
 metadata:
   created_at: '2026-02-08'
-  updated_at: '2026-02-08'
+  updated_at: '2026-02-20'
   data_quality: verified
   sources:
   - https://www.genesis.com/de/de/models/electrified-g80/specifications.html
