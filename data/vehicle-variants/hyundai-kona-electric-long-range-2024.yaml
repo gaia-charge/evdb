@@ -79,6 +79,9 @@ drivetrain:
   type: fwd
   drive_configuration: front-wheel-drive
 performance:
+  total_power_kw: 150  # Canonical schema - verified from Hyundai official specs (FWD single motor)
+  total_torque_nm: 255  # Canonical schema - verified from Hyundai official specs
+  acceleration_0_100_sec: 7.9  # Canonical schema - verified from Hyundai official specs
   acceleration:
     0_100_kmh_s: 7.9
     0_60_mph_s: 7.5

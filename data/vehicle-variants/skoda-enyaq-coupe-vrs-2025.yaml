@@ -37,12 +37,14 @@ range:
   real_world_km: 460
   epa_km: null
 charging:
+  ac_max_kw: 11  # Canonical schema field name
   ac_max_power_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
   - type: Type2
     max_power_kw: 11
     phases: 3
+  dc_max_kw: 135  # Canonical schema field name - verified from Škoda official specs
   dc_max_power_kw: 135
   dc_charge_time_minutes: 28
   dc_ports:
@@ -79,6 +81,8 @@ motors:
   max_power_kw: 210
   max_torque_nm: 460
 performance:
+  total_power_kw: 220  # Canonical schema: sum of front (80kW) + rear (210kW) motors - verified from Škoda specs
+  total_torque_nm: 460  # Canonical schema: rear motor torque (dominant in permanent magnet setup)
   top_speed_kmh: 180
   top_speed_limited: true
   drive_type: AWD
