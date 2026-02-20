@@ -46,9 +46,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_10_to_80_percent_min: 23
   charging_speed_kmh: 1050
-  plug_and_charge: true
 bidirectional:
   v2l: false
   v2h: false
@@ -64,7 +62,6 @@ performance:
   total_power_kw: 280
   total_power_hp: 381
   total_torque_nm: 565
-  acceleration_0_100_kmh_sec: 5.4
   top_speed_kmh: 210
   acceleration_0_100_sec: 5.4
 dimensions:
@@ -86,42 +83,9 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 14.8
   real_world_kwh_per_100km: 16.5
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 225/55 R19
-  standard_size_rear: 245/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional)
-  - 21 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system
-  - Predictive efficiency assist
-  - Emergency assist
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  special_features:
-  - 800V architecture with ultra-fast DC charging
-  - Plug & Charge (ISO 15118-2)
-  - Battery preconditioning via navigation
-  - Dual charge ports (left and right rear)
-  - Estate/wagon body with 1,422L max cargo
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.audi.de/de/neuwagen/a6-e-tron/a6-avant-e-tron/
   - https://ev-database.org/car/2272/Audi-A6-Avant-e-tron-performance
-  notes: RWD variant with 280kW rear motor. Best range in the A6 Avant e-tron lineup
-    (720km WLTP, ~575km real-world). Wagon body adds ~10kg over Sportback but offers
-    1,422L max cargo. Same PPE 800V platform with 269kW DC fast charging.

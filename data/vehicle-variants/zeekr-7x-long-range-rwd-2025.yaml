@@ -1,35 +1,23 @@
 id: zeekr-7x-long-range-rwd-2025
 name: Zeekr 7X Long Range RWD
 model_id: zeekr-7x
-variant_name: Long Range RWD
 model_year: 2025
 battery:
   usable_kwh: 96.0
   total_kwh: 100.0
   chemistry: NMC
-  cells: prismatic
-  supplier: CATL
-  modules: null
   warranty_years: 8
   warranty_km: 200000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volts: 800
 range:
   wltp_km: 615
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 500
-  real_world_mild_weather_km: 570
-  real_world_cold_weather_km: 420
 charging:
   ac_max_kw: 22
-  ac_charge_time_0_100_hours: 5.25
   dc_max_kw: 480
-  dc_charge_time_10_80_minutes: 16
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 1310
   dc_curve:
   - soc_percent: 10
     power_kw: 480
@@ -41,11 +29,6 @@ charging:
     power_kw: 150
   - soc_percent: 80
     power_kw: 80
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 22
-  plug_and_charge: false
-  battery_preconditioning: true
 performance:
   drive_type: RWD
   motors:
@@ -56,13 +39,7 @@ performance:
   total_power_kw: 310
   total_power_hp: 421
   total_torque_nm: 440
-  acceleration_0_100_kmh_sec: 6.0
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 210
-  drive_modes:
-  - Comfort
-  - Eco
-  - Sport
   acceleration_0_100_sec: 6.0
 dimensions:
   length_mm: 4825
@@ -80,69 +57,11 @@ weight:
   payload_kg: 500
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: null
 efficiency:
   wltp_kwh_per_100km: 15.6
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 19.2
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A+
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Blind spot monitoring
-  - 360-degree camera system
-  - Traffic sign recognition
-  - Park Assist
-  infotainment:
-  - 14.6-inch central touchscreen
-  - Digital driver display
-  - AR head-up display
-  - Wireless Apple CarPlay / Android Auto
-  - Over-the-air updates
-  comfort:
-  - Air suspension
-  - Heat pump (standard)
-  - Climate pre-conditioning via app
-  - Panoramic glass roof
-  - Heated front and rear seats
-  - Ventilated front seats
-  - Electric front seats with memory
-  - Dual-zone climate control
-  connectivity:
-  - Zeekr app (remote control)
-  - Digital key
-  - Over-the-air updates
-  - V2L (3.3 kW via Type 2 adapter)
-  audio:
-  - Premium audio system
-version:
-  trim_level: Long Range RWD
-  option_packages: []
-  production_location: Hangzhou, China
-  build_quality: premium
 metadata:
   created_at: '2026-02-09T16:00:00Z'
   updated_at: '2026-02-09T16:00:00Z'
   data_quality: verified
-  data_source: manufacturer_and_tested
-  verified_by: EV Database + Zeekr official specs
-  notes: 'Zeekr 7X Long Range RWD (MY2025). CATL QILIN battery with 480 kW peak DC
-    charging -
-
-    one of the fastest charging SUVs available. 22 kW AC on-board charger is above
-    average.
-
-    200,000 km battery warranty is class-leading.
-
-    '
-sources:
-- url: https://ev-database.org/car/3082/Zeekr-7X-Long-Range-RWD
-  title: EV Database - Zeekr 7X Long Range RWD
-  date_accessed: '2026-02-09'

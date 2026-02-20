@@ -2,13 +2,11 @@ id: hyundai-inster-long-range-49-2025
 name: Long Range 49 kWh
 model_id: hyundai-inster
 model_year: 2025
-trim_level: Trend
 battery:
   usable_kwh: 49.0
   total_kwh: 51.8
   chemistry: LFP
   cell_type: prismatic
-  supplier: BYD
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -18,22 +16,6 @@ range:
   wltp_highway_km: 300
   epa_km: null
   real_world_km: 315
-  conditions:
-  - test: WLTP Combined
-    result_km: 370
-    temperature_c: 23
-  - test: Real-world mixed
-    result_km: 315
-    temperature_c: 15
-    notes: Mixed city/highway driving
-  - test: Real-world winter
-    result_km: 250
-    temperature_c: -5
-    notes: Cold weather with heating, ~20% loss with heat pump
-  - test: Real-world city
-    result_km: 390
-    temperature_c: 20
-    notes: Pure city driving with regeneration
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -57,31 +39,6 @@ charging:
     power_kw: 70
   - soc_percent: 80
     power_kw: 45
-  charge_times:
-  - type: DC fast charging
-    power_kw: 120
-    soc_from: 10
-    soc_to: 80
-    time_minutes: 30
-    notes: CCS2 DC fast charging, peak ~120 kW
-  - type: AC home charging
-    power_kw: 11
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 295
-    notes: 11 kW 3-phase wallbox (~4.9 hours)
-  - type: AC home charging (single phase)
-    power_kw: 2.3
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 1280
-    notes: Standard household outlet (~21.3 hours)
-  plug_and_charge: false
-  bidirectional:
-    v2l: true
-    v2g: false
-    v2h: false
-  preconditioning: true
 performance:
   drive_type: FWD
   motors:
@@ -93,9 +50,6 @@ performance:
   total_power_hp: 115
   total_torque_nm: 147
   acceleration_0_100_sec: 10.6
-  acceleration_0_60_mph_sec: 10.1
-  top_speed_kph: 150
-  top_speed_mph: 93
   top_speed_kmh: 150
 dimensions:
   length_mm: 3825
@@ -115,50 +69,9 @@ weight:
   payload_kg: 360
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  roof_load_kg: 80
 efficiency:
   wltp_kwh_per_100km: 14.9
-  wltp_city_kwh_per_100km: 11.8
-  wltp_highway_kwh_per_100km: 18.5
   real_world_kwh_per_100km: 16.0
-  energy_efficiency_class: A
-features:
-  standard:
-  - 10.25" digital instrument cluster
-  - 10.25" touchscreen infotainment with navigation
-  - Hyundai SmartSense ADAS suite
-  - Forward Collision-Avoidance Assist with junction turning
-  - Highway Driving Assist 1.5
-  - Lane Keeping Assist
-  - Driver Attention Warning
-  - Rear and front parking sensors with rearview camera
-  - i-Pedal one-pedal driving
-  - ECO/NORMAL/SPORT drive modes
-  - Regenerative braking paddle shifters
-  - Vehicle-to-Load (V2L) preparation
-  - Heated front seats
-  - Sliding rear seats (16 cm adjustment)
-  - Fold-flat rear seat backrest
-  - Type 2 charging cable included
-  - Bluetooth with Apple CarPlay and Android Auto
-  - USB-C charging ports
-  - Automatic headlights
-  optional:
-  - V2L exterior adapter (3.6 kW)
-  - Interior 230V outlet
-  - Heat pump with battery heating system
-  - 360-degree camera (SVM)
-  - Blind-Spot Monitor with display
-  - Parking Collision-Avoidance Assist Rear
-  - 17" alloy wheels
-  - LED projection headlights
-  - Steering wheel with illuminated LED pixels
-  - Roof rails
-  - Cross variant styling (bumpers, skid plate, cladding)
-version_info:
-  release_date: 2024-09
-  changes_from_previous: First model year - all new vehicle
-  current_production: true
 notes: The Hyundai INSTER Long Range with 49 kWh battery delivers a segment-leading
   370 km WLTP range for a city car. The 85 kW (115 PS) motor provides adequate performance
   (10.6s 0-100 km/h) while maintaining excellent efficiency at 14.9 kWh/100km. This

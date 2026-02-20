@@ -48,10 +48,7 @@ charging:
     power_kw: 30
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 38
-  time_10_to_80_percent_min: 36
   charging_speed_kmh: 690
-  plug_and_charge: true
 bidirectional:
   v2l: false
   v2l_max_kw: null
@@ -73,8 +70,6 @@ performance:
   total_power_kw: 220
   total_power_hp: 299
   total_torque_nm: 460
-  acceleration_0_100_kmh_sec: 6.9
-  acceleration_0_60_mph_sec: 6.5
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.9
 dimensions:
@@ -92,52 +87,15 @@ weight:
   curb_weight_kg: 2135
   gross_vehicle_weight_kg: 2655
   payload_kg: 520
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 19.3
-  wltp_kwh_per_100km_city: 16.5
-  wltp_kwh_per_100km_highway: 23.1
   real_world_kwh_per_100km: 20.8
-  energy_efficiency_class: B
-wheels_tires:
-  standard_size_front: 235/55 R19
-  standard_size_rear: 255/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -15km range)
-  - 21 inch (optional, -25km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control (ACC) with Stop&Go
-  - Lane departure warning
-  - Lane keeping assist
-  - Traffic sign recognition
-  - Park assist (optional)
-  - 360-degree camera (optional)
-  - Rear cross-traffic alert (optional)
-  connectivity:
-  - Audi connect navigation & infotainment
-  - myAudi app remote control
-  - OTA software updates
-  - e-tron route planner with charging stops
-  special_features:
-  - 'Recuperation levels (3 modes: off, auto, manual)'
-  - B mode for strong regen (one-pedal driving)
-  - Pre-conditioning when navigating to charger
-  - Acoustic Vehicle Alerting System (AVAS)
 metadata:
   data_quality: verified
   created_at: '2026-02-07'
-  last_updated: '2026-02-07'
   sources:
   - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q4-e-tron/technische-daten.html
   - https://ev-database.org/car/1366/Audi-Q4-e-tron-45-quattro
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q4-e-tron/
-  notes: AWD variant of Q4 e-tron with 220kW total power. Built on MEB platform with
-    400V architecture (vs 800V in e-tron GT). More powerful than RWD 40 variant but
-    less efficient due to dual motors and extra weight (+135kg). Popular choice for
-    buyers wanting AWD capability and better traction in winter conditions.

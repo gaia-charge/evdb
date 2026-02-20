@@ -57,9 +57,7 @@ charging:
     power_kw: 30
   - soc_percent: 100
     power_kw: 15
-  time_15_to_80_percent_min: 32
   charging_speed_kmh: 650
-  plug_and_charge: true
 bidirectional:
   v2l: false
   v2l_max_kw: null
@@ -76,7 +74,6 @@ performance:
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
-  acceleration_0_100_kmh_sec: 7.5
   top_speed_kmh: 160
   acceleration_0_100_sec: 7.5
 weight:
@@ -85,55 +82,13 @@ weight:
   payload_kg: 478
   towing_capacity_braked_kg: 900
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
 efficiency:
   wltp_kwh_per_100km: 15.5
-  wltp_kwh_per_100km_city: 12.8
-  wltp_kwh_per_100km_highway: 19.0
   real_world_kwh_per_100km: 16.8
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 215/55 R18
-  standard_size_rear: 215/55 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 20 inch (optional, -15km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control with Stop&Go
-  - Lane centering assist
-  - Lane departure warning
-  - Traffic sign recognition with speed limiter
-  - Blind spot warning
-  - Rear cross-traffic alert
-  - Active emergency braking with pedestrian detection
-  - Park assist with 360° camera
-  - Highway and traffic jam assist
-  connectivity:
-  - Google Automotive Services (Maps, Assistant, Play Store)
-  - openR Link 12-inch portrait display
-  - My Renault app remote control
-  - OTA software updates
-  - E-Route planner with charging stops
-  special_features:
-  - One Pedal driving mode
-  - Multi-Sense driving modes (Eco, Comfort, Sport, Perso)
-  - Pre-conditioning (battery and cabin)
-  - Acoustic Vehicle Alerting System (AVAS)
-  - Heat pump standard
-  - 22kW AC charging (3-phase)
-  - Harmon Kardon audio system (optional)
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.renault.fr/vehicules-electriques/megane-e-tech-electric/caracteristiques-techniques.html
   - https://www.renault.de/elektrofahrzeuge/megane-e-tech-electric.html
   - https://ev-database.org/car/1535/Renault-Megane-E-Tech-EV60
-  notes: Mid-range Megane E-Tech with 60 kWh battery and 218 hp. The Techno trim offers
-    excellent equipment level with 22kW AC charging, 360° camera, and highway assist.
-    Popular choice for those wanting real-world range of 385 km with strong performance.
-    Best value-for-money variant in the lineup.

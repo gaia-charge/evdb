@@ -1,48 +1,22 @@
-# Audi e-tron GT quattro 2024 - Base Variant
-# Gran Turismo Electric Sports Car
-# Entry-level variant with 350 kW dual-motor AWD
-# More affordable than RS, excellent daily driver
-
 id: audi-e-tron-gt-quattro-2024
 name: quattro
 model_id: audi-e-tron-gt
 model_year: 2024
 variant_code: ETGT-Q
-
-production:
-  status: active
-  start_date: "2021-02-09"  # Production started 2021
-  plant: "Böllinger Höfe, Neckarsulm, Germany"  # Audi Sport facility, shared with R8
-
-# Battery Specifications
 battery:
-  usable_kwh: 84.0  # Usable capacity (net)
-  total_kwh: 93.4   # Gross capacity
-  chemistry: NMC            # Nickel Manganese Cobalt
-  cells: 396                # 33 modules × 12 cells
-  modules: 33
+  usable_kwh: 84.0
+  total_kwh: 93.4
+  chemistry: NMC
   cell_type: pouch
-  voltage_nominal: 725      # ~725V nominal (800V architecture)
-  voltage_max: 850          # Peak voltage
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
-  supplier: "LG Energy Solution"
-
-# Range Specifications (WLTP)
 range:
-  wltp_km: 488              # WLTP combined (19" wheels)
-  wltp_city_km: 620         # City range estimate
-  wltp_highway_km: 420      # Highway range estimate
-  epa_miles: 289            # EPA combined (US rating)
-  epa_km: 465               # EPA converted to km
-  real_world_km: 440        # Real-world mixed driving
-  real_world_highway_km: 380  # 75 mph highway
-  real_world_city_km: 520   # City driving
-  real_world_winter_km: 320 # -10°C winter
-
-# Charging Specifications
+  wltp_km: 488
+  wltp_city_km: 620
+  wltp_highway_km: 420
+  epa_km: 465
+  real_world_km: 440
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -50,85 +24,64 @@ charging:
   dc_max_kw: 270
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 260
-    - soc_percent: 10
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 270
-    - soc_percent: 50
-      power_kw: 220
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 70
+  - soc_percent: 0
+    power_kw: 260
+  - soc_percent: 10
+    power_kw: 270
+  - soc_percent: 30
+    power_kw: 270
+  - soc_percent: 50
+    power_kw: 220
+  - soc_percent: 70
+    power_kw: 120
+  - soc_percent: 80
+    power_kw: 70
   time_10_to_80_min: 23
   charging_speed_kmh: 720
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
-# Performance
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 175
-      power_hp: 238
-      torque_nm: null
-    - position: rear
-      type: permanent magnet
-      power_kw: 320
-      power_hp: 435
-      torque_nm: null
+  - position: front
+    type: permanent magnet
+    power_kw: 175
+    power_hp: 238
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: 320
+    power_hp: 435
+    torque_nm: null
   total_power_kw: 350
   total_power_hp: 476
   total_torque_nm: 640
   acceleration_0_100_sec: 4.1
   top_speed_kmh: 245
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 19.6  # WLTP consumption (19" wheels)
-  epa_kwh_per_100km: 21.5   # EPA consumption
-  real_world_kwh_per_100km: 22.0  # Mixed driving
-  real_world_highway_kwh_per_100km: 25.0  # 75 mph
-  real_world_city_kwh_per_100km: 18.5     # City
-  co2_emissions_wltp_g_per_km: 0
-
-# Dimensions & Weight
+  wltp_kwh_per_100km: 19.6
+  epa_kwh_per_100km: 21.5
+  real_world_kwh_per_100km: 22.0
 dimensions:
   length_mm: 4989
-  width_mm: 1964           # Without mirrors
+  width_mm: 1964
   width_with_mirrors_mm: 2190
-  height_mm: 1396          # Low sports car profile
-  wheelbase_mm: 2900       # Long wheelbase for stability
-  ground_clearance_mm: 125  # Low for aerodynamics
-  drag_coefficient: 0.24   # Excellent Cd
-  frontal_area_m2: 2.35
-
+  height_mm: 1396
+  wheelbase_mm: 2900
+  ground_clearance_mm: 125
 weight:
-  curb_weight_kg: 2295     # Lighter than RS (2347 kg)
+  curb_weight_kg: 2295
   gross_vehicle_weight_kg: 2740
   payload_kg: 445
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 405
   frunk_capacity_liters: 81
-
-# Interior
-interior:
-  seating_capacity: 4      # 4-seater (2+2)
-  seating_layout: "2+2"
-
-# Features (Standard on quattro)
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -136,36 +89,35 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
-
 optional_equipment:
-  - name: Bang & Olufsen Premium Sound
-    code: BOS
-    category: comfort
-    included_in_base: false
-  - name: Comfort Package
-    code: COMP
-    category: comfort
-    included_in_base: false
-  - name: 22 kW onboard charger
-    code: CH22
-    category: charging
-    included_in_base: false
+- name: Bang & Olufsen Premium Sound
+  code: BOS
+  category: comfort
+  included_in_base: false
+- name: Comfort Package
+  code: COMP
+  category: comfort
+  included_in_base: false
+- name: 22 kW onboard charger
+  code: CH22
+  category: charging
+  included_in_base: false
+notes: 'Base variant of e-tron GT lineup. Shares J1 platform with Porsche Taycan.
 
-# Platform
-platform_id: j1-performance  # Porsche Taycan shared platform
-
-notes: |
-  Base variant of e-tron GT lineup. Shares J1 platform with Porsche Taycan.
   350 kW (476 hp) quattro AWD with 4.1s 0-100 km/h performance.
+
   488 km WLTP range. 800V architecture: 270 kW DC fast charging, 22.5 min 10-80%.
+
   Built at Audi Sport facility in Neckarsulm (shared with R8).
+
   89% of e-tron GT sales in 2023 were quattro base variant (volume seller).
 
+  '
 metadata:
-  created_at: "2024-02-07"
+  created_at: '2024-02-07'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.audi.com/en/models/e-tron-gt.html
-    - https://www.audi.de/de/brand/de/neuwagen/tron/e-tron-gt.html
+  - https://www.audi.com/en/models/e-tron-gt.html
+  - https://www.audi.de/de/brand/de/neuwagen/tron/e-tron-gt.html

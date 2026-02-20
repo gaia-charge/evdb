@@ -1,10 +1,8 @@
-# Volkswagen ID.7 Pro S (2026)
 id: volkswagen-id7-pro-s-2026
 name: Pro S
 model_id: volkswagen-id7
 model_year: 2026
 variant_code: ID7-PROS-26
-
 battery:
   usable_kwh: 86.0
   total_kwh: 91.0
@@ -14,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    86 kWh usable battery (91 kWh gross). Largest battery available in ID.7 lineup.
-    400V architecture with NCM chemistry. 2026 model features improved battery
-    management software for better cold-weather performance and optimized charging curve.
-
 range:
   wltp_km: 709
   wltp_city_km: 925
@@ -27,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 605
   real_world_source: ADAC EcoTest
-  notes: |
-    Exceptional WLTP range of 709 km (+9 km vs 2024) thanks to software optimizations
-    and refined aerodynamics. Real-world range around 605 km in mixed conditions.
-    Longest-range electric sedan in VW's 2026 lineup and among the best in class.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -39,83 +26,58 @@ charging:
   dc_max_kw: 200
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 200
-    - soc_percent: 10
-      power_kw: 200
-    - soc_percent: 20
-      power_kw: 195
-    - soc_percent: 30
-      power_kw: 185
-    - soc_percent: 40
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 35
-  time_0_to_100_min: 42
+  - soc_percent: 0
+    power_kw: 200
+  - soc_percent: 10
+    power_kw: 200
+  - soc_percent: 20
+    power_kw: 195
+  - soc_percent: 30
+    power_kw: 185
+  - soc_percent: 40
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 115
+  - soc_percent: 70
+    power_kw: 85
+  - soc_percent: 80
+    power_kw: 55
+  - soc_percent: 90
+    power_kw: 35
   time_10_to_80_min: 28
   time_20_to_80_min: 25
   charging_speed_kmh: 1250
-  notes: |
-    Fast DC charging up to 200 kW peak (improved from 175 kW on 2024 model).
-    10-80% in 28 minutes. 11 kW AC charging standard (optional 22 kW upgrade available).
-    2026 model features improved charging curve with higher sustained power.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.6
   v2h: false
   v2g: false
-  notes: "2026 model adds Vehicle-to-Load (V2L) capability, up to 3.6 kW output"
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 545
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 545
   acceleration_0_100_sec: 6.5
   top_speed_kmh: 180
-  notes: |
-    Single permanent magnet motor at rear axle. Powerful and efficient
-    RWD powertrain with 286 hp. 0-100 km/h in 6.5 seconds. Same proven
-    drivetrain as Pro variant, optimized for efficiency with larger battery.
-
 weight:
   curb_weight_kg: 2218
   gross_vehicle_weight_kg: 2775
   payload_kg: 557
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  notes: "Weight increase due to larger 91 kWh battery pack (+80kg vs Pro)"
-
 efficiency:
   wltp_kwh_per_100km: 14.6
-  wltp_city_kwh_per_100km: 12.8
-  wltp_highway_kwh_per_100km: 16.9
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 16.3
   efficiency_rating: A+
-  notes: |
-    Exceptionally efficient: 14.6 kWh/100km WLTP (improved 0.1 kWh from 2024).
-    Slightly higher consumption than Pro due to additional weight, but still
-    best-in-class aerodynamics (Cd 0.23) enables excellent efficiency and range.
-    2026 software optimizations improve real-world efficiency by ~1%.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -123,53 +85,31 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist 2.0 with Swarm Data"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - DCC adaptive chassis control (adaptive dampers)
-    - Travel Assist 2.0 Level 2+ ADAS with enhanced lane keeping and predictive ACC
-    - ID. Light ambient lighting strip for enhanced visual feedback
-    - One-pedal driving with adjustable regenerative braking (3 levels)
-    - AR head-up display available
-    - Climate comfort seats with massage function
-    - Matrix LED IQ.LIGHT headlights
-    - 15" touchscreen with ID. Software 5.0
-    - NEW: Vehicle-to-Load (V2L) for powering external devices
-    - NEW: ID. Software 5.0 with ChatGPT integration and improved voice assistant
-    - NEW: Enhanced IDA voice assistant with natural language processing
-
 optional_equipment:
-  - name: IQ.DRIVE Max Package
-    code: IQDMAX
-    category: safety
-    included_in_base: false
-    notes: "Full ADAS suite with lane change assist, park assist, and enhanced matrix LED"
-  - name: AR Head-Up Display
-    code: ARHUD
-    category: infotainment
-    included_in_base: false
-    notes: "Augmented reality head-up display with navigation arrows"
-  - name: ergoActive Climate Seats
-    code: ERGOACT
-    category: comfort
-    included_in_base: false
-    notes: "Front seats with massage, ventilation, and climate control"
-  - name: 22kW AC Charging
-    code: AC22
-    category: charging
-    included_in_base: false
-    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
-  - name: V2L Kit
-    code: V2LKIT
-    category: charging
-    included_in_base: false
-    notes: "External V2L adapter for camping, tools, or emergency power"
-  - name: Harman Kardon Premium Sound
-    code: HKPREM
-    category: infotainment
-    included_in_base: false
-    notes: "700W Harman Kardon sound system with 14 speakers"
-
+- name: IQ.DRIVE Max Package
+  code: IQDMAX
+  category: safety
+  included_in_base: false
+- name: AR Head-Up Display
+  code: ARHUD
+  category: infotainment
+  included_in_base: false
+- name: ergoActive Climate Seats
+  code: ERGOACT
+  category: comfort
+  included_in_base: false
+- name: 22kW AC Charging
+  code: AC22
+  category: charging
+  included_in_base: false
+- name: V2L Kit
+  code: V2LKIT
+  category: charging
+  included_in_base: false
+- name: Harman Kardon Premium Sound
+  code: HKPREM
+  category: infotainment
+  included_in_base: false
 dimensions:
   length_mm: 4961
   width_mm: 1862
@@ -177,32 +117,38 @@ dimensions:
   height_mm: 1536
   wheelbase_mm: 2966
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 532
   trunk_max_liters: 1586
   frunk_capacity_liters: 0
+notes: 'The 2026 ID.7 Pro S receives mid-cycle updates including ID. Software 5.0
 
-
-notes: |
-  The 2026 ID.7 Pro S receives mid-cycle updates including ID. Software 5.0
   with ChatGPT voice integration, Vehicle-to-Load capability (V2L), improved
+
   charging curve management (now 200 kW peak), and enhanced Travel Assist 2.0.
+
   With 86 kWh usable battery and exceptional aerodynamics (Cd 0.23), it achieves
+
   an impressive 709 km WLTP range - the longest of any Volkswagen electric vehicle
+
   and among the best of any electric sedan. The Pro S is the flagship ID.7 variant,
+
   featuring 286 hp RWD powertrain, DCC adaptive dampers, premium interior with
-  15" touchscreen, and optional AR head-up display. Built on MEB platform at VW's
+
+  15" touchscreen, and optional AR head-up display. Built on MEB platform at VW''s
+
   Emden factory. Perfect for business users and long-distance drivers who need
+
   maximum range without compromising on efficiency or technology.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.com/en/models/id-7.html
-    - https://www.volkswagen-newsroom.com/en/press-releases/id7-2026-updates
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
-    - https://ev-database.org/car/2026/Volkswagen-ID7-Pro-S
+  - https://www.volkswagen.com/en/models/id-7.html
+  - https://www.volkswagen-newsroom.com/en/press-releases/id7-2026-updates
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
+  - https://ev-database.org/car/2026/Volkswagen-ID7-Pro-S

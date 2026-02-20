@@ -49,10 +49,7 @@ charging:
     power_kw: 25
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 37
-  time_10_to_80_percent_min: 32
   charging_speed_kmh: 690
-  plug_and_charge: false
 bidirectional:
   v2l: false
   v2l_max_kw: null
@@ -69,8 +66,6 @@ performance:
   total_power_kw: 175
   total_power_hp: 238
   total_torque_nm: 330
-  acceleration_0_100_kmh_sec: 7.3
-  acceleration_0_60_mph_sec: 6.9
   top_speed_kmh: 180
   acceleration_0_100_sec: 7.3
 weight:
@@ -79,43 +74,9 @@ weight:
   payload_kg: 565
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 55
-  distribution_rear_percent: 45
 efficiency:
   wltp_kwh_per_100km: 15.3
-  wltp_kwh_per_100km_city: 12.5
-  wltp_kwh_per_100km_highway: 18.2
   real_world_kwh_per_100km: 17.1
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/50 R19
-  standard_size_rear: 235/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -20km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Pilot Assist (adaptive cruise with lane centering)
-  - City Safety with collision avoidance
-  - Lane Keeping Aid
-  - Blind Spot Information System (BLIS)
-  - Cross Traffic Alert with autobrake
-  - Run-off Road Mitigation
-  - Oncoming Lane Mitigation
-  - 360-degree camera
-  connectivity:
-  - Google built-in (Maps, Assistant, Play)
-  - Volvo On Call app
-  - OTA software updates
-  - 4G LTE connectivity
-  - Wi-Fi hotspot
-  special_features:
-  - One-pedal driving mode
-  - Pre-conditioning (battery & cabin)
-  - Smartphone as key
-  - Acoustic Vehicle Alerting System (AVAS)
-  - Leather-free interior as standard
 dimensions:
   length_mm: 4440
   width_mm: 1873
@@ -130,14 +91,7 @@ cargo:
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-10'
   sources:
   - https://www.volvocars.com/uk/v/cars/ec40/specifications
   - https://ev-database.org/car/1824/Volvo-EC40-Single-Motor
   - https://insideevs.com/reviews/volvo-ec40-single-motor/
-  notes: Rear-wheel drive variant with superior aerodynamics compared to EX40. The
-    EC40's coupe roofline reduces drag coefficient to 0.30 (vs 0.33 for EX40), resulting
-    in 55km more WLTP range with the same battery. Most efficient Volvo EV variant.
-    Competes with Tesla Model Y RWD, Polestar 2 Long Range Single Motor, and BMW iX3.
-    Shares platform with EX40 and Polestar 2. First Volvo with leather-free interior
-    as standard.

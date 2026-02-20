@@ -2,100 +2,25 @@ id: kia-niro-ev-64kwh-2025
 name: 64.8 kWh
 model_id: kia-niro-ev
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: standard
-market_position: mid-range
 battery:
   usable_kwh: 64.8
   total_kwh: 68.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: pouch
-  supplier: SK On
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 480
-    modules: 12
 range:
   wltp_km: 463
-  wltp_source: manufacturer
   real_world_km: 385
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.7
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 45
-      '0_100': 78
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 70
-    - soc_percent: 10
-      power_kw: 85
-    - soc_percent: 20
-      power_kw: 85
-    - soc_percent: 40
-      power_kw: 82
-    - soc_percent: 50
-      power_kw: 75
-    - soc_percent: 60
-      power_kw: 60
-    - soc_percent: 70
-      power_kw: 42
-    - soc_percent: 80
-      power_kw: 28
-    - soc_percent: 90
-      power_kw: 16
-    - soc_percent: 100
-      power_kw: 8
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 85
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 150
-  max_torque_nm: 255
-  cooling: liquid
-drivetrain:
-  type: fwd
-  drive_configuration: front-wheel-drive
 performance:
-  acceleration:
-    0_100_kmh_s: 7.8
-    0_60_mph_s: 7.4
-  acceleration_0_100_sec: 7.8  # Canonical field for analysis
+  acceleration_0_100_sec: 7.8
   top_speed_kmh: 167
-  top_speed_limited: true
-  total_power_kw: 150  # Canonical field (from motors[0].max_power_kw)
-  total_torque_nm: 255  # Canonical field (from motors[0].max_torque_nm)
-consumption:
-  wltp_kwh_per_100km: 16.2
-  wltp_source: manufacturer
-  real_world:
-    combined_kwh_per_100km: 18.5
-    highway_120kmh_kwh_per_100km: 21.0
-    city_kwh_per_100km: 16.0
-    source: estimated
-    conditions: Mixed driving, moderate climate
+  total_power_kw: 150
+  total_torque_nm: 255
 weight:
   curb_weight_kg: 1840
   gross_vehicle_weight_kg: 2280
@@ -108,94 +33,9 @@ dimensions:
   height_mm: 1570
   wheelbase_mm: 2720
   ground_clearance_mm: 160
-  drag_coefficient: 0.29
-wheels:
-  standard:
-    diameter_inch: 17
-    tire_size: 215/60 R17
-  optional:
-  - diameter_inch: 18
-    tire_size: 215/55 R18
-  - diameter_inch: 19
-    tire_size: 235/45 R19
-technology:
-  infotainment:
-    screen_size_inch: 10.25
-    system: Kia Connect with dual 10.25" panoramic displays
-    features:
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Over-the-air updates
-    - Voice recognition
-    - Kia Connect Connected Services
-  driver_display:
-    type: digital
-    size_inch: 10.25
-  adas_features:
-  - Highway Driving Assist 2
-  - Smart Cruise Control with Stop & Go
-  - Lane Following Assist
-  - Lane Keeping Assist
-  - Blind-Spot Collision-Avoidance Assist
-  - Blind-Spot View Monitor
-  - Rear Cross-Traffic Collision-Avoidance Assist
-  - Forward Collision-Avoidance Assist
-  - Intelligent Speed Limit Assist
-  - Driver Attention Warning
-  - High Beam Assist
-  - Parking Collision-Avoidance Assist
-  - Surround View Monitor (360° camera)
-interior:
-  seating_capacity: 5
-  upholstery_standard: cloth
-  upholstery_optional:
-  - synthetic-leather
-  - leather
-  cargo:
-    trunk_capacity_liters: 475
-    trunk_max_liters: 1392
-    frunk_capacity_liters: 20
-  features:
-  - Heated front seats
-  - Heated steering wheel
-  - Dual-zone automatic climate control
-  - Power driver seat (8-way)
-  - 60/40 split-folding rear seats
-  - Ambient lighting
-  - Panoramic sunroof
-  - Smart Power Tailgate
-  - Digital Key 2.0
-equipment:
-  lighting:
-    headlights: LED with Star Map signature
-    daytime_running_lights: led
-    tail_lights: led
-  exterior:
-  - Body-colored door handles
-  - Privacy glass (rear)
-  - Roof rails
-  - Power folding mirrors
-  - Flush door handles
-safety:
-  euro_ncap:
-    year: 2022
-    rating: 5
-    adult_occupant: 91
-    child_occupant: 87
-    vulnerable_road_users: 73
-    safety_assist: 82
 metadata:
   created_at: '2026-02-10'
   data_quality: verified
-  confidence_level: high
-  last_verified: '2026-02-10'
   sources:
   - Kia Germany official specifications
   - Manufacturer press materials
-  notes: '2025 Kia Niro EV - minor model year update. Key changes vs 2024: - Extended
-    battery warranty to 8 years / 160,000 km (from 7yr/150k) - Slightly improved WLTP
-    range (463 vs 460 km) via software optimization - Digital Key 2.0 now standard
-    - Updated Kia Connect infotainment - Same 64.8 kWh usable / 68 kWh total battery
-    - Same 150 kW motor and 85 kW DC charging
-
-    '

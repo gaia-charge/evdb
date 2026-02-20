@@ -2,76 +2,21 @@ id: mercedes-benz-eqs-suv-450-4matic-2024
 name: 450 4MATIC
 model_id: mercedes-benz-eqs-suv
 model_year: 2024
-production_years:
-  start: 2022
-  end: null
-trim_level: 450-4matic
-market_position: mid
 battery:
   usable_kwh: 118.0
   total_kwh: 122.0
   chemistry: NCM
-  nominal_voltage_v: 396
   cell_type: pouch
-  supplier: CATL
   warranty_years: 10
   warranty_km: 250000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, 400V architecture
-    weight_kg: 690
-    modules: 12
-    cells: 396
 range:
   wltp_km: 600
-  wltp_source: manufacturer
   wltp_city_km: 700
   wltp_highway_km: 510
   epa_km: 465
-  epa_source: manufacturer
   real_world_km: 500
   real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 10.7
-      '10_80': 8.3
-    onboard_charger_kw: 11
-    onboard_charger_optional_kw: 22
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 31
-      '0_100': 62
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 190
-    - soc_percent: 10
-      power_kw: 200
-    - soc_percent: 20
-      power_kw: 200
-    - soc_percent: 30
-      power_kw: 180
-    - soc_percent: 40
-      power_kw: 160
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 120
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 70
-  plug_and_charge: true
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 200
 performance:
@@ -79,22 +24,12 @@ performance:
   motors:
   - position: front
     type: AC induction
-    max_power_kw: 140
-    max_torque_nm: 320
   - position: rear
     type: permanent magnet
-    max_power_kw: 265
-    max_torque_nm: 568
   total_power_kw: 265
   total_power_hp: 360
   total_torque_nm: 800
-  acceleration:
-    0_100_kmh_sec: 6.0
-    0_60_mph_sec: 5.7
   top_speed_kmh: 210
-  energy_recovery:
-    max_regen_power_kw: 215
-    one_pedal_driving: true
 dimensions:
   length_mm: 5125
   width_mm: 1959
@@ -105,71 +40,19 @@ cargo:
   trunk_capacity_liters: 645
   trunk_max_liters: 2100
   frunk_capacity_liters: 0
-  notes: 645L boot (5-seat config), up to 2100L with rear seats folded. Optional 7-seat
-    reduces cargo.
 weight:
   curb_weight_kg: 2855
   gross_vehicle_weight_kg: 3430
   payload_kg: 575
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
 efficiency:
   wltp_kwh_per_100km: 20.6
-  wltp_source: manufacturer
   epa_kwh_per_100km: 25.4
-  epa_mpge: 83
   real_world_kwh_per_100km: 23.6
-  energy_efficiency_class: A
 features:
-  heated_seats: Front and rear standard
-  ventilated_seats: Front standard, rear optional
-  massage_seats: Front standard, rear optional (Executive Rear Seat Package)
-  heated_steering_wheel: true
-  panoramic_roof: true
-  head_up_display: true
-  premium_audio: true
   adaptive_suspension: true
   air_suspension: true
-  all_wheel_steering: true
-  ambient_lighting: true
-  keyless_entry: true
-  power_liftgate: true
-  tow_hitch: true
-  adas_level: 2
-  autopilot_highway: true
-  climate_zones: 4
-  wireless_charging: true
-  special:
-  - MBUX Hyperscreen optional (standard on 580 4MATIC)
-  - Rear-axle steering up to 10° (turning circle 11.9m)
-  - ENERGIZING comfort control with 10 programs
-  - Air Balance Package with ionizer and fragrance
-  - Executive Rear Seat Package (reclining, massage, heating, footrests)
-  - E-Active Body Control optional (active suspension, curve tilting)
-  - Digital Light LED headlights with projection
-  - Acoustic Comfort Package (acoustic glass, additional insulation)
-  - Off-road mode with transparent hood camera
-  - Optional 7-seat configuration with electric-folding third row
-  - 4MATIC all-wheel drive with 4ETS traction control
-technology:
-  heat_pump: true
-  preconditioning: true
-  remote_climate: true
-  battery_preheating: true
-  over_the_air_updates: true
-  digital_key: true
-  voice_assistant: true
-  smartphone_integration:
-  - Apple CarPlay (wireless)
-  - Android Auto (wireless)
-  navigation_system: true
-  telematics: true
-homologation:
-  certification_standard: WLTP
-  energy_label_eu: A
-  co2_emissions_g_km: 0
 notes: 'The Mercedes-Benz EQS SUV 450 4MATIC adds all-wheel drive to the base EQS
   SUV platform.
 
@@ -231,16 +114,6 @@ notes: 'The Mercedes-Benz EQS SUV 450 4MATIC adds all-wheel drive to the base EQ
   Real-world range: 500km mixed driving (vs 600km WLTP, 465km EPA).
 
   '
-sources:
-- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/suv-x296/explore/technical-data.html
-  title: Mercedes-Benz EQS SUV 450 4MATIC Technical Data
-  accessed: '2026-02-08'
-- url: https://ev-database.org/car/1625/Mercedes-EQS-SUV-450-4MATIC
-  title: EV Database Mercedes EQS SUV 450 4MATIC Real-World Data
-  accessed: '2026-02-08'
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  contributor: OpenClaw EVDB Development
-  version: 1.0

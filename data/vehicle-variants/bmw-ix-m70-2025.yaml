@@ -2,63 +2,21 @@ id: bmw-ix-m70-2025
 name: M70
 model_id: bmw-ix
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: M70
-market_position: performance
 battery:
   usable_kwh: 108.9
   total_kwh: 116.5
   chemistry: NCM
-  nominal_voltage_v: 400
   cell_type: prismatic
   manufacturer: Samsung SDI / CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
 range:
   wltp_km: 600
-  wltp_source: manufacturer
   wltp_city_km: 740
   wltp_highway_km: 480
   real_world_km: 500
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.5
-    onboard_charger_kw: 22
-    phases: 3
-    notes: 22kW AC charger standard on M70
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 35
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 190
-    - soc_percent: 20
-      power_kw: 195
-    - soc_percent: 30
-      power_kw: 195
-    - soc_percent: 40
-      power_kw: 190
-    - soc_percent: 50
-      power_kw: 175
-    - soc_percent: 60
-      power_kw: 150
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 85
-  v2l: false
-  v2g: false
-  bidirectional_charging: false
   ac_max_kw: 22
   dc_max_kw: 195
 performance:
@@ -83,8 +41,6 @@ dimensions:
   height_mm: 1696
   wheelbase_mm: 3000
   ground_clearance_mm: 200
-  drag_coefficient: 0.25
-  frontal_area_m2: 2.82
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1750
@@ -97,54 +53,10 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 20.5
-  wltp_source: estimated
   real_world_kwh_per_100km: 24.0
-  real_world_source: estimated
-seating:
-  capacity: 5
-  configuration: 2+3
-features:
-  driver_assistance:
-  - Parking Assistant Plus (standard)
-  - Driving Assistant Professional (standard)
-  - Speed Limit Info
-  - iDrive 8.5 with curved display
-  comfort:
-  - 2-zone automatic climate control
-  - Heated front and rear seats (standard)
-  - Acoustic glass (standard)
-  - Panoramic glass roof with SkyLounge (standard)
-  - Adaptive M air suspension (standard)
-  - Integral active steering (standard)
-  infotainment:
-  - 'Curved display: 12.3" driver + 14.9" central'
-  - iDrive 8.5 with BMW Operating System 8.5
-  - BMW Maps navigation
-  - Apple CarPlay / Android Auto wireless
-  - Bowers & Wilkins Diamond surround sound (standard)
-  charging_features:
-  - 22 kW AC onboard charger (standard)
-  - CCS Combo DC fast charging up to 195 kW
-  - Battery preconditioning
-  performance_features:
-  - M Sport brakes
-  - M adaptive suspension
-  - Launch Control
-  - M Sport differential
-  - M specific Iconic Sounds
-  - 250 km/h top speed (vs 200 km/h on other variants)
 metadata:
   created_at: '2026-02-10'
   data_quality: verified
   sources:
   - https://www.carwow.de/bmw/ix
   - https://www.bmw.de
-  notes: '2025 facelift performance flagship. Replaces M60 with more power
-
-    (425 kW vs 455 kW peak but 1015 Nm torque) and improved efficiency.
-
-    3.8s 0-100 km/h with 250 km/h top speed. Premium positioning
-
-    at ~€105,700 base price in Germany.
-
-    '

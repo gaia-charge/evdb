@@ -1,22 +1,18 @@
-# Volkswagen ID.4 GTX (2025)
 id: volkswagen-id4-gtx-2025
 name: GTX
 model_id: volkswagen-id4
 model_year: 2025
 variant_code: ID4-GTX
-
 dimensions:
   length_mm: 4584
   width_mm: 1852
   height_mm: 1640
   wheelbase_mm: 2771
   ground_clearance_mm: 163
-
 cargo:
   trunk_capacity_liters: 543
   frunk_capacity_liters: 0
   trunk_max_liters: 1575
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -26,12 +22,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    77 kWh usable battery (82 kWh gross). Same MEB battery pack as used in
-    other GTX models. NCM pouch cells from LG Energy Solution with 400V
-    architecture.
-
 range:
   wltp_km: 510
   wltp_city_km: 640
@@ -39,11 +29,6 @@ range:
   epa_km: null
   real_world_km: 410
   real_world_source: ADAC EcoTest estimate
-  notes: |
-    WLTP range of 510 km with 77 kWh battery and AWD drivetrain. Slightly
-    less than RWD Pro (530 km) due to dual-motor weight and losses.
-    Real-world range around 410 km in mixed driving conditions.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -51,89 +36,63 @@ charging:
   dc_max_kw: 175
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 175
-    - soc_percent: 10
-      power_kw: 175
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 155
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 90
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 30
-  time_0_to_100_min: 38
+  - soc_percent: 0
+    power_kw: 175
+  - soc_percent: 10
+    power_kw: 175
+  - soc_percent: 20
+    power_kw: 170
+  - soc_percent: 30
+    power_kw: 155
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 115
+  - soc_percent: 60
+    power_kw: 90
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 30
   time_10_to_80_min: 28
   time_20_to_80_min: 25
   charging_speed_kmh: 1000
-  notes: |
-    DC fast charging up to 175 kW peak. 10-80% in approximately 28 minutes.
-    11 kW AC charging standard with optional 22 kW upgrade.
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-  notes: "Bidirectional charging not supported in 2025 model"
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 162
-    - position: rear
-      type: permanent magnet
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 545
+  - position: front
+    type: AC induction
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 162
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
   total_power_kw: 250
   total_power_hp: 340
   total_torque_nm: 460
   acceleration_0_100_sec: 6.3
   top_speed_kmh: 180
-  notes: |
-    Dual-motor AWD with 340 hp combined. Front asynchronous induction motor
-    (109 hp) and rear permanent magnet motor (286 hp). The front motor
-    engages on demand for traction and performance. 0-100 km/h in 6.3
-    seconds. Top speed electronically limited to 180 km/h.
-
 weight:
   curb_weight_kg: 2224
   gross_vehicle_weight_kg: 2750
   payload_kg: 526
-  towing_capacity_braked_kg: 1400
-  towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
-  notes: "Heavier than RWD Pro due to front motor and AWD components"
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 16.9
-  wltp_city_kwh_per_100km: 14.8
-  wltp_highway_kwh_per_100km: 19.5
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 19.5
   efficiency_rating: B
-  notes: |
-    16.9 kWh/100km WLTP - reasonable for an AWD compact SUV with 340 hp.
-    Higher than RWD variants due to dual-motor drivetrain and increased
-    weight. Real-world consumption around 19.5 kWh/100km.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -141,64 +100,51 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist with Swarm Data"
-  notes: |
-    - Heat pump standard for cold-weather efficiency
-    - DCC adaptive chassis control standard on GTX
-    - Travel Assist Level 2+ ADAS
-    - GTX-specific sport bumpers with red accents
-    - ID. Light ambient lighting with GTX animations
-    - 12-inch touchscreen with ID. Software 4.0
-    - One-pedal driving with adjustable regen
-    - IQ.LIGHT Matrix LED headlights standard
-    - Sport seats with GTX branding
-    - 20-inch GTX alloy wheels standard
-    - Progressive steering for sportier feel
-
 optional_equipment:
-  - name: IQ.DRIVE Max Package
-    code: IQDMAX
-    category: safety
-    included_in_base: false
-    notes: "Full ADAS suite with lane change assist, park assist, emergency steering"
-  - name: AR Head-Up Display
-    code: ARHUD
-    category: infotainment
-    included_in_base: false
-    notes: "Augmented reality head-up display with navigation arrows"
-  - name: ergoActive Climate Seats
-    code: ERGOACT
-    category: comfort
-    included_in_base: false
-    notes: "Front seats with massage, ventilation, and climate control"
-  - name: 22kW AC Charging
-    code: AC22
-    category: charging
-    included_in_base: false
-    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
-  - name: Tow Bar Package
-    code: TOWBAR
-    category: utility
-    included_in_base: false
-    notes: "Electrically retractable tow bar, 1000 kg braked trailer capacity"
+- name: IQ.DRIVE Max Package
+  code: IQDMAX
+  category: safety
+  included_in_base: false
+- name: AR Head-Up Display
+  code: ARHUD
+  category: infotainment
+  included_in_base: false
+- name: ergoActive Climate Seats
+  code: ERGOACT
+  category: comfort
+  included_in_base: false
+- name: 22kW AC Charging
+  code: AC22
+  category: charging
+  included_in_base: false
+- name: Tow Bar Package
+  code: TOWBAR
+  category: utility
+  included_in_base: false
+notes: 'The ID.4 GTX is VW''s performance AWD compact SUV, combining 340 hp with
 
-notes: |
-  The ID.4 GTX is VW's performance AWD compact SUV, combining 340 hp with
   practical family car credentials. The dual-motor AWD system provides
+
   excellent traction in all conditions. With 510 km WLTP range and 175 kW
+
   DC charging, it handles long trips well. The 2025 model benefits from
+
   updated ID. Software 4.0, improved infotainment responsiveness, and
+
   refined DCC adaptive dampers. GTX styling with sport bumpers, red accents,
+
   and 20-inch wheels distinguishes it from standard variants. Built on the
+
   MEB platform at Emden, Germany. Competes with Tesla Model Y Long Range AWD,
+
   BMW iX1 xDrive30, Skoda Enyaq 85x, and Hyundai Ioniq 5 AWD.
 
-
+  '
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.de/de/elektrofahrzeuge/id4/id4-gtx.html
-    - https://www.volkswagen-newsroom.com/en/press-releases/id4-gtx
+  - https://www.volkswagen.de/de/elektrofahrzeuge/id4/id4-gtx.html
+  - https://www.volkswagen-newsroom.com/en/press-releases/id4-gtx

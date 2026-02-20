@@ -2,74 +2,22 @@ id: bmw-ix-m60-2024
 name: M60 xDrive
 model_id: bmw-ix
 model_year: 2024
-production_years:
-  start: 2022
-  end: null
-trim_level: m60-xdrive
-market_position: performance
 battery:
   usable_kwh: 105.2
   total_kwh: 111.5
   chemistry: NCM
-  nominal_voltage_v: 400
   cell_type: prismatic
   manufacturer: Samsung SDI / CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 715
-    cells: 400
 range:
   wltp_km: 566
-  wltp_source: manufacturer
   wltp_city_km: 710
   wltp_highway_km: 460
   epa_km: null
-  epa_source: null
   real_world_km: 485
   real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 10.5
-    onboard_charger_kw: 11
-    phases: 3
-    notes: Optional 22kW upgrade available (5.5h 0-100%)
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 35
-      '0_100': 62
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 190
-    - soc_percent: 20
-      power_kw: 195
-    - soc_percent: 30
-      power_kw: 195
-    - soc_percent: 40
-      power_kw: 190
-    - soc_percent: 50
-      power_kw: 175
-    - soc_percent: 60
-      power_kw: 155
-    - soc_percent: 70
-      power_kw: 125
-    - soc_percent: 80
-      power_kw: 85
-    - soc_percent: 90
-      power_kw: 50
-  plug_and_charge: true
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 195
 performance:
@@ -77,22 +25,12 @@ performance:
   motors:
   - position: front
     type: permanent magnet
-    max_power_kw: 190
-    max_torque_nm: 400
   - position: rear
     type: permanent magnet
-    max_power_kw: 265
-    max_torque_nm: 650
   total_power_kw: 455
   total_power_hp: 619
   total_torque_nm: 1100
-  acceleration:
-    0_100_kmh_sec: 3.8
-    0_60_mph_sec: 3.6
   top_speed_kmh: 250
-  energy_recovery:
-    max_regen_power_kw: 195
-    one_pedal_driving: true
 dimensions:
   length_mm: 4953
   width_mm: 1967
@@ -109,62 +47,13 @@ weight:
   payload_kg: 510
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
 efficiency:
   wltp_kwh_per_100km: 21.9
-  wltp_source: manufacturer
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 24.3
-  energy_efficiency_class: B
 features:
-  heated_seats: Front and rear standard
-  ventilated_seats: Front standard, rear optional
-  massage_seats: Front and rear standard (M Sport Package)
-  heated_steering_wheel: true
-  panoramic_roof: true
-  head_up_display: true
-  premium_audio: true
   adaptive_suspension: true
   air_suspension: true
-  all_wheel_steering: false
-  ambient_lighting: true
-  keyless_entry: true
-  power_liftgate: true
-  tow_hitch: true
-  adas_level: 2
-  autopilot_highway: true
-  climate_zones: 4
-  wireless_charging: true
-  special:
-  - M Sport Package Professional (standard)
-  - M Sport brakes with blue calipers
-  - M Sport differential (electronically controlled)
-  - Adaptive M suspension with electronically controlled dampers
-  - Individual contour seating for driver and front passenger
-  - BMW IconicSounds Electric (Hans Zimmer soundtrack)
-  - Sky Lounge panoramic glass roof with LED light carpet
-  - BMW Interaction Bar (curved ambient light strip)
-  - Crafted Clarity glass controls
-  - Electrochromic glass roof (tint control)
-  - Parking Assistant Professional
-technology:
-  heat_pump: true
-  preconditioning: true
-  remote_climate: true
-  battery_preheating: true
-  over_the_air_updates: true
-  digital_key: true
-  voice_assistant: true
-  smartphone_integration:
-  - Apple CarPlay (wireless)
-  - Android Auto (wireless)
-  navigation_system: true
-  telematics: true
-homologation:
-  certification_standard: WLTP
-  energy_label_eu: B
-  co2_emissions_g_km: 0
 notes: 'The BMW iX M60 xDrive is the high-performance variant of BMW''s electric flagship
   SUV.
 
@@ -252,19 +141,6 @@ notes: 'The BMW iX M60 xDrive is the high-performance variant of BMW''s electric
   Real-world range: 485km mixed driving (vs 566km WLTP).
 
   '
-sources:
-- url: https://www.bmw.de/de/neufahrzeuge/bmw-i/ix/2021/bmw-ix-highlights.html
-  title: BMW iX M60 Official Page (Germany)
-  accessed: '2026-02-08'
-- url: https://ev-database.org/car/1588/BMW-iX-M60
-  title: EV Database BMW iX M60 Specifications
-  accessed: '2026-02-08'
-- url: https://insideevs.com/reviews/598234/bmw-ix-m60-review/
-  title: InsideEVs BMW iX M60 Review
-  accessed: '2026-02-08'
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  contributor: OpenClaw EVDB Development
-  version: 1.0

@@ -2,11 +2,6 @@ id: byd-atto-3-extended-range-2024
 name: Extended Range
 model_id: byd-atto-3
 model_year: 2024
-production_years:
-  start: 2022
-  end: null
-trim_level: extended-range
-market_position: top
 dimensions:
   length_mm: 4455
   width_mm: 1875
@@ -22,82 +17,18 @@ battery:
   usable_kwh: 60.0
   total_kwh: 60.5
   chemistry: LFP
-  nominal_voltage_v: 400
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 390
-    cells: 138
-  notes: 'BYD Blade Battery uses LFP chemistry arranged in long blade-shaped cells
-    integrated directly into the chassis structure. This design improves safety (passes
-    nail penetration test without fire), increases space efficiency, and provides
-    excellent thermal stability. LFP chemistry offers longer cycle life (3000+ cycles)
-    but lower energy density than NMC.
-
-    '
 range:
   wltp_km: 420
-  wltp_source: manufacturer
   real_world_km: 370
   real_world_source: measured
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 9.5
-    onboard_charger_kw: 7
-    phases: 1
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '30_80': 29
-      '0_100': 55
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 70
-    - soc_percent: 10
-      power_kw: 88
-    - soc_percent: 30
-      power_kw: 88
-    - soc_percent: 50
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-    notes: Conservative charging curve optimized for battery longevity (LFP)
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 7
   dc_max_kw: 88
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 150
-  max_torque_nm: 310
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 150
-  total_power_hp: 204
-  total_torque_nm: 310
 performance:
   top_speed_kmh: 160
-  top_speed_limited: true
   acceleration_0_100_sec: 7.3
 weight:
   curb_weight_kg: 1795
@@ -107,50 +38,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 16.2
-  at_speed:
-  - speed_kmh: 100
-    consumption_kwh_per_100km: 14.8
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 18.5
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 21.3
-standard_features:
-- 12.8-inch rotating touchscreen
-- 5-inch digital instrument cluster
-- DiLink 4.0 intelligent connectivity
-- Voice control
-- Heat pump climate control
-- Panoramic sunroof
-- LED headlights
-- 18-inch alloy wheels
-- Synthetic leather seats
-- Wireless phone charging
-- 6 airbags
-- Adaptive cruise control
-- Lane keeping assist
-- Automatic emergency braking
-- 360-degree camera
-- Vehicle-to-Load (V2L)
-optional_packages:
-- name: Premium Package
-  features:
-  - Ventilated front seats
-  - Premium sound system
-  - Ambient lighting
-colors:
-  standard:
-  - Cosmos Black
-  - Boulder Grey
-  - Surf Blue
-  - Parkside Green
-  premium:
-  - Ski White
-interior_colors:
-- Black/Blue
-- Black/Green
-version:
-  facelift: false
-  major_changes: []
 notes: 'The BYD Atto 3 Extended Range represents BYD''s value proposition: competitive
   pricing, solid range, comprehensive features, and proven battery technology. The
   Blade Battery (LFP) offers excellent safety and longevity, with BYD claiming 3000+
@@ -165,8 +52,6 @@ metadata:
   created_at: '2026-02-06'
   updated_at: '2026-02-06'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.byd.com/eu/atto3/specifications
   - https://www.byd.com.au/atto-3.html

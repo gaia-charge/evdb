@@ -1,8 +1,6 @@
 id: mini-aceman-se-2025
 model_id: mini-aceman
 name: SE
-variant_name: SE
-trim_level: SE
 model_year: 2025
 dimensions:
   length_mm: 4079
@@ -19,9 +17,6 @@ battery:
   usable_kwh: 42.5
   total_kwh: 44.5
   chemistry: NMC
-  cells_configuration: null
-  supplier: CATL
-  pack_voltage_v: 400
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -30,72 +25,16 @@ range:
   wltp_city_km: 400
   wltp_highway_km: 250
   epa_km: null
-  epa_miles: null
   real_world_km: 265
-  real_world_highway_km: 215
-  real_world_city_km: 330
 charging:
-  ac_charging:
-    max_power_kw: 11
-    onboard_charger_kw: 11
-    connector_type: Type2
-    phases: 3
-    time_0_100_percent_hours: 4.5
-  dc_charging:
-    max_power_kw: 75
-    connector_type: CCS2
-    time_10_80_percent_minutes: 28
-    time_0_80_percent_minutes: 31
-  charge_curve:
-  - soc_percent: 0
-    power_kw: 55
-  - soc_percent: 10
-    power_kw: 75
-  - soc_percent: 20
-    power_kw: 75
-  - soc_percent: 30
-    power_kw: 72
-  - soc_percent: 40
-    power_kw: 68
-  - soc_percent: 50
-    power_kw: 60
-  - soc_percent: 60
-    power_kw: 50
-  - soc_percent: 70
-    power_kw: 40
-  - soc_percent: 80
-    power_kw: 28
-  - soc_percent: 90
-    power_kw: 18
-  - soc_percent: 100
-    power_kw: 8
-  bidirectional_charging: false
   ac_max_kw: 11
   dc_max_kw: 75
-motors:
-  configuration: single
-  type: permanent_magnet
-  drive_type: FWD
-  total_power_kw: 135
-  total_power_hp: 184
-  total_torque_nm: 290
-  front_motor:
-    power_kw: 135
-    power_hp: 184
-    torque_nm: 290
-    type: permanent_magnet
 performance:
   top_speed_kmh: 160
-  top_speed_limited: true
   total_power_kw: 135
   total_power_hp: 184
   total_torque_nm: 290
   acceleration_0_100_sec: 7.9
-efficiency:
-  consumption_wltp_kwh_per_100km: 15.4
-  consumption_real_world_kwh_per_100km: 17.2
-  efficiency_rating_eu: A
-  co2_emissions_wltp_g_per_km: 0
 weight:
   curb_weight_kg: 1580
   gross_vehicle_weight_kg: 2000
@@ -106,36 +45,10 @@ features:
   heat_pump: true
   adaptive_suspension: false
   air_suspension: false
-  all_wheel_steering: false
   torque_vectoring: false
-  launch_control: false
-  adjustable_regen_braking: true
   one_pedal_driving: true
-driving_modes:
-- Personal
-- Sport
-- Green
-- Green+
-interior_materials:
-  seats: Vescin (vegan synthetic leather)
-  dashboard: Recycled polyester textile
-  steering_wheel: Vegan leather
-version_info:
-  release_date: 2024-09-01
-  discontinuation_date: null
-  facelift: false
-  special_edition: false
-  limited_production: false
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.mini.com/en_GB/home/range/mini-aceman/mini-aceman-se.html
-  notes: 'The Aceman SE is the smaller battery entry-level variant with 42.5kWh usable
-    capacity and 135kW motor. 310km WLTP range suits urban commuters. Lower DC charging
-    peak of 75kW but still achieves 10-80% in ~28 minutes due to smaller battery.
-    More affordable entry point into the Aceman range. Despite the "SE" name, this
-    is actually the base/smaller variant (Mini naming convention).
-
-    '

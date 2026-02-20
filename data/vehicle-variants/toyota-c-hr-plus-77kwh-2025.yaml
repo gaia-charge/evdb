@@ -2,90 +2,23 @@ id: toyota-c-hr-plus-77kwh-2025
 name: 77 kWh
 model_id: toyota-c-hr-plus
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: base
-market_position: mid-range
 battery:
   usable_kwh: 74.6
   total_kwh: 77.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, e-TNGA platform
-    weight_kg: 480
-    modules: null
 range:
   wltp_km: 430
-  wltp_source: manufacturer
   epa_km: null
-  epa_source: null
   real_world_km: 355
   real_world_source: estimated
-  real_world_conditions: Mixed driving, moderate climate
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 60
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 120
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
-  preconditioning:
-    battery_preconditioning: true
-    scheduled_charging: true
-    departure_time_climate: true
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: front
-  type: permanent_magnet_synchronous
-  max_power_kw: 160
-  max_torque_nm: 300
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 160
-  total_power_hp: 218
-  total_torque_nm: 300
 performance:
   top_speed_kmh: 170
-  top_speed_limited: true
   acceleration_0_100_sec: 7.5
 dimensions:
   length_mm: 4360
@@ -106,42 +39,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 19.0
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 22.0
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 25.0
-standard_features:
-- Toyota Safety Sense 3.0
-- 12.3-inch touchscreen
-- Digital instrument cluster
-- Wireless Apple CarPlay / Android Auto
-- LED headlights
-- Heat pump
-- 18-inch alloy wheels
-- Dual-zone automatic climate control
-- Rear parking camera
-- Parking sensors front/rear
-optional_packages:
-- name: Premium Package
-  features:
-  - Head-up display
-  - JBL premium audio system
-  - Panoramic roof
-  - Wireless charging pad
-colors:
-  standard:
-  - Platinum White Pearl
-  - Emotional Red
-  premium:
-  - Precious Silver Metallic
-  - Attitude Black Mica
-  - Urban Khaki
-  - Dark Blue Mica
-version:
-  facelift: false
-  major_changes:
-  - First fully electric C-HR variant
 notes: 'The Toyota C-HR+ is the fully electric version of the third-generation C-HR,
   positioned as a compact crossover BEV for the European market. It shares the e-TNGA
   platform with the bZ4X but in a more compact, stylish package. The 77 kWh battery
@@ -154,7 +51,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: estimated
-  data_source: manufacturer
   sources:
   - https://www.toyota.de
   - https://ev-database.org

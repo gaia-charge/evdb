@@ -1,10 +1,8 @@
-# BMW i7 M70 xDrive (2024)
 id: bmw-i7-m70-xdrive-2024
 name: M70 xDrive
 model_id: bmw-i7
 model_year: 2024
 variant_code: i7-M70-xDrive
-
 battery:
   usable_kwh: 101.7
   total_kwh: 105.7
@@ -14,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    Same large 101.7 kWh usable battery (105.7 kWh gross) as eDrive50.
-    Fifth-generation BMW eDrive with 400V architecture. CATL prismatic cells.
-    Dual-motor AWD configuration for maximum performance.
-
 range:
   wltp_km: 560
   wltp_city_km: 720
@@ -27,12 +19,6 @@ range:
   epa_km: 485
   real_world_km: 465
   real_world_source: InsideEVs real-world test estimate
-  notes: |
-    WLTP range of 560 km - reduced from eDrive50's 625 km due to dual motors,
-    AWD drivetrain, and higher performance focus. EPA rated at approximately
-    485 km (301 miles). Real-world range around 465 km in mixed conditions.
-    Still impressive for a 2.8-ton performance flagship.
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -40,68 +26,52 @@ charging:
   dc_max_kw: 195
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 195
-    - soc_percent: 10
-      power_kw: 195
-    - soc_percent: 20
-      power_kw: 190
-    - soc_percent: 30
-      power_kw: 180
-    - soc_percent: 40
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 35
-  time_0_to_100_min: 55
+  - soc_percent: 0
+    power_kw: 195
+  - soc_percent: 10
+    power_kw: 195
+  - soc_percent: 20
+    power_kw: 190
+  - soc_percent: 30
+    power_kw: 180
+  - soc_percent: 40
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 55
+  - soc_percent: 90
+    power_kw: 35
   time_10_to_80_min: 34
   time_20_to_80_min: 31
   charging_speed_kmh: 1200
-  notes: |
-    Identical charging specifications to eDrive50. DC fast charging up to
-    195 kW peak. 10-80% in 34 minutes with 101.7 kWh battery. 22 kW
-    three-phase AC charging standard. BMW recommends limiting to 80% for
-    daily use to preserve battery longevity.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.7
   v2h: false
   v2g: false
-  notes: "V2L (vehicle-to-load) via adapter. V2H and V2G not yet available."
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 190
-      power_hp: 258
-      torque_nm: 280
-    - position: rear
-      type: permanent magnet
-      power_kw: 360
-      power_hp: 489
-      torque_nm: 650
+  - position: front
+    type: permanent magnet
+    power_kw: 190
+    power_hp: 258
+    torque_nm: 280
+  - position: rear
+    type: permanent magnet
+    power_kw: 360
+    power_hp: 489
+    torque_nm: 650
   total_power_kw: 485
   total_power_hp: 660
   total_torque_nm: 1100
   acceleration_0_100_sec: 3.7
   top_speed_kmh: 250
-  notes: |
-    Dual permanent magnet motors (front 258 hp + rear 489 hp) delivering
-    combined 660 hp and massive 1,100 Nm torque. 0-100 km/h in just 3.7
-    seconds - supercar performance in a luxury flagship sedan. Top speed
-    electronically limited to 250 km/h. BMW M-tuned xDrive AWD system with
-    rear-biased torque distribution for engaging dynamics.
-
 dimensions:
   length_mm: 5391
   width_mm: 1950
@@ -110,36 +80,21 @@ dimensions:
   wheelbase_mm: 3215
   ground_clearance_mm: 145
   turning_circle_m: 12.5
-
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1580
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2800
   gross_vehicle_weight_kg: 3215
   payload_kg: 415
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
-  notes: "Heavier than eDrive50 due to dual motors, but balanced 50/50 weight distribution"
-  towing_capacity_braked_kg: 2000
-  towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 19.6
-  wltp_city_kwh_per_100km: 17.2
-  wltp_highway_kwh_per_100km: 22.8
   epa_kwh_per_100km: 21.0
   real_world_kwh_per_100km: 22.5
   efficiency_rating: C
-  notes: |
-    19.6 kWh/100km WLTP - higher than eDrive50 due to dual motors, AWD
-    drivetrain, and performance focus. Real-world efficiency around 22.5
-    kWh/100km. Trade-off for supercar-level acceleration in a luxury flagship.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -147,72 +102,55 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Driving Assistant Professional"
-  notes: |
-    - Executive Drive Pro with air suspension and active roll stabilization
-    - M Sport-tuned suspension with adaptive dampers
-    - Heat pump standard for improved cold-weather efficiency
-    - xDrive AWD with torque vectoring and rear-biased distribution
-    - M Sport brakes with larger discs and calipers
-    - BMW Curved Display with 12.3" instrument cluster + 14.9" touchscreen
-    - 31.3" BMW Theatre Screen for rear passengers (8K resolution)
-    - Bowers & Wilkins Diamond Surround Sound System (36 speakers) standard
-    - Executive Lounge Seating with massage, heating, ventilation, leg rest
-    - Automatic doors with soft-close function
-    - Driving Assistant Professional (Level 2+ ADAS)
-    - Parking Assistant Professional with remote control
-    - Adaptive LED headlights with BMW Laserlight
-    - Sky Lounge panoramic glass roof with LED lighting
-    - One-pedal driving with adaptive regenerative braking
-    - M-specific drive modes and displays
-
 optional_equipment:
-  - name: M Sport Package Pro
-    code: MSPORTPRO
-    category: styling
-    included_in_base: true
-    notes: "Standard on M70 - M Sport styling, 21-inch wheels, sport seats"
-  - name: Bowers & Wilkins Diamond 4D System
-    code: BW4D
-    category: infotainment
-    included_in_base: true
-    notes: "Standard on M70 - 36-speaker audio with subwoofers and seat exciters"
-  - name: Executive Lounge Seating
-    code: EXECLNG
-    category: comfort
-    included_in_base: false
-    notes: "Rear seats with full recline, massage, leg rest, and side tables"
-  - name: Sky Lounge Panoramic Roof
-    code: SKYLNG
-    category: comfort
-    included_in_base: false
-    notes: "Interactive LED lighting patterns in glass roof panel"
-  - name: 22-inch M Forged Wheels
-    code: M22INCH
-    category: wheels
-    included_in_base: false
-    notes: "Lightweight forged wheels for improved dynamics"
+- name: M Sport Package Pro
+  code: MSPORTPRO
+  category: styling
+  included_in_base: true
+- name: Bowers & Wilkins Diamond 4D System
+  code: BW4D
+  category: infotainment
+  included_in_base: true
+- name: Executive Lounge Seating
+  code: EXECLNG
+  category: comfort
+  included_in_base: false
+- name: Sky Lounge Panoramic Roof
+  code: SKYLNG
+  category: comfort
+  included_in_base: false
+- name: 22-inch M Forged Wheels
+  code: M22INCH
+  category: wheels
+  included_in_base: false
+notes: 'The BMW i7 M70 xDrive is the performance flagship of BMW''s electric 7 Series.
 
-notes: |
-  The BMW i7 M70 xDrive is the performance flagship of BMW's electric 7 Series.
   With 660 hp, 1,100 Nm torque, and 0-100 km/h in 3.7 seconds, it delivers
+
   supercar acceleration while maintaining luxury sedan comfort. The M70 features
+
   M-tuned suspension, xDrive AWD with torque vectoring, and rear-biased power
+
   delivery for engaging dynamics. Despite 85 kg weight gain over eDrive50, the
+
   dual-motor setup provides dramatically improved performance. Standard equipment
+
   includes Bowers & Wilkins Diamond audio, Executive Drive Pro air suspension,
+
   and all the flagship technology features. Competes with Mercedes-AMG EQS 53
+
   4MATIC+ (658 hp) and Porsche Taycan Turbo S (761 hp) while offering more
+
   traditional luxury sedan space and comfort.
 
-
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.bmw.com/en/models/i7.html
-    - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
-    - https://www.bmw.de/de/topics/faszination-bmw/bmw-i7-m70-xdrive.html
-    - https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-i7-m70-xdrive.html
+  - https://www.bmw.com/en/models/i7.html
+  - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
+  - https://www.bmw.de/de/topics/faszination-bmw/bmw-i7-m70-xdrive.html
+  - https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-i7-m70-xdrive.html

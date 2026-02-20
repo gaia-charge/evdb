@@ -1,10 +1,8 @@
-# Opel Frontera Electric 44 kWh (2025)
 id: opel-frontera-electric-44-2025
 name: Electric 44 kWh
 model_id: opel-frontera-electric
 model_year: 2025
 variant_code: null
-
 battery:
   usable_kwh: 44.0
   total_kwh: 44.2
@@ -14,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    44.2 kWh LFP battery from BYD (Blade Battery technology).
-    Standard range option on the Smart Car platform. Same battery
-    as Citroën ë-C3 Aircross and Fiat Grande Panda Electric.
-
 range:
   wltp_km: 305
   wltp_city_km: 390
@@ -27,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 250
   real_world_source: estimated based on platform siblings
-  notes: |
-    WLTP range of 305 km with 44.2 kWh LFP battery. Adequate for
-    daily commuting and urban use. Real-world range estimated around
-    250 km in mixed conditions.
-
 charging:
   ac_max_kw: 7.4
   ac_phases: 1
@@ -39,92 +26,67 @@ charging:
   dc_max_kw: 100
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 90
-    - soc_percent: 10
-      power_kw: 100
-    - soc_percent: 20
-      power_kw: 100
-    - soc_percent: 30
-      power_kw: 95
-    - soc_percent: 40
-      power_kw: 85
-    - soc_percent: 50
-      power_kw: 75
-    - soc_percent: 60
-      power_kw: 60
-    - soc_percent: 70
-      power_kw: 45
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 15
-  time_0_to_100_min: 420
+  - soc_percent: 0
+    power_kw: 90
+  - soc_percent: 10
+    power_kw: 100
+  - soc_percent: 20
+    power_kw: 100
+  - soc_percent: 30
+    power_kw: 95
+  - soc_percent: 40
+    power_kw: 85
+  - soc_percent: 50
+    power_kw: 75
+  - soc_percent: 60
+    power_kw: 60
+  - soc_percent: 70
+    power_kw: 45
+  - soc_percent: 80
+    power_kw: 30
+  - soc_percent: 90
+    power_kw: 15
   time_10_to_80_min: 26
   time_20_to_80_min: 22
   charging_speed_kmh: 500
-  notes: |
-    DC fast charging up to 100 kW peak. 10-80% in approximately 26 minutes.
-    AC charging limited to 7.4 kW single-phase (full charge ~7 hours).
-    11 kW 3-phase AC not available on base Smart Car platform.
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: No bidirectional charging capabilities.
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 83
-      power_hp: 113
-      torque_nm: 120
+  - position: front
+    type: permanent magnet
+    power_kw: 83
+    power_hp: 113
+    torque_nm: 120
   total_power_kw: 83
   total_power_hp: 113
   total_torque_nm: 120
   acceleration_0_100_sec: 12.1
   top_speed_kmh: 143
-  notes: |
-    Single permanent magnet motor at front axle. 83 kW (113 PS) and 120 Nm.
-    Modest performance figures prioritize efficiency and affordability over
-    sportiness. Adequate for urban and suburban driving.
-
 dimensions:
   length_mm: 4385
   width_mm: 1795
   height_mm: 1635
   wheelbase_mm: 2670
   ground_clearance_mm: 190
-
 cargo:
   trunk_capacity_liters: 460
   trunk_max_liters: 1600
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 1514
   gross_vehicle_weight_kg: 1950
   payload_kg: 436
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
-  notes: "Relatively light for an electric SUV. Not rated for towing."
-
 efficiency:
   wltp_kwh_per_100km: 15.4
-  wltp_city_kwh_per_100km: 12.5
-  wltp_highway_kwh_per_100km: 18.5
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.0
   efficiency_rating: A
-  notes: |
-    15.4-15.6 kWh/100km WLTP (from Opel.de). Very efficient for a compact SUV.
-    LFP battery and aerodynamic design contribute to low consumption.
-
 features:
   heat_pump: false
   adaptive_suspension: false
@@ -132,53 +94,42 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Opel IntelliDrive"
-  notes: |
-    - Opel Pure Panel with dual 10-inch displays
-    - Innovative Intelli-Seat with tailbone pressure relief
-    - Standard smartphone station with wireless charging
-    - Apple CarPlay and Android Auto
-    - LED ECO headlights integrated in Opel Vizor
-    - One-pedal driving mode
-    - Lane Keep Assist and Forward Collision Alert
-    - Rear parking sensors
-    - 460 litres boot space (1,600 litres seats folded)
-    - Optional roof rails and roof tent
-    - Recycled materials for seat fabrics
-
 optional_equipment:
-  - name: Roof Rails with Tent
-    code: ROOFTENT
-    category: exterior
-    included_in_base: false
-    notes: "Specially designed roof tent with ladder, 240 kg roof load capacity"
-  - name: Multimedia Navi Pro
-    code: NAVIPRO
-    category: infotainment
-    included_in_base: false
-    notes: "10-inch touchscreen with navigation and live traffic"
-  - name: Rear-View Camera
-    code: REARCAM
-    category: safety
-    included_in_base: false
-    notes: "Standard on GS trim, optional on base Frontera"
+- name: Roof Rails with Tent
+  code: ROOFTENT
+  category: exterior
+  included_in_base: false
+- name: Multimedia Navi Pro
+  code: NAVIPRO
+  category: infotainment
+  included_in_base: false
+- name: Rear-View Camera
+  code: REARCAM
+  category: safety
+  included_in_base: false
+notes: 'The Opel Frontera Electric 44 kWh is the standard-range version of Opel''s
 
-notes: |
-  The Opel Frontera Electric 44 kWh is the standard-range version of Opel's
-  affordable electric SUV. Built on Stellantis' Smart Car platform (shared with
+  affordable electric SUV. Built on Stellantis'' Smart Car platform (shared with
+
   Citroën ë-C3 Aircross and Fiat Grande Panda), it offers a spacious, practical
+
   interior with up to 1,600 litres of cargo space. The boxy design maximizes
+
   usable interior volume. Available in two trims: Frontera (base) and Frontera GS.
-  Priced from around €29,000 in Germany, it's one of the most affordable
+
+  Priced from around €29,000 in Germany, it''s one of the most affordable
+
   electric SUVs in Europe. A long-range version with larger battery and ~400 km
+
   WLTP range is also available.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 85
   sources:
-    - https://www.media.stellantis.com/em-en/opel/press/world-premiere-of-new-opel-frontera-all-electric-opel-suv-available-for-around-29-000-in-germany
-    - https://en.wikipedia.org/wiki/Opel_Frontera_(2024)
-    - https://www.opel.de
+  - https://www.media.stellantis.com/em-en/opel/press/world-premiere-of-new-opel-frontera-all-electric-opel-suv-available-for-around-29-000-in-germany
+  - https://en.wikipedia.org/wiki/Opel_Frontera_(2024)
+  - https://www.opel.de

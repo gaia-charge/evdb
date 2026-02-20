@@ -2,95 +2,23 @@ id: hyundai-ioniq-5-long-range-awd-2024
 name: Long Range AWD
 model_id: hyundai-ioniq-5
 model_year: 2024
-production_years:
-  start: 2021
-  end: null
-trim_level: long-range
-market_position: mid-range
 battery:
   usable_kwh: 72.6
   total_kwh: 77.4
   chemistry: NMC
-  nominal_voltage_v: 800
   cell_type: pouch
-  supplier: SK Innovation / LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, cell-to-pack
-    weight_kg: 450
-    modules: 10
 range:
   wltp_km: 481
-  wltp_source: manufacturer
   epa_km: 435
-  epa_source: manufacturer
   real_world_km: 420
   real_world_source: measured
-  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.4
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 18
-      '0_100': 47
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 220
-    - soc_percent: 10
-      power_kw: 238
-    - soc_percent: 20
-      power_kw: 238
-    - soc_percent: 40
-      power_kw: 225
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 60
-      power_kw: 145
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 12
-    notes: Multi-charging system automatically adapts to 400V or 800V stations
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 238
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 74
-  max_torque_nm: 255
-  cooling: liquid
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 160
-  max_torque_nm: 350
-  cooling: liquid
-drivetrain:
-  type: awd
-  total_power_kw: 234
-  total_power_hp: 320
-  total_torque_nm: 605
 performance:
   top_speed_kmh: 185
-  top_speed_limited: true
   acceleration_0_100_sec: 5.1
 weight:
   curb_weight_kg: 2055
@@ -101,51 +29,6 @@ efficiency:
   wltp_kwh_per_100km: 19.4
   epa_kwh_per_100km: 20.8
   real_world_kwh_per_100km: 17.3
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 21.2
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 24.8
-standard_features:
-- 12.3-inch dual panoramic displays
-- Highway Driving Assist 2 (HDA2)
-- Augmented Reality Head-Up Display
-- Vehicle-to-Load (V2L) - 3.6kW
-- Heat pump
-- Pixel LED headlights
-- 20-inch alloy wheels
-- Relaxation seats (front)
-- Universal Island center console
-- Smart power tailgate
-- Bose Premium Sound (8 speakers)
-optional_packages:
-- name: Digital Side Mirrors
-  features:
-  - Camera-based side mirrors
-  - Interior displays
-- name: Solar Roof
-  features:
-  - Solar panel integration
-  - Up to 2000km/year additional range
-colors:
-  standard:
-  - Gravity Gold Matte
-  - Atlas White
-  - Phantom Black Pearl
-  - Shooting Star Matte
-  premium:
-  - Cyber Grey Metallic
-  - Digital Teal Pearl
-  - Lucid Blue Pearl
-interior_colors:
-- Dark Pebble Grey / Dove Grey
-- Obsidian Black
-version:
-  facelift: true
-  major_changes:
-  - Larger battery (77.4 kWh)
-  - NACS port option (North America)
-  - Updated infotainment software
 dimensions:
   length_mm: 4635
   width_mm: 1890
@@ -169,8 +52,6 @@ metadata:
   created_at: '2026-02-06'
   updated_at: '2026-02-06'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications
   - https://www.hyundai.com/us/en/vehicles/ioniq-5/specs

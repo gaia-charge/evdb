@@ -2,80 +2,23 @@ id: citroen-e-c3-base-2024
 model_id: citroen-e-c3
 name: Base
 model_year: 2024
-trim_level: Base
 variant_code: null
-production:
-  start_date: 2024-03-01
-  end_date: null
-  status: active
-  notes: Launched early 2024 as affordable EV option
 battery:
-  type: Lithium-ion
   chemistry: LFP
   total_kwh: 44.0
   usable_kwh: 44.0
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 192
-  modules: 12
-  voltage_nominal: 400
-  notes: LFP chemistry chosen for cost, longevity, and thermal stability
 range:
   wltp_km: 320
   wltp_city_km: 400
   wltp_highway_km: 260
-  epa_combined_km: null
-  real_world_avg_km: 270
   real_world_source: Early European road tests
-  notes: Practical range for urban and suburban use
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 1
-    time_0_100_hours: 7.0
-    onboard_charger: 7.4kW single-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 26
-    peak_power_notes: 100kW peak maintained well, optimized for fast top-ups
-    preconditioning: false
-  charge_curve:
-  - percent: 10
-    power_kw: 98
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 95
-  - percent: 60
-    power_kw: 85
-  - percent: 70
-    power_kw: 72
-  - percent: 80
-    power_kw: 50
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 7.4
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 83
-    power_hp: 113
-    torque_nm: 125
-    supplier: null
-  combined:
-    power_kw: 83
-    power_hp: 113
-    torque_nm: 125
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 135
-  quarter_mile_seconds: null
   total_power_kw: 83
   total_power_hp: 113
   total_torque_nm: 125
@@ -83,11 +26,8 @@ performance:
   top_speed_kmh: 135
 efficiency:
   wltp_kwh_per_100km: 13.8
-  wltp_wh_per_km: 138
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 15.5
-  mpge_combined: null
-  drag_coefficient: 0.32
 dimensions:
   length_mm: 4015
   width_mm: 1755
@@ -105,63 +45,6 @@ weight:
   payload_kg: 375
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar
-  rear: Torsion beam with Citroën Progressive Hydraulic Cushions
-brakes:
-  front: Disc (280mm)
-  rear: Drum
-  regenerative: true
-tires:
-  standard: 205/55 R17
-features:
-  infotainment:
-  - 10.25" touchscreen
-  - 5.5" digital driver display
-  - Wireless Apple CarPlay and Android Auto
-  - DAB+ radio
-  - 4 speakers
-  - MyCitroën app
-  driver_assistance:
-  - Automatic emergency braking
-  - Lane departure warning
-  - Speed limit recognition
-  - Rear parking sensors
-  - Rear camera
-  comfort_convenience:
-  - Manual climate control
-  - Keyless entry
-  - Electric windows
-  - Height-adjustable driver seat
-  - USB-C ports (front and rear)
-  exterior:
-  - 17" steel wheels with covers
-  - LED headlights
-  - Body-colored bumpers
-  interior:
-  - Cloth upholstery
-  - 310L trunk
-  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source_urls:
-  - https://www.citroen.com/electric-cars/e-c3
-  notes: 'The Citroën ë-C3 is positioned as an affordable family electric crossover.
-    With LFP battery chemistry
-
-    and simplified equipment, it achieves competitive pricing while maintaining Citroën''s
-    comfort focus.
-
-
-    320 km WLTP range and 100kW DC charging make it practical for daily use and occasional
-    road trips.
-
-    The Progressive Hydraulic Cushions suspension technology provides exceptional
-    ride comfort.
-
-    '

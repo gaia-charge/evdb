@@ -1,35 +1,23 @@
 id: volvo-ex60-p12-awd-2027
 name: Volvo EX60 P12 AWD
 model_id: volvo-ex60
-variant_name: P12 AWD
 model_year: 2027
 battery:
   usable_kwh: 112.0
   total_kwh: 117.0
   chemistry: NMC
-  cells: prismatic
-  supplier: null
-  modules: null
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volts: 800
 range:
   wltp_km: 810
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 610
-  real_world_mild_weather_km: 700
-  real_world_cold_weather_km: 515
 charging:
   ac_max_kw: 22
-  ac_charge_time_0_100_hours: 6.0
   dc_max_kw: 370
-  dc_charge_time_10_80_minutes: 20
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 1280
   dc_curve:
   - soc_percent: 10
     power_kw: 370
@@ -41,18 +29,6 @@ charging:
     power_kw: 140
   - soc_percent: 80
     power_kw: 80
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 22
-  plug_and_charge: true
-  battery_preconditioning: true
-  bidirectional:
-    v2l: true
-    v2h: true
-    v2g: true
-    v2l_max_kw: null
-    v2h_max_kw: 11
-    v2g_max_kw: 11
 performance:
   drive_type: AWD
   motors:
@@ -67,14 +43,7 @@ performance:
   total_power_kw: 500
   total_power_hp: 680
   total_torque_nm: 790
-  acceleration_0_100_kmh_sec: 3.9
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 180
-  drive_modes:
-  - Comfort
-  - Eco
-  - Performance
-  - Individual
   acceleration_0_100_sec: 3.9
 dimensions:
   length_mm: 4690
@@ -92,73 +61,11 @@ weight:
   payload_kg: 455
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: null
 efficiency:
   wltp_kwh_per_100km: 16.0
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 18.4
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A+
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2+
-  autonomous_features:
-  - Pilot Assist with hands-free highway driving
-  - Lidar-based safety system (standard)
-  - Automatic emergency braking
-  - Intersection collision avoidance
-  - Blind spot monitoring with steer assist
-  - 360-degree camera system
-  - Park Pilot Assist
-  infotainment:
-  - 15-inch center touchscreen
-  - Digital driver display
-  - Head-up display
-  - Google Built-in (Maps, Assistant, Play)
-  - Wireless Apple CarPlay / Android Auto
-  - Over-the-air updates
-  comfort:
-  - Air suspension
-  - Heat pump (standard)
-  - Climate pre-conditioning via Volvo Cars app
-  - Panoramic glass roof
-  - Heated front and rear seats
-  - Ventilated front seats
-  - Multi-adjustable front seats with massage
-  - 4-zone climate control
-  - Ambient lighting
-  connectivity:
-  - Google Built-in
-  - Volvo Cars app (remote control)
-  - Digital key (UWB)
-  - Plug & Charge
-  - Over-the-air updates
-  - 5G connectivity
-  audio:
-  - Bowers & Wilkins premium audio
-version:
-  trim_level: P12 AWD
-  option_packages: []
-  production_location: Torslanda, Sweden
-  build_quality: premium
 metadata:
   created_at: '2026-02-10T01:45:00Z'
   updated_at: '2026-02-10T01:45:00Z'
   data_quality: estimated
-  data_source: manufacturer_and_estimated
-  verified_by: EV Database
-  notes: 'Volvo EX60 P12 AWD (MY2027). Flagship variant with 112 kWh usable battery.
-
-    810 km WLTP range (class-leading), 800V architecture, 370 kW DC charging.
-
-    500 kW / 680 PS total power, 3.9s 0-100 km/h.
-
-    SPA3 platform, built in Sweden.
-
-    '
-sources:
-- url: https://ev-database.org/car/3443/Volvo-EX60-P12-AWD
-  title: EV Database - Volvo EX60 P12 AWD
-  date_accessed: '2026-02-10'

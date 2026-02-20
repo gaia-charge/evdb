@@ -2,11 +2,6 @@ id: byd-atto-2-standard-2025
 name: Standard
 model_id: byd-atto-2
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: standard
-market_position: base
 dimensions:
   length_mm: 4310
   width_mm: 1830
@@ -22,80 +17,18 @@ battery:
   usable_kwh: 45.1
   total_kwh: 51.1
   chemistry: LFP
-  nominal_voltage_v: 301
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 250000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 350
-    form_factor: prismatic
-  notes: 'BYD Blade Battery uses LFP chemistry in long blade-shaped prismatic cells.
-    Excellent safety (nail penetration test), long cycle life (3000+ cycles), and
-    good thermal stability. 8-year / 250,000 km warranty.
-
-    '
 range:
   wltp_km: 312
-  wltp_source: manufacturer
   real_world_km: 245
   real_world_source: ev-database
-  real_world_conditions: Mixed driving, mild weather
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 39
-      '0_100': 60
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 50
-    - soc_percent: 10
-      power_kw: 55
-    - soc_percent: 30
-      power_kw: 65
-    - soc_percent: 50
-      power_kw: 60
-    - soc_percent: 70
-      power_kw: 45
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 15
-    - soc_percent: 100
-      power_kw: 8
-    notes: Conservative DC charging (max 65 kW) optimized for LFP battery longevity
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 65
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 130
-  max_torque_nm: 290
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 130
-  total_power_hp: 177
-  total_torque_nm: 290
 performance:
   top_speed_kmh: 160
-  top_speed_limited: true
   acceleration_0_100_sec: 7.9
 weight:
   curb_weight_kg: 1645
@@ -105,44 +38,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 14.5
   real_world_kwh_per_100km: 18.4
-  at_speed:
-  - speed_kmh: 100
-    consumption_kwh_per_100km: 16.0
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 20.5
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 23.0
-standard_features:
-- 12.8-inch rotating touchscreen
-- Digital instrument cluster
-- LED headlights
-- Automatic climate control
-- Wireless phone charging
-- Rear parking sensors
-- Rearview camera
-- V2L (Vehicle-to-Load) 3.3 kW
-- Lane keeping assist
-- Automatic emergency braking
-- 6 airbags
-optional_packages:
-- name: Comfort Package
-  features:
-  - Heated front seats
-  - Heated steering wheel
-  - Panoramic sunroof
-colors:
-  standard:
-  - Cosmos Black
-  - Crystal White
-  premium:
-  - Arctic Blue
-  - Boulder Grey
-  - Parkour Red
-interior_colors:
-- Black
-version:
-  facelift: false
-  major_changes: []
 notes: 'The BYD Atto 2 is BYD''s entry-level electric crossover for Europe, positioned
   below the Atto 3. With a 45.1 kWh Blade Battery (LFP), it offers 312 km WLTP range
   at a competitive price point around €31,990. DC charging tops out at 65 kW, which
@@ -155,7 +50,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: verified
-  data_source: ev-database
   sources:
   - https://ev-database.org/car/3125/BYD-ATTO-2
   - https://www.byd.com/eu

@@ -58,8 +58,6 @@ charging:
     power_kw: 25
   - soc_percent: 100
     power_kw: 10
-  time_10_to_80_percent_min: 30
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 3.3
@@ -76,7 +74,6 @@ performance:
   total_power_kw: 170
   total_power_hp: 231
   total_torque_nm: 320
-  acceleration_0_100_kmh_sec: 7.5
   top_speed_kmh: 170
   acceleration_0_100_sec: 7.5
 weight:
@@ -88,38 +85,9 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 19.5
-wheels_tires:
-  standard_size_front: 215/55 R18
-  standard_size_rear: 215/55 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 19 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive Cruise Control
-  - Lane Keeping Assist
-  - Automatic Emergency Braking
-  - Blind Spot Detection
-  - Rear Cross Traffic Alert
-  - 360-degree camera
-  - Traffic Sign Recognition
-  connectivity:
-  - Leapmotor App
-  - Remote climate control
-  - Remote door lock/unlock
-  - OTA software updates
-  special_features:
-  - LEAP 3.5 platform
-  - 150kW DC fast charging
-  - Heat pump standard
-  - V2L capable (3.3kW)
 metadata:
   data_quality: estimated
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.leapmotor.com
   - https://www.autocar.co.uk/car-news/new-cars/leapmotor-b10-unveiled-paris-affordable-electric-suv
-  notes: European launch mid-2025. Specs estimated from Paris Motor Show reveal and
-    platform data. 150kW DC charging is major improvement over C10's 84.4kW.

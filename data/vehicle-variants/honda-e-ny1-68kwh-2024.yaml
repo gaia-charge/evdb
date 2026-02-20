@@ -1,10 +1,8 @@
-# Honda e:Ny1 68.8 kWh (2024)
 id: honda-e-ny1-68kwh-2024
 name: 68.8 kWh FWD
 model_id: honda-e-ny1
 model_year: 2024
 variant_code: ENY1-68-FWD
-
 battery:
   usable_kwh: 68.8
   total_kwh: 68.8
@@ -14,23 +12,13 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    68.8 kWh usable battery with NCM chemistry from CATL. 400V architecture.
-    Single battery option for e:Ny1 across all trim levels.
-
 range:
   wltp_km: 412
   wltp_city_km: 520
   wltp_highway_km: 345
-  epa_km: null  # Not sold in US
+  epa_km: null
   real_world_km: 340
   real_world_source: WhatCar real-world test
-  notes: |
-    WLTP range of 412 km with 68.8 kWh battery. Real-world tests show
-    around 340 km in mixed conditions. Good efficiency for a compact SUV
-    with decent range for daily commuting and occasional longer trips.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -38,95 +26,67 @@ charging:
   dc_max_kw: 78
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 78
-    - soc_percent: 10
-      power_kw: 78
-    - soc_percent: 20
-      power_kw: 75
-    - soc_percent: 30
-      power_kw: 70
-    - soc_percent: 40
-      power_kw: 65
-    - soc_percent: 50
-      power_kw: 55
-    - soc_percent: 60
-      power_kw: 45
-    - soc_percent: 70
-      power_kw: 35
-    - soc_percent: 80
-      power_kw: 25
-    - soc_percent: 90
-      power_kw: 15
-  time_0_to_100_min: 70
+  - soc_percent: 0
+    power_kw: 78
+  - soc_percent: 10
+    power_kw: 78
+  - soc_percent: 20
+    power_kw: 75
+  - soc_percent: 30
+    power_kw: 70
+  - soc_percent: 40
+    power_kw: 65
+  - soc_percent: 50
+    power_kw: 55
+  - soc_percent: 60
+    power_kw: 45
+  - soc_percent: 70
+    power_kw: 35
+  - soc_percent: 80
+    power_kw: 25
+  - soc_percent: 90
+    power_kw: 15
   time_10_to_80_min: 45
   time_20_to_80_min: 40
   charging_speed_kmh: 468
-  notes: |
-    DC fast charging up to 78 kW peak. 10-80% in 45 minutes. 11 kW
-    three-phase AC charging standard. Charging speed is adequate but
-    not class-leading compared to 800V competitors.
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: |
-    No bidirectional charging capabilities on the e:Ny1.
-
 dimensions:
   length_mm: 4387
   width_mm: 1790
   height_mm: 1584
   wheelbase_mm: 2610
   ground_clearance_mm: 171
-
 cargo:
   trunk_capacity_liters: 344
   trunk_max_liters: 1176
   frunk_capacity_liters: 0
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 310
+  - position: front
+    type: permanent magnet
+    power_kw: 150
+    power_hp: 204
+    torque_nm: 310
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 310
   acceleration_0_100_sec: 7.6
   top_speed_kmh: 160
-  notes: |
-    Single permanent magnet motor at front axle with 204 hp and 310 Nm.
-    0-100 km/h in 7.6 seconds. Top speed limited to 160 km/h. Good
-    performance for a compact SUV with responsive acceleration in city
-    driving.
-
 weight:
   curb_weight_kg: 1677
   gross_vehicle_weight_kg: 2070
   payload_kg: 393
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
-  notes: "Front-heavy due to FWD motor and battery placement"
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 16.7
-  wltp_city_kwh_per_100km: 13.2
-  wltp_highway_kwh_per_100km: 19.9
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 20.2
   efficiency_rating: B
-  notes: |
-    16.7 kWh/100km WLTP - competitive efficiency for a compact SUV.
-    Real-world efficiency around 20.2 kWh/100km in mixed conditions.
-    Heat pump helps maintain efficiency in cold weather.
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -134,55 +94,43 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Honda Sensing"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - Honda Sensing with adaptive cruise control and lane keeping assist
-    - One-pedal driving mode with strong regenerative braking
-    - 15.1-inch central touchscreen
-    - 10.25-inch digital instrument cluster
-    - Wireless Apple CarPlay and Android Auto
-    - Honda Magic Seats (folding/reclining rear seats)
-    - Heated front seats and steering wheel
-    - Dual-zone climate control
-    - Blind spot information system
-    - Cross traffic monitor
-
 optional_equipment:
-  - name: Panoramic Glass Roof
-    code: PANROOF
-    category: comfort
-    included_in_base: false
-    notes: "Fixed panoramic glass roof with electric sunblind"
-  - name: Premium Audio Package
-    code: AUDIO
-    category: infotainment
-    included_in_base: false
-    notes: "Upgraded audio system with additional speakers"
-  - name: Winter Pack
-    code: WINTER
-    category: comfort
-    included_in_base: true
-    notes: "Heated seats and heated steering wheel (standard)"
+- name: Panoramic Glass Roof
+  code: PANROOF
+  category: comfort
+  included_in_base: false
+- name: Premium Audio Package
+  code: AUDIO
+  category: infotainment
+  included_in_base: false
+- name: Winter Pack
+  code: WINTER
+  category: comfort
+  included_in_base: true
+notes: 'The Honda e:Ny1 68.8 kWh is Honda''s entry into the European compact
 
-notes: |
-  The Honda e:Ny1 68.8 kWh is Honda's entry into the European compact
   electric SUV market. With 204 hp and 412 km WLTP range, it offers
-  practical performance and range for daily use. Built on Honda's e:N
+
+  practical performance and range for daily use. Built on Honda''s e:N
+
   Architecture F platform, it features a spacious interior thanks to
+
   the Magic Seats system and flat floor. The e:Ny1 competes with the
+
   Kia Niro EV, Hyundai Kona Electric, and VW ID.3. Standard heat pump
+
   and Honda Sensing make it well-equipped for European markets. Available
+
   in three trims: Elegance, Advance, and Advance+.
 
-
+  '
 metadata:
-  created_at: "2026-02-08"
-  updated_at: "2026-02-11"
+  created_at: '2026-02-08'
+  updated_at: '2026-02-11'
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.honda.co.uk/cars/new/e-ny1/specifications.html
-    - https://www.honda.de/cars/new/e-ny1/specifications.html
-    - https://ev-database.org/car/1685/Honda-e-Ny1
-    - https://www.whatcar.com/honda/e-ny1/review/n24532
+  - https://www.honda.co.uk/cars/new/e-ny1/specifications.html
+  - https://www.honda.de/cars/new/e-ny1/specifications.html
+  - https://ev-database.org/car/1685/Honda-e-Ny1
+  - https://www.whatcar.com/honda/e-ny1/review/n24532

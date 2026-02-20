@@ -1,35 +1,23 @@
 id: kia-ev4-814-kwh-2025
 name: Kia EV4 81.4 kWh
 model_id: kia-ev4
-variant_name: 81.4 kWh
 model_year: 2025
 battery:
   usable_kwh: 78.0
   total_kwh: 81.4
   chemistry: NMC
-  cells: null
-  supplier: SK On
-  modules: null
   warranty_years: 7
   warranty_km: 150000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volts: 400
 range:
   wltp_km: 625
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 490
-  real_world_mild_weather_km: 565
-  real_world_cold_weather_km: 405
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 8.5
   dc_max_kw: 135
-  dc_charge_time_10_80_minutes: 33
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 630
   dc_curve:
   - soc_percent: 10
     power_kw: 135
@@ -41,11 +29,6 @@ charging:
     power_kw: 80
   - soc_percent: 80
     power_kw: 50
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  plug_and_charge: true
-  battery_preconditioning: true
 performance:
   drive_type: FWD
   motors:
@@ -56,13 +39,7 @@ performance:
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 283
-  acceleration_0_100_kmh_sec: 7.9
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 170
-  drive_modes:
-  - Eco
-  - Normal
-  - Sport
   acceleration_0_100_sec: 7.9
 dimensions:
   length_mm: 4635
@@ -80,65 +57,11 @@ weight:
   payload_kg: 480
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: null
 efficiency:
   wltp_kwh_per_100km: 14.5
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 15.9
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A+
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Forward collision avoidance
-  - Lane keeping assist
-  - Blind spot monitoring
-  - Smart cruise control with stop & go
-  - Rear cross-traffic collision avoidance
-  - Parking distance warning
-  - Highway Driving Assist 2
-  infotainment:
-  - Dual 12.3-inch curved displays
-  - Kia Connect navigation
-  - Apple CarPlay / Android Auto
-  - Over-the-air updates
-  - Digital key
-  comfort:
-  - Heat pump
-  - Climate pre-conditioning via app
-  - Heated front seats
-  - Heated steering wheel
-  - V2L (Vehicle-to-Load) 3.6 kW
-  - Ventilated front seats (GT-Line)
-  connectivity:
-  - Kia Connect
-  - Remote services via app
-  - Plug & Charge
-  - Over-the-air updates
-  audio:
-  - Harman Kardon premium audio (optional)
-version:
-  trim_level: 81.4 kWh
-  option_packages: []
-  production_location: Hwaseong, South Korea
-  build_quality: standard
 metadata:
   created_at: '2026-02-10T01:00:00Z'
   updated_at: '2026-02-10T01:00:00Z'
   data_quality: verified
-  data_source: manufacturer
-  verified_by: Kia Germany website
-  notes: 'Kia EV4 sedan with 81.4 kWh long range battery. E-GMP platform, FWD.
-
-    625 km WLTP range. Same battery as Fastback but sedan body style offers
-
-    slightly less range due to aerodynamics. Excellent efficiency.
-
-    '
-sources:
-- url: https://www.kia.com/de/ev4/
-  title: Kia EV4 - Kia Deutschland
-  date_accessed: '2026-02-10'

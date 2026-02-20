@@ -1,103 +1,28 @@
 id: mg-im5-long-range-2025
 model_id: mg-im5
 name: Long Range
-variant_name: Long Range
 model_year: 2025
-trim_level: Long Range
-production_years: 2025-present
-overview: 'The MG IM5 Long Range is the primary European variant of MG''s new executive
-  electric sedan. Featuring a 100 kWh battery (96.5 kWh usable) on an 800V architecture,
-  it delivers 710 km WLTP range and ultra-fast charging at up to 369 kW DC. The single
-  rear motor produces 300 kW (408 PS) and 500 Nm, enabling 0-100 km/h in 4.9 seconds.
-  Earned a 5-star Euro NCAP rating in 2025.
-
-  '
 battery:
   chemistry: null
-  supplier: null
   total_kwh: 100.0
   usable_kwh: 96.5
   warranty_years: 7
   warranty_km: 150000
   warranty_capacity_percent: 70
-  voltage: 800
-  notes: 100 kWh battery, 800V architecture
 range:
   wltp_km: 710
   wltp_city_km: null
   wltp_highway_km: null
-  epa_miles: null
   real_world_km: 530
-  real_world_notes: Estimated ~530 km mixed driving based on ev-database estimates
 charging:
-  ac:
-    connector_type: Type2
-    phases: 3
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 630
-      power_kw: 11.0
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 300
-    - soc_percent: 20
-      power_kw: 369
-    - soc_percent: 30
-      power_kw: 350
-    - soc_percent: 40
-      power_kw: 320
-    - soc_percent: 50
-      power_kw: 280
-    - soc_percent: 60
-      power_kw: 240
-    - soc_percent: 70
-      power_kw: 180
-    - soc_percent: 80
-      power_kw: 120
-    - soc_percent: 90
-      power_kw: 60
-    - soc_percent: 100
-      power_kw: 20
-    charging_time:
-    - percent_start: 10
-      percent_end: 80
-      time_minutes: 17
-      power_kw: 250
-      notes: 10-80% in approximately 17 minutes at 250 kW average
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 369
-motors:
-  configuration: single
-  drive_type: RWD
-  total_power_kw: 300
-  total_power_hp: 408
-  total_torque_nm: 500
-  motor_type: permanent_magnet
-  motors:
-  - position: rear
-    power_kw: 300
-    power_hp: 408
-    torque_nm: 500
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 220
-  notes: 0-100 km/h in 4.9 seconds, top speed 220 km/h
   total_power_kw: 300
   total_power_hp: 408
   total_torque_nm: 500
   acceleration_0_100_sec: 4.9
-efficiency:
-  consumption_wltp_kwh_per_100km: 16.0
-  consumption_real_world_kwh_per_100km: 18.2
-  efficiency_rating_eu: null
-  notes: 16.0 kWh/100km WLTP rated consumption
 dimensions:
   length_mm: 4856
   width_mm: 1872
@@ -114,33 +39,8 @@ weight:
   payload_kg: 430
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-features:
-  standard:
-  - Large center touchscreen
-  - Digital instrument cluster
-  - Premium sound system
-  - Heated front seats
-  - Panoramic glass roof
-  - Heat pump climate control
-  - Wireless phone charger
-  - 360-degree camera system
-  - Adaptive cruise control
-  - Lane centering assist
-  - Automatic emergency braking
-  - LED headlights
-  - Powered tailgate
-  - Ambient lighting
-  optional:
-  - Metallic paint options
-version:
-  release_date: 2025-07
-  changes_from_previous: All-new model
-  notes: European specification, 2025 model year
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://ev-database.org/car/3245/MG-IM5-Long-Range
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  notes: European specification MG IM5 Long Range

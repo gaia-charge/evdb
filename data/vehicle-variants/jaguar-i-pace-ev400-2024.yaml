@@ -3,55 +3,31 @@ model_id: jaguar-i-pace
 name: EV400
 model_year: 2024
 variant_code: EV400
-production_status: active
-production_start_date: '2018-03-01'
-base_price_eur: 78500
-base_price_gbp: 69995
 battery:
   usable_kwh: 84.7
   total_kwh: 90.0
   chemistry: NMC
-  cells_supplier: LG Chem
-  pack_voltage: 400
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
 range:
   wltp_km: 470
   real_world_km: 390
-  highway_km: 320
-  city_km: 450
-  winter_km: 300
 performance:
   motors:
   - position: front
     type: permanent magnet
-    max_power_kw: 98
-    max_torque_nm: 228
   - position: rear
     type: permanent magnet
-    max_power_kw: 197
-    max_torque_nm: 348
   total_power_kw: 294
   total_power_hp: 400
   total_torque_nm: 696
   drive_type: AWD
   top_speed_kmh: 200
   acceleration_0_100_sec: 4.8
-charging:
-  ac_charge_power_kw: 11
-  ac_charge_port: Type 2
-  ac_charge_time_0_100_hours: 8.6
-  dc_charge_power_peak_kw: 104
-  dc_charge_port: CCS2
-  dc_charge_time_10_80_min: 40
-  dc_charge_time_20_80_min: 36
-  dc_charge_km_per_10min: 90
 efficiency:
   wltp_kwh_per_100km: 19.8
   real_world_kwh_per_100km: 23.5
-  highway_kwh_per_100km: 28.5
-  city_kwh_per_100km: 20.0
 dimensions:
   length_mm: 4682
   width_mm: 1895
@@ -69,23 +45,6 @@ cargo:
   trunk_capacity_liters: 656
   trunk_max_liters: 1453
   frunk_capacity_liters: 27
-wheels:
-  standard_size_inches: 18
-  tire_size_front: 235/65 R18
-  tire_size_rear: 235/65 R18
-standard_features:
-- Dual-motor AWD with torque vectoring
-- Air suspension with adaptive damping
-- Heat pump for improved cold-weather efficiency
-- LED headlights with signature DRLs
-- Touch Pro Duo infotainment (10" + 5" screens)
-- 12.3" Interactive Driver Display
-- Meridian sound system (380W, 11 speakers)
-- Panoramic fixed glass roof
-- Leather seats (Windsor leather)
-- Heated front seats and steering wheel
-- Connected Navigation Pro
-- Lane Keep Assist, Emergency Braking
 metadata:
   created_at: '2026-02-08'
   updated_at: null

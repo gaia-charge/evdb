@@ -2,95 +2,25 @@ id: hyundai-ioniq-6-long-range-rwd-2025
 name: Long Range RWD
 model_id: hyundai-ioniq-6
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: se-long-range
-market_position: mid-range
 battery:
   usable_kwh: 74.0
   total_kwh: 77.4
   chemistry: NCM
-  nominal_voltage_v: 697
   cell_type: pouch
-  supplier: SK On (SK Innovation)
   warranty_years: 10
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, 800V architecture
-    weight_kg: 477
-    modules: null
 range:
   wltp_km: 614
-  wltp_source: manufacturer
   wltp_city_km: 785
   wltp_highway_km: 495
   epa_km: 581
-  epa_source: manufacturer
   real_world_km: 525
   real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.7
-      '10_80': 4.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 18
-      '0_100': 41
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 225
-    - soc_percent: 10
-      power_kw: 233
-    - soc_percent: 20
-      power_kw: 233
-    - soc_percent: 30
-      power_kw: 195
-    - soc_percent: 40
-      power_kw: 175
-    - soc_percent: 50
-      power_kw: 155
-    - soc_percent: 60
-      power_kw: 125
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    notes: 800V E-GMP architecture enables class-leading charging speed
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 233
-motors:
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 168
-  max_torque_nm: 350
-  max_rpm: 13500
-  cooling: liquid
-drivetrain:
-  type: rwd
-  total_power_kw: 168
-  total_power_hp: 225
-  total_torque_nm: 350
 performance:
-  acceleration_0_60_mph_s: 7.0
   top_speed_kmh: 185
-  top_speed_limited: true
   acceleration_0_100_sec: 7.4
 dimensions:
   length_mm: 4855
@@ -111,59 +41,6 @@ efficiency:
   wltp_kwh_per_100km: 13.9
   epa_kwh_per_100km: 14.0
   real_world_kwh_per_100km: 15.2
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 18.5
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 21.8
-standard_features:
-- Dual 12.3-inch displays (digital cluster + touchscreen)
-- Hyundai CCNC infotainment with OTA updates
-- Wireless Apple CarPlay / Android Auto
-- Digital Key 2.0 (NFC + UWB)
-- Highway Driving Assist 2 (Level 2 ADAS)
-- Vehicle-to-Load (V2L) - 3.6kW
-- Heat pump standard
-- Parametric Pixel LED headlights
-- 18-inch alloy wheels
-- 8-way power driver seat
-- Heated front seats
-- Wireless smartphone charging (dual)
-- Plug & Charge (ISO 15118)
-optional_packages:
-- name: Relaxation Package
-  features:
-  - Relaxation seats with leg support
-  - Massage function (driver)
-- name: Premium Package
-  features:
-  - Ventilated front seats
-  - Heated rear seats
-  - Bose Premium Audio
-  - Active Road Noise Cancellation
-colors:
-  standard:
-  - Gravity Gold Matte
-  - Polar White
-  premium:
-  - Nocturne Gray Metallic
-  - Digital Teal Pearl
-  - Shooting Star Matte
-  - Phantom Black Pearl
-  - Serenity Blue Pearl
-  - Biophilic Blue Pearl
-interior_colors:
-- Gray Eco-Fabric
-- Gray Vegan Leather
-- Black Vegan Leather with Suede Headliner
-technology_highlights:
-- Most aerodynamic EV in production (Cd 0.21)
-- 800V E-GMP architecture
-- 18-minute 10-80% DC fast charging
-- Digital Key 2.0 with UWB
-- Over-the-air software updates
-- Plug & Charge (ISO 15118)
-- 'V2L: Power external devices up to 3.6kW'
 notes: 'The 2025 Ioniq 6 Long Range RWD continues as the most efficient variant with
   614km WLTP range and class-leading 0.21 Cd aerodynamics. The 2025 model year brings
   refined software with improved route planning and charging optimization, new Biophilic
@@ -176,7 +53,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.hyundai.de/modelle/ioniq-6
   - https://www.hyundai.com/worldwide/en/eco/ioniq-6

@@ -2,76 +2,22 @@ id: lancia-ypsilon-54-kwh-2025
 model_id: lancia-ypsilon
 name: 54 kWh
 model_year: 2025
-trim_level: Standard
 variant_code: null
-production:
-  start_date: 2024-10-01
-  end_date: null
-  status: active
-  notes: European launch late 2024, expanding markets in 2025
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 50.8
-  supplier: null
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 102
-  modules: null
-  voltage_nominal: 377
-  notes: 400V architecture, NMC811 chemistry, 102s1p configuration, prismatic cells
 range:
   wltp_km: 426
   wltp_city_km: 510
   wltp_highway_km: 350
-  epa_combined_km: null
-  real_world_avg_km: 325
   real_world_source: EV Database estimation
-  notes: WLTP TEL 426 km, TEH 419 km
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW three-phase
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 28
-    peak_power_notes: 107kW peak, 79kW average 10-80%
-    preconditioning: true
-  charge_curve:
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 107
-  - percent: 50
-    power_kw: 90
-  - percent: 60
-    power_kw: 70
-  - percent: 70
-    power_kw: 50
-  - percent: 80
-    power_kw: 35
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 107
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
-    supplier: null
-  combined:
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
 dimensions:
   length_mm: 4075
   width_mm: 1755
@@ -83,9 +29,6 @@ cargo:
   trunk_max_liters: 1050
   frunk_capacity_liters: 0
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 150
-  quarter_mile_seconds: null
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 260
@@ -93,77 +36,14 @@ performance:
   top_speed_kmh: 150
 efficiency:
   wltp_kwh_per_100km: 14.3
-  wltp_wh_per_km: 143
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 15.6
-  mpge_combined: null
-  drag_coefficient: null
 weight:
   curb_weight_kg: 1590
   gross_vehicle_weight_kg: 2000
   payload_kg: 410
-  weight_distribution_front_percent: null
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut
-  rear: Torsion beam
-brakes:
-  front: Ventilated disc
-  rear: Drum
-  regenerative: true
-tires:
-  standard: 205/55 R17
-features:
-  infotainment:
-  - 10.25" SALA touchscreen
-  - 10.25" digital instrument cluster
-  - Apple CarPlay and Android Auto (wireless)
-  - DAB+ radio
-  - 6-speaker sound system
-  - Lancia Connect app
-  - OTA updates
-  driver_assistance:
-  - Automatic emergency braking
-  - Lane keeping assist
-  - Speed sign recognition
-  - Rear parking sensors
-  - Rear view camera
-  - Adaptive cruise control
-  - Traffic jam assist
-  comfort_convenience:
-  - Automatic dual-zone climate control
-  - Heated front seats
-  - Keyless entry and start
-  - Wireless phone charger
-  - USB-C ports
-  - V2L (Vehicle-to-Load) 3.6 kW
-  - Electric parking brake
-  exterior:
-  - 17" alloy wheels
-  - Full LED headlights
-  - LED tail lights
-  - Privacy glass
-  interior:
-  - Cassina-designed interior
-  - Premium fabric upholstery
-  - 311L boot
-  - 60/40 split-folding rear seats
-  - Sustainable materials
-  - SALA ambient lighting
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  source_urls:
-  - https://ev-database.org/car/3224/Lancia-Ypsilon-54-kWh
-  notes: 'Premium Italian B-segment EV. 426 km WLTP range with 54 kWh battery.
-
-    Cassina-designed interior, SALA infotainment concept. V2L support.
-
-    Built on Stellantis STLA Small platform in Zaragoza, Spain.
-
-    '

@@ -2,13 +2,10 @@ id: ford-mustang-mach-e-gt-2025
 name: GT
 model_id: ford-mustang-mach-e
 model_year: 2025
-trim_level: GT
 battery:
   usable_kwh: 91.0
   total_kwh: 98.7
   chemistry: NMC
-  cells: 376
-  voltage_nominal_v: 360
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -17,64 +14,9 @@ range:
   wltp_city_km: 580
   wltp_highway_km: 410
   real_world_km: 410
-  real_world_conditions: Mixed driving, moderate climate
-  notes: '490 km WLTP range - reduced vs standard AWD due to performance calibration,
-
-    larger wheels, and more aggressive software tuning.
-
-    '
 charging:
-  ac_charging:
-    max_power_kw: 11.0
-    connector_type: Type2
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 8.5
-  dc_charging:
-    max_power_kw: 150
-    connector_type: CCS2
-    charge_time_10_80_minutes: 36
-    charge_time_20_80_minutes: 30
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 148
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: false
-    v2h: true
-    v2g: true
-    max_discharge_power_kw: 9.6
   ac_max_kw: 11.0
   dc_max_kw: 150
-motors:
-  configuration: dual_motor
-  front_motor:
-    type: induction
-    power_kw: 151
-    torque_nm: 262
-  rear_motor:
-    type: permanent_magnet
-    power_kw: 216
-    torque_nm: 430
-  total_power_kw: 358
-  total_power_hp: 487
-  total_torque_nm: 860
 performance:
   top_speed_kmh: 200
   drive_type: AWD
@@ -82,11 +24,6 @@ performance:
   total_power_hp: 487
   total_torque_nm: 860
   acceleration_0_100_sec: 3.7
-efficiency:
-  consumption_wltp_kwh_per_100km: 20.2
-  consumption_epa_kwh_per_100km: 21.0
-  efficiency_rating_eu: D
-  co2_emissions_wltp_g_per_km: 0
 weight:
   curb_weight_kg: 2260
   gross_vehicle_weight_kg: 2740
@@ -110,28 +47,6 @@ features:
   air_suspension: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: BlueCruise 1.3
-  notes: '- MagneRide adaptive dampers (GT exclusive)
-
-    - Performance brake pads (Brembo calipers)
-
-    - 20-inch alloy wheels with performance tyres
-
-    - GT-specific body kit and rear spoiler
-
-    - Nite Pony mode (light show feature)
-
-    - SYNC 4A with Google Built-In
-
-    - Heat pump standard
-
-    - BlueCruise 1.3
-
-    - B&O premium audio
-
-    - Panoramic fixed glass roof
-
-    '
 notes: 'The 2025 Ford Mustang Mach-E GT is the performance flagship with 487 hp,
 
   860 Nm torque and 3.7s 0-100 km/h. MagneRide adaptive dampers provide

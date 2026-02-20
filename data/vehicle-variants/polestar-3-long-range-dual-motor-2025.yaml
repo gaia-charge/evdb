@@ -2,117 +2,26 @@ id: polestar-3-long-range-dual-motor-2025
 name: Long Range Dual Motor
 model_id: polestar-3
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: long-range
-market_position: mainstream
-description: 'The 2025 Long Range Dual Motor is the AWD variant of the Polestar 3,
-  featuring
-
-  dual 180kW permanent magnet motors with a rear-motor disconnect clutch for efficiency.
-
-  The 111kWh battery provides 636km WLTP range with AWD capability.
-
-
-  Standard active dual-chamber air suspension with Standard, Agile, and Firm modes.
-
-  Combined 489hp and 840Nm torque, 0-100 km/h in 5.0 seconds. Towing up to 2,200kg.
-
-  '
-production_status: active
 battery:
   usable_kwh: 107.0
   total_kwh: 111.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 650
-    modules: 17
-    cells: null
 range:
   wltp_km: 636
-  wltp_source: manufacturer
   real_world_km: 530
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 10.0
-      '20_80': 6.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 200
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 20
-      power_kw: 250
-    - soc_percent: 30
-      power_kw: 245
-    - soc_percent: 40
-      power_kw: 230
-    - soc_percent: 50
-      power_kw: 200
-    - soc_percent: 60
-      power_kw: 165
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 70
-    - soc_percent: 90
-      power_kw: 35
-    - soc_percent: 100
-      power_kw: 15
   ac_max_kw: 11
   dc_max_kw: 250
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual-motor
-  drive_type: AWD
-  front:
-    type: permanent-magnet
-    power_kw: 180
-    power_hp: 245
-    torque_nm: 400
-  rear:
-    type: permanent-magnet
-    power_kw: 180
-    power_hp: 245
-    torque_nm: 400
-  combined:
-    power_kw: 360
-    power_hp: 489
-    torque_nm: 840
 performance:
   top_speed_kmh: 210
   total_power_kw: 360
   total_power_hp: 489
   total_torque_nm: 840
   acceleration_0_100_sec: 5.0
-efficiency:
-  consumption_wltp_kwh_100km: 19.6
-  consumption_real_world_kwh_100km: 21.0
-  energy_label: A
 cargo:
   trunk_capacity_liters: 484
   trunk_max_liters: 1411
@@ -131,17 +40,6 @@ dimensions:
   ground_clearance_mm: 206
 metadata:
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   data_quality: verified
   sources:
   - https://www.polestar.com/de/polestar-3/specifications/
-  verified_by: official
-  notes: '2025 model year update with revised pricing (€81,590 in Germany). Dual 180kW
-    motors
-
-    with rear disconnect clutch for efficiency. Active dual-chamber air suspension
-    standard.
-
-    636km WLTP range (vs 706km for Single Motor). Towing up to 2,200kg.
-
-    '

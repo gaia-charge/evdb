@@ -2,8 +2,6 @@ id: cupra-born-59-kwh-2025
 name: 59kWh
 model_id: cupra-born
 model_year: 2025
-production_start: '2025-01-01'
-production_end: null
 battery:
   usable_kwh: 59.0
   total_kwh: 63.0
@@ -13,9 +11,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 59 kWh usable battery (63 kWh gross). Updated MEB platform with improved
-    cell chemistry for 2025.
 range:
   wltp_km: 434
   wltp_city_km: 565
@@ -23,9 +18,6 @@ range:
   epa_km: null
   real_world_km: 370
   real_world_source: estimated
-  notes: "WLTP range of 434 km (10 km improvement over 2024). Real-world range around\
-    \ \n370 km in mixed conditions. Improved battery management software contributes\n\
-    to better range. Winter range approximately 280 km at -10°C.\n"
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -49,36 +41,18 @@ charging:
     power_kw: 68
   - soc_percent: 80
     power_kw: 48
-  charge_time_10_80_minutes: 32
-  notes: 'DC fast charging up to 135kW (up from 120kW in 2024). 10-80% in 32 minutes.
-
-    AC charging: 11kW standard, 0-100% in 6 hours.
-
-    '
-motors:
-- position: rear
-  type: permanent_magnet
-  power_kw: 170
-  torque_nm: 310
-  manufacturer: Volkswagen Group
-drivetrain:
-  type: RWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 160
-  notes: Updated APP550 motor with 170kW (up from 150kW in 2024 58kWh)
   acceleration_0_100_sec: 6.9
 efficiency:
   wltp_kwh_per_100km: 15.6
   real_world_kwh_per_100km: 17.5
-  notes: Slightly improved efficiency through software optimization and updated motor
 weight:
   curb_weight_kg: 1845
   gross_vehicle_weight_kg: 2210
   payload_kg: 365
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: 'No towing capability. Payload: 2210 - 1845 = 365 kg.'
 dimensions:
   length_mm: 4322
   width_mm: 1809
@@ -86,23 +60,10 @@ dimensions:
   height_mm: 1540
   wheelbase_mm: 2765
   ground_clearance_mm: 157
-  trunk_capacity_liters: 385
-  trunk_max_liters: 1267
 cargo:
   trunk_capacity_liters: 385
   trunk_max_liters: 1267
   frunk_capacity_liters: 0
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: rear
-  autonomous_parking: true
-  notes: Park Assist Plus with Memory now standard on 2025 models
 notes: '2025 CUPRA Born with updated 59 kWh battery and improved APP550 motor now  producing
   170kW. Key improvements over 2024: +20kW motor power, 135kW DC  charging (up from
   120kW), 434 km WLTP range (+10 km), improved infotainment  with updated software.
@@ -115,8 +76,6 @@ notes: '2025 CUPRA Born with updated 59 kWh battery and improved APP550 motor no
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source: manufacturer
   sources:
   - https://www.cupraofficial.com/models/born
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/

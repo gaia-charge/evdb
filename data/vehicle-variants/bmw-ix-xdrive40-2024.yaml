@@ -2,72 +2,22 @@ id: bmw-ix-xdrive40-2024
 name: xDrive40
 model_id: bmw-ix
 model_year: 2024
-production_years:
-  start: 2021
-  end: null
-trim_level: xDrive40
-market_position: base
 battery:
   usable_kwh: 71.0
   total_kwh: 76.6
   chemistry: NCM
-  nominal_voltage_v: 400
   cell_type: prismatic
   manufacturer: Samsung SDI / CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 545
-    cells: 280
 range:
   wltp_km: 425
-  wltp_source: manufacturer
   wltp_city_km: 570
   wltp_highway_km: 350
   epa_km: null
-  epa_source: null
   real_world_km: 380
   real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C, highway/city 50/50
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.5
-    onboard_charger_kw: 11
-    phases: 3
-    notes: Optional 22kW upgrade available (3.8h 0-100%)
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 31
-      '0_100': 55
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 145
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 40
-      power_kw: 148
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 125
-    - soc_percent: 70
-      power_kw: 100
-    - soc_percent: 80
-      power_kw: 70
-    - soc_percent: 90
-      power_kw: 40
-  v2l: false
-  v2g: false
-  bidirectional_charging: false
   ac_max_kw: 11
   dc_max_kw: 150
 performance:
@@ -94,8 +44,6 @@ dimensions:
   height_mm: 1695
   wheelbase_mm: 3000
   ground_clearance_mm: 200
-  drag_coefficient: 0.25
-  frontal_area_m2: 2.82
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1750
@@ -106,41 +54,9 @@ weight:
   payload_kg: 550
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-  max_roof_load_kg: 75
 efficiency:
   wltp_kwh_per_100km: 19.8
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 22.5
-  real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C
-seating:
-  capacity: 5
-  configuration: 2+3
-  seat_material: Sensatec synthetic leather (standard), Vernasca leather (optional)
-features:
-  driver_assistance:
-  - Parking Assistant Plus (standard)
-  - Driving Assistant (lane departure warning, collision warning)
-  - Speed Limit Info with no-passing indicator
-  - iDrive 8 with curved display
-  comfort:
-  - 2-zone automatic climate control
-  - Heated front seats (standard)
-  - Acoustic glass (standard)
-  - Panoramic glass roof with SkyLounge (standard)
-  infotainment:
-  - 'Curved display: 12.3" driver + 14.9" central'
-  - iDrive 8 with BMW Operating System 8
-  - BMW Maps navigation
-  - Apple CarPlay / Android Auto wireless
-  - Harman Kardon surround sound (standard)
-  lighting:
-  - LED headlights adaptive (standard)
-  - BMW Laser Light (optional)
-  charging_features:
-  - 11 kW AC onboard charger (standard)
-  - 22 kW AC charger (optional)
-  - CCS Combo DC fast charging up to 150 kW
 metadata:
   created_at: '2026-02-07'
   updated_at: null
@@ -150,39 +66,3 @@ metadata:
   - https://www.bmw.de/de/neufahrzeuge/bmw-i/ix-bmw-ix-uebersicht.html
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/bmw-ix-xdrive40/
   - https://nextmove.de/
-  notes: 'The BMW iX xDrive40 is the base variant and volume seller of the iX lineup,
-
-    offering excellent value with 425 km WLTP range and 240 kW dual-motor AWD.
-
-
-    Compared to xDrive50:
-
-    - €20,000+ cheaper (€87,300 vs ~€110,000)
-
-    - Smaller 71 kWh battery vs 105.2 kWh (-33%)
-
-    - Lower range: 425 km vs 630 km (-205 km, -33%)
-
-    - Less power: 240 kW vs 385 kW (-145 kW, -38%)
-
-    - Slightly slower: 6.1s vs 4.6s 0-100 (+1.5s)
-
-    - Lower DC charging: 150 kW vs 200 kW (-50 kW)
-
-    - Lighter: 2,365 kg vs 2,565 kg (-200 kg)
-
-
-    The xDrive40 represents approximately 70% of iX sales in Germany due to
-
-    better value proposition and still-excellent 425 km range for daily use.
-
-
-    Base price positions it competitively against:
-
-    - Mercedes-Benz EQE 350+ (€72,900) - EQE is sedan, iX is SUV
-
-    - Audi Q8 e-tron 55 quattro (€82,800) - Similar price, iX has better tech
-
-    - Tesla Model X (€98,990) - iX is €11,690 cheaper, better build quality
-
-    '

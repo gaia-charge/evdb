@@ -1,35 +1,23 @@
 id: mercedes-benz-glb-250-plus-2026
 name: Mercedes-Benz GLB 250+
 model_id: mercedes-benz-glb
-variant_name: 250+
 model_year: 2026
 battery:
   usable_kwh: 85.0
   total_kwh: 90.0
   chemistry: NMC
-  cells: null
-  supplier: null
-  modules: null
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volt: 800
 range:
   wltp_km: 631
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 465
-  real_world_mild_weather_km: 530
-  real_world_cold_weather_km: 395
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 9.25
   dc_max_kw: 353
-  dc_charge_time_10_80_minutes: 16
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 1220
   dc_curve:
   - soc_percent: 10
     power_kw: 353
@@ -41,12 +29,6 @@ charging:
     power_kw: 180
   - soc_percent: 80
     power_kw: 120
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  onboard_charger_optional_kw: 22
-  plug_and_charge: true
-  preconditioning: true
 performance:
   drive_type: RWD
   motors:
@@ -57,13 +39,7 @@ performance:
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 335
-  acceleration_0_100_kmh_sec: 7.4
   top_speed_kmh: 210
-  drive_modes:
-  - ECO
-  - Comfort
-  - Sport
-  - Individual
   acceleration_0_100_sec: 7.4
 dimensions:
   length_mm: 4732
@@ -72,9 +48,6 @@ dimensions:
   height_mm: 1687
   wheelbase_mm: 2889
   ground_clearance_mm: 170
-  trunk_capacity_liters: 540
-  trunk_max_liters: 1715
-  frunk_capacity_liters: 127
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1510
@@ -88,64 +61,7 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 15.8
   real_world_kwh_per_100km: 18.3
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Active Distance Assist DISTRONIC
-  - Active Steering Assist
-  - Active Brake Assist
-  - Active Lane Keeping Assist
-  - Active Blind Spot Assist
-  - Traffic Sign Assist
-  - PRE-SAFE
-  infotainment:
-  - MBUX Superscreen (triple display)
-  - MB.OS operating system
-  - Navigation with Electric Intelligence
-  - Wireless Apple CarPlay / Android Auto
-  - AI-powered Voice Assistant
-  comfort:
-  - Dual-zone automatic climate control
-  - Heat pump (standard)
-  - 7-seat configuration
-  - 127L frunk
-  - Ambient lighting
-  - Electric tailgate
-  - Wireless smartphone charging
-  connectivity:
-  - Mercedes me Connect
-  - Over-the-air updates (MB.OS)
-  - Mercedes me Charge
-  - Plug & Charge (ISO 15118-2)
-version:
-  trim_level: 250+
-  production_location: Kecskemét, Hungary
-  build_quality: premium
 metadata:
   created_at: '2026-02-10T12:00:00Z'
   updated_at: '2026-02-10T12:00:00Z'
   data_quality: estimated
-  data_source: manufacturer_and_estimated
-  verified_by: EV Database estimates + Mercedes-Benz official announcements
-  notes: 'The GLB 250+ replaces the EQB 250+ with the new MMA platform (800V).
-
-    Key improvements over EQB:
-
-    - Charging: 353 kW vs 100 kW DC
-
-    - 10-80%: 16 min vs 32 min
-
-    - Range: 631 km WLTP vs 453 km (+39%)
-
-    - Frunk: 127L (new)
-
-    - 7-seat layout retained
-
-    Competes with BMW iX1, Volvo EX40, and Tesla Model Y.
-
-    '
-sources:
-- url: https://ev-database.org/car/3406/Mercedes-Benz-GLB-250plus
-  title: EV Database - Mercedes-Benz GLB 250+
-  date_accessed: '2026-02-10'

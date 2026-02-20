@@ -12,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 800
 range:
   wltp_km: 773
   wltp_city_km: 970
@@ -26,57 +25,18 @@ charging:
   ac_connector: Type2
   dc_max_kw: 353
   dc_connector: CCS2
-  dc_10_80_min: 16
-  dc_charge_curve:
-  - soc_percent: 10
-    power_kw: 320
-  - soc_percent: 20
-    power_kw: 353
-  - soc_percent: 30
-    power_kw: 340
-  - soc_percent: 40
-    power_kw: 300
-  - soc_percent: 50
-    power_kw: 250
-  - soc_percent: 60
-    power_kw: 200
-  - soc_percent: 70
-    power_kw: 140
-  - soc_percent: 80
-    power_kw: 90
-  - soc_percent: 90
-    power_kw: 50
-  - soc_percent: 100
-    power_kw: 20
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
-motor:
-  count: 2
-  type: permanent_magnet
-  position: front_and_rear
-  total_power_kw: 260
-  total_power_hp: 354
-  total_torque_nm: 515
-drivetrain: AWD
 performance:
   top_speed_kmh: 210
   acceleration_0_100_sec: 4.9
   total_power_kw: 260
   total_power_hp: 354
   total_torque_nm: 515
-consumption:
-  wltp_kwh_per_100km: 12.5
-  real_world_kwh_per_100km: 14.8
-  energy_efficiency_class: A+
 dimensions:
   length_mm: 4723
   width_mm: 1855
   height_mm: 1468
   wheelbase_mm: 2790
   ground_clearance_mm: 140
-  drag_coefficient: 0.22
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1300
@@ -87,55 +47,18 @@ weight:
   payload_kg: 500
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-standard_equipment:
-- 11.9" OLED center touchscreen with MB.OS
-- Digital instrument cluster
-- Apple CarPlay & Android Auto
-- LED high-performance headlights
-- Heated front seats
-- Dual-zone climate control
-- Heat pump
-- Synthetic leather upholstery (ARTICO)
-- 19" alloy wheels
-- Adaptive cruise control with active lane change assist
-- Lane keeping assist
-- Automatic emergency braking
-- 360-degree parking camera
-- Parking assist with remote parking
-- Keyless entry & start
-- Wireless phone charging
-- Hey Mercedes voice assistant
-- Plug & Charge (ISO 15118-2)
-- Battery preconditioning via navigation
-- Ambient lighting (64 colors)
-- Sport suspension
 optional_equipment:
 - name: Superscreen (passenger display)
-  cost: 1490
 - name: Augmented Reality Head-Up Display
-  cost: 1190
 - name: AIRMATIC air suspension
-  cost: 1785
 - name: Burmester surround sound system
-  cost: 590
 - name: 20" AMG alloy wheels
-  cost: 1428
 - name: Panoramic sliding sunroof
-  cost: 1416
 - name: AMG Line Exterior
-  cost: 1547
 - name: Night package
-  cost: 476
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
   sources:
   - https://ev-database.org/car/3140/Mercedes-Benz-CLA-350-4MATIC
   - https://www.mercedes-benz.com/
-  last_updated: '2026-02-10'
-  notes: 'Top-spec CLA with dual-motor AWD and 90 kWh NMC battery on 800V MMA platform.
-    260 kW (354 hp) combined output, 0-100 km/h in 4.9 seconds. 773 km WLTP range  despite
-    AWD. Ultra-fast 353 kW DC charging enables 10-80% in 16 minutes. Deliveries expected
-    late 2025 / early 2026.
-
-    '

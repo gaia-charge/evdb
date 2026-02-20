@@ -48,10 +48,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_5_to_80_percent_min: 21
-  time_10_to_80_percent_min: 21
   charging_speed_kmh: 1380
-  plug_and_charge: true
 bidirectional:
   v2l: true
   v2l_max_kw: 11
@@ -78,63 +75,21 @@ performance:
   total_power_kw: 225
   total_power_hp: 306
   total_torque_nm: 485
-  acceleration_0_100_kmh_sec: 6.7
-  acceleration_0_60_mph_sec: 6.3
   top_speed_kmh: 210
   acceleration_0_100_sec: 6.7
 weight:
   curb_weight_kg: 2270
   gross_vehicle_weight_kg: 2895
   payload_kg: 625
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
   towing_capacity_braked_kg: 2100
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 17.0
-  wltp_kwh_per_100km_city: 14.2
-  wltp_kwh_per_100km_highway: 20.5
   real_world_kwh_per_100km: 19.2
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 235/55 R19
-  standard_size_rear: 255/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -20km range)
-  - 21 inch (optional, -35km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control with lane keeping assist
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system (standard)
-  - Predictive efficiency assist
-  - Intersection assist
-  - Emergency assist
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  - 5G connectivity (optional)
-  special_features:
-  - Three-stage recuperation (0.1g, 0.15g, 0.2g)
-  - B mode for strong regen (one-pedal driving)
-  - Pre-conditioning (battery & cabin)
-  - Acoustic Vehicle Alerting System (AVAS)
-  - Bank & Turn technology for improved dynamics
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-11'
   sources:
   - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-e-tron/technische-daten.html
   - https://ev-database.org/car/1698/Audi-Q6-e-tron
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q6-e-tron/
-  notes: First Audi on the PPE platform with 800V architecture. 270 kW peak DC charging
-    enables 10-80% in 21 minutes. Most efficient Q6 variant with excellent range (641
-    km WLTP). Competes with BMW iX3 and Mercedes EQE SUV. Features bank & turn technology
-    for improved cornering dynamics.

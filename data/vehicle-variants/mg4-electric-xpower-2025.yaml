@@ -2,85 +2,25 @@ id: mg4-electric-xpower-2025
 model_id: mg-mg4-electric
 name: XPower
 model_year: 2025
-trim_level: XPower
-version_info:
-  major_version: 1
-  minor_version: 2
-  release_date: 2024-09-01
-  changes_from_previous: 2025 model year with minor updates
 battery:
   chemistry: NMC
-  supplier: CATL
   usable_kwh: 61.7
   total_kwh: 64.0
-  cells: null
-  modules: null
-  voltage_nominal: 400
-  voltage_max: 460
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 385
   wltp_city_km: 500
   wltp_highway_km: 310
   epa_km: null
   real_world_km: 330
-  real_world_highway_km: 270
-  real_world_city_km: 410
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 3
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 6.5
-  dc:
-    peak_power_kw: 135
-    time_10_80_min: 35
-    time_20_80_min: 29
-    preconditioning_available: false
-  bidirectional:
-    capabilities:
-    - v2l
-    max_power_kw: 2.2
   ac_max_kw: 11.0
   dc_max_kw: 135
-charging_curve:
-- soc_percent: 10
-  power_kw: 125
-- soc_percent: 20
-  power_kw: 135
-- soc_percent: 30
-  power_kw: 133
-- soc_percent: 40
-  power_kw: 125
-- soc_percent: 50
-  power_kw: 110
-- soc_percent: 60
-  power_kw: 90
-- soc_percent: 70
-  power_kw: 70
-- soc_percent: 80
-  power_kw: 45
-- soc_percent: 90
-  power_kw: 22
-motor:
-  type: permanent_magnet
-  count: 2
-  drive_type: AWD
-  power_kw: 320
-  power_hp: 435
-  torque_nm: 600
-  max_rpm: 16000
 performance:
   acceleration_0_100_sec: 3.8
-  acceleration_0_60_sec: 3.5
-  top_speed_kph: 200
   top_speed_kmh: 200
-  top_speed_limited: true
   total_power_kw: 320
   total_torque_nm: 600
   total_power_hp: 435
@@ -100,98 +40,8 @@ weight:
   payload_kg: 424
   towing_capacity_braked_kg: 500
   towing_capacity_unbraked_kg: 500
-  weight_distribution_front_percent: 49
-  weight_distribution_rear_percent: 51
-wheels_tires:
-  standard:
-    front_size: 235/40 R18
-    rear_size: 235/40 R18
-    wheel_size_inches: 18
-brakes:
-  front: Ventilated discs, 4-piston calipers
-  rear: Ventilated discs
-  regenerative_braking: true
-  one_pedal_driving: true
-  regen_levels: 3
-suspension:
-  front: MacPherson strut (sport-tuned)
-  rear: Multi-link independent (sport-tuned)
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: true
-interior:
-  seating_material: synthetic_leather
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats: false
-  power_adjustable_driver_seat: true
-  panoramic_roof: false
-  ambient_lighting: true
-climate:
-  heat_pump: true
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 6
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 39990
-  market: DE
-  year: 2025
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - AT
-  - BE
-  - CH
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Volkswagen ID.3 GTX
-- Cupra Born VZ
-- Hyundai Ioniq 5 N
-- BMW iX1 xDrive30
 metadata:
   data_quality: verified
   sources:
   - https://www.mgmotor.eu/mg4-electric/specs
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: 'Performance variant with dual motors and AWD.
-
-    3.8s 0-100 km/h makes it one of the fastest affordable EVs.
-
-    435 hp and 600 Nm torque from dual-motor setup.
-
-    Sport-tuned suspension and upgraded brakes.
-
-    Same 64kWh battery as Extended Range but lower range due to performance.
-
-    Unique bright orange exterior color option.
-
-    Excellent value vs competitors like VW ID.3 GTX.
-
-    '

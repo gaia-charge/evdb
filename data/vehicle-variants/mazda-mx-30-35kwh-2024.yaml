@@ -1,10 +1,8 @@
-# Mazda MX-30 35.5 kWh (2024)
 id: mazda-mx-30-35kwh-2024
 name: 35.5 kWh FWD
 model_id: mazda-mx-30
 model_year: 2024
 variant_code: MX30-35-FWD
-
 battery:
   usable_kwh: 35.5
   total_kwh: 35.5
@@ -14,26 +12,13 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 355
-  notes: |
-    Relatively small 35.5 kWh battery chosen deliberately by Mazda to minimize
-    production emissions (well-to-wheel approach). Battery capacity optimized
-    for urban driving patterns and second-car use cases. Panasonic NMC cells.
-
 range:
   wltp_km: 200
   wltp_city_km: 262
   wltp_highway_km: 150
-  epa_km: null  # Not sold in US
+  epa_km: null
   real_world_km: 165
   real_world_source: What Car? real-world test
-  notes: |
-    WLTP range of only 200 km is the MX-30's biggest limitation. Real-world
-    range around 165 km in mixed conditions, dropping to 140 km in winter.
-    Suitable for urban commuting and short trips, but requires frequent
-    charging for daily use beyond city limits. Not recommended as primary
-    vehicle for high-mileage users.
-
 charging:
   ac_max_kw: 6.6
   ac_phases: 1
@@ -41,62 +26,46 @@ charging:
   dc_max_kw: 50
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 50
-    - soc_percent: 10
-      power_kw: 50
-    - soc_percent: 20
-      power_kw: 50
-    - soc_percent: 30
-      power_kw: 48
-    - soc_percent: 40
-      power_kw: 45
-    - soc_percent: 50
-      power_kw: 40
-    - soc_percent: 60
-      power_kw: 35
-    - soc_percent: 70
-      power_kw: 30
-    - soc_percent: 80
-      power_kw: 22
-    - soc_percent: 90
-      power_kw: 12
-  time_0_to_100_min: 55
+  - soc_percent: 0
+    power_kw: 50
+  - soc_percent: 10
+    power_kw: 50
+  - soc_percent: 20
+    power_kw: 50
+  - soc_percent: 30
+    power_kw: 48
+  - soc_percent: 40
+    power_kw: 45
+  - soc_percent: 50
+    power_kw: 40
+  - soc_percent: 60
+    power_kw: 35
+  - soc_percent: 70
+    power_kw: 30
+  - soc_percent: 80
+    power_kw: 22
+  - soc_percent: 90
+    power_kw: 12
   time_10_to_80_min: 36
   time_20_to_80_min: 25
   charging_speed_kmh: 300
-  notes: |
-    DC fast charging limited to 50 kW peak. 10-80% in 36 minutes. Single-phase
-    AC charging at 6.6 kW (0-100% in ~5.5 hours). The small battery means total
-    charging time is reasonable despite lower charging power. Home charging
-    overnight easily covers daily urban use.
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: |
-    No bidirectional charging capabilities on the MX-30.
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 107
-      power_hp: 145
-      torque_nm: 271
+  - position: front
+    type: permanent magnet
+    power_kw: 107
+    power_hp: 145
+    torque_nm: 271
   total_power_kw: 107
   total_power_hp: 145
   total_torque_nm: 271
   acceleration_0_100_sec: 9.7
   top_speed_kmh: 140
-  notes: |
-    Single permanent magnet motor at front axle with 145 hp and 271 Nm. 0-100
-    km/h in 9.7 seconds is leisurely by EV standards. Top speed limited to 140
-    km/h. Performance adequate for city driving with good initial torque, but
-    not sporty. Mazda prioritizes refinement and efficiency over acceleration.
-
 weight:
   curb_weight_kg: 1645
   gross_vehicle_weight_kg: 2045
@@ -104,22 +73,11 @@ weight:
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-  towing_capacity_braked_kg: 750
-  towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 17.8
-  wltp_city_kwh_per_100km: 13.5
-  wltp_highway_kwh_per_100km: 23.7
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 21.5
   efficiency_rating: B
-  notes: |
-    17.8 kWh/100km WLTP - good efficiency for a crossover despite higher drag.
-    Real-world efficiency around 21.5 kWh/100km in mixed conditions. The
-    relatively light weight (small battery) helps efficiency. Highway efficiency
-    suffers from higher drag coefficient (Cd 0.335).
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -127,69 +85,55 @@ features:
   torque_vectoring: false
   one_pedal_driving: false
   autopilot_level: 2
-  autopilot_name: "Mazda Co-Pilot Assist"
-  notes: |
-    - Heat pump standard (essential given small battery)
-    - Mazda Co-Pilot Assist with adaptive cruise control and lane keeping
-    - Unique freestyle doors (rear-hinged rear doors, no B-pillar when open)
-    - 8.8-inch touchscreen with Mazda Connect
-    - 7-inch digital instrument cluster
-    - Head-up display
-    - Cork interior panels (sustainable material)
-    - Recycled PET bottle fabric for seats
-    - Apple CarPlay and Android Auto
-    - Dual-zone climate control
-    - 360-degree camera (optional)
-    - Bose 12-speaker audio (optional)
-
 optional_equipment:
-  - name: Panoramic Sunroof
-    code: SUNROOF
-    category: comfort
-    included_in_base: false
-    notes: "Large glass roof with power sunshade"
-  - name: Bose Premium Audio
-    code: BOSE
-    category: infotainment
-    included_in_base: false
-    notes: "12-speaker Bose premium audio system"
-  - name: Towing Package
-    code: TOW
-    category: utility
-    included_in_base: false
-    notes: "750 kg braked trailer capacity"
-
+- name: Panoramic Sunroof
+  code: SUNROOF
+  category: comfort
+  included_in_base: false
+- name: Bose Premium Audio
+  code: BOSE
+  category: infotainment
+  included_in_base: false
+- name: Towing Package
+  code: TOW
+  category: utility
+  included_in_base: false
 dimensions:
   length_mm: 4395
   width_mm: 1795
   height_mm: 1570
   wheelbase_mm: 2655
   ground_clearance_mm: 180
-
 cargo:
   trunk_capacity_liters: 366
   trunk_max_liters: 1171
   frunk_capacity_liters: 0
+notes: 'The Mazda MX-30 is a polarizing vehicle. Its 200 km WLTP range is the lowest
 
-
-notes: |
-  The Mazda MX-30 is a polarizing vehicle. Its 200 km WLTP range is the lowest
   of any current EV, making it suitable only for urban use and short trips.
-  However, Mazda's philosophy is thoughtful: smaller battery = lower production
+
+  However, Mazda''s philosophy is thoughtful: smaller battery = lower production
+
   emissions, and most daily driving is under 50 km. The freestyle doors, cork
+
   interior, and premium feel create a unique ownership experience. Best suited
+
   as a second car, for city dwellers with home charging, or environmentally
+
   conscious buyers who prioritize sustainability over range. Available trims:
+
   Prime-Line, Exclusive-Line, and R-EV (range extender with rotary engine).
+
   Competes with Mini Cooper Electric, Honda e, and Smart #1.
 
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.mazda.de/neuwagen/mx-30/spezifikationen/
-    - https://www.mazda.com/en/innovation/technology/electric/mx-30/
-    - https://ev-database.org/car/1273/Mazda-MX-30
-    - https://www.whatcar.com/mazda/mx-30/hatchback/review/n20638
+  - https://www.mazda.de/neuwagen/mx-30/spezifikationen/
+  - https://www.mazda.com/en/innovation/technology/electric/mx-30/
+  - https://ev-database.org/car/1273/Mazda-MX-30
+  - https://www.whatcar.com/mazda/mx-30/hatchback/review/n20638

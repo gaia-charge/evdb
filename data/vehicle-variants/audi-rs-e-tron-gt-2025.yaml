@@ -1,42 +1,21 @@
-# Audi RS e-tron GT 2025 - High-performance variant
-# 2024 facelift: 630 kW / 857 PS, 2.8s 0-100 km/h
-# 105 kWh battery, 322 kW DC charging
-
 id: audi-rs-e-tron-gt-2025
 name: RS e-tron GT
 model_id: audi-e-tron-gt
 model_year: 2025
 variant_code: RSETGT-25
-
-production:
-  status: active
-  start_date: "2024-06-01"
-  plant: "Böllinger Höfe, Neckarsulm, Germany"
-
 battery:
   usable_kwh: 97.0
   total_kwh: 105.0
   chemistry: NMC
-  cells: 396
-  modules: 33
   cell_type: pouch
-  voltage_nominal: 730
-  voltage_max: 850
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
-  supplier: "LG Energy Solution"
-
 range:
   wltp_km: 598
   wltp_city_km: 740
   wltp_highway_km: 527
   real_world_km: 525
-  real_world_highway_km: 495
-  real_world_city_km: 740
-  real_world_winter_km: 440
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -44,50 +23,43 @@ charging:
   dc_max_kw: 322
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 310
-    - soc_percent: 10
-      power_kw: 322
-    - soc_percent: 30
-      power_kw: 310
-    - soc_percent: 50
-      power_kw: 260
-    - soc_percent: 70
-      power_kw: 140
-    - soc_percent: 80
-      power_kw: 80
+  - soc_percent: 0
+    power_kw: 310
+  - soc_percent: 10
+    power_kw: 322
+  - soc_percent: 30
+    power_kw: 310
+  - soc_percent: 50
+    power_kw: 260
+  - soc_percent: 70
+    power_kw: 140
+  - soc_percent: 80
+    power_kw: 80
   time_10_to_80_min: 16
   charging_speed_kmh: 1370
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 250
-      torque_nm: null
-    - position: rear
-      type: permanent magnet
-      power_kw: 475
-      torque_nm: null
+  - position: front
+    type: permanent magnet
+    power_kw: 250
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: 475
+    torque_nm: null
   total_power_kw: 630
   total_power_hp: 857
   total_torque_nm: 865
   acceleration_0_100_sec: 2.8
   top_speed_kmh: 250
-
 efficiency:
   wltp_kwh_per_100km: 18.4
   real_world_kwh_per_100km: 18.5
-  real_world_highway_kwh_per_100km: 19.6
-  real_world_city_kwh_per_100km: 13.1
-  co2_emissions_wltp_g_per_km: 0
-
 dimensions:
   length_mm: 5004
   width_mm: 1964
@@ -95,26 +67,16 @@ dimensions:
   height_mm: 1394
   wheelbase_mm: 2900
   ground_clearance_mm: 125
-  drag_coefficient: 0.24
-  frontal_area_m2: 2.35
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 405
   frunk_capacity_liters: 77
-
 weight:
   curb_weight_kg: 2397
   gross_vehicle_weight_kg: 2860
   payload_kg: 540
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  roof_load_kg: 75
-
-interior:
-  seating_capacity: 4
-  seating_layout: "2+2"
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -122,19 +84,19 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
+notes: '2025 model year RS e-tron GT (2024 facelift). 630 kW (857 PS) with 865 Nm.
 
-platform_id: j1-performance
-
-notes: |
-  2025 model year RS e-tron GT (2024 facelift). 630 kW (857 PS) with 865 Nm.
   2.8s 0-100 km/h, top speed 250 km/h. Massive power increase from 440 kW pre-facelift.
+
   Same 105 kWh / 97 kWh usable battery. 598 km WLTP range.
+
   Sport differential, ceramic brakes optional, RS-specific suspension tuning.
 
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - https://ev-database.org/car/2220/Audi-RS-e-tron-GT
-    - https://www.audi.de
+  - https://ev-database.org/car/2220/Audi-RS-e-tron-GT
+  - https://www.audi.de

@@ -1,35 +1,23 @@
 id: alpine-a390-gt-2026
 name: Alpine A390 GT
 model_id: alpine-a390
-variant_name: GT
 model_year: 2026
 battery:
   usable_kwh: 89.0
   total_kwh: 94.0
   chemistry: NMC
-  cells: null
-  supplier: null
-  modules: null
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volt: 400
 range:
   wltp_km: 555
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 470
-  real_world_mild_weather_km: 535
-  real_world_cold_weather_km: 400
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 9.75
   dc_max_kw: 150
-  dc_charge_time_10_80_minutes: 33
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 590
   dc_curve:
   - soc_percent: 10
     power_kw: 150
@@ -41,12 +29,6 @@ charging:
     power_kw: 80
   - soc_percent: 80
     power_kw: 50
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  onboard_charger_optional_kw: 22
-  plug_and_charge: null
-  preconditioning: true
 performance:
   drive_type: AWD
   motors:
@@ -61,12 +43,7 @@ performance:
   total_power_kw: 295
   total_power_hp: 401
   total_torque_nm: 661
-  acceleration_0_100_kmh_sec: 4.8
   top_speed_kmh: 200
-  drive_modes:
-  - Normal
-  - Sport
-  - Individual
   acceleration_0_100_sec: 4.8
 dimensions:
   length_mm: 4680
@@ -87,58 +64,7 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 16.0
   real_world_kwh_per_100km: 18.9
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Automatic emergency braking
-  - Blind spot warning
-  - Traffic sign recognition
-  infotainment:
-  - Alpine Infotainment System
-  - Alpine Telemetrics
-  - Wireless Apple CarPlay / Android Auto
-  - Navigation with EV route planning
-  comfort:
-  - Dual-zone automatic climate control
-  - Heat pump (standard)
-  - Ambient lighting
-  - Sport seats with Alpine branding
-  - Wireless smartphone charging
-  connectivity:
-  - OTA updates
-  - Connected services
-  - Remote climate control
-  bidirectional:
-    v2l: true
-    v2l_power_kw: null
-    v2l_outlet: 1 x Type 2 (Adapter)
-    v2h: true
-    v2h_power_kw: 22
-    v2g: true
-    v2g_power_kw: 22
-version:
-  trim_level: GT
-  production_location: Douai, France
-  build_quality: premium
 metadata:
   created_at: '2026-02-10T12:00:00Z'
   updated_at: '2026-02-10T12:00:00Z'
   data_quality: estimated
-  data_source: manufacturer_and_estimated
-  verified_by: EV Database estimates + Alpine official announcements
-  notes: 'The Alpine A390 GT is the standard variant of Alpine''s electric fastback.
-
-    Built on the AmpR Medium platform with 400V architecture. Features AWD with
-
-    295 kW total output and 4.8s 0-100 km/h. Supports V2L, V2H, and V2G.
-
-    Competes with Tesla Model Y Performance, BMW iX1, and Polestar 4.
-
-    '
-sources:
-- url: https://ev-database.org/car/3390/Alpine-A390-GT
-  title: EV Database - Alpine A390 GT
-  date_accessed: '2026-02-10'

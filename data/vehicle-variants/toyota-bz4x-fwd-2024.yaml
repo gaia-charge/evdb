@@ -48,10 +48,7 @@ charging:
     power_kw: 25
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 32
-  time_10_to_80_percent_min: 30
   charging_speed_kmh: 900
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
@@ -68,8 +65,6 @@ performance:
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 266
-  acceleration_0_100_kmh_sec: 7.5
-  acceleration_0_60_mph_sec: 7.1
   top_speed_kmh: 160
   acceleration_0_100_sec: 7.5
 dimensions:
@@ -87,58 +82,15 @@ weight:
   curb_weight_kg: 1920
   gross_vehicle_weight_kg: 2395
   payload_kg: 475
-  distribution_front_percent: 58
-  distribution_rear_percent: 42
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 14.9
-  wltp_kwh_per_100km_city: 12.8
-  wltp_kwh_per_100km_highway: 17.2
   real_world_kwh_per_100km: 17.8
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 235/60 R18
-  standard_size_rear: 235/60 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 20 inch (optional, -20km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Toyota Safety Sense 3.0
-  - Pre-Collision System with pedestrian detection
-  - Full-Speed Dynamic Radar Cruise Control
-  - Lane Departure Alert with steering assist
-  - Lane Tracing Assist
-  - Road Sign Assist
-  - Automatic High Beams
-  - Blind Spot Monitor
-  - Rear Cross-Traffic Alert
-  - Parking Support Brake
-  connectivity:
-  - Toyota Connected Services
-  - Remote climate control via app
-  - Remote door lock/unlock
-  - Vehicle finder
-  - Guest driver monitoring
-  - OTA software updates
-  special_features:
-  - Radiant heating system (heated steering wheel, seats, surfaces)
-  - Heat pump standard (excellent cold weather efficiency)
-  - One-Motion Grip e-shifter (dial-style)
-  - Paddle-style regen control
-  - Panoramic roof (fixed)
-  - Solar roof option (for auxiliary systems)
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
   sources:
   - https://www.toyota.com/bz4x/features/
   - https://ev-database.org/car/1547/Toyota-bZ4X-FWD
   - https://www.edmunds.com/toyota/bz4x/
-  notes: 'Toyota''s first mass-market BEV. Conservative approach with excellent build
-    quality. Notable limitation: only 6.6kW AC charging (single-phase). Heat pump
-    standard. 10-year unlimited km battery warranty (best in class). Competes with
-    VW ID.4, Hyundai Ioniq 5, Tesla Model Y.'

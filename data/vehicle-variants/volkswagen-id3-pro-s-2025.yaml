@@ -1,10 +1,8 @@
-# Volkswagen ID.3 Pro S (2025)
 id: volkswagen-id3-pro-s-2025
 name: Pro S
 model_id: volkswagen-id3
 model_year: 2025
 variant_code: ID3-PRO-S
-
 dimensions:
   length_mm: 4261
   width_mm: 1809
@@ -12,12 +10,10 @@ dimensions:
   height_mm: 1552
   wheelbase_mm: 2771
   ground_clearance_mm: 150
-
 cargo:
   trunk_capacity_liters: 385
   trunk_max_liters: 1267
   frunk_capacity_liters: 0
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -27,12 +23,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    77 kWh usable battery (82 kWh gross). Same battery as ID.4 Pro and
-    ID.5 Pro. 400V architecture with NCM chemistry. Liquid-cooled thermal
-    management for optimized charging and longevity.
-
 range:
   wltp_km: 565
   wltp_city_km: 740
@@ -40,11 +30,6 @@ range:
   epa_km: null
   real_world_km: 485
   real_world_source: ADAC EcoTest estimate
-  notes: |
-    WLTP range of 565 km, slightly improved over 2024 (558 km) through
-    software optimizations. Best-in-class range for a compact electric
-    hatchback. Real-world range around 485 km in mixed conditions.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -52,81 +37,58 @@ charging:
   dc_max_kw: 175
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 175
-    - soc_percent: 10
-      power_kw: 175
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 155
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 90
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 30
-  time_0_to_100_min: 35
+  - soc_percent: 0
+    power_kw: 175
+  - soc_percent: 10
+    power_kw: 175
+  - soc_percent: 20
+    power_kw: 170
+  - soc_percent: 30
+    power_kw: 155
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 115
+  - soc_percent: 60
+    power_kw: 90
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 30
   time_10_to_80_min: 27
   time_20_to_80_min: 24
   charging_speed_kmh: 1100
-  notes: |
-    Fast DC charging up to 175 kW peak (up from 170 kW in 2024).
-    10-80% in approximately 27 minutes. 11 kW AC charging standard
-    (22 kW optional). Plug & Charge support added for 2025 MY.
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-  notes: "Bidirectional charging not supported in 2025 model"
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 170
-      power_hp: 231
-      torque_nm: 310
+  - position: rear
+    type: permanent magnet
+    power_kw: 170
+    power_hp: 231
+    torque_nm: 310
   total_power_kw: 170
   total_power_hp: 231
   total_torque_nm: 310
   acceleration_0_100_sec: 7.4
   top_speed_kmh: 160
-  notes: |
-    Single permanent magnet motor at rear axle. Same APP310 motor as 2024
-    model. Responsive and efficient RWD powertrain. 0-100 km/h in 7.4 seconds.
-
 weight:
   curb_weight_kg: 1914
   gross_vehicle_weight_kg: 2370
   payload_kg: 456
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
-  notes: "Well-balanced weight distribution for a hatchback. No towing approved."
-
 efficiency:
   wltp_kwh_per_100km: 15.7
-  wltp_city_kwh_per_100km: 13.3
-  wltp_highway_kwh_per_100km: 18.6
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.3
   efficiency_rating: A
-  notes: |
-    Very efficient at 15.7 kWh/100km WLTP. Slightly improved over 2024
-    through software optimizations. Among the most efficient EVs in its
-    class due to compact size and low weight.
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -134,53 +96,43 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - Travel Assist Level 2 ADAS (lane keeping + adaptive cruise)
-    - ID. Light ambient lighting strip for visual feedback
-    - One-pedal driving with regenerative braking
-    - 12.9-inch touchscreen with wireless Apple CarPlay/Android Auto
-    - Updated ID. Software 4.0 with faster response times
-    - Physical buttons for climate and volume (2024 facelift carried over)
-    - Plug & Charge support (new for 2025)
-    - Matrix LED headlights (IQ.LIGHT) available
-
 optional_equipment:
-  - name: IQ.DRIVE Assist Package
-    code: IQDRV
-    category: safety
-    included_in_base: false
-    notes: "Enhanced ADAS with lane change assist and park assist"
-  - name: Panoramic Glass Roof
-    code: PGR
-    category: comfort
-    included_in_base: false
-  - name: 22kW AC Charging
-    code: AC22
-    category: charging
-    included_in_base: false
-    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
-  - name: Design Package Plus
-    code: DSGN
-    category: exterior
-    included_in_base: false
-    notes: "20-inch wheels, tinted windows, sport bumpers"
+- name: IQ.DRIVE Assist Package
+  code: IQDRV
+  category: safety
+  included_in_base: false
+- name: Panoramic Glass Roof
+  code: PGR
+  category: comfort
+  included_in_base: false
+- name: 22kW AC Charging
+  code: AC22
+  category: charging
+  included_in_base: false
+- name: Design Package Plus
+  code: DSGN
+  category: exterior
+  included_in_base: false
+notes: 'The 2025 VW ID.3 Pro S is the long-range variant of VW''s compact electric
 
-notes: |
-  The 2025 VW ID.3 Pro S is the long-range variant of VW's compact electric
   hatchback. With 77 kWh battery, it offers an impressive 565 km WLTP range
-  in a compact package. Key 2025 updates include ID. Software 4.0 with
-  improved infotainment responsiveness, Plug & Charge support, and slightly
-  improved DC charging peak (175 kW). The ID.3 remains VW's most affordable
-  long-range EV and the spiritual successor to the Golf. Built on MEB
-  platform at VW's carbon-neutral Zwickau and Dresden factories.
 
+  in a compact package. Key 2025 updates include ID. Software 4.0 with
+
+  improved infotainment responsiveness, Plug & Charge support, and slightly
+
+  improved DC charging peak (175 kW). The ID.3 remains VW''s most affordable
+
+  long-range EV and the spiritual successor to the Golf. Built on MEB
+
+  platform at VW''s carbon-neutral Zwickau and Dresden factories.
+
+  '
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.de/de/modelle/id3.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id3/
+  - https://www.volkswagen.de/de/modelle/id3.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id3/

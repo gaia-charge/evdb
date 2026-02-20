@@ -2,93 +2,25 @@ id: mg4-electric-extended-range-2024
 model_id: mg4-electric
 name: Extended Range
 model_year: 2024
-trim_level: Extended Range
-version_info:
-  major_version: 1
-  minor_version: 2
-  release_date: 2022-09-01
-  changes_from_previous: Larger battery variant for increased range
 battery:
   chemistry: NMC
-  supplier: CATL
   usable_kwh: 61.7
   total_kwh: 64.0
-  cells: 210
-  modules: 26
-  voltage_nominal: 396
-  voltage_max: 453
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 450
   wltp_city_km: 590
   wltp_highway_km: 360
   epa_km: null
   real_world_km: 390
-  real_world_highway_km: 330
-  real_world_city_km: 470
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 3
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 6.5
-  dc:
-    peak_power_kw: 135
-    time_10_80_min: 32
-    time_20_80_min: 26
-    preconditioning_available: false
-  bidirectional:
-    capabilities: []
-    max_power_kw: null
   ac_max_kw: 11.0
   dc_max_kw: 135
-charging_curve:
-- soc_percent: 10
-  power_kw: 132
-  current_a: 305
-- soc_percent: 20
-  power_kw: 135
-  current_a: 312
-- soc_percent: 30
-  power_kw: 135
-  current_a: 312
-- soc_percent: 40
-  power_kw: 133
-  current_a: 308
-- soc_percent: 50
-  power_kw: 125
-  current_a: 290
-- soc_percent: 60
-  power_kw: 110
-  current_a: 255
-- soc_percent: 70
-  power_kw: 85
-  current_a: 200
-- soc_percent: 80
-  power_kw: 55
-  current_a: 130
-- soc_percent: 90
-  power_kw: 28
-  current_a: 68
-motor:
-  type: permanent_magnet
-  count: 1
-  drive_type: RWD
-  power_kw: 150
-  power_hp: 204
-  torque_nm: 250
-  max_rpm: 14000
 performance:
   acceleration_0_100_sec: 7.7
-  acceleration_0_60_sec: 7.3
-  top_speed_kph: 160
   top_speed_kmh: 160
-  top_speed_limited: true
   total_power_kw: 150
   total_torque_nm: 250
   total_power_hp: 204
@@ -108,87 +40,6 @@ weight:
   payload_kg: 425
   towing_capacity_braked_kg: 500
   towing_capacity_unbraked_kg: 500
-  weight_distribution_front_percent: 48
-  weight_distribution_rear_percent: 52
-wheels_tires:
-  standard:
-    front_size: 215/60 R17
-    rear_size: 215/60 R17
-    wheel_size_inches: 17
-  optional:
-  - front_size: 235/45 R18
-    rear_size: 235/45 R18
-    wheel_size_inches: 18
-    notes: Diamond-cut alloy wheels
-brakes:
-  front: Ventilated discs
-  rear: Solid discs
-  regenerative_braking: true
-  one_pedal_driving: true
-  regen_levels: 3
-suspension:
-  front: MacPherson strut
-  rear: Multi-link independent
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: true
-interior:
-  seating_material: fabric
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats: false
-  power_adjustable_driver_seat: true
-  panoramic_roof: false
-  ambient_lighting: false
-climate:
-  heat_pump: true
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 6
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 33990
-  market: DE
-  year: 2024
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - PL
-  - AT
-  - BE
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Volkswagen ID.3 Pro
-- Cupra Born 58 kWh
-- Opel Astra Electric
-- Peugeot e-308
-- Nissan Leaf e+ 62 kWh
-- Renault Megane E-Tech EV60
 metadata:
   data_quality: verified
   sources:
@@ -197,27 +48,3 @@ metadata:
   - https://www.car.info/en-se/mg/mg4/
   - https://insideevs.com/reviews/605256/mg4-extended-range-test/
   created_at: '2024-02-08'
-  last_updated: '2024-02-08'
-  notes: 'Most popular MG4 variant with sweet-spot 450km range at €33,990.
-
-    Rear-wheel drive provides engaging, sporty driving dynamics.
-
-    135kW DC fast charging significantly faster than Standard Range (87kW).
-
-    450km WLTP range adequate for long-distance travel with occasional charging stops.
-
-    204hp motor provides brisk performance (7.7s 0-100 km/h).
-
-    Standard heat pump maximizes efficiency in all weather conditions.
-
-    Near-perfect 50:50 weight distribution enhances handling and stability.
-
-    Directly challenges VW ID.3 Pro at €10,000 lower price point.
-
-    Best-selling MG4 variant across Europe.
-
-    Excellent value proposition - premium features at affordable price.
-
-    7-year/175,000km battery warranty among best in class.
-
-    '

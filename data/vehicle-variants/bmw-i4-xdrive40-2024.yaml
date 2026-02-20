@@ -6,7 +6,6 @@ battery:
   usable_kwh: 80.7
   total_kwh: 83.9
   chemistry: NCM
-  supplier: CATL / Samsung SDI
   cell_type: prismatic
   warranty_years: 8
   warranty_km: 160000
@@ -16,67 +15,10 @@ range:
   wltp_city_km: 625
   wltp_highway_km: 430
   epa_km: null
-  epa_miles: null
   real_world_km: 420
-  real_world_highway_km: 370
-  notes: 'AWD variant has slightly reduced range vs eDrive40 RWD (507km vs 590km)
-    due to:
-
-    - Additional front motor weight (+70kg)
-
-    - Higher energy consumption from dual motors
-
-    - Less efficient at highway speeds due to second motor drag
-
-    '
 charging:
-  ac:
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 8.25
-    notes: Optional 22kW AC charger available (+€900)
-  dc:
-    connector_type: CCS2
-    charge_time_10_80_percent_minutes: 31
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 205
-    - soc_percent: 30
-      power_kw: 205
-    - soc_percent: 50
-      power_kw: 160
-    - soc_percent: 70
-      power_kw: 100
-    - soc_percent: 80
-      power_kw: 65
-    notes: '400V architecture limits DC charging to 205kW peak.
-
-      Battery preconditioning available via navigation system.
-
-      Typical 10-80% charge takes 31 minutes at 150kW+ stations.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 205
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: synchronous
-  front_motor:
-    power_kw: 135
-    torque_nm: 247
-    motor_type: synchronous
-  rear_motor:
-    power_kw: 160
-    torque_nm: 339
-    motor_type: synchronous
-  total_power_kw: 295
-  total_power_hp: 401
-  total_torque_nm: 586
 performance:
   top_speed_kmh: 190
   total_power_kw: 295
@@ -86,104 +28,22 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 17.9
   real_world_kwh_per_100km: 19.2
-  notes: 'AWD increases consumption by ~11% vs RWD eDrive40 (17.9 vs 16.1 kWh/100km).
-
-    Real-world efficiency in mixed driving: 19.2 kWh/100km.
-
-    Highway at 130 km/h: ~24 kWh/100km.
-
-    '
 weight:
   curb_weight_kg: 2195
   gross_vehicle_weight_kg: 2735
   payload_kg: 540
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: 70kg heavier than eDrive40 due to front motor and additional electronics.
-    BMW i4 not rated for towing.
-features:
-  standard:
-  - xDrive intelligent AWD with torque vectoring
-  - BMW Curved Display (12.3" + 14.9")
-  - BMW Operating System 8 with 5G
-  - 3-zone automatic climate control
-  - Heat pump
-  - Adaptive LED headlights
-  - 18-inch aerodynamic wheels
-  - Sensatec synthetic leather seats
-  - Parking sensors front and rear
-  - Rear-view camera
-  - Acoustic pedestrian warning
-  - Sport steering wheel
-  - Ambient lighting
-  optional:
-  - 22kW AC onboard charger (€900)
-  - M Sport Package (€3,700)
-  - Driving Assistant Professional (€2,150)
-  - Harman Kardon Surround Sound (€875)
-  - Head-up display (€1,200)
-  - Panoramic glass roof (€1,350)
-  - Comfort Access (€450)
-  - 19-inch M wheels (€1,100)
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_assist: true
-  traffic_sign_recognition: true
-  automatic_emergency_braking: true
-  notes: 'Full Level 2 ADAS available with Driving Assistant Professional package.
-
-    Highway Assistant provides hands-on lane centering at highway speeds.
-
-    '
 dimensions:
   length_mm: 4783
   width_mm: 1852
   height_mm: 1448
   wheelbase_mm: 2856
   ground_clearance_mm: 128
-  turning_circle_meters: 12.0
 cargo:
   trunk_capacity_liters: 470
   trunk_max_liters: 1290
   frunk_capacity_liters: 0
-warranty:
-  basic_years: 3
-  basic_km: unlimited
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  roadside_assistance_years: 3
-  anti_corrosion_years: 12
-pricing:
-  germany:
-    base_price_eur: 62000
-    company_car_tax_percent: 0.25
-    effective_monthly_eur: 155
-  notes: 'AWD xDrive40 positioned between eDrive40 (€57,800) and M50 (€74,900).
-
-    €4,200 premium vs eDrive40 for xDrive AWD system.
-
-    0.25% company car tax rate applies (under €70k threshold).
-
-    Company car tax: €155/month vs €2,500+/month for equivalent ICE vehicle.
-
-    '
-market_positioning:
-  target_audience: Premium sedan buyers in winter regions prioritizing AWD traction
-    over maximum range
-  competitors:
-  - 'Tesla Model 3 Long Range AWD (€53,990): 2.5s faster acceleration, 629km range,
-    €8k cheaper but lower build quality'
-  - 'Polestar 2 Long Range Dual Motor (€54,900): Similar performance, 592km range,
-    €7k cheaper'
-  - 'Mercedes-Benz EQE 350 4MATIC (€74,990): More luxurious, 547km range, €13k more
-    expensive'
-  - 'Audi e-tron GT (€115,000): Much more powerful, similar range, significantly more
-    expensive'
-  - 'BMW i4 eDrive40 RWD (€57,800): Same car with RWD, 83km more range, €4.2k cheaper'
-  - 'BMW i4 M50 xDrive (€74,900): More powerful (400kW), same AWD, €12.9k more expensive'
 notes: 'The BMW i4 xDrive40 is the mid-range AWD variant of BMW''s electric 4 Series
   Gran Coupé.
 
@@ -262,16 +122,6 @@ notes: 'The BMW i4 xDrive40 is the mid-range AWD variant of BMW''s electric 4 Se
   - Winter (-5°C, highway): 280km
 
   '
-sources:
-- url: https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2024/bmw-i4-uebersicht.html
-  title: BMW i4 xDrive40 Official Germany Page
-  accessed: '2026-02-08'
-- url: https://ev-database.org/car/1525/BMW-i4-xDrive40
-  title: EV Database BMW i4 xDrive40 Specifications
-  accessed: '2026-02-08'
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  contributor: OpenClaw EVDB Development
-  version: 1.0

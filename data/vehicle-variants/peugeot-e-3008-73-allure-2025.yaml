@@ -2,82 +2,22 @@ id: peugeot-e-3008-73-allure-2025
 model_id: peugeot-e-3008
 name: 73 kWh Allure
 model_year: 2025
-trim_level: Allure
 variant_code: null
-production:
-  start_date: 2025-01-01
-  end_date: null
-  status: active
-  notes: 2025 model year with minor updates, improved software
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 73.0
   usable_kwh: 69.0
-  supplier: ACC (Automotive Cells Company)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Standard battery option on STLA Medium platform
 range:
   wltp_km: 527
   wltp_city_km: 680
   wltp_highway_km: 430
-  epa_combined_km: null
-  real_world_avg_km: 445
   real_world_source: ADAC test data and owner reports
-  notes: Sufficient for most daily use and occasional long trips
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 7.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 27
-    peak_power_notes: 160kW peak with battery preconditioning
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 150
-  - percent: 10
-    power_kw: 160
-  - percent: 30
-    power_kw: 160
-  - percent: 50
-    power_kw: 150
-  - percent: 60
-    power_kw: 130
-  - percent: 70
-    power_kw: 100
-  - percent: 80
-    power_kw: 60
-  - percent: 90
-    power_kw: 35
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 160
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 157
-    power_hp: 213
-    torque_nm: 345
-    supplier: null
-  combined:
-    power_kw: 157
-    power_hp: 213
-    torque_nm: 345
 dimensions:
   length_mm: 4542
   width_mm: 1895
@@ -90,8 +30,6 @@ cargo:
   trunk_max_liters: 1480
   frunk_capacity_liters: 0
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 170
   total_power_kw: 157
   total_power_hp: 213
   total_torque_nm: 345
@@ -99,81 +37,14 @@ performance:
   top_speed_kmh: 170
 efficiency:
   wltp_kwh_per_100km: 13.9
-  wltp_wh_per_km: 139
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 15.5
-  mpge_combined: null
-  drag_coefficient: 0.28
 weight:
   curb_weight_kg: 1895
   gross_vehicle_weight_kg: 2425
   payload_kg: 530
-  weight_distribution_front_percent: 58
   towing_capacity_braked_kg: 1250
   towing_capacity_unbraked_kg: 750
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar
-  rear: Multi-link independent suspension
-brakes:
-  front: Ventilated disc (345mm)
-  rear: Disc (285mm)
-  regenerative: true
-tires:
-  standard: 235/55 R19
-features:
-  infotainment:
-  - Peugeot Panoramic i-Cockpit with 21" curved HD display
-  - 10.0" digital instrument cluster
-  - Wireless Apple CarPlay and Android Auto
-  - ChatGPT voice assistant integration
-  - DAB+ digital radio
-  - 6 speakers
-  - MyPeugeot mobile app
-  - Connected Navigation with charging stations
-  - i-Toggles 2.0 (customizable shortcut buttons)
-  driver_assistance:
-  - Active Safety Brake with Pedestrian Detection
-  - Lane Keep Assist
-  - Traffic Sign Recognition
-  - Adaptive cruise control with Stop & Go
-  - Rear parking camera
-  - Driver attention alert
-  - Automatic high beam assist
-  comfort_convenience:
-  - Dual-zone automatic climate control
-  - Keyless entry and start
-  - One-pedal driving with B-mode
-  - Heated front seats
-  - Power liftgate
-  - Electric windows front and rear
-  - Rain-sensing wipers
-  - Wireless smartphone charging
-  exterior:
-  - LED headlights with signature lighting
-  - 19" alloy wheels
-  - Body-colored door handles
-  - Roof rails
-  interior:
-  - Fabric/TEP upholstery
-  - 520L trunk capacity
-  - 60/40 split-folding rear seats
-  - Ambient lighting
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source_urls:
-  - https://www.peugeot.de/modelle/e-3008.html
-  notes: '2025 model year Peugeot e-3008 73 kWh Allure - the entry-level variant offering
-
-    excellent value with 527 km WLTP range. Standard battery still provides 160kW
-    DC
-
-    fast charging. Allure trim includes good equipment level with i-Cockpit, heated
-
-    seats, and adaptive cruise control. Competes with VW ID.4 Pro, Skoda Enyaq 85.
-
-    '

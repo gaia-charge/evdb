@@ -1,10 +1,8 @@
-# Renault Zoe ZE50 R135 (2024)
 id: renault-zoe-ze50-r135-2024
 name: ZE50 R135
 model_id: renault-zoe
 model_year: 2024
 variant_code: ZE50-R135
-
 battery:
   usable_kwh: 50.0
   total_kwh: 52.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 395
   wltp_city_km: 520
@@ -22,7 +19,6 @@ range:
   epa_km: null
   real_world_km: 330
   real_world_source: InsideEVs range test
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,126 +26,87 @@ charging:
   dc_max_kw: 50
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 45
-    - soc_percent: 10
-      power_kw: 50
-    - soc_percent: 40
-      power_kw: 50
-    - soc_percent: 60
-      power_kw: 45
-    - soc_percent: 70
-      power_kw: 38
-    - soc_percent: 80
-      power_kw: 25
-    - soc_percent: 90
-      power_kw: 15
-    - soc_percent: 100
-      power_kw: 5
+  - soc_percent: 0
+    power_kw: 45
+  - soc_percent: 10
+    power_kw: 50
+  - soc_percent: 40
+    power_kw: 50
+  - soc_percent: 60
+    power_kw: 45
+  - soc_percent: 70
+    power_kw: 38
+  - soc_percent: 80
+    power_kw: 25
+  - soc_percent: 90
+    power_kw: 15
+  - soc_percent: 100
+    power_kw: 5
   time_10_to_80_min: 70
   time_20_to_80_min: 60
   charging_speed_kmh: 285
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 100
-      power_hp: 135
-      torque_nm: 245
+  - position: front
+    type: permanent magnet
+    power_kw: 100
+    power_hp: 135
+    torque_nm: 245
   total_power_kw: 100
   total_power_hp: 135
   total_torque_nm: 245
   acceleration_0_100_sec: 9.5
   top_speed_kmh: 135
-
 weight:
   curb_weight_kg: 1577
   gross_vehicle_weight_kg: 1952
   payload_kg: 375
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 16.3
   epa_kwh_per_100km: null
-
 dimensions:
   length_mm: 4084
   width_mm: 1730
   height_mm: 1562
   wheelbase_mm: 2588
   ground_clearance_mm: 110
-
-
-interior:
-  seating_capacity: 5
-  cargo_volume_seats_up_liters: 338
-  trunk_max_liters: 1225
-  frunk_volume_liters: 0
-
 cargo:
   trunk_capacity_liters: 338
   trunk_max_liters: 1225
   frunk_capacity_liters: 0
-
-adas:
-  level: 1
-  features:
-    - Lane departure warning
-    - Automatic emergency braking
-    - Speed limit recognition
-    - Traffic sign recognition
-    - Blind spot warning
-    - Rear cross traffic alert
-    - Parking sensors (front/rear)
-    - Rear-view camera
-    - Hill start assist
-
-wheels:
-  front: "195/55 R16"
-  rear: "195/55 R16"
-  size_options:
-    - "16 inch steel with covers"
-    - "16 inch alloy"
-    - "17 inch alloy"
-
-climate:
-  type: automatic
-  heat_pump: false
-
 features:
   heat_pump: false
   one_pedal_driving: true
-  adaptive_cruise_control: false
-  keyless_entry: false  # Available on higher trims
-  parking_sensors: true
-  rear_camera: true
-  automatic_headlights: true
-  rain_sensing_wipers: true
+notes: 'Second-generation Zoe (ZE50) launched in 2019 with significant upgrades over
+  original:
 
-notes: |
-  Second-generation Zoe (ZE50) launched in 2019 with significant upgrades over original:
   - Battery: 41kWh → 52kWh (50kWh usable)
+
   - Range: 300km → 395km WLTP
+
   - DC fast charging: Optional from 2020, standard from 2024
-  
+
+
   R135 motor variant (100kW/135hp) replaced R110 (80kW/110hp) in most markets.
-  R135 has 11kW AC charging vs R110's 22kW Chameleon Charger but adds DC capability.
-  
-  Europe's best-selling EV from 2012-2019 with 500,000+ units sold globally.
-  
-  Battery leasing was pioneered by Zoe but discontinued for new purchases (common on used market).
-  
+
+  R135 has 11kW AC charging vs R110''s 22kW Chameleon Charger but adds DC capability.
+
+
+  Europe''s best-selling EV from 2012-2019 with 500,000+ units sold globally.
+
+
+  Battery leasing was pioneered by Zoe but discontinued for new purchases (common
+  on used market).
+
+
   50kW DC fast charging now standard in 2024 (was €1,000 option 2019-2023).
 
-data_source: manufacturer
-data_quality: verified
-last_updated: "2026-02-07"
+  '

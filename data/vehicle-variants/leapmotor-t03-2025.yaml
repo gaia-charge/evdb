@@ -1,104 +1,28 @@
 id: leapmotor-t03-2025
 model_id: leapmotor-t03
 name: Standard
-variant_name: Standard
 model_year: 2025
-trim_level: Standard
-production_years: 2024-present
-overview: 'The Leapmotor T03 is one of the most affordable BEVs in Europe at €18,900.
-  Despite the low price, it comes comprehensively equipped with panoramic roof, 10.1-inch
-  touchscreen, reversing camera, climate control, and full suite of driver assistance
-  systems. Powered by a 37.3 kWh LFP battery providing 265 km WLTP range with a front-mounted
-  70 kW (95 PS) motor. Produced at Stellantis'' plant in Tychy, Poland. Ideal as an
-  affordable city car.
-
-  '
 battery:
   chemistry: LFP
-  supplier: null
   total_kwh: 37.3
   usable_kwh: 35.0
   warranty_years: 8
   warranty_km: 150000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 37.3 kWh LFP battery
 range:
   wltp_km: 265
   wltp_city_km: 330
   wltp_highway_km: null
-  epa_miles: null
   real_world_km: 210
-  real_world_notes: Estimated ~210km mixed driving
 charging:
-  ac:
-    connector_type: Type2
-    phases: 1
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 390
-      power_kw: 6.6
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 45
-    - soc_percent: 20
-      power_kw: 48
-    - soc_percent: 30
-      power_kw: 48
-    - soc_percent: 40
-      power_kw: 46
-    - soc_percent: 50
-      power_kw: 42
-    - soc_percent: 60
-      power_kw: 38
-    - soc_percent: 70
-      power_kw: 32
-    - soc_percent: 80
-      power_kw: 25
-    - soc_percent: 90
-      power_kw: 15
-    - soc_percent: 100
-      power_kw: 5
-    charging_time:
-    - percent_start: 30
-      percent_end: 80
-      time_minutes: 36
-      power_kw: 48
-      notes: 30-80% in approximately 36 minutes
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 6.6
   dc_max_kw: 48
-motors:
-  configuration: single
-  drive_type: FWD
-  total_power_kw: 70
-  total_power_hp: 95
-  total_torque_nm: 158
-  motor_type: permanent_magnet
-  motors:
-  - position: front
-    power_kw: 70
-    power_hp: 95
-    torque_nm: 158
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 130
-  notes: City-focused performance, 0-100 km/h in 12.7 seconds
   total_power_kw: 70
   total_power_hp: 95
   total_torque_nm: 158
   acceleration_0_100_sec: 12.7
-efficiency:
-  consumption_wltp_kwh_per_100km: 16.3
-  consumption_real_world_kwh_per_100km: 18.0
-  efficiency_rating_eu: A
-  notes: 16.3 kWh/100km WLTP combined, efficient for its class
 dimensions:
   length_mm: 3620
   width_mm: 1652
@@ -115,36 +39,9 @@ weight:
   payload_kg: 320
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-features:
-  standard:
-  - 10.1-inch central touchscreen
-  - 8-inch digital instrument cluster
-  - Wireless Apple CarPlay and Android Auto
-  - Panoramic glass roof
-  - LED headlights
-  - Reversing camera
-  - Climate control
-  - Electric windows (all four)
-  - Automatic Emergency Braking
-  - Lane Departure Warning
-  - Traffic Sign Recognition
-  - Driver Fatigue Detection
-  - Intelligent Speed Assist
-  - Forward Collision Warning
-  - Rear parking sensors
-  - Keyless entry
-  - 15-inch alloy wheels
-  optional: []
-version:
-  release_date: 2024-10
-  changes_from_previous: Initial European launch
-  notes: 2025 model year, produced in Tychy, Poland at Stellantis plant
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.carwow.de/leapmotor/t03
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/leapmotor/t03/
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: European specification, single trim level, produced in Poland

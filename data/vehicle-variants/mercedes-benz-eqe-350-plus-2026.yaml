@@ -2,13 +2,11 @@ id: mercedes-benz-eqe-350-plus-2026
 name: 350+
 model_id: mercedes-benz-eqe
 model_year: 2026
-trim_level: base
 battery:
   usable_kwh: 94.0
   total_kwh: 99.0
   chemistry: NCM
   cell_type: pouch
-  supplier: CATL
   warranty_years: 10
   warranty_km: 250000
   warranty_capacity_percent: 70
@@ -18,22 +16,6 @@ range:
   wltp_highway_km: 535
   epa_km: null
   real_world_km: 575
-  conditions:
-  - test: WLTP Combined
-    result_km: 665
-    temperature_c: 23
-  - test: Real-world mixed
-    result_km: 575
-    temperature_c: 15
-    notes: Mixed city/highway driving, 60/40 split
-  - test: Real-world winter
-    result_km: 455
-    temperature_c: -5
-    notes: Cold weather with heating, 23% loss (heat pump standard)
-  - test: Real-world highway (130 km/h)
-    result_km: 485
-    temperature_c: 20
-    notes: Sustained Autobahn cruising
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -57,31 +39,6 @@ charging:
     power_kw: 100
   - soc_percent: 80
     power_kw: 70
-  charge_times:
-  - type: DC fast charging
-    power_kw: 180
-    soc_from: 10
-    soc_to: 80
-    time_minutes: 30
-    notes: CCS2 DC fast charging with preconditioning
-  - type: AC home charging
-    power_kw: 11
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 515
-    notes: 11kW 3-phase wallbox (8.6 hours)
-  - type: AC home charging (optional 22kW)
-    power_kw: 22
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 260
-    notes: 22kW 3-phase wallbox upgrade (4.3 hours)
-  plug_and_charge: true
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
-  preconditioning: true
 performance:
   drive_type: RWD
   motors:
@@ -93,9 +50,6 @@ performance:
   total_power_hp: 299
   total_torque_nm: 540
   acceleration_0_100_sec: 6.2
-  acceleration_0_60_mph_sec: 5.9
-  top_speed_kph: 210
-  top_speed_mph: 130
   top_speed_kmh: 210
 dimensions:
   length_mm: 4946
@@ -107,64 +61,15 @@ cargo:
   trunk_capacity_liters: 430
   trunk_max_liters: 430
   frunk_capacity_liters: 0
-  notes: 430L boot. Sedan - rear seats fold partially but limited flat loading.
 weight:
   curb_weight_kg: 2255
   gross_vehicle_weight_kg: 2755
   payload_kg: 500
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  roof_load_kg: 100
 efficiency:
   wltp_kwh_per_100km: 16.3
-  wltp_city_kwh_per_100km: 13.1
-  wltp_highway_kwh_per_100km: 20.2
   real_world_kwh_per_100km: 18.5
-  energy_efficiency_class: A
-features:
-  standard:
-  - MBUX Hyperscreen (56-inch panoramic curved display)
-  - Mercedes-Benz User Experience (MBUX) with AI voice assistant
-  - Augmented Reality Head-Up Display
-  - Burmester 3D surround sound system (15 speakers)
-  - AIRMATIC air suspension with Adaptive Damping System
-  - Rear-axle steering (up to 10 degrees)
-  - ENERGIZING comfort control
-  - Heat pump climate control
-  - Heated and ventilated front seats with massage
-  - Heated rear seats
-  - Ambient lighting with 64 colors
-  - Multibeam LED headlights with Adaptive Highbeam Assist
-  - 360-degree camera system
-  - Mercedes-Benz Driving Assistance Package (Level 2+ ADAS)
-  - Active Distance Assist DISTRONIC with Active Steering Assist
-  - Active Lane Change Assist
-  - Active Blind Spot Assist
-  - Active Emergency Stop Assist
-  - Pre-Safe Plus collision preparation
-  - Mercedes me connect services with remote control
-  - Over-the-air (OTA) software updates
-  - Wireless smartphone integration (Apple CarPlay & Android Auto)
-  - Wireless charging pad for smartphones
-  - Keyless entry and start (KEYLESS-GO)
-  - Electric trunk with hands-free opening (HANDS-FREE ACCESS)
-  - Panoramic sliding sunroof
-  optional:
-  - AMG Line exterior and interior package
-  - Night Package (black exterior accents)
-  - Executive rear seat package with business console
-  - Burmester High-End 4D surround sound (17 speakers, 710W)
-  - 22kW AC onboard charger
-  - Head-Up Display with augmented reality navigation
-  - 360-degree camera with transparent hood visualization
-  - Parking Package with surround view system
-  - Memory Package (seats, steering wheel, mirrors)
-version_info:
-  release_date: 2025-09
-  changes_from_previous: '2026 model year update: larger 94kWh battery (+3.4kWh),
-    improved 180kW DC charging (+10kW), enhanced MBUX with AI assistant, improved
-    efficiency (16.3 vs 17.1 kWh/100km), standard rear-axle steering'
-  current_production: true
 notes: 2026 model year brings incremental but meaningful improvements to Mercedes-Benz's
   executive electric sedan. Battery capacity increased from 90.6kWh to 94kWh usable,
   adding 26km WLTP range. DC fast charging improved to 180kW peak (from 170kW). Enhanced

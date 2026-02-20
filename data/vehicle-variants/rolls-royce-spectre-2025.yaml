@@ -2,52 +2,13 @@ id: rolls-royce-spectre-2025
 model_id: rolls-royce-spectre
 name: Spectre
 model_year: 2025
-trim_level: standard
-market_availability:
-- europe
-- germany
-- uk
-- france
-- italy
 battery:
   total_kwh: 102
   usable_kwh: 97
   chemistry: NMC
-  voltage: 400
   manufacturer: bmw
-  warranty:
-    duration_years: 4
-    duration_km: unlimited
-    capacity_retention_percent: 70
-  cooling_system: liquid
-  heat_pump: true
-  preconditioning: true
-  cell_to_pack: false
-motors:
-  layout: awd
-  total_count: 2
-  front:
-    type: separately_excited_synchronous
-    power_kw: 190
-    power_hp: 255
-    torque_nm: 365
-    manufacturer: bmw
-  rear:
-    type: separately_excited_synchronous
-    power_kw: 240
-    power_hp: 322
-    torque_nm: 535
-    manufacturer: bmw
-  combined:
-    total_power_kw: 430
-    total_power_hp: 577
-    total_torque_nm: 900
-drivetrain:
-  drive_type: AWD
-  transmission: single_speed_reduction
 performance:
   top_speed_kmh: 250
-  top_speed_limited: true
   acceleration_0_100_sec: 4.5
   total_power_kw: 430
   total_power_hp: 577
@@ -57,40 +18,19 @@ range:
   wltp_city_km: 620
   wltp_highway_km: 440
   epa_km: 425
-  real_world_mixed_km: 420
-  real_world_highway_km: 360
-  real_world_winter_km: 340
 efficiency:
   wltp_kwh_per_100km: 21.5
   epa_kwh_per_100km: 22.8
   real_world_kwh_per_100km: 23.1
 charging:
-  ac:
-    phases: 3
-    time_0_100_hours: 10.5
-    onboard_charger_kw: 11
-  dc:
-    time_10_80_minutes: 34
-    time_10_80_km_added: 362
-    curve_description: '195kW peak DC charging on 400V architecture. Charges 10-80%
-      in approximately  34 minutes on 350kW chargers. Charging curve tapers from 195kW
-      at 10% to  approximately 100kW at 60% and 50kW at 80%.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 195
-bidirectional_charging:
-  v2l_capable: false
-  v2h_capable: false
-  v2g_capable: false
 dimensions:
   length_mm: 5453
   width_mm: 2080
   height_mm: 1559
   wheelbase_mm: 3210
   ground_clearance_mm: 135
-  drag_coefficient: 0.25
-  frontal_area_m2: 2.75
 weight:
   curb_weight_kg: 2975
   gross_vehicle_weight_kg: 3350
@@ -102,78 +42,6 @@ cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 500
   frunk_capacity_liters: 0
-interior:
-  seating_capacity: 4
-wheels:
-  standard:
-    size_front: 255/40 R23
-    size_rear: 285/35 R23
-    wheel_diameter_inches: 23
-suspension:
-  front: double_wishbone
-  rear: multi_link
-  adaptive: true
-  damping: adaptive_air
-brakes:
-  front: ventilated_disc
-  rear: ventilated_disc
-  regenerative: true
-  regenerative_max_power_kw: 195
-  one_pedal_driving: false
-technology:
-  adas_level: 2
-  features:
-  - adaptive_cruise_control
-  - lane_keeping_assist
-  - lane_centering
-  - automatic_emergency_braking
-  - blind_spot_monitoring
-  - rear_cross_traffic_alert
-  - traffic_sign_recognition
-  - parking_assist
-  - surround_view_camera
-  - automatic_parking
-  - night_vision
-  infotainment:
-    screen_size_inches: 12.3
-    rotating_screen: false
-    apple_carplay: true
-    android_auto: true
-    wireless_connectivity: true
-    ota_updates: true
-    navigation: true
-    voice_control: true
-  audio:
-    system: bespoke_audio
-    speakers: 18
-    power_watts: 1400
-standard_equipment:
-  exterior:
-  - Coach doors (rear-hinged)
-  - Redesigned Spirit of Ecstasy (83mm)
-  - LED headlights with laser light
-  - Illuminated Pantheon grille
-  - 23" alloy wheels
-  - Flush door handles
-  - Frameless windows
-  interior:
-  - Starlight Headliner (4,796 fiber optic lights)
-  - 12.3" digital instrument cluster
-  - 12.3" central touchscreen
-  - Bespoke leather throughout
-  - Massaging front seats
-  - 4-zone automatic climate control
-  - Lambswool floor mats
-  - Bespoke Audio 18-speaker system
-  - Rear-seat entertainment screens
-  - Champagne cooler (optional)
-safety:
-  euro_ncap:
-    year: null
-    overall_stars: null
-energy_label:
-  efficiency_class: b
-  co2_emissions_wltp_g_per_km: 0
 notes: 'The Rolls-Royce Spectre is the world''s most expensive production BEV and
   the marque''s  first electric vehicle. At nearly 3 tonnes, it prioritizes ride comfort
   and luxury over  efficiency, delivering the signature Rolls-Royce "magic carpet

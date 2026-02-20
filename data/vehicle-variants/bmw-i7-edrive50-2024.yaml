@@ -1,10 +1,8 @@
-# BMW i7 eDrive50 (2024)
 id: bmw-i7-edrive50-2024
 name: eDrive50
 model_id: bmw-i7
 model_year: 2024
 variant_code: i7-eDrive50
-
 battery:
   usable_kwh: 101.7
   total_kwh: 105.7
@@ -14,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    Large 101.7 kWh usable battery (105.7 kWh gross). Fifth-generation BMW
-    eDrive with 400V architecture. CATL prismatic cells.
-
-# Dimensions
 dimensions:
   length_mm: 5391
   width_mm: 1950
@@ -27,13 +19,10 @@ dimensions:
   height_mm: 1544
   wheelbase_mm: 3215
   ground_clearance_mm: 145
-
-# Cargo
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 500
   frunk_capacity_liters: 0
-
 range:
   wltp_km: 625
   wltp_city_km: 850
@@ -41,11 +30,6 @@ range:
   epa_km: 518
   real_world_km: 510
   real_world_source: InsideEVs real-world test
-  notes: |
-    Excellent WLTP range of 625 km with large battery. EPA rated at 518 km
-    (322 miles). Real-world tests show around 510 km in mixed conditions.
-    Impressive for a luxury flagship sedan weighing 2.7 tons.
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -53,82 +37,58 @@ charging:
   dc_max_kw: 195
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 195
-    - soc_percent: 10
-      power_kw: 195
-    - soc_percent: 20
-      power_kw: 190
-    - soc_percent: 30
-      power_kw: 180
-    - soc_percent: 40
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 35
-  time_0_to_100_min: 55
+  - soc_percent: 0
+    power_kw: 195
+  - soc_percent: 10
+    power_kw: 195
+  - soc_percent: 20
+    power_kw: 190
+  - soc_percent: 30
+    power_kw: 180
+  - soc_percent: 40
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 55
+  - soc_percent: 90
+    power_kw: 35
   time_10_to_80_min: 34
   time_20_to_80_min: 31
   charging_speed_kmh: 1200
-  notes: |
-    DC fast charging up to 195 kW peak. 10-80% in 34 minutes with 101.7 kWh
-    battery. 22 kW three-phase AC charging standard. BMW recommends limiting
-    to 80% for daily use to preserve battery longevity.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.7
   v2h: false
   v2g: false
-  notes: "V2L (vehicle-to-load) via adapter. V2H and V2G not yet available."
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 400
-      power_hp: 544
-      torque_nm: 745
+  - position: rear
+    type: permanent magnet
+    power_kw: 400
+    power_hp: 544
+    torque_nm: 745
   total_power_kw: 400
   total_power_hp: 544
   total_torque_nm: 745
   acceleration_0_100_sec: 5.5
   top_speed_kmh: 240
-  notes: |
-    Single permanent magnet motor at rear axle with 544 hp and 745 Nm.
-    0-100 km/h in 5.5 seconds - impressive for a 2.7-ton luxury sedan.
-    Top speed electronically limited to 240 km/h.
-
 weight:
   curb_weight_kg: 2715
   gross_vehicle_weight_kg: 3130
   payload_kg: 415
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
-  notes: "Heavy flagship with good weight distribution despite large battery"
-
 efficiency:
   wltp_kwh_per_100km: 18.4
-  wltp_city_kwh_per_100km: 15.8
-  wltp_highway_kwh_per_100km: 21.2
   epa_kwh_per_100km: 19.6
   real_world_kwh_per_100km: 21.0
   efficiency_rating: B
-  notes: |
-    18.4 kWh/100km WLTP - reasonable for a 2.7-ton luxury flagship with
-    performance focus. Real-world efficiency around 21 kWh/100km. Better
-    than Mercedes EQS despite similar weight and power.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -136,59 +96,45 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Driving Assistant Professional"
-  notes: |
-    - Executive Drive Pro with air suspension and active roll stabilization
-    - Heat pump standard for improved cold-weather efficiency
-    - BMW Curved Display with 12.3" instrument cluster + 14.9" touchscreen
-    - 31.3" BMW Theatre Screen for rear passengers (8K resolution)
-    - Bowers & Wilkins Diamond Surround Sound System (36 speakers)
-    - Executive Lounge Seating with massage, heating, ventilation, leg rest
-    - Automatic doors with soft-close function
-    - Driving Assistant Professional (Level 2+ ADAS)
-    - Parking Assistant Professional with remote control
-    - Adaptive LED headlights with BMW Laserlight
-    - Sky Lounge panoramic glass roof with LED lighting
-    - One-pedal driving with adaptive regenerative braking
-
 optional_equipment:
-  - name: M Sport Package Pro
-    code: MSPORTPRO
-    category: styling
-    included_in_base: false
-    notes: "M Sport styling, 21-inch wheels, M Sport brakes, sport seats"
-  - name: Bowers & Wilkins Diamond 4D System
-    code: BW4D
-    category: infotainment
-    included_in_base: false
-    notes: "Upgraded 36-speaker audio with subwoofers and exciters in seats"
-  - name: Executive Lounge Seating
-    code: EXECLNG
-    category: comfort
-    included_in_base: false
-    notes: "Rear seats with full recline, massage, leg rest, and side tables"
-  - name: Sky Lounge Panoramic Roof
-    code: SKYLNG
-    category: comfort
-    included_in_base: false
-    notes: "Interactive LED lighting patterns in glass roof panel"
+- name: M Sport Package Pro
+  code: MSPORTPRO
+  category: styling
+  included_in_base: false
+- name: Bowers & Wilkins Diamond 4D System
+  code: BW4D
+  category: infotainment
+  included_in_base: false
+- name: Executive Lounge Seating
+  code: EXECLNG
+  category: comfort
+  included_in_base: false
+- name: Sky Lounge Panoramic Roof
+  code: SKYLNG
+  category: comfort
+  included_in_base: false
+notes: 'The BMW i7 eDrive50 is the RWD base variant of BMW''s electric flagship sedan.
 
-notes: |
-  The BMW i7 eDrive50 is the RWD base variant of BMW's electric flagship sedan.
   With 544 hp, 101.7 kWh battery, and 625 km WLTP range, it offers impressive
+
   performance and autonomy. The i7 is positioned as a technology showcase
+
   with features like the 31" Theatre Screen, Bowers & Wilkins Diamond audio,
+
   and Executive Lounge seating. Built on the CLAR WE platform shared with
+
   the combustion 7 Series. Targets Mercedes EQS 450+ and Tesla Model S buyers
+
   seeking traditional luxury sedan format with cutting-edge technology.
 
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.bmw.com/en/models/i7.html
-    - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
-    - https://insideevs.com/reviews/bmw-i7-edrive50/
-    - https://www.bmw-welt.com/i7-specifications
+  - https://www.bmw.com/en/models/i7.html
+  - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
+  - https://insideevs.com/reviews/bmw-i7-edrive50/
+  - https://www.bmw-welt.com/i7-specifications

@@ -8,89 +8,25 @@ battery:
   total_kwh: 55.0
   chemistry: NMC
   cell_type: pouch
-  cell_count: 184
-  pack_configuration: 92s2p
-  architecture_v: 400
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
 range:
   wltp_km: 416
-  wltp_tel_km: 419
-  wltp_teh_km: 413
-  wltp_source: manufacturer
   real_world_km: 330
   real_world_source: ev-database.org
-  real_world_conditions: Mixed driving, moderate climate
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.75
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 31
-    avg_power_10_80_kw: 75
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 95
-    - soc_percent: 20
-      power_kw: 101
-    - soc_percent: 30
-      power_kw: 98
-    - soc_percent: 40
-      power_kw: 88
-    - soc_percent: 50
-      power_kw: 78
-    - soc_percent: 60
-      power_kw: 65
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 38
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 12
   ac_max_kw: 11
   dc_max_kw: 101
-bidirectional_charging:
-  v2l: true
-  v2l_power_kw: 3.7
-  v2h: false
-  v2g: false
-  notes: V2L via Type 2 adapter (exterior outlet)
-motors:
-  configuration: single-motor
-  drive_type: FWD
-  front:
-    type: permanent-magnet-synchronous
-    max_power_kw: 110
-    max_power_hp: 150
-    max_torque_nm: 245
-  combined:
-    max_power_kw: 110
-    max_power_hp: 150
-    max_torque_nm: 245
 performance:
   top_speed_kmh: 150
-  top_speed_limited: true
   total_power_kw: 110
   total_power_hp: 150
   total_torque_nm: 245
   acceleration_0_100_sec: 8.0
 efficiency:
   wltp_kwh_per_100km: 14.8
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 15.8
-  real_world_source: ev-database.org
-  real_world_conditions: Mixed driving, moderate climate
 dimensions:
   length_mm: 4084
   width_mm: 1780
@@ -108,56 +44,9 @@ weight:
   payload_kg: 402
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-wheels:
-  standard_size_front: 195/55 R18
-  standard_size_rear: 195/55 R18
-  wheel_options:
-  - 18-inch alloy wheels (standard)
-  - 19-inch alloy wheels (optional on N-Design)
-standard_equipment:
-  exterior:
-  - LED headlights with high beam assist
-  - Welcome light animation
-  - Two-tone roof option
-  - 18-inch alloy wheels
-  - Rear parking camera with 12 sensors
-  interior:
-  - 10.1-inch infotainment touchscreen
-  - Wireless Apple CarPlay and Android Auto
-  - Integrated Google services (Maps, Assistant, Play)
-  - Wireless smartphone charging
-  - MULTI-SENSE with 4 driving modes
-  - Digital instrument cluster
-  - Mode 3 charging cable (3-phase AC, 11 kW)
-  technology:
-  - Battery preconditioning via navigation
-  - Automatic emergency braking
-  - Lane keep assist
-  - Traffic sign recognition
-  - Intelligent speed assist
-colors:
-- Authentic Blue
-- Elegant Silver
-- Rebel Red
-- Mystery Black
-- Pure White
-- Noble Marine
-version:
-  facelift: false
-  generation: 6
-  platform_version: AmpR Small
-  notes: Extended range variant with larger 52 kWh battery and more powerful 110 kW
-    motor
 metadata:
   data_quality: verified
-  last_updated: '2026-02-10'
-  confidence_level: high
   sources:
   - https://ev-database.org/car/3203/Nissan-Micra-Extended-Range-52-kWh
   - https://micra.nissan.de/
-  notes: '2025 model year. Higher-spec variant with 52 kWh battery and 110 kW motor.
-    Up to 416 km WLTP range. Built at Renault ElectriCity, Douai, France.
-
-    '
   created_at: '2026-02-10T12:20:00Z'
-  created_by: Patricio

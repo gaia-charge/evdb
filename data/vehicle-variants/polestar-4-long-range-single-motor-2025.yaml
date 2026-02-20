@@ -2,117 +2,32 @@ id: polestar-4-long-range-single-motor-2025
 name: Long Range Single Motor
 model_id: polestar-4
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: long-range
-market_position: mainstream
-description: 'The Long Range Single Motor is the entry-level and most efficient variant
-  of the
-
-  Polestar 4, featuring rear-wheel drive with a single 200kW permanent magnet motor
-
-  and a 100kWh battery providing 620km WLTP range.
-
-
-  Retains all the innovative design features of the Polestar 4 including the
-
-  no-rear-window design with HD camera system, electrochromic panoramic glass roof,
-
-  and 15.4-inch portrait touchscreen. The most affordable Polestar SUV at €61,900.
-
-  '
-production_status: active
 battery:
   usable_kwh: 94.0
   total_kwh: 100.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 590
-    modules: null
-    cells: null
 range:
   wltp_km: 620
-  wltp_source: manufacturer
   real_world_km: 510
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 10.0
-      '20_80': 6.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 180
-    - soc_percent: 10
-      power_kw: 200
-    - soc_percent: 30
-      power_kw: 200
-    - soc_percent: 50
-      power_kw: 180
-    - soc_percent: 60
-      power_kw: 155
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 85
-    - soc_percent: 90
-      power_kw: 50
-    - soc_percent: 100
-      power_kw: 20
   ac_max_kw: 11
   dc_max_kw: 200
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: single-motor
-  drive_type: RWD
-  rear:
-    type: permanent-magnet
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-  combined:
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
 performance:
   top_speed_kmh: 200
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
   acceleration_0_100_sec: 7.1
-efficiency:
-  consumption_wltp_kwh_100km: 16.7
-  consumption_real_world_kwh_100km: 19.5
-  energy_label: A
 dimensions:
   length_mm: 4839
   width_mm: 2139
   height_mm: 1544
   wheelbase_mm: 2999
   ground_clearance_mm: 166
-  curb_weight_kg: 2195
 cargo:
   trunk_capacity_liters: 526
   trunk_max_liters: 1536
@@ -125,19 +40,7 @@ weight:
   towing_capacity_unbraked_kg: 750
 metadata:
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   data_quality: verified
   sources:
   - https://www.polestar.com/de/polestar-4/
   - https://www.polestar.com/de/polestar-4/specifications/
-  verified_by: official
-  notes: 'New entry-level RWD single-motor variant of the Polestar 4 for 2025/2026
-    model year.
-
-    Best range in the Polestar 4 lineup at 620km WLTP. Starting at €61,900 in Germany,
-
-    making it the most accessible Polestar SUV. Same innovative no-rear-window design,
-
-    electrochromic roof, and 15.4" touchscreen as the Dual Motor variant.
-
-    '

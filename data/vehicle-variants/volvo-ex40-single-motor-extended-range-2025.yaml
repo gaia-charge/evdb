@@ -3,19 +3,6 @@ name: Single Motor Extended Range
 model_id: volvo-ex40
 model_year: 2025
 variant_code: EX40-SM-ER
-description: 'The 2025 Volvo EX40 Single Motor Extended Range features the larger
-  78kWh battery pack,
-
-  offering up to 515km WLTP range - the longest-range EX40 variant. The extended range
-
-  battery adds approximately 40km over the standard 69kWh model while maintaining
-  rear-wheel
-
-  drive efficiency. The 2025 model year brings refined software, improved Google built-in
-
-  integration, and continued availability of Volvo''s comprehensive safety suite.
-
-  '
 battery:
   usable_kwh: 75.0
   total_kwh: 78.0
@@ -61,10 +48,7 @@ charging:
     power_kw: 28
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 30
-  time_10_to_80_percent_min: 27
   charging_speed_kmh: 820
-  plug_and_charge: false
 bidirectional:
   v2l: false
   v2l_max_kw: null
@@ -81,8 +65,6 @@ performance:
   total_power_kw: 185
   total_power_hp: 252
   total_torque_nm: 343
-  acceleration_0_100_kmh_sec: 7.0
-  acceleration_0_60_mph_sec: 6.6
   top_speed_kmh: 180
   acceleration_0_100_sec: 7.0
 dimensions:
@@ -104,48 +86,10 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 16.8
-  wltp_kwh_per_100km_city: 14.0
-  wltp_kwh_per_100km_highway: 19.8
   real_world_kwh_per_100km: 18.5
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/50 R19
-  standard_size_rear: 235/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -15km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Pilot Assist (adaptive cruise with lane centering)
-  - City Safety with collision avoidance
-  - Lane Keeping Aid
-  - Blind Spot Information System (BLIS)
-  - Cross Traffic Alert with autobrake
-  - Run-off Road Mitigation
-  - Oncoming Lane Mitigation
-  - 360-degree camera
-  connectivity:
-  - Google built-in (Maps, Assistant, Play)
-  - Volvo Cars app
-  - OTA software updates
-  - 5G connectivity
-  - Wi-Fi hotspot
-  - Apple CarPlay (wireless)
-  special_features:
-  - One-pedal driving mode
-  - Pre-conditioning (battery & cabin)
-  - Smartphone as key
-  - Acoustic Vehicle Alerting System (AVAS)
-  - Heat pump (standard from Plus trim)
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.volvocars.com/de/cars/ex40-electric/
   - https://www.autoexpress.co.uk/volvo/ex40
-  notes: 'New for 2025: 78kWh Extended Range battery option with 515km WLTP range.
-    DC charging upgraded to 200kW (from 150kW). Slightly more power at 252hp vs 238hp
-    on standard range. Best all-round EX40 choice for most buyers - longer range with
-    RWD efficiency.'

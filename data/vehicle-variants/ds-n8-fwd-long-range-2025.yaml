@@ -1,35 +1,23 @@
 id: ds-n8-fwd-long-range-2025
 name: DS N°8 FWD Long Range
 model_id: ds-n8
-variant_name: FWD Long Range
 model_year: 2025
 battery:
   usable_kwh: 97.2
   total_kwh: 101.0
   chemistry: NMC
-  cells: null
-  supplier: null
-  modules: null
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volts: 400
 range:
   wltp_km: 758
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 545
-  real_world_mild_weather_km: 625
-  real_world_cold_weather_km: 460
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 10.5
   dc_max_kw: 160
-  dc_charge_time_10_80_minutes: 33
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 690
   dc_curve:
   - soc_percent: 10
     power_kw: 160
@@ -41,11 +29,6 @@ charging:
     power_kw: 90
   - soc_percent: 80
     power_kw: 55
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  plug_and_charge: true
-  battery_preconditioning: true
 performance:
   drive_type: FWD
   motors:
@@ -56,13 +39,7 @@ performance:
   total_power_kw: 206
   total_power_hp: 280
   total_torque_nm: 345
-  acceleration_0_100_kmh_sec: 7.8
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 190
-  drive_modes:
-  - Eco
-  - Comfort
-  - Sport
   acceleration_0_100_sec: 7.8
 dimensions:
   length_mm: 4820
@@ -82,61 +59,9 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 15.7
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 17.8
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A+
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - DS Drive Assist 2.0
-  - Active safety brake
-  - Lane keeping assist
-  - Blind spot monitoring
-  - Night Vision infrared camera
-  - 360° camera
-  - Traffic sign recognition
-  infotainment:
-  - DS Iris System (21-inch curved display)
-  - Head-up display
-  - Apple CarPlay / Android Auto
-  - Over-the-air updates
-  comfort:
-  - Heat pump
-  - Climate pre-conditioning via app
-  - DS Advanced Traction Control
-  - Heated and ventilated front seats
-  - Massaging front seats
-  - Panoramic glass roof
-  - Ambient lighting
-  - V2L (Vehicle-to-Load) 3.3 kW
-  connectivity:
-  - DS Connect
-  - Remote services via app
-  - Plug & Charge
-  - Over-the-air updates
-  audio:
-  - Focal Electra premium audio system
-version:
-  trim_level: FWD Long Range
-  option_packages: []
-  production_location: Mulhouse, France
-  build_quality: premium
 metadata:
   created_at: '2026-02-09T16:15:00Z'
   updated_at: '2026-02-09T16:15:00Z'
   data_quality: verified
-  data_source: manufacturer_and_tested
-  verified_by: EV Database
-  notes: 'DS N°8 FWD Long Range with 101 kWh battery. STLA Medium platform.
-
-    758 km WLTP range - one of the longest ranges in its class.
-
-    '
-sources:
-- url: https://ev-database.org/car/3077/DS-Automobiles-N8-FWD-Long-Range
-  title: EV Database - DS N°8 FWD Long Range
-  date_accessed: '2026-02-09'

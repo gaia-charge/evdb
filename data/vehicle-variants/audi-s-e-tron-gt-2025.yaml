@@ -1,42 +1,21 @@
-# Audi S e-tron GT 2025 - Mid-range performance variant
-# New for 2024 facelift: S model slots between quattro and RS
-# 500 kW / 680 PS, 3.4s 0-100 km/h
-
 id: audi-s-e-tron-gt-2025
 name: S e-tron GT
 model_id: audi-e-tron-gt
 model_year: 2025
 variant_code: SETGT-25
-
-production:
-  status: active
-  start_date: "2024-06-01"
-  plant: "Böllinger Höfe, Neckarsulm, Germany"
-
 battery:
   usable_kwh: 97.0
   total_kwh: 105.0
   chemistry: NMC
-  cells: 396
-  modules: 33
   cell_type: pouch
-  voltage_nominal: 730
-  voltage_max: 850
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
-  supplier: "LG Energy Solution"
-
 range:
   wltp_km: 609
   wltp_city_km: 760
   wltp_highway_km: 565
   real_world_km: 540
-  real_world_highway_km: 510
-  real_world_city_km: 760
-  real_world_winter_km: 455
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -44,50 +23,43 @@ charging:
   dc_max_kw: 322
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 310
-    - soc_percent: 10
-      power_kw: 322
-    - soc_percent: 30
-      power_kw: 310
-    - soc_percent: 50
-      power_kw: 260
-    - soc_percent: 70
-      power_kw: 140
-    - soc_percent: 80
-      power_kw: 80
+  - soc_percent: 0
+    power_kw: 310
+  - soc_percent: 10
+    power_kw: 322
+  - soc_percent: 30
+    power_kw: 310
+  - soc_percent: 50
+    power_kw: 260
+  - soc_percent: 70
+    power_kw: 140
+  - soc_percent: 80
+    power_kw: 80
   time_10_to_80_min: 16
   charging_speed_kmh: 1410
-
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 210
-      torque_nm: null
-    - position: rear
-      type: permanent magnet
-      power_kw: 415
-      torque_nm: null
+  - position: front
+    type: permanent magnet
+    power_kw: 210
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: 415
+    torque_nm: null
   total_power_kw: 500
   total_power_hp: 680
   total_torque_nm: 740
   acceleration_0_100_sec: 3.4
   top_speed_kmh: 245
-
 efficiency:
   wltp_kwh_per_100km: 18.0
   real_world_kwh_per_100km: 18.0
-  real_world_highway_kwh_per_100km: 19.0
-  real_world_city_kwh_per_100km: 12.8
-  co2_emissions_wltp_g_per_km: 0
-
 dimensions:
   length_mm: 5004
   width_mm: 1964
@@ -95,25 +67,16 @@ dimensions:
   height_mm: 1394
   wheelbase_mm: 2900
   ground_clearance_mm: 125
-  drag_coefficient: 0.24
-  frontal_area_m2: 2.35
-
 weight:
   curb_weight_kg: 2370
   gross_vehicle_weight_kg: 2840
   payload_kg: 545
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 405
   frunk_capacity_liters: 77
-
-interior:
-  seating_capacity: 4
-  seating_layout: "2+2"
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -121,19 +84,19 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
+notes: 'New S e-tron GT introduced with 2024 facelift. Slots between quattro and RS.
 
-platform_id: j1-performance
-
-notes: |
-  New S e-tron GT introduced with 2024 facelift. Slots between quattro and RS.
   500 kW (680 PS) with 740 Nm torque. 3.4s 0-100 km/h.
+
   Same 105 kWh battery and 322 kW DC charging as other variants.
+
   609 km WLTP range. Sport differential and torque vectoring standard.
 
+  '
 metadata:
-  created_at: "2026-02-09"
-  updated_at: "2026-02-09"
+  created_at: '2026-02-09'
+  updated_at: '2026-02-09'
   data_quality: verified
   sources:
-    - https://ev-database.org/car/2219/Audi-S-e-tron-GT
-    - https://www.audi.de
+  - https://ev-database.org/car/2219/Audi-S-e-tron-GT
+  - https://www.audi.de

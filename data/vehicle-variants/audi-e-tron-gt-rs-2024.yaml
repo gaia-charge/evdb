@@ -1,10 +1,8 @@
-# Audi RS e-tron GT (2024)
 id: audi-e-tron-gt-rs-2024
-name: "RS"
+name: RS
 model_id: audi-e-tron-gt
 model_year: 2024
 variant_code: RS-GT
-
 battery:
   usable_kwh: 93.4
   total_kwh: 97.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 481
   wltp_city_km: 620
@@ -22,7 +19,6 @@ range:
   epa_km: 375
   real_world_km: 410
   real_world_source: Edmunds 70mph highway test
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -30,201 +26,136 @@ charging:
   dc_max_kw: 270
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 220
-    - soc_percent: 5
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 270
-    - soc_percent: 40
-      power_kw: 250
-    - soc_percent: 50
-      power_kw: 225
-    - soc_percent: 60
-      power_kw: 190
-    - soc_percent: 70
-      power_kw: 150
-    - soc_percent: 80
-      power_kw: 105
-    - soc_percent: 90
-      power_kw: 50
-    - soc_percent: 100
-      power_kw: 20
-  time_5_to_80_min: 22.5
+  - soc_percent: 0
+    power_kw: 220
+  - soc_percent: 5
+    power_kw: 270
+  - soc_percent: 30
+    power_kw: 270
+  - soc_percent: 40
+    power_kw: 250
+  - soc_percent: 50
+    power_kw: 225
+  - soc_percent: 60
+    power_kw: 190
+  - soc_percent: 70
+    power_kw: 150
+  - soc_percent: 80
+    power_kw: 105
+  - soc_percent: 90
+    power_kw: 50
+  - soc_percent: 100
+    power_kw: 20
   time_10_to_80_min: 23
   time_20_to_80_min: 24
   charging_speed_kmh: 1020
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 175
-      power_hp: 238
-      torque_nm: 350
-    - position: rear
-      type: permanent magnet
-      power_kw: 300
-      power_hp: 408
-      torque_nm: 500
-  total_power_kw: 440  # Standard mode
-  total_power_hp: 598  # Standard mode
+  - position: front
+    type: permanent magnet
+    power_kw: 175
+    power_hp: 238
+    torque_nm: 350
+  - position: rear
+    type: permanent magnet
+    power_kw: 300
+    power_hp: 408
+    torque_nm: 500
+  total_power_kw: 440
+  total_power_hp: 598
   total_torque_nm: 830
   acceleration_0_100_sec: 3.3
-  acceleration_0_200_sec: 11.4
   top_speed_kmh: 250
-  launch_control: true
-  launch_control_power_kw: 475  # Boost mode with Launch Control
-  launch_control_power_hp: 646
-  overboost_duration_sec: 2.5
-
 weight:
   curb_weight_kg: 2340
   gross_vehicle_weight_kg: 2840
   payload_kg: 500
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
   wltp_kwh_per_100km: 22.5
   epa_kwh_per_100km: 24.8
   real_world_kwh_per_100km: 26.5
-  efficiency_notes: Higher consumption due to performance focus and 800V architecture weight
-
 dimensions:
   length_mm: 4989
   width_mm: 1964
   height_mm: 1396
   wheelbase_mm: 2900
   ground_clearance_mm: 125
-
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 450
   frunk_capacity_liters: 81
-
-interior:
-  seating_capacity: 4  # 2+2 seating
-
-adas:
-  level: 2
-  features:
-    - Adaptive cruise control with Stop & Go
-    - Lane keeping assist (Audi active lane assist)
-    - Traffic sign recognition
-    - Blind spot monitoring
-    - Rear cross traffic alert
-    - 360° cameras (optional)
-    - Night vision assist (optional)
-    - Pre-sense front and rear
-    - Park assist plus
-
-equipment:
-  wheels:
-    standard_size_inches: 20
-    available_sizes_inches: [20, 21]
-    tire_size_front: 265/45 R20
-    tire_size_rear: 305/40 R20
-  
-  lighting:
-    headlights: Matrix LED with laser light
-    matrix_led: true
-    laser_headlights: true  # Optional
-  
-  climate:
-    heat_pump: true
-    heated_seats: true
-    heated_steering_wheel: true
-    ventilated_seats: true
-    massaging_seats: true  # Optional
-    ac_zones: 4
-  
-  driver_assistance:
-    adaptive_cruise_control: true
-    lane_keeping_assist: true
-    blind_spot_monitoring: true
-    parking_sensors: true
-    parking_camera: true
-    surround_view_camera: true  # Optional Top View
-    head_up_display: true  # Optional Audi virtual cockpit plus with HUD
-    autonomous_level: 2
-    adas_brand: Audi Pre Sense
-  
-  infotainment:
-    screen_size_inches: 10.1
-    digital_instrument_cluster: true
-    instrument_cluster_size_inches: 12.3
-    navigation: true
-    smartphone_integration: true  # Apple CarPlay, Android Auto
-    wireless_charging: true
-    premium_audio: true  # Bang & Olufsen 3D sound (16 speakers, 710W)
-  
-  comfort:
-    keyless_entry: true
-    power_tailgate: true
-    ambient_lighting: true
-    adaptive_air_suspension: true
-    adjustable_dampers: true
-    sport_seats: true  # RS sport seats plus with diamond stitching
-
 features:
   heat_pump: true
-  one_pedal_driving: true  # Configurable regen levels
-  adaptive_cruise_control: true
-  keyless_entry: true
-  parking_sensors: true
-  rear_camera: true
-  surround_view_camera: true
-  wireless_charging: true
-  heads_up_display: true
+  one_pedal_driving: true
   adaptive_suspension: true
   air_suspension: true
   torque_vectoring: true
-  launch_control: true
-  sport_exhaust: false  # e-sound system available
+notes: '2024 model year brings minor updates to the RS e-tron GT:
 
-notes: |
-  2024 model year brings minor updates to the RS e-tron GT:
   - Slightly improved battery thermal management
+
   - Updated Audi MMI software (latest version)
+
   - New color options
+
   - Standard equipment enhancements
-  
-  RS e-tron GT is the top-performance variant, offering 475kW (646hp) in boost mode with launch control.
+
+
+  RS e-tron GT is the top-performance variant, offering 475kW (646hp) in boost mode
+  with launch control.
+
   Standard mode provides 440kW (598hp) for everyday driving.
-  
+
+
   The 800V architecture enables exceptional DC fast charging:
+
   - 270kW peak power (5-30% SoC)
+
   - 5-80% charge in just 22.5 minutes
+
   - 100km range in approximately 5 minutes
-  
+
+
   Performance highlights:
+
   - 0-100 km/h in 3.3 seconds
+
   - 0-200 km/h in 11.4 seconds
+
   - 250 km/h top speed (electronically limited)
+
   - 830 Nm torque (instantly available)
-  
+
+
   Built alongside Porsche Taycan at Stuttgart-Zuffenhausen factory.
-  
+
+
   Key differences vs Porsche Taycan Turbo S:
+
   - €15-20k less expensive
+
   - More comfortable suspension tuning (less track-focused)
+
   - More interior space and cargo volume
-  - Audi Virtual Cockpit vs Porsche's curved display
+
+  - Audi Virtual Cockpit vs Porsche''s curved display
+
   - More traditional luxury sedan feel vs sports car character
-  
+
+
   Ceramic brakes (PCCB) available as option for maximum performance.
+
   Rear-axle steering (dynamic all-wheel steering) available for improved agility.
-  
+
+
   Target customer: Those wanting Taycan performance with Audi refinement and value.
 
-data_source: manufacturer
-data_quality: verified
-last_updated: "2026-02-07"
+  '

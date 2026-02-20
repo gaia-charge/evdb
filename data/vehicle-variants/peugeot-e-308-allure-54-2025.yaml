@@ -2,19 +2,11 @@ id: peugeot-e-308-allure-54-2025
 model_id: peugeot-e-308
 name: Allure 54 kWh
 model_year: 2025
-trim_level: Allure
 variant_code: null
-description: "The 2025 Peugeot e-308 Allure continues with the proven 54kWh battery\
-  \ and 156hp front motor.\nFor 2025, minor improvements include updated i-Cockpit\
-  \ software, improved charging curve \nefficiency, and refined driver assistance\
-  \ features. The e-308 remains one of the most \nefficient C-segment EVs with excellent\
-  \ ride quality and the distinctive i-Cockpit layout.\n"
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 51.0
-  supplier: ACC (Automotive Cells Company)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -22,55 +14,11 @@ range:
   wltp_km: 420
   wltp_city_km: 550
   wltp_highway_km: 345
-  real_world_avg_km: 355
   real_world_source: ADAC / press reviews
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 98
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 92
-  - percent: 60
-    power_kw: 82
-  - percent: 70
-    power_kw: 68
-  - percent: 80
-    power_kw: 45
-  - percent: 90
-    power_kw: 30
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 270
-  combined:
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 270
 performance:
-  top_speed_kph: 170
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 270
@@ -95,42 +43,8 @@ weight:
   payload_kg: 400
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-tires:
-  standard: 205/55 R17
-features:
-  infotainment:
-  - Peugeot i-Cockpit HD with 10.0" touchscreen
-  - 10.0" digital instrument cluster
-  - Wireless Apple CarPlay and Android Auto
-  - DAB+ digital radio
-  - 6 speakers
-  - MyPeugeot mobile app
-  - Connected Navigation with real-time traffic
-  - i-Toggles (5 customizable shortcuts)
-  driver_assistance:
-  - Active Safety Brake with Pedestrian/Cyclist Detection
-  - Lane Keep Assist
-  - Traffic Sign Recognition
-  - Adaptive cruise control with Stop & Go
-  - Blind spot monitoring
-  - Rear parking sensors and camera
-  - Driver attention alert
-  comfort_convenience:
-  - Automatic dual-zone climate control
-  - Keyless entry and start
-  - One-pedal driving (B-mode)
-  - Heated front seats
-  - Wireless smartphone charging
-  - Heat pump (standard for 2025)
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.peugeot.de/modelle/e-308.html
-  notes: '2025 model with minor updates: heat pump now standard, slightly improved
-    WLTP range (420km vs 416km), updated software. Remains an excellent value C-segment
-    EV.'

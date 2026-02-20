@@ -1,113 +1,28 @@
 id: porsche-taycan-turbo-gt-2026
 name: Turbo GT
 model_id: porsche-taycan
-manufacturer_id: porsche
 model_year: 2026
-trim_level: Turbo GT
-version: Turbo GT AWD
-description: 'The 2026 Porsche Taycan Turbo GT is the ultimate expression of electric
-
-  performance from Porsche. With 760 kW (1,034 hp) overboost power via Launch
-
-  Control, it accelerates from 0-100 km/h in just 2.3 seconds and reaches a
-
-  top speed of 290 km/h — making it one of the fastest production cars ever
-
-  built. The Turbo GT holds multiple Nürburgring lap records for electric
-
-  production vehicles.
-
-
-  For 2026, the Turbo GT features the upgraded 105 kWh Performance Battery Plus,
-
-  320 kW peak DC charging, PCM 6.0 with curved 16.8-inch display, and refined
-
-  aerodynamics. Standard equipment includes PDCC Sport active anti-roll bars,
-
-  rear-axle steering, carbon fiber exterior elements, and track-focused
-
-  suspension tuning. Available in sedan form only (no Sport Turismo variant).
-
-  '
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
   chemistry: NMC
-  cells: prismatic
   manufacturer: LG Energy Solution
-  supplier: LG Energy Solution (South Korea)
-  modules: 33
-  nominal_voltage: 800
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
-  heating: integrated battery heating
-  preconditioning: true
-  notes: 'Performance Battery Plus with enhanced cooling for sustained track use.
-
-    800V architecture enables 320 kW peak DC charging.
-
-    '
 range:
   wltp_km: 540
   wltp_city_km: 620
   wltp_highway_km: 430
   real_world_km: 420
-  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
-  notes: 'WLTP: 540-559 km depending on configuration.
-
-    Track use significantly reduces range due to high power demands.
-
-    Highway at 130 km/h: ~370 km.
-
-    '
 efficiency:
   wltp_kwh_per_100km: 21.2
   real_world_kwh_per_100km: 24.0
-  real_world_conditions: Mixed driving, 20°C ambient
 charging:
-  ac:
-    standard: true
-    optional_upgrade_kw: 22
-    connector_type: Type2
-    phases: 3
-    time_0_100_hours: 9.5
-  dc:
-    connector_type: CCS
-    time_10_80_percent_min: 18
-    notes: 'Peak: 320 kW DC. 10-80% in 18 minutes at optimal conditions.
-
-      Enhanced thermal management for repeated fast charging sessions.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 320
 performance:
-  power_kw: 560
-  power_hp: 762
-  power_ps: 762
-  overboost_power_kw: 760
-  overboost_power_hp: 1034
-  overboost_power_ps: 1034
-  torque_nm: 940
-  overboost_torque_nm: 940
-  drivetrain: AWD
-  transmission: 2-speed rear, single-speed front
-  acceleration:
-    zero_to_100_kmh_sec: 2.3
-    zero_to_100_kmh_launch_control_sec: 2.3
-    zero_to_200_kmh_sec: 7.3
-    launch_control: true
-    notes: '0-100 km/h: 2.3 seconds (Launch Control). Hypercar-level acceleration.
-
-      0-200 km/h: 7.3 seconds.
-
-      Nürburgring Nordschleife: 7:07.55 (electric production car record).
-
-      '
   top_speed_kmh: 290
-  top_speed_limited: false
   total_power_kw: 560
   total_torque_nm: 940
   total_power_hp: 762
@@ -119,135 +34,14 @@ dimensions:
   height_mm: 1381
   wheelbase_mm: 2900
   ground_clearance_mm: 108
-  drag_coefficient: 0.22
-  frontal_area_m2: 2.33
 weight:
   curb_weight_kg: 2410
   gross_vehicle_weight_kg: 2800
   payload_kg: 390
-  max_towing_kg: 0
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
   trailer_hitch_available: false
-  weight_distribution_front_percent: 50
-  weight_distribution_rear_percent: 50
 cargo:
   trunk_capacity_liters: 366
   trunk_max_liters: 1171
   frunk_capacity_liters: 81
-  total_liters: 447
-  rear_seats_fold: true
-  rear_seats_split: 60/40
-motors:
-- position: front
-  type: PSM
-  power_kw: 280
-  torque_nm: 350
-  cooling: liquid
-- position: rear
-  type: PSM
-  power_kw: 450
-  torque_nm: 590
-  cooling: liquid
-suspension:
-  front: Double wishbone, adaptive air suspension, PDCC Sport
-  rear: Multi-link, adaptive air suspension, rear-axle steering, PDCC Sport
-  dampers: PASM Sport (lowered, stiffer)
-  adjustable: true
-  notes: 'PDCC Sport (active anti-roll stabilization) standard.
-
-    Rear-axle steering standard (up to 2.4° at low speed).
-
-    Sport-tuned suspension with lower ride height than standard Taycan.
-
-    '
-brakes:
-  front_mm: 420
-  rear_mm: 410
-  front_type: PCCB carbon ceramic
-  rear_type: PCCB carbon ceramic
-  caliper_pistons_front: 10
-  caliper_pistons_rear: 4
-  notes: Porsche Ceramic Composite Brake (PCCB) standard on Turbo GT.
-regenerative_braking:
-  max_power_kw: 400
-  modes: Auto, Off, Max
-  one_pedal_driving: true
-wheels:
-  standard: 21-inch Taycan Turbo GT Design wheels
-  optional:
-  - 21-inch Taycan Turbo GT Design wheels in Satin Neodyme
-  - 20-inch Taycan RS Spyder Design wheels
-  tire_front: 265/35 R21
-  tire_rear: 305/30 R21
-infotainment:
-  screen_size_inches: 16.8
-  system: Porsche Communication Management (PCM 6.0)
-  additional_screens:
-  - 10.9-inch passenger display (standard)
-  - 8.4-inch center console touchscreen
-  navigation: true
-  apple_carplay: true
-  android_auto: true
-driver_assistance:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_sensors: true
-  parking_camera: true
-  surround_view_camera: true
-  emergency_braking: true
-  notes: InnoDrive standard on Turbo GT.
-climate:
-  zones: 3
-  heat_pump: true
-  heated_seats: true
-  ventilated_seats: true
-  heated_steering_wheel: true
-standard_features:
-- Performance Battery Plus (105 kWh)
-- PDCC Sport (active anti-roll stabilization)
-- Rear-axle steering
-- PCCB carbon ceramic brakes
-- Sport Chrono Package
-- 21-inch Taycan Turbo GT Design wheels
-- Porsche Electric Sport Sound
-- PCM 6.0 with 16.8-inch curved display
-- InnoDrive with adaptive cruise
-- Passenger display (10.9-inch)
-- Burmester 3D High-End Surround Sound
-- Full leather interior with carbon fiber trim
-- Sport Seats Plus (18-way electric)
-- Heated and ventilated front seats
-- 4-zone climate control
-- LED Matrix headlights with PDLS+
-- Carbon fiber front lip, side skirts, rear diffuser
-- Adaptive air suspension with GT Sport tuning
-- Night Vision Assist
-market_availability:
-- DE
-- FR
-- GB
-- IT
-- ES
-- NL
-- AT
-- CH
-- false
-- SE
-availability:
-  available_since: 2025-11
-  production_status: current
-  order_status: available
-  delivery_time_weeks: 16-20
-  notes: Limited production. Longer delivery times than standard Taycan.
-data_sources:
-- source: Porsche AG Germany official website
-  url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan-turbo-gt/
-  date: 2026-02-09
-  confidence: verified
-- source: Porsche Press Database
-  date: 2026-02-09
-  confidence: verified
-confidence: verified
-last_updated: 2026-02-09

@@ -2,12 +2,6 @@ id: mg5-electric-standard-range-2024
 model_id: mg5-electric
 name: Standard Range
 model_year: 2024
-trim_level: Standard Range
-version_info:
-  major_version: 2
-  minor_version: 0
-  release_date: 2024-01-01
-  changes_from_previous: 2022 refresh with updated battery chemistry
 dimensions:
   length_mm: 4600
   width_mm: 1818
@@ -21,85 +15,23 @@ cargo:
   frunk_capacity_liters: 0
 battery:
   chemistry: LFP
-  supplier: CATL
   usable_kwh: 49.1
   total_kwh: 50.3
-  cells: 168
-  modules: 21
-  voltage_nominal: 345
-  voltage_max: 405
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 320
   wltp_city_km: 435
   wltp_highway_km: 260
   epa_km: null
   real_world_km: 280
-  real_world_highway_km: 240
-  real_world_city_km: 340
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 3
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 5.0
-  dc:
-    peak_power_kw: 87
-    time_10_80_min: 40
-    time_20_80_min: 32
-    preconditioning_available: false
-  bidirectional:
-    capabilities: []
-    max_power_kw: null
   ac_max_kw: 11.0
   dc_max_kw: 87
-charging_curve:
-- soc_percent: 10
-  power_kw: 85
-  current_a: 240
-- soc_percent: 20
-  power_kw: 87
-  current_a: 245
-- soc_percent: 30
-  power_kw: 87
-  current_a: 245
-- soc_percent: 40
-  power_kw: 85
-  current_a: 240
-- soc_percent: 50
-  power_kw: 80
-  current_a: 225
-- soc_percent: 60
-  power_kw: 70
-  current_a: 195
-- soc_percent: 70
-  power_kw: 55
-  current_a: 155
-- soc_percent: 80
-  power_kw: 40
-  current_a: 112
-- soc_percent: 90
-  power_kw: 25
-  current_a: 70
-motor:
-  type: permanent_magnet
-  count: 1
-  drive_type: FWD
-  power_kw: 115
-  power_hp: 156
-  torque_nm: 260
-  max_rpm: 13000
 performance:
   acceleration_0_100_sec: 8.3
-  acceleration_0_60_sec: 7.8
-  top_speed_kph: 185
   top_speed_kmh: 185
-  top_speed_limited: true
   total_power_kw: 115
   total_torque_nm: 260
   total_power_hp: 156
@@ -109,83 +41,6 @@ weight:
   payload_kg: 450
   towing_capacity_braked_kg: 500
   towing_capacity_unbraked_kg: 500
-  weight_distribution_front_percent: 62
-  weight_distribution_rear_percent: 38
-wheels_tires:
-  standard:
-    front_size: 215/55 R16
-    rear_size: 215/55 R16
-    wheel_size_inches: 16
-  optional:
-  - front_size: 215/55 R17
-    rear_size: 215/55 R17
-    wheel_size_inches: 17
-    notes: Alloy wheels
-brakes:
-  front: Ventilated discs
-  rear: Solid discs
-  regenerative_braking: true
-  one_pedal_driving: false
-  regen_levels: 3
-suspension:
-  front: MacPherson strut
-  rear: Multi-link independent
-adas:
-  adaptive_cruise_control: false
-  lane_keeping_assist: true
-  blind_spot_monitoring: false
-  rear_cross_traffic_alert: false
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: false
-interior:
-  seating_material: fabric
-  heated_seats_front: false
-  heated_seats_rear: false
-  heated_steering_wheel: false
-  ventilated_seats: false
-  power_adjustable_driver_seat: false
-  panoramic_roof: false
-  ambient_lighting: false
-climate:
-  heat_pump: false
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 4
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 33000
-  market: DE
-  year: 2024
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - PL
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Dacia Spring (smaller, cheaper)
-- Opel Corsa-e (smaller)
-- Renault Zoe (smaller)
-- Nissan Leaf (less cargo space)
 metadata:
   data_quality: verified
   sources:
@@ -193,19 +48,3 @@ metadata:
   - https://mg.co.uk/new-cars/mg5-electric/specifications
   - https://www.car.info/en-se/mg/5-electric/
   created_at: '2026-02-08'
-  last_updated: '2026-02-20'
-  notes: 'Entry-level electric estate car in Europe.
-
-    50.3kWh LFP battery provides decent 320km WLTP range.
-
-    Front-wheel drive (unlike MG4''s RWD).
-
-    Best-in-class cargo space (479L) for this price point.
-
-    Slightly slower DC charging (87kW max) than MG4.
-
-    Ideal for fleet buyers and families needing practicality over performance.
-
-    7-year/175,000km battery warranty.
-
-    '

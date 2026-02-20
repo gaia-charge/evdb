@@ -2,86 +2,23 @@ id: jeep-avenger-electric-2024
 model_id: jeep-avenger
 name: Electric
 model_year: 2024
-trim_level: null
 variant_code: null
-production:
-  start_date: 2023-03-01
-  end_date: null
-  status: active
-  notes: 2023 European Car of the Year winner
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 51.0
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Standard battery shared across Stellantis eCMP2 platform
 range:
   wltp_km: 400
   wltp_city_km: 550
   wltp_highway_km: 320
-  epa_combined_km: null
-  real_world_avg_km: 340
   real_world_source: Auto Bild test data
-  notes: Real-world range around 340km in mixed conditions, excellent in city
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW 3-phase standard, no 22kW option
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 29
-    peak_power_notes: 100kW peak maintained up to ~50%, then tapers
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 95
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 95
-  - percent: 60
-    power_kw: 75
-  - percent: 70
-    power_kw: 55
-  - percent: 80
-    power_kw: 35
-  - percent: 90
-    power_kw: 20
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
-    supplier: null
-  combined:
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 150
-  quarter_mile_seconds: null
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 260
@@ -89,95 +26,12 @@ performance:
   top_speed_kmh: 150
 efficiency:
   wltp_kwh_per_100km: 14.0
-  wltp_wh_per_km: 140
   real_world_kwh_per_100km: 15.5
-  real_world_wh_per_km: 155
-drivetrain:
-  drive_type: FWD
-  transmission: single_speed
-  traction_control: Selec-Terrain system (Snow, Mud, Sand modes)
-suspension:
-  front: MacPherson strut
-  rear: Torsion beam
-  adaptive: false
-  notes: Comfort-tuned for urban and highway use
-brakes:
-  front: Ventilated disc
-  rear: Solid disc
-  regen_levels: 3
-  one_pedal: true
-wheels_tires:
-  standard:
-  - size: 215/60 R17
-    wheel_diameter_inches: 17
-  - size: 215/55 R18
-    wheel_diameter_inches: 18
-  optional:
-  - size: 215/55 R18
-    wheel_diameter_inches: 18
-    notes: Altitude trim 18" wheels
-exterior:
-  paint_colors:
-  - name: Avenger Black
-    type: solid
-    upcharge_eur: 0
-  - name: Colorado Red
-    type: metallic
-    upcharge_eur: 600
-  - name: Sting-Gray
-    type: metallic
-    upcharge_eur: 600
-  - name: Glacier White
-    type: metallic
-    upcharge_eur: 600
-  - name: Technogreen
-    type: metallic
-    upcharge_eur: 600
-  standard_features:
-  - Full-LED headlights with automatic high beam
-  - LED daytime running lights
-  - LED tail lights
-  - Body-colored door handles
-  - Black roof rails
-  - Rear parking sensors
-  - Rear parking camera
-  - 17" alloy wheels standard
-interior:
-  seats:
-    material: Cloth standard, leatherette optional
-    front_heated: Optional
-    front_ventilated: false
-    front_power: false
-    memory_function: false
-  standard_features:
-  - 10.25" touchscreen with Uconnect 5
-  - 7" digital instrument cluster
-  - Wireless Apple CarPlay & Android Auto
-  - Climate control
-  - Leather-wrapped steering wheel
-  - USB-C ports (front and rear)
-  - Keyless entry
-  - Push-button start
-adas:
-  level: 2
-  features:
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Lane departure warning
-  - Traffic sign recognition
-  - Automatic emergency braking with pedestrian detection
-  - Blind spot monitoring
-  - Rear cross traffic alert
-  - Driver attention warning
-  autopark: false
-  traffic_light_recognition: true
-  notes: Comprehensive ADAS suite standard for safety
 weight:
   curb_weight_kg: 1515
   gross_vehicle_weight_kg: 1955
   payload_kg: 440
   towing_capacity_braked_kg: 750
-  notes: Compact and relatively light for an electric SUV
 dimensions:
   length_mm: 4084
   width_mm: 1776
@@ -188,26 +42,6 @@ cargo:
   trunk_capacity_liters: 355
   trunk_max_liters: 1250
   frunk_capacity_liters: 0
-data_quality:
-  overall: verified
-  specifications: high
-  real_world_data: medium
-  market_data: high
-  last_updated: 2026-02-08
-  confidence_notes: Official specs verified, real-world data from early reviews
-sources:
-- name: Jeep Germany Official Configurator
-  url: https://www.jeep.de/avenger
-  date_accessed: 2026-02-08
-  confidence: verified
-- name: Auto Bild Jeep Avenger Test
-  url: https://www.autobild.de/artikel/jeep-avenger-test-2023-21234567.html
-  date_accessed: 2026-02-08
-  confidence: measured
-- name: Automobile Magazine Test
-  url: https://www.automobile-magazine.fr/essais-voitures/article/35878-essai-jeep-avenger-electric
-  date_accessed: 2026-02-08
-  confidence: measured
 notes: 'The Jeep Avenger Electric won the 2023 European Car of the Year award,
 
   the first Jeep to ever win this prestigious award.

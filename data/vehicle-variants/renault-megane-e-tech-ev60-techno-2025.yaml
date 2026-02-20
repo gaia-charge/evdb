@@ -2,86 +2,23 @@ id: renault-megane-e-tech-ev60-techno-2025
 model_id: renault-megane-e-tech
 name: Megane E-Tech EV60 Techno
 model_year: 2025
-trim_level: Techno
 variant_code: null
-production:
-  start_date: 2022-03-01
-  end_date: null
-  status: active
-  notes: 2025 model year, most popular variant
 battery:
-  type: Lithium-ion
   chemistry: NCM
   total_kwh: 60.0
   usable_kwh: 60.0
-  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 252
-  modules: 12
-  voltage_nominal: 400
-  notes: Larger battery with extended range
 range:
   wltp_km: 450
   wltp_city_km: 580
   wltp_highway_km: 360
-  epa_combined_km: null
-  real_world_avg_km: 380
   real_world_source: ADAC EcoTest 2025, InsideEVs real-world testing
-  notes: Excellent real-world efficiency and range
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 3.0
-    onboard_charger: 22kW 3-phase standard on EV60
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    peak_power_notes: 130kW peak maintained up to ~60% SoC
-    preconditioning: false
-  charge_curve:
-  - percent: 0
-    power_kw: 120
-  - percent: 10
-    power_kw: 130
-  - percent: 30
-    power_kw: 130
-  - percent: 50
-    power_kw: 125
-  - percent: 60
-    power_kw: 105
-  - percent: 70
-    power_kw: 78
-  - percent: 80
-    power_kw: 48
-  - percent: 90
-    power_kw: 30
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 130
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 160
-    power_hp: 218
-    torque_nm: 300
-    supplier: null
-  combined:
-    power_kw: 160
-    power_hp: 218
-    torque_nm: 300
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 160
-  quarter_mile_seconds: null
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
@@ -89,12 +26,7 @@ performance:
   top_speed_kmh: 160
 efficiency:
   wltp_kwh_per_100km: 15.8
-  wltp_wh_per_km: 158
   real_world_kwh_per_100km: 17.4
-  real_world_wh_per_km: 174
-  real_world_highway_kwh_per_100km: 20.2
-  real_world_city_kwh_per_100km: 15.1
-  notes: Excellent efficiency despite more powerful motor
 dimensions:
   length_mm: 4200
   width_mm: 1768
@@ -112,54 +44,6 @@ weight:
   payload_kg: 450
   towing_capacity_braked_kg: 900
   towing_capacity_unbraked_kg: 630
-wheels_tires:
-  standard:
-    front: 215/50 R19
-    rear: 215/50 R19
-    wheels: 19" Diamond-cut alloys
-  optional:
-  - 215/45 R20 (Iconic trim)
-features:
-  standard:
-  - Full LED Matrix headlights
-  - 12" central touchscreen with OpenR Link
-  - 12.3" digital instrument cluster
-  - Google built-in (Android Automotive OS)
-  - Wireless smartphone charging
-  - Dual-zone automatic climate control
-  - Front and rear parking sensors
-  - 360° parking camera
-  - Lane keeping assist with lane centering
-  - Adaptive cruise control with stop & go
-  - Traffic sign recognition
-  - Active emergency braking
-  - Blind spot monitoring
-  - Rear cross traffic alert
-  optional:
-  - Solarbay panoramic roof
-  - Harman Kardon sound system (10 speakers)
-  - Hands-free parking
-data_quality:
-  overall: verified
-  last_updated: 2026-02-09
-  source_reliability: high
-  confidence_specs: verified
-  confidence_performance: verified
-  confidence_consumption: measured
-  notes: Most tested variant, extensive real-world data available
-sources:
-- name: Renault Germany Official Specifications
-  url: https://www.renault.de/
-  date_accessed: 2026-02-09
-  type: manufacturer
-- name: ADAC EcoTest 2025
-  url: https://www.adac.de/
-  date_accessed: 2026-02-09
-  type: independent_test
-- name: InsideEVs Real-World Range Test
-  url: https://insideevs.com/
-  date_accessed: 2024-11-20
-  type: independent_test
 notes: 'The EV60 Techno is the most popular Megane E-Tech variant, offering an excellent
 
   balance of range, performance, and equipment level.

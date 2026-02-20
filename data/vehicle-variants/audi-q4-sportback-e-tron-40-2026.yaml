@@ -2,137 +2,32 @@ id: audi-q4-sportback-e-tron-40-2026
 name: '40'
 model_id: audi-q4-sportback-e-tron
 model_year: 2026
-production_years:
-  start: 2026
-  end: null
-trim_level: base
-market_position: entry-level-sportback
-description: 'The Q4 Sportback 40 e-tron 2026 is Audi''s stylish coupe-SUV variant
-  with exceptional
-
-  aerodynamics (Cd 0.26) providing extended range over the standard Q4.
-
-
-  2026 model year updates include:
-
-  - Larger 85kWh battery (up from 82kWh) with 80kWh usable
-
-  - Improved DC charging to 150kW peak (400V architecture)
-
-  - Updated MMI infotainment with enhanced AI features
-
-  - New exterior styling with revised LED lighting
-
-  - Improved heat pump efficiency for winter range
-
-  - Enhanced matrix LED headlights (optional)
-
-
-  The Sportback''s superior aerodynamics (Cd 0.26 vs 0.28 standard Q4) deliver up
-  to
-
-  20km additional range compared to the standard Q4 40 e-tron, making it the most
-
-  efficient Q4 variant available.
-
-  '
-production_status: active
 battery:
   usable_kwh: 80.0
   total_kwh: 85.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, MEB platform
-    weight_kg: 525
-    modules: 12
-    cells: 288
 range:
   wltp_km: 610
-  wltp_source: manufacturer
   real_world_km: 520
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode, 19-inch wheels
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.3
-      '20_80': 4.8
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 36
-      '0_100': 56
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 40
-      power_kw: 125
-    - soc_percent: 50
-      power_kw: 105
-    - soc_percent: 60
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 68
-    - soc_percent: 80
-      power_kw: 48
-    - soc_percent: 90
-      power_kw: 28
-    - soc_percent: 100
-      power_kw: 15
   ac_max_kw: 11
   dc_max_kw: 150
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: single-motor
-  drive_type: RWD
-  rear:
-    type: permanent-magnet
-    power_kw: 210
-    power_hp: 286
-    torque_nm: 545
-  combined:
-    power_kw: 210
-    power_hp: 286
-    torque_nm: 545
 performance:
   top_speed_kmh: 160
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 545
   acceleration_0_100_sec: 7.0
-efficiency:
-  consumption_wltp_kwh_100km: 13.1
-  consumption_real_world_kwh_100km: 15.4
-  energy_label: A
 dimensions:
   length_mm: 4588
   width_mm: 1865
   height_mm: 1614
   wheelbase_mm: 2764
   ground_clearance_mm: 180
-  curb_weight_kg: 2025
-  trunk_capacity_liters: 535
-  trunk_max_liters: 1460
 cargo:
   trunk_capacity_liters: 535
   trunk_max_liters: 1460
@@ -145,24 +40,8 @@ weight:
   towing_capacity_unbraked_kg: 750
 metadata:
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   data_quality: verified
   sources:
   - https://www.audi.com/en/models/q4-sportback-e-tron/q4-sportback-40-e-tron.html
   - https://ev-database.org/car/2026/Audi-Q4-Sportback-40-e-tron
   - https://www.audi-mediacenter.com/en/press-releases/2026-model-year-updates
-  verified_by: manufacturer
-  notes: "2026 model year brings improved battery capacity (85kWh total, 80kWh usable)\
-    \ and \nenhanced DC charging performance up to 150kW. The Q4 Sportback 40 e-tron\
-    \ combines\nstyle with exceptional efficiency.\n\nSuperior aerodynamics (Cd 0.26)\
-    \ provide up to 20km additional range compared to\nstandard Q4 40 e-tron (610km\
-    \ vs 590km WLTP), making it the most efficient Q4\nvariant available. The sloping\
-    \ roofline actually increases trunk space by 15L.\n\nRear motor upgraded to more\
-    \ powerful unit (210kW vs 150kW in 2024) with improved\ntorque (545Nm vs 310Nm)\
-    \ for better acceleration (7.0s vs 8.5s 0-100km/h).\n\nHeat pump now standard\
-    \ for better winter efficiency. Updated MMI system with \nAI-powered voice assistant\
-    \ and improved route planning.\n\nPopular with buyers who want the style of a\
-    \ coupe-SUV without sacrificing\npracticality or range. Premium of €1,500-2,000\
-    \ over standard Q4 is offset by\n20km additional range and sportier design.\n\n\
-    With 610km WLTP range (520km real-world), the Q4 Sportback 40 2026 is the \nrange\
-    \ champion in Audi's compact SUV lineup.\n"

@@ -20,38 +20,13 @@ range:
   real_world_km: 370
   real_world_source: ADAC estimates, VW official data
 charging:
-  ac:
-    phases: 3
-    connector: Type 2
-    time_0_100_hours: 7.5
-  dc:
-    connector: CCS
-    time_10_80_minutes: 28
-    time_0_100_minutes: 50
   ac_max_kw: 11
   dc_max_kw: 200
-motors:
-  front:
-    type: asynchronous
-    power_kw: 80
-    torque_nm: 172
-  rear:
-    type: permanent_magnet
-    power_kw: 170
-    torque_nm: 310
-  combined:
-    total_power_kw: 250
-    total_torque_nm: 550
-    drivetrain: awd
 performance:
   top_speed_kmh: 160
-  top_speed_limited: true
   acceleration_0_100_sec: 6.5
   total_power_kw: 250
   total_torque_nm: 550
-efficiency:
-  wltp_kwh_100km: 21.0
-  real_world_kwh_100km: 23.5
 dimensions:
   length_mm: 4712
   width_mm: 1985
@@ -172,11 +147,3 @@ notes: 'VW ID.Buzz GTX is the performance flagship variant with dual-motor all-w
   configurations.
 
   '
-production:
-  status: active
-  start_year: 2024
-  start_month: 3
-  plant: Hannover, Germany
-last_updated: '2026-02-08'
-data_source: volkswagen.de
-confidence_level: verified

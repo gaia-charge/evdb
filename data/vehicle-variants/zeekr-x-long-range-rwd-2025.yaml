@@ -1,108 +1,28 @@
 id: zeekr-x-long-range-rwd-2025
 model_id: zeekr-x
 name: Long Range RWD
-variant_name: Long Range RWD
 model_year: 2025
-trim_level: Long Range
-production_years: 2024-present
-overview: 'The Zeekr X Long Range RWD is the single-motor variant of Zeekr''s compact
-  electric crossover, offering the best range in the lineup at 440km WLTP. With 200kW
-  (272hp) from a single rear motor, it provides brisk performance with a 5.6s 0-100
-  km/h time while maintaining excellent efficiency. The 69kWh NMC battery supports
-  150kW DC fast charging for 10-80% in approximately 29 minutes. Built on Geely''s
-  SEA2 platform, it shares its architecture with the Volvo EX30 and Smart #1 but offers
-  more interior space thanks to its larger dimensions.
-
-  '
 battery:
   chemistry: NMC
-  supplier: CATL
   total_kwh: 69.0
   usable_kwh: 64.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 69kWh NMC battery from CATL (Geely Sichuan joint venture), 400V architecture
 range:
   wltp_km: 440
   wltp_city_km: 560
   wltp_highway_km: 370
-  epa_miles: null
   real_world_km: 380
-  real_world_notes: 'Real-world range varies: ~380km mixed driving, ~520km city, ~330km
-    highway'
 charging:
-  ac:
-    connector_type: Type2
-    phases: 3
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 210
-      power_kw: 22.0
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 148
-    - soc_percent: 30
-      power_kw: 140
-    - soc_percent: 40
-      power_kw: 130
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
-    charging_time:
-    - percent_start: 10
-      percent_end: 80
-      time_minutes: 29
-      power_kw: 150
-      notes: 10-80% in approximately 29 minutes at optimal conditions
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 150
-motors:
-  configuration: single
-  drive_type: RWD
-  total_power_kw: 200
-  total_power_hp: 272
-  total_torque_nm: 343
-  motor_type: permanent_magnet
-  motors:
-  - position: rear
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 180
-  notes: 0-100 km/h in 5.6 seconds, electronically limited to 180 km/h
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
   acceleration_0_100_sec: 5.6
-efficiency:
-  consumption_wltp_kwh_per_100km: 15.7
-  consumption_real_world_kwh_per_100km: 17.5
-  efficiency_rating_eu: A
-  notes: 'Good efficiency for a compact crossover: 15.7 kWh/100km WLTP'
 dimensions:
   length_mm: 4432
   width_mm: 1836
@@ -120,35 +40,10 @@ weight:
   payload_kg: 415
   towing_capacity_braked_kg: 1200
   towing_capacity_unbraked_kg: 750
-features:
-  standard:
-  - 14.6-inch floating center touchscreen
-  - 8.0-inch instrument cluster
-  - AR Head-Up Display
-  - Panoramic sunroof
-  - Harman Kardon 13-speaker audio
-  - Wireless Apple CarPlay and Android Auto
-  - Heat pump climate control
-  - LED matrix headlights
-  - 360-degree camera
-  - Zeekr Pilot (adaptive cruise + lane centering)
-  - Wireless phone charger
-  - Powered tailgate
-  - 22kW AC charging
-  optional:
-  - 20-inch wheels
-  - Metallic paint colors
-version:
-  release_date: 2024-11
-  changes_from_previous: European market launch, European-tuned suspension
-  notes: 2025 model year for European market
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://en.wikipedia.org/wiki/Zeekr_X
   - https://www.topgear.com/car-reviews/zeekr-x-2023
   - https://www.euroncap.com/en/results/zeekr/x
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: European specification, 2025 model year

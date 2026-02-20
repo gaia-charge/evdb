@@ -2,84 +2,24 @@ id: byd-dolphin-surf-comfort-2025
 model_id: byd-dolphin-surf
 name: Comfort
 model_year: 2025
-trim_level: Comfort
 variant_code: null
-production:
-  start_date: 2025-03-01
-  end_date: null
-  status: active
-  notes: European launch Q1 2025
 battery:
-  type: Lithium-ion
   chemistry: LFP
   total_kwh: 45.3
   usable_kwh: 43.5
-  supplier: BYD (FinDreams)
   warranty_years: 8
   warranty_km: 200000
   warranty_capacity_percent: 70
-  cells: null
-  modules: null
-  voltage_nominal: 403
-  notes: BYD Blade Battery (LFP Cell-to-Pack)
 range:
   wltp_km: 310
   wltp_city_km: 400
   wltp_highway_km: 260
-  epa_combined_km: null
-  real_world_avg_km: 265
   real_world_source: Estimated based on BYD Dolphin performance
-  notes: Compact battery optimized for urban and suburban driving
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 1
-    time_0_100_hours: 7.0
-    onboard_charger: 7kW single-phase (11kW three-phase optional)
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 88kW peak DC charging
-    preconditioning: true
-  charge_curve:
-  - percent: 10
-    power_kw: 85
-  - percent: 30
-    power_kw: 88
-  - percent: 50
-    power_kw: 75
-  - percent: 60
-    power_kw: 60
-  - percent: 70
-    power_kw: 45
-  - percent: 80
-    power_kw: 30
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 7.0
   dc_max_kw: 88
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 130
-    power_hp: 177
-    torque_nm: 290
-    supplier: BYD
-  combined:
-    total_power_kw: 130
-    total_power_hp: 177
-    total_torque_nm: 290
-drivetrain:
-  type: fwd
-  drive_type: FWD
-  transmission: single_speed
-  notes: Front-wheel drive
 performance:
   top_speed_kmh: 160
-  top_speed_electronically_limited: true
   acceleration_0_100_sec: 8.9
   total_power_kw: 130
   total_power_hp: 177
@@ -91,8 +31,6 @@ weight:
   curb_weight_kg: 1620
   gross_vehicle_weight_kg: 2050
   payload_kg: 430
-  distribution_front_percent: 55
-  distribution_rear_percent: 45
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
 dimensions:
@@ -101,77 +39,10 @@ dimensions:
   height_mm: 1560
   wheelbase_mm: 2710
   ground_clearance_mm: 155
-  drag_coefficient: 0.268
-  frontal_area_m2: 2.45
 cargo:
   trunk_capacity_liters: 425
   trunk_max_liters: 1440
   frunk_capacity_liters: 0
-wheels:
-  standard:
-    size: 205/55 R17
-    diameter_inches: 17
-  optional:
-  - size: 215/50 R18
-    diameter_inches: 18
-suspension:
-  front: MacPherson strut
-  rear: torsion beam
-  adaptive: false
-  air_suspension: false
-  notes: Standard steel spring suspension
-brakes:
-  front: ventilated disc
-  rear: disc
-  regenerative: true
-  one_pedal_driving: true
-interior:
-  seating_capacity: 5
-  seating_configuration: 2+3
-  trunk_capacity_liters: 425
-  cargo_volume_max_liters: 1440
-  frunk_capacity_liters: 32
-technology:
-  infotainment_screen_inches: 12.8
-  instrument_cluster_inches: 10.25
-  head_up_display: false
-  apple_carplay: true
-  android_auto: true
-  wireless_charging: true
-  ota_updates: true
-  keyless_entry: true
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats: false
-  panoramic_roof: false
-adas:
-  level: 2
-  features:
-  - adaptive_cruise_control
-  - lane_keeping_assist
-  - automatic_emergency_braking
-  - blind_spot_monitoring
-  - rear_cross_traffic_alert
-  - traffic_sign_recognition
-  - parking_assist
-  - rear_camera
-safety:
-  euro_ncap:
-    year: null
-    overall: null
-energy_label:
-  efficiency_class: a
-  co2_emissions_g_per_km: 0
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-11
-  source_reliability: medium
-  notes: Specs estimated from Paris Motor Show reveal and BYD platform data
-sources:
-- name: BYD Europe
-  url: https://www.byd.com/eu/car/dolphin-surf
-  date_accessed: 2026-02-09
 notes: 'The BYD Dolphin Surf Comfort is the entry-level variant with a 45.3 kWh Blade
 
   Battery offering 310 km WLTP range. Positioned as an affordable compact crossover,

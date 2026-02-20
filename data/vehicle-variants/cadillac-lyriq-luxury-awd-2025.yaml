@@ -1,64 +1,28 @@
 id: cadillac-lyriq-luxury-awd-2025
 name: Lyriq Luxury AWD
 model_id: cadillac-lyriq
-manufacturer_id: general-motors
-variant_name: Luxury AWD
 model_year: 2025
-trim_level: Luxury
-version: 600 E4
-description: "The Cadillac Lyriq Luxury AWD prioritizes comfort and refinement over\
-  \ the Sport trim's\ndynamic focus. It features pinstripe laser-graved front grille\
-  \ pattern, luxury-specific\nwheel designs, and comfort-tuned suspension. Same powerful\
-  \ 528 PS dual-motor AWD and\n102 kWh battery with 530 km WLTP range.\n\nThe Luxury\
-  \ trim emphasizes Cadillac's traditional strengths: exceptional comfort, \npremium\
-  \ materials, and a serene driving experience enhanced by Active Noise Cancellation.\n\
-  Standard massage seats and softer suspension tuning make it ideal for long-distance\n\
-  touring and daily luxury commuting.\n"
 battery:
   usable_kwh: 95.0
   total_kwh: 102.0
   chemistry: NMCA
-  cells: pouch
   manufacturer: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
-  preconditioning: true
 range:
   wltp_km: 530
   wltp_city_km: 640
   wltp_highway_km: 440
   real_world_km: 430
-  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
 efficiency:
   wltp_kwh_per_100km: 22.5
   real_world_kwh_per_100km: 24.5
-  real_world_conditions: Mixed driving, 20°C ambient
 charging:
-  ac:
-    standard: true
-    connector_type: Type2
-    phases: 3
-    time_0_100_hours: 5.5
-  dc:
-    connector_type: CCS2
-    architecture_voltage: 400
-    time_10_80_minutes: 27
   ac_max_kw: 22
   dc_max_kw: 190
-motors:
-  count: 2
-  type: Permanent Magnet Synchronous Motor (PMSM)
-  configuration: AWD
-  combined_power_kw: 394
-  combined_power_hp: 528
-  torque_nm: 610
-drive_type: AWD
-driven_wheels: all
 performance:
   top_speed_kmh: 210
-  top_speed_electronically_limited: true
   acceleration_0_100_sec: 5.3
   total_power_kw: 394
 weight:
@@ -76,33 +40,9 @@ dimensions:
 cargo:
   trunk_capacity_liters: 588
   trunk_max_liters: 1751
-tires:
-  front: 275/40 R21
-  rear: 275/40 R21
-  wheel_size_inches: 21
-  notes: Standard 21" luxury-design alloy wheels
-climate:
-  heat_pump: true
-  auto_climate_zones: 3
-interior:
-  seats: 5
-  seat_material: Premium leather
-  display_center: 33" diagonal LED display (9K resolution)
-  sound_system: AKG Studio 19-speaker system with Dolby Atmos
-  ambient_lighting: 26 color combinations
-  panoramic_roof: true
-  notes: 'Luxury trim features comfort-oriented seats with massage.
-
-    Pinstripe grille pattern vs Sport''s triangular pattern.
-
-    Same 33" display, AKG audio, and Active Noise Cancellation.
-
-    '
 metadata:
   data_quality: verified
-  data_source: manufacturer
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.cadillaceurope.com/de-de/lyriq
   - https://www.carwow.de/cadillac/lyriq

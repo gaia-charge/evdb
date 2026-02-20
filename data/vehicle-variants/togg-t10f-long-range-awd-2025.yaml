@@ -12,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: '85 kWh usable (88.5 kWh gross). 400V architecture with NMC pouch cells.
-
-    Same battery as RWD variant.
-
-    '
 range:
   wltp_km: 590
   wltp_city_km: null
@@ -25,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 465
   real_world_source: ev-database.org estimate
-  notes: 'WLTP range of ~590 km. Real-world range estimated at around 465 km
-
-    in mixed conditions. Slightly less than RWD due to AWD drivetrain losses.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -55,32 +44,13 @@ charging:
     power_kw: 55
   - soc_percent: 90
     power_kw: 30
-  dc_charge_time_10_80_min: 33
-  dc_average_power_10_80_kw: 115
-  ac_charge_time_0_100_hours: 9.25
-  onboard_charger_kw: 11
-  plug_and_charge: false
-  preconditioning: null
-  notes: '180 kW max DC charging. 10-80% in about 33 minutes.
-
-    11 kW 3-phase AC charging. Type 2 and CCS2 connectors on right front.
-
-    '
 performance:
-  power_kw: 255
-  power_hp: 347
-  torque_nm: 580
-  acceleration_0_100_kmh: 5.2
   total_power_kw: 255
   total_torque_nm: 580
   acceleration_0_100_sec: 5.2
   top_speed_kmh: 177
   drive_type: AWD
   total_power_hp: 347
-consumption:
-  wltp_kwh_per_100km: 14.4
-  real_world_kwh_per_100km: 18.3
-  notes: Slightly higher consumption than RWD due to dual motors
 dimensions:
   length_mm: 4830
   width_mm: 1881
@@ -99,13 +69,9 @@ weight:
   towing_capacity_unbraked_kg: 750
 features:
   heat_pump: true
-  v2l: false
-  v2h: false
-  v2g: false
 metadata:
   data_quality: estimated
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://ev-database.org/de/pkw/3306/TOGG-T10F-Long-Range-AWD
   - https://www.togg.com.tr/

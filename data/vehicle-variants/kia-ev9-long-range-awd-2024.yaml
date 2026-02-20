@@ -3,15 +3,6 @@ name: Long Range AWD
 model_id: kia-ev9
 model_year: 2024
 variant_code: null
-production_status: active
-market_availability:
-- DE
-- US
-- KR
-- GB
-- false
-- NL
-- FR
 battery:
   usable_kwh: 99.8
   total_kwh: 99.8
@@ -25,24 +16,12 @@ range:
   wltp_km: 563
   wltp_city_km: 680
   wltp_highway_km: 470
-  epa_miles: 304
   epa_km: 489
   real_world_km: 450
-  real_world_notes: 'Real-world range highly dependent on temperature and driving
-    style.
-
-    Winter range (0°C): ~350-380km
-
-    Summer range (20°C): ~480-510km
-
-    Highway (130 km/h): ~420km
-
-    '
 efficiency:
   wltp_kwh_per_100km: 23.0
   epa_kwh_per_100km: 25.5
   real_world_kwh_per_100km: 24.5
-  energy_label_eu: B
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -82,16 +61,7 @@ performance:
   total_power_kw: 283
   total_power_hp: 385
   total_torque_nm: 700
-  acceleration_0_100_kmh: 5.3
-  acceleration_0_60_mph: 5.0
   top_speed_kmh: 200
-  notes: 'Impressive 5.3s 0-100 km/h for a 2,740kg 7-seater.
-
-    Rear-biased AWD system (160kW rear, 70kW front) for better efficiency.
-
-    Adaptive suspension with auto-leveling standard.
-
-    '
   acceleration_0_100_sec: 5.3
 dimensions:
   length_mm: 5010
@@ -109,9 +79,6 @@ weight:
   payload_kg: 540
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-tires:
-  front_standard: 255/55 R19
-  rear_standard: 255/55 R19
 bidirectional:
   v2l: true
   v2l_max_kw: 3.6
@@ -134,24 +101,6 @@ optional_equipment:
   category: comfort
 - name: Towing package
   category: utility
-pricing_notes: 'Target pricing:
-
-  - Germany: €73,990-€87,990 (Earth to GT-Line)
-
-  - USA: $54,900-$73,900 (Light to GT-Line)
-
-  - UK: £64,995-£76,995
-
-
-  Significantly undercuts German luxury competitors:
-
-  - vs Tesla Model X Long Range ($79,990): €20k+ cheaper in EU
-
-  - vs Mercedes EQS SUV (€114,641): €27k-40k cheaper
-
-  - vs BMW iX xDrive50 (€109,900): €22k-36k cheaper
-
-  '
 notes: "The Kia EV9 Long Range AWD is the most popular variant, offering the best\
   \ \nbalance of range, performance, and practicality. Key highlights:\n\n**Strengths:**\n\
   - Fastest-charging 3-row SUV: 800V enables 10-80% in 24 minutes\n- Spacious 3-row\
@@ -164,17 +113,3 @@ notes: "The Kia EV9 Long Range AWD is the most popular variant, offering the bes
   \ city centers\n\n**Target Buyers:**\n- Families needing 6-7 seats\n- Road trippers\
   \ prioritizing fast charging\n- Towing needs (trailers, boats, caravans)\n- Premium\
   \ features without luxury brand premium\n"
-data_quality: verified
-data_sources:
-- Kia official specifications
-- Kia USA configurator
-- Real-world testing (Car and Driver, Edmunds, InsideEVs)
-- IIHS safety testing
-- Bjørn Nyland 1,000km challenge (800km in 9h 28min)
-source_urls:
-- https://www.kia.com/de/modelle/ev9/
-- https://www.kia.com/us/en/ev9
-- https://insideevs.com/reviews/701221/kia-ev9-long-range-range-test/
-- https://www.caranddriver.com/kia/ev9
-created_at: 2024-02-07
-updated_at: 2024-02-07

@@ -1,10 +1,8 @@
-# BMW i7 eDrive50 (2026)
 id: bmw-i7-edrive50-2026
 name: eDrive50
 model_id: bmw-i7
 model_year: 2026
 variant_code: i7-eDrive50
-
 battery:
   usable_kwh: 101.7
   total_kwh: 105.7
@@ -14,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    Large 101.7 kWh usable battery (105.7 kWh gross). Fifth-generation BMW
-    eDrive with 400V architecture. CATL prismatic cells. 2026 model year
-    with updated battery management system for improved efficiency.
-
 range:
   wltp_km: 635
   wltp_city_km: 865
@@ -27,11 +19,6 @@ range:
   epa_km: 525
   real_world_km: 520
   real_world_source: Estimated based on 2024 model improvements
-  notes: |
-    Improved WLTP range of 635 km (+10 km vs 2024) with software updates
-    to battery management and efficiency. EPA estimated at 525 km. 
-    Real-world range expected around 520 km in mixed conditions.
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -39,60 +26,47 @@ charging:
   dc_max_kw: 195
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 195
-    - soc_percent: 10
-      power_kw: 195
-    - soc_percent: 20
-      power_kw: 192
-    - soc_percent: 30
-      power_kw: 185
-    - soc_percent: 40
-      power_kw: 170
-    - soc_percent: 50
-      power_kw: 145
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 60
-    - soc_percent: 90
-      power_kw: 40
-  time_0_to_100_min: 54
+  - soc_percent: 0
+    power_kw: 195
+  - soc_percent: 10
+    power_kw: 195
+  - soc_percent: 20
+    power_kw: 192
+  - soc_percent: 30
+    power_kw: 185
+  - soc_percent: 40
+    power_kw: 170
+  - soc_percent: 50
+    power_kw: 145
+  - soc_percent: 60
+    power_kw: 115
+  - soc_percent: 70
+    power_kw: 85
+  - soc_percent: 80
+    power_kw: 60
+  - soc_percent: 90
+    power_kw: 40
   time_10_to_80_min: 33
   time_20_to_80_min: 30
   charging_speed_kmh: 1220
-  notes: |
-    DC fast charging up to 195 kW peak. 10-80% in 33 minutes (improved
-    from 34 min in 2024). 22 kW three-phase AC charging standard. 2026
-    model features slightly optimized charging curve.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.7
   v2h: false
   v2g: false
-  notes: "V2L (vehicle-to-load) via adapter. V2H and V2G not yet available."
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 400
-      power_hp: 544
-      torque_nm: 745
+  - position: rear
+    type: permanent magnet
+    power_kw: 400
+    power_hp: 544
+    torque_nm: 745
   total_power_kw: 400
   total_power_hp: 544
   total_torque_nm: 745
   acceleration_0_100_sec: 5.5
   top_speed_kmh: 240
-  notes: |
-    Single permanent magnet motor at rear axle with 544 hp and 745 Nm.
-    0-100 km/h in 5.5 seconds - impressive for a 2.7-ton luxury sedan.
-    Top speed electronically limited to 240 km/h.
-
 dimensions:
   length_mm: 5391
   width_mm: 1950
@@ -100,33 +74,21 @@ dimensions:
   height_mm: 1544
   wheelbase_mm: 3215
   ground_clearance_mm: 145
-
 cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1586
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2710
   gross_vehicle_weight_kg: 3130
   payload_kg: 420
   towing_capacity_braked_kg: 2000
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
-
 efficiency:
   wltp_kwh_per_100km: 18.1
-  wltp_city_kwh_per_100km: 15.5
-  wltp_highway_kwh_per_100km: 20.8
   epa_kwh_per_100km: 19.4
   real_world_kwh_per_100km: 20.6
   efficiency_rating: B
-  notes: |
-    Improved efficiency at 18.1 kWh/100km WLTP (-0.3 kWh from 2024) through
-    software optimization and minor aerodynamic refinements. Real-world
-    efficiency expected around 20.6 kWh/100km.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -134,57 +96,40 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Driving Assistant Professional"
-  notes: |
-    - Executive Drive Pro with air suspension and active roll stabilization
-    - Heat pump standard for improved cold-weather efficiency
-    - BMW Curved Display with 12.3" instrument cluster + 14.9" touchscreen
-    - 31.3" BMW Theatre Screen for rear passengers (8K resolution)
-    - Bowers & Wilkins Diamond Surround Sound System (36 speakers)
-    - Executive Lounge Seating with massage, heating, ventilation, leg rest
-    - Automatic doors with soft-close function
-    - Driving Assistant Professional (Level 2+ ADAS) with 2026 updates
-    - Parking Assistant Professional with remote control
-    - Adaptive LED headlights with BMW Laserlight
-    - Sky Lounge panoramic glass roof with LED lighting
-    - One-pedal driving with adaptive regenerative braking
-    - 2026 model includes updated iDrive 9 with improved voice assistant
-
 optional_equipment:
-  - name: M Sport Package Pro
-    code: MSPORTPRO
-    category: styling
-    included_in_base: false
-    notes: "M Sport styling, 21-inch wheels, M Sport brakes, sport seats"
-  - name: Bowers & Wilkins Diamond 4D System
-    code: BW4D
-    category: infotainment
-    included_in_base: false
-    notes: "Upgraded 36-speaker audio with subwoofers and exciters in seats"
-  - name: Executive Lounge Seating
-    code: EXECLNG
-    category: comfort
-    included_in_base: false
-    notes: "Rear seats with full recline, massage, leg rest, and side tables"
-  - name: Sky Lounge Panoramic Roof
-    code: SKYLNG
-    category: comfort
-    included_in_base: false
-    notes: "Interactive LED lighting patterns in glass roof panel"
+- name: M Sport Package Pro
+  code: MSPORTPRO
+  category: styling
+  included_in_base: false
+- name: Bowers & Wilkins Diamond 4D System
+  code: BW4D
+  category: infotainment
+  included_in_base: false
+- name: Executive Lounge Seating
+  code: EXECLNG
+  category: comfort
+  included_in_base: false
+- name: Sky Lounge Panoramic Roof
+  code: SKYLNG
+  category: comfort
+  included_in_base: false
+notes: 'The 2026 BMW i7 eDrive50 features refinements over the 2024 model including
 
-notes: |
-  The 2026 BMW i7 eDrive50 features refinements over the 2024 model including
   improved efficiency (+10 km WLTP range), updated iDrive 9 system, and
+
   enhanced ADAS capabilities. The core specifications remain excellent:
-  544 hp, 101.7 kWh battery, and 635 km WLTP range. Positioned as BMW's
+
+  544 hp, 101.7 kWh battery, and 635 km WLTP range. Positioned as BMW''s
+
   technology flagship targeting Mercedes EQS and Tesla Model S buyers.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.bmw.com/en/models/i7.html
-    - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
-    - "2026 model year specifications based on BMW product updates"
+  - https://www.bmw.com/en/models/i7.html
+  - https://www.press.bmwgroup.com/global/article/detail/T0403194EN/the-first-ever-bmw-i7
+  - 2026 model year specifications based on BMW product updates

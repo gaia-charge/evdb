@@ -1,10 +1,8 @@
-# Nissan Ariya 87 kWh FWD (2025)
 id: nissan-ariya-87-kwh-fwd-2025
 name: 87 kWh FWD
 model_id: nissan-ariya
 model_year: 2025
 variant_code: ARIYA-87-FWD-25
-
 battery:
   usable_kwh: 87.0
   total_kwh: 91.0
@@ -14,21 +12,12 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    87 kWh usable battery (91 kWh gross). Envision AESC cells with NCM
-    chemistry. 400V architecture. Larger battery option for maximum range.
-
 range:
   wltp_km: 533
   wltp_city_km: 690
   wltp_highway_km: 440
   real_world_km: 440
   real_world_source: EV Database / InsideEVs tests
-  notes: |
-    WLTP range of 533 km with larger 87 kWh battery. Real-world range
-    approximately 440 km in mixed driving. Best range option in Ariya lineup.
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -36,58 +25,47 @@ charging:
   dc_max_kw: 130
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 130
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 115
-    - soc_percent: 50
-      power_kw: 100
-    - soc_percent: 60
-      power_kw: 80
-    - soc_percent: 70
-      power_kw: 60
-    - soc_percent: 80
-      power_kw: 40
-    - soc_percent: 90
-      power_kw: 25
+  - soc_percent: 0
+    power_kw: 130
+  - soc_percent: 10
+    power_kw: 130
+  - soc_percent: 20
+    power_kw: 130
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 115
+  - soc_percent: 50
+    power_kw: 100
+  - soc_percent: 60
+    power_kw: 80
+  - soc_percent: 70
+    power_kw: 60
+  - soc_percent: 80
+    power_kw: 40
+  - soc_percent: 90
+    power_kw: 25
   time_10_to_80_min: 40
   time_20_to_80_min: 34
   charging_speed_kmh: 750
-  notes: |
-    DC fast charging up to 130 kW peak. 10-80% in approximately 40 minutes
-    with larger battery. 22 kW three-phase AC charging standard.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
   v2h: true
   v2g: false
-  notes: |
-    V2L up to 1.5 kW via adapter. V2H capable with compatible equipment.
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 178
-      power_hp: 242
-      torque_nm: 300
+  - position: front
+    type: permanent magnet
+    power_kw: 178
+    power_hp: 242
+    torque_nm: 300
   total_power_kw: 178
   total_power_hp: 242
   total_torque_nm: 300
   acceleration_0_100_sec: 7.5
   top_speed_kmh: 160
-  notes: |
-    Single front motor with 242 hp and 300 Nm. Slightly more power than
-    63 kWh variant. 0-100 km/h in 7.5 seconds. Top speed 160 km/h.
-
 dimensions:
   length_mm: 4595
   width_mm: 1850
@@ -95,31 +73,20 @@ dimensions:
   height_mm: 1660
   wheelbase_mm: 2775
   ground_clearance_mm: 185
-
 cargo:
   trunk_capacity_liters: 468
   trunk_max_liters: 1350
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2120
   gross_vehicle_weight_kg: 2590
   payload_kg: 470
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 54
-  distribution_rear_percent: 46
-
 efficiency:
   wltp_kwh_per_100km: 18.4
-  wltp_city_kwh_per_100km: 15.5
-  wltp_highway_kwh_per_100km: 21.0
   real_world_kwh_per_100km: 19.5
   efficiency_rating: B
-  notes: |
-    18.4 kWh/100km WLTP combined. Slightly higher consumption than 63 kWh
-    variant due to heavier battery. Real-world around 19.5 kWh/100km.
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -127,34 +94,20 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "ProPILOT Assist 2.0"
-  notes: |
-    - Heat pump standard
-    - ProPILOT Assist 2.0 with hands-free highway driving
-    - e-Pedal Step for one-pedal driving
-    - 12.3-inch dual screens
-    - Wireless Apple CarPlay/Android Auto
-    - 2025 update: improved infotainment software
-    - Nissan Safety Shield 360
+notes: 'The 2025 Nissan Ariya 87 kWh FWD is the long-range variant, offering
 
-notes: |
-  The 2025 Nissan Ariya 87 kWh FWD is the long-range variant, offering
   533 km WLTP range with 242 hp. Same 2025 updates as 63 kWh variant:
+
   improved infotainment, refined ProPILOT, better cold-weather software.
+
   Most popular variant for German buyers seeking maximum range.
 
-version_changes:
-  - version: "2025"
-    changes: |
-      Updated NissanConnect infotainment with faster processor. Refined
-      ProPILOT Assist 2.0 calibration. Improved cold-weather battery
-      preconditioning. New exterior colours.
-
+  '
 metadata:
-  created_at: "2026-02-10"
+  created_at: '2026-02-10'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 88
   sources:
-    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
-    - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
+  - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+  - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf

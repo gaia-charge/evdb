@@ -1,91 +1,28 @@
 id: porsche-macan-electric-turbo-2025
 name: Macan Turbo
 model_id: porsche-macan-electric
-manufacturer_id: porsche
-variant_name: Turbo (AWD)
 model_year: 2025
-trim_level: Turbo
-version: Turbo
-description: "The Porsche Macan Turbo Electric is the flagship performance variant,\
-  \ delivering\nan extraordinary 470kW (639hp) with Launch Control for supercar-rivaling\
-  \ \nacceleration (0-100 km/h in 3.3s). Despite the extreme performance, it retains\n\
-  up to 589km WLTP range and the same 270kW 800V ultra-fast charging as all\nMacan\
-  \ Electric variants. Features enhanced sport suspension, larger brakes,\nand aggressive\
-  \ Turbo styling.\n"
 battery:
   usable_kwh: 95.0
   total_kwh: 100.0
   chemistry: NMC
-  cells: prismatic
   manufacturer: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
-  preconditioning: true
 range:
   wltp_km: 589
   wltp_city_km: 720
   wltp_highway_km: 475
   real_world_km: 480
-  real_world_conditions: Mixed driving, 20°C ambient
 efficiency:
   wltp_kwh_per_100km: 19.5
   real_world_kwh_per_100km: 24.5
 charging:
-  ac:
-    optional_upgrade_kw: 22
-    connector_type: Type2
-    phases: 3
-    time_0_100_hours: 9.5
-  dc:
-    connector_type: CCS2
-    architecture_voltage: 800
-    time_10_80_minutes: 21
-    charge_curve:
-    - soc_percent: 0
-      power_kw: 60
-    - soc_percent: 10
-      power_kw: 260
-    - soc_percent: 15
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 268
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 55
   ac_max_kw: 11
   dc_max_kw: 270
-bidirectional_charging:
-  v2l: true
-  v2l_power_kw: 11
-  v2h: true
-  v2g: true
-motors:
-  count: 2
-  type: Dual Motor AWD
-  configuration: AWD
-  front_motor:
-    power_kw: 175
-    power_hp: 238
-    type: PMSM
-  rear_motor:
-    power_kw: 315
-    power_hp: 428
-    type: PMSM
-  combined_power_kw: 440
-  combined_power_hp: 598
-  overboost_power_kw: 470
-  overboost_power_hp: 639
-  torque_nm: 860
-drive_type: AWD
-driven_wheels: all
 performance:
   top_speed_kmh: 260
-  top_speed_electronically_limited: true
   acceleration_0_100_sec: 3.3
   total_power_kw: 440
 weight:
@@ -99,35 +36,12 @@ dimensions:
   height_mm: 1622
   wheelbase_mm: 2893
   ground_clearance_mm: 185
-  drag_coefficient: 0.25
 cargo:
   trunk_capacity_liters: 540
   trunk_max_liters: 1348
   frunk_capacity_liters: 84
-tires:
-  front: 255/45 R21
-  rear: 295/40 R21
-  wheel_size_inches: 21
-climate:
-  heat_pump: true
-  auto_climate_zones: 3
-interior:
-  seats: 5
-  display_instrument: 12.6 inch curved digital instrument cluster
-  display_center: 10.9 inch curved central touchscreen
 metadata:
   data_quality: verified
-  data_source: manufacturer
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.porsche.com/germany/models/macan/macan-electric-models/macan-turbo-electric/
-  notes: 'Macan Turbo is the flagship with 470kW overboost and 3.3s 0-100 km/h.
-
-    Features dual PMSM motors (both permanent magnet for peak power), sport
-
-    suspension tuning, Turbo-specific 21" wheels, and larger brakes.
-
-    Competes with BMW iX M60, Mercedes-AMG EQE SUV, Tesla Model X Plaid.
-
-    '

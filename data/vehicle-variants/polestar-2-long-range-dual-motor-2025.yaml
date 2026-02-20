@@ -2,130 +2,26 @@ id: polestar-2-long-range-dual-motor-2025
 name: Long Range Dual Motor
 model_id: polestar-2
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: long-range
-market_position: mid-range
-description: 'The Long Range Dual Motor is the performance-oriented variant of the
-  2025 Polestar 2,
-
-  featuring all-wheel drive with dual electric motors and a 78kWh battery pack.
-
-
-  2025 model year updates include:
-
-  - Revised exterior styling with new front and rear design
-
-  - Updated interior with physical climate controls
-
-  - Improved Google Automotive Services integration
-
-  - Enhanced DC charging up to 205kW peak
-
-  - New Pilot Assist features with lane change assistance
-
-  - Optimized AWD torque vectoring for improved handling
-
-
-  The dual-motor AWD configuration delivers 310kW (421hp) with excellent traction
-
-  and dynamic handling. The Performance Pack option adds Öhlins dampers, Brembo brakes,
-
-  and 20-inch forged wheels.
-
-  '
-production_status: active
 battery:
   usable_kwh: 78.0
   total_kwh: 82.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, T-shaped
-    weight_kg: 540
-    modules: 27
-    cells: 324
 range:
   wltp_km: 487
-  wltp_source: manufacturer
   real_world_km: 420
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode, 19-inch wheels
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.5
-      '20_80': 5.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 52
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 170
-    - soc_percent: 10
-      power_kw: 205
-    - soc_percent: 20
-      power_kw: 205
-    - soc_percent: 30
-      power_kw: 200
-    - soc_percent: 40
-      power_kw: 195
-    - soc_percent: 50
-      power_kw: 175
-    - soc_percent: 60
-      power_kw: 145
-    - soc_percent: 70
-      power_kw: 105
-    - soc_percent: 80
-      power_kw: 60
-    - soc_percent: 90
-      power_kw: 33
-    - soc_percent: 100
-      power_kw: 14
   ac_max_kw: 11
   dc_max_kw: 205
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual-motor
-  drive_type: AWD
-  front:
-    type: asynchronous
-    power_kw: 150
-    torque_nm: 330
-  rear:
-    type: permanent-magnet
-    power_kw: 220
-    torque_nm: 490
-  combined:
-    power_kw: 310
-    power_hp: 421
-    torque_nm: 740
 performance:
   top_speed_kmh: 160
   total_power_kw: 310
   total_power_hp: 421
   total_torque_nm: 740
   acceleration_0_100_sec: 4.4
-efficiency:
-  consumption_wltp_kwh_100km: 16.0
-  consumption_real_world_kwh_100km: 18.6
-  energy_label: A
 dimensions:
   length_mm: 4606
   width_mm: 1859
@@ -144,20 +40,8 @@ cargo:
   frunk_capacity_liters: 41
 metadata:
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   data_quality: verified
   sources:
   - https://www.polestar.com/global/polestar-2/specifications/
   - https://ev-database.org/car/1723/Polestar-2-Long-Range-Dual-Motor
   - https://insideevs.com/news/698234/polestar-2-2025-facelift-review/
-  verified_by: manufacturer
-  notes: '2025 model year refresh with updated styling and improved interior.
-
-    Long Range Dual Motor is the performance variant with AWD and 310kW combined output.
-
-    Optional Performance Pack adds Öhlins dampers, Brembo brakes, and 20-inch forged
-    wheels.
-
-    Competes with Tesla Model 3 Long Range, BMW i4 M50, and Genesis GV60.
-
-    '

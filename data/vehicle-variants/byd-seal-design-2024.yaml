@@ -2,11 +2,6 @@ id: byd-seal-design-2024
 name: Design
 model_id: byd-seal
 model_year: 2024
-production_years:
-  start: 2023
-  end: null
-trim_level: design
-market_position: base
 dimensions:
   length_mm: 4800
   width_mm: 1875
@@ -22,82 +17,18 @@ battery:
   usable_kwh: 82.5
   total_kwh: 85.0
   chemistry: LFP
-  nominal_voltage_v: 400
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 200000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 540
-    cells: 180
-  notes: 'BYD Blade Battery uses LFP chemistry in long blade-shaped cells integrated
-    directly into the chassis. This design provides exceptional safety (passes nail
-    penetration test), excellent thermal stability, and long cycle life (3000+ cycles).
-    The Seal''s larger 82.5 kWh pack enables impressive range while maintaining the
-    safety and longevity benefits of LFP chemistry.
-
-    '
 range:
   wltp_km: 570
-  wltp_source: manufacturer
   real_world_km: 490
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 8.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '30_80': 26
-      '0_100': 45
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 110
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 70
-      power_kw: 100
-    - soc_percent: 80
-      power_kw: 60
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
-    notes: Conservative charging curve optimized for LFP battery longevity
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 230
-  max_torque_nm: 360
-  cooling: liquid
-drivetrain:
-  type: rwd
-  total_power_kw: 230
-  total_power_hp: 313
-  total_torque_nm: 360
 performance:
   top_speed_kmh: 180
-  top_speed_limited: true
   acceleration_0_100_sec: 5.9
 weight:
   curb_weight_kg: 1885
@@ -107,57 +38,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 15.8
   real_world_kwh_per_100km: 16.8
-  at_speed:
-  - speed_kmh: 100
-    consumption_kwh_per_100km: 14.2
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 17.5
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 20.1
-standard_features:
-- 15.6-inch rotating touchscreen
-- 10.25-inch digital instrument cluster
-- DiLink 4.0 intelligent connectivity
-- Voice control with AI assistant
-- Heat pump climate control
-- Panoramic glass roof
-- LED headlights with auto high beam
-- 19-inch alloy wheels
-- Vegan leather seats
-- 10-way power driver seat
-- Wireless phone charging
-- Keyless entry and start
-- 8 airbags
-- Adaptive cruise control
-- Lane keeping assist
-- Automatic emergency braking
-- 360-degree camera system
-- Blind spot monitoring
-- Rear cross traffic alert
-- Vehicle-to-Load (V2L)
-- OTA updates
-optional_packages:
-- name: Premium Package
-  features:
-  - Ventilated and heated front seats
-  - 12-speaker Dynaudio sound system
-  - Ambient lighting (31 colors)
-  - Head-up display
-colors:
-  standard:
-  - Cosmos Black
-  - Boulder Grey
-  - Atlantis Grey
-  premium:
-  - Aurora White
-  - Deep Blue
-  - Adventure Green
-interior_colors:
-- Black
-- Black/Blue
-version:
-  facelift: false
-  major_changes: []
 notes: 'The BYD Seal Design represents the entry point into BYD''s premium sedan lineup,
   offering impressive performance (5.9s 0-100 km/h) and long range (570 km WLTP) at
   a competitive price point. The rear-wheel-drive layout provides sporty handling
@@ -173,8 +53,6 @@ metadata:
   created_at: '2026-02-08'
   updated_at: '2026-02-08'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.byd.com/eu/seal/specifications
   - https://www.byd.com/de/seal

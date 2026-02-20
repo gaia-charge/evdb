@@ -2,44 +2,19 @@ id: ford-explorer-ev-standard-range-rwd-2025
 name: Standard Range RWD
 model_id: ford-explorer-ev
 model_year: 2025
-trim_level: Explorer
 battery:
   usable_kwh: 52.0
   total_kwh: 55.0
   chemistry: NMC
-  voltage_nominal_v: 400
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
 range:
   wltp_km: 346
   real_world_km: 290
-  real_world_conditions: Mixed driving, moderate climate
 charging:
-  ac_charging:
-    max_power_kw: 11.0
-    connector_type: Type2
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 5.5
-  dc_charging:
-    max_power_kw: 170
-    connector_type: CCS2
-    charge_time_10_80_minutes: 25
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 170
-motors:
-  configuration: single_rear
-  rear_motor:
-    type: permanent_magnet
-    power_kw: 125
-    torque_nm: 310
-  total_power_kw: 125
-  total_power_hp: 170
-  total_torque_nm: 310
 performance:
   top_speed_kmh: 160
   drive_type: RWD
@@ -47,9 +22,6 @@ performance:
   total_power_hp: 170
   total_torque_nm: 310
   acceleration_0_100_sec: 9.0
-efficiency:
-  consumption_wltp_kwh_per_100km: 16.2
-  co2_emissions_wltp_g_per_km: 0
 dimensions:
   length_mm: 4460
   width_mm: 1870

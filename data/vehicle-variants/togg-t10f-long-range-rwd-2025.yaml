@@ -12,10 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: '85 kWh usable (88.5 kWh gross). 400V architecture with NMC pouch cells.
-
-    '
 range:
   wltp_km: 623
   wltp_city_km: null
@@ -23,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 490
   real_world_source: ev-database.org estimate
-  notes: 'WLTP range of 623 km (TEL). Real-world range estimated at around 490 km
-
-    in mixed conditions. Very efficient for a large fastback sedan.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -53,32 +44,13 @@ charging:
     power_kw: 55
   - soc_percent: 90
     power_kw: 30
-  dc_charge_time_10_80_min: 33
-  dc_average_power_10_80_kw: 115
-  ac_charge_time_0_100_hours: 9.25
-  onboard_charger_kw: 11
-  plug_and_charge: false
-  preconditioning: null
-  notes: '180 kW max DC charging. 10-80% in about 33 minutes.
-
-    11 kW 3-phase AC charging. Type 2 and CCS2 connectors on right front.
-
-    '
 performance:
-  power_kw: 160
-  power_hp: 218
-  torque_nm: 350
-  acceleration_0_100_kmh: 7.5
   total_power_kw: 160
   total_torque_nm: 350
   acceleration_0_100_sec: 7.5
   top_speed_kmh: 177
   drive_type: RWD
   total_power_hp: 218
-consumption:
-  wltp_kwh_per_100km: 13.6
-  real_world_kwh_per_100km: 17.3
-  notes: Very efficient consumption for a vehicle of this size
 dimensions:
   length_mm: 4865
   width_mm: 1894
@@ -97,13 +69,9 @@ weight:
   towing_capacity_unbraked_kg: 750
 features:
   heat_pump: true
-  v2l: false
-  v2h: false
-  v2g: false
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://ev-database.org/car/3305/TOGG-T10F-Long-Range-RWD
   - https://www.togg.com.tr/

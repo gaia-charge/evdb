@@ -2,86 +2,23 @@ id: peugeot-e-2008-allure-2024
 model_id: peugeot-e-2008
 name: Allure
 model_year: 2024
-trim_level: Allure
 variant_code: null
-production:
-  start_date: 2023-09-01
-  end_date: null
-  status: active
-  notes: 2024 model with upgraded 54 kWh battery (from 50 kWh in pre-2023)
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 50.8
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Upgraded from 50 kWh to 54 kWh in 2023 facelift (same platform as Mokka-e/e-208)
 range:
   wltp_km: 406
   wltp_city_km: 530
   wltp_highway_km: 330
-  epa_combined_km: null
-  real_world_avg_km: 340
   real_world_source: ADAC EcoTest 2024, InsideEVs 70 mph highway test
-  notes: Real-world range improved ~12% vs 50 kWh version thanks to larger battery
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 100kW peak maintained briefly, average ~85kW
-    preconditioning: false
-  charge_curve:
-  - percent: 0
-    power_kw: 95
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 87
-  - percent: 60
-    power_kw: 78
-  - percent: 70
-    power_kw: 62
-  - percent: 80
-    power_kw: 42
-  - percent: 90
-    power_kw: 28
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 100
-    power_hp: 136
-    torque_nm: 260
-    supplier: null
-  combined:
-    power_kw: 100
-    power_hp: 136
-    torque_nm: 260
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 150
-  quarter_mile_seconds: null
   total_power_kw: 100
   total_power_hp: 136
   total_torque_nm: 260
@@ -89,16 +26,12 @@ performance:
   top_speed_kmh: 150
 efficiency:
   wltp_kwh_per_100km: 16.5
-  wltp_wh_per_km: 165
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.5
-  mpge_combined: null
-  drag_coefficient: 0.32
 weight:
   curb_weight_kg: 1550
   gross_vehicle_weight_kg: 1930
   payload_kg: 380
-  weight_distribution_front_percent: 62
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
 dimensions:
@@ -112,69 +45,6 @@ cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1467
   frunk_capacity_liters: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar
-  rear: Torsion beam with coil springs
-brakes:
-  front: Ventilated disc (280mm)
-  rear: Drum (with electronic brake force distribution)
-  regenerative: true
-tires:
-  standard: 205/55 R17
-features:
-  infotainment:
-  - Peugeot i-Cockpit 3D with 10.0" color touchscreen
-  - 3D digital instrument cluster (holographic effect)
-  - Apple CarPlay and Android Auto (wired)
-  - DAB+ digital radio
-  - 6 speakers
-  - MyPeugeot mobile app for remote control
-  driver_assistance:
-  - Active Safety Brake with Pedestrian and Cyclist Detection
-  - Lane Keep Assist with Lane Departure Warning
-  - Traffic Sign Recognition with Speed Limit Recommendation
-  - Adaptive cruise control with Stop & Go (optional)
-  - Speed limiter and cruise control
-  - Rear parking sensors and reversing camera
-  - Driver attention alert
-  comfort_convenience:
-  - Automatic dual-zone climate control
-  - Keyless entry and start (optional)
-  - One-pedal driving with B-mode regenerative braking
-  - Heated front seats (optional Winter Pack)
-  - Heated steering wheel (optional Winter Pack)
-  - Electric windows front and rear
-  - Electric and heated mirrors
-  - Rain-sensing wipers
-  exterior:
-  - Full LED headlights with LED DRLs
-  - 17" alloy wheels (Allure design)
-  - Roof rails (silver finish)
-  - Body-colored door handles and mirrors
-  - Dark tinted rear windows
-  interior:
-  - Cloth and TEP upholstery (Allure pattern)
-  - Leather-wrapped steering wheel
-  - Peugeot Connect emergency call and telematics
-  - 405L trunk (best-in-class for CMP platform B-SUVs)
-  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source_urls:
-  - https://www.peugeot.de/modelle/e-2008.html
-  - https://www.peugeot.fr/gamme-vehicules/e-2008.html
-  - https://ev-database.org/car/1568/Peugeot-e-2008
-  notes: "The Peugeot e-2008 Allure is the mid-range trim level, offering excellent\
-    \ value with \ngood equipment including 10\\\" touchscreen, 3D i-Cockpit, LED\
-    \ headlights, and 17\\\" alloys.\n\nAllure trim is the sweet spot - better equipped\
-    \ than base Active trim without the \npremium pricing of GT trim (typically €4,000\
-    \ less than GT).\n\n2024 model benefits from upgraded 54 kWh battery (from 50\
-    \ kWh pre-2023), adding ~40km \nreal-world range vs earlier models while maintaining\
-    \ the same 100kW motor and pricing.\n\nBest-in-class trunk space (405L) makes\
-    \ it significantly more practical than competitors \nlike Opel Mokka-e (310L)\
-    \ despite sharing the same CMP platform.\n"

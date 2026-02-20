@@ -2,18 +2,12 @@ id: byd-seal-excellence-2025
 name: Excellence
 model_id: byd-seal
 model_year: 2025
-production_years:
-  start: 2024
-  end: null
-trim_level: excellence
-market_position: top
 dimensions:
   length_mm: 4800
   width_mm: 1875
   height_mm: 1460
   wheelbase_mm: 2920
   ground_clearance_mm: 150
-  drag_coefficient: 0.219
 cargo:
   trunk_capacity_liters: 400
   frunk_capacity_liters: 0
@@ -22,87 +16,18 @@ battery:
   usable_kwh: 82.5
   total_kwh: 85.0
   chemistry: LFP
-  nominal_voltage_v: 400
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 200000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 535
-    cells: 180
-  notes: 'Same 82.5 kWh Blade Battery as Design variant, but with dual-motor AWD configuration
-    for enhanced performance and all-weather capability. 2025 model features improved
-    battery thermal management for better charging performance in cold weather. LFP
-    chemistry provides exceptional safety, thermal stability, and long cycle life
-    exceeding 3000 charge cycles with minimal degradation.
-
-    '
 range:
   wltp_km: 530
-  wltp_source: manufacturer
   real_world_km: 460
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 8.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '30_80': 25
-      '0_100': 43
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 120
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 145
-    - soc_percent: 70
-      power_kw: 105
-    - soc_percent: 80
-      power_kw: 65
-    - soc_percent: 90
-      power_kw: 32
-    - soc_percent: 100
-      power_kw: 15
-    notes: 2025 model features improved charging curve with better cold-weather performance
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 160
-  max_torque_nm: 310
-  cooling: liquid
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 230
-  max_torque_nm: 360
-  cooling: liquid
-drivetrain:
-  type: awd
-  total_power_kw: 390
-  total_power_hp: 530
-  total_torque_nm: 670
 performance:
   top_speed_kmh: 180
-  top_speed_limited: true
   acceleration_0_100_sec: 3.8
 weight:
   curb_weight_kg: 2145
@@ -112,64 +37,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 17.1
   real_world_kwh_per_100km: 18.0
-  at_speed:
-  - speed_kmh: 100
-    consumption_kwh_per_100km: 15.5
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 18.8
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 22.0
-standard_features:
-- 15.6-inch rotating touchscreen with improved UI
-- 10.25-inch digital instrument cluster
-- DiLink 4.0 intelligent connectivity
-- Enhanced voice control with AI assistant
-- Heat pump climate control with improved efficiency
-- Panoramic glass roof with UV protection
-- Matrix LED headlights with adaptive beam
-- 20-inch alloy wheels
-- Nappa leather seats
-- 12-way power driver and passenger seats
-- Ventilated and heated front seats
-- Heated rear seats
-- Memory function driver seat
-- Wireless phone charging (15W fast charging)
-- Keyless entry and start
-- 8 airbags
-- Advanced driver assistance (DiPilot)
-- Adaptive cruise control with stop & go
-- Lane keeping assist
-- Lane centering
-- Automatic emergency braking
-- 360-degree camera system with 3D view
-- Blind spot monitoring
-- Rear cross traffic alert
-- Parking assist
-- 12-speaker Dynaudio sound system
-- Ambient lighting (31 colors)
-- Head-up display
-- Vehicle-to-Load (V2L)
-- OTA updates
-optional_packages: []
-colors:
-  standard:
-  - Cosmos Black
-  - Aurora White
-  - Deep Blue
-  premium:
-  - Boulder Grey
-  - Atlantis Grey
-  - Adventure Green
-interior_colors:
-- Black Nappa
-- Brown Nappa
-version:
-  facelift: false
-  major_changes:
-  - Improved battery thermal management
-  - Enhanced charging curve
-  - Updated infotainment system
-  - Improved efficiency (17.1 kWh/100km vs 17.3)
 notes: 'The 2025 BYD Seal Excellence AWD continues to deliver supercar-level acceleration
   (3.8s 0-100 km/h) at a mid-range price point. The 2025 model year brings incremental
   improvements including better battery thermal management for improved cold-weather
@@ -189,8 +56,6 @@ metadata:
   created_at: '2026-02-09'
   updated_at: '2026-02-09'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.byd.com/eu/seal/specifications
   - https://www.byd.com/de/seal

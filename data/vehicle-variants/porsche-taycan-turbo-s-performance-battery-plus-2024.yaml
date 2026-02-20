@@ -2,74 +2,20 @@ id: porsche-taycan-turbo-s-performance-battery-plus-2024
 model_id: porsche-taycan
 name: Turbo S Performance Battery Plus
 model_year: 2024
-variant_type: performance
-production_status: active
-release_date: '2023-09-01'
 battery:
   usable_kwh: 97.0
   total_kwh: 105.0
   chemistry: NMC
-  cells: 396
-  modules: 33
-  voltage_nominal_v: 725
-  architecture: 800V
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  degradation_percent_per_year: 2.0
-  thermal_management: liquid
-  heating: true
-  preconditioning: true
-  supplier: LG Energy Solution
-  manufacturing_location: Poland
 range:
   wltp_km: 467
-  wltp_combined_kwh_per_100km: 24.8
   wltp_city_km: 530
   wltp_highway_km: 420
-  epa_miles: 280
   epa_km: 451
-  epa_combined_kwh_per_100km: 25.7
-  real_world_highway_km: 390
-  real_world_combined_km: 440
-  real_world_city_km: 500
-  real_world_winter_km: 330
 charging:
-  ac_max_power_kw: 11.0
-  ac_connector_type: Type2
   ac_phases: 3
-  ac_time_0_100_hours: 9.5
-  ac_onboard_charger_kw: 11.0
-  ac_optional_charger_kw: 22.0
-  dc_max_power_kw: 320
-  dc_connector_type: CCS2
-  dc_time_10_80_min: 18
-  dc_time_20_80_min: 16
-  dc_peak_power_duration_min: 8
-  dc_charging_curve:
-  - soc_percent: 5
-    power_kw: 320
-  - soc_percent: 20
-    power_kw: 320
-  - soc_percent: 30
-    power_kw: 310
-  - soc_percent: 40
-    power_kw: 270
-  - soc_percent: 50
-    power_kw: 210
-  - soc_percent: 60
-    power_kw: 160
-  - soc_percent: 70
-    power_kw: 110
-  - soc_percent: 80
-    power_kw: 70
-  plug_and_charge: true
-  plug_and_charge_networks:
-  - Ionity
-  - Electrify America
-  - Porsche Charging Service
-  battery_preconditioning: true
-  preconditioning_time_min: 15
   ac_max_kw: 11.0
   dc_max_kw: 320
 bidirectional:
@@ -80,27 +26,14 @@ performance:
   motors:
   - position: front
     type: permanent magnet
-    max_power_kw: 250
-    max_torque_nm: 450
-    cooling: liquid
   - position: rear
     type: permanent magnet
-    max_power_kw: 310
-    max_torque_nm: 500
-    cooling: liquid
   drive_type: AWD
   total_power_kw: 560
   total_power_hp: 761
   total_torque_nm: 1050
-  overboost_power_kw: 560
-  overboost_duration_sec: 2.5
   acceleration_0_100_sec: 2.8
-  acceleration_0_60_mph_sec: 2.6
-  acceleration_0_200_kmh_sec: 9.6
   top_speed_kmh: 260
-  quarter_mile_sec: 10.8
-  launch_control: true
-  drift_mode: false
 dimensions:
   length_mm: 4963
   width_mm: 1966
@@ -118,141 +51,9 @@ weight:
   payload_kg: 415
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  weight_distribution_front_percent: 48
-  weight_distribution_rear_percent: 52
 efficiency:
   wltp_kwh_per_100km: 24.8
-  epa_kwh_per_100mi: 41.4
   real_world_kwh_per_100km: 26.5
-  highway_70mph_kwh_per_100km: 29.0
-  city_kwh_per_100km: 23.5
-drivetrain:
-  type: dual_motor
-  configuration: front_and_rear
-  gearbox: 2-speed PDK (rear), single-speed (front)
-  differential: electronic_torque_vectoring
-  traction_control: true
-  regenerative_braking: true
-  regen_max_power_kw: 290
-  regen_modes:
-  - false
-  - low
-  - medium
-  - high
-  - auto
-  one_pedal_driving: true
-suspension:
-  front: Double wishbone with adaptive air suspension
-  rear: Multi-link with adaptive air suspension
-  adaptive_dampers: true
-  air_suspension: true
-  adjustable_ride_height: true
-  ride_height_modes:
-  - mode: normal
-    height_mm: 0
-  - mode: high
-    height_mm: 22
-  - mode: low
-    height_mm: -22
-  rear_wheel_steering: true
-  rear_steer_angle_degrees: 5.0
-brakes:
-  front: Porsche Ceramic Composite Brake (PCCB)
-  rear: Porsche Ceramic Composite Brake (PCCB)
-  front_disc_size_mm: 420
-  rear_disc_size_mm: 410
-  brake_calipers: 10-piston front, 4-piston rear
-wheels:
-  standard_size_front: 265/35 R21
-  standard_size_rear: 305/30 R21
-  optional_sizes:
-  - front: 265/35 R21
-    rear: 305/30 R21
-    description: 21-inch Taycan Turbo Aero wheels
-  tire_pressure_monitoring: true
-technology:
-  driver_assistance:
-  - Adaptive Cruise Control
-  - Lane Keep Assist
-  - Traffic Sign Recognition
-  - Blind Spot Monitoring
-  - Rear Cross Traffic Alert
-  - Park Assist Plus with Surround View
-  - Night Vision Assist
-  - Head-Up Display
-  infotainment:
-    system: Porsche Communication Management 6.0
-    screen_size_inches: 16.8
-    additional_screens:
-    - location: passenger
-      size_inches: 10.9
-    - location: instrument_cluster
-      size_inches: 16.8
-    navigation: true
-    voice_control: true
-    smartphone_integration:
-    - Apple CarPlay
-    - Android Auto
-    ota_updates: true
-    wifi_hotspot: true
-    bluetooth: true
-    usb_ports: 4
-    wireless_charging: true
-  audio_system: Burmester High-End 3D Surround Sound System
-  speakers: 21
-  audio_power_watts: 1455
-  connectivity:
-  - 5G
-  - LTE
-  - WiFi
-  - Bluetooth 5.2
-  remote_services: true
-  remote_climate: true
-  remote_charging: true
-  remote_lock_unlock: true
-interior:
-  seating_material: Leather/Race-Tex
-  seating_configuration: 2+2
-  heated_seats: true
-  ventilated_seats: true
-  massage_seats: true
-  heated_steering_wheel: true
-  power_adjustable_seats: true
-  memory_seats: true
-  panoramic_roof: false
-  ambient_lighting: true
-  climate_zones: 4
-  heat_pump: true
-  hepa_filter: false
-safety:
-  airbags: 8
-  abs: true
-  esp: true
-  traction_control: true
-  hill_start_assist: true
-  tire_pressure_monitoring: true
-  euro_ncap_rating: 5
-  euro_ncap_year: 2019
-  euro_ncap_adult: 91
-  euro_ncap_child: 81
-  euro_ncap_vulnerable: 69
-  euro_ncap_safety_assist: 75
 metadata:
   data_quality: verified
   created_at: '2024-02-07'
-  last_updated: '2024-02-07'
-  source: manufacturer
-  verified_by: Porsche official specifications
-  source_urls:
-  - https://www.porsche.com/international/models/taycan/taycan-models/taycan-turbo-s/
-  - https://www.porsche.com/germany/models/taycan/taycan-models/taycan-turbo-s/
-  notes:
-  - Performance Battery Plus (97 kWh usable) is standard on Turbo S
-  - 2-speed PDK transmission on rear axle enables better efficiency and performance
-  - Porsche Ceramic Composite Brakes (PCCB) standard on Turbo S
-  - Rear-wheel steering (5°) standard for improved agility
-  - Launch Control enables repeatable 2.8s 0-100 km/h acceleration
-  - 800V architecture enables 320 kW DC fast charging (5-80% in 22.5 min)
-  - Real-world range 440 km combined, 390 km highway @130 km/h
-  - Burmester High-End 3D audio system with 21 speakers standard
-  - Adaptive air suspension with PASM standard

@@ -1,16 +1,11 @@
 id: mini-cooper-electric-e-2024
 model_id: mini-cooper-electric
 name: E
-variant_name: E
-trim_level: E
 model_year: 2024
 battery:
   usable_kwh: 54.2
   total_kwh: 57.0
   chemistry: NMC
-  cells_configuration: null
-  supplier: CATL
-  pack_voltage_v: 400
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -19,72 +14,16 @@ range:
   wltp_city_km: 530
   wltp_highway_km: 320
   epa_km: null
-  epa_miles: null
   real_world_km: 350
-  real_world_highway_km: 280
-  real_world_city_km: 420
 charging:
-  ac_charging:
-    max_power_kw: 11
-    onboard_charger_kw: 11
-    connector_type: Type2
-    phases: 3
-    time_0_100_percent_hours: 5.5
-  dc_charging:
-    max_power_kw: 95
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    time_0_80_percent_minutes: 33
-  charge_curve:
-  - soc_percent: 0
-    power_kw: 75
-  - soc_percent: 10
-    power_kw: 95
-  - soc_percent: 20
-    power_kw: 95
-  - soc_percent: 30
-    power_kw: 92
-  - soc_percent: 40
-    power_kw: 87
-  - soc_percent: 50
-    power_kw: 78
-  - soc_percent: 60
-    power_kw: 65
-  - soc_percent: 70
-    power_kw: 52
-  - soc_percent: 80
-    power_kw: 38
-  - soc_percent: 90
-    power_kw: 25
-  - soc_percent: 100
-    power_kw: 11
-  bidirectional_charging: false
   ac_max_kw: 11
   dc_max_kw: 95
-motors:
-  configuration: single
-  type: permanent_magnet
-  drive_type: FWD
-  total_power_kw: 160
-  total_power_hp: 218
-  total_torque_nm: 330
-  front_motor:
-    power_kw: 160
-    power_hp: 218
-    torque_nm: 330
-    type: permanent_magnet
 performance:
   top_speed_kmh: 170
-  top_speed_limited: true
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 330
   acceleration_0_100_sec: 6.7
-efficiency:
-  consumption_wltp_kwh_per_100km: 15.7
-  consumption_real_world_kwh_per_100km: 17.4
-  efficiency_rating_eu: B
-  co2_emissions_wltp_g_per_km: 0
 dimensions:
   length_mm: 3850
   width_mm: 1727
@@ -106,44 +45,12 @@ features:
   heat_pump: true
   adaptive_suspension: false
   air_suspension: false
-  all_wheel_steering: false
   torque_vectoring: false
-  launch_control: false
-  adjustable_regen_braking: true
   one_pedal_driving: true
-driving_modes:
-- Personal
-- Sport
-- Green
-- Green+
-interior_materials:
-  seats: Vescin (vegan synthetic leather)
-  dashboard: Recycled polyester textile
-  steering_wheel: Vegan leather
-version_info:
-  release_date: 2024-03-01
-  discontinuation_date: null
-  facelift: false
-  special_edition: false
-  limited_production: false
 metadata:
   data_quality: verified
   created_at: '2024-02-07'
-  last_updated: '2024-02-07'
   sources:
   - https://www.mini.com/en_GB/home/range/mini-electric/mini-electric-e.html
   - https://ev-database.org/car/2116/Mini-Cooper-Electric-E
   - https://insideevs.com/reviews/678219/mini-cooper-electric-2024-test/
-  notes: 'Larger battery "E" variant with 54.2kWh usable capacity. The base model
-    with 40.7kWh offers 305km WLTP range. This E variant is the most popular choice
-    for customers wanting more range. Real-world consumption is excellent for a fun-to-drive
-    urban EV.
-
-    DC charging speed of 95kW is adequate for the battery size - 10-80% in 30 minutes
-    is competitive with other 50kWh+ vehicles on 400V architecture.
-
-    Front-wheel drive with 160kW (218hp) provides the classic Mini go-kart handling
-    experience with instant electric torque. Weight of 1,590kg is kept relatively
-    low for an EV thanks to compact dimensions.
-
-    '

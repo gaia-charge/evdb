@@ -2,86 +2,23 @@ id: byd-sealion-7-excellence-awd-2025
 model_id: byd-sealion-7
 name: Excellence AWD
 model_year: 2025
-trim_level: Excellence
 variant_code: null
-production:
-  start_date: 2024-11-01
-  end_date: null
-  status: active
-  notes: European launch late 2024
 battery:
-  type: Lithium-ion
   chemistry: LFP
   total_kwh: 91.3
   usable_kwh: 87.0
-  supplier: BYD (FinDreams)
   warranty_years: 8
   warranty_km: 200000
   warranty_capacity_percent: 70
-  cells: null
-  modules: null
-  voltage_nominal: 640
-  notes: Larger BYD Blade Battery (LFP Cell-to-Pack), 800V architecture
 range:
   wltp_km: 542
   wltp_city_km: 650
   wltp_highway_km: 450
-  epa_combined_km: null
-  real_world_avg_km: 450
   real_world_source: European driving reviews
-  notes: Long range despite AWD configuration
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 9.5
-    onboard_charger: 11kW three-phase
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    peak_power_notes: 230kW peak DC charging, 800V architecture
-    preconditioning: true
-  charge_curve:
-  - percent: 10
-    power_kw: 220
-  - percent: 30
-    power_kw: 230
-  - percent: 50
-    power_kw: 195
-  - percent: 60
-    power_kw: 155
-  - percent: 70
-    power_kw: 110
-  - percent: 80
-    power_kw: 70
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 230
-motors:
-  configuration: dual
-  front:
-    type: asynchronous
-    power_kw: 160
-    power_hp: 218
-    torque_nm: 310
-    supplier: BYD
-  rear:
-    type: permanent_magnet
-    power_kw: 230
-    power_hp: 313
-    torque_nm: 380
-    supplier: BYD
-  combined:
-    power_kw: 390
-    power_hp: 530
-    torque_nm: 690
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 215
-  quarter_mile_seconds: null
   total_power_kw: 390
   total_power_hp: 530
   total_torque_nm: 690
@@ -89,11 +26,8 @@ performance:
   top_speed_kmh: 215
 efficiency:
   wltp_kwh_per_100km: 16.8
-  wltp_wh_per_km: 168
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 19.5
-  mpge_combined: null
-  drag_coefficient: 0.258
 dimensions:
   length_mm: 4830
   width_mm: 1925
@@ -108,74 +42,8 @@ weight:
   curb_weight_kg: 2430
   gross_vehicle_weight_kg: 2880
   payload_kg: 450
-  weight_distribution_front_percent: 49
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-drivetrain:
-  drive_type: AWD
-  transmission: Single-speed reduction gear (each axle)
-suspension:
-  front: Double wishbone
-  rear: Multi-link
-brakes:
-  front: Ventilated disc (355mm)
-  rear: Ventilated disc (345mm)
-  regenerative: true
-tires:
-  standard: 255/45 R20
-features:
-  infotainment:
-  - 15.6" rotating touchscreen
-  - 10.25" digital instrument cluster
-  - Head-up display
-  - Apple CarPlay and Android Auto
-  - 12-speaker Dynaudio sound system
-  - BYD app
-  - OTA updates
-  driver_assistance:
-  - Automatic emergency braking
-  - Adaptive cruise control with stop & go
-  - Lane centering assist
-  - Highway driving assist
-  - Speed limit recognition
-  - 360° surround view camera
-  - Rear cross-traffic alert
-  - Blind spot monitoring
-  - Front cross-traffic alert
-  comfort_convenience:
-  - Dual-zone automatic climate control
-  - Heat pump
-  - Heated and ventilated front seats
-  - Heated rear seats
-  - Heated steering wheel
-  - Keyless entry and start
-  - Wireless phone charger
-  - USB-C ports front and rear
-  - V2L (Vehicle-to-Load)
-  - Power tailgate with foot sensor
-  - Electric sunroof
-  exterior:
-  - 20" alloy wheels
-  - Matrix LED headlights
-  - LED tail lights
-  - Privacy glass
-  - Roof rails
-  - Power folding mirrors
-  interior:
-  - Nappa leather upholstery
-  - 520L trunk
-  - 58L frunk
-  - 40/20/40 split-folding rear seats
-  - Power driver and passenger seats with memory
-  - Ambient lighting
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  source_urls:
-  - https://www.byd.com/eu/car/sealion-7
-  notes: 'Top-spec AWD variant with 91.3 kWh Blade Battery. 390 kW combined output,
-
-    4.5s 0-100 km/h, 542 km WLTP range. 230kW DC charging on 800V architecture.
-
-    '

@@ -47,8 +47,6 @@ charging:
     power_kw: 15
   - soc_percent: 100
     power_kw: 8
-  time_10_to_80_percent_min: 30
-  plug_and_charge: false
 bidirectional:
   v2l: false
   v2h: false
@@ -64,7 +62,6 @@ performance:
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 260
-  acceleration_0_100_kmh_sec: 9.0
   top_speed_kmh: 150
   acceleration_0_100_sec: 9.0
 dimensions:
@@ -86,37 +83,8 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 15.2
   real_world_kwh_per_100km: 17.5
-wheels_tires:
-  standard_size_front: 205/55 R17
-  standard_size_rear: 205/55 R17
-  wheel_sizes_available:
-  - 17 inch (standard)
-  - 18 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Active Safety Brake
-  - Lane Keeping Assist
-  - Speed Limit Recognition
-  - Cruise Control
-  - Rear parking sensors
-  connectivity:
-  - 10-inch touchscreen
-  - Wireless Apple CarPlay & Android Auto
-  - MyCitroën app
-  - Bluetooth
-  - USB-C ports
-  special_features:
-  - Citroën Advanced Comfort seats
-  - Progressive Hydraulic Cushions suspension
-  - Eco mode
-  - B-mode regenerative braking
 metadata:
   data_quality: estimated
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.citroen.de/modelle/citroen-e-c4-elektro.html
-  notes: 2025 model year ë-C4 with upgraded 54 kWh battery (up from 50 kWh). Motor
-    upgraded to 115kW/156hp. WLTP range increases to 415km from 357km. Same coupe-crossover
-    body style on updated STLA Medium platform.

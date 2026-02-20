@@ -2,33 +2,6 @@ id: skoda-enyaq-iv-80x-2024
 model_id: skoda-enyaq-iv
 name: 80x
 model_year: 2024
-trim_level: 80x
-version_name: 2024 Facelift
-description: 'The Škoda Enyaq iV 80x adds all-wheel drive to the popular 82kWh battery
-  platform,
-
-  offering enhanced traction, stability, and performance. With dual motors producing
-
-  265 hp combined, it accelerates significantly faster than the RWD 80 variant while
-
-  maintaining impressive range (509 km WLTP).
-
-
-  The "x" designation indicates all-wheel drive across Škoda''s electric lineup. The
-  80x
-
-  combines practicality with performance, making it ideal for families who want the
-
-  security of AWD in winter conditions or those seeking sportier driving dynamics
-
-  without stepping up to the vRS performance flagship.
-
-
-  Like all Enyaq variants, the 80x benefits from the 2024 facelift with improved ME3
-
-  infotainment software, ChatGPT-powered Laura assistant, and more physical controls.
-
-  '
 dimensions:
   length_mm: 4649
   width_mm: 1879
@@ -44,71 +17,18 @@ battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NCM
-  cells_configuration: 288 cells (96s3p pouch cells)
-  supplier: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling with heat pump integration
-  preconditioning: true
 range:
   wltp_km: 509
   wltp_city_km: 670
   wltp_highway_km: 410
   real_world_km: 440
   epa_km: null
-  epa_miles: null
 charging:
   ac_max_kw: 11
-  ac_charge_time_hours: 7.5
-  ac_ports:
-  - type: Type2
-    max_power_kw: 11
-    phases: 3
   dc_max_kw: 135
-  dc_charge_time_minutes: 29
-  dc_ports:
-  - type: CCS2
-    max_power_kw: 135
-  charge_curve:
-  - percent: 0
-    power_kw: 10
-  - percent: 10
-    power_kw: 135
-  - percent: 30
-    power_kw: 132
-  - percent: 50
-    power_kw: 125
-  - percent: 70
-    power_kw: 85
-  - percent: 80
-    power_kw: 50
-  - percent: 90
-    power_kw: 30
-  - percent: 100
-    power_kw: 10
-  bidirectional:
-    v2l: false
-    v2l_max_kw: null
-    v2h: false
-    v2g: false
-motors:
-- position: front
-  type: asynchronous
-  max_power_kw: 80
-  max_power_hp: 109
-  max_torque_nm: 162
-  description: AKA150 motor (front axle)
-- position: rear
-  type: permanent_magnet
-  max_power_kw: 150
-  max_power_hp: 204
-  max_torque_nm: 310
-  description: APP310 motor (rear axle, primary drive motor)
-drivetrain:
-  type: AWD
-  drive_type: AWD
-  notes: Electronic AWD system with rear-biased torque distribution in normal driving
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.9
@@ -117,95 +37,7 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 18.3
   real_world_kwh_per_100km: 20.5
-  co2_emissions_wltp_g_per_km: 0
-weights:
-  curb_weight_kg: 2180
-  gross_vehicle_weight_kg: 2730
-  payload_kg: 550
-  towing_capacity_braked_kg: 1200
-  towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 52
-  distribution_rear_percent: 48
-software:
-  version: ME3
-  ota_updates: true
-  features:
-  - Laura virtual assistant (ChatGPT integration)
-  - Improved UI responsiveness
-  - Faster boot time
-  - More physical buttons vs touchscreen (customer feedback)
-  - Backlit climate control sliders
-  - Improved voice control
-  - AWD torque distribution display
-comfort:
-  climate_control: 3-zone automatic climate control
-  heat_pump: true
-  heated_seats_front: true
-  heated_seats_rear: true
-  heated_steering_wheel: true
-  ventilated_seats_front: false
-  massage_seats: false
-  panoramic_roof: true
-  ambient_lighting: true
-audio:
-  standard_speakers: 6
-  premium_system: Canton Sound System
-  premium_speakers: 12
-  premium_power_watts: 570
-driver_assistance:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_sensors_front: true
-  parking_sensors_rear: true
-  parking_camera: true
-  traffic_sign_recognition: true
-  driver_attention_warning: true
-  automatic_emergency_braking: true
-lighting:
-  headlights: LED Matrix
-  daytime_running_lights: LED
-  taillights: LED with dynamic turn signals
-  ambient_lighting: true
-  features:
-  - LED Matrix with Crystalline elements
-  - Dynamic turn signals front and rear
-  - Coming/Leaving Home function
-  - LED puddle lights in doors
-wheels:
-  standard_size: 20-inch
-  standard_design: Procyon
-  optional_sizes:
-  - 21-inch
-  optional_designs:
-  - Taurus (21-inch, vRS design)
 metadata:
   created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
-  data_sources:
-  - Škoda official specifications (skoda-auto.com, 2024)
-  - Škoda press materials (2024 facelift)
-  - What Car? independent testing (whatcar.com)
-  - Auto Express road test (autoexpress.co.uk)
-  - Carwow review (carwow.co.uk)
-  - InsideEVs range test
-  - ADAC Ecotest (Germany)
-  notes: '2024 facelift brings significant software improvements (ME3 vs ME2). 135kW
-    DC charging upgrade from 125kW.
-
-    Dual-motor AWD system provides excellent traction and stability. Front asynchronous
-    motor + rear permanent
-
-    magnet motor configuration balances efficiency with performance. 265 hp combined
-    output vs 286 hp RWD.
-
-    0-100 km/h in 6.9s vs 8.5s RWD (1.6s faster). Range penalty of 61 km WLTP vs RWD
-    (509 vs 570 km).
-
-    Standard 20-inch wheels vs 19-inch on RWD. Weighs 130 kg more than RWD variant.
-
-    Popular choice in Nordic markets and mountainous regions. Competes with VW ID.4
-    GTX, Ioniq 5 AWD, EV6 AWD.
-
-    '

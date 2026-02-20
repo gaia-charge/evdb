@@ -1,10 +1,8 @@
-# Volkswagen ID.7 GTX (2024)
 id: volkswagen-id7-gtx-2024
 name: GTX
 model_id: volkswagen-id7
 model_year: 2024
 variant_code: ID7-GTX
-
 battery:
   usable_kwh: 86.0
   total_kwh: 91.0
@@ -14,11 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    86 kWh usable battery (91 kWh gross). Same as Pro S variant.
-    400V architecture with NCM chemistry optimized for performance.
-
 range:
   wltp_km: 595
   wltp_city_km: 775
@@ -26,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 510
   real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 595 km - slightly lower than Pro S due to AWD drivetrain
-    and sportier setup. Real-world range around 510 km in mixed conditions.
-    Still excellent for a performance electric sedan.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -38,100 +26,73 @@ charging:
   dc_max_kw: 200
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 200
-    - soc_percent: 10
-      power_kw: 200
-    - soc_percent: 20
-      power_kw: 200
-    - soc_percent: 30
-      power_kw: 185
-    - soc_percent: 40
-      power_kw: 165
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 40
-  time_0_to_100_min: 43
+  - soc_percent: 0
+    power_kw: 200
+  - soc_percent: 10
+    power_kw: 200
+  - soc_percent: 20
+    power_kw: 200
+  - soc_percent: 30
+    power_kw: 185
+  - soc_percent: 40
+    power_kw: 165
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 55
+  - soc_percent: 90
+    power_kw: 40
   time_10_to_80_min: 30
   time_20_to_80_min: 26
   charging_speed_kmh: 1200
-  notes: |
-    Fast DC charging up to 200 kW peak. 10-80% in 30 minutes.
-    11 kW AC charging standard (optional 22 kW upgrade available).
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-  notes: "Bidirectional charging not supported in 2024 model"
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 134
-    - position: rear
-      type: permanent magnet
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 545
+  - position: front
+    type: AC induction
+    power_kw: 80
+    power_hp: 109
+    torque_nm: 134
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
   total_power_kw: 250
   total_power_hp: 340
   total_torque_nm: 545
   acceleration_0_100_sec: 5.4
   top_speed_kmh: 180
-  notes: |
-    Dual-motor AWD system: front asynchronous induction motor + rear permanent
-    magnet motor. Combined 340 hp output. 0-100 km/h in 5.4 seconds makes it
-    the fastest ID.7 variant. Enhanced traction and stability in all conditions.
-
 dimensions:
   length_mm: 4961
   width_mm: 1862
   height_mm: 1538
   wheelbase_mm: 2966
   ground_clearance_mm: 152
-
 cargo:
   trunk_capacity_liters: 532
   trunk_max_liters: 1586
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2258
   gross_vehicle_weight_kg: 2815
   payload_kg: 557
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
-  notes: "Perfect 50/50 weight distribution thanks to dual-motor AWD setup"
-  towing_capacity_braked_kg: 1000
-  towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 16.5
-  wltp_city_kwh_per_100km: 14.2
-  wltp_highway_kwh_per_100km: 19.3
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.2
   efficiency_rating: A
-  notes: |
-    Good efficiency for an AWD performance sedan: 16.5 kWh/100km WLTP.
-    Higher consumption than RWD variants due to dual-motor setup and
-    sportier tuning, but still competitive with BMW i5 M60 and Tesla Model 3 Performance.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -139,69 +100,56 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist with Swarm Data"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - DCC Sport adaptive chassis control (sport-tuned adaptive dampers)
-    - Electronic differential lock (XDS+) with torque vectoring
-    - Travel Assist Level 2+ ADAS with lane keeping and predictive ACC
-    - ID. Light ambient lighting strip with GTX-specific animations
-    - One-pedal driving with adjustable regenerative braking
-    - AR head-up display included
-    - Climate comfort seats with massage function included
-    - GTX-specific sport seats, steering wheel, and interior trim
-    - Matrix LED IQ.LIGHT headlights included
-
 optional_equipment:
-  - name: IQ.DRIVE Max Package
-    code: IQDMAX
-    category: safety
-    included_in_base: true
-    notes: "Full ADAS suite included in GTX trim"
-  - name: AR Head-Up Display
-    code: ARHUD
-    category: infotainment
-    included_in_base: true
-    notes: "Augmented reality head-up display included in GTX"
-  - name: ergoActive Climate Seats
-    code: ERGOACT
-    category: comfort
-    included_in_base: true
-    notes: "Front seats with massage, ventilation, and climate control included"
-  - name: 22kW AC Charging
-    code: AC22
-    category: charging
-    included_in_base: false
-    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
-  - name: Panoramic Glass Roof
-    code: PGR
-    category: comfort
-    included_in_base: false
-    notes: "Large panoramic glass roof with electric sunshade"
-  - name: DynAudio Sound System
-    code: DYNAUDIO
-    category: infotainment
-    included_in_base: false
-    notes: "Premium 700W sound system with 14 speakers"
+- name: IQ.DRIVE Max Package
+  code: IQDMAX
+  category: safety
+  included_in_base: true
+- name: AR Head-Up Display
+  code: ARHUD
+  category: infotainment
+  included_in_base: true
+- name: ergoActive Climate Seats
+  code: ERGOACT
+  category: comfort
+  included_in_base: true
+- name: 22kW AC Charging
+  code: AC22
+  category: charging
+  included_in_base: false
+- name: Panoramic Glass Roof
+  code: PGR
+  category: comfort
+  included_in_base: false
+- name: DynAudio Sound System
+  code: DYNAUDIO
+  category: infotainment
+  included_in_base: false
+notes: 'The ID.7 GTX is the performance flagship of VW''s electric sedan lineup.
 
-notes: |
-  The ID.7 GTX is the performance flagship of VW's electric sedan lineup.
   With dual-motor AWD system producing 340 hp, it accelerates 0-100 km/h
+
   in just 5.4 seconds while maintaining 595 km WLTP range thanks to the
+
   86 kWh battery. The GTX trim includes sport-tuned DCC adaptive dampers,
+
   torque vectoring, GTX-specific styling, and a comprehensive premium
+
   equipment package (AR HUD, climate comfort seats, matrix LED headlights).
-  Built on MEB platform at VW's Emden factory. Competes with BMW i5 M60,
+
+  Built on MEB platform at VW''s Emden factory. Competes with BMW i5 M60,
+
   Tesla Model 3 Performance, and Mercedes EQE 500. Perfect for drivers who
+
   want both performance and practicality in a spacious executive sedan.
 
-
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.com/en/models/id-7.html
-    - https://www.volkswagen-newsroom.com/en/press-releases/id7-gtx-launch-2024
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/
+  - https://www.volkswagen.com/en/models/id-7.html
+  - https://www.volkswagen-newsroom.com/en/press-releases/id7-gtx-launch-2024
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id7/

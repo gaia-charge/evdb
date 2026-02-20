@@ -2,107 +2,26 @@ id: nissan-leaf-75kwh-2025
 name: Extended Range 75 kWh
 model_id: nissan-leaf
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: engage
-market_position: mid
 battery:
   usable_kwh: 75.0
   total_kwh: 79.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: pouch
-  supplier: Envision AESC
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: skateboard, CMF-EV platform
-    weight_kg: 520
-  notes: 'Larger 75 kWh battery option on the CMF-EV platform. Active liquid cooling
-    enables consistent 150kW DC fast charging. The Extended Range battery delivers
-    class-leading 622 km WLTP range with the same excellent aerodynamics.
-
-    '
 range:
   wltp_km: 622
-  wltp_source: manufacturer
   real_world_km: 455
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
-consumption:
-  wltp_kwh_per_100km: 13.8
-  real_world_kwh_per_100km: 16.5
-  real_world_source: estimated
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 32
-      '0_100': 65
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 80
-    - soc_percent: 10
-      power_kw: 140
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 12
-    notes: CCS2 fast charging up to 150kW. 10-80% in approx 32 minutes at 150kW station.
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: true
-    v2h: true
-    notes: Full V2G/V2H bidirectional capability via CCS2
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 160
-  max_torque_nm: 300
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 160
-  total_power_hp: 217
-  total_torque_nm: 300
 performance:
   top_speed_kmh: 170
-  top_speed_limited: true
   acceleration_0_100_sec: 7.0
 efficiency:
   wltp_kwh_per_100km: 13.8
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 16.5
-  highway:
-    kmh: 120
-    kwh_per_100km: 20.0
-    range_km: 375
-  city:
-    kwh_per_100km: 13.5
-    range_km: 555
 dimensions:
   length_mm: 4640
   width_mm: 1820
@@ -115,53 +34,10 @@ weight:
   payload_kg: 400
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-interior:
-  seating_capacity: 5
-  trunk_capacity_liters: 435
-  trunk_max_liters: 1460
-  frunk_capacity_liters: 0
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1460
   frunk_capacity_liters: 0
-features:
-  exterior:
-  - 18-inch alloy wheels
-  - Full LED headlights with adaptive high beam
-  - Flush door handles
-  - Privacy glass
-  - Rear spoiler
-  - Heated and power folding mirrors
-  interior:
-  - 12.3-inch touchscreen with Google built-in
-  - 12.3-inch digital instrument cluster
-  - Google Maps, Google Assistant, Google Play
-  - Wireless Apple CarPlay & Android Auto
-  - Dual-zone automatic climate control with heat pump
-  - Wireless smartphone charging
-  - USB-C ports front and rear
-  - Ambient lighting
-  - Heated front seats
-  - Heated steering wheel
-  - Power driver seat with lumbar
-  safety:
-  - ABS with EBD
-  - Electronic stability control
-  - 6 airbags
-  - ISOFIX child seat anchors
-  - Tire pressure monitoring
-  - Front and rear parking sensors
-  - 360° Around View Monitor
-  driver_assistance:
-  - ProPILOT Assist with Navi-Link
-  - Intelligent Cruise Control
-  - Lane Keep Assist
-  - Autonomous Emergency Braking with pedestrian/cyclist detection
-  - Blind Spot Intervention
-  - Rear Cross Traffic Alert
-  - Traffic Sign Recognition
-  - e-Pedal one-pedal driving
-  - ProPILOT Park (automated parking)
 notes: 'The Extended Range 75 kWh version of the all-new 2025 Nissan LEAF delivers
   an impressive 622 km WLTP range — nearly double the previous generation''s best.
   With the more powerful 160 kW motor, it offers stronger acceleration while maintaining

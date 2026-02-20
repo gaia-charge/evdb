@@ -2,11 +2,6 @@ id: vinfast-vf9-plus-2025
 name: Plus
 model_id: vinfast-vf9
 model_year: 2025
-production_years:
-  start: 2023
-  end: null
-trim_level: premium
-market_position: premium
 dimensions:
   length_mm: 5120
   width_mm: 2000
@@ -22,78 +17,18 @@ battery:
   usable_kwh: 118
   total_kwh: 123
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 10
   warranty_km: 200000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 750
-    cells: null
 range:
   wltp_km: 594
-  wltp_source: manufacturer
   real_world_km: 450
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 11.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 43
-      '0_100': 80
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 100
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 120
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: front
-  type: permanent_magnet
-  max_power_kw: 150
-  max_torque_nm: 310
-  cooling: liquid
-- position: rear
-  type: permanent_magnet
-  max_power_kw: 150
-  max_torque_nm: 310
-  cooling: liquid
-drivetrain:
-  type: awd
-  total_power_kw: 300
-  total_power_hp: 408
-  total_torque_nm: 620
 performance:
   top_speed_kmh: 200
-  top_speed_limited: true
   acceleration_0_100_sec: 6.5
 weight:
   curb_weight_kg: 2800
@@ -103,40 +38,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 20.8
   real_world_kwh_per_100km: 26.2
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 29.0
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 33.0
-standard_features:
-- 15.6-inch infotainment display
-- Digital instrument cluster
-- Advanced driver assistance (ADAS) Level 2+
-- Heated and ventilated front seats
-- Heated second row seats
-- 7-seat configuration
-- Panoramic sunroof
-- Wireless Apple CarPlay & Android Auto
-- Premium audio system (11 speakers)
-- LED Matrix headlights
-- 21-inch alloy wheels
-- Power tailgate
-- 360-degree camera
-- Nappa leather interior
-- Head-up display
-- Air suspension
-colors:
-  standard:
-  - Deception Blue
-  - Crimson Red
-  - Brazen Black
-  - Pure White
-  - Lux Grey
-version:
-  facelift: false
-  major_changes:
-  - Improved software and infotainment for 2025
-  - Enhanced ADAS features
 notes: 'The VinFast VF9 Plus is one of the largest electric SUVs available in Europe
   with a massive 123 kWh battery. It competes directly with the Kia EV9 and Hyundai
   Ioniq 9 in the 3-row electric SUV segment. The 2025 model benefits from OTA software
@@ -147,6 +48,5 @@ metadata:
   created_at: '2026-02-09'
   updated_at: '2026-02-09'
   data_quality: estimated
-  data_source: manufacturer
   sources:
   - https://www.vinfast.com/vf9

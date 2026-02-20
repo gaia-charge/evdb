@@ -2,101 +2,28 @@ id: mercedes-benz-eqe-350-plus-2024
 name: Mercedes-Benz EQE 350+ (2024)
 model_id: mercedes-benz-eqe
 model_year: 2024
-variant_name: 350+
-trim_level: base
 battery:
   usable_kwh: 90.6
   total_kwh: 96.0
   chemistry: NCM
-  cells_config: 288s2p (576 cells)
-  supplier: CATL
-  form_factor: pouch
   warranty_years: 10
   warranty_km: 250000
   warranty_capacity_percent: 70
-  notes: 'Large 90.6kWh usable capacity provides excellent range. NCM (Nickel Cobalt  Manganese)
-    chemistry from CATL. Liquid thermal management with heat pump.  Battery preconditioning
-    available for optimal DC fast charging performance.
-
-    '
 range:
   wltp_km: 639
   wltp_city_km: 840
   wltp_highway_km: 515
   epa_km: null
-  epa_miles: null
   real_world_km: 550
-  notes: 'WLTP range of 639km is excellent for this class. Real-world range around  550km
-    in mixed driving. Highway range is reduced due to higher speeds  affecting aerodynamics.
-    Winter range approximately 420-450km.
-
-    '
 charging:
-  ac:
-    plug_type: Type2
-    phases: 3
-    charge_time_0_100_hours: 9.0
-    notes: 'Standard 11kW AC charging (3-phase, 16A). Optional 22kW onboard charger  available
-      but rarely utilized due to limited 22kW charging infrastructure.  Mercedes me
-      Charge provides access to 600,000+ charging points globally.
-
-      '
-  dc:
-    plug_type: CCS2
-    charge_time_10_80_percent_minutes: 32
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 170
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 165
-    - soc_percent: 40
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 65
-    notes: 'Peak DC fast charging at 170kW (improved from 140kW in 2023 model).  400V
-      architecture with battery preconditioning. Typical 10-80% charge  takes 32 minutes.
-      Mercedes me Charge app integrates with IONITY and  other high-power charging
-      networks.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 170
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: 'Bidirectional charging not currently available but Mercedes-Benz has announced  it
-    will come to future models/updates.
-
-    '
-motors:
-  count: 1
-  type: permanent_magnet
-  layout: rear
-  total_power_kw: 215
-  total_power_hp: 292
-  total_torque_nm: 530
-  drive_type: RWD
-  notes: 'Single permanent magnet synchronous motor (PSM) on rear axle. Excellent  efficiency
-    and smooth power delivery. Mercedes-Benz AMG variants offer  dual-motor AWD configurations
-    with significantly more power.
-
-    '
 performance:
   top_speed_kmh: 210
-  notes: 'Rear-wheel drive provides balanced handling and good traction. Optional  rear-axle
-    steering (up to 10 degrees) dramatically improves maneuverability  and reduces
-    turning circle. AMG EQE 43/53 variants offer 3.3-second 0-100km/h.
-
-    '
   total_power_kw: 215
   total_power_hp: 292
   total_torque_nm: 530
@@ -104,12 +31,6 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 18.3
   real_world_kwh_per_100km: 20.5
-  energy_label_eu: B
-  notes: 'Excellent efficiency for a luxury sedan thanks to Cd 0.22 aerodynamics,  low
-    rolling resistance tires, and efficient powertrain. Real-world  consumption around
-    20.5 kWh/100km in mixed driving.
-
-    '
 dimensions:
   length_mm: 4946
   width_mm: 1906
@@ -128,66 +49,10 @@ weight:
   payload_kg: 500
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-adas:
-  level: 2_plus
-  features:
-  - Adaptive Cruise Control (DISTRONIC)
-  - Active Lane Keeping Assist
-  - Active Blind Spot Assist
-  - Active Brake Assist
-  - Traffic Sign Assist
-  - Active Distance Assist DISTRONIC
-  - Active Steering Assist
-  - Active Emergency Stop Assist
-  notes: 'Level 2+ driver assistance standard. Optional DRIVE PILOT (Level 3) available  in
-    Germany for hands-free highway driving up to 60 km/h in traffic. One of  the first
-    Level 3 systems approved for public roads.
-
-    '
-features:
-  standard:
-  - AIRMATIC air suspension (optional but common)
-  - Rear-axle steering (optional, up to 10°)
-  - Burmester 3D Surround Sound (optional)
-  - Ambient lighting with 64 colors
-  - Keyless entry and start
-  - Dual-zone automatic climate control
-  - Heat pump
-  - LED Intelligent Light System
-  - 12.8" OLED touchscreen
-  - Wireless smartphone charging
-  - 360-degree camera (optional)
-  optional:
-  - MBUX Hyperscreen (56" curved glass display)
-  - Burmester High-End 4D Surround Sound
-  - AMG Line exterior/interior
-  - Panoramic sliding sunroof
-  - Executive rear seat package
-  - DRIVE PILOT (Level 3 autonomy, Germany only)
-  - 22kW AC onboard charger
-  - Trailer hitch
-environmental:
-  lifecycle_co2_kg: null
-  production_location: Bremen, Germany; Beijing, China
-  battery_production: Kamenz, Germany (Mercedes-Benz subsidiary Accumotive)
-  notes: 'Built at Mercedes-Benz Bremen plant in Germany and Beijing plant in China.  Batteries
-    produced at Mercedes-Benz subsidiary Accumotive in Kamenz, Germany.  Mercedes-Benz
-    aims for carbon-neutral production.
-
-    '
 metadata:
   data_quality: verified
-  data_sources:
-  - manufacturer
-  - measured
   created_at: '2024-02-07'
-  last_updated: '2024-02-07'
   sources:
   - https://www.mercedes-benz.com/en/vehicles/passenger-cars/eqe/
   - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe/sedan-v295/explore/prices-and-specifications.html
   - https://ev-database.org/car/1610/Mercedes-EQE-350
-  notes: '2024 model year data. The EQE 350+ is the most popular variant, offering  excellent
-    range (639km WLTP) with single-motor efficiency. Specs verified  from official
-    Mercedes-Benz sources.
-
-    '

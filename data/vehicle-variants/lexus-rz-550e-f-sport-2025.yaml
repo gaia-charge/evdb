@@ -48,9 +48,7 @@ charging:
     power_kw: 28
   - soc_percent: 100
     power_kw: 15
-  time_10_to_80_percent_min: 30
   charging_speed_kmh: 800
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
@@ -72,8 +70,6 @@ performance:
   total_power_kw: 300
   total_power_hp: 408
   total_torque_nm: 566
-  acceleration_0_100_kmh_sec: 4.4
-  acceleration_0_60_mph_sec: 4.1
   top_speed_kmh: 180
   acceleration_0_100_sec: 4.4
 dimensions:
@@ -86,67 +82,17 @@ cargo:
   trunk_capacity_liters: 522
   trunk_max_liters: 1451
   frunk_capacity_liters: 0
-  notes: 522L boot, 1451L with rear seats folded.
 weight:
   curb_weight_kg: 2100
   gross_vehicle_weight_kg: 2575
   payload_kg: 475
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 52
-  distribution_rear_percent: 48
 efficiency:
   wltp_kwh_per_100km: 17.4
-  wltp_kwh_per_100km_city: 14.8
-  wltp_kwh_per_100km_highway: 20.1
   real_world_kwh_per_100km: 20.5
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/50 R20
-  standard_size_rear: 235/50 R20
-  wheel_sizes_available:
-  - 20 inch (standard, F SPORT design)
-technology:
-  adas_level: 2
-  adas_features:
-  - Lexus Safety System+ 3.0
-  - Pre-Collision System with pedestrian/cyclist detection
-  - Full-Speed Dynamic Radar Cruise Control
-  - Lane Departure Alert with steering assist
-  - Lane Tracing Assist
-  - Road Sign Assist
-  - Adaptive High Beams
-  - Blind Spot Monitor with Rear Cross-Traffic Alert
-  - Parking Support Brake
-  - Panoramic View Monitor
-  - VDIM integrated vehicle dynamics management
-  connectivity:
-  - Lexus Link connected services
-  - Remote climate control via app
-  - OTA software updates
-  - Lexus Interface multimedia system
-  - Hey Lexus voice assistant
-  special_features:
-  - Steer-by-Wire with Yoke steering (standard on F SPORT)
-  - Interactive Manual Drive (virtual shift paddles)
-  - DIRECT4 AWD with sport-tuned torque distribution
-  - 22kW AC onboard charger
-  - F SPORT front bumper, blue brake calipers
-  - F SPORT front and rear spoilers
-  - Exclusive Neutrino Grey paint option
-  - F SPORT interior (dark grey/black with blue stitching)
-  - Heat pump standard
-  - Electrochromic panoramic roof with dimming
-  - Head-up display (color)
-  - Mark Levinson premium audio
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.lexus.de/modelle/rz/
-  notes: New top-of-range performance variant for 2025. First Lexus with Steer-by-Wire
-    and Yoke steering as standard. 300kW/408PS makes it the most powerful RZ. Interactive
-    Manual Drive simulates gear changes via paddle shifters. F SPORT-specific exterior
-    and interior design. 462km WLTP range. 180 km/h top speed (up from 160 km/h on
-    other variants).

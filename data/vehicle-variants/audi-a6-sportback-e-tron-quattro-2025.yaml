@@ -46,9 +46,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_10_to_80_percent_min: 23
   charging_speed_kmh: 1040
-  plug_and_charge: true
 bidirectional:
   v2l: false
   v2h: false
@@ -69,7 +67,6 @@ performance:
   total_power_kw: 340
   total_power_hp: 462
   total_torque_nm: 855
-  acceleration_0_100_kmh_sec: 4.7
   top_speed_kmh: 210
   acceleration_0_100_sec: 4.7
 dimensions:
@@ -91,43 +88,9 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 14.7
   real_world_kwh_per_100km: 16.6
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 225/55 R19
-  standard_size_rear: 245/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional)
-  - 21 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system
-  - Predictive efficiency assist
-  - Emergency assist
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  special_features:
-  - 800V architecture with ultra-fast DC charging
-  - Plug & Charge (ISO 15118-2)
-  - Battery preconditioning via navigation
-  - Dual charge ports (left and right rear)
-  - quattro electric AWD with torque vectoring
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.audi.de/de/neuwagen/a6-e-tron/a6-sportback-e-tron/
   - https://ev-database.org/car/3052/Audi-A6-Sportback-e-tron-quattro
-  notes: AWD variant with dual motors (340kW combined). Adds front AC induction motor
-    for all-wheel drive capability. 110kg heavier than performance RWD, resulting
-    in 40km less WLTP range (716 vs 756km). Significantly more powerful (462 PS vs
-    381 PS) with 4.7s 0-100 km/h. Same 269kW DC fast charging and 800V architecture.

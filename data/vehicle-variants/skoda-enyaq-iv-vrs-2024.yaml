@@ -2,8 +2,6 @@ id: skoda-enyaq-iv-vrs-2024
 name: vRS
 model_id: skoda-enyaq-iv
 model_year: 2024
-production_start: '2024-01-01'
-production_end: null
 dimensions:
   length_mm: 4648
   width_mm: 1877
@@ -24,9 +22,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 82 kWh usable battery (85 kWh gross). Same battery as 80/80x but with performance-tuned
-    dual motors. 400V MEB platform.
 range:
   wltp_km: 513
   wltp_city_km: 650
@@ -34,13 +29,6 @@ range:
   epa_km: null
   real_world_km: 430
   real_world_source: InsideEVs 70mph highway test
-  notes: 'WLTP range of 513 km. Real-world range around 430 km in mixed conditions.
-
-    Performance-tuned but still efficient. Winter range ~310km at -10°C.
-
-    Slightly lower range than 80x due to sportier setup and larger wheels.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -64,81 +52,17 @@ charging:
     power_kw: 70
   - soc_percent: 80
     power_kw: 45
-  charge_time_10_80_minutes: 36
-  notes: 'DC fast charging up to 135kW. 10-80% in 36 minutes.
-
-    AC charging: 11kW standard, 0-100% in 8.5 hours.
-
-    Battery preconditioning available when navigating to DC charger.
-
-    '
-motors:
-- position: front
-  type: asynchronous_induction
-  power_kw: 80
-  torque_nm: 162
-  manufacturer: Volkswagen Group
-- position: rear
-  type: permanent_magnet
-  power_kw: 150
-  torque_nm: 310
-  manufacturer: Volkswagen Group
-drivetrain:
-  type: AWD
-  all_wheel_drive: true
-  total_power_kw: 220
-  total_torque_nm: 460
-  notes: 'Dual motor setup: 80kW induction front + 150kW permanent magnet rear = 220kW
-    combined'
 performance:
   top_speed_kmh: 180
-  notes: Performance-oriented variant. 0-100 km/h in 6.5s, quickest Enyaq. Sport suspension
-    with 15mm lower ride height.
   acceleration_0_100_sec: 6.5
 efficiency:
   wltp_kwh_per_100km: 18.2
   real_world_kwh_per_100km: 20.8
-  notes: Slightly higher consumption than 80x due to sportier setup and performance
-    focus
 weight:
   curb_weight_kg: 2190
   gross_vehicle_weight_kg: 2710
   payload_kg: 520
   towing_capacity_braked_kg: 1200
-  notes: Performance variant with dual motors. Can tow up to 1200kg (braked trailer).
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: rear
-  autonomous_parking: true
-special_features:
-- Sport suspension (15mm lower)
-- 20-inch Xtreme alloy wheels (21-inch optional)
-- vRS sports seats with integrated headrests
-- vRS steering wheel with paddle shifters
-- Black exterior trim package
-- Red brake calipers
-- vRS front grille with Crystalline elements
-- Carbon fiber effect interior accents
-- Sport driving mode
-- Enhanced recuperation settings
-standard_equipment:
-- LED Matrix headlights
-- 13-inch infotainment touchscreen
-- 10.25-inch digital instrument cluster
-- Wireless Apple CarPlay & Android Auto
-- Canton sound system (12 speakers)
-- Panoramic glass roof
-- Heat pump
-- 3-zone climate control
-- Heated front seats & steering wheel
-- Electric tailgate
-- Keyless entry & start
 notes: 'Škoda Enyaq iV vRS - The performance flagship of the Enyaq range. Features
   dual motors producing 220kW (299hp) combined, achieving 0-100 km/h in 6.5 seconds.
   Built on VW MEB platform with 82 kWh battery offering 513 km WLTP range (430 km
@@ -154,8 +78,6 @@ notes: 'Škoda Enyaq iV vRS - The performance flagship of the Enyaq range. Featu
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source: manufacturer
   sources:
   - https://www.skoda-auto.com/models/enyaq-iv/enyaq-iv-rs
   - https://www.adac.de/rund-ums-fahfahrzeug/autokatalog/marken-modelle/skoda/enyaq/

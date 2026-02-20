@@ -12,8 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: Upgraded 82 kWh battery for 2025 model year, replacing the 72 kWh pack.
 range:
   wltp_km: 590
   wltp_city_km: 760
@@ -21,12 +19,6 @@ range:
   epa_km: null
   real_world_km: 500
   real_world_source: Estimated based on EX40 ER data and improved Cd
-  notes: 'WLTP range of 590 km thanks to larger 82 kWh battery and excellent 0.30
-    Cd.
-
-    Significant improvement over 2024 model (530 km). Real-world ~500 km mixed.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -56,14 +48,7 @@ charging:
     power_kw: 30
   - soc_percent: 100
     power_kw: 15
-  time_10_to_80_percent_min: 28
   charging_speed_kmh: 980
-  plug_and_charge: false
-  notes: 'DC fast charging upgraded to 200 kW for 2025 (up from 150 kW in 2024).
-
-    10-80% in 28 minutes. AC 11 kW standard, full charge in 8 hours.
-
-    '
 bidirectional:
   v2l: false
   v2h: false
@@ -79,7 +64,6 @@ performance:
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
-  acceleration_0_100_kmh_sec: 6.7
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.7
 weight:
@@ -88,8 +72,6 @@ weight:
   payload_kg: 530
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 54
-  distribution_rear_percent: 46
 cargo:
   trunk_capacity_liters: 413
   trunk_max_liters: 1205
@@ -97,39 +79,12 @@ cargo:
 efficiency:
   wltp_kwh_per_100km: 15.6
   real_world_kwh_per_100km: 17.5
-  notes: Excellent efficiency thanks to 0.30 Cd and optimized powertrain for 2025
-wheels_tires:
-  standard_size_front: 235/50 R19
-  standard_size_rear: 235/50 R19
 dimensions:
   length_mm: 4440
   width_mm: 1873
   height_mm: 1596
   wheelbase_mm: 2702
   ground_clearance_mm: 175
-  trunk_capacity_liters: 413
-  frunk_capacity_liters: 31
-technology:
-  adas_level: 2
-  adas_features:
-  - Pilot Assist (adaptive cruise with lane centering)
-  - City Safety with collision avoidance
-  - Lane Keeping Aid
-  - Blind Spot Information System (BLIS)
-  - Cross Traffic Alert with autobrake
-  - 360-degree camera
-  connectivity:
-  - Google built-in (Maps, Assistant, Play Store)
-  - Volvo Cars app
-  - OTA software updates
-  - 5G connectivity (new for 2025)
-  - Wireless Apple CarPlay and Android Auto
-  special_features:
-  - One-pedal driving mode
-  - Pre-conditioning (battery & cabin)
-  - Smartphone as key
-  - Leather-free interior as standard
-  - Heat pump standard
 notes: 'The 2025 Volvo EC40 Single Motor Extended Range brings significant upgrades
   over the 2024 model: larger 82 kWh battery (up from 72 kWh), 200 kW DC charging
   (up from 150 kW), increased motor power to 272 hp (up from 238 hp), and 5G connectivity.
@@ -142,7 +97,6 @@ notes: 'The 2025 Volvo EC40 Single Motor Extended Range brings significant upgra
 metadata:
   data_quality: estimated
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.volvocars.com/de/cars/ec40/
   - https://www.volvocars.com/intl/v/cars/ec40

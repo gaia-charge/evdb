@@ -59,10 +59,7 @@ charging:
     power_kw: 25
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 32
-  time_10_to_80_percent_min: 30
   charging_speed_kmh: 920
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
@@ -79,7 +76,6 @@ performance:
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 266
-  acceleration_0_100_kmh_sec: 7.5
   top_speed_kmh: 160
   acceleration_0_100_sec: 7.5
 weight:
@@ -90,52 +86,10 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 14.6
-  wltp_kwh_per_100km_city: 12.5
-  wltp_kwh_per_100km_highway: 16.8
   real_world_kwh_per_100km: 17.5
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 235/60 R18
-  standard_size_rear: 235/60 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 20 inch (optional, -20km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Toyota Safety Sense 3.0
-  - Pre-Collision System with pedestrian/cyclist detection
-  - Full-Speed Dynamic Radar Cruise Control
-  - Lane Departure Alert with steering assist
-  - Lane Tracing Assist
-  - Road Sign Assist
-  - Automatic High Beams
-  - Blind Spot Monitor
-  - Rear Cross-Traffic Alert
-  - Parking Support Brake
-  - Proactive Driving Assist
-  connectivity:
-  - Toyota Connected Services
-  - Remote climate control via app
-  - Remote door lock/unlock
-  - Vehicle finder
-  - OTA software updates
-  - Digital key (smartphone)
-  special_features:
-  - 11kW 3-phase AC charging (upgraded from 6.6kW)
-  - Improved infotainment with faster processor
-  - Heat pump standard
-  - Radiant heating system
-  - Paddle-style regen control
-  - Panoramic roof (fixed)
-  - Solar roof option
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.toyota.de/modelle/bz4x
   - https://ev-database.org/car/1547/Toyota-bZ4X-FWD
-  notes: 2025 model year update adds 11kW 3-phase AC charging (major improvement over
-    6.6kW single-phase), improved infotainment, slightly better efficiency. WLTP range
-    improved to 531 km. Competes with VW ID.4, Hyundai Ioniq 5.

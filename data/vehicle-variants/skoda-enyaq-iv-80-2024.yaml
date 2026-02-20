@@ -2,82 +2,22 @@ id: skoda-enyaq-iv-80-2024
 model_id: skoda-enyaq-iv
 name: '80'
 model_year: 2024
-trim_level: '80'
-version_name: 2024 Facelift
-description: "The Škoda Enyaq iV 80 is the most popular variant in the lineup, offering\
-  \ the largest 82kWh battery \nfor excellent range (up to 570km WLTP) combined with\
-  \ competitive pricing. The 2024 facelift brought \nupdated exterior styling, improved\
-  \ Infotainment ME3 software with ChatGPT-powered Laura assistant, \nand slightly\
-  \ enhanced efficiency.\n\nThis RWD variant prioritizes efficiency and range over\
-  \ performance, making it ideal for families \nand long-distance travel. It offers\
-  \ class-leading interior space (best-in-class rear legroom), \na huge 585L boot,\
-  \ and Škoda's signature \"Simply Clever\" practical features.\n\nThe iV 80 competes\
-  \ directly with VW ID.4 Pro and Audi Q4 e-tron 50, but typically costs €3,000-5,000\
-  \ \nless while offering similar or better equipment levels and more space.\n"
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NCM
-  cells_configuration: 288 cells (96s3p pouch cells)
-  supplier: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling with heat pump integration
-  preconditioning: true
 range:
   wltp_km: 570
   wltp_city_km: 750
   wltp_highway_km: 460
   real_world_km: 490
   epa_km: null
-  epa_miles: null
 charging:
-  ac_max_power_kw: 11
-  ac_charge_time_hours: 7.5
-  ac_ports:
-  - type: Type2
-    max_power_kw: 11
-    phases: 3
-  dc_max_power_kw: 135
-  dc_charge_time_minutes: 29
-  dc_ports:
-  - type: CCS2
-    max_power_kw: 135
-  charge_curve:
-  - percent: 0
-    power_kw: 10
-  - percent: 10
-    power_kw: 135
-  - percent: 30
-    power_kw: 132
-  - percent: 50
-    power_kw: 125
-  - percent: 70
-    power_kw: 85
-  - percent: 80
-    power_kw: 50
-  - percent: 90
-    power_kw: 30
-  - percent: 100
-    power_kw: 10
-  bidirectional:
-    v2l: false
-    v2l_max_kw: null
-    v2h: false
-    v2g: false
   ac_max_kw: 11
   dc_max_kw: 135
-motors:
-- position: rear
-  type: permanent_magnet
-  max_power_kw: 210
-  max_power_hp: 286
-  max_torque_nm: 545
-  description: APP310 motor (shared with VW ID.4 Pro)
-drivetrain:
-  type: RWD
-  drive_type: RWD
 performance:
   total_power_kw: 210
   total_torque_nm: 545
@@ -86,69 +26,6 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 16.8
   real_world_kwh_per_100km: 19.0
-  co2_emissions_wltp_g_per_km: 0
-weights:
-  curb_weight_kg: 2050
-  gross_vehicle_weight_kg: 2600
-  payload_kg: 550
-  towing_capacity_braked_kg: 1200
-  towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
-software:
-  version: ME3
-  ota_updates: true
-  features:
-  - Laura virtual assistant (ChatGPT integration)
-  - Improved UI responsiveness
-  - Faster boot time
-  - More physical buttons vs touchscreen (customer feedback)
-  - Backlit climate control sliders
-  - Improved voice control
-comfort:
-  climate_control: 3-zone automatic climate control
-  heat_pump: true
-  heated_seats_front: true
-  heated_seats_rear: true
-  heated_steering_wheel: true
-  ventilated_seats_front: false
-  massage_seats: false
-  panoramic_roof: true
-  ambient_lighting: true
-audio:
-  standard_speakers: 6
-  premium_system: Canton Sound System
-  premium_speakers: 12
-  premium_power_watts: 570
-driver_assistance:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_sensors_front: true
-  parking_sensors_rear: true
-  parking_camera: true
-  traffic_sign_recognition: true
-  driver_attention_warning: true
-  automatic_emergency_braking: true
-lighting:
-  headlights: LED Matrix
-  daytime_running_lights: LED
-  taillights: LED with dynamic turn signals
-  ambient_lighting: true
-  features:
-  - LED Matrix with Crystalline elements
-  - Dynamic turn signals front and rear
-  - Coming/Leaving Home function
-  - LED puddle lights in doors
-wheels:
-  standard_size: 19-inch
-  standard_design: Vela Aero
-  optional_sizes:
-  - 20-inch
-  - 21-inch
-  optional_designs:
-  - Procyon (20-inch)
-  - Taurus (21-inch, vRS design)
 dimensions:
   length_mm: 4649
   width_mm: 1879
@@ -164,26 +41,3 @@ metadata:
   created_at: '2026-02-07'
   updated_at: '2026-02-20'
   data_quality: verified
-  data_sources:
-  - Škoda official specifications (skoda-auto.com, 2024)
-  - Škoda press materials (2024 facelift)
-  - What Car? independent testing (whatcar.com)
-  - Auto Express road test (autoexpress.co.uk)
-  - Carwow review (carwow.co.uk)
-  - InsideEVs range test
-  - ADAC Ecotest (Germany)
-  notes: '2024 facelift brings significant software improvements (ME3 vs ME2). 135kW
-    DC charging is upgrade from 125kW in 2023 models.
-
-    Range improved from 558km to 570km WLTP (2% efficiency gain). More physical buttons
-    vs full-touch (response to customer feedback).
-
-    Laura AI assistant powered by ChatGPT (industry-first integration). Shares APP310
-    motor and 82kWh battery with VW ID.4 Pro.
-
-    Typically €3,000-5,000 cheaper than equivalent VW ID.4 Pro. Class-leading rear
-    legroom (more than VW ID.4).
-
-    Best-in-class boot: 585L (ID.4: 543L, Model Y: 854L but less rear legroom).
-
-    '

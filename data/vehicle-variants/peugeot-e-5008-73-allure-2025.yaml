@@ -2,56 +2,22 @@ id: peugeot-e-5008-73-allure-2025
 model_id: peugeot-e-5008
 name: 73 kWh Allure
 model_year: 2025
-trim_level: Allure
 variant_code: null
-production:
-  start_date: 2024-06-01
-  end_date: null
-  status: active
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 73.0
   usable_kwh: 70.0
-  supplier: ACC (Automotive Cells Company)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage_nominal: 400
 range:
   wltp_km: 502
   wltp_city_km: null
   wltp_highway_km: null
-  real_world_avg_km: 380
   real_world_source: Estimated based on e-3008 73 kWh data and heavier weight
-  notes: Shorter range than e-3008 73kWh due to larger/heavier body
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 7.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 27
-    preconditioning: true
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 160
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 157
-    power_hp: 213
-    torque_nm: 345
-  combined:
-    power_kw: 157
-    power_hp: 213
-    torque_nm: 345
 dimensions:
   length_mm: 4791
   width_mm: 1895
@@ -63,9 +29,7 @@ cargo:
   trunk_capacity_liters: 348
   trunk_max_liters: 2232
   frunk_capacity_liters: 0
-  notes: 348L with 3rd row up, 748L with 3rd row folded, 2232L fully flat
 performance:
-  top_speed_kph: 170
   total_power_kw: 157
   total_power_hp: 213
   total_torque_nm: 345
@@ -73,7 +37,6 @@ performance:
   top_speed_kmh: 170
 efficiency:
   wltp_kwh_per_100km: 14.9
-  wltp_wh_per_km: 149
   real_world_kwh_per_100km: 19.5
 weight:
   curb_weight_kg: 2100
@@ -81,48 +44,6 @@ weight:
   payload_kg: 600
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-tires:
-  standard: 235/55 R19
-features:
-  infotainment:
-  - Peugeot Panoramic i-Cockpit with 21" curved display
-  - 10" digital instrument cluster
-  - Wireless Apple CarPlay and Android Auto
-  - ChatGPT voice assistant
-  - 6 speakers
-  - Connected Navigation
-  driver_assistance:
-  - Active Safety Brake with Pedestrian and Cyclist Detection
-  - Lane Keep Assist
-  - Adaptive cruise control with Stop & Go
-  - 360° parking camera
-  - Blind spot monitoring
-  - Traffic Sign Recognition
-  comfort_convenience:
-  - 7-seat configuration
-  - Automatic dual-zone climate control
-  - Heated front seats
-  - Power liftgate
-  - Keyless entry and start
-  - Wireless smartphone charging
-  exterior:
-  - Pixel LED headlights
-  - 19" alloy wheels
-  - Privacy glass
 metadata:
   data_quality: estimated
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  source_urls:
-  - https://ev-database.org/car/2151/Peugeot-e-5008-97-kWh-Long-Range
-  notes: 'The e-5008 73 kWh Allure is the entry-level battery option for the 7-seat
-    e-5008.
-
-    Shares powertrain with the e-3008 73 kWh but in a larger, heavier body resulting
-
-    in slightly reduced range. Still offers over 500 km WLTP range.
-
-    '

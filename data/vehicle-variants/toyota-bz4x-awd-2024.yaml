@@ -48,10 +48,7 @@ charging:
     power_kw: 25
   - soc_percent: 100
     power_kw: 15
-  time_5_to_80_percent_min: 32
-  time_10_to_80_percent_min: 30
   charging_speed_kmh: 820
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
@@ -73,8 +70,6 @@ performance:
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 338
-  acceleration_0_100_kmh_sec: 6.9
-  acceleration_0_60_mph_sec: 6.5
   top_speed_kmh: 160
   acceleration_0_100_sec: 6.9
 dimensions:
@@ -90,61 +85,15 @@ weight:
   curb_weight_kg: 2005
   gross_vehicle_weight_kg: 2480
   payload_kg: 475
-  distribution_front_percent: 52
-  distribution_rear_percent: 48
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 16.1
-  wltp_kwh_per_100km_city: 13.9
-  wltp_kwh_per_100km_highway: 18.6
   real_world_kwh_per_100km: 19.3
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/60 R18
-  standard_size_rear: 235/60 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 20 inch (optional, -20km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Toyota Safety Sense 3.0
-  - Pre-Collision System with pedestrian detection
-  - Full-Speed Dynamic Radar Cruise Control
-  - Lane Departure Alert with steering assist
-  - Lane Tracing Assist
-  - Road Sign Assist
-  - Automatic High Beams
-  - Blind Spot Monitor
-  - Rear Cross-Traffic Alert
-  - Parking Support Brake
-  connectivity:
-  - Toyota Connected Services
-  - Remote climate control via app
-  - Remote door lock/unlock
-  - Vehicle finder
-  - Guest driver monitoring
-  - OTA software updates
-  special_features:
-  - X-MODE AWD (Snow/Dirt, Deep Snow/Mud modes)
-  - Grip Control for enhanced traction
-  - Downhill Assist Control
-  - Radiant heating system
-  - Heat pump standard
-  - One-Motion Grip e-shifter
-  - Paddle-style regen control
-  - Panoramic roof (fixed)
-  - Solar roof option
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
   sources:
   - https://www.toyota.com/bz4x/features/
   - https://ev-database.org/car/1547/Toyota-bZ4X-AWD
   - https://www.edmunds.com/toyota/bz4x/
-  notes: AWD variant with X-MODE for enhanced off-road capability. Twin motor setup
-    (80kW each). 10-year unlimited km battery warranty. Only 6.6kW AC charging (single-phase)
-    is main limitation. Heat pump standard for efficiency. Competes with Subaru Solterra
-    (mechanical twin), VW ID.4 AWD, Hyundai Ioniq 5 AWD.

@@ -2,11 +2,6 @@ id: kia-ev3-standard-range-2025
 name: Standard Range
 model_id: kia-ev3
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: standard
-market_position: entry-level
 dimensions:
   length_mm: 4300
   width_mm: 1850
@@ -22,96 +17,25 @@ battery:
   usable_kwh: 58.3
   total_kwh: 60.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: pouch
-  supplier: SK On (formerly SK Innovation)
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, integrated into E-GMP platform
-    weight_kg: 380
-    modules: 8
 range:
   wltp_km: 410
-  wltp_source: manufacturer
   real_world_km: 360
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode, 18-inch wheels
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.0
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 31
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 95
-    - soc_percent: 10
-      power_kw: 102
-    - soc_percent: 20
-      power_kw: 102
-    - soc_percent: 30
-      power_kw: 100
-    - soc_percent: 40
-      power_kw: 95
-    - soc_percent: 50
-      power_kw: 85
-    - soc_percent: 60
-      power_kw: 70
-    - soc_percent: 70
-      power_kw: 55
-    - soc_percent: 80
-      power_kw: 35
-    - soc_percent: 90
-      power_kw: 20
-    - soc_percent: 100
-      power_kw: 10
   ac_max_kw: 11
   dc_max_kw: 102
-bidirectional_charging:
-  v2l: true
-  v2l_power_kw: 3.6
-  v2h: true
-  v2g: true
-  v2g_certified_markets:
-  - KR
-  - DE
-  - NL
-  notes: V2L adapter included, can power household appliances or other EVs
-motors:
-  configuration: single-motor
-  drive_type: RWD
-  rear:
-    type: permanent-magnet-synchronous
-    max_power_kw: 150
-    max_torque_nm: 283
-  combined:
-    max_power_kw: 150
-    max_power_hp: 204
-    max_torque_nm: 283
 performance:
   top_speed_kmh: 170
-  top_speed_limited: true
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 283
   acceleration_0_100_sec: 7.5
 efficiency:
   wltp_kwh_per_100km: 15.8
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 17.5
-  real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, normal mode
-  efficiency_rating_eu: A
 weight:
   curb_weight_kg: 1650
   gross_vehicle_weight_kg: 2200
@@ -119,76 +43,12 @@ weight:
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 600
   trailer_hitch_available: false
-wheels:
-  standard_size_front: 215/55 R18
-  standard_size_rear: 215/55 R18
-  wheel_options:
-  - 18-inch alloy (standard)
-  - 19-inch alloy (optional)
-standard_equipment:
-  exterior:
-  - LED headlights with DRLs
-  - LED taillights with sequential indicators
-  - Body-colored door handles
-  - Solar glass windscreen
-  - Roof rails
-  interior:
-  - Dual 10.25-inch panoramic displays (digital cockpit + infotainment)
-  - Wireless phone charging
-  - Cloth upholstery
-  - Heated front seats
-  - Heated steering wheel
-  - Dual-zone climate control with heat pump
-  - Ambient lighting
-  technology:
-  - Forward Collision Avoidance Assist
-  - Lane Keep Assist
-  - Blind Spot Monitoring
-  - Rear Cross-Traffic Collision Avoidance Assist
-  - Remote climate control via Kia Connect app
-  - OTA software updates
-  charging:
-  - Type 2 charging cable
-  - V2L adapter
-  - Scheduled charging
 optional_equipment:
 - name: GT-Line Package
-  price_eur: 2000
-  includes:
-  - Sportier exterior styling
-  - 19-inch wheels
-  - Sport seats
-  - GT-Line badging
 - name: Advanced Driver Assistance
-  price_eur: 1000
-  includes:
-  - Highway Driving Assist
-  - Smart Parking Assist
-  - Surround View Monitor
-version:
-  facelift: false
-  mid_cycle_refresh: false
-  generation: 1
-  platform_version: E-GMP Compact
-colors:
-- Clear White
-- Aurora Black Pearl
-- Steel Gray Metallic
-- Twilight Blue
-- Terra Brown
 metadata:
   data_quality: verified
-  last_updated: '2026-02-10'
-  confidence_level: high
   sources:
   - https://www.kia.com/de/modelle/ev3/entdecken/
   - https://www.kia.com/worldwide/vehicles/ev3/
-  notes: '2025 model year Kia EV3 Standard Range - unchanged specs from 2024 launch.
-    Now available as "Air" trim in Germany from €35,990. Remains one of the most affordable
-    compact electric SUVs with V2L capability and heat pump as standard. 400V architecture
-    with 102kW DC charging. Competes with Citroën ë-C3, Opel Frontera Electric, and
-    Renault 5 E-Tech in the affordable EV segment.
-
-    '
   created_at: '2026-02-10T11:00:00Z'
-  created_by: Patricio

@@ -46,9 +46,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_10_to_80_percent_min: 23
   charging_speed_kmh: 1010
-  plug_and_charge: true
 bidirectional:
   v2l: false
   v2h: false
@@ -69,7 +67,6 @@ performance:
   total_power_kw: 405
   total_power_hp: 551
   total_torque_nm: 855
-  acceleration_0_100_kmh_sec: 3.9
   top_speed_kmh: 240
   acceleration_0_100_sec: 3.9
 weight:
@@ -92,45 +89,9 @@ cargo:
 efficiency:
   wltp_kwh_per_100km: 15.7
   real_world_kwh_per_100km: 17.1
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 245/45 R20
-  standard_size_rear: 275/40 R20
-  wheel_sizes_available:
-  - 20 inch (standard)
-  - 21 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system
-  - Predictive efficiency assist
-  - Emergency assist
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  special_features:
-  - 800V architecture with ultra-fast DC charging
-  - Plug & Charge (ISO 15118-2)
-  - Battery preconditioning via navigation
-  - Dual charge ports (left and right rear)
-  - S sport suspension with adaptive dampers
-  - quattro sport differential
-  - S-specific exterior styling
-  - Sport seats with S embossing
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.audi.de/de/neuwagen/a6-e-tron/s6-sportback-e-tron/
   - https://ev-database.org/car/2271/Audi-S6-Sportback-e-tron
-  notes: Top-performance variant with 405kW (551 PS) and 3.9s 0-100 km/h. More powerful
-    front motor (145kW vs 80kW in quattro). Higher top speed (240 km/h vs 210 km/h).
-    S-specific sport suspension, exterior styling, and interior. 20-inch wheels standard.
-    Competes with BMW i5 M60, Mercedes-AMG EQE 43.

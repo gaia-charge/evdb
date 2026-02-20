@@ -2,13 +2,6 @@ id: mg4-electric-xpower-2024
 model_id: mg4-electric
 name: XPower
 model_year: 2024
-trim_level: XPower
-version_info:
-  major_version: 1
-  minor_version: 1
-  release_date: 2023-03-01
-  changes_from_previous: Performance AWD variant launched 6 months after standard
-    models
 dimensions:
   length_mm: 4287
   width_mm: 1836
@@ -22,91 +15,23 @@ cargo:
   frunk_capacity_liters: 0
 battery:
   chemistry: NMC
-  supplier: CATL
   usable_kwh: 61.7
   total_kwh: 64.0
-  cells: 210
-  modules: 26
-  voltage_nominal: 396
-  voltage_max: 453
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 385
   wltp_city_km: 490
   wltp_highway_km: 310
   epa_km: null
   real_world_km: 340
-  real_world_highway_km: 285
-  real_world_city_km: 410
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 3
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 6.5
-  dc:
-    peak_power_kw: 144
-    time_10_80_min: 30
-    time_20_80_min: 24
-    preconditioning_available: false
-  bidirectional:
-    capabilities: []
-    max_power_kw: null
   ac_max_kw: 11.0
   dc_max_kw: 144
-charging_curve:
-- soc_percent: 10
-  power_kw: 140
-  current_a: 325
-- soc_percent: 20
-  power_kw: 144
-  current_a: 334
-- soc_percent: 30
-  power_kw: 144
-  current_a: 334
-- soc_percent: 40
-  power_kw: 140
-  current_a: 325
-- soc_percent: 50
-  power_kw: 130
-  current_a: 302
-- soc_percent: 60
-  power_kw: 115
-  current_a: 268
-- soc_percent: 70
-  power_kw: 90
-  current_a: 210
-- soc_percent: 80
-  power_kw: 58
-  current_a: 135
-- soc_percent: 90
-  power_kw: 30
-  current_a: 70
-motors:
-  front:
-    type: permanent_magnet
-    power_kw: 165
-    torque_nm: 250
-  rear:
-    type: permanent_magnet
-    power_kw: 165
-    torque_nm: 250
-  combined:
-    total_power_kw: 320
-    total_power_hp: 435
-    total_torque_nm: 600
-    drive_type: AWD
 performance:
   acceleration_0_100_sec: 3.8
-  acceleration_0_60_sec: 3.4
-  top_speed_kph: 200
   top_speed_kmh: 200
-  top_speed_limited: true
   total_power_kw: 320
   total_torque_nm: 600
   total_power_hp: 435
@@ -116,88 +41,6 @@ weight:
   payload_kg: 425
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  weight_distribution_front_percent: 50
-  weight_distribution_rear_percent: 50
-wheels_tires:
-  standard:
-    front_size: 235/45 R18
-    rear_size: 235/45 R18
-    wheel_size_inches: 18
-    notes: 18-inch diamond-cut alloy wheels
-  optional:
-  - front_size: 245/40 R19
-    rear_size: 245/40 R19
-    wheel_size_inches: 19
-    notes: 19-inch sport alloy wheels
-brakes:
-  front: Ventilated discs (larger, 345mm)
-  rear: Ventilated discs (325mm)
-  regenerative_braking: true
-  one_pedal_driving: true
-  regen_levels: 3
-suspension:
-  front: MacPherson strut with sport tuning
-  rear: Multi-link independent with sport tuning
-  notes: Lowered 40mm, stiffer springs and dampers
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: true
-interior:
-  seating_material: alcantara_leather
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats: false
-  power_adjustable_driver_seat: true
-  panoramic_roof: false
-  ambient_lighting: true
-climate:
-  heat_pump: true
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 6
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 42490
-  market: DE
-  year: 2024
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - PL
-  - AT
-  - BE
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Cupra Born VZ
-- Volkswagen ID.3 GTX (if/when released)
-- Hyundai Ioniq 5 N (much more expensive)
-- Tesla Model 3 RWD (similar performance, higher price)
-- BMW i4 eDrive35 (much more expensive)
 metadata:
   data_quality: verified
   sources:
@@ -207,31 +50,3 @@ metadata:
   - https://insideevs.com/reviews/658720/mg4-xpower-test/
   - https://www.autocar.co.uk/car-review/mg/4/xpower
   created_at: '2024-02-08'
-  last_updated: '2024-02-08'
-  notes: 'Hot hatch with supercar-rivaling 435hp and 3.8s 0-100 km/h at €42,490.
-
-    Dual-motor AWD provides exceptional traction and handling in all conditions.
-
-    Perfect 50:50 weight distribution enhances cornering balance.
-
-    Sport-tuned suspension lowered 40mm with stiffer springs/dampers.
-
-    Larger brakes (345mm front, 325mm rear ventilated discs) for better stopping power.
-
-    Alcantara sport seats with orange stitching distinguish from standard models.
-
-    144kW DC fast charging slightly faster than Extended Range (135kW).
-
-    Range reduced to 385km WLTP due to higher power consumption.
-
-    Exceptional value - similar performance to cars costing 2-3x more.
-
-    Challenges Cupra Born VZ at similar price but with more power (435hp vs 326hp).
-
-    Real-world track testing shows impressive cornering and stability.
-
-    Limited slip differential improves power delivery in corners.
-
-    Target buyers: enthusiasts seeking affordable performance EV.
-
-    '

@@ -2,12 +2,6 @@ id: mg5-electric-long-range-2024
 model_id: mg5-electric
 name: Long Range
 model_year: 2024
-trim_level: Long Range
-version_info:
-  major_version: 2
-  minor_version: 0
-  release_date: 2024-01-01
-  changes_from_previous: 2022 refresh with upgraded battery and heat pump
 dimensions:
   length_mm: 4600
   width_mm: 1818
@@ -21,85 +15,23 @@ cargo:
   frunk_capacity_liters: 0
 battery:
   chemistry: LFP
-  supplier: CATL
   usable_kwh: 57.4
   total_kwh: 61.1
-  cells: 192
-  modules: 24
-  voltage_nominal: 403
-  voltage_max: 460
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 400
   wltp_city_km: 545
   wltp_highway_km: 330
   epa_km: null
   real_world_km: 350
-  real_world_highway_km: 300
-  real_world_city_km: 420
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 3
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 6.0
-  dc:
-    peak_power_kw: 87
-    time_10_80_min: 48
-    time_20_80_min: 38
-    preconditioning_available: false
-  bidirectional:
-    capabilities: []
-    max_power_kw: null
   ac_max_kw: 11.0
   dc_max_kw: 87
-charging_curve:
-- soc_percent: 10
-  power_kw: 85
-  current_a: 205
-- soc_percent: 20
-  power_kw: 87
-  current_a: 210
-- soc_percent: 30
-  power_kw: 87
-  current_a: 210
-- soc_percent: 40
-  power_kw: 85
-  current_a: 205
-- soc_percent: 50
-  power_kw: 80
-  current_a: 193
-- soc_percent: 60
-  power_kw: 72
-  current_a: 174
-- soc_percent: 70
-  power_kw: 58
-  current_a: 140
-- soc_percent: 80
-  power_kw: 42
-  current_a: 102
-- soc_percent: 90
-  power_kw: 27
-  current_a: 65
-motor:
-  type: permanent_magnet
-  count: 1
-  drive_type: FWD
-  power_kw: 115
-  power_hp: 156
-  torque_nm: 260
-  max_rpm: 13000
 performance:
   acceleration_0_100_sec: 7.3
-  acceleration_0_60_sec: 6.9
-  top_speed_kph: 185
   top_speed_kmh: 185
-  top_speed_limited: true
   total_power_kw: 115
   total_torque_nm: 260
   total_power_hp: 156
@@ -109,83 +41,6 @@ weight:
   payload_kg: 450
   towing_capacity_braked_kg: 500
   towing_capacity_unbraked_kg: 500
-  weight_distribution_front_percent: 63
-  weight_distribution_rear_percent: 37
-wheels_tires:
-  standard:
-    front_size: 215/55 R17
-    rear_size: 215/55 R17
-    wheel_size_inches: 17
-  optional:
-  - front_size: 215/50 R18
-    rear_size: 215/50 R18
-    wheel_size_inches: 18
-    notes: Diamond-cut alloy wheels, slightly reduces range
-brakes:
-  front: Ventilated discs
-  rear: Solid discs
-  regenerative_braking: true
-  one_pedal_driving: false
-  regen_levels: 3
-suspension:
-  front: MacPherson strut
-  rear: Multi-link independent
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: false
-interior:
-  seating_material: fabric
-  heated_seats_front: true
-  heated_seats_rear: false
-  heated_steering_wheel: true
-  ventilated_seats: false
-  power_adjustable_driver_seat: false
-  panoramic_roof: false
-  ambient_lighting: true
-climate:
-  heat_pump: true
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 6
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 36000
-  market: DE
-  year: 2024
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - PL
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Volkswagen ID.3 Pro (more expensive)
-- Nissan Leaf e+ (less cargo space)
-- Renault Megane E-Tech EV60 (smaller boot)
-- Opel Astra Electric (less cargo space)
 metadata:
   data_quality: verified
   sources:
@@ -194,23 +49,3 @@ metadata:
   - https://www.car.info/en-se/mg/5-electric/
   - https://www.autoexpress.co.uk/mg/5-electric
   created_at: '2026-02-08'
-  last_updated: '2026-02-20'
-  notes: 'Long Range is the most popular MG5 variant (61.1kWh battery).
-
-    Heat pump standard improves cold weather efficiency.
-
-    LFP battery chemistry (CATL) provides excellent safety and longevity.
-
-    Only affordable electric estate car in Europe with 400km+ range.
-
-    479L boot capacity - unmatched in electric estate segment at this price.
-
-    Popular with fleet buyers, taxi operators, and families.
-
-    Slightly slower DC charging (87kW) acceptable for estate car use case.
-
-    7-year/175,000km battery warranty among best in class.
-
-    Front-wheel drive provides good traction and efficiency.
-
-    '

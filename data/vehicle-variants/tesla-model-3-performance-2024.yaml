@@ -9,72 +9,21 @@ battery:
   chemistry: NCA
   warranty_years: 8
   warranty_km: 192000
-  degradation_warranty_percent: 70
 range:
   wltp_km: 528
   wltp_city_km: null
   wltp_highway_km: null
-  epa_miles: 315
   real_world_km: 450
   real_world_source: community_average
-range_conditions:
-- temperature_c: 20
-  speed_kmh: 120
-  estimated_range_km: 420
-  conditions: Highway, steady speed
-- temperature_c: -10
-  speed_kmh: 90
-  estimated_range_km: 350
-  conditions: Winter, heating on
-charging_ac:
-  max_power_kw: 11
-  connector_type: Type2
-  onboard_charger_kw: 11
-  charge_time_0_100_hours: 7.5
-charging_dc:
-  max_power_kw: 250
-  connector_type: CCS2
-  charge_time_10_80_minutes: 27
-  charge_time_10_80_source: manufacturer
-  charging_curve_type: optimized
-  peak_charge_rate_soc_percent: 25
-  charge_speed_km_per_hour: 1130
-charging_curve:
-- soc_percent: 10
-  power_kw: 250
-- soc_percent: 20
-  power_kw: 250
-- soc_percent: 30
-  power_kw: 230
-- soc_percent: 40
-  power_kw: 200
-- soc_percent: 50
-  power_kw: 170
-- soc_percent: 60
-  power_kw: 140
-- soc_percent: 70
-  power_kw: 110
-- soc_percent: 80
-  power_kw: 80
-- soc_percent: 90
-  power_kw: 40
-bidirectional_charging: false
-v2l_power_kw: null
-v2h_capable: false
-v2g_capable: false
 performance:
-  electric_motors: 2
-  motor_type: Permanent Magnet Synchronous (front + rear)
   total_power_kw: 393
   total_power_hp: 534
   total_torque_nm: 660
   drive_type: AWD
-  acceleration_0_100_kmh: 3.1
   top_speed_kmh: 261
   acceleration_0_100_sec: 3.1
 efficiency:
   wltp_kwh_per_100km: 14.8
-  epa_mpge: 107
   efficiency_rating: B
 weight:
   curb_weight_kg: 1920
@@ -92,42 +41,13 @@ cargo:
   trunk_capacity_liters: 561
   trunk_max_liters: 561
   frunk_capacity_liters: 88
-production_status: active
-production_start_date: '2024-01-01'
-production_end_date: null
-assembly_location: Fremont, USA / Shanghai, China
-platform_id: tesla-model-3-platform
-trim_level: Performance
-trim_position: 3
-base_trim: false
-standard_equipment:
-- Performance Brakes (Brembo)
-- 20-inch Überturbine wheels
-- Lowered sport suspension
-- Carbon fiber spoiler
-- Aluminum alloy pedals
-- Track Mode v3
-- Premium interior
-- 12-way power front seats
-- Premium audio (14 speakers)
-- Autopilot included
 optional_equipment:
 - name: Full Self-Driving (Supervised)
-  description: Advanced driver assistance
-sources:
-- url: https://www.tesla.com/model3/design
-  type: manufacturer
-  accessed_date: '2024-02-06'
-- url: https://insideevs.com/reviews/tesla-model-3-performance/
-  type: verified_review
-  accessed_date: '2024-02-06'
 notes: Track Mode v3 allows advanced performance tuning for circuit driving. Performance
   variant includes sport suspension and upgraded brakes as standard. Slightly reduced
   range vs Long Range due to performance-oriented setup and heavier weight.
 metadata:
   data_quality: verified
-  data_verified_date: '2024-02-01'
-  last_updated: '2024-02-06'
   created_at: '2024-02-06T23:18:00Z'
   updated_at: '2024-02-06T23:18:00Z'
 charging:

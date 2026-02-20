@@ -1,97 +1,28 @@
 id: porsche-macan-electric-4-2025
 name: Macan 4
 model_id: porsche-macan-electric
-manufacturer_id: porsche
-variant_name: 4 (AWD)
 model_year: 2025
-trim_level: '4'
-version: '4'
-description: 'The Porsche Macan 4 is the entry-level AWD variant, bridging the gap
-  between
-
-  the rear-wheel-drive base Macan and the high-performance 4S. With 300kW (408hp)
-
-  from dual motors, it delivers confident all-weather traction and sporty
-
-  acceleration (0-100 km/h in 5.2s) while maintaining excellent range (up to
-
-  610km WLTP). Same 800V PPE platform with 270kW peak DC charging.
-
-  '
 battery:
   usable_kwh: 95.0
   total_kwh: 100.0
   chemistry: NMC
-  cells: prismatic
   manufacturer: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
-  preconditioning: true
 range:
   wltp_km: 610
   wltp_city_km: 760
   wltp_highway_km: 495
   real_world_km: 510
-  real_world_conditions: Mixed driving, 20°C ambient
 efficiency:
   wltp_kwh_per_100km: 18.8
   real_world_kwh_per_100km: 23.0
 charging:
-  ac:
-    optional_upgrade_kw: 22
-    connector_type: Type2
-    phases: 3
-    time_0_100_hours: 9.5
-  dc:
-    connector_type: CCS2
-    architecture_voltage: 800
-    time_10_80_minutes: 21
-    charge_curve:
-    - soc_percent: 0
-      power_kw: 60
-    - soc_percent: 10
-      power_kw: 260
-    - soc_percent: 15
-      power_kw: 270
-    - soc_percent: 30
-      power_kw: 268
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 55
   ac_max_kw: 11
   dc_max_kw: 270
-bidirectional_charging:
-  v2l: true
-  v2l_power_kw: 11
-  v2h: true
-  v2g: true
-motors:
-  count: 2
-  type: Dual Motor AWD
-  configuration: AWD
-  front_motor:
-    power_kw: 95
-    power_hp: 129
-    type: AC induction
-  rear_motor:
-    power_kw: 240
-    power_hp: 326
-    type: PMSM
-  combined_power_kw: 285
-  combined_power_hp: 387
-  overboost_power_kw: 300
-  overboost_power_hp: 408
-  torque_nm: 650
-drive_type: AWD
-driven_wheels: all
 performance:
   top_speed_kmh: 220
-  top_speed_electronically_limited: true
   acceleration_0_100_sec: 5.2
   total_power_kw: 285
 weight:
@@ -106,35 +37,12 @@ dimensions:
   height_mm: 1622
   wheelbase_mm: 2893
   ground_clearance_mm: 185
-  drag_coefficient: 0.25
 cargo:
   trunk_capacity_liters: 540
   trunk_max_liters: 1348
   frunk_capacity_liters: 84
-tires:
-  front: 235/60 R19
-  rear: 255/55 R19
-  wheel_size_inches: 19
-climate:
-  heat_pump: true
-  auto_climate_zones: 3
-interior:
-  seats: 5
-  display_instrument: 12.6 inch curved digital instrument cluster
-  display_center: 10.9 inch curved central touchscreen
 metadata:
   data_quality: verified
-  data_source: manufacturer
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.porsche.com/germany/models/macan/macan-electric-models/macan-4-electric/
-  notes: 'Macan 4 is the entry-level AWD variant. Offers all-weather traction with
-
-    dual motors while maintaining near-identical range to RWD. €3,400 premium
-
-    over base RWD for AWD capability. Sweet spot of the Macan lineup for buyers
-
-    wanting AWD without the 4S/Turbo price premium.
-
-    '

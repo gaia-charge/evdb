@@ -2,87 +2,24 @@ id: citroen-e-c4-you-2024
 model_id: citroen-e-c4
 name: You!
 model_year: 2024
-trim_level: You!
 variant_code: null
-production:
-  start_date: 2020-06-01
-  end_date: null
-  status: active
-  notes: Entry trim offering full EV capability at accessible price point
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 50.0
   usable_kwh: 45.0
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Same battery as Peugeot e-208/Opel Corsa-e, shared eCMP platform
 range:
   wltp_km: 357
   wltp_city_km: 465
   wltp_highway_km: 285
-  epa_combined_km: null
-  real_world_avg_km: 305
   real_world_source: ADAC EcoTest 2024
-  notes: Identical range to Shine Plus, same battery and motor configuration
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.0
-    onboard_charger: 11kW 3-phase
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    peak_power_notes: 100kW peak maintained briefly, average ~80kW
-    preconditioning: false
-  charge_curve:
-  - percent: 10
-    power_kw: 100
-  - percent: 20
-    power_kw: 100
-  - percent: 30
-    power_kw: 95
-  - percent: 40
-    power_kw: 88
-  - percent: 50
-    power_kw: 78
-  - percent: 60
-    power_kw: 65
-  - percent: 70
-    power_kw: 50
-  - percent: 80
-    power_kw: 30
-  - percent: 90
-    power_kw: 15
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front_motor:
-    type: permanent_magnet
-    max_power_kw: 100
-    max_power_hp: 136
-    max_torque_nm: 260
-    supplier: null
-  rear_motor: null
-  drive_type: FWD
-  total_power_kw: 100
-  total_power_hp: 136
-  total_torque_nm: 260
 performance:
-  acceleration_0_60_mph_s: null
   top_speed_kmh: 150
-  quarter_mile_s: null
   total_power_kw: 100
   total_power_hp: 136
   total_torque_nm: 260
@@ -91,8 +28,6 @@ efficiency:
   wltp_kwh_per_100km: 17.5
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 19.8
-  efficiency_notes: Less efficient than e-208 due to larger C-segment body and higher
-    drag (Cd 0.29)
 dimensions:
   length_mm: 4360
   width_mm: 1800
@@ -110,68 +45,6 @@ weight:
   payload_kg: 485
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-equipment:
-  wheels:
-    standard_size_inches: 17
-    available_sizes_inches:
-    - 17
-    - 18
-    tire_size_front: 205/55 R17
-    tire_size_rear: 205/55 R17
-  lighting:
-    headlights: LED with Citroën signature V-shape LED DRL
-    matrix_led: false
-  climate:
-    heat_pump: false
-    heated_seats: false
-    heated_steering_wheel: false
-    ac_zones: 2
-  driver_assistance:
-    adaptive_cruise_control: false
-    lane_keeping_assist: true
-    blind_spot_monitoring: false
-    parking_sensors: true
-    parking_camera: false
-    surround_view_camera: false
-    autonomous_level: 1
-    adas_brand: null
-    notes: Basic ADAS standard (LKA, AEB, TSR). ACC optional in Safety Pack Plus
-interior:
-  upholstery_material: Cloth
-  upholstery_color_options:
-  - Grey
-  seat_adjustment: Manual front seats
-  premium_audio: false
-  ambient_lighting: false
-exterior:
-  paint_type: Solid, Metallic
-  paint_colors: 8
-  two_tone_available: false
-  roof_options: Body-color roof standard
-  aerodynamic_features: Smooth underbody, active grille shutters, distinctive coupe-crossover
-    design
-data_quality:
-  overall: verified
-  battery_specs: verified
-  range_specs: verified
-  charging_specs: verified
-  performance_specs: verified
-  efficiency_specs: verified
-  source_reliability: high
-  last_updated: 2024-02-08
-sources:
-- name: Citroën Germany Configurator
-  url: https://www.citroen.de/modelle/citroen-e-c4-elektro.html
-  type: manufacturer
-  date_accessed: 2024-02-08
-- name: ADAC EcoTest Citroën ë-C4 2024
-  url: https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/citroen-e-c4-test/
-  type: measured
-  date_accessed: 2024-02-08
-- name: Auto Motor und Sport Technical Data
-  url: https://www.auto-motor-und-sport.de/fahrbericht/citroen-e-c4-test-2024/
-  type: magazine_review
-  date_accessed: 2024-02-08
 notes: 'The ë-C4 You! is Citroën''s entry-level C-segment electric coupe-crossover,
   offering:
 

@@ -2,67 +2,23 @@ id: lotus-emeya-r-2025
 name: R
 model_id: lotus-emeya
 model_year: 2025
-production_years:
-  start: 2024
-  end: null
-trim_level: r
-market_position: performance
 battery:
   usable_kwh: 102.0
   total_kwh: 105.0
   chemistry: NCM
-  nominal_voltage_v: 800
-  thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
 range:
   wltp_km: 580
-  wltp_source: manufacturer
   real_world_km: 490
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.0
-    onboard_charger_kw: 22.0
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 18
-      0_80: 21
-  bidirectional:
-    v2l: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 350
 efficiency:
   wltp_kwh_per_100km: 17.6
-  real_world:
-    combined_kwh_per_100km: 20.8
-    highway_kwh_per_100km: 24.5
-    city_kwh_per_100km: 17.5
-drivetrain:
-  configuration: awd
-  motor_type: permanent_magnet
-  motors:
-    front:
-      type: permanent_magnet
-      power_kw: 225
-      power_hp: 306
-      torque_nm: 480
-    rear:
-      type: permanent_magnet
-      power_kw: 450
-      power_hp: 612
-      torque_nm: 710
 performance:
   top_speed_kmh: 256
-  top_speed_limited: true
   acceleration_0_100_sec: 2.78
 dimensions:
   length_mm: 5139
@@ -71,11 +27,8 @@ dimensions:
   height_mm: 1460
   wheelbase_mm: 3069
   ground_clearance_mm: 130
-  drag_coefficient: 0.21
-  frontal_area_m2: 2.45
 weight:
   curb_weight_kg: 2565
-  gvwr_kg: 3040
   gross_vehicle_weight_kg: 3040
   payload_kg: 475
   towing_capacity_braked_kg: 0
@@ -83,96 +36,10 @@ cargo:
   trunk_capacity_liters: 509
   trunk_max_liters: 688
   frunk_capacity_liters: 31
-equipment:
-  standard:
-    exterior:
-    - 22" ultra-lightweight forged alloy wheels
-    - LED matrix headlights with adaptive high beam
-    - Animated light bar with R-specific graphics
-    - Active rear spoiler with track mode
-    - Active aero shutters
-    - Carbon fiber body panels
-    - Flush door handles
-    - Panoramic glass roof
-    - R-specific badging
-    - Enlarged air intakes
-    interior:
-    - 15.1" OLED touchscreen infotainment
-    - 55" augmented reality head-up display
-    - 12.6" digital instrument cluster with R graphics
-    - 4-zone climate control
-    - Heated, ventilated and massaging sport seats
-    - Electric adjustable carbon-backed sport seats (4 seats)
-    - Ambient lighting with 9 colors
-    - Alcantara and premium leather upholstery with R stitching
-    - Meridian Signature audio (2160W, 23 speakers)
-    - Wireless phone charging
-    - Carbon fiber interior trim
-    - R-specific steering wheel with track controls
-    safety:
-    - Autonomous Emergency Braking
-    - 360-degree camera system with 3D view and track view
-    - Adaptive cruise control with traffic jam assist
-    - Lane keeping assist with lane centering
-    - Traffic sign recognition
-    - Blind spot monitoring with rear cross traffic alert
-    - 8 airbags
-    - Night vision with pedestrian detection
-    technology:
-    - Apple CarPlay and Android Auto (wireless)
-    - Air suspension with track-tuned adaptive damping
-    - Rear-wheel steering (standard on R)
-    - Multi-mode driving (Range/Tour/Sport/Individual/Track)
-    - Electronic limited-slip differential
-    - Torque vectoring by braking
-    - Track telemetry system with lap timer
-    - Carbon ceramic brakes (standard on R)
-    - Two-piece floating brake discs
-    - Launch control
-    - Drift mode
-  optional:
-  - name: Carbon Pack Pro (extensive carbon fiber)
-    price_eur: 18000
-  - name: Luxury Pack with premium semi-aniline leather
-    price_eur: 22000
-  - name: Track Pack with data logger and onboard cameras
-    price_eur: 8500
-pricing:
-  msrp_eur: 153950
-  msrp_usd: null
-colors:
-  exterior:
-  - name: Stellar Black
-    code: SB
-    type: metallic
-  - name: Kaimu Grey
-    code: KG
-    type: metallic
-  - name: Solar Yellow
-    code: SY
-    type: metallic
-  - name: Seneca Blue
-    code: SNB
-    type: metallic
-  - name: Blossom White
-    code: BW
-    type: solid
-  - name: Racing Green
-    code: RG
-    type: metallic
-  - name: Vivid Orange
-    code: VO
-    type: solid
-  interior:
-  - name: Black Alcantara and leather with R stitching
-  - name: Grey leather with carbon trim
-  - name: Tan leather with wood trim
-  - name: Red leather with Alcantara and carbon
 metadata:
   created_at: '2026-02-09'
   updated_at: '2026-02-09'
   data_quality: verified
-  confidence: high
   sources:
   - https://www.lotuscars.com/en-GB/emeya
   - https://www.lotuscars.com/en-DE/emeya

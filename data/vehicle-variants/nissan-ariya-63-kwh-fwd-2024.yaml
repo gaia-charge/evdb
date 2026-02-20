@@ -1,10 +1,8 @@
-# Nissan Ariya 63 kWh FWD (2024)
 id: nissan-ariya-63-kwh-fwd-2024
 name: 63 kWh FWD
 model_id: nissan-ariya
 model_year: 2024
 variant_code: ARIYA-63-FWD
-
 battery:
   usable_kwh: 63.0
   total_kwh: 66.0
@@ -14,11 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    63 kWh usable battery (66 kWh gross). Envision AESC cells with NCM
-    chemistry. 400V architecture. Base battery option for Ariya.
-
 range:
   wltp_km: 450
   wltp_city_km: 580
@@ -26,11 +19,6 @@ range:
   epa_km: 362
   real_world_km: 365
   real_world_source: InsideEVs real-world test
-  notes: |
-    WLTP range of 450 km with smaller 63 kWh battery. EPA rated at 362 km
-    (225 miles). Real-world tests show around 365 km in mixed conditions.
-    Good efficiency for a mid-size crossover.
-
 charging:
   ac_max_kw: 22
   ac_phases: 3
@@ -38,101 +26,66 @@ charging:
   dc_max_kw: 130
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 125
-    - soc_percent: 30
-      power_kw: 115
-    - soc_percent: 40
-      power_kw: 100
-    - soc_percent: 50
-      power_kw: 85
-    - soc_percent: 60
-      power_kw: 70
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 35
-    - soc_percent: 90
-      power_kw: 25
-  time_0_to_100_min: 45
+  - soc_percent: 0
+    power_kw: 130
+  - soc_percent: 10
+    power_kw: 130
+  - soc_percent: 20
+    power_kw: 125
+  - soc_percent: 30
+    power_kw: 115
+  - soc_percent: 40
+    power_kw: 100
+  - soc_percent: 50
+    power_kw: 85
+  - soc_percent: 60
+    power_kw: 70
+  - soc_percent: 70
+    power_kw: 50
+  - soc_percent: 80
+    power_kw: 35
+  - soc_percent: 90
+    power_kw: 25
   time_10_to_80_min: 35
   time_20_to_80_min: 30
   charging_speed_kmh: 780
-  notes: |
-    DC fast charging up to 130 kW peak. 10-80% in 35 minutes with 63 kWh
-    battery. 22 kW three-phase AC charging standard. Lower DC power than
-    87 kWh variant (which can charge at 150 kW).
-
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
   v2h: true
   v2g: false
-  notes: |
-    V2L (vehicle-to-load) up to 1.5 kW via adapter. V2H (vehicle-to-home)
-    capable with compatible equipment. V2G not yet available in Europe.
-
 performance:
   drive_type: FWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 300
+  - position: front
+    type: permanent magnet
+    power_kw: 160
+    power_hp: 218
+    torque_nm: 300
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 300
   acceleration_0_100_sec: 7.5
   top_speed_kmh: 160
-  notes: |
-    Single permanent magnet motor at front axle with 218 hp and 300 Nm.
-    0-100 km/h in 7.5 seconds. Top speed limited to 160 km/h. Base
-    powertrain for Ariya lineup.
-
 dimensions:
   length_mm: 4595
   width_mm: 1850
   height_mm: 1660
   wheelbase_mm: 2775
   ground_clearance_mm: 185
-
 cargo:
   trunk_capacity_liters: 468
   trunk_max_liters: 1490
   frunk_capacity_liters: 0
-
-
-towing:
-  towing_capacity_braked_kg: 750
-  towing_capacity_unbraked_kg: 750
-  trailer_hitch_available: true
-  notes: "750 kg braked and unbraked. Tow bar available as accessory."
-
 weight:
   curb_weight_kg: 1990
   gross_vehicle_weight_kg: 2460
   payload_kg: 470
-  distribution_front_percent: 55
-  distribution_rear_percent: 45
-  notes: "Front-heavy due to FWD motor placement"
-
 efficiency:
   wltp_kwh_per_100km: 17.2
-  wltp_city_kwh_per_100km: 14.8
-  wltp_highway_kwh_per_100km: 19.8
   epa_kwh_per_100km: 17.4
   real_world_kwh_per_100km: 18.5
   efficiency_rating: B
-  notes: |
-    17.2 kWh/100km WLTP - good efficiency for a mid-size crossover.
-    Real-world efficiency around 18.5 kWh/100km in mixed conditions.
-    Better than larger 87 kWh variants due to lighter weight.
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -140,58 +93,46 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "ProPILOT Assist 2.0"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - ProPILOT Assist 2.0 with hands-free highway driving (single-lane)
-    - ProPILOT Park for automated parking
-    - e-Pedal Step for one-pedal driving
-    - 12.3-inch digital instrument cluster
-    - 12.3-inch center touchscreen
-    - Wireless Apple CarPlay/Android Auto
-    - Premium Bose audio system (10 speakers)
-    - Panoramic glass roof
-    - Heated front seats and steering wheel
-    - Nissan Safety Shield 360 (AEB, LDW, BSW, RCTA)
-
 optional_equipment:
-  - name: ProPILOT Assist 2.0 Pack
-    code: PROPILOT2
-    category: safety
-    included_in_base: false
-    notes: "Hands-free highway driving with navigation integration"
-  - name: Premium Interior Package
-    code: PREMINT
-    category: comfort
-    included_in_base: false
-    notes: "Quilted leather seats, power driver seat, premium materials"
-  - name: ProPILOT Park Package
-    code: PROPARK
-    category: safety
-    included_in_base: false
-    notes: "Automated parking with 360-degree camera"
-  - name: Bose Premium Audio
-    code: BOSE
-    category: infotainment
-    included_in_base: false
-    notes: "10-speaker Bose audio system"
+- name: ProPILOT Assist 2.0 Pack
+  code: PROPILOT2
+  category: safety
+  included_in_base: false
+- name: Premium Interior Package
+  code: PREMINT
+  category: comfort
+  included_in_base: false
+- name: ProPILOT Park Package
+  code: PROPARK
+  category: safety
+  included_in_base: false
+- name: Bose Premium Audio
+  code: BOSE
+  category: infotainment
+  included_in_base: false
+notes: 'The Nissan Ariya 63 kWh FWD is the base variant of Nissan''s electric
 
-notes: |
-  The Nissan Ariya 63 kWh FWD is the base variant of Nissan's electric
   crossover, offering 218 hp and 450 km WLTP range. With FWD layout and
+
   lighter 63 kWh battery, it provides good efficiency and lower price point
-  than AWD variants. Built on Nissan's CMF-EV platform shared with Renault.
+
+  than AWD variants. Built on Nissan''s CMF-EV platform shared with Renault.
+
   Features ProPILOT Assist 2.0 for hands-free highway driving and V2H
+
   capability. Targets buyers seeking practical mid-size EV crossover with
+
   strong technology features. Competes with VW ID.4, Hyundai Ioniq 5, and
+
   Kia EV6.
 
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
-    - https://insideevs.com/reviews/nissan-ariya-63kwh/
-    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+  - https://www.nissan-cdn.net/content/dam/Nissan/nissan_europe/ariya/specifications/ariya-specifications.pdf
+  - https://insideevs.com/reviews/nissan-ariya-63kwh/
+  - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html

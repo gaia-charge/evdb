@@ -2,7 +2,6 @@ id: bmw-ix3-2024
 name: Base
 model_id: bmw-ix3
 model_year: 2024
-trim_level: Base
 dimensions:
   length_mm: 4734
   width_mm: 1891
@@ -19,7 +18,6 @@ battery:
   total_kwh: 83.9
   chemistry: NMC
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -29,18 +27,6 @@ range:
   wltp_highway_km: 380
   epa_km: null
   real_world_km: 395
-  conditions:
-  - test: WLTP Combined
-    result_km: 461
-    temperature_c: 23
-  - test: Real-world mixed
-    result_km: 395
-    temperature_c: 15
-    notes: Mixed city/highway driving
-  - test: Real-world winter
-    result_km: 310
-    temperature_c: -5
-    notes: Cold weather with heating, 22% loss
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -58,24 +44,6 @@ charging:
     power_kw: 95
   - soc_percent: 80
     power_kw: 45
-  charge_times:
-  - type: DC fast charging
-    power_kw: 150
-    soc_from: 10
-    soc_to: 80
-    time_minutes: 34
-    notes: CCS2 DC fast charging
-  - type: AC home charging
-    power_kw: 11
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 480
-    notes: 11kW 3-phase wallbox (8 hours)
-  plug_and_charge: true
-  bidirectional:
-    v2l: false
-    v2g: false
-  preconditioning: true
 performance:
   drive_type: RWD
   motors:
@@ -87,9 +55,6 @@ performance:
   total_power_hp: 286
   total_torque_nm: 400
   acceleration_0_100_sec: 6.8
-  acceleration_0_60_mph_sec: 6.5
-  top_speed_kph: 180
-  top_speed_mph: 112
   top_speed_kmh: 180
 weight:
   curb_weight_kg: 2260
@@ -97,43 +62,9 @@ weight:
   payload_kg: 520
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  roof_load_kg: 75
 efficiency:
   wltp_kwh_per_100km: 18.5
-  wltp_city_kwh_per_100km: 15.2
-  wltp_highway_kwh_per_100km: 22.4
   real_world_kwh_per_100km: 21.2
-  energy_efficiency_class: A
-features:
-  standard:
-  - LED headlights
-  - Dual-zone automatic climate control
-  - BMW Live Cockpit Professional
-  - 12.3" instrument cluster + 10.25" central display
-  - BMW iDrive 7.0
-  - Apple CarPlay & Android Auto wireless
-  - BMW Intelligent Personal Assistant
-  - Parking sensors front and rear
-  - Reversing camera
-  - Adaptive cruise control
-  - Lane departure warning
-  - Speed limit information
-  - Adaptive air suspension
-  - 19" aero wheels
-  optional:
-  - Heat pump (standard on 2023+ models)
-  - M Sport Package (sport styling, 20" wheels)
-  - Driving Assistant Professional (Highway Assistant)
-  - Parking Assistant Plus with 360° camera
-  - Harman Kardon surround sound
-  - Panoramic glass roof
-  - Adaptive LED headlights
-  - Head-Up Display
-  - Comfort Access (keyless entry)
-version_info:
-  release_date: 2020-09
-  changes_from_previous: 2024 model adds heat pump as standard
-  current_production: true
 notes: BMW's first mass-production electric SUV. RWD only (no AWD variant available).
   Built on CLAR platform (shared with X3). 400V architecture with 150kW DC fast charging.
   Adaptive air suspension standard (unique in segment). Heavier than iX1 (2,260kg

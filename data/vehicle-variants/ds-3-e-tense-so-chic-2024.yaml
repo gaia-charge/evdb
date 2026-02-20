@@ -2,87 +2,23 @@ id: ds-3-e-tense-so-chic-2024
 model_id: ds-3-e-tense
 name: So Chic
 model_year: 2024
-trim_level: So Chic
 variant_code: null
-production:
-  start_date: 2023-09-01
-  end_date: null
-  status: active
-  notes: 2024 model with upgraded 54 kWh battery (from 50 kWh in pre-2023)
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 50.8
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Upgraded from 50 kWh to 54 kWh in 2023 facelift (same battery as e-2008/Mokka-e)
 range:
   wltp_km: 402
   wltp_city_km: 525
   wltp_highway_km: 325
-  epa_combined_km: null
-  real_world_avg_km: 335
   real_world_source: ADAC EcoTest 2024, Auto Bild 120 km/h test
-  notes: Slightly lower range than e-2008 (406 km) due to slightly heavier premium
-    equipment
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 100kW peak maintained briefly, average ~85kW
-    preconditioning: false
-  charge_curve:
-  - percent: 0
-    power_kw: 95
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 87
-  - percent: 60
-    power_kw: 78
-  - percent: 70
-    power_kw: 62
-  - percent: 80
-    power_kw: 42
-  - percent: 90
-    power_kw: 28
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
-    supplier: null
-  combined:
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 260
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 150
-  quarter_mile_seconds: null
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 260
@@ -90,84 +26,20 @@ performance:
   top_speed_kmh: 150
 efficiency:
   wltp_kwh_per_100km: 16.8
-  wltp_wh_per_km: 168
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.8
-  mpge_combined: null
-  drag_coefficient: 0.31
 weight:
   curb_weight_kg: 1590
   gross_vehicle_weight_kg: 1970
   payload_kg: 380
-  weight_distribution_front_percent: 62
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar
-  rear: Torsion beam with coil springs and progressive dampers
-brakes:
-  front: Ventilated disc (283mm)
-  rear: Drum (with electronic brake force distribution)
-  regenerative: true
-tires:
-  standard: 215/55 R18
-features:
-  infotainment:
-  - DS IRIS SYSTEM with 10.3" HD touchscreen
-  - 7.0" digital instrument cluster
-  - DS IRIS voice assistant with natural language processing
-  - Wireless Apple CarPlay and Android Auto
-  - DAB+ digital radio
-  - 6 speakers (premium audio)
-  - DS Connect app for remote control and monitoring
-  driver_assistance:
-  - Active Safety Brake Plus with Pedestrian and Cyclist Detection
-  - Active Lane Keeping Assist with Lane Departure Warning
-  - Extended Traffic Sign Recognition with Speed Limit Recommendation
-  - Adaptive cruise control with Stop & Go
-  - Speed limiter and cruise control
-  - 360° parking sensors and reversing camera
-  - Driver Attention Alert
-  - Automatic high beam
-  comfort_convenience:
-  - Automatic dual-zone climate control
-  - Keyless entry and start (DS Smart Touch)
-  - DS Drive Assist 2.0 with one-pedal driving
-  - Heated front seats (Nappa leather)
-  - Heated steering wheel (leather-wrapped)
-  - Electric windows front and rear
-  - Electric folding and heated mirrors
-  - Rain-sensing wipers
-  - Wireless smartphone charging
-  - USB-C ports front and rear
-  exterior:
-  - DS Active LED Vision headlights (adaptive)
-  - LED sequential indicators
-  - 18" diamond-cut alloy wheels (Davos design)
-  - Retractable door handles (flush with body)
-  - DS Wings chrome grille
-  - Panoramic glass roof
-  - Privacy glass (rear windows)
-  interior:
-  - Nappa leather upholstery with watch strap quilting (DS signature)
-  - Leather-wrapped steering wheel with DS logo
-  - DS Extended Head-Up Display (optional)
-  - Ambient LED mood lighting (8 colors)
-  - DS Connect emergency call and telematics
-  - 350L trunk with electric tailgate
-  - 60/40 split-folding rear seats
 dimensions:
   length_mm: 4118
   width_mm: 1791
-  width_mirrors_mm: 2060
   height_mm: 1534
   wheelbase_mm: 2558
   ground_clearance_mm: 170
-  drag_coefficient: 0.31
-  frontal_area_m2: 2.27
 cargo:
   trunk_capacity_liters: 350
   trunk_max_liters: 1050
@@ -175,23 +47,3 @@ cargo:
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source_urls:
-  - https://www.dsautomobiles.com/models/ds-3/e-tense.html
-  - https://www.dsautomobiles.de/modelle/ds-3/e-tense.html
-  - https://ev-database.org/car/1569/DS-3-Crossback-E-Tense
-  notes: "The DS 3 E-Tense So Chic is the premium mid-range trim, offering French\
-    \ luxury and \ndesign excellence. Built on the same CMP platform as Peugeot e-2008\
-    \ and Opel Mokka-e,\nbut with significantly more premium materials, distinctive\
-    \ styling, and advanced features.\n\nSo Chic trim is the sweet spot for DS 3 E-Tense\
-    \ buyers - better equipped than base \nBastille with Nappa leather, retractable\
-    \ door handles, 18\" wheels, and premium audio,\nwithout the cost premium of top\
-    \ Rivoli trim.\n\nKey differentiators from platform siblings:\n- Nappa leather\
-    \ with DS watch strap quilting (vs cloth in e-2008/Mokka-e)\n- Retractable flush\
-    \ door handles for aerodynamics and style\n- DS IRIS voice assistant with natural\
-    \ language\n- Extended head-up display available\n- DS Active LED Vision adaptive\
-    \ headlights\n- Premium build quality and French luxury philosophy\n\nSlightly\
-    \ more powerful 115kW motor (vs 100kW in e-2008) provides better acceleration\n\
-    (8.7s vs 9.1s 0-100 km/h) at the cost of slightly lower range (402 vs 406 km).\n\
-    \nCompetes with MINI Cooper Electric, Volvo EX40 (though larger), premium B-segment\
-    \ crossovers.\n"

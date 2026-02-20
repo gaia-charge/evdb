@@ -1,12 +1,8 @@
-# Kia EV9 Air RWD 2025
-# Base trim with Long Range battery, rear-wheel drive
-
 id: kia-ev9-air-rwd-2025
 name: Air RWD
 model_id: kia-ev9
 model_year: 2025
 variant_code: EV9-AIR-RWD-2025
-
 battery:
   usable_kwh: 99.8
   total_kwh: 99.8
@@ -16,24 +12,12 @@ battery:
   warranty_years: 10
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 800
-  notes: |
-    99.8 kWh battery with 800V architecture. SK On NCM prismatic cells.
-    Same battery as Long Range AWD variant. 10-year/160,000km warranty
-    with 70% capacity guarantee. 800V enables ultra-fast charging.
-
 range:
   wltp_km: 563
   wltp_city_km: 700
   wltp_highway_km: 470
   real_world_km: 470
   real_world_source: Automotive media testing
-  notes: |
-    563 km WLTP range - best-in-class for a 3-row electric SUV. RWD variant
-    achieves best range due to lower weight and single motor efficiency.
-    Real-world range approximately 470 km in mixed conditions.
-
-# Dimensions
 dimensions:
   length_mm: 5010
   width_mm: 1980
@@ -41,13 +25,10 @@ dimensions:
   height_mm: 1755
   wheelbase_mm: 3100
   ground_clearance_mm: 172
-
-# Cargo
 cargo:
   trunk_capacity_liters: 333
   trunk_max_liters: 2318
   frunk_capacity_liters: 52
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -55,67 +36,52 @@ charging:
   dc_max_kw: 233
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 233
-    - soc_percent: 20
-      power_kw: 233
-    - soc_percent: 30
-      power_kw: 233
-    - soc_percent: 40
-      power_kw: 215
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 60
-      power_kw: 160
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 85
+  - soc_percent: 10
+    power_kw: 233
+  - soc_percent: 20
+    power_kw: 233
+  - soc_percent: 30
+    power_kw: 233
+  - soc_percent: 40
+    power_kw: 215
+  - soc_percent: 50
+    power_kw: 190
+  - soc_percent: 60
+    power_kw: 160
+  - soc_percent: 70
+    power_kw: 120
+  - soc_percent: 80
+    power_kw: 85
   time_10_to_80_min: 24
   charging_speed_kmh: 985
-  notes: |
-    800V architecture enables 233 kW DC fast charging. 10-80% in just 24 minutes.
-    249 km of range added in 15 minutes. 11 kW AC charging standard (3-phase).
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.6
   v2h: false
   v2g: false
-  notes: "Vehicle-to-Load (V2L) up to 3.6 kW via exterior outlet and interior socket."
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 350
+  - position: rear
+    type: permanent magnet
+    power_kw: 160
+    power_hp: 218
+    torque_nm: 350
   total_power_kw: 160
   total_power_hp: 218
   total_torque_nm: 350
   acceleration_0_100_sec: 8.3
   top_speed_kmh: 185
-  notes: |
-    Single rear motor with 218 hp and 350 Nm. 0-100 km/h in 8.3 seconds.
-    More efficient than AWD variant. Adequate performance for a family SUV.
-
 weight:
   curb_weight_kg: 2614
   gross_vehicle_weight_kg: 3150
   payload_kg: 536
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 20.5
   real_world_kwh_per_100km: 22.5
   efficiency_rating: B
-  notes: |
-    20.5 kWh/100km WLTP - more efficient than AWD variant due to single motor
-    and lower weight. Excellent for a large 3-row SUV. Heat pump standard.
-
 features:
   heat_pump: true
   adaptive_suspension: false
@@ -123,38 +89,26 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Highway Driving Assist 2"
-  notes: |
-    - Triple 12.3" panoramic curved display
-    - Kia Connect with OTA updates
-    - Digital Key 2.0 (UWB)
-    - Apple CarPlay and Android Auto (wireless)
-    - Highway Driving Assist 2 (Level 2+)
-    - Forward Collision-Avoidance Assist
-    - Lane Following Assist
-    - Adaptive Cruise Control with Stop & Go
-    - 10 airbags
-    - Heat pump standard
-    - V2L capability (3.6 kW)
-    - 7-seat configuration (2+3+2)
-    - Panoramic glass roof
-    - LED headlights
-    - 19-inch alloy wheels
+notes: 'The Kia EV9 Air RWD 2025 is the entry-level variant of Kia''s flagship
 
-notes: |
-  The Kia EV9 Air RWD 2025 is the entry-level variant of Kia's flagship
   electric SUV. Starting at €63,190 in Germany, it offers the full 99.8 kWh
+
   battery with 563 km WLTP range and 800V ultra-fast charging. The Air trim
-  focuses on essential features while maintaining the EV9's spacious 7-seat
+
+  focuses on essential features while maintaining the EV9''s spacious 7-seat
+
   interior and premium feel. RWD provides better efficiency than AWD variants.
+
   Competes favorably against much more expensive rivals like the Mercedes EQS
+
   SUV and BMW iX. Best value 3-row electric SUV in Europe.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.kia.com/de/modelle/ev9/
-    - https://www.kia.com/de/modelle/ev9/technische-daten/
+  - https://www.kia.com/de/modelle/ev9/
+  - https://www.kia.com/de/modelle/ev9/technische-daten/

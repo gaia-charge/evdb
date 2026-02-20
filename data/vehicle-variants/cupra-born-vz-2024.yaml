@@ -2,8 +2,6 @@ id: cupra-born-vz-2024
 name: VZ 77kWh
 model_id: cupra-born
 model_year: 2024
-production_start: '2024-01-01'
-production_end: null
 dimensions:
   length_mm: 4322
   width_mm: 1809
@@ -24,9 +22,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 77 kWh usable battery (82 kWh gross). Same battery as e-Boost but with performance
-    tuning. 400V MEB platform.
 range:
   wltp_km: 511
   wltp_city_km: 670
@@ -34,9 +29,6 @@ range:
   epa_km: null
   real_world_km: 430
   real_world_source: ADAC EcoTest
-  notes: "WLTP range of 511 km. Real-world range around 430 km in mixed conditions.\n\
-    Slightly lower than standard 77kWh (548km) due to performance tuning and \nsportier\
-    \ aerodynamics. Winter range drops to ~320km at -10°C.\n"
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -60,47 +52,17 @@ charging:
     power_kw: 90
   - soc_percent: 80
     power_kw: 55
-  charge_time_10_80_minutes: 28
-  notes: 'DC fast charging up to 170kW. 10-80% in 28 minutes. Same as e-Boost.
-
-    AC charging: 11kW standard, 0-100% in 7.5 hours.
-
-    '
-motors:
-- position: rear
-  type: permanent_magnet
-  power_kw: 240
-  torque_nm: 310
-  manufacturer: Volkswagen Group
-drivetrain:
-  type: RWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 200
-  notes: Performance flagship with 240kW motor. Fastest Cupra Born. 0-100 km/h in
-    5.7s
   acceleration_0_100_sec: 5.7
 efficiency:
   wltp_kwh_per_100km: 16.6
   real_world_kwh_per_100km: 19.3
-  notes: Higher consumption due to 240kW motor and performance tuning
 weight:
   curb_weight_kg: 1970
   gross_vehicle_weight_kg: 2330
   payload_kg: 360
   towing_capacity_braked_kg: 0
-  notes: Heaviest Born variant at 1970kg due to performance equipment. No towing (pure
-    performance focus)
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: '360'
-  autonomous_parking: true
 notes: 'Top-spec Cupra Born VZ (Veloz = Fast) with 240kW motor for 5.7s 0-100 km/h.
   Fastest Born variant with raised top speed to 200 km/h (vs 160 km/h standard). Features
   sport suspension 20mm lower than standard, progressive steering, and performance
@@ -114,8 +76,6 @@ notes: 'Top-spec Cupra Born VZ (Veloz = Fast) with 240kW motor for 5.7s 0-100 km
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source: manufacturer
   sources:
   - https://www.cupraofficial.com/models/born/vz
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/

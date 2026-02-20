@@ -2,114 +2,26 @@ id: polestar-3-performance-pack-2024
 name: Long Range Dual Motor with Performance Pack
 model_id: polestar-3
 model_year: 2024
-production_years:
-  start: 2024
-  end: null
-trim_level: performance
-market_position: performance
-description: "The Performance Pack variant of the Polestar 3 adds significantly more\
-  \ power and \nperformance-oriented features to the already capable Long Range Dual\
-  \ Motor.\n\nWith 380kW (517hp) and 910Nm torque, this variant achieves 0-100 km/h\
-  \ in just 4.7 \nseconds, making it one of the fastest luxury electric SUVs available.\
-  \ The Performance \nPack includes:\n- Upgraded electric motors (+20kW each)\n- Performance-tuned\
-  \ air suspension with adjustable dampers\n- Performance brakes with gold calipers\n\
-  - 22-inch forged wheels\n- Sport seats with extended adjustment\n- Performance software\
-  \ calibration\n\nDespite the increased power, range remains competitive at 560km\
-  \ WLTP thanks to \nefficient motor and battery management. Fast charging at up to\
-  \ 250kW enables \n10-80% charging in approximately 30 minutes.\n"
-production_status: active
 battery:
   usable_kwh: 107.0
   total_kwh: 111.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 650
-    modules: 24
-    cells: null
 range:
   wltp_km: 560
-  wltp_source: manufacturer
   real_world_km: 480
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, sport mode, 22-inch wheels
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 10.0
-      '20_80': 6.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 200
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 20
-      power_kw: 250
-    - soc_percent: 30
-      power_kw: 245
-    - soc_percent: 40
-      power_kw: 230
-    - soc_percent: 50
-      power_kw: 200
-    - soc_percent: 60
-      power_kw: 165
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 70
-    - soc_percent: 90
-      power_kw: 35
-    - soc_percent: 100
-      power_kw: 15
   ac_max_kw: 11
   dc_max_kw: 250
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual-motor
-  drive_type: AWD
-  front:
-    type: permanent-magnet
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 455
-  rear:
-    type: permanent-magnet
-    power_kw: 180
-    power_hp: 245
-    torque_nm: 455
-  combined:
-    power_kw: 380
-    power_hp: 517
-    torque_nm: 910
 performance:
   top_speed_kmh: 210
   total_power_kw: 380
   total_power_hp: 517
   total_torque_nm: 910
   acceleration_0_100_sec: 4.7
-efficiency:
-  consumption_wltp_kwh_100km: 19.1
-  consumption_real_world_kwh_100km: 22.3
-  energy_label: C
 dimensions:
   length_mm: 4900
   width_mm: 1968
@@ -128,14 +40,8 @@ weight:
   towing_capacity_unbraked_kg: 750
 metadata:
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
   data_quality: verified
   sources:
   - https://www.polestar.com/global/polestar-3/specifications/
   - https://www.polestar.com/se/news/polestar-3-performance-pack/
   - https://ev-database.org/car/2058/Polestar-3-Long-Range-Performance
-  verified_by: official
-  notes: "Performance Pack adds 20kW to front motor for total 517hp and 910Nm torque.\
-    \ \n0-100 km/h in 4.7s makes it one of fastest luxury electric SUVs. Includes\
-    \ \nperformance brakes (gold calipers), 22\" forged wheels, sport seats, tuned\
-    \ \nair suspension. Range reduced to 560km WLTP vs 610km for base model.\n"

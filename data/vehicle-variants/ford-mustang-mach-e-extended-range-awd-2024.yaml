@@ -2,13 +2,10 @@ id: ford-mustang-mach-e-extended-range-awd-2024
 name: Extended Range AWD
 model_id: ford-mustang-mach-e
 model_year: 2024
-trim_level: Premium
 battery:
   usable_kwh: 88.0
   total_kwh: 91.0
   chemistry: NMC
-  cells: 376
-  voltage_nominal_v: 360
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -17,62 +14,10 @@ range:
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: 434
-  epa_miles: 270
   real_world_km: 480
-  real_world_conditions: Mixed driving, moderate climate, 120 km/h highway
 charging:
-  ac_charging:
-    max_power_kw: 11.0
-    connector_type: Type2
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 8.0
-  dc_charging:
-    max_power_kw: 150
-    connector_type: CCS2
-    charge_time_10_80_minutes: 38
-    charge_time_20_80_minutes: 32
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 145
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: false
-    v2h: true
-    v2g: true
-    max_discharge_power_kw: 9.6
-    notes: Ford Intelligent Backup Power with 80A Ford Charge Station Pro
   ac_max_kw: 11.0
   dc_max_kw: 150
-motors:
-  configuration: dual
-  front_motor:
-    type: permanent_magnet
-    power_kw: 198
-    torque_nm: 430
-  rear_motor:
-    type: permanent_magnet
-    power_kw: 70
-    torque_nm: 210
-  total_power_kw: 258
-  total_power_hp: 351
-  total_torque_nm: 580
 performance:
   top_speed_kmh: 180
   drive_type: AWD
@@ -80,11 +25,6 @@ performance:
   total_power_hp: 351
   total_torque_nm: 580
   acceleration_0_100_sec: 5.8
-efficiency:
-  consumption_wltp_kwh_per_100km: 18.3
-  consumption_epa_kwh_per_100km: 20.3
-  efficiency_rating_eu: C
-  co2_emissions_wltp_g_per_km: 0
 dimensions:
   length_mm: 4713
   width_mm: 1881
@@ -108,11 +48,6 @@ notes: "The Extended Range AWD is the most popular Mach-E configuration, offerin
   \ \nenables 540 km WLTP range. DC fast charging peaks at 150 kW with 400V \narchitecture.\
   \ Ford's Intelligent Backup Power enables V2H/V2G for home backup \nduring outages.\
   \ Features include BlueCruise hands-free highway driving \n(subscription required).\n"
-version_changes:
-- version: '2024'
-  changes: "Model year 2024 updates: Improved SYNC 4A software, added Digital Experience\
-    \ \npack as standard, increased charging speed slightly, BlueCruise 1.2 with \n\
-    lane change assist, Android Auto wireless connectivity added.\n"
 metadata:
   created_at: '2026-02-07T00:00:00Z'
   updated_at: '2026-02-07T00:00:00Z'

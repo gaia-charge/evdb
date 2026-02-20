@@ -2,98 +2,28 @@ id: genesis-electrified-gv70-awd-2025
 name: AWD
 model_id: genesis-electrified-gv70
 model_year: 2025
-trim_level: Standard
-description: '2025 Genesis Electrified GV70 receives a significant facelift with major
-  powertrain upgrades.
-
-  Battery capacity increases from 77.4 kWh to 84 kWh usable, while dual-motor output
-  jumps
-
-  dramatically from 280 kW to 360 kW (490 PS), with each axle now producing 180 kW.
-  This
-
-  delivers a blistering 4.4-second 0-100 km/h sprint, 0.1 seconds quicker than before.
-
-  WLTP range improves to 479 km (up from 455 km) despite the power increase. DC charging
-
-  peaks at 240 kW via the retained 800V architecture, achieving 10-80% in just 19
-  minutes.
-
-  Exterior receives refreshed front fascia with updated Two Lines lighting signature,
-  new
-
-  bumper designs, and revised wheel options. Interior upgrades include updated infotainment
-
-  with faster processor and refined materials. Retains all the luxury equipment that
-  made
-
-  the original a compelling alternative to German rivals: Nappa leather, Lexicon audio,
-
-  adaptive air suspension, Highway Driving Assist 2, and V2L capability all standard.
-
-  '
 battery:
   usable_kwh: 84.0
   total_kwh: 88.0
   chemistry: NCM
-  supplier: SK On
   cell_type: pouch
   warranty_years: 10
   warranty_km: 160000
   warranty_capacity_percent: 70
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: permanent_magnet
-  front_motor:
-    power_kw: 180
-    torque_nm: 350
-  rear_motor:
-    power_kw: 180
-    torque_nm: 350
-  combined_power_kw: 360
-  combined_torque_nm: 700
-  notes: Major power upgrade from 280 kW to 360 kW for 2025 facelift
 performance:
-  acceleration_0_100_kmh: 4.4
   acceleration_0_100_sec: 4.4
   top_speed_kmh: 235
   total_power_kw: 360
   total_torque_nm: 700
-  notes: Significantly more powerful than 2024 model (360 kW vs 280 kW)
 range:
   wltp_km: 479
   wltp_city_km: 600
-  wltp_highway_kmh_130: 385
-  real_world_mixed_km: 400
-  real_world_highway_kmh_130: 325
-  real_world_winter_km: 310
-  notes: 24 km more WLTP range than 2024 model despite significant power increase
 efficiency:
   wltp_kwh_per_100km: 19.4
   real_world_kwh_per_100km: 21.0
-  notes: Efficiency maintained despite 29% power increase thanks to larger battery
 charging:
-  ac_charging:
-    max_power_kw: 11
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 7.1
-    onboard_charger_kw: 11
-  dc_charging:
-    max_power_kw: 240
-    connector_type: CCS2
-    charge_time_10_80_minutes: 19
-    charge_speed_km_per_minute: 13.5
-    notes: 800V ultra-fast charging, peak 240 kW
-    curve_notes: Maintains >200 kW from 10-50%, tapers above 60%
   ac_max_kw: 11
   dc_max_kw: 240
-bidirectional_charging:
-  v2l: true
-  v2h: false
-  v2g: false
-  v2l_power_kw: 3.6
 dimensions:
   length_mm: 4715
   width_mm: 1910
@@ -101,7 +31,6 @@ dimensions:
   height_mm: 1630
   wheelbase_mm: 2875
   ground_clearance_mm: 174
-  drag_coefficient: 0.29
 weight:
   curb_weight_kg: 2335
   gross_vehicle_weight_kg: 2935
@@ -112,119 +41,6 @@ cargo:
   trunk_capacity_liters: 503
   trunk_max_liters: 1678
   frunk_capacity_liters: 0
-  notes: Generous cargo space for mid-size SUV segment
-seating:
-  capacity: 5
-  configuration: 2+3
-  seat_material: Nappa leather with quilted pattern
-  front_seats_heated: true
-  front_seats_ventilated: true
-  front_seats_massage: false
-  rear_seats_heated: true
-  isofix_points: 2
-wheels_tires:
-  standard_wheel_size_inches: 19
-  standard_tire_size_front: 235/55 R19
-  standard_tire_size_rear: 235/55 R19
-  optional_wheel_sizes:
-  - 21
-  spare_wheel: Tire repair kit
-infotainment:
-  screen_size_inches: 12.3
-  screen_count: 2
-  screen_type: Dual 12.3-inch panoramic displays with updated processor
-  apple_carplay: true
-  android_auto: true
-  wireless_smartphone_integration: true
-  navigation: true
-  ota_updates: true
-  voice_control: true
-  speakers: 16
-  audio_brand: Lexicon
-  digital_key: true
-  smartphone_app: true
-driver_assistance:
-  autonomous_level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors_front: true
-  parking_sensors_rear: true
-  parking_camera: 360-degree surround view
-  automated_parking: true
-  automated_parking_type: Remote Smart Parking Assist 2
-  traffic_sign_recognition: true
-  driver_attention_monitoring: true
-  automatic_emergency_braking: true
-  pedestrian_detection: true
-  cyclist_detection: true
-  notes: Highway Driving Assist 2 with updated software for 2025
 features:
-  keyless_entry: true
-  keyless_start: true
-  heads_up_display: true
-  ambient_lighting: true
-  panoramic_roof: true
-  heated_steering_wheel: true
-  power_tailgate: true
-  hands_free_tailgate: true
-  wireless_charging: true
-  v2l_capability: true
-  v2l_power_kw: 3.6
   heat_pump: true
-  climate_zones: 2
   air_suspension: true
-  notes: Comprehensive standard equipment including HUD, adaptive air suspension,
-    V2L
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2022
-  adult_occupant: 89
-  child_occupant: 87
-  vulnerable_road_users: 64
-  safety_assist: 88
-  notes: Euro NCAP rating from original GV70 platform, 2025 facelift adds updated
-    ADAS
-price_positioning:
-  segment: D-SUV
-  competitors:
-  - Mercedes-Benz EQE SUV 350+
-  - BMW iX3
-  - Audi Q6 e-tron quattro
-  - Tesla Model Y Long Range
-  - Hyundai Ioniq 5 Long Range AWD
-  - Kia EV6 Long Range AWD
-  value_proposition: '2025 Electrified GV70 delivers a massive power upgrade (360
-    kW, +29%) while improving
-
-    range to 479 km WLTP. Retains the exceptional value proposition with comprehensive
-
-    standard equipment that German rivals charge extra for. 800V ultra-fast charging
-
-    (19 min 10-80%) remains class-leading. Nappa leather, Lexicon 16-speaker audio,
-
-    adaptive air suspension, HUD, and Highway Driving Assist 2 all included. At estimated
-
-    €76,900, undercuts Mercedes EQE SUV while offering superior performance and charging
-    speed.
-
-    '
-data_sources:
-  manufacturer: https://www.genesis.com/de/en/models/electrified-gv70.html
-  specifications: https://www.ultimatespecs.com/car-specs/Genesis/149530/Genesis-GV70-2025-Electrified-AWD.html
-  confidence_level: verified
-tags:
-- mid-size-suv
-- 800v-charging
-- ultra-fast-charging
-- awd
-- dual-motor
-- luxury
-- korean
-- e-gmp
-- facelift
-- v2l
-- air-suspension
-last_updated: '2026-02-09'
-data_quality: verified

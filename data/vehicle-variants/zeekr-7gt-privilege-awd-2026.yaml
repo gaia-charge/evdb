@@ -1,106 +1,28 @@
 id: zeekr-7gt-privilege-awd-2026
 model_id: zeekr-7gt
 name: Privilege AWD
-variant_name: Privilege AWD
 model_year: 2026
-trim_level: Privilege
-production_years: 2025-present
-overview: 'The Zeekr 7GT Privilege AWD is the performance-oriented dual-motor variant
-  producing 475kW (646 PS) and 710Nm of torque. Sharing the same 100kWh CATL QILIN
-  battery with 800V architecture as the RWD variant, AWD reduces range slightly to
-  ~558km WLTP but delivers a blistering 3.3-second 0-100 km/h. Ultra-fast 480kW peak
-  DC charging remains, with 10-80% in just 16 minutes.
-
-  '
 battery:
   chemistry: NMC
-  supplier: CATL
   total_kwh: 100.0
   usable_kwh: 96.0
   warranty_years: 8
   warranty_km: 200000
   warranty_capacity_percent: 70
-  voltage: 800
-  notes: CATL QILIN battery, 800V architecture, prismatic cells
 range:
   wltp_km: 558
   wltp_city_km: null
   wltp_highway_km: null
-  epa_miles: null
   real_world_km: 515
-  real_world_notes: 'Real-world range varies: ~515km mixed, ~730km city, ~485km highway
-    (mild weather)'
 charging:
-  ac:
-    connector_type: Type2
-    phases: 3
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 315
-      power_kw: 22.0
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 480
-    - soc_percent: 20
-      power_kw: 450
-    - soc_percent: 30
-      power_kw: 400
-    - soc_percent: 40
-      power_kw: 350
-    - soc_percent: 50
-      power_kw: 280
-    - soc_percent: 60
-      power_kw: 220
-    - soc_percent: 70
-      power_kw: 160
-    - soc_percent: 80
-      power_kw: 100
-    - soc_percent: 90
-      power_kw: 60
-    - soc_percent: 100
-      power_kw: 20
-    charging_time:
-    - percent_start: 10
-      percent_end: 80
-      time_minutes: 16
-      power_kw: 260
-      notes: 10-80% in approximately 16 minutes at 260kW average
-  bidirectional:
-    v2l: true
-    v2l_power_kw: 3.3
-    v2h: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 480
-motors:
-  configuration: dual
-  drive_type: AWD
-  total_power_kw: 475
-  total_power_hp: 646
-  total_torque_nm: 710
-  motor_type: permanent_magnet
-  motors:
-  - position: front
-    power_kw: 165
-    torque_nm: 270
-    motor_type: permanent_magnet
-  - position: rear
-    power_kw: 310
-    torque_nm: 440
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 210
   total_power_kw: 475
   total_power_hp: 646
   total_torque_nm: 710
   acceleration_0_100_sec: 3.3
-efficiency:
-  consumption_wltp_kwh_per_100km: 19.8
-  consumption_real_world_kwh_per_100km: 18.6
-  notes: Higher consumption due to AWD, still competitive for dual-motor estate
 weight:
   curb_weight_kg: 2410
   gross_vehicle_weight_kg: 2885
@@ -117,24 +39,8 @@ cargo:
   trunk_capacity_liters: 456
   trunk_max_liters: 1350
   frunk_capacity_liters: 65
-features:
-  standard:
-  - 15.05-inch OLED central display
-  - AR HUD
-  - Heat pump
-  - Frameless doors
-  - Roof rails
-  - Battery preconditioning via navigation
-  - V2L (3.3kW)
-  - Air suspension
-  optional: []
-version:
-  release_date: 2025-Q4
-  notes: MY2026 European launch, high-performance AWD variant
 metadata:
   data_quality: estimated
-  data_source: ev-database
   sources:
   - https://ev-database.org/car/3430/Zeekr-7GT-Privilege-AWD
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'

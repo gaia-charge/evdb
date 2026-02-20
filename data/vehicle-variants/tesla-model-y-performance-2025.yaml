@@ -18,11 +18,6 @@ battery:
   usable_kwh: 75.0
   total_kwh: 78.1
   chemistry: NCA
-  cells: prismatic
-  pack_voltage_v: 400
-  supplier:
-  - Panasonic
-  - LG Energy Solution
   warranty_years: 8
   warranty_km: 192000
   warranty_capacity_percent: 70
@@ -30,61 +25,9 @@ range:
   wltp_km: 514
   wltp_city_km: 605
   wltp_highway_km: 440
-  epa_miles: 303
   epa_km: 488
   real_world_km: 435
-  real_world_highway_km: 380
-  real_world_winter_km: 345
-charging_ac:
-  max_power_kw: 11
-  connector_type: Type2
-  onboard_charger_kw: 11
-  charge_time_0_100_hours: 7.5
-charging_dc:
-  max_power_kw: 250
-  connector_type: CCS2
-  charge_time_10_80_percent_min: 27
-  charge_time_0_100_percent_min: 44
-  km_per_10min: 270
-charging_curve:
-- soc_percent: 0
-  power_kw: 180
-- soc_percent: 10
-  power_kw: 250
-- soc_percent: 20
-  power_kw: 250
-- soc_percent: 30
-  power_kw: 230
-- soc_percent: 40
-  power_kw: 190
-- soc_percent: 50
-  power_kw: 160
-- soc_percent: 60
-  power_kw: 125
-- soc_percent: 70
-  power_kw: 95
-- soc_percent: 80
-  power_kw: 70
-- soc_percent: 90
-  power_kw: 40
-- soc_percent: 100
-  power_kw: 20
-bidirectional_charging: false
-v2l: false
-v2h: false
-v2g: false
-motors:
-  count: 2
-  type: Permanent Magnet Synchronous
-  total_power_kw: 534
-  total_power_hp: 725
-  front_motor_kw: 180
-  rear_motor_kw: 354
-drivetrain:
-  type: AWD
-  drive_config: Dual Motor AWD Performance
 performance:
-  acceleration_0_60_mph_s: 3.3
   top_speed_kmh: 250
   total_power_kw: 534
   total_power_hp: 725
@@ -97,23 +40,7 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 17.8
-  epa_mpge: 115
   real_world_kwh_per_100km: 19.8
-  energy_efficiency_class: C
-technology:
-  autopilot: true
-  adaptive_cruise: true
-  lane_keeping: true
-  autonomous_level: 2
-  full_self_driving: false
-  ota_updates: true
-  track_mode: true
-infotainment:
-  screen_size_inch: 15.4
-  screen_orientation: landscape
-  navigation: true
-  streaming: true
-  connectivity: 4G LTE
 features: null
 notes: '2025 Model Year Performance variant with latest software updates.
 
@@ -166,13 +93,10 @@ metadata:
   created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
-  last_updated: '2026-02-09'
   sources:
   - https://www.tesla.com/model-y/design
   - https://ev-database.org/car/1750/Tesla-Model-Y-Performance
   - https://www.fastned.nl/en/support/charge-speed-reference-list
-  notes: 2025 model year with latest software and minor refinements
-  version: '2025'
 charging:
   ac_max_kw: 11
   dc_max_kw: 250

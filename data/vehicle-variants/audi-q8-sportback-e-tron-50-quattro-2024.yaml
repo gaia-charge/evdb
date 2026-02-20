@@ -6,7 +6,6 @@ battery:
   usable_kwh: 89.0
   total_kwh: 95.0
   chemistry: NCM
-  supplier: LG Energy Solution
   cell_type: pouch
   warranty_years: 8
   warranty_km: 160000
@@ -16,68 +15,10 @@ range:
   wltp_city_km: 630
   wltp_highway_km: 420
   epa_km: null
-  epa_miles: null
   real_world_km: 440
-  real_world_highway_km: 368
-  notes: 'Sportback coupe body style achieves +14km WLTP vs SUV variant (505km vs
-    491km) thanks to improved aerodynamics (Cd 0.26).
-
-    Entry-level Sportback with smaller 89kWh battery offers 95km less range than 55
-    quattro Sportback (600km).
-
-    '
 charging:
-  ac:
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 8.8
-    notes: Optional 22kW AC charger available (+€590)
-  dc:
-    connector_type: CCS2
-    charge_time_10_80_percent_minutes: 28
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 148
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 138
-    - soc_percent: 60
-      power_kw: 125
-    - soc_percent: 70
-      power_kw: 100
-    - soc_percent: 80
-      power_kw: 70
-    notes: '400V architecture limits DC charging speed vs 800V competitors.
-
-      Battery preconditioning available via navigation system.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 150
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: permanent_magnet
-  front_motor:
-    power_kw: 100
-    torque_nm: 220
-    motor_type: asynchronous
-  rear_motor:
-    power_kw: 150
-    torque_nm: 314
-    motor_type: permanent_magnet
-  total_power_kw: 250
-  total_power_hp: 340
-  total_torque_nm: 664
 performance:
   top_speed_kmh: 190
   total_power_kw: 250
@@ -87,105 +28,22 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 20.3
   real_world_kwh_per_100km: 23.0
-  notes: 'Sportback achieves best efficiency in Q8 e-tron lineup thanks to superior
-    aerodynamics (Cd 0.26).
-
-    Better efficiency than SUV variant (20.9 kWh/100km) despite identical drivetrain.
-
-    '
 weight:
   curb_weight_kg: 2545
   gross_vehicle_weight_kg: 3095
   payload_kg: 550
-  notes: Sportback marginally lighter than SUV variant (-5kg) despite similar equipment
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-features:
-  standard:
-  - Quattro electric AWD
-  - Matrix LED headlights
-  - Progressive steering
-  - Virtual cockpit plus (12.3-inch)
-  - MMI touch response (10.1-inch + 8.6-inch dual screens)
-  - 3-zone automatic climate control
-  - Leather seats
-  - Audi pre sense front and rear
-  - Lane departure warning
-  - Parking sensors front and rear
-  - Rear-view camera
-  - Acoustic vehicle alerting system (AVAS)
-  - Heat pump climate control standard
-  - Sportback coupe styling
-optional_features:
-- name: Bang & Olufsen 3D Premium Sound
-  price_eur: 850
-- name: 22kW AC onboard charger
-  price_eur: 590
-- name: Virtual exterior mirrors (camera mirrors)
-  price_eur: 1950
-  notes: Not available in all markets due to regulations
-- name: Comfort Package Plus
-  price_eur: 2990
-- name: Black styling package
-  price_eur: 1450
-- name: Adaptive air suspension with damping control
-  price_eur: 2400
-- name: 360-degree cameras
-  price_eur: 1100
-- name: Park assist plus
-  price_eur: 1100
-- name: Head-up display
-  price_eur: 1200
-- name: Massage seats
-  price_eur: 650
-- name: Panoramic sunroof
-  price_eur: 1350
-- name: Trailer hitch
-  price_eur: 900
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  parking_assist: true
-  traffic_sign_recognition: true
-  automatic_emergency_braking: true
-  notes: 'Advanced driver assistance features available as part of Audi pre sense
-    packages.
-
-    Full suite of Level 2 ADAS features available with optional Tour Package (€2,850).
-
-    '
 dimensions:
   length_mm: 4915
   width_mm: 1937
   height_mm: 1615
   wheelbase_mm: 2928
   ground_clearance_mm: 172
-  turning_circle_meters: 12.4
 cargo:
   trunk_capacity_liters: 528
   trunk_max_liters: 1655
   frunk_capacity_liters: 0
-warranty:
-  basic_years: 2
-  basic_km: unlimited
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-  roadside_assistance_years: 2
-  anti_corrosion_years: 12
 metadata:
-  source: https://www.audi.com/en/models/q8-e-tron.html
   created_at: '2024-02-08'
-  last_updated: '2024-02-08'
   data_quality: verified
-  notes: 'Entry-level Sportback coupe variant with sleeker design and better aerodynamics
-    than SUV.
-
-    Achieves 505km WLTP range - 14km more than SUV variant thanks to Cd 0.26.
-
-    Good choice for buyers prioritizing style and efficiency over cargo space.
-
-    Cargo: 528L trunk (vs 569L SUV), 1655L max with seats folded (vs 1725L SUV).
-
-    '

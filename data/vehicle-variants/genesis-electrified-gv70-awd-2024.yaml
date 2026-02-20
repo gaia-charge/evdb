@@ -6,7 +6,6 @@ battery:
   usable_kwh: 77.4
   total_kwh: 82.0
   chemistry: NCM
-  supplier: SK Innovation
   cell_type: pouch
   warranty_years: 10
   warranty_km: 160000
@@ -16,80 +15,10 @@ range:
   wltp_city_km: 590
   wltp_highway_km: 370
   epa_km: 385
-  epa_miles: 240
   real_world_km: 400
-  real_world_highway_km: 330
-  notes: 'Solid real-world range for luxury SUV.
-
-    City range significantly better than highway due to regenerative braking.
-
-    E-GMP platform efficiency competitive with German rivals.
-
-    '
 charging:
-  ac:
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 7.0
-    notes: Standard 11kW AC charging for home/workplace
-  dc:
-    connector_type: CCS2
-    charge_time_10_80_percent_minutes: 18
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 235
-    - soc_percent: 20
-      power_kw: 235
-    - soc_percent: 30
-      power_kw: 230
-    - soc_percent: 40
-      power_kw: 210
-    - soc_percent: 50
-      power_kw: 185
-    - soc_percent: 60
-      power_kw: 150
-    - soc_percent: 70
-      power_kw: 110
-    - soc_percent: 80
-      power_kw: 75
-    notes: '800V ultra-fast charging architecture (350kW peak).
-
-      10-80% in ~18 minutes with 350kW DC charger (IONITY, Electrify America).
-
-      Battery preconditioning when navigation set to charging station.
-
-      Among the fastest-charging luxury SUVs available.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 350
-bidirectional_charging:
-  v2l: true
-  v2h: false
-  v2g: false
-  v2l_power_kw: 3.6
-  v2l_notes: 'Vehicle-to-Load (V2L) capability standard on all Genesis EVs.
-
-    Can power external devices up to 3.6kW (camping, tools, emergency power).
-
-    V2L adapter included with vehicle.
-
-    '
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: permanent_magnet
-  front_motor:
-    power_kw: 120
-    torque_nm: 350
-    motor_type: permanent_magnet
-  rear_motor:
-    power_kw: 160
-    torque_nm: 350
-    motor_type: permanent_magnet
-  total_power_kw: 280
-  total_power_hp: 381
-  total_torque_nm: 700
 performance:
   top_speed_kmh: 225
   total_power_kw: 280
@@ -99,13 +28,6 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 20.2
   real_world_kwh_per_100km: 22.5
-  notes: 'Competitive efficiency for AWD luxury SUV.
-
-    E-GMP platform delivers excellent efficiency despite performance focus.
-
-    Heat pump standard helps cold-weather range.
-
-    '
 dimensions:
   length_mm: 4715
   width_mm: 1910
@@ -122,48 +44,6 @@ weight:
   payload_kg: 625
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
-  notes: Competitive weight for 800V EV platform with large battery
-features:
-  standard:
-  - Dual-motor AWD
-  - 800V ultra-fast charging (350kW)
-  - Vehicle-to-Load (V2L) 3.6kW
-  - Adaptive air suspension
-  - Heat pump climate control
-  - Nappa leather interior with quilted pattern
-  - Heated and ventilated front seats
-  - Heated rear seats
-  - Heated steering wheel
-  - Head-up display with AR navigation
-  - Dual 12.3" widescreen display
-  - Lexicon 16-speaker premium audio
-  - Surround-view monitor
-  - Highway Driving Assist 2
-  - Remote Smart Parking Assist
-  - Panoramic sunroof
-  - Power tailgate with hands-free
-  - Wireless Apple CarPlay/Android Auto
-  - Wireless phone charging
-optional_features:
-- name: Electronically Controlled Suspension
-  price_eur: 1950
-  notes: Adaptive damping for comfort or sport modes
-- name: G-Matrix LED exterior lighting
-  price_eur: 1200
-  notes: Distinctive Genesis lighting signature
 metadata:
-  source: https://www.genesis.com/us/en/models/genesis-electrified-gv70.html
   created_at: '2024-02-08'
-  last_updated: '2024-02-08'
   data_quality: verified
-  notes: 'Genesis Electrified GV70 - premium electric SUV with 800V ultra-fast charging.
-
-    Exceptional standard equipment: Nappa leather, premium audio, ADAS, V2L.
-
-    One of the fastest-charging luxury SUVs (10-80% in 18 minutes).
-
-    Competes with Mercedes EQE SUV, BMW iX3, Audi Q4 e-tron at competitive price.
-
-    Generous warranty: 5yr/100,000km vehicle, 10yr/160,000km battery (industry-leading).
-
-    '

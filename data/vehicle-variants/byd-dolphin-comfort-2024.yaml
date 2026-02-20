@@ -2,105 +2,26 @@ id: byd-dolphin-comfort-2024
 name: Comfort
 model_id: byd-dolphin
 model_year: 2024
-production_years:
-  start: 2023
-  end: null
-trim_level: comfort
-market_position: mid
 battery:
   usable_kwh: 60.4
   total_kwh: 63.0
   chemistry: LFP
-  nominal_voltage_v: 400
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 200000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 460
-    cells: 160
-  notes: 'BYD Blade Battery uses LFP chemistry in long blade-shaped cells integrated
-    directly into the chassis. This larger 60.4 kWh pack provides excellent range
-    for a compact car while maintaining the safety and longevity benefits of LFP chemistry.
-
-    '
 range:
   wltp_km: 427
-  wltp_source: manufacturer
   real_world_km: 365
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
-consumption:
-  wltp_kwh_per_100km: 14.1
-  real_world_kwh_per_100km: 16.5
-  real_world_source: estimated
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '30_80': 28
-      '0_100': 45
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 70
-    - soc_percent: 10
-      power_kw: 88
-    - soc_percent: 30
-      power_kw: 88
-    - soc_percent: 50
-      power_kw: 85
-    - soc_percent: 70
-      power_kw: 60
-    - soc_percent: 80
-      power_kw: 35
-    - soc_percent: 90
-      power_kw: 20
-    - soc_percent: 100
-      power_kw: 12
-    notes: Conservative charging optimized for battery longevity
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 88
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 150
-  max_torque_nm: 310
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 150
-  total_power_hp: 204
-  total_torque_nm: 310
 performance:
   top_speed_kmh: 160
-  top_speed_limited: true
   acceleration_0_100_sec: 7.5
 efficiency:
   wltp_kwh_per_100km: 14.1
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 16.5
-  highway:
-    kmh: 120
-    kwh_per_100km: 19.5
-    range_km: 310
-  city:
-    kwh_per_100km: 14.0
-    range_km: 430
 dimensions:
   length_mm: 4290
   width_mm: 1770
@@ -118,58 +39,6 @@ cargo:
   trunk_capacity_liters: 345
   trunk_max_liters: 1310
   frunk_capacity_liters: 0
-interior:
-  seating_capacity: 5
-features:
-  exterior:
-  - 17-inch alloy wheels
-  - LED headlights with DRL
-  - LED taillights
-  - Body-colored door handles
-  - Front and rear parking sensors
-  - Electric folding mirrors
-  - Roof rails
-  interior:
-  - 12.8-inch rotating touchscreen
-  - 5-inch digital instrument cluster
-  - Synthetic leather upholstery
-  - Automatic climate control
-  - Heat pump
-  - Heated front seats
-  - DiLink intelligent system
-  - Apple CarPlay / Android Auto
-  - Wireless phone charging
-  - USB-A and USB-C ports
-  - Six speakers
-  - Ambient lighting
-  safety:
-  - ABS with EBD
-  - Electronic stability control
-  - Traction control
-  - Front airbags
-  - Side airbags
-  - Curtain airbags
-  - ISOFIX child seat anchors
-  - Tire pressure monitoring
-  - Front and rear parking sensors
-  - Rear view camera
-  driver_assistance:
-  - Adaptive cruise control
-  - Lane keeping assist
-  - Lane departure warning
-  - Blind spot monitoring
-  - Traffic sign recognition
-  - Forward collision warning
-  - Automatic emergency braking
-  - Hill start assist
-  - Electric parking brake
-options_packages:
-- name: Premium Pack
-  price_eur: 1500
-  items:
-  - 360-degree camera
-  - Panoramic glass roof
-  - Power tailgate
 notes: 'The Comfort trim offers the larger 60.4 kWh battery with a realistic range
   of around 365 km and more powerful 150 kW motor. It includes comprehensive standard
   equipment including heat pump, heated seats, adaptive cruise control, and advanced

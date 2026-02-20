@@ -1,9 +1,7 @@
 id: nissan-ariya-e-4orce-87kwh-2024
 model_id: nissan-ariya
 name: e-4ORCE 87kWh
-full_name: Nissan Ariya e-4ORCE 87kWh
 model_year: 2024
-trim_level: Evolve+
 variant_code: null
 battery:
   usable_kwh: 87.0
@@ -18,73 +16,12 @@ range:
   wltp_km: 490
   wltp_city_km: 600
   wltp_highway_km: 420
-  epa_miles: null
   real_world_km: 430
-  conditions:
-    temperature_c: 20
-    driving_style: mixed
-    climate_control: true
 charging:
-  ac:
-    connector: Type2
-    onboard_charger_kw: 22
-    charge_time_0_100_hours: 9.0
-  dc:
-    connector: CCS2
-    charge_time_10_80_percent_min: 45
-    charge_time_20_80_percent_min: 35
-  charge_curve:
-  - soc_percent: 10
-    power_kw: 125
-  - soc_percent: 20
-    power_kw: 130
-  - soc_percent: 30
-    power_kw: 130
-  - soc_percent: 40
-    power_kw: 130
-  - soc_percent: 50
-    power_kw: 125
-  - soc_percent: 60
-    power_kw: 110
-  - soc_percent: 70
-    power_kw: 85
-  - soc_percent: 80
-    power_kw: 60
-  - soc_percent: 90
-    power_kw: 35
-  - soc_percent: 100
-    power_kw: 15
-  bidirectional:
-    v2l: true
-    v2h: true
-    v2g: true
-    power_kw: 6.0
-    notes: 'V2X requires CHAdeMO adapter. Nissan pioneered V2X with the LEAF in 2010.
-      CCS2 does not support bidirectional charging on Ariya.
-
-      '
   ac_max_kw: 22
   dc_max_kw: 130
-motors:
-  count: 2
-  type: permanent_magnet_synchronous
-  configuration:
-  - position: front
-    power_kw: 160
-    torque_nm: null
-  - position: rear
-    power_kw: 150
-    torque_nm: null
-  total_power_kw: 290
-  total_power_hp: 394
-  total_torque_nm: 600
-drive_type: AWD
 performance:
   top_speed_kmh: 200
-  notes: 'e-4ORCE all-wheel drive provides excellent traction and stability. Twin
-    motor setup with electronic torque vectoring.
-
-    '
   total_power_kw: 290
   total_power_hp: 394
   total_torque_nm: 600
@@ -108,20 +45,6 @@ weight:
 efficiency:
   wltp_kwh_per_100km: 19.7
   real_world_kwh_per_100km: 21.5
-  eu_energy_efficiency_class: B
-standard_equipment:
-- ProPILOT Assist 2.0 (hands-off highway driving)
-- e-Pedal Step (one-pedal driving)
-- Dual 12.3" displays (digital cockpit + touchscreen)
-- NissanConnect with OTA updates
-- Apple CarPlay & Android Auto (wireless)
-- Panoramic glass roof
-- LED headlights with adaptive beam
-- Heat pump climate control
-- 360-degree camera
-- ProPILOT Park (hands-free parking)
-- Zero Gravity seats
-- Bose Premium Audio (12 speakers)
 optional_equipment:
 - name: Two-tone paint
   category: appearance
@@ -130,21 +53,6 @@ optional_equipment:
 - name: ProPILOT Assist 2.0 with Navi-link
   category: technology
   included_in_base: true
-colors_available: 10
-version:
-  release_date: 2024-01
-  end_date: null
-  changes_from_previous: '2024 model year updates: Improved DC fast charging (130kW
-    vs 125kW MY2023), enhanced ProPILOT Assist 2.0, updated NissanConnect software.
-
-    '
-production:
-  plant: Tochigi, Japan
-  also_produced_in:
-  - Sunderland, UK (planned 2024)
-price_indication:
-  currency: EUR
-  base_price_estimate: 60000
 metadata:
   sources:
   - https://www.nissan.com/ariya/
@@ -153,9 +61,3 @@ metadata:
   - https://www.whatcar.com/nissan/ariya/estate/review
   data_quality: verified
   created_at: '2026-02-07'
-  last_updated: '2026-02-07'
-  notes: 'Specifications based on European (WLTP) testing. The e-4ORCE AWD system
-    provides excellent all-weather capability and dynamic handling. Nissan''s longest-range
-    EV after the LEAF Plus. CMF-EV platform provides class-leading interior space.
-
-    '

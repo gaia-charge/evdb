@@ -1,41 +1,16 @@
 id: nissan-leaf-e-plus-62kwh-2024
 model_id: nissan-leaf
 name: Leaf e+ 62kWh
-variant_name: e+ 62kWh
 model_year: 2024
-marketing_name: Leaf e+ Tekna
-trim_level: Tekna
-production_start: '2019-01-01'
-production_end: null
-status: current
 battery:
   usable_kwh: 62.0
   total_kwh: 65.0
   chemistry: NCM
-  cells_configuration: 288s1p
-  nominal_voltage_v: 360
-  cooling_type: passive_air
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 75
-  degradation_percent_per_year: 2.5
-  preconditioning: false
-  supplier: Envision AESC
-  pack_weight_kg: 410
-motors:
-  front:
-    type: permanent magnet
-    power_kw: 160
-    max_power_kw: 160
-    torque_nm: 340
-    peak_torque_nm: 340
-  combined:
-    total_power_kw: 160
-    total_torque_nm: 340
-    drivetrain: fwd
 performance:
   top_speed_kmh: 157
-  acceleration_80_120_kmh_s: 4.8
   acceleration_0_100_sec: 6.9
   total_power_kw: 160
   total_torque_nm: 340
@@ -43,33 +18,7 @@ range:
   wltp_km: 385
   wltp_city_km: 450
   wltp_highway_km: 325
-  real_world_mixed_km: 320
-  real_world_highway_km: 270
-  real_world_city_km: 390
-  epa_combined_km: null
-  winter_range_km: 240
-efficiency:
-  wltp_consumption_kwh_per_100km: 16.1
-  real_world_consumption_kwh_per_100km: 19.4
-  epa_combined_kwh_per_100km: null
-  energy_efficiency_class: A+
 charging:
-  ac:
-    phases: 1
-    connector_type: Type 2
-    charge_time_0_100_percent_hours: 11.5
-    onboard_charger_efficiency_percent: 90
-  dc:
-    connector_type: CHAdeMO
-    charge_time_10_80_percent_minutes: 45
-    charge_time_20_80_percent_minutes: 40
-    peak_charge_rate_kw: 100
-    charge_curve_type: rapid_taper
-  bidirectional:
-    v2g_capable: true
-    v2h_capable: true
-    v2l_capable: false
-    max_discharge_power_kw: 6.0
   ac_max_kw: 6.6
   dc_max_kw: 100
 dimensions:
@@ -78,54 +27,10 @@ dimensions:
   height_mm: 1560
   wheelbase_mm: 2700
   ground_clearance_mm: 150
-  curb_weight_kg: 1730
-  gross_vehicle_weight_kg: 2120
-  payload_kg: 390
-  weight_distribution_front_percent: 55
-  weight_distribution_rear_percent: 45
-  trunk_capacity_liters: 435
-  trunk_max_liters: 1176
-  towing_capacity_braked_kg: 0
-  towing_capacity_unbraked_kg: 0
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1176
   frunk_capacity_liters: 0
-features:
-  standard:
-  - e-Pedal one-pedal driving system
-  - ProPILOT Assist (Nissan's advanced driver assistance)
-  - Around View Monitor 360° camera
-  - Bose premium audio system (8 speakers)
-  - LED headlights with automatic high beam
-  - Dual-zone automatic climate control
-  - Heated front seats and heated steering wheel
-  - Nissan Connect Services with remote monitoring
-  - 8" touchscreen infotainment
-  - Digital instrument cluster
-  - Keyless entry and push-button start
-  - Automatic emergency braking
-  - Lane departure warning and lane keep assist
-  - Blind spot warning
-  - Rear cross traffic alert
-  - Traffic sign recognition
-  - Intelligent cruise control
-  - 7 airbags
-  optional:
-  - ProPILOT Park (automated parking)
-  - Leather seats (Tekna standard)
-  - Sunroof
-  - Winter package (heated rear seats)
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2018
-  euro_ncap_adult_occupant_percent: 87
-  euro_ncap_child_occupant_percent: 86
-  euro_ncap_vulnerable_road_users_percent: 71
-  euro_ncap_safety_assist_percent: 77
-  airbags: 7
-  adas_level: 2
-price_estimate_eur: 43990
 notes: "Nissan Leaf e+ 62kWh is the longer-range version of the world's best-selling\
   \ electric vehicle.\nFeatures larger 62 kWh battery (vs 40 kWh base) delivering\
   \ 385km WLTP range (115km more than base).\nMore powerful 160kW (217hp) motor vs\
@@ -151,6 +56,3 @@ notes: "Nissan Leaf e+ 62kWh is the longer-range version of the world's best-sel
   \ EV (€43,990, 75km more range, CCS2, 800V), \nRenault Megane E-Tech EV60 (€43,000,\
   \ 65km more range, CCS2), MG4 Extended Range (€35,990, \n65km more range, CCS2,\
   \ €8k cheaper).\n"
-data_source: nissan.de
-confidence_level: verified
-last_updated: '2026-02-08'

@@ -2,81 +2,22 @@ id: opel-grandland-electric-98-long-range-2025
 model_id: opel-grandland-electric
 name: GS Long Range 98 kWh
 model_year: 2025
-trim_level: GS
 variant_code: null
-production:
-  start_date: 2025-01-01
-  end_date: null
-  status: active
-  notes: Long Range variant on STLA Medium platform with 98 kWh NMC battery
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 98.0
   usable_kwh: 93.0
-  supplier: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage_nominal: 400
-  notes: 98 kWh NMC battery for maximum range, Samsung SDI cells
 range:
   wltp_km: 700
   wltp_city_km: 870
   wltp_highway_km: 560
-  epa_combined_km: null
-  real_world_avg_km: 560
   real_world_source: Early review estimates based on Peugeot e-5008 Long Range data
-  notes: 700 km WLTP - among the longest range non-Tesla EVs in Europe
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.0
-    onboard_charger: 22kW 3-phase standard on Long Range
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 160kW peak, excellent curve for large battery
-    preconditioning: true
-  charge_curve:
-  - percent: 10
-    power_kw: 155
-  - percent: 20
-    power_kw: 160
-  - percent: 30
-    power_kw: 158
-  - percent: 40
-    power_kw: 150
-  - percent: 50
-    power_kw: 135
-  - percent: 60
-    power_kw: 115
-  - percent: 70
-    power_kw: 90
-  - percent: 80
-    power_kw: 60
-  - percent: 90
-    power_kw: 35
-  - percent: 100
-    power_kw: 10
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 160
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 170
-    power_hp: 231
-    torque_nm: 345
-  combined:
-    power_kw: 170
-    power_hp: 231
-    torque_nm: 345
 dimensions:
   length_mm: 4650
   width_mm: 1906
@@ -89,7 +30,6 @@ cargo:
   trunk_max_liters: 1645
   frunk_capacity_liters: 0
 performance:
-  top_speed_kph: 170
   total_power_kw: 170
   total_power_hp: 231
   total_torque_nm: 345
@@ -97,106 +37,13 @@ performance:
   top_speed_kmh: 170
 efficiency:
   wltp_kwh_per_100km: 16.0
-  wltp_wh_per_km: 160
   real_world_kwh_per_100km: 18.5
-  drag_coefficient: 0.28
 weight:
   curb_weight_kg: 2050
   gross_vehicle_weight_kg: 2500
   payload_kg: 450
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut
-  rear: Multi-link
-brakes:
-  front: Ventilated disc (330mm)
-  rear: Disc (290mm)
-  regenerative: true
-tires:
-  standard: 225/55 R19
-features:
-  infotainment:
-  - Dual 16-inch widescreen displays
-  - STLA Brain operating system
-  - Google built-in (Assistant, Maps, Play Store)
-  - Wireless Apple CarPlay and Android Auto
-  - Wireless smartphone charging
-  - DAB+ digital radio
-  - 10-speaker premium audio system
-  - MyOpel app
-  driver_assistance:
-  - Intelli-Drive 2.0
-  - Adaptive cruise control with traffic jam assist
-  - Lane centering assist
-  - Active Safety Brake with pedestrian/cyclist detection
-  - Blind Spot Monitoring
-  - Rear Cross Traffic Alert
-  - 360-degree camera
-  - Traffic Sign Recognition
-  - Speed limit assist
-  - Semi-automated lane change
-  comfort_convenience:
-  - Tri-zone automatic climate control
-  - Heat pump STANDARD
-  - Heated front and rear seats
-  - Heated steering wheel
-  - Keyless entry and start
-  - Electric tailgate with hands-free
-  - One-pedal driving
-  - V2L bidirectional charging outlet
-  - 22kW AC charging standard
-  exterior:
-  - IntelliLux LED Pixel Matrix headlights
-  - 20-inch alloy wheels
-  - LED rear lights
-  - Panoramic fixed glass roof
-  interior:
-  - Ergonomic AGR-certified seats
-  - 550L trunk
-  - 25L frunk
-  - 40/20/40 split-folding rear seats
-  - Ambient lighting (16 colors)
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source_urls:
-  - https://www.opel.de/fahrzeuge/grandland-electric.html
-  - https://ev-database.org/
-  notes: 'The Grandland Electric 98 kWh Long Range is the flagship variant offering
-
-    700 km WLTP range - one of the longest-range EVs in Europe.
-
-
-    Key differences vs 73 kWh GS:
-
-    - 98 kWh NMC battery (vs 73 kWh LFP)
-
-    - 700 km WLTP range (vs 523 km)
-
-    - 231 hp / 345 Nm (vs 213 hp / 260 Nm)
-
-    - 22kW AC charging standard (vs 11kW)
-
-    - Tri-zone climate (vs dual-zone)
-
-    - 10-speaker audio (vs 8-speaker)
-
-    - Heated rear seats standard
-
-    - 20" wheels (vs 19")
-
-    - Panoramic glass roof standard
-
-    - Semi-automated lane change
-
-
-    Platform sibling to Peugeot e-5008 Long Range 98 kWh.
-
-    Built at Eisenach, Germany.
-
-    '

@@ -2,107 +2,26 @@ id: nissan-leaf-52kwh-2025
 name: Standard Range 52 kWh
 model_id: nissan-leaf
 model_year: 2025
-production_years:
-  start: 2025
-  end: null
-trim_level: engage
-market_position: base
 battery:
   usable_kwh: 52.0
   total_kwh: 55.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: pouch
-  supplier: Envision AESC
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: skateboard, CMF-EV platform
-    weight_kg: 380
-  notes: 'All-new battery pack for the 3rd generation LEAF on CMF-EV platform. Active
-    liquid cooling replaces the passive air-cooling of previous generations, significantly
-    improving charging performance and battery longevity.
-
-    '
 range:
   wltp_km: 436
-  wltp_source: manufacturer
   real_world_km: 320
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
-consumption:
-  wltp_kwh_per_100km: 13.8
-  real_world_kwh_per_100km: 16.2
-  real_world_source: estimated
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 28
-      '0_100': 55
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 80
-    - soc_percent: 10
-      power_kw: 130
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 140
-    - soc_percent: 50
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-    notes: CCS2 replaces CHAdeMO from previous generations. Up to 150kW DC fast charging.
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: true
-    v2h: true
-    notes: Nissan continues to lead in V2G/V2H capability, now via CCS2
   ac_max_kw: 11
   dc_max_kw: 150
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 130
-  max_torque_nm: 300
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 130
-  total_power_hp: 176
-  total_torque_nm: 300
 performance:
   top_speed_kmh: 170
-  top_speed_limited: true
   acceleration_0_100_sec: 7.9
 efficiency:
   wltp_kwh_per_100km: 13.8
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 16.2
-  highway:
-    kmh: 120
-    kwh_per_100km: 19.5
-    range_km: 265
-  city:
-    kwh_per_100km: 13.0
-    range_km: 400
 dimensions:
   length_mm: 4640
   width_mm: 1820
@@ -115,50 +34,10 @@ weight:
   payload_kg: 460
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  towing_notes: New CMF-EV platform supports light towing unlike previous generation
 cargo:
   trunk_capacity_liters: 435
   trunk_max_liters: 1460
   frunk_capacity_liters: 0
-interior:
-  seating_capacity: 5
-  trunk_capacity_liters: 435
-  trunk_max_liters: 1460
-  frunk_capacity_liters: 0
-features:
-  exterior:
-  - 17-inch alloy wheels
-  - LED headlights with signature DRL
-  - Flush door handles
-  - Shark fin antenna
-  - Rear spoiler
-  - Power folding mirrors
-  interior:
-  - 12.3-inch touchscreen with Google built-in
-  - 12.3-inch digital instrument cluster
-  - Google Maps, Google Assistant, Google Play
-  - Wireless Apple CarPlay & Android Auto
-  - Dual-zone automatic climate control
-  - Wireless smartphone charging
-  - USB-C ports front and rear
-  - Ambient lighting
-  safety:
-  - ABS with EBD
-  - Electronic stability control
-  - 6 airbags
-  - ISOFIX child seat anchors
-  - Tire pressure monitoring
-  - Rear parking sensors
-  - Rear view camera
-  driver_assistance:
-  - ProPILOT Assist with Navi-Link
-  - Intelligent Cruise Control
-  - Lane Keep Assist
-  - Autonomous Emergency Braking
-  - Blind Spot Warning
-  - Rear Cross Traffic Alert
-  - Traffic Sign Recognition
-  - e-Pedal one-pedal driving
 notes: 'The all-new 2025 Nissan LEAF is a complete reinvention on the CMF-EV platform,
   shared with Renault Megane E-Tech and Scenic E-Tech. The 52 kWh Standard Range offers
   436 km WLTP range with excellent 13.8 kWh/100km efficiency. Key upgrades over the

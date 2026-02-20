@@ -2,96 +2,25 @@ id: hyundai-ioniq-6-standard-range-rwd-2025
 name: Standard Range RWD
 model_id: hyundai-ioniq-6
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: se-standard-range
-market_position: entry-level
 battery:
   usable_kwh: 53.0
   total_kwh: 54.0
   chemistry: NCM
-  nominal_voltage_v: 697
   cell_type: pouch
-  supplier: SK On (SK Innovation)
   warranty_years: 10
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, 800V E-GMP architecture
-    weight_kg: 352
-    modules: null
 range:
   wltp_km: 446
-  wltp_source: manufacturer
   wltp_city_km: 590
   wltp_highway_km: 355
   epa_km: 435
-  epa_source: manufacturer
   real_world_km: 385
   real_world_source: measured
-  real_world_conditions: Mixed driving, 20°C, moderate speed
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 4.8
-      '10_80': 3.2
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 18
-      '0_100': 32
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 170
-    - soc_percent: 10
-      power_kw: 180
-    - soc_percent: 20
-      power_kw: 180
-    - soc_percent: 30
-      power_kw: 165
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 130
-    - soc_percent: 60
-      power_kw: 105
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 22
-    notes: 800V E-GMP architecture enables 18-minute 10-80% charging despite smaller
-      battery
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 180
-motors:
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 151
-  max_torque_nm: 350
-  max_rpm: 13500
-  cooling: liquid
-drivetrain:
-  type: rwd
-  total_power_kw: 151
-  total_power_hp: 204
-  total_torque_nm: 350
 performance:
-  acceleration_0_60_mph_s: 8.1
   top_speed_kmh: 185
-  top_speed_limited: true
   acceleration_0_100_sec: 8.5
 weight:
   curb_weight_kg: 1730
@@ -102,65 +31,6 @@ efficiency:
   wltp_kwh_per_100km: 13.9
   epa_kwh_per_100km: 13.4
   real_world_kwh_per_100km: 15.0
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 18.2
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 21.5
-standard_features:
-- Dual 12.3-inch displays (digital cluster + touchscreen)
-- Hyundai CCNC infotainment with navigation
-- Over-the-air software updates
-- Wireless Apple CarPlay / Android Auto
-- Digital Key 2.0 (NFC + UWB)
-- Highway Driving Assist 2 (Level 2 ADAS)
-- Smart Cruise Control with Stop & Go
-- Lane Following Assist / Lane Keeping Assist
-- Forward Collision-Avoidance Assist
-- Blind-Spot Collision-Avoidance Assist
-- Vehicle-to-Load (V2L) - 3.6kW
-- Heat pump standard
-- Parametric Pixel LED headlights
-- 18-inch alloy wheels
-- 8-way power driver seat
-- Heated front seats
-- Dual wireless smartphone charging
-optional_packages:
-- name: Premium Package
-  features:
-  - Ventilated front seats
-  - Heated rear seats
-  - Bose Premium Audio (8 speakers)
-  - Active Road Noise Cancellation
-  - Vegan leather seating
-- name: Convenience Package
-  features:
-  - Surround View Monitor (360° camera)
-  - Remote Smart Parking Assist 2
-  - Blind-Spot View Monitor
-colors:
-  standard:
-  - Polar White
-  - Phantom Black Pearl
-  premium:
-  - Nocturne Gray Metallic
-  - Digital Teal Pearl
-  - Serenity Blue Pearl
-  - Shooting Star Matte
-  - Gravity Gold Matte
-  - Biophilic Blue Pearl
-interior_colors:
-- Gray Eco-Fabric
-- Gray Vegan Leather
-- Black Vegan Leather
-technology_highlights:
-- Most aerodynamic EV in production (Cd 0.21)
-- 800V E-GMP architecture - 18-minute 10-80% charging
-- Digital Key 2.0 with UWB
-- Over-the-air software updates
-- Plug & Charge (ISO 15118)
-- 'V2L: Power external devices up to 3.6kW'
-- Heat pump standard
 notes: 'The 2025 Ioniq 6 Standard Range RWD is the entry-level variant with 446km
   WLTP range from a 53kWh battery, enabled by class-leading Cd 0.21 aerodynamics.
   The 800V architecture maintains 18-minute 10-80% charging. At 125kg lighter than
@@ -172,12 +42,9 @@ notes: 'The 2025 Ioniq 6 Standard Range RWD is the entry-level variant with 446k
 dimensions:
   length_mm: 4855
   width_mm: 1880
-  width_mirrors_mm: 2141
   height_mm: 1495
   wheelbase_mm: 2950
   ground_clearance_mm: 140
-  drag_coefficient: 0.21
-  frontal_area_m2: 2.29
 cargo:
   trunk_capacity_liters: 401
   trunk_max_liters: 1578
@@ -186,7 +53,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.hyundai.de/modelle/ioniq-6
   - https://www.hyundai.com/worldwide/en/eco/ioniq-6

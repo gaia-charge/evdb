@@ -12,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 800
 range:
   wltp_km: 641
   wltp_city_km: 850
@@ -20,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 565
   real_world_source: ADAC EcoTest
-  notes: 'WLTP range of 641 km (best in Q6 lineup). ADAC tested 565 km real-world.
-
-    Highest range Q6 variant thanks to efficient single rear motor and large battery.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -54,9 +48,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_10_to_80_percent_min: 21
   charging_speed_kmh: 1380
-  plug_and_charge: true
 bidirectional:
   v2l: true
   v2l_max_kw: 11
@@ -73,8 +65,6 @@ performance:
   total_power_kw: 240
   total_power_hp: 326
   total_torque_nm: 485
-  acceleration_0_100_kmh_sec: 6.6
-  acceleration_0_60_mph_sec: 6.2
   top_speed_kmh: 210
   acceleration_0_100_sec: 6.6
 dimensions:
@@ -93,53 +83,11 @@ weight:
   payload_kg: 625
   towing_capacity_braked_kg: 2400
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
 efficiency:
   wltp_kwh_per_100km: 17.0
-  wltp_kwh_per_100km_city: 14.2
-  wltp_kwh_per_100km_highway: 20.5
   real_world_kwh_per_100km: 18.8
-  energy_efficiency_class: A+
-wheels_tires:
-  standard_size_front: 235/55 R19
-  standard_size_rear: 255/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -20km range)
-  - 21 inch (optional, -35km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control with lane keeping assist
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system (standard)
-  - Predictive efficiency assist
-  - Intersection assist
-  - Emergency assist
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  - 5G connectivity (optional)
-  special_features:
-  - Three-stage recuperation (0.1g, 0.15g, 0.2g)
-  - B mode for strong regen (one-pedal driving)
-  - Pre-conditioning (battery & cabin)
-  - Bank & Turn technology
-  - 14.5-inch MMI panoramic display
-  - 11.9-inch virtual cockpit plus
-  - 10.9-inch passenger display (optional)
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
   sources:
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/
-  notes: Performance variant with 240 kW (326 PS) rear motor and 100 kWh battery.
-    ADAC tested real-world range of 565 km. Price starts at €68,800 in Germany. Best
-    balance of range and performance in the Q6 lineup. Same 270 kW DC charging as
-    quattro variant.

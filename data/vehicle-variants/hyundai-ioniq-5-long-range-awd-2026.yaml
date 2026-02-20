@@ -2,96 +2,23 @@ id: hyundai-ioniq-5-long-range-awd-2026
 name: Long Range AWD
 model_id: hyundai-ioniq-5
 model_year: 2026
-production_years:
-  start: 2021
-  end: null
-trim_level: long-range
-market_position: mid-range
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
   chemistry: NMC
-  nominal_voltage_v: 800
   cell_type: pouch
-  supplier: SK Innovation / LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted, cell-to-pack
-    weight_kg: 465
-    modules: 10
 range:
   wltp_km: 498
-  wltp_source: manufacturer
   epa_km: 450
-  epa_source: manufacturer
   real_world_km: 435
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 7.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 17
-      '0_100': 45
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 225
-    - soc_percent: 10
-      power_kw: 240
-    - soc_percent: 20
-      power_kw: 240
-    - soc_percent: 40
-      power_kw: 230
-    - soc_percent: 50
-      power_kw: 195
-    - soc_percent: 60
-      power_kw: 150
-    - soc_percent: 70
-      power_kw: 100
-    - soc_percent: 80
-      power_kw: 58
-    - soc_percent: 90
-      power_kw: 26
-    - soc_percent: 100
-      power_kw: 12
-    notes: Multi-charging system automatically adapts to 400V or 800V stations. 2026
-      model features improved charging curve
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 240
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 74
-  max_torque_nm: 255
-  cooling: liquid
-- position: rear
-  type: permanent-magnet-synchronous
-  max_power_kw: 165
-  max_torque_nm: 350
-  cooling: liquid
-drivetrain:
-  type: awd
-  total_power_kw: 239
-  total_power_hp: 325
-  total_torque_nm: 605
 performance:
   top_speed_kmh: 185
-  top_speed_limited: true
   acceleration_0_100_sec: 5.0
 dimensions:
   length_mm: 4655
@@ -113,62 +40,6 @@ efficiency:
   wltp_kwh_per_100km: 18.9
   epa_kwh_per_100km: 20.2
   real_world_kwh_per_100km: 17.7
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 20.8
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 24.2
-standard_features:
-- 12.3-inch dual panoramic displays
-- Highway Driving Assist 2 (HDA2)
-- Augmented Reality Head-Up Display
-- Vehicle-to-Load (V2L) - 3.6kW
-- Heat pump
-- Pixel LED headlights
-- 20-inch alloy wheels
-- Relaxation seats (front)
-- Universal Island center console
-- Smart power tailgate
-- Bose Premium Sound (8 speakers)
-- Surround view monitor
-- Remote Smart Parking Assist
-optional_packages:
-- name: Digital Side Mirrors
-  features:
-  - Camera-based side mirrors
-  - Interior displays
-- name: Solar Roof
-  features:
-  - Solar panel integration
-  - Up to 2000km/year additional range
-- name: N Performance Package
-  features:
-  - Sport-tuned suspension
-  - Performance brakes
-  - Sport seats
-colors:
-  standard:
-  - Atlas White
-  - Phantom Black Pearl
-  - Cyber Grey Metallic
-  premium:
-  - Digital Teal Pearl
-  - Lucid Blue Pearl
-  - Shooting Star Matte
-  - Gravity Gold Matte
-interior_colors:
-- Dark Pebble Grey / Dove Grey
-- Obsidian Black
-- Cognac Brown / Dove Grey
-version:
-  facelift: false
-  major_changes:
-  - Increased battery capacity (82 kWh total)
-  - Improved charging speed (240 kW peak)
-  - Enhanced battery thermal management
-  - Updated infotainment with AI assistant
-  - Refined interior materials and finishes
-  - Improved sound insulation
 notes: 'The Ioniq 5 Long Range AWD 2026 represents the most popular and well-rounded
   variant in the lineup. The 2026 model year brings significant improvements including
   increased battery capacity (77.0 kWh usable vs 72.6 kWh in 2024), slightly improved
@@ -186,8 +57,6 @@ metadata:
   created_at: '2026-02-09'
   updated_at: '2026-02-09'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.hyundai.com/worldwide/en/eco/ioniq5/specifications
   - https://www.hyundai.com/us/en/vehicles/ioniq-5/specs

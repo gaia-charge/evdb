@@ -2,67 +2,23 @@ id: lotus-emeya-base-2025
 name: Base
 model_id: lotus-emeya
 model_year: 2025
-production_years:
-  start: 2024
-  end: null
-trim_level: base
-market_position: entry
 battery:
   usable_kwh: 102.0
   total_kwh: 105.0
   chemistry: NCM
-  nominal_voltage_v: 800
-  thermal_management: liquid-cooled
   warranty_years: 8
   warranty_km: 160000
 range:
   wltp_km: 610
-  wltp_source: manufacturer
   real_world_km: 530
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 5.0
-    onboard_charger_kw: 22.0
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 18
-      0_80: 21
-  bidirectional:
-    v2l: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 350
 efficiency:
   wltp_kwh_per_100km: 16.7
-  real_world:
-    combined_kwh_per_100km: 19.2
-    highway_kwh_per_100km: 22.0
-    city_kwh_per_100km: 16.5
-drivetrain:
-  configuration: awd
-  motor_type: permanent_magnet
-  motors:
-    front:
-      type: permanent_magnet
-      power_kw: 225
-      power_hp: 306
-      torque_nm: 400
-    rear:
-      type: permanent_magnet
-      power_kw: 225
-      power_hp: 306
-      torque_nm: 400
 performance:
   top_speed_kmh: 250
-  top_speed_limited: true
   acceleration_0_100_sec: 4.15
 dimensions:
   length_mm: 5139
@@ -71,11 +27,8 @@ dimensions:
   height_mm: 1460
   wheelbase_mm: 3069
   ground_clearance_mm: 135
-  drag_coefficient: 0.21
-  frontal_area_m2: 2.45
 weight:
   curb_weight_kg: 2475
-  gvwr_kg: 2950
   gross_vehicle_weight_kg: 2950
   payload_kg: 475
   towing_capacity_braked_kg: 0
@@ -83,79 +36,10 @@ cargo:
   trunk_capacity_liters: 509
   trunk_max_liters: 688
   frunk_capacity_liters: 31
-equipment:
-  standard:
-    exterior:
-    - 20" alloy wheels
-    - LED matrix headlights
-    - Animated light bar
-    - Deployable rear spoiler
-    - Active aero shutters
-    - Flush door handles
-    - Panoramic glass roof
-    interior:
-    - 15.1" OLED touchscreen infotainment
-    - 55" augmented reality head-up display
-    - 12.6" digital instrument cluster
-    - 4-zone climate control
-    - Heated and ventilated front seats
-    - Electric adjustable sport seats (4 seats)
-    - Ambient lighting
-    - Alcantara and leather upholstery
-    - KEF Premium audio (1380W, 15 speakers)
-    safety:
-    - Autonomous Emergency Braking
-    - 360-degree camera system
-    - Adaptive cruise control
-    - Lane keeping assist
-    - Traffic sign recognition
-    - Blind spot monitoring
-    - 8 airbags
-    technology:
-    - Apple CarPlay and Android Auto
-    - Air suspension with adaptive damping
-    - Multi-mode driving (Range/Tour/Sport/Individual)
-    - Torque vectoring
-  optional:
-  - name: Carbon Pack
-    price_eur: 10000
-  - name: Luxury Pack
-    price_eur: 15000
-  - name: 21" forged wheels
-    price_eur: 3000
-  - name: Rear-wheel steering
-    price_eur: 4000
-  - name: Meridian Signature audio (2160W, 23 speakers)
-    price_eur: 6500
-pricing:
-  msrp_eur: 96950
-  msrp_usd: null
-colors:
-  exterior:
-  - name: Stellar Black
-    code: SB
-    type: metallic
-  - name: Kaimu Grey
-    code: KG
-    type: metallic
-  - name: Solar Yellow
-    code: SY
-    type: metallic
-  - name: Seneca Blue
-    code: SNB
-    type: metallic
-  - name: Blossom White
-    code: BW
-    type: solid
-  interior:
-  - name: Black Alcantara and leather
-  - name: Grey leather with carbon trim
-  - name: Tan leather with wood trim
 metadata:
   created_at: '2026-02-09'
   updated_at: '2026-02-09'
   data_quality: verified
-  confidence: high
   sources:
   - https://www.lotuscars.com/en-GB/emeya
   - https://www.lotuscars.com/en-DE/emeya

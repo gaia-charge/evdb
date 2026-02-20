@@ -1,10 +1,8 @@
-# Tesla Model X Long Range AWD (2025 Model Year)
 id: tesla-model-x-long-range-awd-2025
 name: Long Range AWD
 model_id: tesla-model-x
 model_year: 2025
 variant_code: MX-LR
-
 dimensions:
   length_mm: 5057
   width_mm: 1999
@@ -12,12 +10,10 @@ dimensions:
   height_mm: 1684
   wheelbase_mm: 2965
   ground_clearance_mm: 174
-
 cargo:
   trunk_capacity_liters: 1050
   trunk_max_liters: 2614
   frunk_capacity_liters: 183
-
 battery:
   usable_kwh: 95.0
   total_kwh: 100.0
@@ -27,7 +23,6 @@ battery:
   warranty_years: 8
   warranty_km: 240000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 550
   wltp_city_km: null
@@ -35,7 +30,6 @@ range:
   epa_km: 543
   real_world_km: 465
   real_world_source: estimated
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -43,71 +37,66 @@ charging:
   dc_max_kw: 250
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 180
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 20
-      power_kw: 250
-    - soc_percent: 30
-      power_kw: 230
-    - soc_percent: 40
-      power_kw: 190
-    - soc_percent: 50
-      power_kw: 160
-    - soc_percent: 60
-      power_kw: 125
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 70
-    - soc_percent: 90
-      power_kw: 40
-    - soc_percent: 100
-      power_kw: 20
+  - soc_percent: 0
+    power_kw: 180
+  - soc_percent: 10
+    power_kw: 250
+  - soc_percent: 20
+    power_kw: 250
+  - soc_percent: 30
+    power_kw: 230
+  - soc_percent: 40
+    power_kw: 190
+  - soc_percent: 50
+    power_kw: 160
+  - soc_percent: 60
+    power_kw: 125
+  - soc_percent: 70
+    power_kw: 95
+  - soc_percent: 80
+    power_kw: 70
+  - soc_percent: 90
+    power_kw: 40
+  - soc_percent: 100
+    power_kw: 20
   time_0_to_80_min: 32
   time_10_to_80_min: 29
   time_20_to_80_min: 26
   charging_speed_kmh: 1140
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 193
-      power_hp: 262
-      torque_nm: 280
-    - position: rear
-      type: permanent magnet
-      power_kw: 300
-      power_hp: 408
-      torque_nm: 420
+  - position: front
+    type: permanent magnet
+    power_kw: 193
+    power_hp: 262
+    torque_nm: 280
+  - position: rear
+    type: permanent magnet
+    power_kw: 300
+    power_hp: 408
+    torque_nm: 420
   total_power_kw: 493
   total_power_hp: 670
   total_torque_nm: 700
   acceleration_0_100_sec: 3.9
   top_speed_kmh: 250
-
 weight:
   curb_weight_kg: 2455
   gross_vehicle_weight_kg: 3020
   payload_kg: 565
   towing_capacity_braked_kg: 2250
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 17.3
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 20.4
   efficiency_rating: B
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -115,51 +104,59 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-
 optional_equipment:
-  - name: Enhanced Autopilot
-    code: AP
-    category: technology
-    included_in_base: false
-  - name: Full Self-Driving Capability
-    code: FSD
-    category: technology
-    included_in_base: false
-  - name: Premium Connectivity
-    code: PC
-    category: technology
-    included_in_base: false
-  - name: 6-Seat Configuration
-    code: SIX
-    category: interior
-    included_in_base: false
-  - name: 5-Seat Configuration
-    code: FIVE
-    category: interior
-    included_in_base: false
+- name: Enhanced Autopilot
+  code: AP
+  category: technology
+  included_in_base: false
+- name: Full Self-Driving Capability
+  code: FSD
+  category: technology
+  included_in_base: false
+- name: Premium Connectivity
+  code: PC
+  category: technology
+  included_in_base: false
+- name: 6-Seat Configuration
+  code: SIX
+  category: interior
+  included_in_base: false
+- name: 5-Seat Configuration
+  code: FIVE
+  category: interior
+  included_in_base: false
+notes: '2025 Model X Long Range AWD receives minor updates over 2024 model.
 
-notes: |
-  2025 Model X Long Range AWD receives minor updates over 2024 model.
-  
+
   Updates from 2024:
+
   - Slightly improved WLTP range: 550km (up from 543km)
+
   - Improved efficiency: 17.3 kWh/100km (from 17.5 kWh/100km)
+
   - Updated Autopilot software (2025.x firmware)
+
   - Enhanced cabin noise insulation
+
   - Price reduction to €99,990 (from €104,990 in 2024)
-  
+
+
   Features distinctive falcon-wing rear doors. 7-seat configuration standard
+
   (5 and 6-seat options available). 17" landscape touchscreen, premium audio
+
   with 22 speakers (960W), glass roof with UV protection.
-  
+
+
   Competes with:
+
   - Mercedes-Benz EQS SUV 450+ (€119,658, more luxury, less sporty)
+
   - BMW iX xDrive50 (€93,100, similar size, better handling)
+
   - Audi Q8 e-tron 55 quattro (€79,600, less range, more affordable)
 
+  '
 metadata:
   data_quality: verified
-  created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  contributor: OpenClaw EVDB Development
-  version: 1.0
+  created_at: '2026-02-10'

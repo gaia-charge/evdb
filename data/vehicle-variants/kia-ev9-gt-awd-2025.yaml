@@ -1,12 +1,8 @@
-# Kia EV9 GT AWD 2025
-# High-performance variant with dual motors
-
 id: kia-ev9-gt-awd-2025
 name: GT AWD
 model_id: kia-ev9
 model_year: 2025
 variant_code: EV9-GT-AWD-2025
-
 battery:
   usable_kwh: 99.8
   total_kwh: 99.8
@@ -16,21 +12,12 @@ battery:
   warranty_years: 10
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 800
-  notes: |
-    99.8 kWh battery with 800V architecture. Same battery pack as other EV9
-    variants but with higher-output dual motor setup. SK On NCM cells.
-
 range:
   wltp_km: 490
   wltp_city_km: 600
   wltp_highway_km: 420
   real_world_km: 400
   real_world_source: Automotive media testing
-  notes: |
-    490 km WLTP range - lower than standard AWD due to more powerful motors
-    and performance-oriented tuning. Real-world approximately 400 km.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -38,85 +25,67 @@ charging:
   dc_max_kw: 233
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 10
-      power_kw: 233
-    - soc_percent: 20
-      power_kw: 233
-    - soc_percent: 30
-      power_kw: 233
-    - soc_percent: 40
-      power_kw: 215
-    - soc_percent: 50
-      power_kw: 190
-    - soc_percent: 60
-      power_kw: 160
-    - soc_percent: 70
-      power_kw: 120
-    - soc_percent: 80
-      power_kw: 85
+  - soc_percent: 10
+    power_kw: 233
+  - soc_percent: 20
+    power_kw: 233
+  - soc_percent: 30
+    power_kw: 233
+  - soc_percent: 40
+    power_kw: 215
+  - soc_percent: 50
+    power_kw: 190
+  - soc_percent: 60
+    power_kw: 160
+  - soc_percent: 70
+    power_kw: 120
+  - soc_percent: 80
+    power_kw: 85
   time_10_to_80_min: 24
   charging_speed_kmh: 850
-  notes: |
-    Same 800V/233kW charging as other EV9 variants. 10-80% in 24 minutes.
-
 bidirectional:
   v2l: true
   v2l_max_kw: 3.6
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: permanent magnet
-      power_kw: 160
-      power_hp: 218
-      torque_nm: 350
-    - position: rear
-      type: permanent magnet
-      power_kw: 270
-      power_hp: 367
-      torque_nm: 350
+  - position: front
+    type: permanent magnet
+    power_kw: 160
+    power_hp: 218
+    torque_nm: 350
+  - position: rear
+    type: permanent magnet
+    power_kw: 270
+    power_hp: 367
+    torque_nm: 350
   total_power_kw: 379
   total_power_hp: 515
   total_torque_nm: 700
   acceleration_0_100_sec: 4.3
   top_speed_kmh: 200
-  notes: |
-    515 hp combined output from dual permanent magnet motors. 0-100 km/h in
-    just 4.3 seconds - remarkable for a 7-seat SUV weighing nearly 2.8 tonnes.
-    Electronic Limited Slip Differential (e-LSD) for enhanced cornering.
-    GT-tuned suspension with adaptive dampers. Drift mode available.
-
 dimensions:
   length_mm: 5015
   width_mm: 1980
   height_mm: 1755
   wheelbase_mm: 3100
   ground_clearance_mm: 178
-
 cargo:
   trunk_capacity_liters: 333
   trunk_max_liters: 828
   frunk_capacity_liters: 0
-
-
 weight:
   curb_weight_kg: 2782
   gross_vehicle_weight_kg: 3280
   payload_kg: 498
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 24.5
   real_world_kwh_per_100km: 27.0
   efficiency_rating: C
-  notes: |
-    24.5 kWh/100km WLTP - higher than standard variants due to more powerful
-    motors and performance orientation. Real-world around 27 kWh/100km.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -124,37 +93,24 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Highway Driving Assist 2"
-  notes: |
-    All GT-line features plus:
-    - GT-exclusive exterior styling (bumpers, grille, badges)
-    - GT-tuned adaptive suspension with electronic dampers
-    - Electronic Limited Slip Differential (e-LSD)
-    - GT drive mode with Drift mode
-    - Neon Green interior accents
-    - GT sport seats with enhanced bolstering
-    - 21-inch GT-exclusive alloy wheels
-    - Meridian Premium Audio (14 speakers)
-    - Augmented Reality Head-Up Display
-    - Digital side mirrors (optional)
-    - Triple 12.3" panoramic curved display
-    - Remote Smart Parking Assist 2
-    - Surround View Monitor
-    - Blind-Spot View Monitor
+notes: 'The Kia EV9 GT AWD 2025 is the performance flagship of the EV9 lineup.
 
-notes: |
-  The Kia EV9 GT AWD 2025 is the performance flagship of the EV9 lineup.
   At €89,990 in Germany, it offers supercar-rivaling acceleration (4.3s 0-100)
+
   in a practical 7-seat SUV package. The GT adds 515 hp dual motors,
+
   GT-tuned suspension, e-LSD, and exclusive styling. Despite the performance
+
   focus, it retains full family practicality with 7 seats and 800V fast charging.
+
   Competes with Tesla Model X Performance but at a significantly lower price.
 
+  '
 metadata:
-  created_at: "2026-02-09"
+  created_at: '2026-02-09'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.kia.com/de/modelle/ev9/
-    - https://www.kia.com/de/modelle/ev9/technische-daten/
+  - https://www.kia.com/de/modelle/ev9/
+  - https://www.kia.com/de/modelle/ev9/technische-daten/

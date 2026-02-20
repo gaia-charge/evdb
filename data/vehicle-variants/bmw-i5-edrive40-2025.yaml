@@ -2,11 +2,6 @@ id: bmw-i5-edrive40-2025
 name: eDrive40
 model_id: bmw-i5
 model_year: 2025
-production_years:
-  start: 2023
-  end: null
-trim_level: base
-market_position: base
 dimensions:
   length_mm: 5060
   width_mm: 1900
@@ -22,75 +17,19 @@ battery:
   usable_kwh: 81.2
   total_kwh: 84.3
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 550
-    cells: 192
 range:
   wltp_km: 585
-  wltp_source: manufacturer
   epa_km: 470
-  epa_source: manufacturer
   real_world_km: 498
   real_world_source: measured
-  real_world_conditions: Mixed driving, 15-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 8.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 49
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 185
-    - soc_percent: 10
-      power_kw: 205
-    - soc_percent: 30
-      power_kw: 205
-    - soc_percent: 50
-      power_kw: 165
-    - soc_percent: 70
-      power_kw: 108
-    - soc_percent: 80
-      power_kw: 70
-    - soc_percent: 90
-      power_kw: 39
-    - soc_percent: 100
-      power_kw: 18
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 205
-motors:
-- position: rear
-  type: synchronous
-  max_power_kw: 250
-  max_torque_nm: 430
-  cooling: liquid
-drivetrain:
-  type: rwd
-  total_power_kw: 250
-  total_power_hp: 340
-  total_torque_nm: 430
 performance:
   top_speed_kmh: 193
-  top_speed_limited: true
   acceleration_0_100_sec: 6.0
 weight:
   curb_weight_kg: 2230
@@ -102,76 +41,6 @@ efficiency:
   wltp_kwh_per_100km: 15.8
   epa_kwh_per_100km: 17.3
   real_world_kwh_per_100km: 16.3
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 19.1
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 21.6
-  - speed_kmh: 140
-    consumption_kwh_per_100km: 24.6
-standard_features:
-- BMW Curved Display (12.3" + 14.9")
-- BMW Operating System 8.5
-- 4-zone automatic climate control
-- Heat pump
-- LED headlights with matrix function
-- 18-inch alloy wheels
-- Vernasca leather seats
-- Parking Assistant Plus
-- Driving Assistant (Level 2)
-- Comfort Access (keyless entry)
-- 3-spoke leather steering wheel
-- Ambient lighting (6 themes)
-- Wireless phone charging
-- Harman Kardon Surround Sound (16 speakers)
-optional_packages:
-- name: M Sport Package Pro
-  features:
-  - M Sport suspension
-  - 19-inch M wheels
-  - M Sport steering wheel
-  - M Sport seats
-  - M Sport brakes with blue calipers
-- name: Driving Assistant Professional
-  features:
-  - Highway Assistant (Level 2+)
-  - Active cruise control with Stop & Go
-  - Steering and lane control assistant
-  - Active side collision protection
-  - Emergency stop assistant
-- name: Executive Package
-  features:
-  - Panoramic glass roof Sky Lounge
-  - Adaptive air suspension with self-leveling
-  - Massage seats front
-  - Heated rear seats
-  - 4-zone climate control rear
-- name: Technology Package
-  features:
-  - BMW Head-Up Display with AR
-  - Parking Assistant Professional (automated)
-  - Surround View with 3D view
-  - BMW IconicSounds Electric by Hans Zimmer
-colors:
-  standard:
-  - Alpine White
-  - Black Sapphire Metallic
-  premium:
-  - Brooklyn Grey Metallic
-  - Mineral White Metallic
-  - Portimao Blue Metallic
-  - Aventurine Red Metallic
-  - Tanzanite Blue II Metallic
-  - Skyscraper Grey Metallic
-  individual:
-  - Frozen Pure Grey
-  - Frozen Deep Grey
-version:
-  facelift: false
-  major_changes:
-  - Minor software update from BMW Operating System 8.5
-  - Improved WLTP range (+3km to 585 km vs 2024)
-  - Slight efficiency improvement through software optimization
 notes: 'The 2025 BMW i5 eDrive40 continues with the G60 platform and receives incremental
   software updates. WLTP range improves slightly to 585 km through battery management
   optimization. The 400V architecture with 205 kW DC charging remains unchanged. The
@@ -184,8 +53,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.bmw.com/en/all-models/5-series/sedan/2023/bmw-5-series-sedan-overview.html
   - https://ev-database.org/car/1867/BMW-i5-eDrive40

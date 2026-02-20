@@ -1,145 +1,30 @@
 id: porsche-taycan-rwd-performance-battery-plus-2024
 name: RWD Performance Battery Plus
 model_id: porsche-taycan
-manufacturer_id: porsche
-variant_name: RWD Performance Battery Plus
 model_year: 2024
-trim_level: Base
-version: Performance Battery Plus
-description: "The Porsche Taycan RWD (Rear-Wheel Drive) is the entry-level variant\
-  \ of the \nTaycan lineup, featuring a single rear motor and rear-wheel drive configuration.\
-  \ \nDespite being the \"base\" model, it delivers impressive performance (0-100\
-  \ km/h \nin 5.4s) while offering the best efficiency and longest range of all Taycan\
-  \ \nvariants - up to 678km WLTP with Performance Battery Plus.\n\nThe RWD variant\
-  \ maintains Porsche's core DNA: precise handling, excellent build \nquality, and\
-  \ sports car dynamics. The rear-wheel drive configuration provides \na more traditional\
-  \ Porsche driving feel, similar to classic rear-engine Porsche \nsports cars. Lower\
-  \ weight (no front motor) improves efficiency and handling \nbalance.\n\nWith 800V\
-  \ architecture, the RWD still achieves 270kW peak DC charging, enabling \nrapid\
-  \ 10-80% charges in ~23 minutes. For many buyers, the RWD offers the best \nvalue\
-  \ proposition: excellent range, strong performance, and pure Porsche driving \n\
-  dynamics at a more accessible price point.\n"
 battery:
   usable_kwh: 93.4
   total_kwh: 105.0
   chemistry: NMC
-  cells: pouch
   manufacturer: LG Energy Solution
-  supplier: LG Energy Solution (South Korea)
-  modules: 33
-  cells_total: 396
-  nominal_voltage: 725
-  pack_voltage_range: 610-835V (800V architecture)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid-cooled
-  heating: integrated battery heating
-  preconditioning: true
-  notes: "Same Performance Battery Plus as other Taycan variants. The 800V architecture\
-    \ \nenables ultra-fast DC charging. Single motor RWD configuration maximizes \n\
-    efficiency, delivering the longest range in the Taycan lineup.\n"
 range:
   wltp_km: 678
   wltp_city_km: 890
   wltp_highway_km: 555
   epa_km: 547
-  epa_miles: 340
   real_world_km: 570
-  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
-  notes: "WLTP: 678km (Performance Battery Plus, 19\" Taycan Aero wheels)\nEPA: 340\
-    \ miles / 547km (US rating)\nReal-world: ~570km mixed driving in good conditions\n\
-    \nLONGEST range of all Taycan variants thanks to single motor efficiency and \n\
-    lower weight. Excellent for long-distance touring. Winter range penalty: \n~20-25%\
-    \ in cold weather (better than AWD variants due to lower power consumption).\n"
 efficiency:
   wltp_kwh_per_100km: 17.9
   epa_kwh_per_100km: 20.5
   real_world_kwh_per_100km: 21.5
-  real_world_conditions: Mixed driving, 20°C ambient, normal driving style
-  notes: "Most efficient Taycan variant at 17.9 kWh/100km WLTP. Single rear motor\
-    \ \neliminates front motor drag and reduces overall system losses. Still higher\
-    \ \nconsumption than smaller EVs (Tesla Model 3 ~14 kWh/100km) due to Taycan's\
-    \ \nsports car nature (wider tires, heavier weight, performance-oriented tuning).\n"
 charging:
-  ac:
-    standard: true
-    optional_upgrade_kw: 22
-    optional_upgrade_cost: €1,470 (22kW onboard charger)
-    connector_type: Type2
-    phases: 3
-    time_0_100_hours: 9.0
-    notes: 'Standard: 11kW AC (3-phase Type2) - 0-100% in ~9 hours
-
-      Optional: 22kW AC onboard charger upgrade (€1,470) - 0-100% in ~4.5 hours
-
-      '
-  dc:
-    connector_type: CCS2
-    architecture_voltage: 800
-    time_10_80_minutes: 22.5
-    time_5_80_minutes: 22.5
-    peak_charge_time_minutes: 18-35% state of charge
-    notes: "Same 800V fast charging as more expensive variants:\n- Peak: 270kW (achieved\
-      \ between 18-35% SoC at 350kW chargers)\n- 10-80%: ~22.5 minutes (ideal conditions)\n\
-      - Average 10-80%: ~23-25 minutes real-world\n\nSingle motor RWD offers same\
-      \ charging performance as dual-motor AWD variants.\nThis is a key advantage\
-      \ of Taycan RWD: base model pricing with flagship \ncharging speeds.\n"
-    charge_curve:
-    - soc_percent: 0
-      power_kw: 50
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 18
-      power_kw: 270
-      note: Peak power
-    - soc_percent: 35
-      power_kw: 265
-    - soc_percent: 50
-      power_kw: 175
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 50
   ac_max_kw: 11
   dc_max_kw: 270
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-  notes: Not currently supported in production models
-motors:
-  count: 1
-  type: Permanent Magnet Synchronous Motor (PMSM)
-  configuration: RWD (rear-wheel drive)
-  rear_motor:
-    power_kw: 240
-    power_hp: 326
-    type: PMSM
-  combined_power_kw: 240
-  combined_power_hp: 326
-  overboost_power_kw: 280
-  overboost_power_hp: 380
-  overboost_duration_seconds: 10
-  torque_nm: 345
-  notes: "Taycan RWD features single rear motor:\n- Rear: 240kW (326hp) continuous,\
-    \ 280kW (380hp) overboost\n- Torque: 345 Nm (lower than AWD variants but sufficient\
-    \ for spirited driving)\n\nOverboost (Launch Control): 280kW for ~10 seconds during\
-    \ hard acceleration.\nPure rear-wheel drive provides classic sports car feel with\
-    \ excellent \nhandling balance and driver engagement.\n"
-drive_type: RWD
-driven_wheels: rear
 performance:
-  acceleration_0_60_mph_seconds: 5.1
-  acceleration_0_200_kmh_seconds: 19.8
   top_speed_kmh: 230
-  top_speed_electronically_limited: true
-  notes: "Taycan RWD Performance Battery Plus with overboost (Launch Control):\n-\
-    \ 0-100 km/h: 5.4 seconds\n- 0-60 mph: 5.1 seconds\n- 0-200 km/h: 19.8 seconds\n\
-    - Top speed: 230 km/h (electronically limited)\n- Quarter mile: ~13.6 seconds\n\
-    \nStill very quick despite being \"entry-level\". Faster than most hot hatches\
-    \ \nand many sports cars. Porsche's two-speed transmission on rear axle maintains\
-    \ \nstrong mid-range acceleration.\n"
   acceleration_0_100_sec: 5.4
   total_power_kw: 240
   total_power_hp: 326
@@ -156,111 +41,14 @@ cargo:
   frunk_capacity_liters: 84
 weight:
   curb_weight_kg: 2170
-  distribution_front_percent: 45
-  distribution_rear_percent: 55
   gross_vehicle_weight_kg: 2605
   payload_kg: 435
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-  notes: "Lightest Taycan variant at 2,170kg (125kg lighter than 4S) due to single\
-    \ \nmotor. Rear-biased weight distribution (45/55) provides classic rear-drive\
-    \ \nsports car handling. Lower weight improves efficiency, handling, and reduces\
-    \ \ntire wear.\n"
-suspension:
-  front: Double-wishbone with adaptive air suspension
-  rear: Multi-link with adaptive air suspension
-  adaptive_damping: Porsche Active Suspension Management (PASM)
-  adjustable_ride_height: true
-  notes: "Standard three-chamber air suspension with PASM (Porsche Active Suspension\
-    \ \nManagement). Same high-quality suspension as more expensive variants. Optional\
-    \ \nPorsche Torque Vectoring Plus (PTV Plus, €1,890) adds electronic rear \ndifferential\
-    \ lock for improved cornering.\n"
-brakes:
-  front: 360mm ventilated discs
-  rear: 358mm ventilated discs
-  caliper_type: Fixed aluminum monobloc calipers
-  regenerative: true
-  regenerative_max_power_kw: 265
-  notes: "Standard: Fixed aluminum monobloc calipers with 360mm front / 358mm rear\
-    \ discs\nOptional: Porsche Ceramic Composite Brake (PCCB) - 420mm front / 410mm\
-    \ rear\nOptional: Porsche Surface Coated Brake (PSCB) - tungsten carbide coating\n\
-    \nRegenerative braking: Up to 265kW recuperation (slightly lower than AWD \nvariants\
-    \ due to single motor).\n"
-tires:
-  front: 225/55 R19
-  rear: 275/45 R19
-  wheel_size_inches: 19
-  notes: 'Standard RWD wheels: 19" Taycan Aero wheels (optimized for efficiency)
-
-    Optional: 20" or 21" wheels available but reduce range slightly
-
-    Staggered setup (wider rears) maintains rear-drive sports car character
-
-    '
-climate:
-  heat_pump: true
-  auto_climate_zones: 3
-  notes: 'Standard: Automatic 3-zone climate control with heat pump
-
-    Heat pump improves winter efficiency significantly
-
-    Pre-conditioning via Porsche Connect app
-
-    '
-interior:
-  seats: 4
-  seat_material: Partial leather / Synthetic
-  seat_adjustment: 8-way power adjustable front seats (standard), 14-way optional
-  steering_wheel: Leather multi-function steering wheel
-  display_instrument: 16.8" curved touchscreen + 12.6" digital instrument cluster
-  display_passenger: Optional 10.9" passenger display
-  sound_system: Sound Package Plus (standard), BOSE/Burmester optional
-  ambient_lighting: true
-  notes: "RWD has slightly simpler standard interior than 4S/Turbo variants but can\
-    \ be \noptioned to same level. Standard partial leather with synthetic inserts.\
-    \ \nOptional upgrades available: full leather, extended leather, comfort seats.\n"
-adas_features:
-- Porsche InnoDrive (adaptive cruise with predictive range optimization, optional)
-- Lane Keeping Assist
-- Lane Change Assist (optional)
-- Traffic Sign Recognition
-- Adaptive Cruise Control with Stop & Go (optional)
-- Surround View (360° cameras, optional)
-- Park Assist with reversing camera (optional)
-connectivity:
-  system: Porsche Communication Management (PCM) 6.0
-  apple_carplay: true
-  android_auto: true
-  wireless_charging: true
-  wifi_hotspot: true
-  ota_updates: true
-  remote_app: Porsche Connect (My Porsche app)
-  voice_assistant: '"Hey Porsche" voice control'
-  notes: 'PCM 6.0 with 16.8" curved touchscreen. Wireless CarPlay/Android Auto.
-
-    OTA updates. My Porsche app for remote control.
-
-    '
 metadata:
   data_quality: verified
-  data_source: manufacturer
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  verified_by: Porsche official specifications
   sources:
   - https://www.porsche.com/germany/models/taycan/taycan-models/taycan/
   - https://newsroom.porsche.com
   - https://press.porsche.com
-  notes: "The Taycan RWD is the most underrated variant in the lineup. It offers:\n\
-    - BEST range: 678km WLTP (120km more than 4S, 135km more than Turbo)\n- BEST efficiency:\
-    \ 17.9 kWh/100km (3kWh/100km better than 4S)\n- LIGHTEST weight: 2,170kg (125kg\
-    \ lighter than 4S)\n- SAME 800V charging: 270kW peak (no compromise)\n- LOWEST\
-    \ price: ~€25k cheaper than 4S\n- PURE rear-drive feel: Classic Porsche sports\
-    \ car character\n\nFor many buyers, the RWD is the smartest choice. You get genuine\
-    \ Porsche \ndriving dynamics, excellent range, world-class charging, and significant\
-    \ \ncost savings. Unless you need AWD traction or sub-5-second 0-100, the RWD\
-    \ \ndelivers the complete Taycan experience.\n\nCompetitors: Tesla Model 3 Long\
-    \ Range RWD, BMW i4 eDrive40, Mercedes EQE 300\n\nRecommended options:\n- 22kW\
-    \ AC onboard charger (€1,470)\n- Porsche InnoDrive (€2,890) - adaptive cruise\
-    \ + range optimization\n- PTV Plus (€1,890) - electronic rear diff for better\
-    \ cornering\n- PSCB brakes (€6,210) - no brake dust, easier maintenance\n"

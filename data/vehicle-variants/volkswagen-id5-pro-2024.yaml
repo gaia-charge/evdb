@@ -1,10 +1,8 @@
-# Volkswagen ID.5 Pro (2024)
 id: volkswagen-id5-pro-2024
 name: Pro
 model_id: volkswagen-id5
 model_year: 2024
 variant_code: ID5-PRO
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -14,11 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: |
-    77 kWh usable battery (82 kWh gross). Same battery pack as ID.4 Pro
-    and ID.3 Pro. NCM chemistry with 400V architecture.
-
 range:
   wltp_km: 520
   wltp_city_km: 660
@@ -26,11 +19,6 @@ range:
   epa_km: null
   real_world_km: 430
   real_world_source: ADAC EcoTest
-  notes: |
-    WLTP range of 520 km with 77 kWh battery. Slightly better than ID.4 Pro
-    (513 km) thanks to improved aerodynamics (Cd 0.26 vs 0.28). Real-world
-    range around 430 km in mixed conditions.
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -38,58 +26,47 @@ charging:
   dc_max_kw: 175
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 175
-    - soc_percent: 10
-      power_kw: 175
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 155
-    - soc_percent: 40
-      power_kw: 135
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 90
-    - soc_percent: 70
-      power_kw: 65
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 30
-  time_0_to_100_min: 38
+  - soc_percent: 0
+    power_kw: 175
+  - soc_percent: 10
+    power_kw: 175
+  - soc_percent: 20
+    power_kw: 170
+  - soc_percent: 30
+    power_kw: 155
+  - soc_percent: 40
+    power_kw: 135
+  - soc_percent: 50
+    power_kw: 115
+  - soc_percent: 60
+    power_kw: 90
+  - soc_percent: 70
+    power_kw: 65
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 30
   time_10_to_80_min: 28
   time_20_to_80_min: 25
   charging_speed_kmh: 1080
-  notes: |
-    Fast DC charging up to 175 kW peak. 10-80% in 28 minutes with 77 kWh
-    battery. 11 kW AC charging standard (optional 22 kW available).
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-  notes: "Bidirectional charging not supported in 2024 model"
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 545
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 545
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 545
   acceleration_0_100_sec: 7.4
   top_speed_kmh: 160
-  notes: |
-    Single permanent magnet motor at rear axle with 286 hp and 545 Nm.
-    0-100 km/h in 7.4 seconds. Top speed limited to 160 km/h.
-
 dimensions:
   length_mm: 4599
   width_mm: 1852
@@ -98,37 +75,21 @@ dimensions:
   wheelbase_mm: 2766
   ground_clearance_mm: 164
   turning_circle_m: 10.2
-
 cargo:
   trunk_capacity_liters: 549
   trunk_max_liters: 1561
   frunk_capacity_liters: 0
-
 weight:
   curb_weight_kg: 2119
   gross_vehicle_weight_kg: 2640
   payload_kg: 521
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  roof_load_kg: 75
-  distribution_front_percent: 48
-  distribution_rear_percent: 52
-  notes: "Similar weight to ID.4 Pro despite coupe styling"
-  towing_capacity_braked_kg: 1000
-  towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 16.2
-  wltp_city_kwh_per_100km: 14.1
-  wltp_highway_kwh_per_100km: 18.5
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.5
   efficiency_rating: B
-  notes: |
-    16.2 kWh/100km WLTP - slightly better than ID.4 Pro (16.6 kWh/100km)
-    thanks to improved aerodynamics. Real-world efficiency around
-    18.5 kWh/100km in mixed conditions.
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -136,61 +97,48 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: "Travel Assist with Swarm Data"
-  notes: |
-    - Heat pump standard for improved cold-weather efficiency
-    - DCC adaptive chassis control (adaptive dampers)
-    - Travel Assist Level 2+ ADAS with lane keeping and predictive ACC
-    - ID. Light ambient lighting strip
-    - One-pedal driving with adjustable regenerative braking
-    - Matrix LED headlights (IQ.LIGHT)
-    - 12-inch touchscreen with wireless Apple CarPlay/Android Auto
-    - Digital cockpit with 5.3-inch driver display
-    - Climate comfort seats with massage function (optional)
-
 optional_equipment:
-  - name: IQ.DRIVE Max Package
-    code: IQDMAX
-    category: safety
-    included_in_base: false
-    notes: "Full ADAS suite with lane change assist, park assist, and matrix LED"
-  - name: AR Head-Up Display
-    code: ARHUD
-    category: infotainment
-    included_in_base: false
-    notes: "Augmented reality head-up display with navigation arrows"
-  - name: ergoActive Climate Seats
-    code: ERGOACT
-    category: comfort
-    included_in_base: false
-    notes: "Front seats with massage, ventilation, and climate control"
-  - name: 22kW AC Charging
-    code: AC22
-    category: charging
-    included_in_base: false
-    notes: "Upgrade from 11kW to 22kW three-phase AC charging"
-  - name: DCC Adaptive Chassis Control
-    code: DCC
-    category: chassis
-    included_in_base: false
-    notes: "Adaptive dampers for improved comfort and handling"
+- name: IQ.DRIVE Max Package
+  code: IQDMAX
+  category: safety
+  included_in_base: false
+- name: AR Head-Up Display
+  code: ARHUD
+  category: infotainment
+  included_in_base: false
+- name: ergoActive Climate Seats
+  code: ERGOACT
+  category: comfort
+  included_in_base: false
+- name: 22kW AC Charging
+  code: AC22
+  category: charging
+  included_in_base: false
+- name: DCC Adaptive Chassis Control
+  code: DCC
+  category: chassis
+  included_in_base: false
+notes: 'The ID.5 Pro is the RWD base variant of VW''s coupe SUV. With 286 hp,
 
-notes: |
-  The ID.5 Pro is the RWD base variant of VW's coupe SUV. With 286 hp,
   77 kWh battery, and 520 km WLTP range, it offers a sportier alternative
+
   to the ID.4 with improved aerodynamics. The coupe roofline reduces rear
-  headroom slightly but improves efficiency. Built on MEB platform at VW's
+
+  headroom slightly but improves efficiency. Built on MEB platform at VW''s
+
   Zwickau factory. Targets buyers seeking sportier styling than the ID.4
+
   while maintaining strong range and practicality. Competes with Audi Q4
+
   Sportback e-tron, BMW iX1, and Tesla Model Y.
 
-
+  '
 metadata:
-  created_at: "2026-02-08"
+  created_at: '2026-02-08'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.com/en/models/id-5.html
-    - https://www.volkswagen-newsroom.com/en/press-releases/id5-specifications
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id5/
+  - https://www.volkswagen.com/en/models/id-5.html
+  - https://www.volkswagen-newsroom.com/en/press-releases/id5-specifications
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id5/

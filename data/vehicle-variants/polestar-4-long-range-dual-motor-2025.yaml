@@ -2,83 +2,22 @@ id: polestar-4-long-range-dual-motor-2025
 model_id: polestar-4
 name: Long Range Dual Motor
 model_year: 2025
-trim_level: Long Range Dual Motor
 variant_code: null
-production:
-  start_date: 2025-01-01
-  end_date: null
-  status: active
-  notes: 2025 model year continuation with minor software updates
 battery:
-  type: Lithium-ion
   chemistry: NCM
   total_kwh: 102.0
   usable_kwh: 94.0
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage_nominal: 400
-  notes: Large 102 kWh battery shared with Polestar 3, 400V architecture
 range:
   wltp_km: 590
   wltp_city_km: 725
   wltp_highway_km: 495
-  real_world_avg_km: 490
   real_world_source: European automotive press
-  notes: Excellent efficiency for a dual-motor AWD SUV coupe
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 10.5
-    onboard_charger: 11kW 3-phase standard, 22kW optional
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    peak_power_notes: 200kW peak sustained well
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 185
-  - percent: 10
-    power_kw: 200
-  - percent: 30
-    power_kw: 200
-  - percent: 50
-    power_kw: 185
-  - percent: 60
-    power_kw: 165
-  - percent: 70
-    power_kw: 135
-  - percent: 80
-    power_kw: 95
-  - percent: 90
-    power_kw: 55
-  - percent: 100
-    power_kw: 22
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 200
-motors:
-  configuration: dual
-  front:
-    type: permanent_magnet
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-  rear:
-    type: permanent_magnet
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-  combined:
-    power_kw: 400
-    power_hp: 544
-    torque_nm: 686
 dimensions:
   length_mm: 4839
   width_mm: 2139
@@ -91,7 +30,6 @@ cargo:
   trunk_max_liters: 1536
   frunk_capacity_liters: 15
 performance:
-  top_speed_kph: 200
   total_power_kw: 400
   total_power_hp: 544
   total_torque_nm: 686
@@ -100,72 +38,12 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 18.8
   real_world_kwh_per_100km: 21.2
-  drag_coefficient: 0.26
 weight:
   curb_weight_kg: 2390
   gross_vehicle_weight_kg: 2850
   payload_kg: 460
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: 50
-drivetrain:
-  drive_type: AWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: Double wishbone with air suspension
-  rear: Multi-link with air suspension and adaptive dampers
-  notes: Dual-chamber air suspension with adaptive dampers standard
-brakes:
-  front: Ventilated disc (390mm)
-  rear: Ventilated disc (390mm)
-  regenerative: true
-  notes: Brembo brakes with one-pedal driving
-tires:
-  standard: 265/45 R20
-features:
-  infotainment:
-  - Android Automotive OS with Google built-in
-  - 15.4" portrait center touchscreen
-  - 10.2" digital driver display
-  - Google Assistant voice control
-  - Google Maps with charging integration
-  - Harman Kardon premium audio (16 speakers)
-  - Wireless Apple CarPlay
-  driver_assistance:
-  - Polestar Pilot Assist
-  - 360° surround view camera
-  - Blind Spot Information System (BLIS)
-  - Cross Traffic Alert with auto brake
-  - Lane Keeping Aid
-  - Collision Avoidance by Braking
-  - Park Assist Pilot
-  comfort_convenience:
-  - Panoramic glass roof (non-opening)
-  - Heated front and rear seats (Nappa leather)
-  - Ventilated front seats
-  - Heated steering wheel
-  - 4-zone climate control
-  - Head-up display
-  - Wireless phone charging
-  - Polestar Digital Key
-  exterior:
-  - Pixel LED headlights with Thor's Hammer DRL
-  - 20" forged alloy wheels
-  - Rear camera system (replaces rear window)
-  - Flush door handles
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source_urls:
-  - https://www.polestar.com/de/polestar-4/
-  - https://www.polestar.com/global/polestar-4/
-  notes: '2025 model year Polestar 4 Long Range Dual Motor. Unchanged mechanical specs
-
-    from 2024 launch, with software updates and refined infotainment. 544 hp AWD
-
-    performance with 590 km WLTP range. Priced above €70,000 threshold so uses
-
-    0.5% company car tax rate in Germany instead of 0.25%.
-
-    '

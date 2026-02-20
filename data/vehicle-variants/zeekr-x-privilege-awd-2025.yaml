@@ -1,112 +1,28 @@
 id: zeekr-x-privilege-awd-2025
 model_id: zeekr-x
 name: Privilege AWD
-variant_name: Privilege AWD
 model_year: 2025
-trim_level: Privilege
-production_years: 2024-present
-overview: 'The Zeekr X Privilege AWD is the performance-oriented dual-motor variant
-  of Zeekr''s compact electric crossover. With 315kW (422hp) and 543Nm from two permanent
-  magnet motors, it rockets to 100 km/h in just 3.8 seconds — making it one of the
-  quickest compact crossovers on sale. Despite the performance focus, it still offers
-  400km WLTP range from the same 69kWh NMC battery. The Privilege trim adds premium
-  interior appointments and all-wheel drive traction for all-weather confidence.
-
-  '
 battery:
   chemistry: NMC
-  supplier: CATL
   total_kwh: 69.0
   usable_kwh: 64.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 69kWh NMC battery from CATL (Geely Sichuan joint venture), 400V architecture
 range:
   wltp_km: 400
   wltp_city_km: 510
   wltp_highway_km: 340
-  epa_miles: null
   real_world_km: 350
-  real_world_notes: 'Real-world range varies: ~350km mixed driving, ~470km city, ~300km
-    highway'
 charging:
-  ac:
-    connector_type: Type2
-    phases: 3
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 210
-      power_kw: 22.0
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 130
-    - soc_percent: 10
-      power_kw: 150
-    - soc_percent: 20
-      power_kw: 148
-    - soc_percent: 30
-      power_kw: 140
-    - soc_percent: 40
-      power_kw: 130
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
-    charging_time:
-    - percent_start: 10
-      percent_end: 80
-      time_minutes: 29
-      power_kw: 150
-      notes: 10-80% in approximately 29 minutes at optimal conditions
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 22.0
   dc_max_kw: 150
-motors:
-  configuration: dual
-  drive_type: AWD
-  total_power_kw: 315
-  total_power_hp: 422
-  total_torque_nm: 543
-  motor_type: permanent_magnet
-  motors:
-  - position: front
-    power_kw: 115
-    power_hp: 154
-    torque_nm: 200
-    motor_type: permanent_magnet
-  - position: rear
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 180
-  notes: 0-100 km/h in 3.8 seconds, electronically limited to 180 km/h
   total_power_kw: 315
   total_power_hp: 422
   total_torque_nm: 543
   acceleration_0_100_sec: 3.8
-efficiency:
-  consumption_wltp_kwh_per_100km: 17.2
-  consumption_real_world_kwh_per_100km: 19.5
-  efficiency_rating_eu: B
-  notes: 'Higher consumption due to dual motors and AWD: 17.2 kWh/100km WLTP'
 dimensions:
   length_mm: 4450
   width_mm: 1836
@@ -123,37 +39,9 @@ weight:
   payload_kg: 415
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-features:
-  standard:
-  - 14.6-inch floating center touchscreen
-  - 8.0-inch instrument cluster
-  - AR Head-Up Display
-  - Panoramic sunroof
-  - Harman Kardon 13-speaker audio
-  - Wireless Apple CarPlay and Android Auto
-  - Heat pump climate control
-  - LED matrix headlights
-  - 360-degree camera
-  - Zeekr Pilot (adaptive cruise + lane centering)
-  - Wireless phone charger
-  - Powered tailgate
-  - 22kW AC charging
-  - Premium Nappa leather seats
-  - Heated and ventilated front seats
-  - Electric front seat adjustment with memory
-  optional:
-  - 20-inch wheels
-  - Metallic paint colors
-version:
-  release_date: 2024-11
-  changes_from_previous: European market launch
-  notes: 2025 model year, dual-motor performance variant for European market
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://en.wikipedia.org/wiki/Zeekr_X
   - https://www.topgear.com/car-reviews/zeekr-x-2023
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: European specification, 2025 model year, Privilege AWD trim

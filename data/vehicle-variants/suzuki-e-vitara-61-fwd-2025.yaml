@@ -2,8 +2,6 @@ id: suzuki-e-vitara-61-fwd-2025
 name: 61 kWh FWD
 model_id: suzuki-e-vitara
 model_year: 2025
-production_start: '2025-08-01'
-production_end: null
 dimensions:
   length_mm: 4275
   width_mm: 1800
@@ -24,19 +22,12 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 61 kWh LFP blade battery. Larger battery option for extended range.
 range:
   wltp_km: 428
   wltp_city_km: 530
   wltp_highway_km: 350
   real_world_km: 340
   real_world_source: Estimated based on carwow.de review data
-  notes: 'WLTP range of 428 km with 61 kWh battery. Real-world highway range approximately
-
-    300 km. Heat pump standard helps maintain winter range.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -58,46 +49,18 @@ charging:
     power_kw: 50
   - soc_percent: 80
     power_kw: 35
-  charge_time_10_80_minutes: 30
-  notes: 'DC fast charging up to 150 kW (larger battery only).
-
-    AC charging: 11 kW standard (3-phase), 0-100% in approximately 5.5 hours.
-
-    '
-motors:
-- position: front
-  type: permanent_magnet
-  power_kw: 128
-  torque_nm: 189
-  manufacturer: Suzuki/Toyota
-drivetrain:
-  type: FWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 150
-  notes: Mid-range powertrain. 128 kW (174 PS) front motor. Good daily performance.
   acceleration_0_100_sec: 8.7
 efficiency:
   wltp_kwh_per_100km: 14.3
   real_world_kwh_per_100km: 18.0
-  notes: Slightly higher consumption than 49 kWh variant due to added weight.
 weight:
   curb_weight_kg: 1810
   gross_vehicle_weight_kg: 2300
   payload_kg: 490
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-  notes: Heavier than 49 kWh variant due to larger battery. Tows up to 1,000 kg.
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: rear
-  parking_camera: rear
-  autonomous_parking: false
 notes: 'Mid-range Suzuki e Vitara with 61 kWh LFP battery and front-wheel drive. 128
   kW (174 PS) front motor delivers 0-100 km/h in 8.7 seconds. WLTP range of 428 km.
   150 kW DC fast charging (only available with 61 kWh battery). Heat pump standard.
@@ -106,8 +69,6 @@ notes: 'Mid-range Suzuki e Vitara with 61 kWh LFP battery and front-wheel drive.
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source: manufacturer
   sources:
   - https://en.wikipedia.org/wiki/Suzuki_e_Vitara
   - https://www.carwow.de/suzuki/e-vitara

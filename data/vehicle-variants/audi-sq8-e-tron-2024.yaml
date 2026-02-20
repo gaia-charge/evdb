@@ -6,7 +6,6 @@ battery:
   usable_kwh: 106.0
   total_kwh: 114.0
   chemistry: NCM
-  supplier: LG Energy Solution
   cell_type: pouch
   warranty_years: 8
   warranty_km: 160000
@@ -16,71 +15,10 @@ range:
   wltp_city_km: 605
   wltp_highway_km: 395
   epa_km: null
-  epa_miles: null
   real_world_km: 415
-  real_world_highway_km: 345
-  notes: 'SQ8 e-tron performance variant achieves 480km WLTP (vs 582km for 55 quattro).
-
-    Range reduced due to more powerful motors and performance-oriented tuning.
-
-    14km less than Sportback variant (494km) due to less aerodynamic SUV body (Cd
-    0.27 vs 0.26).
-
-    '
 charging:
-  ac:
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 10.5
-    notes: Optional 22kW AC charger available (+€590)
-  dc:
-    connector_type: CCS2
-    charge_time_10_80_percent_minutes: 31
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 170
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 168
-    - soc_percent: 40
-      power_kw: 160
-    - soc_percent: 50
-      power_kw: 148
-    - soc_percent: 60
-      power_kw: 130
-    - soc_percent: 70
-      power_kw: 105
-    - soc_percent: 80
-      power_kw: 75
-    notes: '400V architecture limits DC charging speed vs 800V competitors.
-
-      Battery preconditioning available via navigation system.
-
-      Same charging performance as non-S variants.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 170
-bidirectional_charging:
-  v2l: false
-  v2h: false
-  v2g: false
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: permanent_magnet
-  front_motor:
-    power_kw: 140
-    torque_nm: 355
-    motor_type: asynchronous
-  rear_motor:
-    power_kw: 230
-    torque_nm: 583
-    motor_type: permanent_magnet
-  total_power_kw: 370
-  total_power_hp: 503
-  total_torque_nm: 973
 performance:
   top_speed_kmh: 210
   total_power_kw: 370
@@ -90,19 +28,12 @@ performance:
 efficiency:
   wltp_kwh_per_100km: 25.2
   real_world_kwh_per_100km: 28.0
-  notes: 'Higher consumption than 55 quattro due to more powerful motors and performance
-    tuning.
-
-    SUV body slightly less efficient than Sportback variant due to aerodynamics.
-
-    '
 weight:
   curb_weight_kg: 2710
   gross_vehicle_weight_kg: 3260
   payload_kg: 550
   towing_capacity_braked_kg: 2400
   towing_capacity_unbraked_kg: 750
-  notes: 95kg heavier than 55 quattro due to larger brakes, suspension upgrades
 dimensions:
   length_mm: 4915
   width_mm: 1937
@@ -113,63 +44,6 @@ cargo:
   trunk_capacity_liters: 569
   trunk_max_liters: 1725
   frunk_capacity_liters: 60
-  notes: 41L more cargo than Sportback (528L), seats-down 70L more (1655L Sportback)
-features:
-  standard:
-  - S-specific Quattro electric AWD with sport differential
-  - Adaptive air suspension sport (-15mm)
-  - S-tuned progressive steering
-  - Red brake calipers (400mm front, 350mm rear)
-  - Heat pump climate control standard
-  - Matrix LED headlights with dynamic light signature
-  - Virtual cockpit plus 12.3" with S-specific display
-  - MMI touch response dual-screen
-  - Audi pre sense safety suite
-  - 360-degree cameras
-  - Park assist plus
-  - Panoramic sunroof
-  - Power tailgate
-  - Keyless entry and start
-  - S sport seats with Alcantara/leather
-  - Traditional SUV styling (vs Sportback coupe)
-  - S-specific exterior styling (matt silver accents)
-  - 21" S-design wheels (standard)
-optional_features:
-- name: Bang & Olufsen 3D Premium Sound
-  price_eur: 850
-- name: 22kW AC onboard charger
-  price_eur: 590
-- name: Virtual exterior mirrors (camera mirrors)
-  price_eur: 1950
-  notes: Not available in all markets due to regulations
-- name: 22" S-design wheels
-  price_eur: 1850
-  notes: Reduces range by approximately 20km
-- name: Black styling package
-  price_eur: 1450
-- name: Carbon ceramic brakes
-  price_eur: 8900
-  notes: Reduces weight by 25kg, improves performance braking
 metadata:
-  source: https://www.audi.com/en/models/q8-e-tron.html
   created_at: '2024-02-09'
-  last_updated: '2024-02-09'
   data_quality: verified
-  notes: 'Performance flagship SUV variant of Q8 e-tron with 370kW (503hp) and 4.5s
-    0-100.
-
-    Traditional SUV body offers more cargo space (569L vs 528L Sportback) but 14km
-    less range.
-
-    Features sport-tuned adaptive air suspension (-15mm), larger brakes, S-specific
-    styling.
-
-    Still achieves 480km WLTP range despite performance focus.
-
-    Competes with BMW iX M60 (€120,000), Mercedes-AMG EQE 53 SUV (€107,000).
-
-    Premium choice for buyers seeking ultimate combination of practicality and performance.
-
-    569L trunk expandable to 1725L with seats folded (41L/70L more than Sportback).
-
-    '

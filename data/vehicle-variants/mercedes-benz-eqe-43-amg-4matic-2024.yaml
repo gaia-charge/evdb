@@ -2,129 +2,34 @@ id: mercedes-benz-eqe-43-amg-4matic-2024
 name: Mercedes-Benz EQE 43 AMG 4MATIC (2024)
 model_id: mercedes-benz-eqe
 model_year: 2024
-variant_name: 43 AMG 4MATIC
-trim_level: performance
 battery:
   usable_kwh: 90.6
   total_kwh: 96.0
   chemistry: NCM
-  cells_config: 288s2p (576 cells)
-  supplier: CATL
-  form_factor: pouch
   warranty_years: 10
   warranty_km: 250000
   warranty_capacity_percent: 70
-  notes: 'Same large 90.6kWh usable capacity as base EQE 350+. NCM (Nickel Cobalt  Manganese)
-    chemistry from CATL. Liquid thermal management with heat pump.  Battery preconditioning
-    optimized for AMG performance driving with faster  warm-up and better thermal
-    management for sustained high power output.
-
-    '
 range:
   wltp_km: 529
   wltp_city_km: 685
   wltp_highway_km: 425
   epa_km: null
-  epa_miles: null
   real_world_km: 460
-  notes: 'WLTP range of 529km is reduced from 639km (EQE 350+) due to dual-motor AWD,  higher
-    weight (+75kg), AMG sport suspension tuning, and wider tires. Real-world  range
-    around 460km in mixed driving, 380-400km with spirited AMG driving style.  Winter
-    range approximately 350-380km. Highway range reduced at high speeds due  to increased
-    frontal area and rolling resistance from performance tires.
-
-    '
 charging:
-  ac:
-    plug_type: Type2
-    phases: 3
-    charge_time_0_100_hours: 9.0
-    notes: 'Standard 11kW AC charging (3-phase, 16A). Optional 22kW onboard charger  available.
-      Mercedes me Charge provides access to 600,000+ charging points  globally with
-      preferential IONITY access for AMG customers.
-
-      '
-  dc:
-    plug_type: CCS2
-    charge_time_10_80_percent_minutes: 32
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 170
-    - soc_percent: 20
-      power_kw: 170
-    - soc_percent: 30
-      power_kw: 165
-    - soc_percent: 40
-      power_kw: 150
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 65
-    notes: 'Peak DC fast charging at 170kW. 400V architecture with enhanced battery  preconditioning
-      for AMG driving patterns. Typical 10-80% charge takes 32  minutes. AMG customers
-      get preferential IONITY pricing through Mercedes me  Charge (€0.29/kWh vs €0.79/kWh
-      public rate).
-
-      '
   ac_max_kw: 11
   dc_max_kw: 170
 bidirectional:
   v2l: false
   v2h: false
   v2g: false
-  notes: 'Bidirectional charging not currently available but Mercedes-Benz has announced  it
-    will come to future AMG EQ models.
-
-    '
-motors:
-  configuration: dual-motor
-  drive_type: AWD
-  combined:
-    max_power_kw: 350
-    max_torque_nm: 858
-  front:
-    type: permanent-magnet-synchronous
-    max_power_kw: 135
-    max_torque_nm: 330
-  rear:
-    type: permanent-magnet-synchronous
-    max_power_kw: 215
-    max_torque_nm: 528
-  notes: 'Dual permanent magnet synchronous motors (PSM) - front (135kW) and rear
-    (215kW)  axles. AMG 4MATIC+ all-wheel drive with variable torque distribution
-    optimized  for performance and handling. Enhanced cooling for sustained high power
-    output  during track driving. AMG Sound Experience adds synthetic engine sound
-    tuned  by AMG engineers (3 sound modes: Authentic, Performance, Powerful).
-
-    '
 performance:
   top_speed_kmh: 210
-  notes: 'AMG performance: 0-100 km/h in 4.2 seconds (vs 6.4s EQE 350+, 34% faster!).  Top
-    speed electronically limited to 210 km/h. Optional AMG Dynamic Plus package  increases
-    top speed to 240 km/h and adds Race mode, drift mode, and AMG Track  Pace app.
-    Rear-axle steering standard (up to 10 degrees) for improved agility.  AMG RIDE
-    CONTROL+ air suspension with adaptive damping provides comfort and  dynamic handling.
-    Launch Control optimizes acceleration from standstill.
-
-    '
   acceleration_0_100_sec: 4.2
   total_power_kw: 350
   total_torque_nm: 858
 efficiency:
   wltp_kwh_per_100km: 21.6
   real_world_kwh_per_100km: 24.5
-  energy_label_eu: C
-  notes: 'Efficiency reduced from EQE 350+ due to dual motors, higher weight, performance  tires,
-    and AMG sport suspension tuning. Real-world consumption around 24.5  kWh/100km
-    in mixed driving, up to 28-30 kWh/100km with spirited AMG driving.  Aerodynamics
-    slightly worse than base model (Cd 0.24 vs 0.22) due to AMG front  spoiler and
-    rear diffuser.
-
-    '
 dimensions:
   length_mm: 4946
   width_mm: 1906
@@ -141,77 +46,10 @@ weight:
   payload_kg: 500
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-adas:
-  level: 2_plus
-  features:
-  - Adaptive Cruise Control (DISTRONIC)
-  - Active Lane Keeping Assist
-  - Active Blind Spot Assist
-  - Active Brake Assist with Cross-Traffic Function
-  - Traffic Sign Assist
-  - Active Distance Assist DISTRONIC
-  - Active Steering Assist
-  - Active Emergency Stop Assist
-  - AMG Track Pace (lap timer and telemetry)
-  notes: 'Level 2+ driver assistance standard on AMG variant. Optional DRIVE PILOT  (Level
-    3) available in Germany for hands-free highway driving up to 60 km/h.  AMG Track
-    Pace app records over 80 vehicle-specific data points for track  driving analysis
-    including acceleration, braking, cornering g-forces.
-
-    '
-features:
-  standard:
-  - AMG RIDE CONTROL+ air suspension with adaptive damping
-  - Rear-axle steering (up to 10°, standard on AMG)
-  - AMG Performance steering wheel with Touch Control buttons
-  - AMG brakes with painted calipers (front 415x36mm, rear 378x26mm)
-  - AMG Performance 4MATIC+ all-wheel drive
-  - AMG Sound Experience with 3 modes
-  - AMG Sport seats with memory function
-  - Burmester 3D Surround Sound
-  - Ambient lighting with 64 colors (AMG-specific themes)
-  - Heat pump
-  - LED Intelligent Light System
-  - 12.8" OLED touchscreen with AMG-specific displays
-  - Wireless smartphone charging
-  - AMG exterior styling (front spoiler, side skirts, rear diffuser)
-  - AMG 20" cross-spoke forged wheels
-  optional:
-  - MBUX Hyperscreen (56" curved glass display)
-  - AMG Dynamic Plus package (240 km/h, Race mode, drift mode)
-  - Burmester High-End 4D Surround Sound (upgrade from standard Burmester)
-  - AMG Night Package (black chrome trim)
-  - AMG Carbon Fiber package (interior trim)
-  - Panoramic sliding sunroof
-  - Executive rear seat package
-  - DRIVE PILOT (Level 3 autonomy, Germany only)
-  - 22kW AC onboard charger
-  - AMG Performance 21" wheels (reduces range by ~15km)
-  - AMG Ceramic High-Performance brakes (€8,900 option)
-environmental:
-  lifecycle_co2_kg: null
-  production_location: Bremen, Germany
-  battery_production: Kamenz, Germany (Mercedes-Benz subsidiary Accumotive)
-  notes: 'Built at Mercedes-Benz Bremen plant in Germany. Batteries produced at  Mercedes-Benz
-    subsidiary Accumotive in Kamenz, Germany. AMG components  manufactured at AMG
-    headquarters in Affalterbach, Germany. Mercedes-Benz  aims for carbon-neutral
-    production.
-
-    '
 metadata:
   data_quality: verified
-  data_sources:
-  - manufacturer
-  - measured
   created_at: '2024-02-07'
-  last_updated: '2024-02-07'
   sources:
   - https://www.mercedes-amg.com/en/vehicles/eqe-43-4matic.html
   - https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqe/sedan-v295/amg.html
   - https://ev-database.org/car/1849/Mercedes-AMG-EQE-43-4MATIC
-  notes: '2024 model year data. The AMG EQE 43 4MATIC is the performance variant,  offering
-    dual-motor AWD with 476 hp and 4.2-second 0-100 km/h acceleration.  Significantly
-    more expensive than EQE 350+ but provides AMG driving dynamics.  Specs verified
-    from official Mercedes-AMG sources.
-
-    '

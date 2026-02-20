@@ -1,110 +1,28 @@
 id: volvo-ex30-extended-range-single-motor-2025
 model_id: volvo-ex30
 name: Extended Range Single Motor
-variant_name: Extended Range Single Motor
 model_year: 2025
-trim_level: Extended Range
-production_years: 2025-present
-overview: 'The 2025 Volvo EX30 Extended Range Single Motor continues as the best-selling
-  variant of Volvo''s compact electric SUV, now also produced at the Volvo Cars Ghent
-  factory in Belgium alongside Chinese production. The 2025 model year brings refined
-  software, improved Google integration, and availability of European-built units
-  which avoid EU import tariffs on Chinese-built EVs. The 69kWh NMC battery delivers
-  up to 476km WLTP range, while the 200kW rear motor provides engaging RWD dynamics.
-  Still one of the most efficient compact SUVs on the market at 14.5 kWh/100km WLTP.
-
-  '
 battery:
   chemistry: NMC
-  supplier: CATL
   total_kwh: 69.0
   usable_kwh: 64.0
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 69kWh NMC battery from CATL, 400V architecture, thermal management optimized
-    for 2025
 range:
   wltp_km: 476
   wltp_city_km: 615
   wltp_highway_km: 385
-  epa_miles: null
   real_world_km: 420
-  real_world_notes: 'Real-world range varies: ~420km mixed driving, ~600km city, ~350km
-    highway'
 charging:
-  ac:
-    connector_type: Type2
-    phases: 3
-    charging_time:
-    - percent_start: 0
-      percent_end: 100
-      time_minutes: 360
-      power_kw: 11.0
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 150
-    - soc_percent: 10
-      power_kw: 153
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 140
-    - soc_percent: 40
-      power_kw: 130
-    - soc_percent: 50
-      power_kw: 115
-    - soc_percent: 60
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
-    charging_time:
-    - percent_start: 10
-      percent_end: 80
-      time_minutes: 26
-      power_kw: 153
-      notes: 10-80% in 26 minutes at optimal conditions
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
-    notes: No bidirectional charging capability
   ac_max_kw: 11.0
   dc_max_kw: 153
-motors:
-  configuration: single
-  drive_type: RWD
-  total_power_kw: 200
-  total_power_hp: 272
-  total_torque_nm: 343
-  motor_type: permanent_magnet
-  motors:
-  - position: rear
-    power_kw: 200
-    power_hp: 272
-    torque_nm: 343
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 180
-  notes: 0-100 km/h in 5.3 seconds, electronically limited to 180 km/h
   total_power_kw: 200
   total_power_hp: 272
   total_torque_nm: 343
   acceleration_0_100_sec: 5.3
-efficiency:
-  consumption_wltp_kwh_per_100km: 14.5
-  consumption_real_world_kwh_per_100km: 16.5
-  efficiency_rating_eu: A
-  notes: 'Very efficient for an SUV: 14.5 kWh/100km WLTP'
 weight:
   curb_weight_kg: 1760
   gross_vehicle_weight_kg: 2150
@@ -121,35 +39,9 @@ cargo:
   trunk_capacity_liters: 318
   trunk_max_liters: 904
   frunk_capacity_liters: 7
-features:
-  standard:
-  - 12.3-inch portrait touchscreen
-  - Google built-in (Maps, Assistant, Play Store)
-  - Pilot Assist (semi-autonomous driving)
-  - City Safety with collision avoidance
-  - Heat pump climate control
-  - LED headlights
-  - Wireless phone charging
-  - Keyless entry and start
-  - Improved Google integration (2025 update)
-  - Refined climate control software
-  optional:
-  - Harmon Kardon premium audio (€800)
-  - Panoramic sunroof (€1,200)
-  - Tow hitch (€900, 1000kg capacity)
-  - Plus Pack
-  - Ultra Pack
-version:
-  release_date: 2025-01
-  changes_from_previous: '2025 MY: European (Ghent, Belgium) production added, refined
-    software, improved Google integration, updated interior trim options'
-  notes: 2025 model year, first generation with dual-sourced production (China + Belgium)
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.volvocars.com/intl/v/cars/ex30/specifications
   - https://ev-database.org/car/1828/Volvo-EX30-Extended-Range-Single-Motor
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: 2025 model year with European production

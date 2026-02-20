@@ -12,12 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: '86 kWh usable (91 kWh gross). Shared battery with ID.7 sedan Pro S.
-
-    400V architecture with NCM chemistry. Optimized BMS for 2026 model year.
-
-    '
 range:
   wltp_km: 690
   wltp_city_km: 900
@@ -25,43 +19,14 @@ range:
   epa_km: null
   real_world_km: 520
   real_world_source: ev-database.org estimation
-  notes: '690 km WLTP range, slightly less than sedan (709 km) due to increased
-
-    weight and slightly less aerodynamic estate body. Real-world mixed
-
-    driving approximately 520 km. Excellent highway range for touring.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
   ac_connector: Type2
   dc_max_kw: 200
   dc_connector: CCS2
-  dc_10_80_minutes: 26
-  dc_curve_peak_kw: 200
-  plug_and_charge: true
-  preconditioning: true
-  notes: '200 kW peak DC charging (10-80% in 26 min). Plug & Charge (ISO 15118-2)
-
-    supported. Navigation-based battery preconditioning for optimal fast charging.
-
-    '
-motors:
-- location: rear
-  type: permanent_magnet
-  power_kw: 210
-  power_hp: 286
-  torque_nm: 560
-  manufacturer: Volkswagen
-drivetrain: rwd
-total_power_kw: 210
-total_power_hp: 286
-total_torque_nm: 560
 performance:
-  acceleration_0_100_kmh: 6.7
   top_speed_kmh: 180
-  top_speed_limited: true
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 560
@@ -72,7 +37,6 @@ dimensions:
   height_mm: 1536
   wheelbase_mm: 2965
   ground_clearance_mm: 148
-  drag_coefficient: 0.24
 weight:
   curb_weight_kg: 2214
   gross_vehicle_weight_kg: 2750
@@ -83,16 +47,9 @@ cargo:
   trunk_capacity_liters: 605
   trunk_max_liters: 1714
   frunk_capacity_liters: 0
-seating:
-  seats: 5
-  isofix: true
 efficiency:
   wltp_kwh_per_100km: 14.0
   real_world_kwh_per_100km: 16.5
-safety:
-  euro_ncap_stars: 5
-  euro_ncap_year: 2024
-  notes: Shares Euro NCAP rating with ID.7 sedan platform
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -100,40 +57,6 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: Travel Assist 2.0 with Swarm Data
-  notes: '- ID. Software 5.0 with enhanced voice control
-
-    - 15" infotainment touchscreen
-
-    - Augmented reality head-up display
-
-    - Matrix LED headlights (IQ.LIGHT)
-
-    - DCC adaptive chassis control
-
-    - Heat pump standard
-
-    - Wireless Apple CarPlay and Android Auto
-
-    - 360° area view cameras
-
-    - Park Assist Plus with memory function
-
-    - Heated front and rear seats
-
-    - 3-zone climate control
-
-    - Panoramic glass roof
-
-    - Powered tailgate with gesture control
-
-    - Harman Kardon sound system (700W, 14 speakers)
-
-    '
-production:
-  plant: Emden
-  country: Germany
-  start_date: 2024-06
 notes: 'The ID.7 Tourer Pro S is the long-range estate variant with 690 km WLTP range.
   Estate body adds practical 605L boot (1,714L with seats folded) while maintaining
   excellent range. Built alongside ID.7 sedan at VW Emden. 2026 model features refined

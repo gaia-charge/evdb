@@ -48,10 +48,7 @@ charging:
     power_kw: 45
   - soc_percent: 100
     power_kw: 20
-  time_5_to_80_percent_min: 21
-  time_10_to_80_percent_min: 21
   charging_speed_kmh: 1380
-  plug_and_charge: true
 bidirectional:
   v2l: true
   v2l_max_kw: 11
@@ -73,8 +70,6 @@ performance:
   total_power_kw: 285
   total_power_hp: 387
   total_torque_nm: 580
-  acceleration_0_100_kmh_sec: 5.9
-  acceleration_0_60_mph_sec: 5.6
   top_speed_kmh: 210
   acceleration_0_100_sec: 5.9
 dimensions:
@@ -91,57 +86,15 @@ weight:
   curb_weight_kg: 2345
   gross_vehicle_weight_kg: 2970
   payload_kg: 625
-  distribution_front_percent: 50
-  distribution_rear_percent: 50
   towing_capacity_braked_kg: 2400
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 17.5
-  wltp_kwh_per_100km_city: 14.8
-  wltp_kwh_per_100km_highway: 21.2
   real_world_kwh_per_100km: 19.8
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/55 R19
-  standard_size_rear: 255/50 R19
-  wheel_sizes_available:
-  - 19 inch (standard)
-  - 20 inch (optional, -20km range)
-  - 21 inch (optional, -35km range)
-technology:
-  adas_level: 2
-  adas_features:
-  - Adaptive cruise control with lane keeping assist
-  - Active lane assist
-  - Traffic sign recognition
-  - Park assist plus with remote parking
-  - 360-degree camera system (standard)
-  - Predictive efficiency assist
-  - Intersection assist
-  - Emergency assist
-  - quattro all-wheel drive
-  connectivity:
-  - Audi connect navigation & infotainment plus
-  - myAudi app with remote functions
-  - OTA software updates
-  - e-tron route planner with charging optimization
-  - 5G connectivity (optional)
-  special_features:
-  - Three-stage recuperation (0.1g, 0.15g, 0.2g)
-  - B mode for strong regen (one-pedal driving)
-  - Pre-conditioning (battery & cabin)
-  - Acoustic Vehicle Alerting System (AVAS)
-  - Bank & Turn technology for improved dynamics
-  - quattro torque vectoring
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
   sources:
   - https://www.audi.de/de/brand/de/neuwagen/q-modelle/audi-q6-e-tron/technische-daten.html
   - https://ev-database.org/car/1698/Audi-Q6-e-tron-quattro
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/audi-q6-e-tron/
-  notes: AWD variant with 285 kW combined power. 800V PPE platform enables 270 kW
-    peak DC charging (10-80% in 21 minutes). Excellent acceleration (5.9s to 100 km/h)
-    while maintaining 625 km WLTP range. Slightly less efficient than RWD due to dual
-    motors (+75kg). Ideal for buyers wanting AWD performance and traction.

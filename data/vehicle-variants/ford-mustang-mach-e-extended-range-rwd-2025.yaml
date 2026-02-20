@@ -2,83 +2,21 @@ id: ford-mustang-mach-e-extended-range-rwd-2025
 name: Extended Range RWD
 model_id: ford-mustang-mach-e
 model_year: 2025
-trim_level: Premium
 battery:
   usable_kwh: 91.0
   total_kwh: 98.7
   chemistry: NMC
-  cells: 376
-  voltage_nominal_v: 360
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  notes: 'Updated 91 kWh usable (98.7 kWh gross) battery for 2025. Improved
-
-    cell chemistry from SK On for better energy density vs 2024 (88 kWh usable).
-
-    '
 range:
   wltp_km: 610
   wltp_city_km: 750
   wltp_highway_km: 500
   real_world_km: 520
-  real_world_conditions: Mixed driving, moderate climate, 120 km/h highway
-  notes: '610 km WLTP range with updated 91 kWh battery. Real-world approximately
-
-    520 km in mixed European driving. Improvement over 2024''s 600 km WLTP
-
-    thanks to increased battery capacity and software efficiency gains.
-
-    '
 charging:
-  ac_charging:
-    max_power_kw: 11.0
-    connector_type: Type2
-    onboard_charger_kw: 11.0
-    time_0_100_hours: 8.5
-  dc_charging:
-    max_power_kw: 150
-    connector_type: CCS2
-    charge_time_10_80_minutes: 36
-    charge_time_20_80_minutes: 30
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 148
-    - soc_percent: 20
-      power_kw: 150
-    - soc_percent: 30
-      power_kw: 150
-    - soc_percent: 40
-      power_kw: 145
-    - soc_percent: 50
-      power_kw: 135
-    - soc_percent: 60
-      power_kw: 115
-    - soc_percent: 70
-      power_kw: 85
-    - soc_percent: 80
-      power_kw: 50
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: false
-    v2h: true
-    v2g: true
-    max_discharge_power_kw: 9.6
-    notes: Ford Intelligent Backup Power with Ford Charge Station Pro
   ac_max_kw: 11.0
   dc_max_kw: 150
-motors:
-  configuration: single_rear
-  rear_motor:
-    type: permanent_magnet
-    power_kw: 216
-    torque_nm: 430
-  total_power_kw: 216
-  total_power_hp: 294
-  total_torque_nm: 430
 performance:
   top_speed_kmh: 180
   drive_type: RWD
@@ -86,16 +24,6 @@ performance:
   total_power_hp: 294
   total_torque_nm: 430
   acceleration_0_100_sec: 6.4
-efficiency:
-  consumption_wltp_kwh_per_100km: 16.5
-  consumption_epa_kwh_per_100km: 17.2
-  efficiency_rating_eu: B
-  co2_emissions_wltp_g_per_km: 0
-  notes: '16.5 kWh/100km WLTP - improved efficiency vs 2024 (16.8) through
-
-    software optimisation and reduced rolling resistance tyres.
-
-    '
 dimensions:
   length_mm: 4739
   width_mm: 1881
@@ -119,24 +47,6 @@ features:
   air_suspension: false
   one_pedal_driving: true
   autopilot_level: 2
-  autopilot_name: BlueCruise 1.3
-  notes: '- Heat pump standard for 2025
-
-    - BlueCruise 1.3 with hands-free highway driving and auto lane change
-
-    - SYNC 4A with Google Built-In (Maps, Assistant, Play Store)
-
-    - 15.5-inch centre touchscreen + 10.2-inch digital cluster
-
-    - Wireless Apple CarPlay/Android Auto
-
-    - B&O premium audio (10 speakers)
-
-    - Panoramic fixed glass roof
-
-    - Ford Co-Pilot360 Assist 2.0
-
-    '
 notes: 'The 2025 Ford Mustang Mach-E Extended Range RWD features an updated
 
   91 kWh battery (up from 88 kWh usable) for improved range of 610 km WLTP.
@@ -152,15 +62,6 @@ notes: 'The 2025 Ford Mustang Mach-E Extended Range RWD features an updated
   Hyundai Ioniq 5 Long Range.
 
   '
-version_changes:
-- version: '2025'
-  changes: 'Increased battery to 91 kWh usable (from 88 kWh). Heat pump standard.
-
-    BlueCruise 1.3 with auto lane change. Improved charging curve. SYNC 4A
-
-    updates. Reduced rolling resistance tyres. New colour options.
-
-    '
 metadata:
   created_at: '2026-02-10'
   updated_at: null

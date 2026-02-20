@@ -2,82 +2,22 @@ id: opel-astra-e-gs-2025
 model_id: opel-astra-e
 name: GS
 model_year: 2025
-trim_level: GS
 variant_code: null
-production:
-  start_date: 2024-09-01
-  end_date: null
-  status: active
-  notes: 2025 model year with updated infotainment and enhanced ADAS features
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 51.0
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 288
-  modules: 24
-  voltage_nominal: 400
-  notes: Same 54 kWh NMC battery on EMP2 platform
 range:
   wltp_km: 418
   wltp_city_km: 548
   wltp_highway_km: 337
-  epa_combined_km: null
-  real_world_avg_km: 338
   real_world_source: ADAC EcoTest 2025
-  notes: Minor range improvement from software optimization
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 30
-    peak_power_notes: 100kW peak maintained up to ~50%, then tapers
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 95
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 90
-  - percent: 60
-    power_kw: 80
-  - percent: 70
-    power_kw: 65
-  - percent: 80
-    power_kw: 45
-  - percent: 90
-    power_kw: 28
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 270
-    supplier: null
-  combined:
-    power_kw: 115
-    power_hp: 156
-    torque_nm: 270
 dimensions:
   length_mm: 4374
   width_mm: 1860
@@ -90,9 +30,6 @@ cargo:
   trunk_max_liters: 1268
   frunk_capacity_liters: 0
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 170
-  quarter_mile_seconds: null
   total_power_kw: 115
   total_power_hp: 156
   total_torque_nm: 270
@@ -100,96 +37,14 @@ performance:
   top_speed_kmh: 170
 efficiency:
   wltp_kwh_per_100km: 15.4
-  wltp_wh_per_km: 154
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 17.5
-  mpge_combined: null
-  drag_coefficient: 0.27
 weight:
   curb_weight_kg: 1635
   gross_vehicle_weight_kg: 2085
   payload_kg: 450
-  weight_distribution_front_percent: 58
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar (sport tuning)
-  rear: Multi-link independent suspension (sport tuning)
-brakes:
-  front: Ventilated disc
-  rear: Solid disc
-  regenerative: true
-tires:
-  standard: 225/45 R18
-features:
-  infotainment:
-  - Pure Panel Pro - dual 10" digital displays
-  - Apple CarPlay and Android Auto (wireless)
-  - DAB+ digital radio
-  - 8 speakers premium audio system
-  - MyOpel mobile app with remote charging management
-  - Opel Connect with emergency call and vehicle diagnostics
-  - Head-up display (10")
-  - Over-the-air software updates
-  driver_assistance:
-  - IntelliLux LED Pixel Matrix headlights (84 LED elements) STANDARD
-  - Forward Collision Alert with Automatic Emergency Braking
-  - Lane Keep Assist with Lane Departure Warning
-  - Traffic Sign Recognition with speed limit display
-  - Adaptive cruise control with stop & go
-  - Driver drowsiness alert
-  - 360-degree camera system
-  - Blind spot monitoring
-  - Rear cross-traffic alert
-  - Intelligent Speed Assist
-  comfort_convenience:
-  - Automatic climate control (dual-zone)
-  - Heat pump STANDARD
-  - One-pedal driving with B-mode regenerative braking
-  - Keyless entry and start
-  - Heated front seats and steering wheel
-  - Electric windows front and rear
-  - Electric, heated, and auto-folding mirrors
-  - Rain-sensing wipers
-  - Auto-dimming rearview mirror
-  - Wireless phone charging
-  exterior:
-  - IntelliLux LED Pixel Matrix headlights with 84 LED elements
-  - LED daytime running lights
-  - 18" bi-color alloy wheels
-  - GS sport body kit with black accents
-  - Black roof (two-tone)
-  - Privacy glass (rear windows)
-  interior:
-  - AGR-certified ergonomic sport seats with enhanced side bolsters
-  - Leather-wrapped steering wheel and gear selector
-  - Aluminum sport pedals
-  - Black headliner
-  - 352L trunk
-  - 60/40 split-folding rear seats
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source_urls:
-  - https://www.opel.com/modelle/astra/astra-electric.html
-  - https://www.adac.de/
-  - https://ev-database.org/
-  notes: '2025 model year Opel Astra Electric GS with minor updates:
-
-    - Battery preconditioning now standard for DC fast charging
-
-    - Updated Pure Panel Pro infotainment with OTA updates
-
-    - Enhanced Intelligent Speed Assist
-
-    - Slightly improved WLTP range (418km vs 416km) from software optimization
-
-    - Same powertrain, battery, and core specs as 2024
-
-    Platform sibling to Peugeot e-308 GT.
-
-    '

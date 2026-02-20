@@ -1,61 +1,20 @@
 id: renault-5-e-tech-techno-52-2025
 model_id: renault-5-e-tech
 name: Renault 5 E-Tech Electric Techno 52
-variant_name: Techno 52
 model_year: 2025
-vehicle_type: hatchback
-segment: B
-body_style: 5-door hatchback
-seats: 5
-doors: 5
-drivetrain:
-  type: fwd
-  motors:
-    front:
-      type: permanent_magnet
-      power_kw: 110
-      power_hp: 150
-      torque_nm: 245
-      position: front
 battery:
   total_kwh: 54
   usable_kwh: 52
   chemistry: NMC
-  voltage_nominal: 400
-  cells: 216
-  modules: 12
   manufacturer: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 charging:
-  ac:
-    connector: type2
-    charge_time_0_100_hours: 5.0
-  dc:
-    connector: ccs2
-    charge_time_10_80_percent_minutes: 30
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 100
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 70
-      power_kw: 75
-    - soc_percent: 80
-      power_kw: 50
-  bidirectional:
-    v2g_capable: true
-    v2h_capable: true
-    v2l_capable: true
-    max_discharge_power_kw: 3.7
-    notes: V2G/V2L capability standard on Techno trim
   ac_max_kw: 11
   dc_max_kw: 100
 performance:
   top_speed_kmh: 150
-  power_to_weight_ratio_kwkg: 84.6
   acceleration_0_100_sec: 7.9
   total_power_kw: 110
   total_power_hp: 150
@@ -64,23 +23,12 @@ range:
   wltp_km: 400
   wltp_city_km: 520
   wltp_highway_km: 320
-  real_world:
-    mixed_km: 350
-    highway_km: 280
-    city_km: 440
-    winter_km: 280
-efficiency:
-  wltp_consumption_kwh_per_100km: 14.2
-  real_world_consumption_kwh_per_100km: 16.4
-  epa_efficiency_rating: null
 dimensions:
   length_mm: 3920
   width_mm: 1770
   height_mm: 1500
   wheelbase_mm: 2540
   ground_clearance_mm: 150
-  drag_coefficient: 0.288
-  frontal_area_m2: 2.35
 weight:
   curb_weight_kg: 1300
   gross_vehicle_weight_kg: 1630
@@ -91,103 +39,6 @@ cargo:
   trunk_capacity_liters: 326
   trunk_max_liters: 1090
   frunk_capacity_liters: 0
-platform: AmpR Small
-production:
-  plant: Douai, France
-  start_year: 2024
-  end_year: null
-technology:
-  infotainment:
-    system: OpenR Link
-    screen_size_inches: 10.1
-    operating_system: Android Automotive
-    features:
-    - Google Built-In
-    - Google Maps
-    - Google Assistant
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Reno avatar assistant
-    - Digital instrument cluster
-    - Head-up display
-  driver_assistance:
-    level: 2
-    features:
-    - Adaptive Cruise Control with Stop & Go
-    - Lane Centering Assist
-    - Traffic Sign Recognition
-    - Blind Spot Warning
-    - Rear Cross Traffic Alert
-    - Active Emergency Braking
-    - Rear camera
-    - Front and rear parking sensors
-  comfort:
-    climate_zones: 2
-    heat_pump: true
-    features:
-    - Heated front seats
-    - Heated steering wheel
-    - Automatic climate control
-    - Fabric/synthetic leather seats
-    - Electric seat adjustment (driver)
-    - LED headlights
-    - Keyless entry and start
-    - Wireless phone charging
-    - Ambient lighting
-safety:
-  euro_ncap_rating: 5
-  euro_ncap_year: 2024
-  euro_ncap_scores:
-    adult_occupant: 88
-    child_occupant: 84
-    vulnerable_road_users: 75
-    safety_assist: 82
-wheels:
-  standard_size: 18"
-  tire_size_front: 195/50R18
-  tire_size_rear: 195/50R18
-suspension:
-  front: MacPherson strut
-  rear: Torsion beam
-  adjustable: false
-market_position:
-  target_segment: Premium compact electric hatchback
-  competitors:
-  - Volkswagen ID.3 Pure (€39,995)
-  - MINI Cooper Electric (€35,500)
-  - Opel Corsa Electric Ultimate (€36,990)
-  - MG4 Long Range (€35,990)
-  - Peugeot e-208 GT (€38,500)
-  key_selling_points:
-  - Iconic retro-modern design
-  - 400km WLTP range
-  - Standard heat pump
-  - V2G/V2L bidirectional charging
-  - Google Built-In with Reno assistant
-  - 100kW DC fast charging
-  - Dual-zone climate control
-  - Advanced ADAS features
-  - French design and premium feel
-  - Competitive €30,000 price
-ownership:
-  depreciation_3_years_percent: 40
-  insurance_group: null
-  service_interval_months: 12
-  service_interval_km: 30000
-data_sources:
-  specifications: https://www.renault.de/elektrofahrzeuge/renault-5-e-tech.html
-  testing:
-  - source: ADAC
-    url: https://www.adac.de/rund-ums-fahrzeug/tests/elektroauto/renault-5-e-tech/
-    real_world_consumption: 16.4 kWh/100km
-    confidence: estimated
-  - source: Auto Motor und Sport
-    url: https://www.auto-motor-und-sport.de/test/renault-5-e-tech-2024/
-    real_world_range: 350 km
-    confidence: estimated
-  reviews:
-  - https://www.autoexpress.co.uk/renault/5-e-tech
-  - https://www.carwow.de/renault/5-e-tech
 notes: 'Top Techno 52 trim of the iconic Renault 5 E-Tech with extended 400km WLTP
   range.  Features larger 52 kWh NMC battery (vs 40 kWh LFP in base model) and more
   powerful  150 hp motor. Standard heat pump improves winter efficiency significantly.

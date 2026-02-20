@@ -2,8 +2,6 @@ id: suzuki-e-vitara-61-allgrip-awd-2025
 name: 61 kWh AllGrip-e AWD
 model_id: suzuki-e-vitara
 model_year: 2025
-production_start: '2025-08-01'
-production_end: null
 battery:
   usable_kwh: 61.0
   total_kwh: 61.0
@@ -13,19 +11,12 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 61 kWh LFP blade battery with AllGrip-e dual-motor AWD system.
 range:
   wltp_km: 412
   wltp_city_km: 510
   wltp_highway_km: 330
   real_world_km: 320
   real_world_source: Estimated based on carwow.de review data
-  notes: 'WLTP range of 412 km with AWD. Slightly lower than FWD variant due to additional
-
-    rear motor weight and drivetrain losses. Heat pump standard.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -47,34 +38,12 @@ charging:
     power_kw: 50
   - soc_percent: 80
     power_kw: 35
-  charge_time_10_80_minutes: 30
-  notes: 'DC fast charging up to 150 kW. Same charging specs as 61 kWh FWD variant.
-
-    AC charging: 11 kW standard (3-phase), 0-100% in approximately 5.5 hours.
-
-    '
-motors:
-- position: front
-  type: permanent_magnet
-  power_kw: 128
-  torque_nm: 189
-  manufacturer: Suzuki/Toyota
-- position: rear
-  type: permanent_magnet
-  power_kw: 48
-  torque_nm: 121
-  manufacturer: Suzuki/Toyota
-drivetrain:
-  type: AWD
-  all_wheel_drive: true
 performance:
   top_speed_kmh: 150
-  notes: Top-spec AllGrip-e AWD. System power 135 kW (184 PS). Fastest e Vitara variant.
   acceleration_0_100_sec: 7.4
 efficiency:
   wltp_kwh_per_100km: 14.8
   real_world_kwh_per_100km: 19.0
-  notes: Higher consumption than FWD due to dual motors and additional weight.
 dimensions:
   length_mm: 4275
   width_mm: 1800
@@ -91,17 +60,6 @@ weight:
   payload_kg: 540
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  notes: Heaviest e Vitara variant due to dual motors and AWD system.
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: rear
-  autonomous_parking: false
 notes: 'Top-spec Suzuki e Vitara with 61 kWh LFP battery and AllGrip-e all-wheel drive.
   Dual-motor system: 128 kW front + 48 kW rear for combined 135 kW (184 PS) system
   output. 0-100 km/h in 7.4 seconds. WLTP range of 412 km. AllGrip-e provides enhanced
@@ -112,8 +70,6 @@ notes: 'Top-spec Suzuki e Vitara with 61 kWh LFP battery and AllGrip-e all-wheel
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source: manufacturer
   sources:
   - https://en.wikipedia.org/wiki/Suzuki_e_Vitara
   - https://www.carwow.de/suzuki/e-vitara

@@ -1,7 +1,6 @@
 id: mercedes-benz-eqb-250-plus-2024
 name: Mercedes-Benz EQB 250+
 model_id: mercedes-benz-eqb
-variant_name: 250+
 model_year: 2024
 dimensions:
   length_mm: 4684
@@ -18,48 +17,29 @@ battery:
   usable_kwh: 66.5
   total_kwh: 70.5
   chemistry: NCM
-  cells: prismatic
-  supplier: CATL
-  modules: 9
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
 range:
   wltp_km: 474
   wltp_city_km: 590
   wltp_highway_km: 390
   epa_km: null
   real_world_km: 405
-  real_world_mild_weather_km: 430
-  real_world_cold_weather_km: 320
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 6.0
   dc_max_kw: 100
-  dc_charge_time_10_80_minutes: 32
-  dc_charge_time_0_100_minutes: 55
-  dc_charge_speed_kmh: 540
   dc_curve:
   - soc_percent: 10
     power_kw: 100
-    duration_minutes: 5
   - soc_percent: 30
     power_kw: 98
-    duration_minutes: 10
   - soc_percent: 50
     power_kw: 85
-    duration_minutes: 10
   - soc_percent: 70
     power_kw: 65
-    duration_minutes: 10
   - soc_percent: 80
     power_kw: 45
-    duration_minutes: 7
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  plug_and_charge: true
 performance:
   drive_type: FWD
   motors:
@@ -70,14 +50,7 @@ performance:
   total_power_kw: 140
   total_power_hp: 190
   total_torque_nm: 385
-  acceleration_0_100_kmh_sec: 9.0
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 160
-  drive_modes:
-  - ECO
-  - Comfort
-  - Sport
-  - Individual
   acceleration_0_100_sec: 9.0
 weight:
   curb_weight_kg: 2175
@@ -85,117 +58,11 @@ weight:
   payload_kg: 555
   towing_capacity_braked_kg: 1700
   towing_capacity_unbraked_kg: 750
-  weight_distribution_front_percent: 60
 efficiency:
   wltp_kwh_per_100km: 16.8
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 18.4
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Active Distance Assist DISTRONIC (adaptive cruise)
-  - Active Steering Assist
-  - Active Brake Assist with cross-traffic function
-  - Active Lane Keeping Assist
-  - Attention Assist (drowsiness detection)
-  - Traffic Sign Assist
-  - Active Blind Spot Assist
-  - PRE-SAFE (collision preparation)
-  infotainment:
-  - MBUX with 10.25-inch touchscreen
-  - 7.0-inch digital instrument cluster (10.25-inch optional)
-  - Navigation with Electric Intelligence
-  - Apple CarPlay / Android Auto (wireless optional)
-  - Mercedes me Connect app
-  - Voice control with 'Hey Mercedes'
-  comfort:
-  - Dual-zone automatic climate control
-  - Climate pre-conditioning via app
-  - Heat pump (standard)
-  - Heated front seats (optional)
-  - Electric tailgate
-  - Keyless entry and start (KEYLESS-GO, optional)
-  - Wireless smartphone charging (optional)
-  - Ambient lighting 64 colors
-  - Third row seats (optional 7-seater)
-  connectivity:
-  - Mercedes me Connect (remote control)
-  - Over-the-air updates
-  - Mercedes me Charge
-  - Plug & Charge
-version:
-  trim_level: Base (Progressive)
-  option_packages:
-  - AMG Line (sport styling, 19-inch wheels)
-  - Night Package (black exterior accents)
-  - Premium Package (larger displays, KEYLESS-GO)
-  - Third row seats (7-seater, +€1,785)
-  production_location: Kecskemét, Hungary
-  build_quality: premium
-  paint_options: 9
-  interior_options: 3
 metadata:
   created_at: '2026-02-08T04:00:00Z'
   updated_at: '2026-02-08T04:00:00Z'
   data_quality: verified
-  data_source: manufacturer_and_tested
-  verified_by: Mercedes-Benz official specs + EV Database testing
-  notes: 'Mercedes-Benz EQB 250+ is the FWD variant with the largest battery (70.5kWh).
-
-    Offers best range of all EQB variants (474km WLTP).
-
-
-    Key features:
-
-    - Optional third row seats (7-seater configuration)
-
-    - 495L trunk (5 seats) / 190L (7 seats)
-
-    - Good family SUV with premium feel
-
-    - Proven MFA2 platform
-
-
-    Competes with:
-
-    - Tesla Model Y (5-seat, better performance/range)
-
-    - BMW iX1 (5-seat, similar specs)
-
-    - Volkswagen ID.4 (5-seat, better value)
-
-
-    Strengths:
-
-    - Only premium 7-seat compact EV
-
-    - Mercedes brand prestige
-
-    - Good real-world range (~405km)
-
-    - Standard heat pump
-
-
-    Weaknesses:
-
-    - Modest 100kW DC charging
-
-    - Third row very tight
-
-    - Higher price than competitors
-
-    - No frunk
-
-    '
-sources:
-- url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqb/explore.html
-  title: Mercedes-Benz EQB Official Specs
-  date_accessed: '2026-02-08'
-- url: https://ev-database.org/car/1547/Mercedes-EQB-250plus
-  title: EV Database - Real-world testing
-  date_accessed: '2026-02-08'

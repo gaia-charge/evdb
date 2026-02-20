@@ -2,87 +2,23 @@ id: peugeot-e-2008-gt-2024
 model_id: peugeot-e-2008
 name: GT
 model_year: 2024
-trim_level: GT
 variant_code: null
-production:
-  start_date: 2023-09-01
-  end_date: null
-  status: active
-  notes: 2024 model with upgraded 54 kWh battery, GT is the sportiest trim level
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 54.0
   usable_kwh: 50.8
-  supplier: CATL (Contemporary Amperex Technology Co. Limited)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 216
-  modules: 18
-  voltage_nominal: 400
-  notes: Same 54 kWh battery as Allure trim, GT differentiation is equipment/styling
 range:
   wltp_km: 406
   wltp_city_km: 530
   wltp_highway_km: 330
-  epa_combined_km: null
-  real_world_avg_km: 340
   real_world_source: ADAC EcoTest 2024, InsideEVs 70 mph highway test
-  notes: Identical range to Allure (same battery/motor), slightly lower due to 18"
-    wheels
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 5.5
-    onboard_charger: 11kW 3-phase standard
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 100kW peak maintained briefly, average ~85kW
-    preconditioning: false
-  charge_curve:
-  - percent: 0
-    power_kw: 95
-  - percent: 10
-    power_kw: 100
-  - percent: 30
-    power_kw: 100
-  - percent: 50
-    power_kw: 87
-  - percent: 60
-    power_kw: 78
-  - percent: 70
-    power_kw: 62
-  - percent: 80
-    power_kw: 42
-  - percent: 90
-    power_kw: 28
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 100
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 100
-    power_hp: 136
-    torque_nm: 260
-    supplier: null
-  combined:
-    power_kw: 100
-    power_hp: 136
-    torque_nm: 260
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 150
-  quarter_mile_seconds: null
   total_power_kw: 100
   total_power_hp: 136
   total_torque_nm: 260
@@ -90,84 +26,20 @@ performance:
   top_speed_kmh: 150
 efficiency:
   wltp_kwh_per_100km: 16.5
-  wltp_wh_per_km: 165
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.7
-  mpge_combined: null
-  drag_coefficient: 0.32
 weight:
   curb_weight_kg: 1560
   gross_vehicle_weight_kg: 1940
   payload_kg: 380
-  weight_distribution_front_percent: 62
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar
-  rear: Torsion beam with coil springs
-brakes:
-  front: Ventilated disc (280mm)
-  rear: Drum (with electronic brake force distribution)
-  regenerative: true
-tires:
-  standard: 215/50 R18
-features:
-  infotainment:
-  - Peugeot i-Cockpit 3D with 10.0" color touchscreen
-  - 3D digital instrument cluster (holographic effect)
-  - Premium navigation with real-time traffic
-  - Apple CarPlay and Android Auto (wired)
-  - DAB+ digital radio
-  - FOCAL Premium Audio system with 10 speakers and subwoofer
-  - MyPeugeot mobile app for remote control
-  driver_assistance:
-  - Active Safety Brake with Pedestrian and Cyclist Detection
-  - Lane Keep Assist with Lane Departure Warning
-  - Traffic Sign Recognition with Speed Limit Recommendation
-  - Adaptive cruise control with Stop & Go (standard)
-  - Blind Spot Monitoring
-  - Park Assist with 360° camera
-  - Driver attention alert
-  comfort_convenience:
-  - Automatic dual-zone climate control with air quality sensor
-  - Keyless entry and start (standard)
-  - One-pedal driving with B-mode regenerative braking
-  - Heated front seats (standard GT Pack)
-  - Heated steering wheel (standard GT Pack)
-  - Electric panoramic glass roof (optional)
-  - Electric windows front and rear
-  - Electric and heated mirrors
-  - Rain-sensing wipers
-  - Ambient interior lighting
-  exterior:
-  - Full LED headlights with LED DRLs and cornering function
-  - 18" bi-tone alloy wheels (GT design)
-  - GT body kit with black accents
-  - Gloss black roof rails
-  - Chrome exhaust surrounds (styling only)
-  - Body-colored door handles and mirrors
-  - Dark tinted rear windows
-  - GT badges
-  interior:
-  - Alcantara and TEP sport upholstery with GT stitching
-  - Leather-wrapped GT steering wheel with paddle shifters
-  - Aluminum pedals
-  - Stainless steel door sills with GT logo
-  - Peugeot Connect emergency call and telematics
-  - 405L trunk (best-in-class for CMP platform B-SUVs)
-  - 60/40 split-folding rear seats
 dimensions:
   length_mm: 4300
   width_mm: 1770
-  width_mirrors_mm: 2020
   height_mm: 1530
   wheelbase_mm: 2605
   ground_clearance_mm: 190
-  drag_coefficient: 0.32
-  frontal_area_m2: 2.3
 cargo:
   trunk_capacity_liters: 405
   trunk_max_liters: 1467
@@ -175,18 +47,3 @@ cargo:
 metadata:
   data_quality: verified
   created_at: '2026-02-08'
-  last_updated: '2026-02-08'
-  source_urls:
-  - https://www.peugeot.de/modelle/e-2008.html
-  - https://www.peugeot.fr/gamme-vehicules/e-2008.html
-  - https://ev-database.org/car/1568/Peugeot-e-2008
-  notes: "The Peugeot e-2008 GT is the flagship trim level, adding premium equipment\
-    \ and \nsporty styling to the practical B-SUV package.\n\nGT adds over Allure:\
-    \ FOCAL 10-speaker audio, Park Assist with 360° camera, adaptive \ncruise, keyless\
-    \ entry, heated seats/wheel, 18\\\" wheels, GT body kit, Alcantara interior.\n\
-    \nTypical pricing: €4,000 premium over Allure (€43,000 vs €39,000 in Germany).\n\
-    \nMechanically identical to Allure - same 54 kWh battery, 100kW motor, 406km WLTP\
-    \ range.\nThe GT is about equipment, comfort, and style, not performance (no power\
-    \ upgrade).\n\nBest-in-class trunk space (405L) and real-world range (~340km)\
-    \ make it a practical \nchoice vs sportier but less roomy competitors like Opel\
-    \ Mokka-e or Jeep Avenger.\n"

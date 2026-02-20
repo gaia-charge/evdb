@@ -1,10 +1,8 @@
-# Tesla Model S Dual Motor (2025 Model Year)
 id: tesla-model-s-dual-motor-2025
 name: Dual Motor AWD
 model_id: tesla-model-s
 model_year: 2025
 variant_code: MS
-
 battery:
   usable_kwh: 100.0
   total_kwh: 104.5
@@ -14,15 +12,13 @@ battery:
   warranty_years: 8
   warranty_km: 240000
   warranty_capacity_percent: 70
-
 range:
-  wltp_km: 637  # Slight improvement from 634km in 2024
+  wltp_km: 637
   wltp_city_km: null
   wltp_highway_km: null
-  epa_km: 655  # ~407 miles (slight improvement)
+  epa_km: 655
   real_world_km: 582
   real_world_source: estimated
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,58 +26,55 @@ charging:
   dc_max_kw: 250
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 250
-    - soc_percent: 10
-      power_kw: 250
-    - soc_percent: 20
-      power_kw: 250
-    - soc_percent: 30
-      power_kw: 210
-    - soc_percent: 40
-      power_kw: 180
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 110
-    - soc_percent: 70
-      power_kw: 80
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
+  - soc_percent: 0
+    power_kw: 250
+  - soc_percent: 10
+    power_kw: 250
+  - soc_percent: 20
+    power_kw: 250
+  - soc_percent: 30
+    power_kw: 210
+  - soc_percent: 40
+    power_kw: 180
+  - soc_percent: 50
+    power_kw: 140
+  - soc_percent: 60
+    power_kw: 110
+  - soc_percent: 70
+    power_kw: 80
+  - soc_percent: 80
+    power_kw: 55
+  - soc_percent: 90
+    power_kw: 30
+  - soc_percent: 100
+    power_kw: 15
   time_0_to_80_min: 31
   time_10_to_80_min: 28
   time_20_to_80_min: 25
   charging_speed_kmh: 1350
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: null
-      power_hp: null
-      torque_nm: null
-    - position: rear
-      type: permanent magnet
-      power_kw: null
-      power_hp: null
-      torque_nm: null
+  - position: front
+    type: AC induction
+    power_kw: null
+    power_hp: null
+    torque_nm: null
+  - position: rear
+    type: permanent magnet
+    power_kw: null
+    power_hp: null
+    torque_nm: null
   total_power_kw: 493
   total_power_hp: 670
   total_torque_nm: null
   acceleration_0_100_sec: 3.2
   top_speed_kmh: 250
-
 dimensions:
   length_mm: 5021
   width_mm: 1960
@@ -89,25 +82,21 @@ dimensions:
   height_mm: 1440
   wheelbase_mm: 2960
   ground_clearance_mm: 117
-
 cargo:
   trunk_capacity_liters: 793
   trunk_max_liters: 793
   frunk_capacity_liters: 89
-
 weight:
   curb_weight_kg: 2162
   gross_vehicle_weight_kg: 2640
   payload_kg: 478
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-
 efficiency:
-  wltp_kwh_per_100km: 16.4  # Slight improvement from 16.5 kWh/100km in 2024
+  wltp_kwh_per_100km: 16.4
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 18.1
   efficiency_rating: A
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -115,43 +104,48 @@ features:
   torque_vectoring: true
   one_pedal_driving: true
   autopilot_level: 2
-
 optional_equipment:
-  - name: Yoke Steering Wheel
-    code: YOKE
-    category: interior
-    included_in_base: false
-  - name: Enhanced Autopilot
-    code: AP
-    category: technology
-    included_in_base: false
-  - name: Full Self-Driving Capability
-    code: FSD
-    category: technology
-    included_in_base: false
-  - name: Premium Connectivity
-    code: PC
-    category: technology
-    included_in_base: false
+- name: Yoke Steering Wheel
+  code: YOKE
+  category: interior
+  included_in_base: false
+- name: Enhanced Autopilot
+  code: AP
+  category: technology
+  included_in_base: false
+- name: Full Self-Driving Capability
+  code: FSD
+  category: technology
+  included_in_base: false
+- name: Premium Connectivity
+  code: PC
+  category: technology
+  included_in_base: false
+notes: '2025 Model S Dual Motor receives minor software and efficiency updates.
 
-notes: |
-  2025 Model S Dual Motor receives minor software and efficiency updates.
-  
+
   Updates from 2024:
+
   - Slightly improved WLTP range: 637km (up from 634km)
+
   - Improved efficiency: 16.4 kWh/100km (from 16.5 kWh/100km)
+
   - Updated Autopilot software (2025.x firmware)
+
   - Enhanced cabin noise insulation
-  
+
+
   Competes with:
+
   - Mercedes-Benz EQS 450+ (€116,950, more luxury, less performance)
+
   - Porsche Taycan 4S (€118,737, sportier handling, less range)
+
   - BMW i7 xDrive60 (€135,700, more traditional luxury, less sporty)
+
   - Lucid Air Touring (€95,000, more range, less brand recognition)
 
+  '
 metadata:
   data_quality: verified
-  created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  contributor: OpenClaw EVDB Development
-  version: 1.0
+  created_at: '2026-02-09'

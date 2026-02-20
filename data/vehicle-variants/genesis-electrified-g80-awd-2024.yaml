@@ -2,122 +2,30 @@ id: genesis-electrified-g80-awd-2024
 name: AWD
 model_id: genesis-electrified-g80
 model_year: 2024
-trim_level: Luxury
-description: 'Genesis Electrified G80 AWD is the brand''s flagship electric luxury
-  sedan, offering
-
-  traditional executive sedan proportions and presence with dual-motor electric powertrain.
-
-  87.2 kWh battery delivers practical 520 km WLTP range suitable for long-distance
-  business
-
-  travel. Dual-motor AWD system produces 272 kW (370 hp) for refined yet spirited
-  4.9-second
-
-  0-100 km/h acceleration. Comprehensive standard equipment includes Lexicon 21-speaker
-
-  premium audio, Nappa leather quilted seats with heating/ventilation/massage, multi-chamber
-
-  air suspension, Highway Driving Assist 2, Face Connect biometric authentication,
-  and
-
-  dual 12.3-inch panoramic displays. Positioned as premium electric alternative to
-  Mercedes
-
-  EQE and BMW i5 with excellent value proposition at €84,000 base price.
-
-  '
 battery:
   usable_kwh: 87.2
   total_kwh: 91.0
   chemistry: NCM
-  supplier: SK On
   cell_type: pouch
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-motors:
-  configuration: dual_motor
-  drive_type: AWD
-  motor_type: permanent_magnet
-  front_motor:
-    power_kw: 100
-    torque_nm: 350
-  rear_motor:
-    power_kw: 172
-    torque_nm: 350
-  combined_power_kw: 272
-  combined_torque_nm: 700
-  notes: Dual permanent magnet synchronous motors with intelligent AWD torque distribution
 performance:
-  acceleration_0_100_kmh: 4.9
-  acceleration_0_100_sec: 4.9  # Canonical schema field name
+  acceleration_0_100_sec: 4.9
   top_speed_kmh: 225
-  total_power_kw: 272  # From motors.combined_power_kw, canonical schema field
-  total_torque_nm: 700  # From motors.combined_torque_nm, canonical schema field
-  notes: Refined acceleration with executive sedan comfort
+  total_power_kw: 272
+  total_torque_nm: 700
 range:
   wltp_km: 520
   wltp_city_km: 650
   wltp_highway_km: 425
   epa_km: null
-  real_world_mixed_km: 440
-  real_world_highway_130kmh_km: 360
-  real_world_city_km: 530
-  real_world_winter_km: 350
 efficiency:
   wltp_kwh_per_100km: 19.3
   real_world_kwh_per_100km: 21.0
-  mpge_combined: null
 charging:
-  ac:
-    phases: 3
-    connector_type: Type2
-    charge_time_0_100_hours: 8.0
-    notes: Standard 11kW AC charging for home/workplace
-  dc:
-    connector_type: CCS2
-    charge_time_10_80_percent_minutes: 34
-    charge_curve:
-    - soc_percent: 10
-      power_kw: 175
-    - soc_percent: 20
-      power_kw: 175
-    - soc_percent: 30
-      power_kw: 165
-    - soc_percent: 40
-      power_kw: 155
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 60
-      power_kw: 120
-    - soc_percent: 70
-      power_kw: 95
-    - soc_percent: 80
-      power_kw: 65
-    notes: '400V architecture with 175kW peak DC charging.
-
-      10-80% in ~34 minutes with 350kW DC charger.
-
-      Slower charging than 800V E-GMP siblings (GV60/EV6).
-
-      Battery preconditioning when navigation set to charging station.
-
-      '
   ac_max_kw: 11
   dc_max_kw: 175
-bidirectional_charging:
-  v2l: true
-  v2h: false
-  v2g: false
-  v2l_power_kw: 3.6
-  v2l_notes: 'Vehicle-to-Load (V2L) capability standard.
-
-    Can power external devices up to 3.6kW.
-
-    V2L adapter included with vehicle.
-
-    '
 dimensions:
   length_mm: 4995
   width_mm: 1925
@@ -134,38 +42,6 @@ cargo:
   trunk_capacity_liters: 424
   trunk_max_liters: 424
   frunk_capacity_liters: 0
-  notes: Rear seats do not fold flat due to luxury sedan design.
-wheels_tires:
-  standard_wheel_size_inches: 19
-  optional_wheel_sizes:
-  - 20
-standard_features:
-- Lexicon 21-speaker premium audio
-- Nappa leather quilted seats
-- Multi-chamber air suspension
-- Highway Driving Assist 2
-- Face Connect facial recognition
-- Dual 12.3-inch panoramic displays
-- Smart Cruise Control with Stop & Go
-- Surround View Monitor
-- Remote Smart Parking Assist 2
-- Heated/ventilated/massaging front seats
-- Heated rear seats
-- Dual-zone climate control
-- Panoramic sunroof
-- LED Matrix headlights
-- V2L 3.6 kW
-optional_features:
-- 20-inch forged wheels (€2,000)
-- Advanced lighting package (€1,500)
-- Winter package (€800)
-- Matte paint (€3,000)
-competitors:
-- Mercedes-Benz EQE 350+
-- BMW i5 eDrive40
-- Audi A6 e-tron
-- Tesla Model S Dual Motor
-- Polestar 2 Long Range Dual Motor
 notes: 'Genesis'' flagship electric sedan with traditional executive proportions.
 
   Based on adapted combustion G80 platform (400V, not 800V E-GMP).

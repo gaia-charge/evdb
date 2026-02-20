@@ -2,8 +2,6 @@ id: abarth-600e-scorpionissima-2025
 name: Scorpionissima
 model_id: abarth-600e
 model_year: 2025
-production_start: '2024-10-01'
-production_end: null
 battery:
   usable_kwh: 51.0
   total_kwh: 54.0
@@ -12,20 +10,12 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 54 kWh NMC battery shared with Fiat 600e.
 range:
   wltp_km: 322
   wltp_city_km: 425
   wltp_highway_km: 260
   real_world_km: 255
   real_world_source: Estimated based on 20-inch wheels and sport settings
-  notes: 'WLTP range of 322 km. Slightly lower range than Turismo due to larger 20-inch
-    wheels
-
-    and sportier settings as standard.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -47,25 +37,12 @@ charging:
     power_kw: 40
   - soc_percent: 80
     power_kw: 30
-  charge_time_10_80_minutes: 35
-  notes: Same charging specs as Turismo.
-motors:
-- position: front
-  type: permanent_magnet
-  power_kw: 207
-  torque_nm: 345
-  manufacturer: Stellantis
-drivetrain:
-  type: FWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 200
-  notes: Same powertrain as Turismo. 207 kW (280 PS). Limited-edition launch specification.
   acceleration_0_100_sec: 5.9
 efficiency:
   wltp_kwh_per_100km: 16.8
   real_world_kwh_per_100km: 21.0
-  notes: Slightly higher consumption due to 20-inch wheels and sport setup.
 dimensions:
   length_mm: 4189
   width_mm: 1779
@@ -83,16 +60,6 @@ weight:
   payload_kg: 400
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: rear
-  autonomous_parking: false
 notes: 'Abarth 600e Scorpionissima is the limited-edition launch variant. Same 207
   kW powertrain as Turismo but with exclusive Hypnotique Green or Acid Green paint,
   Alcantara/leather interior, JBL premium audio, 20-inch alloy wheels, full LED matrix
@@ -102,8 +69,6 @@ notes: 'Abarth 600e Scorpionissima is the limited-edition launch variant. Same 2
 metadata:
   data_quality: estimated
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source: manufacturer
   sources:
   - https://www.abarth.com/600e
   - https://ev-database.org/car/2043/Abarth-600e

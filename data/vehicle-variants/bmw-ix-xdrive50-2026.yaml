@@ -2,13 +2,11 @@ id: bmw-ix-xdrive50-2026
 name: xDrive50
 model_id: bmw-ix
 model_year: 2026
-trim_level: xDrive50
 battery:
   usable_kwh: 109.0
   total_kwh: 115.0
   chemistry: NCM
   cell_type: prismatic
-  supplier: Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
@@ -18,22 +16,6 @@ range:
   wltp_highway_km: 530
   epa_km: null
   real_world_km: 570
-  conditions:
-  - test: WLTP Combined
-    result_km: 655
-    temperature_c: 23
-  - test: Real-world mixed
-    result_km: 570
-    temperature_c: 15
-    notes: Mixed city/highway driving, 50/50 split
-  - test: Real-world winter
-    result_km: 445
-    temperature_c: -5
-    notes: Cold weather with heating, 22% loss thanks to heat pump
-  - test: Real-world highway
-    result_km: 490
-    temperature_c: 20
-    notes: Sustained 130 km/h on German Autobahn
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -57,31 +39,6 @@ charging:
     power_kw: 135
   - soc_percent: 80
     power_kw: 95
-  charge_times:
-  - type: DC fast charging
-    power_kw: 210
-    soc_from: 10
-    soc_to: 80
-    time_minutes: 33
-    notes: CCS2 DC fast charging, peak 210kW
-  - type: AC home charging
-    power_kw: 11
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 595
-    notes: 11kW 3-phase wallbox (9.9 hours)
-  - type: AC home charging (optional 22kW)
-    power_kw: 22
-    soc_from: 0
-    soc_to: 100
-    time_minutes: 300
-    notes: 22kW 3-phase wallbox upgrade (5 hours)
-  plug_and_charge: true
-  bidirectional:
-    v2l: false
-    v2g: true
-    v2h: true
-  preconditioning: true
 performance:
   drive_type: AWD
   motors:
@@ -97,9 +54,6 @@ performance:
   total_power_hp: 530
   total_torque_nm: 770
   acceleration_0_100_sec: 4.5
-  acceleration_0_60_mph_sec: 4.3
-  top_speed_kph: 200
-  top_speed_mph: 124
   top_speed_kmh: 200
 weight:
   curb_weight_kg: 2595
@@ -107,44 +61,9 @@ weight:
   payload_kg: 545
   towing_capacity_braked_kg: 2500
   towing_capacity_unbraked_kg: 750
-  roof_load_kg: 100
 efficiency:
   wltp_kwh_per_100km: 19.2
-  wltp_city_kwh_per_100km: 15.4
-  wltp_highway_kwh_per_100km: 23.8
   real_world_kwh_per_100km: 21.8
-  energy_efficiency_class: A
-features:
-  standard:
-  - BMW Operating System 9.5 with enhanced AI assistant
-  - Curved display (12.3" driver cluster + 14.9" central touchscreen)
-  - BMW Natural Interaction with improved gesture and voice control
-  - Augmented Reality Head-Up Display
-  - BMW Driving Assistant Professional (Level 2+ ADAS with Highway Assistant)
-  - BMW Highway Assistant with hands-free driving capability (Germany)
-  - Parking Assistant Professional with Remote 3D View
-  - 360-degree camera with 3D visualization
-  - Adaptive M Suspension Professional with air springs
-  - Integral active steering (rear-wheel steering up to 2.5°)
-  - Harman Kardon surround sound system (18 speakers)
-  - Panoramic glass roof with Sky Lounge LED ambient lighting
-  - 4-zone automatic climate control with heat pump
-  - Heated front and rear seats with massage function
-  - Heated steering wheel
-  - Soft-close doors with electric handles
-  - BMW IconicSounds Electric by Hans Zimmer
-  - Hexagonal illuminated kidney grille
-  - Adaptive LED headlights with BMW Laser Light
-  - Over-the-air (OTA) software updates
-  - 5G connectivity
-  - BMW ConnectedDrive with remote services
-  optional:
-  - Bowers & Wilkins Diamond Surround Sound (30 speakers, 1615W)
-  - Executive Lounge rear seats with massage and entertainment
-  - 22kW AC onboard charger (5h full charge)
-  - M Sport Package with 21" or 22" wheels
-  - Travel & Comfort System (folding tables, cupholders)
-  - BMW Individual paint and interior options
 dimensions:
   length_mm: 4953
   width_mm: 1967
@@ -156,13 +75,6 @@ cargo:
   trunk_capacity_liters: 500
   trunk_max_liters: 1750
   frunk_capacity_liters: 0
-version_info:
-  release_date: 2025-09
-  changes_from_previous: '2026 model year update: larger 109kWh battery (+3.8kWh),
-    improved 210kW DC charging (+10kW), BMW Operating System 9.5, V2G capability,
-    enhanced driver assistance with hands-free highway driving, improved efficiency
-    (19.2 vs 19.8 kWh/100km)'
-  current_production: true
 notes: 2026 model year brings significant improvements to BMW's flagship electric
   SUV. Battery capacity increased from 105.2kWh to 109kWh usable, providing 25km additional
   WLTP range. DC fast charging improved to 210kW peak (from 200kW). New BMW Operating

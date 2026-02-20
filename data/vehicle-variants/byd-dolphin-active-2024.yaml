@@ -2,105 +2,26 @@ id: byd-dolphin-active-2024
 name: Active
 model_id: byd-dolphin
 model_year: 2024
-production_years:
-  start: 2023
-  end: null
-trim_level: active
-market_position: base
 battery:
   usable_kwh: 44.9
   total_kwh: 47.0
   chemistry: LFP
-  nominal_voltage_v: 400
   cell_type: blade
-  supplier: BYD (FinDreams Battery)
   warranty_years: 8
   warranty_km: 200000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: cell-to-body, blade cells
-    weight_kg: 350
-    cells: 120
-  notes: 'BYD Blade Battery uses LFP chemistry in long blade-shaped cells integrated
-    directly into the chassis. This smaller 44.9 kWh pack is ideal for city driving
-    and offers excellent safety, thermal stability, and long cycle life.
-
-    '
 range:
   wltp_km: 340
-  wltp_source: manufacturer
   real_world_km: 290
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-25°C, normal mode
-consumption:
-  wltp_kwh_per_100km: 13.2
-  real_world_kwh_per_100km: 15.5
-  real_world_source: estimated
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.5
-    onboard_charger_kw: 7
-    phases: 1
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '30_80': 29
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 50
-    - soc_percent: 10
-      power_kw: 60
-    - soc_percent: 30
-      power_kw: 60
-    - soc_percent: 50
-      power_kw: 55
-    - soc_percent: 70
-      power_kw: 40
-    - soc_percent: 80
-      power_kw: 25
-    - soc_percent: 90
-      power_kw: 15
-    - soc_percent: 100
-      power_kw: 10
-    notes: Conservative charging optimized for battery longevity
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.3
-    v2g: false
-    v2h: false
   ac_max_kw: 7
   dc_max_kw: 60
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 70
-  max_torque_nm: 180
-  cooling: liquid
-drivetrain:
-  type: fwd
-  total_power_kw: 70
-  total_power_hp: 95
-  total_torque_nm: 180
 performance:
   top_speed_kmh: 150
-  top_speed_limited: true
   acceleration_0_100_sec: 13.9
 efficiency:
   wltp_kwh_per_100km: 13.2
-  wltp_source: manufacturer
   real_world_kwh_per_100km: 15.5
-  highway:
-    kmh: 120
-    kwh_per_100km: 18.0
-    range_km: 250
-  city:
-    kwh_per_100km: 13.0
-    range_km: 345
 dimensions:
   length_mm: 4290
   width_mm: 1770
@@ -118,45 +39,6 @@ cargo:
   trunk_capacity_liters: 345
   trunk_max_liters: 1310
   frunk_capacity_liters: 0
-interior:
-  seating_capacity: 5
-features:
-  exterior:
-  - 16-inch steel wheels with covers
-  - LED headlights
-  - LED daytime running lights
-  - Body-colored bumpers
-  - Rear parking sensors
-  - Shark fin antenna
-  interior:
-  - 12.8-inch rotating touchscreen
-  - 5-inch digital instrument cluster
-  - Fabric upholstery
-  - Manual climate control
-  - Bluetooth connectivity
-  - USB-A and USB-C ports
-  - Six speakers
-  safety:
-  - ABS with EBD
-  - Electronic stability control
-  - Traction control
-  - Front airbags
-  - Side airbags
-  - Curtain airbags
-  - ISOFIX child seat anchors
-  - Tire pressure monitoring
-  - Rear parking sensors
-  driver_assistance:
-  - Hill start assist
-  - Electric parking brake
-  - Rear view camera
-options_packages:
-- name: Comfort Pack
-  price_eur: 1000
-  items:
-  - Heat pump
-  - Heated front seats
-  - Leather steering wheel
 notes: 'The Active trim is the entry-level Dolphin variant with the smaller 44.9 kWh
   battery. It offers excellent value for city driving and daily commuting with a realistic
   range of around 290 km. Standard equipment includes a 12.8-inch rotating touchscreen,

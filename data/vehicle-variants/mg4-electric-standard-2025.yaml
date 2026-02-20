@@ -2,13 +2,6 @@ id: mg4-electric-standard-2025
 model_id: mg-mg4-electric
 name: Standard
 model_year: 2025
-trim_level: Standard
-version_info:
-  major_version: 1
-  minor_version: 2
-  release_date: 2024-09-01
-  changes_from_previous: 2025 model year update with improved infotainment software
-    and minor interior refinements
 dimensions:
   length_mm: 4287
   width_mm: 1836
@@ -22,76 +15,23 @@ cargo:
   frunk_capacity_liters: 0
 battery:
   chemistry: LFP
-  supplier: CATL
   usable_kwh: 50.8
   total_kwh: 51.0
-  cells: null
-  modules: null
-  voltage_nominal: 400
-  voltage_max: 455
   warranty_years: 7
   warranty_km: 175000
   warranty_capacity_percent: 70
-  thermal_management: liquid_cooling
 range:
   wltp_km: 350
   wltp_city_km: 460
   wltp_highway_km: 290
   epa_km: null
   real_world_km: 300
-  real_world_highway_km: 250
-  real_world_city_km: 380
 charging:
-  connectors:
-  - type2
-  - ccs2
-  ac:
-    phases: 1
-    onboard_charger_kw: 6.6
-    time_0_100_hours: 8.5
-  dc:
-    peak_power_kw: 117
-    time_10_80_min: 35
-    time_20_80_min: 29
-    preconditioning_available: false
-  bidirectional:
-    capabilities: []
-    max_power_kw: null
   ac_max_kw: 6.6
   dc_max_kw: 117
-charging_curve:
-- soc_percent: 10
-  power_kw: 110
-- soc_percent: 20
-  power_kw: 117
-- soc_percent: 30
-  power_kw: 115
-- soc_percent: 40
-  power_kw: 110
-- soc_percent: 50
-  power_kw: 100
-- soc_percent: 60
-  power_kw: 85
-- soc_percent: 70
-  power_kw: 65
-- soc_percent: 80
-  power_kw: 40
-- soc_percent: 90
-  power_kw: 20
-motor:
-  type: permanent_magnet
-  count: 1
-  drive_type: RWD
-  power_kw: 125
-  power_hp: 170
-  torque_nm: 250
-  max_rpm: 16000
 performance:
   acceleration_0_100_sec: 7.9
-  acceleration_0_60_sec: 7.5
-  top_speed_kph: 160
   top_speed_kmh: 160
-  top_speed_limited: true
   total_power_kw: 125
   total_torque_nm: 250
   total_power_hp: 170
@@ -101,100 +41,9 @@ weight:
   payload_kg: 424
   towing_capacity_braked_kg: 500
   towing_capacity_unbraked_kg: 500
-  weight_distribution_front_percent: 47
-  weight_distribution_rear_percent: 53
-wheels_tires:
-  standard:
-    front_size: 205/55 R17
-    rear_size: 205/55 R17
-    wheel_size_inches: 17
-brakes:
-  front: Ventilated discs
-  rear: Solid discs
-  regenerative_braking: true
-  one_pedal_driving: true
-  regen_levels: 3
-suspension:
-  front: MacPherson strut
-  rear: Multi-link independent
-adas:
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  autonomous_emergency_braking: true
-  traffic_sign_recognition: true
-  driver_monitoring: false
-  level: 2
-connectivity:
-  5g: false
-  4g: true
-  wifi_hotspot: false
-  bluetooth: true
-  smartphone_integration:
-  - apple_carplay
-  - android_auto
-  remote_services: true
-  ota_updates: true
-interior:
-  seating_material: fabric
-  heated_seats_front: false
-  heated_seats_rear: false
-  heated_steering_wheel: false
-  ventilated_seats: false
-  power_adjustable_driver_seat: false
-  panoramic_roof: false
-  ambient_lighting: false
-climate:
-  heat_pump: false
-  heated_windshield: false
-  remote_climate_control: true
-audio:
-  speakers: 6
-  premium_audio: false
-pricing_reference:
-  base_price_eur: 28990
-  market: DE
-  year: 2025
-availability:
-  markets:
-  - DE
-  - GB
-  - FR
-  - NL
-  - ES
-  - IT
-  - false
-  - SE
-  - PL
-  - AT
-  - BE
-  - DK
-  - CH
-  production_plant: SAIC Lingang Plant, Shanghai, China
-competitors:
-- Volkswagen ID.3 Pure
-- Renault Megane E-Tech EV40
-- BYD Dolphin
-- Cupra Born
-- Peugeot e-208
 metadata:
   data_quality: verified
   sources:
   - https://www.mgmotor.eu/mg4-electric/specs
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/mg/mg4/
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  notes: 'Entry-level MG4 with 51kWh LFP battery.
-
-    Excellent value - one of the cheapest EVs in Europe with decent range.
-
-    RWD layout gives surprisingly good driving dynamics.
-
-    LFP battery allows charging to 100% without degradation concerns.
-
-    Single-phase AC charging (6.6kW) is a limitation for European markets.
-
-    DC charging up to 117kW is competitive for the price point.
-
-    '

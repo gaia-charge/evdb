@@ -1,258 +1,154 @@
-# Volkswagen ID.Buzz Pro Long (77kWh) 2024
-# Most popular variant - long wheelbase, 77kWh battery, RWD
-
 id: volkswagen-id-buzz-pro-long-2024
 name: Pro Long
 model_id: volkswagen-id-buzz
 model_year: 2024
 variant_code: null
-
-# Battery specifications
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
-  chemistry: NCM  # Nickel-Cobalt-Manganese from LG Energy Solution/Samsung SDI
+  chemistry: NCM
   cell_type: prismatic
   manufacturer: LG Energy Solution / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
-# Range specifications
 range:
-  wltp_km: 461  # Long wheelbase with 77kWh
-  wltp_city_km: 600  # Excellent city efficiency for a van
-  wltp_highway_km: 370  # Higher drag coefficient affects highway range
-  epa_km: null  # Not EPA-rated
-  real_world_km: 390  # Real-world mixed driving
-  real_world_source: "ADAC Ecotest 2024, various owner reports"
-
-# Charging specifications
+  wltp_km: 461
+  wltp_city_km: 600
+  wltp_highway_km: 370
+  epa_km: null
+  real_world_km: 390
+  real_world_source: ADAC Ecotest 2024, various owner reports
 charging:
-  # AC charging
   ac_max_kw: 11
   ac_phases: 3
   ac_connector: Type2
-  
-  # DC fast charging
-  dc_max_kw: 170  # Improved from 150kW in earlier models
+  dc_max_kw: 170
   dc_connector: CCS2
-  
-  # DC charging curve (MEB platform typical curve, 77kWh)
   dc_curve:
-    - soc_percent: 0
-      power_kw: 170
-    - soc_percent: 5
-      power_kw: 170
-    - soc_percent: 10
-      power_kw: 170
-    - soc_percent: 20
-      power_kw: 165
-    - soc_percent: 30
-      power_kw: 155
-    - soc_percent: 40
-      power_kw: 140
-    - soc_percent: 50
-      power_kw: 125
-    - soc_percent: 60
-      power_kw: 100
-    - soc_percent: 70
-      power_kw: 70
-    - soc_percent: 80
-      power_kw: 45
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 10
-  
-  # Charging times (DC, in minutes)
+  - soc_percent: 0
+    power_kw: 170
+  - soc_percent: 5
+    power_kw: 170
+  - soc_percent: 10
+    power_kw: 170
+  - soc_percent: 20
+    power_kw: 165
+  - soc_percent: 30
+    power_kw: 155
+  - soc_percent: 40
+    power_kw: 140
+  - soc_percent: 50
+    power_kw: 125
+  - soc_percent: 60
+    power_kw: 100
+  - soc_percent: 70
+    power_kw: 70
+  - soc_percent: 80
+    power_kw: 45
+  - soc_percent: 90
+    power_kw: 25
+  - soc_percent: 100
+    power_kw: 10
   time_0_to_80_min: 30
   time_10_to_80_min: 26
   time_20_to_80_min: 23
-  
-  # Peak charging speed (km of range added per hour at peak power)
-  charging_speed_kmh: 850  # ~170kW / 19.5 kWh/100km * 60min
-
-# Bidirectional charging capabilities
+  charging_speed_kmh: 850
 bidirectional:
-  v2l: true  # Vehicle-to-Load via Plug & Charge
+  v2l: true
   v2l_max_kw: 3.0
-  v2h: true  # Vehicle-to-Home capable with right equipment
-  v2g: true  # Vehicle-to-Grid capable in markets with infrastructure
-
-# Performance specifications
+  v2h: true
+  v2g: true
 performance:
-  # Drive type
-  drive_type: RWD  # Rear-wheel drive (motor at rear axle)
-  
-  # Motor configuration
+  drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet  # Synchronous motor
-      power_kw: 210
-      power_hp: 286
-      torque_nm: 550
-  
-  # Total system power (single motor)
+  - position: rear
+    type: permanent magnet
+    power_kw: 210
+    power_hp: 286
+    torque_nm: 550
   total_power_kw: 210
   total_power_hp: 286
   total_torque_nm: 550
-  
-  # Acceleration and top speed
-  acceleration_0_100_sec: 10.2  # Slower than ID.4 due to weight and van shape
-  top_speed_kmh: 145  # Electronically limited (van aerodynamics)
-
-# Weight specifications
+  acceleration_0_100_sec: 10.2
+  top_speed_kmh: 145
 weight:
-  curb_weight_kg: 2516  # Heavier than ID.4 due to larger body and battery
+  curb_weight_kg: 2516
   gross_vehicle_weight_kg: 3000
-  payload_kg: 484  # Decent payload for passengers + cargo
+  payload_kg: 484
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
-# Efficiency
 efficiency:
-  wltp_kwh_per_100km: 19.5  # Higher than ID.4 due to van aerodynamics (Cd 0.29)
+  wltp_kwh_per_100km: 19.5
   epa_kwh_per_100km: null
-  real_world_kwh_per_100km: 22.0  # Real-world slightly higher
-  efficiency_rating: B  # Good for a van, not as good as sedans/hatchbacks
-
-# Key features
+  real_world_kwh_per_100km: 22.0
+  efficiency_rating: B
 features:
-  heat_pump: true  # Standard on all ID.Buzz models (improved 2024)
-  adaptive_suspension: false  # Standard suspension
+  heat_pump: true
+  adaptive_suspension: false
   air_suspension: false
   torque_vectoring: false
-  one_pedal_driving: true  # ID. Software supports B-mode regenerative braking
-  autopilot_level: 2  # IQ.DRIVE Travel Assist (lane keeping + adaptive cruise)
-
-# Optional equipment included in Pro Long trim
+  one_pedal_driving: true
+  autopilot_level: 2
 optional_equipment:
-  - name: IQ.LIGHT LED Matrix Headlights
-    code: IQL
-    category: lighting
-    included_in_base: true
-  - name: 3-zone Automatic Climate Control
-    code: 3AC
-    category: comfort
-    included_in_base: true
-  - name: Park Assist Plus with Memory Function
-    code: PAP
-    category: driver_assistance
-    included_in_base: true
-  - name: Electric Sliding Doors (both sides)
-    code: ESD
-    category: convenience
-    included_in_base: true
-  - name: Multifunction Steering Wheel with Touch Controls
-    code: MSW
-    category: interior
-    included_in_base: true
+- name: IQ.LIGHT LED Matrix Headlights
+  code: IQL
+  category: lighting
+  included_in_base: true
+- name: 3-zone Automatic Climate Control
+  code: 3AC
+  category: comfort
+  included_in_base: true
+- name: Park Assist Plus with Memory Function
+  code: PAP
+  category: driver_assistance
+  included_in_base: true
+- name: Electric Sliding Doors (both sides)
+  code: ESD
+  category: convenience
+  included_in_base: true
+- name: Multifunction Steering Wheel with Touch Controls
+  code: MSW
+  category: interior
+  included_in_base: true
+notes: 'The ID.Buzz Pro Long is the most popular variant, offering the perfect balance
+  of range,
 
-# Wheels and tires
-wheels_tires:
-  standard_wheel_size_inches: 20
-  standard_tire_size: 235/55 R20
-  optional_wheel_sizes: [21]
+  space, and value. The long wheelbase (2,988mm) provides significantly more interior
+  space
 
-# Exterior colors (iconic two-tone combinations available)
-colors:
-  - name: Candy White / Deep Black Pearl
-    code: B4B4
-    type: two-tone
-  - name: Bay Leaf Green / Deep Black Pearl
-    code: B4P7
-    type: two-tone
-  - name: Energetic Orange / Deep Black Pearl
-    code: B4J8
-    type: two-tone
-  - name: Lime Yellow / Deep Black Pearl
-    code: B4N3
-    type: two-tone
-  - name: Starlight Blue / Deep Black Pearl
-    code: B4W5
-    type: two-tone
-  - name: Kings Red / Deep Black Pearl
-    code: B4X1
-    type: two-tone
-
-# Interior options
-interior:
-  standard_upholstery: Microfiber Fabric
-  optional_upholstery:
-    - Leatherette
-
-# Infotainment and displays
-infotainment:
-  screen_size_inches: 12.9  # Portrait orientation touchscreen
-  screen_type: touchscreen
-  operating_system: ID. Software 3.2  # 2024 update with improved UI
-  navigation: Yes
-  voice_assistant: Yes (IDA voice assistant)
-  smartphone_integration:
-    - Apple CarPlay (wireless)
-    - Android Auto (wireless)
-  ota_updates: true
-  digital_cockpit_size_inches: 5.3  # Small digital display behind steering wheel
-
-# ADAS features (IQ.DRIVE)
-adas:
-  - Lane Assist (lane keeping)
-  - Travel Assist (Level 2 semi-autonomous, hands-on)
-  - Adaptive Cruise Control (ACC) with Stop & Go
-  - Front Assist with Pedestrian and Cyclist Monitoring
-  - Side Assist (blind spot monitoring)
-  - Rear Traffic Alert
-  - Park Assist Plus with 360° camera
-  - Emergency Assist (detects driver inattention)
-
-# Audio system
-audio:
-  standard_speakers: 6
-  premium_audio_system: Harman Kardon (optional)
-  premium_speakers: 10
-  premium_power_watts: 480
-
-# Lighting
-lighting:
-  headlights: IQ.LIGHT LED Matrix (standard in Pro Long)
-  taillights: LED with dynamic turn signals
-  interior_ambient: ID. Light (ambient light strip with visual feedback)
-
-# Climate control
-climate:
-  zones: 3  # Driver, passenger, rear
-  heat_pump: true
-  air_quality_sensor: true
-  heated_seats: Front (standard), rear (optional)
-  ventilated_seats: false
-  heated_steering_wheel: Optional
-
-# Official variant webpage
-website: https://www.volkswagen.de/de/modelle-und-konfigurator/id-buzz.html
-
-# Notes
-notes: |
-  The ID.Buzz Pro Long is the most popular variant, offering the perfect balance of range,
-  space, and value. The long wheelbase (2,988mm) provides significantly more interior space
   than the standard version (Euro-only), making it ideal for families.
-  
+
+
   Key advantages:
+
   - 7-seater configuration with flexible seating (5/6/7 options)
+
   - 1,121L cargo space with rear seats (2,205L with all seats folded)
+
   - Electric sliding doors on both sides (standard)
+
   - Two-tone paint schemes pay homage to classic VW T1/T2 vans
+
   - ID. Software 3.2 (2024) with improved UI and responsiveness
+
   - Comprehensive IQ.DRIVE safety suite
-  
+
+
   Trade-offs vs. ID.4:
+
   - Higher consumption (19.5 vs 17.9 kWh/100km) due to van aerodynamics
+
   - Slower acceleration (10.2s vs 8.5s 0-100 km/h) due to weight
+
   - Lower top speed (145 vs 160 km/h) due to aerodynamics
+
   - But: Much more interior space, sliding doors, retro appeal
-  
+
+
   Competes with: Mercedes EQV, Opel Vivaro-e (commercial), no direct lifestyle competitor
 
+  '
 dimensions:
   length_mm: 4962
   width_mm: 1985
@@ -260,22 +156,17 @@ dimensions:
   height_mm: 1927
   wheelbase_mm: 2989
   ground_clearance_mm: 175
-
 cargo:
   trunk_capacity_liters: 1340
   trunk_max_liters: 2469
   frunk_capacity_liters: 0
-
-
-# Metadata
 metadata:
-  created_at: "2026-02-07"
-  updated_at: "2026-02-10"
+  created_at: '2026-02-07'
+  updated_at: '2026-02-10'
   data_quality: verified
-  data_source: manufacturer
   sources:
-    - https://www.volkswagen.de/de/modelle-und-konfigurator/id-buzz.html
-    - https://www.volkswagen-newsroom.com/en/id-buzz-14168
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id-buzz/
-    - https://insideevs.com/reviews/643281/2024-vw-id-buzz-first-drive/
-    - https://ev-database.org/car/1691/Volkswagen-ID-Buzz-77-kWh
+  - https://www.volkswagen.de/de/modelle-und-konfigurator/id-buzz.html
+  - https://www.volkswagen-newsroom.com/en/id-buzz-14168
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id-buzz/
+  - https://insideevs.com/reviews/643281/2024-vw-id-buzz-first-drive/
+  - https://ev-database.org/car/1691/Volkswagen-ID-Buzz-77-kWh

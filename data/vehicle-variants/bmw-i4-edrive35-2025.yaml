@@ -2,11 +2,6 @@ id: bmw-i4-edrive35-2025
 name: eDrive35
 model_id: bmw-i4
 model_year: 2025
-production_years:
-  start: 2022
-  end: null
-trim_level: base
-market_position: entry
 dimensions:
   length_mm: 4783
   width_mm: 1852
@@ -22,75 +17,19 @@ battery:
   usable_kwh: 66.0
   total_kwh: 70.2
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL / Samsung SDI
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 450
-    cells: 156
 range:
   wltp_km: 490
-  wltp_source: manufacturer
   epa_km: 420
-  epa_source: estimated
   real_world_km: 400
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.75
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 28
-      '0_100': 45
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 160
-    - soc_percent: 10
-      power_kw: 180
-    - soc_percent: 30
-      power_kw: 180
-    - soc_percent: 50
-      power_kw: 140
-    - soc_percent: 70
-      power_kw: 90
-    - soc_percent: 80
-      power_kw: 55
-    - soc_percent: 90
-      power_kw: 30
-    - soc_percent: 100
-      power_kw: 15
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 180
-motors:
-- position: rear
-  type: synchronous
-  max_power_kw: 210
-  max_torque_nm: 400
-  cooling: liquid
-drivetrain:
-  type: rwd
-  total_power_kw: 210
-  total_power_hp: 286
-  total_torque_nm: 400
 performance:
   top_speed_kmh: 190
-  top_speed_limited: true
   acceleration_0_100_sec: 6.0
 weight:
   curb_weight_kg: 2050
@@ -101,48 +40,6 @@ efficiency:
   wltp_kwh_per_100km: 15.7
   epa_kwh_per_100km: 15.8
   real_world_kwh_per_100km: 16.5
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 19.0
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 21.5
-standard_features:
-- BMW Curved Display
-- BMW Operating System 9.0
-- 3-zone automatic climate control
-- Heat pump
-- LED headlights
-- 17-inch alloy wheels
-- Sport seats
-- Parking sensors front and rear
-- Wireless Apple CarPlay & Android Auto
-optional_packages:
-- name: M Sport Package
-  features:
-  - M Sport suspension
-  - 19-inch M wheels
-  - M Sport steering wheel
-  - M Sport brakes
-- name: Driving Assistant Professional
-  features:
-  - Active cruise control with Stop & Go
-  - Steering and lane control assistant
-  - Active side collision protection
-colors:
-  standard:
-  - Alpine White
-  - Mineral Grey Metallic
-  - Black Sapphire Metallic
-  premium:
-  - Portimao Blue
-  - Brooklyn Grey
-  - Tanzanite Blue II
-version:
-  facelift: false
-  major_changes:
-  - BMW Operating System 9.0
-  - Improved efficiency (slightly better WLTP range)
-  - Front parking sensors now standard
 notes: '2025 model year i4 eDrive35 with BMW Operating System 9.0 update. Entry-level
   RWD model with 66kWh battery. Slightly improved efficiency over 2024 model thanks
   to software optimization. 490 km WLTP range (up from 483 km). Still limited to 180kW
@@ -155,7 +52,6 @@ metadata:
   created_at: '2026-02-10'
   updated_at: '2026-02-10'
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/technische-daten.html
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/i4/

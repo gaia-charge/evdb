@@ -1,35 +1,23 @@
 id: kia-ev4-fastback-583-kwh-2025
 name: Kia EV4 Fastback 58.3 kWh
 model_id: kia-ev4
-variant_name: Fastback 58.3 kWh
 model_year: 2025
 battery:
   usable_kwh: 55.9
   total_kwh: 58.3
   chemistry: NMC
-  cells: null
-  supplier: SK On
-  modules: null
   warranty_years: 7
   warranty_km: 150000
   warranty_capacity_percent: 70
-  thermal_management: Liquid cooling
-  architecture_volts: 400
 range:
   wltp_km: 450
   wltp_city_km: null
   wltp_highway_km: null
   epa_km: null
   real_world_km: 355
-  real_world_mild_weather_km: 405
-  real_world_cold_weather_km: 295
 charging:
   ac_max_kw: 11
-  ac_charge_time_0_100_hours: 6.0
   dc_max_kw: 135
-  dc_charge_time_10_80_minutes: 25
-  dc_charge_time_0_100_minutes: null
-  dc_charge_speed_kmh: 610
   dc_curve:
   - soc_percent: 10
     power_kw: 135
@@ -41,11 +29,6 @@ charging:
     power_kw: 70
   - soc_percent: 80
     power_kw: 45
-  connector_ac: Type2
-  connector_dc: CCS2
-  onboard_charger_kw: 11
-  plug_and_charge: true
-  battery_preconditioning: true
 performance:
   drive_type: FWD
   motors:
@@ -56,13 +39,7 @@ performance:
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 283
-  acceleration_0_100_kmh_sec: 8.5
-  acceleration_0_60_mph_sec: null
   top_speed_kmh: 170
-  drive_modes:
-  - Eco
-  - Normal
-  - Sport
   acceleration_0_100_sec: 8.5
 dimensions:
   length_mm: 4430
@@ -80,62 +57,11 @@ weight:
   payload_kg: 450
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 600
-  weight_distribution_front_percent: null
 efficiency:
   wltp_kwh_per_100km: 14.3
-  wltp_mi_per_kwh: null
   epa_kwh_per_100km: null
-  epa_mpge: null
   real_world_kwh_per_100km: 15.7
-  real_world_mi_per_kwh: null
-  energy_efficiency_class: A+
-  co2_emissions_wltp_g_per_km: 0
-features:
-  adas_level: 2
-  autonomous_features:
-  - Forward collision avoidance
-  - Lane keeping assist
-  - Blind spot monitoring
-  - Smart cruise control with stop & go
-  - Rear cross-traffic collision avoidance
-  - Parking distance warning
-  infotainment:
-  - Dual 12.3-inch curved displays
-  - Kia Connect navigation
-  - Apple CarPlay / Android Auto
-  - Over-the-air updates
-  - Digital key
-  comfort:
-  - Heat pump
-  - Climate pre-conditioning via app
-  - Heated front seats
-  - V2L (Vehicle-to-Load) 3.6 kW
-  connectivity:
-  - Kia Connect
-  - Remote services via app
-  - Plug & Charge
-  - Over-the-air updates
-  audio:
-  - 6-speaker system
-version:
-  trim_level: Fastback Earth
-  option_packages: []
-  production_location: Hwaseong, South Korea
-  build_quality: standard
 metadata:
   created_at: '2026-02-10T01:00:00Z'
   updated_at: '2026-02-10T01:00:00Z'
   data_quality: verified
-  data_source: manufacturer
-  verified_by: Kia Germany website
-  notes: 'Kia EV4 Fastback with 58.3 kWh standard range battery. E-GMP platform, FWD.
-
-    Entry-level Fastback variant with the sportier sloped rear design.
-
-    450 km WLTP range. From €41,490 in Germany.
-
-    '
-sources:
-- url: https://www.kia.com/de/ev4-fastback/
-  title: Kia EV4 Fastback - Kia Deutschland
-  date_accessed: '2026-02-10'

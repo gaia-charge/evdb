@@ -7,10 +7,6 @@ battery:
   usable_kwh: 95.0
   total_kwh: 100.0
   chemistry: NCA
-  cells: cylindrical
-  pack_voltage_v: 400
-  supplier:
-  - Panasonic
   warranty_years: 8
   warranty_km: 240000
   warranty_capacity_percent: 70
@@ -18,72 +14,10 @@ range:
   wltp_km: 543
   wltp_city_km: 640
   wltp_highway_km: 465
-  epa_miles: 335
   epa_km: 539
   real_world_km: 460
-  real_world_highway_km: 400
-  real_world_winter_km: 360
-charging_ac:
-  max_power_kw: 11
-  connector_type: Type2
-  onboard_charger_kw: 11
-  charge_time_0_100_hours: 9.5
-charging_dc:
-  max_power_kw: 250
-  connector_type: CCS2
-  charge_time_10_80_percent_min: 32
-  charge_time_0_100_percent_min: 52
-  km_per_10min: 255
-charging_curve:
-- soc_percent: 0
-  power_kw: 180
-- soc_percent: 10
-  power_kw: 250
-- soc_percent: 20
-  power_kw: 250
-- soc_percent: 30
-  power_kw: 230
-- soc_percent: 40
-  power_kw: 190
-- soc_percent: 50
-  power_kw: 160
-- soc_percent: 60
-  power_kw: 125
-- soc_percent: 70
-  power_kw: 95
-- soc_percent: 80
-  power_kw: 70
-- soc_percent: 90
-  power_kw: 40
-- soc_percent: 100
-  power_kw: 20
-bidirectional_charging: false
-v2l: false
-v2h: false
-v2g: false
-motors:
-  count: 2
-  type: Permanent Magnet Synchronous
-  combined:
-    total_power_kw: 493
-    total_power_hp: 670
-    total_torque_nm: 700
-  front:
-    motor_type: Permanent Magnet
-    power_kw: 193
-    torque_nm: 280
-  rear:
-    motor_type: Permanent Magnet
-    power_kw: 300
-    torque_nm: 420
-drivetrain:
-  type: AWD
-  drive_config: Dual Motor AWD
-  differential: electronic
 performance:
-  acceleration_0_60_mph_s: 3.8
   top_speed_kmh: 250
-  quarter_mile_s: 12.1
   acceleration_0_100_sec: 3.9
   total_power_kw: 493
   total_power_hp: 670
@@ -107,99 +41,7 @@ weight:
   towing_capacity_unbraked_kg: 750
 efficiency:
   wltp_kwh_per_100km: 17.5
-  wltp_consumption_mi_per_kwh: 3.5
   real_world_kwh_per_100km: 20.7
-  energy_efficiency_class: B
-brakes:
-  front_type: Ventilated disc
-  front_diameter_mm: 355
-  rear_type: Ventilated disc
-  rear_diameter_mm: 350
-  regenerative_braking: true
-  regenerative_max_power_kw: 70
-suspension:
-  front: Double wishbone with air suspension
-  rear: Multi-link with air suspension
-  adaptive_damping: true
-tires_wheels:
-  standard_tire_size: 255/45 R20
-  standard_wheel_size_inches: 20
-  optional_tire_sizes:
-  - 265/45 R20
-  - 275/35 R22
-  optional_wheel_sizes_inches:
-  - 20
-  - 22
-steering:
-  type: Electric power steering
-  turning_circle_m: 12.5
-driver_assistance:
-  autopilot_standard: true
-  full_self_driving_available: true
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: true
-  surround_view_camera: true
-  automatic_emergency_braking: true
-safety:
-  euro_ncap_rating: null
-  euro_ncap_adult_percent: null
-  euro_ncap_child_percent: null
-  nhtsa_rating: 5
-  airbags: 12
-features:
-  infotainment_screen_inches: 17
-  instrument_cluster_type: digital
-  sound_system: Premium Audio (22 speakers)
-  premium_sound_option: null
-  heated_seats: true
-  ventilated_seats: true
-  heated_steering_wheel: true
-  panoramic_roof: true
-  ambient_lighting: true
-  wireless_charging: true
-  usb_ports: 6
-  apple_carplay: false
-  android_auto: false
-  over_the_air_updates: true
-interior:
-  seats: 7
-  upholstery_material: Vegan leather
-  upholstery_color_options:
-  - Black
-  - Cream
-colors:
-- name: Pearl White Multi-Coat
-  cost_eur: 0
-- name: Solid Black
-  cost_eur: 1500
-- name: Midnight Silver Metallic
-  cost_eur: 1500
-- name: Deep Blue Metallic
-  cost_eur: 1500
-- name: Red Multi-Coat
-  cost_eur: 2500
-lighting:
-  headlights: LED
-  daytime_running_lights: LED
-  tail_lights: LED
-  adaptive_headlights: true
-  automatic_high_beam: true
-climate:
-  air_conditioning: true
-  climate_zones: 3
-  heat_pump: true
-  preconditioning: true
-warranty:
-  basic_years: 4
-  basic_km: 80000
-  powertrain_years: 8
-  powertrain_km: 240000
-  battery_years: 8
-  battery_km: 240000
-  battery_capacity_guarantee_percent: 70
 metadata:
   created_at: '2026-02-08'
   updated_at: null
@@ -208,16 +50,6 @@ metadata:
   - https://www.tesla.com/modelx
   - https://www.tesla.com/support/european-union-end-of-series-information
   - https://ev-database.org/car/1594/Tesla-Model-X-Long-Range
-  notes: 'Specifications for 2024 Tesla Model X Long Range AWD (refreshed design from
-    2021).
-
-    Features distinctive falcon-wing rear doors, 7-seat configuration as standard,
-
-    and premium interior with 17" landscape touchscreen. Peak Supercharger V3 charging
-
-    at 250kW enables ~255km in 10 minutes. Model X is Tesla''s flagship luxury SUV.
-
-    '
 charging:
   ac_max_kw: 11
   dc_max_kw: 250

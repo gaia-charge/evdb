@@ -36,92 +36,24 @@ charging:
   ac_connector: Type2
   dc_max_kw: 135
   dc_connector: CCS2
-  dc_10_80_min: 30
-  dc_0_100_min: 58
-  dc_charge_curve:
-  - soc_percent: 10
-    power_kw: 130
-  - soc_percent: 20
-    power_kw: 135
-  - soc_percent: 30
-    power_kw: 132
-  - soc_percent: 40
-    power_kw: 115
-  - soc_percent: 50
-    power_kw: 95
-  - soc_percent: 60
-    power_kw: 75
-  - soc_percent: 70
-    power_kw: 58
-  - soc_percent: 80
-    power_kw: 42
-  - soc_percent: 90
-    power_kw: 28
-  - soc_percent: 100
-    power_kw: 14
-  bidirectional:
-    v2l: true
-    v2g: false
-    v2h: false
-motor:
-  count: 1
-  type: permanent_magnet
-  position: rear
-  total_power_kw: 150
-  total_power_hp: 204
-  total_torque_nm: 250
-drivetrain: RWD
 performance:
   top_speed_kmh: 160
   acceleration_0_100_sec: 7.7
   total_power_kw: 150
   total_power_hp: 204
   total_torque_nm: 250
-consumption:
-  wltp_kwh_per_100km: 15.9
-  real_world_kwh_per_100km: 17.8
-  energy_efficiency_class: A
 weight:
   curb_weight_kg: 1685
   gross_vehicle_weight_kg: 2109
   payload_kg: 424
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-standard_equipment:
-- 10.25" touchscreen infotainment
-- 7" digital instrument cluster
-- Apple CarPlay & Android Auto
-- LED headlights with auto high beam
-- Rear parking camera
-- Front and rear parking sensors
-- MG Pilot ADAS suite
-- Lane keeping assist
-- Automatic emergency braking
-- Adaptive cruise control
-- Blind spot monitoring
-- Keyless entry and start
-- Dual-zone automatic climate control
-- Heated front seats
-- Heated steering wheel
-- V2L vehicle-to-load outlet
-- 17" alloy wheels
-- Wireless phone charging
 optional_equipment:
 - name: Technology Package
-  description: 360-degree camera, head-up display
-  cost: 1200
 - name: 18" Diamond Cut Wheels
-  cost: 600
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
   sources:
   - https://www.mgmotor.eu/model/mg4
   - https://ev-database.org/car/1640/MG-MG4-Electric-Extended-Range
-  last_updated: '2026-02-09'
-  notes: 'Mid-range MG4 Electric with 64 kWh NMC battery and 150 kW motor. Best-selling
-    variant in Europe. Includes V2L, 11 kW 3-phase AC charging, and significantly
-    more equipment than Standard. 435 km WLTP range makes it practical for longer
-    journeys. 2025 model year with updated software and minor equipment changes.
-
-    '

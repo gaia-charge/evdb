@@ -2,52 +2,13 @@ id: lucid-air-grand-touring-awd-2025
 model_id: lucid-air
 name: Grand Touring AWD
 model_year: 2025
-trim_level: grand_touring
-market_availability:
-- europe
-- germany
-- netherlands
-- switzerland
-- uk
 battery:
   total_kwh: 112
   usable_kwh: 107
   chemistry: NCA
-  voltage: 924
   manufacturer: lucid
-  warranty:
-    duration_years: 8
-    duration_km: 160000
-    capacity_retention_percent: 70
-  cooling_system: liquid
-  heat_pump: true
-  preconditioning: true
-  cell_to_pack: true
-motors:
-  layout: awd
-  total_count: 2
-  front:
-    type: permanent_magnet
-    power_kw: 238
-    power_hp: 320
-    torque_nm: 380
-    manufacturer: lucid
-  rear:
-    type: permanent_magnet
-    power_kw: 425
-    power_hp: 571
-    torque_nm: 840
-    manufacturer: lucid
-  combined:
-    total_power_kw: 663
-    total_power_hp: 891
-    total_torque_nm: 1220
-drivetrain:
-  drive_type: AWD
-  transmission: single_speed_reduction
 performance:
   top_speed_kmh: 270
-  top_speed_limited: true
   acceleration_0_100_sec: 3.0
   total_power_kw: 663
   total_power_hp: 891
@@ -57,177 +18,33 @@ range:
   wltp_city_km: 1040
   wltp_highway_km: 730
   epa_km: 837
-  real_world_mixed_km: 740
-  real_world_highway_km: 650
-  real_world_winter_km: 590
 efficiency:
   wltp_kwh_per_100km: 12.9
   epa_kwh_per_100km: 12.8
   real_world_kwh_per_100km: 14.5
 charging:
-  ac:
-    phases: 3
-    time_0_100_hours: 5.1
-    onboard_charger_kw: 22
-  dc:
-    time_10_80_minutes: 27
-    time_10_80_km_added: 581
-    curve_description: 'Peak 350kW charging with 900V+ architecture maintained from
-      10-35% SoC,  tapering to 300kW at 40%, 250kW at 50%, 200kW at 60%, 150kW at
-      70%, and  75kW at 80%. The Grand Touring benefits from enhanced cooling enabling  sustained
-      high-power charging. Real-world 20-80% charging takes approximately  27 minutes
-      on capable 350kW chargers, adding nearly 600km range.
-
-      '
   ac_max_kw: 22
   dc_max_kw: 350
-bidirectional_charging:
-  v2l_capable: true
-  v2l_power_kw: 9.6
-  v2h_capable: true
-  v2g_capable: false
 dimensions:
   length_mm: 4975
   width_mm: 1939
   height_mm: 1410
   wheelbase_mm: 2960
   ground_clearance_mm: 108
-  drag_coefficient: 0.197
-  frontal_area_m2: 2.53
 weight:
   curb_weight_kg: 2565
   gross_vehicle_weight_kg: 3000
   payload_kg: 435
   towing_capacity_braked_kg: 0
   towing_capacity_unbraked_kg: 0
-interior:
-  seating_capacity: 5
-  trunk_capacity_liters: 456
-  trunk_max_liters: 627
-  frunk_volume_liters: 283
 cargo:
   trunk_capacity_liters: 456
   trunk_max_liters: 627
   frunk_capacity_liters: 283
-wheels:
-  standard:
-    size_front: 245/35 R21
-    size_rear: 265/35 R21
-    wheel_diameter_inches: 21
-  optional:
-  - size_front: 245/35 R21
-    size_rear: 265/35 R21
-    wheel_diameter_inches: 21
-    description: Aero Sport design
-suspension:
-  front: double_wishbone
-  rear: multi_link
-  adaptive: true
-  damping: adaptive
-  air_suspension: true
-  ride_height_adjustable: true
-brakes:
-  front: ventilated_disc
-  rear: ventilated_disc
-  regenerative: true
-  regenerative_max_power_kw: 350
-  one_pedal_driving: true
-technology:
-  adas_level: 2
-  features:
-  - adaptive_cruise_control
-  - lane_keeping_assist
-  - lane_centering
-  - automatic_emergency_braking
-  - blind_spot_monitoring
-  - rear_cross_traffic_alert
-  - traffic_sign_recognition
-  - parking_assist
-  - surround_view_camera
-  - automatic_parking
-  - highway_assist
-  - automatic_lane_changing
-  infotainment:
-    screen_size_inches: 34
-    rotating_screen: false
-    apple_carplay: true
-    android_auto: true
-    wireless_connectivity: true
-    ota_updates: true
-    navigation: true
-    voice_control: true
-  audio:
-    system: surreal_sound_pro
-    speakers: 21
-    power_watts: 406
-standard_equipment:
-  exterior:
-  - LED matrix headlights with adaptive beam
-  - LED taillights with Lucid signature light bar
-  - Glass Canopy roof (full-length electrochromic)
-  - Power-folding heated mirrors with auto-dimming
-  - 21" Aero Blade alloy wheels (standard)
-  - Frameless windows
-  - Automatic wipers with rain sensing
-  - Flush door handles with proximity sensors
-  - Body-color brake calipers
-  interior:
-  - 34" curved 5K Glass Cockpit display
-  - 12.3" rear passenger display (retractable)
-  - Nappa leather steering wheel with heating
-  - Premium Nappa leather seats with heating and ventilation (front and rear)
-  - 18-way power driver seat with memory and massage
-  - 12-way power passenger seat with memory and massage
-  - 4-way power rear seats with massage
-  - Wireless smartphone charging (15W)
-  - Quad-zone automatic climate control
-  - Air quality monitoring system
-  - HEPA air filtration
-  - Enhanced ambient lighting (multiple colors and zones)
-  - Keyless entry and start
-  - Power trunk with kick sensor
-  - Spacious interior (limousine-like rear legroom)
-  - Santa Monica or Mojave interior (premium Nappa leather)
-  - Real wood trim accents
-  - Luxury floor mats
-  safety:
-  - 5-star NHTSA rating (US)
-  - Top Safety Pick+ IIHS (US)
-  - 10 airbags (front, side, curtain, knee)
-  - ISOFIX child seat anchors (rear)
-  - Tire pressure monitoring system (TPMS)
-  - Electronic stability control (ESC)
-  - Traction control system (TCS)
-  - Hill start assist
-  - Anti-lock braking system (ABS)
-  technology:
-  - Dream Drive Pro (standard)
-  - Surreal Sound Pro Audio (21 speakers, Dolby Atmos)
-  - Adaptive air suspension
-  - 360-degree camera system
 optional_equipment:
 - name: Metallic/Pearl Paint
-  price_eur: 1500
-  description: Premium metallic or pearl paint finishes
 - name: Stealth Look Package
-  price_eur: 3000
-  description: Black exterior accents, dark wheels, tinted glass
 - name: Executive Rear Seat Package
-  price_eur: 5000
-  description: Enhanced rear seating with extended legroom, massage, and privacy screens
-safety:
-  nhtsa:
-    year: 2023
-    overall_stars: 5
-  iihs:
-    year: 2023
-    rating: top_safety_pick_plus
-  euro_ncap:
-    year: null
-    overall_stars: null
-energy_label:
-  efficiency_class: a_plus
-  co2_emissions_wltp_g_per_km: 0
 notes: 'The Lucid Air Grand Touring AWD represents the pinnacle of long-range luxury
   electric  sedans, offering an unmatched combination of 830 km WLTP range (837 km
   EPA / 520 miles -  highest in the segment), 663kW/891hp dual-motor performance (3.0s

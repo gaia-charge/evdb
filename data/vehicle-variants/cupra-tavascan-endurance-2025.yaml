@@ -2,8 +2,6 @@ id: cupra-tavascan-endurance-2025
 name: Endurance
 model_id: cupra-tavascan
 model_year: 2025
-production_start: '2024-06-01'
-production_end: null
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -13,9 +11,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 82 kWh gross (77 kWh usable). Same battery as VW ID.5/ID.4 GTX. 400V MEB
-    platform.
 range:
   wltp_km: 550
   wltp_city_km: 680
@@ -23,11 +18,6 @@ range:
   epa_km: null
   real_world_km: 450
   real_world_source: Estimated based on MEB platform peers
-  notes: 'WLTP range of 550 km with efficient RWD drivetrain. Real-world range
-
-    around 450 km in mixed conditions. Longer range than VZ due to single motor.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -51,45 +41,17 @@ charging:
     power_kw: 65
   - soc_percent: 80
     power_kw: 45
-  charge_time_10_80_minutes: 28
-  notes: 'DC fast charging up to 135kW. 10-80% in approximately 28 minutes.
-
-    AC charging: 11kW standard, 0-100% in about 7.5 hours.
-
-    '
-motors:
-- position: rear
-  type: permanent_magnet
-  power_kw: 210
-  torque_nm: 545
-  manufacturer: Volkswagen Group
-drivetrain:
-  type: RWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 180
-  notes: Single rear motor with 210 kW (286 hp). Strong torque for everyday driving.
   acceleration_0_100_sec: 6.8
 efficiency:
   wltp_kwh_per_100km: 15.4
   real_world_kwh_per_100km: 18.0
-  notes: Efficient RWD drivetrain. Better consumption than AWD VZ variant.
 weight:
   curb_weight_kg: 2098
   gross_vehicle_weight_kg: 2520
   payload_kg: 422
   towing_capacity_braked_kg: 1000
-  notes: Lighter than VZ by ~100 kg due to single motor. 1000 kg towing.
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: rear
-  autonomous_parking: false
 dimensions:
   length_mm: 4644
   width_mm: 1861
@@ -110,8 +72,6 @@ notes: 'Cupra Tavascan Endurance is the RWD variant with single rear motor produ
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
-  source: manufacturer
   sources:
   - https://www.cupraofficial.com/models/tavascan
   - https://en.wikipedia.org/wiki/Cupra_Tavascan

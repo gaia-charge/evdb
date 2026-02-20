@@ -48,9 +48,7 @@ charging:
     power_kw: 28
   - soc_percent: 100
     power_kw: 15
-  time_10_to_80_percent_min: 30
   charging_speed_kmh: 850
-  plug_and_charge: false
 bidirectional:
   v2l: true
   v2l_max_kw: 1.5
@@ -72,8 +70,6 @@ performance:
   total_power_kw: 260
   total_power_hp: 354
   total_torque_nm: 466
-  acceleration_0_100_kmh_sec: 4.8
-  acceleration_0_60_mph_sec: 4.5
   top_speed_kmh: 160
   acceleration_0_100_sec: 4.8
 dimensions:
@@ -92,57 +88,11 @@ weight:
   payload_kg: 475
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
-  distribution_front_percent: 54
-  distribution_rear_percent: 46
 efficiency:
   wltp_kwh_per_100km: 16.3
-  wltp_kwh_per_100km_city: 13.8
-  wltp_kwh_per_100km_highway: 18.9
   real_world_kwh_per_100km: 19.3
-  energy_efficiency_class: A
-wheels_tires:
-  standard_size_front: 235/60 R18
-  standard_size_rear: 235/60 R18
-  wheel_sizes_available:
-  - 18 inch (standard)
-  - 20 inch (optional)
-technology:
-  adas_level: 2
-  adas_features:
-  - Lexus Safety System+ 3.0
-  - Pre-Collision System with pedestrian/cyclist detection
-  - Full-Speed Dynamic Radar Cruise Control
-  - Lane Departure Alert with steering assist
-  - Lane Tracing Assist
-  - Road Sign Assist
-  - Adaptive High Beams
-  - Blind Spot Monitor with Rear Cross-Traffic Alert
-  - Parking Support Brake
-  - Panoramic View Monitor
-  - VDIM integrated vehicle dynamics management
-  connectivity:
-  - Lexus Link connected services
-  - Remote climate control via app
-  - OTA software updates
-  - Lexus Interface multimedia system
-  - Hey Lexus voice assistant
-  special_features:
-  - DIRECT4 AWD with enhanced torque distribution
-  - 22kW AC onboard charger
-  - Steer-by-Wire optional (with Yoke steering)
-  - Heat pump standard
-  - Electrochromic panoramic roof with dimming function
-  - Head-up display (color)
-  - Mark Levinson premium audio
-  - Ultrasuede door trim with laser engraving
-  - Multi-color ambient lighting with shadow effects
 metadata:
   data_quality: verified
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
   - https://www.lexus.de/modelle/rz/
-  notes: 2025 Lexus RZ 500e replaces the 450e as the mid-range AWD variant. More powerful
-    than outgoing 450e (354hp vs 313hp). New 77kWh battery with 72kWh usable. 493km
-    WLTP range (up from 440km). 22kW AC charging. Enhanced DIRECT4 AWD. Optional Steer-by-Wire
-    with Yoke steering. VDIM integrated dynamics management.

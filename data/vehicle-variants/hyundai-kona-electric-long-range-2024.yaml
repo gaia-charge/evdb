@@ -2,105 +2,25 @@ id: hyundai-kona-electric-long-range-2024
 name: Long Range
 model_id: hyundai-kona-electric
 model_year: 2024
-production_years:
-  start: 2024
-  end: null
-trim_level: long-range
-market_position: mid-range
 battery:
   usable_kwh: 65.4
   total_kwh: 68.0
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: pouch
-  supplier: LG Energy Solution
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 450
-    modules: 10
 range:
   wltp_km: 514
-  wltp_source: manufacturer
   real_world_km: 420
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 10-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 6.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 41
-      '0_100': 73
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 80
-    - soc_percent: 10
-      power_kw: 102
-    - soc_percent: 20
-      power_kw: 102
-    - soc_percent: 40
-      power_kw: 100
-    - soc_percent: 50
-      power_kw: 85
-    - soc_percent: 60
-      power_kw: 65
-    - soc_percent: 70
-      power_kw: 45
-    - soc_percent: 80
-      power_kw: 30
-    - soc_percent: 90
-      power_kw: 18
-    - soc_percent: 100
-      power_kw: 10
-  bidirectional:
-    v2l: true
-    v2l_max_power_kw: 3.6
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 102
-motors:
-- position: front
-  type: permanent-magnet-synchronous
-  max_power_kw: 150
-  max_torque_nm: 255
-  cooling: liquid
-drivetrain:
-  type: fwd
-  drive_configuration: front-wheel-drive
 performance:
-  total_power_kw: 150  # Canonical schema - verified from Hyundai official specs (FWD single motor)
-  total_torque_nm: 255  # Canonical schema - verified from Hyundai official specs
-  acceleration_0_100_sec: 7.9  # Canonical schema - verified from Hyundai official specs
-  acceleration:
-    0_100_kmh_s: 7.9
-    0_60_mph_s: 7.5
+  total_power_kw: 150
+  total_torque_nm: 255
+  acceleration_0_100_sec: 7.9
   top_speed_kmh: 172
-  top_speed_limited: true
-consumption:
-  wltp_kwh_per_100km: 14.3
-  wltp_source: manufacturer
-  real_world:
-    combined_kwh_per_100km: 16.8
-    highway_120kmh_kwh_per_100km: 19.2
-    city_kwh_per_100km: 14.5
-    source: estimated
-    conditions: Mixed driving, moderate climate
-towing:
-  towing_capacity_braked_kg: 750
-  towing_capacity_unbraked_kg: 750
-  trailer_hitch_available: true
-  notes: 750 kg braked and unbraked (FWD variant). 2024 SX2 generation.
 weight:
   curb_weight_kg: 1795
   gross_vehicle_weight_kg: 2235
@@ -111,77 +31,9 @@ dimensions:
   height_mm: 1575
   wheelbase_mm: 2660
   ground_clearance_mm: 155
-  drag_coefficient: 0.27
-wheels:
-  standard:
-    diameter_inch: 17
-    tire_size: 215/60 R17
-  optional:
-  - diameter_inch: 19
-    tire_size: 235/45 R19
-technology:
-  infotainment:
-    screen_size_inch: 12.3
-    system: Hyundai Bluelink Navigation with dual 12.3" curved displays
-    features:
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Over-the-air updates
-    - Voice recognition
-    - Bluelink Connected Services
-  driver_display:
-    type: digital
-    size_inch: 12.3
-  adas_features:
-  - Highway Driving Assist 2
-  - Smart Cruise Control with Stop & Go
-  - Lane Following Assist
-  - Lane Keeping Assist
-  - Blind-Spot Collision-Avoidance Assist
-  - Rear Cross-Traffic Collision-Avoidance Assist
-  - Forward Collision-Avoidance Assist
-  - Intelligent Speed Limit Assist
-  - Driver Attention Warning
-  - High Beam Assist
-  - Parking Collision-Avoidance Assist
-  - Surround View Monitor (360° camera)
-interior:
-  seating_capacity: 5
-  upholstery_standard: cloth
-  upholstery_optional:
-  - synthetic-leather
-  - leather
-  cargo:
-    trunk_capacity_liters: 466
-    trunk_max_liters: 1300
-    frunk_capacity_liters: 0
-  features:
-  - Heated front seats
-  - Heated steering wheel
-  - Dual-zone automatic climate control
-  - Power driver seat (8-way)
-  - 60/40 split-folding rear seats
-  - Ambient lighting
-equipment:
-  lighting:
-    headlights: LED Parametric Pixel lights
-    daytime_running_lights: led
-    tail_lights: led
-  exterior:
-  - Body-colored door handles
-  - Privacy glass (rear)
-  - Roof rails
-  - Power folding mirrors
 metadata:
   created_at: '2026-02-08'
   data_quality: verified
-  confidence_level: high
-  last_verified: '2026-02-08'
   sources:
   - Hyundai Germany official specifications
   - Manufacturer press materials
-  notes: 'Second-generation Kona Electric built on E-GMP platform. Long Range variant
-    offers excellent balance of range, price, and features. Front-wheel drive only.
-    Heat pump included as standard. Popular entry-level electric SUV in Europe.
-
-    '

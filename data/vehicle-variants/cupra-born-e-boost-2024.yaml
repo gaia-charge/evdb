@@ -2,8 +2,6 @@ id: cupra-born-e-boost-2024
 name: e-Boost 77kWh
 model_id: cupra-born
 model_year: 2024
-production_start: '2024-01-01'
-production_end: null
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -13,9 +11,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 77 kWh usable battery (82 kWh gross). Same battery as VW ID.3 Pro S. 400V
-    MEB platform.
 range:
   wltp_km: 548
   wltp_city_km: 720
@@ -23,13 +18,6 @@ range:
   epa_km: null
   real_world_km: 470
   real_world_source: ADAC EcoTest
-  notes: 'WLTP range of 548 km. Real-world range around 470 km in mixed conditions.
-
-    Slightly lower than ID.3 Pro S (558km) due to sportier suspension and tuning.
-
-    Winter range drops to ~350km at -10°C.
-
-    '
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -53,47 +41,17 @@ charging:
     power_kw: 95
   - soc_percent: 80
     power_kw: 60
-  charge_time_10_80_minutes: 28
-  notes: '2024 model improved DC charging from 135kW to 170kW (+26%). 10-80% in 28
-    minutes.
-
-    AC charging: 11kW standard, 0-100% in 7.5 hours.
-
-    '
-motors:
-- position: rear
-  type: permanent_magnet
-  power_kw: 170
-  torque_nm: 310
-  manufacturer: Volkswagen Group
-drivetrain:
-  type: RWD
-  all_wheel_drive: false
 performance:
   top_speed_kmh: 160
-  notes: Faster than ID.3 Pro S (7.4s) thanks to e-Boost 170kW motor and sport suspension
   acceleration_0_100_sec: 6.6
 efficiency:
   wltp_kwh_per_100km: 16.1
   real_world_kwh_per_100km: 18.2
-  notes: Slightly higher than ID.3 (15.9 kWh/100km) due to sportier setup
 weight:
   curb_weight_kg: 1950
   gross_vehicle_weight_kg: 2310
   payload_kg: 360
   towing_capacity_braked_kg: 0
-  notes: 36kg heavier than ID.3 Pro S due to sport equipment. No towing (performance
-    focus)
-adas:
-  level: 2
-  adaptive_cruise_control: true
-  lane_keeping_assist: true
-  automatic_emergency_braking: true
-  blind_spot_monitoring: true
-  rear_cross_traffic_alert: true
-  parking_sensors: front_and_rear
-  parking_camera: '360'
-  autonomous_parking: true
 dimensions:
   length_mm: 4322
   width_mm: 1809
@@ -119,8 +77,6 @@ notes: 'e-Boost variant features 170kW motor (vs 150kW base Born) with faster  a
 metadata:
   data_quality: verified
   created_at: '2026-02-07'
-  last_updated: '2026-02-07'
-  source: manufacturer
   sources:
   - https://www.cupraofficial.com/models/born/e-boost
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/cupra-born-test/

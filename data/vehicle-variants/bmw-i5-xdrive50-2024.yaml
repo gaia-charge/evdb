@@ -2,89 +2,23 @@ id: bmw-i5-xdrive50-2024
 name: xDrive50
 model_id: bmw-i5
 model_year: 2024
-production_years:
-  start: 2023
-  end: null
-trim_level: premium
-market_position: premium
 battery:
   usable_kwh: 81.2
   total_kwh: 84.3
   chemistry: NMC
-  nominal_voltage_v: 400
   cell_type: prismatic
-  supplier: CATL
   warranty_years: 8
   warranty_km: 160000
-  thermal_management: liquid-cooled
-  pack:
-    configuration: floor-mounted
-    weight_kg: 550
-    cells: 192
 range:
   wltp_km: 516
-  wltp_source: manufacturer
   epa_km: 425
-  epa_source: manufacturer
   real_world_km: 435
   real_world_source: estimated
-  real_world_conditions: Mixed driving, 15-20°C, comfort mode
 charging:
-  ac:
-    connector_types:
-    - type2
-    charging_time_hours:
-      '0_100': 8.5
-    onboard_charger_kw: 11
-    phases: 3
-  dc:
-    connector_types:
-    - ccs2
-    charging_time_minutes:
-      '10_80': 30
-      '0_100': 50
-    charging_curve:
-    - soc_percent: 0
-      power_kw: 185
-    - soc_percent: 10
-      power_kw: 205
-    - soc_percent: 30
-      power_kw: 205
-    - soc_percent: 50
-      power_kw: 165
-    - soc_percent: 70
-      power_kw: 105
-    - soc_percent: 80
-      power_kw: 68
-    - soc_percent: 90
-      power_kw: 38
-    - soc_percent: 100
-      power_kw: 18
-  bidirectional:
-    v2l: false
-    v2g: false
-    v2h: false
   ac_max_kw: 11
   dc_max_kw: 205
-motors:
-- position: front
-  type: synchronous
-  max_power_kw: 140
-  max_torque_nm: 280
-  cooling: liquid
-- position: rear
-  type: synchronous
-  max_power_kw: 230
-  max_torque_nm: 430
-  cooling: liquid
-drivetrain:
-  type: awd
-  total_power_kw: 370
-  total_power_hp: 503
-  total_torque_nm: 710
 performance:
   top_speed_kmh: 230
-  top_speed_limited: false
   acceleration_0_100_sec: 4.5
 dimensions:
   length_mm: 5060
@@ -106,83 +40,6 @@ efficiency:
   wltp_kwh_per_100km: 17.9
   epa_kwh_per_100km: 19.1
   real_world_kwh_per_100km: 18.7
-  at_speed:
-  - speed_kmh: 120
-    consumption_kwh_per_100km: 21.5
-  - speed_kmh: 130
-    consumption_kwh_per_100km: 24.3
-  - speed_kmh: 140
-    consumption_kwh_per_100km: 27.6
-standard_features:
-- BMW Curved Display (12.3" + 14.9")
-- BMW Operating System 8.5
-- 4-zone automatic climate control
-- Heat pump
-- LED headlights with matrix function
-- 19-inch M alloy wheels
-- Vernasca leather seats
-- Parking Assistant Plus
-- Driving Assistant Professional (Level 2+)
-- Comfort Access (keyless entry)
-- M Sport steering wheel
-- Ambient lighting (11 themes)
-- Wireless phone charging
-- Harman Kardon Surround Sound (16 speakers)
-- Adaptive M suspension
-- BMW xDrive intelligent AWD
-optional_packages:
-- name: M Sport Package Pro
-  features:
-  - M Sport suspension (sport-tuned)
-  - 20-inch M wheels
-  - M Sport steering wheel (heated)
-  - M Sport seats
-  - M Sport brakes with blue calipers
-  - M aerodynamics package
-- name: Executive Package
-  features:
-  - Panoramic glass roof Sky Lounge
-  - Adaptive air suspension with self-leveling
-  - Massage seats front
-  - Heated rear seats
-  - 4-zone climate control rear
-  - Soft-close doors
-- name: Technology Package Pro
-  features:
-  - BMW Head-Up Display with AR
-  - Parking Assistant Professional (automated)
-  - Surround View with 3D view
-  - BMW IconicSounds Electric by Hans Zimmer
-  - BMW Digital Key Plus
-  - Remote Software Upgrade
-- name: 22kW AC Charger
-  features:
-  - Upgraded 22kW onboard charger (optional)
-  - Reduces 0-100% AC charging to ~4 hours
-colors:
-  standard:
-  - Alpine White
-  - Black Sapphire Metallic
-  premium:
-  - Brooklyn Grey Metallic
-  - Mineral White Metallic
-  - Portimao Blue Metallic
-  - Aventurine Red Metallic
-  - Tanzanite Blue II Metallic
-  - Skyscraper Grey Metallic
-  individual:
-  - Frozen Pure Grey
-  - Frozen Deep Grey
-  - Frozen Marina Bay Blue
-version:
-  facelift: false
-  major_changes:
-  - New G60 platform (eighth-generation 5-series)
-  - BMW xDrive intelligent AWD with dynamic torque distribution
-  - Dual-motor setup (140kW front + 230kW rear)
-  - Combined 503 hp for sport sedan performance
-  - Adaptive M suspension standard
-  - BMW Operating System 8.5 with QuickSelect
 notes: 'The i5 xDrive50 is BMW''s premium AWD electric sedan variant, positioned between
   the efficient eDrive40 and the performance-focused M60. With 503 hp from dual synchronous
   motors, it delivers supercar-like 4.5s 0-100 km/h acceleration while maintaining
@@ -201,8 +58,6 @@ metadata:
   created_at: '2026-02-08'
   updated_at: '2026-02-08'
   data_quality: verified
-  data_source: manufacturer
-  measured_by: null
   sources:
   - https://www.bmw.com/en/all-models/5-series/sedan/2023/bmw-5-series-sedan-overview.html
   - https://www.bmwusa.com/vehicles/bmwi/i5/sedan/overview.html

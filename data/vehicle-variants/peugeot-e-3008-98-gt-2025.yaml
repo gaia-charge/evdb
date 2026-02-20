@@ -2,85 +2,23 @@ id: peugeot-e-3008-98-gt-2025
 model_id: peugeot-e-3008
 name: 98 kWh GT
 model_year: 2025
-trim_level: GT
 variant_code: null
-production:
-  start_date: 2025-01-01
-  end_date: null
-  status: active
-  notes: 2025 model year flagship with segment-leading range
 battery:
-  type: Lithium-ion
   chemistry: NMC
   total_kwh: 98.0
   usable_kwh: 94.0
-  supplier: ACC (Automotive Cells Company)
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-  cells: 354
-  modules: 30
-  voltage_nominal: 400
-  notes: Largest battery in segment, class-leading 700 km range
 range:
   wltp_km: 700
   wltp_city_km: 900
   wltp_highway_km: 575
-  epa_combined_km: null
-  real_world_avg_km: 590
   real_world_source: ADAC test data and owner reports
-  notes: Best-in-class range for compact electric SUV segment
 charging:
-  ac:
-    connector_type: Type 2
-    phases: 3
-    time_0_100_hours: 10.0
-    onboard_charger: 11kW 3-phase standard, 22kW optional
-  dc:
-    connector_type: CCS2
-    time_10_80_percent_minutes: 32
-    peak_power_notes: 160kW peak sustained well due to large battery thermal mass
-    preconditioning: true
-  charge_curve:
-  - percent: 0
-    power_kw: 155
-  - percent: 10
-    power_kw: 160
-  - percent: 30
-    power_kw: 160
-  - percent: 50
-    power_kw: 160
-  - percent: 60
-    power_kw: 145
-  - percent: 70
-    power_kw: 115
-  - percent: 80
-    power_kw: 70
-  - percent: 90
-    power_kw: 40
-  - percent: 100
-    power_kw: 11
-  bidirectional:
-    v2l: true
-    v2h: false
-    v2g: false
   ac_max_kw: 11.0
   dc_max_kw: 160
-motors:
-  configuration: single_front
-  front:
-    type: permanent_magnet
-    power_kw: 170
-    power_hp: 231
-    torque_nm: 345
-    supplier: null
-  combined:
-    power_kw: 170
-    power_hp: 231
-    torque_nm: 345
 performance:
-  acceleration_0_60_mph: null
-  top_speed_kph: 170
   total_power_kw: 170
   total_power_hp: 231
   total_torque_nm: 345
@@ -88,11 +26,8 @@ performance:
   top_speed_kmh: 170
 efficiency:
   wltp_kwh_per_100km: 14.0
-  wltp_wh_per_km: 140
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 16.0
-  mpge_combined: null
-  drag_coefficient: 0.28
 dimensions:
   length_mm: 4540
   width_mm: 1890
@@ -110,76 +45,6 @@ weight:
   towing_capacity_braked_kg: 1250
   towing_capacity_unbraked_kg: 750
   trailer_hitch_available: true
-drivetrain:
-  drive_type: FWD
-  transmission: Single-speed reduction gear
-suspension:
-  front: MacPherson strut with anti-roll bar and adaptive dampers
-  rear: Multi-link independent suspension with adaptive dampers
-brakes:
-  front: Ventilated disc (345mm)
-  rear: Disc (285mm)
-  regenerative: true
-tires:
-  standard: 235/50 R20
-features:
-  infotainment:
-  - Peugeot Panoramic i-Cockpit with 21" curved HD display
-  - 10.0" digital instrument cluster with 3D display
-  - Wireless Apple CarPlay and Android Auto
-  - ChatGPT voice assistant integration
-  - DAB+ digital radio
-  - 10 speakers FOCAL premium audio system
-  - MyPeugeot mobile app
-  - Connected Navigation with real-time traffic
-  - i-Toggles 2.0 (10 customizable shortcut buttons)
-  - Plug & Charge (ISO 15118)
-  driver_assistance:
-  - Active Safety Brake with Pedestrian and Cyclist Detection
-  - Lane Keep Assist with Lane Centering (Level 2)
-  - Traffic Sign Recognition with Speed Limit Adaptation
-  - Adaptive cruise control with Stop & Go
-  - Blind spot monitoring with active intervention
-  - 360° HD parking camera with 3D view
-  - Driver attention alert
-  - Automatic high beam assist
-  - Rear cross-traffic alert with braking
-  - Park Assist (automated parking)
-  comfort_convenience:
-  - Automatic tri-zone climate control
-  - Keyless entry and start
-  - One-pedal driving with B-mode
-  - Heated and massaging front seats (Nappa leather)
-  - Heated rear seats
-  - Power liftgate with kick sensor
-  - Wireless smartphone charging (15W dual pad)
-  - Panoramic glass roof with electric sunshade
-  exterior:
-  - Pixel LED headlights with matrix beam
-  - 20" Washington GT alloy wheels
-  - Privacy glass rear windows
-  - Roof rails (chrome)
-  - GT badging
-  interior:
-  - Nappa leather upholstery
-  - 520L trunk capacity
-  - 60/40 split-folding rear seats
-  - Ambient lighting (8 colors)
-  - Aluminum pedals
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
-  source_urls:
-  - https://www.peugeot.de/modelle/e-3008.html
-  notes: '2025 model year Peugeot e-3008 98 kWh GT - flagship with segment-leading
-    700 km
-
-    WLTP range. Beats Tesla Model Y LR (533 km), VW ID.4 (550 km), Skoda Enyaq (585
-    km).
-
-    Premium GT trim with FOCAL audio, Nappa leather, adaptive dampers, panoramic roof.
-
-    Revolutionary 21" Panoramic i-Cockpit. Excellent value vs German premium competitors.
-
-    '

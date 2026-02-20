@@ -1,10 +1,7 @@
 id: maxus-euniq-6-bev-2025
 model_id: maxus-euniq-6
 name: BEV
-variant_name: BEV
 model_year: 2025
-trim_level: Standard
-production_years: 2022-present
 dimensions:
   length_mm: 4735
   width_mm: 1860
@@ -16,135 +13,35 @@ cargo:
   trunk_capacity_liters: 754
   trunk_max_liters: 1858
   frunk_capacity_liters: 0
-overview: 'The MAXUS Euniq 6 BEV is the pure electric variant of SAIC''s mid-size
-  SUV. With a 70 kWh battery and single front motor producing 130 kW (177 PS), it
-  offers 354 km WLTP range. The interior is spacious with 754 liters of trunk space
-  and comprehensive standard equipment. Main limitation is the DC charging speed capped
-  at 75 kW, well below class average. Priced at €53,491 in Germany.
-
-  '
 battery:
   chemistry: NMC
-  supplier: null
   total_kwh: 70.0
   usable_kwh: 67.0
   warranty_years: 8
   warranty_km: 150000
   warranty_capacity_percent: 70
-  voltage: 400
-  notes: 70 kWh battery, 400V architecture
 range:
   wltp_km: 354
   wltp_city_km: 450
   real_world_km: 300
-  real_world_notes: Estimated ~300km mixed driving based on 21.5 kWh/100km real-world
-    consumption
 charging:
-  ac:
-    connector_type: Type2
-    phases: 1
-    charging_time:
-    - percent_start: 5
-      percent_end: 100
-      time_minutes: 720
-      power_kw: 7.2
-      notes: 5-100% in approximately 12 hours
-  dc:
-    connector_type: CCS2
-    charging_curve:
-    - soc_percent: 10
-      power_kw: 70
-    - soc_percent: 20
-      power_kw: 75
-    - soc_percent: 30
-      power_kw: 75
-    - soc_percent: 40
-      power_kw: 72
-    - soc_percent: 50
-      power_kw: 68
-    - soc_percent: 60
-      power_kw: 60
-    - soc_percent: 70
-      power_kw: 50
-    - soc_percent: 80
-      power_kw: 40
-    - soc_percent: 90
-      power_kw: 25
-    - soc_percent: 100
-      power_kw: 8
-    charging_time:
-    - percent_start: 30
-      percent_end: 80
-      time_minutes: 33
-      power_kw: 75.0
-      notes: 30-80% in approximately 30-35 minutes
-  bidirectional:
-    v2l: false
-    v2h: false
-    v2g: false
   ac_max_kw: 7.2
   dc_max_kw: 75.0
-motors:
-  configuration: single
-  drive_type: FWD
-  total_power_kw: 130
-  total_power_hp: 177
-  total_torque_nm: 310
-  motor_type: permanent_magnet
-  motors:
-  - position: front
-    power_kw: 130
-    power_hp: 177
-    torque_nm: 310
-    motor_type: permanent_magnet
 performance:
   top_speed_kmh: 160
-  notes: Comfort-oriented tuning, FWD configuration
   total_power_kw: 130
   total_power_hp: 177
   total_torque_nm: 310
   acceleration_0_100_sec: 10.5
-efficiency:
-  consumption_wltp_kwh_per_100km: 21.5
-  consumption_real_world_kwh_per_100km: 23.0
-  notes: 21.5 kWh/100km WLTP combined, relatively high for the segment
 weight:
   curb_weight_kg: 2080
   payload_kg: 325
   gross_vehicle_weight_kg: 2405
   towing_capacity_braked_kg: 1500
   towing_capacity_unbraked_kg: 750
-features:
-  standard:
-  - 12.3-inch digital instrument cluster
-  - 10.4-inch central touchscreen
-  - Apple CarPlay
-  - Panoramic glass roof
-  - LED headlights
-  - 360-degree camera system
-  - Adaptive Cruise Control
-  - Lane Keeping Assist
-  - Automatic Emergency Braking
-  - Blind Spot Detection
-  - Heated front seats
-  - Leather seats
-  - Dual-zone climate control
-  - Heat pump
-  - Electric tailgate
-  - Wireless phone charger
-  - Keyless entry and start
-  - 18-inch alloy wheels
-  optional:
-  - Metallic paint
-version:
-  release_date: 2022-01
-  changes_from_previous: Continued from 2024, minor updates
-  notes: 2025 model year, European specification
 metadata:
   data_quality: verified
-  data_source: manufacturer
   sources:
   - https://www.carwow.de/maxus/euniq-6
   - https://www.carwow.de/maxus/euniq-6/technische-daten
   created_at: '2026-02-10'
-  last_updated: '2026-02-10'
