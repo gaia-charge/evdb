@@ -105,7 +105,10 @@ performance:
   acceleration_0_100_sec: 3.8
   acceleration_0_60_sec: 3.4
   top_speed_kph: 200
+  top_speed_kmh: 200  # Canonical schema field (same as top_speed_kph)
   top_speed_limited: true
+  total_power_kw: 320  # Canonical schema field (from motors.combined.total_power_kw)
+  total_torque_nm: 600  # Canonical schema field (from motors.combined.total_torque_nm)
 weight:
   curb_weight_kg: 1865
   gross_vehicle_weight_kg: 2290
