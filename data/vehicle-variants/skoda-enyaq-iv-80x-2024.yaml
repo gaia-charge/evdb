@@ -59,13 +59,13 @@ range:
   epa_km: null
   epa_miles: null
 charging:
-  ac_max_power_kw: 11
+  ac_max_kw: 11
   ac_charge_time_hours: 7.5
   ac_ports:
   - type: Type2
     max_power_kw: 11
     phases: 3
-  dc_max_power_kw: 135
+  dc_max_kw: 135
   dc_charge_time_minutes: 29
   dc_ports:
   - type: CCS2
@@ -112,6 +112,8 @@ drivetrain:
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.9
+  total_power_kw: 195
+  total_torque_nm: 460
 efficiency:
   wltp_kwh_per_100km: 18.3
   real_world_kwh_per_100km: 20.5
