@@ -1,10 +1,8 @@
-# Volkswagen ID.4 Pro 4Motion (2024)
 id: volkswagen-id4-pro-4motion-2024
 name: Pro 4Motion
 model_id: volkswagen-id4
 model_year: 2024
 variant_code: ID4-PRO-4M
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -14,7 +12,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 497
   wltp_city_km: null
@@ -22,7 +19,6 @@ range:
   epa_km: 443
   real_world_km: 440
   real_world_source: ADAC EcoTest
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -30,51 +26,45 @@ charging:
   dc_max_kw: 135
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 135
-    - soc_percent: 20
-      power_kw: 135
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 75
-    - soc_percent: 70
-      power_kw: 55
-    - soc_percent: 80
-      power_kw: 40
+  - soc_percent: 0
+    power_kw: 135
+  - soc_percent: 20
+    power_kw: 135
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 95
+  - soc_percent: 60
+    power_kw: 75
+  - soc_percent: 70
+    power_kw: 55
+  - soc_percent: 80
+    power_kw: 40
   time_10_to_80_min: 38
   time_20_to_80_min: 32
   charging_speed_kmh: 815
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: AWD
   motors:
-    - position: front
-      type: AC induction
-      power_kw: 80
-      power_hp: 109
-      torque_nm: 162
-    - position: rear
-      type: permanent magnet
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 310
+  - position: front
+    type: AC induction
+    power_kw: 80
+    torque_nm: 162
+  - position: rear
+    type: permanent magnet
+    power_kw: 150
+    torque_nm: 310
   total_power_kw: 210
-  total_power_hp: 286
   total_torque_nm: 460
   acceleration_0_100_sec: 6.7
   top_speed_kmh: 160
-
 dimensions:
   length_mm: 4584
   width_mm: 1852
@@ -82,24 +72,20 @@ dimensions:
   height_mm: 1636
   wheelbase_mm: 2765
   ground_clearance_mm: 162
-
 cargo:
   trunk_capacity_liters: 543
   trunk_max_liters: 1575
-
 weight:
   curb_weight_kg: 2239
   towing_capacity_braked_kg: 1400
   towing_capacity_unbraked_kg: 750
   gross_vehicle_weight_kg: 2780
   payload_kg: 541
-
 efficiency:
   wltp_kwh_per_100km: 18.6
   epa_kwh_per_100km: 20.8
   real_world_kwh_per_100km: 20.3
   efficiency_rating: A
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -107,29 +93,33 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-
 optional_equipment:
-  - name: IQ.DRIVE Assist
-    code: IQDRV
-    category: safety
-    included_in_base: false
-  - name: Panoramic Glass Roof
-    code: PGR
-    category: comfort
-    included_in_base: false
+- name: IQ.DRIVE Assist
+  code: IQDRV
+  category: safety
+  included_in_base: false
+- name: Panoramic Glass Roof
+  code: PGR
+  category: comfort
+  included_in_base: false
+notes: 'The ID.4 Pro 4Motion is the AWD variant with dual motors providing 210 kW
+  total power.
 
-notes: |
-  The ID.4 Pro 4Motion is the AWD variant with dual motors providing 210 kW total power.
   Features electric AWD with front AC induction motor and rear permanent magnet motor.
-  Popular choice for buyers wanting better traction and performance while maintaining good range.
-  Slightly lower range (497 km WLTP) compared to RWD due to added weight and second motor.
 
+  Popular choice for buyers wanting better traction and performance while maintaining
+  good range.
+
+  Slightly lower range (497 km WLTP) compared to RWD due to added weight and second
+  motor.
+
+  '
 metadata:
-  created_at: "2026-02-07"
+  created_at: '2026-02-07'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 90
   sources:
-    - https://www.volkswagen.com/en/models/id-4.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id4/
-    - https://www.fueleconomy.gov/
+  - https://www.volkswagen.com/en/models/id-4.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/vw/id4/
+  - https://www.fueleconomy.gov/

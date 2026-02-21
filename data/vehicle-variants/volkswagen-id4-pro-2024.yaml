@@ -1,10 +1,8 @@
-# Volkswagen ID.4 Pro (2024)
 id: volkswagen-id4-pro-2024
 name: Pro
 model_id: volkswagen-id4
 model_year: 2024
 variant_code: ID4-PRO
-
 dimensions:
   length_mm: 4584
   width_mm: 1852
@@ -12,12 +10,10 @@ dimensions:
   height_mm: 1640
   wheelbase_mm: 2766
   ground_clearance_mm: 163
-
 cargo:
   trunk_capacity_liters: 543
   trunk_max_liters: 1575
   frunk_capacity_liters: 0
-
 battery:
   usable_kwh: 77.0
   total_kwh: 82.0
@@ -27,7 +23,6 @@ battery:
   warranty_years: 8
   warranty_km: 160000
   warranty_capacity_percent: 70
-
 range:
   wltp_km: 520
   wltp_city_km: null
@@ -35,7 +30,6 @@ range:
   epa_km: null
   real_world_km: 460
   real_world_source: ADAC EcoTest
-
 charging:
   ac_max_kw: 11
   ac_phases: 3
@@ -43,59 +37,52 @@ charging:
   dc_max_kw: 135
   dc_connector: CCS2
   dc_curve:
-    - soc_percent: 0
-      power_kw: 135
-    - soc_percent: 20
-      power_kw: 135
-    - soc_percent: 30
-      power_kw: 125
-    - soc_percent: 40
-      power_kw: 110
-    - soc_percent: 50
-      power_kw: 95
-    - soc_percent: 60
-      power_kw: 75
-    - soc_percent: 70
-      power_kw: 55
-    - soc_percent: 80
-      power_kw: 40
+  - soc_percent: 0
+    power_kw: 135
+  - soc_percent: 20
+    power_kw: 135
+  - soc_percent: 30
+    power_kw: 125
+  - soc_percent: 40
+    power_kw: 110
+  - soc_percent: 50
+    power_kw: 95
+  - soc_percent: 60
+    power_kw: 75
+  - soc_percent: 70
+    power_kw: 55
+  - soc_percent: 80
+    power_kw: 40
   time_10_to_80_min: 38
   time_20_to_80_min: 32
   charging_speed_kmh: 850
-
 bidirectional:
   v2l: false
   v2l_max_kw: null
   v2h: false
   v2g: false
-
 performance:
   drive_type: RWD
   motors:
-    - position: rear
-      type: permanent magnet
-      power_kw: 150
-      power_hp: 204
-      torque_nm: 310
+  - position: rear
+    type: permanent magnet
+    power_kw: 150
+    torque_nm: 310
   total_power_kw: 150
-  total_power_hp: 204
   total_torque_nm: 310
   acceleration_0_100_sec: 8.5
   top_speed_kmh: 160
-
 weight:
   curb_weight_kg: 2124
   gross_vehicle_weight_kg: 2650
   payload_kg: 526
   towing_capacity_braked_kg: 1000
   towing_capacity_unbraked_kg: 750
-
 efficiency:
   wltp_kwh_per_100km: 17.9
   epa_kwh_per_100km: null
   real_world_kwh_per_100km: 19.5
   efficiency_rating: A
-
 features:
   heat_pump: true
   adaptive_suspension: true
@@ -103,25 +90,24 @@ features:
   torque_vectoring: false
   one_pedal_driving: true
   autopilot_level: 2
-
 optional_equipment:
-  - name: IQ.DRIVE Assist
-    code: IQDRV
-    category: safety
-    included_in_base: false
-  - name: Panoramic Glass Roof
-    code: PGR
-    category: comfort
-    included_in_base: false
+- name: IQ.DRIVE Assist
+  code: IQDRV
+  category: safety
+  included_in_base: false
+- name: Panoramic Glass Roof
+  code: PGR
+  category: comfort
+  included_in_base: false
+notes: 'The ID.4 Pro is the mid-range variant with the larger 77 kWh battery.
 
-notes: |
-  The ID.4 Pro is the mid-range variant with the larger 77 kWh battery.
   Features RWD configuration with good range and practicality.
 
+  '
 metadata:
-  created_at: "2026-02-06"
+  created_at: '2026-02-06'
   updated_at: null
   data_quality: verified
   data_completeness_percent: 85
   sources:
-    - https://www.volkswagen.com/en/models/id-4.html
+  - https://www.volkswagen.com/en/models/id-4.html
