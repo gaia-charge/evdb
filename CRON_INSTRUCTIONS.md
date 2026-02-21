@@ -1,7 +1,7 @@
 # EVDB Cron Instructions
 
 **Updated:** 2026-02-21
-**Status:** 533 variants, 1,182 market entries
+**Status:** 533 variants, 1,217 market entries
 
 ---
 
@@ -50,9 +50,15 @@ Check existing files in `data/market-availability/` for exact format reference.
 
 ### Sources
 
-- **Spain:** manufacturer.es websites, coches.net (pricing verification)
-- **Poland:** manufacturer.pl websites, electromobilnosc.pl
-- **Skip** variants where manufacturer doesn't sell in that market (e.g., some Chinese brands not yet in ES/PL)
+**Acceptable sources (in priority order):**
+1. Official manufacturer websites (.es, .pl)
+2. Reputable automotive pricing sites: km77.com, coches.net (ES); motonews.pl, otoev.pl, elektrowoz.pl, chceauto.pl (PL)
+3. Automotive press: forococheselectricos.com, diariomotor.com, caranddriver.com/es (ES); electromobilnosc.pl (PL)
+4. Wikipedia (for availability confirmation)
+
+**If manufacturer site fails** (common with JS-heavy configurators), use the automotive pricing sites above — they pull from official price lists.
+
+- **Skip** variants where brand doesn't sell in that market (e.g., Genesis, NIO not in ES/PL)
 - **Do NOT use ev-database.org**
 
 ### Market-specific notes
