@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 120
   dc_connector: CCS2
+  time_10_to_80_min: 35
   dc_curve:
   - soc_percent: 10
     power_kw: 120
@@ -44,6 +45,9 @@ charging:
 performance:
   top_speed_kmh: 160
   acceleration_0_100_sec: 7.3
+  total_power_kw: 150
+  total_torque_nm: 310
+  drive_type: RWD
 efficiency:
   wltp_kwh_per_100km: 15.9
   real_world_kwh_per_100km: 17.8
@@ -77,4 +81,5 @@ metadata:
   sources:
   - https://www.cupraofficial.com/models/born
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/
-  - https://ev-database.org/car/1687/Cupra-Born-58-kWh
+  - https://en.wikipedia.org/wiki/Cupra_Born
+  - https://evkx.net/models/cupra/born/born_58/chargingcurve/

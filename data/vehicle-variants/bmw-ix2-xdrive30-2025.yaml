@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 130
   dc_connector: CCS2
+  time_10_to_80_min: 34
   dc_curve:
   - soc_percent: 10
     power_kw: 130
@@ -53,6 +54,9 @@ cargo:
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 5.6
+  total_power_kw: 230
+  total_torque_nm: 494
+  drive_type: AWD
 efficiency:
   wltp_kwh_per_100km: 16.3
   real_world_kwh_per_100km: 18.5
@@ -75,3 +79,4 @@ metadata:
   sources:
   - https://www.bmw.de/de/modelle/x-modelle/ix2/ueberblick.html
   - https://en.wikipedia.org/wiki/BMW_X2
+  - https://evkx.net/models/bmw/ix2/ix2_xdrive30/
