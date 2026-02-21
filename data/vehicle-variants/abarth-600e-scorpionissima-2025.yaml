@@ -22,6 +22,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 100
   dc_connector: CCS2
+  time_10_to_80_min: 30
   dc_curve:
   - soc_percent: 10
     power_kw: 100
@@ -38,6 +39,14 @@ charging:
   - soc_percent: 80
     power_kw: 30
 performance:
+  drive_type: FWD
+  total_power_kw: 207
+  total_torque_nm: 345
+  motors:
+  - position: front
+    type: permanent magnet
+    power_kw: 207
+    torque_nm: 345
   top_speed_kmh: 200
   acceleration_0_100_sec: 5.9
 efficiency:

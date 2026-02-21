@@ -54,20 +54,24 @@ bidirectional:
   v2g: true
 performance:
   drive_type: FWD
+  total_power_kw: 160
+  total_torque_nm: 300
   motors:
   - position: front
     type: permanent magnet
     power_kw: 160
-    power_hp: 220
     torque_nm: 300
   top_speed_kmh: 170
-  acceleration_0_100_sec: 8.4
+  acceleration_0_100_sec: 7.9
 weight:
   curb_weight_kg: 1953
   gross_vehicle_weight_kg: 2453
   payload_kg: 500
   towing_capacity_braked_kg: 750
   towing_capacity_unbraked_kg: 750
+efficiency:
+  wltp_kwh_per_100km: 18.5
+  real_world_kwh_per_100km: 18.1
 dimensions:
   length_mm: 4470
   width_mm: 1864
