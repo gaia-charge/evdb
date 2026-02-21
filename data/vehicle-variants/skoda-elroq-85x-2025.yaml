@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 175
   dc_connector: CCS2
+  time_10_to_80_min: 35
   dc_curve:
   - soc_percent: 10
     power_kw: 175
@@ -44,6 +45,9 @@ charging:
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.0
+  total_power_kw: 220
+  total_torque_nm: 679
+  drive_type: AWD
 efficiency:
   wltp_kwh_per_100km: 16.5
   real_world_kwh_per_100km: 19.0
@@ -76,3 +80,5 @@ metadata:
   - https://en.wikipedia.org/wiki/%C5%A0koda_Elroq
   - https://www.carwow.de/skoda/elroq
   - https://www.skoda-auto.de/modelle/elroq
+  - https://evkx.net/models/skoda/elroq/elroq_85x/
+  - https://evkx.net/models/skoda/elroq/elroq_85x/chargingcurve/
