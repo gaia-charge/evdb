@@ -35,6 +35,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 170
   dc_connector: CCS2
+  time_10_to_80_min: 30
   dc_curve:
   - soc_percent: 10
     power_kw: 170
@@ -55,6 +56,9 @@ charging:
 performance:
   top_speed_kmh: 200
   acceleration_0_100_sec: 5.7
+  total_power_kw: 240
+  total_torque_nm: 545
+  drive_type: RWD
 efficiency:
   wltp_kwh_per_100km: 16.6
   real_world_kwh_per_100km: 19.3
@@ -80,3 +84,5 @@ metadata:
   - https://www.cupraofficial.com/models/born/vz
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/
   - https://www.auto-motor-und-sport.de/test/cupra-born-vz-2024-test/
+  - https://en.wikipedia.org/wiki/Cupra_Born
+  - https://www.autocar.co.uk/car-news/advertising-promotions-promoted-by-cupra/cupra-born-essential-guide-10-things-you-need-know

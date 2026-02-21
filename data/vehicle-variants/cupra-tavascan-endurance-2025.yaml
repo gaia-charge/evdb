@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 135
   dc_connector: CCS2
+  time_10_to_80_min: 35
   dc_curve:
   - soc_percent: 10
     power_kw: 135
@@ -44,6 +45,9 @@ charging:
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.8
+  total_power_kw: 210
+  total_torque_nm: 545
+  drive_type: RWD
 efficiency:
   wltp_kwh_per_100km: 15.4
   real_world_kwh_per_100km: 18.0
@@ -75,3 +79,4 @@ metadata:
   sources:
   - https://www.cupraofficial.com/models/tavascan
   - https://en.wikipedia.org/wiki/Cupra_Tavascan
+  - https://evkx.net/models/cupra/tavascan/tavascan_endurance/
