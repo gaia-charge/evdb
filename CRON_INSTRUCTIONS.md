@@ -1,155 +1,94 @@
 # EVDB Cron Instructions
 
-**Updated:** 2026-02-10  
-**Status:** 🎉 **530+ variants, 180+ models, 45+ manufacturers**
+**Updated:** 2026-02-21
+**Status:** 533 variants, 1,182 market entries
 
 ---
 
-## 🎯 CURRENT PRIORITIES (in order)
+## 🎯 CURRENT PRIORITY: Spanish & Polish Market Expansion
 
-### Priority 1: Fill Missing Data on Existing Vehicles
-Many existing variants are missing key specs. **Before adding new vehicles**, check and update existing ones:
+**Focus:** Add missing market-availability files for ES and PL markets.
 
-**Fields to fill:**
-- `dimensions`: length_mm, width_mm, height_mm, wheelbase_mm, ground_clearance_mm
-- `cargo`: trunk_capacity_liters, trunk_max_liters (seats folded), frunk_capacity_liters
-- `weight`: curb_weight_kg, gross_vehicle_weight_kg, payload_kg, towing_capacity_braked_kg, towing_capacity_unbraked_kg
-- `charging`: Verify DC and AC charging power is complete
-- `performance`: top_speed_kmh, acceleration_0_100_sec
+- **ES missing:** ~201 variants (have DE but not ES)
+- **PL missing:** ~371 variants (have DE but not PL)
 
-**How to find vehicles with missing data:**
+### How to find what's missing
+
 ```bash
-# Check which variants lack dimensions
-grep -rL "dimensions:" data/vehicle-variants/ | head -20
+# Variants with DE market but no ES market
+comm -23 \
+  <(ls data/market-availability/*-de.yaml | sed 's/-de\.yaml//' | sed 's|.*/||' | sort) \
+  <(ls data/market-availability/*-es.yaml | sed 's/-es\.yaml//' | sed 's|.*/||' | sort)
 
-# Check which variants lack cargo
-grep -rL "cargo:" data/vehicle-variants/ | head -20
-
-# Check which variants lack towing
-grep -rL "towing_capacity" data/vehicle-variants/ | head -20
+# Same for PL
+comm -23 \
+  <(ls data/market-availability/*-de.yaml | sed 's/-de\.yaml//' | sed 's|.*/||' | sort) \
+  <(ls data/market-availability/*-pl.yaml | sed 's/-pl\.yaml//' | sed 's|.*/||' | sort)
 ```
 
-**Update 5-10 existing variants per session** with missing specs. Use manufacturer websites, ADAC, ev-database.org for data.
+### Per session workflow
 
-### Priority 2: Add Spain (ES), Poland (PL), and France (FR) Market Data
-Most vehicles only have Germany (DE) market data. **Add market availability files** for:
+1. Pick 3-5 variants missing ES or PL market files
+2. Check manufacturer's local website (.es / .pl) for pricing and availability
+3. Create market-availability YAML files with base_price, currency, on_sale status
+4. Validate, commit to daily branch `data-fill/YYYY-MM-DD`, push
+5. **Alternate between ES and PL** each session
 
-1. **Spain (ES)** — Highest priority
-2. **Poland (PL)** — Second priority  
-3. **France (FR)** — Third priority
+### Market-availability file format
 
-**For each market, create:** `data/market-availability/[variant-id]-[country].yaml`
-- Include: base price in local currency (EUR for ES/FR, PLN for PL)
-- Include: available trims, colors, incentives/grants
-- Check: manufacturer's local website (e.g., tesla.com/es_ES, renault.pl, peugeot.fr)
+```yaml
+variant_id: "example-variant-id-2025"
+country: "ES"  # or "PL"
+base_price: 45990  # EUR for ES, PLN for PL
+currency: "EUR"  # or "PLN"
+on_sale: true
+available_trims: []  # optional
+incentives: []  # optional
+```
 
-**Spanish market specifics:**
-- MOVES III subsidies (if still active in 2025/2026)
-- IVA (21% VAT) included in prices
-- Check: manufacturer.es websites
+Check existing files in `data/market-availability/` for exact format reference.
 
-**Polish market specifics:**
-- "Mój elektryk" subsidy program
+### Sources
+
+- **Spain:** manufacturer.es websites, coches.net (pricing verification)
+- **Poland:** manufacturer.pl websites, electromobilnosc.pl
+- **Skip** variants where manufacturer doesn't sell in that market (e.g., some Chinese brands not yet in ES/PL)
+- **Do NOT use ev-database.org**
+
+### Market-specific notes
+
+**Spain (ES):**
+- Prices in EUR, IVA (21%) included
+- MOVES III subsidies if still active
+- Some brands (NIO, Genesis) may not sell in Spain — skip those
+
+**Poland (PL):**
 - Prices in PLN
-- Check: manufacturer.pl websites
-
-**French market specifics:**
-- Bonus écologique (up to €4,000-€7,000 depending on price)
-- Leasing social program
-- Check: manufacturer.fr websites
-
-**Add 3-5 market entries per session.**
-
-### Priority 3: Add New Vehicles (Lower Priority Now)
-Only if priorities 1 and 2 have been addressed in the session:
-- Focus on 2025/2026 model years
-- Add missing variants for existing models
-- Add new models not yet in the database
-
----
-
-## 📋 SESSION WORKFLOW
-
-1. **Check what's missing:**
-   ```bash
-   # Count variants without dimensions
-   grep -rL "dimensions:" data/vehicle-variants/ | wc -l
-   
-   # Count variants without ES market
-   ls data/market-availability/*-es.yaml 2>/dev/null | wc -l
-   ```
-
-2. **Update 5-10 existing variants** with missing specs (dimensions, cargo, towing, weight)
-
-3. **Add 3-5 market entries** for ES/PL/FR markets
-
-4. **Optionally add 1-2 new vehicles** if time permits
-
-5. **Validate and commit:**
-   ```bash
-   python3 scripts/validate.py --directory data/
-   python3 scripts/build-sqlite.py
-   git add data/
-   git commit -m "Update [X] variants with dimensions/cargo data, add [Y] ES/PL/FR market entries"
-   git push origin main
-   ```
+- "Mój elektryk" subsidy program
+- Check manufacturer.pl websites
 
 ---
 
 ## 📊 Session Reporting Format
 
 ```
-**Data enrichment:** Updated X variants with dimensions/cargo/towing data
-**Market expansion:** Added Y market entries (Z for ES, W for PL, V for FR)
-**New vehicles:** [if any]
+**Market expansion:** Added X market entries (Y for ES, Z for PL)
+**Variants covered:** [list variant names]
+**Skipped:** [variants not sold in that market]
 **Database:** X variants, Y market entries
 **Validation:** ✅ All files pass
 ```
 
 ---
 
-## ✅ Per-Variant Data Update Checklist
-
-When updating an existing variant, add ALL available data:
-
-- [ ] `dimensions.length_mm`
-- [ ] `dimensions.width_mm`  
-- [ ] `dimensions.height_mm`
-- [ ] `dimensions.wheelbase_mm`
-- [ ] `dimensions.ground_clearance_mm`
-- [ ] `cargo.trunk_capacity_liters`
-- [ ] `cargo.trunk_max_liters`
-- [ ] `cargo.frunk_capacity_liters` (if applicable)
-- [ ] `weight.curb_weight_kg`
-- [ ] `weight.gross_vehicle_weight_kg`
-- [ ] `weight.payload_kg`
-- [ ] `weight.towing_capacity_braked_kg`
-- [ ] `weight.towing_capacity_unbraked_kg`
-
----
-
 ## 🚫 Reminders
 
-- **Enum values MUST be uppercase**: `drive_type` must be `FWD`, `RWD`, or `AWD` (never lowercase `fwd`/`rwd`/`awd` or spelled out like `rear_wheel_drive`)
+- **Daily branch workflow:** Create/use `data-fill/YYYY-MM-DD` branch, not main
 - **BEVs only** — No PHEVs, hybrids, or range extenders
-- **European market only** — Vehicles sold in Europe
-- **Validate before committing** — Always run validate.py
-- **Quality over quantity** — Better accurate data than many incomplete entries
-- **Model name convention:** Model `name` must NOT include brand prefix
-- **Variant name convention:** Variant `name` must NOT include model name prefix
-
----
-
-## 🔗 Data Sources
-
-**⚠️ USE THE BROWSER TOOL for data lookups!** Instead of relying on web_search (which may not be configured), use the `browser` tool to navigate manufacturer websites, ADAC, ev-database.org, etc. This gives you access to real, current data. Use `browser` with `action: "navigate"` and `action: "snapshot"` to read page content.
-
-- **Manufacturer websites:** .de, .es, .pl, .fr variants
-- **ADAC:** adac.de/rund-ums-fahrzeug/autokatalog/ (excellent for dimensions/weight)
-- **ev-database.org:** Good for cross-referencing specs
-- **Euro NCAP:** euroncap.com (dimensions, weight)
-
----
-
-**Daily target:** 5-10 spec updates + 3-5 market entries  
-**Quality over Speed** — accurate, complete data matters more than volume
+- **European market only**
+- **Validate before committing** — Always run validate + build-sqlite
+- **Quality over quantity** — Accurate prices from official sources
+- **Source URLs in commit messages**
+- **Do NOT use ev-database.org** (Wojtek's instruction)
+- **ALL data must come from sources fetched in THIS session** — no guessing prices
+- **additionalProperties: false** enforced — use exact schema field names
