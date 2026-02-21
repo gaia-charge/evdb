@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 135
   dc_connector: CCS2
+  time_10_to_80_min: 28
   dc_curve:
   - soc_percent: 10
     power_kw: 135
@@ -44,6 +45,8 @@ charging:
 performance:
   top_speed_kmh: 160
   acceleration_0_100_sec: 6.9
+  total_power_kw: 170
+  total_torque_nm: 310
 efficiency:
   wltp_kwh_per_100km: 15.6
   real_world_kwh_per_100km: 17.5
@@ -76,6 +79,9 @@ notes: '2025 CUPRA Born with updated 59 kWh battery and improved APP550 motor no
 metadata:
   data_quality: verified
   created_at: '2026-02-10'
+  updated_at: '2026-02-21'
   sources:
   - https://www.cupraofficial.com/models/born
   - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/cupra/born/
+  - https://en.wikipedia.org/wiki/Cupra_Born
+  - https://www.cupraofficial.com/cars/born

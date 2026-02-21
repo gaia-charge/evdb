@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 170
   dc_connector: CCS2
+  time_10_to_80_min: 30
   dc_curve:
   - soc_percent: 10
     power_kw: 170
@@ -44,6 +45,8 @@ charging:
 performance:
   top_speed_kmh: 160
   acceleration_0_100_sec: 6.6
+  total_power_kw: 170
+  total_torque_nm: 310
 efficiency:
   wltp_kwh_per_100km: 16.1
   real_world_kwh_per_100km: 18.2
@@ -77,7 +80,9 @@ notes: 'e-Boost variant features 170kW motor (vs 150kW base Born) with faster  a
 metadata:
   data_quality: verified
   created_at: '2026-02-07'
+  updated_at: '2026-02-21'
   sources:
   - https://www.cupraofficial.com/models/born/e-boost
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/cupra-born-test/
   - https://www.auto-motor-und-sport.de/fahrbericht/cupra-born-2024-test/
+  - https://en.wikipedia.org/wiki/Cupra_Born
