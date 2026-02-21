@@ -24,6 +24,7 @@ charging:
   ac_connector: Type2
   dc_max_kw: 175
   dc_connector: CCS2
+  time_10_to_80_min: 28
   dc_curve:
   - soc_percent: 10
     power_kw: 175
@@ -44,6 +45,9 @@ charging:
 performance:
   top_speed_kmh: 180
   acceleration_0_100_sec: 6.6
+  total_power_kw: 210
+  total_torque_nm: 545
+  drive_type: RWD
 efficiency:
   wltp_kwh_per_100km: 15.2
   real_world_kwh_per_100km: 17.5
