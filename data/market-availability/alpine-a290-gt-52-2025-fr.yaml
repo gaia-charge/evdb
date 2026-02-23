@@ -1,47 +1,48 @@
-# Market Availability: Alpine A290 GT 52 - France
+# Alpine A290 GT 52 kWh (2025) - France Market Availability
+
 id: alpine-a290-gt-52-2025-fr
 variant_id: alpine-a290-gt-52-2025
 market: FR
-market_code: FR
 currency: EUR
 
+# Market-Specific Details
+availability_status: available
+available_from: "2024-07-30"
+delivery_time_weeks: 8
+
+# Pricing
 pricing:
-  base_price: 38700.00
-  base_price_vat_inclusive: true
-  vat_rate: 20.0
-  notes: "Base price for Alpine A290 GT with 52 kWh battery and 180 ch in France."
+  base_price: 38700
+  price_including_vat: 38700
+  vat_rate_percent: 20
 
+# Incentives
 incentives:
-  - type: bonus
-    name: "Bonus écologique"
-    amount: 4000.00
-    currency: EUR
-    notes: "Ecological bonus for electric vehicles in France."
-    valid_until: "2025-12-31"
-    active: true
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: >
+      Government ecological bonus for BEVs priced under €47,000.
+      Eligible for all A290 trims until December 31, 2024.
+    valid_until: "2024-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Assembled in France (Douai plant)
 
-availability:
-  status: available
-  order_date: "2024-07-30"
-  notes: "Orders opened on July 30, 2024."
-
-warranty:
-  vehicle_years: 3
-  battery_years: 8
-  notes: "Standard Alpine warranty."
-
+# Notes
 market_notes: >
-  The Alpine A290 GT is the entry-level variant with 180 ch (132 kW) power and 
-  52 kWh battery offering up to 380 km WLTP range. Features include 19-inch 
-  Iconic alloy wheels, Michelin Sport EV tires, bidirectional 11 kW AC charger,
-  and 100 kW DC fast charging. Includes Alpine Portal infotainment with Google
-  Automotive Services.
+  Alpine A290 GT is the entry-level trim with 180 ch (130 kW) motor and 52 kWh battery.
+  WLTP range: 380 km. 0-100 km/h in 7.4s. Top speed 160 km/h.
+  Standard equipment includes 19" Iconic wheels, Michelin Pilot Sport EV tires,
+  heated sport seats, 10.1" infotainment with Alpine Portal, leather Nappa steering wheel,
+  Brembo brakes, adaptive cruise control with Stop & Go, bidirectional charging (11 kW AC, 100 kW DC).
+  Based on Renault 5 platform but with performance-focused tuning and premium equipment.
+  Made in France at Douai plant. Eligible for full €4,000 bonus écologique.
 
 metadata:
+  created_at: "2026-02-23"
+  updated_at: null
   data_quality: verified
-  data_source: manufacturer
   sources:
-    - https://media.alpinecars.com/alpine-a290-ouverture-des-commandes-et-tarifs-pour-la-france/
-  created_at: "2026-02-22"
-  last_updated: "2026-02-22"
-  notes: "France market pricing from official Alpine press release, 2025 model year."
+    - https://www.largus.fr/actualite-automobile/prix-alpine-a290-2024-tous-les-details-sur-la-gamme-et-les-equipements-30035233.html
+    - https://www.alpinecars.fr/modeles-electriques/a290.html

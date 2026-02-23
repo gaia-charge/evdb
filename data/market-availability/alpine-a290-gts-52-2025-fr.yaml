@@ -1,97 +1,49 @@
-# Market Availability: Alpine A290 GTS - France
+# Alpine A290 GTS 52 kWh (2025) - France Market Availability
+
 id: alpine-a290-gts-52-2025-fr
 variant_id: alpine-a290-gts-52-2025
 market: FR
-market_code: FR
 currency: EUR
 
+# Market-Specific Details
+availability_status: available
+available_from: "2024-07-30"
+delivery_time_weeks: 8
+
+# Pricing
 pricing:
-  base_price: 41700.00
-  base_price_vat_inclusive: true
-  vat_rate: 20.0
-  base_price_excluding_vat: 34750.00
-  notes: "Base price for A290 GTS in France (2025 model year). Top trim."
+  base_price: 44700
+  price_including_vat: 44700
+  vat_rate_percent: 20
 
-colors:
-  - name: "Alpine White"
-    type: "solid"
-    price: 0.00
-    notes: "Standard color"
-  - name: "Noir Etoile"
-    type: "metallic"
-    price: 600.00
-  - name: "Bleu Alpine Vision"
-    type: "metallic"
-    price: 900.00
-    notes: "Signature Alpine blue"
-  - name: "Gris Tonnerre"
-    type: "metallic"
-    price: 600.00
-  - name: "Rouge Torino"
-    type: "metallic"
-    price: 600.00
-
-wheels:
-  - size: "19-inch"
-    type: "Alpine diamond-cut alloy wheels"
-    price: 0.00
-    notes: "Standard GTS wheels"
-
-interiors:
-  - name: "GTS Sport"
-    material: "Alcantara and leather"
-    color: "Black with Alpine Blue stitching"
-    price: 0.00
-
-packages: []
-
-standalone_options:
-  - name: "Metallic Paint"
-    price: 600.00
-  - name: "Alpine Blue Paint"
-    price: 900.00
-
+# Incentives
 incentives:
-  - type: grant
-    name: "Bonus écologique"
-    amount: 4000.00
-    currency: EUR
-    notes: "Vehicle price under 47,000 EUR and manufactured in EU (Douai, France). Eligible for bonus écologique."
-    valid_until: "2025-12-31"
-    active: true
+  - name: Bonus écologique
+    type: grant
+    amount: 4000
+    description: >
+      Government ecological bonus for BEVs priced under €47,000.
+      Eligible for all A290 trims until December 31, 2024.
+    valid_until: "2024-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Assembled in France (Douai plant)
 
-  - type: tax_exemption
-    name: "Exonération carte grise"
-    amount: 0.00
-    currency: EUR
-    notes: "Full or partial exemption from vehicle registration tax depending on region."
-    active: true
-
-availability:
-  status: available
-  delivery_time_weeks: 8
-  notes: "Built in Douai, France. GTS trim may have slightly longer delivery."
-
-dealers:
-  count: 45
-  notes: "Available through Alpine/Renault dealer network across France"
-
-warranty:
-  vehicle_years: 2
-  vehicle_km: null
-  battery_years: 8
-  battery_km: 160000
-  battery_capacity_guarantee_percent: 70
-
+# Notes
 market_notes: >
-  The Alpine A290 GTS is the top performance trim with 180 kW motor.
-  Built in Douai, France. Eligible for bonus écologique.
-  Positioned as premium electric hot hatch for enthusiasts.
+  Alpine A290 GTS is the top-spec trim with 220 ch (160 kW) motor and 52 kWh battery.
+  WLTP range: 364 km. 0-100 km/h in 6.4s. Top speed 170 km/h.
+  Combines the best features from GT Premium and GT Performance trims:
+  19" Snowflake black wheels, Michelin Pilot Sport 5S tires, red Racing brake calipers,
+  leather Nappa bicolor seats with Alpine monograms, Devialet premium audio system with Alpine Drive Sound,
+  heated steering wheel, wireless smartphone charging, Alpine Telemetrics,
+  electrochrome frameless rearview mirror, bidirectional charging (11 kW AC, 100 kW DC).
+  Made in France at Douai plant. Eligible for full €4,000 bonus écologique.
 
 metadata:
-  data_quality: estimated
-  data_source: manufacturer
+  created_at: "2026-02-23"
+  updated_at: null
+  data_quality: verified
   sources:
-    - https://www.alpinecars.fr
-  created_at: "2026-02-11"
-  last_updated: "2026-02-11"
+    - https://www.largus.fr/actualite-automobile/prix-alpine-a290-2024-tous-les-details-sur-la-gamme-et-les-equipements-30035233.html
+    - https://www.alpinecars.fr/modeles-electriques/a290.html
