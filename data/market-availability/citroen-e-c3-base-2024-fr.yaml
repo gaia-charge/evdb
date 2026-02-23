@@ -1,87 +1,38 @@
-# Citroën ë-C3 Base 2024 - France Market
+# Market Availability: Citroën ë-C3 Base - France
 id: citroen-e-c3-base-2024-fr
 variant_id: citroen-e-c3-base-2024
 market: FR
+market_code: FR
 currency: EUR
 
-availability_status: available
-available_from: "2024-06-01"
-
 pricing:
-  base_price: 23300
-  price_including_vat: 23300
-  vat_rate_percent: 20
-  destination_charge: 0
-  registration_fees: 0
-  total_price_estimate: 23300
+  base_price: 23950.00
+  base_price_vat_inclusive: true
+  vat_rate: 20.0
+  notes: "Base price for Citroën ë-C3 Base 2024 in France (MAX trim shown on Citroen.fr)."
 
-incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 4000
-    description: Government EV purchase bonus. Up to €4,000 standard, up to €7,000 for low-income households.
-    valid_from: "2024-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - Vehicle price under €47,000
-      - Manufactured in Europe (eligible - Trnava, Slovakia)
-    source_url: https://www.ecologie.gouv.fr/bonus-ecologique
-  - name: Prime à la conversion
-    type: grant
-    amount: 1500
-    description: Additional bonus when scrapping an old vehicle.
-    valid_from: "2024-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - Must scrap an eligible older vehicle
-  - name: Leasing social
-    type: subsidy
-    amount: 0
-    description: Government-backed social leasing program for low-income households. ë-C3 was flagship vehicle for this program at ~€54/month.
-    conditions:
-      - Household income below threshold
-      - Limited allocation
+availability:
+  status: available
+  order_date: "2024"
+  notes: "Available to order in France. French-made affordable electric vehicle."
 
-market_specific:
-  standard_equipment:
-    - 10.25-inch touchscreen
-    - Wireless Apple CarPlay / Android Auto
-    - Automatic climate control
-    - LED headlights
-    - Rear parking sensors
-    - Lane keeping assist
-    - Automatic emergency braking
+warranty:
+  vehicle_years: 3
+  battery_years: 8
+  notes: "Standard Stellantis warranty."
 
-  available_colors:
-    - name: Blanc Banquise
-      additional_cost: 0
-    - name: Gris Artense
-      additional_cost: 500
-    - name: Bleu Emeraude
-      additional_cost: 500
-    - name: Rouge Elixir
-      additional_cost: 500
-
-dealer_network:
-  online_sales_available: true
-
-delivery:
-  typical_delivery_weeks: 12
-
-compliance:
-  ncap_rating: null
-  emission_class: Zero Emission
-
-notes: |
-  Citroën's affordable EV for the French market. At €23,300 before incentives,
-  it becomes one of the cheapest EVs available after bonus écologique.
-  Effective price from €16,300 with maximum incentives.
-  Key vehicle in France's social leasing program.
+market_notes: >
+  The Citroën ë-C3 is France's domestically-produced entry-level electric vehicle, manufactured in Slovakia.
+  Features Citroën's signature Advanced Comfort suspension and seats, raised driving position,
+  and urban SUV-inspired design. With 44 kWh battery providing 320 km WLTP range, it targets
+  urban and periurban mobility. Standard equipment includes LED lighting and 10-inch touchscreen.
 
 metadata:
-  created_at: "2026-02-11"
-  updated_at: null
-  data_quality: estimated
-  price_checked_at: "2026-02-11"
+  data_quality: verified
+  data_source: manufacturer
   sources:
-    - https://www.citroen.fr/modeles/e-c3.html
+    - https://www.citroen.fr/acheter/offres/nouvelle_e_c3.html
+    - https://www.largus.fr/actualite-automobile/citroen-e-c3-2024-les-prix-et-la-gamme-de-la-citadine-electrique-francaise-30030727.html
+  created_at: "2026-02-23"
+  last_updated: "2026-02-23"
+  notes: "France market pricing from official Citroën France website and L'Argus, 2024 model year."
