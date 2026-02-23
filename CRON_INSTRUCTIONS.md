@@ -58,9 +58,21 @@ Check existing files in `data/market-availability/` for exact format reference.
 
 **If manufacturer site fails** (common with BMW, Audi, Mercedes JS-heavy configurators), use the automotive pricing sites above — they pull from official price lists.
 
+### Trim mapping across markets
+
+When a DE variant's trim name doesn't exist in NL/FR/IT, **map by specs** (battery capacity, motor power, drivetrain) rather than requiring an exact trim name match. For example:
+- DE `byd-dolphin-active-2024` (45 kWh, 70 kW) → NL might call it "Comfort" but same specs → use the DE variant_id, add NL price
+- DE `cupra-born-vz-2024` (79 kWh, 240 kW) → FR might call it "e-Boost" but same specs → map it
+
+**Rules for trim mapping:**
+1. Battery capacity must match (within ~1 kWh tolerance for rounding)
+2. Motor power/drivetrain must match (RWD vs AWD)
+3. Note the local trim name in the `notes` field of the market file
+4. If specs genuinely differ (different battery, different motor), do NOT map — skip it
+
 ### Important rules
 
-- **Skip** variants where brand doesn't sell in that market
+- **Skip** variants where brand doesn't sell in that market at all
 - **Do NOT use ev-database.org**
 - **Prioritize volume brands** (Renault, VW, Hyundai, Kia, etc.) over premium brands with opaque pricing
 
