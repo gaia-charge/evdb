@@ -1,0 +1,58 @@
+# Dacia Spring Expression - Italy Market (2025)
+id: dacia-spring-expression-2025-it
+variant_id: dacia-spring-expression-2025
+market: IT
+currency: EUR
+
+available_from: "2025-03-01"
+availability_status: available
+delivery_time_weeks: 4
+
+pricing:
+  base_price: 17900
+  price_including_vat: 17900
+  vat_rate_percent: 22
+  notes: "Base price for Expression 45 trim before incentives."
+
+incentives:
+  - name: "Ecobonus statale"
+    type: grant
+    amount: 11000
+    currency: EUR
+    notes: "State incentive for ISEE below 30,000 EUR with trade-in."
+    active: true
+  
+  - name: "Ecobonus statale (ISEE 30-40k)"
+    type: grant
+    amount: 9000
+    currency: EUR
+    notes: "State incentive for ISEE between 30,000-40,000 EUR with trade-in."
+    active: true
+
+  - name: "Sconto Dacia"
+    type: manufacturer
+    amount: 3300
+    currency: EUR
+    notes: "Manufacturer discount added to state incentive."
+    active: true
+
+availability:
+  status: available
+  delivery_time_weeks: 4
+  notes: "Entry-level Expression trim with 45 hp motor. Most affordable new EV in Italy."
+
+warranty:
+  vehicle_years: 3
+  vehicle_km: 100000
+  battery_years: 8
+  battery_km: 160000
+  battery_capacity_guarantee_percent: 70
+
+metadata:
+  data_quality: verified
+  created_at: "2026-02-24"
+  last_updated: "2026-02-24"
+  sources:
+    - "https://www.quattroruote.it/news/mercato/2025/10/07/dacia_spring_la_citycar_elettrica_a_meno_di_quattromila_euro.html"
+    - "https://www.quattroruote.it/offerte-auto/nuova-dacia-spring.html"
+  notes: "Italy market pricing from Quattroruote. With maximum incentives (ISEE <30k + trade-in), final price can be as low as €3,900."
