@@ -2,12 +2,11 @@ name: Validate YAML Data
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, 'data-fill/**' ]
     paths:
       - 'data/**/*.yaml'
       - 'schemas/**/*.json'
       - 'scripts/validate.py'
-      - 'requirements.txt'
       - '.github/workflows/validate.yml'
   pull_request:
     branches: [ main, develop ]
@@ -15,45 +14,38 @@ on:
       - 'data/**/*.yaml'
       - 'schemas/**/*.json'
       - 'scripts/validate.py'
-      - 'requirements.txt'
       - '.github/workflows/validate.yml'
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.12'
         cache: 'pip'
-        
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        
+        pip install pyyaml jsonschema click rich
+
     - name: Validate YAML against JSON Schema
-      id: validate
       run: |
-        echo "🔍 Validating YAML files against JSON Schema..."
+        echo "Validating YAML files against JSON Schema..."
         python scripts/validate.py --directory data --check-duplicates
-        
+
     - name: Validation failed
       if: failure()
       run: |
-        echo "❌ YAML validation failed!"
-        echo ""
-        echo "Schema validation errors were found. Please fix them before merging."
-        echo "Run locally: python scripts/validate.py --directory data"
+        echo "YAML validation failed."
+        echo "Run locally: python scripts/validate.py --directory data --check-duplicates"
         exit 1
-        
-    - name: Validation success
-      if: success()
-      run: |
-        echo "✅ All YAML files validated successfully against JSON Schema!"
-        echo "✅ No duplicate IDs found!"
