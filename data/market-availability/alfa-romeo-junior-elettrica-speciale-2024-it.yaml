@@ -6,32 +6,43 @@ market_code: IT
 currency: EUR
 
 pricing:
-  base_price: 31900.00
+  base_price: 39500.00
   base_price_vat_inclusive: true
   vat_rate: 22.0
-  notes: "Base price for Alfa Romeo Junior Elettrica Speciale in Italy."
+  notes: "Base price for Alfa Romeo Junior Elettrica (Speciale trim, 156 CV) in Italy."
 
 availability:
   status: available
   order_date: "2024"
   notes: "Available to order in Italy since 2024."
 
+incentives:
+  - name: Ecobonus
+    type: grant
+    amount: 5000
+    currency: EUR
+    description: "Italian government electric vehicle incentive with trade-in"
+    eligibility: "With scrapping of Euro 5 or older vehicle, ISEE below threshold"
+    valid_until: "Subject to fund availability"
+
 warranty:
-  vehicle_years: 3
+  vehicle_years: 2
   battery_years: 8
+  battery_km: 160000
   notes: "Standard Stellantis warranty."
 
 market_notes: >
-  The Alfa Romeo Junior Elettrica Speciale features 156 CV (115 kW) electric motor,
-  54 kWh battery, 18" alloy wheels, LED headlights, electric tailgate, and
-  premium interior details with Rosso Brera accents. This is the mid-range trim
-  between the base Junior Elettrica and the high-performance Veloce version.
+  The Alfa Romeo Junior Elettrica Speciale (156 CV/115 kW) is the launch variant 
+  of Alfa Romeo's first electric vehicle. Built on Stellantis eCMP2 platform with 
+  54 kWh battery delivering 410 km WLTP range. Features heat pump, LED Matrix 
+  headlights, dual 10.25" screens, and comprehensive safety systems. Entry trim 
+  well-equipped with Icona fabric seats and full connectivity.
 
 metadata:
   data_quality: verified
-  data_source: manufacturer
+  data_source: official
   sources:
-    - https://www.media.stellantis.com/uploads/it/model-pricelist/alfaromeojuniorlistinodel10maggio2024-6642349a6250e.pdf
+    - https://www.alfaromeo.it/modelli/junior-elettrica
   created_at: "2026-02-23"
   last_updated: "2026-02-23"
-  notes: "Italy market pricing from official Stellantis price list, May 2024."
+  notes: "Italy market pricing from official Alfa Romeo Italia website, 2024 model year."
