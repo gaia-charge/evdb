@@ -1,47 +1,49 @@
-# Market Availability: Alpine A290 GTS - France
+# Alpine A290 GTS 52 kWh (2025) - France Market Availability
+
 id: alpine-a290-gts-52-2025-fr
 variant_id: alpine-a290-gts-52-2025
 market: FR
-market_code: FR
 currency: EUR
 
+# Market-Specific Details
+availability_status: available
+available_from: "2024-07-30"
+delivery_time_weeks: 8
+
+# Pricing
 pricing:
-  base_price: 44700.00
-  base_price_vat_inclusive: true
-  vat_rate: 20.0
-  notes: "Base price for Alpine A290 GTS with 220 ch (160 kW) motor in France."
+  base_price: 44700
+  price_including_vat: 44700
+  vat_rate_percent: 20
 
-availability:
-  status: available
-  order_date: "2025-07"
-  notes: "Available to order in France since July 30, 2024."
-
+# Incentives
 incentives:
   - name: Bonus écologique
     type: grant
     amount: 4000
-    currency: EUR
-    description: "French government electric vehicle purchase bonus"
-    eligibility: "Subject to income and vehicle price limits"
-    valid_until: "2026"
+    description: >
+      Government ecological bonus for BEVs priced under €47,000.
+      Eligible for all A290 trims until December 31, 2024.
+    valid_until: "2024-12-31"
+    conditions:
+      - Vehicle price under €47,000
+      - Assembled in France (Douai plant)
 
-warranty:
-  vehicle_years: 2
-  battery_years: 8
-  notes: "Standard Renault/Alpine warranty."
-
+# Notes
 market_notes: >
-  The Alpine A290 GTS is the top-spec version combining GT Premium equipment 
-  with the more powerful 220 ch (160 kW) motor. Features 52 kWh battery, 
-  364 km WLTP range, 19-inch Snowflakes wheels, Brembo Rouge Racing brake 
-  calipers, Devialet premium audio, and Alpine Telemetrics Premium system. 
-  Nappa leather interior. Manufactured in France (Douai).
+  Alpine A290 GTS is the top-spec trim with 220 ch (160 kW) motor and 52 kWh battery.
+  WLTP range: 364 km. 0-100 km/h in 6.4s. Top speed 170 km/h.
+  Combines the best features from GT Premium and GT Performance trims:
+  19" Snowflake black wheels, Michelin Pilot Sport 5S tires, red Racing brake calipers,
+  leather Nappa bicolor seats with Alpine monograms, Devialet premium audio system with Alpine Drive Sound,
+  heated steering wheel, wireless smartphone charging, Alpine Telemetrics,
+  electrochrome frameless rearview mirror, bidirectional charging (11 kW AC, 100 kW DC).
+  Made in France at Douai plant. Eligible for full €4,000 bonus écologique.
 
 metadata:
-  data_quality: verified
-  data_source: press
-  sources:
-    - https://lesalpinistes.com/alpine-a290-ouverture-commandes-tarifs-france/
   created_at: "2026-02-23"
-  last_updated: "2026-02-23"
-  notes: "France market pricing from automotive press (Les Alpinistes), 2025 model year."
+  updated_at: null
+  data_quality: verified
+  sources:
+    - https://www.largus.fr/actualite-automobile/prix-alpine-a290-2024-tous-les-details-sur-la-gamme-et-les-equipements-30035233.html
+    - https://www.alpinecars.fr/modeles-electriques/a290.html
