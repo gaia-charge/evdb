@@ -469,9 +469,11 @@ class DatabaseBuilder:
             consumption = data.get('consumption', {})
             efficiency = data.get('efficiency', {})  # Many vehicles use 'efficiency' instead of 'consumption'
             charging = data.get('charging', {})
+            # Schema uses flat keys (charging.ac_max_kw); pre-normalization files
+            # nested them (charging.ac.max_power_kw) - support both
             ac = charging.get('ac', {})
             dc = charging.get('dc', {})
-            bidir = charging.get('bidirectional', {})
+            bidir = data.get('bidirectional', {}) or charging.get('bidirectional', {})
             performance = data.get('performance', {})
             weight = data.get('weight', {})
             dimensions = data.get('dimensions', {})
@@ -656,24 +658,24 @@ class DatabaseBuilder:
                 battery.get('voltage'),
                 battery.get('cells'),
                 battery.get('modules'),
-                battery.get('warranty', {}).get('years'),
-                battery.get('warranty', {}).get('km'),
+                battery.get('warranty_years') or battery.get('warranty', {}).get('years'),
+                battery.get('warranty_km') or battery.get('warranty', {}).get('km'),
                 range_data.get('wltp_km'),
                 range_data.get('epa_km'),
                 range_data.get('real_world_km'),
                 consumption.get('wltp_kwh_100km') or efficiency.get('wltp_kwh_per_100km'),
                 consumption.get('real_world_kwh_100km') or efficiency.get('real_world_kwh_per_100km'),
                 consumption.get('efficiency_wh_km') or efficiency.get('efficiency_wh_km'),
-                ac.get('max_power_kw'),
-                ac.get('phases'),
+                charging.get('ac_max_kw') or ac.get('max_power_kw'),
+                charging.get('ac_phases') or ac.get('phases'),
                 ac.get('onboard_charger_kw'),
-                dc.get('max_power_kw'),
-                dc.get('charging_time_minutes', {}).get('10_80'),
-                dc.get('charging_time_minutes', {}).get('0_100'),
-                dc.get('peak_power_kw'),
-                json.dumps(charging.get('connectors', [])),
-                json.dumps(bidir.get('capabilities', [])),
-                bidir.get('max_power_kw'),
+                charging.get('dc_max_kw') or dc.get('max_power_kw'),
+                charging.get('time_10_to_80_min') or dc.get('charging_time_minutes', {}).get('10_80'),
+                charging.get('time_0_to_80_min') or dc.get('charging_time_minutes', {}).get('0_100'),
+                (max((pt.get('power_kw') or 0) for pt in charging.get('dc_curve', [])) if charging.get('dc_curve') else None) or dc.get('peak_power_kw'),
+                json.dumps([c for c in [charging.get('ac_connector'), charging.get('dc_connector')] if c] or charging.get('connectors', [])),
+                json.dumps([cap for cap, on in [('V2L', bidir.get('v2l')), ('V2H', bidir.get('v2h')), ('V2G', bidir.get('v2g'))] if on] or bidir.get('capabilities', [])),
+                bidir.get('v2l_max_kw') or bidir.get('max_power_kw'),
                 motor_type,
                 motor_count,
                 drive_type,
