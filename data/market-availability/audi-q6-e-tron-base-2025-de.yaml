@@ -9,100 +9,100 @@ pricing:
   destination_charge: 1290
   on_the_road_price: 64790
   price_includes:
-    - "11kW AC charging (3-phase)"
-    - "225kW DC fast charging"
-    - "14.5-inch MMI panoramic display"
-    - "11.9-inch Audi virtual cockpit plus"
-    - "Automatic climate control"
-    - "Heat pump"
-    - "360-degree camera system"
-    - "19-inch wheels"
-    - "LED headlights"
+  - "11kW AC charging (3-phase)"
+  - "225kW DC fast charging"
+  - "14.5-inch MMI panoramic display"
+  - "11.9-inch Audi virtual cockpit plus"
+  - "Automatic climate control"
+  - "Heat pump"
+  - "360-degree camera system"
+  - "19-inch wheels"
+  - "LED headlights"
 
 trim_levels:
-  - name: "Q6 e-tron"
-    price: 63500
-    features:
-      - "RWD with 215kW (292hp)"
-      - "529 km WLTP range"
-      - "76 kWh usable battery"
-      - "19-inch wheels standard"
-  - name: "advanced"
-    price: 68500
-    features:
-      - "Adaptive cruise control"
-      - "Park assist plus"
-      - "Nappa leather seats"
-      - "Ambient lighting plus"
-  - name: "S line"
-    price: 73500
-    features:
-      - "S line exterior styling"
-      - "S line sport seats"
-      - "20-inch S line wheels"
-      - "Sport suspension"
+- name: "Q6 e-tron"
+  price: 63500
+  features:
+  - "RWD with 215kW (292hp)"
+  - "529 km WLTP range"
+  - "76 kWh usable battery"
+  - "19-inch wheels standard"
+- name: "advanced"
+  price: 68500
+  features:
+  - "Adaptive cruise control"
+  - "Park assist plus"
+  - "Nappa leather seats"
+  - "Ambient lighting plus"
+- name: "S line"
+  price: 73500
+  features:
+  - "S line exterior styling"
+  - "S line sport seats"
+  - "20-inch S line wheels"
+  - "Sport suspension"
 
 colors:
-  - name: "Brilliant Black"
-    type: solid
-    price: 0
-  - name: "Glacier White metallic"
-    type: metallic
-    price: 895
-  - name: "Mythos Black metallic"
-    type: metallic
-    price: 895
-  - name: "Ascari Blue metallic"
-    type: metallic
-    price: 895
-  - name: "Taifun Gray metallic"
-    type: metallic
-    price: 895
+- name: "Brilliant Black"
+  type: solid
+  price: 0
+- name: "Glacier White metallic"
+  type: metallic
+  price: 895
+- name: "Mythos Black metallic"
+  type: metallic
+  price: 895
+- name: "Ascari Blue metallic"
+  type: metallic
+  price: 895
+- name: "Taifun Gray metallic"
+  type: metallic
+  price: 895
 
 packages:
-  - name: "Comfort Package Plus"
-    price: 2490
-    includes:
-      - "Heated & ventilated front seats"
-      - "Heated rear seats"
-      - "Massage function front seats"
-      - "Power tailgate with sensor control"
-  - name: "Technology Package Pro"
-    price: 4990
-    includes:
-      - "Adaptive cruise control"
-      - "Active lane assist plus"
-      - "Park assist plus with remote parking"
-      - "Augmented reality head-up display"
+- name: "Comfort Package Plus"
+  price: 2490
+  includes:
+  - "Heated & ventilated front seats"
+  - "Heated rear seats"
+  - "Massage function front seats"
+  - "Power tailgate with sensor control"
+- name: "Technology Package Pro"
+  price: 4990
+  includes:
+  - "Adaptive cruise control"
+  - "Active lane assist plus"
+  - "Park assist plus with remote parking"
+  - "Augmented reality head-up display"
 
 individual_options:
-  - name: "Towing package"
-    price: 1250
-    notes: "Electrically folding towbar"
-  - name: "Bang & Olufsen 3D sound"
-    price: 2990
-    notes: "22 speakers, 830W"
-  - name: "22kW AC charging"
-    price: 790
-  - name: "Frunk (front trunk)"
-    price: 260
-    notes: "75-liter front storage compartment"
+- name: "Towing package"
+  price: 1250
+  notes: "Electrically folding towbar"
+- name: "Bang & Olufsen 3D sound"
+  price: 2990
+  notes: "22 speakers, 830W"
+- name: "22kW AC charging"
+  price: 790
+- name: "Frunk (front trunk)"
+  price: 260
+  notes: "75-liter front storage compartment"
 
 incentives:
-  - name: "Company car tax benefit"
-    type: tax_credit
-    amount: 5715
-    notes: "0.25% of €63,500 = €159/month vs 1% = €635/month. Savings: €476/month = €5,715/year"
-    eligibility: "Company car drivers only"
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 460
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote"
-    type: grant
-    amount: 300
-    notes: "Annual CO2 certificate income"
+- name: "Company car tax benefit"
+  type: tax_credit
+  amount: 5715
+  notes: "0.25% of €63,500 = €159/month vs 1% = €635/month. Savings: €476/month = €5,715/year"
+  eligibility: "Company car drivers only"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 460
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote"
+  type: grant
+  amount: 300
+  notes: "Annual CO2 certificate income"
 
 availability:
   in_stock: true
@@ -112,12 +112,12 @@ availability:
   notes: "Entry-level Q6 e-tron. Most affordable way into the PPE platform. Built at Ingolstadt, Germany."
 
 charging_costs:
-  - scenario: "Home charging"
-    cost_per_kwh: 0.30
-    cost_per_100km: 4.92
-  - scenario: "Public DC fast charging (IONITY subscription)"
-    cost_per_kwh: 0.31
-    cost_per_100km: 5.08
+- scenario: "Home charging"
+  cost_per_kwh: 0.30
+  cost_per_100km: 4.92
+- scenario: "Public DC fast charging (IONITY subscription)"
+  cost_per_kwh: 0.31
+  cost_per_100km: 5.08
 
 warranty:
   vehicle_years: 2
@@ -129,7 +129,7 @@ warranty:
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   sources:
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/audi-q6-e-tron/"
   notes: "New entry-level Q6 e-tron at €63,500. Excellent value with 529 km range and 800V architecture. Most affordable Audi on PPE platform."
+  updated_at: "2026-02-10"

@@ -18,70 +18,70 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Cosmos Black
-    code: BK
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Aurora White
-    code: WH
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  - name: Boulder Grey
-    code: GY
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  - name: Surf Blue
-    code: SB
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  - name: Adventure Green
-    code: GN
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
+- name: Cosmos Black
+  code: BK
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Aurora White
+  code: WH
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+- name: Boulder Grey
+  code: GY
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+- name: Surf Blue
+  code: SB
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+- name: Adventure Green
+  code: GN
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 17" Alloy Wheels
-    size_inches: 17
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
+- name: 17" Alloy Wheels
+  size_inches: 17
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Synthetic Leather
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black Synthetic Leather
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Environmental Bonus)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: manufacturer
-    name: "BYD Trade-In Bonus"
-    amount:
-      amount: 1000
-      currency: EUR
-    conditions: ["Trade-in of vehicle older than 5 years"]
+- type: federal
+  name: "Umweltbonus (Environmental Bonus)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: manufacturer
+  name: "BYD Trade-In Bonus"
+  amount:
+    amount: 1000
+    currency: EUR
+  conditions: ["Trade-in of vehicle older than 5 years"]
 
 # Tax Information (Germany-specific)
 taxation:
@@ -97,37 +97,26 @@ taxation:
 
 # Popular Configuration
 popular_configurations:
-  - name: "Standard Configuration"
-    description: "Well-equipped mid-range model"
-    base_price: 36990
-    options:
-      - "Base vehicle"
-    total_price: 36990
-    
-  - name: "Premium Configuration"
-    description: "Enhanced comfort and convenience"
-    base_price: 36990
-    options:
-      - "Aurora White metallic"
-      - "Premium Pack (360 camera, panoramic roof, power tailgate)"
-    total_price: 40180
+- name: "Standard Configuration"
+  description: "Well-equipped mid-range model"
+  base_price: 36990
+  options:
+  - "Base vehicle"
+  total_price: 36990
+
+- name: "Premium Configuration"
+  description: "Enhanced comfort and convenience"
+  base_price: 36990
+  options:
+  - "Aurora White metallic"
+  - "Premium Pack (360 camera, panoramic roof, power tailgate)"
+  total_price: 40180
 
 # Notes
-market_notes: >
-  The BYD Dolphin Comfort offers excellent value with the larger 60.4 kWh
-  battery providing 427 km WLTP range (365 km real-world). The more powerful
-  150 kW motor delivers spirited performance (7.5s 0-100 km/h). Standard
-  equipment includes heat pump, heated seats, adaptive cruise control, and
-  comprehensive driver assistance systems.
-  
-  This variant represents the sweet spot in the Dolphin lineup - balancing
-  range, performance, and features at a competitive price. The 0.25% company
-  car tax rate makes it attractive for business users.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.byd.com/de/dolphin
-    - https://www.dat.de/ (pricing verification)
+  - https://www.byd.com/de/dolphin
+  - https://www.dat.de/ (pricing verification)
+notes: "The BYD Dolphin Comfort offers excellent value with the larger 60.4 kWh battery providing 427 km WLTP range (365 km real-world). The more powerful 150 kW motor delivers spirited performance (7.5s 0-100 km/h). Standard equipment includes heat pump, heated seats, adaptive cruise control, and comprehensive driver assistance systems.\nThis variant represents the sweet spot in the Dolphin lineup - balancing range, performance, and features at a competitive price. The 0.25% company car tax rate makes it attractive for business users."

@@ -25,284 +25,263 @@ pricing:
   price_including_incentives: 52180  # No BAFA bonus since 2024
 
   trim_levels:
-    - name: "Style"
-      price: 50990
-      description: "Base trim with Long Range battery, comprehensive equipment"
-    
-    - name: "Select"
-      price: 55990
-      price_difference: 5000
-      description: "Mid-level trim, adds premium comfort and tech features"
-    
-    - name: "Vertex"
-      price: 59990
-      price_difference: 9000
-      description: "Top trim, luxury appointments and all available features"
+  - name: "Style"
+    price: 50990
+    description: "Base trim with Long Range battery, comprehensive equipment"
+  - name: "Select"
+    price: 55990
+    price_difference: 5000
+    description: "Mid-level trim, adds premium comfort and tech features"
+  - name: "Vertex"
+    price: 59990
+    price_difference: 9000
+    description: "Top trim, luxury appointments and all available features"
 
 # Standard Equipment (Style Base Trim)
 standard_equipment:
   exterior:
-    - "18-inch alloy wheels with Michelin EV tires"
-    - "Parametric Pixel LED headlights"
-    - "Parametric Pixel LED taillights"
-    - "LED daytime running lights"
-    - "Heated power-folding side mirrors with puddle lamps"
-    - "Flush door handles with auto-deploy"
-    - "Privacy glass (rear windows)"
-    - "Active air flaps for improved aerodynamics"
-    - "Shark fin antenna"
-  
+  - "18-inch alloy wheels with Michelin EV tires"
+  - "Parametric Pixel LED headlights"
+  - "Parametric Pixel LED taillights"
+  - "LED daytime running lights"
+  - "Heated power-folding side mirrors with puddle lamps"
+  - "Flush door handles with auto-deploy"
+  - "Privacy glass (rear windows)"
+  - "Active air flaps for improved aerodynamics"
+  - "Shark fin antenna"
   interior:
-    - "Dual 12-inch displays (digital cluster + touchscreen)"
-    - "Hyundai CCNC infotainment with navigation"
-    - "Wireless Apple CarPlay / Android Auto"
-    - "Digital Key 2.0 (NFC + UWB)"
-    - "8-way power driver seat with lumbar support"
-    - "4-way power passenger seat"
-    - "Heated front seats"
-    - "Leather-wrapped steering wheel with controls"
-    - "Auto-dimming rearview mirror"
-    - "Wireless smartphone charging pad (dual)"
-    - "Dual-zone automatic climate control with heat pump"
-    - "Ambient lighting (8 colors)"
-    - "Eco-processed recycled materials"
-    - "60:40 split-folding rear seats"
-    - "USB-C ports (front x2, rear x2)"
-  
+  - "Dual 12-inch displays (digital cluster + touchscreen)"
+  - "Hyundai CCNC infotainment with navigation"
+  - "Wireless Apple CarPlay / Android Auto"
+  - "Digital Key 2.0 (NFC + UWB)"
+  - "8-way power driver seat with lumbar support"
+  - "4-way power passenger seat"
+  - "Heated front seats"
+  - "Leather-wrapped steering wheel with controls"
+  - "Auto-dimming rearview mirror"
+  - "Wireless smartphone charging pad (dual)"
+  - "Dual-zone automatic climate control with heat pump"
+  - "Ambient lighting (8 colors)"
+  - "Eco-processed recycled materials"
+  - "60:40 split-folding rear seats"
+  - "USB-C ports (front x2, rear x2)"
   technology:
-    - "Highway Driving Assist 2 (Level 2)"
-    - "Smart Cruise Control with Stop & Go"
-    - "Lane Following Assist"
-    - "Lane Keeping Assist"
-    - "Blind-Spot Collision-Avoidance Assist"
-    - "Rear Cross-Traffic Collision-Avoidance Assist"
-    - "Forward Collision-Avoidance Assist"
-    - "Parking Distance Warning (front & rear)"
-    - "Rear-View Monitor (backup camera)"
-    - "Driver Attention Warning"
-    - "Safe Exit Warning"
-    - "Bluelink connected services (5 years included)"
-    - "Over-the-air software updates"
-    - "Plug & Charge (ISO 15118)"
-    - "V2L (Vehicle-to-Load) 3.6kW"
+  - "Highway Driving Assist 2 (Level 2)"
+  - "Smart Cruise Control with Stop & Go"
+  - "Lane Following Assist"
+  - "Lane Keeping Assist"
+  - "Blind-Spot Collision-Avoidance Assist"
+  - "Rear Cross-Traffic Collision-Avoidance Assist"
+  - "Forward Collision-Avoidance Assist"
+  - "Parking Distance Warning (front & rear)"
+  - "Rear-View Monitor (backup camera)"
+  - "Driver Attention Warning"
+  - "Safe Exit Warning"
+  - "Bluelink connected services (5 years included)"
+  - "Over-the-air software updates"
+  - "Plug & Charge (ISO 15118)"
+  - "V2L (Vehicle-to-Load) 3.6kW"
 
 # Optional Equipment & Packages
 optional_equipment:
   packages:
-    - name: "Premium Package"
-      price: 2900
-      available_trims: ["Select", "Vertex"]
-      includes:
-        - "Ventilated front seats"
-        - "Heated rear seats"
-        - "Heated steering wheel"
-        - "Bose Premium Audio with 8 speakers"
-        - "Active Road Noise Cancellation"
-        - "Ambient lighting upgrade (64 colors)"
-    
-    - name: "Vision Package"
-      price: 1990
-      available_trims: ["Style", "Select", "Vertex"]
-      includes:
-        - "Surround View Monitor (360° camera)"
-        - "Blind-Spot View Monitor"
-        - "Auto-dimming side mirrors"
-        - "High Beam Assist"
-    
-    - name: "Relaxation Package"
-      price: 1490
-      available_trims: ["Vertex"]
-      includes:
-        - "Relaxation seats with leg support (front)"
-        - "Massage function for driver seat"
-        - "8-way power passenger seat with lumbar"
-    
-    - name: "Winter Comfort Package"
-      price: 890
-      available_trims: ["Style"]
-      includes:
-        - "Heated steering wheel"
-        - "Heated rear seats"
-        - "Heated windshield washer nozzles"
-    
-    - name: "Advanced Technology Package"
-      price: 2490
-      available_trims: ["Select", "Vertex"]
-      includes:
-        - "Remote Smart Parking Assist 2"
-        - "Parking Collision-Avoidance Assist"
-        - "Rear Occupant Alert"
-        - "Ultrasonic Cabin Sensors"
-  
+  - name: "Premium Package"
+    price: 2900
+    available_trims: ["Select", "Vertex"]
+    includes:
+    - "Ventilated front seats"
+    - "Heated rear seats"
+    - "Heated steering wheel"
+    - "Bose Premium Audio with 8 speakers"
+    - "Active Road Noise Cancellation"
+    - "Ambient lighting upgrade (64 colors)"
+  - name: "Vision Package"
+    price: 1990
+    available_trims: ["Style", "Select", "Vertex"]
+    includes:
+    - "Surround View Monitor (360° camera)"
+    - "Blind-Spot View Monitor"
+    - "Auto-dimming side mirrors"
+    - "High Beam Assist"
+  - name: "Relaxation Package"
+    price: 1490
+    available_trims: ["Vertex"]
+    includes:
+    - "Relaxation seats with leg support (front)"
+    - "Massage function for driver seat"
+    - "8-way power passenger seat with lumbar"
+  - name: "Winter Comfort Package"
+    price: 890
+    available_trims: ["Style"]
+    includes:
+    - "Heated steering wheel"
+    - "Heated rear seats"
+    - "Heated windshield washer nozzles"
+  - name: "Advanced Technology Package"
+    price: 2490
+    available_trims: ["Select", "Vertex"]
+    includes:
+    - "Remote Smart Parking Assist 2"
+    - "Parking Collision-Avoidance Assist"
+    - "Rear Occupant Alert"
+    - "Ultrasonic Cabin Sensors"
   individual_options:
-    - name: "Panoramic sunroof with power sunshade"
-      price: 1350
-      available_trims: ["all"]
-      impact_range_km: -8
-    
-    - name: "20-inch alloy wheels"
-      price: 1400
-      available_trims: ["Select", "Vertex"]
-      tire_size: "245/40 R20"
-      impact_range_km: -35
-      notes: "Reduces efficiency and range"
-    
-    - name: "Tow hitch (electrically foldable)"
-      price: 1050
-      available_trims: ["all"]
-      towing_capacity_kg: 1600
-    
-    - name: "Premium paint (Gravity Gold Matte, Digital Teal Pearl)"
-      price: 1095
-      available_trims: ["all"]
-    
-    - name: "Matte paint (Gravity Gold Matte)"
-      price: 1895
-      available_trims: ["Vertex"]
-      maintenance_note: "Requires special care, no automatic car washes"
+  - name: "Panoramic sunroof with power sunshade"
+    price: 1350
+    available_trims: ["all"]
+    impact_range_km: -8
+
+  - name: "20-inch alloy wheels"
+    price: 1400
+    available_trims: ["Select", "Vertex"]
+    tire_size: "245/40 R20"
+    impact_range_km: -35
+    notes: "Reduces efficiency and range"
+  - name: "Tow hitch (electrically foldable)"
+    price: 1050
+    available_trims: ["all"]
+    towing_capacity_kg: 1600
+
+  - name: "Premium paint (Gravity Gold Matte, Digital Teal Pearl)"
+    price: 1095
+    available_trims: ["all"]
+  - name: "Matte paint (Gravity Gold Matte)"
+    price: 1895
+    available_trims: ["Vertex"]
+    maintenance_note: "Requires special care, no automatic car washes"
 
 # Colors
 colors:
   standard:
-    - name: "Gravity Gold Matte"
-      hex: "#C5A572"
-      price: 0
-      type: matte
-      signature_color: true
-      notes: "Signature color, requires special matte paint care"
-  
+  - name: "Gravity Gold Matte"
+    hex: "#C5A572"
+    price: 0
+    type: matte
+    signature_color: true
+    notes: "Signature color, requires special matte paint care"
   metallic:
-    - name: "Polar White"
-      hex: "#F8F8F8"
-      price: 0
-      type: solid
-    
-    - name: "Nocturne Gray Metallic"
-      hex: "#4A4A4A"
-      price: 895
-      type: metallic
-    
-    - name: "Digital Teal Pearl"
-      hex: "#2F5F5F"
-      price: 1095
-      type: pearl
-      signature_color: true
-    
-    - name: "Shooting Star Matte"
-      hex: "#8B8B8B"
-      price: 1095
-      type: matte
-    
-    - name: "Phantom Black Pearl"
-      hex: "#1C1C1C"
-      price: 895
-      type: pearl
-    
-    - name: "Serenity Blue Pearl"
-      hex: "#3A5F7D"
-      price: 895
-      type: pearl
+  - name: "Polar White"
+    hex: "#F8F8F8"
+    price: 0
+    type: solid
+
+  - name: "Nocturne Gray Metallic"
+    hex: "#4A4A4A"
+    price: 895
+    type: metallic
+
+  - name: "Digital Teal Pearl"
+    hex: "#2F5F5F"
+    price: 1095
+    type: pearl
+    signature_color: true
+
+  - name: "Shooting Star Matte"
+    hex: "#8B8B8B"
+    price: 1095
+    type: matte
+
+  - name: "Phantom Black Pearl"
+    hex: "#1C1C1C"
+    price: 895
+    type: pearl
+
+  - name: "Serenity Blue Pearl"
+    hex: "#3A5F7D"
+    price: 895
+    type: pearl
 
 # Interior Options
 interior_options:
   standard:
-    - name: "Gray Eco-Fabric with Sustainable Materials"
-      price: 0
-      description: "Recycled materials, environmentally friendly"
-  
+  - name: "Gray Eco-Fabric with Sustainable Materials"
+    price: 0
+    description: "Recycled materials, environmentally friendly"
   premium:
-    - name: "Gray Vegan Leather"
-      price: 1500
-      available_trims: ["Select", "Vertex"]
-      description: "Animal-free leather alternative"
-    
-    - name: "Black Vegan Leather with Suede Headliner"
-      price: 1800
-      available_trims: ["Vertex"]
-      description: "Premium black interior with microsuede headliner"
+  - name: "Gray Vegan Leather"
+    price: 1500
+    available_trims: ["Select", "Vertex"]
+    description: "Animal-free leather alternative"
+  - name: "Black Vegan Leather with Suede Headliner"
+    price: 1800
+    available_trims: ["Vertex"]
+    description: "Premium black interior with microsuede headliner"
 
 # Incentives & Subsidies
 incentives:
-  - name: "BAFA Umweltbonus (Environmental Bonus)"
-    amount: 0
-    type: subsidy
-    description: "Federal EV purchase incentive program"
-    notes: "Program ended December 17, 2023 - no longer available"
-  
-  - name: "Company Car Tax Benefit (Dienstwagen)"
-    amount: 0  # Tax rate reduction
-    type: tax_credit
-    description: "0.25% monthly tax rate for BEVs under €60,000 gross list price. Saves ~€382/month vs 1% ICE rate (0.25% × €50,990 = €127/month vs €510/month for ICE)"
-    notes: "Massive benefit for company car drivers - saves €4,589/year"
-  
-  - name: "Kfz-Steuer (Road Tax) Exemption"
-    amount: 0  # Full exemption
-    type: tax_exemption
-    description: "Electric vehicles exempt from road tax until 2030"
-    notes: "€0/year vs ~€280/year for comparable ICE sedan"
-  
-  - name: "THG-Quote (Greenhouse Gas Quota Trading)"
-    amount: 300
-    type: subsidy
-    description: "Annual income from selling CO2 emissions savings certificate"
-    notes: "Paid via various platforms (e.g., eMobility, Geld für eAuto)"
-  
-  - name: "KfW Charging Station Subsidy (440/441)"
-    amount: 0
-    type: subsidy
-    description: "Home wallbox installation subsidy"
-    notes: "Program ended - no longer available"
-  
-  - name: "Munich Free Parking (Parkausweis E)"
-    amount: 0
-    type: tax_exemption
-    description: "EVs can park free in some municipal zones"
-    notes: "Varies by city - Munich, Berlin, Stuttgart offer benefits"
+- name: "BAFA Umweltbonus (Environmental Bonus)"
+  amount: 0
+  type: subsidy
+  description: "Federal EV purchase incentive program"
+  notes: "Program ended December 17, 2023 - no longer available"
+- name: "Company Car Tax Benefit (Dienstwagen)"
+  amount: 0    # Tax rate reduction
+  type: tax_credit
+  description: "0.25% monthly tax rate for BEVs under €60,000 gross list price. Saves ~€382/month vs 1% ICE rate (0.25% × €50,990 = €127/month vs €510/month for ICE)"
+  notes: "Massive benefit for company car drivers - saves €4,589/year"
+- name: "Kfz-Steuer (Road Tax) Exemption"
+  amount: 0    # Full exemption
+  type: tax_exemption
+  description: "Electric vehicles exempt from road tax until 2030"
+  notes: "€0/year vs ~€280/year for comparable ICE sedan"
+- name: "THG-Quote (Greenhouse Gas Quota Trading)"
+  amount: 300
+  type: subsidy
+  description: "Annual income from selling CO2 emissions savings certificate"
+  notes: "Paid via various platforms (e.g., eMobility, Geld für eAuto)"
+- name: "KfW Charging Station Subsidy (440/441)"
+  amount: 0
+  type: subsidy
+  description: "Home wallbox installation subsidy"
+  notes: "Program ended - no longer available"
+- name: "Munich Free Parking (Parkausweis E)"
+  amount: 0
+  type: tax_exemption
+  description: "EVs can park free in some municipal zones"
+  notes: "Varies by city - Munich, Berlin, Stuttgart offer benefits"
 
 # Total Cost Examples
 total_cost_examples:
-  - configuration: "Style Base (Popular)"
-    base_price: 50990
-    destination: 1190
-    options:
-      - "Vision Package": 1990
-      - "Winter Comfort Package": 890
-      - "Panoramic sunroof": 1350
-      - "Tow hitch": 1050
-      - "Digital Teal Pearl paint": 1095
-    total_options: 6375
-    total_price: 58555
-    notes: "Popular configuration with essential comfort and tech upgrades"
-  
-  - configuration: "Select Premium (Best Value)"
-    base_price: 55990
-    destination: 1190
-    options:
-      - "Premium Package": 2900
-      - "Vision Package": 1990
-      - "Advanced Technology Package": 2490
-      - "Panoramic sunroof": 1350
-      - "Gray Vegan Leather": 1500
-      - "Digital Teal Pearl paint": 1095
-    total_options: 11325
-    total_price: 68505
-    notes: "Best value mid-trim with premium features, popular among company car drivers"
-  
-  - configuration: "Vertex Fully Loaded"
-    base_price: 59990
-    destination: 1190
-    options:
-      - "Premium Package": 2900
-      - "Vision Package": 1990
-      - "Relaxation Package": 1490
-      - "Advanced Technology Package": 2490
-      - "Panoramic sunroof": 1350
-      - "20-inch wheels": 1400
-      - "Black Vegan Leather with Suede": 1800
-      - "Gravity Gold Matte paint": 1895
-    total_options: 15315
-    total_price: 76495
-    notes: "Fully loaded luxury configuration, all available features"
+- configuration: "Style Base (Popular)"
+  base_price: 50990
+  destination: 1190
+  options:
+  - "Vision Package": 1990
+  - "Winter Comfort Package": 890
+  - "Panoramic sunroof": 1350
+  - "Tow hitch": 1050
+  - "Digital Teal Pearl paint": 1095
+  total_options: 6375
+  total_price: 58555
+  notes: "Popular configuration with essential comfort and tech upgrades"
+- configuration: "Select Premium (Best Value)"
+  base_price: 55990
+  destination: 1190
+  options:
+  - "Premium Package": 2900
+  - "Vision Package": 1990
+  - "Advanced Technology Package": 2490
+  - "Panoramic sunroof": 1350
+  - "Gray Vegan Leather": 1500
+  - "Digital Teal Pearl paint": 1095
+  total_options: 11325
+  total_price: 68505
+  notes: "Best value mid-trim with premium features, popular among company car drivers"
+- configuration: "Vertex Fully Loaded"
+  base_price: 59990
+  destination: 1190
+  options:
+  - "Premium Package": 2900
+  - "Vision Package": 1990
+  - "Relaxation Package": 1490
+  - "Advanced Technology Package": 2490
+  - "Panoramic sunroof": 1350
+  - "20-inch wheels": 1400
+  - "Black Vegan Leather with Suede": 1800
+  - "Gravity Gold Matte paint": 1895
+  total_options: 15315
+  total_price: 76495
+  notes: "Fully loaded luxury configuration, all available features"
 
 # Dealer & Distribution
 distribution:
@@ -317,38 +296,36 @@ distribution:
 # Charging Infrastructure & Partnerships
 charging:
   network_partnerships:
-    - name: "IONITY"
-      description: "High-power charging network across Europe"
-      subscription_cost_monthly: 17.99
-      subscription_rate_per_kwh: 0.35
-      payg_rate_per_kwh: 0.79
-      locations_germany: 160
-      locations_europe: 550
-      charger_power_kw: "350 kW"
-      notes: "Best value for road trips, 10-80% charge = €6.13"
-    
-    - name: "EnBW mobility+"
-      description: "Largest charging network in Germany"
-      subscription_cost_monthly: 5.99
-      subscription_rate_per_kwh: 0.49
-      payg_rate_per_kwh: 0.59
-      locations_germany: 400000
-      notes: "Good domestic coverage, 10-80% charge = €25.18"
-    
-    - name: "Hyundai Charge MyHyundai"
-      description: "Hyundai's integrated charging service (powered by Digital Charging Solutions)"
-      subscription_cost_monthly: 0
-      payg_rate_per_kwh: 0.55
-      locations_europe: 500000
-      notes: "Integrated into vehicle, Plug & Charge support, 30+ countries"
+  - name: "IONITY"
+    description: "High-power charging network across Europe"
+    subscription_cost_monthly: 17.99
+    subscription_rate_per_kwh: 0.35
+    payg_rate_per_kwh: 0.79
+    locations_germany: 160
+    locations_europe: 550
+    charger_power_kw: "350 kW"
+    notes: "Best value for road trips, 10-80% charge = €6.13"
+  - name: "EnBW mobility+"
+    description: "Largest charging network in Germany"
+    subscription_cost_monthly: 5.99
+    subscription_rate_per_kwh: 0.49
+    payg_rate_per_kwh: 0.59
+    locations_germany: 400000
+    notes: "Good domestic coverage, 10-80% charge = €25.18"
+  - name: "Hyundai Charge MyHyundai"
+    description: "Hyundai's integrated charging service (powered by Digital Charging Solutions)"
+    subscription_cost_monthly: 0
+    payg_rate_per_kwh: 0.55
+    locations_europe: 500000
+    notes: "Integrated into vehicle, Plug & Charge support, 30+ countries"
 
   home_charging:
-    - name: "Wallbox Recommendation"
-      model: "Recommended: ABL eMH1, Heidelberg Wallbox, Webasto Pure"
-      power_kw: 11
-      installation_cost_eur: 1500
-      installation_notes: "Professional installation required, check local regulations"
-      charging_time_0_100: "6.7 hours"
+  - name: "Wallbox Recommendation"
+    model: "Recommended: ABL eMH1, Heidelberg Wallbox, Webasto Pure"
+    power_kw: 11
+    installation_cost_eur: 1500
+    installation_notes: "Professional installation required, check local regulations"
+    charging_time_0_100: "6.7 hours"
 
 # Warranty
 warranty:
@@ -356,13 +333,11 @@ warranty:
     duration_years: 5
     duration_km: 100000
     coverage: "Bumper-to-bumper, includes paint and corrosion"
-  
   battery:
     duration_years: 8
     duration_km: 160000
     capacity_guarantee_percent: 70
     coverage: "Battery capacity degradation below 70%, battery defects"
-  
   roadside_assistance:
     duration_years: 5
     coverage: "24/7 roadside assistance across Europe, includes towing"
@@ -378,7 +353,6 @@ financing:
     monthly_payment: 754
     total_interest: 4250
     notes: "Example rate, varies by creditworthiness"
-  
   leasing_example:
     purchase_price: 50990
     down_payment: 5000
@@ -397,7 +371,7 @@ running_costs:
     annual_kwh: 2280
     annual_cost: 684
     cost_per_km: 0.046
-  
+
   electricity_public:
     annual_km: 15000
     consumption_kwh_per_100km: 15.2
@@ -405,7 +379,7 @@ running_costs:
     annual_kwh: 2280
     annual_cost: 1254
     cost_per_km: 0.084
-  
+
   electricity_fast:
     annual_km: 15000
     consumption_kwh_per_100km: 15.2
@@ -416,19 +390,16 @@ running_costs:
     annual_cost_subscription: 798
     cost_per_km: 0.120
     cost_per_km_subscription: 0.053
-  
+
   insurance:
     annual_cost: 1200
     notes: "Mid-range comprehensive coverage, varies by age/location/history"
-  
   maintenance:
     annual_cost: 350
     notes: "Lower than ICE, includes brake fluid, cabin filter, inspection"
-  
   road_tax:
     annual_cost: 0
     notes: "Electric vehicles exempt until 2030"
-  
   total_annual_home_charging:
     electricity: 684
     insurance: 1200
@@ -440,52 +411,48 @@ running_costs:
 # Comparison to Competitors
 market_positioning:
   competitors:
-    - model: "Tesla Model 3 Long Range RWD"
-      price: 46990
-      price_difference: 4000  # Ioniq 6 more expensive
-      range_wltp_km: 629
-      range_difference: -15
-      charging_speed_kw: 250
-      notes: "Tesla cheaper with better range, but less premium interior, smaller dealer network"
-    
-    - model: "BMW i4 eDrive40"
-      price: 56900
-      price_difference: -5910  # BMW more expensive
-      range_wltp_km: 590
-      range_difference: 24
-      charging_speed_kw: 205
-      notes: "BMW more expensive, less range, slower charging, but premium brand prestige"
-    
-    - model: "Polestar 2 Long Range Single Motor"
-      price: 49900
-      price_difference: 1090  # Ioniq 6 slightly more expensive
-      range_wltp_km: 635
-      range_difference: -21
-      charging_speed_kw: 205
-      notes: "Polestar similar price/range, but slower charging (400V), less practical"
-    
-    - model: "Mercedes-Benz EQE 300"
-      price: 71328
-      price_difference: -20338  # Mercedes much more expensive
-      range_wltp_km: 639
-      range_difference: -25
-      charging_speed_kw: 170
-      notes: "Mercedes much more expensive, slower charging, luxury brand prestige"
+  - model: "Tesla Model 3 Long Range RWD"
+    price: 46990
+    price_difference: 4000    # Ioniq 6 more expensive
+    range_wltp_km: 629
+    range_difference: -15
+    charging_speed_kw: 250
+    notes: "Tesla cheaper with better range, but less premium interior, smaller dealer network"
+  - model: "BMW i4 eDrive40"
+    price: 56900
+    price_difference: -5910    # BMW more expensive
+    range_wltp_km: 590
+    range_difference: 24
+    charging_speed_kw: 205
+    notes: "BMW more expensive, less range, slower charging, but premium brand prestige"
+  - model: "Polestar 2 Long Range Single Motor"
+    price: 49900
+    price_difference: 1090    # Ioniq 6 slightly more expensive
+    range_wltp_km: 635
+    range_difference: -21
+    charging_speed_kw: 205
+    notes: "Polestar similar price/range, but slower charging (400V), less practical"
+  - model: "Mercedes-Benz EQE 300"
+    price: 71328
+    price_difference: -20338    # Mercedes much more expensive
+    range_wltp_km: 639
+    range_difference: -25
+    charging_speed_kw: 170
+    notes: "Mercedes much more expensive, slower charging, luxury brand prestige"
 
   strengths:
-    - "Best-in-class aerodynamics (Cd 0.21)"
-    - "18-minute 10-80% charging (800V advantage)"
-    - "Excellent efficiency (13.9 kWh/100km WLTP)"
-    - "Strong standard equipment"
-    - "5-year warranty (longer than Tesla's 4 years)"
-    - "Unique retro-futuristic design"
-    - "V2L capability (3.6kW)"
-  
+  - "Best-in-class aerodynamics (Cd 0.21)"
+  - "18-minute 10-80% charging (800V advantage)"
+  - "Excellent efficiency (13.9 kWh/100km WLTP)"
+  - "Strong standard equipment"
+  - "5-year warranty (longer than Tesla's 4 years)"
+  - "Unique retro-futuristic design"
+  - "V2L capability (3.6kW)"
   weaknesses:
-    - "No frunk (unlike Tesla)"
-    - "Limited cargo space (401L vs Tesla Model 3's 561L)"
-    - "Rear headroom tight due to fastback roofline"
-    - "Less brand prestige than BMW/Mercedes"
+  - "No frunk (unlike Tesla)"
+  - "Limited cargo space (401L vs Tesla Model 3's 561L)"
+  - "Rear headroom tight due to fastback roofline"
+  - "Less brand prestige than BMW/Mercedes"
 
 # Environmental Impact
 environmental:
@@ -502,23 +469,23 @@ notes: |
   sedan segment. At €50,990, it undercuts Tesla Model 3 Long Range (€46,990) by
   €4,000 but offers comparable range (614 vs 629km) and faster charging (18 vs 25
   minutes 10-80%) thanks to 800V E-GMP architecture.
-  
+
   Company car drivers benefit massively: 0.25% tax rate = €127/month vs €510 for
   ICE equivalent (1% rule), saving €4,589/year. Popular Select trim configurations
   (€55,990 base + ~€10k options) total ~€68,000 fully equipped.
-  
+
   The Ioniq 6's exceptional aerodynamics (Cd 0.21, best in production) and efficiency
   (13.9 kWh/100km) make it ideal for long-distance driving. The unique retro-futuristic
   'Electrified Streamliner' design and Parametric Pixel lighting create a distinctive,
   eye-catching appearance.
-  
+
   Key advantages:
   - 18-min 10-80% charging (800V) vs 25-30 min for 400V competitors
   - 614km WLTP range, class-leading efficiency
   - 5-year warranty (vs Tesla's 4, BMW's 2)
   - V2L 3.6kW output (power external devices)
   - Strong standard ADAS (Highway Driving Assist 2)
-  
+
   Trade-offs vs Tesla Model 3:
   - €4,000 more expensive
   - 15km less range (614 vs 629km)
@@ -527,7 +494,7 @@ notes: |
   + Faster charging (18 vs 25 min)
   + Better build quality, more premium interior
   + 650 dealer network vs Tesla's 25 service centers
-  
+
   Best for: Efficiency-focused buyers, long-distance drivers, company car users,
   design enthusiasts wanting something unique.
 
@@ -536,12 +503,11 @@ metadata:
   created_at: "2024-02-07"
   updated_at: "2024-02-07"
   data_quality: verified
-  last_updated: "2024-02-07"
   sources:
-    - "https://www.hyundai.de/modelle/ioniq-6"
-    - "https://www.hyundai.de/media/preise/Hyundai_Ioniq_6_Preisliste_2024.pdf"
-    - "Hyundai Deutschland dealer inquiries"
-    - "IONITY pricing (February 2024)"
+  - "https://www.hyundai.de/modelle/ioniq-6"
+  - "https://www.hyundai.de/media/preise/Hyundai_Ioniq_6_Preisliste_2024.pdf"
+  - "Hyundai Deutschland dealer inquiries"
+  - "IONITY pricing (February 2024)"
   verified_by: "Official Hyundai Germany pricing + dealer quotes"
-  exchange_rate: null  # Priced directly in EUR
-  price_date: "2024-02-07"
+  price_checked_at: "2024-02-07"
+  notes: 'Exchange rate used: None'

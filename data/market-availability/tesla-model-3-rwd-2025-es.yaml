@@ -17,48 +17,48 @@ pricing:
   total_price_estimate: 43690
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired. Successor program pending.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-  - name: Impuesto de Matriculación Exemption
-    type: tax_exemption
-    amount: 0
-    description: EVs exempt from registration tax (0% rate for 0 g/km CO2)
-    valid_from: "2023-01-01"
-    valid_until: "2026-12-31"
-    conditions:
-      - Zero emissions vehicle
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired. Successor program pending.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+- name: Impuesto de Matriculación Exemption
+  type: tax_exemption
+  amount: 0
+  description: EVs exempt from registration tax (0% rate for 0 g/km CO2)
+  valid_from: "2023-01-01"
+  valid_until: "2026-12-31"
+  conditions:
+  - Zero emissions vehicle
 
 market_specific:
   popular_options:
-    - name: Enhanced Autopilot
-      price: 3800
-    - name: Full Self-Driving Capability
-      price: 7500
-    - name: 19-inch Sport Wheels
-      price: 1500
+  - name: Enhanced Autopilot
+    price: 3800
+  - name: Full Self-Driving Capability
+    price: 7500
+  - name: 19-inch Sport Wheels
+    price: 1500
 
   available_colors:
-    - name: Pearl White Multi-Coat
-      type: solid
-      price_add: 0
-    - name: Solid Black
-      type: metallic
-      price_add: 1200
-    - name: Midnight Silver Metallic
-      type: metallic
-      price_add: 1200
-    - name: Deep Blue Metallic
-      type: metallic
-      price_add: 1200
-    - name: Ultra Red
-      type: metallic
-      price_add: 2400
+  - name: Pearl White Multi-Coat
+    type: solid
+    price_add: 0
+  - name: Solid Black
+    type: metallic
+    price_add: 1200
+  - name: Midnight Silver Metallic
+    type: metallic
+    price_add: 1200
+  - name: Deep Blue Metallic
+    type: metallic
+    price_add: 1200
+  - name: Ultra Red
+    type: metallic
+    price_add: 2400
 
 notes: |
   Tesla Model 3 RWD available in Spain via tesla.com/es_ES.
@@ -69,6 +69,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/es_ES/model3
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
+  sources:
+  - https://www.tesla.com/es_ES/model3

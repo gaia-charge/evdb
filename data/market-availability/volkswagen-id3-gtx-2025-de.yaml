@@ -8,9 +8,17 @@ currency: EUR
 availability_status: available
 available_from: "2024-06-01"
 delivery_time_weeks: 6
-notes: |
+notes: |-
   VW's electric hot hatch - the GTX brings performance credentials to the
   ID.3 lineup with 286 hp, 200 km/h top speed, and 601 km range.
+  The ID.3 GTX is positioned as VW's electric hot hatch for the German
+  market, priced attractively at €46,335. It undercuts competitors like
+  the Cupra Born VZ and offers more range than most rivals. Company car
+  tax at 0.25% makes it compelling for business users at only €115.84/month
+  taxable benefit. The performance credentials (5.9s 0-100, 200 km/h)
+  combined with 601 km range make it a practical daily driver with sporty
+  character. Popular configurations with Tech and Comfort packages bring
+  the price to around €49,500.
 
 pricing:
   base_price: 46335
@@ -21,69 +29,69 @@ pricing:
     286 hp rear motor. Represents strong value as a performance EV hatchback.
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €46,335 × 0.25% = €115.84/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €46,335 × 0.25% = €115.84/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 equipment_packages:
-  - name: IQ.DRIVE Max Package
-    price:
-      amount: 2290
-      currency: EUR
-    items:
-      - Lane Change Assist (Side Assist)
-      - Park Assist with Park Distance Control
-      - Emergency Steering Assist
-      - Travel Assist with predictive ACC
-    notes: "Complete ADAS and safety package"
+- name: IQ.DRIVE Max Package
+  price:
+    amount: 2290
+    currency: EUR
+  items:
+  - Lane Change Assist (Side Assist)
+  - Park Assist with Park Distance Control
+  - Emergency Steering Assist
+  - Travel Assist with predictive ACC
+  notes: "Complete ADAS and safety package"
 
-  - name: Comfort Package
-    price:
-      amount: 1690
-      currency: EUR
-    items:
-      - ergoActive front seats with massage
-      - Heated windshield
-      - Heated steering wheel
-      - Keyless entry
-    notes: "Premium comfort features"
+- name: Comfort Package
+  price:
+    amount: 1690
+    currency: EUR
+  items:
+  - ergoActive front seats with massage
+  - Heated windshield
+  - Heated steering wheel
+  - Keyless entry
+  notes: "Premium comfort features"
 
-  - name: Tech Package
-    price:
-      amount: 1390
-      currency: EUR
-    items:
-      - AR Head-Up Display
-      - Harman Kardon premium sound system
-      - Wireless smartphone charging
-    notes: "Advanced technology features"
+- name: Tech Package
+  price:
+    amount: 1390
+    currency: EUR
+  items:
+  - AR Head-Up Display
+  - Harman Kardon premium sound system
+  - Wireless smartphone charging
+  notes: "Advanced technology features"
 
-  - name: 22kW AC Charging Upgrade
-    price:
-      amount: 590
-      currency: EUR
-    items:
-      - 22 kW three-phase AC onboard charger
-    notes: "Upgrade from 11kW to 22kW charging"
+- name: 22kW AC Charging Upgrade
+  price:
+    amount: 590
+    currency: EUR
+  items:
+  - 22 kW three-phase AC onboard charger
+  notes: "Upgrade from 11kW to 22kW charging"
 
 sales_model: dealership
 dealerships_count: 680
@@ -102,20 +110,9 @@ warranty:
     2-year unlimited km vehicle warranty.
     8-year/160,000 km battery warranty with 70% capacity guarantee.
 
-market_notes: |
-  The ID.3 GTX is positioned as VW's electric hot hatch for the German
-  market, priced attractively at €46,335. It undercuts competitors like
-  the Cupra Born VZ and offers more range than most rivals. Company car
-  tax at 0.25% makes it compelling for business users at only €115.84/month
-  taxable benefit. The performance credentials (5.9s 0-100, 200 km/h)
-  combined with 601 km range make it a practical daily driver with sporty
-  character. Popular configurations with Tech and Comfort packages bring
-  the price to around €49,500.
-
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.volkswagen.de/de/elektrofahrzeuge/id3/id3-gtx.html
-    - https://www.volkswagen.de/de/elektrofahrzeuge/id3/konfigurator.html
+  - https://www.volkswagen.de/de/elektrofahrzeuge/id3/id3-gtx.html
+  - https://www.volkswagen.de/de/elektrofahrzeuge/id3/konfigurator.html

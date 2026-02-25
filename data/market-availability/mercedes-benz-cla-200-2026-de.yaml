@@ -3,9 +3,9 @@ variant_id: mercedes-benz-cla-200-2026
 market: DE
 currency: EUR
 available_from: "2025-10-01"
-available_until: null
+available_until:
 availability_status: announced
-delivery_time_weeks: null
+delivery_time_weeks:
 pre_order_available: true
 order_book_open: true
 
@@ -15,9 +15,7 @@ pricing:
   vat_rate: 0.19
   destination_charge: 950
   notes: >
-    Estimated base price €45,250 including 19% German VAT. Under €70,000 
-    threshold for favorable 0.25% company car taxation (BEV). Entry-level 
-    electric Mercedes with LFP battery for best value proposition.
+    Estimated base price €45,250 including 19% German VAT. Under €70,000  threshold for favorable 0.25% company car taxation (BEV). Entry-level  electric Mercedes with LFP battery for best value proposition.
 
 company_car_tax:
   monthly_rate_percent: 0.25
@@ -28,40 +26,39 @@ company_car_tax:
     Monthly taxable benefit: €113.13 based on base price.
 
 colors:
-  - name: Polar White
-    type: solid
-    price: 0
-    available: true
-  - name: Cosmos Black Metallic
-    type: metallic
-    price: 750
-    available: true
-  - name: Spectral Blue Metallic
-    type: metallic
-    price: 750
-    available: true
-  - name: High-Tech Silver Metallic
-    type: metallic
-    price: 750
-    available: true
-  - name: Selenite Grey Metallic
-    type: metallic
-    price: 750
-    available: true
+- name: Polar White
+  type: solid
+  price: 0
+  available: true
+- name: Cosmos Black Metallic
+  type: metallic
+  price: 750
+  available: true
+- name: Spectral Blue Metallic
+  type: metallic
+  price: 750
+  available: true
+- name: High-Tech Silver Metallic
+  type: metallic
+  price: 750
+  available: true
+- name: Selenite Grey Metallic
+  type: metallic
+  price: 750
+  available: true
 
 incentives:
-  - name: Dienstwagen-Privileg (Company Car Tax)
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly taxation for BEVs under €70,000"
-    active: true
+- name: Dienstwagen-Privileg (Company Car Tax)
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly taxation for BEVs under €70,000"
+  active: true
 
 metadata:
   data_quality: estimated
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   sources:
-    - https://www.mercedes-benz.de/
+  - https://www.mercedes-benz.de/
   notes: >
-    Pricing is estimated based on announced positioning. Final German pricing 
-    expected with order opening in Q2 2025. Deliveries late 2025 / early 2026.
+    Pricing is estimated based on announced positioning. Final German pricing  expected with order opening in Q2 2025. Deliveries late 2025 / early 2026.
+  updated_at: "2026-02-10"

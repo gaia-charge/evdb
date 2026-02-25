@@ -17,56 +17,56 @@ pricing:
   total_price_estimate: 129900
 
 incentives:
-  - name: "NaszEauto"
-    type: grant
-    amount: 30000
-    description: >
-      Polish government subsidy for electric vehicles. Up to 30,000 PLN for individuals
-      purchasing new BEVs under 225,000 PLN.
-    conditions:
-      - Vehicle must be new BEV
-      - Registered in Poland
-      - Vehicle price under 225,000 PLN
-    valid_until: "2026-12-31"
+- name: "NaszEauto"
+  type: grant
+  amount: 30000
+  description: >
+    Polish government subsidy for electric vehicles. Up to 30,000 PLN for individuals
+    purchasing new BEVs under 225,000 PLN.
+  conditions:
+  - Vehicle must be new BEV
+  - Registered in Poland
+  - Vehicle price under 225,000 PLN
+  valid_until: "2026-12-31"
 
 market_specific:
   available_trims:
-    - name: Active
-      price: 129900
-      description: Base trim with 177 KM (130 kW), 45.1 kWh battery
-    - name: Comfort
-      price: 139900
-      description: Enhanced comfort features and equipment
-    - name: Boost
-      price: 149900
-      description: Top trim with premium features
+  - name: Active
+    price: 129900
+    description: Base trim with 177 KM (130 kW), 45.1 kWh battery
+  - name: Comfort
+    price: 139900
+    description: Enhanced comfort features and equipment
+  - name: Boost
+    price: 149900
+    description: Top trim with premium features
 
   standard_equipment:
-    - 12.8" rotating touchscreen infotainment
-    - LED headlights with DRL
-    - 17" alloy wheels
-    - Rear parking sensors and camera
-    - Cruise control
-    - 6 airbags
-    - Electric parking brake
-    - Hill start assist
-    - Vehicle-to-Load (V2L) 3.3 kW capability
-    - BYD Blade Battery (LFP chemistry)
-    - 8-year/250,000 km battery warranty
+  - 12.8" rotating touchscreen infotainment
+  - LED headlights with DRL
+  - 17" alloy wheels
+  - Rear parking sensors and camera
+  - Cruise control
+  - 6 airbags
+  - Electric parking brake
+  - Hill start assist
+  - Vehicle-to-Load (V2L) 3.3 kW capability
+  - BYD Blade Battery (LFP chemistry)
+  - 8-year/250,000 km battery warranty
 
   colors:
-    - name: Cosmos Black
-      type: solid
-      price: 0
-    - name: Crystal White
-      type: solid
-      price: 0
-    - name: Boulder Grey
-      type: metallic
-      price: 2000
-    - name: Surf Blue
-      type: metallic
-      price: 2000
+  - name: Cosmos Black
+    type: solid
+    price: 0
+  - name: Crystal White
+    type: solid
+    price: 0
+  - name: Boulder Grey
+    type: metallic
+    price: 2000
+  - name: Surf Blue
+    type: metallic
+    price: 2000
 
 notes: |
   BYD Atto 2 available in Poland from March 2025. Starting price 129,900 PLN for Active trim.
@@ -78,6 +78,7 @@ notes: |
 metadata:
   data_quality: verified
   data_source: Polish automotive pricing sites
-  source_url: https://elektromobilni.pl/atto-2-juz-z-polskimi-cenami-start-od-129-900-zl/
   created_at: "2026-02-21"
   last_verified_at: "2026-02-21"
+  sources:
+  - https://elektromobilni.pl/atto-2-juz-z-polskimi-cenami-start-od-129-900-zl/

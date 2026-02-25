@@ -15,26 +15,26 @@ pricing:
   notes: "Base price for Expression 45 trim before incentives."
 
 incentives:
-  - name: "Ecobonus statale"
-    type: grant
-    amount: 11000
-    currency: EUR
-    notes: "State incentive for ISEE below 30,000 EUR with trade-in."
-    active: true
-  
-  - name: "Ecobonus statale (ISEE 30-40k)"
-    type: grant
-    amount: 9000
-    currency: EUR
-    notes: "State incentive for ISEE between 30,000-40,000 EUR with trade-in."
-    active: true
+- name: "Ecobonus statale"
+  type: grant
+  amount: 11000
+  currency: EUR
+  notes: "State incentive for ISEE below 30,000 EUR with trade-in."
+  active: true
 
-  - name: "Sconto Dacia"
-    type: discount
-    amount: 3300
-    currency: EUR
-    notes: "Manufacturer discount added to state incentive."
-    active: true
+- name: "Ecobonus statale (ISEE 30-40k)"
+  type: grant
+  amount: 9000
+  currency: EUR
+  notes: "State incentive for ISEE between 30,000-40,000 EUR with trade-in."
+  active: true
+
+- name: "Sconto Dacia"
+  type: discount
+  amount: 3300
+  currency: EUR
+  notes: "Manufacturer discount added to state incentive."
+  active: true
 
 availability:
   status: available
@@ -51,8 +51,8 @@ warranty:
 metadata:
   data_quality: verified
   created_at: "2026-02-24"
-  last_updated: "2026-02-24"
   sources:
-    - "https://www.quattroruote.it/news/mercato/2025/10/07/dacia_spring_la_citycar_elettrica_a_meno_di_quattromila_euro.html"
-    - "https://www.quattroruote.it/offerte-auto/nuova-dacia-spring.html"
+  - "https://www.quattroruote.it/news/mercato/2025/10/07/dacia_spring_la_citycar_elettrica_a_meno_di_quattromila_euro.html"
+  - "https://www.quattroruote.it/offerte-auto/nuova-dacia-spring.html"
   notes: "Italy market pricing from Quattroruote. With maximum incentives (ISEE <30k + trade-in), final price can be as low as €3,900."
+  updated_at: "2026-02-24"

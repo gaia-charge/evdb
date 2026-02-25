@@ -15,256 +15,253 @@ pricing:
 availability:
   status: available
   release_date: "2022-11"
-  production_end: null
+  production_end:
   order_status: open
   delivery_time_weeks: 12
   notes: Built at Regensburg, Germany alongside X1 gasoline/diesel
 
 trim_levels:
-  - name: Base
-    price_eur: 54200
-    description: Well-equipped with BMW Live Cockpit Professional, heat pump, LED lights
-  - name: M Sport
-    price_eur: 58700
-    price_difference_eur: 4500
-    description: Sport styling, 19" M wheels, M suspension, blue brake calipers
+- name: Base
+  price_eur: 54200
+  description: Well-equipped with BMW Live Cockpit Professional, heat pump, LED lights
+- name: M Sport
+  price_eur: 58700
+  price_difference_eur: 4500
+  description: Sport styling, 19" M wheels, M suspension, blue brake calipers
 
 colors:
-  - name: Alpine White
-    type: solid
-    price_eur: 0
-    notes: Free solid color
-  - name: Black Sapphire Metallic
-    type: metallic
-    price_eur: 1300
-  - name: Mineral White Metallic
-    type: metallic
-    price_eur: 1300
-  - name: Storm Bay Metallic
-    type: metallic
-    price_eur: 1300
-  - name: Phytonic Blue Metallic
-    type: metallic
-    price_eur: 1300
-  - name: Toronto Red Metallic
-    type: metallic
-    price_eur: 1300
-  - name: Sparkling Copper Grey Metallic
-    type: metallic
-    price_eur: 1800
-  - name: Brooklyn Grey Metallic
-    type: metallic
-    price_eur: 1800
-  - name: BMW Individual Frozen Pure Grey Metallic
-    type: individual
-    price_eur: 4900
-    notes: BMW Individual matte finish
+- name: Alpine White
+  type: solid
+  price_eur: 0
+  notes: Free solid color
+- name: Black Sapphire Metallic
+  type: metallic
+  price_eur: 1300
+- name: Mineral White Metallic
+  type: metallic
+  price_eur: 1300
+- name: Storm Bay Metallic
+  type: metallic
+  price_eur: 1300
+- name: Phytonic Blue Metallic
+  type: metallic
+  price_eur: 1300
+- name: Toronto Red Metallic
+  type: metallic
+  price_eur: 1300
+- name: Sparkling Copper Grey Metallic
+  type: metallic
+  price_eur: 1800
+- name: Brooklyn Grey Metallic
+  type: metallic
+  price_eur: 1800
+- name: BMW Individual Frozen Pure Grey Metallic
+  type: individual
+  price_eur: 4900
+  notes: BMW Individual matte finish
 
 wheels:
-  - size_inches: 18
-    type: Alloy wheels style 847
-    price_eur: 0
-    range_impact_km: 0
-    notes: Standard on Base trim, 225/55 R18
-  - size_inches: 19
-    type: M light alloy wheels style 848 M
-    price_eur: 1400
-    range_impact_km: -15
-    notes: Standard on M Sport, optional on Base, 225/50 R19
-  - size_inches: 20
-    type: M light alloy wheels style 849 M bicolor
-    price_eur: 2800
-    range_impact_km: -25
-    notes: Optional on M Sport only, 225/45 R20
+- size_inches: 18
+  type: Alloy wheels style 847
+  price_eur: 0
+  range_impact_km: 0
+  notes: Standard on Base trim, 225/55 R18
+- size_inches: 19
+  type: M light alloy wheels style 848 M
+  price_eur: 1400
+  range_impact_km: -15
+  notes: Standard on M Sport, optional on Base, 225/50 R19
+- size_inches: 20
+  type: M light alloy wheels style 849 M bicolor
+  price_eur: 2800
+  range_impact_km: -25
+  notes: Optional on M Sport only, 225/45 R20
 
 interior:
-  - name: Veganza Anthracite/Black
-    type: synthetic leather
-    price_eur: 0
-    notes: Standard sustainable interior trim
-  - name: Veganza Mocha/Black
-    type: synthetic leather
-    price_eur: 0
-    notes: Alternative standard color
-  - name: Vernasca Leather Mocha
-    type: leather
-    price_eur: 1900
-    notes: Optional genuine leather
-  - name: Vernasca Leather Black
-    type: leather
-    price_eur: 1900
-    notes: Optional genuine leather
+- name: Veganza Anthracite/Black
+  type: synthetic leather
+  price_eur: 0
+  notes: Standard sustainable interior trim
+- name: Veganza Mocha/Black
+  type: synthetic leather
+  price_eur: 0
+  notes: Alternative standard color
+- name: Vernasca Leather Mocha
+  type: leather
+  price_eur: 1900
+  notes: Optional genuine leather
+- name: Vernasca Leather Black
+  type: leather
+  price_eur: 1900
+  notes: Optional genuine leather
 
 packages:
-  - name: M Sport Package
-    price_eur: 4500
-    features:
-      - 19" M light alloy wheels style 848 M (reduces range by 15km)
-      - M Sport suspension (lowered 10mm)
-      - M aerodynamics package (front apron, side skirts, rear diffuser)
-      - M Sport brake system with blue calipers
-      - Sport seats front
-      - M leather steering wheel
-      - Anthracite headliner
-      - Aluminium door sill finishers with M designation
-    notes: Most popular package, included in M Sport trim
-  
-  - name: Driving Assistant Professional
-    price_eur: 2400
-    features:
-      - Highway Assistant (Level 2+ semi-autonomous)
-      - Active Cruise Control with Stop & Go
-      - Steering and lane control assistant
-      - Lane keeping assistant with active side collision protection
-      - Emergency stop assistant
-      - Evasion aid
-      - Cross-traffic warning front
-      - Wrong-way warning
-    notes: Advanced driver assistance, highly recommended
-  
-  - name: Parking Assistant Professional
-    price_eur: 1600
-    features:
-      - Reversing Assistant
-      - Panoramic View with 3D view
-      - Remote 3D View via smartphone
-      - Parking Assistant Plus (automated parking)
-      - Surround View with 3D visualization
-    notes: Includes 360° camera system
-  
-  - name: Comfort Package
-    price_eur: 1900
-    features:
-      - Panoramic glass roof with electric sunblind
-      - Storage Package (nets, cupholders, additional USB-C)
-      - Comfort Access (keyless entry and start)
-      - Ambient lighting
-      - Alarm system with interior protection
-    notes: Enhances comfort and convenience
-  
-  - name: Technology Package
-    price_eur: 2900
-    features:
-      - Head-Up Display with augmented reality
-      - Harman Kardon surround sound system (16 speakers, 464W)
-      - Wireless smartphone charging (2x)
-      - BMW Digital Key Plus (UWB technology)
-    notes: Premium technology features
-  
-  - name: Winter Comfort Package
-    price_eur: 790
-    features:
-      - Heated steering wheel
-      - Heated front seats
-      - Heated rear seats
-      - Heated windshield washer jets
-    notes: Essential for winter driving
+- name: M Sport Package
+  price_eur: 4500
+  features:
+  - 19" M light alloy wheels style 848 M (reduces range by 15km)
+  - M Sport suspension (lowered 10mm)
+  - M aerodynamics package (front apron, side skirts, rear diffuser)
+  - M Sport brake system with blue calipers
+  - Sport seats front
+  - M leather steering wheel
+  - Anthracite headliner
+  - Aluminium door sill finishers with M designation
+  notes: Most popular package, included in M Sport trim
+
+- name: Driving Assistant Professional
+  price_eur: 2400
+  features:
+  - Highway Assistant (Level 2+ semi-autonomous)
+  - Active Cruise Control with Stop & Go
+  - Steering and lane control assistant
+  - Lane keeping assistant with active side collision protection
+  - Emergency stop assistant
+  - Evasion aid
+  - Cross-traffic warning front
+  - Wrong-way warning
+  notes: Advanced driver assistance, highly recommended
+
+- name: Parking Assistant Professional
+  price_eur: 1600
+  features:
+  - Reversing Assistant
+  - Panoramic View with 3D view
+  - Remote 3D View via smartphone
+  - Parking Assistant Plus (automated parking)
+  - Surround View with 3D visualization
+  notes: Includes 360° camera system
+
+- name: Comfort Package
+  price_eur: 1900
+  features:
+  - Panoramic glass roof with electric sunblind
+  - Storage Package (nets, cupholders, additional USB-C)
+  - Comfort Access (keyless entry and start)
+  - Ambient lighting
+  - Alarm system with interior protection
+  notes: Enhances comfort and convenience
+
+- name: Technology Package
+  price_eur: 2900
+  features:
+  - Head-Up Display with augmented reality
+  - Harman Kardon surround sound system (16 speakers, 464W)
+  - Wireless smartphone charging (2x)
+  - BMW Digital Key Plus (UWB technology)
+  notes: Premium technology features
+
+- name: Winter Comfort Package
+  price_eur: 790
+  features:
+  - Heated steering wheel
+  - Heated front seats
+  - Heated rear seats
+  - Heated windshield washer jets
+  notes: Essential for winter driving
 
 individual_options:
-  - name: Adaptive LED headlights
-    price_eur: 1590
-    description: Matrix LED with adaptive beam control and animated indicators
-  
-  - name: Towing package
-    price_eur: 1050
-    description: Electrically detachable tow hitch, 1,200kg braked capacity
-  
-  - name: Heat protection glass
-    price_eur: 590
-    description: Tinted rear windows for privacy and heat protection
-  
-  - name: Electric tailgate
-    price_eur: 790
-    description: Power-operated tailgate with hands-free opening
-  
-  - name: Sun protection glass for rear windows
-    price_eur: 590
-    description: Additional tinting for rear passengers
+- name: Adaptive LED headlights
+  price_eur: 1590
+  description: Matrix LED with adaptive beam control and animated indicators
+
+- name: Towing package
+  price_eur: 1050
+  description: Electrically detachable tow hitch, 1,200kg braked capacity
+
+- name: Heat protection glass
+  price_eur: 590
+  description: Tinted rear windows for privacy and heat protection
+
+- name: Electric tailgate
+  price_eur: 790
+  description: Power-operated tailgate with hands-free opening
+
+- name: Sun protection glass for rear windows
+  price_eur: 590
+  description: Additional tinting for rear passengers
 
 popular_configurations:
-  - name: Base Family
-    description: Base + Comfort Package + Parking Assistant
-    total_price_eur: 57690
-    notes: Popular family configuration with practical features
-  
-  - name: M Sport Executive
-    description: M Sport + Driving Assistant Pro + Technology Package + Parking Assistant
-    total_price_eur: 67600
-    notes: Fully loaded executive configuration
-  
-  - name: M Sport Premium
-    description: M Sport + Driving Assistant Pro + Comfort Package + Technology Package
-    total_price_eur: 69590
-    notes: Premium fully equipped variant
+- name: Base Family
+  description: Base + Comfort Package + Parking Assistant
+  total_price_eur: 57690
+  notes: Popular family configuration with practical features
+
+- name: M Sport Executive
+  description: M Sport + Driving Assistant Pro + Technology Package + Parking Assistant
+  total_price_eur: 67600
+  notes: Fully loaded executive configuration
+
+- name: M Sport Premium
+  description: M Sport + Driving Assistant Pro + Comfort Package + Technology Package
+  total_price_eur: 69590
+  notes: Premium fully equipped variant
 
 available_incentives:
-  - type: federal
-    name: "BAFA Umweltbonus"
-    amount:
-      amount: 0
-      currency: EUR
-    description: "German EV subsidy ended December 2023"
-    conditions: ["Ended 2023-12-17"]
-    notes: "No longer available for new orders"
-  
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "0.25% monthly taxation vs 1% for ICE. €136/month vs €545/month for ICE equivalent (saves €409/month, €4,891/year)"
-    conditions: ["Price under €60,000 gross list price"]
-    notes: "Massive benefit for company car drivers"
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption"
-    amount:
-      amount: 340
-      currency: EUR
-    description: "Road tax exemption until 2030"
-    expires_at: "2030-12-31"
-    notes: "Electric vehicles exempt from German road tax until 2030"
-  
-  - type: grant
-    name: "THG-Quote (Greenhouse Gas Reduction Quota)"
-    amount:
-      amount: 300
-      currency: EUR
-    description: "Annual CO2 certificate trading income"
-    notes: "Tradeable emission certificates, varies by market price. Annual benefit."
+- type: federal
+  name: "BAFA Umweltbonus"
+  amount:
+    amount: 0
+    currency: EUR
+  description: "German EV subsidy ended December 2023"
+  conditions: ["Ended 2023-12-17"]
+  notes: "No longer available for new orders"
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "0.25% monthly taxation vs 1% for ICE. €136/month vs €545/month for ICE equivalent (saves €409/month, €4,891/year)"
+  conditions: ["Price under €60,000 gross list price"]
+  notes: "Massive benefit for company car drivers"
+- type: tax_exemption
+  name: "Kfz-Steuer exemption"
+  amount:
+    amount: 340
+    currency: EUR
+  description: "Road tax exemption until 2030"
+  expires_at: "2030-12-31"
+  notes: "Electric vehicles exempt from German road tax until 2030"
+- type: grant
+  name: "THG-Quote (Greenhouse Gas Reduction Quota)"
+  amount:
+    amount: 300
+    currency: EUR
+  description: "Annual CO2 certificate trading income"
+  notes: "Tradeable emission certificates, varies by market price. Annual benefit."
 
 charging:
   networks:
-    - name: BMW Charging
-      coverage: 550,000+ charging points across Europe
-      countries: 30+
-      app: My BMW app
-      authentication: Automatic via app or charging card
-      notes: Integrated into BMW navigation system
-  
+  - name: BMW Charging
+    coverage: 550,000+ charging points across Europe
+    countries: 30+
+    app: My BMW app
+    authentication: Automatic via app or charging card
+    notes: Integrated into BMW navigation system
+
   ionity:
-    - plan: Pay per use
-      monthly_fee_eur: 0
-      price_per_kwh: 0.79
-      charge_10_80_cost_eur: 35.82
-      notes: Expensive without subscription
-    
-    - plan: IONITY PASSPORT Plus
-      monthly_fee_eur: 17.99
-      price_per_kwh: 0.35
-      charge_10_80_cost_eur: 15.88
-      annual_cost_eur: 215.88
-      notes: Recommended for frequent highway travelers, 10-80% charge = €15.88 (saves €19.94 per charge)
-  
+  - plan: Pay per use
+    monthly_fee_eur: 0
+    price_per_kwh: 0.79
+    charge_10_80_cost_eur: 35.82
+    notes: Expensive without subscription
+
+  - plan: IONITY PASSPORT Plus
+    monthly_fee_eur: 17.99
+    price_per_kwh: 0.35
+    charge_10_80_cost_eur: 15.88
+    annual_cost_eur: 215.88
+    notes: Recommended for frequent highway travelers, 10-80% charge = €15.88 (saves €19.94 per charge)
+
   home_charging:
-    - power_kw: 11
-      time_hours: 6.5
-      cost_eur: 19.41
-      notes: 11kW 3-phase wallbox (0-100%), assuming €0.30/kWh home electricity rate
+  - power_kw: 11
+    time_hours: 6.5
+    cost_eur: 19.41
+    notes: 11kW 3-phase wallbox (0-100%), assuming €0.30/kWh home electricity rate
 
 warranty:
   vehicle:
     duration_years: 2
     duration_km: unlimited
     notes: BMW standard vehicle warranty
-  
+
   battery:
     duration_years: 8
     duration_km: 160000
@@ -294,20 +291,9 @@ metadata:
   updated_at: "2026-02-07"
   data_quality: verified
   sources:
-    - https://www.bmw.de/de/neufahrzeuge/x/ix1/konfigurator.html
-    - https://www.bmw.de/de/neufahrzeuge/x/ix1/preise.html
-    - https://www.bmw-charging.com/
-    - https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html
-  
-  notes:
-    - Prices as of February 2026
-    - Company car tax benefit is the main value proposition (saves €4,891/year)
-    - Most popular configuration is M Sport Executive (~€67,600)
-    - Fast 12-week delivery due to German production at Regensburg
-    - Competes with Audi Q4 40 e-tron (€49,500), Mercedes EQA 250+ (€54,399)
-    - BMW brand premium justifies €4,700 premium over Q4 40
-    - Positioned as BMW's entry-level electric SUV (most affordable BMW EV)
-    - Real-world 370km range adequate for daily use with home charging
-    - 130kW DC charging competitive for segment (29-min 10-80%)
-    - Heat pump standard essential for winter efficiency
-    - Strong resale values typical of BMW premium brand
+  - https://www.bmw.de/de/neufahrzeuge/x/ix1/konfigurator.html
+  - https://www.bmw.de/de/neufahrzeuge/x/ix1/preise.html
+  - https://www.bmw-charging.com/
+  - https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html
+
+  notes: Prices as of February 2026 Company car tax benefit is the main value proposition (saves €4,891/year) Most popular configuration is M Sport Executive (~€67,600) Fast 12-week delivery due to German production at Regensburg Competes with Audi Q4 40 e-tron (€49,500), Mercedes EQA 250+ (€54,399) BMW brand premium justifies €4,700 premium over Q4 40 Positioned as BMW's entry-level electric SUV (most affordable BMW EV) Real-world 370km range adequate for daily use with home charging 130kW DC charging competitive for segment (29-min 10-80%) Heat pump standard essential for winter efficiency Strong resale values typical of BMW premium brand

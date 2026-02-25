@@ -17,39 +17,39 @@ pricing:
   total_price_estimate: 74900
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III expired. Price exceeds typical subsidy thresholds.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-  - name: Impuesto de Matriculación Exemption
-    type: tax_exemption
-    amount: 0
-    description: Zero-emission vehicles exempt from registration tax.
-    valid_from: "2025-01-01"
-    valid_until: null
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III expired. Price exceeds typical subsidy thresholds.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+- name: Impuesto de Matriculación Exemption
+  type: tax_exemption
+  amount: 0
+  description: Zero-emission vehicles exempt from registration tax.
+  valid_from: "2025-01-01"
+  valid_until:
 
 market_specific:
   popular_options:
-    - name: Sunroof Package
-      price: 1200
+  - name: Sunroof Package
+    price: 1200
 
   available_colors:
-    - name: Performance Blue Matte
-      type: matt
-      price_add: 900
-    - name: Abyss Black Pearl
-      type: metallic
-      price_add: 600
-    - name: Gravity Gold Matte
-      type: matt
-      price_add: 900
-    - name: Atlas White
-      type: solid
-      price_add: 0
+  - name: Performance Blue Matte
+    type: matt
+    price_add: 900
+  - name: Abyss Black Pearl
+    type: metallic
+    price_add: 600
+  - name: Gravity Gold Matte
+    type: matt
+    price_add: 900
+  - name: Atlas White
+    type: solid
+    price_add: 0
 
 notes: |
   Hyundai IONIQ 6 N performance EV sedan available in Spain.
@@ -60,6 +60,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.hyundai.com/es/modelos/ioniq6.html
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.hyundai.com/es/modelos/ioniq6.html

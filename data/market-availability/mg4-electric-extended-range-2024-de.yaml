@@ -21,137 +21,135 @@ price_details:
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - name: "Umweltbonus (BAFA)"
-    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
-    type: rebate
-    provider: federal
-    eligibility: "BEV with price ≤€45,000"
-    valid_until: "2024-12-31"
-    notes: "German federal EV subsidy - being phased out"
-    
-  - name: "Company Car Tax"
-    amount: 0  # Percentage-based benefit, not fixed amount
-    type: tax_exemption
-    provider: federal
-    description: "0.25% monthly gross list price for BEVs under €60k"
-    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+- name: "Umweltbonus (BAFA)"
+  amount: 3000    # Reduced from €4,500 in 2023, ends Dec 2024
+  type: rebate
+  provider: federal
+  eligibility: "BEV with price ≤€45,000"
+  valid_until: "2024-12-31"
+  notes: "German federal EV subsidy - being phased out"
+- name: "Company Car Tax"
+  amount: 0    # Percentage-based benefit, not fixed amount
+  type: tax_exemption
+  provider: federal
+  description: "0.25% monthly gross list price for BEVs under €60k"
+  notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
 
 # Available Colors
 colors:
-  - name: "Polar White"
-    code: "solid-white"
-    type: solid
-    price_delta: 0
-    
-  - name: "Dynamic Red"
-    code: "metallic-red"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Arctic Silver"
-    code: "metallic-silver"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Black Pearl"
-    code: "metallic-black"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Camden Grey"
-    code: "metallic-grey"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Volcano Orange"
-    code: "metallic-orange"
-    type: metallic
-    price_delta: 680
-    special: true
-    notes: "Distinctive launch color"
+- name: "Polar White"
+  code: "solid-white"
+  type: solid
+  price_delta: 0
+
+- name: "Dynamic Red"
+  code: "metallic-red"
+  type: metallic
+  price_delta: 680
+
+- name: "Arctic Silver"
+  code: "metallic-silver"
+  type: metallic
+  price_delta: 680
+
+- name: "Black Pearl"
+  code: "metallic-black"
+  type: metallic
+  price_delta: 680
+
+- name: "Camden Grey"
+  code: "metallic-grey"
+  type: metallic
+  price_delta: 680
+
+- name: "Volcano Orange"
+  code: "metallic-orange"
+  type: metallic
+  price_delta: 680
+  special: true
+  notes: "Distinctive launch color"
 
 # Wheel Options
 wheels:
-  - name: "17-inch alloy wheels"
-    size_inches: 17
-    tire_size: "215/55 R17"
-    price_delta: 0
-    standard: true
-    
-  - name: "18-inch diamond-cut alloy wheels"
-    size_inches: 18
-    tire_size: "235/45 R18"
-    price_delta: 550
-    notes: "Sportier look, minimal range impact (-5km WLTP)"
+- name: "17-inch alloy wheels"
+  size_inches: 17
+  tire_size: "215/55 R17"
+  price_delta: 0
+  standard: true
+
+- name: "18-inch diamond-cut alloy wheels"
+  size_inches: 18
+  tire_size: "235/45 R18"
+  price_delta: 550
+  notes: "Sportier look, minimal range impact (-5km WLTP)"
 
 # Interior Options
 interiors:
-  - name: "Grey fabric with orange accents"
-    material: fabric
-    price_delta: 0
-    standard: true
-    
-  - name: "Black faux leather"
-    material: synthetic_leather
-    price_delta: 1200
-    notes: "Premium feel, easier to clean"
+- name: "Grey fabric with orange accents"
+  material: fabric
+  price_delta: 0
+  standard: true
+
+- name: "Black faux leather"
+  material: synthetic_leather
+  price_delta: 1200
+  notes: "Premium feel, easier to clean"
 
 # Equipment Packages & Options
 packages:
-  - name: "Comfort Pack"
-    price: 1500
-    includes:
-      - "Panoramic glass roof"
-      - "Automatic climate control"
-      - "Rear parking sensors"
-      - "Auto-dimming rear-view mirror"
-    popular: true
-    
-  - name: "Luxury Pack"
-    price: 2500
-    includes:
-      - "All Comfort Pack features"
-      - "Black faux leather seats"
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Wireless phone charging"
-      - "Premium 6-speaker audio"
-    popular: true
-    recommended: true
-    
-  - name: "Trophy Spec"
-    price: 4500
-    includes:
-      - "All Luxury Pack features"
-      - "18-inch diamond-cut wheels"
-      - "Advanced driver assistance (MG Pilot)"
-      - "360-degree camera"
-      - "Power tailgate"
-      - "LED matrix headlights"
-    notes: "Top specification - best value"
+- name: "Comfort Pack"
+  price: 1500
+  includes:
+  - "Panoramic glass roof"
+  - "Automatic climate control"
+  - "Rear parking sensors"
+  - "Auto-dimming rear-view mirror"
+  popular: true
+
+- name: "Luxury Pack"
+  price: 2500
+  includes:
+  - "All Comfort Pack features"
+  - "Black faux leather seats"
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Wireless phone charging"
+  - "Premium 6-speaker audio"
+  popular: true
+  recommended: true
+
+- name: "Trophy Spec"
+  price: 4500
+  includes:
+  - "All Luxury Pack features"
+  - "18-inch diamond-cut wheels"
+  - "Advanced driver assistance (MG Pilot)"
+  - "360-degree camera"
+  - "Power tailgate"
+  - "LED matrix headlights"
+  notes: "Top specification - best value"
 
 # Individual Options
 individual_options:
-  - name: "Metallic paint"
-    price: 680
-    category: exterior
-    
-  - name: "Heat pump"
-    price: 0
-    category: efficiency
-    notes: "Standard equipment from 2024"
-    
-  - name: "Tow bar"
-    price: 650
-    category: utility
-    towing_capacity_kg: 500
-    
-  - name: "Winter package"
-    price: 800
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated windshield washer nozzles"
+- name: "Metallic paint"
+  price: 680
+  category: exterior
+
+- name: "Heat pump"
+  price: 0
+  category: efficiency
+  notes: "Standard equipment from 2024"
+- name: "Tow bar"
+  price: 650
+  category: utility
+  towing_capacity_kg: 500
+
+- name: "Winter package"
+  price: 800
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Heated windshield washer nozzles"
 
 # Total Price Range
 price_range:
@@ -166,15 +164,6 @@ production_location: "Shanghai, China"
 import_duties_included: true
 
 # Market-Specific Notes
-market_notes:
-  - "Best-selling Chinese EV in Germany"
-  - "7-year/175,000km battery warranty"
-  - "Free home charger installation support (via MG partners)"
-  - "MG Motor Germany provides 6-year paint warranty"
-  - "Available at 120+ MG dealers across Germany"
-  - "Direct import from China - no local assembly"
-
-# Sales & Distribution
 distribution:
   dealer_network_size: 120
   direct_sales: false
@@ -190,19 +179,19 @@ warranty:
   battery_km: 175000
   battery_capacity_guarantee_percent: 70
   roadside_assistance_years: 7
-  
+
 service:
   service_interval_months: 12
   service_interval_km: 20000
   average_service_cost_eur: 200
   service_plan_available: true
-  
+
 # Charging Infrastructure Support
 charging_support:
-  - "Partnership with EnBW (Mobility+ card)"
-  - "Access to 200,000+ charging points in Europe"
-  - "Free RFID charging card included"
-  - "MG iSMART app for charging station locator"
+- "Partnership with EnBW (Mobility+ card)"
+- "Access to 200,000+ charging points in Europe"
+- "Free RFID charging card included"
+- "MG iSMART app for charging station locator"
 
 # Insurance
 insurance_notes:
@@ -231,48 +220,42 @@ leasing_example:
 
 # Competitors in Market
 local_competitors:
-  - vehicle: "Volkswagen ID.3 Pro"
-    price_eur: 42875
-    price_delta: +8885
-    notes: "German brand, similar specs, higher price"
-    
-  - vehicle: "Renault Megane E-Tech EV60"
-    price_eur: 42500
-    price_delta: +8510
-    notes: "French brand, similar platform concept"
-    
-  - vehicle: "Opel Astra Electric"
-    price_eur: 44465
-    price_delta: +10475
-    notes: "German-French brand, platform sister"
-    
-  - vehicle: "Cupra Born 58kWh"
-    price_eur: 38490
-    price_delta: +4500
-    notes: "Spanish premium, VW group"
+- vehicle: "Volkswagen ID.3 Pro"
+  price_eur: 42875
+  price_delta: 8885
+  notes: "German brand, similar specs, higher price"
+- vehicle: "Renault Megane E-Tech EV60"
+  price_eur: 42500
+  price_delta: 8510
+  notes: "French brand, similar platform concept"
+- vehicle: "Opel Astra Electric"
+  price_eur: 44465
+  price_delta: 10475
+  notes: "German-French brand, platform sister"
+- vehicle: "Cupra Born 58kWh"
+  price_eur: 38490
+  price_delta: 4500
+  notes: "Spanish premium, VW group"
 
 # Market Performance
 market_stats:
   sales_2023: 4200  # Estimated DE registrations
   market_share_segment_percent: 8.5
   customer_satisfaction_score: 4.2  # out of 5
-  
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Hervorragendes Preis-Leistungs-Verhältnis"
-    
-  - source: "ADAC"
-    rating: 2.0  # ADAC scale (lower is better)
-    score_out_of: 5.0
-    summary: "Empfehlenswert - gute Ausstattung, faire Preise"
-    
-  - source: "Auto Bild"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Preis-Hit mit ordentlicher Reichweite"
+- source: "Auto Motor und Sport"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Hervorragendes Preis-Leistungs-Verhältnis"
+- source: "ADAC"
+  rating: 2.0    # ADAC scale (lower is better)
+  score_out_of: 5.0
+  summary: "Empfehlenswert - gute Ausstattung, faire Preise"
+- source: "Auto Bild"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Preis-Hit mit ordentlicher Reichweite"
 
 # Environmental
 environmental:
@@ -291,12 +274,11 @@ residual_value:
 metadata:
   data_quality: verified
   sources:
-    - https://www.mgmotor.de/mg4-electric
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg4-electric-test/
-    - https://www.auto-motor-und-sport.de/fahrbericht/mg4-electric-test/
-    - https://www.dat.de/ (pricing and typklasse data)
+  - https://www.mgmotor.de/mg4-electric
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg4-electric-test/
+  - https://www.auto-motor-und-sport.de/fahrbericht/mg4-electric-test/
+  - https://www.dat.de/ (pricing and typklasse data)
   created_at: "2024-02-06"
-  last_updated: "2024-02-06"
   notes: |
     MG4 Electric is the value leader in the compact EV segment.
     Pricing typically €8,000-10,000 below European competitors.
@@ -306,3 +288,5 @@ metadata:
     Battery warranty (7yr/175,000km) better than VW (8yr/160,000km but stricter terms).
     Heat pump now standard improves winter range significantly.
     Umweltbonus reduced to €3,000 in 2024, ends completely Dec 2024.
+  updated_at: "2024-02-06"
+notes: "['Best-selling Chinese EV in Germany', '7-year/175,000km battery warranty', 'Free home charger installation support (via MG partners)', 'MG Motor Germany provides 6-year paint warranty', 'Available at 120+ MG dealers across Germany', 'Direct import from China - no local assembly']"

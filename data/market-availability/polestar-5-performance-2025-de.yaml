@@ -10,61 +10,58 @@ pricing:
 
 options:
   packages: []
-  
   paint_options:
-    - name: "Snow"
-      price: 0
-      code: "snow"
-    - name: "Midnight"
-      price: 1200
-      code: "midnight"
-    - name: "Jupiter"
-      price: 1200
-      code: "jupiter"
-    - name: "Storm"
-      price: 1200
-      code: "storm"
+  - name: "Snow"
+    price: 0
+    code: "snow"
+  - name: "Midnight"
+    price: 1200
+    code: "midnight"
+  - name: "Jupiter"
+    price: 1200
+    code: "jupiter"
+  - name: "Storm"
+    price: 1200
+    code: "storm"
 
   interior_options:
-    - name: "Charcoal interior"
-      price: 0
-    - name: "Zinc interior"
-      price: 0
+  - name: "Charcoal interior"
+    price: 0
+  - name: "Zinc interior"
+    price: 0
 
 incentives:
-  - name: "Company Car Tax Benefit"
-    type: tax_credit
-    amount: 0
-    notes: "BLP over €70,000 - 0.5% rate applies (vs 1% ICE). €118,600 × 0.5% = €593/month vs ICE 1% equivalent. Still a benefit vs ICE but reduced vs sub-€70k EVs."
-    eligibility: "Company car drivers only"
-  
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 400
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  
-  - name: "THG-Quote (CO2 Certificate Trading)"
-    type: grant
-    amount: 300
-    notes: "Annual CO2 certificate income ~€300"
+- name: "Company Car Tax Benefit"
+  type: tax_credit
+  amount: 0
+  notes: "BLP over €70,000 - 0.5% rate applies (vs 1% ICE). €118,600 × 0.5% = €593/month vs ICE 1% equivalent. Still a benefit vs ICE but reduced vs sub-€70k EVs."
+  eligibility: "Company car drivers only"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 400
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (CO2 Certificate Trading)"
+  type: grant
+  amount: 300
+  notes: "Annual CO2 certificate income ~€300"
 
 availability:
   status: available
   waiting_time_weeks: 16
   online_configurator: yes
   online_purchase: yes
-  
+
   sales_regions:
-    - Germany
-    - Austria
-    - Switzerland
-    - Netherlands
-    - Belgium
-    - Sweden
-    - Norway
-    - Denmark
-    - UK
+  - Germany
+  - Austria
+  - Switzerland
+  - Netherlands
+  - Belgium
+  - Sweden
+  - Norway
+  - Denmark
+  - UK
 
 warranty:
   vehicle_warranty_years: 2
@@ -75,21 +72,18 @@ warranty:
 
 market_context:
   competitors:
-    - model: "Porsche Taycan Turbo"
-      price: 156200
-      range_wltp: 535
-      notes: "€37,600 more, less range, Porsche brand prestige"
-    
-    - model: "Audi RS e-tron GT"
-      price: 152800
-      range_wltp: 525
-      notes: "€34,200 more, less range, RS badge cachet"
-    
-    - model: "Lotus Emeya R"
-      price: 153990
-      range_wltp: 435
-      notes: "€35,390 more, much less range, more extreme performance"
-  
+  - model: "Porsche Taycan Turbo"
+    price: 156200
+    range_wltp: 535
+    notes: "€37,600 more, less range, Porsche brand prestige"
+  - model: "Audi RS e-tron GT"
+    price: 152800
+    range_wltp: 525
+    notes: "€34,200 more, less range, RS badge cachet"
+  - model: "Lotus Emeya R"
+    price: 153990
+    range_wltp: 435
+    notes: "€35,390 more, much less range, more extreme performance"
   market_position: |
     At €118,600, the Polestar 5 Performance significantly undercuts the Porsche 
     Taycan Turbo (€156,200) and Audi RS e-tron GT (€152,800) while offering 
@@ -99,13 +93,13 @@ market_context:
 metadata:
   created_at: "2026-02-09T15:45:00Z"
   updated_at: "2026-02-09T15:45:00Z"
-  data_quality: verified
+  data_quality: unverified
   data_source: manufacturer_and_market
   notes: |
     Performance price confirmed at €118,600 from Polestar Germany website.
     Company car tax: 0.5% rate applies as BLP exceeds €70,000 threshold.
 
 sources:
-  - url: "https://www.polestar.com/de/polestar-5/"
-    title: "Polestar 5 Germany - Kaufpreis ab 118.600€"
-    date_accessed: "2026-02-09"
+- url: "https://www.polestar.com/de/polestar-5/"
+  title: "Polestar 5 Germany - Kaufpreis ab 118.600€"
+  date_accessed: "2026-02-09"

@@ -3,12 +3,11 @@
 id: fiat-500e-icon-42kwh-2024-it
 variant_id: fiat-500e-icon-42kwh-2024
 market: IT  # Italy
-market_code: IT  # Italy
 currency: EUR
 
 # Availability
 available_from: "2020-11-04"  # Launch date in Italy
-available_until: null  # Still available
+available_until:       # Still available
 availability_status: available
 pre_order_available: false
 order_book_open: true
@@ -23,201 +22,180 @@ pricing:
 
 # Colors Available (Italy market)
 colors:
-  - name: "Gelato White"
-    type: solid
-    price: 0
-    notes: "Standard solid color (no extra charge)"
-    
-  - name: "Onyx Black"
-    type: solid
-    price: 0
-    notes: "Standard solid color (no extra charge)"
-    
-  - name: "Ocean Green"
-    type: metallic
-    price: 500
-    notes: "Metallic finish"
-    
-  - name: "Celestial Blue"
-    type: metallic
-    price: 500
-    notes: "Metallic finish"
-    
-  - name: "Mineral Gray"
-    type: metallic
-    price: 500
-    notes: "Metallic finish"
-    
-  - name: "Glacier Blue"
-    type: metallic
-    price: 500
-    notes: "Metallic finish (new for 2024)"
-    
-  - name: "Passion Red (bi-tone)"
-    type: bi-tone
-    price: 1000
-    notes: "Iconic red body with black roof (extra €1,000)"
-    
-  - name: "Onyx Black (bi-tone)"
-    type: bi-tone
-    price: 1000
-    notes: "Black body with white roof (extra €1,000)"
+- name: "Gelato White"
+  type: solid
+  price: 0
+  notes: "Standard solid color (no extra charge)"
+- name: "Onyx Black"
+  type: solid
+  price: 0
+  notes: "Standard solid color (no extra charge)"
+- name: "Ocean Green"
+  type: metallic
+  price: 500
+  notes: "Metallic finish"
+- name: "Celestial Blue"
+  type: metallic
+  price: 500
+  notes: "Metallic finish"
+- name: "Mineral Gray"
+  type: metallic
+  price: 500
+  notes: "Metallic finish"
+- name: "Glacier Blue"
+  type: metallic
+  price: 500
+  notes: "Metallic finish (new for 2024)"
+- name: "Passion Red (bi-tone)"
+  type: bi-tone
+  price: 1000
+  notes: "Iconic red body with black roof (extra €1,000)"
+- name: "Onyx Black (bi-tone)"
+  type: bi-tone
+  price: 1000
+  notes: "Black body with white roof (extra €1,000)"
 
 # Wheels Available
 wheels:
-  - size: "15-inch steel wheels with covers"
-    design: "Steel wheels"
-    price: 0
-    standard: true
-    notes: "Standard wheels for Icon trim"
-    
-  - size: "15-inch diamond-cut alloy wheels"
-    design: "Diamond-cut alloy"
-    price: 500
-    standard: false
-    notes: "Optional alloy wheels (€500)"
-    
-  - size: "16-inch diamond-cut alloy wheels"
-    design: "Diamond-cut alloy"
-    price: 800
-    standard: false
-    notes: "Optional 16-inch alloy wheels (€800)"
+- size: "15-inch steel wheels with covers"
+  design: "Steel wheels"
+  price: 0
+  standard: true
+  notes: "Standard wheels for Icon trim"
+- size: "15-inch diamond-cut alloy wheels"
+  design: "Diamond-cut alloy"
+  price: 500
+  standard: false
+  notes: "Optional alloy wheels (€500)"
+- size: "16-inch diamond-cut alloy wheels"
+  design: "Diamond-cut alloy"
+  price: 800
+  standard: false
+  notes: "Optional 16-inch alloy wheels (€800)"
 
 # Interior Options
 interiors:
-  - name: "Icon Interior (Cloth)"
-    material: "Cloth seats with leather details"
-    color: "Black/Gray"
-    price: 0
-    standard: true
-    notes: "Standard Icon interior with cloth seats"
-    
-  - name: "Icon Interior (Eco-leather)"
-    material: "Eco-leather seats"
-    color: "Black or Ivory"
-    price: 700
-    standard: false
-    notes: "Optional eco-leather seats (€700)"
-    
-  - name: "La Prima Interior"
-    material: "Premium eco-leather with bamboo dashboard"
-    color: "Ivory with bamboo accents"
-    price: 1500
-    standard: false
-    notes: "Premium La Prima interior with sustainable bamboo (€1,500)"
+- name: "Icon Interior (Cloth)"
+  material: "Cloth seats with leather details"
+  color: "Black/Gray"
+  price: 0
+  standard: true
+  notes: "Standard Icon interior with cloth seats"
+- name: "Icon Interior (Eco-leather)"
+  material: "Eco-leather seats"
+  color: "Black or Ivory"
+  price: 700
+  standard: false
+  notes: "Optional eco-leather seats (€700)"
+- name: "La Prima Interior"
+  material: "Premium eco-leather with bamboo dashboard"
+  color: "Ivory with bamboo accents"
+  price: 1500
+  standard: false
+  notes: "Premium La Prima interior with sustainable bamboo (€1,500)"
 
 # Equipment Packages
 packages:
-  - name: "Safety Pack"
-    price: 800
-    included_features:
-      - "Autonomous Emergency Braking (AEB)"
-      - "Lane Keeping Assist"
-      - "Traffic Sign Recognition"
-      - "Intelligent Speed Assist"
-      - "Drowsiness Detection"
-    notes: "CRITICAL: AEB is NOT standard - requires this pack for 5-star safety"
-    
-  - name: "Autonomous Driving Pack"
-    price: 1500
-    included_features:
-      - "Adaptive Cruise Control (ACC)"
-      - "Lane Centering Assist"
-      - "Highway Assist (Level 2)"
-      - "Traffic Sign Recognition"
-      - "All features from Safety Pack"
-    notes: "Level 2 autonomous driving for highways"
-    
-  - name: "Visibility Pack"
-    price: 600
-    included_features:
-      - "Rear parking sensors"
-      - "Rear-view camera"
-      - "Automatic headlights"
-      - "Rain-sensing wipers"
-    notes: "Improves parking and visibility"
-    
-  - name: "Comfort Pack"
-    price: 900
-    included_features:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Automatic climate control"
-      - "Wireless smartphone charging"
-    notes: "Cold weather and convenience features"
-    
-  - name: "Technology Pack"
-    price: 1200
-    included_features:
-      - "10.25-inch UConnect 5 touchscreen (upgraded)"
-      - "7-inch TFT driver display (upgraded)"
-      - "JBL Premium Audio (6 speakers)"
-      - "Navigation with real-time traffic"
-      - "Smartphone integration (wireless CarPlay)"
-    notes: "Upgraded infotainment and audio system"
-    
-  - name: "Panoramic Glass Roof"
-    price: 800
-    included_features:
-      - "Fixed panoramic glass roof"
-      - "Electric sunshade"
-    notes: "Not available on Cabrio (convertible) version"
+- name: "Safety Pack"
+  price: 800
+  included_features:
+  - "Autonomous Emergency Braking (AEB)"
+  - "Lane Keeping Assist"
+  - "Traffic Sign Recognition"
+  - "Intelligent Speed Assist"
+  - "Drowsiness Detection"
+  notes: "CRITICAL: AEB is NOT standard - requires this pack for 5-star safety"
+- name: "Autonomous Driving Pack"
+  price: 1500
+  included_features:
+  - "Adaptive Cruise Control (ACC)"
+  - "Lane Centering Assist"
+  - "Highway Assist (Level 2)"
+  - "Traffic Sign Recognition"
+  - "All features from Safety Pack"
+  notes: "Level 2 autonomous driving for highways"
+- name: "Visibility Pack"
+  price: 600
+  included_features:
+  - "Rear parking sensors"
+  - "Rear-view camera"
+  - "Automatic headlights"
+  - "Rain-sensing wipers"
+  notes: "Improves parking and visibility"
+- name: "Comfort Pack"
+  price: 900
+  included_features:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Automatic climate control"
+  - "Wireless smartphone charging"
+  notes: "Cold weather and convenience features"
+- name: "Technology Pack"
+  price: 1200
+  included_features:
+  - "10.25-inch UConnect 5 touchscreen (upgraded)"
+  - "7-inch TFT driver display (upgraded)"
+  - "JBL Premium Audio (6 speakers)"
+  - "Navigation with real-time traffic"
+  - "Smartphone integration (wireless CarPlay)"
+  notes: "Upgraded infotainment and audio system"
+- name: "Panoramic Glass Roof"
+  price: 800
+  included_features:
+  - "Fixed panoramic glass roof"
+  - "Electric sunshade"
+  notes: "Not available on Cabrio (convertible) version"
 
 # Italian EV Incentives (2024)
 incentives:
-  - name: "Ecobonus Statale 2024"
-    type: grant
-    amount: 5000
-    currency: EUR
-    conditions:
-      - "Income below €30,000/year"
-      - "Scrapping old ICE vehicle (Euro 0-4)"
-      - "Vehicle price below €35,000"
-    notes: "Maximum €5,000 with scrappage bonus (€3,000 without scrappage)"
-    source: "Italian Ministry of Economic Development"
-    
-  - name: "Regional Incentives (varies)"
-    type: grant
-    amount: 2000
-    currency: EUR
-    conditions:
-      - "Available in select regions (Lombardy, Lazio, Emilia-Romagna)"
-      - "Income requirements vary by region"
-    notes: "Additional regional bonuses up to €2,000 in some areas"
-    
-  - name: "Zero Road Tax (Bollo Auto)"
-    type: tax_exemption
-    amount: 150
-    currency: EUR
-    conditions:
-      - "Electric vehicles exempt from Bollo Auto for 5 years"
-    notes: "Saves ~€150/year for 5 years = €750 total"
-    applies_until: "2029"
-    
-  - name: "Free ZTL Access"
-    type: discount
-    amount: 0
-    currency: EUR
-    conditions:
-      - "Electric vehicles exempt from Limited Traffic Zone (ZTL) restrictions"
-    notes: "Free access to historic city centers (ZTL) in Rome, Florence, Milan, Turin, etc."
-    
-  - name: "Free Blue Zone Parking"
-    type: discount
-    amount: 0
-    currency: EUR
-    conditions:
-      - "Free parking in Blue Zones in many Italian cities"
-      - "Varies by municipality"
-    notes: "Rome, Milan, and other cities offer free/discounted parking for EVs"
-    
-  - name: "Company Car Tax Benefit"
-    type: tax_credit
-    amount: 0
-    currency: EUR
-    conditions:
-      - "Electric vehicles: 25% of list price is taxable benefit (vs 100% for ICE)"
-    notes: "Significant savings for company car drivers (75% reduction)"
+- name: "Ecobonus Statale 2024"
+  type: grant
+  amount: 5000
+  currency: EUR
+  conditions:
+  - "Income below €30,000/year"
+  - "Scrapping old ICE vehicle (Euro 0-4)"
+  - "Vehicle price below €35,000"
+  notes: "Maximum €5,000 with scrappage bonus (€3,000 without scrappage)"
+  source: "Italian Ministry of Economic Development"
+- name: "Regional Incentives (varies)"
+  type: grant
+  amount: 2000
+  currency: EUR
+  conditions:
+  - "Available in select regions (Lombardy, Lazio, Emilia-Romagna)"
+  - "Income requirements vary by region"
+  notes: "Additional regional bonuses up to €2,000 in some areas"
+- name: "Zero Road Tax (Bollo Auto)"
+  type: tax_exemption
+  amount: 150
+  currency: EUR
+  conditions:
+  - "Electric vehicles exempt from Bollo Auto for 5 years"
+  notes: "Saves ~€150/year for 5 years = €750 total"
+  applies_until: "2029"
+- name: "Free ZTL Access"
+  type: discount
+  amount: 0
+  currency: EUR
+  conditions:
+  - "Electric vehicles exempt from Limited Traffic Zone (ZTL) restrictions"
+  notes: "Free access to historic city centers (ZTL) in Rome, Florence, Milan, Turin, etc."
+- name: "Free Blue Zone Parking"
+  type: discount
+  amount: 0
+  currency: EUR
+  conditions:
+  - "Free parking in Blue Zones in many Italian cities"
+  - "Varies by municipality"
+  notes: "Rome, Milan, and other cities offer free/discounted parking for EVs"
+- name: "Company Car Tax Benefit"
+  type: tax_credit
+  amount: 0
+  currency: EUR
+  conditions:
+  - "Electric vehicles: 25% of list price is taxable benefit (vs 100% for ICE)"
+  notes: "Significant savings for company car drivers (75% reduction)"
 
 # Financing Options
 financing_available: true
@@ -232,7 +210,6 @@ charging:
   home_charger_available: true
   home_charger_price: 600
   home_charger_notes: "Enel X or FCA/Stellantis branded wallbox available (11kW, €600 installed)"
-  
   public_network: "Enel X, Be Charge, Free To X, Ionity"
   public_network_access: "Free To X Moove app pre-installed with 1 year free charging at participating stations"
   public_network_notes: "Italy has 30,000+ public charging points (2024). Enel X is largest network."
@@ -242,12 +219,10 @@ warranty:
   vehicle_years: 2
   vehicle_km: unlimited
   vehicle_notes: "2-year unlimited km warranty (EU minimum), extendable to 5 years"
-  
   battery_years: 8
   battery_km: 160000
   battery_capacity_guarantee_percent: 70
   battery_notes: "8-year/160,000km battery warranty with 70% capacity guarantee"
-  
   roadside_assistance_years: 2
   roadside_assistance_notes: "24/7 roadside assistance for 2 years"
 
@@ -257,19 +232,6 @@ import_or_local: local  # Made in Italy!
 delivery_notes: "Shortest delivery time in Europe (4 weeks) - produced locally at Mirafiori plant in Turin."
 
 # Market-Specific Features
-market_notes:
-  - "🇮🇹 Made in Italy at historic Mirafiori plant (since 1939)"
-  - "Italy's best-selling electric car (2021-2023)"
-  - "Icon of Italian design - third generation of iconic 1957 'Cinquecento'"
-  - "Perfect for narrow Italian city streets and historic ZTL zones"
-  - "Free ZTL access saves significant costs in Rome, Florence, Milan (€100+/year)"
-  - "Free blue zone parking in major cities (saves €500+/year)"
-  - "Cabrio (convertible) version extremely popular in Italy (+€3,000)"
-  - "Generous ecobonus incentives reduce price to ~€29,900 with scrappage"
-  - "Supports Italian manufacturing and local jobs"
-  - "Heritage model celebrating 'La Dolce Vita' with zero emissions"
-
-# Environmental Data
 environmental:
   lifecycle_co2_tonnes: 22  # Lowest in segment (compact battery, local production)
   production_co2_tonnes: 8
@@ -279,20 +241,21 @@ environmental:
 
 # References
 references:
-  - name: "Fiat 500e Italia Pricing"
-    url: "https://www.fiat.it/500-elettrica"
-  - name: "Italian Ecobonus Incentives"
-    url: "https://ecobonus.mise.gov.it/"
-  - name: "Fiat 500e Sales Data Italy"
-    url: "https://www.unrae.it/"
+- name: "Fiat 500e Italia Pricing"
+  url: "https://www.fiat.it/500-elettrica"
+- name: "Italian Ecobonus Incentives"
+  url: "https://ecobonus.mise.gov.it/"
+- name: "Fiat 500e Sales Data Italy"
+  url: "https://www.unrae.it/"
 
 # Metadata
 metadata:
   data_quality: verified
-  last_updated: "2024-02-07"
   created_at: "2024-02-07"
   sources:
-    - "Fiat Italia official pricing"
-    - "Italian Ministry of Economic Development (MISE)"
-    - "Automotive press and sales data"
+  - "Fiat Italia official pricing"
+  - "Italian Ministry of Economic Development (MISE)"
+  - "Automotive press and sales data"
   notes: "Icon trim is most popular in Italy. Cabrio version adds €3,000. Ecobonus makes it very affordable."
+  updated_at: "2024-02-07"
+notes: "['🇮🇹 Made in Italy at historic Mirafiori plant (since 1939)', \"Italy's best-selling electric car (2021-2023)\", \"Icon of Italian design - third generation of iconic 1957 'Cinquecento'\", 'Perfect for narrow Italian city streets and historic ZTL zones', 'Free ZTL access saves significant costs in Rome, Florence, Milan (€100+/year)', 'Free blue zone parking in major cities (saves €500+/year)', 'Cabrio (convertible) version extremely popular in Italy (+€3,000)', 'Generous ecobonus incentives reduce price to ~€29,900 with scrappage', 'Supports Italian manufacturing and local jobs', \"Heritage model celebrating 'La Dolce Vita' with zero emissions\"]"

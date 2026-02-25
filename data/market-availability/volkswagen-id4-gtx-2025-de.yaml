@@ -8,9 +8,18 @@ currency: EUR
 availability_status: available
 available_from: "2024-09-01"
 delivery_time_weeks: 8
-notes: |
+notes: |-
   Performance AWD variant of VW's best-selling electric SUV. The ID.4 GTX
   combines 340 hp dual-motor AWD with family-friendly practicality.
+  The ID.4 GTX is one of VW's strongest offerings in the German market,
+  combining the practicality of their best-selling electric SUV with
+  performance AWD credentials. At €52,295, it's priced competitively
+  against the Tesla Model Y Long Range AWD (€55,990) while offering a
+  more premium interior feel and German build quality. Company car tax at
+  0.25% (€130.74/month) makes it compelling for business use. The tow bar
+  option (1000 kg) adds versatility. Popular spec with Comfort and Tech
+  packages brings total to around €56,000. Strong residual values and
+  short delivery times (8 weeks) support the business case.
 
 pricing:
   base_price: 52295
@@ -22,79 +31,79 @@ pricing:
     more power, sport equipment, and DCC adaptive dampers.
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €52,295 × 0.25% = €130.74/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €52,295 × 0.25% = €130.74/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 equipment_packages:
-  - name: IQ.DRIVE Max Package
-    price:
-      amount: 2490
-      currency: EUR
-    items:
-      - Lane Change Assist (Side Assist)
-      - Park Assist with Park Distance Control
-      - Emergency Steering Assist
-      - Travel Assist with predictive ACC
-    notes: "Complete ADAS and safety package"
+- name: IQ.DRIVE Max Package
+  price:
+    amount: 2490
+    currency: EUR
+  items:
+  - Lane Change Assist (Side Assist)
+  - Park Assist with Park Distance Control
+  - Emergency Steering Assist
+  - Travel Assist with predictive ACC
+  notes: "Complete ADAS and safety package"
 
-  - name: Comfort Package
-    price:
-      amount: 1790
-      currency: EUR
-    items:
-      - ergoActive Climate Seats front
-      - Massage function driver seat
-      - Heated windshield
-      - Heated steering wheel
-      - Power tailgate with Easy Open
-    notes: "Premium comfort features"
+- name: Comfort Package
+  price:
+    amount: 1790
+    currency: EUR
+  items:
+  - ergoActive Climate Seats front
+  - Massage function driver seat
+  - Heated windshield
+  - Heated steering wheel
+  - Power tailgate with Easy Open
+  notes: "Premium comfort features"
 
-  - name: Tech Package Plus
-    price:
-      amount: 1490
-      currency: EUR
-    items:
-      - AR Head-Up Display
-      - Harman Kardon premium sound system
-      - Wireless smartphone charging
-    notes: "Advanced technology features"
+- name: Tech Package Plus
+  price:
+    amount: 1490
+    currency: EUR
+  items:
+  - AR Head-Up Display
+  - Harman Kardon premium sound system
+  - Wireless smartphone charging
+  notes: "Advanced technology features"
 
-  - name: 22kW AC Charging Upgrade
-    price:
-      amount: 590
-      currency: EUR
-    items:
-      - 22 kW three-phase AC onboard charger
-    notes: "Upgrade from 11kW to 22kW charging"
+- name: 22kW AC Charging Upgrade
+  price:
+    amount: 590
+    currency: EUR
+  items:
+  - 22 kW three-phase AC onboard charger
+  notes: "Upgrade from 11kW to 22kW charging"
 
-  - name: Tow Bar Package
-    price:
-      amount: 990
-      currency: EUR
-    items:
-      - Electrically retractable tow bar
-      - 1000 kg braked trailer capacity
-    notes: "Towing capability for the ID.4 GTX"
+- name: Tow Bar Package
+  price:
+    amount: 990
+    currency: EUR
+  items:
+  - Electrically retractable tow bar
+  - 1000 kg braked trailer capacity
+  notes: "Towing capability for the ID.4 GTX"
 
 sales_model: dealership
 dealerships_count: 680
@@ -113,21 +122,9 @@ warranty:
     2-year unlimited km vehicle warranty.
     8-year/160,000 km battery warranty with 70% capacity guarantee.
 
-market_notes: |
-  The ID.4 GTX is one of VW's strongest offerings in the German market,
-  combining the practicality of their best-selling electric SUV with
-  performance AWD credentials. At €52,295, it's priced competitively
-  against the Tesla Model Y Long Range AWD (€55,990) while offering a
-  more premium interior feel and German build quality. Company car tax at
-  0.25% (€130.74/month) makes it compelling for business use. The tow bar
-  option (1000 kg) adds versatility. Popular spec with Comfort and Tech
-  packages brings total to around €56,000. Strong residual values and
-  short delivery times (8 weeks) support the business case.
-
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.volkswagen.de/de/elektrofahrzeuge/id4/id4-gtx.html
-    - https://www.volkswagen.de/de/elektrofahrzeuge/id4/konfigurator.html
+  - https://www.volkswagen.de/de/elektrofahrzeuge/id4/id4-gtx.html
+  - https://www.volkswagen.de/de/elektrofahrzeuge/id4/konfigurator.html

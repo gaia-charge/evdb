@@ -9,10 +9,16 @@ currency: EUR
 availability_status: available
 available_from: "2023-03-01"
 delivery_time_weeks: 16
-notes: |
+notes: |-
   AWD variant of Nissan Ariya with 63 kWh battery and e-4ORCE dual-motor
   system. Offers better performance and all-weather traction compared to
   FWD variant.
+  The Nissan Ariya e-4ORCE 63 kWh brings dual-motor AWD to the more
+  affordable 63 kWh battery option. German pricing at €55,900 makes it
+  competitive with other AWD electric crossovers. Popular with buyers
+  seeking all-weather capability without the premium of the 87 kWh battery.
+  The e-4ORCE system provides excellent traction and dynamic handling.
+  Delivery times typically 12-16 weeks.
 
 # Pricing
 pricing:
@@ -26,74 +32,74 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €55,900 × 0.25% = €139.75/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €55,900 × 0.25% = €139.75/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: ProPILOT Assist 2.0 Pack
-    price:
-      amount: 1800
-      currency: EUR
-    items:
-      - Hands-free highway driving
-      - Navigation integration
-    notes: "Enhanced highway automation"
+- name: ProPILOT Assist 2.0 Pack
+  price:
+    amount: 1800
+    currency: EUR
+  items:
+  - Hands-free highway driving
+  - Navigation integration
+  notes: "Enhanced highway automation"
 
-  - name: Premium Interior Package
-    price:
-      amount: 2200
-      currency: EUR
-    items:
-      - Quilted leather seats
-      - Power driver seat
-      - Premium materials
-    notes: "Luxury interior upgrade"
+- name: Premium Interior Package
+  price:
+    amount: 2200
+    currency: EUR
+  items:
+  - Quilted leather seats
+  - Power driver seat
+  - Premium materials
+  notes: "Luxury interior upgrade"
 
-  - name: Bose Premium Audio
-    price:
-      amount: 950
-      currency: EUR
-    items:
-      - 10-speaker Bose audio system
-    notes: "High-end audio system"
+- name: Bose Premium Audio
+  price:
+    amount: 950
+    currency: EUR
+  items:
+  - 10-speaker Bose audio system
+  notes: "High-end audio system"
 
-  - name: ProPILOT Park Package
-    price:
-      amount: 850
-      currency: EUR
-    items:
-      - Automated parking
-      - 360-degree camera
-    notes: "Automated parking assist"
+- name: ProPILOT Park Package
+  price:
+    amount: 850
+    currency: EUR
+  items:
+  - Automated parking
+  - 360-degree camera
+  notes: "Automated parking assist"
 
-  - name: Two-Tone Paint
-    price:
-      amount: 1200
-      currency: EUR
-    items:
-      - Contrasting roof color
-    notes: "Available in several color combinations"
+- name: Two-Tone Paint
+  price:
+    amount: 1200
+    currency: EUR
+  items:
+  - Contrasting roof color
+  notes: "Available in several color combinations"
 
 # Dealership & Sales
 sales_model: dealership
@@ -116,17 +122,8 @@ warranty:
     Same warranty coverage as FWD variant.
 
 # Market-Specific Notes
-market_notes: |
-  The Nissan Ariya e-4ORCE 63 kWh brings dual-motor AWD to the more
-  affordable 63 kWh battery option. German pricing at €55,900 makes it
-  competitive with other AWD electric crossovers. Popular with buyers
-  seeking all-weather capability without the premium of the 87 kWh battery.
-  The e-4ORCE system provides excellent traction and dynamic handling.
-  Delivery times typically 12-16 weeks.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+  - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html

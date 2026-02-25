@@ -18,129 +18,126 @@ price_details:
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - name: "Umweltbonus (BAFA)"
-    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
-    type: rebate
-    provider: federal
-    eligibility: "BEV with price ≤€45,000"
-    valid_until: "2024-12-31"
-    notes: "German federal EV subsidy - being phased out"
-    
-  - name: "Company Car Tax"
-    amount: 0  # Percentage-based benefit
-    type: tax_exemption
-    provider: federal
-    description: "0.25% monthly gross list price for BEVs under €60k"
-    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+- name: "Umweltbonus (BAFA)"
+  amount: 3000    # Reduced from €4,500 in 2023, ends Dec 2024
+  type: rebate
+  provider: federal
+  eligibility: "BEV with price ≤€45,000"
+  valid_until: "2024-12-31"
+  notes: "German federal EV subsidy - being phased out"
+- name: "Company Car Tax"
+  amount: 0    # Percentage-based benefit
+  type: tax_exemption
+  provider: federal
+  description: "0.25% monthly gross list price for BEVs under €60k"
+  notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
 
 # Available Colors
 colors:
-  - name: "Arctic White"
-    code: "solid-white"
-    type: solid
-    price_delta: 0
-    
-  - name: "Dynamic Red"
-    code: "metallic-red"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Diamond Silver"
-    code: "metallic-silver"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Black Pearl"
-    code: "metallic-black"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Camden Grey"
-    code: "metallic-grey"
-    type: metallic
-    price_delta: 680
+- name: "Arctic White"
+  code: "solid-white"
+  type: solid
+  price_delta: 0
+
+- name: "Dynamic Red"
+  code: "metallic-red"
+  type: metallic
+  price_delta: 680
+
+- name: "Diamond Silver"
+  code: "metallic-silver"
+  type: metallic
+  price_delta: 680
+
+- name: "Black Pearl"
+  code: "metallic-black"
+  type: metallic
+  price_delta: 680
+
+- name: "Camden Grey"
+  code: "metallic-grey"
+  type: metallic
+  price_delta: 680
 
 # Wheel Options
 wheels:
-  - name: "16-inch alloy wheels"
-    size_inches: 16
-    tire_size: "215/55 R16"
-    price_delta: 0
-    standard: true
-    
-  - name: "17-inch alloy wheels"
-    size_inches: 17
-    tire_size: "215/55 R17"
-    price_delta: 550
-    notes: "Upgrade for better aesthetics, minimal range impact (-5km WLTP)"
+- name: "16-inch alloy wheels"
+  size_inches: 16
+  tire_size: "215/55 R16"
+  price_delta: 0
+  standard: true
+
+- name: "17-inch alloy wheels"
+  size_inches: 17
+  tire_size: "215/55 R17"
+  price_delta: 550
+  notes: "Upgrade for better aesthetics, minimal range impact (-5km WLTP)"
 
 # Interior Options
 interiors:
-  - name: "Grey fabric"
-    material: fabric
-    price_delta: 0
-    standard: true
-    
-  - name: "Black faux leather"
-    material: synthetic_leather
-    price_delta: 1200
-    notes: "Premium upgrade, easier to clean"
+- name: "Grey fabric"
+  material: fabric
+  price_delta: 0
+  standard: true
+
+- name: "Black faux leather"
+  material: synthetic_leather
+  price_delta: 1200
+  notes: "Premium upgrade, easier to clean"
 
 # Equipment Packages & Options
 packages:
-  - name: "Comfort Pack"
-    price: 1200
-    includes:
-      - "Automatic climate control"
-      - "Rear parking sensors"
-      - "Cruise control"
-    popular: true
-    
-  - name: "Style Pack"
-    price: 2200
-    includes:
-      - "All Comfort Pack features"
-      - "Black faux leather seats"
-      - "Heated front seats"
-      - "Wireless phone charging"
-      - "6-speaker audio system"
-    popular: true
-    recommended: true
-    
-  - name: "Practicality Pack"
-    price: 3500
-    includes:
-      - "All Style Pack features"
-      - "17-inch alloy wheels"
-      - "Roof rails"
-      - "Privacy glass"
-      - "Power tailgate"
-      - "Tow bar preparation"
-    notes: "Best value for fleet buyers and families"
+- name: "Comfort Pack"
+  price: 1200
+  includes:
+  - "Automatic climate control"
+  - "Rear parking sensors"
+  - "Cruise control"
+  popular: true
+
+- name: "Style Pack"
+  price: 2200
+  includes:
+  - "All Comfort Pack features"
+  - "Black faux leather seats"
+  - "Heated front seats"
+  - "Wireless phone charging"
+  - "6-speaker audio system"
+  popular: true
+  recommended: true
+
+- name: "Practicality Pack"
+  price: 3500
+  includes:
+  - "All Style Pack features"
+  - "17-inch alloy wheels"
+  - "Roof rails"
+  - "Privacy glass"
+  - "Power tailgate"
+  - "Tow bar preparation"
+  notes: "Best value for fleet buyers and families"
 
 # Individual Options
 individual_options:
-  - name: "Metallic paint"
-    price: 680
-    category: exterior
-    
-  - name: "Heat pump"
-    price: 800
-    category: efficiency
-    notes: "Highly recommended for German winters - improves range by 10-15%"
-    
-  - name: "Tow bar"
-    price: 650
-    category: utility
-    towing_capacity_kg: 500
-    notes: "Popular addition for families"
-    
-  - name: "Winter package"
-    price: 650
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated windshield washer nozzles"
+- name: "Metallic paint"
+  price: 680
+  category: exterior
+
+- name: "Heat pump"
+  price: 800
+  category: efficiency
+  notes: "Highly recommended for German winters - improves range by 10-15%"
+- name: "Tow bar"
+  price: 650
+  category: utility
+  towing_capacity_kg: 500
+  notes: "Popular addition for families"
+- name: "Winter package"
+  price: 650
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Heated windshield washer nozzles"
 
 # Total Price Range
 price_range:
@@ -155,17 +152,6 @@ production_location: "Shanghai, China"
 import_duties_included: true
 
 # Market-Specific Notes
-market_notes:
-  - "Entry-level electric estate - most affordable EV with 479L boot in Europe"
-  - "7-year/175,000km battery warranty best in segment"
-  - "479L boot capacity - best in class for price point"
-  - "LFP battery chemistry - better thermal stability, longer lifespan"
-  - "Popular with fleet buyers, taxi operators, and budget-conscious families"
-  - "Available at 120+ MG dealers across Germany"
-  - "320km WLTP range sufficient for daily urban/suburban use"
-  - "€3,000 savings vs Long Range for buyers prioritizing price"
-
-# Sales & Distribution
 distribution:
   dealer_network_size: 120
   direct_sales: false
@@ -181,19 +167,19 @@ warranty:
   battery_km: 175000
   battery_capacity_guarantee_percent: 70
   roadside_assistance_years: 7
-  
+
 service:
   service_interval_months: 12
   service_interval_km: 20000
   average_service_cost_eur: 200
   service_plan_available: true
-  
+
 # Charging Infrastructure Support
 charging_support:
-  - "Partnership with EnBW (Mobility+ card)"
-  - "Access to 200,000+ charging points in Europe"
-  - "Free RFID charging card included"
-  - "MG iSMART app for charging station locator"
+- "Partnership with EnBW (Mobility+ card)"
+- "Access to 200,000+ charging points in Europe"
+- "Free RFID charging card included"
+- "MG iSMART app for charging station locator"
 
 # Insurance
 insurance_notes:
@@ -223,43 +209,38 @@ leasing_example:
 
 # Competitors in Market
 local_competitors:
-  - vehicle: "Dacia Spring"
-    price_eur: 22900
-    price_delta: -10100
-    notes: "Much cheaper but tiny (300L boot, 220km range)"
-    
-  - vehicle: "Opel Corsa-e"
-    price_eur: 35000
-    price_delta: +2000
-    notes: "Hatchback, smaller boot (309L vs 479L)"
-    
-  - vehicle: "Renault Zoe"
-    price_eur: 34000
-    price_delta: +1000
-    notes: "Hatchback, smaller boot (338L vs 479L), better known brand"
+- vehicle: "Dacia Spring"
+  price_eur: 22900
+  price_delta: -10100
+  notes: "Much cheaper but tiny (300L boot, 220km range)"
+- vehicle: "Opel Corsa-e"
+  price_eur: 35000
+  price_delta: 2000
+  notes: "Hatchback, smaller boot (309L vs 479L)"
+- vehicle: "Renault Zoe"
+  price_eur: 34000
+  price_delta: 1000
+  notes: "Hatchback, smaller boot (338L vs 479L), better known brand"
 
 # Market Performance
 market_stats:
   sales_2023: 950  # Estimated DE registrations (Standard Range)
   market_share_segment_percent: 3.1
   customer_satisfaction_score: 4.2  # out of 5, practical buyers love value
-  
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 3.8
-    score_out_of: 5.0
-    summary: "Unschlagbares Preis-Leistungs-Verhältnis für Kombi-Käufer"
-    
-  - source: "ADAC"
-    rating: 2.3  # ADAC scale (lower is better)
-    score_out_of: 5.0
-    summary: "Solide Wahl für preisbewusste Käufer"
-    
-  - source: "Auto Bild"
-    rating: 3.5
-    score_out_of: 5.0
-    summary: "Der günstigste Elektro-Kombi mit riesigem Kofferraum"
+- source: "Auto Motor und Sport"
+  rating: 3.8
+  score_out_of: 5.0
+  summary: "Unschlagbares Preis-Leistungs-Verhältnis für Kombi-Käufer"
+- source: "ADAC"
+  rating: 2.3    # ADAC scale (lower is better)
+  score_out_of: 5.0
+  summary: "Solide Wahl für preisbewusste Käufer"
+- source: "Auto Bild"
+  rating: 3.5
+  score_out_of: 5.0
+  summary: "Der günstigste Elektro-Kombi mit riesigem Kofferraum"
 
 # Environmental
 environmental:
@@ -283,7 +264,6 @@ use_case_analysis:
     monthly_charging_cost: 45
     annual_cost_savings_vs_ice: 1680
     notes: "Ideal for urban/suburban daily use"
-  
   taxi_fleet:
     distance_km: 200
     frequency: 6_days_per_week
@@ -312,11 +292,11 @@ popular_configuration:
   description: "Most popular configuration for families"
   total_price: 36460
   includes:
-    - Base Standard Range trim
-    - Style Pack (€2,200)
-    - Heat pump (€800)
-    - Diamond Silver metallic (€680)
-    - Tow bar (€650)
+  - Base Standard Range trim
+  - Style Pack (€2,200)
+  - Heat pump (€800)
+  - Diamond Silver metallic (€680)
+  - Tow bar (€650)
   notes: |
     Popular family spec with comfort features and winter capability.
     Heat pump essential for German winters, recovers cost in efficiency.
@@ -328,15 +308,14 @@ charging_costs:
     electricity_rate_eur_per_kwh: 0.32
     cost_per_100km: 6.08  # Based on 19 kWh/100km real-world
     cost_full_charge: 15.71  # 49.1 kWh usable
-  
   public_ac_charging:
     electricity_rate_eur_per_kwh: 0.49
     cost_per_100km: 9.31
-  
+
   public_dc_fast_charging:
     electricity_rate_eur_per_kwh: 0.79
     cost_per_100km: 15.01
-  
+
   comparison_ice_equivalent:
     fuel_consumption_l_per_100km: 6.5
     fuel_price_eur_per_liter: 1.85
@@ -347,11 +326,10 @@ charging_costs:
 metadata:
   data_quality: verified
   sources:
-    - https://www.mgmotor.de/mg5-electric
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg5-electric-test/
-    - https://www.auto-motor-und-sport.de/fahrbericht/mg5-electric-test/
+  - https://www.mgmotor.de/mg5-electric
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg5-electric-test/
+  - https://www.auto-motor-und-sport.de/fahrbericht/mg5-electric-test/
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   notes: |
     Entry-level MG5 offers unbeatable value for electric estate segment.
     320km WLTP range sufficient for most daily urban/suburban use cases.
@@ -361,3 +339,5 @@ metadata:
     Popular with fleet buyers, taxi operators, and budget-conscious families.
     Heat pump option highly recommended for German winters.
     Company car tax benefit (0.25%) makes it extremely attractive for business use.
+  updated_at: "2026-02-08"
+notes: "['Entry-level electric estate - most affordable EV with 479L boot in Europe', '7-year/175,000km battery warranty best in segment', '479L boot capacity - best in class for price point', 'LFP battery chemistry - better thermal stability, longer lifespan', 'Popular with fleet buyers, taxi operators, and budget-conscious families', 'Available at 120+ MG dealers across Germany', '320km WLTP range sufficient for daily urban/suburban use', '€3,000 savings vs Long Range for buyers prioritizing price']"

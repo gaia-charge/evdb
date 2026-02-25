@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 48590
@@ -17,41 +17,41 @@ pricing:
   total_price_estimate: 48590
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program has expired. No active national EV subsidy currently available.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program has expired. No active national EV subsidy currently available.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+  source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
 
 market_specific:
   standard_equipment:
-    - Heat pump
-    - 15.6-inch rotating touchscreen
-    - 12-speaker Dynaudio audio system
-    - Panoramic glass roof
-    - Adaptive cruise control
-    - Lane keeping assist
-    - Wireless smartphone charging
-    - Vehicle-to-Load (V2L)
+  - Heat pump
+  - 15.6-inch rotating touchscreen
+  - 12-speaker Dynaudio audio system
+  - Panoramic glass roof
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Wireless smartphone charging
+  - Vehicle-to-Load (V2L)
 
   available_colors:
-    - name: Arctic White
-      additional_cost: 0
-    - name: Cosmos Black Metallic
-      additional_cost: 600
-    - name: Atlantic Blue Metallic
-      additional_cost: 600
-    - name: Aurora Green Metallic
-      additional_cost: 600
+  - name: Arctic White
+    additional_cost: 0
+  - name: Cosmos Black Metallic
+    additional_cost: 600
+  - name: Atlantic Blue Metallic
+    additional_cost: 600
+  - name: Aurora Green Metallic
+    additional_cost: 600
 
   available_wheels:
-    - size_inches: 19
-      design: Standard
-      additional_cost: 0
+  - size_inches: 19
+    design: Standard
+    additional_cost: 0
 
 dealer_network:
   online_sales_available: true
@@ -71,8 +71,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: estimated
   price_checked_at: "2026-02-10"
   sources:
-    - https://www.byd.com/es
+  - https://www.byd.com/es

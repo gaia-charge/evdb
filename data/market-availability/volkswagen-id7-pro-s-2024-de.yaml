@@ -9,9 +9,16 @@ currency: EUR
 availability_status: available
 available_from: "2023-10-01"
 delivery_time_weeks: 18
-notes: |
+notes: |-
   Long-range flagship with 86 kWh battery achieving 700 km WLTP range.
   Most popular ID.7 variant for long-distance drivers and company cars.
+  The ID.7 Pro S with 700 km WLTP range is the ultimate long-distance
+  electric sedan from VW. Popular with Autobahn drivers and sales reps
+  who need maximum range. At €62,155, it still qualifies for the 0.25%
+  company car tax rate (under €70k), making it financially attractive
+  for business users. Outsells Pro variant 2:1 in Germany due to range
+  advantage. Real-world highway range of ~600 km makes it viable for
+  Berlin-Munich trips without charging stops.
 
 # Pricing
 pricing:
@@ -24,86 +31,86 @@ pricing:
 
 # Available Colors (same as Pro)
 available_colors:
-  - name: Pure White
-    code: B4B4
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Deep Black Pearl Effect
-    code: A1A1
-    type: pearl
-    price_add:
-      amount: 1090
-      currency: EUR
-  - name: Glacier White Metallic
-    code: 2Y2Y
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
-  - name: Moonstone Grey Metallic
-    code: Z7Z7
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
-  - name: Kings Red Metallic
-    code: K5K5
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
-  - name: Nordic Blue Pearl Effect
-    code: N8N8
-    type: pearl
-    price_add:
-      amount: 1290
-      currency: EUR
+- name: Pure White
+  code: B4B4
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Deep Black Pearl Effect
+  code: A1A1
+  type: pearl
+  price_add:
+    amount: 1090
+    currency: EUR
+- name: Glacier White Metallic
+  code: 2Y2Y
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
+- name: Moonstone Grey Metallic
+  code: Z7Z7
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
+- name: Kings Red Metallic
+  code: K5K5
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
+- name: Nordic Blue Pearl Effect
+  code: N8N8
+  type: pearl
+  price_add:
+    amount: 1290
+    currency: EUR
 
 # Incentives (Germany)
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €62,155 × 0.25% = €155/month taxable benefit.
-      Still under €70k threshold - excellent company car choice.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €62,155 × 0.25% = €155/month taxable benefit.
+    Still under €70k threshold - excellent company car choice.
 
-  - type: subsidy
-    name: "THG-Quote"
-    amount: 380
-    currency: EUR
-    notes: "CO2 certificate sale ~€380/year (highest for large battery)"
+- type: subsidy
+  name: "THG-Quote"
+  amount: 380
+  currency: EUR
+  notes: "CO2 certificate sale ~€380/year (highest for large battery)"
 
 # Equipment Packages (same as Pro)
 equipment_packages:
-  - name: Comfort Package Plus
-    price:
-      amount: 2890
-      currency: EUR
-  - name: IQ.DRIVE Max Package
-    price:
-      amount: 2690
-      currency: EUR
-  - name: AR Head-Up Display
-    price:
-      amount: 1490
-      currency: EUR
-  - name: ergoActive Climate Seats
-    price:
-      amount: 1890
-      currency: EUR
-  - name: Panoramic Glass Roof
-    price:
-      amount: 1550
-      currency: EUR
-  - name: 22kW AC Charging
-    price:
-      amount: 690
-      currency: EUR
+- name: Comfort Package Plus
+  price:
+    amount: 2890
+    currency: EUR
+- name: IQ.DRIVE Max Package
+  price:
+    amount: 2690
+    currency: EUR
+- name: AR Head-Up Display
+  price:
+    amount: 1490
+    currency: EUR
+- name: ergoActive Climate Seats
+  price:
+    amount: 1890
+    currency: EUR
+- name: Panoramic Glass Roof
+  price:
+    amount: 1550
+    currency: EUR
+- name: 22kW AC Charging
+  price:
+    amount: 690
+    currency: EUR
 
 # Warranty & Support
 warranty:
@@ -114,18 +121,8 @@ warranty:
   battery_capacity_guarantee_percent: 70
 
 # Market-Specific Notes
-market_notes: |
-  The ID.7 Pro S with 700 km WLTP range is the ultimate long-distance
-  electric sedan from VW. Popular with Autobahn drivers and sales reps
-  who need maximum range. At €62,155, it still qualifies for the 0.25%
-  company car tax rate (under €70k), making it financially attractive
-  for business users. Outsells Pro variant 2:1 in Germany due to range
-  advantage. Real-world highway range of ~600 km makes it viable for
-  Berlin-Munich trips without charging stops.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.volkswagen.de/de/modelle-und-konfigurator/id-7.html
+  - https://www.volkswagen.de/de/modelle-und-konfigurator/id-7.html

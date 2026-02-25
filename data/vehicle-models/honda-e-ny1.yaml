@@ -14,11 +14,11 @@ platform: e:N Architecture F  # Honda's dedicated EV platform
 production:
   status: active
   start_date: 2023-05
-  end_date: null
+  end_date:
   generations:
-    - name: First Generation
-      years: 2023-present
-      notes: Honda's first pure-electric SUV for Europe, based on HR-V
+  - name: First Generation
+    years: 2023-present
+    notes: Honda's first pure-electric SUV for Europe, based on HR-V
 
 description: >
   The Honda e:Ny1 is Honda's first pure-electric SUV for Europe, based on the
@@ -47,7 +47,7 @@ seating:
 
 cargo:
   trunk_liters: 344  # 361L seats up with underfloor storage
-  frunk_liters: null  # No frunk
+  frunk_liters:       # No frunk
 
 towing:
   max_towing_kg: 750  # Braked trailer
@@ -62,28 +62,28 @@ safety:
     safety_assist: 87
 
 awards:
-  - name: What Car? Best Small Electric SUV - Shortlist
-    year: 2024
+- name: What Car? Best Small Electric SUV - Shortlist
+  year: 2024
 
 features:
   infotainment:
-    - 15.1" central touchscreen
-    - 10.25" digital instrument cluster
-    - Honda Connect with OTA updates
-    - Apple CarPlay and Android Auto (wireless)
-    - Voice control with Honda Personal Assistant
+  - 15.1" central touchscreen
+  - 10.25" digital instrument cluster
+  - Honda Connect with OTA updates
+  - Apple CarPlay and Android Auto (wireless)
+  - Voice control with Honda Personal Assistant
   comfort:
-    - Heat pump standard
-    - Honda Magic Seats (folding/reclining rear seats)
-    - Panoramic glass roof (optional)
-    - Heated front seats and steering wheel
-    - Dual-zone climate control
+  - Heat pump standard
+  - Honda Magic Seats (folding/reclining rear seats)
+  - Panoramic glass roof (optional)
+  - Heated front seats and steering wheel
+  - Dual-zone climate control
   driver_assistance:
-    - Honda Sensing suite (adaptive cruise, lane keeping, collision mitigation)
-    - Blind spot information system
-    - Cross traffic monitor
-    - Parking sensors front and rear
-    - Rear-view camera
+  - Honda Sensing suite (adaptive cruise, lane keeping, collision mitigation)
+  - Blind spot information system
+  - Cross traffic monitor
+  - Parking sensors front and rear
+  - Rear-view camera
 
 aerodynamics:
   drag_coefficient: 0.318  # Cd
@@ -99,10 +99,10 @@ notes: >
 
 metadata:
   sources:
-    - https://www.honda.co.uk/cars/new/e-ny1.html
-    - https://www.honda.de/cars/new/e-ny1.html
-    - https://ev-database.org/car/1685/Honda-e-Ny1
-    - https://www.euroncap.com/en/results/honda/e-ny1/48877
+  - https://www.honda.co.uk/cars/new/e-ny1.html
+  - https://www.honda.de/cars/new/e-ny1.html
+  - https://ev-database.org/car/1685/Honda-e-Ny1
+  - https://www.euroncap.com/en/results/honda/e-ny1/48877
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
+  updated_at: "2026-02-08"

@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-03-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 16
   notes: Production in Slovakia
@@ -22,68 +22,67 @@ pricing:
 
 options:
   colors:
-    - name: Polar White (solid)
-      price: 0
-      type: solid
-    - name: Titanium Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Voltaic Blue (metallic)
-      price: 695
-      type: metallic
-  
+  - name: Polar White (solid)
+    price: 0
+    type: solid
+  - name: Titanium Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Voltaic Blue (metallic)
+    price: 695
+    type: metallic
+
   wheels:
-    - name: 17" steel wheels with covers
-      price: 0
-      size_inches: 17
-      notes: Standard
-    - name: 17" alloy wheels
-      price: 495
-      size_inches: 17
+  - name: 17" steel wheels with covers
+    price: 0
+    size_inches: 17
+    notes: Standard
+  - name: 17" alloy wheels
+    price: 495
+    size_inches: 17
 
 packages:
-  - name: Comfort Package
-    price: 1290
-    includes:
-      - Automatic climate control
-      - Heated front seats
-      - Rain-sensing wipers
-      - Automatic lights
-    notes: Recommended for year-round comfort
+- name: Comfort Package
+  price: 1290
+  includes:
+  - Automatic climate control
+  - Heated front seats
+  - Rain-sensing wipers
+  - Automatic lights
+  notes: Recommended for year-round comfort
 
 standalone_options:
-  - name: Heat pump
-    price: 890
-    notes: Improves range in cold weather
+- name: Heat pump
+  price: 890
+  notes: Improves range in cold weather
 
 popular_configurations:
-  - name: Well-Equipped
-    description: Base + Comfort Pack + Heat Pump + Metallic Paint
-    price: 26460
-    includes:
-      - ë-C3 base
-      - Comfort Package (€1,290)
-      - Heat pump (€890)
-      - Voltaic Blue metallic (€695)
+- name: Well-Equipped
+  description: Base + Comfort Pack + Heat Pump + Metallic Paint
+  price: 26460
+  includes:
+  - ë-C3 base
+  - Comfort Package (€1,290)
+  - Heat pump (€890)
+  - Voltaic Blue metallic (€695)
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    notes: "Federal EV subsidy ended December 2024"
-  
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: "Qualifies for 0.25% taxation (under €70k threshold)"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  notes: "Federal EV subsidy ended December 2024"
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: "Qualifies for 0.25% taxation (under €70k threshold)"
 
 total_cost_of_ownership:
   purchase_price: 23585
   federal_incentive: 0
   net_purchase_price: 23585
-  
+
   annual_costs:
     insurance_liability: 620
     insurance_comprehensive: 580
@@ -92,16 +91,15 @@ total_cost_of_ownership:
     maintenance: 300
     total_annual: 2060
 
-data_quality:
-  overall: verified
-  last_updated: 2026-02-08
-  source_reliability: high
-
 sources:
-  - name: Citroën Germany Official Configurator
-    url: https://www.citroen.de/modelle/e-c3.html
-    date_accessed: 2026-02-08
+- name: Citroën Germany Official Configurator
+  url: https://www.citroen.de/modelle/e-c3.html
+  date_accessed: 2026-02-08
 
 notes: |
   The Citroën ë-C3 offers exceptional value as an affordable electric family crossover.
   At €23,585, it undercuts most competitors while providing practical range and space.
+metadata:
+  data_quality: unverified
+  updated_at: '2026-02-08'
+  created_at: '2026-02-08'

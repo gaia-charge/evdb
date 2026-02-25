@@ -40,7 +40,7 @@ charging:
   charging_speed_kmh: 720
 bidirectional:
   v2l: false
-  v2l_max_kw: null
+  v2l_max_kw:
   v2h: false
   v2g: false
 performance:
@@ -49,11 +49,11 @@ performance:
   - position: front
     type: permanent magnet
     power_kw: 175
-    torque_nm: null
+    torque_nm:
   - position: rear
     type: permanent magnet
     power_kw: 320
-    torque_nm: null
+    torque_nm:
   total_power_kw: 350
   total_torque_nm: 640
   acceleration_0_100_sec: 4.1
@@ -112,9 +112,7 @@ notes: 'Base variant of e-tron GT lineup. Shares J1 platform with Porsche Taycan
   '
 metadata:
   created_at: '2024-02-07'
-  updated_at: null
   data_quality: verified
-  data_completeness_percent: 90
   sources:
   - https://www.audi.com/en/models/e-tron-gt.html
   - https://www.audi.de/de/brand/de/neuwagen/tron/e-tron-gt.html

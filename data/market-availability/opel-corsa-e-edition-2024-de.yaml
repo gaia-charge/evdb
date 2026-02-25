@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Fast delivery from Zaragoza, Spain; mechanically identical to Peugeot e-208
@@ -22,119 +22,117 @@ pricing:
 
 options:
   colors:
-    - name: Voltaic Blue (metallic)
-      price: 695
-      type: metallic
-    - name: Power Red (metallic)
-      price: 695
-      type: metallic
-    - name: Moonstone Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Quartz Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Diamond Black (pearl)
-      price: 795
-      type: pearl
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Polar White (solid)
-      price: 0
-      type: solid
-  
+  - name: Voltaic Blue (metallic)
+    price: 695
+    type: metallic
+  - name: Power Red (metallic)
+    price: 695
+    type: metallic
+  - name: Moonstone Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Quartz Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Diamond Black (pearl)
+    price: 795
+    type: pearl
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Polar White (solid)
+    price: 0
+    type: solid
+
   wheels:
-    - name: 16" Steel Wheels with Covers
-      price: 0
-      size_inches: 16
-      notes: Standard on Edition trim
-    - name: 16" Alloy Wheels
-      price: 590
-      size_inches: 16
-      notes: Optional upgrade from steel wheels
-    - name: 17" Alloy Wheels (GS Line style)
-      price: 990
-      size_inches: 17
-      notes: Premium upgrade with sportier look
-  
+  - name: 16" Steel Wheels with Covers
+    price: 0
+    size_inches: 16
+    notes: Standard on Edition trim
+  - name: 16" Alloy Wheels
+    price: 590
+    size_inches: 16
+    notes: Optional upgrade from steel wheels
+  - name: 17" Alloy Wheels (GS Line style)
+    price: 990
+    size_inches: 17
+    notes: Premium upgrade with sportier look
+
   interior:
-    - name: Black Cloth Seats
-      price: 0
-      notes: Standard on Edition
+  - name: Black Cloth Seats
+    price: 0
+    notes: Standard on Edition
 
 packages:
-  - name: Winter Package
-    price: 590
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Heated windscreen
-      - Heated washer nozzles
-  
-  - name: LED Headlight Package
-    price: 690
-    includes:
-      - LED headlights
-      - LED fog lights
-      - Automatic headlight activation
-  
-  - name: Multimedia Navi Pro Package
-    price: 1490
-    includes:
-      - 10.0" color touchscreen (upgrade from 7.0")
-      - Navigation with live traffic
-      - DAB+ digital radio
-      - Wireless smartphone charging
-      - 6 speakers premium audio (upgrade from 4)
-  
-  - name: Parking Assistance Package
-    price: 690
-    includes:
-      - Front and rear parking sensors (only rear standard)
-      - Reversing camera with guidelines
-      - Park Assist (automatic parking)
-  
-  - name: Keyless Entry & Start
-    price: 490
-    includes:
-      - Keyless entry on front doors
-      - Keyless start button
-      - Automatic door unlocking on approach
-  
-  - name: Automatic Climate Control
-    price: 390
-    includes:
-      - Automatic temperature control
-      - Air quality sensor
-      - Multi-zone climate control
+- name: Winter Package
+  price: 590
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Heated windscreen
+  - Heated washer nozzles
+
+- name: LED Headlight Package
+  price: 690
+  includes:
+  - LED headlights
+  - LED fog lights
+  - Automatic headlight activation
+
+- name: Multimedia Navi Pro Package
+  price: 1490
+  includes:
+  - 10.0" color touchscreen (upgrade from 7.0")
+  - Navigation with live traffic
+  - DAB+ digital radio
+  - Wireless smartphone charging
+  - 6 speakers premium audio (upgrade from 4)
+
+- name: Parking Assistance Package
+  price: 690
+  includes:
+  - Front and rear parking sensors (only rear standard)
+  - Reversing camera with guidelines
+  - Park Assist (automatic parking)
+
+- name: Keyless Entry & Start
+  price: 490
+  includes:
+  - Keyless entry on front doors
+  - Keyless start button
+  - Automatic door unlocking on approach
+
+- name: Automatic Climate Control
+  price: 390
+  includes:
+  - Automatic temperature control
+  - Air quality sensor
+  - Multi-zone climate control
 
 standalone_options:
-  - name: 11kW 3-phase AC Onboard Charger
-    price: 0
-    notes: Standard on all Corsa-e trims
+- name: 11kW 3-phase AC Onboard Charger
+  price: 0
+  notes: Standard on all Corsa-e trims
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€200-300/year."
-  
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year (rates vary by market)"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€200-300/year."
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year (rates vary by market)"
 
 company_car:
   taxation_rate: 0.25  # 0.25% for BEVs under €70k (vs 1% for ICE)
@@ -150,29 +148,27 @@ charging:
   public_network:
     name: "Opel Charging powered by Plugsurfing"
     coverage: "250,000+ charging points across 29 European countries"
-    membership_fee: null
+    membership_fee:
     notes: "Access to multiple networks with single RFID card"
-  
   subscription:
     name: "Opel Charging Subscription"
     monthly_fee: 9.99
     currency: EUR
     ionity_rate_eur_per_kwh: 0.35  # vs €0.79 pay-as-you-go
     benefits:
-      - "IONITY fast charging at €0.35/kWh (vs €0.79)"
-      - "Access to 250,000+ charging points"
-      - "MyOpel app integration"
-  
+    - "IONITY fast charging at €0.35/kWh (vs €0.79)"
+    - "Access to 250,000+ charging points"
+    - "MyOpel app integration"
   home_charging:
-    - name: "Opel Wallbox"
-      price: 899
-      power_kw: 11
-      features:
-        - "Integrated Type 2 cable (5m)"
-        - "WiFi connectivity with app control"
-        - "Dynamic load management"
-        - "Weather-resistant (IP54)"
-      installation_cost: "€500-1,500 depending on location"
+  - name: "Opel Wallbox"
+    price: 899
+    power_kw: 11
+    features:
+    - "Integrated Type 2 cable (5m)"
+    - "WiFi connectivity with app control"
+    - "Dynamic load management"
+    - "Weather-resistant (IP54)"
+    installation_cost: "€500-1,500 depending on location"
 
 warranty:
   vehicle_years: 2
@@ -204,25 +200,21 @@ environmental:
 
 market_comparison:
   direct_competitors:
-    - name: "Peugeot e-208 Allure"
-      base_price: 36990
-      comparison: "€3,000 cheaper, mechanically identical, Opel has simpler interior"
-    
-    - name: "Fiat 500e Action"
-      base_price: 29990
-      comparison: "€4,000 more, but Fiat 500e is smaller, less range, city-focused"
-    
-    - name: "Renault Zoe Life"
-      base_price: 33990
-      comparison: "Same price, Corsa-e has faster charging (100kW vs 50kW)"
-    
-    - name: "MG4 Standard Range"
-      base_price: 31990
-      comparison: "€2,000 more, but MG4 has similar range, larger, better value"
-    
-    - name: "Dacia Spring Extreme"
-      base_price: 23585
-      comparison: "€10,405 more, but Corsa-e is much larger, better quality, more range"
+  - name: "Peugeot e-208 Allure"
+    base_price: 36990
+    comparison: "€3,000 cheaper, mechanically identical, Opel has simpler interior"
+  - name: "Fiat 500e Action"
+    base_price: 29990
+    comparison: "€4,000 more, but Fiat 500e is smaller, less range, city-focused"
+  - name: "Renault Zoe Life"
+    base_price: 33990
+    comparison: "Same price, Corsa-e has faster charging (100kW vs 50kW)"
+  - name: "MG4 Standard Range"
+    base_price: 31990
+    comparison: "€2,000 more, but MG4 has similar range, larger, better value"
+  - name: "Dacia Spring Extreme"
+    base_price: 23585
+    comparison: "€10,405 more, but Corsa-e is much larger, better quality, more range"
 
 sales_notes: |
   Opel Corsa (all versions) consistently in top 10 best-selling cars in Germany.
@@ -231,7 +223,7 @@ sales_notes: |
 
 notes: |
   The Opel Corsa-e Edition at €33,990 offers excellent entry-level value:
-  
+
   **Key Advantages:**
   - Lowest-priced Corsa-e trim (€3,000 less than GS Line)
   - Same battery, motor, range as all Corsa-e variants
@@ -240,7 +232,7 @@ notes: |
   - Strong Opel dealer network (850+ locations)
   - Fast 8-week delivery from Zaragoza, Spain
   - Mechanically identical to Peugeot e-208 Allure (€3,000 cheaper)
-  
+
   **vs Corsa-e GS Line:**
   - €3,000 cheaper (€33,990 vs €36,990)
   - Halogen headlights vs LED (upgrade available)
@@ -248,20 +240,20 @@ notes: |
   - 7.0" touchscreen vs 10.0" (upgrade available)
   - 16" steel wheels vs 17" alloys (upgrade available)
   - Same battery, motor, charging, performance
-  
+
   **Best for:**
   - Entry-level EV buyers on a budget
   - Company car drivers minimizing benefit-in-kind tax
   - City driving and short commutes
   - German brand loyalty at affordable price
   - Base trim with option to upgrade features à la carte
-  
+
   **Considerations:**
   - Smallest trunk in segment (309L)
   - No towing capability
   - Base trim has fewer standard features (upgradable)
   - 4-star Euro NCAP (vs 5-star for newer competitors)
-  
+
   **Upgrade Path:**
   For €34,980 base + typical upgrades:
   - LED headlights: +€690
@@ -272,9 +264,9 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - https://www.opel.com/modelle/corsa/corsa-e.html
-    - https://www.opel.com/tools/konfigurator.html
-    - https://www.adac.de/
-    - https://ev-database.org/
+  - https://www.opel.com/modelle/corsa/corsa-e.html
+  - https://www.opel.com/tools/konfigurator.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  updated_at: "2026-02-08"

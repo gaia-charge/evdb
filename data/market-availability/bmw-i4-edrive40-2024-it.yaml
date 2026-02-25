@@ -18,100 +18,100 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Alpine White
-    code: 300
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black Sapphire Metallic
-    code: C1M
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Portimao Blue Metallic
-    code: C3N
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Brooklyn Grey Metallic
-    code: C3P
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: Alpine White
+  code: 300
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black Sapphire Metallic
+  code: C1M
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Portimao Blue Metallic
+  code: C3N
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Brooklyn Grey Metallic
+  code: C3P
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" Aero wheels Style 861
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 19" Aerodynamic wheels Style 862 M
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 1250
-      currency: EUR
+- name: 18" Aero wheels Style 861
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 19" Aerodynamic wheels Style 862 M
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 1250
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Sensatec
-    material: sensatec
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Mocha Sensatec/Mesh
-    material: sensatec_mesh
-    color: mocha
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Cognac Vernasca Leather
-    material: leather
-    color: cognac
-    price_add:
-      amount: 1650
-      currency: EUR
+- name: Black Sensatec
+  material: sensatec
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Mocha Sensatec/Mesh
+  material: sensatec_mesh
+  color: mocha
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Cognac Vernasca Leather
+  material: leather
+  color: cognac
+  price_add:
+    amount: 1650
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: national
-    name: "Ecobonus statale"
-    amount:
-      amount: 6000
-      currency: EUR
-    conditions: ["ISEE under €30,000", "Price under €35,000", "With scrap"]
-    notes: "Government EV incentive with conditions"
-  - type: regional
-    name: "Regional incentives (varies)"
-    description: "Additional regional incentives may be available"
+- type: national
+  name: "Ecobonus statale"
+  amount:
+    amount: 6000
+    currency: EUR
+  conditions: ["ISEE under €30,000", "Price under €35,000", "With scrap"]
+  notes: "Government EV incentive with conditions"
+- type: regional
+  name: "Regional incentives (varies)"
+  description: "Additional regional incentives may be available"
 
 # Options
 popular_packages:
-  - name: Driving Assistant Professional
-    price:
-      amount: 2200
-      currency: EUR
-    features:
-      - Active Cruise Control with Stop&Go
-      - Steering and lane control assistant
-      - Lane Change Warning
-      - Lane Change Assistant
-      - Side collision prevention
-  - name: Comfort Package
-    price:
-      amount: 1350
-      currency: EUR
-    features:
-      - Heated front seats
-      - Heated steering wheel
-      - Electric lumbar support
+- name: Driving Assistant Professional
+  price:
+    amount: 2200
+    currency: EUR
+  features:
+  - Active Cruise Control with Stop&Go
+  - Steering and lane control assistant
+  - Lane Change Warning
+  - Lane Change Assistant
+  - Side collision prevention
+- name: Comfort Package
+  price:
+    amount: 1350
+    currency: EUR
+  features:
+  - Heated front seats
+  - Heated steering wheel
+  - Electric lumbar support
 
 # Notes
 notes: |
@@ -123,7 +123,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.bmw.it/it/gamma/i-series/i4/bmw-i4-gran-coupe.html
   created_at: "2026-02-22"
   last_verified_at: "2026-02-22"
   notes: Base price €75,350 from BMW Italia website, February 2026
+  sources:
+  - https://www.bmw.it/it/gamma/i-series/i4/bmw-i4-gran-coupe.html

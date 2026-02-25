@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-12-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Built in South Korea. European deliveries started late 2024.
@@ -25,87 +25,87 @@ pricing:
 
 options:
   colors:
-    - name: Atlas White (solid)
-      price: 0
-      type: solid
-    - name: Abyss Black (pearl)
-      price: 550
-      type: pearl
-    - name: Cyber Grey (metallic)
-      price: 550
-      type: metallic
-    - name: Tomboy Khaki (metallic)
-      price: 550
-      type: metallic
-    - name: Amazonas Green Matte
-      price: 700
-      type: special
-      notes: "Exclusive to Cross variant"
-    - name: Bicolor (contrast roof)
-      price: 500
-      type: special
+  - name: Atlas White (solid)
+    price: 0
+    type: solid
+  - name: Abyss Black (pearl)
+    price: 550
+    type: pearl
+  - name: Cyber Grey (metallic)
+    price: 550
+    type: metallic
+  - name: Tomboy Khaki (metallic)
+    price: 550
+    type: metallic
+  - name: Amazonas Green Matte
+    price: 700
+    type: special
+    notes: "Exclusive to Cross variant"
+  - name: Bicolor (contrast roof)
+    price: 500
+    type: special
 
   wheels:
-    - name: 15" Alloy Wheels
-      price: 0
-      size_inches: 15
-      notes: Standard on Trend trim
-    - name: 17" Alloy Wheels
-      price: 590
-      size_inches: 17
-      notes: Standard on Cross and Prime trims
+  - name: 15" Alloy Wheels
+    price: 0
+    size_inches: 15
+    notes: Standard on Trend trim
+  - name: 17" Alloy Wheels
+    price: 590
+    size_inches: 17
+    notes: Standard on Cross and Prime trims
 
   interior:
-    - name: Dark Grey Fabric
-      price: 0
-      notes: Standard sustainable fabric
-    - name: Grey Embossed Fabric with Lime Accents
-      price: 0
-      notes: Exclusive to Cross variant
+  - name: Dark Grey Fabric
+    price: 0
+    notes: Standard sustainable fabric
+  - name: Grey Embossed Fabric with Lime Accents
+    price: 0
+    notes: Exclusive to Cross variant
 
 packages:
-  - name: Prime Upgrade
-    price: 4200
-    includes:
-      - 17" alloy wheels
-      - LED projection headlights
-      - Blind-Spot Monitor with display
-      - 360-degree camera
-      - Parking Collision-Avoidance Assist Rear
-      - Heat pump with battery heating system
+- name: Prime Upgrade
+  price: 4200
+  includes:
+  - 17" alloy wheels
+  - LED projection headlights
+  - Blind-Spot Monitor with display
+  - 360-degree camera
+  - Parking Collision-Avoidance Assist Rear
+  - Heat pump with battery heating system
 
-  - name: Cross Package
-    price: 3000
-    includes:
-      - 17" alloy wheels
-      - LED projection headlights
-      - Illuminated LED pixel steering wheel
-      - Roof rails
-      - Rugged bumpers and skid plate
-      - Black wheel arch cladding
+- name: Cross Package
+  price: 3000
+  includes:
+  - 17" alloy wheels
+  - LED projection headlights
+  - Illuminated LED pixel steering wheel
+  - Roof rails
+  - Rugged bumpers and skid plate
+  - Black wheel arch cladding
 
 standalone_options:
-  - name: Heat Pump with Battery Heating
-    price: 990
-    notes: "Recommended for winter; standard on Prime"
-  - name: Roof Basket
-    price: 490
-    notes: "Cross variant, requires roof rails"
+- name: Heat Pump with Battery Heating
+  price: 990
+  notes: "Recommended for winter; standard on Prime"
+- name: Roof Basket
+  price: 490
+  notes: "Cross variant, requires roof rails"
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
 
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -132,21 +132,21 @@ warranty:
 
 market_comparison:
   direct_competitors:
-    - name: "Dacia Spring"
-      base_price: 22750
-      comparison: "Cheaper but 140 km less range, much less power and technology"
+  - name: "Dacia Spring"
+    base_price: 22750
+    comparison: "Cheaper but 140 km less range, much less power and technology"
 
-    - name: "Fiat 500e (42 kWh)"
-      base_price: 29990
-      comparison: "€3,600 more expensive, similar range (320km), more premium interior"
+  - name: "Fiat 500e (42 kWh)"
+    base_price: 29990
+    comparison: "€3,600 more expensive, similar range (320km), more premium interior"
 
-    - name: "Citroën ë-C3"
-      base_price: 23300
-      comparison: "Cheaper, 50 km less range, comparable features"
+  - name: "Citroën ë-C3"
+    base_price: 23300
+    comparison: "Cheaper, 50 km less range, comparable features"
 
-    - name: "Opel Frontera Electric"
-      base_price: 28990
-      comparison: "More expensive, less range (305km), bigger SUV body, more cargo"
+  - name: "Opel Frontera Electric"
+    base_price: 28990
+    comparison: "More expensive, less range (305km), bigger SUV body, more cargo"
 
 notes: |
   The Hyundai INSTER Long Range 49 kWh at €26,400 is the sweet spot of the range:
@@ -177,7 +177,7 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-09"
-  last_updated: "2026-02-09"
   sources:
-    - https://www.hyundai.com/de/de/modelle/inster/varianten-und-preise.html
-    - https://www.carwow.de/hyundai/inster
+  - https://www.hyundai.com/de/de/modelle/inster/varianten-und-preise.html
+  - https://www.carwow.de/hyundai/inster
+  updated_at: "2026-02-09"

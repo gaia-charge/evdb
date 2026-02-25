@@ -24,120 +24,117 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Candy White
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Aurora Blue Metallic
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  
-  - name: Magnetic Tech Matte
-    type: matte
-    price_add:
-      amount: 990
-      currency: EUR
-  
-  - name: Enceladus Grey Metallic
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  
-  - name: Century Bronze Metallic
-    type: metallic
-    price_add:
-      amount: 690
-      currency: EUR
-  
-  - name: Energy Blue Matte
-    type: matte
-    price_add:
-      amount: 990
-      currency: EUR
-    notes: "CUPRA exclusive matte finish"
+- name: Candy White
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Aurora Blue Metallic
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+
+- name: Magnetic Tech Matte
+  type: matte
+  price_add:
+    amount: 990
+    currency: EUR
+
+- name: Enceladus Grey Metallic
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+
+- name: Century Bronze Metallic
+  type: metallic
+  price_add:
+    amount: 690
+    currency: EUR
+
+- name: Energy Blue Matte
+  type: matte
+  price_add:
+    amount: 990
+    currency: EUR
+  notes: "CUPRA exclusive matte finish"
 
 # Wheel Options
 available_wheels:
-  - name: 18" Machined Alloy
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: 19" Performance Alloy
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: 20" Aero Alloy
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1290
-      currency: EUR
+- name: 18" Machined Alloy
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: 19" Performance Alloy
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: 20" Aero Alloy
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1290
+    currency: EUR
 
 # Equipment Packages
 available_packages:
-  - name: Pilot Pack L
-    price:
-      amount: 1890
-      currency: EUR
-    contents:
-      - "Adaptive Cruise Control with predictive speed"
-      - "Travel Assist"
-      - "Side Assist with Rear Traffic Alert"
-      - "Emergency Assist"
-  
-  - name: Infotainment Plus
-    price:
-      amount: 1490
-      currency: EUR
-    contents:
-      - "Beats Premium Audio (395W, 9 speakers)"
-      - "Wireless App-Connect"
-      - "Head-Up Display (AR)"
-      - "Enhanced voice control"
-  
-  - name: Winter Package
-    price:
-      amount: 590
-      currency: EUR
-    contents:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated windshield"
+- name: Pilot Pack L
+  price:
+    amount: 1890
+    currency: EUR
+  contents:
+  - "Adaptive Cruise Control with predictive speed"
+  - "Travel Assist"
+  - "Side Assist with Rear Traffic Alert"
+  - "Emergency Assist"
+- name: Infotainment Plus
+  price:
+    amount: 1490
+    currency: EUR
+  contents:
+  - "Beats Premium Audio (395W, 9 speakers)"
+  - "Wireless App-Connect"
+  - "Head-Up Display (AR)"
+  - "Enhanced voice control"
+- name: Winter Package
+  price:
+    amount: 590
+    currency: EUR
+  contents:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Heated windshield"
 
 # Incentives & Subsidies
 incentives:
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      0.25% of list price per month (~€97/month).
-      Major savings vs ICE company cars.
-  
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    valid_until: "2030-12-31"
-  
-  - type: grant
-    name: THG-Quote
-    amount: 340
-    currency: EUR
-    status: active
+- type: tax_exemption
+  name: Company Car Tax (Dienstwagen-Steuer)
+  amount: 0
+  currency: EUR
+  status: active
+  notes: |
+    0.25% of list price per month (~€97/month).
+    Major savings vs ICE company cars.
+
+- type: tax_exemption
+  name: Road Tax Exemption (Kfz-Steuer)
+  amount: 0
+  currency: EUR
+  status: active
+  valid_until: "2030-12-31"
+- type: grant
+  name: THG-Quote
+  amount: 340
+  currency: EUR
+  status: active
 
 # Warranty
 warranty:
@@ -156,9 +153,9 @@ service:
 
 metadata:
   data_quality: verified
-  last_updated: '2026-02-10'
   created_at: '2026-02-10'
-  source: "CUPRA Germany official configurator"
-  source_urls:
-    - "https://www.cupraofficial.de/modelle/born"
-  verification_date: '2026-02-10'
+  updated_at: '2026-02-10'
+  last_verified_at: '2026-02-10'
+  sources:
+  - CUPRA Germany official configurator
+  - https://www.cupraofficial.de/modelle/born

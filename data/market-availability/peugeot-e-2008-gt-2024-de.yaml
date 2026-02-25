@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: GT is the premium top-spec trim, production at Trnava/Vigo
@@ -22,159 +22,157 @@ pricing:
 
 options:
   colors:
-    - name: Elixir Red (solid)
-      price: 0
-      type: solid
-    - name: Cumulus Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Perla Nera Black (pearl)
-      price: 695
-      type: pearl
-    - name: Okenite White (pearl)
-      price: 695
-      type: pearl
-    - name: Vertigo Blue (metallic)
-      price: 695
-      type: metallic
-    - name: Emerald Crystal Green (metallic)
-      price: 995
-      type: metallic
-    - name: Ultimate Red (metallic)
-      price: 995
-      type: metallic
-    - name: GT Exclusive Blue (special)
-      price: 1495
-      type: special
-      notes: GT-exclusive color with special paint finish
-  
+  - name: Elixir Red (solid)
+    price: 0
+    type: solid
+  - name: Cumulus Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Perla Nera Black (pearl)
+    price: 695
+    type: pearl
+  - name: Okenite White (pearl)
+    price: 695
+    type: pearl
+  - name: Vertigo Blue (metallic)
+    price: 695
+    type: metallic
+  - name: Emerald Crystal Green (metallic)
+    price: 995
+    type: metallic
+  - name: Ultimate Red (metallic)
+    price: 995
+    type: metallic
+  - name: GT Exclusive Blue (special)
+    price: 1495
+    type: special
+    notes: GT-exclusive color with special paint finish
+
   wheels:
-    - name: 18" Carbone bi-tone diamond-cut alloy wheels
-      price: 0
-      size_inches: 18
-      notes: Standard on GT trim with GT design
-    - name: 18" Saphir black alloy wheels
-      price: 490
-      size_inches: 18
-      notes: Gloss black finish, sportier look
-  
+  - name: 18" Carbone bi-tone diamond-cut alloy wheels
+    price: 0
+    size_inches: 18
+    notes: Standard on GT trim with GT design
+  - name: 18" Saphir black alloy wheels
+    price: 490
+    size_inches: 18
+    notes: Gloss black finish, sportier look
+
   interior:
-    - name: Black Alcantara/TEP with GT stitching
-      price: 0
-      notes: Standard GT sport interior with premium materials
-    - name: Grey Alcantara/TEP with contrast stitching
-      price: 0
-      notes: Alternative interior color scheme
+  - name: Black Alcantara/TEP with GT stitching
+    price: 0
+    notes: Standard GT sport interior with premium materials
+  - name: Grey Alcantara/TEP with contrast stitching
+    price: 0
+    notes: Alternative interior color scheme
 
 packages:
-  - name: GT Premium Package
-    price: 2490
-    includes:
-      - FOCAL Premium Hi-Fi audio system (10 speakers + subwoofer)
-      - Wireless smartphone charging
-      - Electric adjustable driver seat with memory
-      - Massage function for driver seat
-      - Ambient interior lighting (8 colors)
-      - Premium floor mats with GT logo
-    notes: Adds luxury comfort features to GT
-  
-  - name: GT Vision Package
-    price: 1990
-    includes:
-      - Matrix LED headlights with automatic high beam
-      - Adaptive front lighting (curve following)
-      - LED fog lights
-      - Automatic headlight leveling
-      - Extended LED lighting signature
-    notes: Top-tier lighting technology
-  
-  - name: GT Winter Package
-    price: 390
-    includes:
-      - Heated windscreen washer nozzles (heated seats/wheel already standard on GT)
-      - Heated windscreen (demisting zones)
-      - All-season floor mats
-    notes: Additional winter features beyond standard GT equipment
-  
-  - name: Panoramic Glass Roof
-    price: 1200
-    includes:
-      - Electrochromic darkening glass roof
-      - 95% UV protection
-      - Fixed (non-opening) design
-      - Ambient lighting integration
-    notes: Enhances premium cabin feel
-  
-  - name: Advanced Grip Control
-    price: 690
-    includes:
-      - Grip Control with mode selector (Normal/Snow/Mud/Sand)
-      - Hill Descent Control
-      - Mud & snow tires (Michelin CrossClimate)
-    notes: Enhanced all-weather capability
+- name: GT Premium Package
+  price: 2490
+  includes:
+  - FOCAL Premium Hi-Fi audio system (10 speakers + subwoofer)
+  - Wireless smartphone charging
+  - Electric adjustable driver seat with memory
+  - Massage function for driver seat
+  - Ambient interior lighting (8 colors)
+  - Premium floor mats with GT logo
+  notes: Adds luxury comfort features to GT
+
+- name: GT Vision Package
+  price: 1990
+  includes:
+  - Matrix LED headlights with automatic high beam
+  - Adaptive front lighting (curve following)
+  - LED fog lights
+  - Automatic headlight leveling
+  - Extended LED lighting signature
+  notes: Top-tier lighting technology
+
+- name: GT Winter Package
+  price: 390
+  includes:
+  - Heated windscreen washer nozzles (heated seats/wheel already standard on GT)
+  - Heated windscreen (demisting zones)
+  - All-season floor mats
+  notes: Additional winter features beyond standard GT equipment
+
+- name: Panoramic Glass Roof
+  price: 1200
+  includes:
+  - Electrochromic darkening glass roof
+  - 95% UV protection
+  - Fixed (non-opening) design
+  - Ambient lighting integration
+  notes: Enhances premium cabin feel
+
+- name: Advanced Grip Control
+  price: 690
+  includes:
+  - Grip Control with mode selector (Normal/Snow/Mud/Sand)
+  - Hill Descent Control
+  - Mud & snow tires (Michelin CrossClimate)
+  notes: Enhanced all-weather capability
 
 standalone_options:
-  - name: 11kW 3-phase AC Onboard Charger
-    price: 0
-    notes: Standard on GT (and all e-2008s since 2023)
-  
-  - name: Two-tone GT Black Pack roof
-    price: 850
-    notes: Gloss black roof, mirrors, and diffuser with GT badging
-  
-  - name: GT Sport Package (cosmetic)
-    price: 490
-    notes: Black door mirror caps, black exhaust surrounds, GT side badges
+- name: 11kW 3-phase AC Onboard Charger
+  price: 0
+  notes: Standard on GT (and all e-2008s since 2023)
+
+- name: Two-tone GT Black Pack roof
+  price: 850
+  notes: Gloss black roof, mirrors, and diffuser with GT badging
+
+- name: GT Sport Package (cosmetic)
+  price: 490
+  notes: Black door mirror caps, black exhaust surrounds, GT side badges
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV subsidy ended December 2023. No rebate available."
-  
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €43,490 × 0.25% = €109/month taxable benefit.
-      Saves ~€14,000 per year vs comparable ICE car.
-      
-      This makes the GT's €4k premium over Allure almost negligible for company car users.
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Road tax waived for BEVs registered before 2031."
-  
-  - type: grant
-    name: "THG-Quote"
-    amount: 300
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Sell CO2 savings certificate annually (~€250-350/year)."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV subsidy ended December 2023. No rebate available."
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €43,490 × 0.25% = €109/month taxable benefit.
+    Saves ~€14,000 per year vs comparable ICE car.
+
+    This makes the GT's €4k premium over Allure almost negligible for company car users.
+
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Road tax waived for BEVs registered before 2031."
+- type: grant
+  name: "THG-Quote"
+  amount: 300
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Sell CO2 savings certificate annually (~€250-350/year)."
 
 sales:
   channels:
-    - Peugeot dealerships (850+ locations in Germany)
-    - Online configurator with home delivery option
-    - Direct sales centers (Berlin, Munich, Hamburg, Frankfurt, Düsseldorf)
-  
+  - Peugeot dealerships (850+ locations in Germany)
+  - Online configurator with home delivery option
+  - Direct sales centers (Berlin, Munich, Hamburg, Frankfurt, Düsseldorf)
+
   delivery_methods:
-    - Dealer pickup (free, white-glove service)
-    - Home delivery (€0, premium delivery experience)
-  
+  - Dealer pickup (free, white-glove service)
+  - Home delivery (€0, premium delivery experience)
+
   test_drive: Available at all Peugeot dealers, GT often includes extended 48-hour test drives
-  
+
   financing:
-    - Peugeot Bank leasing from €369/month (48 months, €6,000 down, 10,000 km/year)
-    - Purchase financing from 2.49% APR (preferential rate for GT)
-    - Balloon financing available
+  - Peugeot Bank leasing from €369/month (48 months, €6,000 down, 10,000 km/year)
+  - Purchase financing from 2.49% APR (preferential rate for GT)
+  - Balloon financing available
 
 warranty:
   vehicle_years: 2
@@ -189,14 +187,14 @@ warranty:
 
 charging_network:
   home:
-    - Peugeot partners with certified installers for wallbox installation
-    - Wallbox Plus 11kW charger €899 installed (GT buyers often get discounted rate)
-  
+  - Peugeot partners with certified installers for wallbox installation
+  - Wallbox Plus 11kW charger €899 installed (GT buyers often get discounted rate)
+
   public:
-    - Free2Move Charge app for 500,000+ charging points
-    - IONITY Passport: €11.99/month for €0.35/kWh DC fast charging (vs €0.79 PAYG)
-    - GT buyers receive 12 months IONITY Passport included (€144 value)
-    - Engie, Allego network access
+  - Free2Move Charge app for 500,000+ charging points
+  - IONITY Passport: €11.99/month for €0.35/kWh DC fast charging (vs €0.79 PAYG)
+  - GT buyers receive 12 months IONITY Passport included (€144 value)
+  - Engie, Allego network access
 
 service:
   maintenance_interval_months: 24
@@ -212,32 +210,24 @@ environmental:
   battery_recycling: Stellantis program with 96% material recovery
 
 certifications:
-  - WLTP certified
-  - Euro 6d emissions equivalent (zero tailpipe)
-  - German vehicle registration approved
-
-data_quality:
-  pricing: verified
-  options: verified
-  incentives: verified
-  delivery: verified
-  source_reliability: high
-  last_updated: 2024-02-08
+- WLTP certified
+- Euro 6d emissions equivalent (zero tailpipe)
+- German vehicle registration approved
 
 sources:
-  - name: Peugeot Germany Official Configurator
-    url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-2008
-    date_accessed: 2024-02-08
-  - name: Peugeot Germany GT Trim Specifications
-    url: https://www.peugeot.de/modelle/e-2008/ausstattungslinien.html
-    date_accessed: 2024-02-08
+- name: Peugeot Germany Official Configurator
+  url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-2008
+  date_accessed: 2024-02-08
+- name: Peugeot Germany GT Trim Specifications
+  url: https://www.peugeot.de/modelle/e-2008/ausstattungslinien.html
+  date_accessed: 2024-02-08
 
 notes: |
   **Market Positioning in Germany:**
-  
+
   The Peugeot e-2008 GT at €43,490 (€44,580 on-the-road) is the premium offering in 
   Peugeot's B-SUV lineup - adding luxury, technology, and sporty styling over Allure.
-  
+
   **GT Premium Over Allure (€4,000 extra):**
   - 18" bi-tone alloy wheels (vs 17")
   - Alcantara/TEP sport upholstery (vs cloth/TEP)
@@ -251,14 +241,14 @@ notes: |
   - Blind spot monitoring (standard vs optional)
   - Ambient lighting
   - GT badges and aluminum pedals
-  
+
   **vs Competitors:**
   - **Opel Mokka-e Ultimate (€38,990)**: €4,500 cheaper, but smaller trunk (310L vs 405L)
   - **Nissan Ariya 63kWh (€50,000)**: €6,000 more, larger C-SUV, more range (450km)
   - **Jeep Avenger Summit (€44,000)**: Similar price, unique American styling
   - **Kia Niro EV Wave (€43,000)**: Similar price, better range (460km), 7-year warranty
   - **Volkswagen ID.3 Pro (€42,000)**: €1,500 cheaper, hatchback not SUV, more range (550km)
-  
+
   **Key Selling Points:**
   - Best-in-class practicality (405L trunk) with premium equipment
   - Distinctive 3D i-Cockpit design with Alcantara sport interior
@@ -266,14 +256,14 @@ notes: |
   - Strong company car value (0.25% tax makes €4k GT premium cost ~€10/month)
   - 406km WLTP range sufficient for most use cases
   - Premium SUV feel at accessible price point
-  
+
   **Company Car Sweet Spot:**
   For company car drivers, the GT's €4,000 premium over Allure costs only:
   - €4,000 × 0.25% = €10/month extra taxable benefit
   - Total tax: €109/month vs €99/month Allure
-  
+
   This makes GT equipment excellent value for business users.
-  
+
   **Recommended Configuration:**
   - Base GT (€43,490)
   - GT Premium Package (€2,490) - FOCAL audio, massage seats, wireless charging
@@ -281,12 +271,16 @@ notes: |
   - Panoramic glass roof (€1,200)
   - Ultimate Red metallic (€995)
   - Total: €50,165 (~€51,255 on-the-road)
-  
+
   At this spec, GT offers excellent value vs C-segment competitors like Nissan Ariya 
   (€55k+) while maintaining B-SUV maneuverability and lower running costs.
-  
+
   **Target Buyer:**
   Professionals and families seeking a premium, well-equipped electric B-SUV without 
   stepping up to larger/pricier C-segment models. Ideal for company car drivers where 
   0.25% tax makes premium equipment essentially "free". Strong choice for those 
   prioritizing comfort, technology, and style over maximum range/performance.
+metadata:
+  updated_at: '2024-02-08'
+  created_at: '2026-02-08'
+  data_quality: unverified

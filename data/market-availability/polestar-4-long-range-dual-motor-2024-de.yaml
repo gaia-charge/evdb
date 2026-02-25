@@ -16,7 +16,7 @@ pricing:
   base_price: 62990
   destination_charge: 1495
   on_road_price: 64485
-  
+
   incentives:
     federal: 0
     state: 0
@@ -60,202 +60,197 @@ total_cost_of_ownership:
 
 options:
   packages:
-    - name: Plus Pack
-      price: 3900
-      includes:
-        - "22kW AC charger (vs 11kW standard)"
-        - "Ventilated front seats"
-        - "Park Assist Pilot (automated parking)"
-        - "Pixel LED headlights with auto high beam"
-        - "360° surround view camera"
-      popular: true
-    
-    - name: Pilot Pack
-      price: 2100
-      includes:
-        - "Advanced Pilot Assist features"
-        - "Highway autonomy capabilities"
-        - "Cross Traffic Alert with auto brake"
-        - "Enhanced object detection"
-      popular: true
-    
-    - name: Pro Pack
-      price: 2600
-      includes:
-        - "All Plus Pack features"
-        - "All Pilot Pack features"
-      notes: "Best value - saves €3,400 vs buying Plus + Pilot separately"
-      popular: true
-  
+  - name: Plus Pack
+    price: 3900
+    includes:
+    - "22kW AC charger (vs 11kW standard)"
+    - "Ventilated front seats"
+    - "Park Assist Pilot (automated parking)"
+    - "Pixel LED headlights with auto high beam"
+    - "360° surround view camera"
+    popular: true
+
+  - name: Pilot Pack
+    price: 2100
+    includes:
+    - "Advanced Pilot Assist features"
+    - "Highway autonomy capabilities"
+    - "Cross Traffic Alert with auto brake"
+    - "Enhanced object detection"
+    popular: true
+
+  - name: Pro Pack
+    price: 2600
+    includes:
+    - "All Plus Pack features"
+    - "All Pilot Pack features"
+    notes: "Best value - saves €3,400 vs buying Plus + Pilot separately"
+    popular: true
+
   individual_options:
-    - name: Performance Pack
-      price: 5700
-      includes:
-        - "22\" forged wheels"
-        - "Adjustable Öhlins dampers (dual-flow valve)"
-        - "Brembo 4-piston front brakes (400mm)"
-        - "Sport+ drive mode"
-      notes: For driving enthusiasts
-    
-    - name: Panoramic glass roof
-      price: 0
-      notes: Standard on all Polestar 4 models
-    
-    - name: Tow bar (electrically deployable)
-      price: 1150
-      max_towing_kg: 1500
-    
-    - name: Heat pump
-      price: 0
-      notes: Standard on all models, improves winter efficiency by 15-20%
-  
+  - name: Performance Pack
+    price: 5700
+    includes:
+    - "22\" forged wheels"
+    - "Adjustable Öhlins dampers (dual-flow valve)"
+    - "Brembo 4-piston front brakes (400mm)"
+    - "Sport+ drive mode"
+    notes: For driving enthusiasts
+
+  - name: Panoramic glass roof
+    price: 0
+    notes: Standard on all Polestar 4 models
+
+  - name: Tow bar (electrically deployable)
+    price: 1150
+    max_towing_kg: 1500
+
+  - name: Heat pump
+    price: 0
+    notes: Standard on all models, improves winter efficiency by 15-20%
+
   available_colors:
-    - name: Snow
-      type: solid
-      price_add:
-        amount: 0
-        currency: EUR
-    
-    - name: Magnesium
-      type: metallic
-      price_add:
-        amount: 0
-        currency: EUR
-    
-    - name: Storm
-      type: metallic
-      price_add:
-        amount: 1400
-        currency: EUR
-    
-    - name: Electron
-      type: metallic
-      price_add:
-        amount: 1400
-        currency: EUR
-    
-    - name: Midnight
-      type: metallic
-      price_add:
-        amount: 1400
-        currency: EUR
-    
-    - name: Space
-      type: metallic
-      price_add:
-        amount: 1400
-        currency: EUR
+  - name: Snow
+    type: solid
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Magnesium
+    type: metallic
+    price_add:
+      amount: 0
+      currency: EUR
+
+  - name: Storm
+    type: metallic
+    price_add:
+      amount: 1400
+      currency: EUR
+
+  - name: Electron
+    type: metallic
+    price_add:
+      amount: 1400
+      currency: EUR
+
+  - name: Midnight
+    type: metallic
+    price_add:
+      amount: 1400
+      currency: EUR
+
+  - name: Space
+    type: metallic
+    price_add:
+      amount: 1400
+      currency: EUR
 
 popular_configurations:
-  - name: Base as-delivered
-    description: "Base Long Range Dual Motor with Snow or Magnesium color"
-    price: 64485
-    includes:
-      - Base vehicle with all standard features
-      - Harman Kardon premium audio
-      - Nappa leather seats
-      - Panoramic glass roof
-      - 20" forged wheels
-    notes: Extremely well-equipped as standard, most buyers add Pro Pack
-  
-  - name: Plus Pack Performance
-    description: "Base + Plus Pack + Performance Pack + premium color"
-    price: 74575
-    includes:
-      - All base features
-      - 22kW AC charger
-      - Ventilated seats
-      - 360° camera
-      - 22" wheels with Öhlins dampers
-      - Brembo performance brakes
-      - Premium Storm/Electron color
-    notes: Most popular among enthusiasts, still under €80k
-  
-  - name: Pro Pack Ultimate
-    description: "Base + Pro Pack + Performance Pack + premium color + tow bar"
-    price: 77925
-    includes:
-      - All Plus Pack features
-      - All Pilot Pack features
-      - Performance Pack upgrades
-      - Tow bar
-      - Premium color
-    notes: Fully-loaded configuration for maximum capability
+- name: Base as-delivered
+  description: "Base Long Range Dual Motor with Snow or Magnesium color"
+  price: 64485
+  includes:
+  - Base vehicle with all standard features
+  - Harman Kardon premium audio
+  - Nappa leather seats
+  - Panoramic glass roof
+  - 20" forged wheels
+  notes: Extremely well-equipped as standard, most buyers add Pro Pack
+
+- name: Plus Pack Performance
+  description: "Base + Plus Pack + Performance Pack + premium color"
+  price: 74575
+  includes:
+  - All base features
+  - 22kW AC charger
+  - Ventilated seats
+  - 360° camera
+  - 22" wheels with Öhlins dampers
+  - Brembo performance brakes
+  - Premium Storm/Electron color
+  notes: Most popular among enthusiasts, still under €80k
+
+- name: Pro Pack Ultimate
+  description: "Base + Pro Pack + Performance Pack + premium color + tow bar"
+  price: 77925
+  includes:
+  - All Plus Pack features
+  - All Pilot Pack features
+  - Performance Pack upgrades
+  - Tow bar
+  - Premium color
+  notes: Fully-loaded configuration for maximum capability
 
 competitors:
-  - model: BMW iX2 xDrive30
-    price_base: 61500
-    price_comparable: 68000
-    comparison: "€1,490 cheaper base but €3k more comparable, Polestar faster (3.8s vs 5.6s), 110km more range, better tech (15.4\" screen vs dual 10.25\"), BMW better dealer network"
-  
-  - model: Audi Q6 e-tron quattro
-    price_base: 65900
-    price_comparable: 72000
-    comparison: "€2,910 more expensive base, Audi 800V charging faster (10-80% 21min vs 30min), 64km more range (654km vs 590km), Polestar €7k cheaper comparable, better value"
-  
-  - model: Tesla Model Y Long Range AWD
-    price_base: 54990
-    price_comparable: 58990
-    comparison: "€9,495 cheaper base, Tesla 140km more range (730km vs 590km), faster Supercharging, but Polestar more premium interior, distinctive design, better build quality, standard leather"
-  
-  - model: Mercedes EQE SUV 350+
-    price_base: 77000
-    price_comparable: 85000
-    comparison: "€12,515 more expensive base, Mercedes more luxurious, 90km more range (680km vs 590km), but Polestar €20k cheaper comparable, faster (3.8s vs 6.4s), better value"
-  
-  - model: Genesis Electrified GV70 AWD
-    price_base: 73900
-    price_comparable: 78000
-    comparison: "€10,910 more expensive, Genesis more luxurious, free charging for 3 years, but Polestar faster (3.8s vs 4.5s), €13k cheaper comparable, distinctive design"
-  
-  - model: Polestar 2 Long Range Dual Motor
-    price_base: 54900
-    price_comparable: 61000
-    comparison: "€10,585 cheaper (sibling model), Polestar 2 sedan vs 4 SUV coupe, similar performance, 4 has 96km more range (590km vs 494km), more premium interior, larger size"
+- model: BMW iX2 xDrive30
+  price_base: 61500
+  price_comparable: 68000
+  comparison: "€1,490 cheaper base but €3k more comparable, Polestar faster (3.8s vs 5.6s), 110km more range, better tech (15.4\" screen vs dual 10.25\"), BMW better dealer network"
+- model: Audi Q6 e-tron quattro
+  price_base: 65900
+  price_comparable: 72000
+  comparison: "€2,910 more expensive base, Audi 800V charging faster (10-80% 21min vs 30min), 64km more range (654km vs 590km), Polestar €7k cheaper comparable, better value"
+- model: Tesla Model Y Long Range AWD
+  price_base: 54990
+  price_comparable: 58990
+  comparison: "€9,495 cheaper base, Tesla 140km more range (730km vs 590km), faster Supercharging, but Polestar more premium interior, distinctive design, better build quality, standard leather"
+- model: Mercedes EQE SUV 350+
+  price_base: 77000
+  price_comparable: 85000
+  comparison: "€12,515 more expensive base, Mercedes more luxurious, 90km more range (680km vs 590km), but Polestar €20k cheaper comparable, faster (3.8s vs 6.4s), better value"
+- model: Genesis Electrified GV70 AWD
+  price_base: 73900
+  price_comparable: 78000
+  comparison: "€10,910 more expensive, Genesis more luxurious, free charging for 3 years, but Polestar faster (3.8s vs 4.5s), €13k cheaper comparable, distinctive design"
+- model: Polestar 2 Long Range Dual Motor
+  price_base: 54900
+  price_comparable: 61000
+  comparison: "€10,585 cheaper (sibling model), Polestar 2 sedan vs 4 SUV coupe, similar performance, 4 has 96km more range (590km vs 494km), more premium interior, larger size"
 
 market_position:
   segment: Premium D-segment SUV coupe
   target_buyers:
-    - Performance enthusiasts seeking practical SUV with sports car acceleration
-    - Tech-savvy buyers wanting Android Automotive OS and OTA updates
-    - Design-conscious customers appreciating Scandinavian minimalism
-    - Company car drivers benefiting from 0.25% tax rate (under €70k)
-    - Sustainable luxury buyers (animal welfare certified leather)
-  
+  - Performance enthusiasts seeking practical SUV with sports car acceleration
+  - Tech-savvy buyers wanting Android Automotive OS and OTA updates
+  - Design-conscious customers appreciating Scandinavian minimalism
+  - Company car drivers benefiting from 0.25% tax rate (under €70k)
+  - Sustainable luxury buyers (animal welfare certified leather)
+
   strengths:
-    - Revolutionary no-rear-window design with HD camera system
-    - Supercar-like 3.8s 0-100 km/h acceleration with 544 hp
-    - Excellent 590 km WLTP range despite AWD performance
-    - 15.4" portrait touchscreen - largest in premium SUV segment
-    - Harman Kardon premium audio standard
-    - Dual-chamber air suspension standard
-    - Well below €70k threshold for 0.25% company car tax
-    - Android Automotive OS with Google built-in
-    - Near-perfect 50/50 weight distribution
-    - Polestar brand cachet and Scandinavian design
-  
+  - Revolutionary no-rear-window design with HD camera system
+  - Supercar-like 3.8s 0-100 km/h acceleration with 544 hp
+  - Excellent 590 km WLTP range despite AWD performance
+  - 15.4" portrait touchscreen - largest in premium SUV segment
+  - Harman Kardon premium audio standard
+  - Dual-chamber air suspension standard
+  - Well below €70k threshold for 0.25% company car tax
+  - Android Automotive OS with Google built-in
+  - Near-perfect 50/50 weight distribution
+  - Polestar brand cachet and Scandinavian design
+
   weaknesses:
-    - 400V architecture, not 800V (slower charging vs Audi Q6/Porsche Macan)
-    - Limited dealer network (Polestar Spaces in major cities only)
-    - No rear window may concern some buyers (camera system excellent but different)
-    - Higher insurance costs than mass-market EVs
-    - Chinese production (though high quality)
-    - No V2L/V2H capability
-  
+  - 400V architecture, not 800V (slower charging vs Audi Q6/Porsche Macan)
+  - Limited dealer network (Polestar Spaces in major cities only)
+  - No rear window may concern some buyers (camera system excellent but different)
+  - Higher insurance costs than mass-market EVs
+  - Chinese production (though high quality)
+  - No V2L/V2H capability
+
   ideal_for:
-    - Daily commute up to 150km round trip (excellent range buffer)
-    - Long-distance travel (590km range, 200kW DC charging)
-    - Performance driving enthusiasts (3.8s acceleration, adaptive dampers)
-    - Company car use (0.25% tax rate saves €4-5k annually)
-    - Urban luxury transport (distinctive design, premium materials)
-    - Weekend getaways (1500kg towing, large trunk)
-  
+  - Daily commute up to 150km round trip (excellent range buffer)
+  - Long-distance travel (590km range, 200kW DC charging)
+  - Performance driving enthusiasts (3.8s acceleration, adaptive dampers)
+  - Company car use (0.25% tax rate saves €4-5k annually)
+  - Urban luxury transport (distinctive design, premium materials)
+  - Weekend getaways (1500kg towing, large trunk)
+
   not_ideal_for:
-    - Budget-conscious buyers (premium pricing)
-    - Maximum range seekers (Tesla Model Y LR 140km more range)
-    - Ultra-fast charging priority (Audi Q6 800V faster)
-    - Traditional design preference (no rear window unconventional)
-    - Remote areas without charging infrastructure
+  - Budget-conscious buyers (premium pricing)
+  - Maximum range seekers (Tesla Model Y LR 140km more range)
+  - Ultra-fast charging priority (Audi Q6 800V faster)
+  - Traditional design preference (no rear window unconventional)
+  - Remote areas without charging infrastructure
 
 sales_data:
   first_year_target_de: 2500
@@ -278,9 +273,7 @@ warranty:
   roadside_assistance_years: 3
   notes: Industry-standard warranty coverage
 
-data_quality:
-  verified: true
-  last_updated: "2026-02-09"
-  source: Official Polestar Germany pricing and specifications
-  confidence: high
-  notes: Pricing and specifications current as of February 2026
+metadata:
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'
+  data_quality: unverified

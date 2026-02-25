@@ -18,80 +18,80 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Star White
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Midnight Black
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Interstellar Grey
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
-  - name: Horizon Green
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
-  - name: Aurora Blue
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
+- name: Star White
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Midnight Black
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Interstellar Grey
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
+- name: Horizon Green
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
+- name: Aurora Blue
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" aero alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" sport alloy wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: 19" aero alloy wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 20" sport alloy wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black vegan leather
-    material: vegan_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Grey/Black vegan leather
-    material: vegan_leather
-    color: grey_black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black vegan leather
+  material: vegan_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Grey/Black vegan leather
+  material: vegan_leather
+  color: grey_black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars"
-    conditions: ["Price under €70,000 gross list price", "BEV"]
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars"
+  conditions: ["Price under €70,000 gross list price", "BEV"]
 
 # Options
 popular_packages:
-  - name: XNGP Max Package
-    price:
-      amount: 0
-      currency: EUR
-    features:
-      - XNGP Navigation Guided Pilot
-      - City NGP
-      - Highway NGP
-      - Smart parking assist
+- name: XNGP Max Package
+  price:
+    amount: 0
+    currency: EUR
+  features:
+  - XNGP Navigation Guided Pilot
+  - City NGP
+  - Highway NGP
+  - Smart parking assist
 
 # Notes
 notes: |
@@ -104,7 +104,8 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.xpeng.com
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
   notes: Pricing estimated based on XPENG European pricing strategy and segment positioning
+  sources:
+  - https://www.xpeng.com

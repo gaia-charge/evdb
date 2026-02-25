@@ -9,118 +9,118 @@ pricing:
   destination_charge: 950
   on_the_road_price: 45940
   price_includes:
-    - "11kW AC charging (3-phase)"
-    - "78kW DC fast charging"
-    - "15.1-inch touchscreen"
-    - "10.25-inch digital instrument cluster"
-    - "Honda Sensing driver assistance suite"
-    - "Heat pump (standard)"
-    - "Wireless Apple CarPlay/Android Auto"
-    - "Honda Magic Seats"
-    - "18-inch alloy wheels"
-    - "LED headlights and taillights"
+  - "11kW AC charging (3-phase)"
+  - "78kW DC fast charging"
+  - "15.1-inch touchscreen"
+  - "10.25-inch digital instrument cluster"
+  - "Honda Sensing driver assistance suite"
+  - "Heat pump (standard)"
+  - "Wireless Apple CarPlay/Android Auto"
+  - "Honda Magic Seats"
+  - "18-inch alloy wheels"
+  - "LED headlights and taillights"
 
 trim_levels:
-  - name: "Elegance"
-    price: 44990
-    features:
-      - "Base trim with 204hp motor"
-      - "412 km WLTP range"
-      - "18-inch wheels standard"
-      - "Cloth/synthetic leather interior"
-      - "Honda Sensing driver assistance"
-      - "Heated front seats"
-      - "Dual-zone climate control"
-  - name: "Advance"
-    price: 47990  # +€3,000
-    features:
-      - "Leather seats"
-      - "Heated steering wheel"
-      - "Front parking sensors"
-      - "360-degree camera"
-      - "Blind spot information system"
-      - "Rear cross-traffic alert"
-  - name: "Advance+"
-    price: 50990  # +€6,000 over Elegance
-    features:
-      - "All Advance features"
-      - "Panoramic glass roof"
-      - "Premium audio system"
-      - "Ambient lighting"
-      - "Power tailgate"
-      - "Wireless phone charger"
+- name: "Elegance"
+  price: 44990
+  features:
+  - "Base trim with 204hp motor"
+  - "412 km WLTP range"
+  - "18-inch wheels standard"
+  - "Cloth/synthetic leather interior"
+  - "Honda Sensing driver assistance"
+  - "Heated front seats"
+  - "Dual-zone climate control"
+- name: "Advance"
+  price: 47990    # +€3,000
+  features:
+  - "Leather seats"
+  - "Heated steering wheel"
+  - "Front parking sensors"
+  - "360-degree camera"
+  - "Blind spot information system"
+  - "Rear cross-traffic alert"
+- name: "Advance+"
+  price: 50990    # +€6,000 over Elegance
+  features:
+  - "All Advance features"
+  - "Panoramic glass roof"
+  - "Premium audio system"
+  - "Ambient lighting"
+  - "Power tailgate"
+  - "Wireless phone charger"
 
 colors:
-  - name: "Crystal Black Pearl"
-    type: solid
-    price: 0  # Free
-  - name: "Platinum White Pearl"
-    type: pearl
-    price: 790
-  - name: "Brilliant Sporty Blue"
-    type: metallic
-    price: 790
-  - name: "Premium Crystal Red Metallic"
-    type: metallic
-    price: 990
-  - name: "Modern Steel Metallic"
-    type: metallic
-    price: 790
+- name: "Crystal Black Pearl"
+  type: solid
+  price: 0    # Free
+- name: "Platinum White Pearl"
+  type: pearl
+  price: 790
+- name: "Brilliant Sporty Blue"
+  type: metallic
+  price: 790
+- name: "Premium Crystal Red Metallic"
+  type: metallic
+  price: 990
+- name: "Modern Steel Metallic"
+  type: metallic
+  price: 790
 
 wheels:
-  - size: "18 inch"
-    price: 0  # Standard
-    range_impact_km: 0
-    name: "18-inch alloy wheels"
+- size: "18 inch"
+  price: 0    # Standard
+  range_impact_km: 0
+  name: "18-inch alloy wheels"
 
 interior:
-  - name: "Cloth/synthetic leather"
-    price: 0  # Standard on Elegance
-  - name: "Leather seats"
-    price: 0  # Standard on Advance/Advance+
+- name: "Cloth/synthetic leather"
+  price: 0    # Standard on Elegance
+- name: "Leather seats"
+  price: 0    # Standard on Advance/Advance+
 
 packages:
-  - name: "Winter Package"
-    price: 590
-    includes:
-      - "Heated front seats (standard)"
-      - "Heated steering wheel (Advance+)"
-      - "Heated windshield"
-    notes: "Heated seats already standard on all trims"
+- name: "Winter Package"
+  price: 590
+  includes:
+  - "Heated front seats (standard)"
+  - "Heated steering wheel (Advance+)"
+  - "Heated windshield"
+  notes: "Heated seats already standard on all trims"
 
 individual_options:
-  - name: "Panoramic glass roof"
-    price: 1290
-    notes: "Standard on Advance+, optional on Elegance/Advance"
-  - name: "Premium audio system"
-    price: 890
-    notes: "Upgraded speakers and amplifier"
-  - name: "Towing package"
-    price: 850
-    notes: "750kg braked trailer, removable towbar"
+- name: "Panoramic glass roof"
+  price: 1290
+  notes: "Standard on Advance+, optional on Elegance/Advance"
+- name: "Premium audio system"
+  price: 890
+  notes: "Upgraded speakers and amplifier"
+- name: "Towing package"
+  price: 850
+  notes: "750kg braked trailer, removable towbar"
 
 incentives:
-  - name: "BAFA Umweltbonus"
-    type: grant
-    amount: 0
-    notes: "German EV subsidy ended December 2023"
-    valid_until: null
-  - name: "Company car tax benefit"
-    type: tax_credit
-    amount: 3235  # Annual savings vs 1% ICE rate
-    notes: "0.25% of gross list price per month (vs 1% for ICE). For €44,990 vehicle: 0.25% = €112/month = €1,344/year vs 1% = €450/month = €5,400/year. Annual savings: €4,056."
-    calculation: "€44,990 × 0.25% = €112/month. ICE: €44,990 × 1% = €450/month. Savings: €338/month = €4,056/year"
-    eligibility: "Company car drivers only"
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 320  # Annual road tax savings
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote (CO2 certificate)"
-    type: grant
-    amount: 300  # Annual income
-    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
-    valid_until: null
+- name: "BAFA Umweltbonus"
+  type: grant
+  amount: 0
+  notes: "German EV subsidy ended December 2023"
+  valid_until:
+- name: "Company car tax benefit"
+  type: tax_credit
+  amount: 3235    # Annual savings vs 1% ICE rate
+  notes: "0.25% of gross list price per month (vs 1% for ICE). For €44,990 vehicle: 0.25% = €112/month = €1,344/year vs 1% = €450/month = €5,400/year. Annual savings: €4,056."
+  calculation: "€44,990 × 0.25% = €112/month. ICE: €44,990 × 1% = €450/month. Savings: €338/month = €4,056/year"
+  eligibility: "Company car drivers only"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 320    # Annual road tax savings
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (CO2 certificate)"
+  type: grant
+  amount: 300    # Annual income
+  notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+  valid_until:
 
 availability:
   in_stock: true
@@ -136,24 +136,24 @@ dealers:
   notes: "Honda dealer network across Germany, trained for EV servicing"
 
 charging_networks:
-  - name: "Honda e:Progress"
-    coverage: "300,000+ charging points across Europe"
-    pricing: "Various tariffs available"
-    notes: "Access to major networks including EnBW, Allego, Fastned"
+- name: "Honda e:Progress"
+  coverage: "300,000+ charging points across Europe"
+  pricing: "Various tariffs available"
+  notes: "Access to major networks including EnBW, Allego, Fastned"
 
 charging_costs:
-  - scenario: "Home charging (night rate)"
-    cost_per_kwh: 0.30  # €/kWh (German average night rate 2024)
-    cost_10_to_80_percent: 14.45  # € (68.8kWh × 70% × €0.30)
-    cost_per_100km: 6.06  # € (20.2 kWh/100km × €0.30)
-  - scenario: "Public AC charging"
-    cost_per_kwh: 0.45  # €/kWh (typical AC rate)
-    cost_10_to_80_percent: 21.67
-    cost_per_100km: 9.09
-  - scenario: "DC fast charging (typical)"
-    cost_per_kwh: 0.55  # €/kWh (typical DC rate)
-    cost_10_to_80_percent: 26.49
-    cost_per_100km: 11.11
+- scenario: "Home charging (night rate)"
+  cost_per_kwh: 0.30    # €/kWh (German average night rate 2024)
+  cost_10_to_80_percent: 14.45    # € (68.8kWh × 70% × €0.30)
+  cost_per_100km: 6.06    # € (20.2 kWh/100km × €0.30)
+- scenario: "Public AC charging"
+  cost_per_kwh: 0.45    # €/kWh (typical AC rate)
+  cost_10_to_80_percent: 21.67
+  cost_per_100km: 9.09
+- scenario: "DC fast charging (typical)"
+  cost_per_kwh: 0.55    # €/kWh (typical DC rate)
+  cost_10_to_80_percent: 26.49
+  cost_per_100km: 11.11
 
 warranty:
   vehicle_years: 3
@@ -178,35 +178,35 @@ environmental:
   production_site: "Dongfeng Honda, China"
 
 popular_configurations:
-  - name: "Elegance Base"
-    price: 46730  # Base + typical options
-    includes:
-      - "Elegance trim (€44,990)"
-      - "Metallic paint (€790)"
-      - "Destination charge (€950)"
-    notes: "Most affordable configuration, well-equipped"
-  - name: "Advance Comfort"
-    price: 49730
-    includes:
-      - "Advance trim (€47,990)"
-      - "Metallic paint (€790)"
-      - "Destination charge (€950)"
-    notes: "Popular mid-range configuration"
-  - name: "Advance+ Premium"
-    price: 53270
-    includes:
-      - "Advance+ trim (€50,990)"
-      - "Premium Crystal Red Metallic (€990)"
-      - "Towing package (€850)"
-      - "Destination charge (€950)"
-    notes: "Fully loaded configuration with all features"
+- name: "Elegance Base"
+  price: 46730    # Base + typical options
+  includes:
+  - "Elegance trim (€44,990)"
+  - "Metallic paint (€790)"
+  - "Destination charge (€950)"
+  notes: "Most affordable configuration, well-equipped"
+- name: "Advance Comfort"
+  price: 49730
+  includes:
+  - "Advance trim (€47,990)"
+  - "Metallic paint (€790)"
+  - "Destination charge (€950)"
+  notes: "Popular mid-range configuration"
+- name: "Advance+ Premium"
+  price: 53270
+  includes:
+  - "Advance+ trim (€50,990)"
+  - "Premium Crystal Red Metallic (€990)"
+  - "Towing package (€850)"
+  - "Destination charge (€950)"
+  notes: "Fully loaded configuration with all features"
 
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - "https://www.honda.de/cars/new/e-ny1.html"
-    - "https://ev-database.org/car/1685/Honda-e-Ny1"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/honda-e-ny1/"
+  - "https://www.honda.de/cars/new/e-ny1.html"
+  - "https://ev-database.org/car/1685/Honda-e-Ny1"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/honda-e-ny1/"
   notes: "2024 German market pricing for Honda e:Ny1. Base price at €44,990 (Elegance) positions it competitively against Kia Niro EV (€46,990) and Hyundai Kona Electric (€43,990). Good value with standard heat pump, Honda Sensing, and Magic Seats. Company car drivers save €4,056/year with 0.25% tax rate. Most popular configuration is Advance trim (~€50k). Honda's reputation for reliability makes it attractive to conservative buyers."
+  updated_at: "2026-02-08"

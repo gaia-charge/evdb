@@ -17,40 +17,40 @@ pricing:
   total_price_estimate: 40250
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired. Potential future MOVES IV program pending.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired. Potential future MOVES IV program pending.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
 
 market_specific:
   standard_equipment:
-    - OpenR Link infotainment with Google
-    - 12-inch touchscreen
-    - 12.3-inch digital instrument cluster
-    - Multi-Sense driving modes
-    - Rear parking camera
-    - Adaptive cruise control
-    - Lane centering assist
-    - Heat pump
-    - Wireless phone charger
+  - OpenR Link infotainment with Google
+  - 12-inch touchscreen
+  - 12.3-inch digital instrument cluster
+  - Multi-Sense driving modes
+  - Rear parking camera
+  - Adaptive cruise control
+  - Lane centering assist
+  - Heat pump
+  - Wireless phone charger
 
   available_colors:
-    - name: Glacier White
-      type: solid
-      price_add: 0
-    - name: Diamond Black
-      type: metallic
-      price_add: 800
-    - name: Schist Grey
-      type: metallic
-      price_add: 800
-    - name: Midnight Blue
-      type: metallic
-      price_add: 800
+  - name: Glacier White
+    type: solid
+    price_add: 0
+  - name: Diamond Black
+    type: metallic
+    price_add: 800
+  - name: Schist Grey
+    type: metallic
+    price_add: 800
+  - name: Midnight Blue
+    type: metallic
+    price_add: 800
 
 notes: |
   Renault Megane E-Tech EV60 Techno is a popular C-segment EV in Spain.
@@ -58,8 +58,10 @@ notes: |
   Built on CMF-EV platform in Douai, France.
 
 metadata:
-  data_quality: estimated
+  data_quality: unverified
   data_source: manufacturer
-  source_url: https://www.renault.es/vehiculos-electricos/megane-e-tech-electrico.html
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
+  sources:
+  - https://www.renault.es/vehiculos-electricos/megane-e-tech-electrico.html
+  notes: "Price conflict: duplicate record 'megane-e-tech-ev60-techno-2025' listed base_price 40500 EUR vs this record's 40250 EUR. Needs source re-verification."

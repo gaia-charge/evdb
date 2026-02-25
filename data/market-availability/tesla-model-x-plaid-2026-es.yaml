@@ -3,7 +3,7 @@ variant_id: tesla-model-x-plaid-2026
 market: ES
 currency: EUR
 available_from: '2025-10-01'
-available_until: null
+available_until:
 availability_status: available
 delivery_time_weeks: 4
 order_book_open: true
@@ -29,84 +29,79 @@ government_incentives:
     notes: Not eligible (price above €45,000 MOVES III limit)
 
 available_colors:
-  - name: Pearl White Multi-Coat
-    code: null
-    type: pearl
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Solid Black
-    code: null
-    type: solid
-    price_add:
-      amount: 1500
-      currency: EUR
-  - name: Midnight Silver Metallic
-    code: null
-    type: metallic
-    price_add:
-      amount: 1500
-      currency: EUR
-  - name: Deep Blue Metallic
-    code: null
-    type: metallic
-    price_add:
-      amount: 1500
-      currency: EUR
-  - name: Red Multi-Coat
-    code: null
-    type: pearl
-    price_add:
-      amount: 2500
-      currency: EUR
+- name: Pearl White Multi-Coat
+  code:
+  type: pearl
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Solid Black
+  code:
+  type: solid
+  price_add:
+    amount: 1500
+    currency: EUR
+- name: Midnight Silver Metallic
+  code:
+  type: metallic
+  price_add:
+    amount: 1500
+    currency: EUR
+- name: Deep Blue Metallic
+  code:
+  type: metallic
+  price_add:
+    amount: 1500
+    currency: EUR
+- name: Red Multi-Coat
+  code:
+  type: pearl
+  price_add:
+    amount: 2500
+    currency: EUR
 
 available_interiors:
-  - name: All Black
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black and White
-    material: synthetic_leather
-    color: two_tone
-    price_add:
-      amount: 1000
-      currency: EUR
-  - name: Cream
-    material: synthetic_leather
-    color: cream
-    price_add:
-      amount: 1000
-      currency: EUR
+- name: All Black
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black and White
+  material: synthetic_leather
+  color: two_tone
+  price_add:
+    amount: 1000
+    currency: EUR
+- name: Cream
+  material: synthetic_leather
+  color: cream
+  price_add:
+    amount: 1000
+    currency: EUR
 
 competitors:
-  - model: BMW iX M60
-    price: 132000
-    notes: Comparable performance, more expensive
-  - model: Mercedes-AMG EQS 53 SUV
-    price: 155000
-    notes: Much more expensive AMG performance SUV
-  - model: Audi e-tron S Sportback
-    price: 95000
-    notes: Less powerful but more affordable
+- model: BMW iX M60
+  price: 132000
+  notes: Comparable performance, more expensive
+- model: Mercedes-AMG EQS 53 SUV
+  price: 155000
+  notes: Much more expensive AMG performance SUV
+- model: Audi e-tron S Sportback
+  price: 95000
+  notes: Less powerful but more affordable
 
 typical_charging_costs:
   home_kwh: 0.28
   public_ac_kwh: 0.45
   public_dc_kwh: 0.65
 
-market_notes: |
-  The Plaid is the fastest production SUV in the world at 2.5s 0-100 km/h.
-  With 609 km WLTP range and 1,020 CV tri-motor AWD, it offers exceptional performance
-  in the luxury electric SUV segment. Tesla's Supercharger network in Spain provides
-  excellent charging infrastructure for long-distance travel.
-
 metadata:
   data_quality: verified
   data_source: automotive_pricing_sites
   created_at: '2026-02-21'
-  last_updated: '2026-02-21'
   sources:
-    - https://www.quecochemecompro.com/precios/tesla-model-x/tesla-model-x-plaid-4wd/
-    - https://www.tesla.com/es_ES/modelx/design
+  - https://www.quecochemecompro.com/precios/tesla-model-x/tesla-model-x-plaid-4wd/
+  - https://www.tesla.com/es_ES/modelx/design
+  updated_at: '2026-02-21'
+notes: "The Plaid is the fastest production SUV in the world at 2.5s 0-100 km/h.\nWith 609 km WLTP range and 1,020 CV tri-motor AWD, it offers exceptional performance\nin the luxury electric SUV segment. Tesla's Supercharger network in Spain provides\nexcellent charging infrastructure for long-distance travel."

@@ -9,9 +9,16 @@ currency: EUR
 availability_status: available
 available_from: "2023-01-01"
 delivery_time_weeks: 14
-notes: |
+notes: |-
   Long-range FWD variant of Nissan's electric crossover. Best range in
   Ariya lineup with 520 km WLTP. Built on CMF-EV platform shared with Renault.
+  The Nissan Ariya 87 kWh FWD offers the best range in the Ariya lineup
+  at 520 km WLTP. German pricing starts at €56,000, positioned between
+  the 63 kWh FWD and 87 kWh AWD variants. Strong value for buyers seeking
+  long-range capability without AWD performance. Popular with business users
+  due to favorable company car taxation. Typical delivery time 10-14 weeks.
+  Competes directly with VW ID.4 Pro (€52k) and Hyundai Ioniq 5 Long Range
+  RWD (€52k).
 
 # Pricing
 pricing:
@@ -25,66 +32,66 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €56,000 × 0.25% = €140/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €56,000 × 0.25% = €140/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: ProPILOT Assist 2.0 Pack
-    price:
-      amount: 1800
-      currency: EUR
-    items:
-      - Hands-free highway driving
-      - Navigation integration
-    notes: "Enhanced highway automation"
+- name: ProPILOT Assist 2.0 Pack
+  price:
+    amount: 1800
+    currency: EUR
+  items:
+  - Hands-free highway driving
+  - Navigation integration
+  notes: "Enhanced highway automation"
 
-  - name: Premium Interior Package
-    price:
-      amount: 2200
-      currency: EUR
-    items:
-      - Quilted leather seats
-      - Power driver seat
-      - Premium materials
-    notes: "Luxury interior upgrade"
+- name: Premium Interior Package
+  price:
+    amount: 2200
+    currency: EUR
+  items:
+  - Quilted leather seats
+  - Power driver seat
+  - Premium materials
+  notes: "Luxury interior upgrade"
 
-  - name: Bose Premium Audio
-    price:
-      amount: 950
-      currency: EUR
-    items:
-      - 10-speaker Bose audio system
-    notes: "High-end audio system"
+- name: Bose Premium Audio
+  price:
+    amount: 950
+    currency: EUR
+  items:
+  - 10-speaker Bose audio system
+  notes: "High-end audio system"
 
-  - name: ProPILOT Park Package
-    price:
-      amount: 850
-      currency: EUR
-    items:
-      - Automated parking
-      - 360-degree camera
-    notes: "Automated parking assist"
+- name: ProPILOT Park Package
+  price:
+    amount: 850
+    currency: EUR
+  items:
+  - Automated parking
+  - 360-degree camera
+  notes: "Automated parking assist"
 
 # Dealership & Sales
 sales_model: dealership
@@ -105,18 +112,8 @@ warranty:
     8-year/160,000 km battery warranty with 70% capacity guarantee.
 
 # Market-Specific Notes
-market_notes: |
-  The Nissan Ariya 87 kWh FWD offers the best range in the Ariya lineup
-  at 520 km WLTP. German pricing starts at €56,000, positioned between
-  the 63 kWh FWD and 87 kWh AWD variants. Strong value for buyers seeking
-  long-range capability without AWD performance. Popular with business users
-  due to favorable company car taxation. Typical delivery time 10-14 weeks.
-  Competes directly with VW ID.4 Pro (€52k) and Hyundai Ioniq 5 Long Range
-  RWD (€52k).
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+  - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html

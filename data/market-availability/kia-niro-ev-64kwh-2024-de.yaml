@@ -18,175 +18,175 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Runway Red
-    code: RR
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Glacier White Pearl
-    code: GWP
-    type: pearl
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Aurora Black Pearl
-    code: ABP
-    type: pearl
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Mineral Blue
-    code: MB
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Cityscape Grey
-    code: CG
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Interstellar Grey
-    code: IG
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
+- name: Runway Red
+  code: RR
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Glacier White Pearl
+  code: GWP
+  type: pearl
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Aurora Black Pearl
+  code: ABP
+  type: pearl
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Mineral Blue
+  code: MB
+  type: metallic
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Cityscape Grey
+  code: CG
+  type: metallic
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Interstellar Grey
+  code: IG
+  type: metallic
+  price_add:
+    amount: 650
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 17" Alloy Wheels
-    size_inches: 17
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 18" Alloy Wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 750
-      currency: EUR
-  - name: 19" Diamond-Cut Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 1100
-      currency: EUR
+- name: 17" Alloy Wheels
+  size_inches: 17
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 18" Alloy Wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 750
+    currency: EUR
+- name: 19" Diamond-Cut Alloy Wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 1100
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Cloth
-    material: cloth
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black Synthetic Leather
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 1300
-      currency: EUR
-  - name: Two-tone Synthetic Leather (Black/Grey)
-    material: synthetic_leather
-    color: two-tone
-    price_add:
-      amount: 1500
-      currency: EUR
+- name: Black Cloth
+  material: cloth
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black Synthetic Leather
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 1300
+    currency: EUR
+- name: Two-tone Synthetic Leather (Black/Grey)
+  material: synthetic_leather
+  color: two-tone
+  price_add:
+    amount: 1500
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Innovation Premium)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: company_car
-    name: "0.25% company car tax (BEV under €70k)"
-    description: "Reduced taxation for electric company cars under €70,000 gross list price"
-    calculation: "Monthly taxable benefit = 0.25% × €43,990 = €110.00/month (€1,320/year)"
-    vs_ice: "Saves €3,939/year vs 1.0% ICE rate (€5,259 annual tax on €43,990 ICE equivalent)"
-    conditions: ["Price under €70,000 gross list price"]
+- type: federal
+  name: "Umweltbonus (Innovation Premium)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: company_car
+  name: "0.25% company car tax (BEV under €70k)"
+  description: "Reduced taxation for electric company cars under €70,000 gross list price"
+  calculation: "Monthly taxable benefit = 0.25% × €43,990 = €110.00/month (€1,320/year)"
+  vs_ice: "Saves €3,939/year vs 1.0% ICE rate (€5,259 annual tax on €43,990 ICE equivalent)"
+  conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Vision Package
-    price:
-      amount: 2000
-      currency: EUR
-    features:
-      - Highway Driving Assist 2
-      - Blind-Spot View Monitor
-      - Parking Collision-Avoidance Assist
-      - Surround View Monitor (360° camera)
-      - Head-Up Display
-      - LED Star Map headlights
-  
-  - name: Premium Package
-    price:
-      amount: 1800
-      currency: EUR
-    features:
-      - Panoramic sunroof
-      - Bose Premium Sound System (8 speakers)
-      - Wireless phone charger
-      - Ambient lighting (64 colors)
-      - Relaxation seat with leg rest (passenger)
+- name: Vision Package
+  price:
+    amount: 2000
+    currency: EUR
+  features:
+  - Highway Driving Assist 2
+  - Blind-Spot View Monitor
+  - Parking Collision-Avoidance Assist
+  - Surround View Monitor (360° camera)
+  - Head-Up Display
+  - LED Star Map headlights
 
-  - name: Winter Comfort Package
-    price:
-      amount: 750
-      currency: EUR
-    features:
-      - Heated front and rear seats
-      - Heated steering wheel
-      - Heat pump (essential for German winters)
-      - Heated windshield washer nozzles
+- name: Premium Package
+  price:
+    amount: 1800
+    currency: EUR
+  features:
+  - Panoramic sunroof
+  - Bose Premium Sound System (8 speakers)
+  - Wireless phone charger
+  - Ambient lighting (64 colors)
+  - Relaxation seat with leg rest (passenger)
+
+- name: Winter Comfort Package
+  price:
+    amount: 750
+    currency: EUR
+  features:
+  - Heated front and rear seats
+  - Heated steering wheel
+  - Heat pump (essential for German winters)
+  - Heated windshield washer nozzles
 
 popular_configurations:
-  - name: "Base (Standard Equipment)"
-    total_price:
-      amount: 43990
-      currency: EUR
-    description: "Entry-level with essential features"
-    includes:
-      - "Dual 10.25\" panoramic displays"
-      - "LED headlights with Star Map signature"
-      - "Wireless Apple CarPlay & Android Auto"
-      - "Smart Cruise Control with Stop & Go"
-      - "Lane Following Assist"
-      - "Forward Collision-Avoidance Assist"
-      - "11kW AC charging standard"
-      - "V2L capability (3.6kW)"
-      - "Flush door handles"
+- name: "Base (Standard Equipment)"
+  total_price:
+    amount: 43990
+    currency: EUR
+  description: "Entry-level with essential features"
+  includes:
+  - "Dual 10.25\" panoramic displays"
+  - "LED headlights with Star Map signature"
+  - "Wireless Apple CarPlay & Android Auto"
+  - "Smart Cruise Control with Stop & Go"
+  - "Lane Following Assist"
+  - "Forward Collision-Avoidance Assist"
+  - "11kW AC charging standard"
+  - "V2L capability (3.6kW)"
+  - "Flush door handles"
 
-  - name: "Popular (Base + Vision + Winter Comfort + 18\" wheels)"
-    total_price:
-      amount: 48140
-      currency: EUR
-    description: "Most popular configuration in Germany"
-    includes:
-      - "All Base features"
-      - "Vision Package (ADAS + HUD + 360° camera)"
-      - "Winter Comfort Package (heat pump essential)"
-      - "18\" alloy wheels"
-      - "Metallic paint"
+- name: "Popular (Base + Vision + Winter Comfort + 18\" wheels)"
+  total_price:
+    amount: 48140
+    currency: EUR
+  description: "Most popular configuration in Germany"
+  includes:
+  - "All Base features"
+  - "Vision Package (ADAS + HUD + 360° camera)"
+  - "Winter Comfort Package (heat pump essential)"
+  - "18\" alloy wheels"
+  - "Metallic paint"
 
-  - name: "Premium (Popular + Premium Package + leather + 19\" wheels)"
-    total_price:
-      amount: 52790
-      currency: EUR
-    description: "Top specification for private buyers"
-    includes:
-      - "All Popular features"
-      - "Premium Package (sunroof + Bose audio)"
-      - "Two-tone synthetic leather interior"
-      - "19\" diamond-cut alloy wheels"
+- name: "Premium (Popular + Premium Package + leather + 19\" wheels)"
+  total_price:
+    amount: 52790
+    currency: EUR
+  description: "Top specification for private buyers"
+  includes:
+  - "All Popular features"
+  - "Premium Package (sunroof + Bose audio)"
+  - "Two-tone synthetic leather interior"
+  - "19\" diamond-cut alloy wheels"
 
 # Cost Analysis
 cost_of_ownership:
@@ -201,7 +201,7 @@ cost_of_ownership:
       currency: EUR
       rate_per_kwh: 0.53
       consumption_kwh: 18.8
-  
+
   company_car:
     monthly_benefit_025_percent:
       amount: 110.00
@@ -215,25 +215,22 @@ cost_of_ownership:
 # Comparison to Competitors
 competitive_analysis:
   direct_competitors:
-    - model: "Hyundai Kona Electric Long Range"
-      price: 42990
-      range_km: 514
-      notes: "€1,000 cheaper, 54km more range, sister model with similar platform"
-    
-    - model: "Volkswagen ID.4 Pro"
-      price: 46000
-      range_km: 521
-      notes: "€2,010 more expensive, 61km more range, larger SUV"
-    
-    - model: "Toyota bZ4X FWD"
-      price: 47000
-      range_km: 516
-      notes: "€3,010 more expensive, 56km more range, 10-year battery warranty"
-    
-    - model: "Nissan Ariya 63 kWh FWD"
-      price: 50000
-      range_km: 450
-      notes: "€6,010 more expensive, 10km less range, but more premium interior"
+  - model: "Hyundai Kona Electric Long Range"
+    price: 42990
+    range_km: 514
+    notes: "€1,000 cheaper, 54km more range, sister model with similar platform"
+  - model: "Volkswagen ID.4 Pro"
+    price: 46000
+    range_km: 521
+    notes: "€2,010 more expensive, 61km more range, larger SUV"
+  - model: "Toyota bZ4X FWD"
+    price: 47000
+    range_km: 516
+    notes: "€3,010 more expensive, 56km more range, 10-year battery warranty"
+  - model: "Nissan Ariya 63 kWh FWD"
+    price: 50000
+    range_km: 450
+    notes: "€6,010 more expensive, 10km less range, but more premium interior"
 
   value_proposition: >
     Kia Niro EV offers excellent value as a practical family electric SUV at €43,990.
@@ -262,7 +259,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.kia.com/de/modelle/niro-ev/
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
   notes: Prices and incentives as of February 2026, based on Kia Germany official specifications
+  sources:
+  - https://www.kia.com/de/modelle/niro-ev/

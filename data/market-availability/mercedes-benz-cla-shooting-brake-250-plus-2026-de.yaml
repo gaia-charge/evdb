@@ -15,67 +15,65 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-  - name: Kfz-Steuer exemption
-    type: tax_exemption
-    amount: 0
-    amount: 380
-    description: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: THG-Quote
-    type: grant
-    amount: 280
-    description: "Sell CO2 savings certificate (€250-350/year)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+- name: Kfz-Steuer exemption
+  type: tax_exemption
+  amount: 0
+  description: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: THG-Quote
+  type: grant
+  amount: 280
+  description: "Sell CO2 savings certificate (€250-350/year)"
 
 # Colors (Germany Market)
 available_colors:
-  - name: Digital White
-    code: DW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Digital White
+  code: DW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
-  - name: Obsidian Black Metallic
-    code: OBM
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
+- name: Obsidian Black Metallic
+  code: OBM
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
 
-  - name: Spectral Blue Metallic
-    code: SBM
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
+- name: Spectral Blue Metallic
+  code: SBM
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
 
-  - name: Mojave Silver Metallic
-    code: MSM
-    type: metallic
-    price_add:
-      amount: 1190
-      currency: EUR
+- name: Mojave Silver Metallic
+  code: MSM
+  type: metallic
+  price_add:
+    amount: 1190
+    currency: EUR
 
 # Optional Equipment
 optional_equipment:
-  - name: Premium Package
-    price: 4200
-    includes:
-      - "MBUX Superscreen with passenger display"
-      - "Head-up display"
-      - "Burmester 3D surround sound"
+- name: Premium Package
+  price: 4200
+  includes:
+  - "MBUX Superscreen with passenger display"
+  - "Head-up display"
+  - "Burmester 3D surround sound"
 
-  - name: 22 kW AC Onboard Charger
-    price: 590
-    includes:
-      - "Upgrade from 11 kW to 22 kW AC charging"
+- name: 22 kW AC Onboard Charger
+  price: 590
+  includes:
+  - "Upgrade from 11 kW to 22 kW AC charging"
 
 # Company Car Calculation (Germany)
 company_car_tax:
@@ -88,18 +86,11 @@ company_car_tax:
     Estate version of CLA at €2,500 premium. Attractive for families
     needing more cargo space at modest price increase.
 
-market_notes: >
-  The CLA Shooting Brake 250+ is the estate version, launching Q2 2026.
-  ~€2,500 premium over sedan for significantly more cargo space (565 km
-  real-world range). Popular body style in Germany for families who prefer
-  estates. Same 85 kWh battery, 200 kW motor, 353 kW DC fast charging.
-
-# Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-09"
-  confidence_level: medium
   sources:
-    - https://ev-database.org/car/3396/Mercedes-Benz-CLA-Shooting-Brake-250plus
+  - https://ev-database.org/car/3396/Mercedes-Benz-CLA-Shooting-Brake-250plus
   created_at: "2026-02-09T21:15:00Z"
   created_by: Patricio
+  updated_at: "2026-02-09"
+notes: The CLA Shooting Brake 250+ is the estate version, launching Q2 2026. ~€2,500 premium over sedan for significantly more cargo space (565 km real-world range). Popular body style in Germany for families who prefer estates. Same 85 kWh battery, 200 kW motor, 353 kW DC fast charging.

@@ -3,7 +3,7 @@ variant_id: cadillac-lyriq-sport-awd-2025
 market: DE
 currency: EUR
 available_from: '2024-09-01'
-available_until: null
+available_until:
 availability_status: available
 delivery_time_weeks: 8
 pre_order_available: false
@@ -33,52 +33,52 @@ pricing:
     - 360° HD Surround Vision camera
     - Wireless phone charging
     - Regen on Demand paddle
-    
+
     Sold through direct-to-consumer model via Cadillac stores.
     Only 5 Cadillac stores in Germany currently, plus service partners.
     German pricing includes 19% VAT.
 
 available_colors:
-  - name: Stellar Black Metallic
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Crystal White Tricoat
-    type: tricoat
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Radiant Red Tintcoat
-    type: tintcoat
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Satin Steel Metallic
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Argent Silver Metallic
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Nimbus Metallic
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
+- name: Stellar Black Metallic
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Crystal White Tricoat
+  type: tricoat
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Radiant Red Tintcoat
+  type: tintcoat
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Satin Steel Metallic
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Argent Silver Metallic
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Nimbus Metallic
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
 
 available_wheels:
-  - size: 21 inch
-    name: Sport alloy wheels
-    design: Multi-spoke sport design
-    tires: 275/40 R21
-    notes: Standard Sport trim wheels
-    price_add:
-      amount: 0
-      currency: EUR
+- size: 21 inch
+  name: Sport alloy wheels
+  design: Multi-spoke sport design
+  tires: 275/40 R21
+  notes: Standard Sport trim wheels
+  price_add:
+    amount: 0
+    currency: EUR
 
 government_incentives:
   federal:
@@ -92,13 +92,13 @@ company_car_tax:
   calculation_basis: list_price
   calculation: |
     0.5% monthly rate for EVs priced over €70,000:
-    
+
     Monthly taxable benefit: €83,000 × 0.5% = €415/month
     Annual taxable benefit: €4,980/year
     Income tax (42% bracket): ~€2,092/year
     Social contributions (~20%): ~€996/year
     Total annual cost to employee: ~€3,088/year
-    
+
     Excellent company car value. Much lower taxation than comparable
     combustion luxury SUVs (1% rate on similar price = €9,960/year taxable).
   notes: |
@@ -120,52 +120,33 @@ charging_costs:
     notes: IONITY/EnBW HyperNetz DC fast charging rates
 
 competitors:
-  - model: BMW iX xDrive50
-    price: 108000
-    power_kw: 385
-    range_km: 611
-    notes: €25k more expensive, better range but less power
-  - model: Mercedes-Benz EQE 350+ SUV
-    price: 91000
-    power_kw: 215
-    range_km: 559
-    notes: €8k more, significantly less power, similar range
-  - model: Audi Q8 55 e-tron
-    price: 90000
-    power_kw: 300
-    range_km: 582
-    notes: €7k more, less power, slightly better range
-  - model: Tesla Model X Long Range
-    price: 99990
-    power_kw: 487
-    range_km: 576
-    notes: €17k more, more power, less luxury feel
-
-market_notes: |
-  The Cadillac Lyriq Sport represents outstanding value in the luxury electric SUV segment.
-  At €83,000, it significantly undercuts all comparable German competitors:
-  - BMW iX xDrive50: €108,000 (€25k premium)
-  - Mercedes EQE SUV: €91,000+ (€8k premium)
-  - Audi Q8 e-tron: €90,000 (€7k premium)
-  
-  While offering: larger battery (102 kWh), more power (528 PS), larger dimensions, 
-  and generous standard equipment including 33" display, AKG Dolby Atmos audio, 
-  Active Noise Cancellation, and massage seats.
-  
-  Key considerations:
-  - Limited dealer network (5 stores + service partners in Germany)
-  - Direct-to-consumer sales model (no haggling, fixed pricing)
-  - American brand with limited European track record
-  - Charging at 190 kW is adequate but not class-leading
-  
-  Won German Car of the Year 2025 (luxury) - significant endorsement for German market.
-  Strong company car proposition with 0.5% tax rate on competitive base price.
+- model: BMW iX xDrive50
+  price: 108000
+  power_kw: 385
+  range_km: 611
+  notes: €25k more expensive, better range but less power
+- model: Mercedes-Benz EQE 350+ SUV
+  price: 91000
+  power_kw: 215
+  range_km: 559
+  notes: €8k more, significantly less power, similar range
+- model: Audi Q8 55 e-tron
+  price: 90000
+  power_kw: 300
+  range_km: 582
+  notes: €7k more, less power, slightly better range
+- model: Tesla Model X Long Range
+  price: 99990
+  power_kw: 487
+  range_km: 576
+  notes: €17k more, more power, less luxury feel
 
 metadata:
   data_quality: verified
   data_source: manufacturer
   created_at: '2026-02-09'
-  last_updated: '2026-02-09'
   sources:
-    - https://www.cadillaceurope.com/de-de/lyriq
-    - https://www.carwow.de/cadillac/lyriq
+  - https://www.cadillaceurope.com/de-de/lyriq
+  - https://www.carwow.de/cadillac/lyriq
+  updated_at: '2026-02-09'
+notes: "The Cadillac Lyriq Sport represents outstanding value in the luxury electric SUV segment.\nAt €83,000, it significantly undercuts all comparable German competitors:\n- BMW iX xDrive50: €108,000 (€25k premium)\n- Mercedes EQE SUV: €91,000+ (€8k premium)\n- Audi Q8 e-tron: €90,000 (€7k premium)\n\nWhile offering: larger battery (102 kWh), more power (528 PS), larger dimensions, \nand generous standard equipment including 33\" display, AKG Dolby Atmos audio, \nActive Noise Cancellation, and massage seats.\n\nKey considerations:\n- Limited dealer network (5 stores + service partners in Germany)\n- Direct-to-consumer sales model (no haggling, fixed pricing)\n- American brand with limited European track record\n- Charging at 190 kW is adequate but not class-leading\n\nWon German Car of the Year 2025 (luxury) - significant endorsement for German market.\nStrong company car proposition with 0.5% tax rate on competitive base price."

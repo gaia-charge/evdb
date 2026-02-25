@@ -18,43 +18,43 @@ pricing:
   total_price_estimate: 44190
 
 incentives:
-  - name: "Bonus écologique"
-    type: grant
-    amount: 4000
-    description: "Government ecological bonus for BEVs. €4,000 for vehicles priced under €47,000."
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Vehicle price must not exceed €47,000"
-      - "Vehicle must meet European manufacturing requirements"
-      - "Tesla Model 3 from Shanghai may not qualify due to environmental score"
+- name: "Bonus écologique"
+  type: grant
+  amount: 4000
+  description: "Government ecological bonus for BEVs. €4,000 for vehicles priced under €47,000."
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Vehicle price must not exceed €47,000"
+  - "Vehicle must meet European manufacturing requirements"
+  - "Tesla Model 3 from Shanghai may not qualify due to environmental score"
 
 market_specific:
   available_colors:
-    - name: "Pearl White Multi-Coat"
-      type: solid
-      price_add: 0
-    - name: "Solid Black"
-      type: metallic
-      price_add: 1200
-    - name: "Midnight Silver Metallic"
-      type: metallic
-      price_add: 1200
-    - name: "Deep Blue Metallic"
-      type: metallic
-      price_add: 1200
-    - name: "Stealth Grey"
-      type: metallic
-      price_add: 1500
-    - name: "Ultra Red"
-      type: metallic
-      price_add: 2400
+  - name: "Pearl White Multi-Coat"
+    type: solid
+    price_add: 0
+  - name: "Solid Black"
+    type: metallic
+    price_add: 1200
+  - name: "Midnight Silver Metallic"
+    type: metallic
+    price_add: 1200
+  - name: "Deep Blue Metallic"
+    type: metallic
+    price_add: 1200
+  - name: "Stealth Grey"
+    type: metallic
+    price_add: 1500
+  - name: "Ultra Red"
+    type: metallic
+    price_add: 2400
 
   popular_options:
-    - name: "Enhanced Autopilot"
-      price: 3800
-    - name: "Full Self-Driving Capability"
-      price: 7500
+  - name: "Enhanced Autopilot"
+    price: 3800
+  - name: "Full Self-Driving Capability"
+    price: 7500
 
 dealer_network:
   dealer_count: 0
@@ -70,6 +70,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/fr_fr/model3
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.tesla.com/fr_fr/model3

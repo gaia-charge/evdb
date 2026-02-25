@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Available at Mercedes-Benz dealers across Germany
@@ -22,62 +22,62 @@ pricing:
 
 options:
   colors:
-    - name: Obsidian Black Metallic
-      price: 0
-      type: metallic
-    - name: MANUFAKTUR Alpine Grey Uni
-      price: 1190
-      type: solid
-    - name: Selenite Grey Metallic
-      price: 0
-      type: metallic
-    - name: Nautical Blue Metallic
-      price: 1190
-      type: metallic
-    - name: High-Tech Silver Metallic
-      price: 1190
-      type: metallic
-    - name: Sodalite Blue Metallic
-      price: 1190
-      type: metallic
+  - name: Obsidian Black Metallic
+    price: 0
+    type: metallic
+  - name: MANUFAKTUR Alpine Grey Uni
+    price: 1190
+    type: solid
+  - name: Selenite Grey Metallic
+    price: 0
+    type: metallic
+  - name: Nautical Blue Metallic
+    price: 1190
+    type: metallic
+  - name: High-Tech Silver Metallic
+    price: 1190
+    type: metallic
+  - name: Sodalite Blue Metallic
+    price: 1190
+    type: metallic
 
   wheels:
-    - name: 20" AMG multi-spoke alloy wheels
-      price: 0
-      size_inches: 20
-    - name: 21" AMG multi-spoke alloy wheels
-      price: 1785
-      size_inches: 21
+  - name: 20" AMG multi-spoke alloy wheels
+    price: 0
+    size_inches: 20
+  - name: 21" AMG multi-spoke alloy wheels
+    price: 1785
+    size_inches: 21
 
 packages:
-  - name: Executive Rear Seat Package
-    price: 4760
-    includes:
-      - Reclining rear seats
-      - Rear massage seats
-      - Rear heated and ventilated seats
-      - Electrically adjustable footrests
-  - name: E-Active Body Control
-    price: 8330
-    includes:
-      - Active suspension with curve tilting
-      - Road surface scan
-  - name: DRIVE PILOT (Level 3)
-    price: 5950
-    includes:
-      - Conditionally automated driving up to 95 km/h
-      - Highway driving automation
+- name: Executive Rear Seat Package
+  price: 4760
+  includes:
+  - Reclining rear seats
+  - Rear massage seats
+  - Rear heated and ventilated seats
+  - Electrically adjustable footrests
+- name: E-Active Body Control
+  price: 8330
+  includes:
+  - Active suspension with curve tilting
+  - Road surface scan
+- name: DRIVE PILOT (Level 3)
+  price: 5950
+  includes:
+  - Conditionally automated driving up to 95 km/h
+  - Highway driving automation
 
 standalone_options:
-  - name: 22kW AC Onboard Charger
-    price: 595
+- name: 22kW AC Onboard Charger
+  price: 595
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax"
-    amount: 0
-    currency: EUR
-    notes: "0.5% monthly taxation (over €70k gross list price)"
+- type: tax_exemption
+  name: "Company Car Tax"
+  amount: 0
+  currency: EUR
+  notes: "0.5% monthly taxation (over €70k gross list price)"
 
 total_cost_of_ownership:
   purchase_price: 135529
@@ -92,17 +92,16 @@ total_cost_of_ownership:
     maintenance: 500
     total_annual: 3300
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-10
-  source_reliability: medium
-
 sources:
-  - name: Mercedes-Benz Germany
-    url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297.html
-    date_accessed: 2026-02-10
+- name: Mercedes-Benz Germany
+  url: https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/sedan-v297.html
+  date_accessed: 2026-02-10
 
 notes: |
   Flagship EQS variant. 544 hp, 4.3s 0-100 km/h with AWD.
   MBUX Hyperscreen standard. DRIVE PILOT Level 3 optional.
   Over €70k so qualifies for 0.5% company car tax (not 0.25%).
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-10'
+  created_at: '2026-02-10'

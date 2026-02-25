@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-10-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Available at BYD dealers across Germany
@@ -22,34 +22,34 @@ pricing:
 
 options:
   colors:
-    - name: Crystal White (solid)
-      price: 0
-      type: solid
-    - name: Cosmos Black (metallic)
-      price: 690
-      type: metallic
-    - name: Time Grey (metallic)
-      price: 690
-      type: metallic
-    - name: Deepsea Blue (metallic)
-      price: 690
-      type: metallic
+  - name: Crystal White (solid)
+    price: 0
+    type: solid
+  - name: Cosmos Black (metallic)
+    price: 690
+    type: metallic
+  - name: Time Grey (metallic)
+    price: 690
+    type: metallic
+  - name: Deepsea Blue (metallic)
+    price: 690
+    type: metallic
 
   wheels:
-    - name: 20" alloy wheels
-      price: 0
-      size_inches: 20
+  - name: 20" alloy wheels
+    price: 0
+    size_inches: 20
 
 packages: []
 
 standalone_options: []
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: "Qualifies for 0.25% monthly taxation (under €70k)"
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: "Qualifies for 0.25% monthly taxation (under €70k)"
 
 total_cost_of_ownership:
   purchase_price: 69990
@@ -64,17 +64,16 @@ total_cost_of_ownership:
     maintenance: 400
     total_annual: 3070
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-09
-  source_reliability: medium
-
 sources:
-  - name: BYD Germany Official
-    url: https://www.byd.com/de/car/tang
-    date_accessed: 2026-02-09
+- name: BYD Germany Official
+  url: https://www.byd.com/de/car/tang
+  date_accessed: 2026-02-09
 
 notes: |
   The BYD Tang EV at €69,990 is the most affordable 7-seat BEV in Germany.
   Qualifies for the 0.25% company car tax benefit (under €70k threshold).
   Competes with Kia EV9 (from €72,990) and Tesla Model X (from €94,990).
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'

@@ -11,7 +11,7 @@ pricing:
   price_including_vat: 29990
   vat_rate_percent: 19
   destination_charge: 1200
-  registration_fees: null
+  registration_fees:
   total_price_estimate: 31190
   notes: >
     Renault 5 E-Tech Techno 52 is the premium trim with 400km WLTP range and
@@ -19,109 +19,108 @@ pricing:
     dual-zone climate, and premium equipment as standard.
 
 incentives:
-  - name: Federal EV Subsidy (Ended)
-    type: subsidy
-    amount: 0
-    description: >
-      German federal EV incentive ended December 31, 2023. No longer available.
-    valid_from: null
-    valid_until: "2023-12-31"
-  
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 2699
-    description: >
-      EVs with list price under €70,000 qualify for 0.25% monthly tax rate
-      (vs 1.0% for combustion vehicles). Saves €2,699/year vs ICE equivalent.
-    conditions:
-      - List price under €70,000
-      - Pure battery-electric vehicle (BEV)
-  
-  - name: Renault EV Bonus
-    type: discount
-    amount: 2000
-    description: >
-      Manufacturer discount for early adopters.
-    valid_from: "2024-11-01"
-    valid_until: "2025-06-30"
+- name: Federal EV Subsidy (Ended)
+  type: subsidy
+  amount: 0
+  description: >
+    German federal EV incentive ended December 31, 2023. No longer available.
+  valid_from:
+  valid_until: "2023-12-31"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 2699
+  description: >
+    EVs with list price under €70,000 qualify for 0.25% monthly tax rate
+    (vs 1.0% for combustion vehicles). Saves €2,699/year vs ICE equivalent.
+  conditions:
+  - List price under €70,000
+  - Pure battery-electric vehicle (BEV)
+
+- name: Renault EV Bonus
+  type: discount
+  amount: 2000
+  description: >
+    Manufacturer discount for early adopters.
+  valid_from: "2024-11-01"
+  valid_until: "2025-06-30"
 
 market_specific:
   standard_equipment:
-    - 18" alloy wheels
-    - 10.1" OpenR Link touchscreen with Google Built-In
-    - Wireless Apple CarPlay and Android Auto
-    - Digital instrument cluster
-    - Head-up display
-    - Reno avatar assistant
-    - LED headlights
-    - Dual-zone automatic climate control
-    - Heat pump (standard on Techno)
-    - Heated front seats
-    - Heated steering wheel
-    - Adaptive Cruise Control with Stop & Go
-    - Lane Centering Assist
-    - Active Emergency Braking
-    - Blind Spot Warning
-    - Rear camera
-    - Front and rear parking sensors
-    - V2G/V2L bidirectional charging
-    - Wireless phone charging
-    - Ambient lighting
-  
+  - 18" alloy wheels
+  - 10.1" OpenR Link touchscreen with Google Built-In
+  - Wireless Apple CarPlay and Android Auto
+  - Digital instrument cluster
+  - Head-up display
+  - Reno avatar assistant
+  - LED headlights
+  - Dual-zone automatic climate control
+  - Heat pump (standard on Techno)
+  - Heated front seats
+  - Heated steering wheel
+  - Adaptive Cruise Control with Stop & Go
+  - Lane Centering Assist
+  - Active Emergency Braking
+  - Blind Spot Warning
+  - Rear camera
+  - Front and rear parking sensors
+  - V2G/V2L bidirectional charging
+  - Wireless phone charging
+  - Ambient lighting
+
   available_colors:
-    - name: Pearl White
-      type: solid
-      cost: 0
-    - name: Celadon Blue
-      type: solid
-      cost: 0
-    - name: Starry Black
-      type: metallic
-      cost: 650
-    - name: Vesuvius Green
-      type: metallic
-      cost: 650
-    - name: Cassiopeia Grey
-      type: metallic
-      cost: 650
-    - name: Pop Yellow
-      type: special
-      cost: 800
-    - name: Matte Vesuvius Green
-      type: special
-      cost: 1200
-  
+  - name: Pearl White
+    type: solid
+    cost: 0
+  - name: Celadon Blue
+    type: solid
+    cost: 0
+  - name: Starry Black
+    type: metallic
+    cost: 650
+  - name: Vesuvius Green
+    type: metallic
+    cost: 650
+  - name: Cassiopeia Grey
+    type: metallic
+    cost: 650
+  - name: Pop Yellow
+    type: special
+    cost: 800
+  - name: Matte Vesuvius Green
+    type: special
+    cost: 1200
+
   optional_packages:
-    - name: Iconic Package
-      price: 2500
-      items:
-        - Unique retro interior trim
-        - Exclusive wheel design
-        - Special badging
-        - Premium materials
-    
-    - name: Premium Sound System (Harman Kardon)
-      price: 800
-      items:
-        - 9-speaker premium audio system
-    
-    - name: Panoramic Glass Roof
-      price: 1200
-      items:
-        - Fixed panoramic glass roof
-        - Electric sunshade
-    
-    - name: Advanced Park Assist
-      price: 600
-      items:
-        - 360° camera system
-        - Automated parking assist
-    
-    - name: 22kW Three-Phase Charging
-      price: 600
-      items:
-        - Upgrade from 11kW to 22kW AC charging
-  
+  - name: Iconic Package
+    price: 2500
+    items:
+    - Unique retro interior trim
+    - Exclusive wheel design
+    - Special badging
+    - Premium materials
+
+  - name: Premium Sound System (Harman Kardon)
+    price: 800
+    items:
+    - 9-speaker premium audio system
+
+  - name: Panoramic Glass Roof
+    price: 1200
+    items:
+    - Fixed panoramic glass roof
+    - Electric sunshade
+
+  - name: Advanced Park Assist
+    price: 600
+    items:
+    - 360° camera system
+    - Automated parking assist
+
+  - name: 22kW Three-Phase Charging
+    price: 600
+    items:
+    - Upgrade from 11kW to 22kW AC charging
+
   dealer_network:
     count: 450
     coverage: Nationwide with extensive network
@@ -149,26 +148,24 @@ tco_3_year:
 
 charging_infrastructure:
   home_charging:
-    - type: Wallbox 11kW
-      cost: 800
-      installation_cost: 1200
-      total_cost: 2000
-      monthly_cost: null
-      notes: Installation cost varies by location
-  
+  - type: Wallbox 11kW
+    cost: 800
+    installation_cost: 1200
+    total_cost: 2000
+    monthly_cost:
+    notes: Installation cost varies by location
+
   public_charging:
-    - network: IONITY
-      cost_per_kwh: 0.79
-      monthly_subscription: null
-    - network: EnBW
-      cost_per_kwh: 0.49
-      monthly_subscription: null
+  - network: IONITY
+    cost_per_kwh: 0.79
+    monthly_subscription:
+  - network: EnBW
+    cost_per_kwh: 0.49
+    monthly_subscription:
 
 metadata:
   created_at: "2026-02-09"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.renault.de/elektrofahrzeuge/renault-5-e-tech.html
-  confidence: high
-  last_verified: "2026-02-09"
+  - https://www.renault.de/elektrofahrzeuge/renault-5-e-tech.html
+  last_verified_at: "2026-02-09"

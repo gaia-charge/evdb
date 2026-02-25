@@ -19,203 +19,203 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Pure White
-    code: B4B4
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Deep Black Pearl Effect
-    code: A1A1
-    type: pearl
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Moonstone Grey Metallic
-    code: Z7Z7
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Kings Red Metallic
-    code: K5K5
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Glacier Blue Metallic
-    code: U5U5
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Dune Grey Metallic
-    code: 7H7H
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
+- name: Pure White
+  code: B4B4
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Deep Black Pearl Effect
+  code: A1A1
+  type: pearl
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Moonstone Grey Metallic
+  code: Z7Z7
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Kings Red Metallic
+  code: K5K5
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Glacier Blue Metallic
+  code: U5U5
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Dune Grey Metallic
+  code: 7H7H
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" Andoya Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    range_impact_km: 0
-  - name: 20" Ystad Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1080
-      currency: EUR
-    range_impact_km: -15
-  - name: 21" Skagen Alloy Wheels
-    size_inches: 21
-    type: alloy
-    price_add:
-      amount: 1780
-      currency: EUR
-    range_impact_km: -25
+- name: 19" Andoya Alloy Wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  range_impact_km: 0
+- name: 20" Ystad Alloy Wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1080
+    currency: EUR
+  range_impact_km: -15
+- name: 21" Skagen Alloy Wheels
+  size_inches: 21
+  type: alloy
+  price_add:
+    amount: 1780
+    currency: EUR
+  range_impact_km: -25
 
 # Interior Options
 available_interiors:
-  - name: Storm Grey Fabric
-    material: fabric
-    color: grey
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Soul Black ArtVelours
-    material: artvelours
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Nutmeg Brown Microfiber
-    material: microfiber
-    color: brown
-    price_add:
-      amount: 820
-      currency: EUR
+- name: Storm Grey Fabric
+  material: fabric
+  color: grey
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Soul Black ArtVelours
+  material: artvelours
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Nutmeg Brown Microfiber
+  material: microfiber
+  color: brown
+  price_add:
+    amount: 820
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (BAFA ended Dec 2023)"
-    amount:
-      amount: 0
-      currency: EUR
-    conditions: ["Program ended December 17, 2023"]
-    expires_at: "2023-12-17"
-    status: expired
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars - saves €1,812/year vs 1% ICE rate"
-    amount_saved_per_year:
-      amount: 1812
-      currency: EUR
-    calculation: "Based on €51,790 gross list price: 0.25% x €51,790 x 12 months = €1,553/year vs 1% ICE (€6,215/year)"
-    conditions: ["Price under €60,000 gross list price", "Must be registered as company car"]
-  - type: tax
-    name: "Kfz-Steuer exemption"
-    description: "Road tax exemption for BEV until 2030"
-    amount_saved_per_year:
-      amount: 358
-      currency: EUR
-    conditions: ["All BEV registered until 2030"]
-    expires_at: "2030-12-31"
-  - type: emissions_trading
-    name: "THG-Quote (Greenhouse Gas Quota)"
-    description: "Sell CO2 certificate for ~€300-400/year"
-    amount_saved_per_year:
-      amount: 350
-      currency: EUR
-    conditions: ["BEV owners can sell annual CO2 savings certificate"]
+- type: federal
+  name: "Umweltbonus (BAFA ended Dec 2023)"
+  amount:
+    amount: 0
+    currency: EUR
+  conditions: ["Program ended December 17, 2023"]
+  expires_at: "2023-12-17"
+  status: expired
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars - saves €1,812/year vs 1% ICE rate"
+  amount_saved_per_year:
+    amount: 1812
+    currency: EUR
+  calculation: "Based on €51,790 gross list price: 0.25% x €51,790 x 12 months = €1,553/year vs 1% ICE (€6,215/year)"
+  conditions: ["Price under €60,000 gross list price", "Must be registered as company car"]
+- type: tax
+  name: "Kfz-Steuer exemption"
+  description: "Road tax exemption for BEV until 2030"
+  amount_saved_per_year:
+    amount: 358
+    currency: EUR
+  conditions: ["All BEV registered until 2030"]
+  expires_at: "2030-12-31"
+- type: emissions_trading
+  name: "THG-Quote (Greenhouse Gas Quota)"
+  description: "Sell CO2 certificate for ~€300-400/year"
+  amount_saved_per_year:
+    amount: 350
+    currency: EUR
+  conditions: ["BEV owners can sell annual CO2 savings certificate"]
 
 # Options
 popular_packages:
-  - name: Assistance Package Plus
-    code: ASSIST_PLUS
-    price:
-      amount: 1895
-      currency: EUR
-    features:
-      - Travel Assist with Emergency Assist
-      - IQ.DRIVE adaptive cruise control
-      - Park Assist Plus
-      - Area View (360° camera)
-  - name: Comfort Package
-    code: COMFORT
-    price:
-      amount: 1360
-      currency: EUR
-    features:
-      - Electric panoramic sunroof
-      - Heated front seats
-      - Heated windscreen
-      - Heated steering wheel
-  - name: Infotainment Package Plus
-    code: INFOTAIN_PLUS
-    price:
-      amount: 1020
-      currency: EUR
-    features:
-      - Discover Pro navigation system
-      - We Connect Plus (3 years)
-      - Premium sound system (480W, 10 speakers)
-  - name: Towing Package
-    code: TOW
-    price:
-      amount: 1180
-      currency: EUR
-    features:
-      - Tow hitch (electrically swiveling)
-      - Trailer Assist
-      - 1,200 kg braked towing capacity
+- name: Assistance Package Plus
+  code: ASSIST_PLUS
+  price:
+    amount: 1895
+    currency: EUR
+  features:
+  - Travel Assist with Emergency Assist
+  - IQ.DRIVE adaptive cruise control
+  - Park Assist Plus
+  - Area View (360° camera)
+- name: Comfort Package
+  code: COMFORT
+  price:
+    amount: 1360
+    currency: EUR
+  features:
+  - Electric panoramic sunroof
+  - Heated front seats
+  - Heated windscreen
+  - Heated steering wheel
+- name: Infotainment Package Plus
+  code: INFOTAIN_PLUS
+  price:
+    amount: 1020
+    currency: EUR
+  features:
+  - Discover Pro navigation system
+  - We Connect Plus (3 years)
+  - Premium sound system (480W, 10 speakers)
+- name: Towing Package
+  code: TOW
+  price:
+    amount: 1180
+    currency: EUR
+  features:
+  - Tow hitch (electrically swiveling)
+  - Trailer Assist
+  - 1,200 kg braked towing capacity
 
 # Popular Configurations
 popular_configurations:
-  - name: "Family AWD"
-    description: "Most popular configuration for families wanting AWD traction"
-    base_price: 51790
-    added_options:
-      - Pure White (standard): 0
-      - 19" Andoya wheels (standard): 0
-      - Storm Grey Fabric interior (standard): 0
-      - Comfort Package: 1360
-      - Assistance Package Plus: 1895
-    total_price: 55045
-    destination_charge: 1190
-    total_on_road: 56235
-  - name: "Premium AWD Executive"
-    description: "Executive-focused configuration for company car drivers"
-    base_price: 51790
-    added_options:
-      - Moonstone Grey Metallic: 990
-      - 20" Ystad wheels: 1080
-      - Nutmeg Brown Microfiber interior: 820
-      - Comfort Package: 1360
-      - Assistance Package Plus: 1895
-      - Infotainment Package Plus: 1020
-    total_price: 58955
-    destination_charge: 1190
-    total_on_road: 60145
-  - name: "Adventure AWD Towing"
-    description: "Outdoor enthusiasts wanting AWD traction and towing"
-    base_price: 51790
-    added_options:
-      - Glacier Blue Metallic: 990
-      - 19" Andoya wheels: 0
-      - Soul Black ArtVelours interior: 0
-      - Comfort Package: 1360
-      - Assistance Package Plus: 1895
-      - Towing Package: 1180
-    total_price: 57215
-    destination_charge: 1190
-    total_on_road: 58405
+- name: "Family AWD"
+  description: "Most popular configuration for families wanting AWD traction"
+  base_price: 51790
+  added_options:
+  - Pure White (standard): 0
+  - 19" Andoya wheels (standard): 0
+  - Storm Grey Fabric interior (standard): 0
+  - Comfort Package: 1360
+  - Assistance Package Plus: 1895
+  total_price: 55045
+  destination_charge: 1190
+  total_on_road: 56235
+- name: "Premium AWD Executive"
+  description: "Executive-focused configuration for company car drivers"
+  base_price: 51790
+  added_options:
+  - Moonstone Grey Metallic: 990
+  - 20" Ystad wheels: 1080
+  - Nutmeg Brown Microfiber interior: 820
+  - Comfort Package: 1360
+  - Assistance Package Plus: 1895
+  - Infotainment Package Plus: 1020
+  total_price: 58955
+  destination_charge: 1190
+  total_on_road: 60145
+- name: "Adventure AWD Towing"
+  description: "Outdoor enthusiasts wanting AWD traction and towing"
+  base_price: 51790
+  added_options:
+  - Glacier Blue Metallic: 990
+  - 19" Andoya wheels: 0
+  - Soul Black ArtVelours interior: 0
+  - Comfort Package: 1360
+  - Assistance Package Plus: 1895
+  - Towing Package: 1180
+  total_price: 57215
+  destination_charge: 1190
+  total_on_road: 58405
 
 # Notes
 notes: |
@@ -223,18 +223,18 @@ notes: |
   Front motor is 80 kW AC induction, rear is 150 kW permanent magnet.
   Slightly lower range (497 km WLTP) vs RWD (520 km) due to added weight and second motor.
   Popular choice for buyers in mountainous regions or wanting better winter traction.
-  
+
   AWD premium: €3,225 over RWD Pro variant (€51,790 vs €48,565).
   Acceleration: 0-100 km/h in 6.7s (vs 8.5s RWD) - much sportier!
   Weight: +115 kg vs RWD (2,239 kg vs 2,124 kg).
-  
+
   Built in Zwickau, Germany on MEB platform (shared production line with RWD).
   No BAFA Umweltbonus available (program ended December 2023).
-  
+
   Company car drivers save €1,812/year with 0.25% tax rate vs 1% ICE rate.
   Additional THG-Quote earnings: ~€350/year from CO2 certificate sales.
   Total annual savings: ~€2,520/year (company car tax + road tax + THG-Quote).
-  
+
   Popular with:
   - Company car drivers (0.25% tax rate saves €1,812/year)
   - Families wanting AWD traction for winter/mountains
@@ -245,7 +245,6 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.volkswagen.de/de/modelle-und-konfigurator/id4.html
   created_at: "2026-02-07"
   last_verified_at: "2026-02-07"
   notes: |
@@ -253,3 +252,5 @@ metadata:
     BAFA Umweltbonus program ended December 17, 2023.
     Company car tax benefits and THG-Quote still available.
     AWD variant adds €3,225 premium over RWD Pro for dual-motor system.
+  sources:
+  - https://www.volkswagen.de/de/modelle-und-konfigurator/id4.html

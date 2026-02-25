@@ -19,120 +19,111 @@ pricing:
     due to VAT difference (21% vs 19%).
 
 incentives:
-  - name: Registro IEDMT Exemption
-    type: tax_exemption
-    amount: 0
-    description: "Zero-emission vehicles exempt from registration tax (IEDMT)"
-    valid_until: "2026-12-31"
-  - name: Municipal Road Tax Discount
-    type: tax_exemption
-    amount: 0
-    description: "Up to 75% discount on IVTM (road tax) in many municipalities"
-    notes: "Varies by municipality; Madrid, Barcelona typically offer 75%"
-  - name: Madrid Central / ZBE Access
-    type: discount
-    amount: 0
-    description: "Full access to Zero Emission Zones (ZBE) in Spanish cities"
-    notes: "Includes Madrid Central, Barcelona ZBE, and other city restrictions"
+- name: Registro IEDMT Exemption
+  type: tax_exemption
+  amount: 0
+  description: "Zero-emission vehicles exempt from registration tax (IEDMT)"
+  valid_until: "2026-12-31"
+- name: Municipal Road Tax Discount
+  type: tax_exemption
+  amount: 0
+  description: "Up to 75% discount on IVTM (road tax) in many municipalities"
+  notes: "Varies by municipality; Madrid, Barcelona typically offer 75%"
+- name: Madrid Central / ZBE Access
+  type: discount
+  amount: 0
+  description: "Full access to Zero Emission Zones (ZBE) in Spanish cities"
+  notes: "Includes Madrid Central, Barcelona ZBE, and other city restrictions"
 
 available_colors:
-  - name: Mythos Black Metallic
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Glacier White Metallic
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Navarra Blue Metallic
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Typhoon Gray Metallic
-    type: metallic
-    price_add:
-      amount: 850
-      currency: EUR
-  - name: Aurora Violet Metallic
-    type: metallic
-    price_add:
-      amount: 1250
-      currency: EUR
-  - name: Chronos Gray Metallic
-    type: metallic
-    price_add:
-      amount: 1250
-      currency: EUR
+- name: Mythos Black Metallic
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Glacier White Metallic
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Navarra Blue Metallic
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Typhoon Gray Metallic
+  type: metallic
+  price_add:
+    amount: 850
+    currency: EUR
+- name: Aurora Violet Metallic
+  type: metallic
+  price_add:
+    amount: 1250
+    currency: EUR
+- name: Chronos Gray Metallic
+  type: metallic
+  price_add:
+    amount: 1250
+    currency: EUR
 
 available_wheels:
-  - name: "19-inch 5-spoke design wheels"
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: "20-inch 5-spoke aero design wheels"
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1150
-      currency: EUR
-  - name: "21-inch 5-spoke V-design contrast wheels"
-    size_inches: 21
-    type: alloy
-    price_add:
-      amount: 2300
-      currency: EUR
+- name: "19-inch 5-spoke design wheels"
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: "20-inch 5-spoke aero design wheels"
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1150
+    currency: EUR
+- name: "21-inch 5-spoke V-design contrast wheels"
+  size_inches: 21
+  type: alloy
+  price_add:
+    amount: 2300
+    currency: EUR
 
 available_interiors:
-  - name: Leather-free seats
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Alcantara/leather combination
-    price_add:
-      amount: 1900
-      currency: EUR
-  - name: Fine Nappa leather
-    price_add:
-      amount: 2700
-      currency: EUR
+- name: Leather-free seats
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Alcantara/leather combination
+  price_add:
+    amount: 1900
+    currency: EUR
+- name: Fine Nappa leather
+  price_add:
+    amount: 2700
+    currency: EUR
 
 available_packages:
-  - name: Technology Package
-    price_add:
-      amount: 2600
-      currency: EUR
-    description: "MMI Navigation plus, Audi virtual cockpit plus, head-up display"
-  - name: Assistance Package Plus
-    price_add:
-      amount: 2300
-      currency: EUR
-    description: "Adaptive cruise assist, traffic jam assist, 360° cameras"
-  - name: S line Exterior Package
-    price_add:
-      amount: 2800
-      currency: EUR
-    description: "S line exterior styling, LED headlights Pro, sports suspension"
-
-market_notes: >
-  Audi Q4 40 e-tron 2026 is available through Audi Spain dealer network.
-  At €55,900 it exceeds the MOVES III price cap, so no direct purchase
-  subsidy applies. However, it benefits from IEDMT exemption (saving
-  ~€2,500-€5,000 vs equivalent ICE), municipal road tax discounts, and
-  full ZBE access across Spanish cities. The 590 km WLTP range makes it
-  practical for long Spanish highway trips. Popular in Madrid and Barcelona
-  among premium SUV buyers transitioning to electric.
+- name: Technology Package
+  price_add:
+    amount: 2600
+    currency: EUR
+  description: "MMI Navigation plus, Audi virtual cockpit plus, head-up display"
+- name: Assistance Package Plus
+  price_add:
+    amount: 2300
+    currency: EUR
+  description: "Adaptive cruise assist, traffic jam assist, 360° cameras"
+- name: S line Exterior Package
+  price_add:
+    amount: 2800
+    currency: EUR
+  description: "S line exterior styling, LED headlights Pro, sports suspension"
 
 metadata:
   data_quality: estimated
-  last_updated: "2026-02-12"
-  confidence_level: medium
   sources:
-    - https://www.audi.es/es/modelos/q4-e-tron/
-    - https://www.audi.es/es/modelos/q4-e-tron/configurador.html
+  - https://www.audi.es/es/modelos/q4-e-tron/
+  - https://www.audi.es/es/modelos/q4-e-tron/configurador.html
   created_at: "2026-02-12T07:15:00Z"
   created_by: Patricio
+  updated_at: "2026-02-12"
+notes: Audi Q4 40 e-tron 2026 is available through Audi Spain dealer network. At €55,900 it exceeds the MOVES III price cap, so no direct purchase subsidy applies. However, it benefits from IEDMT exemption (saving ~€2,500-€5,000 vs equivalent ICE), municipal road tax discounts, and full ZBE access across Spanish cities. The 590 km WLTP range makes it practical for long Spanish highway trips. Popular in Madrid and Barcelona among premium SUV buyers transitioning to electric.

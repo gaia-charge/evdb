@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Built in Vigo, Spain (Stellantis Vigo plant)
@@ -22,68 +22,68 @@ pricing:
 
 options:
   colors:
-    - name: Bianco White
-      price: 0
-      type: solid
-    - name: Elixir Red
-      price: 650
-      type: metallic
-    - name: Titanium Grey
-      price: 650
-      type: metallic
-    - name: Celebes Blue
-      price: 650
-      type: metallic
-    - name: Nera Black
-      price: 650
-      type: metallic
-    - name: Okenite White
-      price: 350
-      type: pearl
+  - name: Bianco White
+    price: 0
+    type: solid
+  - name: Elixir Red
+    price: 650
+    type: metallic
+  - name: Titanium Grey
+    price: 650
+    type: metallic
+  - name: Celebes Blue
+    price: 650
+    type: metallic
+  - name: Nera Black
+    price: 650
+    type: metallic
+  - name: Okenite White
+    price: 350
+    type: pearl
 
   wheels:
-    - name: 18" GT alloy wheels
-      price: 0
-      size_inches: 18
+  - name: 18" GT alloy wheels
+    price: 0
+    size_inches: 18
 
 packages:
-  - name: Pack Drive Assist Plus
-    price: 1200
-    includes:
-      - Adaptive cruise control with Stop & Go
-      - Lane positioning assist
-      - Semi-automatic lane change
+- name: Pack Drive Assist Plus
+  price: 1200
+  includes:
+  - Adaptive cruise control with Stop & Go
+  - Lane positioning assist
+  - Semi-automatic lane change
 
-  - name: Pack Visibilidad
-    price: 800
-    includes:
-      - LED Matrix headlights
-      - High beam assist
+- name: Pack Visibilidad
+  price: 800
+  includes:
+  - LED Matrix headlights
+  - High beam assist
 
 incentives:
-  - type: tax_exemption
-    name: Exención Impuesto de Matriculación
-    amount: 0
-    currency: EUR
-    notes: Zero-emission vehicles exempt from registration tax in Spain.
-    valid_until: "2026-12-31"
+- type: tax_exemption
+  name: Exención Impuesto de Matriculación
+  amount: 0
+  currency: EUR
+  notes: Zero-emission vehicles exempt from registration tax in Spain.
+  valid_until: "2026-12-31"
 
-  - type: tax_exemption
-    name: Reducción IVTM
-    amount: 0
-    currency: EUR
-    notes: Up to 75% reduction on annual road tax depending on municipality.
+- type: tax_exemption
+  name: Reducción IVTM
+  amount: 0
+  currency: EUR
+  notes: Up to 75% reduction on annual road tax depending on municipality.
 
-  - type: tax_exemption
-    name: Etiqueta DGT CERO
-    amount: 0
-    currency: EUR
-    notes: Access to ZBE zones, free/discounted parking in many cities.
+- type: tax_exemption
+  name: Etiqueta DGT CERO
+  amount: 0
+  currency: EUR
+  notes: Access to ZBE zones, free/discounted parking in many cities.
 
 sales:
   channels:
-    - Peugeot dealerships across Spain
-    - Online configurator at peugeot.es
+  - Peugeot dealerships across Spain
+  - Online configurator at peugeot.es
 
 warranty:
   vehicle_years: 2
@@ -100,10 +100,10 @@ compliance:
 metadata:
   data_quality: estimated
   created_at: "2026-02-12"
-  last_updated: "2026-02-12"
-  source_urls:
-    - https://www.peugeot.es/gama/suv-e-2008.html
   notes: |
     Price estimated based on German pricing adjusted for Spanish market.
     The e-2008 is partially built in Spain (Vigo), making it locally relevant.
     Prices include 21% IVA.
+  updated_at: "2026-02-12"
+  sources:
+  - https://www.peugeot.es/gama/suv-e-2008.html

@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Fast delivery from Zaragoza, Spain; mechanically identical to Peugeot e-208 GT
@@ -22,124 +22,122 @@ pricing:
 
 options:
   colors:
-    - name: Voltaic Blue (metallic)
-      price: 695
-      type: metallic
-    - name: Power Red (metallic)
-      price: 695
-      type: metallic
-    - name: Moonstone Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Quartz Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Diamond Black (pearl)
-      price: 795
-      type: pearl
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Polar White (solid)
-      price: 0
-      type: solid
-  
+  - name: Voltaic Blue (metallic)
+    price: 695
+    type: metallic
+  - name: Power Red (metallic)
+    price: 695
+    type: metallic
+  - name: Moonstone Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Quartz Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Diamond Black (pearl)
+    price: 795
+    type: pearl
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Polar White (solid)
+    price: 0
+    type: solid
+
   two_tone:
-    - name: Two-Tone Black Roof
-      price: 650
-      notes: Black roof and B-pillars with any color
-  
+  - name: Two-Tone Black Roof
+    price: 650
+    notes: Black roof and B-pillars with any color
+
   wheels:
-    - name: 17" Bi-Color Alloy Wheels
-      price: 0
-      size_inches: 17
-      notes: Standard on GS Line trim
-    - name: 17" Black Diamond-Cut Alloy Wheels
-      price: 450
-      size_inches: 17
-      notes: Optional sporty black finish
-  
+  - name: 17" Bi-Color Alloy Wheels
+    price: 0
+    size_inches: 17
+    notes: Standard on GS Line trim
+  - name: 17" Black Diamond-Cut Alloy Wheels
+    price: 450
+    size_inches: 17
+    notes: Optional sporty black finish
+
   interior:
-    - name: Black Sport Cloth Seats
-      price: 0
-      notes: Standard on GS Line
-    - name: Black Alcantara Sport Seats
-      price: 850
-      notes: Premium Alcantara with contrast stitching
+  - name: Black Sport Cloth Seats
+    price: 0
+    notes: Standard on GS Line
+  - name: Black Alcantara Sport Seats
+    price: 850
+    notes: Premium Alcantara with contrast stitching
 
 packages:
-  - name: Winter Package
-    price: 590
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Heated windscreen
-      - Heated washer nozzles
-  
-  - name: IntelliLux LED Matrix Package
-    price: 990
-    includes:
-      - IntelliLux LED Matrix headlights (Opel exclusive)
-      - Adaptive lighting with 16 LED segments
-      - Automatic high beam assist
-      - Cornering lights
-    notes: Segment-leading technology not available on competitors
-  
-  - name: Multimedia Navi Pro Package
-    price: 1290
-    includes:
-      - 10.0" color touchscreen
-      - Navigation with live traffic
-      - DAB+ digital radio
-      - Wireless smartphone charging
-      - 6 speakers premium audio
-  
-  - name: Parking Assistance Package
-    price: 690
-    includes:
-      - Front and rear parking sensors
-      - Reversing camera with guidelines
-      - Park Assist (automatic parking)
-  
-  - name: Keyless Entry & Start
-    price: 490
-    includes:
-      - Keyless entry on front doors
-      - Keyless start button
-      - Automatic door unlocking on approach
-  
-  - name: Panoramic Glass Roof
-    price: 900
-    includes:
-      - Fixed glass roof with electric sunshade
-      - UV protection
+- name: Winter Package
+  price: 590
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Heated windscreen
+  - Heated washer nozzles
+
+- name: IntelliLux LED Matrix Package
+  price: 990
+  includes:
+  - IntelliLux LED Matrix headlights (Opel exclusive)
+  - Adaptive lighting with 16 LED segments
+  - Automatic high beam assist
+  - Cornering lights
+  notes: Segment-leading technology not available on competitors
+
+- name: Multimedia Navi Pro Package
+  price: 1290
+  includes:
+  - 10.0" color touchscreen
+  - Navigation with live traffic
+  - DAB+ digital radio
+  - Wireless smartphone charging
+  - 6 speakers premium audio
+
+- name: Parking Assistance Package
+  price: 690
+  includes:
+  - Front and rear parking sensors
+  - Reversing camera with guidelines
+  - Park Assist (automatic parking)
+
+- name: Keyless Entry & Start
+  price: 490
+  includes:
+  - Keyless entry on front doors
+  - Keyless start button
+  - Automatic door unlocking on approach
+
+- name: Panoramic Glass Roof
+  price: 900
+  includes:
+  - Fixed glass roof with electric sunshade
+  - UV protection
 
 standalone_options:
-  - name: 11kW 3-phase AC Onboard Charger
-    price: 0
-    notes: Standard on GS Line trim
+- name: 11kW 3-phase AC Onboard Charger
+  price: 0
+  notes: Standard on GS Line trim
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€200-300/year."
-  
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year (rates vary by market)"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€200-300/year."
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year (rates vary by market)"
 
 company_car:
   taxation_rate: 0.25  # 0.25% for BEVs under €70k (vs 1% for ICE)
@@ -154,29 +152,27 @@ charging:
   public_network:
     name: "Opel Charging powered by Plugsurfing"
     coverage: "250,000+ charging points across 29 European countries"
-    membership_fee: null
+    membership_fee:
     notes: "Access to multiple networks with single RFID card"
-  
   subscription:
     name: "Opel Charging Subscription"
     monthly_fee: 9.99
     currency: EUR
     ionity_rate_eur_per_kwh: 0.35  # vs €0.79 pay-as-you-go
     benefits:
-      - "IONITY fast charging at €0.35/kWh (vs €0.79)"
-      - "Access to 250,000+ charging points"
-      - "MyOpel app integration"
-  
+    - "IONITY fast charging at €0.35/kWh (vs €0.79)"
+    - "Access to 250,000+ charging points"
+    - "MyOpel app integration"
   home_charging:
-    - name: "Opel Wallbox"
-      price: 899
-      power_kw: 11
-      features:
-        - "Integrated Type 2 cable (5m)"
-        - "WiFi connectivity with app control"
-        - "Dynamic load management"
-        - "Weather-resistant (IP54)"
-      installation_cost: "€500-1,500 depending on location"
+  - name: "Opel Wallbox"
+    price: 899
+    power_kw: 11
+    features:
+    - "Integrated Type 2 cable (5m)"
+    - "WiFi connectivity with app control"
+    - "Dynamic load management"
+    - "Weather-resistant (IP54)"
+    installation_cost: "€500-1,500 depending on location"
 
 warranty:
   vehicle_years: 2
@@ -208,25 +204,21 @@ environmental:
 
 market_comparison:
   direct_competitors:
-    - name: "Peugeot e-208 GT"
-      base_price: 39490
-      comparison: "€2,500 cheaper, mechanically identical, Opel has IntelliLux Matrix LED"
-    
-    - name: "Mini Cooper Electric"
-      base_price: 39990
-      comparison: "€3,000 cheaper, more range (359km vs 305km), more practical"
-    
-    - name: "Fiat 500e Icon"
-      base_price: 34990
-      comparison: "€2,000 more, Corsa-e is larger, more range, more practical"
-    
-    - name: "Renault Zoe"
-      base_price: 33990
-      comparison: "€3,000 more, Corsa-e has faster charging (100kW vs 50kW)"
-    
-    - name: "MG4 Standard Range"
-      base_price: 31990
-      comparison: "€5,000 more, but MG4 has more range (350km), larger, better value"
+  - name: "Peugeot e-208 GT"
+    base_price: 39490
+    comparison: "€2,500 cheaper, mechanically identical, Opel has IntelliLux Matrix LED"
+  - name: "Mini Cooper Electric"
+    base_price: 39990
+    comparison: "€3,000 cheaper, more range (359km vs 305km), more practical"
+  - name: "Fiat 500e Icon"
+    base_price: 34990
+    comparison: "€2,000 more, Corsa-e is larger, more range, more practical"
+  - name: "Renault Zoe"
+    base_price: 33990
+    comparison: "€3,000 more, Corsa-e has faster charging (100kW vs 50kW)"
+  - name: "MG4 Standard Range"
+    base_price: 31990
+    comparison: "€5,000 more, but MG4 has more range (350km), larger, better value"
 
 sales_notes: |
   Opel Corsa (all versions) consistently in top 10 best-selling cars in Germany.
@@ -236,7 +228,7 @@ sales_notes: |
 
 notes: |
   The Opel Corsa-e GS Line at €36,990 offers exceptional value:
-  
+
   **Key Advantages:**
   - €2,500 cheaper than mechanically identical Peugeot e-208 GT
   - IntelliLux LED Matrix headlights (Opel exclusive, segment-leading)
@@ -245,20 +237,20 @@ notes: |
   - Strong Opel dealer network (850+ locations)
   - Fast 8-week delivery from Zaragoza, Spain
   - Company car tax benefit: 0.25% = €92/month (saves €3,328/year vs ICE)
-  
+
   **vs Peugeot e-208 GT:**
   - €2,500 cheaper (€36,990 vs €39,490)
   - Same CMP platform, battery, motor, performance
   - IntelliLux Matrix LED vs standard LED
   - More conservative design vs sportier e-208
   - Built at same Zaragoza plant
-  
+
   **Best for:**
   - Value-conscious buyers prioritizing practicality
   - Company car drivers (0.25% tax)
   - German brand loyalty
   - IntelliLux Matrix LED technology
-  
+
   **Considerations:**
   - Smallest trunk in segment (309L)
   - No towing capability
@@ -268,9 +260,9 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-07"
-  last_updated: "2026-02-07"
   sources:
-    - https://www.opel.com/modelle/corsa/corsa-e.html
-    - https://www.opel.com/tools/konfigurator.html
-    - https://www.adac.de/
-    - https://ev-database.org/
+  - https://www.opel.com/modelle/corsa/corsa-e.html
+  - https://www.opel.com/tools/konfigurator.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  updated_at: "2026-02-07"

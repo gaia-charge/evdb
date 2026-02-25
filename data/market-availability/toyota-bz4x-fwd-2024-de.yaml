@@ -9,128 +9,128 @@ pricing:
   destination_charge: 995
   on_the_road_price: 47995
   price_includes:
-    - "6.6kW AC charging (single-phase)"
-    - "150kW DC fast charging"
-    - "Heat pump (standard)"
-    - "12.3-inch touchscreen"
-    - "Toyota Safety Sense 3.0"
-    - "Panoramic glass roof (fixed)"
-    - "LED headlights"
-    - "18-inch alloy wheels"
+  - "6.6kW AC charging (single-phase)"
+  - "150kW DC fast charging"
+  - "Heat pump (standard)"
+  - "12.3-inch touchscreen"
+  - "Toyota Safety Sense 3.0"
+  - "Panoramic glass roof (fixed)"
+  - "LED headlights"
+  - "18-inch alloy wheels"
 
 trim_levels:
-  - name: "Pure"
-    price: 47000
-    features:
-      - "Base FWD model with 150kW (204hp)"
-      - "516 km WLTP range"
-      - "18-inch wheels"
-      - "Fabric interior"
-      - "8-speaker audio"
-  - name: "Comfort"
-    price: 51500  # +€4,500
-    features:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Power driver's seat"
-      - "Blind spot monitor"
-      - "Rear cross-traffic alert"
-      - "Synthetic leather interior"
-  - name: "Premium"
-    price: 55500  # +€8,500 over base
-    features:
-      - "All Comfort features"
-      - "Ventilated front seats"
-      - "Power front passenger seat"
-      - "360-degree camera"
-      - "Premium audio (9 speakers)"
-      - "Panoramic view monitor"
-      - "Wireless phone charger"
+- name: "Pure"
+  price: 47000
+  features:
+  - "Base FWD model with 150kW (204hp)"
+  - "516 km WLTP range"
+  - "18-inch wheels"
+  - "Fabric interior"
+  - "8-speaker audio"
+- name: "Comfort"
+  price: 51500    # +€4,500
+  features:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Power driver's seat"
+  - "Blind spot monitor"
+  - "Rear cross-traffic alert"
+  - "Synthetic leather interior"
+- name: "Premium"
+  price: 55500    # +€8,500 over base
+  features:
+  - "All Comfort features"
+  - "Ventilated front seats"
+  - "Power front passenger seat"
+  - "360-degree camera"
+  - "Premium audio (9 speakers)"
+  - "Panoramic view monitor"
+  - "Wireless phone charger"
 
 colors:
-  - name: "Super White"
-    type: solid
-    price: 0  # Free
-  - name: "Silver Metallic"
-    type: metallic
-    price: 650
-  - name: "Black"
-    type: solid
-    price: 0  # Free
-  - name: "Emotional Red II"
-    type: metallic
-    price: 850
-  - name: "Oxygen White Pearl"
-    type: pearl
-    price: 850
-  - name: "Precious Metal"
-    type: metallic
-    price: 650
+- name: "Super White"
+  type: solid
+  price: 0    # Free
+- name: "Silver Metallic"
+  type: metallic
+  price: 650
+- name: "Black"
+  type: solid
+  price: 0    # Free
+- name: "Emotional Red II"
+  type: metallic
+  price: 850
+- name: "Oxygen White Pearl"
+  type: pearl
+  price: 850
+- name: "Precious Metal"
+  type: metallic
+  price: 650
 
 wheels:
-  - size: "18 inch"
-    price: 0  # Standard
-    range_impact_km: 0
-    name: "18-inch alloy wheels"
-  - size: "20 inch"
-    price: 1200
-    range_impact_km: -20
-    name: "20-inch alloy wheels"
+- size: "18 inch"
+  price: 0    # Standard
+  range_impact_km: 0
+  name: "18-inch alloy wheels"
+- size: "20 inch"
+  price: 1200
+  range_impact_km: -20
+  name: "20-inch alloy wheels"
 
 interior:
-  - name: "Fabric standard"
-    price: 0
-  - name: "Synthetic leather"
-    price: 1500
+- name: "Fabric standard"
+  price: 0
+- name: "Synthetic leather"
+  price: 1500
 
 packages:
-  - name: "Tech Package"
-    price: 2500
-    includes:
-      - "360-degree camera"
-      - "Panoramic view monitor"
-      - "Digital rear-view mirror"
-      - "Wireless phone charger"
-  - name: "Comfort Package"
-    price: 1800
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Power driver's seat with memory"
+- name: "Tech Package"
+  price: 2500
+  includes:
+  - "360-degree camera"
+  - "Panoramic view monitor"
+  - "Digital rear-view mirror"
+  - "Wireless phone charger"
+- name: "Comfort Package"
+  price: 1800
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Power driver's seat with memory"
 
 individual_options:
-  - name: "Towing package"
-    price: 990
-    notes: "750kg braked/unbraked, electrically folding towbar"
-  - name: "Solar roof"
-    price: 1500
-    notes: "Generates power for auxiliary systems (not traction battery)"
-  - name: "Premium audio system"
-    price: 890
-    notes: "9-speaker premium sound system"
+- name: "Towing package"
+  price: 990
+  notes: "750kg braked/unbraked, electrically folding towbar"
+- name: "Solar roof"
+  price: 1500
+  notes: "Generates power for auxiliary systems (not traction battery)"
+- name: "Premium audio system"
+  price: 890
+  notes: "9-speaker premium sound system"
 
 incentives:
-  - name: "BAFA Umweltbonus"
-    type: grant
-    amount: 0
-    notes: "German EV subsidy ended December 2023"
-    valid_until: null
-  - name: "Company car tax benefit"
-    type: tax_credit
-    amount: 4230
-    notes: "0.25% of gross list price per month (vs 1% for ICE). For €47,000 vehicle: 0.25% = €118/month = €1,416/year vs 1% = €470/month = €5,640/year. Annual savings: €4,224."
-    calculation: "€47,000 × 0.25% = €118/month. ICE: €47,000 × 1% = €470/month. Savings: €352/month = €4,224/year"
-    eligibility: "Company car drivers only"
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 380
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote (CO2 certificate)"
-    type: grant
-    amount: 300
-    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
-    valid_until: null
+- name: "BAFA Umweltbonus"
+  type: grant
+  amount: 0
+  notes: "German EV subsidy ended December 2023"
+  valid_until:
+- name: "Company car tax benefit"
+  type: tax_credit
+  amount: 4230
+  notes: "0.25% of gross list price per month (vs 1% for ICE). For €47,000 vehicle: 0.25% = €118/month = €1,416/year vs 1% = €470/month = €5,640/year. Annual savings: €4,224."
+  calculation: "€47,000 × 0.25% = €118/month. ICE: €47,000 × 1% = €470/month. Savings: €352/month = €4,224/year"
+  eligibility: "Company car drivers only"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 380
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (CO2 certificate)"
+  type: grant
+  amount: 300
+  notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+  valid_until:
 
 availability:
   in_stock: true
@@ -146,18 +146,18 @@ dealers:
   notes: "Extensive Toyota dealer network across Germany"
 
 charging_costs:
-  - scenario: "Home charging (night rate)"
-    cost_per_kwh: 0.30
-    cost_10_to_80_percent: 14.99
-    cost_per_100km: 4.47
-  - scenario: "Public AC charging"
-    cost_per_kwh: 0.45
-    cost_10_to_80_percent: 22.49
-    cost_per_100km: 6.71
-  - scenario: "DC fast charging (average)"
-    cost_per_kwh: 0.55
-    cost_10_to_80_percent: 27.49
-    cost_per_100km: 8.20
+- scenario: "Home charging (night rate)"
+  cost_per_kwh: 0.30
+  cost_10_to_80_percent: 14.99
+  cost_per_100km: 4.47
+- scenario: "Public AC charging"
+  cost_per_kwh: 0.45
+  cost_10_to_80_percent: 22.49
+  cost_per_100km: 6.71
+- scenario: "DC fast charging (average)"
+  cost_per_kwh: 0.55
+  cost_10_to_80_percent: 27.49
+  cost_per_100km: 8.20
 
 warranty:
   vehicle_years: 3
@@ -175,28 +175,28 @@ annual_costs:
   total_estimate: 1335
 
 popular_configurations:
-  - name: "Pure Base"
-    price: 49495
-    includes:
-      - "Pure trim (€47,000)"
-      - "Metallic paint (€650)"
-      - "Solar roof (€1,500)"
-      - "Destination charge (€995)"
-    notes: "Most affordable configuration"
-  - name: "Comfort Recommended"
-    price: 55235
-    includes:
-      - "Comfort trim (€51,500)"
-      - "Tech Package (€2,500)"
-      - "Metallic paint (€650)"
-      - "Destination charge (€995)"
-    notes: "Popular mid-range configuration"
+- name: "Pure Base"
+  price: 49495
+  includes:
+  - "Pure trim (€47,000)"
+  - "Metallic paint (€650)"
+  - "Solar roof (€1,500)"
+  - "Destination charge (€995)"
+  notes: "Most affordable configuration"
+- name: "Comfort Recommended"
+  price: 55235
+  includes:
+  - "Comfort trim (€51,500)"
+  - "Tech Package (€2,500)"
+  - "Metallic paint (€650)"
+  - "Destination charge (€995)"
+  notes: "Popular mid-range configuration"
 
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - "https://www.toyota.de/modelle/bz4x"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/toyota-bz4x/"
+  - "https://www.toyota.de/modelle/bz4x"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/toyota-bz4x/"
   notes: "Toyota's first mass-market BEV in Germany. Base price at €47,000 positions it competitively vs VW ID.4 (€46,000), Hyundai Ioniq 5 (€45,000). Main limitation: only 6.6kW AC charging (single-phase). Strengths: 10-year unlimited km battery warranty (best in class), heat pump standard, excellent build quality, Toyota reliability reputation. Company car drivers save €4,224/year with 0.25% tax rate."
+  updated_at: "2026-02-08"

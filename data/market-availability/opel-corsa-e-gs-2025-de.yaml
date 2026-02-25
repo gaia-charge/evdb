@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Built at Trnava, Slovakia; fast delivery to Germany
@@ -22,89 +22,89 @@ pricing:
 
 options:
   colors:
-    - name: Power Red (solid)
-      price: 0
-      type: solid
-    - name: Quartz Silver (metallic)
-      price: 595
-      type: metallic
-    - name: Nautica Blue (metallic)
-      price: 595
-      type: metallic
-    - name: Volt Yellow (metallic)
-      price: 595
-      type: metallic
-    - name: Diamond Black (metallic)
-      price: 595
-      type: metallic
-    - name: Summit White
-      price: 0
-      type: solid
-    - name: Rekord Red (special)
-      price: 795
-      type: special
-  
+  - name: Power Red (solid)
+    price: 0
+    type: solid
+  - name: Quartz Silver (metallic)
+    price: 595
+    type: metallic
+  - name: Nautica Blue (metallic)
+    price: 595
+    type: metallic
+  - name: Volt Yellow (metallic)
+    price: 595
+    type: metallic
+  - name: Diamond Black (metallic)
+    price: 595
+    type: metallic
+  - name: Summit White
+    price: 0
+    type: solid
+  - name: Rekord Red (special)
+    price: 795
+    type: special
+
   wheels:
-    - name: 17" bi-color alloy wheels
-      price: 0
-      size_inches: 17
-      notes: Standard on GS trim
-    - name: 18" diamond-cut alloy wheels
-      price: 750
-      size_inches: 18
+  - name: 17" bi-color alloy wheels
+    price: 0
+    size_inches: 17
+    notes: Standard on GS trim
+  - name: 18" diamond-cut alloy wheels
+    price: 750
+    size_inches: 18
 
 packages:
-  - name: IntelliLux LED Matrix Package
-    price: 1190
-    includes:
-      - IntelliLux LED Matrix headlights
-      - Adaptive high beam
-      - Cornering light function
-    notes: Opel-exclusive LED matrix technology
-  
-  - name: Park & Go Package
-    price: 890
-    includes:
-      - Semi-automatic parking assist
-      - Front parking sensors
-      - 180° rear view camera with dynamic guidelines
-  
-  - name: Panoramic Rear View Camera
-    price: 490
-    includes:
-      - 360° surround view camera system
+- name: IntelliLux LED Matrix Package
+  price: 1190
+  includes:
+  - IntelliLux LED Matrix headlights
+  - Adaptive high beam
+  - Cornering light function
+  notes: Opel-exclusive LED matrix technology
+
+- name: Park & Go Package
+  price: 890
+  includes:
+  - Semi-automatic parking assist
+  - Front parking sensors
+  - 180° rear view camera with dynamic guidelines
+
+- name: Panoramic Rear View Camera
+  price: 490
+  includes:
+  - 360° surround view camera system
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit (Dienstwagensteuer)"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs under €70k taxed at 0.25% of list price per month.
-      Opel Corsa Electric GS: €36,490 × 0.25% = €91.23/month taxable benefit.
-      Saves ~€12,600/year vs comparable ICE car at 1% taxation.
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: Road tax waived for BEVs registered before 2031.
-  
-  - type: grant
-    name: "THG-Quote"
-    amount: 280
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: Annual CO2 certificate sale (~€250-350/year in 2025)
+- type: tax_exemption
+  name: "Company Car Tax Benefit (Dienstwagensteuer)"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs under €70k taxed at 0.25% of list price per month.
+    Opel Corsa Electric GS: €36,490 × 0.25% = €91.23/month taxable benefit.
+    Saves ~€12,600/year vs comparable ICE car at 1% taxation.
+
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: Road tax waived for BEVs registered before 2031.
+
+- type: grant
+  name: "THG-Quote"
+  amount: 280
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: Annual CO2 certificate sale (~€250-350/year in 2025)
 
 sales:
   channels:
-    - Opel dealerships (700+ locations in Germany)
-    - Online configurator
+  - Opel dealerships (700+ locations in Germany)
+  - Online configurator
   financing:
-    - Opel Bank leasing from €279/month (48 months, €5,000 down)
-    - Purchase financing from 3.49% APR
+  - Opel Bank leasing from €279/month (48 months, €5,000 down)
+  - Purchase financing from 3.49% APR
 
 warranty:
   vehicle_years: 2
@@ -117,10 +117,10 @@ warranty:
 
 charging_network:
   home:
-    - Opel partners with local installers for wallbox setup
+  - Opel partners with local installers for wallbox setup
   public:
-    - Free2Move Charge app (Stellantis network, 500,000+ points)
-    - IONITY subscription available
+  - Free2Move Charge app (Stellantis network, 500,000+ points)
+  - IONITY subscription available
 
 service:
   maintenance_interval_months: 24
@@ -130,17 +130,17 @@ service:
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  source_urls:
-    - https://www.opel.de/fahrzeuge/corsa/corsa-electric.html
   notes: |
     The Opel Corsa Electric GS 2025 at €36,490 is positioned €3,500 below the
     equivalent Peugeot e-208 GT, offering identical mechanicals with Opel's more
     conservative but practical styling.
-    
+
     Key competitor pricing (DE, 2025):
     - Opel Corsa Electric GS: €36,490
     - Peugeot e-208 GT: ~€39,990
     - Fiat 500e Icon: ~€34,990
     - MG4 Standard: ~€28,990
     - Renault 5 E-Tech Techno 52: ~€33,490
+  updated_at: "2026-02-10"
+  sources:
+  - https://www.opel.de/fahrzeuge/corsa/corsa-electric.html

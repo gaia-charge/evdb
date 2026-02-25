@@ -8,9 +8,12 @@ currency: EUR
 availability_status: available
 available_from: "2025-03-01"
 delivery_time_weeks: 10
-notes: |
+notes: |-
   2025 model year Mustang Mach-E Extended Range RWD. Built at Ford Cologne
   Electrification Center (Niehl plant). Strong availability in Germany.
+  Built locally at Ford Cologne - strong dealer network and availability.
+  Extended Range RWD is the best-selling Mach-E variant in Germany.
+  Competitive with Tesla Model Y LR and Hyundai Ioniq 5 LR.
 
 pricing:
   base_price: 52900
@@ -21,40 +24,40 @@ pricing:
     Competitive pricing vs Tesla Model Y Long Range (€54,990).
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month.
-      €52,900 × 0.25% = €132.25/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month.
+    €52,900 × 0.25% = €132.25/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 equipment_packages:
-  - name: Technology Package
-    price:
-      amount: 2500
-      currency: EUR
-    items:
-      - BlueCruise 1.3 hands-free driving
-      - Matrix LED headlights
-      - Enhanced parking assist
+- name: Technology Package
+  price:
+    amount: 2500
+    currency: EUR
+  items:
+  - BlueCruise 1.3 hands-free driving
+  - Matrix LED headlights
+  - Enhanced parking assist
 
-  - name: Comfort Package
-    price:
-      amount: 1800
-      currency: EUR
-    items:
-      - Heated rear seats
-      - Heated steering wheel
-      - Power liftgate
+- name: Comfort Package
+  price:
+    amount: 1800
+    currency: EUR
+  items:
+  - Heated rear seats
+  - Heated steering wheel
+  - Power liftgate
 
 sales_model: dealership
 dealerships_count: 350
@@ -68,14 +71,8 @@ warranty:
   notes: |
     FordProtect extended warranty available up to 5 years/100,000 km.
 
-market_notes: |
-  Built locally at Ford Cologne - strong dealer network and availability.
-  Extended Range RWD is the best-selling Mach-E variant in Germany.
-  Competitive with Tesla Model Y LR and Hyundai Ioniq 5 LR.
-
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.ford.de/personenwagen/mustang-mach-e
+  - https://www.ford.de/personenwagen/mustang-mach-e

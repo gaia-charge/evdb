@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Available through Volkswagen Spain dealer network
@@ -22,54 +22,54 @@ pricing:
 
 options:
   colors:
-    - name: Glacier White Metallic
-      price: 0
-      type: metallic
-    - name: Grenadilla Black Metallic
-      price: 600
-      type: metallic
-    - name: Moonstone Grey
-      price: 600
-      type: metallic
-    - name: Kings Red Metallic
-      price: 900
-      type: metallic
+  - name: Glacier White Metallic
+    price: 0
+    type: metallic
+  - name: Grenadilla Black Metallic
+    price: 600
+    type: metallic
+  - name: Moonstone Grey
+    price: 600
+    type: metallic
+  - name: Kings Red Metallic
+    price: 900
+    type: metallic
 
   wheels:
-    - name: 19" Drammen Alloy
-      price: 0
-      size_inches: 19
-    - name: 20" Ystad Alloy
-      price: 800
-      size_inches: 20
+  - name: 19" Drammen Alloy
+    price: 0
+    size_inches: 19
+  - name: 20" Ystad Alloy
+    price: 800
+    size_inches: 20
 
   interiors:
-    - name: Black
-      price: 0
-    - name: Grey
-      price: 0
+  - name: Black
+    price: 0
+  - name: Grey
+    price: 0
 
 packages:
-  - name: IQ.DRIVE Max Package
-    price: 2500
-    includes:
-      - Lane change assist
-      - Park Assist Plus
-      - Matrix LED headlights
+- name: IQ.DRIVE Max Package
+  price: 2500
+  includes:
+  - Lane change assist
+  - Park Assist Plus
+  - Matrix LED headlights
 
 standalone_options: []
 
 incentives:
-  - type: tax_exemption
-    name: Impuesto de Matriculación Exemption
-    amount: 0
-    currency: EUR
-    notes: EVs exempt from registration tax
-  - type: tax_exemption
-    name: Reduced Impuesto de Circulación
-    amount: 0
-    currency: EUR
-    notes: Up to 75% road tax reduction in many municipalities
+- type: tax_exemption
+  name: Impuesto de Matriculación Exemption
+  amount: 0
+  currency: EUR
+  notes: EVs exempt from registration tax
+- type: tax_exemption
+  name: Reduced Impuesto de Circulación
+  amount: 0
+  currency: EUR
+  notes: Up to 75% road tax reduction in many municipalities
 
 total_cost_of_ownership:
   purchase_price: 56750
@@ -84,17 +84,16 @@ total_cost_of_ownership:
     maintenance: 280
     total_annual: 1900
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-10
-  source_reliability: medium
-
 sources:
-  - name: Volkswagen Spain
-    url: https://www.volkswagen.es/es/modelos/id5.html
-    date_accessed: 2026-02-10
+- name: Volkswagen Spain
+  url: https://www.volkswagen.es/es/modelos/id5.html
+  date_accessed: 2026-02-10
 
 notes: |
   VW ID.5 Pro 4MOTION AWD coupe-SUV with 77 kWh battery and 490 km WLTP range.
   Prices include 21% IVA. Strong VW dealer network across Spain.
   No active federal purchase subsidies (MOVES III expired).
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-10'
+  created_at: '2026-02-10'

@@ -21,107 +21,105 @@ price_details:
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - name: "Umweltbonus (BAFA)"
-    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
-    type: rebate
-    provider: federal
-    eligibility: "BEV with price ≤€45,000"
-    valid_until: "2024-12-31"
-    notes: "German federal EV subsidy - being phased out"
-    
-  - name: "Company Car Tax"
-    amount: 0  # Percentage-based benefit, not fixed amount
-    type: tax_exemption
-    provider: federal
-    description: "0.25% monthly gross list price for BEVs under €60k"
-    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+- name: "Umweltbonus (BAFA)"
+  amount: 3000    # Reduced from €4,500 in 2023, ends Dec 2024
+  type: rebate
+  provider: federal
+  eligibility: "BEV with price ≤€45,000"
+  valid_until: "2024-12-31"
+  notes: "German federal EV subsidy - being phased out"
+- name: "Company Car Tax"
+  amount: 0    # Percentage-based benefit, not fixed amount
+  type: tax_exemption
+  provider: federal
+  description: "0.25% monthly gross list price for BEVs under €60k"
+  notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
 
 # Available Colors
 colors:
-  - name: "Polar White"
-    code: "solid-white"
-    type: solid
-    price_delta: 0
-    
-  - name: "Dynamic Red"
-    code: "metallic-red"
-    type: metallic
-    price_delta: 680
-    popular: true
-    
-  - name: "Black Pearl"
-    code: "metallic-black"
-    type: metallic
-    price_delta: 680
-    popular: true
-    
-  - name: "Camden Grey"
-    code: "metallic-grey"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Volcano Orange"
-    code: "metallic-orange"
-    type: metallic
-    price_delta: 680
-    special: true
-    recommended: true
-    notes: "Signature XPower color with matching interior accents"
+- name: "Polar White"
+  code: "solid-white"
+  type: solid
+  price_delta: 0
+
+- name: "Dynamic Red"
+  code: "metallic-red"
+  type: metallic
+  price_delta: 680
+  popular: true
+
+- name: "Black Pearl"
+  code: "metallic-black"
+  type: metallic
+  price_delta: 680
+  popular: true
+
+- name: "Camden Grey"
+  code: "metallic-grey"
+  type: metallic
+  price_delta: 680
+
+- name: "Volcano Orange"
+  code: "metallic-orange"
+  type: metallic
+  price_delta: 680
+  special: true
+  recommended: true
+  notes: "Signature XPower color with matching interior accents"
 
 # Wheel Options
 wheels:
-  - name: "18-inch diamond-cut alloy wheels with Michelin Pilot Sport 4"
-    size_inches: 18
-    tire_size: "235/45 R18"
-    price_delta: 0
-    standard: true
-    notes: "Performance tires included"
+- name: "18-inch diamond-cut alloy wheels with Michelin Pilot Sport 4"
+  size_inches: 18
+  tire_size: "235/45 R18"
+  price_delta: 0
+  standard: true
+  notes: "Performance tires included"
 
 # Interior Options
 interiors:
-  - name: "Black Alcantara and leather with orange stitching"
-    material: alcantara_leather
-    price_delta: 0
-    standard: true
-    notes: "Sport seats with enhanced bolstering"
+- name: "Black Alcantara and leather with orange stitching"
+  material: alcantara_leather
+  price_delta: 0
+  standard: true
+  notes: "Sport seats with enhanced bolstering"
 
 # Equipment Packages & Options
 packages:
-  - name: "XPower Trophy Package"
-    price: 3500
-    includes:
-      - "360-degree camera system"
-      - "LED matrix headlights"
-      - "Power tailgate"
-      - "Panoramic glass roof with UV protection"
-      - "Premium 6-speaker audio system"
-      - "Wireless phone charging"
-    popular: true
-    recommended: true
-    notes: "Most XPower buyers choose this package"
+- name: "XPower Trophy Package"
+  price: 3500
+  includes:
+  - "360-degree camera system"
+  - "LED matrix headlights"
+  - "Power tailgate"
+  - "Panoramic glass roof with UV protection"
+  - "Premium 6-speaker audio system"
+  - "Wireless phone charging"
+  popular: true
+  recommended: true
+  notes: "Most XPower buyers choose this package"
 
 # Individual Options
 individual_options:
-  - name: "Metallic paint"
-    price: 680
-    category: exterior
-    popular: true
-    
-  - name: "Tow bar"
-    price: 650
-    category: utility
-    towing_capacity_kg: 500
-    notes: "Rarely chosen on performance model"
-    
-  - name: "Track Day Package"
-    price: 1500
-    includes:
-      - "Set of performance brake pads"
-      - "Track-oriented tire pressure monitoring"
-      - "Extended cooling system fluid"
-      - "Track mode activation (software unlock)"
-    category: performance
-    notes: "For enthusiast drivers doing track days"
+- name: "Metallic paint"
+  price: 680
+  category: exterior
+  popular: true
+
+- name: "Tow bar"
+  price: 650
+  category: utility
+  towing_capacity_kg: 500
+  notes: "Rarely chosen on performance model"
+- name: "Track Day Package"
+  price: 1500
+  includes:
+  - "Set of performance brake pads"
+  - "Track-oriented tire pressure monitoring"
+  - "Extended cooling system fluid"
+  - "Track mode activation (software unlock)"
+  category: performance
+  notes: "For enthusiast drivers doing track days"
 
 # Total Price Range
 price_range:
@@ -136,17 +134,6 @@ production_location: "Shanghai, China"
 import_duties_included: true
 
 # Market-Specific Notes
-market_notes:
-  - "Fastest affordable performance EV in Germany under €50k"
-  - "435hp / 600Nm rivals €70k+ performance cars"
-  - "0-100 km/h in 3.8s - supercar territory"
-  - "7-year/175,000km battery warranty"
-  - "Enhanced cooling for track use"
-  - "Orange brake calipers and sport interior standard"
-  - "Available at 120+ MG dealers across Germany"
-  - "Direct import from China - no local assembly"
-
-# Sales & Distribution
 distribution:
   dealer_network_size: 120
   direct_sales: false
@@ -163,21 +150,21 @@ warranty:
   battery_km: 175000
   battery_capacity_guarantee_percent: 70
   roadside_assistance_years: 7
-  
+
 service:
   service_interval_months: 12
   service_interval_km: 15000  # More frequent for performance model
   average_service_cost_eur: 250
   service_plan_available: true
   performance_service_available: true
-  
+
 # Charging Infrastructure Support
 charging_support:
-  - "Partnership with EnBW (Mobility+ card)"
-  - "Access to 200,000+ charging points in Europe"
-  - "Free RFID charging card included"
-  - "MG iSMART app for charging station locator"
-  - "Battery preconditioning for optimal fast charging"
+- "Partnership with EnBW (Mobility+ card)"
+- "Access to 200,000+ charging points in Europe"
+- "Free RFID charging card included"
+- "MG iSMART app for charging station locator"
+- "Battery preconditioning for optimal fast charging"
 
 # Insurance
 insurance_notes:
@@ -207,68 +194,59 @@ leasing_example:
 
 # Competitors in Market
 local_competitors:
-  - vehicle: "Cupra Born VZ"
-    price_eur: 51490
-    price_delta: +9000
-    notes: "Similar concept, VW Group, 326hp"
-    
-  - vehicle: "BMW i4 eDrive40"
-    price_eur: 59900
-    price_delta: +17410
-    notes: "German premium, less power (340hp), more prestige"
-    
-  - vehicle: "Tesla Model 3 Long Range AWD"
-    price_eur: 50990
-    price_delta: +8500
-    notes: "More tech, similar performance"
-    
-  - vehicle: "Hyundai Ioniq 5 N"
-    price_eur: 74900
-    price_delta: +32410
-    notes: "650hp track weapon, much higher price"
-    
-  - vehicle: "Polestar 2 Long Range Dual Motor"
-    price_eur: 55400
-    price_delta: +12910
-    notes: "Volvo/Geely premium, 476hp"
+- vehicle: "Cupra Born VZ"
+  price_eur: 51490
+  price_delta: 9000
+  notes: "Similar concept, VW Group, 326hp"
+- vehicle: "BMW i4 eDrive40"
+  price_eur: 59900
+  price_delta: 17410
+  notes: "German premium, less power (340hp), more prestige"
+- vehicle: "Tesla Model 3 Long Range AWD"
+  price_eur: 50990
+  price_delta: 8500
+  notes: "More tech, similar performance"
+- vehicle: "Hyundai Ioniq 5 N"
+  price_eur: 74900
+  price_delta: 32410
+  notes: "650hp track weapon, much higher price"
+- vehicle: "Polestar 2 Long Range Dual Motor"
+  price_eur: 55400
+  price_delta: 12910
+  notes: "Volvo/Geely premium, 476hp"
 
 # Market Performance
 market_stats:
   sales_2023: 420  # Estimated DE registrations for XPower
   market_share_segment_percent: 12.5  # Of hot hatch EV segment
   customer_satisfaction_score: 4.5  # out of 5 (enthusiast appeal)
-  
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 4.5
-    score_out_of: 5.0
-    summary: "Preis-Leistungs-Wunder: 435 PS für unter €45.000"
-    
-  - source: "Sport Auto"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Überraschend spaßig auf Landstraße und Rennstrecke"
-    
-  - source: "Auto Bild Sportscars"
-    rating: 4.5
-    score_out_of: 5.0
-    summary: "Elektro-Geheimtipp für Fahrspaß-Fans"
+- source: "Auto Motor und Sport"
+  rating: 4.5
+  score_out_of: 5.0
+  summary: "Preis-Leistungs-Wunder: 435 PS für unter €45.000"
+- source: "Sport Auto"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Überraschend spaßig auf Landstraße und Rennstrecke"
+- source: "Auto Bild Sportscars"
+  rating: 4.5
+  score_out_of: 5.0
+  summary: "Elektro-Geheimtipp für Fahrspaß-Fans"
 
 # Performance Testing (Germany)
 performance_testing:
-  - test: "0-100 km/h"
-    result: "3.82 sec"
-    source: "Sport Auto"
-    
-  - test: "100-200 km/h"
-    result: "10.4 sec"
-    source: "Sport Auto"
-    
-  - test: "Nürburgring Nordschleife lap time"
-    result: "8:23.0"
-    source: "Sport Auto"
-    notes: "Impressive for FWD-based platform, rivals BMW M135i xDrive"
+- test: "0-100 km/h"
+  result: "3.82 sec"
+  source: "Sport Auto"
+- test: "100-200 km/h"
+  result: "10.4 sec"
+  source: "Sport Auto"
+- test: "Nürburgring Nordschleife lap time"
+  result: "8:23.0"
+  source: "Sport Auto"
+  notes: "Impressive for FWD-based platform, rivals BMW M135i xDrive"
 
 # Environmental
 environmental:
@@ -285,22 +263,21 @@ residual_value:
 
 # Track Day & Performance Support
 performance_support:
-  - "MG Performance Driving Academy (track days)"
-  - "Performance brake pad upgrade available"
-  - "Track mode with launch control"
-  - "Drift mode (software unlock via service)"
-  - "Cooling system monitoring via app"
+- "MG Performance Driving Academy (track days)"
+- "Performance brake pad upgrade available"
+- "Track mode with launch control"
+- "Drift mode (software unlock via service)"
+- "Cooling system monitoring via app"
 
 # Metadata
 metadata:
   data_quality: verified
   sources:
-    - https://www.mgmotor.de/mg4-electric/xpower
-    - https://www.sportauto.de/
-    - https://www.auto-motor-und-sport.de/
-    - https://www.dat.de/
+  - https://www.mgmotor.de/mg4-electric/xpower
+  - https://www.sportauto.de/
+  - https://www.auto-motor-und-sport.de/
+  - https://www.dat.de/
   created_at: "2024-02-08"
-  last_updated: "2024-02-08"
   notes: |
     MG4 XPower is the performance bargain of the German EV market.
     435hp / 600Nm dual-motor AWD for under €43k is unprecedented.
@@ -314,3 +291,5 @@ metadata:
     Nürburgring lap time of 8:23 impressive for FWD-based platform.
     Insurance costs higher (Typklasse 26) but still reasonable vs competitors.
     Growing enthusiast community in Germany organizing track days.
+  updated_at: "2024-02-08"
+notes: "['Fastest affordable performance EV in Germany under €50k', '435hp / 600Nm rivals €70k+ performance cars', '0-100 km/h in 3.8s - supercar territory', '7-year/175,000km battery warranty', 'Enhanced cooling for track use', 'Orange brake calipers and sport interior standard', 'Available at 120+ MG dealers across Germany', 'Direct import from China - no local assembly']"

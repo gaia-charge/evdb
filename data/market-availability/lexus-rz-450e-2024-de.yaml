@@ -9,101 +9,101 @@ pricing:
   destination_charge: 1290
   on_the_road_price: 76190
   price_includes:
-    - "11kW AC charging (3-phase)"
-    - "150kW DC fast charging"
-    - "Heat pump (standard)"
-    - "14-inch touchscreen with Lexus Interface"
-    - "Lexus Safety System+ 3.0"
-    - "Electrochromic panoramic roof"
-    - "Mark Levinson 13-speaker audio (1800W)"
-    - "Head-up display (8-inch color)"
-    - "Heated and ventilated front seats"
-    - "Heated rear seats"
-    - "18-inch alloy wheels"
+  - "11kW AC charging (3-phase)"
+  - "150kW DC fast charging"
+  - "Heat pump (standard)"
+  - "14-inch touchscreen with Lexus Interface"
+  - "Lexus Safety System+ 3.0"
+  - "Electrochromic panoramic roof"
+  - "Mark Levinson 13-speaker audio (1800W)"
+  - "Head-up display (8-inch color)"
+  - "Heated and ventilated front seats"
+  - "Heated rear seats"
+  - "18-inch alloy wheels"
 
 trim_levels:
-  - name: "Premium"
-    price: 74900
-    features:
-      - "Only trim available - fully loaded"
-      - "AWD with DIRECT4 (313hp)"
-      - "440 km WLTP range"
-      - "Leather and Ultrasuede interior"
-      - "Mark Levinson 13-speaker audio"
-      - "Head-up display"
-      - "360° Panoramic View Monitor"
-      - "All safety and driver assistance features"
+- name: "Premium"
+  price: 74900
+  features:
+  - "Only trim available - fully loaded"
+  - "AWD with DIRECT4 (313hp)"
+  - "440 km WLTP range"
+  - "Leather and Ultrasuede interior"
+  - "Mark Levinson 13-speaker audio"
+  - "Head-up display"
+  - "360° Panoramic View Monitor"
+  - "All safety and driver assistance features"
 
 colors:
-  - name: "Sonic White"
-    type: solid
-    price: 0  # Included
-  - name: "Graphite Black Glass Flake"
-    type: metallic
-    price: 0  # Included
-  - name: "Sonic Copper"
-    type: metallic
-    price: 0  # Included
-  - name: "Sonic Quartz"
-    type: pearl
-    price: 0  # Included
-  - name: "Ether"
-    type: metallic
-    price: 0  # Included
-  - name: "Heat Blue Contrast Layering"
-    type: premium
-    price: 1200  # Premium color
+- name: "Sonic White"
+  type: solid
+  price: 0    # Included
+- name: "Graphite Black Glass Flake"
+  type: metallic
+  price: 0    # Included
+- name: "Sonic Copper"
+  type: metallic
+  price: 0    # Included
+- name: "Sonic Quartz"
+  type: pearl
+  price: 0    # Included
+- name: "Ether"
+  type: metallic
+  price: 0    # Included
+- name: "Heat Blue Contrast Layering"
+  type: premium
+  price: 1200    # Premium color
 
 wheels:
-  - size: "18 inch"
-    price: 0  # Standard
-    range_impact_km: 0
-    name: "18-inch alloy wheels"
-  - size: "20 inch"
-    price: 1500
-    range_impact_km: -15
-    name: "20-inch black machined finish alloy wheels"
+- size: "18 inch"
+  price: 0    # Standard
+  range_impact_km: 0
+  name: "18-inch alloy wheels"
+- size: "20 inch"
+  price: 1500
+  range_impact_km: -15
+  name: "20-inch black machined finish alloy wheels"
 
 packages:
-  - name: "One Motion Grip"
-    price: 2500
-    includes:
-      - "Yoke steering wheel (no physical steering column)"
-      - "Steer-by-wire technology"
-      - "150° lock-to-lock (vs conventional 540°)"
-      - "Adjustable steering response"
-      - "Future-forward design"
+- name: "One Motion Grip"
+  price: 2500
+  includes:
+  - "Yoke steering wheel (no physical steering column)"
+  - "Steer-by-wire technology"
+  - "150° lock-to-lock (vs conventional 540°)"
+  - "Adjustable steering response"
+  - "Future-forward design"
 
 individual_options:
-  - name: "20-inch Alloy Wheels"
-    price: 1500
-    notes: "235/50 R20 tires, reduces range by ~15km"
-  - name: "Premium Paint (Heat Blue Contrast Layering)"
-    price: 1200
-    notes: "Exclusive premium color"
+- name: "20-inch Alloy Wheels"
+  price: 1500
+  notes: "235/50 R20 tires, reduces range by ~15km"
+- name: "Premium Paint (Heat Blue Contrast Layering)"
+  price: 1200
+  notes: "Exclusive premium color"
 
 incentives:
-  - name: "BAFA Umweltbonus"
-    type: grant
-    amount: 0
-    notes: "German EV subsidy ended December 2023"
-    valid_until: null
-  - name: "Company car tax (above €70k)"
-    type: tax_credit
-    amount: 2694
-    notes: "0.5% of gross list price per month (vs 1% for ICE). Above €70k threshold. For €74,900 vehicle: 0.5% = €375/month = €4,500/year vs 1% = €749/month = €8,988/year. Annual savings: €4,488."
-    calculation: "€74,900 × 0.5% = €375/month. ICE: €74,900 × 1% = €749/month. Savings: €374/month = €4,488/year"
-    eligibility: "Company car drivers only. 0.5% rate applies (above €70k threshold)"
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 450
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote (CO2 certificate)"
-    type: grant
-    amount: 300
-    notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
-    valid_until: null
+- name: "BAFA Umweltbonus"
+  type: grant
+  amount: 0
+  notes: "German EV subsidy ended December 2023"
+  valid_until:
+- name: "Company car tax (above €70k)"
+  type: tax_credit
+  amount: 2694
+  notes: "0.5% of gross list price per month (vs 1% for ICE). Above €70k threshold. For €74,900 vehicle: 0.5% = €375/month = €4,500/year vs 1% = €749/month = €8,988/year. Annual savings: €4,488."
+  calculation: "€74,900 × 0.5% = €375/month. ICE: €74,900 × 1% = €749/month. Savings: €374/month = €4,488/year"
+  eligibility: "Company car drivers only. 0.5% rate applies (above €70k threshold)"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 450
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (CO2 certificate)"
+  type: grant
+  amount: 300
+  notes: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+  valid_until:
 
 availability:
   in_stock: true
@@ -119,18 +119,18 @@ dealers:
   notes: "Lexus premium dealer network across Germany"
 
 charging_costs:
-  - scenario: "Home charging (night rate)"
-    cost_per_kwh: 0.30
-    cost_10_to_80_percent: 15.00
-    cost_per_100km: 5.40
-  - scenario: "Public AC charging"
-    cost_per_kwh: 0.45
-    cost_10_to_80_percent: 22.49
-    cost_per_100km: 8.10
-  - scenario: "DC fast charging (average)"
-    cost_per_kwh: 0.55
-    cost_10_to_80_percent: 27.49
-    cost_per_100km: 9.90
+- scenario: "Home charging (night rate)"
+  cost_per_kwh: 0.30
+  cost_10_to_80_percent: 15.00
+  cost_per_100km: 5.40
+- scenario: "Public AC charging"
+  cost_per_kwh: 0.45
+  cost_10_to_80_percent: 22.49
+  cost_per_100km: 8.10
+- scenario: "DC fast charging (average)"
+  cost_per_kwh: 0.55
+  cost_10_to_80_percent: 27.49
+  cost_per_100km: 9.90
 
 warranty:
   vehicle_years: 4
@@ -148,52 +148,52 @@ annual_costs:
   total_estimate: 1900
 
 popular_configurations:
-  - name: "Base Premium"
-    price: 76190
-    includes:
-      - "Premium trim (€74,900)"
-      - "Standard color (included)"
-      - "18-inch wheels (standard)"
-      - "Destination charge (€1,290)"
-    notes: "Base configuration, fully loaded"
-  - name: "With Yoke Steering"
-    price: 78690
-    includes:
-      - "Premium trim (€74,900)"
-      - "One Motion Grip yoke steering (€2,500)"
-      - "Standard color (included)"
-      - "Destination charge (€1,290)"
-    notes: "With distinctive yoke steering wheel"
-  - name: "Premium Plus"
-    price: 81380
-    includes:
-      - "Premium trim (€74,900)"
-      - "One Motion Grip yoke steering (€2,500)"
-      - "20-inch alloy wheels (€1,500)"
-      - "Premium paint (€1,200)"
-      - "Destination charge (€1,290)"
-    notes: "Top specification with all premium options"
+- name: "Base Premium"
+  price: 76190
+  includes:
+  - "Premium trim (€74,900)"
+  - "Standard color (included)"
+  - "18-inch wheels (standard)"
+  - "Destination charge (€1,290)"
+  notes: "Base configuration, fully loaded"
+- name: "With Yoke Steering"
+  price: 78690
+  includes:
+  - "Premium trim (€74,900)"
+  - "One Motion Grip yoke steering (€2,500)"
+  - "Standard color (included)"
+  - "Destination charge (€1,290)"
+  notes: "With distinctive yoke steering wheel"
+- name: "Premium Plus"
+  price: 81380
+  includes:
+  - "Premium trim (€74,900)"
+  - "One Motion Grip yoke steering (€2,500)"
+  - "20-inch alloy wheels (€1,500)"
+  - "Premium paint (€1,200)"
+  - "Destination charge (€1,290)"
+  notes: "Top specification with all premium options"
 
 competitive_analysis:
-  - competitor: "BMW iX1 xDrive30"
-    price: 61500
-    notes: "€13k cheaper, same power (313hp), 440km range, less premium interior"
-  - competitor: "Audi Q4 e-tron 50 quattro"
-    price: 57990
-    notes: "€17k cheaper, 299hp (less power), 491km range (better), less distinctive"
-  - competitor: "Mercedes EQA 350 4MATIC"
-    price: 64990
-    notes: "€10k cheaper, 292hp (less power), 429km range (similar)"
-  - competitor: "Volvo EX40 Twin Motor"
-    price: 60000
-    notes: "€15k cheaper, 408hp (more power), 452km range (better), Swedish design"
+- competitor: "BMW iX1 xDrive30"
+  price: 61500
+  notes: "€13k cheaper, same power (313hp), 440km range, less premium interior"
+- competitor: "Audi Q4 e-tron 50 quattro"
+  price: 57990
+  notes: "€17k cheaper, 299hp (less power), 491km range (better), less distinctive"
+- competitor: "Mercedes EQA 350 4MATIC"
+  price: 64990
+  notes: "€10k cheaper, 292hp (less power), 429km range (similar)"
+- competitor: "Volvo EX40 Twin Motor"
+  price: 60000
+  notes: "€15k cheaper, 408hp (more power), 452km range (better), Swedish design"
 
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - "https://www.lexus.de/models/rz/"
-    - "https://www.mobile.de/auto/lexus-rz"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rz/"
+  - "https://www.lexus.de/models/rz/"
+  - "https://www.mobile.de/auto/lexus-rz"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/rz/"
   notes: "First Lexus BEV. Premium positioning above German competitors at €74,900. Distinctive yoke steering option (One Motion Grip €2,500) unique in segment. 0.5% company car tax (above €70k threshold). Excellent interior quality with Takumi craftsmanship. DIRECT4 AWD system provides precise handling. More powerful than Toyota bZ4X (313hp vs 218hp). Competes with Q4 e-tron, iX1, EQA but positioned as more exclusive alternative. 11kW AC charging (vs bZ4X's 6.6kW)."
+  updated_at: "2026-02-08"

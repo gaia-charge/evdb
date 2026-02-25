@@ -13,193 +13,183 @@ pricing:
   vat_rate_percent: 19
   destination_charge: 990
   on_road_price: 50980
-  
+
   notes: >
-    Long Range RWD is €4,000 cheaper than AWD variant while offering 
-    22km more range and better efficiency (16.5 vs 18.0 kWh/100km).
+    Long Range RWD is €4,000 cheaper than AWD variant while offering  22km more range and better efficiency (16.5 vs 18.0 kWh/100km).
     Most popular EV6 variant for buyers prioritizing range over AWD traction.
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-    
-    calculation:
-      gross_list_price: 49990
-      monthly_taxable_benefit: 104.15
-      annual_taxable_benefit: 1249.80
-      assumed_tax_rate: 0.42
-      annual_tax: 524.92
-      
-      comparison_ice:
-        model: "Kia Sportage 2.0 CRDi AWD"
-        gross_list_price: 45000
-        monthly_rate: 1.0
-        monthly_taxable_benefit: 450.00
-        annual_taxable_benefit: 5400.00
-        annual_tax: 2268.00
-        
-      annual_savings: 1743.08
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+  calculation:
+    gross_list_price: 49990
+    monthly_taxable_benefit: 104.15
+    annual_taxable_benefit: 1249.80
+    assumed_tax_rate: 0.42
+    annual_tax: 524.92
+
+    comparison_ice:
+      model: "Kia Sportage 2.0 CRDi AWD"
+      gross_list_price: 45000
+      monthly_rate: 1.0
+      monthly_taxable_benefit: 450.00
+      annual_taxable_benefit: 5400.00
+      annual_tax: 2268.00
+
+    annual_savings: 1743.08
 
 # Colors (Germany Market)
 available_colors:
-  - name: Glacier White Pearl
-    code: SWP
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Aurora Black Pearl
-    code: ABP
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  
-  - name: Moonscape Gray Matte
-    code: MGM
-    type: matte
-    price_add:
-      amount: 1490
-      currency: EUR
-  
-  - name: Yacht Blue
-    code: YB
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  
-  - name: Interstellar Gray
-    code: IG
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  
-  - name: Runway Red
-    code: RR
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Glacier White Pearl
+  code: SWP
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Aurora Black Pearl
+  code: ABP
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+
+- name: Moonscape Gray Matte
+  code: MGM
+  type: matte
+  price_add:
+    amount: 1490
+    currency: EUR
+
+- name: Yacht Blue
+  code: YB
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+
+- name: Interstellar Gray
+  code: IG
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+
+- name: Runway Red
+  code: RR
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19-inch alloy wheels
-    size_inches: 19
-    tire_size: "235/55 R19"
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard - best range and comfort"
-  
-  - name: 20-inch alloy wheels (GT-Line)
-    size_inches: 20
-    tire_size: "255/45 R20"
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Included in GT-Line package, reduces range by ~15km"
+- name: 19-inch alloy wheels
+  size_inches: 19
+  tire_size: "235/55 R19"
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard - best range and comfort"
+- name: 20-inch alloy wheels (GT-Line)
+  size_inches: 20
+  tire_size: "255/45 R20"
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Included in GT-Line package, reduces range by ~15km"
 
 # Interior Options
 available_interiors:
-  - name: Black vegan leather
-    code: BVL
-    material: synthetic-leather
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Gray vegan leather with lime accents (GT-Line)
-    code: GVL
-    material: synthetic-leather
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Included in GT-Line package"
+- name: Black vegan leather
+  code: BVL
+  material: synthetic-leather
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Gray vegan leather with lime accents (GT-Line)
+  code: GVL
+  material: synthetic-leather
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Included in GT-Line package"
 
 # Optional Equipment
 optional_equipment:
-  - name: GT-Line Package
-    price: 2500
-    includes:
-      - "20-inch alloy wheels"
-      - "Sportier exterior styling (GT-Line front/rear bumpers)"
-      - "GT-Line sport seats with additional bolstering"
-      - "Gray/lime interior accents"
-      - "GT-Line badging"
-      - "Sport pedals"
-  
-  - name: Technology Pack
-    price: 1800
-    includes:
-      - "Augmented Reality Head-Up Display (HUD)"
-      - "Surround View Monitor (360° camera)"
-      - "Remote Smart Parking Assist"
-      - "Blind Spot View Monitor"
-  
-  - name: Premium Sound Package
-    price: 990
-    includes:
-      - "Meridian Premium Sound (14 speakers, 600W)"
-      - "External Sound for Pedestrians (customizable)"
-  
-  - name: Solar Roof
-    price: 1200
-    includes:
-      - "Solar panel integrated into panoramic sunroof"
-      - "Up to 2,000 km additional range per year"
-      - "Can charge 12V battery when vehicle parked"
-  
-  - name: Tow Package
-    price: 890
-    includes:
-      - "Tow hitch (removable)"
-      - "Trailer stability control"
-      - "1,600 kg towing capacity (braked)"
-      - "Wiring harness"
+- name: GT-Line Package
+  price: 2500
+  includes:
+  - "20-inch alloy wheels"
+  - "Sportier exterior styling (GT-Line front/rear bumpers)"
+  - "GT-Line sport seats with additional bolstering"
+  - "Gray/lime interior accents"
+  - "GT-Line badging"
+  - "Sport pedals"
+- name: Technology Pack
+  price: 1800
+  includes:
+  - "Augmented Reality Head-Up Display (HUD)"
+  - "Surround View Monitor (360° camera)"
+  - "Remote Smart Parking Assist"
+  - "Blind Spot View Monitor"
+- name: Premium Sound Package
+  price: 990
+  includes:
+  - "Meridian Premium Sound (14 speakers, 600W)"
+  - "External Sound for Pedestrians (customizable)"
+- name: Solar Roof
+  price: 1200
+  includes:
+  - "Solar panel integrated into panoramic sunroof"
+  - "Up to 2,000 km additional range per year"
+  - "Can charge 12V battery when vehicle parked"
+- name: Tow Package
+  price: 890
+  includes:
+  - "Tow hitch (removable)"
+  - "Trailer stability control"
+  - "1,600 kg towing capacity (braked)"
+  - "Wiring harness"
 
 # Popular Configurations
 popular_configurations:
-  - name: Base (as-delivered)
-    description: "19\" wheels, Glacier White, no options"
-    total_price: 50980
-    includes_options: []
-  
-  - name: Tech Comfort
-    description: "19\" wheels, metallic paint, Technology Pack"
-    total_price: 53760
-    includes_options:
-      - "Technology Pack (€1,800)"
-      - "Aurora Black Pearl (€990)"
-  
-  - name: GT-Line Premium
-    description: "20\" wheels, GT-Line, Tech Pack, Meridian audio"
-    total_price: 57760
-    includes_options:
-      - "GT-Line Package (€2,500)"
-      - "Technology Pack (€1,800)"
-      - "Premium Sound Package (€990)"
-      - "Moonscape Gray Matte (€1,490)"
-  
-  - name: Fully Loaded
-    description: "All options, ideal for company car drivers"
-    total_price: 59850
-    includes_options:
-      - "GT-Line Package (€2,500)"
-      - "Technology Pack (€1,800)"
-      - "Premium Sound Package (€990)"
-      - "Solar Roof (€1,200)"
-      - "Tow Package (€890)"
-      - "Moonscape Gray Matte (€1,490)"
+- name: Base (as-delivered)
+  description: "19\" wheels, Glacier White, no options"
+  total_price: 50980
+  includes_options: []
+- name: Tech Comfort
+  description: "19\" wheels, metallic paint, Technology Pack"
+  total_price: 53760
+  includes_options:
+  - "Technology Pack (€1,800)"
+  - "Aurora Black Pearl (€990)"
+- name: GT-Line Premium
+  description: "20\" wheels, GT-Line, Tech Pack, Meridian audio"
+  total_price: 57760
+  includes_options:
+  - "GT-Line Package (€2,500)"
+  - "Technology Pack (€1,800)"
+  - "Premium Sound Package (€990)"
+  - "Moonscape Gray Matte (€1,490)"
+- name: Fully Loaded
+  description: "All options, ideal for company car drivers"
+  total_price: 59850
+  includes_options:
+  - "GT-Line Package (€2,500)"
+  - "Technology Pack (€1,800)"
+  - "Premium Sound Package (€990)"
+  - "Solar Roof (€1,200)"
+  - "Tow Package (€890)"
+  - "Moonscape Gray Matte (€1,490)"
 
 # Dealer Network & Service
 market_info:
@@ -219,7 +209,7 @@ tco_analysis:
   period_years: 3
   annual_km: 15000
   total_km: 45000
-  
+
   costs:
     depreciation: 14997
     energy: 1485
@@ -227,192 +217,170 @@ tco_analysis:
     insurance: 2400
     tax: 0
     total: 19782
-  
+
   cost_per_km: 0.44
-  
+
   comparison_ice:
     model: "Kia Sportage 2.0 CRDi AWD"
     total_cost: 26280
     cost_per_km: 0.58
-    
+
   savings:
     amount: 6498
     percent: 24.7
 
 # Financing Options
 financing:
-  - type: purchase_loan
-    term_months: 48
-    interest_rate_percent: 3.99
-    down_payment: 10000
-    monthly_payment: 899
-    
-  - type: lease
-    term_months: 36
-    annual_km: 10000
-    down_payment: 0
-    monthly_payment: 549
-    purchase_option_price: 22495
+- type: purchase_loan
+  term_months: 48
+  interest_rate_percent: 3.99
+  down_payment: 10000
+  monthly_payment: 899
+
+- type: lease
+  term_months: 36
+  annual_km: 10000
+  down_payment: 0
+  monthly_payment: 549
+  purchase_option_price: 22495
 
 # Charging Infrastructure (Germany)
 charging:
   home:
-    - provider: Kia
-      model: "Kia Charge Home Wallbox"
-      power_kw: 11
-      installation_cost: 1299
-      
-    - provider: Third-party
-      model: "Generic 11kW wallbox"
-      power_kw: 11
-      installation_cost: 800
-  
+  - provider: Kia
+    model: "Kia Charge Home Wallbox"
+    power_kw: 11
+    installation_cost: 1299
+
+  - provider: Third-party
+    model: "Generic 11kW wallbox"
+    power_kw: 11
+    installation_cost: 800
+
   public_networks:
-    - name: EnBW Mobility+
-      coverage: nationwide
-      dc_fast_chargers: 1000+
-      cost_per_kwh: 0.49
-      
-    - name: Ionity
-      coverage: highways
-      dc_fast_chargers: 400+
-      cost_per_kwh: 0.79
-      notes: "Reduced rate with Ionity subscription"
-      
-    - name: Fastned
-      coverage: highways
-      dc_fast_chargers: 100+
-      cost_per_kwh: 0.59
-      
-    - name: Tesla Supercharger (select locations)
-      coverage: limited
-      dc_fast_chargers: 50+
-      cost_per_kwh: 0.42
-      notes: "Available via Tesla app for non-Tesla EVs"
-      
-    - name: Shell Recharge
-      coverage: nationwide
-      dc_fast_chargers: 500+
-      cost_per_kwh: 0.55
+  - name: EnBW Mobility+
+    coverage: nationwide
+    dc_fast_chargers: 1000+
+    cost_per_kwh: 0.49
+
+  - name: Ionity
+    coverage: highways
+    dc_fast_chargers: 400+
+    cost_per_kwh: 0.79
+    notes: "Reduced rate with Ionity subscription"
+  - name: Fastned
+    coverage: highways
+    dc_fast_chargers: 100+
+    cost_per_kwh: 0.59
+
+  - name: Tesla Supercharger (select locations)
+    coverage: limited
+    dc_fast_chargers: 50+
+    cost_per_kwh: 0.42
+    notes: "Available via Tesla app for non-Tesla EVs"
+  - name: Shell Recharge
+    coverage: nationwide
+    dc_fast_chargers: 500+
+    cost_per_kwh: 0.55
 
 # Competitors Analysis
 competitors:
-  - model: Hyundai Ioniq 5 Long Range RWD
-    price: 49900
-    range_km: 507
-    power_kw: 168
-    charging_kw: 240
-    notes: "Platform sibling, nearly identical specs, €90 cheaper"
-    
-  - model: Tesla Model Y Long Range RWD
-    price: 54990
-    range_km: 565
-    power_kw: 220
-    charging_kw: 250
-    notes: "€5k more, 37km more range, Tesla ecosystem"
-    
-  - model: Ford Mustang Mach-E Extended Range RWD
-    price: 53900
-    range_km: 600
-    power_kw: 198
-    charging_kw: 150
-    notes: "€4k more, 72km more range, but slower charging"
-    
-  - model: Volkswagen ID.5 Pro Performance
-    price: 51995
-    range_km: 520
-    power_kw: 150
-    charging_kw: 135
-    notes: "€2k more, similar range, less power, slower charging"
-    
-  - model: Polestar 2 Long Range Single Motor
-    price: 49990
-    range_km: 551
-    power_kw: 220
-    charging_kw: 155
-    notes: "Same price, 23km more range, premium brand, slower charging"
+- model: Hyundai Ioniq 5 Long Range RWD
+  price: 49900
+  range_km: 507
+  power_kw: 168
+  charging_kw: 240
+  notes: "Platform sibling, nearly identical specs, €90 cheaper"
+- model: Tesla Model Y Long Range RWD
+  price: 54990
+  range_km: 565
+  power_kw: 220
+  charging_kw: 250
+  notes: "€5k more, 37km more range, Tesla ecosystem"
+- model: Ford Mustang Mach-E Extended Range RWD
+  price: 53900
+  range_km: 600
+  power_kw: 198
+  charging_kw: 150
+  notes: "€4k more, 72km more range, but slower charging"
+- model: Volkswagen ID.5 Pro Performance
+  price: 51995
+  range_km: 520
+  power_kw: 150
+  charging_kw: 135
+  notes: "€2k more, similar range, less power, slower charging"
+- model: Polestar 2 Long Range Single Motor
+  price: 49990
+  range_km: 551
+  power_kw: 220
+  charging_kw: 155
+  notes: "Same price, 23km more range, premium brand, slower charging"
 
 # Target Buyers
 target_buyers:
-  - segment: company_car_drivers
-    priority: high
-    reasons:
-      - "0.25% tax rate saves €1,743/year vs ICE equivalent"
-      - "528km range adequate for weekly business trips"
-      - "7-year warranty reduces TCO concerns"
-      - "Strong Kia dealer network for service"
-      
-  - segment: efficiency_enthusiasts
-    priority: high
-    reasons:
-      - "Best efficiency in EV6 lineup (16.5 kWh/100km)"
-      - "528km WLTP range (480km real-world)"
-      - "RWD dynamics more engaging than FWD"
-      - "€4,000 cheaper than AWD with better range"
-      
-  - segment: families
-    priority: medium
-    reasons:
-      - "Spacious 5-seater crossover with 520L trunk"
-      - "Comprehensive safety features (5-star Euro NCAP)"
-      - "7-year warranty provides peace of mind"
-      - "V2L capability for camping/outdoor activities"
-      
-  - segment: tech_enthusiasts
-    priority: medium
-    reasons:
-      - "800V architecture with 240kW ultra-fast charging"
-      - "Dual 12.3\" curved display with OTA updates"
-      - "Highway Driving Assist 2 (Level 2 autonomy)"
-      - "V2G capability for home energy backup"
+- segment: company_car_drivers
+  priority: high
+  reasons:
+  - "0.25% tax rate saves €1,743/year vs ICE equivalent"
+  - "528km range adequate for weekly business trips"
+  - "7-year warranty reduces TCO concerns"
+  - "Strong Kia dealer network for service"
+- segment: efficiency_enthusiasts
+  priority: high
+  reasons:
+  - "Best efficiency in EV6 lineup (16.5 kWh/100km)"
+  - "528km WLTP range (480km real-world)"
+  - "RWD dynamics more engaging than FWD"
+  - "€4,000 cheaper than AWD with better range"
+- segment: families
+  priority: medium
+  reasons:
+  - "Spacious 5-seater crossover with 520L trunk"
+  - "Comprehensive safety features (5-star Euro NCAP)"
+  - "7-year warranty provides peace of mind"
+  - "V2L capability for camping/outdoor activities"
+- segment: tech_enthusiasts
+  priority: medium
+  reasons:
+  - "800V architecture with 240kW ultra-fast charging"
+  - "Dual 12.3\" curved display with OTA updates"
+  - "Highway Driving Assist 2 (Level 2 autonomy)"
+  - "V2G capability for home energy backup"
 
 # Strengths
 strengths:
-  - "Best range in EV6 lineup (528km WLTP, 480km real-world)"
-  - "Excellent efficiency (16.5 kWh/100km WLTP, A-rated)"
-  - "800V architecture enables 18-minute 10-80% DC charging"
-  - "€4,000 cheaper than AWD while offering 22km more range"
-  - "Comprehensive standard equipment (AR HUD, Meridian audio, V2L)"
-  - "7-year/150,000km warranty (best in class)"
-  - "European Car of the Year 2022 credibility"
-  - "Strong dealer network (450 dealers in Germany)"
-  - "OTA software updates keep vehicle current"
-  - "V2G capability for home backup power"
+- "Best range in EV6 lineup (528km WLTP, 480km real-world)"
+- "Excellent efficiency (16.5 kWh/100km WLTP, A-rated)"
+- "800V architecture enables 18-minute 10-80% DC charging"
+- "€4,000 cheaper than AWD while offering 22km more range"
+- "Comprehensive standard equipment (AR HUD, Meridian audio, V2L)"
+- "7-year/150,000km warranty (best in class)"
+- "European Car of the Year 2022 credibility"
+- "Strong dealer network (450 dealers in Germany)"
+- "OTA software updates keep vehicle current"
+- "V2G capability for home backup power"
 
 # Weaknesses
 weaknesses:
-  - "No AWD traction for winter/slippery conditions"
-  - "7.3s 0-100 km/h adequate but not sporty (vs 5.2s AWD)"
-  - "€50k price point no longer eligible for subsidies (ended Dec 2023)"
-  - "Rear seat legroom less than some rivals (Tesla Model Y, ID.5)"
-  - "Kia Connect subscription required after 7 years (€99/year)"
-  - "20\" wheels reduce range by ~15km (vs standard 19\")"
-  - "Matte paint option expensive (€1,490) and harder to maintain"
+- "No AWD traction for winter/slippery conditions"
+- "7.3s 0-100 km/h adequate but not sporty (vs 5.2s AWD)"
+- "€50k price point no longer eligible for subsidies (ended Dec 2023)"
+- "Rear seat legroom less than some rivals (Tesla Model Y, ID.5)"
+- "Kia Connect subscription required after 7 years (€99/year)"
+- "20\" wheels reduce range by ~15km (vs standard 19\")"
+- "Matte paint option expensive (€1,490) and harder to maintain"
 
 # Specific to German Market
-market_notes: >
-  - Kia EV6 was European Car of the Year 2022, providing strong credibility
-  - Long Range RWD most popular variant (60% of EV6 sales in Germany)
-  - Delivery times: 16 weeks (improved from 40+ weeks in 2022-2023)
-  - Strong market presence with 450 dealers nationwide
-  - Popular with company car drivers (0.25% tax rate)
-  - Federal EV subsidy ended December 2023, but company car tax benefit remains
-  - OTA software updates supported (Kia Connect subscription after 7 years)
-  - V2G capability available but requires compatible home charger (€2,000-3,000)
-  - 7-year warranty is best-in-class among European-market EVs
-  - Resale values strong due to warranty and European COTY award
-
-# Real-World Usage
 real_world_usage:
   daily_commute_50km:
     days_per_charge: 9
     weekly_charging_sessions: 0.8
     energy_cost_per_month: 24.50
-    
+
   weekend_trip_300km:
     charging_stops: 0
     remaining_range_km: 180
-    
+
   long_trip_800km:
     charging_stops: 1
     total_charging_time_min: 18
@@ -422,13 +390,13 @@ real_world_usage:
 # Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-08"
-  confidence_level: high
   sources:
-    - https://www.kia.com/de/modelle/ev6/entdecken/
-    - https://www.kia.com/de/konfigurator/
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/kia-ev6/
-    - https://ev-database.org/car/1420/Kia-EV6-Long-Range-RWD
-    - https://insideevs.com/reviews/563629/kia-ev6-rwd-first-drive/
+  - https://www.kia.com/de/modelle/ev6/entdecken/
+  - https://www.kia.com/de/konfigurator/
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/kia/kia-ev6/
+  - https://ev-database.org/car/1420/Kia-EV6-Long-Range-RWD
+  - https://insideevs.com/reviews/563629/kia-ev6-rwd-first-drive/
   created_at: "2026-02-08T22:30:00Z"
   created_by: Patricio
+  updated_at: "2026-02-08"
+notes: '- Kia EV6 was European Car of the Year 2022, providing strong credibility - Long Range RWD most popular variant (60% of EV6 sales in Germany) - Delivery times: 16 weeks (improved from 40+ weeks in 2022-2023) - Strong market presence with 450 dealers nationwide - Popular with company car drivers (0.25% tax rate) - Federal EV subsidy ended December 2023, but company car tax benefit remains - OTA software updates supported (Kia Connect subscription after 7 years) - V2G capability available but requires compatible home charger (€2,000-3,000) - 7-year warranty is best-in-class among European-market EVs - Resale values strong due to warranty and European COTY award'

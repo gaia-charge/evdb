@@ -13,166 +13,166 @@ pricing:
   delivery_charge: 1850
 
 incentives:
-  - name: "Kfz-Steuer Exemption"
-    type: tax_exemption
-    amount: 0
-    description: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "Company Car Tax Benefit"
-    type: tax_exemption
-    amount: 7560
-    description: |
-      0.5% monthly tax rate vs 1.0% for combustion vehicles.
-      Vehicles over €70,000 qualify for 0.5% rate (not 0.25%).
-      Saves €7,560/year vs combustion equivalent.
-  - name: "THG-Quote (Greenhouse Gas Certificate)"
-    type: subsidy
-    amount: 300
-    description: "Annual CO2 savings certificate (~€250-350/year)"
+- name: "Kfz-Steuer Exemption"
+  type: tax_exemption
+  amount: 0
+  description: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "Company Car Tax Benefit"
+  type: tax_exemption
+  amount: 7560
+  description: |
+    0.5% monthly tax rate vs 1.0% for combustion vehicles.
+    Vehicles over €70,000 qualify for 0.5% rate (not 0.25%).
+    Saves €7,560/year vs combustion equivalent.
+- name: "THG-Quote (Greenhouse Gas Certificate)"
+  type: subsidy
+  amount: 300
+  description: "Annual CO2 savings certificate (~€250-350/year)"
 
 configurations:
-  - name: Base Configuration (as delivered)
-    price: 85850
-    description: >
-      Electrified G80 AWD fully equipped as standard with Lexicon 21-speaker audio,
-      Nappa leather quilted seats with massage, multi-chamber air suspension, Highway
-      Driving Assist 2, Face Connect, dual 12.3-inch panoramic displays, panoramic
-      sunroof, 19-inch alloy wheels. Includes delivery charge (€1,850). Flagship
-      executive sedan with comprehensive luxury features.
-    included_features:
-      - Lexicon 21-speaker premium audio system
-      - Face Connect facial recognition
-      - Dual 12.3-inch panoramic displays
-      - Nappa leather quilted seats with heating/ventilation/massage
-      - Multi-chamber air suspension
-      - Highway Driving Assist 2
-      - Remote Smart Parking Assist 2
-      - Surround View Monitor
-      - LED Matrix headlights
-      - Panoramic sunroof
-      - Dual-zone automatic climate control
-      - Vehicle-to-Load (3.6 kW)
-      - 19-inch alloy wheels
-  
-  - name: Premium Executive (popular configuration)
-    price: 91150
-    description: >
-      Most popular configuration adds 20-inch forged wheels for enhanced presence,
-      advanced lighting package with adaptive LED matrix headlights, winter package
-      with heated steering wheel and windshield, and premium floor mats. Total €91,150
-      including delivery. Ideal executive specification.
-    added_features:
-      - 20-inch forged alloy wheels (€2,000)
-      - Advanced lighting package (€1,500)
-      - Winter package (€800)
-      - Upgraded Nappa leather surfaces (€1,000)
-      - Premium floor mats + accessories (€500)
-    added_cost: 5800
-  
-  - name: Ultimate Luxury (fully loaded)
-    price: 96850
-    description: >
-      Ultimate specification adds matte paint finish, extended leather package with
-      additional Nappa surfaces, ambient lighting upgrade, and all luxury accessories.
-      Total €96,850 including delivery. Flagship expression with every luxury feature.
-    added_features:
-      - 20-inch forged alloy wheels (€2,000)
-      - Matte paint finish (€3,000)
-      - Advanced lighting package (€1,500)
-      - Winter package (€800)
-      - Extended leather package (€1,500)
-      - Ambient lighting upgrade (€1,000)
-      - Premium floor mats + accessories (€500)
-      - Executive rear seat package (€1,200)
-    added_cost: 11500
+- name: Base Configuration (as delivered)
+  price: 85850
+  description: >
+    Electrified G80 AWD fully equipped as standard with Lexicon 21-speaker audio,
+    Nappa leather quilted seats with massage, multi-chamber air suspension, Highway
+    Driving Assist 2, Face Connect, dual 12.3-inch panoramic displays, panoramic
+    sunroof, 19-inch alloy wheels. Includes delivery charge (€1,850). Flagship
+    executive sedan with comprehensive luxury features.
+  included_features:
+  - Lexicon 21-speaker premium audio system
+  - Face Connect facial recognition
+  - Dual 12.3-inch panoramic displays
+  - Nappa leather quilted seats with heating/ventilation/massage
+  - Multi-chamber air suspension
+  - Highway Driving Assist 2
+  - Remote Smart Parking Assist 2
+  - Surround View Monitor
+  - LED Matrix headlights
+  - Panoramic sunroof
+  - Dual-zone automatic climate control
+  - Vehicle-to-Load (3.6 kW)
+  - 19-inch alloy wheels
+
+- name: Premium Executive (popular configuration)
+  price: 91150
+  description: >
+    Most popular configuration adds 20-inch forged wheels for enhanced presence,
+    advanced lighting package with adaptive LED matrix headlights, winter package
+    with heated steering wheel and windshield, and premium floor mats. Total €91,150
+    including delivery. Ideal executive specification.
+  added_features:
+  - 20-inch forged alloy wheels (€2,000)
+  - Advanced lighting package (€1,500)
+  - Winter package (€800)
+  - Upgraded Nappa leather surfaces (€1,000)
+  - Premium floor mats + accessories (€500)
+  added_cost: 5800
+
+- name: Ultimate Luxury (fully loaded)
+  price: 96850
+  description: >
+    Ultimate specification adds matte paint finish, extended leather package with
+    additional Nappa surfaces, ambient lighting upgrade, and all luxury accessories.
+    Total €96,850 including delivery. Flagship expression with every luxury feature.
+  added_features:
+  - 20-inch forged alloy wheels (€2,000)
+  - Matte paint finish (€3,000)
+  - Advanced lighting package (€1,500)
+  - Winter package (€800)
+  - Extended leather package (€1,500)
+  - Ambient lighting upgrade (€1,000)
+  - Premium floor mats + accessories (€500)
+  - Executive rear seat package (€1,200)
+  added_cost: 11500
 
 popular_options:
-  - name: 20-inch forged alloy wheels
-    price: 2000
-    description: Lightweight forged wheels with executive sedan design
-  - name: Matte paint finish
-    price: 3000
-    description: Exclusive matte colors (Matte Grey, Matte Silver) for distinctive appearance
-  - name: Advanced lighting package
-    price: 1500
-    description: Adaptive LED matrix headlights with advanced projection
-  - name: Winter package
-    price: 800
-    description: Heated steering wheel, heated windshield, heated rear seats
-  - name: Extended leather package
-    price: 1500
-    description: Extended Nappa leather surfaces on dashboard and door panels
-  - name: Executive rear seat package
-    price: 1200
-    description: Rear seat massage, rear sunshades, premium rear armrest
+- name: 20-inch forged alloy wheels
+  price: 2000
+  description: Lightweight forged wheels with executive sedan design
+- name: Matte paint finish
+  price: 3000
+  description: Exclusive matte colors (Matte Grey, Matte Silver) for distinctive appearance
+- name: Advanced lighting package
+  price: 1500
+  description: Adaptive LED matrix headlights with advanced projection
+- name: Winter package
+  price: 800
+  description: Heated steering wheel, heated windshield, heated rear seats
+- name: Extended leather package
+  price: 1500
+  description: Extended Nappa leather surfaces on dashboard and door panels
+- name: Executive rear seat package
+  price: 1200
+  description: Rear seat massage, rear sunshades, premium rear armrest
 
 standard_equipment:
   exterior:
-    - LED Matrix headlights with auto leveling
-    - LED daytime running lights with G-Matrix signature
-    - LED taillights with dynamic turn signals
-    - Power-folding heated exterior mirrors
-    - Auto-dimming exterior mirrors with blind-spot monitoring
-    - Privacy glass (rear windows)
-    - Flush door handles with electronic release
-    - Panoramic fixed glass sunroof
-    - Rain-sensing wipers
-    - Power trunk with hands-free opening
-    - 19-inch alloy wheels
-    - Shark fin antenna
-  
+  - LED Matrix headlights with auto leveling
+  - LED daytime running lights with G-Matrix signature
+  - LED taillights with dynamic turn signals
+  - Power-folding heated exterior mirrors
+  - Auto-dimming exterior mirrors with blind-spot monitoring
+  - Privacy glass (rear windows)
+  - Flush door handles with electronic release
+  - Panoramic fixed glass sunroof
+  - Rain-sensing wipers
+  - Power trunk with hands-free opening
+  - 19-inch alloy wheels
+  - Shark fin antenna
+
   interior:
-    - Nappa leather quilted seats
-    - 16-way power-adjustable driver seat with memory
-    - 12-way power-adjustable passenger seat
-    - 4-way power lumbar support (driver + passenger)
-    - Heated front seats (3 levels)
-    - Ventilated front seats
-    - Massage function (front seats, 7 modes)
-    - Heated rear seats
-    - 60/40 split-folding rear seats
-    - Leather-wrapped heated steering wheel
-    - Shift-by-wire electronic gear selector
-    - Aluminum sport pedals
-    - Ambient lighting
-    - Dual-zone automatic climate control
-    - Air purification with PM2.5 filter
-    - Auto-dimming rearview mirror
-    - Wireless smartphone charging (15W)
-    - USB-C ports (front x2, rear x2)
-    - 12V power outlet
-  
+  - Nappa leather quilted seats
+  - 16-way power-adjustable driver seat with memory
+  - 12-way power-adjustable passenger seat
+  - 4-way power lumbar support (driver + passenger)
+  - Heated front seats (3 levels)
+  - Ventilated front seats
+  - Massage function (front seats, 7 modes)
+  - Heated rear seats
+  - 60/40 split-folding rear seats
+  - Leather-wrapped heated steering wheel
+  - Shift-by-wire electronic gear selector
+  - Aluminum sport pedals
+  - Ambient lighting
+  - Dual-zone automatic climate control
+  - Air purification with PM2.5 filter
+  - Auto-dimming rearview mirror
+  - Wireless smartphone charging (15W)
+  - USB-C ports (front x2, rear x2)
+  - 12V power outlet
+
   technology:
-    - Dual 12.3-inch panoramic displays
-    - Lexicon 21-speaker premium audio
-    - Genesis Connected Services with OTA updates
-    - Face Connect facial recognition
-    - Digital key (smartphone as key)
-    - Wireless Apple CarPlay
-    - Wireless Android Auto
-    - Bluetooth 5.0
-    - Navigation with real-time traffic
-    - Voice recognition
-    - Remote climate pre-conditioning
-    - Remote charging control
-  
+  - Dual 12.3-inch panoramic displays
+  - Lexicon 21-speaker premium audio
+  - Genesis Connected Services with OTA updates
+  - Face Connect facial recognition
+  - Digital key (smartphone as key)
+  - Wireless Apple CarPlay
+  - Wireless Android Auto
+  - Bluetooth 5.0
+  - Navigation with real-time traffic
+  - Voice recognition
+  - Remote climate pre-conditioning
+  - Remote charging control
+
   safety_adas:
-    - Highway Driving Assist 2 (HDA2)
-    - Remote Smart Parking Assist 2
-    - Forward Collision-Avoidance Assist (FCA)
-    - Blind-Spot Collision-Avoidance Assist (BCA)
-    - Rear Cross-Traffic Collision-Avoidance Assist
-    - Lane Following Assist (LFA)
-    - Lane Keeping Assist (LKA)
-    - Smart Cruise Control with Stop & Go
-    - Surround View Monitor
-    - Blind-Spot View Monitor
-    - Parking Collision-Avoidance Assist
-    - Safe Exit Warning
-    - Driver Attention Warning
-    - High Beam Assist
-    - Electronic Stability Control
-    - 10 airbags
+  - Highway Driving Assist 2 (HDA2)
+  - Remote Smart Parking Assist 2
+  - Forward Collision-Avoidance Assist (FCA)
+  - Blind-Spot Collision-Avoidance Assist (BCA)
+  - Rear Cross-Traffic Collision-Avoidance Assist
+  - Lane Following Assist (LFA)
+  - Lane Keeping Assist (LKA)
+  - Smart Cruise Control with Stop & Go
+  - Surround View Monitor
+  - Blind-Spot View Monitor
+  - Parking Collision-Avoidance Assist
+  - Safe Exit Warning
+  - Driver Attention Warning
+  - High Beam Assist
+  - Electronic Stability Control
+  - 10 airbags
 
 total_cost_of_ownership:
   period_years: 3
@@ -211,51 +211,48 @@ total_cost_of_ownership:
 charging:
   home:
     options:
-      - provider: ABL eMH1
-        power_kw: 11
-        installation_cost_eur: 1500
-        monthly_cost_eur: 0
-        notes: "Most popular home wallbox, 11 kW 3-phase charging (8 hours 0-100%)"
-      - provider: Wallbox Pulsar Plus
-        power_kw: 11
-        installation_cost_eur: 1200
-        monthly_cost_eur: 0
-        notes: "Budget wallbox with app connectivity, 11 kW charging"
+    - provider: ABL eMH1
+      power_kw: 11
+      installation_cost_eur: 1500
+      monthly_cost_eur: 0
+      notes: "Most popular home wallbox, 11 kW 3-phase charging (8 hours 0-100%)"
+    - provider: Wallbox Pulsar Plus
+      power_kw: 11
+      installation_cost_eur: 1200
+      monthly_cost_eur: 0
+      notes: "Budget wallbox with app connectivity, 11 kW charging"
     typical_cost_per_100km: 7.35
     calculation_basis: "21.0 kWh/100km × €0.35/kWh"
-  
   public_ac:
     providers:
-      - name: EnBW
-        coverage: Nationwide, 1,000+ AC locations
-        cost_per_kwh: 0.45
-        notes: "Most extensive AC charging network in Germany"
-      - name: Stadtwerke
-        coverage: City-specific
-        cost_per_kwh: 0.39
-        notes: "Often cheapest AC charging"
+    - name: EnBW
+      coverage: Nationwide, 1,000+ AC locations
+      cost_per_kwh: 0.45
+      notes: "Most extensive AC charging network in Germany"
+    - name: Stadtwerke
+      coverage: City-specific
+      cost_per_kwh: 0.39
+      notes: "Often cheapest AC charging"
     typical_cost_per_100km: 9.45
     calculation_basis: "21.0 kWh/100km × €0.45/kWh"
-  
   public_dc:
     providers:
-      - name: Ionity
-        coverage: 400+ stations on highways, 350 kW CCS
-        cost_per_kwh: 0.79
-        membership_discount: 0.69
-        notes: "Highway fast charging (175 kW peak, 34 min 10-80%)"
-      - name: EnBW HyperNetz
-        coverage: 300,000+ charging points across Europe
-        cost_per_kwh: 0.55
-        membership_monthly: 5.99
-        notes: "Best value for frequent travelers"
-      - name: Fastned
-        coverage: Highway stations, 300 kW CCS
-        cost_per_kwh: 0.69
-        notes: "Premium highway charging"
+    - name: Ionity
+      coverage: 400+ stations on highways, 350 kW CCS
+      cost_per_kwh: 0.79
+      membership_discount: 0.69
+      notes: "Highway fast charging (175 kW peak, 34 min 10-80%)"
+    - name: EnBW HyperNetz
+      coverage: 300,000+ charging points across Europe
+      cost_per_kwh: 0.55
+      membership_monthly: 5.99
+      notes: "Best value for frequent travelers"
+    - name: Fastned
+      coverage: Highway stations, 300 kW CCS
+      cost_per_kwh: 0.69
+      notes: "Premium highway charging"
     typical_cost_per_100km: 16.59
     calculation_basis: "21.0 kWh/100km × €0.79/kWh (Ionity)"
-  
   fast_charging_recommendations: >
     Electrified G80 features 400V architecture with 175 kW peak DC charging (10-80%
     in 34 minutes). While not as fast as 800V rivals (GV60: 18 min, EQE: 32 min),
@@ -276,91 +273,91 @@ delivery:
     Genesis dealer network: 45 locations in Germany with dedicated Studio showrooms.
 
 competitors:
-  - model: Mercedes-Benz EQE 350+
-    price: 79400
-    battery_kwh: 90.6
-    power_kw: 215
-    range_wltp_km: 590
-    acceleration_0_100_s: 6.4
-    comparison: >
-      Mercedes EQE 350+ priced €4,600 less (€79,400 vs €84,000) with impressive 70km
-      more range (590km vs 520km WLTP). However, Electrified G80 delivers superior
-      performance (272 kW/370 hp vs 215 kW/292 hp, 4.9s vs 6.4s 0-100) and more
-      traditional executive sedan proportions with spacious rear legroom. EQE offers
-      400V architecture with 170 kW charging (32 min 10-80%, similar to G80's 34 min).
-      G80 provides more luxurious standard equipment (Lexicon 21-speaker vs 6-speaker,
-      multi-chamber air suspension standard vs optional €2,400). Both qualify for 0.5%
-      company car tax rate. G80 targets buyers valuing traditional executive sedan
-      presence and superior performance, EQE appeals to Mercedes brand loyalists
-      prioritizing range and MBUX technology.
-  
-  - model: BMW i5 eDrive40
-    price: 72000
-    battery_kwh: 81.2
-    power_kw: 250
-    range_wltp_km: 582
-    acceleration_0_100_s: 5.7
-    comparison: >
-      BMW i5 eDrive40 positioned €12,000 cheaper (€72,000 vs €84,000) with excellent
-      value and 62km more range (582km vs 520km WLTP). i5 RWD configuration delivers
-      respectable 250 kW (340 hp), though G80 AWD offers 22 kW more power and all-weather
-      capability. i5 benefits from 400V with 205 kW charging (30 min 10-80%, faster than
-      G80's 34 min). G80 provides more luxurious interior (Lexicon 21-speaker vs optional
-      audio upgrade, multi-chamber air suspension standard vs extra €2,700). Both qualify
-      for 0.5% company car tax (i5 under €70k would be 0.25% if optioned conservatively).
-      i5 excellent choice for buyers prioritizing BMW driving dynamics and efficiency,
-      G80 suits those seeking traditional executive sedan luxury with Genesis's distinctive
-      Korean design.
-  
-  - model: Audi A6 e-tron (2026)
-    price: 77000
-    battery_kwh: 94.9
-    power_kw: 270
-    range_wltp_km: 720
-    acceleration_0_100_s: 5.4
-    comparison: >
-      Audi A6 e-tron (arriving 2026) positioned €7,000 less (€77,000 estimated vs €84,000)
-      with revolutionary 200km more range (720km vs 520km WLTP) thanks to PPE platform
-      and exceptional aerodynamics (Cd 0.21). A6 e-tron features 800V architecture with
-      270 kW charging (10-80% in 21 minutes, significantly faster than G80's 34 min).
-      Similar performance (270 kW both, 5.4s vs 4.9s 0-100). When A6 e-tron arrives,
-      it will challenge G80 with superior technology, but G80 currently available with
-      immediate delivery. G80 offers more traditional executive sedan presence and proven
-      reliability, A6 e-tron represents next-generation EV technology.
-  
-  - model: Tesla Model S Dual Motor
-    price: 99990
-    battery_kwh: 100.0
-    power_kw: 493
-    range_wltp_km: 634
-    acceleration_0_100_s: 3.2
-    comparison: >
-      Tesla Model S Dual Motor positioned €15,990 more expensive (€99,990 vs €84,000)
-      with extraordinary 114km more range (634km vs 520km WLTP) and supercar acceleration
-      (3.2s vs 4.9s 0-100). Model S features yoke steering wheel, massive 17" horizontal
-      touchscreen, and access to extensive Supercharger network. However, G80 delivers
-      traditional executive sedan luxury (physical buttons, Nappa leather quilted seats,
-      Lexicon audio) versus Model S's minimalist tech-focused interior. G80 significantly
-      better value at €84k, Model S targets buyers seeking maximum performance and range.
-      Both qualify for 0.5% company car tax (over €70k threshold).
-  
-  - model: Polestar 2 Long Range Dual Motor
-    price: 54900
-    battery_kwh: 78.0
-    power_kw: 310
-    range_wltp_km: 480
-    acceleration_0_100_s: 4.5
-    comparison: >
-      Polestar 2 LR Dual Motor positioned €29,100 cheaper (€54,900 vs €84,000) with
-      impressive performance (310 kW, 4.5s 0-100, 0.4s faster than G80) and respectable
-      480km WLTP range (40km less than G80). However, G80 positioned in E-segment
-      executive sedan class with significantly more luxurious interior (Nappa leather
-      quilted seats vs vegan WeaveTech, Lexicon 21-speaker vs Harman Kardon 13-speaker,
-      multi-chamber air suspension vs monotube dampers), larger dimensions (4995mm vs
-      4606mm), and traditional executive sedan presence. Polestar 2 qualifies for 0.25%
-      company car tax (under €70k), while G80 subject to 0.5% rate. Polestar 2 excellent
-      choice for performance-focused buyers on budget, G80 suits traditional executive
-      buyers seeking flagship luxury sedan with electric powertrain.
+- model: Mercedes-Benz EQE 350+
+  price: 79400
+  battery_kwh: 90.6
+  power_kw: 215
+  range_wltp_km: 590
+  acceleration_0_100_s: 6.4
+  comparison: >
+    Mercedes EQE 350+ priced €4,600 less (€79,400 vs €84,000) with impressive 70km
+    more range (590km vs 520km WLTP). However, Electrified G80 delivers superior
+    performance (272 kW/370 hp vs 215 kW/292 hp, 4.9s vs 6.4s 0-100) and more
+    traditional executive sedan proportions with spacious rear legroom. EQE offers
+    400V architecture with 170 kW charging (32 min 10-80%, similar to G80's 34 min).
+    G80 provides more luxurious standard equipment (Lexicon 21-speaker vs 6-speaker,
+    multi-chamber air suspension standard vs optional €2,400). Both qualify for 0.5%
+    company car tax rate. G80 targets buyers valuing traditional executive sedan
+    presence and superior performance, EQE appeals to Mercedes brand loyalists
+    prioritizing range and MBUX technology.
+
+- model: BMW i5 eDrive40
+  price: 72000
+  battery_kwh: 81.2
+  power_kw: 250
+  range_wltp_km: 582
+  acceleration_0_100_s: 5.7
+  comparison: >
+    BMW i5 eDrive40 positioned €12,000 cheaper (€72,000 vs €84,000) with excellent
+    value and 62km more range (582km vs 520km WLTP). i5 RWD configuration delivers
+    respectable 250 kW (340 hp), though G80 AWD offers 22 kW more power and all-weather
+    capability. i5 benefits from 400V with 205 kW charging (30 min 10-80%, faster than
+    G80's 34 min). G80 provides more luxurious interior (Lexicon 21-speaker vs optional
+    audio upgrade, multi-chamber air suspension standard vs extra €2,700). Both qualify
+    for 0.5% company car tax (i5 under €70k would be 0.25% if optioned conservatively).
+    i5 excellent choice for buyers prioritizing BMW driving dynamics and efficiency,
+    G80 suits those seeking traditional executive sedan luxury with Genesis's distinctive
+    Korean design.
+
+- model: Audi A6 e-tron (2026)
+  price: 77000
+  battery_kwh: 94.9
+  power_kw: 270
+  range_wltp_km: 720
+  acceleration_0_100_s: 5.4
+  comparison: >
+    Audi A6 e-tron (arriving 2026) positioned €7,000 less (€77,000 estimated vs €84,000)
+    with revolutionary 200km more range (720km vs 520km WLTP) thanks to PPE platform
+    and exceptional aerodynamics (Cd 0.21). A6 e-tron features 800V architecture with
+    270 kW charging (10-80% in 21 minutes, significantly faster than G80's 34 min).
+    Similar performance (270 kW both, 5.4s vs 4.9s 0-100). When A6 e-tron arrives,
+    it will challenge G80 with superior technology, but G80 currently available with
+    immediate delivery. G80 offers more traditional executive sedan presence and proven
+    reliability, A6 e-tron represents next-generation EV technology.
+
+- model: Tesla Model S Dual Motor
+  price: 99990
+  battery_kwh: 100.0
+  power_kw: 493
+  range_wltp_km: 634
+  acceleration_0_100_s: 3.2
+  comparison: >
+    Tesla Model S Dual Motor positioned €15,990 more expensive (€99,990 vs €84,000)
+    with extraordinary 114km more range (634km vs 520km WLTP) and supercar acceleration
+    (3.2s vs 4.9s 0-100). Model S features yoke steering wheel, massive 17" horizontal
+    touchscreen, and access to extensive Supercharger network. However, G80 delivers
+    traditional executive sedan luxury (physical buttons, Nappa leather quilted seats,
+    Lexicon audio) versus Model S's minimalist tech-focused interior. G80 significantly
+    better value at €84k, Model S targets buyers seeking maximum performance and range.
+    Both qualify for 0.5% company car tax (over €70k threshold).
+
+- model: Polestar 2 Long Range Dual Motor
+  price: 54900
+  battery_kwh: 78.0
+  power_kw: 310
+  range_wltp_km: 480
+  acceleration_0_100_s: 4.5
+  comparison: >
+    Polestar 2 LR Dual Motor positioned €29,100 cheaper (€54,900 vs €84,000) with
+    impressive performance (310 kW, 4.5s 0-100, 0.4s faster than G80) and respectable
+    480km WLTP range (40km less than G80). However, G80 positioned in E-segment
+    executive sedan class with significantly more luxurious interior (Nappa leather
+    quilted seats vs vegan WeaveTech, Lexicon 21-speaker vs Harman Kardon 13-speaker,
+    multi-chamber air suspension vs monotube dampers), larger dimensions (4995mm vs
+    4606mm), and traditional executive sedan presence. Polestar 2 qualifies for 0.25%
+    company car tax (under €70k), while G80 subject to 0.5% rate. Polestar 2 excellent
+    choice for performance-focused buyers on budget, G80 suits traditional executive
+    buyers seeking flagship luxury sedan with electric powertrain.
 
 market_analysis:
   segment: Executive Electric Sedan (E-segment)
@@ -371,43 +368,43 @@ market_analysis:
     Korean design language. Represents transition of Genesis's core G80 combustion sedan
     to electric mobility while maintaining the craftsmanship and luxury that defines
     the brand. Priced competitively at €84,000 versus €79-90k German rivals.
-  
+
   target_demographics:
-    - C-suite executives seeking electric flagship sedan
-    - Company car drivers prioritizing executive presence
-    - Genesis brand loyalists wanting electric alternative
-    - Buyers seeking alternative to German executive sedans
-    - Chauffeur-driven buyers prioritizing rear passenger comfort
-    - Business professionals with long-distance travel needs
-  
+  - C-suite executives seeking electric flagship sedan
+  - Company car drivers prioritizing executive presence
+  - Genesis brand loyalists wanting electric alternative
+  - Buyers seeking alternative to German executive sedans
+  - Chauffeur-driven buyers prioritizing rear passenger comfort
+  - Business professionals with long-distance travel needs
+
   strengths:
-    - Traditional executive sedan proportions with spacious rear legroom (1010mm)
-    - Luxurious Nappa leather interior with comprehensive standard equipment
-    - Lexicon 21-speaker premium audio system
-    - Multi-chamber air suspension delivers executive ride quality
-    - Face Connect biometric authentication
-    - Competitive pricing vs German rivals (€84k vs €79-90k)
-    - Strong company car proposition (0.5% tax rate)
-    - 5-year/100,000km warranty with 8-year/160,000km battery coverage
-    - Vehicle-to-Load capability (3.6 kW)
-    - Respectable 520 km WLTP range suitable for business travel
-  
+  - Traditional executive sedan proportions with spacious rear legroom (1010mm)
+  - Luxurious Nappa leather interior with comprehensive standard equipment
+  - Lexicon 21-speaker premium audio system
+  - Multi-chamber air suspension delivers executive ride quality
+  - Face Connect biometric authentication
+  - Competitive pricing vs German rivals (€84k vs €79-90k)
+  - Strong company car proposition (0.5% tax rate)
+  - 5-year/100,000km warranty with 8-year/160,000km battery coverage
+  - Vehicle-to-Load capability (3.6 kW)
+  - Respectable 520 km WLTP range suitable for business travel
+
   weaknesses:
-    - Limited Genesis dealer network in Germany (45 locations)
-    - Genesis brand less recognized vs Mercedes/BMW/Audi
-    - 400V architecture slower charging than 800V rivals
-    - Adapted combustion platform less efficient than dedicated EV architecture
-    - Resale value uncertainty for relatively new brand
-    - Subject to 0.5% company car tax rate (vehicles over €70k)
-  
+  - Limited Genesis dealer network in Germany (45 locations)
+  - Genesis brand less recognized vs Mercedes/BMW/Audi
+  - 400V architecture slower charging than 800V rivals
+  - Adapted combustion platform less efficient than dedicated EV architecture
+  - Resale value uncertainty for relatively new brand
+  - Subject to 0.5% company car tax rate (vehicles over €70k)
+
   recommendations:
-    - Excellent choice for traditional executive buyers seeking electric alternative
-    - Strong company car proposition with €7,560/year tax savings
-    - Ideal for chauffeur-driven use with spacious rear passenger comfort
-    - Consider Mercedes EQE if prioritizing range (70km more) and brand recognition
-    - Consider BMW i5 if prioritizing driving dynamics and dealer network
-    - Popular Premium Executive configuration (€91,150) adds 20" wheels and packages
-    - Test drive comparing to EQE and i5 recommended
+  - Excellent choice for traditional executive buyers seeking electric alternative
+  - Strong company car proposition with €7,560/year tax savings
+  - Ideal for chauffeur-driven use with spacious rear passenger comfort
+  - Consider Mercedes EQE if prioritizing range (70km more) and brand recognition
+  - Consider BMW i5 if prioritizing driving dynamics and dealer network
+  - Popular Premium Executive configuration (€91,150) adds 20" wheels and packages
+  - Test drive comparing to EQE and i5 recommended
 
 notes: >
   Genesis Electrified G80 represents Genesis's flagship electric sedan, adapting the
@@ -434,9 +431,8 @@ metadata:
   created_at: "2026-02-08"
   updated_at: "2026-02-08"
   data_quality: verified
-  confidence_level: high
   sources:
-    - https://www.genesis.com/de/de/models/electrified-g80/buy.html
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/genesis/electrified-g80/
-    - https://ev-database.org/car/1492/Genesis-Electrified-G80-AWD
-    - mobile.de Genesis Electrified G80 pricing data
+  - https://www.genesis.com/de/de/models/electrified-g80/buy.html
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/genesis/electrified-g80/
+  - https://ev-database.org/car/1492/Genesis-Electrified-G80-AWD
+  - mobile.de Genesis Electrified G80 pricing data

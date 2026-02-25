@@ -18,136 +18,134 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Alfa Red
-    code: null
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Alfa White
-    code: null
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Vulcano Black
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Alfa Grey
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
-  - name: Brera Blue
-    code: null
-    type: metallic
-    price_add:
-      amount: 700
-      currency: EUR
+- name: Alfa Red
+  code:
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Alfa White
+  code:
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Vulcano Black
+  code:
+  type: metallic
+  price_add:
+    amount: 700
+    currency: EUR
+- name: Alfa Grey
+  code:
+  type: metallic
+  price_add:
+    amount: 700
+    currency: EUR
+- name: Brera Blue
+  code:
+  type: metallic
+  price_add:
+    amount: 700
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" diamond-finish alloy wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 19" dark alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 800
-      currency: EUR
+- name: 18" diamond-finish alloy wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 19" dark alloy wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 800
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black cloth/microfiber
-    material: cloth
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black/Red cloth sport seats
-    material: cloth
-    color: black_red
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black cloth/microfiber
+  material: cloth
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black/Red cloth sport seats
+  material: cloth
+  color: black_red
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Federal subsidy)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €40,000", "BEV", "Private buyers only"]
-    expires_at: "2024-12-31"
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price"]
+- type: federal
+  name: "Umweltbonus (Federal subsidy)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €40,000", "BEV", "Private buyers only"]
+  expires_at: "2024-12-31"
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars under €70,000"
+  conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Glass panoramic roof
-    price:
-      amount: 1200
-      currency: EUR
-  - name: Premium Harman Kardon audio
-    price:
-      amount: 600
-      currency: EUR
-  - name: Advanced Driver Assistance Pack
-    price:
-      amount: 800
-      currency: EUR
-  - name: Visibility Pack
-    price:
-      amount: 500
-      currency: EUR
+- name: Glass panoramic roof
+  price:
+    amount: 1200
+    currency: EUR
+- name: Premium Harman Kardon audio
+  price:
+    amount: 600
+    currency: EUR
+- name: Advanced Driver Assistance Pack
+  price:
+    amount: 800
+    currency: EUR
+- name: Visibility Pack
+  price:
+    amount: 500
+    currency: EUR
 
 # Popular Configurations
 popular_configs:
-  - name: "Speciale Base"
-    description: "Standard Speciale with all included features"
-    total_price:
-      amount: 39990
-      currency: EUR
-    includes:
-      - "Heat pump (standard)"
-      - "LED Matrix headlights"
-      - "18\" alloy wheels"
-      - "Dual 10.25\" displays"
-      - "Wireless smartphone charging"
-      - "Adaptive cruise control"
-      - "Complete safety package"
-  
-  - name: "Speciale Plus"
-    description: "Speciale with popular comfort options"
-    total_price:
-      amount: 42590
-      currency: EUR
-    includes:
-      - "All Speciale base features"
-      - "Glass panoramic roof (€1,200)"
-      - "Premium Harman Kardon audio (€600)"
-      - "Advanced Driver Assistance Pack (€800)"
-  
-  - name: "Speciale Premium"
-    description: "Fully loaded Speciale with all options"
-    total_price:
-      amount: 44090
-      currency: EUR
-    includes:
-      - "All Speciale Plus features"
-      - "19\" dark alloy wheels (€800)"
-      - "Visibility Pack (€500)"
+- name: "Speciale Base"
+  description: "Standard Speciale with all included features"
+  total_price:
+    amount: 39990
+    currency: EUR
+  includes:
+  - "Heat pump (standard)"
+  - "LED Matrix headlights"
+  - "18\" alloy wheels"
+  - "Dual 10.25\" displays"
+  - "Wireless smartphone charging"
+  - "Adaptive cruise control"
+  - "Complete safety package"
+- name: "Speciale Plus"
+  description: "Speciale with popular comfort options"
+  total_price:
+    amount: 42590
+    currency: EUR
+  includes:
+  - "All Speciale base features"
+  - "Glass panoramic roof (€1,200)"
+  - "Premium Harman Kardon audio (€600)"
+  - "Advanced Driver Assistance Pack (€800)"
+- name: "Speciale Premium"
+  description: "Fully loaded Speciale with all options"
+  total_price:
+    amount: 44090
+    currency: EUR
+  includes:
+  - "All Speciale Plus features"
+  - "19\" dark alloy wheels (€800)"
+  - "Visibility Pack (€500)"
 
 # Charging Costs (Germany Q2 2024)
 typical_charging_costs:
@@ -177,35 +175,33 @@ dealer_info:
 
 # Competitors
 competitors:
-  - model_id: bmw-ix1
-    price: 56000
-    notes: "Premium badge, more power, higher positioning"
-  - model_id: mercedes-eqa
-    price: 54000
-    notes: "Premium badge, similar specs, higher price"
-  - model_id: volvo-ex40
-    price: 53000
-    notes: "Swedish premium, similar range, higher price"
-  - model_id: peugeot-e-2008
-    price: 43000
-    notes: "Platform sibling, less sporty positioning"
-  - model_id: opel-mokka-e
-    price: 39000
-    notes: "Platform sibling, more mainstream positioning"
-  - model_id: volkswagen-id3
-    price: 39995
-    notes: "Larger battery, more range, but less premium"
+- model_id: bmw-ix1
+  price: 56000
+  notes: "Premium badge, more power, higher positioning"
+- model_id: mercedes-eqa
+  price: 54000
+  notes: "Premium badge, similar specs, higher price"
+- model_id: volvo-ex40
+  price: 53000
+  notes: "Swedish premium, similar range, higher price"
+- model_id: peugeot-e-2008
+  price: 43000
+  notes: "Platform sibling, less sporty positioning"
+- model_id: opel-mokka-e
+  price: 39000
+  notes: "Platform sibling, more mainstream positioning"
+- model_id: volkswagen-id3
+  price: 39995
+  notes: "Larger battery, more range, but less premium"
 
 # Metadata
 metadata:
   created_at: "2026-02-08"
   updated_at: "2026-02-08"
   data_quality: estimated
-  confidence: medium
-  
   sources:
-    - "https://www.alfaromeo.de/junior"
-    - "https://www.mobile.de"
+  - "https://www.alfaromeo.de/junior"
+  - "https://www.mobile.de"
 
 notes: >
   The Alfa Romeo Junior Elettrica Speciale represents excellent value in the German

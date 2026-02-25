@@ -15,106 +15,106 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-  - name: Kfz-Steuer exemption
-    type: tax_exemption
-    amount: 380
-    description: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: THG-Quote
-    type: grant
-    amount: 280
-    description: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+- name: Kfz-Steuer exemption
+  type: tax_exemption
+  amount: 380
+  description: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: THG-Quote
+  type: grant
+  amount: 280
+  description: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
 
 # Colors (Germany Market)
 available_colors:
-  - name: Clear White
-    code: CW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Clear White
+  code: CW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
-  - name: Aurora Black Pearl
-    code: ABP
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Aurora Black Pearl
+  code: ABP
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Steel Gray Metallic
-    code: SGM
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Steel Gray Metallic
+  code: SGM
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Twilight Blue
-    code: TB
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Twilight Blue
+  code: TB
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Terra Brown
-    code: TBR
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Terra Brown
+  code: TBR
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Moonscape Gray Matte
-    code: MGM
-    type: matte
-    price_add:
-      amount: 1290
-      currency: EUR
+- name: Moonscape Gray Matte
+  code: MGM
+  type: matte
+  price_add:
+    amount: 1290
+    currency: EUR
 
-  - name: Shale Green Matte
-    code: SGR
-    type: matte
-    price_add:
-      amount: 1290
-      currency: EUR
+- name: Shale Green Matte
+  code: SGR
+  type: matte
+  price_add:
+    amount: 1290
+    currency: EUR
 
 # Optional Equipment
 optional_equipment:
-  - name: GT-Line Package
-    price: 2000
-    includes:
-      - "20-inch alloy wheels"
-      - "Sportier exterior styling"
-      - "GT-Line sport seats"
-      - "Gray/blue interior"
-      - "GT-Line badging"
+- name: GT-Line Package
+  price: 2000
+  includes:
+  - "20-inch alloy wheels"
+  - "Sportier exterior styling"
+  - "GT-Line sport seats"
+  - "Gray/blue interior"
+  - "GT-Line badging"
 
-  - name: Advanced Driver Assistance Plus
-    price: 1200
-    includes:
-      - "Highway Driving Assist 2"
-      - "Surround View Monitor"
-      - "Remote Smart Parking Assist"
-      - "Blind Spot View Monitor"
+- name: Advanced Driver Assistance Plus
+  price: 1200
+  includes:
+  - "Highway Driving Assist 2"
+  - "Surround View Monitor"
+  - "Remote Smart Parking Assist"
+  - "Blind Spot View Monitor"
 
-  - name: Comfort Package
-    price: 1500
-    includes:
-      - "Panoramic sunroof"
-      - "Heated and ventilated front seats"
-      - "Heated rear seats"
-      - "Power tailgate"
+- name: Comfort Package
+  price: 1500
+  includes:
+  - "Panoramic sunroof"
+  - "Heated and ventilated front seats"
+  - "Heated rear seats"
+  - "Power tailgate"
 
-  - name: Winter Package
-    price: 490
-    includes:
-      - "Heated windshield"
-      - "Heated rear seats"
-      - "All-season tires"
+- name: Winter Package
+  price: 490
+  includes:
+  - "Heated windshield"
+  - "Heated rear seats"
+  - "All-season tires"
 
 # Dealer Network
 market_info:
@@ -136,20 +136,12 @@ company_car_tax:
     0.25% rule for EVs under €70,000. At 30% tax bracket, saves ~€318/month
     vs equivalent ICE. Below €60,000 ensures 0.25% rate.
 
-market_notes: >
-  2025 model year with €500 price increase over 2024. Still excellent value
-  at €42,490 for 605km WLTP range. Kia's 7-year warranty and strong
-  dealer network make it a safe choice. V2L/V2G capability growing in
-  importance with German energy market developments. Good availability
-  with 10-week delivery.
-
-# Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-09"
-  confidence_level: high
   sources:
-    - https://www.kia.com/de/modelle/ev3/entdecken/
-    - https://www.kia.com/de/konfigurator/
+  - https://www.kia.com/de/modelle/ev3/entdecken/
+  - https://www.kia.com/de/konfigurator/
   created_at: "2026-02-09T14:15:00Z"
   created_by: Patricio
+  updated_at: "2026-02-09"
+notes: 2025 model year with €500 price increase over 2024. Still excellent value at €42,490 for 605km WLTP range. Kia's 7-year warranty and strong dealer network make it a safe choice. V2L/V2G capability growing in importance with German energy market developments. Good availability with 10-week delivery.

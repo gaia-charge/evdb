@@ -14,28 +14,28 @@ pricing:
   vat_rate_percent: 23
 
 incentives:
-  - name: Mój Elektryk
-    type: grant
-    amount: 27000
-    description: >
-      Government subsidy for EV purchases. Up to 27,000 PLN for individuals.
-    conditions:
-      - Pure battery-electric vehicle (BEV)
-      - Individual buyer
-      - Vehicle price under 225,000 PLN gross
-    active: false
-    notes: "Vehicle slightly exceeds the 225,000 PLN price cap"
+- name: Mój Elektryk
+  type: grant
+  amount: 27000
+  description: >
+    Government subsidy for EV purchases. Up to 27,000 PLN for individuals.
+  conditions:
+  - Pure battery-electric vehicle (BEV)
+  - Individual buyer
+  - Vehicle price under 225,000 PLN gross
+  active: false
+  notes: "Vehicle slightly exceeds the 225,000 PLN price cap"
 
 available_colors:
-  - name: Glacier White Metallic
-    type: metallic
-    price_add: 0
-  - name: Grenadilla Black Metallic
-    type: metallic
-    price_add: 3200
-  - name: Moonstone Grey
-    type: metallic
-    price_add: 3200
+- name: Glacier White Metallic
+  type: metallic
+  price_add: 0
+- name: Grenadilla Black Metallic
+  type: metallic
+  price_add: 3200
+- name: Moonstone Grey
+  type: metallic
+  price_add: 3200
 
 notes: |
   VW ID.5 Pro available in Poland through Volkswagen dealer network.
@@ -45,6 +45,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.volkswagen.pl/pl/modele/id5.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.volkswagen.pl/pl/modele/id5.html

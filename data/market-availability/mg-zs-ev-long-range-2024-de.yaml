@@ -21,139 +21,136 @@ price_details:
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - name: "Umweltbonus (BAFA)"
-    amount: 3000  # Reduced from €4,500 in 2023, ends Dec 2024
-    type: rebate
-    provider: federal
-    eligibility: "BEV with price ≤€45,000"
-    valid_until: "2024-12-31"
-    notes: "German federal EV subsidy - being phased out"
-    
-  - name: "Company Car Tax"
-    amount: 0  # Percentage-based benefit, not fixed amount
-    type: tax_exemption
-    provider: federal
-    description: "0.25% monthly gross list price for BEVs under €60k"
-    notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
+- name: "Umweltbonus (BAFA)"
+  amount: 3000    # Reduced from €4,500 in 2023, ends Dec 2024
+  type: rebate
+  provider: federal
+  eligibility: "BEV with price ≤€45,000"
+  valid_until: "2024-12-31"
+  notes: "German federal EV subsidy - being phased out"
+- name: "Company Car Tax"
+  amount: 0    # Percentage-based benefit, not fixed amount
+  type: tax_exemption
+  provider: federal
+  description: "0.25% monthly gross list price for BEVs under €60k"
+  notes: "Significant benefit for company car drivers - 75% reduction vs 1% for ICE"
 
 # Available Colors
 colors:
-  - name: "Polar White"
-    code: "solid-white"
-    type: solid
-    price_delta: 0
-    
-  - name: "Dynamic Red"
-    code: "metallic-red"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Arctic Silver"
-    code: "metallic-silver"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Black Pearl"
-    code: "metallic-black"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Camden Grey"
-    code: "metallic-grey"
-    type: metallic
-    price_delta: 680
-    
-  - name: "Pebble Black"
-    code: "metallic-black-two"
-    type: metallic
-    price_delta: 680
+- name: "Polar White"
+  code: "solid-white"
+  type: solid
+  price_delta: 0
+
+- name: "Dynamic Red"
+  code: "metallic-red"
+  type: metallic
+  price_delta: 680
+
+- name: "Arctic Silver"
+  code: "metallic-silver"
+  type: metallic
+  price_delta: 680
+
+- name: "Black Pearl"
+  code: "metallic-black"
+  type: metallic
+  price_delta: 680
+
+- name: "Camden Grey"
+  code: "metallic-grey"
+  type: metallic
+  price_delta: 680
+
+- name: "Pebble Black"
+  code: "metallic-black-two"
+  type: metallic
+  price_delta: 680
 
 # Wheel Options
 wheels:
-  - name: "17-inch alloy wheels"
-    size_inches: 17
-    tire_size: "215/55 R17"
-    price_delta: 0
-    standard: true
-    
-  - name: "18-inch diamond-cut alloy wheels"
-    size_inches: 18
-    tire_size: "215/50 R18"
-    price_delta: 650
-    notes: "Sportier look, minimal range impact (-5km WLTP)"
+- name: "17-inch alloy wheels"
+  size_inches: 17
+  tire_size: "215/55 R17"
+  price_delta: 0
+  standard: true
+
+- name: "18-inch diamond-cut alloy wheels"
+  size_inches: 18
+  tire_size: "215/50 R18"
+  price_delta: 650
+  notes: "Sportier look, minimal range impact (-5km WLTP)"
 
 # Interior Options
 interiors:
-  - name: "Black fabric"
-    material: fabric
-    price_delta: 0
-    standard: true
-    
-  - name: "Black faux leather"
-    material: synthetic_leather
-    price_delta: 1400
-    notes: "Premium feel, easier to clean, more durable"
+- name: "Black fabric"
+  material: fabric
+  price_delta: 0
+  standard: true
+
+- name: "Black faux leather"
+  material: synthetic_leather
+  price_delta: 1400
+  notes: "Premium feel, easier to clean, more durable"
 
 # Equipment Packages & Options
 packages:
-  - name: "Comfort Pack"
-    price: 1800
-    includes:
-      - "Panoramic sunroof (standard)"
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Rear parking sensors"
-      - "Auto-dimming rear-view mirror"
-    popular: true
-    notes: "Panoramic sunroof already standard on Long Range"
-    
-  - name: "Luxury Pack"
-    price: 2800
-    includes:
-      - "All Comfort Pack features"
-      - "Black faux leather seats"
-      - "Power-adjustable driver seat"
-      - "Wireless phone charging"
-      - "Premium 6-speaker audio"
-      - "Ambient lighting"
-    popular: true
-    recommended: true
-    
-  - name: "Trophy Spec"
-    price: 4800
-    includes:
-      - "All Luxury Pack features"
-      - "18-inch diamond-cut wheels"
-      - "Advanced driver assistance (MG Pilot)"
-      - "360-degree camera"
-      - "Power tailgate"
-      - "LED matrix headlights"
-      - "Adaptive cruise control"
-    notes: "Top specification - best value for money"
+- name: "Comfort Pack"
+  price: 1800
+  includes:
+  - "Panoramic sunroof (standard)"
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Rear parking sensors"
+  - "Auto-dimming rear-view mirror"
+  popular: true
+  notes: "Panoramic sunroof already standard on Long Range"
+- name: "Luxury Pack"
+  price: 2800
+  includes:
+  - "All Comfort Pack features"
+  - "Black faux leather seats"
+  - "Power-adjustable driver seat"
+  - "Wireless phone charging"
+  - "Premium 6-speaker audio"
+  - "Ambient lighting"
+  popular: true
+  recommended: true
+
+- name: "Trophy Spec"
+  price: 4800
+  includes:
+  - "All Luxury Pack features"
+  - "18-inch diamond-cut wheels"
+  - "Advanced driver assistance (MG Pilot)"
+  - "360-degree camera"
+  - "Power tailgate"
+  - "LED matrix headlights"
+  - "Adaptive cruise control"
+  notes: "Top specification - best value for money"
 
 # Individual Options
 individual_options:
-  - name: "Metallic paint"
-    price: 680
-    category: exterior
-    
-  - name: "Heat pump"
-    price: 0
-    category: efficiency
-    notes: "Standard equipment from 2023"
-    
-  - name: "Tow bar"
-    price: 750
-    category: utility
-    towing_capacity_kg: 500
-    
-  - name: "Winter package"
-    price: 900
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Heated rear seats"
-      - "Heated windshield washer nozzles"
+- name: "Metallic paint"
+  price: 680
+  category: exterior
+
+- name: "Heat pump"
+  price: 0
+  category: efficiency
+  notes: "Standard equipment from 2023"
+- name: "Tow bar"
+  price: 750
+  category: utility
+  towing_capacity_kg: 500
+
+- name: "Winter package"
+  price: 900
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Heated rear seats"
+  - "Heated windshield washer nozzles"
 
 # Total Price Range
 price_range:
@@ -168,17 +165,6 @@ production_location: "Shanghai, China"
 import_duties_included: true
 
 # Market-Specific Notes
-market_notes:
-  - "Popular family SUV in German market"
-  - "7-year/175,000km battery warranty"
-  - "Free home charger installation support (via MG partners)"
-  - "MG Motor Germany provides 6-year paint warranty"
-  - "Available at 120+ MG dealers across Germany"
-  - "Direct import from China - no local assembly"
-  - "Higher ground clearance than MG4 (161mm vs 150mm)"
-  - "Larger boot space than MG4 (448L vs 363L)"
-
-# Sales & Distribution
 distribution:
   dealer_network_size: 120
   direct_sales: false
@@ -194,19 +180,19 @@ warranty:
   battery_km: 175000
   battery_capacity_guarantee_percent: 70
   roadside_assistance_years: 7
-  
+
 service:
   service_interval_months: 12
   service_interval_km: 20000
   average_service_cost_eur: 220
   service_plan_available: true
-  
+
 # Charging Infrastructure Support
 charging_support:
-  - "Partnership with EnBW (Mobility+ card)"
-  - "Access to 200,000+ charging points in Europe"
-  - "Free RFID charging card included"
-  - "MG iSMART app for charging station locator"
+- "Partnership with EnBW (Mobility+ card)"
+- "Access to 200,000+ charging points in Europe"
+- "Free RFID charging card included"
+- "MG iSMART app for charging station locator"
 
 # Insurance
 insurance_notes:
@@ -235,53 +221,46 @@ leasing_example:
 
 # Competitors in Market
 local_competitors:
-  - vehicle: "Nissan Ariya 63 kWh FWD"
-    price_eur: 50400
-    price_delta: +13410
-    notes: "Japanese brand, more premium positioning, similar size"
-    
-  - vehicle: "Hyundai Kona Electric 65 kWh"
-    price_eur: 44990
-    price_delta: +8000
-    notes: "Korean brand, proven reliability, similar specs"
-    
-  - vehicle: "Opel Mokka-e"
-    price_eur: 38350
-    price_delta: +1360
-    notes: "German-French brand, smaller battery (50kWh)"
-    
-  - vehicle: "Peugeot e-2008 Allure"
-    price_eur: 38750
-    price_delta: +1760
-    notes: "French brand, smaller battery (54kWh)"
-    
-  - vehicle: "Renault Megane E-Tech EV60"
-    price_eur: 42500
-    price_delta: +5510
-    notes: "French brand, similar battery (60kWh)"
+- vehicle: "Nissan Ariya 63 kWh FWD"
+  price_eur: 50400
+  price_delta: 13410
+  notes: "Japanese brand, more premium positioning, similar size"
+- vehicle: "Hyundai Kona Electric 65 kWh"
+  price_eur: 44990
+  price_delta: 8000
+  notes: "Korean brand, proven reliability, similar specs"
+- vehicle: "Opel Mokka-e"
+  price_eur: 38350
+  price_delta: 1360
+  notes: "German-French brand, smaller battery (50kWh)"
+- vehicle: "Peugeot e-2008 Allure"
+  price_eur: 38750
+  price_delta: 1760
+  notes: "French brand, smaller battery (54kWh)"
+- vehicle: "Renault Megane E-Tech EV60"
+  price_eur: 42500
+  price_delta: 5510
+  notes: "French brand, similar battery (60kWh)"
 
 # Market Performance
 market_stats:
   sales_2023: 2800  # Estimated DE registrations
   market_share_segment_percent: 5.2
   customer_satisfaction_score: 4.1  # out of 5
-  
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Praktischer Familien-SUV mit gutem Preis-Leistungs-Verhältnis"
-    
-  - source: "ADAC"
-    rating: 2.2  # ADAC scale (lower is better)
-    score_out_of: 5.0
-    summary: "Empfehlenswert - große Batterie, viel Platz"
-    
-  - source: "Auto Bild"
-    rating: 3.5
-    score_out_of: 5.0
-    summary: "Günstiger Elektro-SUV mit ordentlicher Reichweite"
+- source: "Auto Motor und Sport"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Praktischer Familien-SUV mit gutem Preis-Leistungs-Verhältnis"
+- source: "ADAC"
+  rating: 2.2    # ADAC scale (lower is better)
+  score_out_of: 5.0
+  summary: "Empfehlenswert - große Batterie, viel Platz"
+- source: "Auto Bild"
+  rating: 3.5
+  score_out_of: 5.0
+  summary: "Günstiger Elektro-SUV mit ordentlicher Reichweite"
 
 # Environmental
 environmental:
@@ -309,12 +288,11 @@ company_car_example:
 metadata:
   data_quality: verified
   sources:
-    - https://www.mgmotor.de/mg-zs-ev
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg-zs-ev-test/
-    - https://www.auto-motor-und-sport.de/fahrbericht/mg-zs-ev-test/
-    - https://www.dat.de/ (pricing and typklasse data)
+  - https://www.mgmotor.de/mg-zs-ev
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg-zs-ev-test/
+  - https://www.auto-motor-und-sport.de/fahrbericht/mg-zs-ev-test/
+  - https://www.dat.de/ (pricing and typklasse data)
   created_at: "2024-02-08"
-  last_updated: "2024-02-08"
   notes: |
     MG ZS EV is excellent value in the compact electric SUV segment.
     72.6 kWh battery provides class-leading range (440km WLTP) at this price point.
@@ -327,3 +305,5 @@ metadata:
     Growing dealer network (120+ dealers) provides good service coverage.
     Second generation (2023+) has significantly improved tech and range vs gen 1.
     Umweltbonus (€3,000) ends Dec 2024 - act before subsidy expires.
+  updated_at: "2024-02-08"
+notes: "['Popular family SUV in German market', '7-year/175,000km battery warranty', 'Free home charger installation support (via MG partners)', 'MG Motor Germany provides 6-year paint warranty', 'Available at 120+ MG dealers across Germany', 'Direct import from China - no local assembly', 'Higher ground clearance than MG4 (161mm vs 150mm)', 'Larger boot space than MG4 (448L vs 363L)']"

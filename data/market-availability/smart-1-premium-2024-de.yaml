@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2023-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 41990
@@ -17,143 +17,143 @@ pricing:
   total_price_estimate: 43330
 
 incentives:
-  - name: Kfz-Steuer Exemption
-    type: tax_exemption
-    amount: 0
-    description: BEVs exempt from vehicle tax until 2030
-    valid_from: "2024-01-01"
-    valid_until: "2030-12-31"
-    conditions:
-      - All battery electric vehicles
-    source_url: https://www.bundesfinanzministerium.de/
+- name: Kfz-Steuer Exemption
+  type: tax_exemption
+  amount: 0
+  description: BEVs exempt from vehicle tax until 2030
+  valid_from: "2024-01-01"
+  valid_until: "2030-12-31"
+  conditions:
+  - All battery electric vehicles
+  source_url: https://www.bundesfinanzministerium.de/
 
-  - name: Company Car Tax Benefit
-    type: tax_credit
-    amount: 3780
-    description: 0.25% monthly gross list price (vs 1% for ICE)
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - BEVs used as company cars
-      - €41,990 × 0.25% = €105/month taxable benefit
-    notes: Annual savings ~€3,780 vs equivalent ICE vehicle
+- name: Company Car Tax Benefit
+  type: tax_credit
+  amount: 3780
+  description: 0.25% monthly gross list price (vs 1% for ICE)
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - BEVs used as company cars
+  - €41,990 × 0.25% = €105/month taxable benefit
+  notes: Annual savings ~€3,780 vs equivalent ICE vehicle
 
-  - name: THG-Quote
-    type: grant
-    amount: 300
-    description: Annual payment for selling CO2 savings certificate
-    valid_from: "2024-01-01"
-    valid_until: "2024-12-31"
-    conditions:
-      - All BEV owners in Germany
-    notes: Sell via aggregators (Geld für eAuto, ADAC)
-    source_url: https://www.umweltbundesamt.de/thg-quote
+- name: THG-Quote
+  type: grant
+  amount: 300
+  description: Annual payment for selling CO2 savings certificate
+  valid_from: "2024-01-01"
+  valid_until: "2024-12-31"
+  conditions:
+  - All BEV owners in Germany
+  notes: Sell via aggregators (Geld für eAuto, ADAC)
+  source_url: https://www.umweltbundesamt.de/thg-quote
 
 market_specific:
   standard_equipment:
-    - 12.8" portrait touchscreen
-    - 9.2" digital driver display
-    - Smart OS with OTA updates
-    - Apple CarPlay & Android Auto
-    - LED headlights
-    - Panoramic glass roof (fixed)
-    - Heated front seats
-    - Dual-zone climate control
-    - Heat pump
-    - Synthetic leather upholstery
-    - 18" alloy wheels
-    - Adaptive cruise control
-    - Lane keeping assist
-    - Automatic emergency braking
-    - Blind spot monitoring
-    - 360-degree camera
-    - Keyless entry
-    - Power tailgate
-  
+  - 12.8" portrait touchscreen
+  - 9.2" digital driver display
+  - Smart OS with OTA updates
+  - Apple CarPlay & Android Auto
+  - LED headlights
+  - Panoramic glass roof (fixed)
+  - Heated front seats
+  - Dual-zone climate control
+  - Heat pump
+  - Synthetic leather upholstery
+  - 18" alloy wheels
+  - Adaptive cruise control
+  - Lane keeping assist
+  - Automatic emergency braking
+  - Blind spot monitoring
+  - 360-degree camera
+  - Keyless entry
+  - Power tailgate
+
   available_colors:
-    - name: Pulse Black
-      type: solid
-      cost: 0
-    - name: Ice White
-      type: solid
-      cost: 0
-    - name: Cyber Green
-      type: metallic
-      cost: 800
-    - name: Lava Orange
-      type: metallic
-      cost: 800
-    - name: Vapor Grey
-      type: metallic
-      cost: 800
-    - name: Star Blue
-      type: metallic
-      cost: 800
-    - name: Two-tone Black Roof
-      type: special
-      cost: 900
-      notes: With Ice White, Cyber Green, or Lava Orange base
-  
+  - name: Pulse Black
+    type: solid
+    cost: 0
+  - name: Ice White
+    type: solid
+    cost: 0
+  - name: Cyber Green
+    type: metallic
+    cost: 800
+  - name: Lava Orange
+    type: metallic
+    cost: 800
+  - name: Vapor Grey
+    type: metallic
+    cost: 800
+  - name: Star Blue
+    type: metallic
+    cost: 800
+  - name: Two-tone Black Roof
+    type: special
+    cost: 900
+    notes: With Ice White, Cyber Green, or Lava Orange base
+
   available_wheels:
-    - size_inches: 18
-      type: alloy
-      design: 5-spoke
-      cost: 0
-      standard: true
-    - size_inches: 19
-      type: alloy
-      design: 10-spoke bi-color
-      cost: 900
-      standard: false
-  
+  - size_inches: 18
+    type: alloy
+    design: 5-spoke
+    cost: 0
+    standard: true
+  - size_inches: 19
+    type: alloy
+    design: 10-spoke bi-color
+    cost: 900
+    standard: false
+
   available_interiors:
-    - name: Black synthetic leather
-      material: synthetic_leather
-      cost: 0
-      standard: true
-    - name: Grey/White synthetic leather
-      material: synthetic_leather
-      cost: 500
-      standard: false
-    - name: Nappa leather Black
-      material: nappa_leather
-      cost: 1800
-      standard: false
-      notes: Premium upgrade with diamond stitching
-  
+  - name: Black synthetic leather
+    material: synthetic_leather
+    cost: 0
+    standard: true
+  - name: Grey/White synthetic leather
+    material: synthetic_leather
+    cost: 500
+    standard: false
+  - name: Nappa leather Black
+    material: nappa_leather
+    cost: 1800
+    standard: false
+    notes: Premium upgrade with diamond stitching
+
   packages:
-    - name: Pulse Package
-      cost: 1500
-      features:
-        - Beats Audio premium sound (12 speakers)
-        - Ambient lighting (64 colors)
-        - Wireless smartphone charging
-        - Rear USB-C ports
-      notes: Most popular package
-    
-    - name: Panorama Package
-      cost: 1200
-      features:
-        - Electrochromic panoramic glass roof
-        - Adjustable transparency (5 levels)
-      notes: Upgrades standard fixed glass roof
-    
-    - name: Winter Package
-      cost: 800
-      features:
-        - Heated steering wheel
-        - Heated rear seats
-        - Heated windscreen washer nozzles
-      notes: Essential for cold German winters
-    
-    - name: Premium Package
-      cost: 3200
-      features:
-        - Pulse Package
-        - Panorama Package
-        - Nappa leather seats
-        - Head-up display
-      notes: Complete premium experience
+  - name: Pulse Package
+    cost: 1500
+    features:
+    - Beats Audio premium sound (12 speakers)
+    - Ambient lighting (64 colors)
+    - Wireless smartphone charging
+    - Rear USB-C ports
+    notes: Most popular package
+
+  - name: Panorama Package
+    cost: 1200
+    features:
+    - Electrochromic panoramic glass roof
+    - Adjustable transparency (5 levels)
+    notes: Upgrades standard fixed glass roof
+
+  - name: Winter Package
+    cost: 800
+    features:
+    - Heated steering wheel
+    - Heated rear seats
+    - Heated windscreen washer nozzles
+    notes: Essential for cold German winters
+
+  - name: Premium Package
+    cost: 3200
+    features:
+    - Pulse Package
+    - Panorama Package
+    - Nappa leather seats
+    - Head-up display
+    notes: Complete premium experience
 
 delivery:
   lead_time_weeks: 6
@@ -171,14 +171,14 @@ dealer_network:
   count: 0
   showroom_count: 8
   cities:
-    - Berlin
-    - Munich
-    - Hamburg
-    - Frankfurt
-    - Düsseldorf
-    - Cologne
-    - Stuttgart
-    - Hanover
+  - Berlin
+  - Munich
+  - Hamburg
+  - Frankfurt
+  - Düsseldorf
+  - Cologne
+  - Stuttgart
+  - Hanover
   notes: Direct-sales model only, Smart Spaces for test drives
 
 service:
@@ -192,11 +192,9 @@ metadata:
   data_quality: verified
   created_at: "2024-02-07"
   sources:
-    - https://www.smart.com/de/de/modelle/1/premium
-    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/smart/smart-1/
-    - https://efahrer.chip.de/elektroautos/smart-1_108115
-  last_updated: "2024-02-07"
+  - https://www.smart.com/de/de/modelle/1/premium
+  - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/smart/smart-1/
+  - https://efahrer.chip.de/elektroautos/smart-1_108115
   notes: >
-    Direct-sales model with consistent nationwide pricing. Home delivery available. 
-    6-week delivery time from China. Strong Q1 2024 sales (2,500+ units). Mercedes 
-    design heritage appeals to premium buyers despite Chinese production.
+    Direct-sales model with consistent nationwide pricing. Home delivery available.  6-week delivery time from China. Strong Q1 2024 sales (2,500+ units). Mercedes  design heritage appeals to premium buyers despite Chinese production.
+  updated_at: "2024-02-07"

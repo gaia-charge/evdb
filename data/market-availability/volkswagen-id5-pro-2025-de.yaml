@@ -8,10 +8,15 @@ currency: EUR
 availability_status: available
 available_from: "2024-09-01"
 delivery_time_weeks: 10
-notes: |
+notes: |-
   2025 model year ID.5 Pro available with updated software and features.
   Built at VW's Zwickau factory. Strong demand in Germany as coupe SUV
   alternative to ID.4.
+  The 2025 ID.5 Pro offers strong value in the coupe SUV segment with its
+  price reduction to under €50,000. Excellent company car taxation at 0.25%
+  rate makes it attractive for business users. Key selling points: Made in
+  Germany, good range (530 km WLTP), fast charging (175 kW), and sporty
+  coupe styling. Main competitors are Tesla Model Y and Audi Q4 Sportback.
 
 pricing:
   base_price: 49995
@@ -23,84 +28,84 @@ pricing:
     increased competition and VW's pricing strategy.
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €49,995 × 0.25% = €125/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €49,995 × 0.25% = €125/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 equipment_packages:
-  - name: IQ.DRIVE Max Package
-    price:
-      amount: 2200
-      currency: EUR
-    items:
-      - Full ADAS suite
-      - Lane change assist
-      - Park assist
-      - Matrix LED headlights
-    notes: "Advanced driver assistance features"
+- name: IQ.DRIVE Max Package
+  price:
+    amount: 2200
+    currency: EUR
+  items:
+  - Full ADAS suite
+  - Lane change assist
+  - Park assist
+  - Matrix LED headlights
+  notes: "Advanced driver assistance features"
 
-  - name: DCC Adaptive Chassis Control
-    price:
-      amount: 990
-      currency: EUR
-    items:
-      - Adaptive dampers
-      - Improved comfort and handling
+- name: DCC Adaptive Chassis Control
+  price:
+    amount: 990
+    currency: EUR
+  items:
+  - Adaptive dampers
+  - Improved comfort and handling
 
-  - name: AR Head-Up Display
-    price:
-      amount: 1150
-      currency: EUR
-    items:
-      - Augmented reality HUD with navigation
+- name: AR Head-Up Display
+  price:
+    amount: 1150
+    currency: EUR
+  items:
+  - Augmented reality HUD with navigation
 
-  - name: ergoActive Climate Seats
-    price:
-      amount: 550
-      currency: EUR
-    items:
-      - Front seats with massage and ventilation
+- name: ergoActive Climate Seats
+  price:
+    amount: 550
+    currency: EUR
+  items:
+  - Front seats with massage and ventilation
 
-  - name: 22kW AC Charging Upgrade
-    price:
-      amount: 650
-      currency: EUR
-    items:
-      - 22 kW three-phase AC onboard charger
+- name: 22kW AC Charging Upgrade
+  price:
+    amount: 650
+    currency: EUR
+  items:
+  - 22 kW three-phase AC onboard charger
 
 available_colors:
-  - name: Glacier White Metallic
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Moonstone Grey
-    type: metallic
-    price_add:
-      amount: 695
-      currency: EUR
-  - name: Kings Red Metallic
-    type: metallic
-    price_add:
-      amount: 695
-      currency: EUR
-  - name: Grenadilla Black Metallic
-    type: metallic
-    price_add:
-      amount: 695
-      currency: EUR
+- name: Glacier White Metallic
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Moonstone Grey
+  type: metallic
+  price_add:
+    amount: 695
+    currency: EUR
+- name: Kings Red Metallic
+  type: metallic
+  price_add:
+    amount: 695
+    currency: EUR
+- name: Grenadilla Black Metallic
+  type: metallic
+  price_add:
+    amount: 695
+    currency: EUR
 
 sales_model: dealership
 dealerships_count: 680
@@ -140,32 +145,24 @@ charging_costs:
     notes: IONITY/EnBW HyperNetz DC fast charging rates
 
 competitors:
-  - model: Tesla Model Y RWD
-    price: 44990
-    power_kw: 220
-    range_km: 455
-    notes: €5k cheaper, less range, different styling
-  - model: BMW iX1 xDrive30
-    price: 55900
-    power_kw: 230
-    range_km: 440
-    notes: €6k more, premium badge, less range
-  - model: Audi Q4 Sportback 45 e-tron
-    price: 52900
-    power_kw: 210
-    range_km: 540
-    notes: Similar price, premium badge, comparable specs
-
-market_notes: |
-  The 2025 ID.5 Pro offers strong value in the coupe SUV segment with its
-  price reduction to under €50,000. Excellent company car taxation at 0.25%
-  rate makes it attractive for business users. Key selling points: Made in
-  Germany, good range (530 km WLTP), fast charging (175 kW), and sporty
-  coupe styling. Main competitors are Tesla Model Y and Audi Q4 Sportback.
+- model: Tesla Model Y RWD
+  price: 44990
+  power_kw: 220
+  range_km: 455
+  notes: €5k cheaper, less range, different styling
+- model: BMW iX1 xDrive30
+  price: 55900
+  power_kw: 230
+  range_km: 440
+  notes: €6k more, premium badge, less range
+- model: Audi Q4 Sportback 45 e-tron
+  price: 52900
+  power_kw: 210
+  range_km: 540
+  notes: Similar price, premium badge, comparable specs
 
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.volkswagen.de/de/modelle/id5.html
+  - https://www.volkswagen.de/de/modelle/id5.html

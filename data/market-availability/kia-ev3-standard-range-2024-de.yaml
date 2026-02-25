@@ -15,116 +15,112 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
 
 # Colors (Germany Market)
 available_colors:
-  - name: Clear White
-    code: CW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Aurora Black Pearl
-    code: ABP
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  
-  - name: Steel Gray Metallic
-    code: SGM
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  
-  - name: Twilight Blue
-    code: TB
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  
-  - name: Terra Brown
-    code: TBR
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Clear White
+  code: CW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Aurora Black Pearl
+  code: ABP
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+
+- name: Steel Gray Metallic
+  code: SGM
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+
+- name: Twilight Blue
+  code: TB
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+
+- name: Terra Brown
+  code: TBR
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18-inch alloy wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: 19-inch alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 690
-      currency: EUR
+- name: 18-inch alloy wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: 19-inch alloy wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 690
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black cloth
-    code: BCL
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Black eco-leather
-    code: BEL
-    price_add:
-      amount: 990
-      currency: EUR
+- name: Black cloth
+  code: BCL
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Black eco-leather
+  code: BEL
+  price_add:
+    amount: 990
+    currency: EUR
 
 # Optional Equipment
 optional_equipment:
-  - name: GT-Line Package
-    price: 2000
-    includes:
-      - "19-inch alloy wheels"
-      - "Sportier exterior styling"
-      - "GT-Line sport seats"
-      - "GT-Line badging"
-      - "Sport pedals"
-  
-  - name: Advanced Driver Assistance
-    price: 1000
-    includes:
-      - "Highway Driving Assist"
-      - "Surround View Monitor"
-      - "Smart Parking Assist"
-  
-  - name: Comfort Package
-    price: 1200
-    includes:
-      - "Panoramic sunroof"
-      - "Heated and ventilated front seats"
-      - "Power tailgate"
-  
-  - name: Premium Sound Package
-    price: 790
-    includes:
-      - "Meridian Premium Sound (8 speakers)"
-  
-  - name: Winter Package
-    price: 490
-    includes:
-      - "Heated windshield"
-      - "Heated rear seats"
-      - "All-season tires"
+- name: GT-Line Package
+  price: 2000
+  includes:
+  - "19-inch alloy wheels"
+  - "Sportier exterior styling"
+  - "GT-Line sport seats"
+  - "GT-Line badging"
+  - "Sport pedals"
+- name: Advanced Driver Assistance
+  price: 1000
+  includes:
+  - "Highway Driving Assist"
+  - "Surround View Monitor"
+  - "Smart Parking Assist"
+- name: Comfort Package
+  price: 1200
+  includes:
+  - "Panoramic sunroof"
+  - "Heated and ventilated front seats"
+  - "Power tailgate"
+- name: Premium Sound Package
+  price: 790
+  includes:
+  - "Meridian Premium Sound (8 speakers)"
+- name: Winter Package
+  price: 490
+  includes:
+  - "Heated windshield"
+  - "Heated rear seats"
+  - "All-season tires"
 
 # Dealer Network & Service
 market_info:
@@ -139,18 +135,6 @@ market_info:
   roadside_assistance_years: 7
 
 # Specific to German Market
-market_notes: >
-  - Entry-level EV3 variant offering excellent value at €38,990
-  - 410km WLTP range sufficient for daily urban/suburban use
-  - €3,000 savings vs Long Range for buyers prioritizing price over range
-  - Standard heat pump crucial for German winter efficiency
-  - Competitive with Hyundai Kona Electric (€39,990), VW ID.3 Pure (€39,995)
-  - Still includes V2L capability despite being base variant
-  - Strong dealer network and 7-year warranty remain key selling points
-  - Ideal for first-time EV buyers or second family car
-  - Company car tax benefit (0.25%) makes it very attractive for fleet use
-
-# Company Car Calculation (Germany)
 company_car_tax:
   gross_list_price: 38990
   monthly_tax_base: 97.48  # 0.25% of 38990
@@ -168,10 +152,10 @@ popular_configuration:
   name: "EV3 Standard Range Comfort"
   base_price: 38990
   options:
-    - GT-Line Package: 2000
-    - Comfort Package: 1200
-    - Premium Sound: 790
-    - Aurora Black Pearl: 790
+  - GT-Line Package: 2000
+  - Comfort Package: 1200
+  - Premium Sound: 790
+  - Aurora Black Pearl: 790
   total_price: 43770
   notes: >
     Popular mid-spec configuration with sporty styling and key comfort
@@ -184,15 +168,14 @@ charging_costs:
     electricity_rate_eur_per_kwh: 0.32
     cost_per_100km: 5.60  # Based on 17.5 kWh/100km real-world
     cost_full_charge: 18.66  # 58.3 kWh usable
-  
   public_ac_charging:
     electricity_rate_eur_per_kwh: 0.49
     cost_per_100km: 8.58
-  
+
   public_dc_fast_charging:
     electricity_rate_eur_per_kwh: 0.79
     cost_per_100km: 13.83
-  
+
   comparison_ice_equivalent:
     fuel_consumption_l_per_100km: 6.0
     fuel_price_eur_per_liter: 1.85
@@ -202,11 +185,11 @@ charging_costs:
 # Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-08"
-  confidence_level: high
   sources:
-    - https://www.kia.com/de/modelle/ev3/entdecken/
-    - https://www.kia.com/de/konfigurator/
-    - https://ev-database.org/car/1850/Kia-EV3-Standard-Range
+  - https://www.kia.com/de/modelle/ev3/entdecken/
+  - https://www.kia.com/de/konfigurator/
+  - https://ev-database.org/car/1850/Kia-EV3-Standard-Range
   created_at: "2026-02-08T16:20:00Z"
   created_by: Patricio
+  updated_at: "2026-02-08"
+notes: '- Entry-level EV3 variant offering excellent value at €38,990 - 410km WLTP range sufficient for daily urban/suburban use - €3,000 savings vs Long Range for buyers prioritizing price over range - Standard heat pump crucial for German winter efficiency - Competitive with Hyundai Kona Electric (€39,990), VW ID.3 Pure (€39,995) - Still includes V2L capability despite being base variant - Strong dealer network and 7-year warranty remain key selling points - Ideal for first-time EV buyers or second family car - Company car tax benefit (0.25%) makes it very attractive for fleet use'

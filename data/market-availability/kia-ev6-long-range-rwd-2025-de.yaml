@@ -27,145 +27,139 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Clear White
-    code: UD
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Aurora Black Pearl
-    code: ABP
-    type: pearl
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: Moonscape
-    code: MS
-    type: matte
-    price_add:
-      amount: 1190
-      currency: EUR
-    notes: "Premium matte finish"
-  
-  - name: Glacier
-    code: GL
-    type: premium
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: Steel Grey Metallic
-    code: SGM
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: Interstellar Grey
-    code: IG
-    type: premium
-    price_add:
-      amount: 1190
-      currency: EUR
-    notes: "New color for 2025"
+- name: Clear White
+  code: UD
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Aurora Black Pearl
+  code: ABP
+  type: pearl
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: Moonscape
+  code: MS
+  type: matte
+  price_add:
+    amount: 1190
+    currency: EUR
+  notes: "Premium matte finish"
+- name: Glacier
+  code: GL
+  type: premium
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: Steel Grey Metallic
+  code: SGM
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: Interstellar Grey
+  code: IG
+  type: premium
+  price_add:
+    amount: 1190
+    currency: EUR
+  notes: "New color for 2025"
 
 # Wheel Options
 available_wheels:
-  - name: 19" Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard, best efficiency and range"
-  
-  - name: 20" Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1200
-      currency: EUR
-    notes: "Reduces range by ~20km"
+- name: 19" Alloy Wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard, best efficiency and range"
+- name: 20" Alloy Wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1200
+    currency: EUR
+  notes: "Reduces range by ~20km"
 
 # Equipment Packages
 available_packages:
-  - name: Comfort Package
-    price:
-      amount: 2490
-      currency: EUR
-    contents:
-      - "Heated steering wheel"
-      - "Heated & ventilated front seats"
-      - "Heated rear seats"
-      - "Premium relaxation front seats"
-      - "Smart power tailgate"
-    notes: "Popular winter package"
-  
-  - name: Tech Package Plus
-    price:
-      amount: 3290
-      currency: EUR
-    contents:
-      - "Augmented Reality Head-Up Display"
-      - "Premium Meridian sound (14 speakers)"
-      - "Surround View Monitor (360° camera)"
-      - "Remote Smart Parking Assist 2.0"
-      - "Highway Driving Assist 2"
-    notes: "Advanced tech features"
-  
-  - name: Vision Package
-    price:
-      amount: 1790
-      currency: EUR
-    contents:
-      - "Digital Matrix LED headlights"
-      - "LED rear combination lamps"
-      - "Automatic high beam"
-      - "Welcome lights"
-    notes: "Best-in-class lighting"
+- name: Comfort Package
+  price:
+    amount: 2490
+    currency: EUR
+  contents:
+  - "Heated steering wheel"
+  - "Heated & ventilated front seats"
+  - "Heated rear seats"
+  - "Premium relaxation front seats"
+  - "Smart power tailgate"
+  notes: "Popular winter package"
+- name: Tech Package Plus
+  price:
+    amount: 3290
+    currency: EUR
+  contents:
+  - "Augmented Reality Head-Up Display"
+  - "Premium Meridian sound (14 speakers)"
+  - "Surround View Monitor (360° camera)"
+  - "Remote Smart Parking Assist 2.0"
+  - "Highway Driving Assist 2"
+  notes: "Advanced tech features"
+- name: Vision Package
+  price:
+    amount: 1790
+    currency: EUR
+  contents:
+  - "Digital Matrix LED headlights"
+  - "LED rear combination lamps"
+  - "Automatic high beam"
+  - "Welcome lights"
+  notes: "Best-in-class lighting"
 
 # Individual Options
 individual_options:
-  - name: Panoramic Glass Roof
-    price:
-      amount: 1450
-      currency: EUR
-    notes: "Fixed glass roof with electric sunshade"
-  
-  - name: Tow Hitch
-    price:
-      amount: 1150
-      currency: EUR
-    notes: "1600kg braked towing capacity, trailer stability assist"
+- name: Panoramic Glass Roof
+  price:
+    amount: 1450
+    currency: EUR
+  notes: "Fixed glass roof with electric sunshade"
+- name: Tow Hitch
+  price:
+    amount: 1150
+    currency: EUR
+  notes: "1600kg braked towing capacity, trailer stability assist"
 
 # Incentives & Subsidies
 incentives:
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      Company car drivers pay only 0.25% of list price per month (€130/month)
-      vs 1% for ICE cars, saving ~€4,300/year in taxes.
-      Under €70k gross list price threshold.
-  
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    valid_until: "2030-12-31"
-    notes: "Full exemption from road tax until December 31, 2030"
-  
-  - type: grant
-    name: THG-Quote
-    amount: 340
-    currency: EUR
-    status: active
-    notes: "CO2 certificate trading, ~€300-380/year depending on provider"
+- type: tax_exemption
+  name: Company Car Tax (Dienstwagen-Steuer)
+  amount: 0
+  currency: EUR
+  status: active
+  notes: |
+    Company car drivers pay only 0.25% of list price per month (€130/month)
+    vs 1% for ICE cars, saving ~€4,300/year in taxes.
+    Under €70k gross list price threshold.
+
+- type: tax_exemption
+  name: Road Tax Exemption (Kfz-Steuer)
+  amount: 0
+  currency: EUR
+  status: active
+  valid_until: "2030-12-31"
+  notes: "Full exemption from road tax until December 31, 2030"
+- type: grant
+  name: THG-Quote
+  amount: 340
+  currency: EUR
+  status: active
+  notes: "CO2 certificate trading, ~€300-380/year depending on provider"
 
 # Typical Configuration
 typical_configuration:
@@ -173,36 +167,34 @@ typical_configuration:
   description: "Popular configuration with comfort and tech packages"
   total_price: 59560
   includes:
-    - Base Long Range RWD
-    - Aurora Black Pearl
-    - 20-inch alloy wheels
-    - Comfort Package
-    - Tech Package Plus
+  - Base Long Range RWD
+  - Aurora Black Pearl
+  - 20-inch alloy wheels
+  - Comfort Package
+  - Tech Package Plus
   notes: "Best-selling configuration in Germany"
 
 # Charging Infrastructure
 charging_infrastructure:
   home_charging:
-    - provider: Kia Charge
-      rate_per_kwh: 0.29
-      notes: "Kia home charging tariff"
-    - provider: Wallbox installation (Kia partner)
-      installation_cost: 950
-      power_kw: 11
-      notes: "Professional installation included"
-  
+  - provider: Kia Charge
+    rate_per_kwh: 0.29
+    notes: "Kia home charging tariff"
+  - provider: Wallbox installation (Kia partner)
+    installation_cost: 950
+    power_kw: 11
+    notes: "Professional installation included"
   public_charging:
-    - provider: Kia Charge
-      network_size: "600,000+ charging points across Europe"
-      app: Kia Charge app
-      notes: "Integrated into vehicle navigation with real-time availability"
-    
-    - provider: IONITY
-      network_type: High-power DC (350kW)
-      standard_rate_per_kwh: 0.75
-      subscription_rate_per_kwh: 0.32
-      subscription_cost_monthly: 17.99
-      notes: "Kia Charge members get IONITY discount"
+  - provider: Kia Charge
+    network_size: "600,000+ charging points across Europe"
+    app: Kia Charge app
+    notes: "Integrated into vehicle navigation with real-time availability"
+  - provider: IONITY
+    network_type: High-power DC (350kW)
+    standard_rate_per_kwh: 0.75
+    subscription_rate_per_kwh: 0.32
+    subscription_cost_monthly: 17.99
+    notes: "Kia Charge members get IONITY discount"
 
 # Warranty
 warranty:
@@ -240,11 +232,11 @@ market_position:
   segment_rank: 3
   monthly_sales_avg: 520
   key_competitors:
-    - Tesla Model Y RWD
-    - Hyundai Ioniq 5 Long Range
-    - Volkswagen ID.5 Pro
-    - Ford Mustang Mach-E Extended Range
-    - Polestar 2 Long Range
+  - Tesla Model Y RWD
+  - Hyundai Ioniq 5 Long Range
+  - Volkswagen ID.5 Pro
+  - Ford Mustang Mach-E Extended Range
+  - Polestar 2 Long Range
   notes: |
     #3 in mid-size electric SUV segment in Germany.
     Most popular EV6 variant (~60% of EV6 sales).
@@ -253,10 +245,10 @@ market_position:
 
 metadata:
   data_quality: verified
-  last_updated: '2026-02-09'
   created_at: '2026-02-09'
-  source: "Kia Germany official configurator"
-  source_urls:
-    - "https://www.kia.com/de/modelle/ev6/"
-  verification_date: '2026-02-09'
   notes: "2025 model year with updated specs, pricing, and features"
+  updated_at: '2026-02-09'
+  last_verified_at: '2026-02-09'
+  sources:
+  - Kia Germany official configurator
+  - https://www.kia.com/de/modelle/ev6/

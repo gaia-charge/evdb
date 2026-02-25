@@ -7,7 +7,7 @@ market: DE
 currency: EUR
 availability_status: available
 available_from: "2024-01-15"
-available_until: null
+available_until:
 
 pricing:
   base_price: 46900
@@ -18,48 +18,48 @@ pricing:
   total_price_estimate: 48080
 
 incentives:
-  - name: Umweltbonus (Environmental Bonus)
-    type: grant
-    amount: 0
-    description: German EV subsidy ended December 2023
-    valid_from: "2023-01-01"
-    valid_until: "2023-12-31"
-    conditions:
-      - Vehicle price must be under €40,000 for cars up to €45,000
-      - Ioniq 5 Standard Range exceeds price limit
-    source_url: https://www.bafa.de/umweltbonus
-  
-  - name: THG-Quote (Greenhouse Gas Reduction Quota)
-    type: grant
-    amount: 350
-    description: Annual CO2 credits that can be sold (€300-400/year typical)
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - Available to all EV owners
-      - Can be sold via third-party platforms
-    source_url: null
-  
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 1760
-    description: Reduced company car taxation (0.25% instead of 1% for ICE)
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Only for company cars under €70,000
-      - Applies to private use taxation
-    source_url: null
-  
-  - name: Kfz-Steuer Exemption
-    type: tax_exemption
-    amount: 200
-    description: Road tax exemption for EVs until 2030
-    valid_from: "2024-01-01"
-    valid_until: "2030-12-31"
-    conditions:
-      - All battery electric vehicles
-    source_url: null
+- name: Umweltbonus (Environmental Bonus)
+  type: grant
+  amount: 0
+  description: German EV subsidy ended December 2023
+  valid_from: "2023-01-01"
+  valid_until: "2023-12-31"
+  conditions:
+  - Vehicle price must be under €40,000 for cars up to €45,000
+  - Ioniq 5 Standard Range exceeds price limit
+  source_url: https://www.bafa.de/umweltbonus
+
+- name: THG-Quote (Greenhouse Gas Reduction Quota)
+  type: grant
+  amount: 350
+  description: Annual CO2 credits that can be sold (€300-400/year typical)
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - Available to all EV owners
+  - Can be sold via third-party platforms
+  source_url:
+
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 1760
+  description: Reduced company car taxation (0.25% instead of 1% for ICE)
+  valid_from:
+  valid_until:
+  conditions:
+  - Only for company cars under €70,000
+  - Applies to private use taxation
+  source_url:
+
+- name: Kfz-Steuer Exemption
+  type: tax_exemption
+  amount: 200
+  description: Road tax exemption for EVs until 2030
+  valid_from: "2024-01-01"
+  valid_until: "2030-12-31"
+  conditions:
+  - All battery electric vehicles
+  source_url:
 
 market_specific:
   standard_equipment:
@@ -92,158 +92,155 @@ market_specific:
 
 # Available Colors (German Market)
 available_colors:
-  - name: Phantom Black Pearl
-    code: BKP
-    additional_cost: 0
-    hex: "#0F0F0F"
-    popularity_percent: 35
-  - name: Gravity Gold Matte
-    code: GGM
-    additional_cost: 890
-    hex: "#9B8B6B"
-    popularity_percent: 10
-    notes: "Matte finish, popular signature color"
-  - name: Digital Teal Pearl
-    code: DTP
-    additional_cost: 600
-    hex: "#4A8B8F"
-    popularity_percent: 15
-  - name: Lucid Blue Pearl
-    code: LBP
-    additional_cost: 600
-    hex: "#3D5A99"
-    popularity_percent: 12
-  - name: Atlas White
-    code: AWH
-    additional_cost: 600
-    hex: "#F5F5F5"
-    popularity_percent: 20
-  - name: Cyber Gray Metallic
-    code: CGM
-    additional_cost: 600
-    hex: "#6B6E70"
-    popularity_percent: 8
+- name: Phantom Black Pearl
+  code: BKP
+  additional_cost: 0
+  hex: "#0F0F0F"
+  popularity_percent: 35
+- name: Gravity Gold Matte
+  code: GGM
+  additional_cost: 890
+  hex: "#9B8B6B"
+  popularity_percent: 10
+  notes: "Matte finish, popular signature color"
+- name: Digital Teal Pearl
+  code: DTP
+  additional_cost: 600
+  hex: "#4A8B8F"
+  popularity_percent: 15
+- name: Lucid Blue Pearl
+  code: LBP
+  additional_cost: 600
+  hex: "#3D5A99"
+  popularity_percent: 12
+- name: Atlas White
+  code: AWH
+  additional_cost: 600
+  hex: "#F5F5F5"
+  popularity_percent: 20
+- name: Cyber Gray Metallic
+  code: CGM
+  additional_cost: 600
+  hex: "#6B6E70"
+  popularity_percent: 8
 
 # Available Interior Options
 available_interiors:
-  - name: Dark Pebble Gray Fabric
-    color: Dark Gray
-    material: fabric
-    additional_cost: 0
-    popularity_percent: 55
-    notes: "Standard interior, eco-friendly materials"
-  - name: Dark Teal Fabric
-    color: Dark Teal
-    material: fabric
-    additional_cost: 0
-    popularity_percent: 25
-    notes: "Available with Digital Teal exterior"
-  - name: Obsidian Black Leather
-    color: Black
-    material: leather
-    additional_cost: 1500
-    popularity_percent: 15
-    notes: "Premium upgrade, relaxation seats"
-  - name: Dove Gray Leather
-    color: Light Gray
-    material: leather
-    additional_cost: 1500
-    popularity_percent: 5
+- name: Dark Pebble Gray Fabric
+  color: Dark Gray
+  material: fabric
+  additional_cost: 0
+  popularity_percent: 55
+  notes: "Standard interior, eco-friendly materials"
+- name: Dark Teal Fabric
+  color: Dark Teal
+  material: fabric
+  additional_cost: 0
+  popularity_percent: 25
+  notes: "Available with Digital Teal exterior"
+- name: Obsidian Black Leather
+  color: Black
+  material: leather
+  additional_cost: 1500
+  popularity_percent: 15
+  notes: "Premium upgrade, relaxation seats"
+- name: Dove Gray Leather
+  color: Light Gray
+  material: leather
+  additional_cost: 1500
+  popularity_percent: 5
 
 # Available Wheels
 available_wheels:
-  - size_inches: 17
-    design: Aero Alloy
-    material: alloy
-    additional_cost: 0
-    popularity_percent: 60
-    notes: "Standard, optimized for range (384 km WLTP)"
-  - size_inches: 19
-    design: Parametric Pixel Alloy
-    material: alloy
-    additional_cost: 750
-    popularity_percent: 35
-    range_impact_km: -15  # ~369 km with 19-inch
-    notes: "Signature Ioniq 5 design"
-  - size_inches: 20
-    design: Aero Turbine Alloy
-    material: alloy
-    additional_cost: 950
-    popularity_percent: 5
-    range_impact_km: -25  # ~359 km with 20-inch
-    notes: "Sporty design, available with option packages"
+- size_inches: 17
+  design: Aero Alloy
+  material: alloy
+  additional_cost: 0
+  popularity_percent: 60
+  notes: "Standard, optimized for range (384 km WLTP)"
+- size_inches: 19
+  design: Parametric Pixel Alloy
+  material: alloy
+  additional_cost: 750
+  popularity_percent: 35
+  range_impact_km: -15    # ~369 km with 19-inch
+  notes: "Signature Ioniq 5 design"
+- size_inches: 20
+  design: Aero Turbine Alloy
+  material: alloy
+  additional_cost: 950
+  popularity_percent: 5
+  range_impact_km: -25    # ~359 km with 20-inch
+  notes: "Sporty design, available with option packages"
 
 # Optional Packages (German Market)
 optional_packages:
-  - name: Innovation Pack
-    price: 2900
-    includes:
-      - "19-inch Parametric Pixel alloy wheels"
-      - "Vision Roof (solar panel glass roof with sunshade)"
-      - "Relaxation Comfort front seats (power-adjustable with leg rest)"
-      - "Ventilated front seats"
-      - "Power-adjustable steering wheel"
-      - "Head-Up Display (AR HUD)"
-      - "BOSE Premium Sound (8 speakers)"
-      - "Surround View Monitor (360° camera)"
-      - "Smart power tailgate"
-    popularity_percent: 40
-    notes: "Most popular package, adds premium features"
-  
-  - name: Convenience Pack
-    price: 1200
-    includes:
-      - "Remote Smart Parking Assist (RSPA)"
-      - "Blind-Spot View Monitor (cameras in mirrors)"
-      - "Digital Side Mirrors (cameras replace mirrors)"
-      - "Smart power tailgate"
-    popularity_percent: 20
-  
-  - name: Winter Pack
-    price: 500
-    includes:
-      - "Heated rear seats"
-      - "Heated windshield wiper nozzles"
-    popularity_percent: 30
-    notes: "Popular in Germany for winter comfort"
+- name: Innovation Pack
+  price: 2900
+  includes:
+  - "19-inch Parametric Pixel alloy wheels"
+  - "Vision Roof (solar panel glass roof with sunshade)"
+  - "Relaxation Comfort front seats (power-adjustable with leg rest)"
+  - "Ventilated front seats"
+  - "Power-adjustable steering wheel"
+  - "Head-Up Display (AR HUD)"
+  - "BOSE Premium Sound (8 speakers)"
+  - "Surround View Monitor (360° camera)"
+  - "Smart power tailgate"
+  popularity_percent: 40
+  notes: "Most popular package, adds premium features"
+- name: Convenience Pack
+  price: 1200
+  includes:
+  - "Remote Smart Parking Assist (RSPA)"
+  - "Blind-Spot View Monitor (cameras in mirrors)"
+  - "Digital Side Mirrors (cameras replace mirrors)"
+  - "Smart power tailgate"
+  popularity_percent: 20
+
+- name: Winter Pack
+  price: 500
+  includes:
+  - "Heated rear seats"
+  - "Heated windshield wiper nozzles"
+  popularity_percent: 30
+  notes: "Popular in Germany for winter comfort"
 
 # Charging Network Compatibility
 charging_networks:
-  - "IONITY (Hyundai Charging Service partner, discounted rates)"
-  - "EnBW HyperNetz (Germany's largest network, 300,000+ charge points)"
-  - "Fastned (highway fast charging)"
-  - "Tesla Supercharger (select locations via app)"
-  - "All CCS2 networks in Europe"
+- "IONITY (Hyundai Charging Service partner, discounted rates)"
+- "EnBW HyperNetz (Germany's largest network, 300,000+ charge points)"
+- "Fastned (highway fast charging)"
+- "Tesla Supercharger (select locations via app)"
+- "All CCS2 networks in Europe"
 
 # Typical Configurations
 popular_configurations:
-  - name: Base Value
-    total_price: 48080
-    popularity_percent: 35
-    includes:
-      - "Phantom Black Pearl (free)"
-      - "17-inch Aero wheels"
-      - "Dark Pebble Gray fabric interior"
-    notes: "Best value entry-level, 384 km range"
-  
-  - name: Innovation Package
-    total_price: 52180
-    popularity_percent: 40
-    includes:
-      - "Digital Teal Pearl (+€600)"
-      - "Innovation Pack (+€2,900)"
-      - "Winter Pack (+€500)"
-    notes: "Most popular, premium features, 369 km range with 19-inch wheels"
-  
-  - name: Premium Comfort
-    total_price: 55070
-    popularity_percent: 15
-    includes:
-      - "Gravity Gold Matte (+€890)"
-      - "Innovation Pack (+€2,900)"
-      - "Convenience Pack (+€1,200)"
-      - "Obsidian Black Leather (+€1,500)"
-    notes: "Fully loaded base variant, 369 km range"
+- name: Base Value
+  total_price: 48080
+  popularity_percent: 35
+  includes:
+  - "Phantom Black Pearl (free)"
+  - "17-inch Aero wheels"
+  - "Dark Pebble Gray fabric interior"
+  notes: "Best value entry-level, 384 km range"
+- name: Innovation Package
+  total_price: 52180
+  popularity_percent: 40
+  includes:
+  - "Digital Teal Pearl (+€600)"
+  - "Innovation Pack (+€2,900)"
+  - "Winter Pack (+€500)"
+  notes: "Most popular, premium features, 369 km range with 19-inch wheels"
+- name: Premium Comfort
+  total_price: 55070
+  popularity_percent: 15
+  includes:
+  - "Gravity Gold Matte (+€890)"
+  - "Innovation Pack (+€2,900)"
+  - "Convenience Pack (+€1,200)"
+  - "Obsidian Black Leather (+€1,500)"
+  notes: "Fully loaded base variant, 369 km range"
 
 # Delivery
 delivery:
@@ -302,7 +299,7 @@ notes: |
   The Hyundai Ioniq 5 Standard Range is the entry-level variant of the Ioniq 5 lineup, 
   positioned at €46,900 in Germany. It offers excellent value with 58 kWh battery, 
   384 km WLTP range, and 125 kW (170 hp) single rear motor RWD configuration. 
-  
+
   Key advantages:
   - Still benefits from E-GMP 800V architecture (220 kW DC charging, 10-80% in 18 min)
   - V2L capability standard (power external devices up to 3.6 kW)
@@ -310,25 +307,25 @@ notes: |
   - Heat pump standard in European market
   - Excellent company car tax benefits (0.25% rule, €47/month at 40% bracket)
   - 5-year warranty with 8-year battery guarantee
-  
+
   Compared to Long Range AWD (€54,900):
   - €8,000 cheaper (-15%)
   - Single motor vs dual motor (-100 kW)
   - 384 km vs 481 km WLTP range (-97 km, -20%)
   - Still fast charging capability (800V architecture maintained)
   - Lighter weight (1,890 kg vs 2,020 kg)
-  
+
   Popular configurations:
   - Base: €48,080 (35% of buyers, best value)
   - Innovation Pack: €52,180 (40%, most popular, adds premium features)
   - Premium: €55,070 (15%, fully loaded)
-  
+
   Main competitors:
   - VW ID.4 Pure (€44,565, 52 kWh, 343 km) - cheaper but less range
   - Tesla Model Y RWD (€44,990, 60 kWh, 455 km) - similar price, more range
   - Kia EV6 Standard (€47,990, 58 kWh, 394 km) - similar specs, platform sibling
   - Nissan Ariya 63 kWh (€47,490, 63 kWh, 403 km) - similar segment
-  
+
   Target buyers:
   - Budget-conscious EV buyers wanting Ioniq 5 design
   - Company car drivers (excellent 0.25% tax benefits)
@@ -339,11 +336,10 @@ notes: |
 # Metadata
 metadata:
   created_at: "2026-02-07"
-  updated_at: null
   data_quality: verified
   price_checked_at: "2026-02-07"
   sources:
-    - "https://www.hyundai.com/de/modelle/ioniq-5.html"
-    - "https://www.hyundai.com/de/konfigurator/ioniq-5.html"
-    - "https://ev-database.org/car/1443/Hyundai-IONIQ-5-58-kWh"
-    - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/hyundai/ioniq-5/"
+  - "https://www.hyundai.com/de/modelle/ioniq-5.html"
+  - "https://www.hyundai.com/de/konfigurator/ioniq-5.html"
+  - "https://ev-database.org/car/1443/Hyundai-IONIQ-5-58-kWh"
+  - "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/hyundai/ioniq-5/"

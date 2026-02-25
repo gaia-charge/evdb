@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 12
   notes: Built at Rüsselsheim, Germany; platform sibling to Peugeot e-308
@@ -22,121 +22,119 @@ pricing:
 
 options:
   colors:
-    - name: Voltaic Blue (metallic)
-      price: 795
-      type: metallic
-    - name: Mataro Orange (metallic)
-      price: 795
-      type: metallic
-    - name: Moonstone Grey (metallic)
-      price: 795
-      type: metallic
-    - name: Velvet Red (metallic)
-      price: 795
-      type: metallic
-    - name: Diamond Black (pearl)
-      price: 895
-      type: pearl
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Polar White (solid)
-      price: 0
-      type: solid
-  
+  - name: Voltaic Blue (metallic)
+    price: 795
+    type: metallic
+  - name: Mataro Orange (metallic)
+    price: 795
+    type: metallic
+  - name: Moonstone Grey (metallic)
+    price: 795
+    type: metallic
+  - name: Velvet Red (metallic)
+    price: 795
+    type: metallic
+  - name: Diamond Black (pearl)
+    price: 895
+    type: pearl
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Polar White (solid)
+    price: 0
+    type: solid
+
   wheels:
-    - name: 17" Alloy Wheels
-      price: 0
-      size_inches: 17
-      notes: Standard on Edition trim
-    - name: 18" Bi-Color Alloy Wheels
-      price: 750
-      size_inches: 18
-      notes: Optional upgrade (standard on GS)
-  
+  - name: 17" Alloy Wheels
+    price: 0
+    size_inches: 17
+    notes: Standard on Edition trim
+  - name: 18" Bi-Color Alloy Wheels
+    price: 750
+    size_inches: 18
+    notes: Optional upgrade (standard on GS)
+
   interior:
-    - name: Black Cloth Seats
-      price: 0
-      notes: Standard AGR-certified ergonomic seats
-    - name: Black Leather Seats
-      price: 1200
-      notes: Nappa leather with contrast stitching
+  - name: Black Cloth Seats
+    price: 0
+    notes: Standard AGR-certified ergonomic seats
+  - name: Black Leather Seats
+    price: 1200
+    notes: Nappa leather with contrast stitching
 
 packages:
-  - name: Winter Package
-    price: 690
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Heated windscreen
-      - Heated washer nozzles
-    notes: Heat pump is already standard
-  
-  - name: IntelliLux LED Pixel Matrix Package
-    price: 1200
-    includes:
-      - IntelliLux LED Pixel Matrix headlights with 84 LED elements
-      - Adaptive lighting with glare-free high beam
-      - Automatic high beam assist
-      - Dynamic cornering lights
-      - Dynamic bend lighting
-    notes: Opel exclusive technology, segment-leading; standard on GS trim
-  
-  - name: Ultimate Package
-    price: 1990
-    includes:
-      - 10" head-up display
-      - 360-degree camera system
-      - Rear cross-traffic alert
-      - Premium 8-speaker audio
-      - Wireless phone charging
-    notes: Includes most GS trim premium features
-  
-  - name: Towing Package
-    price: 790
-    includes:
-      - Removable towbar (1000kg braked)
-      - Trailer stability control
-      - Electrical trailer connection
-    notes: 1000kg towing capacity (rare in C-segment EVs)
-  
-  - name: Panoramic Glass Roof
-    price: 1100
-    includes:
-      - Fixed glass roof with electric sunshade
-      - UV protection
-      - Ambient lighting integration
+- name: Winter Package
+  price: 690
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Heated windscreen
+  - Heated washer nozzles
+  notes: Heat pump is already standard
+
+- name: IntelliLux LED Pixel Matrix Package
+  price: 1200
+  includes:
+  - IntelliLux LED Pixel Matrix headlights with 84 LED elements
+  - Adaptive lighting with glare-free high beam
+  - Automatic high beam assist
+  - Dynamic cornering lights
+  - Dynamic bend lighting
+  notes: Opel exclusive technology, segment-leading; standard on GS trim
+
+- name: Ultimate Package
+  price: 1990
+  includes:
+  - 10" head-up display
+  - 360-degree camera system
+  - Rear cross-traffic alert
+  - Premium 8-speaker audio
+  - Wireless phone charging
+  notes: Includes most GS trim premium features
+
+- name: Towing Package
+  price: 790
+  includes:
+  - Removable towbar (1000kg braked)
+  - Trailer stability control
+  - Electrical trailer connection
+  notes: 1000kg towing capacity (rare in C-segment EVs)
+
+- name: Panoramic Glass Roof
+  price: 1100
+  includes:
+  - Fixed glass roof with electric sunshade
+  - UV protection
+  - Ambient lighting integration
 
 standalone_options:
-  - name: 11kW 3-phase AC Onboard Charger
-    price: 0
-    notes: Standard on all trims
-  
-  - name: 7.4kW Single-phase AC Onboard Charger
-    price: -300
-    notes: Downgrade option for lower cost (slower home charging)
+- name: 11kW 3-phase AC Onboard Charger
+  price: 0
+  notes: Standard on all trims
+
+- name: 7.4kW Single-phase AC Onboard Charger
+  price: -300
+  notes: Downgrade option for lower cost (slower home charging)
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€250-350/year."
-  
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 320
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€280-350/year (rates vary by market)"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€250-350/year."
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 320
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€280-350/year (rates vary by market)"
 
 company_car:
   taxation_rate: 0.25  # 0.25% for BEVs under €70k (vs 1% for ICE)
@@ -146,7 +144,7 @@ company_car:
   notes: |
     Company car taxation: 0.25% of list price per month (vs 1% for ICE).
     Monthly tax: €112 vs €450 for comparable ICE = saves €4,049/year.
-    
+
     Astra Electric is exceptionally attractive for company car drivers in Germany:
     - 0.25% rate (vs 1% ICE)
     - Comprehensive standard equipment
@@ -158,31 +156,29 @@ charging:
   public_network:
     name: "Opel Charging powered by Plugsurfing"
     coverage: "250,000+ charging points across 29 European countries"
-    membership_fee: null
+    membership_fee:
     notes: "Access to multiple networks with single RFID card"
-  
   subscription:
     name: "Opel Charging Subscription"
     monthly_fee: 9.99
     currency: EUR
     ionity_rate_eur_per_kwh: 0.35  # vs €0.79 pay-as-you-go
     benefits:
-      - "IONITY fast charging at €0.35/kWh (vs €0.79)"
-      - "Access to 250,000+ charging points"
-      - "MyOpel app integration"
-      - "Route planning with charging stops"
-  
+    - "IONITY fast charging at €0.35/kWh (vs €0.79)"
+    - "Access to 250,000+ charging points"
+    - "MyOpel app integration"
+    - "Route planning with charging stops"
   home_charging:
-    - name: "Opel Wallbox Pro"
-      price: 999
-      power_kw: 11
-      features:
-        - "Integrated Type 2 cable (5m)"
-        - "WiFi and LAN connectivity with app control"
-        - "Dynamic load management"
-        - "Solar integration support"
-        - "Weather-resistant (IP54)"
-      installation_cost: "€600-1,800 depending on location and electrical work"
+  - name: "Opel Wallbox Pro"
+    price: 999
+    power_kw: 11
+    features:
+    - "Integrated Type 2 cable (5m)"
+    - "WiFi and LAN connectivity with app control"
+    - "Dynamic load management"
+    - "Solar integration support"
+    - "Weather-resistant (IP54)"
+    installation_cost: "€600-1,800 depending on location and electrical work"
 
 warranty:
   vehicle_years: 2
@@ -217,25 +213,21 @@ environmental:
 
 market_comparison:
   direct_competitors:
-    - name: "Volkswagen ID.3 Pro"
-      base_price: 42990
-      comparison: "+€2,000, Astra has heat pump standard, better interior quality, 1000kg towing"
-    
-    - name: "Cupra Born 58kWh"
-      base_price: 41000
-      comparison: "+€4,000, Astra has better equipment, heat pump, German build quality"
-    
-    - name: "Renault Megane E-Tech EV60"
-      base_price: 43000
-      comparison: "+€2,000, similar range, Astra has better dealer network in Germany"
-    
-    - name: "Peugeot e-308"
-      base_price: 47490
-      comparison: "€2,500 cheaper, mechanically identical, Opel has stronger German brand"
-    
-    - name: "BMW i4 eDrive35"
-      base_price: 52000
-      comparison: "€7,000 cheaper, Astra offers 80% of i4's features at 64% of the price"
+  - name: "Volkswagen ID.3 Pro"
+    base_price: 42990
+    comparison: "+€2,000, Astra has heat pump standard, better interior quality, 1000kg towing"
+  - name: "Cupra Born 58kWh"
+    base_price: 41000
+    comparison: "+€4,000, Astra has better equipment, heat pump, German build quality"
+  - name: "Renault Megane E-Tech EV60"
+    base_price: 43000
+    comparison: "+€2,000, similar range, Astra has better dealer network in Germany"
+  - name: "Peugeot e-308"
+    base_price: 47490
+    comparison: "€2,500 cheaper, mechanically identical, Opel has stronger German brand"
+  - name: "BMW i4 eDrive35"
+    base_price: 52000
+    comparison: "€7,000 cheaper, Astra offers 80% of i4's features at 64% of the price"
 
 sales_notes: |
   Astra won 2023 European Car of the Year, first Opel to win since 2016 Astra-K.
@@ -246,7 +238,7 @@ sales_notes: |
 notes: |
   The Opel Astra Electric Edition at €44,990 represents exceptional value in the 
   C-segment EV market:
-  
+
   **Key Advantages:**
   - 2023 European Car of the Year in electric form
   - Heat pump STANDARD (reduces winter range loss by ~15%)
@@ -256,42 +248,42 @@ notes: |
   - Made in Germany at historic Rüsselsheim plant
   - 850+ dealer network (largest in Germany)
   - Company car tax benefit: 0.25% = €112/month (saves €4,049/year vs ICE)
-  
+
   **vs Volkswagen ID.3 Pro (€42,990):**
   - +€2,000 but includes heat pump (€1,200 option on ID.3)
   - Better interior quality and ergonomics
   - More conventional controls (physical buttons)
   - 1000kg towing vs 0kg (ID.3 can't tow)
   - Longer warranty (8yr/160k vs 8yr/160k battery, same)
-  
+
   **vs Peugeot e-308 (€47,490):**
   - €2,500 cheaper, mechanically identical
   - Same EMP2 platform, battery, motor, performance
   - Opel has stronger brand recognition in Germany
   - More conservative, practical design
   - Built in Germany vs France
-  
+
   **Best for:**
   - Company car drivers (0.25% tax, comprehensive equipment)
   - Families needing towing capability
   - Value-conscious buyers prioritizing German quality
   - Drivers who prefer conventional controls over touchscreen-heavy interfaces
-  
+
   **Considerations:**
   - 54kWh battery smaller than some competitors (VW ID.3: 77kWh)
   - 100kW DC charging adequate but slower than premium rivals
   - 352L trunk smaller than ICE Astra (370L) but competitive for EV
   - No Sports Tourer (wagon) variant yet
-  
+
   **Delivery:** 12-16 weeks from Rüsselsheim plant
 
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - https://www.opel.com/modelle/astra/astra-electric.html
-    - https://www.opel.com/tools/konfigurator.html
-    - https://www.adac.de/
-    - https://ev-database.org/
-    - https://www.euroncap.com/
+  - https://www.opel.com/modelle/astra/astra-electric.html
+  - https://www.opel.com/tools/konfigurator.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  - https://www.euroncap.com/
+  updated_at: "2026-02-08"

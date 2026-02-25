@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 14
   notes: Standard trim, more accessible entry to 600e range
@@ -22,62 +22,62 @@ pricing:
 
 options:
   colors:
-    - name: Cinema Black
-      price: 0
-      type: solid
-    - name: Passione Red
-      price: 600
-      type: metallic
-    - name: Sicilia Orange
-      price: 600
-      type: metallic
-    - name: Venezia Blue
-      price: 600
-      type: metallic
-    - name: Gelato White
-      price: 600
-      type: metallic
+  - name: Cinema Black
+    price: 0
+    type: solid
+  - name: Passione Red
+    price: 600
+    type: metallic
+  - name: Sicilia Orange
+    price: 600
+    type: metallic
+  - name: Venezia Blue
+    price: 600
+    type: metallic
+  - name: Gelato White
+    price: 600
+    type: metallic
 
   wheels:
-    - name: 17" Alloy Wheels
-      price: 0
-      size_inches: 17
-      notes: Standard
-    - name: 18" Diamond-Cut Alloy Wheels
-      price: 800
-      size_inches: 18
+  - name: 17" Alloy Wheels
+    price: 0
+    size_inches: 17
+    notes: Standard
+  - name: 18" Diamond-Cut Alloy Wheels
+    price: 800
+    size_inches: 18
 
 packages:
-  - name: Comfort Package
-    price: 1290
-    includes:
-      - Heated front seats
-      - Dual-zone automatic climate control
-      - Auto-dimming rearview mirror
-      - Rear armrest
+- name: Comfort Package
+  price: 1290
+  includes:
+  - Heated front seats
+  - Dual-zone automatic climate control
+  - Auto-dimming rearview mirror
+  - Rear armrest
 
-  - name: Tech Package
-    price: 1490
-    includes:
-      - Wireless smartphone charging
-      - Blind spot monitoring
-      - Rear cross-traffic alert
-      - Full-LED fog lights
+- name: Tech Package
+  price: 1490
+  includes:
+  - Wireless smartphone charging
+  - Blind spot monitoring
+  - Rear cross-traffic alert
+  - Full-LED fog lights
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax until 2030"
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax until 2030"
 
-  - type: subsidy
-    name: "THG-Quote certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "CO2 certificate sales ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "CO2 certificate sales ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -99,6 +99,6 @@ warranty:
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   sources:
-    - https://www.fiat.de/600e
+  - https://www.fiat.de/600e
+  updated_at: "2026-02-10"

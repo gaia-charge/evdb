@@ -8,7 +8,7 @@ currency: PLN
 availability:
   status: available
   release_date: 2025-10-15
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 4
   notes: Available for order on tesla.com/pl, delivery from Gigafactory Shanghai
@@ -24,69 +24,69 @@ pricing:
 
 options:
   colors:
-    - name: Pearl White Multi-Coat
-      price: 0
-      type: solid
-    - name: Solid Black
-      price: 5800
-      type: solid
-    - name: Midnight Cherry Red
-      price: 8900
-      type: metallic
-    - name: Quicksilver
-      price: 8900
-      type: metallic
-    - name: Ultra Red
-      price: 8900
-      type: metallic
-    - name: Glacier Blue
-      price: 5800
-      type: metallic
+  - name: Pearl White Multi-Coat
+    price: 0
+    type: solid
+  - name: Solid Black
+    price: 5800
+    type: solid
+  - name: Midnight Cherry Red
+    price: 8900
+    type: metallic
+  - name: Quicksilver
+    price: 8900
+    type: metallic
+  - name: Ultra Red
+    price: 8900
+    type: metallic
+  - name: Glacier Blue
+    price: 5800
+    type: metallic
 
   wheels:
-    - name: 18" Photon Wheels
-      price: 0
-      size_inches: 18
-    - name: 19" Nova Wheels
-      price: 7100
-      size_inches: 19
+  - name: 18" Photon Wheels
+    price: 0
+    size_inches: 18
+  - name: 19" Nova Wheels
+    price: 7100
+    size_inches: 19
 
   interiors:
-    - name: All Black
-      price: 0
-    - name: Black and White
-      price: 4900
+  - name: All Black
+    price: 0
+  - name: Black and White
+    price: 4900
 
 packages:
-  - name: Enhanced Autopilot
-    price: 16900
-    includes:
-      - Navigate on Autopilot
-      - Auto Lane Change
-      - Autopark
-      - Summon
-  - name: Full Self-Driving Capability
-    price: 33400
-    includes:
-      - Enhanced Autopilot features
-      - Traffic Light and Stop Sign Control
+- name: Enhanced Autopilot
+  price: 16900
+  includes:
+  - Navigate on Autopilot
+  - Auto Lane Change
+  - Autopark
+  - Summon
+- name: Full Self-Driving Capability
+  price: 33400
+  includes:
+  - Enhanced Autopilot features
+  - Traffic Light and Stop Sign Control
 
 standalone_options: []
 
 incentives:
-  - type: subsidy
-    name: "Mój elektryk"
-    amount: 27000
-    currency: PLN
-    notes: |
-      Standard subsidy PLN 27,000 for BEVs. PLN 36,000 for large families.
-      Net price must be under PLN 225,000. Tesla Model 3 Premium RWD net price
-      (~PLN 170,724) qualifies for the full subsidy.
-  - type: tax_exemption
-    name: "Business VAT recovery"
-    amount: 0
-    currency: PLN
-    notes: "Companies can recover 100% VAT (PLN 39,266) on BEVs used for business"
+- type: subsidy
+  name: "Mój elektryk"
+  amount: 27000
+  currency: PLN
+  notes: |
+    Standard subsidy PLN 27,000 for BEVs. PLN 36,000 for large families.
+    Net price must be under PLN 225,000. Tesla Model 3 Premium RWD net price
+    (~PLN 170,724) qualifies for the full subsidy.
+- type: tax_exemption
+  name: "Business VAT recovery"
+  amount: 0
+  currency: PLN
+  notes: "Companies can recover 100% VAT (PLN 39,266) on BEVs used for business"
 
 total_cost_of_ownership:
   purchase_price: 209990
@@ -101,21 +101,20 @@ total_cost_of_ownership:
     maintenance: 1300
     total_annual: 8400
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-12
-  source_reliability: medium
-
 sources:
-  - name: Tesla Poland
-    url: https://www.tesla.com/pl_pl/model3
-    date_accessed: 2026-02-12
+- name: Tesla Poland
+  url: https://www.tesla.com/pl_pl/model3
+  date_accessed: 2026-02-12
 
 notes: |
   Tesla Model 3 Premium RWD 2026 qualifies for Mój elektryk subsidy in Poland,
   making effective price ~PLN 183,000. Very competitive in Polish EV market.
-  
+
   Tesla Supercharger network in Poland: 40+ locations along major routes (A1, A2, A4).
   Strong demand driven by range (750km WLTP) and Supercharger access.
-  
+
   Key competitor: Hyundai Ioniq 6 LR RWD (~PLN 219,900), BYD Seal (~PLN 179,900).
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-12'
+  created_at: '2026-02-12'

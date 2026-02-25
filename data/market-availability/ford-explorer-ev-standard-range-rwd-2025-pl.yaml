@@ -17,15 +17,15 @@ pricing:
   total_price_estimate: 169990
 
 incentives:
-  - name: Mój elektryk
-    type: grant
-    amount: 0
-    description: Government EV subsidy program for eligible buyers.
-    valid_from: "2025-01-01"
-    valid_until: null
-    conditions:
-      - Check eligibility with dealer
-      - Budget dependent
+- name: Mój elektryk
+  type: grant
+  amount: 0
+  description: Government EV subsidy program for eligible buyers.
+  valid_from: "2025-01-01"
+  valid_until:
+  conditions:
+  - Check eligibility with dealer
+  - Budget dependent
 
 market_specific:
   popular_options: []
@@ -41,6 +41,7 @@ notes: |
 metadata:
   data_quality: verified
   data_source: automotive_pricing
-  source_url: https://www.motonews.pl/auta-nowe/auto-278-ford-explorer-ev.html
   created_at: "2026-02-22"
   last_verified_at: "2026-02-22"
+  sources:
+  - https://www.motonews.pl/auta-nowe/auto-278-ford-explorer-ev.html

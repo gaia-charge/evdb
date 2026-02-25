@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-12-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Built in South Korea. European deliveries started late 2024.
@@ -25,67 +25,67 @@ pricing:
 
 options:
   colors:
-    - name: Atlas White (solid)
-      price: 0
-      type: solid
-    - name: Abyss Black (pearl)
-      price: 550
-      type: pearl
-    - name: Cyber Grey (metallic)
-      price: 550
-      type: metallic
-    - name: Tomboy Khaki (metallic)
-      price: 550
-      type: metallic
-    - name: Bicolor (contrast roof)
-      price: 500
-      type: special
-      notes: "Black roof on selected body colors"
+  - name: Atlas White (solid)
+    price: 0
+    type: solid
+  - name: Abyss Black (pearl)
+    price: 550
+    type: pearl
+  - name: Cyber Grey (metallic)
+    price: 550
+    type: metallic
+  - name: Tomboy Khaki (metallic)
+    price: 550
+    type: metallic
+  - name: Bicolor (contrast roof)
+    price: 500
+    type: special
+    notes: "Black roof on selected body colors"
 
   wheels:
-    - name: 15" Steel Wheels with Covers
-      price: 0
-      size_inches: 15
-      notes: Standard on Select trim
-    - name: 15" Alloy Wheels
-      price: 490
-      size_inches: 15
-      notes: Standard on Trend trim
+  - name: 15" Steel Wheels with Covers
+    price: 0
+    size_inches: 15
+    notes: Standard on Select trim
+  - name: 15" Alloy Wheels
+    price: 490
+    size_inches: 15
+    notes: Standard on Trend trim
 
   interior:
-    - name: Dark Grey Fabric
-      price: 0
-      notes: Standard recycled fabric seats
+  - name: Dark Grey Fabric
+    price: 0
+    notes: Standard recycled fabric seats
 
 packages:
-  - name: Trend Upgrade
-    price: 2500
-    includes:
-      - Heated front seats
-      - Sliding rear seats (16 cm)
-      - V2L preparation
-      - Front and rear parking sensors
-      - Type 2 charging cable
+- name: Trend Upgrade
+  price: 2500
+  includes:
+  - Heated front seats
+  - Sliding rear seats (16 cm)
+  - V2L preparation
+  - Front and rear parking sensors
+  - Type 2 charging cable
 
 standalone_options:
-  - name: Heat Pump with Battery Heating
-    price: 990
-    notes: "Recommended for winter range preservation"
+- name: Heat Pump with Battery Heating
+  price: 990
+  notes: "Recommended for winter range preservation"
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
 
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -112,21 +112,21 @@ warranty:
 
 market_comparison:
   direct_competitors:
-    - name: "Dacia Spring"
-      base_price: 22750
-      comparison: "Cheaper but significantly less range (230km), power, and tech"
+  - name: "Dacia Spring"
+    base_price: 22750
+    comparison: "Cheaper but significantly less range (230km), power, and tech"
 
-    - name: "Fiat 500e"
-      base_price: 29990
-      comparison: "More expensive, similar range (320km), more premium feel, less practical"
+  - name: "Fiat 500e"
+    base_price: 29990
+    comparison: "More expensive, similar range (320km), more premium feel, less practical"
 
-    - name: "Citroën ë-C3"
-      base_price: 23300
-      comparison: "Similar price, slightly less range (320km), different styling"
+  - name: "Citroën ë-C3"
+    base_price: 23300
+    comparison: "Similar price, slightly less range (320km), different styling"
 
-    - name: "Smart #1"
-      base_price: 33490
-      comparison: "Much more expensive, more powerful, bigger, different segment"
+  - name: "Smart #1"
+    base_price: 33490
+    comparison: "Much more expensive, more powerful, bigger, different segment"
 
 notes: |
   The Hyundai INSTER Standard 42 kWh at €23,900 is one of the best-value EVs in Germany:
@@ -156,7 +156,7 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-09"
-  last_updated: "2026-02-09"
   sources:
-    - https://www.hyundai.com/de/de/modelle/inster/varianten-und-preise.html
-    - https://www.carwow.de/hyundai/inster
+  - https://www.hyundai.com/de/de/modelle/inster/varianten-und-preise.html
+  - https://www.carwow.de/hyundai/inster
+  updated_at: "2026-02-09"

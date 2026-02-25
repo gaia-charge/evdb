@@ -9,11 +9,21 @@ currency: EUR
 availability_status: available
 available_from: "2025-09-01"
 delivery_time_weeks: 14
-notes: |
+notes: |-
   BMW's 2026 model year performance flagship electric sedan with 660 hp,
   updated software, and improved efficiency. Built at BMW's Dingolfing
   factory in Germany. Target audience: luxury performance buyers seeking
   supercar acceleration in a traditional luxury sedan format.
+  The 2026 BMW i7 M70 xDrive features refinements over the 2024 model including
+  improved efficiency (+10 km WLTP range to 570 km), updated iDrive 9, and
+  enhanced ADAS. German pricing starts at €175,000 for the performance flagship
+  with 660 hp and 0-100 km/h in 3.7 seconds. Competes with Mercedes-AMG EQS 53
+  (€154,000) and Porsche Taycan Turbo S (€208,000). Popular with business
+  performance buyers due to favorable company car taxation (0.25% monthly)
+  despite ultra-luxury pricing. Typical delivery 12-14 weeks. Standard equipment
+  includes M Sport Package, Bowers & Wilkins Diamond audio, and all flagship
+  technology. Key improvements for 2026: software optimizations, battery
+  management updates, and refined M-specific drive modes.
 
 # Pricing
 pricing:
@@ -27,91 +37,91 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "No federal incentive for vehicles over €65,000."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "No federal incentive for vehicles over €65,000."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €175,000 × 0.25% = €437.50/month taxable benefit.
-      Higher list price but still favorable vs ICE for ultra-luxury segment.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €175,000 × 0.25% = €437.50/month taxable benefit.
+    Higher list price but still favorable vs ICE for ultra-luxury segment.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: Executive Lounge Seating
-    price:
-      amount: 9200
-      currency: EUR
-    items:
-      - Rear seats with full recline
-      - Massage function
-      - Leg rest
-      - Ventilation
-      - Side tables
-    notes: "Premium rear seat package for executive comfort"
+- name: Executive Lounge Seating
+  price:
+    amount: 9200
+    currency: EUR
+  items:
+  - Rear seats with full recline
+  - Massage function
+  - Leg rest
+  - Ventilation
+  - Side tables
+  notes: "Premium rear seat package for executive comfort"
 
-  - name: Sky Lounge Panoramic Roof
-    price:
-      amount: 4650
-      currency: EUR
-    items:
-      - Interactive LED lighting patterns in glass roof
-      - Panoramic glass roof
-    notes: "Premium glass roof with lighting experience"
+- name: Sky Lounge Panoramic Roof
+  price:
+    amount: 4650
+    currency: EUR
+  items:
+  - Interactive LED lighting patterns in glass roof
+  - Panoramic glass roof
+  notes: "Premium glass roof with lighting experience"
 
-  - name: 22-inch M Forged Wheels
-    price:
-      amount: 3800
-      currency: EUR
-    items:
-      - Lightweight forged wheels
-      - Improved dynamics
-      - M-specific design
-    notes: "Performance wheel upgrade"
+- name: 22-inch M Forged Wheels
+  price:
+    amount: 3800
+    currency: EUR
+  items:
+  - Lightweight forged wheels
+  - Improved dynamics
+  - M-specific design
+  notes: "Performance wheel upgrade"
 
-  - name: M Sport Package Pro
-    price:
-      amount: 0
-      currency: EUR
-    items:
-      - M Sport styling (standard)
-      - 21-inch M wheels (standard)
-      - M Sport brakes (standard)
-      - Sport seats (standard)
-    notes: "Standard on M70 - included in base price"
+- name: M Sport Package Pro
+  price:
+    amount: 0
+    currency: EUR
+  items:
+  - M Sport styling (standard)
+  - 21-inch M wheels (standard)
+  - M Sport brakes (standard)
+  - Sport seats (standard)
+  notes: "Standard on M70 - included in base price"
 
-  - name: Bowers & Wilkins Diamond 4D Audio
-    price:
-      amount: 0
-      currency: EUR
-    items:
-      - 36-speaker premium audio system (standard)
-      - Subwoofers (standard)
-      - Exciters in seats for 4D sound (standard)
-    notes: "Standard on M70 - included in base price"
+- name: Bowers & Wilkins Diamond 4D Audio
+  price:
+    amount: 0
+    currency: EUR
+  items:
+  - 36-speaker premium audio system (standard)
+  - Subwoofers (standard)
+  - Exciters in seats for 4D sound (standard)
+  notes: "Standard on M70 - included in base price"
 
-  - name: BMW Theatre Screen (31.3")
-    price:
-      amount: 1950
-      currency: EUR
-    items:
-      - 31.3-inch 8K resolution rear entertainment screen
-      - Amazon Fire TV integration
-    notes: "Massive rear entertainment system"
+- name: BMW Theatre Screen (31.3")
+  price:
+    amount: 1950
+    currency: EUR
+  items:
+  - 31.3-inch 8K resolution rear entertainment screen
+  - Amazon Fire TV integration
+  notes: "Massive rear entertainment system"
 
 # Dealership & Sales
 sales_model: dealership
@@ -135,23 +145,10 @@ warranty:
     M-specific service intervals and support.
 
 # Market-Specific Notes
-market_notes: |
-  The 2026 BMW i7 M70 xDrive features refinements over the 2024 model including
-  improved efficiency (+10 km WLTP range to 570 km), updated iDrive 9, and
-  enhanced ADAS. German pricing starts at €175,000 for the performance flagship
-  with 660 hp and 0-100 km/h in 3.7 seconds. Competes with Mercedes-AMG EQS 53
-  (€154,000) and Porsche Taycan Turbo S (€208,000). Popular with business
-  performance buyers due to favorable company car taxation (0.25% monthly)
-  despite ultra-luxury pricing. Typical delivery 12-14 weeks. Standard equipment
-  includes M Sport Package, Bowers & Wilkins Diamond audio, and all flagship
-  technology. Key improvements for 2026: software optimizations, battery
-  management updates, and refined M-specific drive modes.
-
 metadata:
   created_at: "2026-02-09"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.bmw.de/de/neufahrzeuge/bmw-i/i7/2022/bmw-i7-uebersicht.html
-    - https://www.bmw.de/de/topics/faszination-bmw/bmw-i7-m70-xdrive.html
-    - "2026 model year pricing based on BMW Germany list prices"
+  - https://www.bmw.de/de/neufahrzeuge/bmw-i/i7/2022/bmw-i7-uebersicht.html
+  - https://www.bmw.de/de/topics/faszination-bmw/bmw-i7-m70-xdrive.html
+  - "2026 model year pricing based on BMW Germany list prices"

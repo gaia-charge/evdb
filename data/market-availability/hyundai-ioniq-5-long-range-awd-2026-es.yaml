@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Available through Hyundai Spain dealer network
@@ -22,51 +22,51 @@ pricing:
 
 options:
   colors:
-    - name: Atlas White
-      price: 0
-      type: solid
-    - name: Abyss Black Pearl
-      price: 600
-      type: metallic
-    - name: Nocturne Grey Matte
-      price: 800
-      type: matte
-    - name: Biophilic Blue Pearl
-      price: 600
-      type: metallic
-    - name: Gravity Gold Matte
-      price: 800
-      type: matte
+  - name: Atlas White
+    price: 0
+    type: solid
+  - name: Abyss Black Pearl
+    price: 600
+    type: metallic
+  - name: Nocturne Grey Matte
+    price: 800
+    type: matte
+  - name: Biophilic Blue Pearl
+    price: 600
+    type: metallic
+  - name: Gravity Gold Matte
+    price: 800
+    type: matte
 
   wheels:
-    - name: 19" Alloy Wheels
-      price: 0
-      size_inches: 19
-    - name: 20" Alloy Wheels
-      price: 900
-      size_inches: 20
+  - name: 19" Alloy Wheels
+    price: 0
+    size_inches: 19
+  - name: 20" Alloy Wheels
+    price: 900
+    size_inches: 20
 
   interiors:
-    - name: Dark Pebble Grey / Black
-      price: 0
-    - name: Dark Teal / Light Grey
-      price: 0
+  - name: Dark Pebble Grey / Black
+    price: 0
+  - name: Dark Teal / Light Grey
+    price: 0
 
 packages: []
 
 standalone_options: []
 
 incentives:
-  - type: tax_exemption
-    name: Impuesto de Matriculación Exemption
-    amount: 0
-    currency: EUR
-    notes: EVs exempt from registration tax
-  - type: tax_exemption
-    name: Reduced Impuesto de Circulación
-    amount: 0
-    currency: EUR
-    notes: Up to 75% road tax reduction in many municipalities
+- type: tax_exemption
+  name: Impuesto de Matriculación Exemption
+  amount: 0
+  currency: EUR
+  notes: EVs exempt from registration tax
+- type: tax_exemption
+  name: Reduced Impuesto de Circulación
+  amount: 0
+  currency: EUR
+  notes: Up to 75% road tax reduction in many municipalities
 
 total_cost_of_ownership:
   purchase_price: 54900
@@ -81,18 +81,17 @@ total_cost_of_ownership:
     maintenance: 280
     total_annual: 1960
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-10
-  source_reliability: medium
-
 sources:
-  - name: Hyundai Spain
-    url: https://www.hyundai.com/es/modelos/ioniq5.html
-    date_accessed: 2026-02-10
+- name: Hyundai Spain
+  url: https://www.hyundai.com/es/modelos/ioniq5.html
+  date_accessed: 2026-02-10
 
 notes: |
   2026 facelift IONIQ 5 with updated 84 kWh battery and revised styling.
   Prices include 21% IVA. Hyundai has strong dealer presence across Spain.
   800V ultra-fast charging capability. V2L standard.
   No active federal purchase subsidies (MOVES III expired).
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-10'
+  created_at: '2026-02-10'

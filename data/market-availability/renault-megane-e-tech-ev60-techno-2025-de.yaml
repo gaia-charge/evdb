@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2022-03-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Production at Douai, France (CMF-EV platform), most popular variant
@@ -22,113 +22,112 @@ pricing:
 
 options:
   colors:
-    - name: Diamond Black (solid)
-      price: 0
-      type: solid
-    - name: Glacier White (solid)
-      price: 0
-      type: solid
-    - name: Rafale Grey (metallic)
-      price: 790
-      type: metallic
-    - name: Urban Grey (metallic)
-      price: 790
-      type: metallic
-    - name: Flame Red (metallic)
-      price: 790
-      type: metallic
-    - name: Highland Blue (metallic)
-      price: 790
-      type: metallic
-    - name: Iron Blue (metallic)
-      price: 790
-      type: metallic
-    - name: Glacier Blue (metallic)
-      price: 790
-      type: metallic
-  
+  - name: Diamond Black (solid)
+    price: 0
+    type: solid
+  - name: Glacier White (solid)
+    price: 0
+    type: solid
+  - name: Rafale Grey (metallic)
+    price: 790
+    type: metallic
+  - name: Urban Grey (metallic)
+    price: 790
+    type: metallic
+  - name: Flame Red (metallic)
+    price: 790
+    type: metallic
+  - name: Highland Blue (metallic)
+    price: 790
+    type: metallic
+  - name: Iron Blue (metallic)
+    price: 790
+    type: metallic
+  - name: Glacier Blue (metallic)
+    price: 790
+    type: metallic
+
   wheels:
-    - name: 19" Diamond-cut alloy wheels
-      price: 0
-      size_inches: 19
-      notes: Standard on Techno
-    - name: 20" Aero diamond-cut alloy wheels
-      price: 950
-      size_inches: 20
-      notes: Premium look, slightly reduces range
+  - name: 19" Diamond-cut alloy wheels
+    price: 0
+    size_inches: 19
+    notes: Standard on Techno
+  - name: 20" Aero diamond-cut alloy wheels
+    price: 950
+    size_inches: 20
+    notes: Premium look, slightly reduces range
 
 packages:
-  - name: Comfort Plus Package
-    price: 1690
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Massage front seats
-      - Extended leather package
-    notes: Maximum comfort features
-  
-  - name: Winter Package
-    price: 690
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Heated windscreen washer nozzles
-    notes: Essential for cold climates
+- name: Comfort Plus Package
+  price: 1690
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Massage front seats
+  - Extended leather package
+  notes: Maximum comfort features
+
+- name: Winter Package
+  price: 690
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Heated windscreen washer nozzles
+  notes: Essential for cold climates
 
 standalone_options:
-  - name: Solarbay Panoramic Roof
-    price: 1400
-    notes: Electrochromic glass roof, adjustable opacity - highly recommended
-  
-  - name: Two-tone roof (black)
-    price: 750
-    notes: Gloss black roof with contrasting body color
-  
-  - name: Extended leather package
-    price: 890
-    notes: Premium Nappa leather seats with extended coverage
+- name: Solarbay Panoramic Roof
+  price: 1400
+  notes: Electrochromic glass roof, adjustable opacity - highly recommended
+
+- name: Two-tone roof (black)
+  price: 750
+  notes: Gloss black roof with contrasting body color
+
+- name: Extended leather package
+  price: 890
+  notes: Premium Nappa leather seats with extended coverage
 
 incentives:
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €43,500 × 0.25% = €109/month taxable benefit.
-      Saves ~€14,000 per year vs comparable ICE car.
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Road tax waived for BEVs registered before 2031."
-  
-  - type: grant
-    name: "THG-Quote"
-    amount: 340
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Sell your CO2 savings certificate annually (~€300-370/year)."
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €43,500 × 0.25% = €109/month taxable benefit.
+    Saves ~€14,000 per year vs comparable ICE car.
+
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Road tax waived for BEVs registered before 2031."
+- type: grant
+  name: "THG-Quote"
+  amount: 340
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Sell your CO2 savings certificate annually (~€300-370/year)."
 
 sales:
   channels:
-    - Renault dealerships (1,100+ locations in Germany)
-    - Online configurator with home delivery option
-    - Renault stores in major cities
-  
+  - Renault dealerships (1,100+ locations in Germany)
+  - Online configurator with home delivery option
+  - Renault stores in major cities
+
   delivery_methods:
-    - Dealer pickup (free)
-    - Home delivery (€0, included in destination charge)
-  
+  - Dealer pickup (free)
+  - Home delivery (€0, included in destination charge)
+
   test_drive: Available at all Renault dealers, extended overnight test drives often offered for EV60
-  
+
   financing:
-    - Renault Bank leasing from €429/month (48 months, €6,000 down, 10,000 km/year)
-    - Purchase financing from 3.49% APR
-    - Balloon financing available
-    - Business leasing from €389/month (36 months, no down payment, 15,000 km/year)
+  - Renault Bank leasing from €429/month (48 months, €6,000 down, 10,000 km/year)
+  - Purchase financing from 3.49% APR
+  - Balloon financing available
+  - Business leasing from €389/month (36 months, no down payment, 15,000 km/year)
 
 warranty:
   vehicle_years: 2
@@ -143,14 +142,14 @@ warranty:
 
 charging_network:
   home:
-    - Renault partners with local electricians for wallbox installation
-    - 22kW 3-phase wallbox recommended for EV60 (€1,399 installed)
-    - 11kW wallbox also available (€999 installed)
-  
+  - Renault partners with local electricians for wallbox installation
+  - 22kW 3-phase wallbox recommended for EV60 (€1,399 installed)
+  - 11kW wallbox also available (€999 installed)
+
   public:
-    - Mobilize Charge Pass for 600,000+ charging points across Europe
-    - IONITY integration (130kW DC charging capability)
-    - Charging app with route planner and real-time availability
+  - Mobilize Charge Pass for 600,000+ charging points across Europe
+  - IONITY integration (130kW DC charging capability)
+  - Charging app with route planner and real-time availability
 
 service:
   maintenance_interval_months: 12
@@ -166,39 +165,31 @@ environmental:
   battery_recycling: Renault battery recycling program with 95% material recovery
 
 certifications:
-  - WLTP certified
-  - Euro 6d emissions equivalent (zero tailpipe)
-  - German vehicle registration approved
-
-data_quality:
-  pricing: verified
-  options: verified
-  incentives: verified
-  delivery: verified
-  source_reliability: high
-  last_updated: 2026-02-09
+- WLTP certified
+- Euro 6d emissions equivalent (zero tailpipe)
+- German vehicle registration approved
 
 sources:
-  - name: Renault Germany Official Website
-    url: https://www.renault.de/
-    date_accessed: 2026-02-09
-  - name: Renault Germany Configurator
-    url: https://www.renault.de/
-    date_accessed: 2026-02-09
+- name: Renault Germany Official Website
+  url: https://www.renault.de/
+  date_accessed: 2026-02-09
+- name: Renault Germany Configurator
+  url: https://www.renault.de/
+  date_accessed: 2026-02-09
 
 notes: |
   **Market Positioning in Germany:**
-  
+
   The Renault Megane E-Tech EV60 Techno at €43,500 (€44,490 on-the-road) is the most
   popular variant, offering an excellent balance of range, performance, and equipment.
-  
+
   **vs Direct Competitors:**
   - **VW ID.3 Pro (€44,995)**: €500 more, 426 km range, less tech/design appeal
   - **Cupra Born 58 (€40,990)**: €3,000 cheaper, 424 km range, sportier positioning
   - **Hyundai Kona Electric 65kWh (€47,000)**: €3,000 more, 484 km range, more SUV-like
   - **Tesla Model 3 RWD (€42,990)**: €500 cheaper, 513 km range, larger, different appeal
   - **Nissan Ariya 63kWh (€51,000)**: €7,000 more, 403 km range, larger C-SUV
-  
+
   **Key Advantages Over EV40:**
   - 50% more range (450 km vs 300 km WLTP)
   - 68% more power (218 hp vs 130 hp)
@@ -209,7 +200,7 @@ notes: |
   - 360° camera
   - Adaptive cruise control with stop & go
   - More standard safety features
-  
+
   **Key Selling Points:**
   - 450 km WLTP range (380-400 km real-world)
   - 2023 European Car of the Year
@@ -222,13 +213,13 @@ notes: |
   - Matrix LED headlights
   - 360° parking camera
   - Adaptive cruise control
-  
+
   **Company Car Benefits:**
   With 0.25% monthly taxation (€109/month), the Megane E-Tech EV60 Techno saves
   company car drivers ~€14,000 per year in taxes compared to ICE equivalent.
-  
+
   This is the sweet spot for German company car drivers under the €70k threshold.
-  
+
   **Techno Trim Features (vs EV40):**
   - Matrix LED headlights (vs standard LED)
   - 360° parking camera (vs rear sensors only)
@@ -238,19 +229,24 @@ notes: |
   - 19" diamond-cut alloys (vs 18" aero)
   - Premium materials and stitching
   - Ambient lighting
-  
+
   **Recommended Options:**
   - Solarbay Panoramic Roof (€1,400) - Signature feature, highly recommended
   - Winter Package (€690) - Essential for German winters
   - Extended leather package (€890) - Premium feel
   - Total with recommended options: €47,470
-  
+
   **Target Buyer:**
   The EV60 Techno is perfect for professionals and families who want a stylish, 
   well-equipped electric car with genuine long-distance capability. The 450 km WLTP
   range (380-400 km real-world) eliminates range anxiety for most users, while the
   218 hp motor provides spirited performance. The comprehensive standard equipment
   and advanced technology make it feel premium without reaching luxury pricing.
-  
+
   This is the variant most reviewers recommend as the best overall value in the
   Megane E-Tech lineup.
+metadata:
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'
+  data_quality: unverified
+  notes: "Price conflict: duplicate record 'megane-e-tech-ev60-techno-2025' listed base_price 43990 EUR vs this record's 43500 EUR. Needs source re-verification."

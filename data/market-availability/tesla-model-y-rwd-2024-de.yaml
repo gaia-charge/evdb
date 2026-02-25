@@ -18,130 +18,130 @@ pricing:
 
 market_specific:
   standard_equipment:
-    - Autopilot (Traffic-Aware Cruise Control, Autosteer)
-    - Heat pump climate control
-    - Premium audio system (14 speakers)
-    - Panoramic glass roof
-    - Power liftgate
-    - Heated front and rear seats
-    - Wireless charging pad
-    - HEPA air filtration
-    - Sentry Mode and Dashcam
-    - Ambient LED lighting (2024)
-    - Ventilated front seats (2024)
-  
+  - Autopilot (Traffic-Aware Cruise Control, Autosteer)
+  - Heat pump climate control
+  - Premium audio system (14 speakers)
+  - Panoramic glass roof
+  - Power liftgate
+  - Heated front and rear seats
+  - Wireless charging pad
+  - HEPA air filtration
+  - Sentry Mode and Dashcam
+  - Ambient LED lighting (2024)
+  - Ventilated front seats (2024)
+
   available_colors:
-    - name: "Pearl White Multi-Coat"
-      code: "PPSW"
-      additional_cost: 0
-      popularity_percent: 40  # Most popular for value buyers
-    - name: "Solid Black"
-      code: "PBSB"
-      additional_cost: 1200
-      popularity_percent: 20
-    - name: "Midnight Silver Metallic"
-      code: "PMNG"
-      additional_cost: 1200
-      popularity_percent: 15
-    - name: "Deep Blue Metallic"
-      code: "PPSB"
-      additional_cost: 1200
-      popularity_percent: 10
-    - name: "Red Multi-Coat"
-      code: "PPMR"
-      additional_cost: 2400
-      popularity_percent: 8  # Less popular on base variant due to cost
-    - name: "Quicksilver"
-      code: "PPQS"
-      additional_cost: 2400
-      popularity_percent: 4
-    - name: "Stealth Grey"
-      code: "PPSG"
-      additional_cost: 2400
-      popularity_percent: 3
-  
+  - name: "Pearl White Multi-Coat"
+    code: "PPSW"
+    additional_cost: 0
+    popularity_percent: 40    # Most popular for value buyers
+  - name: "Solid Black"
+    code: "PBSB"
+    additional_cost: 1200
+    popularity_percent: 20
+  - name: "Midnight Silver Metallic"
+    code: "PMNG"
+    additional_cost: 1200
+    popularity_percent: 15
+  - name: "Deep Blue Metallic"
+    code: "PPSB"
+    additional_cost: 1200
+    popularity_percent: 10
+  - name: "Red Multi-Coat"
+    code: "PPMR"
+    additional_cost: 2400
+    popularity_percent: 8    # Less popular on base variant due to cost
+  - name: "Quicksilver"
+    code: "PPQS"
+    additional_cost: 2400
+    popularity_percent: 4
+  - name: "Stealth Grey"
+    code: "PPSG"
+    additional_cost: 2400
+    popularity_percent: 3
+
   available_wheels:
-    - size_inches: 19
-      design: "Gemini"
-      material: alloy
-      additional_cost: 0
-      range_impact_km: 0
-      popularity_percent: 75  # Most keep standard for value
-    - size_inches: 20
-      design: "Induction"
-      material: alloy
-      additional_cost: 2000
-      range_impact_km: -25  # Reduced range with larger wheels
-      popularity_percent: 25
-  
+  - size_inches: 19
+    design: "Gemini"
+    material: alloy
+    additional_cost: 0
+    range_impact_km: 0
+    popularity_percent: 75    # Most keep standard for value
+  - size_inches: 20
+    design: "Induction"
+    material: alloy
+    additional_cost: 2000
+    range_impact_km: -25    # Reduced range with larger wheels
+    popularity_percent: 25
+
   available_interiors:
-    - name: "All Black"
-      color: Black
-      additional_cost: 0
-      popularity_percent: 70  # Most choose standard
-    - name: "Black and White"
-      color: "Black/White"
-      additional_cost: 1500
-      popularity_percent: 30
+  - name: "All Black"
+    color: Black
+    additional_cost: 0
+    popularity_percent: 70    # Most choose standard
+  - name: "Black and White"
+    color: "Black/White"
+    additional_cost: 1500
+    popularity_percent: 30
 
   optional_packages:
-    - name: "Full Self-Driving Capability"
-      price: 7500
-      take_rate_percent: 12  # Lower than Long Range due to budget focus
-      description: "Navigate on Autopilot, Auto Lane Change, Autopark, Summon, Smart Summon"
-    - name: "Tow Hitch"
-      price: 1000
-      take_rate_percent: 25
-      description: "1,600 kg towing capacity"
-    - name: "Wall Connector"
-      price: 550
-      take_rate_percent: 55
-      description: "Home charging solution (11 kW)"
-    - name: "7-Seater Configuration"
-      price: 3000
-      take_rate_percent: 35  # Popular on base for family use
-      description: "Third row seating (2 additional seats)"
+  - name: "Full Self-Driving Capability"
+    price: 7500
+    take_rate_percent: 12    # Lower than Long Range due to budget focus
+    description: "Navigate on Autopilot, Auto Lane Change, Autopark, Summon, Smart Summon"
+  - name: "Tow Hitch"
+    price: 1000
+    take_rate_percent: 25
+    description: "1,600 kg towing capacity"
+  - name: "Wall Connector"
+    price: 550
+    take_rate_percent: 55
+    description: "Home charging solution (11 kW)"
+  - name: "7-Seater Configuration"
+    price: 3000
+    take_rate_percent: 35    # Popular on base for family use
+    description: "Third row seating (2 additional seats)"
 
 # Popular Configurations
 popular_configurations:
-  - name: "Base Value"
-    description: "Pearl White + 19\" wheels + All Black interior"
-    total_price: 46640
-    popularity_percent: 35  # Most buyers choose base spec
-    includes:
-      - Base vehicle
-      - Standard equipment
-      - No options
-  
-  - name: "Family Comfort"
-    description: "Midnight Silver + 19\" wheels + Black/White interior + 7-seater + Tow Hitch + Wall Connector"
-    total_price: 53390
-    popularity_percent: 25
-    includes:
-      - Midnight Silver Metallic (+€1,200)
-      - 7-Seater (+€3,000)
-      - Black/White interior (+€1,500)
-      - Tow Hitch (+€1,000)
-      - Wall Connector (+€550)
-  
-  - name: "Premium RWD"
-    description: "Quicksilver + 20\" Induction wheels + Black/White interior + FSD + 7-seater"
-    total_price: 60440
-    popularity_percent: 15
-    includes:
-      - Quicksilver (+€2,400)
-      - 20\" Induction wheels (+€2,000)
-      - Black/White interior (+€1,500)
-      - Full Self-Driving (+€7,500)
-      - 7-Seater (+€3,000)
-  
-  - name: "Efficient Daily"
-    description: "Deep Blue + 19\" wheels + All Black + Wall Connector"
-    total_price: 48390
-    popularity_percent: 20
-    includes:
-      - Deep Blue Metallic (+€1,200)
-      - Wall Connector (+€550)
+- name: "Base Value"
+  description: "Pearl White + 19\" wheels + All Black interior"
+  total_price: 46640
+  popularity_percent: 35    # Most buyers choose base spec
+  includes:
+  - Base vehicle
+  - Standard equipment
+  - No options
+
+- name: "Family Comfort"
+  description: "Midnight Silver + 19\" wheels + Black/White interior + 7-seater + Tow Hitch + Wall Connector"
+  total_price: 53390
+  popularity_percent: 25
+  includes:
+  - Midnight Silver Metallic (+€1,200)
+  - 7-Seater (+€3,000)
+  - Black/White interior (+€1,500)
+  - Tow Hitch (+€1,000)
+  - Wall Connector (+€550)
+
+- name: "Premium RWD"
+  description: "Quicksilver + 20\" Induction wheels + Black/White interior + FSD + 7-seater"
+  total_price: 60440
+  popularity_percent: 15
+  includes:
+  - Quicksilver (+€2,400)
+  - 20\" Induction wheels (+€2,000)
+  - Black/White interior (+€1,500)
+  - Full Self-Driving (+€7,500)
+  - 7-Seater (+€3,000)
+
+- name: "Efficient Daily"
+  description: "Deep Blue + 19\" wheels + All Black + Wall Connector"
+  total_price: 48390
+  popularity_percent: 20
+  includes:
+  - Deep Blue Metallic (+€1,200)
+  - Wall Connector (+€550)
 
 # Company Car Tax Benefits
 company_car_tax:
@@ -150,18 +150,15 @@ company_car_tax:
   monthly_benefit_025_percent: 112.48  # 0.25% × €44,990
   annual_benefit_025_percent: 1349.70
   tax_liability_40_percent_bracket: 539.88  # €45/month ✓
-  
   comparison_1_percent_rate:
     monthly_benefit: 449.90  # What ICE would be at 1%
     annual_benefit: 5398.80
     tax_liability_40_percent_bracket: 2159.52  # €180/month
     annual_savings: 1619.64  # €135/month savings! ⭐
-  
   additional_benefits:
     kfz_steuer_exemption: 420  # €35/month road tax savings
     thg_quote_income: 350  # €29/month CO2 certificate income
     total_annual_benefits: 2389.64  # €199/month total benefits! ⭐
-  
   effective_monthly_cost:
     gross_list_price_monthly: 44990  # One-time purchase
     monthly_benefit_tax: 44.99  # €45/month (40% bracket)
@@ -171,25 +168,25 @@ company_car_tax:
 
 notes_company_car: |
   ⭐ EXCELLENT COMPANY CAR VALUE - Under €70k threshold qualifies for 0.25% rate!
-  
+
   Annual tax savings vs ICE equivalent:
   - ICE (1.0% rate): €2,160/year tax (40% bracket)
   - EV RWD (0.25% rate): €540/year tax (40% bracket)
   - **Savings: €1,620/year** (€135/month) ⭐
-  
+
   Plus additional benefits:
   - Kfz-Steuer exemption: €420/year (€35/month)
   - THG-Quote income: €350/year (€29/month)
   - **Total annual benefits: €2,390** (€199/month) ⭐
-  
+
   Net effective cost for employee (40% tax bracket):
   - Monthly benefit tax: €45
   - Minus THG-Quote: -€29
   - Minus road tax savings: -€35
   - **Net monthly cost: -€19** (NEGATIVE! Saves money!) ⭐
-  
+
   This makes Model Y RWD essentially FREE for German company car drivers!
-  
+
   vs Long Range AWD at €52,990 (still under €70k):
   - RWD saves €8,000 upfront
   - RWD saves €20/month in benefit-in-kind taxes
@@ -204,38 +201,37 @@ dealer_network:
 delivery:
   typical_delivery_weeks: 2  # Faster than Long Range (higher volume production)
   current_order_backlog_weeks: 3
-  
+
 # German Market Incentives (2024)
 incentives:
-  - name: "BAFA Umweltbonus (Federal EV Subsidy)"
-    amount: 0
-    type: grant
-    description: "Federal EV incentive ended December 17, 2023"
-    valid_from: "2023-01-01"
-    valid_until: "2023-12-17"
-    source_url: https://www.bafa.de/umweltbonus
-    
-  - name: "Company Car Tax Benefit - 0.25% Rate ⭐"
-    amount: 0
-    type: tax_exemption
-    description: >
-      Electric company cars UNDER €70,000 taxed at 0.25% of gross list price per month
-      (vs. 1% for ICE vehicles). Model Y RWD at €44,990 QUALIFIES! ⭐
-      Save ~€135/month in taxes vs. comparable ICE vehicle.
-      This is THE killer benefit for German EV company cars under €70k.
-    
-  - name: "Kfz-Steuer (Vehicle Tax) Exemption"
-    amount: 420
-    type: tax_exemption
-    description: "Zero vehicle tax until December 31, 2030 (saves ~€420/year)"
-    valid_until: "2030-12-31"
-    
-  - name: "THG-Quote (Greenhouse Gas Quota)"
-    amount: 350
-    type: subsidy
-    description: >
-      Sell your CO2 savings certificate annually. Typical payout: €300-400/year.
-      Register via platforms like eQuota, Geld für eAuto, etc.
+- name: "BAFA Umweltbonus (Federal EV Subsidy)"
+  amount: 0
+  type: grant
+  description: "Federal EV incentive ended December 17, 2023"
+  valid_from: "2023-01-01"
+  valid_until: "2023-12-17"
+  source_url: https://www.bafa.de/umweltbonus
+
+- name: "Company Car Tax Benefit - 0.25% Rate ⭐"
+  amount: 0
+  type: tax_exemption
+  description: >
+    Electric company cars UNDER €70,000 taxed at 0.25% of gross list price per month
+    (vs. 1% for ICE vehicles). Model Y RWD at €44,990 QUALIFIES! ⭐
+    Save ~€135/month in taxes vs. comparable ICE vehicle.
+    This is THE killer benefit for German EV company cars under €70k.
+
+- name: "Kfz-Steuer (Vehicle Tax) Exemption"
+  amount: 420
+  type: tax_exemption
+  description: "Zero vehicle tax until December 31, 2030 (saves ~€420/year)"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (Greenhouse Gas Quota)"
+  amount: 350
+  type: subsidy
+  description: >
+    Sell your CO2 savings certificate annually. Typical payout: €300-400/year.
+    Register via platforms like eQuota, Geld für eAuto, etc.
 
 compliance:
   ncap_rating: 5
@@ -244,44 +240,44 @@ compliance:
 
 # Market Positioning & Competition
 market_positioning:
-  - competitor: "Volkswagen ID.4 Pro (€48,565)"
-    price_difference: -3575  # Model Y €3,575 cheaper!
-    comparison: >
-      Model Y RWD €3,575 cheaper than ID.4 Pro!
-      Model Y has better tech (15.4" screen, Autopilot standard, OTA updates),
-      faster acceleration (6.9s vs 8.5s), access to Supercharger network.
-      ID.4 has slightly more range (520 vs 455 km), VW dealer network.
-      Model Y is the better value despite slightly less range.
-  
-  - competitor: "BMW iX1 xDrive30 (€54,200)"
-    price_difference: -9210  # Model Y €9,210 cheaper!
-    comparison: >
-      Model Y RWD €9,210 cheaper than BMW iX1!
-      Similar size SUV, Model Y has better range (455 vs 439 km),
-      better tech (15.4" screen, Autopilot, Supercharger network).
-      BMW has premium badge, AWD standard, dealer network.
-      Model Y offers incredible value vs BMW pricing.
-  
-  - competitor: "Hyundai Ioniq 5 Standard Range (€45,900)"
-    price_difference: -910  # Model Y €910 cheaper!
-    comparison: >
-      Model Y RWD €910 cheaper than Ioniq 5 Standard!
-      Model Y has better range (455 vs 384 km), faster charging infrastructure (Supercharger),
-      better tech integration (OTA updates, Autopilot).
-      Ioniq 5 has 800V ultra-fast charging (18 min 10-80%), V2L capability.
-      Very close match - both excellent value EVs under €46k.
-  
-  - competitor: "Kia EV6 Standard Range (€46,990)"
-    price_difference: -2000  # Model Y €2,000 cheaper!
-    comparison: >
-      Model Y RWD €2,000 cheaper than EV6 Standard!
-      Similar range (455 vs 426 km), Model Y has Supercharger network advantage.
-      EV6 has 800V ultra-fast charging, sportier styling, V2L capability.
-      Both excellent value - Model Y wins on price and charging infrastructure.
+- competitor: "Volkswagen ID.4 Pro (€48,565)"
+  price_difference: -3575    # Model Y €3,575 cheaper!
+  comparison: >
+    Model Y RWD €3,575 cheaper than ID.4 Pro!
+    Model Y has better tech (15.4" screen, Autopilot standard, OTA updates),
+    faster acceleration (6.9s vs 8.5s), access to Supercharger network.
+    ID.4 has slightly more range (520 vs 455 km), VW dealer network.
+    Model Y is the better value despite slightly less range.
+
+- competitor: "BMW iX1 xDrive30 (€54,200)"
+  price_difference: -9210    # Model Y €9,210 cheaper!
+  comparison: >
+    Model Y RWD €9,210 cheaper than BMW iX1!
+    Similar size SUV, Model Y has better range (455 vs 439 km),
+    better tech (15.4" screen, Autopilot, Supercharger network).
+    BMW has premium badge, AWD standard, dealer network.
+    Model Y offers incredible value vs BMW pricing.
+
+- competitor: "Hyundai Ioniq 5 Standard Range (€45,900)"
+  price_difference: -910    # Model Y €910 cheaper!
+  comparison: >
+    Model Y RWD €910 cheaper than Ioniq 5 Standard!
+    Model Y has better range (455 vs 384 km), faster charging infrastructure (Supercharger),
+    better tech integration (OTA updates, Autopilot).
+    Ioniq 5 has 800V ultra-fast charging (18 min 10-80%), V2L capability.
+    Very close match - both excellent value EVs under €46k.
+
+- competitor: "Kia EV6 Standard Range (€46,990)"
+  price_difference: -2000    # Model Y €2,000 cheaper!
+  comparison: >
+    Model Y RWD €2,000 cheaper than EV6 Standard!
+    Similar range (455 vs 426 km), Model Y has Supercharger network advantage.
+    EV6 has 800V ultra-fast charging, sportier styling, V2L capability.
+    Both excellent value - Model Y wins on price and charging infrastructure.
 
 notes: |
   ⭐ BEST VALUE MODEL Y - Base RWD is the volume seller (50%+ of Model Y sales in Germany)!
-  
+
   Why RWD is so popular:
   1. **Price**: €44,990 vs €52,990 Long Range AWD (€8,000 savings, -15%)
   2. **Company car tax**: 0.25% rate (under €70k threshold) saves €1,620/year vs ICE ⭐
@@ -293,26 +289,26 @@ notes: |
      - Longer lifespan (more charge cycles)
      - Safer chemistry (less thermal runaway risk)
      - Lower cost (CATL mass production)
-  
+
   Trade-offs vs Long Range AWD:
   - Less range: -110 km WLTP (-19%), but still 400 km real-world
   - Slower acceleration: 6.9s vs 5.0s 0-100 km/h (+38%), but still quick for SUV
   - Lower DC charging peak: 170 kW vs 250 kW (-32%), but still fast (27 min 10-80%)
   - No AWD: RWD only (adequate for most European conditions, not for mountains)
-  
+
   Perfect for:
   - **Company car drivers**: Under €70k = 0.25% tax rate = massive savings ⭐
   - **Daily commuters**: 400 km real-world range sufficient for daily use
   - **City drivers**: LFP excels in city (545 km city range!)
   - **Budget-conscious buyers**: €8,000 savings vs Long Range AWD
   - **Second car families**: Daily driver with occasional road trips
-  
+
   Not ideal for:
   - **Long-distance tourers**: 345 km highway range requires more charging stops
   - **Mountain regions**: RWD less capable than AWD in snow/ice
   - **Cold climates**: LFP loses ~25% range in winter (-5°C), NCA only ~15%
   - **Towing heavy loads**: RWD less stable than AWD when towing 1,600 kg
-  
+
   Built at Gigafactory Berlin-Brandenburg, Germany (Grünheide).
   Made in Germany - fastest delivery times in Europe (2-3 weeks).
   Direct-to-consumer sales model via tesla.com (no dealerships).
@@ -321,7 +317,7 @@ notes: |
   8-year/160,000 km battery and drive unit warranty (LFP).
   4-year/80,000 km basic vehicle warranty.
   Over-the-air software updates add new features regularly.
-  
+
   Operating costs (annual estimate for 15,000 km/year):
   - Electricity (€0.30/kWh home): €788
   - Public charging (20% at €0.45/kWh): +€118
@@ -329,7 +325,7 @@ notes: |
   - Service/maintenance: €200
   - Tires (every 3 years): €300
   - **Total: €3,206/year** or **€0.21/km** ⭐
-  
+
   vs ICE equivalent (BMW X3 sDrive20i):
   - Fuel (€1.70/L, 7.5 L/100km): €1,913
   - Insurance: €2,000
@@ -341,12 +337,11 @@ notes: |
 
 metadata:
   created_at: "2026-02-07"
-  updated_at: null
   data_quality: verified
   price_checked_at: "2026-02-07"
   sources:
-    - https://www.tesla.com/de_DE/model-y/design
-    - https://www.bafa.de/umweltbonus
-    - https://www.bundesfinanzministerium.de
-    - https://ev-database.org/car/1738/Tesla-Model-Y-RWD
+  - https://www.tesla.com/de_DE/model-y/design
+  - https://www.bafa.de/umweltbonus
+  - https://www.bundesfinanzministerium.de
+  - https://ev-database.org/car/1738/Tesla-Model-Y-RWD
   notes: "2024 model with LFP battery - most affordable Model Y, volume seller, excellent company car value under €70k threshold"

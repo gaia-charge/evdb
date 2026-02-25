@@ -14,8 +14,8 @@ battery:
   warranty_capacity_percent: 70
 range:
   wltp_km: 606
-  wltp_city_km: null
-  wltp_highway_km: null
+  wltp_city_km:
+  wltp_highway_km:
   epa_km: 640
   real_world_km: 545
   real_world_source: estimated
@@ -54,7 +54,7 @@ charging:
   charging_speed_kmh: 1290
 bidirectional:
   v2l: false
-  v2l_max_kw: null
+  v2l_max_kw:
   v2h: false
   v2g: false
 performance:
@@ -62,16 +62,16 @@ performance:
   motors:
   - position: front
     type: AC induction
-    power_kw: null
-    torque_nm: null
+    power_kw:
+    torque_nm:
   - position: rear
     type: permanent magnet
-    power_kw: null
-    torque_nm: null
+    power_kw:
+    torque_nm:
   - position: rear
     type: permanent magnet
-    power_kw: null
-    torque_nm: null
+    power_kw:
+    torque_nm:
   total_power_kw: 750
   total_torque_nm: 1420
   acceleration_0_100_sec: 2.1
@@ -95,7 +95,7 @@ weight:
   towing_capacity_unbraked_kg: 0
 efficiency:
   wltp_kwh_per_100km: 17.5
-  epa_kwh_per_100km: null
+  epa_kwh_per_100km:
   real_world_kwh_per_100km: 19.5
   efficiency_rating: B
 features:
@@ -167,5 +167,5 @@ notes: '2025 Model S Plaid receives minor updates over 2024 model.
 
   '
 metadata:
-  data_quality: verified
+  data_quality: unverified
   created_at: '2026-02-10'

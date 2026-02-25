@@ -18,144 +18,144 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Abyss Black Pearl
-    code: ABP
-    type: pearl
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Cyber Grey Metallic
-    code: CGM
-    type: metallic
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Dive Blue Pearl
-    code: DBP
-    type: pearl
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Atlas White
-    code: AW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Pulse Red Solid
-    code: PRS
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Abyss Black Pearl
+  code: ABP
+  type: pearl
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Cyber Grey Metallic
+  code: CGM
+  type: metallic
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Dive Blue Pearl
+  code: DBP
+  type: pearl
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Atlas White
+  code: AW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Pulse Red Solid
+  code: PRS
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 17" Alloy Wheels
-    size_inches: 17
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 19" Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 900
-      currency: EUR
+- name: 17" Alloy Wheels
+  size_inches: 17
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 19" Alloy Wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 900
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Cloth
-    material: cloth
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black Synthetic Leather
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: Black Cloth
+  material: cloth
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black Synthetic Leather
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Innovation Premium)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: company_car
-    name: "0.25% company car tax (BEV under €70k)"
-    description: "Reduced taxation for electric company cars under €70,000 gross list price"
-    calculation: "Monthly taxable benefit = 0.25% × €42,990 = €107.48/month (€1,290/year)"
-    vs_ice: "Saves €3,869/year vs 1.0% ICE rate (€5,159 annual tax on €42,990 ICE equivalent)"
-    conditions: ["Price under €70,000 gross list price"]
+- type: federal
+  name: "Umweltbonus (Innovation Premium)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: company_car
+  name: "0.25% company car tax (BEV under €70k)"
+  description: "Reduced taxation for electric company cars under €70,000 gross list price"
+  calculation: "Monthly taxable benefit = 0.25% × €42,990 = €107.48/month (€1,290/year)"
+  vs_ice: "Saves €3,869/year vs 1.0% ICE rate (€5,159 annual tax on €42,990 ICE equivalent)"
+  conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Trend Package
-    price:
-      amount: 1900
-      currency: EUR
-    features:
-      - Highway Driving Assist 2
-      - Blind-Spot Collision-Avoidance Assist
-      - Rear Cross-Traffic Collision-Avoidance Assist
-      - Parking Collision-Avoidance Assist
-      - Surround View Monitor (360° camera)
-  - name: Comfort Package
-    price:
-      amount: 1400
-      currency: EUR
-    features:
-      - Heated front and rear seats
-      - Heated steering wheel
-      - Ventilated front seats
-      - Power liftgate
-      - Wireless phone charger
+- name: Trend Package
+  price:
+    amount: 1900
+    currency: EUR
+  features:
+  - Highway Driving Assist 2
+  - Blind-Spot Collision-Avoidance Assist
+  - Rear Cross-Traffic Collision-Avoidance Assist
+  - Parking Collision-Avoidance Assist
+  - Surround View Monitor (360° camera)
+- name: Comfort Package
+  price:
+    amount: 1400
+    currency: EUR
+  features:
+  - Heated front and rear seats
+  - Heated steering wheel
+  - Ventilated front seats
+  - Power liftgate
+  - Wireless phone charger
 
 popular_configurations:
-  - name: "Base (Standard Equipment)"
-    total_price:
-      amount: 42990
-      currency: EUR
-    description: "Entry-level with essential features"
-    includes:
-      - "Dual 12.3\" curved displays"
-      - "LED Parametric Pixel lights"
-      - "Wireless Apple CarPlay & Android Auto"
-      - "Smart Cruise Control"
-      - "Lane Keeping Assist"
-      - "Forward Collision-Avoidance Assist"
-      - "11kW AC charging standard"
-      - "Heat pump"
-      - "V2L capability (3.6kW)"
+- name: "Base (Standard Equipment)"
+  total_price:
+    amount: 42990
+    currency: EUR
+  description: "Entry-level with essential features"
+  includes:
+  - "Dual 12.3\" curved displays"
+  - "LED Parametric Pixel lights"
+  - "Wireless Apple CarPlay & Android Auto"
+  - "Smart Cruise Control"
+  - "Lane Keeping Assist"
+  - "Forward Collision-Avoidance Assist"
+  - "11kW AC charging standard"
+  - "Heat pump"
+  - "V2L capability (3.6kW)"
 
-  - name: "Popular (Base + Trend + Comfort + 19\" wheels)"
-    total_price:
-      amount: 47190
-      currency: EUR
-    description: "Most popular configuration in Germany"
-    includes:
-      - "All Base features"
-      - "Trend Package (ADAS + 360° camera)"
-      - "Comfort Package (heated seats, ventilated seats)"
-      - "19\" alloy wheels"
-      - "Metallic paint"
+- name: "Popular (Base + Trend + Comfort + 19\" wheels)"
+  total_price:
+    amount: 47190
+    currency: EUR
+  description: "Most popular configuration in Germany"
+  includes:
+  - "All Base features"
+  - "Trend Package (ADAS + 360° camera)"
+  - "Comfort Package (heated seats, ventilated seats)"
+  - "19\" alloy wheels"
+  - "Metallic paint"
 
-  - name: "Premium (Popular + leather interior + sunroof)"
-    total_price:
-      amount: 50190
-      currency: EUR
-    description: "Top specification for private buyers"
-    includes:
-      - "All Popular features"
-      - "Synthetic leather interior"
-      - "Panoramic sunroof (€1,800)"
+- name: "Premium (Popular + leather interior + sunroof)"
+  total_price:
+    amount: 50190
+    currency: EUR
+  description: "Top specification for private buyers"
+  includes:
+  - "All Popular features"
+  - "Synthetic leather interior"
+  - "Panoramic sunroof (€1,800)"
 
 # Cost Analysis
 cost_of_ownership:
@@ -170,7 +170,7 @@ cost_of_ownership:
       currency: EUR
       rate_per_kwh: 0.53
       consumption_kwh: 16.9
-  
+
   company_car:
     monthly_benefit_025_percent:
       amount: 107.48
@@ -184,25 +184,22 @@ cost_of_ownership:
 # Comparison to Competitors
 competitive_analysis:
   direct_competitors:
-    - model: "Volkswagen ID.3 Pro (Pure Performance 77kWh)"
-      price: 39995
-      range_km: 558
-      notes: "€2,995 cheaper, 44km more range, but less SUV practicality"
-    
-    - model: "Kia EV3 Long Range"
-      price: 41990
-      range_km: 600
-      notes: "€1,000 cheaper, 86km more range, sister model with similar platform"
-    
-    - model: "MG4 Electric Long Range"
-      price: 35990
-      range_km: 450
-      notes: "€7,000 cheaper, but less premium, 64km less range"
-    
-    - model: "Nissan Ariya 63 kWh FWD"
-      price: 50000
-      range_km: 450
-      notes: "€7,010 more expensive, 64km less range, but larger SUV"
+  - model: "Volkswagen ID.3 Pro (Pure Performance 77kWh)"
+    price: 39995
+    range_km: 558
+    notes: "€2,995 cheaper, 44km more range, but less SUV practicality"
+  - model: "Kia EV3 Long Range"
+    price: 41990
+    range_km: 600
+    notes: "€1,000 cheaper, 86km more range, sister model with similar platform"
+  - model: "MG4 Electric Long Range"
+    price: 35990
+    range_km: 450
+    notes: "€7,000 cheaper, but less premium, 64km less range"
+  - model: "Nissan Ariya 63 kWh FWD"
+    price: 50000
+    range_km: 450
+    notes: "€7,010 more expensive, 64km less range, but larger SUV"
 
   value_proposition: >
     Hyundai Kona Electric Long Range is positioned as an affordable entry into Hyundai's
@@ -228,7 +225,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.hyundai.de/modelle/kona-electric
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
   notes: Prices and incentives as of February 2026, based on Hyundai Germany official specifications
+  sources:
+  - https://www.hyundai.de/modelle/kona-electric

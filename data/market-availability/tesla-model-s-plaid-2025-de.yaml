@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2025-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 109990
@@ -17,15 +17,15 @@ pricing:
   total_price_estimate: 111790
 
 incentives:
-  - name: Umweltbonus (Environmental Bonus)
-    type: grant
-    amount: 0
-    description: Federal EV incentive ended December 2023
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program ended 2023-12-31
-    source_url: https://www.bafa.de/umweltbonus
+- name: Umweltbonus (Environmental Bonus)
+  type: grant
+  amount: 0
+  description: Federal EV incentive ended December 2023
+  valid_from:
+  valid_until:
+  conditions:
+  - Program ended 2023-12-31
+  source_url: https://www.bafa.de/umweltbonus
 
 company_car_taxation:
   list_price_gross: 109990
@@ -41,86 +41,86 @@ company_car_taxation:
 
 market_specific:
   standard_equipment:
-    - Heat pump
-    - Air suspension
-    - Carbon ceramic brakes
-    - Premium audio system (22 speakers, 960W)
-    - Glass roof with UV protection
-    - Autopilot (basic)
-    - Navigation with live traffic visualization
-    - Heated seats front and rear
-    - Ventilated seats front
-    - Power folding mirrors
-    - Tri-zone climate control
-    - 17" horizontal touchscreen
-    - 8" rear touchscreen
-    - Wireless phone charging (dual)
-    - Powered liftgate
-    - LED headlights with auto high beam
-    - Carbon fiber interior trim
-    - Track Mode with drift mode
-    - Enhanced cabin noise insulation (2025 improvement)
+  - Heat pump
+  - Air suspension
+  - Carbon ceramic brakes
+  - Premium audio system (22 speakers, 960W)
+  - Glass roof with UV protection
+  - Autopilot (basic)
+  - Navigation with live traffic visualization
+  - Heated seats front and rear
+  - Ventilated seats front
+  - Power folding mirrors
+  - Tri-zone climate control
+  - 17" horizontal touchscreen
+  - 8" rear touchscreen
+  - Wireless phone charging (dual)
+  - Powered liftgate
+  - LED headlights with auto high beam
+  - Carbon fiber interior trim
+  - Track Mode with drift mode
+  - Enhanced cabin noise insulation (2025 improvement)
 
   available_colors:
-    - name: Pearl White Multi-Coat
-      code: PPSW
-      additional_cost: 0
-      hex: "#F5F5F5"
-    - name: Solid Black
-      code: PBSB
-      additional_cost: 1900
-      hex: "#000000"
-    - name: Midnight Silver Metallic
-      code: PMNG
-      additional_cost: 1900
-      hex: "#4A5660"
-    - name: Deep Blue Metallic
-      code: PPSB
-      additional_cost: 1900
-      hex: "#1B3D6D"
-    - name: Ultra Red
-      code: PPMR
-      additional_cost: 3200
-      hex: "#C41E3D"
+  - name: Pearl White Multi-Coat
+    code: PPSW
+    additional_cost: 0
+    hex: "#F5F5F5"
+  - name: Solid Black
+    code: PBSB
+    additional_cost: 1900
+    hex: "#000000"
+  - name: Midnight Silver Metallic
+    code: PMNG
+    additional_cost: 1900
+    hex: "#4A5660"
+  - name: Deep Blue Metallic
+    code: PPSB
+    additional_cost: 1900
+    hex: "#1B3D6D"
+  - name: Ultra Red
+    code: PPMR
+    additional_cost: 3200
+    hex: "#C41E3D"
 
   available_interiors:
-    - name: All Black
-      color: Black
-      material: Premium synthetic leather
-      additional_cost: 0
-    - name: Black and White
-      color: Black/White
-      material: Premium synthetic leather
-      additional_cost: 2500
-    - name: Cream
-      color: Cream
-      material: Premium synthetic leather
-      additional_cost: 2500
+  - name: All Black
+    color: Black
+    material: Premium synthetic leather
+    additional_cost: 0
+  - name: Black and White
+    color: Black/White
+    material: Premium synthetic leather
+    additional_cost: 2500
+  - name: Cream
+    color: Cream
+    material: Premium synthetic leather
+    additional_cost: 2500
 
   available_wheels:
-    - size_inches: 19
-      design: Tempest
-      material: alloy
-      additional_cost: 0
-    - size_inches: 21
-      design: Arachnid
-      material: alloy
-      additional_cost: 4700
+  - size_inches: 19
+    design: Tempest
+    material: alloy
+    additional_cost: 0
+  - size_inches: 21
+    design: Arachnid
+    material: alloy
+    additional_cost: 4700
 
   optional_packages:
-    - name: Enhanced Autopilot
-      price: 3800
-      description: Navigate on Autopilot, Auto Lane Change, Autopark, Summon
-    - name: Full Self-Driving Capability
-      price: 7500
-      description: All Enhanced Autopilot features plus Traffic Light Recognition
-    - name: Yoke Steering Wheel
-      price: 0
-      description: Optional yoke steering wheel (standard round wheel at no cost)
-    - name: Premium Connectivity
-      price: 99
-      monthly: true
-      description: Satellite-view maps, video streaming, music streaming, internet browser
+  - name: Enhanced Autopilot
+    price: 3800
+    description: Navigate on Autopilot, Auto Lane Change, Autopark, Summon
+  - name: Full Self-Driving Capability
+    price: 7500
+    description: All Enhanced Autopilot features plus Traffic Light Recognition
+  - name: Yoke Steering Wheel
+    price: 0
+    description: Optional yoke steering wheel (standard round wheel at no cost)
+  - name: Premium Connectivity
+    price: 99
+    monthly: true
+    description: Satellite-view maps, video streaming, music streaming, internet browser
 
 dealer_network:
   dealer_count: 19
@@ -144,7 +144,7 @@ notes: |
   Tesla Model S Plaid 2025 receives a €10,000 price reduction to €109,990
   (from €119,990 in 2024), making the tri-motor hypercar-rivaling sedan
   more competitive against the Porsche Taycan Turbo S (€190,381).
-  
+
   Key advantages:
   - 2.1s 0-100 km/h (faster than Taycan Turbo S at 2.8s)
   - €80,000+ cheaper than Taycan Turbo S
@@ -153,8 +153,7 @@ notes: |
   - Company car benefit: €275/month (0.5% rate)
 
 metadata:
-  data_quality: verified
+  data_quality: unverified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  contributor: OpenClaw EVDB Development
-  version: 1.0
+  updated_at: "2026-02-10"
+  created_by: OpenClaw EVDB Development

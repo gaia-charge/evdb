@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-10-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 53970
@@ -17,59 +17,59 @@ pricing:
   total_price_estimate: 53970
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III ended December 2024. No active national EV subsidy for vehicles over €45,000.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III ended December 2024. No active national EV subsidy for vehicles over €45,000.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+  source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
 
 market_specific:
   standard_equipment:
-    - Heat pump
-    - Premium audio system
-    - Navigation with live traffic
-    - Autopilot (basic)
-    - Heated seats (front and rear)
-    - Power folding mirrors
-    - Carbon fiber rear spoiler
-    - 20" Warp wheels
-    - Lowered suspension
-    - Performance brakes with red calipers
-    - Track Mode
+  - Heat pump
+  - Premium audio system
+  - Navigation with live traffic
+  - Autopilot (basic)
+  - Heated seats (front and rear)
+  - Power folding mirrors
+  - Carbon fiber rear spoiler
+  - 20" Warp wheels
+  - Lowered suspension
+  - Performance brakes with red calipers
+  - Track Mode
 
   available_colors:
-    - name: Pearl White Multi-Coat
-      code: PPSW
-      additional_cost: 0
-    - name: Solid Black
-      code: PBSB
-      additional_cost: 1200
-    - name: Ultra Red
-      code: PPMR
-      additional_cost: 2400
-    - name: Quicksilver
-      code: PMNG
-      additional_cost: 1200
-    - name: Deep Blue Metallic
-      code: PPSB
-      additional_cost: 1200
+  - name: Pearl White Multi-Coat
+    code: PPSW
+    additional_cost: 0
+  - name: Solid Black
+    code: PBSB
+    additional_cost: 1200
+  - name: Ultra Red
+    code: PPMR
+    additional_cost: 2400
+  - name: Quicksilver
+    code: PMNG
+    additional_cost: 1200
+  - name: Deep Blue Metallic
+    code: PPSB
+    additional_cost: 1200
 
   available_interiors:
-    - name: All Black
-      color: Black
-      additional_cost: 0
-    - name: Black and White
-      color: Black/White
-      additional_cost: 1200
+  - name: All Black
+    color: Black
+    additional_cost: 0
+  - name: Black and White
+    color: Black/White
+    additional_cost: 1200
 
   available_wheels:
-    - size_inches: 20
-      design: Warp
-      additional_cost: 0
+  - size_inches: 20
+    design: Warp
+    additional_cost: 0
 
 dealer_network:
   online_sales_available: true
@@ -90,8 +90,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-11"
-  updated_at: null
   data_quality: estimated
   price_checked_at: "2026-02-11"
   sources:
-    - https://www.tesla.com/es_ES/model3/design
+  - https://www.tesla.com/es_ES/model3/design

@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-01-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 16
   notes: 2025 model year flagship, production at Sochaux, France
@@ -22,74 +22,74 @@ pricing:
 
 options:
   colors:
-    - name: Okenite White (solid)
-      price: 0
-      type: solid
-    - name: Elixir Red (solid)
-      price: 0
-      type: solid
-    - name: Perla Nera Black (pearl)
-      price: 895
-      type: pearl
-    - name: Cumulus Grey (metallic)
-      price: 895
-      type: metallic
-    - name: Vertigo Blue (metallic)
-      price: 895
-      type: metallic
-    - name: Selenium Grey (metallic)
-      price: 895
-      type: metallic
-    - name: Olivine Green (metallic)
-      price: 1195
-      type: metallic
-    - name: Ultimate Red (metallic)
-      price: 1195
-      type: metallic
+  - name: Okenite White (solid)
+    price: 0
+    type: solid
+  - name: Elixir Red (solid)
+    price: 0
+    type: solid
+  - name: Perla Nera Black (pearl)
+    price: 895
+    type: pearl
+  - name: Cumulus Grey (metallic)
+    price: 895
+    type: metallic
+  - name: Vertigo Blue (metallic)
+    price: 895
+    type: metallic
+  - name: Selenium Grey (metallic)
+    price: 895
+    type: metallic
+  - name: Olivine Green (metallic)
+    price: 1195
+    type: metallic
+  - name: Ultimate Red (metallic)
+    price: 1195
+    type: metallic
   wheels:
-    - name: 20" Washington GT diamond-cut alloy wheels
-      price: 0
-      size_inches: 20
-      notes: Standard on GT trim
-    - name: 21" Meriden GT alloy wheels
-      price: 990
-      size_inches: 21
-      notes: Optional larger wheels, ~15 km range reduction
+  - name: 20" Washington GT diamond-cut alloy wheels
+    price: 0
+    size_inches: 20
+    notes: Standard on GT trim
+  - name: 21" Meriden GT alloy wheels
+    price: 990
+    size_inches: 21
+    notes: Optional larger wheels, ~15 km range reduction
   interior:
-    - name: Nappa leather (standard on GT)
-      price: 0
+  - name: Nappa leather (standard on GT)
+    price: 0
   packages:
-    - name: "Premium Package"
-      price: 2990
-      includes:
-        - "Matrix LED headlights"
-        - "Head-up display"
-        - "Night vision"
-    - name: "Towing Package"
-      price: 790
-      includes:
-        - "Electrically retractable towbar"
-        - "Trailer stability assist"
+  - name: "Premium Package"
+    price: 2990
+    includes:
+    - "Matrix LED headlights"
+    - "Head-up display"
+    - "Night vision"
+  - name: "Towing Package"
+    price: 790
+    includes:
+    - "Electrically retractable towbar"
+    - "Trailer stability assist"
 
 incentives:
-  - name: "BAFA Umweltbonus"
-    type: subsidy
-    amount: 0
-    notes: "German EV subsidy ended December 2023"
-  - name: "Company car tax benefit (0.25%)"
-    type: tax_credit
-    amount: 6540
-    notes: "0.25% of list price/month vs 1% for ICE. €54,490 × 0.25% = €136/month vs €545/month. Savings: €409/month = €4,908/year"
-    eligibility: Company car drivers
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 420
-    notes: "EV road tax exemption until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote"
-    type: grant
-    amount: 300
-    notes: "CO2 certificate sale, €250-350/year"
+- name: "BAFA Umweltbonus"
+  type: subsidy
+  amount: 0
+  notes: "German EV subsidy ended December 2023"
+- name: "Company car tax benefit (0.25%)"
+  type: tax_credit
+  amount: 6540
+  notes: "0.25% of list price/month vs 1% for ICE. €54,490 × 0.25% = €136/month vs €545/month. Savings: €409/month = €4,908/year"
+  eligibility: Company car drivers
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 420
+  notes: "EV road tax exemption until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote"
+  type: grant
+  amount: 300
+  notes: "CO2 certificate sale, €250-350/year"
 
 warranty:
   vehicle_years: 2
@@ -99,42 +99,42 @@ warranty:
   battery_capacity_guarantee_percent: 70
 
 charging_costs:
-  - scenario: "Home charging"
-    cost_per_kwh: 0.30
-    cost_per_100km: 4.80
-  - scenario: "Public AC"
-    cost_per_kwh: 0.45
-    cost_per_100km: 7.20
-  - scenario: "DC fast charging"
-    cost_per_kwh: 0.59
-    cost_per_100km: 9.44
+- scenario: "Home charging"
+  cost_per_kwh: 0.30
+  cost_per_100km: 4.80
+- scenario: "Public AC"
+  cost_per_kwh: 0.45
+  cost_per_100km: 7.20
+- scenario: "DC fast charging"
+  cost_per_kwh: 0.59
+  cost_per_100km: 9.44
 
 popular_configurations:
-  - name: "GT Standard"
-    price: 56580
-    includes:
-      - "Base e-3008 98 kWh GT (€54,490)"
-      - "Metallic paint (€895)"
-      - "Destination charge (€1,195)"
-    notes: "Already well-equipped GT with FOCAL audio, Nappa leather, panoramic roof"
-  - name: "GT Full Options"
-    price: 60360
-    includes:
-      - "Base (€54,490)"
-      - "Premium Package (€2,990)"
-      - "Metallic paint (€895)"
-      - "Towing Package (€790)"
-      - "Destination (€1,195)"
-    notes: "Fully loaded with matrix LED, HUD, night vision, towing"
+- name: "GT Standard"
+  price: 56580
+  includes:
+  - "Base e-3008 98 kWh GT (€54,490)"
+  - "Metallic paint (€895)"
+  - "Destination charge (€1,195)"
+  notes: "Already well-equipped GT with FOCAL audio, Nappa leather, panoramic roof"
+- name: "GT Full Options"
+  price: 60360
+  includes:
+  - "Base (€54,490)"
+  - "Premium Package (€2,990)"
+  - "Metallic paint (€895)"
+  - "Towing Package (€790)"
+  - "Destination (€1,195)"
+  notes: "Fully loaded with matrix LED, HUD, night vision, towing"
 
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  source_urls:
-    - https://www.peugeot.de/modelle/e-3008.html
   notes: |
     2025 model year German market data for flagship GT trim with 98 kWh battery.
     700 km WLTP range is class-leading. At ~€55k, significantly cheaper than
     comparable German premium SUVs (BMW iX1 xDrive30 €55k with only 440 km range).
     Excellent company car with 0.25% taxation and under €60k list price.
+  updated_at: "2026-02-10"
+  sources:
+  - https://www.peugeot.de/modelle/e-3008.html

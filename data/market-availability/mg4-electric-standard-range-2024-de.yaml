@@ -22,112 +22,110 @@ price_details:
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - name: "Umweltbonus (BAFA)"
-    amount: 3000
-    type: rebate
-    provider: federal
-    eligibility: "BEV with price ≤€45,000"
-    valid_until: "2024-12-31"
-    notes: "German federal EV subsidy - ENDED Dec 2023 (program phased out)"
-    
-  - name: "Company Car Tax"
-    amount: 0
-    type: tax_exemption
-    provider: federal
-    description: "0.25% monthly gross list price for BEVs under €60k"
-    notes: "€75/month benefit vs €300/month for equivalent ICE (saves €2,700/year)"
+- name: "Umweltbonus (BAFA)"
+  amount: 3000
+  type: rebate
+  provider: federal
+  eligibility: "BEV with price ≤€45,000"
+  valid_until: "2024-12-31"
+  notes: "German federal EV subsidy - ENDED Dec 2023 (program phased out)"
+- name: "Company Car Tax"
+  amount: 0
+  type: tax_exemption
+  provider: federal
+  description: "0.25% monthly gross list price for BEVs under €60k"
+  notes: "€75/month benefit vs €300/month for equivalent ICE (saves €2,700/year)"
 
 # Available Colors
 colors:
-  - name: "Dover White"
-    code: "solid-white"
-    type: solid
-    price_delta: 0
-    
-  - name: "Dynamic Red"
-    code: "metallic-red"
-    type: metallic
-    price_delta: 650
-    
-  - name: "Diamond Black"
-    code: "metallic-black"
-    type: metallic
-    price_delta: 650
-    
-  - name: "Pebble Grey"
-    code: "metallic-grey"
-    type: metallic
-    price_delta: 650
-    
-  - name: "Camden Grey"
-    code: "metallic-dark-grey"
-    type: metallic
-    price_delta: 650
+- name: "Dover White"
+  code: "solid-white"
+  type: solid
+  price_delta: 0
+
+- name: "Dynamic Red"
+  code: "metallic-red"
+  type: metallic
+  price_delta: 650
+
+- name: "Diamond Black"
+  code: "metallic-black"
+  type: metallic
+  price_delta: 650
+
+- name: "Pebble Grey"
+  code: "metallic-grey"
+  type: metallic
+  price_delta: 650
+
+- name: "Camden Grey"
+  code: "metallic-dark-grey"
+  type: metallic
+  price_delta: 650
 
 # Wheel Options
 wheels:
-  - name: "17-inch alloy wheels"
-    size_inches: 17
-    tire_size: "215/60 R17"
-    price_delta: 0
-    standard: true
-    
-  - name: "18-inch diamond-cut alloy wheels"
-    size_inches: 18
-    tire_size: "235/45 R18"
-    price_delta: 750
-    notes: "Sportier look, slightly reduced range (-10km WLTP)"
+- name: "17-inch alloy wheels"
+  size_inches: 17
+  tire_size: "215/60 R17"
+  price_delta: 0
+  standard: true
+
+- name: "18-inch diamond-cut alloy wheels"
+  size_inches: 18
+  tire_size: "235/45 R18"
+  price_delta: 750
+  notes: "Sportier look, slightly reduced range (-10km WLTP)"
 
 # Interior Options
 interiors:
-  - name: "Black fabric"
-    material: fabric
-    price_delta: 0
-    standard: true
-    
-  - name: "Grey fabric with contrast stitching"
-    material: fabric
-    price_delta: 300
-    notes: "Modern two-tone look"
+- name: "Black fabric"
+  material: fabric
+  price_delta: 0
+  standard: true
+
+- name: "Grey fabric with contrast stitching"
+  material: fabric
+  price_delta: 300
+  notes: "Modern two-tone look"
 
 # Equipment Packages & Options
 packages:
-  - name: "Comfort Pack"
-    price: 1600
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Rear parking sensors"
-      - "Auto-dimming rear-view mirror"
-      - "Wireless phone charging"
-    popular: true
-    recommended: true
-    
-  - name: "Tech Pack"
-    price: 2200
-    includes:
-      - "All Comfort Pack features"
-      - "360-degree camera"
-      - "Adaptive cruise control"
-      - "Traffic sign recognition"
-      - "Lane keeping assist"
-    popular: true
+- name: "Comfort Pack"
+  price: 1600
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Rear parking sensors"
+  - "Auto-dimming rear-view mirror"
+  - "Wireless phone charging"
+  popular: true
+  recommended: true
+
+- name: "Tech Pack"
+  price: 2200
+  includes:
+  - "All Comfort Pack features"
+  - "360-degree camera"
+  - "Adaptive cruise control"
+  - "Traffic sign recognition"
+  - "Lane keeping assist"
+  popular: true
 
 # Individual Options
 individual_options:
-  - name: "Metallic paint"
-    price: 650
-    category: exterior
-    
-  - name: "Heat pump"
-    price: 0
-    category: efficiency
-    notes: "Standard equipment - improves winter range by ~15%"
-    
-  - name: "Tow bar"
-    price: 700
-    category: utility
-    towing_capacity_kg: 500
+- name: "Metallic paint"
+  price: 650
+  category: exterior
+
+- name: "Heat pump"
+  price: 0
+  category: efficiency
+  notes: "Standard equipment - improves winter range by ~15%"
+- name: "Tow bar"
+  price: 700
+  category: utility
+  towing_capacity_kg: 500
 
 # Total Price Range
 price_range:
@@ -142,15 +140,6 @@ production_location: "Shanghai, China"
 import_duties_included: true
 
 # Market-Specific Notes
-market_notes:
-  - "Most affordable rear-wheel drive EV in Germany"
-  - "7-year/175,000km battery warranty"
-  - "Free home charger installation support (via MG partners)"
-  - "Available at 120+ MG dealers across Germany"
-  - "350km WLTP range adequate for daily commuting"
-  - "Standard heat pump improves efficiency vs competitors"
-
-# Sales & Distribution
 distribution:
   dealer_network_size: 120
   direct_sales: false
@@ -166,7 +155,7 @@ warranty:
   battery_km: 175000
   battery_capacity_guarantee_percent: 70
   roadside_assistance_years: 7
-  
+
 service:
   service_interval_months: 12
   service_interval_km: 20000
@@ -175,10 +164,10 @@ service:
 
 # Charging Infrastructure Support
 charging_support:
-  - "Partnership with EnBW (Mobility+ card)"
-  - "Access to 200,000+ charging points in Europe"
-  - "Free RFID charging card included"
-  - "MG iSMART app for charging station locator"
+- "Partnership with EnBW (Mobility+ card)"
+- "Access to 200,000+ charging points in Europe"
+- "Free RFID charging card included"
+- "MG iSMART app for charging station locator"
 
 # Insurance
 insurance_notes:
@@ -207,25 +196,22 @@ leasing_example:
 
 # Competitors in Market
 local_competitors:
-  - vehicle: "Volkswagen ID.3 Pure"
-    price_eur: 39995
-    price_delta: +10005
-    notes: "German brand premium, but FWD and less engaging"
-    
-  - vehicle: "Opel Astra Electric"
-    price_eur: 44000
-    price_delta: +14010
-    notes: "German-French brand, similar hatchback"
-    
-  - vehicle: "Nissan Leaf 40 kWh"
-    price_eur: 34990
-    price_delta: +5000
-    notes: "Japanese brand, proven but dated CHAdeMO charging"
-    
-  - vehicle: "Renault Megane E-Tech EV40"
-    price_eur: 38000
-    price_delta: +8010
-    notes: "French brand, smaller 40 kWh battery, FWD"
+- vehicle: "Volkswagen ID.3 Pure"
+  price_eur: 39995
+  price_delta: 10005
+  notes: "German brand premium, but FWD and less engaging"
+- vehicle: "Opel Astra Electric"
+  price_eur: 44000
+  price_delta: 14010
+  notes: "German-French brand, similar hatchback"
+- vehicle: "Nissan Leaf 40 kWh"
+  price_eur: 34990
+  price_delta: 5000
+  notes: "Japanese brand, proven but dated CHAdeMO charging"
+- vehicle: "Renault Megane E-Tech EV40"
+  price_eur: 38000
+  price_delta: 8010
+  notes: "French brand, smaller 40 kWh battery, FWD"
 
 # Market Performance
 market_stats:
@@ -235,20 +221,18 @@ market_stats:
 
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 4.2
-    score_out_of: 5.0
-    summary: "Überraschend gutes Fahrverhalten dank Heckantrieb"
-    
-  - source: "ADAC"
-    rating: 2.1
-    score_out_of: 5.0
-    summary: "Sehr empfehlenswert - tolles Preis-Leistungs-Verhältnis"
-    
-  - source: "Auto Bild"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Bester günstiger Elektro-Hatchback"
+- source: "Auto Motor und Sport"
+  rating: 4.2
+  score_out_of: 5.0
+  summary: "Überraschend gutes Fahrverhalten dank Heckantrieb"
+- source: "ADAC"
+  rating: 2.1
+  score_out_of: 5.0
+  summary: "Sehr empfehlenswert - tolles Preis-Leistungs-Verhältnis"
+- source: "Auto Bild"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Bester günstiger Elektro-Hatchback"
 
 # Environmental
 environmental:
@@ -288,63 +272,61 @@ tco_3_years:
 
 # Popular Configurations
 popular_configs:
-  - name: "Base as-delivered"
-    price: 30890
-    includes:
-      - "Standard equipment"
-      - "Delivery and documentation"
-    target_buyer: "Budget-conscious first EV buyer"
-    
-  - name: "Comfort Config"
-    price: 33240
-    includes:
-      - "Base vehicle"
-      - "Comfort Pack (€1,600)"
-      - "Metallic paint (€650)"
-      - "Delivery (€900)"
-    target_buyer: "Most popular choice - best value"
-    recommended: true
-    
-  - name: "Fully Loaded"
-    price: 34890
-    includes:
-      - "Base vehicle"
-      - "Tech Pack (€2,200)"
-      - "Metallic paint (€650)"
-      - "18-inch wheels (€750)"
-      - "Delivery (€900)"
-    target_buyer: "Tech enthusiasts wanting all features"
+- name: "Base as-delivered"
+  price: 30890
+  includes:
+  - "Standard equipment"
+  - "Delivery and documentation"
+  target_buyer: "Budget-conscious first EV buyer"
+- name: "Comfort Config"
+  price: 33240
+  includes:
+  - "Base vehicle"
+  - "Comfort Pack (€1,600)"
+  - "Metallic paint (€650)"
+  - "Delivery (€900)"
+  target_buyer: "Most popular choice - best value"
+  recommended: true
+
+- name: "Fully Loaded"
+  price: 34890
+  includes:
+  - "Base vehicle"
+  - "Tech Pack (€2,200)"
+  - "Metallic paint (€650)"
+  - "18-inch wheels (€750)"
+  - "Delivery (€900)"
+  target_buyer: "Tech enthusiasts wanting all features"
 
 # Target Buyers
 target_buyers:
-  - "First-time EV buyers prioritizing affordability"
-  - "Urban/suburban commuters (under 100km/day)"
-  - "Second car for city use"
-  - "Young professionals on budget"
-  - "Company car drivers (0.25% tax benefit)"
-  - "Driving enthusiasts appreciating RWD at affordable price"
+- "First-time EV buyers prioritizing affordability"
+- "Urban/suburban commuters (under 100km/day)"
+- "Second car for city use"
+- "Young professionals on budget"
+- "Company car drivers (0.25% tax benefit)"
+- "Driving enthusiasts appreciating RWD at affordable price"
 
 # Key Selling Points (Germany)
 selling_points:
-  - "Most affordable RWD electric car in Germany (€29,990)"
-  - "Engaging driving dynamics uncommon at this price"
-  - "Standard heat pump improves winter efficiency"
-  - "350km range adequate for 95% of daily trips"
-  - "7-year/175,000km warranty beats VW (2 years)"
-  - "€10,000 cheaper than VW ID.3 Pure"
-  - "Company car tax: only €22/month vs €90/month for ICE"
-  - "87kW DC charging competitive in class"
-  - "Near-perfect 50:50 weight distribution"
+- "Most affordable RWD electric car in Germany (€29,990)"
+- "Engaging driving dynamics uncommon at this price"
+- "Standard heat pump improves winter efficiency"
+- "350km range adequate for 95% of daily trips"
+- "7-year/175,000km warranty beats VW (2 years)"
+- "€10,000 cheaper than VW ID.3 Pure"
+- "Company car tax: only €22/month vs €90/month for ICE"
+- "87kW DC charging competitive in class"
+- "Near-perfect 50:50 weight distribution"
 
 # Metadata
 metadata:
   data_quality: verified
   sources:
-    - https://www.mgmotor.de/mg4-electric
-    - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg4-test/
-    - https://www.auto-motor-und-sport.de/fahrbericht/mg4-test/
+  - https://www.mgmotor.de/mg4-electric
+  - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/mg4-test/
+  - https://www.auto-motor-und-sport.de/fahrbericht/mg4-test/
   created_at: "2024-02-08"
-  last_updated: "2024-02-08"
   notes: |
     MG4 Standard Range is exceptional value at €29,990 - €10,000 less than VW ID.3.
     Rear-wheel drive provides engaging handling uncommon in affordable EVs.
@@ -355,3 +337,5 @@ metadata:
     Growing MG dealer network (120+ in Germany) provides good service coverage.
     Umweltbonus subsidy ended Dec 2023 - no federal incentive available.
     Strong alternative to used Tesla Model 3 or new VW ID.3.
+  updated_at: "2024-02-08"
+notes: "['Most affordable rear-wheel drive EV in Germany', '7-year/175,000km battery warranty', 'Free home charger installation support (via MG partners)', 'Available at 120+ MG dealers across Germany', '350km WLTP range adequate for daily commuting', 'Standard heat pump improves efficiency vs competitors']"

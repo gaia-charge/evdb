@@ -23,115 +23,115 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Carrara White Metallic
-    code: 0Q
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Jet Black Metallic
-    code: C9X
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Gentian Blue Metallic
-    type: metallic
-    price_add:
-      amount: 1390
-      currency: EUR
-  - name: Frozen Blue Metallic
-    type: metallic
-    price_add:
-      amount: 1390
-      currency: EUR
-  - name: Ice Grey Metallic
-    type: metallic
-    price_add:
-      amount: 1390
-      currency: EUR
-  - name: Volcano Grey Metallic
-    type: metallic
-    price_add:
-      amount: 1390
-      currency: EUR
-  - name: Cherry Metallic
-    type: metallic
-    price_add:
-      amount: 1390
-      currency: EUR
-  - name: Paint to Sample
-    type: custom
-    price_add:
-      amount: 6800
-      currency: EUR
-    notes: Choose from extended Porsche color palette
-  - name: Paint to Sample Plus
-    type: custom
-    price_add:
-      amount: 11900
-      currency: EUR
-    notes: Any custom color from full Porsche spectrum
+- name: Carrara White Metallic
+  code: 0Q
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Jet Black Metallic
+  code: C9X
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Gentian Blue Metallic
+  type: metallic
+  price_add:
+    amount: 1390
+    currency: EUR
+- name: Frozen Blue Metallic
+  type: metallic
+  price_add:
+    amount: 1390
+    currency: EUR
+- name: Ice Grey Metallic
+  type: metallic
+  price_add:
+    amount: 1390
+    currency: EUR
+- name: Volcano Grey Metallic
+  type: metallic
+  price_add:
+    amount: 1390
+    currency: EUR
+- name: Cherry Metallic
+  type: metallic
+  price_add:
+    amount: 1390
+    currency: EUR
+- name: Paint to Sample
+  type: custom
+  price_add:
+    amount: 6800
+    currency: EUR
+  notes: Choose from extended Porsche color palette
+- name: Paint to Sample Plus
+  type: custom
+  price_add:
+    amount: 11900
+    currency: EUR
+  notes: Any custom color from full Porsche spectrum
 
 # Wheel Options
 available_wheels:
-  - name: 19-inch Taycan Aero wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: Best efficiency and range
-  - name: 20-inch Taycan Design wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1840
-      currency: EUR
-    notes: Sportier look, range reduced approximately 20km
-  - name: 20-inch Taycan Turbo wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1840
-      currency: EUR
-    notes: Sportier look, range reduced approximately 20km
-  - name: 21-inch Mission E Design wheels
-    size_inches: 21
-    type: alloy
-    price_add:
-      amount: 3670
-      currency: EUR
-    notes: Most aggressive look, range reduced approximately 30km
+- name: 19-inch Taycan Aero wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: Best efficiency and range
+- name: 20-inch Taycan Design wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1840
+    currency: EUR
+  notes: Sportier look, range reduced approximately 20km
+- name: 20-inch Taycan Turbo wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1840
+    currency: EUR
+  notes: Sportier look, range reduced approximately 20km
+- name: 21-inch Mission E Design wheels
+  size_inches: 21
+  type: alloy
+  price_add:
+    amount: 3670
+    currency: EUR
+  notes: Most aggressive look, range reduced approximately 30km
 
 # Interior Options
 available_interiors:
-  - name: Partial Leather interior (Standard)
-    material: leather_race_tex
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Race-Tex interior
-    material: race_tex
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: Sustainable microfiber alternative
-  - name: Full Leather interior
-    material: leather
-    price_add:
-      amount: 2920
-      currency: EUR
-    notes: Multiple color options available
+- name: Partial Leather interior (Standard)
+  material: leather_race_tex
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Race-Tex interior
+  material: race_tex
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: Sustainable microfiber alternative
+- name: Full Leather interior
+  material: leather
+  price_add:
+    amount: 2920
+    currency: EUR
+  notes: Multiple color options available
 
 # Incentives
 available_incentives:
-  - type: company_car
-    name: "0.5% company car tax (BEV over €70k)"
-    description: "Reduced taxation for electric company cars"
-    conditions: ["BEVs over €70,000 gross list price get 0.5% rate"]
-    notes: "Still better than 1% ICE rate, but not as favorable as under-€70k EVs (0.25%)"
+- type: company_car
+  name: "0.5% company car tax (BEV over €70k)"
+  description: "Reduced taxation for electric company cars"
+  conditions: ["BEVs over €70,000 gross list price get 0.5% rate"]
+  notes: "Still better than 1% ICE rate, but not as favorable as under-€70k EVs (0.25%)"
 
 # Company Car Tax Calculation (Germany-specific)
 company_car_tax:
@@ -146,94 +146,94 @@ company_car_tax:
 
 # Popular Options/Packages
 popular_packages:
-  - name: 22kW Onboard Charger
-    price:
-      amount: 1530
-      currency: EUR
-    features:
-      - Faster AC charging (0-100% in 4.5h vs 8.5h)
-  - name: InnoDrive with Adaptive Cruise Control
-    price:
-      amount: 4120
-      currency: EUR
-    features:
-      - Adaptive cruise control
-      - Predictive efficiency assistant
-      - Lane Keep Assist integration
-  - name: Lane Change Assist + Lane Keeping Assist
-    price:
-      amount: 1190
-      currency: EUR
-    features:
-      - Active lane change assistance
-      - Lane keeping with steering intervention
-  - name: Surround View with Remote Parking
-    price:
-      amount: 1780
-      currency: EUR
-    features:
-      - 360-degree camera system
-      - Remote-controlled parking assist
-  - name: Sport Chrono Package
-    price:
-      amount: 1090
-      currency: EUR
-    features:
-      - Performance display with lap timer
-      - Sport Plus driving mode
-      - Mode switch on steering wheel
-  - name: Bose Surround Sound System
-    price:
-      amount: 1240
-      currency: EUR
-    features:
-      - 14 speakers
-      - 710 watts total power
-  - name: Burmester 3D High-End Surround Sound
-    price:
-      amount: 6110
-      currency: EUR
-    features:
-      - 21 speakers
-      - 1,455 watts total power
-      - 3D sound experience
-  - name: Porsche Ceramic Composite Brake (PCCB)
-    price:
-      amount: 9180
-      currency: EUR
-    features:
-      - 420mm front, 410mm rear carbon ceramic rotors
-      - Extreme performance and minimal fade
-      - Longer lifespan than steel brakes
-  - name: Passenger Display
-    price:
-      amount: 1330
-      currency: EUR
-    features:
-      - 10.9-inch touchscreen for passenger
-  - name: Heat-Insulating Glass (tinted)
-    price:
-      amount: 1360
-      currency: EUR
-    features:
-      - Improved thermal insulation
-      - Privacy tinting
+- name: 22kW Onboard Charger
+  price:
+    amount: 1530
+    currency: EUR
+  features:
+  - Faster AC charging (0-100% in 4.5h vs 8.5h)
+- name: InnoDrive with Adaptive Cruise Control
+  price:
+    amount: 4120
+    currency: EUR
+  features:
+  - Adaptive cruise control
+  - Predictive efficiency assistant
+  - Lane Keep Assist integration
+- name: Lane Change Assist + Lane Keeping Assist
+  price:
+    amount: 1190
+    currency: EUR
+  features:
+  - Active lane change assistance
+  - Lane keeping with steering intervention
+- name: Surround View with Remote Parking
+  price:
+    amount: 1780
+    currency: EUR
+  features:
+  - 360-degree camera system
+  - Remote-controlled parking assist
+- name: Sport Chrono Package
+  price:
+    amount: 1090
+    currency: EUR
+  features:
+  - Performance display with lap timer
+  - Sport Plus driving mode
+  - Mode switch on steering wheel
+- name: Bose Surround Sound System
+  price:
+    amount: 1240
+    currency: EUR
+  features:
+  - 14 speakers
+  - 710 watts total power
+- name: Burmester 3D High-End Surround Sound
+  price:
+    amount: 6110
+    currency: EUR
+  features:
+  - 21 speakers
+  - 1,455 watts total power
+  - 3D sound experience
+- name: Porsche Ceramic Composite Brake (PCCB)
+  price:
+    amount: 9180
+    currency: EUR
+  features:
+  - 420mm front, 410mm rear carbon ceramic rotors
+  - Extreme performance and minimal fade
+  - Longer lifespan than steel brakes
+- name: Passenger Display
+  price:
+    amount: 1330
+    currency: EUR
+  features:
+  - 10.9-inch touchscreen for passenger
+- name: Heat-Insulating Glass (tinted)
+  price:
+    amount: 1360
+    currency: EUR
+  features:
+  - Improved thermal insulation
+  - Privacy tinting
 
 # Typical Configuration Example
 typical_configuration:
   description: Well-equipped Taycan RWD with practical options
   base_price: 103500
   options:
-    - name: 22kW Onboard Charger
-      price: 1530
-    - name: InnoDrive with Adaptive Cruise
-      price: 4120
-    - name: Lane Change Assist
-      price: 1190
-    - name: Sport Chrono Package
-      price: 1090
-    - name: Heat-Insulating Glass
-      price: 1360
+  - name: 22kW Onboard Charger
+    price: 1530
+  - name: InnoDrive with Adaptive Cruise
+    price: 4120
+  - name: Lane Change Assist
+    price: 1190
+  - name: Sport Chrono Package
+    price: 1090
+  - name: Heat-Insulating Glass
+    price: 1360
   total_options_price: 9290
   total_price: 112790
   notes: Most buyers add €8,000-12,000 in options
@@ -266,18 +266,18 @@ leasing_example:
 
 # Market Competition
 competitors:
-  - model: Tesla Model S Long Range
-    starting_price: 92990
-    notes: More range, less sporty, better efficiency
-  - model: BMW i5 eDrive40
-    starting_price: 72000
-    notes: More practical, less performance, lower price
-  - model: Mercedes-Benz EQE 350+
-    starting_price: 77000
-    notes: Luxury focus, less sporty, good efficiency
-  - model: Audi e-tron GT
-    starting_price: 110000
-    notes: Shared platform with Taycan, similar performance
+- model: Tesla Model S Long Range
+  starting_price: 92990
+  notes: More range, less sporty, better efficiency
+- model: BMW i5 eDrive40
+  starting_price: 72000
+  notes: More practical, less performance, lower price
+- model: Mercedes-Benz EQE 350+
+  starting_price: 77000
+  notes: Luxury focus, less sporty, good efficiency
+- model: Audi e-tron GT
+  starting_price: 110000
+  notes: Shared platform with Taycan, similar performance
 
 # Ownership Costs (Annual Estimate)
 annual_ownership_estimate:
@@ -325,7 +325,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan/
   created_at: "2026-02-09"
   last_verified_at: "2026-02-09"
   notes: Official Porsche Germany pricing and specifications for 2026 model year
+  sources:
+  - https://www.porsche.com/germany/models/taycan/taycan-models/taycan/

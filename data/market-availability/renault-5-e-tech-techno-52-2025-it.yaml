@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-05-31"
-available_until: null
+available_until:
 
 pricing:
   base_price: 31900
@@ -16,32 +16,32 @@ pricing:
   total_price_estimate: 31900
 
 incentives:
-  - name: Ecobonus
-    type: grant
-    amount: 11000
-    description: >
-      With trade-in of old vehicle (Crit'Air 3 or worse equivalent).
-      Price can drop to €20,900 with maximum incentives.
-    valid_from: "2025-01-01"
-    valid_until: null
-    conditions:
-      - Must scrap old polluting vehicle
-      - Income-dependent
-      - Vehicle price under certain threshold
+- name: Ecobonus
+  type: grant
+  amount: 11000
+  description: >
+    With trade-in of old vehicle (Crit'Air 3 or worse equivalent).
+    Price can drop to €20,900 with maximum incentives.
+  valid_from: "2025-01-01"
+  valid_until:
+  conditions:
+  - Must scrap old polluting vehicle
+  - Income-dependent
+  - Vehicle price under certain threshold
 
 market_specific:
   standard_equipment:
-    - 10.1-inch digital instrument cluster
-    - 10.1-inch touchscreen infotainment with OpenR Link
-    - Wireless Apple CarPlay and Android Auto
-    - LED headlights
-    - Rear parking sensors and camera
-    - Lane Keep Assist
-    - Forward Collision Warning
-    - Adaptive cruise control
-    - Climate control
-    - 11 kW AC charging
-    - 100 kW DC fast charging
+  - 10.1-inch digital instrument cluster
+  - 10.1-inch touchscreen infotainment with OpenR Link
+  - Wireless Apple CarPlay and Android Auto
+  - LED headlights
+  - Rear parking sensors and camera
+  - Lane Keep Assist
+  - Forward Collision Warning
+  - Adaptive cruise control
+  - Climate control
+  - 11 kW AC charging
+  - 100 kW DC fast charging
 
   battery_specifications:
     capacity_kwh: 52
@@ -68,8 +68,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-24"
-  updated_at: null
   data_quality: verified
   price_checked_at: "2026-02-24"
   sources:
-    - https://www.quattroruote.it/news/mercato/2025/09/23/renault_5_l-auto_dell-anno_con_gli_incentivi_statali.html
+  - https://www.quattroruote.it/news/mercato/2025/09/23/renault_5_l-auto_dell-anno_con_gli_incentivi_statali.html

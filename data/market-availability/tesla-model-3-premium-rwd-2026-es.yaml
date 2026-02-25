@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-10-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 4
   notes: Available for order on tesla.com/es, delivery from Gigafactory Shanghai
@@ -22,66 +22,66 @@ pricing:
 
 options:
   colors:
-    - name: Pearl White Multi-Coat
-      price: 0
-      type: solid
-    - name: Solid Black
-      price: 1300
-      type: solid
-    - name: Midnight Cherry Red
-      price: 2000
-      type: metallic
-    - name: Quicksilver
-      price: 2000
-      type: metallic
-    - name: Ultra Red
-      price: 2000
-      type: metallic
-    - name: Glacier Blue
-      price: 1300
-      type: metallic
+  - name: Pearl White Multi-Coat
+    price: 0
+    type: solid
+  - name: Solid Black
+    price: 1300
+    type: solid
+  - name: Midnight Cherry Red
+    price: 2000
+    type: metallic
+  - name: Quicksilver
+    price: 2000
+    type: metallic
+  - name: Ultra Red
+    price: 2000
+    type: metallic
+  - name: Glacier Blue
+    price: 1300
+    type: metallic
 
   wheels:
-    - name: 18" Photon Wheels
-      price: 0
-      size_inches: 18
-    - name: 19" Nova Wheels
-      price: 1600
-      size_inches: 19
+  - name: 18" Photon Wheels
+    price: 0
+    size_inches: 18
+  - name: 19" Nova Wheels
+    price: 1600
+    size_inches: 19
 
   interiors:
-    - name: All Black
-      price: 0
-    - name: Black and White
-      price: 1100
+  - name: All Black
+    price: 0
+  - name: Black and White
+    price: 1100
 
 packages:
-  - name: Enhanced Autopilot
-    price: 3800
-    includes:
-      - Navigate on Autopilot
-      - Auto Lane Change
-      - Autopark
-      - Summon
-  - name: Full Self-Driving Capability
-    price: 7500
-    includes:
-      - Enhanced Autopilot features
-      - Traffic Light and Stop Sign Control
+- name: Enhanced Autopilot
+  price: 3800
+  includes:
+  - Navigate on Autopilot
+  - Auto Lane Change
+  - Autopark
+  - Summon
+- name: Full Self-Driving Capability
+  price: 7500
+  includes:
+  - Enhanced Autopilot features
+  - Traffic Light and Stop Sign Control
 
 standalone_options: []
 
 incentives:
-  - type: tax_exemption
-    name: Impuesto de Matriculación Exemption
-    amount: 0
-    currency: EUR
-    notes: EVs exempt from registration tax (0% rate for zero emissions)
-  - type: tax_exemption
-    name: Reduced Impuesto de Circulación
-    amount: 0
-    currency: EUR
-    notes: Up to 75% reduction on road tax in many municipalities
+- type: tax_exemption
+  name: Impuesto de Matriculación Exemption
+  amount: 0
+  currency: EUR
+  notes: EVs exempt from registration tax (0% rate for zero emissions)
+- type: tax_exemption
+  name: Reduced Impuesto de Circulación
+  amount: 0
+  currency: EUR
+  notes: Up to 75% reduction on road tax in many municipalities
 
 total_cost_of_ownership:
   purchase_price: 46990
@@ -96,18 +96,17 @@ total_cost_of_ownership:
     maintenance: 300
     total_annual: 1920
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-10
-  source_reliability: medium
-
 sources:
-  - name: Tesla Spain
-    url: https://www.tesla.com/es_es/model3
-    date_accessed: 2026-02-10
+- name: Tesla Spain
+  url: https://www.tesla.com/es_es/model3
+  date_accessed: 2026-02-10
 
 notes: |
   New 2026 Premium RWD trim with 82 kWh NMC battery and 750 km WLTP range.
   Prices include 21% IVA. Exempt from registration tax (Impuesto de Matriculación).
   Tesla Supercharger network well-established in Spain with 80+ locations.
   MOVES III program has expired; no current federal purchase subsidies.
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-10'
+  created_at: '2026-02-10'

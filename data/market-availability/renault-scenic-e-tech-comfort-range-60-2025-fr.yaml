@@ -17,41 +17,41 @@ pricing:
   total_price_estimate: 38370
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 4000
-    description: Government EV purchase bonus for vehicles under €47,000
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - Vehicle price under €47,000
-      - Manufactured in EU (Douai, France - fully eligible)
+- name: Bonus écologique
+  type: grant
+  amount: 4000
+  description: Government EV purchase bonus for vehicles under €47,000
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - Vehicle price under €47,000
+  - Manufactured in EU (Douai, France - fully eligible)
 
-  - name: Prime à la conversion
-    type: grant
-    amount: 1500
-    description: Additional bonus when scrapping old ICE vehicle
-    conditions:
-      - Must scrap eligible older vehicle
-      - Income-dependent (up to €6,000 for low-income)
+- name: Prime à la conversion
+  type: grant
+  amount: 1500
+  description: Additional bonus when scrapping old ICE vehicle
+  conditions:
+  - Must scrap eligible older vehicle
+  - Income-dependent (up to €6,000 for low-income)
 
 market_specific:
   available_colors:
-    - name: Blanc Glacier
-      type: solid
-      price_add: 0
-    - name: Noir Etoilé
-      type: metallic
-      price_add: 690
-    - name: Gris Schiste
-      type: metallic
-      price_add: 690
-    - name: Bleu Rafale
-      type: metallic
-      price_add: 690
-    - name: Vert Jade
-      type: metallic
-      price_add: 690
+  - name: Blanc Glacier
+    type: solid
+    price_add: 0
+  - name: Noir Etoilé
+    type: metallic
+    price_add: 690
+  - name: Gris Schiste
+    type: metallic
+    price_add: 690
+  - name: Bleu Rafale
+    type: metallic
+    price_add: 690
+  - name: Vert Jade
+    type: metallic
+    price_add: 690
 
 notes: |
   Renault Scenic E-Tech Comfort Range (60 kWh) in France.
@@ -63,6 +63,7 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.renault.fr/vehicules-electriques/scenic-e-tech-electric.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.renault.fr/vehicules-electriques/scenic-e-tech-electric.html

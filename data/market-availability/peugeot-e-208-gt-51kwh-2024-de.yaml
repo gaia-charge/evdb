@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-09-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 8
   notes: Fast delivery thanks to Slovakian production (Trnava plant)
@@ -22,169 +22,167 @@ pricing:
 
 options:
   colors:
-    - name: Elixir Red (solid)
-      price: 0
-      type: solid
-    - name: Cumulus Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Perla Nera Black (pearl)
-      price: 695
-      type: pearl
-    - name: Okenite White (pearl)
-      price: 695
-      type: pearl
-    - name: Vertigo Blue (metallic)
-      price: 695
-      type: metallic
-    - name: Fusion Orange (metallic)
-      price: 995
-      type: metallic
-    - name: Selenium Grey (metallic)
-      price: 695
-      type: metallic
-    - name: Nera Black (special)
-      price: 0
-      type: solid
-  
+  - name: Elixir Red (solid)
+    price: 0
+    type: solid
+  - name: Cumulus Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Perla Nera Black (pearl)
+    price: 695
+    type: pearl
+  - name: Okenite White (pearl)
+    price: 695
+    type: pearl
+  - name: Vertigo Blue (metallic)
+    price: 695
+    type: metallic
+  - name: Fusion Orange (metallic)
+    price: 995
+    type: metallic
+  - name: Selenium Grey (metallic)
+    price: 695
+    type: metallic
+  - name: Nera Black (special)
+    price: 0
+    type: solid
+
   wheels:
-    - name: 17" Krypton diamond-cut alloy wheels
-      price: 0
-      size_inches: 17
-      notes: Standard on GT trim
-    - name: 18" Portland diamond-cut alloy wheels
-      price: 950
-      size_inches: 18
-      notes: Optional sporty wheels
-  
+  - name: 17" Krypton diamond-cut alloy wheels
+    price: 0
+    size_inches: 17
+    notes: Standard on GT trim
+  - name: 18" Portland diamond-cut alloy wheels
+    price: 950
+    size_inches: 18
+    notes: Optional sporty wheels
+
   interior:
-    - name: Black Alcantara/TEP with Lime Yellow stitching
-      price: 0
-      notes: Standard GT sport interior
-    - name: Black Alcantara/TEP with Grey stitching
-      price: 0
-      notes: Alternative stitching color
+  - name: Black Alcantara/TEP with Lime Yellow stitching
+    price: 0
+    notes: Standard GT sport interior
+  - name: Black Alcantara/TEP with Grey stitching
+    price: 0
+    notes: Alternative stitching color
 
 packages:
-  - name: Comfort Package
-    price: 1290
-    includes:
-      - Adaptive cruise control with Stop & Go
-      - Traffic sign recognition with speed limit recommendation
-      - Active lane keeping assist
-      - Driver attention alert
-      - 180° reversing camera
-    notes: Drive Assist 2.0 suite
-  
-  - name: Comfort Plus Package
-    price: 2190
-    includes:
-      - All Comfort Package features
-      - Focal Premium Hi-Fi audio system (6 speakers, amplifier)
-      - Wireless smartphone charging
-      - Electric adjustable driver seat with lumbar support
-      - Massage function for driver seat
-    notes: Adds premium audio and electric seats to Drive Assist
-  
-  - name: Winter Package
-    price: 590
-    includes:
-      - Heated front seats (already standard on GT)
-      - Heated steering wheel (already standard on GT)
-      - Heated windscreen washer nozzles
-    notes: Most winter features already standard on GT trim
-  
-  - name: Panoramic Glass Roof
-    price: 1200
-    includes:
-      - Electrochromic darkening glass roof
-      - 95% UV protection
-      - Opening rear section
-    notes: Large glass area enhances cabin brightness
-  
-  - name: Keyless Entry & Start
-    price: 590
-    includes:
-      - Keyless entry on front doors
-      - Keyless start button
-      - Automatic door unlocking on approach
-  
-  - name: Park Assist Package
-    price: 890
-    includes:
-      - Active Park Assist (automatic parallel/perpendicular parking)
-      - 180° reversing camera with dynamic guidelines
-      - Front and rear parking sensors
-  
-  - name: Matrix LED Headlights
-    price: 1490
-    includes:
-      - Matrix LED headlights with automatic high beam
-      - Adaptive lighting (curve following)
-      - LED fog lights
-      - Signature LED "fang" DRLs (already standard)
-    notes: Upgrade from standard full LED headlights
+- name: Comfort Package
+  price: 1290
+  includes:
+  - Adaptive cruise control with Stop & Go
+  - Traffic sign recognition with speed limit recommendation
+  - Active lane keeping assist
+  - Driver attention alert
+  - 180° reversing camera
+  notes: Drive Assist 2.0 suite
+
+- name: Comfort Plus Package
+  price: 2190
+  includes:
+  - All Comfort Package features
+  - Focal Premium Hi-Fi audio system (6 speakers, amplifier)
+  - Wireless smartphone charging
+  - Electric adjustable driver seat with lumbar support
+  - Massage function for driver seat
+  notes: Adds premium audio and electric seats to Drive Assist
+
+- name: Winter Package
+  price: 590
+  includes:
+  - Heated front seats (already standard on GT)
+  - Heated steering wheel (already standard on GT)
+  - Heated windscreen washer nozzles
+  notes: Most winter features already standard on GT trim
+
+- name: Panoramic Glass Roof
+  price: 1200
+  includes:
+  - Electrochromic darkening glass roof
+  - 95% UV protection
+  - Opening rear section
+  notes: Large glass area enhances cabin brightness
+
+- name: Keyless Entry & Start
+  price: 590
+  includes:
+  - Keyless entry on front doors
+  - Keyless start button
+  - Automatic door unlocking on approach
+
+- name: Park Assist Package
+  price: 890
+  includes:
+  - Active Park Assist (automatic parallel/perpendicular parking)
+  - 180° reversing camera with dynamic guidelines
+  - Front and rear parking sensors
+
+- name: Matrix LED Headlights
+  price: 1490
+  includes:
+  - Matrix LED headlights with automatic high beam
+  - Adaptive lighting (curve following)
+  - LED fog lights
+  - Signature LED "fang" DRLs (already standard)
+  notes: Upgrade from standard full LED headlights
 
 standalone_options:
-  - name: 11kW 3-phase AC Onboard Charger
-    price: 0
-    notes: Standard on GT trim (was optional on earlier models)
-  
-  - name: Focal Premium Audio Upgrade
-    price: 950
-    notes: Standalone option if not taking Comfort Plus Package
-  
-  - name: Two-tone "Black Pack" roof
-    price: 650
-    notes: Gloss black roof, mirrors, and rear diffuser
+- name: 11kW 3-phase AC Onboard Charger
+  price: 0
+  notes: Standard on GT trim (was optional on earlier models)
+
+- name: Focal Premium Audio Upgrade
+  price: 950
+  notes: Standalone option if not taking Comfort Plus Package
+
+- name: Two-tone "Black Pack" roof
+  price: 650
+  notes: Gloss black roof, mirrors, and rear diffuser
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
-  
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €39,990 × 0.25% = €100/month taxable benefit.
-      Saves €13,200 per year vs comparable ICE car.
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Road tax waived for BEVs registered before 2031."
-  
-  - type: grant
-    name: "THG-Quote"
-    amount: 300
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Sell your CO2 savings certificate annually (~€250-350/year in 2024)."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €39,990 × 0.25% = €100/month taxable benefit.
+    Saves €13,200 per year vs comparable ICE car.
+
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Road tax waived for BEVs registered before 2031."
+- type: grant
+  name: "THG-Quote"
+  amount: 300
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Sell your CO2 savings certificate annually (~€250-350/year in 2024)."
 
 sales:
   channels:
-    - Peugeot dealerships (850+ locations in Germany)
-    - Online configurator with home delivery option
-    - Direct sales centers in major cities
-  
+  - Peugeot dealerships (850+ locations in Germany)
+  - Online configurator with home delivery option
+  - Direct sales centers in major cities
+
   delivery_methods:
-    - Dealer pickup
-    - Home delivery (+€0, included in destination charge)
-  
+  - Dealer pickup
+  - Home delivery (+€0, included in destination charge)
+
   test_drive: Available at all Peugeot dealers, free 24-hour extended test drives often offered
-  
+
   financing:
-    - Peugeot Bank leasing from €299/month (48 months, €5,000 down)
-    - Purchase financing from 2.99% APR
-    - Battery lease no longer offered (was available 2019-2021)
+  - Peugeot Bank leasing from €299/month (48 months, €5,000 down)
+  - Purchase financing from 2.99% APR
+  - Battery lease no longer offered (was available 2019-2021)
 
 warranty:
   vehicle_years: 2
@@ -199,15 +197,15 @@ warranty:
 
 charging_network:
   home:
-    - Peugeot partners with installation companies for wallbox setup
-    - Wallbox Plus 11kW charger available for €899 (installed)
-    - Government subsidies for home chargers ended 2023
-  
+  - Peugeot partners with installation companies for wallbox setup
+  - Wallbox Plus 11kW charger available for €899 (installed)
+  - Government subsidies for home chargers ended 2023
+
   public:
-    - Free2Move Charge app for access to 500,000+ charging points (30 countries)
-    - IONITY Passport subscription: €11.99/month for €0.35/kWh (vs €0.79 pay-as-you-go)
-    - Engie charging network integration
-    - Allego fast charging preferred partner
+  - Free2Move Charge app for access to 500,000+ charging points (30 countries)
+  - IONITY Passport subscription: €11.99/month for €0.35/kWh (vs €0.79 pay-as-you-go)
+  - Engie charging network integration
+  - Allego fast charging preferred partner
 
 service:
   maintenance_interval_months: 24
@@ -223,44 +221,36 @@ environmental:
   battery_recycling: Stellantis battery recycling program with 96% material recovery
 
 certifications:
-  - WLTP certified
-  - Euro 6d emissions equivalent (zero tailpipe)
-  - German vehicle registration (Typengenehmigung) approved
-
-data_quality:
-  pricing: verified
-  options: verified
-  incentives: verified
-  delivery: verified
-  source_reliability: high
-  last_updated: 2024-02-07
+- WLTP certified
+- Euro 6d emissions equivalent (zero tailpipe)
+- German vehicle registration (Typengenehmigung) approved
 
 sources:
-  - name: Peugeot Germany Official Configurator
-    url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-208
-    date_accessed: 2024-02-07
-  - name: Peugeot Germany Pricing
-    url: https://www.peugeot.de/tools/preislisten.html
-    date_accessed: 2024-02-07
-  - name: German Federal Tax Office (Company Car Tax)
-    url: https://www.bundesfinanzministerium.de/
-    date_accessed: 2024-02-07
-  - name: Free2Move Charge Network
-    url: https://www.free2move.com/de-de/charge/
-    date_accessed: 2024-02-07
+- name: Peugeot Germany Official Configurator
+  url: https://www.peugeot.de/tools/konfigurieren.html#!/modell/e-208
+  date_accessed: 2024-02-07
+- name: Peugeot Germany Pricing
+  url: https://www.peugeot.de/tools/preislisten.html
+  date_accessed: 2024-02-07
+- name: German Federal Tax Office (Company Car Tax)
+  url: https://www.bundesfinanzministerium.de/
+  date_accessed: 2024-02-07
+- name: Free2Move Charge Network
+  url: https://www.free2move.com/de-de/charge/
+  date_accessed: 2024-02-07
 
 notes: |
   **Market Positioning in Germany:**
-  
+
   The Peugeot e-208 GT at €39,990 (€41,080 on-the-road) is positioned as a premium compact EV:
-  
+
   **vs Direct Competitors:**
   - **Opel Corsa-e (€36,990)**: Identical mechanically, €3k cheaper, less distinctive design
   - **Mini Cooper Electric (€39,990)**: Same price, less range (305km), more premium brand
   - **Fiat 500e Icon (€34,990)**: €5k cheaper, smaller, less practical, retro charm
   - **MG4 Extended Range (€35,990)**: €4k cheaper, more range (435km), larger, less premium
   - **Renault Megane E-Tech (€42,990)**: €3k more, much more range (470km), larger C-segment
-  
+
   **Key Selling Points:**
   - Award-winning design (European Car of the Year 2020)
   - Unique 3D i-Cockpit with holographic instrument display
@@ -268,27 +258,31 @@ notes: |
   - Fast 8-week delivery (Slovakian production close to Germany)
   - 400km WLTP range sufficient for daily use
   - Strong Stellantis dealer network (850+ locations)
-  
+
   **Company Car Benefits:**
   With 0.25% monthly taxation (€100/month vs €1,200 for ICE equivalent), the e-208 GT saves
   company car drivers €13,200 per year in taxes. This makes the higher purchase price very
   attractive for business use.
-  
+
   **Weaknesses:**
   - Slower DC fast charging (100kW) vs MG4 (135kW) or Hyundai Ioniq 5 (230kW)
   - Smallest trunk in segment (309L) due to battery placement
   - No towing capability
   - No bidirectional charging (V2L/V2H/V2G)
   - Platform shares components with ICE variant (not dedicated EV platform)
-  
+
   **2023 Facelift Improvements:**
   - Battery: 50kWh → 51kWh (+2%)
   - Range: 385km → 400km WLTP (+3.9%)
   - Efficiency: 16.5 → 15.9 kWh/100km (-3.6%)
   - Updated infotainment UI
   - Improved heat pump efficiency
-  
+
   **Target Buyer:**
   Urban/suburban drivers seeking a stylish, premium compact EV for daily commuting and
   weekend trips. The 400km range and fast charging make it suitable for occasional longer
   journeys. Strong choice for company car drivers due to 0.25% tax benefit.
+metadata:
+  updated_at: '2024-02-07'
+  created_at: '2026-02-07'
+  data_quality: unverified

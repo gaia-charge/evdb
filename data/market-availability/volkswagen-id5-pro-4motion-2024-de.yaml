@@ -9,10 +9,19 @@ currency: EUR
 availability_status: available
 available_from: "2022-03-01"
 delivery_time_weeks: 12
-notes: |
+notes: |-
   AWD coupe SUV variant of ID.4 with dual motors and enhanced performance.
   Built at VW's Zwickau factory. Popular choice for winter regions and
   performance-oriented buyers.
+  The ID.5 Pro 4MOTION combines sporty coupe SUV styling with all-wheel drive
+  capability. German pricing starts at €57,000, positioning it between the
+  RWD Pro (€52,000) and GTX performance variant (€63,000). Popular with
+  business users and families in mountain/winter regions. The dual-motor
+  AWD system provides excellent traction and significantly faster acceleration
+  (6.3s vs 7.4s 0-100 km/h) compared to RWD. Most buyers add DCC adaptive
+  dampers and IQ.DRIVE Max package. Typical delivery time 10-12 weeks.
+  Competes with Tesla Model Y Long Range, Audi Q4 Sportback 50 quattro,
+  and BMW iX1 xDrive30 in the premium AWD electric SUV segment.
 
 # Pricing
 pricing:
@@ -25,82 +34,82 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €57,000 × 0.25% = €142.50/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €57,000 × 0.25% = €142.50/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: IQ.DRIVE Max Package
-    price:
-      amount: 2200
-      currency: EUR
-    items:
-      - Full ADAS suite
-      - Lane change assist
-      - Park assist
-      - Matrix LED headlights
-    notes: "Advanced driver assistance features"
+- name: IQ.DRIVE Max Package
+  price:
+    amount: 2200
+    currency: EUR
+  items:
+  - Full ADAS suite
+  - Lane change assist
+  - Park assist
+  - Matrix LED headlights
+  notes: "Advanced driver assistance features"
 
-  - name: DCC Adaptive Chassis Control
-    price:
-      amount: 990
-      currency: EUR
-    items:
-      - Adaptive dampers
-      - Improved comfort and handling
-    notes: "Premium suspension upgrade, recommended for AWD dynamics"
+- name: DCC Adaptive Chassis Control
+  price:
+    amount: 990
+    currency: EUR
+  items:
+  - Adaptive dampers
+  - Improved comfort and handling
+  notes: "Premium suspension upgrade, recommended for AWD dynamics"
 
-  - name: AR Head-Up Display
-    price:
-      amount: 1150
-      currency: EUR
-    items:
-      - Augmented reality HUD with navigation
-    notes: "Projects navigation onto road"
+- name: AR Head-Up Display
+  price:
+    amount: 1150
+    currency: EUR
+  items:
+  - Augmented reality HUD with navigation
+  notes: "Projects navigation onto road"
 
-  - name: ergoActive Climate Seats
-    price:
-      amount: 550
-      currency: EUR
-    items:
-      - Front seats with massage and ventilation
-    notes: "Climate comfort seats"
+- name: ergoActive Climate Seats
+  price:
+    amount: 550
+    currency: EUR
+  items:
+  - Front seats with massage and ventilation
+  notes: "Climate comfort seats"
 
-  - name: 22kW AC Charging Upgrade
-    price:
-      amount: 650
-      currency: EUR
-    items:
-      - 22 kW three-phase AC onboard charger
-    notes: "Upgrade from 11kW to 22kW charging"
+- name: 22kW AC Charging Upgrade
+  price:
+    amount: 650
+    currency: EUR
+  items:
+  - 22 kW three-phase AC onboard charger
+  notes: "Upgrade from 11kW to 22kW charging"
 
-  - name: 20-inch Skagen Alloy Wheels
-    price:
-      amount: 1300
-      currency: EUR
-    items:
-      - Sporty 20-inch alloy wheels
-    notes: "Enhances sporty appearance, slightly reduces range"
+- name: 20-inch Skagen Alloy Wheels
+  price:
+    amount: 1300
+    currency: EUR
+  items:
+  - Sporty 20-inch alloy wheels
+  notes: "Enhances sporty appearance, slightly reduces range"
 
 # Dealership & Sales
 sales_model: dealership
@@ -122,21 +131,9 @@ warranty:
     8-year/160,000 km battery warranty with 70% capacity guarantee.
 
 # Market-Specific Notes
-market_notes: |
-  The ID.5 Pro 4MOTION combines sporty coupe SUV styling with all-wheel drive
-  capability. German pricing starts at €57,000, positioning it between the
-  RWD Pro (€52,000) and GTX performance variant (€63,000). Popular with
-  business users and families in mountain/winter regions. The dual-motor
-  AWD system provides excellent traction and significantly faster acceleration
-  (6.3s vs 7.4s 0-100 km/h) compared to RWD. Most buyers add DCC adaptive
-  dampers and IQ.DRIVE Max package. Typical delivery time 10-12 weeks.
-  Competes with Tesla Model Y Long Range, Audi Q4 Sportback 50 quattro,
-  and BMW iX1 xDrive30 in the premium AWD electric SUV segment.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.volkswagen.de/de/modelle/id-5.html
-    - https://www.volkswagen.de/de/elektrofahrzeuge/foerderung.html
+  - https://www.volkswagen.de/de/modelle/id-5.html
+  - https://www.volkswagen.de/de/elektrofahrzeuge/foerderung.html

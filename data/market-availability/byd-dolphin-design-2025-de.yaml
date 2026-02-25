@@ -18,83 +18,83 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Cosmos Black
-    code: BK
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Aurora White
-    code: WH
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Boulder Grey
-    code: GY
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Surf Blue
-    code: SB
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Adventure Green
-    code: GN
-    type: metallic
-    price_add:
-      amount: 800
-      currency: EUR
-  - name: Pearl White/Black
-    code: WB
-    type: two_tone
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Boulder Grey/Black
-    code: GB
-    type: two_tone
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: Cosmos Black
+  code: BK
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Aurora White
+  code: WH
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Boulder Grey
+  code: GY
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Surf Blue
+  code: SB
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Adventure Green
+  code: GN
+  type: metallic
+  price_add:
+    amount: 800
+    currency: EUR
+- name: Pearl White/Black
+  code: WB
+  type: two_tone
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Boulder Grey/Black
+  code: GB
+  type: two_tone
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 17" Design Alloy Wheels (updated style)
-    size_inches: 17
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
+- name: 17" Design Alloy Wheels (updated style)
+  size_inches: 17
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Premium Synthetic Leather
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black Premium Synthetic Leather
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Environmental Bonus)"
-    amount:
-      amount: 3000
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2025-12-31"
-  - type: manufacturer
-    name: "BYD Loyalty Bonus"
-    amount:
-      amount: 1000
-      currency: EUR
-    conditions: ["Previous BYD owner or trade-in of vehicle older than 5 years"]
-    expires_at: "2025-06-30"
+- type: federal
+  name: "Umweltbonus (Environmental Bonus)"
+  amount:
+    amount: 3000
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2025-12-31"
+- type: manufacturer
+  name: "BYD Loyalty Bonus"
+  amount:
+    amount: 1000
+    currency: EUR
+  conditions: ["Previous BYD owner or trade-in of vehicle older than 5 years"]
+  expires_at: "2025-06-30"
 
 # Tax Information (Germany-specific)
 taxation:
@@ -110,56 +110,26 @@ taxation:
 
 # Popular Configuration
 popular_configurations:
-  - name: "Premium Configuration"
-    description: "Fully loaded top-spec model"
-    base_price: 37990
-    options:
-      - "Base vehicle (all features included)"
-    total_price: 37990
-    
-  - name: "Design Plus"
-    description: "Top spec with two-tone paint"
-    base_price: 37990
-    options:
-      - "Pearl White/Black two-tone"
-    total_price: 39190
+- name: "Premium Configuration"
+  description: "Fully loaded top-spec model"
+  base_price: 37990
+  options:
+  - "Base vehicle (all features included)"
+  total_price: 37990
+
+- name: "Design Plus"
+  description: "Top spec with two-tone paint"
+  base_price: 37990
+  options:
+  - "Pearl White/Black two-tone"
+  total_price: 39190
 
 # Notes
-market_notes: >
-  The 2025 BYD Dolphin Design is the premium variant with all features included
-  as standard and significant 2025 improvements.
-  
-  2025 Model Year Improvements:
-  - Faster DC charging: 95 kW (vs 88 kW in 2024)
-  - Better efficiency: 13.9 kWh/100km (vs 14.1 in 2024)
-  - Improved range: 435 km WLTP (vs 427 km in 2024)
-  - Enhanced heat pump performance
-  - Updated DiLink 4.0 with wireless Apple CarPlay/Android Auto
-  - Improved charging curve (26 min 30-80% vs 28 min in 2024)
-  - Price reduction: €37,990 (vs €38,990 in 2024)
-  - Faster delivery: 3 weeks (vs 4 weeks in 2024)
-  
-  With the 60.4 kWh battery (435 km WLTP / 375 km real-world), powerful
-  150 kW motor, and premium equipment, the Design competes with vehicles
-  like the MINI Electric and VW ID.3 Pro S while offering better value.
-  
-  The 0.25% company car tax rate makes it particularly attractive for business
-  users seeking a premium compact EV. Standard equipment includes everything
-  plus ventilated seats, heated steering wheel, panoramic glass roof, 360-degree
-  camera, power tailgate, enhanced audio system, and remote parking assist.
-  
-  Popular Configuration: Dolphin Design with two-tone paint = €39,190
-  
-  Company Car Calculation (Germany):
-  - Gross list price: €37,990
-  - Monthly tax base: €37,990 × 0.25% = €94.98 (vs. €379.90 for ICE)
-  - Annual tax savings vs. ICE: ~€3,419
-
 metadata:
   created_at: "2026-02-09"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.byd.com/de/dolphin
-    - https://www.dat.de/ (pricing verification)
+  - https://www.byd.com/de/dolphin
+  - https://www.dat.de/ (pricing verification)
   notes: Prices as of February 2026. BYD Dolphin Design 2025 model year features improved charging, efficiency, and better value.
+notes: "The 2025 BYD Dolphin Design is the premium variant with all features included as standard and significant 2025 improvements.\n2025 Model Year Improvements: - Faster DC charging: 95 kW (vs 88 kW in 2024) - Better efficiency: 13.9 kWh/100km (vs 14.1 in 2024) - Improved range: 435 km WLTP (vs 427 km in 2024) - Enhanced heat pump performance - Updated DiLink 4.0 with wireless Apple CarPlay/Android Auto - Improved charging curve (26 min 30-80% vs 28 min in 2024) - Price reduction: €37,990 (vs €38,990 in 2024) - Faster delivery: 3 weeks (vs 4 weeks in 2024)\nWith the 60.4 kWh battery (435 km WLTP / 375 km real-world), powerful 150 kW motor, and premium equipment, the Design competes with vehicles like the MINI Electric and VW ID.3 Pro S while offering better value.\nThe 0.25% company car tax rate makes it particularly attractive for business users seeking a premium compact EV. Standard equipment includes everything plus ventilated seats, heated steering wheel, panoramic glass roof, 360-degree camera, power tailgate, enhanced audio system, and remote parking assist.\nPopular Configuration: Dolphin Design with two-tone paint = €39,190\nCompany Car Calculation (Germany): - Gross list price: €37,990 - Monthly tax base: €37,990 × 0.25% = €94.98 (vs. €379.90 for ICE) - Annual tax savings vs. ICE: ~€3,419"

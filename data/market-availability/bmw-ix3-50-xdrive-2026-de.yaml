@@ -15,107 +15,107 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-  - name: Kfz-Steuer exemption
-    type: tax_exemption
-    amount: 380
-    description: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: THG-Quote
-    type: grant
-    amount: 280
-    description: "Sell CO2 savings certificate (€250-350/year)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+- name: Kfz-Steuer exemption
+  type: tax_exemption
+  amount: 380
+  description: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: THG-Quote
+  type: grant
+  amount: 280
+  description: "Sell CO2 savings certificate (€250-350/year)"
 
 # Colors (Germany Market)
 available_colors:
-  - name: Alpine White
-    code: AW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Alpine White
+  code: AW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
-  - name: Black Sapphire Metallic
-    code: BSM
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
+- name: Black Sapphire Metallic
+  code: BSM
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
 
-  - name: Mineral White Metallic
-    code: MWM
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
+- name: Mineral White Metallic
+  code: MWM
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
 
-  - name: Tanzanite Blue Metallic
-    code: TBM
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
+- name: Tanzanite Blue Metallic
+  code: TBM
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
 
-  - name: Dune Grey Metallic
-    code: DGM
-    type: metallic
-    price_add:
-      amount: 1090
-      currency: EUR
+- name: Dune Grey Metallic
+  code: DGM
+  type: metallic
+  price_add:
+    amount: 1090
+    currency: EUR
 
-  - name: Frozen Deep Grey Metallic
-    code: FDGM
-    type: frozen
-    price_add:
-      amount: 2490
-      currency: EUR
+- name: Frozen Deep Grey Metallic
+  code: FDGM
+  type: frozen
+  price_add:
+    amount: 2490
+    currency: EUR
 
 # Optional Equipment
 optional_equipment:
-  - name: M Sport Package
-    price: 4500
-    includes:
-      - "M Sport exterior styling"
-      - "M Sport suspension"
-      - "21-inch M Sport alloy wheels"
-      - "M Sport seats"
-      - "M leather steering wheel"
+- name: M Sport Package
+  price: 4500
+  includes:
+  - "M Sport exterior styling"
+  - "M Sport suspension"
+  - "21-inch M Sport alloy wheels"
+  - "M Sport seats"
+  - "M leather steering wheel"
 
-  - name: Technology Package
-    price: 3200
-    includes:
-      - "BMW Panoramic Vision (full-width HUD)"
-      - "Augmented Reality navigation"
-      - "Active steering"
-      - "Bowers & Wilkins Diamond sound system"
+- name: Technology Package
+  price: 3200
+  includes:
+  - "BMW Panoramic Vision (full-width HUD)"
+  - "Augmented Reality navigation"
+  - "Active steering"
+  - "Bowers & Wilkins Diamond sound system"
 
-  - name: Comfort Package
-    price: 2800
-    includes:
-      - "Ventilated front seats"
-      - "Soft-close doors"
-      - "4-zone climate control"
-      - "Glass sunroof (openable)"
+- name: Comfort Package
+  price: 2800
+  includes:
+  - "Ventilated front seats"
+  - "Soft-close doors"
+  - "4-zone climate control"
+  - "Glass sunroof (openable)"
 
-  - name: Driving Assistant Professional
-    price: 2500
-    includes:
-      - "Highway Assistant (Level 2+)"
-      - "Active Lane Change"
-      - "Lane guidance"
-      - "Traffic jam assistant"
+- name: Driving Assistant Professional
+  price: 2500
+  includes:
+  - "Highway Assistant (Level 2+)"
+  - "Active Lane Change"
+  - "Lane guidance"
+  - "Traffic jam assistant"
 
 # Dealer Network
 market_info:
   dealers_count: 700
   service_centers_count: 700
   warranty_years: 3
-  warranty_km: null
+  warranty_km:
   battery_warranty_years: 8
   battery_warranty_km: 160000
 
@@ -131,21 +131,12 @@ company_car_tax:
     saves ~€524/month vs equivalent ICE. Strategic pricing by BMW to
     keep the 0.25% company car benefit.
 
-market_notes: >
-  The 2026 BMW iX3 Neue Klasse is BMW's most significant EV launch yet.
-  Built on the all-new Neue Klasse platform in Debrecen, Hungary. 800V
-  architecture enables 400kW DC charging (10-80% in 21 min). Strategically
-  priced at €69,900 to stay under the €70,000 company car tax threshold.
-  Expected to be one of BMW's best-selling EVs in Germany. 12-week delivery
-  due to high demand and production ramp-up.
-
-# Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-09"
-  confidence_level: high
   sources:
-    - https://ev-database.org/car/3290/BMW-iX3-50-xDrive
-    - https://www.bmw.de/de/neufahrzeuge/x/ix3.html
+  - https://ev-database.org/car/3290/BMW-iX3-50-xDrive
+  - https://www.bmw.de/de/neufahrzeuge/x/ix3.html
   created_at: "2026-02-09T21:15:00Z"
   created_by: Patricio
+  updated_at: "2026-02-09"
+notes: The 2026 BMW iX3 Neue Klasse is BMW's most significant EV launch yet. Built on the all-new Neue Klasse platform in Debrecen, Hungary. 800V architecture enables 400kW DC charging (10-80% in 21 min). Strategically priced at €69,900 to stay under the €70,000 company car tax threshold. Expected to be one of BMW's best-selling EVs in Germany. 12-week delivery due to high demand and production ramp-up.

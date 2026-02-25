@@ -16,44 +16,44 @@ pricing:
   total_price_estimate: 54400
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 0
-    description: "No bonus écologique - price exceeds €47,000 threshold."
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Vehicle price must be under €47,000"
-      - "IONIQ 5 LR AWD exceeds threshold"
-  - name: Prime à la conversion
-    type: grant
-    amount: 1500
-    description: "Scrapping bonus when replacing old ICE vehicle (income-dependent, up to €6,000)."
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Must scrap eligible old vehicle"
-      - "Income-dependent amount"
+- name: Bonus écologique
+  type: grant
+  amount: 0
+  description: "No bonus écologique - price exceeds €47,000 threshold."
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Vehicle price must be under €47,000"
+  - "IONIQ 5 LR AWD exceeds threshold"
+- name: Prime à la conversion
+  type: grant
+  amount: 1500
+  description: "Scrapping bonus when replacing old ICE vehicle (income-dependent, up to €6,000)."
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Must scrap eligible old vehicle"
+  - "Income-dependent amount"
 
 market_specific:
   popular_options:
-    - name: Pack Confort
-      price: 2000
-    - name: Pack Technology
-      price: 3000
+  - name: Pack Confort
+    price: 2000
+  - name: Pack Technology
+    price: 3000
   available_colors:
-    - name: Atlas White
-      type: solid
-      price_add: 0
-    - name: Digital Teal Green
-      type: metallic
-      price_add: 600
-    - name: Lucid Blue
-      type: metallic
-      price_add: 600
-    - name: Gravity Gold Matte
-      type: matte
-      price_add: 800
+  - name: Atlas White
+    type: solid
+    price_add: 0
+  - name: Digital Teal Green
+    type: metallic
+    price_add: 600
+  - name: Lucid Blue
+    type: metallic
+    price_add: 600
+  - name: Gravity Gold Matte
+    type: matte
+    price_add: 800
 
 notes: |
   Hyundai IONIQ 5 Long Range AWD available in France. Built in Czech Republic (Nošovice).
@@ -64,6 +64,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.hyundai.com/fr/modeles/ioniq5.html
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.hyundai.com/fr/modeles/ioniq5.html

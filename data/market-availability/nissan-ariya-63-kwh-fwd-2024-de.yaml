@@ -9,9 +9,13 @@ currency: EUR
 availability_status: available
 available_from: "2023-01-01"
 delivery_time_weeks: 14
-notes: |
+notes: |-
   Base variant of Nissan's electric crossover. Built on CMF-EV platform
   shared with Renault. Targets practical mid-size EV crossover buyers.
+  The Nissan Ariya 63 kWh FWD is the entry-level variant of Nissan's
+  electric crossover. German pricing starts at €50,000, competitive with
+  VW ID.4. Popular with business users due to favorable company car taxation.
+  Typical delivery time 10-14 weeks. Most buyers add ProPILOT 2.0.
 
 # Pricing
 pricing:
@@ -24,66 +28,66 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €50,000 × 0.25% = €125/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €50,000 × 0.25% = €125/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: ProPILOT Assist 2.0 Pack
-    price:
-      amount: 1800
-      currency: EUR
-    items:
-      - Hands-free highway driving
-      - Navigation integration
-    notes: "Enhanced highway automation"
+- name: ProPILOT Assist 2.0 Pack
+  price:
+    amount: 1800
+    currency: EUR
+  items:
+  - Hands-free highway driving
+  - Navigation integration
+  notes: "Enhanced highway automation"
 
-  - name: Premium Interior Package
-    price:
-      amount: 2200
-      currency: EUR
-    items:
-      - Quilted leather seats
-      - Power driver seat
-      - Premium materials
-    notes: "Luxury interior upgrade"
+- name: Premium Interior Package
+  price:
+    amount: 2200
+    currency: EUR
+  items:
+  - Quilted leather seats
+  - Power driver seat
+  - Premium materials
+  notes: "Luxury interior upgrade"
 
-  - name: Bose Premium Audio
-    price:
-      amount: 950
-      currency: EUR
-    items:
-      - 10-speaker Bose audio system
-    notes: "High-end audio system"
+- name: Bose Premium Audio
+  price:
+    amount: 950
+    currency: EUR
+  items:
+  - 10-speaker Bose audio system
+  notes: "High-end audio system"
 
-  - name: ProPILOT Park Package
-    price:
-      amount: 850
-      currency: EUR
-    items:
-      - Automated parking
-      - 360-degree camera
-    notes: "Automated parking assist"
+- name: ProPILOT Park Package
+  price:
+    amount: 850
+    currency: EUR
+  items:
+  - Automated parking
+  - 360-degree camera
+  notes: "Automated parking assist"
 
 # Dealership & Sales
 sales_model: dealership
@@ -104,15 +108,8 @@ warranty:
     8-year/160,000 km battery warranty with 70% capacity guarantee.
 
 # Market-Specific Notes
-market_notes: |
-  The Nissan Ariya 63 kWh FWD is the entry-level variant of Nissan's
-  electric crossover. German pricing starts at €50,000, competitive with
-  VW ID.4. Popular with business users due to favorable company car taxation.
-  Typical delivery time 10-14 weeks. Most buyers add ProPILOT 2.0.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html
+  - https://www.nissan.de/fahrzeuge/neue-fahrzeuge/ariya.html

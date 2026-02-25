@@ -17,44 +17,44 @@ pricing:
   total_price_estimate: 44900
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-  - name: Impuesto de Matriculación Exemption
-    type: tax_exemption
-    amount: 0
-    description: Zero-emission vehicles are exempt from registration tax.
-    valid_from: "2023-01-01"
-    valid_until: "2026-12-31"
-  - name: Reduced IVTM (road tax)
-    type: tax_exemption
-    amount: 0
-    description: Up to 75% reduction on annual road tax depending on municipality.
-    valid_from: "2023-01-01"
-    valid_until: null
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+- name: Impuesto de Matriculación Exemption
+  type: tax_exemption
+  amount: 0
+  description: Zero-emission vehicles are exempt from registration tax.
+  valid_from: "2023-01-01"
+  valid_until: "2026-12-31"
+- name: Reduced IVTM (road tax)
+  type: tax_exemption
+  amount: 0
+  description: Up to 75% reduction on annual road tax depending on municipality.
+  valid_from: "2023-01-01"
+  valid_until:
 
 market_specific:
   available_colors:
-    - name: Elixir Red
-      type: metallic
-      price_add: 900
-    - name: Olivine Green
-      type: metallic
-      price_add: 600
-    - name: Okenite White
-      type: pearlescent
-      price_add: 800
-    - name: Nera Black
-      type: solid
-      price_add: 0
-    - name: Cumulus Grey
-      type: metallic
-      price_add: 600
+  - name: Elixir Red
+    type: metallic
+    price_add: 900
+  - name: Olivine Green
+    type: metallic
+    price_add: 600
+  - name: Okenite White
+    type: pearlescent
+    price_add: 800
+  - name: Nera Black
+    type: solid
+    price_add: 0
+  - name: Cumulus Grey
+    type: metallic
+    price_add: 600
 
 notes: |
   Peugeot e-308 Allure available in Spain. C-segment electric hatchback.
@@ -66,6 +66,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.peugeot.es/gama/nuevo-peugeot-308/electrico.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.peugeot.es/gama/nuevo-peugeot-308/electrico.html

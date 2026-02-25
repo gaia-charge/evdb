@@ -9,10 +9,16 @@ currency: EUR
 availability_status: available
 available_from: "2023-01-01"
 delivery_time_weeks: 12
-notes: |
+notes: |-
   All-wheel drive variant of Škoda's popular electric SUV. With 265 hp dual
   motors and 82 kWh battery, it offers excellent performance and traction.
   Popular in regions with harsh winter weather.
+  The Škoda Enyaq iV 80x is extremely popular in Germany, offering excellent
+  value vs competitors. At €53,900, it's €7,845 cheaper than VW ID.4 GTX
+  despite sharing platform and similar specs. Popular with families and
+  business users. AWD provides confidence in winter conditions. Typical
+  delivery 10-12 weeks. Best-selling electric SUV in its price range.
+  Most buyers configure with Travel Assist and Canton sound system.
 
 # Pricing
 pricing:
@@ -26,85 +32,85 @@ pricing:
 
 # Incentives (Germany)
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV incentive ended December 2023."
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV incentive ended December 2023."
 
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €53,900 × 0.25% = €134.75/month taxable benefit.
-      Under €70k threshold for 0.25% rate.
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €53,900 × 0.25% = €134.75/month taxable benefit.
+    Under €70k threshold for 0.25% rate.
 
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "Electric vehicles exempt from vehicle tax until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "Electric vehicles exempt from vehicle tax until 2030."
 
 # Equipment Packages
 equipment_packages:
-  - name: Sport Line Package
-    price:
-      amount: 2450
-      currency: EUR
-    items:
-      - Sport seats
-      - Sport steering wheel
-      - Black exterior trim
-      - 20-inch Procyon wheels (standard on 80x)
-    notes: "Sportier appearance and comfort"
+- name: Sport Line Package
+  price:
+    amount: 2450
+    currency: EUR
+  items:
+  - Sport seats
+  - Sport steering wheel
+  - Black exterior trim
+  - 20-inch Procyon wheels (standard on 80x)
+  notes: "Sportier appearance and comfort"
 
-  - name: Canton Sound System
-    price:
-      amount: 850
-      currency: EUR
-    items:
-      - 12 speakers
-      - 570W amplifier
-    notes: "Premium audio upgrade"
+- name: Canton Sound System
+  price:
+    amount: 850
+    currency: EUR
+  items:
+  - 12 speakers
+  - 570W amplifier
+  notes: "Premium audio upgrade"
 
-  - name: LED Matrix Headlights
-    price:
-      amount: 1450
-      currency: EUR
-    items:
-      - Matrix LED with auto high beam
-      - Crystalline design elements
-    notes: "Advanced adaptive lighting"
+- name: LED Matrix Headlights
+  price:
+    amount: 1450
+    currency: EUR
+  items:
+  - Matrix LED with auto high beam
+  - Crystalline design elements
+  notes: "Advanced adaptive lighting"
 
-  - name: Panoramic Glass Roof
-    price:
-      amount: 1400
-      currency: EUR
-    items:
-      - Electric sunshade
-    notes: "Opens up interior"
+- name: Panoramic Glass Roof
+  price:
+    amount: 1400
+    currency: EUR
+  items:
+  - Electric sunshade
+  notes: "Opens up interior"
 
-  - name: Travel Assist Package
-    price:
-      amount: 1050
-      currency: EUR
-    items:
-      - Adaptive cruise control
-      - Lane keeping with steering assist
-      - Traffic jam assist
-    notes: "Level 2 semi-autonomous driving"
+- name: Travel Assist Package
+  price:
+    amount: 1050
+    currency: EUR
+  items:
+  - Adaptive cruise control
+  - Lane keeping with steering assist
+  - Traffic jam assist
+  notes: "Level 2 semi-autonomous driving"
 
-  - name: Heat Pump
-    price:
-      amount: 0
-      currency: EUR
-    items:
-      - Heat pump climate system
-    notes: "Standard equipment on 2024 models"
+- name: Heat Pump
+  price:
+    amount: 0
+    currency: EUR
+  items:
+  - Heat pump climate system
+  notes: "Standard equipment on 2024 models"
 
 # Dealership & Sales
 sales_model: dealership
@@ -127,18 +133,9 @@ warranty:
     Škoda Plus extended warranty available.
 
 # Market-Specific Notes
-market_notes: |
-  The Škoda Enyaq iV 80x is extremely popular in Germany, offering excellent
-  value vs competitors. At €53,900, it's €7,845 cheaper than VW ID.4 GTX
-  despite sharing platform and similar specs. Popular with families and
-  business users. AWD provides confidence in winter conditions. Typical
-  delivery 10-12 weeks. Best-selling electric SUV in its price range.
-  Most buyers configure with Travel Assist and Canton sound system.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.skoda.de/modelle/enyaq-iv
-    - https://www.skoda.de/tools/enyaq-iv-konfigurator
+  - https://www.skoda.de/modelle/enyaq-iv
+  - https://www.skoda.de/tools/enyaq-iv-konfigurator

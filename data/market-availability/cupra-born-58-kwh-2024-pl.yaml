@@ -17,40 +17,40 @@ pricing:
   total_price_estimate: 159900
 
 incentives:
-  - name: Mój elektryk
-    type: grant
-    amount: 27000
-    description: "Mój elektryk subsidy for BEVs priced under 225,000 PLN"
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - Vehicle price under 225,000 PLN
-      - New vehicle only
-      - Private buyers
+- name: Mój elektryk
+  type: grant
+  amount: 27000
+  description: "Mój elektryk subsidy for BEVs priced under 225,000 PLN"
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - Vehicle price under 225,000 PLN
+  - New vehicle only
+  - Private buyers
 
 market_specific:
   popular_options:
-    - name: Design Pack Plus
-      price: 7100
-    - name: Technology Pack
-      price: 9400
+  - name: Design Pack Plus
+    price: 7100
+  - name: Technology Pack
+    price: 9400
 
   available_colors:
-    - name: Magnetic Tech Matte
-      type: matte
-      price_add: 5500
-    - name: Aurora Blue Metallic
-      type: metallic
-      price_add: 3100
-    - name: Quasar Grey Metallic
-      type: metallic
-      price_add: 3100
-    - name: Glacier White Metallic
-      type: metallic
-      price_add: 2500
-    - name: Energy Blue
-      type: solid
-      price_add: 0
+  - name: Magnetic Tech Matte
+    type: matte
+    price_add: 5500
+  - name: Aurora Blue Metallic
+    type: metallic
+    price_add: 3100
+  - name: Quasar Grey Metallic
+    type: metallic
+    price_add: 3100
+  - name: Glacier White Metallic
+    type: metallic
+    price_add: 2500
+  - name: Energy Blue
+    type: solid
+    price_add: 0
 
 notes: |
   CUPRA Born 58 kWh available in Poland via CUPRA Studios.
@@ -60,6 +60,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.cupraofficial.pl/modele/born
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.cupraofficial.pl/modele/born

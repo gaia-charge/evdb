@@ -18,156 +18,152 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Magnesium
-    code: R702
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Thunder
-    code: R707
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Midnight
-    code: R701
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Snow
-    code: R709
-    type: solid
-    price_add:
-      amount: 1500
-      currency: EUR
-  
-  - name: Moon
-    code: R708
-    type: metallic
-    price_add:
-      amount: 1500
-      currency: EUR
-  
-  - name: Vapour
-    code: R710
-    type: matte
-    price_add:
-      amount: 2500
-      currency: EUR
-    notes: "Exclusive matte finish"
+- name: Magnesium
+  code: R702
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Thunder
+  code: R707
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Midnight
+  code: R701
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Snow
+  code: R709
+  type: solid
+  price_add:
+    amount: 1500
+    currency: EUR
+
+- name: Moon
+  code: R708
+  type: metallic
+  price_add:
+    amount: 1500
+    currency: EUR
+
+- name: Vapour
+  code: R710
+  type: matte
+  price_add:
+    amount: 2500
+    currency: EUR
+  notes: "Exclusive matte finish"
 
 # Wheel Options
 available_wheels:
-  - name: "22-inch 5-spoke Performance Forged wheels"
-    size_inches: 22
-    type: forged-alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard on Performance Pack, lightweight forged wheels"
+- name: "22-inch 5-spoke Performance Forged wheels"
+  size_inches: 22
+  type: forged-alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard on Performance Pack, lightweight forged wheels"
 
 # Interior Options
 available_interiors:
-  - name: Performance Seats with Animal Welfare Standard
-    code: PS-AWS
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Sport seats with extended adjustment, vegan materials"
-  
-  - name: Performance Seats with Nappa Leather
-    code: PS-NLC
-    price_add:
-      amount: 4500
-      currency: EUR
-    notes: "Premium Nappa leather performance seats, ventilated"
+- name: Performance Seats with Animal Welfare Standard
+  code: PS-AWS
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Sport seats with extended adjustment, vegan materials"
+- name: Performance Seats with Nappa Leather
+  code: PS-NLC
+  price_add:
+    amount: 4500
+    currency: EUR
+  notes: "Premium Nappa leather performance seats, ventilated"
 
 # Optional Packages (Performance Pack includes most premium features)
 available_packages:
-  - name: Pilot Pack
-    price_add:
-      amount: 3700
-      currency: EUR
-    description: "LiDAR-based autonomous driving features, lane change assistance"
-  
-  - name: Plus Pack
-    price_add:
-      amount: 5500
-      currency: EUR
-    description: "Panoramic roof, head-up display, 360° camera"
-  
-  - name: Pro Pack
-    price_add:
-      amount: 6900
-      currency: EUR
-    description: "Complete premium package with Bowers & Wilkins audio (25 speakers, 1610W)"
-  
-  - name: Climate Pack
-    price_add:
-      amount: 1200
-      currency: EUR
-    description: "Heated steering wheel, heated rear seats, windscreen wiper heating"
+- name: Pilot Pack
+  price_add:
+    amount: 3700
+    currency: EUR
+  description: "LiDAR-based autonomous driving features, lane change assistance"
+- name: Plus Pack
+  price_add:
+    amount: 5500
+    currency: EUR
+  description: "Panoramic roof, head-up display, 360° camera"
+- name: Pro Pack
+  price_add:
+    amount: 6900
+    currency: EUR
+  description: "Complete premium package with Bowers & Wilkins audio (25 speakers, 1610W)"
+- name: Climate Pack
+  price_add:
+    amount: 1200
+    currency: EUR
+  description: "Heated steering wheel, heated rear seats, windscreen wiper heating"
 
 # Performance Pack Includes
 performance_pack_features:
-  - Upgraded motors (+20kW front motor)
-  - Performance-tuned air suspension
-  - Performance brakes with gold calipers
-  - 22-inch forged wheels (standard)
-  - Sport seats with extended adjustment
-  - Performance software calibration
-  - Lowered suspension (-5mm)
+- Upgraded motors (+20kW front motor)
+- Performance-tuned air suspension
+- Performance brakes with gold calipers
+- 22-inch forged wheels (standard)
+- Sport seats with extended adjustment
+- Performance software calibration
+- Lowered suspension (-5mm)
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (base price €90,900)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-    calculation:
-      monthly_tax_base: 22725  # €90,900 * 0.25%
-      annual_tax_value: 272700  # Monthly * 12
-    notes: "High-performance SUV with company car tax advantage (€227/month vs €909/month for 1% rule)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (base price €90,900)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+  calculation:
+    monthly_tax_base: 22725    # €90,900 * 0.25%
+    annual_tax_value: 272700    # Monthly * 12
+  notes: "High-performance SUV with company car tax advantage (€227/month vs €909/month for 1% rule)"
 
 # Market Notes
 notes: |
   Performance Pack adds €7,000 to base Polestar 3 price (from €83,900 to €90,900), delivering 
   517hp and 4.7s 0-100 km/h acceleration. Competes with BMW iX M60 (€135,300), Mercedes-AMG 
   EQS 53 (€148,023), and Audi SQ6 e-tron (€93,800).
-  
+
   Excellent value proposition: 517hp Polestar 3 Performance costs €90,900 vs BMW iX M60's 
   €135,300 for similar performance (4.7s vs 3.8s 0-100). Audi SQ6 e-tron offers closer 
   performance at €93,800 but smaller size.
-  
+
   Performance Pack includes comprehensive upgrades beyond just power: performance brakes 
   (gold calipers), forged 22" wheels, tuned air suspension, sport seats. Lowered by 5mm 
   for improved handling without sacrificing ride comfort.
-  
+
   Direct-to-consumer ordering through polestar.com. Test drives at Polestar Spaces. 
   Service through Volvo network.
-  
+
   Company car tax benefit (0.25% rule) makes this high-performance SUV very attractive 
   for business users. Monthly taxable benefit of €227 vs €909 for fossil fuel equivalent.
-  
+
   Range reduced to 560km WLTP (from 610km on base model) due to increased power and 
   performance calibration, but still competitive for luxury SUV segment.
 
 # Data quality metadata
 metadata:
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   data_quality: verified
-  
+
   sources:
-    - https://www.polestar.com/de/polestar-3/
-    - https://www.polestar.com/de/polestar-3/performance-pack/
-    - https://www.carwow.de/polestar/3
-  
+  - https://www.polestar.com/de/polestar-3/
+  - https://www.polestar.com/de/polestar-3/performance-pack/
+  - https://www.carwow.de/polestar/3
+
   verified_by: official
+  updated_at: "2026-02-08"

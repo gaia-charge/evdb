@@ -18,166 +18,159 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Magnesium
-    code: R702
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Thunder
-    code: R707
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Midnight
-    code: R701
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Snow
-    code: R709
-    type: solid
-    price_add:
-      amount: 1200
-      currency: EUR
-  
-  - name: Moon
-    code: R708
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  
-  - name: Storm
-    code: R712
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-    notes: "New for 2025"
-  
-  - name: Jupiter
-    code: R706
-    type: matte
-    price_add:
-      amount: 2000
-      currency: EUR
+- name: Magnesium
+  code: R702
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Thunder
+  code: R707
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Midnight
+  code: R701
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Snow
+  code: R709
+  type: solid
+  price_add:
+    amount: 1200
+    currency: EUR
+
+- name: Moon
+  code: R708
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+
+- name: Storm
+  code: R712
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+  notes: "New for 2025"
+- name: Jupiter
+  code: R706
+  type: matte
+  price_add:
+    amount: 2000
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: "19-inch 5-spoke diamond cut wheels"
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard wheels"
-  
-  - name: "20-inch 4-spoke diamond cut wheels"
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 500
-      currency: EUR
-  
-  - name: "20-inch Performance Pack forged wheels"
-    size_inches: 20
-    type: forged
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Included with Performance Pack"
+- name: "19-inch 5-spoke diamond cut wheels"
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard wheels"
+- name: "20-inch 4-spoke diamond cut wheels"
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 500
+    currency: EUR
+
+- name: "20-inch Performance Pack forged wheels"
+  size_inches: 20
+  type: forged
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Included with Performance Pack"
 
 # Interior Options
 available_interiors:
-  - name: WeaveTech Standard
-    code: WTS
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Vegan-friendly sustainable textile"
-  
-  - name: WeaveTech with Ventilated Seats
-    code: WTV
-    price_add:
-      amount: 1500
-      currency: EUR
-  
-  - name: Nappa Leather
-    code: NL
-    price_add:
-      amount: 4000
-      currency: EUR
-    notes: "Premium Nappa leather, ventilated seats"
+- name: WeaveTech Standard
+  code: WTS
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Vegan-friendly sustainable textile"
+- name: WeaveTech with Ventilated Seats
+  code: WTV
+  price_add:
+    amount: 1500
+    currency: EUR
+
+- name: Nappa Leather
+  code: NL
+  price_add:
+    amount: 4000
+    currency: EUR
+  notes: "Premium Nappa leather, ventilated seats"
 
 # Optional Packages
 available_packages:
-  - name: Pilot Lite Pack
-    price_add:
-      amount: 800
-      currency: EUR
-    description: "Basic driver assistance features"
-  
-  - name: Pilot Pack
-    price_add:
-      amount: 1200
-      currency: EUR
-    description: "Advanced driver assistance with lane change assist"
-  
-  - name: Plus Pack
-    price_add:
-      amount: 3800
-      currency: EUR
-    description: "Premium comfort and technology"
-  
-  - name: Performance Pack
-    price_add:
-      amount: 6000
-      currency: EUR
-    description: "Öhlins dampers, Brembo brakes, 20-inch forged wheels, gold seatbelts and valve caps"
-  
-  - name: Pro Pack
-    price_add:
-      amount: 5300
-      currency: EUR
-    description: "Complete premium package"
+- name: Pilot Lite Pack
+  price_add:
+    amount: 800
+    currency: EUR
+  description: "Basic driver assistance features"
+- name: Pilot Pack
+  price_add:
+    amount: 1200
+    currency: EUR
+  description: "Advanced driver assistance with lane change assist"
+- name: Plus Pack
+  price_add:
+    amount: 3800
+    currency: EUR
+  description: "Premium comfort and technology"
+- name: Performance Pack
+  price_add:
+    amount: 6000
+    currency: EUR
+  description: "Öhlins dampers, Brembo brakes, 20-inch forged wheels, gold seatbelts and valve caps"
+- name: Pro Pack
+  price_add:
+    amount: 5300
+    currency: EUR
+  description: "Complete premium package"
 
 # Typical Configuration Examples
 typical_configurations:
-  - name: Base Configuration
-    description: "Entry-level Long Range Dual Motor"
-    total_price: 52900
-    details:
-      - Base price: €52,900
-      - Magnesium metallic paint: €0
-      - 19-inch wheels: €0
-      - WeaveTech interior: €0
-      - No packages
-  
-  - name: Performance Configuration
-    description: "Track-ready specification"
-    total_price: 63000
-    details:
-      - Base price: €52,900
-      - Thunder metallic paint: €0
-      - Performance Pack: €6,000
-      - Plus Pack: €3,800
-      - WeaveTech with ventilation: €1,500
+- name: Base Configuration
+  description: "Entry-level Long Range Dual Motor"
+  total_price: 52900
+  details:
+  - Base price: €52,900
+  - Magnesium metallic paint: €0
+  - 19-inch wheels: €0
+  - WeaveTech interior: €0
+  - No packages
+
+- name: Performance Configuration
+  description: "Track-ready specification"
+  total_price: 63000
+  details:
+  - Base price: €52,900
+  - Thunder metallic paint: €0
+  - Performance Pack: €6,000
+  - Plus Pack: €3,800
+  - WeaveTech with ventilation: €1,500
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-    notes: "Applies to base configuration and most typical configurations"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (under €70,000)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+  notes: "Applies to base configuration and most typical configurations"
 
 # Company Car Taxation
 company_car_taxation:
@@ -190,17 +183,17 @@ company_car_taxation:
     - Tax (30% rate): €39.68/month (€476/year)
     - Social security (20%): €26.45/month (€317/year)
     - Total annual cost to employee: ~€793
-    
+
     Still qualifies for 0.25% BEV benefit (under €70,000 threshold).
 
 # Market Notes
 notes: |
   Polestar 2 Long Range Dual Motor 2025 is the performance variant with AWD.
   Popular with enthusiast drivers who want both range and performance.
-  
+
   The Performance Pack is a popular option adding Öhlins adjustable dampers, 
   Brembo front brakes (4-piston), 20-inch forged wheels, and gold seatbelts/valve caps.
-  
+
   Key competitors:
   - Tesla Model 3 Long Range AWD (€49,990) - cheaper, similar performance
   - BMW i4 M50 (€69,900) - more expensive, more powerful
@@ -209,12 +202,12 @@ notes: |
 # Data quality metadata
 metadata:
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   data_quality: verified
-  
+
   sources:
-    - https://www.polestar.com/de/polestar-2/
-    - https://www.polestar.com/de/polestar-2/design-your-polestar-2/
-    - https://www.carwow.de/polestar/2
-  
+  - https://www.polestar.com/de/polestar-2/
+  - https://www.polestar.com/de/polestar-2/design-your-polestar-2/
+  - https://www.carwow.de/polestar/2
+
   verified_by: official
+  updated_at: "2026-02-10"

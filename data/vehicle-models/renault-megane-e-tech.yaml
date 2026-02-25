@@ -10,19 +10,19 @@ segment: C  # Compact crossover / C-segment
 
 production:
   start_year: 2022
-  end_year: null  # Still in production
+  end_year:       # Still in production
   generation: 5  # Fifth generation Megane, first fully electric
   current_status: active
 
 platform: CMF-EV  # Alliance (Renault-Nissan) electric platform
 
 awards:
-  - name: European Car of the Year
-    year: 2023
-    notes: Praised for design, technology, and driving dynamics
-  - name: What Car? Best Small Electric SUV
-    year: 2023
-    notes: Strong value proposition and efficiency
+- name: European Car of the Year
+  year: 2023
+  notes: Praised for design, technology, and driving dynamics
+- name: What Car? Best Small Electric SUV
+  year: 2023
+  notes: Strong value proposition and efficiency
 
 safety:
   euro_ncap_rating: 5
@@ -59,39 +59,33 @@ technology:
   voice_assistant: Google Assistant
   connectivity: Android Automotive OS, Google Maps, Google Play Store, wireless Apple CarPlay
   notable_features:
-    - Google Automotive Services built-in
-    - Solarbay panoramic glass roof (electrochromic)
-    - Multi-Sense driving modes
-    - One-pedal driving with B-mode
-    - Advanced driver assistance systems
+  - Google Automotive Services built-in
+  - Solarbay panoramic glass roof (electrochromic)
+  - Multi-Sense driving modes
+  - One-pedal driving with B-mode
+  - Advanced driver assistance systems
 
 build:
   production_location: Douai, France
   also_built_at: []
   quality_notes: Built on new CMF-EV platform shared with Nissan Ariya
 
-data_quality:
-  overall: verified
-  last_updated: 2026-02-09
-  source_reliability: high
-  notes: Specifications verified from Renault Germany official website and press materials
-
 sources:
-  - name: Renault Germany Official Website
-    url: https://www.renault.de/
-    date_accessed: 2026-02-09
-  - name: European Car of the Year 2023
-    url: https://www.caroftheyear.org/
-    date_accessed: 2026-02-09
-  - name: Euro NCAP Safety Rating
-    url: https://www.euroncap.com/en/results/renault/megane-e-tech/49041
-    date_accessed: 2026-02-09
+- name: Renault Germany Official Website
+  url: https://www.renault.de/
+  date_accessed: 2026-02-09
+- name: European Car of the Year 2023
+  url: https://www.caroftheyear.org/
+  date_accessed: 2026-02-09
+- name: Euro NCAP Safety Rating
+  url: https://www.euroncap.com/en/results/renault/megane-e-tech/49041
+  date_accessed: 2026-02-09
 
 notes: |
   The Renault Megane E-Tech Electric is the first fully electric generation of the iconic Megane.
   Built on the new CMF-EV platform shared with the Nissan Ariya, it represents Renault's new
   electric vehicle design philosophy.
-  
+
   Key highlights:
   - 2023 European Car of the Year winner
   - Excellent aerodynamics (Cd 0.30)
@@ -101,8 +95,12 @@ notes: |
   - Fast charging up to 130 kW (EV60 supports up to 130 kW DC)
   - Excellent real-world efficiency
   - Spacious interior despite compact exterior dimensions
-  
+
   The Megane E-Tech competes directly with VW ID.3, Cupra Born, and Hyundai Kona Electric.
   It stands out with its sophisticated design, tech integration, and driving dynamics.
-  
+
   2025 model year continues with refinements and updated software.
+metadata:
+  data_quality: unverified
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'

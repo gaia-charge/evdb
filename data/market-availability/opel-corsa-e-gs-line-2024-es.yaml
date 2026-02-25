@@ -17,49 +17,49 @@ pricing:
   total_price_estimate: 36400
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired. No direct purchase subsidy currently available.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-  - name: Impuesto de Matriculación Exemption
-    type: tax_exemption
-    amount: 0
-    description: Zero-emission vehicles are exempt from registration tax.
-    valid_from: "2023-01-01"
-    valid_until: "2026-12-31"
-  - name: Reduced IVTM (road tax)
-    type: tax_exemption
-    amount: 0
-    description: Up to 75% reduction on annual road tax depending on municipality.
-    valid_from: "2023-01-01"
-    valid_until: null
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired. No direct purchase subsidy currently available.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+- name: Impuesto de Matriculación Exemption
+  type: tax_exemption
+  amount: 0
+  description: Zero-emission vehicles are exempt from registration tax.
+  valid_from: "2023-01-01"
+  valid_until: "2026-12-31"
+- name: Reduced IVTM (road tax)
+  type: tax_exemption
+  amount: 0
+  description: Up to 75% reduction on annual road tax depending on municipality.
+  valid_from: "2023-01-01"
+  valid_until:
 
 market_specific:
   available_colors:
-    - name: Voltaic Blue
-      type: metallic
-      price_add: 695
-    - name: Power Red
-      type: metallic
-      price_add: 695
-    - name: Moonstone Grey
-      type: metallic
-      price_add: 695
-    - name: Diamond Black
-      type: pearl
-      price_add: 795
-    - name: Jade White
-      type: solid
-      price_add: 0
+  - name: Voltaic Blue
+    type: metallic
+    price_add: 695
+  - name: Power Red
+    type: metallic
+    price_add: 695
+  - name: Moonstone Grey
+    type: metallic
+    price_add: 695
+  - name: Diamond Black
+    type: pearl
+    price_add: 795
+  - name: Jade White
+    type: solid
+    price_add: 0
 
   available_wheels:
-    - size_inches: 17
-      design: Bi-Color Alloy Wheels
-      additional_cost: 0
+  - size_inches: 17
+    design: Bi-Color Alloy Wheels
+    additional_cost: 0
 
 notes: |
   Opel Corsa Electric GS Line available in Spain. Built at Zaragoza plant.
@@ -71,6 +71,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.opel.es/coches-electricos/corsa-electric.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.opel.es/coches-electricos/corsa-electric.html

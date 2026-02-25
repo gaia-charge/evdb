@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-01-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 16
   notes: Flagship Long Range variant, built at Eisenach, Germany
@@ -22,67 +22,67 @@ pricing:
 
 options:
   colors:
-    - name: Moonstone Grey (metallic)
-      price: 795
-      type: metallic
-    - name: Voltaic Blue (metallic)
-      price: 795
-      type: metallic
-    - name: Crimson Red (metallic)
-      price: 795
-      type: metallic
-    - name: Diamond Black (pearl)
-      price: 895
-      type: pearl
-    - name: Arctic White (solid)
-      price: 0
-      type: solid
+  - name: Moonstone Grey (metallic)
+    price: 795
+    type: metallic
+  - name: Voltaic Blue (metallic)
+    price: 795
+    type: metallic
+  - name: Crimson Red (metallic)
+    price: 795
+    type: metallic
+  - name: Diamond Black (pearl)
+    price: 895
+    type: pearl
+  - name: Arctic White (solid)
+    price: 0
+    type: solid
 
   wheels:
-    - name: 20" Alloy Wheels
-      price: 0
-      size_inches: 20
-      notes: Standard on Long Range
-    - name: 20" Diamond-Cut Bi-Color Wheels
-      price: 650
-      size_inches: 20
+  - name: 20" Alloy Wheels
+    price: 0
+    size_inches: 20
+    notes: Standard on Long Range
+  - name: 20" Diamond-Cut Bi-Color Wheels
+    price: 650
+    size_inches: 20
 
   interior:
-    - name: Black Cloth/Leatherette Seats
-      price: 0
-    - name: Black Nappa Leather Seats
-      price: 1800
+  - name: Black Cloth/Leatherette Seats
+    price: 0
+  - name: Black Nappa Leather Seats
+    price: 1800
 
 packages:
-  - name: Panoramic Camera Package
-    price: 990
-    includes:
-      - 360-degree bird's eye view camera (enhanced resolution)
-      - Automated parking assist
-      - Front parking sensors (additional)
+- name: Panoramic Camera Package
+  price: 990
+  includes:
+  - 360-degree bird's eye view camera (enhanced resolution)
+  - Automated parking assist
+  - Front parking sensors (additional)
 
-  - name: Towing Package
-    price: 890
-    includes:
-      - Electric retractable towbar (1500kg braked)
-      - Trailer stability control
-      - Electrical trailer connection
-    notes: "1500kg towing - excellent for an electric SUV"
+- name: Towing Package
+  price: 890
+  includes:
+  - Electric retractable towbar (1500kg braked)
+  - Trailer stability control
+  - Electrical trailer connection
+  notes: "1500kg towing - excellent for an electric SUV"
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax until 2030"
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax until 2030"
 
-  - type: subsidy
-    name: "THG-Quote certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "CO2 certificate sales ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "CO2 certificate sales ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -104,7 +104,7 @@ warranty:
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   sources:
-    - https://www.opel.de/fahrzeuge/grandland-electric.html
-    - https://ev-database.org/
+  - https://www.opel.de/fahrzeuge/grandland-electric.html
+  - https://ev-database.org/
+  updated_at: "2026-02-10"

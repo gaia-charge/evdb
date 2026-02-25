@@ -10,7 +10,7 @@ segment: C  # C-segment compact crossover
 
 production:
   start_year: 2025
-  end_year: null
+  end_year:
   generation: 1
   current_status: active
 
@@ -19,8 +19,8 @@ platform: e-Platform 3.0  # BYD's dedicated EV platform
 awards: []
 
 safety:
-  euro_ncap_rating: null
-  euro_ncap_year: null
+  euro_ncap_rating:
+  euro_ncap_year:
   notes: Euro NCAP testing expected in 2025
 
 dimensions:
@@ -49,33 +49,31 @@ technology:
   voice_assistant: true
   connectivity: Apple CarPlay, Android Auto, BYD app
   notable_features:
-    - Rotating 12.8" touchscreen
-    - Vehicle-to-Load (V2L) capability
-    - Heat pump standard
+  - Rotating 12.8" touchscreen
+  - Vehicle-to-Load (V2L) capability
+  - Heat pump standard
 
 build:
   production_location: Changsha, China
   also_built_at: []
   quality_notes: Built on BYD e-Platform 3.0
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-09
-  source_reliability: medium
-  notes: Specs based on BYD Europe press materials and Paris Motor Show 2024 reveal
-
 sources:
-  - name: BYD Europe Official Website
-    url: https://www.byd.com/eu/car/dolphin-surf
-    date_accessed: 2026-02-09
+- name: BYD Europe Official Website
+  url: https://www.byd.com/eu/car/dolphin-surf
+  date_accessed: 2026-02-09
 
 notes: |
   The BYD Dolphin Surf is a compact electric crossover positioned between the
   Dolphin hatchback and the Atto 3/Seal U. Unveiled at the Paris Motor Show 2024,
   it targets the European C-segment crossover market, competing with the VW ID.3,
   Peugeot e-2008, and Opel Mokka Electric.
-  
+
   Based on the Chinese-market BYD Yuan Up, the Dolphin Surf features BYD's Blade
   Battery (LFP) technology and is available in two battery sizes.
-  
+
   Competes with: Volkswagen ID.3, Peugeot e-2008, Opel Mokka Electric, Cupra Born.
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'

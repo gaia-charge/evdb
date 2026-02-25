@@ -18,44 +18,44 @@ pricing:
   total_price_estimate: 239990
 
 incentives:
-  - name: "Mój elektryk"
-    type: grant
-    amount: 27000
-    description: "Subsidy up to 27,000 PLN for BEV purchase (individual buyers). Up to 70,000 PLN for large families."
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - BEV with base price under 225,000 PLN (net) — this model may exceed threshold
-      - Subject to available funding
+- name: "Mój elektryk"
+  type: grant
+  amount: 27000
+  description: "Subsidy up to 27,000 PLN for BEV purchase (individual buyers). Up to 70,000 PLN for large families."
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - BEV with base price under 225,000 PLN (net) — this model may exceed threshold
+  - Subject to available funding
 
-  - name: Excise Tax Exemption
-    type: tax_exemption
-    amount: 0
-    description: "Electric vehicles exempt from excise tax (akcyza)"
+- name: Excise Tax Exemption
+  type: tax_exemption
+  amount: 0
+  description: "Electric vehicles exempt from excise tax (akcyza)"
 
 market_specific:
   available_colors:
-    - name: "Pearl White Multi-Coat"
-      type: solid
-      price_add: 0
-    - name: "Solid Black"
-      type: metallic
-      price_add: 5400
-    - name: "Midnight Silver Metallic"
-      type: metallic
-      price_add: 5400
-    - name: "Deep Blue Metallic"
-      type: metallic
-      price_add: 5400
-    - name: "Red Multi-Coat"
-      type: metallic
-      price_add: 10800
+  - name: "Pearl White Multi-Coat"
+    type: solid
+    price_add: 0
+  - name: "Solid Black"
+    type: metallic
+    price_add: 5400
+  - name: "Midnight Silver Metallic"
+    type: metallic
+    price_add: 5400
+  - name: "Deep Blue Metallic"
+    type: metallic
+    price_add: 5400
+  - name: "Red Multi-Coat"
+    type: metallic
+    price_add: 10800
 
   popular_options:
-    - name: "Full Self-Driving Capability"
-      price: 33800
-    - name: "Tow Hitch"
-      price: 4500
+  - name: "Full Self-Driving Capability"
+    price: 33800
+  - name: "Tow Hitch"
+    price: 4500
 
 dealer_network:
   online_sales_available: true
@@ -71,6 +71,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/pl_pl/model-y
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.tesla.com/pl_pl/model-y

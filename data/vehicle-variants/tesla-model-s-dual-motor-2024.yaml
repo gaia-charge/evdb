@@ -25,8 +25,8 @@ battery:
   warranty_capacity_percent: 70
 range:
   wltp_km: 634
-  wltp_city_km: null
-  wltp_highway_km: null
+  wltp_city_km:
+  wltp_highway_km:
   epa_km: 652
   real_world_km: 580
   real_world_source: ADAC Ecotest
@@ -65,7 +65,7 @@ charging:
   charging_speed_kmh: 1350
 bidirectional:
   v2l: false
-  v2l_max_kw: null
+  v2l_max_kw:
   v2h: false
   v2g: false
 performance:
@@ -73,14 +73,14 @@ performance:
   motors:
   - position: front
     type: AC induction
-    power_kw: null
-    torque_nm: null
+    power_kw:
+    torque_nm:
   - position: rear
     type: permanent magnet
-    power_kw: null
-    torque_nm: null
+    power_kw:
+    torque_nm:
   total_power_kw: 493
-  total_torque_nm: null
+  total_torque_nm:
   acceleration_0_100_sec: 3.2
   top_speed_kmh: 250
 weight:
@@ -91,7 +91,7 @@ weight:
   towing_capacity_unbraked_kg: 0
 efficiency:
   wltp_kwh_per_100km: 16.5
-  epa_kwh_per_100km: null
+  epa_kwh_per_100km:
   real_world_kwh_per_100km: 18.2
   efficiency_rating: A
 features:
@@ -135,9 +135,7 @@ notes: 'The 2024 Tesla Model S with dual-motor AWD is Tesla''s flagship luxury s
   '
 metadata:
   created_at: '2026-02-08'
-  updated_at: null
   data_quality: verified
-  data_completeness_percent: 90
   sources:
   - https://www.tesla.com/models/design
   - https://www.adac.de/rund-ums-fahrzeug/tests/elektromobilitaet/tesla-model-s-test/

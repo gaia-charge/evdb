@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-03-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 12
   notes: Built in Trnava, Slovakia. Long Range variant available from Q1 2025.
@@ -25,66 +25,66 @@ pricing:
 
 options:
   colors:
-    - name: Voltaic Blue (metallic)
-      price: 595
-      type: metallic
-    - name: Quartz Grey (metallic)
-      price: 595
-      type: metallic
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Diamond Black (pearl)
-      price: 695
-      type: pearl
-    - name: Khaki Green (metallic)
-      price: 595
-      type: metallic
+  - name: Voltaic Blue (metallic)
+    price: 595
+    type: metallic
+  - name: Quartz Grey (metallic)
+    price: 595
+    type: metallic
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Diamond Black (pearl)
+    price: 695
+    type: pearl
+  - name: Khaki Green (metallic)
+    price: 595
+    type: metallic
 
   wheels:
-    - name: 17" Alloy Wheels
-      price: 0
-      size_inches: 17
-      notes: Standard on Long Range variant
-    - name: 17" Two-tone Alloy Wheels
-      price: 390
-      size_inches: 17
-      notes: Optional premium design
+  - name: 17" Alloy Wheels
+    price: 0
+    size_inches: 17
+    notes: Standard on Long Range variant
+  - name: 17" Two-tone Alloy Wheels
+    price: 390
+    size_inches: 17
+    notes: Optional premium design
 
   interior:
-    - name: Dark Fabric (Recycled Materials)
-      price: 0
-      notes: Standard sustainable recycled fabric seats
+  - name: Dark Fabric (Recycled Materials)
+    price: 0
+    notes: Standard sustainable recycled fabric seats
 
 packages:
-  - name: GS Long Range Upgrade
-    price: 2500
-    includes:
-      - Multimedia Navi Pro with 10" touchscreen and navigation
-      - Rear-view camera
-      - 17" two-tone alloy wheels
-      - Additional comfort features
+- name: GS Long Range Upgrade
+  price: 2500
+  includes:
+  - Multimedia Navi Pro with 10" touchscreen and navigation
+  - Rear-view camera
+  - 17" two-tone alloy wheels
+  - Additional comfort features
 
-  - name: Roof Rails Package
-    price: 390
-    includes:
-      - Aluminium roof rails
-      - 240 kg roof load capacity
+- name: Roof Rails Package
+  price: 390
+  includes:
+  - Aluminium roof rails
+  - 240 kg roof load capacity
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
 
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -109,21 +109,21 @@ warranty:
 
 market_comparison:
   direct_competitors:
-    - name: "Citroën ë-C3 Aircross Max"
-      base_price: 32800
-      comparison: "Sister model on same platform, similar specs, slightly cheaper"
+  - name: "Citroën ë-C3 Aircross Max"
+    base_price: 32800
+    comparison: "Sister model on same platform, similar specs, slightly cheaper"
 
-    - name: "Opel Mokka Electric"
-      base_price: 35990
-      comparison: "More premium feel, slightly less cargo space, similar range"
+  - name: "Opel Mokka Electric"
+    base_price: 35990
+    comparison: "More premium feel, slightly less cargo space, similar range"
 
-    - name: "Peugeot e-2008"
-      base_price: 38990
-      comparison: "More premium, better performance, higher price"
+  - name: "Peugeot e-2008"
+    base_price: 38990
+    comparison: "More premium, better performance, higher price"
 
-    - name: "MG ZS EV"
-      base_price: 33990
-      comparison: "Similar price and range, less cargo space"
+  - name: "MG ZS EV"
+    base_price: 33990
+    comparison: "Similar price and range, less cargo space"
 
 notes: |
   The Opel Frontera Electric Long Range at €33,490 addresses the main
@@ -151,7 +151,7 @@ notes: |
 metadata:
   data_quality: estimated
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
   sources:
-    - https://www.opel.de/fahrzeuge/frontera-electric.html
-    - https://www.media.stellantis.com/em-en/opel/
+  - https://www.opel.de/fahrzeuge/frontera-electric.html
+  - https://www.media.stellantis.com/em-en/opel/
+  updated_at: "2026-02-10"

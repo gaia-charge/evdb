@@ -18,121 +18,121 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Alpine White
-    code: 300
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black Sapphire Metallic
-    code: C1M
-    type: metallic
-    price_add:
-      amount: 1300
-      currency: EUR
-  - name: Mineral White Metallic
-    type: metallic
-    price_add:
-      amount: 1300
-      currency: EUR
-  - name: Brooklyn Grey Metallic
-    code: C3P
-    type: metallic
-    price_add:
-      amount: 1300
-      currency: EUR
+- name: Alpine White
+  code: 300
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black Sapphire Metallic
+  code: C1M
+  type: metallic
+  price_add:
+    amount: 1300
+    currency: EUR
+- name: Mineral White Metallic
+  type: metallic
+  price_add:
+    amount: 1300
+    currency: EUR
+- name: Brooklyn Grey Metallic
+  code: C3P
+  type: metallic
+  price_add:
+    amount: 1300
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" Light-alloy wheels V-spoke style 868
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" Light-alloy wheels multi-spoke style 960 M
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1500
-      currency: EUR
-  - name: 21" Light-alloy wheels V-spoke style 1004
-    size_inches: 21
-    type: alloy
-    price_add:
-      amount: 2800
-      currency: EUR
+- name: 19" Light-alloy wheels V-spoke style 868
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 20" Light-alloy wheels multi-spoke style 960 M
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1500
+    currency: EUR
+- name: 21" Light-alloy wheels V-spoke style 1004
+  size_inches: 21
+  type: alloy
+  price_add:
+    amount: 2800
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Merino leather
-    material: leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Truffle Brown Merino leather
-    material: leather
-    color: brown
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Tartufo Brown extended Merino leather
-    material: leather
-    color: brown
-    price_add:
-      amount: 3500
-      currency: EUR
+- name: Black Merino leather
+  material: leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Truffle Brown Merino leather
+  material: leather
+  color: brown
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Tartufo Brown extended Merino leather
+  material: leather
+  color: brown
+  price_add:
+    amount: 3500
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: national
-    name: "Bonus écologique"
-    amount:
-      amount: 0
-      currency: EUR
-    conditions: ["Price exceeds €47,000 limit"]
-    notes: "i7 eDrive50 exceeds price limits for French EV incentives"
-  - type: company_car
-    name: "Avantage fiscal véhicule de société"
-    description: "Lower company car taxation for electric vehicles"
+- type: national
+  name: "Bonus écologique"
+  amount:
+    amount: 0
+    currency: EUR
+  conditions: ["Price exceeds €47,000 limit"]
+  notes: "i7 eDrive50 exceeds price limits for French EV incentives"
+- type: company_car
+  name: "Avantage fiscal véhicule de société"
+  description: "Lower company car taxation for electric vehicles"
 
 # Options
 popular_packages:
-  - name: Driving Assistant Professional
-    price:
-      amount: 2500
-      currency: EUR
-    features:
-      - Active Cruise Control with Stop&Go
-      - Steering and lane control assistant
-      - Lane Change Assistant
-  - name: Executive Lounge Package
-    price:
-      amount: 8500
-      currency: EUR
-    features:
-      - Executive Lounge rear seats
-      - Rear seat entertainment
-      - Panoramic glass roof Sky Lounge
-  - name: M Sport Package
-    price:
-      amount: 7300
-      currency: EUR
-    features:
-      - M Sport suspension
-      - M Sport exterior styling
-      - M Sport wheels
-      - M Sport interior details
+- name: Driving Assistant Professional
+  price:
+    amount: 2500
+    currency: EUR
+  features:
+  - Active Cruise Control with Stop&Go
+  - Steering and lane control assistant
+  - Lane Change Assistant
+- name: Executive Lounge Package
+  price:
+    amount: 8500
+    currency: EUR
+  features:
+  - Executive Lounge rear seats
+  - Rear seat entertainment
+  - Panoramic glass roof Sky Lounge
+- name: M Sport Package
+  price:
+    amount: 7300
+    currency: EUR
+  features:
+  - M Sport suspension
+  - M Sport exterior styling
+  - M Sport wheels
+  - M Sport interior details
 
 # Trim Levels
 available_trims:
-  - name: eDrive50 455ch
-    base_price: 131550
-    notes: "Base luxury trim"
-  - name: eDrive50 455ch M Sport
-    base_price: 138850
-    notes: "M Sport package included"
+- name: eDrive50 455ch
+  base_price: 131550
+  notes: "Base luxury trim"
+- name: eDrive50 455ch M Sport
+  base_price: 138850
+  notes: "M Sport package included"
 
 # Notes
 notes: |
@@ -146,7 +146,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: automotive_press
-  source_url: https://www.largus.fr/prix-du-neuf/bmw/i7.html
   created_at: "2026-02-22"
   last_verified_at: "2026-02-22"
   notes: Base price €131,550 from L'Argus (official French automotive pricing source), February 2026
+  sources:
+  - https://www.largus.fr/prix-du-neuf/bmw/i7.html

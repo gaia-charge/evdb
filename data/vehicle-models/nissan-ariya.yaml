@@ -14,11 +14,11 @@ platform: CMF-EV  # Renault-Nissan-Mitsubishi Alliance platform
 production:
   status: active
   start_date: 2021-12
-  end_date: null
+  end_date:
   generations:
-    - name: First Generation
-      years: 2021-present
-      notes: Nissan's first EV on the CMF-EV platform, modern design language
+  - name: First Generation
+    years: 2021-present
+    notes: Nissan's first EV on the CMF-EV platform, modern design language
 
 description: >
   The Nissan Ariya is a compact electric crossover SUV and Nissan's second pure-electric vehicle
@@ -45,7 +45,7 @@ seating:
 
 cargo:
   trunk_liters: 466  # 408L with e-4ORCE
-  frunk_liters: null  # No frunk
+  frunk_liters:       # No frunk
 
 towing:
   max_towing_kg: 1500  # All variants
@@ -60,30 +60,30 @@ safety:
     safety_assist: 83
 
 awards:
-  - name: World Car Design of the Year Finalist
-    year: 2022
-  - name: EV of the Year - Auto Express
-    year: 2022
-  - name: Japanese Car of the Year
-    year: 2021-2022
+- name: World Car Design of the Year Finalist
+  year: 2022
+- name: EV of the Year - Auto Express
+  year: 2022
+- name: Japanese Car of the Year
+  year: 2021-2022
 
 features:
   infotainment:
-    - Dual 12.3" displays (instrument cluster + touchscreen)
-    - NissanConnect with OTA updates
-    - Apple CarPlay and Android Auto (wireless)
-    - e-Pedal Step regenerative braking
-    - ProPILOT Assist 2.0 (hands-off highway driving)
+  - Dual 12.3" displays (instrument cluster + touchscreen)
+  - NissanConnect with OTA updates
+  - Apple CarPlay and Android Auto (wireless)
+  - e-Pedal Step regenerative braking
+  - ProPILOT Assist 2.0 (hands-off highway driving)
   comfort:
-    - Flat floor (no transmission tunnel)
-    - Panoramic glass roof
-    - Zero Gravity seats (NASA-inspired)
-    - Climate control with air purification
+  - Flat floor (no transmission tunnel)
+  - Panoramic glass roof
+  - Zero Gravity seats (NASA-inspired)
+  - Climate control with air purification
   driver_assistance:
-    - ProPILOT Assist 2.0 with Navi-link
-    - ProPILOT Park (hands-free parking)
-    - 360-degree camera
-    - Intelligent Around View Monitor
+  - ProPILOT Assist 2.0 with Navi-link
+  - ProPILOT Park (hands-free parking)
+  - 360-degree camera
+  - Intelligent Around View Monitor
 
 aerodynamics:
   drag_coefficient: 0.297  # Cd
@@ -97,10 +97,10 @@ notes: >
 
 metadata:
   sources:
-    - https://www.nissan.com/ariya/
-    - https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/ARIYA/
-    - https://ev-database.org/car/1395/Nissan-Ariya-87kWh
-    - https://www.euroncap.com/en/results/nissan/ariya/45082
+  - https://www.nissan.com/ariya/
+  - https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/ARIYA/
+  - https://ev-database.org/car/1395/Nissan-Ariya-87kWh
+  - https://www.euroncap.com/en/results/nissan/ariya/45082
   data_quality: verified
   created_at: "2026-02-07"
-  last_updated: "2026-02-07"
+  updated_at: "2026-02-07"

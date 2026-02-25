@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2025-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 83600
@@ -17,36 +17,36 @@ pricing:
   total_price_estimate: 83600
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: Price far exceeds subsidy cap.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Price exceeds subsidy cap
-    source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: Price far exceeds subsidy cap.
+  valid_from:
+  valid_until:
+  conditions:
+  - Price exceeds subsidy cap
+  source_url: https://www.idae.es/ayudas-y-financiacion/para-movilidad-y-vehiculos/plan-moves-iii
 
 market_specific:
   standard_equipment:
-    - 14.5-inch Google-based infotainment
-    - Bowers & Wilkins audio (25 speakers)
-    - Air suspension with adaptive dampers
-    - 7-seat configuration
-    - LiDAR sensor
-    - Pilot Assist with lane change
-    - 360° surround view camera
-    - Heated front and second row seats
+  - 14.5-inch Google-based infotainment
+  - Bowers & Wilkins audio (25 speakers)
+  - Air suspension with adaptive dampers
+  - 7-seat configuration
+  - LiDAR sensor
+  - Pilot Assist with lane change
+  - 360° surround view camera
+  - Heated front and second row seats
 
   available_colors:
-    - name: Crystal White Pearl
-      additional_cost: 0
-    - name: Onyx Black Metallic
-      additional_cost: 1000
-    - name: Vapour Grey Metallic
-      additional_cost: 1000
-    - name: Denim Blue Metallic
-      additional_cost: 1000
+  - name: Crystal White Pearl
+    additional_cost: 0
+  - name: Onyx Black Metallic
+    additional_cost: 1000
+  - name: Vapour Grey Metallic
+    additional_cost: 1000
+  - name: Denim Blue Metallic
+    additional_cost: 1000
 
 dealer_network:
   online_sales_available: true
@@ -65,8 +65,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-10"
-  updated_at: null
   data_quality: estimated
   price_checked_at: "2026-02-10"
   sources:
-    - https://www.volvocars.com/es/cars/ex90/
+  - https://www.volvocars.com/es/cars/ex90/

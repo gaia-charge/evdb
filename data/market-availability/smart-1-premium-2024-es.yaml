@@ -16,40 +16,40 @@ pricing:
   total_price_estimate: 41950
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired. Future MOVES IV pending.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
-  - name: Impuesto de Matriculación
-    type: tax_exemption
-    amount: 0
-    description: Zero-emission vehicles exempt from registration tax.
-    active: true
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired. Future MOVES IV pending.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
+- name: Impuesto de Matriculación
+  type: tax_exemption
+  amount: 0
+  description: Zero-emission vehicles exempt from registration tax.
+  active: true
 
 market_specific:
   popular_options:
-    - name: Pulse Package
-      price: 1500
-    - name: Electrochromic panoramic roof
-      price: 1200
+  - name: Pulse Package
+    price: 1500
+  - name: Electrochromic panoramic roof
+    price: 1200
 
   available_colors:
-    - name: Digital White
-      type: solid
-      price_add: 0
-    - name: Cyber Silver
-      type: metallic
-      price_add: 750
-    - name: Laser Red
-      type: metallic
-      price_add: 750
-    - name: Eclipse Black
-      type: metallic
-      price_add: 750
+  - name: Digital White
+    type: solid
+    price_add: 0
+  - name: Cyber Silver
+    type: metallic
+    price_add: 750
+  - name: Laser Red
+    type: metallic
+    price_add: 750
+  - name: Eclipse Black
+    type: metallic
+    price_add: 750
 
 notes: |
   Smart #1 Premium available in Spain through smart/Mercedes-Benz dealer network.
@@ -59,6 +59,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.smart.com/es/es/modelos/1
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
+  sources:
+  - https://www.smart.com/es/es/modelos/1

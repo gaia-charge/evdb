@@ -16,39 +16,39 @@ pricing:
   total_price_estimate: 38600
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 4000
-    description: >
-      Government bonus for BEV purchase. €4,000 for vehicles under €47,000.
-      Manufactured in Europe (Zwickau, Germany) - eligible.
-    valid_until: "2025-12-31"
-    conditions:
-      - Pure BEV
-      - Price under €47,000
-      - European manufacturing
-  - name: Prime à la conversion
-    type: grant
-    amount: 1500
-    description: >
-      Additional bonus when scrapping old ICE vehicle.
-    conditions:
-      - Scrapping Crit'Air 3+ vehicle
+- name: Bonus écologique
+  type: grant
+  amount: 4000
+  description: >
+    Government bonus for BEV purchase. €4,000 for vehicles under €47,000.
+    Manufactured in Europe (Zwickau, Germany) - eligible.
+  valid_until: "2025-12-31"
+  conditions:
+  - Pure BEV
+  - Price under €47,000
+  - European manufacturing
+- name: Prime à la conversion
+  type: grant
+  amount: 1500
+  description: >
+    Additional bonus when scrapping old ICE vehicle.
+  conditions:
+  - Scrapping Crit'Air 3+ vehicle
 
 market_specific:
   available_colors:
-    - name: Blanc Candy
-      type: solid
-      price_add: 0
-    - name: Bleu Aurora
-      type: metallic
-      price_add: 800
-    - name: Gris Magnetic Tech
-      type: metallic
-      price_add: 800
-    - name: Bronze Century
-      type: metallic
-      price_add: 800
+  - name: Blanc Candy
+    type: solid
+    price_add: 0
+  - name: Bleu Aurora
+    type: metallic
+    price_add: 800
+  - name: Gris Magnetic Tech
+    type: metallic
+    price_add: 800
+  - name: Bronze Century
+    type: metallic
+    price_add: 800
 
 notes: |
   Cupra Born 58 kWh in France.
@@ -59,6 +59,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.cupraofficial.fr
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.cupraofficial.fr

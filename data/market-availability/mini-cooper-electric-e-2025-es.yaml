@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-10-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 12
   notes: Built in Leipzig, Germany (BMW Group)
@@ -22,72 +22,72 @@ pricing:
 
 options:
   colors:
-    - name: White Silver metallic
-      price: 0
-      type: metallic
-    - name: Blazing Blue metallic
-      price: 500
-      type: metallic
-    - name: Icy Sunshine Blue metallic
-      price: 500
-      type: metallic
-    - name: Midnight Black metallic
-      price: 500
-      type: metallic
-    - name: Chili Red 2
-      price: 500
-      type: solid
-    - name: Nanuq White
-      price: 0
-      type: solid
+  - name: White Silver metallic
+    price: 0
+    type: metallic
+  - name: Blazing Blue metallic
+    price: 500
+    type: metallic
+  - name: Icy Sunshine Blue metallic
+    price: 500
+    type: metallic
+  - name: Midnight Black metallic
+    price: 500
+    type: metallic
+  - name: Chili Red 2
+    price: 500
+    type: solid
+  - name: Nanuq White
+    price: 0
+    type: solid
 
   wheels:
-    - name: 16" styling wheels
-      price: 0
-      size_inches: 16
-    - name: 17" alloy wheels
-      price: 650
-      size_inches: 17
+  - name: 16" styling wheels
+    price: 0
+    size_inches: 16
+  - name: 17" alloy wheels
+    price: 650
+    size_inches: 17
 
 packages:
-  - name: Comfort Plus
-    price: 1900
-    includes:
-      - Heated front seats
-      - Heated steering wheel
-      - Parking assistant
+- name: Comfort Plus
+  price: 1900
+  includes:
+  - Heated front seats
+  - Heated steering wheel
+  - Parking assistant
 
-  - name: Navigation Plus
-    price: 990
-    includes:
-      - MINI Navigation system
-      - Real-time traffic information
-      - Connected navigation
+- name: Navigation Plus
+  price: 990
+  includes:
+  - MINI Navigation system
+  - Real-time traffic information
+  - Connected navigation
 
 incentives:
-  - type: tax_exemption
-    name: Exención Impuesto de Matriculación
-    amount: 0
-    currency: EUR
-    notes: Zero-emission vehicles exempt from registration tax in Spain.
-    valid_until: "2026-12-31"
+- type: tax_exemption
+  name: Exención Impuesto de Matriculación
+  amount: 0
+  currency: EUR
+  notes: Zero-emission vehicles exempt from registration tax in Spain.
+  valid_until: "2026-12-31"
 
-  - type: tax_exemption
-    name: Reducción IVTM
-    amount: 0
-    currency: EUR
-    notes: Up to 75% reduction on annual road tax depending on municipality.
+- type: tax_exemption
+  name: Reducción IVTM
+  amount: 0
+  currency: EUR
+  notes: Up to 75% reduction on annual road tax depending on municipality.
 
-  - type: tax_exemption
-    name: Etiqueta DGT CERO
-    amount: 0
-    currency: EUR
-    notes: Access to ZBE zones, free/discounted parking in many cities.
+- type: tax_exemption
+  name: Etiqueta DGT CERO
+  amount: 0
+  currency: EUR
+  notes: Access to ZBE zones, free/discounted parking in many cities.
 
 sales:
   channels:
-    - MINI dealerships across Spain
-    - Online configurator at mini.es
+  - MINI dealerships across Spain
+  - Online configurator at mini.es
 
 warranty:
   vehicle_years: 2
@@ -104,10 +104,10 @@ compliance:
 metadata:
   data_quality: estimated
   created_at: "2026-02-12"
-  last_updated: "2026-02-12"
-  source_urls:
-    - https://www.mini.es/es_ES/home/gama/mini-cooper-electrico.html
   notes: |
     Price estimated based on German pricing adjusted for Spanish market.
     New generation MINI Cooper Electric with 36.6 kWh battery.
     Prices include 21% IVA.
+  updated_at: "2026-02-12"
+  sources:
+  - https://www.mini.es/es_ES/home/gama/mini-cooper-electrico.html

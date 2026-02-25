@@ -18,87 +18,87 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Cosmos Black
-    code: BK
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Surf Blue
-    code: BU
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Parkour Red
-    code: RD
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Boulder Grey
-    code: GY
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Crystal White
-    code: WH
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Cosmos Black
+  code: BK
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Surf Blue
+  code: BU
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Parkour Red
+  code: RD
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Boulder Grey
+  code: GY
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Crystal White
+  code: WH
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18" Alloy Wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
+- name: 18" Alloy Wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Interior
-    material: synthetic_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black Interior
+  material: synthetic_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Innovation Premium)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: manufacturer
-    name: "BYD Launch Bonus"
-    amount:
-      amount: 1000
-      currency: EUR
-    conditions: ["Order by end of Q1 2024"]
-    expires_at: "2024-03-31"
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars"
-    conditions: ["Price under €60,000 gross list price"]
+- type: federal
+  name: "Umweltbonus (Innovation Premium)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: manufacturer
+  name: "BYD Launch Bonus"
+  amount:
+    amount: 1000
+    currency: EUR
+  conditions: ["Order by end of Q1 2024"]
+  expires_at: "2024-03-31"
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars"
+  conditions: ["Price under €60,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Comfort Package
-    price:
-      amount: 1200
-      currency: EUR
-    features:
-      - Heated front seats
-      - Heated steering wheel
-      - Electric panoramic sunroof
-      - Power liftgate
+- name: Comfort Package
+  price:
+    amount: 1200
+    currency: EUR
+  features:
+  - Heated front seats
+  - Heated steering wheel
+  - Electric panoramic sunroof
+  - Power liftgate
 
 # Notes
 notes: |
@@ -113,7 +113,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.byd.com/de/car/atto3
   created_at: "2024-02-06"
   last_verified_at: "2024-02-06"
   notes: Prices and incentives as of February 2024. BYD recently entered German market (2022).
+  sources:
+  - https://www.byd.com/de/car/atto3

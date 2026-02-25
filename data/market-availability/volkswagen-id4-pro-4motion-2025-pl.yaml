@@ -14,31 +14,31 @@ pricing:
   vat_rate_percent: 23
 
 incentives:
-  - name: Mój Elektryk
-    type: grant
-    amount: 27000
-    description: >
-      Government subsidy for EV purchases. Up to 27,000 PLN for individuals.
-    conditions:
-      - Pure battery-electric vehicle (BEV)
-      - Individual buyer
-      - Vehicle price under 225,000 PLN gross
-    active: false
-    notes: "Vehicle exceeds the 225,000 PLN price cap for individual buyers"
+- name: Mój Elektryk
+  type: grant
+  amount: 27000
+  description: >
+    Government subsidy for EV purchases. Up to 27,000 PLN for individuals.
+  conditions:
+  - Pure battery-electric vehicle (BEV)
+  - Individual buyer
+  - Vehicle price under 225,000 PLN gross
+  active: false
+  notes: "Vehicle exceeds the 225,000 PLN price cap for individual buyers"
 
 available_colors:
-  - name: Glacier White Metallic
-    type: metallic
-    price_add: 0
-  - name: Grenadilla Black Metallic
-    type: metallic
-    price_add: 3200
-  - name: Moonstone Grey
-    type: metallic
-    price_add: 3200
-  - name: Kings Red Metallic
-    type: metallic
-    price_add: 3200
+- name: Glacier White Metallic
+  type: metallic
+  price_add: 0
+- name: Grenadilla Black Metallic
+  type: metallic
+  price_add: 3200
+- name: Moonstone Grey
+  type: metallic
+  price_add: 3200
+- name: Kings Red Metallic
+  type: metallic
+  price_add: 3200
 
 notes: |
   VW ID.4 Pro 4MOTION available through Volkswagen dealer network in Poland.
@@ -48,6 +48,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.volkswagen.pl/pl/modele/id4.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.volkswagen.pl/pl/modele/id4.html

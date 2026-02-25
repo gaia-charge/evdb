@@ -5,7 +5,7 @@ currency: EUR
 
 # Availability
 available_from: "2020-12-01"
-available_until: null
+available_until:
 availability_status: available
 pre_order_available: false
 order_book_open: true
@@ -20,200 +20,184 @@ pricing:
 
 # Colors Available
 colors:
-  - name: "Gelato White"
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard solid color"
-    
-  - name: "Onyx Black"
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard solid color"
-    
-  - name: "Ocean Green"
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-    notes: "Metallic finish"
-    
-  - name: "Celestial Blue"
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-    notes: "Metallic finish"
-    
-  - name: "Mineral Gray"
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-    notes: "Metallic finish"
-    
-  - name: "Glacier Blue"
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-    notes: "Metallic finish (new for 2024)"
-    
-  - name: "Passion Red (bi-tone)"
-    type: bi-tone
-    price_add:
-      amount: 1190
-      currency: EUR
-    notes: "Iconic red body with black roof"
-    
-  - name: "Onyx Black (bi-tone)"
-    type: bi-tone
-    price_add:
-      amount: 1190
-      currency: EUR
-    notes: "Black body with white roof"
+- name: "Gelato White"
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard solid color"
+- name: "Onyx Black"
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard solid color"
+- name: "Ocean Green"
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+  notes: "Metallic finish"
+- name: "Celestial Blue"
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+  notes: "Metallic finish"
+- name: "Mineral Gray"
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+  notes: "Metallic finish"
+- name: "Glacier Blue"
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+  notes: "Metallic finish (new for 2024)"
+- name: "Passion Red (bi-tone)"
+  type: bi-tone
+  price_add:
+    amount: 1190
+    currency: EUR
+  notes: "Iconic red body with black roof"
+- name: "Onyx Black (bi-tone)"
+  type: bi-tone
+  price_add:
+    amount: 1190
+    currency: EUR
+  notes: "Black body with white roof"
 
 # Wheels Available
 available_wheels:
-  - name: "15-inch steel wheels with covers"
-    size_inches: 15
-    type: steel
-    price_add:
-      amount: 0
-      currency: EUR
-    standard: true
-    
-  - name: "15-inch diamond-cut alloy wheels"
-    size_inches: 15
-    type: alloy
-    price_add:
-      amount: 590
-      currency: EUR
-    
-  - name: "16-inch diamond-cut alloy wheels"
-    size_inches: 16
-    type: alloy
-    price_add:
-      amount: 890
-      currency: EUR
+- name: "15-inch steel wheels with covers"
+  size_inches: 15
+  type: steel
+  price_add:
+    amount: 0
+    currency: EUR
+  standard: true
+
+- name: "15-inch diamond-cut alloy wheels"
+  size_inches: 15
+  type: alloy
+  price_add:
+    amount: 590
+    currency: EUR
+
+- name: "16-inch diamond-cut alloy wheels"
+  size_inches: 16
+  type: alloy
+  price_add:
+    amount: 890
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: "Icon Interior (Cloth)"
-    material: cloth
-    price_add:
-      amount: 0
-      currency: EUR
-    standard: true
-    notes: "Standard Icon interior with cloth seats"
-    
-  - name: "Icon Interior (Eco-leather)"
-    material: synthetic_leather
-    price_add:
-      amount: 790
-      currency: EUR
-    notes: "Optional eco-leather seats"
-    
-  - name: "La Prima Interior"
-    material: premium_synthetic_leather
-    price_add:
-      amount: 1690
-      currency: EUR
-    notes: "Premium interior with sustainable bamboo dashboard"
+- name: "Icon Interior (Cloth)"
+  material: cloth
+  price_add:
+    amount: 0
+    currency: EUR
+  standard: true
+  notes: "Standard Icon interior with cloth seats"
+- name: "Icon Interior (Eco-leather)"
+  material: synthetic_leather
+  price_add:
+    amount: 790
+    currency: EUR
+  notes: "Optional eco-leather seats"
+- name: "La Prima Interior"
+  material: premium_synthetic_leather
+  price_add:
+    amount: 1690
+    currency: EUR
+  notes: "Premium interior with sustainable bamboo dashboard"
 
 # Equipment Packages
 optional_equipment:
-  - name: "Safety Pack"
-    price: 890
-    includes:
-      - "Autonomous Emergency Braking (AEB)"
-      - "Lane Keeping Assist"
-      - "Traffic Sign Recognition"
-      - "Intelligent Speed Assist"
-      - "Drowsiness Detection"
-    notes: "CRITICAL: AEB is NOT standard - requires this pack for 5-star safety"
-    
-  - name: "Autonomous Driving Pack"
-    price: 1690
-    includes:
-      - "Adaptive Cruise Control (ACC)"
-      - "Lane Centering Assist"
-      - "Highway Assist (Level 2)"
-      - "Traffic Sign Recognition"
-      - "All features from Safety Pack"
-    notes: "Level 2 autonomous driving for highways"
-    
-  - name: "Visibility Pack"
-    price: 690
-    includes:
-      - "Rear parking sensors"
-      - "Rear-view camera"
-      - "Automatic headlights"
-      - "Rain-sensing wipers"
-    notes: "Improves parking and visibility"
-    
-  - name: "Comfort Pack"
-    price: 990
-    includes:
-      - "Heated front seats"
-      - "Heated steering wheel"
-      - "Automatic climate control"
-      - "Wireless smartphone charging"
-    notes: "Essential for German winters"
-    
-  - name: "Technology Pack"
-    price: 1390
-    includes:
-      - "10.25-inch UConnect 5 touchscreen (upgraded)"
-      - "7-inch TFT driver display (upgraded)"
-      - "JBL Premium Audio (6 speakers)"
-      - "Navigation with real-time traffic"
-      - "Wireless Apple CarPlay/Android Auto"
-    notes: "Upgraded infotainment and audio system"
-    
-  - name: "Panoramic Glass Roof"
-    price: 890
-    includes:
-      - "Fixed panoramic glass roof"
-      - "Electric sunshade"
-    notes: "Not available on Cabrio version"
+- name: "Safety Pack"
+  price: 890
+  includes:
+  - "Autonomous Emergency Braking (AEB)"
+  - "Lane Keeping Assist"
+  - "Traffic Sign Recognition"
+  - "Intelligent Speed Assist"
+  - "Drowsiness Detection"
+  notes: "CRITICAL: AEB is NOT standard - requires this pack for 5-star safety"
+- name: "Autonomous Driving Pack"
+  price: 1690
+  includes:
+  - "Adaptive Cruise Control (ACC)"
+  - "Lane Centering Assist"
+  - "Highway Assist (Level 2)"
+  - "Traffic Sign Recognition"
+  - "All features from Safety Pack"
+  notes: "Level 2 autonomous driving for highways"
+- name: "Visibility Pack"
+  price: 690
+  includes:
+  - "Rear parking sensors"
+  - "Rear-view camera"
+  - "Automatic headlights"
+  - "Rain-sensing wipers"
+  notes: "Improves parking and visibility"
+- name: "Comfort Pack"
+  price: 990
+  includes:
+  - "Heated front seats"
+  - "Heated steering wheel"
+  - "Automatic climate control"
+  - "Wireless smartphone charging"
+  notes: "Essential for German winters"
+- name: "Technology Pack"
+  price: 1390
+  includes:
+  - "10.25-inch UConnect 5 touchscreen (upgraded)"
+  - "7-inch TFT driver display (upgraded)"
+  - "JBL Premium Audio (6 speakers)"
+  - "Navigation with real-time traffic"
+  - "Wireless Apple CarPlay/Android Auto"
+  notes: "Upgraded infotainment and audio system"
+- name: "Panoramic Glass Roof"
+  price: 890
+  includes:
+  - "Fixed panoramic glass roof"
+  - "Electric sunshade"
+  notes: "Not available on Cabrio version"
 
 # Incentives & Subsidies (Germany 2024)
 incentives:
-  - type: grant
-    name: BAFA Umweltbonus
-    amount: 0
-    currency: EUR
-    status: expired
-    valid_until: "2023-12-31"
-    notes: "Federal EV subsidy ended December 31, 2023"
-  
-  - type: tax_exemption
-    name: Company Car Tax (Dienstwagen-Steuer)
-    amount: 0
-    currency: EUR
-    status: active
-    notes: |
-      Company car drivers pay only 0.25% of list price per month (€87/month)
-      vs 1% for ICE cars (€350/month), saving €3,156/year in taxes.
-  
-  - type: tax_exemption
-    name: Road Tax Exemption (Kfz-Steuer Befreiung)
-    amount: 0
-    currency: EUR
-    status: active
-    valid_until: "2030-12-31"
-    notes: "Full exemption from road tax until December 31, 2030"
-  
-  - type: grant
-    name: THG-Quote
-    amount: 340
-    currency: EUR
-    status: active
-    notes: "CO2 certificate trading, earning €280-400/year"
+- type: grant
+  name: BAFA Umweltbonus
+  amount: 0
+  currency: EUR
+  status: expired
+  valid_until: "2023-12-31"
+  notes: "Federal EV subsidy ended December 31, 2023"
+- type: tax_exemption
+  name: Company Car Tax (Dienstwagen-Steuer)
+  amount: 0
+  currency: EUR
+  status: active
+  notes: |
+    Company car drivers pay only 0.25% of list price per month (€87/month)
+    vs 1% for ICE cars (€350/month), saving €3,156/year in taxes.
+
+- type: tax_exemption
+  name: Road Tax Exemption (Kfz-Steuer Befreiung)
+  amount: 0
+  currency: EUR
+  status: active
+  valid_until: "2030-12-31"
+  notes: "Full exemption from road tax until December 31, 2030"
+- type: grant
+  name: THG-Quote
+  amount: 340
+  currency: EUR
+  status: active
+  notes: "CO2 certificate trading, earning €280-400/year"
 
 # Popular Configuration
 popular_configuration:
@@ -221,13 +205,13 @@ popular_configuration:
   description: "Most popular German configuration"
   total_price: 39340
   includes:
-    - Base Icon 42kWh trim (€34,990)
-    - Comfort Pack (€990)
-    - Safety Pack (€890)
-    - Visibility Pack (€690)
-    - Glacier Blue metallic (€590)
-    - 16-inch alloy wheels (€890)
-    - Eco-leather seats (€790)
+  - Base Icon 42kWh trim (€34,990)
+  - Comfort Pack (€990)
+  - Safety Pack (€890)
+  - Visibility Pack (€690)
+  - Glacier Blue metallic (€590)
+  - 16-inch alloy wheels (€890)
+  - Eco-leather seats (€790)
   notes: "Comfort and safety-focused spec popular with urban buyers"
 
 # Typical Configuration
@@ -236,9 +220,9 @@ typical_configuration:
   description: "Budget-conscious city dweller configuration"
   total_price: 36670
   includes:
-    - Base Icon 42kWh trim (€34,990)
-    - Comfort Pack (€990)
-    - Celestial Blue metallic (€590)
+  - Base Icon 42kWh trim (€34,990)
+  - Comfort Pack (€990)
+  - Celestial Blue metallic (€590)
   notes: "Minimalist spec with essential comfort features for city use"
 
 # Dealer Network & Service
@@ -246,7 +230,7 @@ market_info:
   dealers_count: 280
   service_centers_count: 280
   warranty_years: 2
-  warranty_km: null
+  warranty_km:
   battery_warranty_years: 8
   battery_warranty_km: 160000
   free_charging_network: false
@@ -258,7 +242,6 @@ charging_infrastructure:
   home_charger_available: true
   home_charger_price: 750
   home_charger_notes: "Stellantis/Enel X wallbox available (11kW, €750 installed)"
-  
   public_network: "EnBW, IONITY, Charge Now, Shell Recharge"
   public_network_notes: |
     Germany has 100,000+ public charging points (2024).
@@ -267,7 +250,7 @@ charging_infrastructure:
 # Service & Warranty
 warranty:
   vehicle_years: 2
-  vehicle_km: null
+  vehicle_km:
   battery_years: 8
   battery_km: 160000
   battery_capacity_guarantee_percent: 70
@@ -311,25 +294,22 @@ leasing_example:
 
 # Competitors in German Market
 local_competitors:
-  - vehicle: "Mini Cooper Electric"
-    price_eur: 35900
-    price_delta: +910
-    notes: "Direct competitor, British premium brand"
-    
-  - vehicle: "Honda e"
-    price_eur: 38000
-    price_delta: +3010
-    notes: "Similar retro styling, smaller battery"
-    
-  - vehicle: "Renault Zoe"
-    price_eur: 34000
-    price_delta: -990
-    notes: "More practical, less stylish"
-    
-  - vehicle: "Opel Corsa-e"
-    price_eur: 35000
-    price_delta: +10
-    notes: "Similar platform (eCMP), more practical"
+- vehicle: "Mini Cooper Electric"
+  price_eur: 35900
+  price_delta: 910
+  notes: "Direct competitor, British premium brand"
+- vehicle: "Honda e"
+  price_eur: 38000
+  price_delta: 3010
+  notes: "Similar retro styling, smaller battery"
+- vehicle: "Renault Zoe"
+  price_eur: 34000
+  price_delta: -990
+  notes: "More practical, less stylish"
+- vehicle: "Opel Corsa-e"
+  price_eur: 35000
+  price_delta: 10
+  notes: "Similar platform (eCMP), more practical"
 
 # Market Performance
 market_stats:
@@ -340,21 +320,19 @@ market_stats:
 
 # Reviews & Ratings (Germany)
 reviews:
-  - source: "Auto Motor und Sport"
-    rating: 4.2
-    score_out_of: 5.0
-    summary: "Italienische Designikone mit elektrischem Herzen"
-    
-  - source: "ADAC"
-    rating: 2.4  # ADAC scale (lower is better)
-    score_out_of: 5.0
-    summary: "Charmantes Stadtauto mit Stil"
-    notes: "Criticized for safety features not being standard"
-    
-  - source: "Auto Bild"
-    rating: 4.0
-    score_out_of: 5.0
-    summary: "Dolce Vita für die Stadt"
+- source: "Auto Motor und Sport"
+  rating: 4.2
+  score_out_of: 5.0
+  summary: "Italienische Designikone mit elektrischem Herzen"
+- source: "ADAC"
+  rating: 2.4    # ADAC scale (lower is better)
+  score_out_of: 5.0
+  summary: "Charmantes Stadtauto mit Stil"
+  notes: "Criticized for safety features not being standard"
+- source: "Auto Bild"
+  rating: 4.0
+  score_out_of: 5.0
+  summary: "Dolce Vita für die Stadt"
 
 # Environmental
 environmental:
@@ -392,7 +370,6 @@ use_case_analysis:
     monthly_charging_cost: 38
     annual_cost_savings_vs_ice: 1440
     notes: "Perfect for city dwellers with garage/carport"
-  
   weekend_trips:
     distance_km: 200
     frequency: 2_times_per_month
@@ -405,15 +382,14 @@ charging_costs:
     electricity_rate_eur_per_kwh: 0.32
     cost_per_100km: 5.28  # Based on 16.5 kWh/100km real-world
     cost_full_charge: 11.94  # 37.3 kWh usable
-  
   public_ac_charging:
     electricity_rate_eur_per_kwh: 0.49
     cost_per_100km: 8.09
-  
+
   public_dc_fast_charging:
     electricity_rate_eur_per_kwh: 0.79
     cost_per_100km: 13.04
-  
+
   comparison_ice_equivalent:
     fuel_consumption_l_per_100km: 5.5
     fuel_price_eur_per_liter: 1.85
@@ -421,28 +397,16 @@ charging_costs:
     annual_savings_home_charging: 980  # Based on 12,000 km/year city use
 
 # Market-Specific Notes
-market_notes: |
-  - Italian design icon reimagined as electric city car
-  - Perfect for narrow German city streets and tight parking
-  - Popular as second car or fashion statement
-  - Strong brand heritage appeals to style-conscious buyers
-  - Made in Turin, Italy (Mirafiori plant)
-  - Cabrio (convertible) version very popular in Germany (+€3,500)
-  - Criticized by ADAC for safety features not being standard (AEB requires pack)
-  - Heat pump standard improves winter efficiency
-  - 320km WLTP range adequate for urban use, struggles on long highway trips
-  - Company car tax benefit (0.25%) makes it attractive despite premium price
-  - Free city center access in some German cities (environmental zones)
-
 metadata:
   data_quality: verified
-  last_updated: "2026-02-08"
   created_at: "2026-02-08"
-  source: "Fiat Deutschland official configurator + market research"
-  source_urls:
-    - "https://www.fiat.de/500-elektro"
-  verification_date: "2026-02-08"
   notes: |
     Icon trim most popular in Germany. Safety Pack highly recommended despite extra cost.
     Cabrio version adds €3,500. Italian styling and heritage key selling points.
     Competitors like Mini Cooper Electric offer similar premium city car proposition.
+  updated_at: "2026-02-08"
+  last_verified_at: "2026-02-08"
+  sources:
+  - Fiat Deutschland official configurator + market research
+  - https://www.fiat.de/500-elektro
+notes: "- Italian design icon reimagined as electric city car\n- Perfect for narrow German city streets and tight parking\n- Popular as second car or fashion statement\n- Strong brand heritage appeals to style-conscious buyers\n- Made in Turin, Italy (Mirafiori plant)\n- Cabrio (convertible) version very popular in Germany (+€3,500)\n- Criticized by ADAC for safety features not being standard (AEB requires pack)\n- Heat pump standard improves winter efficiency\n- 320km WLTP range adequate for urban use, struggles on long highway trips\n- Company car tax benefit (0.25%) makes it attractive despite premium price\n- Free city center access in some German cities (environmental zones)"

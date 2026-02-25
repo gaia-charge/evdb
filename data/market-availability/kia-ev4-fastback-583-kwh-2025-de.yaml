@@ -11,45 +11,45 @@ pricing:
 options:
   packages: []
   paint_options:
-    - name: "Snow White Pearl"
-      price: 0
-      code: "snow-white"
-    - name: "Aurora Black Pearl"
-      price: 590
-      code: "aurora-black"
-    - name: "Gravity Blue"
-      price: 590
-      code: "gravity-blue"
-    - name: "Yacht Blue"
-      price: 590
-      code: "yacht-blue"
+  - name: "Snow White Pearl"
+    price: 0
+    code: "snow-white"
+  - name: "Aurora Black Pearl"
+    price: 590
+    code: "aurora-black"
+  - name: "Gravity Blue"
+    price: 590
+    code: "gravity-blue"
+  - name: "Yacht Blue"
+    price: 590
+    code: "yacht-blue"
   interior_options:
-    - name: "Black"
-      price: 0
+  - name: "Black"
+    price: 0
 
 incentives:
-  - name: "Company Car Tax Benefit"
-    type: tax_credit
-    amount: 2480
-    notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €41,490 × 0.25% = €103.73/month = €1,245/year vs ICE 1% = €4,979/year. Annual savings: €3,734."
-    eligibility: "Company car drivers only"
+- name: "Company Car Tax Benefit"
+  type: tax_credit
+  amount: 2480
+  notes: "0.25% of gross list price per month for EVs under €70,000 BLP. €41,490 × 0.25% = €103.73/month = €1,245/year vs ICE 1% = €4,979/year. Annual savings: €3,734."
+  eligibility: "Company car drivers only"
 
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 200
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 200
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
 
-  - name: "THG-Quote (CO2 Certificate Trading)"
-    type: grant
-    amount: 300
-    notes: "Annual CO2 certificate income ~€300"
+- name: "THG-Quote (CO2 Certificate Trading)"
+  type: grant
+  amount: 300
+  notes: "Annual CO2 certificate income ~€300"
 
-  - name: "E-Auto Förderprogramm"
-    type: grant
-    amount: 6000
-    notes: "Federal EV purchase incentive up to €6,000 for EVs under €45,000. Subject to availability and eligibility."
-    valid_until: "2026-12-31"
+- name: "E-Auto Förderprogramm"
+  type: grant
+  amount: 6000
+  notes: "Federal EV purchase incentive up to €6,000 for EVs under €45,000. Subject to availability and eligibility."
+  valid_until: "2026-12-31"
 
 availability:
   status: available
@@ -57,14 +57,14 @@ availability:
   online_configurator: yes
   online_purchase: no
   sales_regions:
-    - Germany
-    - Austria
-    - Switzerland
-    - Netherlands
-    - Belgium
-    - UK
-    - Norway
-    - Sweden
+  - Germany
+  - Austria
+  - Switzerland
+  - Netherlands
+  - Belgium
+  - UK
+  - Norway
+  - Sweden
 
 warranty:
   vehicle_warranty_years: 7
@@ -75,18 +75,18 @@ warranty:
 
 market_context:
   competitors:
-    - model: "Tesla Model 3 RWD"
-      price: 42990
-      range_wltp: 554
-      notes: "Similar price, more range"
-    - model: "Kia EV4 58.3 kWh (sedan)"
-      price: 37590
-      range_wltp: 458
-      notes: "Cheaper sedan variant, same specs"
-    - model: "Cupra Born 79 kWh"
-      price: 41990
-      range_wltp: 549
-      notes: "Similar price, more range, hatchback"
+  - model: "Tesla Model 3 RWD"
+    price: 42990
+    range_wltp: 554
+    notes: "Similar price, more range"
+  - model: "Kia EV4 58.3 kWh (sedan)"
+    price: 37590
+    range_wltp: 458
+    notes: "Cheaper sedan variant, same specs"
+  - model: "Cupra Born 79 kWh"
+    price: 41990
+    range_wltp: 549
+    notes: "Similar price, more range, hatchback"
 
   market_position: |
     The Kia EV4 Fastback 58.3 kWh is the entry point to the sportier Fastback
@@ -96,12 +96,12 @@ market_context:
 metadata:
   created_at: "2026-02-10T01:00:00Z"
   updated_at: "2026-02-10T01:00:00Z"
-  data_quality: verified
+  data_quality: unverified
   data_source: manufacturer
   notes: |
     German pricing from Kia Deutschland website. EV4 Fastback base at €41,490.
 
 sources:
-  - url: "https://www.kia.com/de/ev4-fastback/"
-    title: "Kia EV4 Fastback - Kia Deutschland"
-    date_accessed: "2026-02-10"
+- url: "https://www.kia.com/de/ev4-fastback/"
+  title: "Kia EV4 Fastback - Kia Deutschland"
+  date_accessed: "2026-02-10"

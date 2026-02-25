@@ -15,101 +15,98 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
 
 # Colors (Germany Market)
 available_colors:
-  - name: Pulse Red
-    code: PR
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Star Black
-    code: SB
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Polar Silver
-    code: PS
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: Vapor Grey
-    code: VG
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
-  
-  - name: Ice White
-    code: IW
-    type: metallic
-    price_add:
-      amount: 890
-      currency: EUR
+- name: Pulse Red
+  code: PR
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Star Black
+  code: SB
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Polar Silver
+  code: PS
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: Vapor Grey
+  code: VG
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
+
+- name: Ice White
+  code: IW
+  type: metallic
+  price_add:
+    amount: 890
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 18-inch alloy wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: 19-inch alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 900
-      currency: EUR
+- name: 18-inch alloy wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: 19-inch alloy wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 900
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black synthetic leather
-    code: BSL
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black synthetic leather
+  code: BSL
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Optional Equipment
 optional_equipment:
-  - name: Pulse Package
-    price: 1500
-    includes:
-      - "Beats Audio premium sound"
-      - "Ambient lighting"
-      - "LED mood lighting"
-  
-  - name: Comfort Package
-    price: 1100
-    includes:
-      - "360-degree camera"
-      - "Power tailgate"
-      - "Electrochromic mirrors"
-  
-  - name: Electrochromic Panoramic Roof
-    price: 1200
-    includes:
-      - "Switchable tint glass roof"
-      - "Enhanced interior ambience"
-  
-  - name: 19-inch Sport Wheels
-    price: 900
-    includes:
-      - "19-inch alloy wheels"
-      - "235/45 R19 tires"
+- name: Pulse Package
+  price: 1500
+  includes:
+  - "Beats Audio premium sound"
+  - "Ambient lighting"
+  - "LED mood lighting"
+- name: Comfort Package
+  price: 1100
+  includes:
+  - "360-degree camera"
+  - "Power tailgate"
+  - "Electrochromic mirrors"
+- name: Electrochromic Panoramic Roof
+  price: 1200
+  includes:
+  - "Switchable tint glass roof"
+  - "Enhanced interior ambience"
+- name: 19-inch Sport Wheels
+  price: 900
+  includes:
+  - "19-inch alloy wheels"
+  - "235/45 R19 tires"
 
 # Dealer Network & Service
 market_info:
@@ -124,17 +121,6 @@ market_info:
   roadside_assistance_years: 3
 
 # Specific to German Market
-market_notes: >
-  - Entry-level Smart #1 offering excellent value at €41,990
-  - Same powertrain as Premium (200kW, 440km WLTP) at €2,000 lower price
-  - Standard heat pump crucial for German winters
-  - Competitive with Mini Cooper Electric (€39,900), Volvo EX30 (€38,900)
-  - Still includes 22kW AC charging and 150kW DC fast charging
-  - Strong value proposition: premium platform at accessible price
-  - Company car tax benefit (0.25%) makes it attractive for fleet buyers
-  - Lower equipment level vs Premium: manual vs power tailgate, no 360 camera standard
-
-# Company Car Calculation (Germany)
 company_car_tax:
   gross_list_price: 41990
   monthly_tax_base: 104.98  # 0.25% of 41990
@@ -152,10 +138,10 @@ popular_configuration:
   name: "Smart #1 Pro+ Comfort"
   base_price: 41990
   options:
-    - Pulse Package: 1500
-    - Comfort Package: 1100
-    - Electrochromic Roof: 1200
-    - Vapor Grey Metallic: 890
+  - Pulse Package: 1500
+  - Comfort Package: 1100
+  - Electrochromic Roof: 1200
+  - Vapor Grey Metallic: 890
   total_price: 46680
   notes: >
     Popular mid-spec configuration with premium sound, 360 camera, and
@@ -168,15 +154,14 @@ charging_costs:
     electricity_rate_eur_per_kwh: 0.32
     cost_per_100km: 5.92  # Based on 18.5 kWh/100km real-world
     cost_full_charge: 21.12  # 66 kWh usable
-  
   public_ac_charging:
     electricity_rate_eur_per_kwh: 0.49
     cost_per_100km: 9.07
-  
+
   public_dc_fast_charging:
     electricity_rate_eur_per_kwh: 0.79
     cost_per_100km: 14.62
-  
+
   comparison_ice_equivalent:
     fuel_consumption_l_per_100km: 6.5
     fuel_price_eur_per_liter: 1.85
@@ -186,11 +171,11 @@ charging_costs:
 # Metadata
 metadata:
   data_quality: verified
-  last_updated: "2026-02-08"
-  confidence_level: high
   sources:
-    - https://www.smart.com/de/modelle/1/pro-plus/
-    - https://www.smart.com/de/konfigurator/
-    - https://ev-database.org/car/1873/Smart-1-Pro-Plus
+  - https://www.smart.com/de/modelle/1/pro-plus/
+  - https://www.smart.com/de/konfigurator/
+  - https://ev-database.org/car/1873/Smart-1-Pro-Plus
   created_at: "2026-02-08T16:25:00Z"
   created_by: Patricio
+  updated_at: "2026-02-08"
+notes: '- Entry-level Smart #1 offering excellent value at €41,990 - Same powertrain as Premium (200kW, 440km WLTP) at €2,000 lower price - Standard heat pump crucial for German winters - Competitive with Mini Cooper Electric (€39,900), Volvo EX30 (€38,900) - Still includes 22kW AC charging and 150kW DC fast charging - Strong value proposition: premium platform at accessible price - Company car tax benefit (0.25%) makes it attractive for fleet buyers - Lower equipment level vs Premium: manual vs power tailgate, no 360 camera standard'

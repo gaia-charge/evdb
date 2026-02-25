@@ -17,37 +17,37 @@ pricing:
   total_price_estimate: 199900
 
 incentives:
-  - name: Mój Elektryk
-    type: grant
-    amount: 27000
-    description: "Mój Elektryk subsidy for BEVs. Up to 27,000 PLN for private buyers."
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - Vehicle price must be under 225,000 PLN gross
-      - Must be registered in Poland
-      - Private individuals and businesses eligible
+- name: Mój Elektryk
+  type: grant
+  amount: 27000
+  description: "Mój Elektryk subsidy for BEVs. Up to 27,000 PLN for private buyers."
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - Vehicle price must be under 225,000 PLN gross
+  - Must be registered in Poland
+  - Private individuals and businesses eligible
 
 market_specific:
   popular_options:
-    - name: Executive
-      price: 15000
-    - name: Premium Package
-      price: 8900
+  - name: Executive
+    price: 15000
+  - name: Premium Package
+    price: 8900
 
   available_colors:
-    - name: Atlas White
-      type: solid
-      price_add: 0
-    - name: Abyss Black Pearl
-      type: metallic
-      price_add: 3100
-    - name: Cyber Grey
-      type: metallic
-      price_add: 3100
-    - name: Neolithic Blue
-      type: metallic
-      price_add: 3100
+  - name: Atlas White
+    type: solid
+    price_add: 0
+  - name: Abyss Black Pearl
+    type: metallic
+    price_add: 3100
+  - name: Cyber Grey
+    type: metallic
+    price_add: 3100
+  - name: Neolithic Blue
+    type: metallic
+    price_add: 3100
 
 notes: |
   Hyundai Kona Electric Long Range available in Poland through Hyundai dealers.
@@ -57,6 +57,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.hyundai.pl/modele/kona-electric
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.hyundai.pl/modele/kona-electric

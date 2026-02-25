@@ -18,64 +18,64 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Cosmos Black
-    code: BK
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Aurora White
-    code: WH
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-  - name: Boulder Grey
-    code: GY
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
-  - name: Surf Blue
-    code: SB
-    type: metallic
-    price_add:
-      amount: 590
-      currency: EUR
+- name: Cosmos Black
+  code: BK
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Aurora White
+  code: WH
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+- name: Boulder Grey
+  code: GY
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
+- name: Surf Blue
+  code: SB
+  type: metallic
+  price_add:
+    amount: 590
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 16" Steel Wheels with Covers
-    size_inches: 16
-    type: steel
-    price_add:
-      amount: 0
-      currency: EUR
+- name: 16" Steel Wheels with Covers
+  size_inches: 16
+  type: steel
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Fabric
-    material: fabric
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Black Fabric
+  material: fabric
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Environmental Bonus)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: manufacturer
-    name: "BYD Trade-In Bonus"
-    amount:
-      amount: 1000
-      currency: EUR
-    conditions: ["Trade-in of vehicle older than 5 years"]
+- type: federal
+  name: "Umweltbonus (Environmental Bonus)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: manufacturer
+  name: "BYD Trade-In Bonus"
+  amount:
+    amount: 1000
+    currency: EUR
+  conditions: ["Trade-in of vehicle older than 5 years"]
 
 # Tax Information (Germany-specific)
 taxation:
@@ -91,36 +91,26 @@ taxation:
 
 # Popular Configuration
 popular_configurations:
-  - name: "City Package"
-    description: "Base model with essentials for city driving"
-    base_price: 33990
-    options:
-      - "Base vehicle"
-    total_price: 33990
-    
-  - name: "Comfort Package"
-    description: "Enhanced comfort features"
-    base_price: 33990
-    options:
-      - "Aurora White metallic"
-      - "Comfort Pack (heat pump, heated seats)"
-    total_price: 36580
+- name: "City Package"
+  description: "Base model with essentials for city driving"
+  base_price: 33990
+  options:
+  - "Base vehicle"
+  total_price: 33990
+
+- name: "Comfort Package"
+  description: "Enhanced comfort features"
+  base_price: 33990
+  options:
+  - "Aurora White metallic"
+  - "Comfort Pack (heat pump, heated seats)"
+  total_price: 36580
 
 # Notes
-market_notes: >
-  The BYD Dolphin Active is the entry-level variant, offering excellent value
-  for city driving and daily commuting. With 340 km WLTP range and a competitive
-  price point, it's an attractive option for first-time EV buyers. The 0.25%
-  company car tax rate makes it particularly appealing for business users.
-  
-  Standard equipment is comprehensive including 12.8" touchscreen, V2L capability,
-  and comprehensive safety features. The Comfort Pack adds heat pump and heated
-  seats for year-round comfort.
-
 metadata:
   created_at: "2026-02-08"
-  updated_at: null
   data_quality: verified
   sources:
-    - https://www.byd.com/de/dolphin
-    - https://www.dat.de/ (pricing verification)
+  - https://www.byd.com/de/dolphin
+  - https://www.dat.de/ (pricing verification)
+notes: "The BYD Dolphin Active is the entry-level variant, offering excellent value for city driving and daily commuting. With 340 km WLTP range and a competitive price point, it's an attractive option for first-time EV buyers. The 0.25% company car tax rate makes it particularly appealing for business users.\nStandard equipment is comprehensive including 12.8\" touchscreen, V2L capability, and comprehensive safety features. The Comfort Pack adds heat pump and heated seats for year-round comfort."

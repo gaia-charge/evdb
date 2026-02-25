@@ -17,34 +17,34 @@ pricing:
   total_price_estimate: 199990
 
 incentives:
-  - name: Mój Elektryk
-    type: grant
-    amount: 27000
-    description: "Mój Elektryk subsidy for BEVs priced under 225,000 PLN gross"
-    valid_from: "2024-01-01"
-    valid_until: null
-    conditions:
-      - Vehicle price under 225,000 PLN gross
-      - Must be new BEV
-      - Registered in Poland
+- name: Mój Elektryk
+  type: grant
+  amount: 27000
+  description: "Mój Elektryk subsidy for BEVs priced under 225,000 PLN gross"
+  valid_from: "2024-01-01"
+  valid_until:
+  conditions:
+  - Vehicle price under 225,000 PLN gross
+  - Must be new BEV
+  - Registered in Poland
 
 market_specific:
   popular_options:
-    - name: Enhanced Autopilot
-      price: 17900
-    - name: Tow Hitch
-      price: 4900
+  - name: Enhanced Autopilot
+    price: 17900
+  - name: Tow Hitch
+    price: 4900
 
   available_colors:
-    - name: Pearl White Multi-Coat
-      type: standard
-      price_add: 0
-    - name: Solid Black
-      type: solid
-      price_add: 5900
-    - name: Quicksilver
-      type: metallic
-      price_add: 9400
+  - name: Pearl White Multi-Coat
+    type: standard
+    price_add: 0
+  - name: Solid Black
+    type: solid
+    price_add: 5900
+  - name: Quicksilver
+    type: metallic
+    price_add: 9400
 
 notes: |
   Tesla Model Y RWD available in Poland via tesla.com/pl_pl.
@@ -55,6 +55,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.tesla.com/pl_pl/modely
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
+  sources:
+  - https://www.tesla.com/pl_pl/modely

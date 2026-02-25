@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-10-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Built in Trnava, Slovakia. Deliveries started Q4 2024.
@@ -24,71 +24,71 @@ pricing:
 
 options:
   colors:
-    - name: Voltaic Blue (metallic)
-      price: 595
-      type: metallic
-    - name: Quartz Grey (metallic)
-      price: 595
-      type: metallic
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Diamond Black (pearl)
-      price: 695
-      type: pearl
-    - name: Khaki Green (metallic)
-      price: 595
-      type: metallic
+  - name: Voltaic Blue (metallic)
+    price: 595
+    type: metallic
+  - name: Quartz Grey (metallic)
+    price: 595
+    type: metallic
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Diamond Black (pearl)
+    price: 695
+    type: pearl
+  - name: Khaki Green (metallic)
+    price: 595
+    type: metallic
 
   wheels:
-    - name: 16" Steel Wheels with Covers
-      price: 0
-      size_inches: 16
-      notes: Standard on base Frontera
-    - name: 16" Alloy Wheels
-      price: 490
-      size_inches: 16
-      notes: Standard on GS trim
+  - name: 16" Steel Wheels with Covers
+    price: 0
+    size_inches: 16
+    notes: Standard on base Frontera
+  - name: 16" Alloy Wheels
+    price: 490
+    size_inches: 16
+    notes: Standard on GS trim
 
   interior:
-    - name: Dark Fabric (Recycled Materials)
-      price: 0
-      notes: Standard sustainable recycled fabric seats
+  - name: Dark Fabric (Recycled Materials)
+    price: 0
+    notes: Standard sustainable recycled fabric seats
 
 packages:
-  - name: GS Upgrade
-    price: 2500
-    includes:
-      - Multimedia Navi Pro with 10" touchscreen and navigation
-      - Rear-view camera
-      - 16" alloy wheels
-      - Additional comfort features
+- name: GS Upgrade
+  price: 2500
+  includes:
+  - Multimedia Navi Pro with 10" touchscreen and navigation
+  - Rear-view camera
+  - 16" alloy wheels
+  - Additional comfort features
 
-  - name: Roof Rails Package
-    price: 390
-    includes:
-      - Aluminium roof rails
-      - 240 kg roof load capacity
+- name: Roof Rails Package
+  price: 390
+  includes:
+  - Aluminium roof rails
+  - 240 kg roof load capacity
 
 standalone_options:
-  - name: Roof Tent with Ladder
-    price: 1990
-    notes: Specially designed for Frontera, requires roof rails
+- name: Roof Tent with Ladder
+  price: 1990
+  notes: Specially designed for Frontera, requires roof rails
 
 incentives:
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030."
 
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 300
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€250-350/year"
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 300
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€250-350/year"
 
 company_car:
   taxation_rate: 0.25
@@ -113,21 +113,21 @@ warranty:
 
 market_comparison:
   direct_competitors:
-    - name: "Citroën ë-C3 Aircross"
-      base_price: 27800
-      comparison: "Sister model on same platform, slightly cheaper, similar specs"
+  - name: "Citroën ë-C3 Aircross"
+    base_price: 27800
+    comparison: "Sister model on same platform, slightly cheaper, similar specs"
 
-    - name: "Fiat Grande Panda Electric"
-      base_price: 24990
-      comparison: "Same platform, smaller and cheaper, less cargo space"
+  - name: "Fiat Grande Panda Electric"
+    base_price: 24990
+    comparison: "Same platform, smaller and cheaper, less cargo space"
 
-    - name: "Dacia Spring"
-      base_price: 22750
-      comparison: "Much cheaper but significantly less range and performance"
+  - name: "Dacia Spring"
+    base_price: 22750
+    comparison: "Much cheaper but significantly less range and performance"
 
-    - name: "MG4 Standard Range"
-      base_price: 31990
-      comparison: "More powerful and sporty, but more expensive"
+  - name: "MG4 Standard Range"
+    base_price: 31990
+    comparison: "More powerful and sporty, but more expensive"
 
 notes: |
   The Opel Frontera Electric at €28,990 offers excellent value:
@@ -156,7 +156,7 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-09"
-  last_updated: "2026-02-09"
   sources:
-    - https://www.media.stellantis.com/em-en/opel/press/world-premiere-of-new-opel-frontera-all-electric-opel-suv-available-for-around-29-000-in-germany
-    - https://www.opel.de
+  - https://www.media.stellantis.com/em-en/opel/press/world-premiere-of-new-opel-frontera-all-electric-opel-suv-available-for-around-29-000-in-germany
+  - https://www.opel.de
+  updated_at: "2026-02-09"

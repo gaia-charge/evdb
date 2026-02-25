@@ -9,49 +9,49 @@ pricing:
   destination_charge: 1095  # €
   on_the_road_price: 61095  # Includes destination
   price_includes:
-    - "Twin motor AWD 300kW (408hp)"
-    - "78 kWh battery (452 km WLTP)"
-    - "11 kW AC charging (3-phase)"
-    - "150 kW DC fast charging"
-    - "All-weather capability with dual motors"
-    - "Google built-in, heat pump standard"
-    - "8-year/160,000km battery warranty"
+  - "Twin motor AWD 300kW (408hp)"
+  - "78 kWh battery (452 km WLTP)"
+  - "11 kW AC charging (3-phase)"
+  - "150 kW DC fast charging"
+  - "All-weather capability with dual motors"
+  - "Google built-in, heat pump standard"
+  - "8-year/160,000km battery warranty"
 
 trim_levels:
-  - name: "Core"
-    price: 60000
-    features:
-      - "Twin motor AWD 300kW (408hp)"
-      - "452km WLTP range"
-      - "19-inch alloy wheels"
-  - name: "Plus"
-    price: 65000
-    features:
-      - "Panoramic glass roof, heated seats"
-      - "Harman Kardon audio, leather upholstery"
-      - "360-degree camera"
-  - name: "Ultra"
-    price: 70000
-    features:
-      - "Pixel LED headlights, head-up display"
-      - "Ventilated seats, 20-inch wheels"
-      - "Advanced air purifier"
+- name: "Core"
+  price: 60000
+  features:
+  - "Twin motor AWD 300kW (408hp)"
+  - "452km WLTP range"
+  - "19-inch alloy wheels"
+- name: "Plus"
+  price: 65000
+  features:
+  - "Panoramic glass roof, heated seats"
+  - "Harman Kardon audio, leather upholstery"
+  - "360-degree camera"
+- name: "Ultra"
+  price: 70000
+  features:
+  - "Pixel LED headlights, head-up display"
+  - "Ventilated seats, 20-inch wheels"
+  - "Advanced air purifier"
 
 incentives:
-  - name: "Company car tax benefit"
-    type: tax_credit
-    amount: 5040  # Annual savings
-    calculation: "€60,000 × 0.25% = €150/month. ICE: €60,000 × 1% = €600/month. Savings: €450/month = €5,400/year"
-    eligibility: "Company car drivers only"
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 390
-    notes: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote (CO2 certificate)"
-    type: grant
-    amount: 330
-    notes: "Sell CO2 savings certificate, varies by provider (€280-380/year)"
+- name: "Company car tax benefit"
+  type: tax_credit
+  amount: 5040    # Annual savings
+  calculation: "€60,000 × 0.25% = €150/month. ICE: €60,000 × 1% = €600/month. Savings: €450/month = €5,400/year"
+  eligibility: "Company car drivers only"
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 390
+  notes: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote (CO2 certificate)"
+  type: grant
+  amount: 330
+  notes: "Sell CO2 savings certificate, varies by provider (€280-380/year)"
 
 availability:
   in_stock: true
@@ -60,19 +60,19 @@ availability:
   order_url: "https://www.volvocars.com/de/cars/ex40-electric/"
 
 charging_costs:
-  - scenario: "Home charging (night rate)"
-    cost_per_kwh: 0.30
-    cost_per_100km: 5.70  # € (19 kWh/100km × €0.30)
-  - scenario: "DC fast charging (IONITY Volvo subscription)"
-    cost_per_kwh: 0.35
-    cost_per_100km: 6.65
+- scenario: "Home charging (night rate)"
+  cost_per_kwh: 0.30
+  cost_per_100km: 5.70    # € (19 kWh/100km × €0.30)
+- scenario: "DC fast charging (IONITY Volvo subscription)"
+  cost_per_kwh: 0.35
+  cost_per_100km: 6.65
 
 metadata:
   data_quality: estimated
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - "https://www.volvocars.com/de/cars/ex40-electric/"
-    - "https://ev-database.org/car/1668/Volvo-EX40-Twin-Motor"
-    - "Pricing estimated based on EX40 Single Motor + typical AWD premium"
+  - "https://www.volvocars.com/de/cars/ex40-electric/"
+  - "https://ev-database.org/car/1668/Volvo-EX40-Twin-Motor"
+  - "Pricing estimated based on EX40 Single Motor + typical AWD premium"
   notes: "EX40 Twin Motor: AWD SUV with 300kW (408hp) dual motors, 452 km WLTP range, 4.7s 0-100 km/h. All-weather capability with permanent AWD. Competes with Tesla Model Y Long Range AWD (€56k), BMW iX1 xDrive30 (€54k), Audi Q4 45 e-tron quattro (€60k). Company car value: under €70k = 0.25% tax rate saves ~€5,400/year. Typical price: €61-66k with popular options. Premium compact SUV with performance, AWD grip, and Swedish safety heritage."
+  updated_at: "2026-02-08"

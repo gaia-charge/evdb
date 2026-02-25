@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-02-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 16
   notes: All-new model, production at Sochaux, France
@@ -22,162 +22,161 @@ pricing:
 
 options:
   colors:
-    - name: Okenite White (solid)
-      price: 0
-      type: solid
-    - name: Elixir Red (solid)
-      price: 0
-      type: solid
-    - name: Perla Nera Black (pearl)
-      price: 895
-      type: pearl
-    - name: Cumulus Grey (metallic)
-      price: 895
-      type: metallic
-    - name: Vertigo Blue (metallic)
-      price: 895
-      type: metallic
-    - name: Selenium Grey (metallic)
-      price: 895
-      type: metallic
-    - name: Olivine Green (metallic)
-      price: 1195
-      type: metallic
-    - name: Ultimate Red (metallic)
-      price: 1195
-      type: metallic
-  
+  - name: Okenite White (solid)
+    price: 0
+    type: solid
+  - name: Elixir Red (solid)
+    price: 0
+    type: solid
+  - name: Perla Nera Black (pearl)
+    price: 895
+    type: pearl
+  - name: Cumulus Grey (metallic)
+    price: 895
+    type: metallic
+  - name: Vertigo Blue (metallic)
+    price: 895
+    type: metallic
+  - name: Selenium Grey (metallic)
+    price: 895
+    type: metallic
+  - name: Olivine Green (metallic)
+    price: 1195
+    type: metallic
+  - name: Ultimate Red (metallic)
+    price: 1195
+    type: metallic
+
   wheels:
-    - name: 19" Brasilia diamond-cut alloy wheels
-      price: 0
-      size_inches: 19
-      notes: Standard on Allure trim
-    - name: 20" Washington GT diamond-cut alloy wheels
-      price: 1190
-      size_inches: 20
-      notes: Sportier look, slight range reduction (~8 km)
-  
+  - name: 19" Brasilia diamond-cut alloy wheels
+    price: 0
+    size_inches: 19
+    notes: Standard on Allure trim
+  - name: 20" Washington GT diamond-cut alloy wheels
+    price: 1190
+    size_inches: 20
+    notes: Sportier look, slight range reduction (~8 km)
+
   interior:
-    - name: Météorite Grey cloth and TEP
-      price: 0
-      notes: Standard Allure interior with modern grey tones
-    - name: Noir Mist cloth and TEP
-      price: 0
-      notes: Darker interior alternative
+  - name: Météorite Grey cloth and TEP
+    price: 0
+    notes: Standard Allure interior with modern grey tones
+  - name: Noir Mist cloth and TEP
+    price: 0
+    notes: Darker interior alternative
 
 packages:
-  - name: Drive Assist Package Plus
-    price: 1790
-    includes:
-      - Enhanced adaptive cruise control with lane centering
-      - Traffic jam assist (Level 2 autonomy)
-      - Automatic lane change assist
-      - Highway exit assist
-    notes: Upgrades standard Drive Assist to full Level 2
-  
-  - name: Winter Package
-    price: 790
-    includes:
-      - Heated rear seats
-      - Heated steering wheel
-      - Heated windscreen washer nozzles
-    notes: Front seats already heated as standard
-  
-  - name: Comfort Package
-    price: 1890
-    includes:
-      - 8-way power adjustable driver seat with memory
-      - 4-way power lumbar support (driver and passenger)
-      - Hands-free powered tailgate with kick sensor (already standard)
-      - Massage function for driver seat
-    notes: Enhances long-distance comfort
-  
-  - name: 360° Vision Package
-    price: 1190
-    includes:
-      - 360° HD parking camera with 3D view
-      - Front parking sensors
-      - Advanced park assist with automated steering
-      - Blind spot monitoring with rear cross-traffic alert
-    notes: Comprehensive parking and visibility aids
-  
-  - name: Premium Interior Package
-    price: 2490
-    includes:
-      - Panoramic glass roof with electric sunshade
-      - Ambient lighting with 8 colors and zones
-      - Premium FOCAL audio system (10 speakers)
-      - Alcantara steering wheel
-    notes: Brings many GT features to Allure trim
+- name: Drive Assist Package Plus
+  price: 1790
+  includes:
+  - Enhanced adaptive cruise control with lane centering
+  - Traffic jam assist (Level 2 autonomy)
+  - Automatic lane change assist
+  - Highway exit assist
+  notes: Upgrades standard Drive Assist to full Level 2
+
+- name: Winter Package
+  price: 790
+  includes:
+  - Heated rear seats
+  - Heated steering wheel
+  - Heated windscreen washer nozzles
+  notes: Front seats already heated as standard
+
+- name: Comfort Package
+  price: 1890
+  includes:
+  - 8-way power adjustable driver seat with memory
+  - 4-way power lumbar support (driver and passenger)
+  - Hands-free powered tailgate with kick sensor (already standard)
+  - Massage function for driver seat
+  notes: Enhances long-distance comfort
+
+- name: 360° Vision Package
+  price: 1190
+  includes:
+  - 360° HD parking camera with 3D view
+  - Front parking sensors
+  - Advanced park assist with automated steering
+  - Blind spot monitoring with rear cross-traffic alert
+  notes: Comprehensive parking and visibility aids
+
+- name: Premium Interior Package
+  price: 2490
+  includes:
+  - Panoramic glass roof with electric sunshade
+  - Ambient lighting with 8 colors and zones
+  - Premium FOCAL audio system (10 speakers)
+  - Alcantara steering wheel
+  notes: Brings many GT features to Allure trim
 
 standalone_options:
-  - name: Heat pump
-    price: 1090
-    notes: Improves range in cold weather by up to 12%, highly recommended
-  
-  - name: 22kW 3-phase AC charger
-    price: 590
-    notes: Doubles AC charging speed from 11kW to 22kW
-  
-  - name: Tow bar with electric preparation
-    price: 1190
-    notes: 1,250 kg towing capacity, includes trailer stability control
+- name: Heat pump
+  price: 1090
+  notes: Improves range in cold weather by up to 12%, highly recommended
+
+- name: 22kW 3-phase AC charger
+  price: 590
+  notes: Doubles AC charging speed from 11kW to 22kW
+
+- name: Tow bar with electric preparation
+  price: 1190
+  notes: 1,250 kg towing capacity, includes trailer stability control
 
 popular_configurations:
-  - name: Winter-Ready Allure
-    description: Allure + Winter + Heat Pump + Metallic
-    price: 51860
-    includes:
-      - Peugeot e-3008 73 kWh Allure base
-      - Winter Package (€790)
-      - Heat pump (€1,090)
-      - Cumulus Grey metallic (€895)
-    notes: Optimal configuration for German climate
-  
-  - name: Fully-Loaded Allure
-    description: Allure + All Premium Packages
-    price: 58135
-    includes:
-      - Peugeot e-3008 73 kWh Allure base
-      - Drive Assist Package Plus (€1,790)
-      - Winter Package (€790)
-      - Comfort Package (€1,890)
-      - 360° Vision Package (€1,190)
-      - Premium Interior Package (€2,490)
-      - Heat pump (€1,090)
-      - 22kW charger (€590)
-      - Ultimate Red metallic (€1,195)
-    notes: Approaches GT 98kWh pricing with all features
+- name: Winter-Ready Allure
+  description: Allure + Winter + Heat Pump + Metallic
+  price: 51860
+  includes:
+  - Peugeot e-3008 73 kWh Allure base
+  - Winter Package (€790)
+  - Heat pump (€1,090)
+  - Cumulus Grey metallic (€895)
+  notes: Optimal configuration for German climate
+
+- name: Fully-Loaded Allure
+  description: Allure + All Premium Packages
+  price: 58135
+  includes:
+  - Peugeot e-3008 73 kWh Allure base
+  - Drive Assist Package Plus (€1,790)
+  - Winter Package (€790)
+  - Comfort Package (€1,890)
+  - 360° Vision Package (€1,190)
+  - Premium Interior Package (€2,490)
+  - Heat pump (€1,090)
+  - 22kW charger (€590)
+  - Ultimate Red metallic (€1,195)
+  notes: Approaches GT 98kWh pricing with all features
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Federal EV subsidy ended December 2024"
-  
-  - type: tax_exemption
-    name: "Company Car Tax Benefit"
-    amount: 0
-    currency: EUR
-    notes: |
-      BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
-      Example: €48,990 × 0.25% = €122/month taxable benefit.
-      Saves €368/month = €4,416/year vs comparable ICE SUV.
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer Exemption"
-    amount: 0
-    currency: EUR
-    notes: "BEVs exempt from German vehicle tax until 2030"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Federal EV subsidy ended December 2024"
+- type: tax_exemption
+  name: "Company Car Tax Benefit"
+  amount: 0
+  currency: EUR
+  notes: |
+    BEVs under €70k taxed at 0.25% of list price per month (vs 1% for ICE).
+    Example: €48,990 × 0.25% = €122/month taxable benefit.
+    Saves €368/month = €4,416/year vs comparable ICE SUV.
+
+- type: tax_exemption
+  name: "Kfz-Steuer Exemption"
+  amount: 0
+  currency: EUR
+  notes: "BEVs exempt from German vehicle tax until 2030"
 
 total_cost_of_ownership:
   purchase_price: 48990
   federal_incentive: 0
   state_incentive: 0
   net_purchase_price: 48990
-  
+
   annual_costs:
     insurance_liability: 950
     insurance_comprehensive: 850
@@ -186,7 +185,7 @@ total_cost_of_ownership:
     maintenance: 380
     inspection: 140
     total_annual: 3145
-  
+
   comparison_ice:
     ice_equivalent: Peugeot 3008 1.2 PureTech 130 Allure
     ice_msrp: 39990
@@ -195,39 +194,31 @@ total_cost_of_ownership:
     ice_annual_maintenance: 620
     ice_total_annual: 3480
     bev_vs_ice_annual_savings: -335  # BEV saves €335 per year in running costs
-    
   notes: |
     The e-3008 73 kWh Allure costs €9,000 more than comparable ICE 3008.
     Annual savings of €335 means a 27-year payback period for private buyers without incentives.
-    
+
     Company car drivers benefit hugely:
     - 0.25% taxation: €122/month taxable benefit
     - ICE equivalent: €400/month (1% of €40k)
     - Monthly savings: €278 = €3,336/year in reduced taxable benefit
-    
+
     For company car use, the e-3008 pays back the premium in under 3 years through
     tax savings alone, not counting fuel savings.
 
-data_quality:
-  overall: verified
-  last_updated: 2026-02-08
-  source_reliability: high
-  pricing_verified: true
-  incentives_verified: true
-
 sources:
-  - name: Peugeot Germany Official Configurator
-    url: https://www.peugeot.de/modelle/e-3008/konfigurator.html
-    date_accessed: 2026-02-08
-  - name: Auto Motor und Sport e-3008 Review
-    url: https://www.auto-motor-und-sport.de/neuheiten/peugeot-e-3008-2024/
-    date_accessed: 2026-02-08
+- name: Peugeot Germany Official Configurator
+  url: https://www.peugeot.de/modelle/e-3008/konfigurator.html
+  date_accessed: 2026-02-08
+- name: Auto Motor und Sport e-3008 Review
+  url: https://www.auto-motor-und-sport.de/neuheiten/peugeot-e-3008-2024/
+  date_accessed: 2026-02-08
 
 notes: |
   The all-new Peugeot e-3008 73 kWh Allure offers exceptional value in the compact electric
   SUV segment. At €48,990, it undercuts VW ID.4 Pro (€52,000), Škoda Enyaq iV 60 (€49,990),
   and Ford Mustang Mach-E (€54,000) while offering cutting-edge technology.
-  
+
   Key selling points for German market:
   - Segment-first 21" Panoramic i-Cockpit curved display
   - ChatGPT voice assistant integration (unique in class)
@@ -236,14 +227,18 @@ notes: |
   - 520L trunk (best-in-class space efficiency)
   - Qualifies for 0.25% company car taxation
   - French ride comfort and sophisticated design
-  
+
   The e-3008 represents Peugeot's first ground-up electric SUV design with no ICE compromises.
   The revolutionary interior with its massive curved display and advanced AI voice assistant
   make it feel a generation ahead of German competitors.
-  
+
   Recommended configuration: Add Heat Pump (€1,090) and Winter Package (€790) for optimal
   German climate performance. With these options, total price is €50,870 - still excellent
   value vs competition.
-  
+
   Strong alternative to: VW ID.4, Škoda Enyaq iV, Tesla Model Y RWD, Hyundai Ioniq 5,
   Kia EV6, Ford Mustang Mach-E.
+metadata:
+  data_quality: unverified
+  updated_at: '2026-02-08'
+  created_at: '2026-02-08'

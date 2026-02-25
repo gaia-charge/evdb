@@ -14,61 +14,61 @@ pricing:
   destination_charge: 0
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: "MOVES III program expired. Awaiting potential MOVES IV."
-    valid_from: null
-    valid_until: null
-    conditions:
-      - "Program expired"
-  - name: Etiqueta CERO
-    type: tax_exemption
-    amount: 0
-    description: "Zero-emission label: free urban access, parking discounts, reduced road tax in many municipalities"
-    valid_from: "2024-01-01"
-    valid_until: null
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: "MOVES III program expired. Awaiting potential MOVES IV."
+  valid_from:
+  valid_until:
+  conditions:
+  - "Program expired"
+- name: Etiqueta CERO
+  type: tax_exemption
+  amount: 0
+  description: "Zero-emission label: free urban access, parking discounts, reduced road tax in many municipalities"
+  valid_from: "2024-01-01"
+  valid_until:
 
 available_colors:
-  - name: Clear White
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Aurora Black Pearl
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Steel Gray Metallic
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Twilight Blue
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
-  - name: Terra Brown
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Clear White
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Aurora Black Pearl
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Steel Gray Metallic
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Twilight Blue
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
+- name: Terra Brown
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
 available_wheels:
-  - name: 18-inch alloy wheels
-    size_inches: 18
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 19-inch alloy wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 690
-      currency: EUR
+- name: 18-inch alloy wheels
+  size_inches: 18
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 19-inch alloy wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 690
+    currency: EUR
 
 market_info:
   warranty_years: 7
@@ -77,16 +77,10 @@ market_info:
   battery_warranty_km: 150000
   roadside_assistance_years: 7
 
-market_notes: |
-  Kia EV3 Standard Range available through Kia Spain dealer network.
-  Prices include 21% IVA. Etiqueta CERO provides urban access benefits,
-  parking discounts, and reduced municipal road tax across Spain.
-  Competitive with Peugeot e-2008 and Opel Mokka Electric.
-  7-year/150,000km warranty is segment-leading in Spain.
-
 metadata:
   data_quality: estimated
-  last_updated: "2026-02-11"
   created_at: "2026-02-11"
-  source_urls:
-    - "https://www.kia.com/es/modelos/ev3/"
+  updated_at: "2026-02-11"
+  sources:
+  - https://www.kia.com/es/modelos/ev3/
+notes: "Kia EV3 Standard Range available through Kia Spain dealer network.\nPrices include 21% IVA. Etiqueta CERO provides urban access benefits,\nparking discounts, and reduced municipal road tax across Spain.\nCompetitive with Peugeot e-2008 and Opel Mokka Electric.\n7-year/150,000km warranty is segment-leading in Spain."

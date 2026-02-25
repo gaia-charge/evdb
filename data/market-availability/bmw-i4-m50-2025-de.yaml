@@ -18,79 +18,79 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: M Brooklyn Grey Metallic
-    code: C3P
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Black Sapphire Metallic
-    code: C1M
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: Portimao Blue Metallic
-    code: C3N
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
-  - name: M Frozen Pure Grey Metallic
-    code: C40
-    type: frozen
-    price_add:
-      amount: 2900
-      currency: EUR
-  - name: Skyscraper Grey Metallic
-    code: C3Q
-    type: metallic
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: M Brooklyn Grey Metallic
+  code: C3P
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Black Sapphire Metallic
+  code: C1M
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: Portimao Blue Metallic
+  code: C3N
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
+- name: M Frozen Pure Grey Metallic
+  code: C40
+  type: frozen
+  price_add:
+    amount: 2900
+    currency: EUR
+- name: Skyscraper Grey Metallic
+  code: C3Q
+  type: metallic
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" M light alloy wheels Style 862 M
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" M light alloy wheels Style 863 M
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1900
-      currency: EUR
+- name: 19" M light alloy wheels Style 862 M
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 20" M light alloy wheels Style 863 M
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1900
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Sensatec/Mesh
-    material: sensatec_mesh
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Black/Blue M Sensatec
-    material: m_sensatec
-    color: black_blue
-    price_add:
-      amount: 650
-      currency: EUR
-  - name: Black M Vernasca Leather
-    material: m_leather
-    color: black
-    price_add:
-      amount: 1650
-      currency: EUR
+- name: Black Sensatec/Mesh
+  material: sensatec_mesh
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Black/Blue M Sensatec
+  material: m_sensatec
+  color: black_blue
+  price_add:
+    amount: 650
+    currency: EUR
+- name: Black M Vernasca Leather
+  material: m_leather
+  color: black
+  price_add:
+    amount: 1650
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars"
-    conditions: ["Price over €70,000 gross list price - rate is 0.5%"]
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars"
+  conditions: ["Price over €70,000 gross list price - rate is 0.5%"]
 
 # Company Car Tax Calculation (Germany-specific)
 company_car_tax:
@@ -102,32 +102,32 @@ company_car_tax:
 
 # Options
 popular_packages:
-  - name: M Pro Package
-    price:
-      amount: 3200
-      currency: EUR
-    features:
-      - Adaptive M Suspension Professional
-      - Integral Active Steering
-      - M Sport Differential
-  - name: Technology Package
-    price:
-      amount: 2800
-      currency: EUR
-    features:
-      - Head-Up Display
-      - BMW Laser Light
-      - BMW Night Vision
-      - Surround View cameras
-  - name: Comfort Package
-    price:
-      amount: 1600
-      currency: EUR
-    features:
-      - Heated front and rear seats
-      - Heated steering wheel
-      - Soft-close doors
-      - Ambient lighting enhanced
+- name: M Pro Package
+  price:
+    amount: 3200
+    currency: EUR
+  features:
+  - Adaptive M Suspension Professional
+  - Integral Active Steering
+  - M Sport Differential
+- name: Technology Package
+  price:
+    amount: 2800
+    currency: EUR
+  features:
+  - Head-Up Display
+  - BMW Laser Light
+  - BMW Night Vision
+  - Surround View cameras
+- name: Comfort Package
+  price:
+    amount: 1600
+    currency: EUR
+  features:
+  - Heated front and rear seats
+  - Heated steering wheel
+  - Soft-close doors
+  - Ambient lighting enhanced
 
 # Notes
 notes: |
@@ -140,7 +140,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2025/bmw-i4-m50.html
   created_at: "2026-02-09"
   last_verified_at: "2026-02-09"
   notes: Prices as of February 2026, no federal incentives available
+  sources:
+  - https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/2025/bmw-i4-m50.html

@@ -14,27 +14,27 @@ pricing:
   vat_rate_percent: 20
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 4000
-    description: >
-      French government ecological bonus for electric vehicles.
-    conditions:
-      - Pure battery-electric vehicle (BEV)
-      - Vehicle price under €47,000 for full bonus
-    active: false
-    notes: "Vehicle exceeds €47,000 price cap for bonus écologique"
+- name: Bonus écologique
+  type: grant
+  amount: 4000
+  description: >
+    French government ecological bonus for electric vehicles.
+  conditions:
+  - Pure battery-electric vehicle (BEV)
+  - Vehicle price under €47,000 for full bonus
+  active: false
+  notes: "Vehicle exceeds €47,000 price cap for bonus écologique"
 
 available_colors:
-  - name: Glacier White Metallic
-    type: metallic
-    price_add: 0
-  - name: Grenadilla Black Metallic
-    type: metallic
-    price_add: 700
-  - name: Moonstone Grey
-    type: metallic
-    price_add: 700
+- name: Glacier White Metallic
+  type: metallic
+  price_add: 0
+- name: Grenadilla Black Metallic
+  type: metallic
+  price_add: 700
+- name: Moonstone Grey
+  type: metallic
+  price_add: 700
 
 notes: |
   VW ID.5 Pro available in France through Volkswagen dealers.
@@ -45,6 +45,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.volkswagen.fr/fr/modeles/id5.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.volkswagen.fr/fr/modeles/id5.html

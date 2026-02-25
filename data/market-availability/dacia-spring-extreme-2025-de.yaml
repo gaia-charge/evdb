@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2025-03-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: 2025 facelift model, top trim of Europe's most affordable EV
@@ -22,39 +22,39 @@ pricing:
 
 options:
   colors:
-    - name: Highland Grey (solid)
-      price: 0
-      type: solid
-    - name: Cedar Green (solid)
-      price: 0
-      type: solid
-    - name: Pearl White (pearl)
-      price: 490
-      type: pearl
-    - name: Iron Blue (metallic)
-      price: 490
-      type: metallic
+  - name: Highland Grey (solid)
+    price: 0
+    type: solid
+  - name: Cedar Green (solid)
+    price: 0
+    type: solid
+  - name: Pearl White (pearl)
+    price: 490
+    type: pearl
+  - name: Iron Blue (metallic)
+    price: 490
+    type: metallic
   wheels:
-    - name: 15" alloy wheels
-      price: 0
-      size_inches: 15
-      notes: "Standard on Extreme trim"
+  - name: 15" alloy wheels
+    price: 0
+    size_inches: 15
+    notes: "Standard on Extreme trim"
 
 incentives:
-  - name: "Company car tax benefit (0.25%)"
-    type: tax_credit
-    amount: 1884
-    notes: "0.25% of €20,900 = €52.25/month vs 1% = €209/month. Savings: €157/month = €1,884/year"
-    eligibility: Company car drivers
-  - name: "Kfz-Steuer exemption"
-    type: tax_exemption
-    amount: 150
-    notes: "EV road tax exemption until 2030"
-    valid_until: "2030-12-31"
-  - name: "THG-Quote"
-    type: grant
-    amount: 300
-    notes: "CO2 certificate sale, significant relative to vehicle price"
+- name: "Company car tax benefit (0.25%)"
+  type: tax_credit
+  amount: 1884
+  notes: "0.25% of €20,900 = €52.25/month vs 1% = €209/month. Savings: €157/month = €1,884/year"
+  eligibility: Company car drivers
+- name: "Kfz-Steuer exemption"
+  type: tax_exemption
+  amount: 150
+  notes: "EV road tax exemption until 2030"
+  valid_until: "2030-12-31"
+- name: "THG-Quote"
+  type: grant
+  amount: 300
+  notes: "CO2 certificate sale, significant relative to vehicle price"
 
 warranty:
   vehicle_years: 3
@@ -65,40 +65,40 @@ warranty:
   notes: "Dacia offers 3-year/100,000km vehicle warranty"
 
 charging_costs:
-  - scenario: "Home charging"
-    cost_per_kwh: 0.30
-    cost_per_100km: 4.65
-  - scenario: "Public AC"
-    cost_per_kwh: 0.45
-    cost_per_100km: 6.98
-  - scenario: "DC fast charging (30kW)"
-    cost_per_kwh: 0.59
-    cost_per_100km: 9.15
+- scenario: "Home charging"
+  cost_per_kwh: 0.30
+  cost_per_100km: 4.65
+- scenario: "Public AC"
+  cost_per_kwh: 0.45
+  cost_per_100km: 6.98
+- scenario: "DC fast charging (30kW)"
+  cost_per_kwh: 0.59
+  cost_per_100km: 9.15
 
 popular_configurations:
-  - name: "Extreme Base"
-    price: 21590
-    includes:
-      - "Spring Extreme (€20,900)"
-      - "Destination (€690)"
-    notes: "Fully loaded - Extreme includes everything"
-  - name: "Extreme with Metallic"
-    price: 22080
-    includes:
-      - "Spring Extreme (€20,900)"
-      - "Metallic paint (€490)"
-      - "Destination (€690)"
-    notes: "Only cosmetic option worth adding"
+- name: "Extreme Base"
+  price: 21590
+  includes:
+  - "Spring Extreme (€20,900)"
+  - "Destination (€690)"
+  notes: "Fully loaded - Extreme includes everything"
+- name: "Extreme with Metallic"
+  price: 22080
+  includes:
+  - "Spring Extreme (€20,900)"
+  - "Metallic paint (€490)"
+  - "Destination (€690)"
+  notes: "Only cosmetic option worth adding"
 
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  source_urls:
-    - https://www.dacia.de/modelle/spring.html
   notes: |
     Dacia Spring Extreme 2025 is the top trim at €20,900 - still under €22k on-road.
     Adds the 65hp motor (vs 45hp), automatic climate, cruise control, reversing camera,
     alloy wheels, leather steering wheel over the Expression. The motor upgrade alone
     makes city driving much more pleasant. At just €2,000 over Expression, the Extreme
     represents excellent value. THG-Quote of €300/year is ~1.4% of purchase price annually.
+  updated_at: "2026-02-10"
+  sources:
+  - https://www.dacia.de/modelle/spring.html

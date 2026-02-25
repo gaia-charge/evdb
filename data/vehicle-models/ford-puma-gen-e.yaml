@@ -10,7 +10,7 @@ segment: B  # B-segment compact crossover
 
 production:
   start_year: 2025
-  end_year: null
+  end_year:
   generation: 1
   current_status: active
 
@@ -19,8 +19,8 @@ platform: Multi-Energy Platform  # Shared with Peugeot e-2008, Opel Mokka-e
 awards: []
 
 safety:
-  euro_ncap_rating: null
-  euro_ncap_year: null
+  euro_ncap_rating:
+  euro_ncap_year:
   notes: Euro NCAP rating pending
 
 dimensions:
@@ -30,7 +30,7 @@ dimensions:
   wheelbase_mm: 2609
   ground_clearance_mm: 145
   drag_coefficient: 0.307
-  frontal_area_m2: null
+  frontal_area_m2:
 
 interior:
   seating_capacity: 5
@@ -49,35 +49,33 @@ technology:
   voice_assistant: true
   connectivity: Apple CarPlay, Android Auto, FordPass app, wireless charging
   notable_features:
-    - 12.8" digital instrument cluster
-    - 12" touchscreen with SYNC 4
-    - MegaBox under-boot storage
-    - Plug & Charge (ISO 15118-2)
+  - 12.8" digital instrument cluster
+  - 12" touchscreen with SYNC 4
+  - MegaBox under-boot storage
+  - Plug & Charge (ISO 15118-2)
 
 build:
   production_location: Craiova, Romania
   also_built_at: []
   quality_notes: Built at Ford Craiova alongside ICE Puma
 
-data_quality:
-  overall: verified
-  last_updated: 2026-02-09
-  source_reliability: high
-  notes: Specifications from Ford Europe and EV Database
-
 sources:
-  - name: EV Database
-    url: https://ev-database.org/car/3073/Ford-Puma-Gen-E
-    date_accessed: 2026-02-09
-  - name: Ford Europe
-    url: https://www.ford.eu/electric-vehicles/puma-gen-e
-    date_accessed: 2026-02-09
+- name: EV Database
+  url: https://ev-database.org/car/3073/Ford-Puma-Gen-E
+  date_accessed: 2026-02-09
+- name: Ford Europe
+  url: https://www.ford.eu/electric-vehicles/puma-gen-e
+  date_accessed: 2026-02-09
 
 notes: |
   The Ford Puma Gen-E is Ford's first small electric crossover for Europe, built on
   a multi-energy platform shared with Stellantis brands. Positioned as a practical
   urban-friendly EV with 376 km WLTP range and 523L boot space.
-  
+
   Key features: 100 kW DC fast charging, Plug & Charge support, MegaBox storage.
-  
+
   Competes with: Peugeot e-2008, Opel Mokka Electric, Renault 4 E-Tech, Citroën ë-C3 Aircross.
+metadata:
+  data_quality: unverified
+  updated_at: '2026-02-09'
+  created_at: '2026-02-09'

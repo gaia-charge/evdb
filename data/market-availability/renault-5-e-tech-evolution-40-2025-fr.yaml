@@ -18,46 +18,46 @@ pricing:
   total_price_estimate: 25000
 
 incentives:
-  - name: "Bonus écologique"
-    type: grant
-    amount: 4000
-    description: "Government ecological bonus for BEVs priced under €47,000. Made in France = qualifies."
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Vehicle price under €47,000"
-      - "Meets environmental score requirements (made in France)"
-  - name: "Leasing social"
-    type: subsidy
-    amount: 0
-    description: "Social leasing program for low-income households. Renault 5 eligible at ~€100/month."
-    valid_from: "2024-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Household income below threshold"
-      - "Subject to allocation availability"
+- name: "Bonus écologique"
+  type: grant
+  amount: 4000
+  description: "Government ecological bonus for BEVs priced under €47,000. Made in France = qualifies."
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Vehicle price under €47,000"
+  - "Meets environmental score requirements (made in France)"
+- name: "Leasing social"
+  type: subsidy
+  amount: 0
+  description: "Social leasing program for low-income households. Renault 5 eligible at ~€100/month."
+  valid_from: "2024-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Household income below threshold"
+  - "Subject to allocation availability"
 
 market_specific:
   available_colors:
-    - name: "Pop Green"
-      type: solid
-      price_add: 0
-    - name: "Iconic Yellow"
-      type: solid
-      price_add: 0
-    - name: "Revolution Blue"
-      type: metallic
-      price_add: 600
-    - name: "Urban Grey"
-      type: metallic
-      price_add: 600
-    - name: "Black"
-      type: metallic
-      price_add: 600
+  - name: "Pop Green"
+    type: solid
+    price_add: 0
+  - name: "Iconic Yellow"
+    type: solid
+    price_add: 0
+  - name: "Revolution Blue"
+    type: metallic
+    price_add: 600
+  - name: "Urban Grey"
+    type: metallic
+    price_add: 600
+  - name: "Black"
+    type: metallic
+    price_add: 600
 
   popular_options:
-    - name: "Comfort Pack"
-      price: 1300
+  - name: "Comfort Pack"
+    price: 1300
 
 notes: |
   Renault 5 E-Tech is a flagship product for the French market. Built in Douai, France,
@@ -68,6 +68,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.renault.fr/vehicules-electriques/renault-5-e-tech.html
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.renault.fr/vehicules-electriques/renault-5-e-tech.html

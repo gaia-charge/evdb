@@ -14,17 +14,17 @@ pricing:
   total_price_estimate: 249900
 
 incentives:
-  - name: Mój elektryk
-    type: grant
-    amount: 27000
-    currency: PLN
-    description: "Mój elektryk subsidy for BEVs priced under PLN 225,000 net. This vehicle may exceed the cap."
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - "Vehicle price net must not exceed PLN 225,000"
-      - "First registration in Poland"
-      - "Natural person or company"
+- name: Mój elektryk
+  type: grant
+  amount: 27000
+  currency: PLN
+  description: "Mój elektryk subsidy for BEVs priced under PLN 225,000 net. This vehicle may exceed the cap."
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - "Vehicle price net must not exceed PLN 225,000"
+  - "First registration in Poland"
+  - "Natural person or company"
 
 market_specific:
   excise_duty: 0
@@ -39,6 +39,7 @@ notes: |
 
 metadata:
   data_quality: estimated
-  source_url: https://www.skoda.pl/modele/enyaq-coupe
   created_at: "2026-02-11"
   last_verified_at: "2026-02-11"
+  sources:
+  - https://www.skoda.pl/modele/enyaq-coupe

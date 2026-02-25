@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2025-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 27400
@@ -16,58 +16,58 @@ pricing:
   total_price_estimate: 27400
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 4000
-    description: >
-      Bonus écologique of €4,000 for electric vehicles priced under €47,000.
-      Must meet environmental manufacturing score requirements.
-    valid_from: "2025-01-01"
-    valid_until: "2025-12-31"
-    conditions:
-      - Vehicle price under €47,000
-      - Must meet environmental score threshold
-      - New vehicle only
-    source_url: https://www.service-public.fr/particuliers/vosdroits/F34014
+- name: Bonus écologique
+  type: grant
+  amount: 4000
+  description: >
+    Bonus écologique of €4,000 for electric vehicles priced under €47,000.
+    Must meet environmental manufacturing score requirements.
+  valid_from: "2025-01-01"
+  valid_until: "2025-12-31"
+  conditions:
+  - Vehicle price under €47,000
+  - Must meet environmental score threshold
+  - New vehicle only
+  source_url: https://www.service-public.fr/particuliers/vosdroits/F34014
 
-  - name: Prime à la conversion
-    type: grant
-    amount: 1500
-    description: >
-      Additional €1,500 when scrapping an old polluting vehicle (Crit'Air 3 or worse).
-      Income-dependent, can be up to €6,000 for low-income households.
-    conditions:
-      - Must scrap old vehicle (Crit'Air 3+)
-      - Income-dependent amount
+- name: Prime à la conversion
+  type: grant
+  amount: 1500
+  description: >
+    Additional €1,500 when scrapping an old polluting vehicle (Crit'Air 3 or worse).
+    Income-dependent, can be up to €6,000 for low-income households.
+  conditions:
+  - Must scrap old vehicle (Crit'Air 3+)
+  - Income-dependent amount
 
 market_specific:
   standard_equipment:
-    - 10.25-inch digital instrument cluster
-    - 10.25-inch touchscreen infotainment
-    - Wireless Apple CarPlay and Android Auto
-    - Rear parking sensors and camera
-    - Lane Keep Assist
-    - Forward Collision-Avoidance Assist
-    - Heated front seats
-    - Climate control
-    - 85 kW fast charging (DC)
+  - 10.25-inch digital instrument cluster
+  - 10.25-inch touchscreen infotainment
+  - Wireless Apple CarPlay and Android Auto
+  - Rear parking sensors and camera
+  - Lane Keep Assist
+  - Forward Collision-Avoidance Assist
+  - Heated front seats
+  - Climate control
+  - 85 kW fast charging (DC)
 
   available_colors:
-    - name: Atlas White
-      additional_cost: 0
-    - name: Abyss Black Pearl
-      additional_cost: 500
-    - name: Tomboy Khaki
-      additional_cost: 500
-    - name: Unbleached Ivory
-      additional_cost: 500
-    - name: Bicolor options
-      additional_cost: 800
+  - name: Atlas White
+    additional_cost: 0
+  - name: Abyss Black Pearl
+    additional_cost: 500
+  - name: Tomboy Khaki
+    additional_cost: 500
+  - name: Unbleached Ivory
+    additional_cost: 500
+  - name: Bicolor options
+    additional_cost: 800
 
   available_interiors:
-    - name: Dark Grey
-      color: Grey
-      additional_cost: 0
+  - name: Dark Grey
+    color: Grey
+    additional_cost: 0
 
 dealer_network:
   online_sales_available: true
@@ -76,7 +76,7 @@ delivery:
   typical_delivery_weeks: 10
 
 compliance:
-  ncap_rating: null
+  ncap_rating:
   emission_class: Zero Emission
 
 notes: |
@@ -87,8 +87,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-12"
-  updated_at: null
   data_quality: estimated
   price_checked_at: "2026-02-12"
   sources:
-    - https://www.hyundai.com/fr/modeles/inster-electric.html
+  - https://www.hyundai.com/fr/modeles/inster-electric.html

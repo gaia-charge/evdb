@@ -17,29 +17,29 @@ pricing:
   total_price_estimate: 53990
 
 incentives:
-  - name: Bonus écologique
-    type: grant
-    amount: 0
-    description: >
-      Vehicle price exceeds €47,000 threshold for bonus écologique eligibility.
-      Not eligible for the ecological bonus.
-    conditions:
-      - Vehicle price must be under €47,000
+- name: Bonus écologique
+  type: grant
+  amount: 0
+  description: >
+    Vehicle price exceeds €47,000 threshold for bonus écologique eligibility.
+    Not eligible for the ecological bonus.
+  conditions:
+  - Vehicle price must be under €47,000
 
 market_specific:
   available_colors:
-    - name: Snow White Pearl
-      type: pearl
-      price_add: 0
-    - name: Gravity Blue
-      type: metallic
-      price_add: 650
-    - name: Aurora Black Pearl
-      type: pearl
-      price_add: 650
-    - name: Terracotta Orange
-      type: metallic
-      price_add: 650
+  - name: Snow White Pearl
+    type: pearl
+    price_add: 0
+  - name: Gravity Blue
+    type: metallic
+    price_add: 650
+  - name: Aurora Black Pearl
+    type: pearl
+    price_add: 650
+  - name: Terracotta Orange
+    type: metallic
+    price_add: 650
 
 notes: |
   Kia EV5 GT-Line premium trim in France. Prices include 20% TVA.
@@ -49,6 +49,7 @@ notes: |
 metadata:
   data_quality: estimated
   data_source: manufacturer
-  source_url: https://www.kia.fr/modeles/ev5
   created_at: "2026-02-12"
   last_verified_at: "2026-02-12"
+  sources:
+  - https://www.kia.fr/modeles/ev5

@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2025-01-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 94990  # Price reduction from €99,990 in 2024
@@ -17,15 +17,15 @@ pricing:
   total_price_estimate: 96790
 
 incentives:
-  - name: Umweltbonus (Environmental Bonus)
-    type: grant
-    amount: 0
-    description: Federal EV incentive ended December 2023
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program ended 2023-12-31
-    source_url: https://www.bafa.de/umweltbonus
+- name: Umweltbonus (Environmental Bonus)
+  type: grant
+  amount: 0
+  description: Federal EV incentive ended December 2023
+  valid_from:
+  valid_until:
+  conditions:
+  - Program ended 2023-12-31
+  source_url: https://www.bafa.de/umweltbonus
 
 company_car_taxation:
   list_price_gross: 94990
@@ -41,83 +41,82 @@ company_car_taxation:
 
 market_specific:
   standard_equipment:
-    - Heat pump
-    - Air suspension
-    - Premium audio system (22 speakers, 960W)
-    - Glass roof with UV protection
-    - Autopilot (basic)
-    - Navigation with live traffic visualization
-    - Heated seats front and rear
-    - Ventilated seats front
-    - Power folding mirrors
-    - Tri-zone climate control
-    - 17" horizontal touchscreen
-    - 8" rear touchscreen
-    - Wireless phone charging (dual)
-    - Powered liftgate
-    - LED headlights with auto high beam
-    - Enhanced cabin noise insulation (2025 improvement)
-  
+  - Heat pump
+  - Air suspension
+  - Premium audio system (22 speakers, 960W)
+  - Glass roof with UV protection
+  - Autopilot (basic)
+  - Navigation with live traffic visualization
+  - Heated seats front and rear
+  - Ventilated seats front
+  - Power folding mirrors
+  - Tri-zone climate control
+  - 17" horizontal touchscreen
+  - 8" rear touchscreen
+  - Wireless phone charging (dual)
+  - Powered liftgate
+  - LED headlights with auto high beam
+  - Enhanced cabin noise insulation (2025 improvement)
+
   available_colors:
-    - name: Pearl White Multi-Coat
-      code: PPSW
-      additional_cost: 0
-      hex: "#F5F5F5"
-    - name: Solid Black
-      code: PBSB
-      additional_cost: 1900  # Up from €1,800 in 2024
-      hex: "#000000"
-    - name: Midnight Silver Metallic
-      code: PMNG
-      additional_cost: 1900
-      hex: "#4A5660"
-    - name: Deep Blue Metallic
-      code: PPSB
-      additional_cost: 1900
-      hex: "#1B3D6D"
-    - name: Ultra Red
-      code: PPMR
-      additional_cost: 3200  # Up from €3,000 in 2024
-      hex: "#C41E3D"
-  
+  - name: Pearl White Multi-Coat
+    code: PPSW
+    additional_cost: 0
+    hex: "#F5F5F5"
+  - name: Solid Black
+    code: PBSB
+    additional_cost: 1900    # Up from €1,800 in 2024
+    hex: "#000000"
+  - name: Midnight Silver Metallic
+    code: PMNG
+    additional_cost: 1900
+    hex: "#4A5660"
+  - name: Deep Blue Metallic
+    code: PPSB
+    additional_cost: 1900
+    hex: "#1B3D6D"
+  - name: Ultra Red
+    code: PPMR
+    additional_cost: 3200    # Up from €3,000 in 2024
+    hex: "#C41E3D"
   available_interiors:
-    - name: All Black
-      color: Black
-      material: Premium synthetic leather
-      additional_cost: 0
-    - name: Black and White
-      color: Black/White
-      material: Premium synthetic leather
-      additional_cost: 2500  # Up from €2,400 in 2024
-    - name: Cream
-      color: Cream
-      material: Premium synthetic leather
-      additional_cost: 2500
-  
+  - name: All Black
+    color: Black
+    material: Premium synthetic leather
+    additional_cost: 0
+  - name: Black and White
+    color: Black/White
+    material: Premium synthetic leather
+    additional_cost: 2500    # Up from €2,400 in 2024
+  - name: Cream
+    color: Cream
+    material: Premium synthetic leather
+    additional_cost: 2500
+
   available_wheels:
-    - size_inches: 19
-      design: Tempest
-      material: alloy
-      additional_cost: 0
-    - size_inches: 21
-      design: Arachnid
-      material: alloy
-      additional_cost: 4700  # Up from €4,500 in 2024
+  - size_inches: 19
+    design: Tempest
+    material: alloy
+    additional_cost: 0
+  - size_inches: 21
+    design: Arachnid
+    material: alloy
+    additional_cost: 4700    # Up from €4,500 in 2024
 
   optional_packages:
-    - name: Enhanced Autopilot
-      price: 3800
-      description: Navigate on Autopilot, Auto Lane Change, Autopark, Summon
-    - name: Full Self-Driving Capability
-      price: 7500
-      description: All Enhanced Autopilot features plus Traffic Light Recognition and future autonomous driving capabilities
-    - name: Yoke Steering Wheel
-      price: 0
-      description: Optional yoke steering wheel (standard round wheel available at no cost)
-    - name: Premium Connectivity
-      price: 99
-      monthly: true
-      description: Satellite-view maps, video streaming, music streaming, internet browser
+  - name: Enhanced Autopilot
+    price: 3800
+    description: Navigate on Autopilot, Auto Lane Change, Autopark, Summon
+  - name: Full Self-Driving Capability
+    price: 7500
+    description: All Enhanced Autopilot features plus Traffic Light Recognition and future autonomous driving capabilities
+  - name: Yoke Steering Wheel
+    price: 0
+    description: Optional yoke steering wheel (standard round wheel available at no cost)
+  - name: Premium Connectivity
+    price: 99
+    monthly: true
+    description: Satellite-view maps, video streaming, music streaming, internet browser
 
 dealer_network:
   dealer_count: 19
@@ -141,30 +140,29 @@ notes: |
   Tesla Model S 2025 features a significant price reduction to €94,990 (down from €99,990 in 2024)
   to better compete with Mercedes EQS, Porsche Taycan, and BMW i7. This makes it the most
   affordable flagship electric sedan with supercar performance (3.2s 0-100 km/h).
-  
+
   2025 Updates:
   - Base price reduced by €5,000 to €94,990
   - Enhanced cabin noise insulation
   - Updated Autopilot software (2025.x firmware)
   - Improved delivery times (6 weeks vs 8 weeks in 2024)
   - Slightly improved efficiency and range
-  
+
   Advantages vs competition:
   - €22,000 cheaper than Mercedes EQS 450+ (€116,950)
   - €24,000 cheaper than Porsche Taycan 4S (€118,737)
   - Much faster acceleration: 3.2s vs EQS 6.2s, Taycan 4.0s
   - Best Supercharger network access
   - Direct sales, no dealer markup
-  
+
   Subject to 0.5% company car tax rate (vehicles over €70,000). No longer
   eligible for Umweltbonus. Premium Connectivity subscription required for
   full feature access after first year.
-  
+
   Company car benefit: €237/month (vs €287/month for EQS, saving €600/year in tax benefit value)
 
 metadata:
-  data_quality: verified
+  data_quality: unverified
   created_at: "2026-02-09"
-  last_updated: "2026-02-09"
-  contributor: OpenClaw EVDB Development
-  version: 1.0
+  updated_at: "2026-02-09"
+  created_by: OpenClaw EVDB Development

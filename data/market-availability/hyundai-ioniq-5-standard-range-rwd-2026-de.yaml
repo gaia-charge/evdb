@@ -18,108 +18,108 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Atlas White
-    code: WAW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Phantom Black Pearl
-    code: NB
-    type: pearl
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Cyber Grey Metallic
-    code: YT3
-    type: metallic
-    price_add:
-      amount: 850
-      currency: EUR
-  - name: Digital Teal Pearl
-    code: TT3
-    type: pearl
-    price_add:
-      amount: 850
-      currency: EUR
-  - name: Lucid Blue Pearl
-    code: LB3
-    type: pearl
-    price_add:
-      amount: 850
-      currency: EUR
-  - name: Shooting Star Matte
-    code: SS3
-    type: matte
-    price_add:
-      amount: 850
-      currency: EUR
+- name: Atlas White
+  code: WAW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Phantom Black Pearl
+  code: NB
+  type: pearl
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Cyber Grey Metallic
+  code: YT3
+  type: metallic
+  price_add:
+    amount: 850
+    currency: EUR
+- name: Digital Teal Pearl
+  code: TT3
+  type: pearl
+  price_add:
+    amount: 850
+    currency: EUR
+- name: Lucid Blue Pearl
+  code: LB3
+  type: pearl
+  price_add:
+    amount: 850
+    currency: EUR
+- name: Shooting Star Matte
+  code: SS3
+  type: matte
+  price_add:
+    amount: 850
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 19" Alloy Wheels
-    size_inches: 19
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: 20" Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 1200
-      currency: EUR
+- name: 19" Alloy Wheels
+  size_inches: 19
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+- name: 20" Alloy Wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 1200
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Dark Pebble Grey / Dove Grey
-    material: cloth_synthetic
-    color: grey
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Obsidian Black
-    material: cloth_synthetic
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Dark Pebble Grey / Dove Grey
+  material: cloth_synthetic
+  color: grey
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Obsidian Black
+  material: cloth_synthetic
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000"
-    conditions: ["Price under €70,000 gross list price", "BEV only"]
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars under €70,000"
+  conditions: ["Price under €70,000 gross list price", "BEV only"]
 
 # Options
 popular_packages:
-  - name: Comfort Package
-    price:
-      amount: 2800
-      currency: EUR
-    features:
-      - Relaxation seats (front)
-      - Augmented Reality Head-Up Display
-      - Bose Premium Sound (8 speakers)
-      - Ventilated front seats
-  - name: Tech Package
-    price:
-      amount: 1900
-      currency: EUR
-    features:
-      - Pixel LED headlights
-      - Surround view monitor
-      - Smart power tailgate
-      - Remote Smart Parking Assist
-  - name: Convenience Package
-    price:
-      amount: 1500
-      currency: EUR
-    features:
-      - Electric panoramic sunroof
-      - Heated front and rear seats
-      - Heated steering wheel
+- name: Comfort Package
+  price:
+    amount: 2800
+    currency: EUR
+  features:
+  - Relaxation seats (front)
+  - Augmented Reality Head-Up Display
+  - Bose Premium Sound (8 speakers)
+  - Ventilated front seats
+- name: Tech Package
+  price:
+    amount: 1900
+    currency: EUR
+  features:
+  - Pixel LED headlights
+  - Surround view monitor
+  - Smart power tailgate
+  - Remote Smart Parking Assist
+- name: Convenience Package
+  price:
+    amount: 1500
+    currency: EUR
+  features:
+  - Electric panoramic sunroof
+  - Heated front and rear seats
+  - Heated steering wheel
 
 # Company Car Tax Calculation
 company_car_tax:
@@ -141,7 +141,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.hyundai.de/modelle/ioniq5
   created_at: "2026-02-09"
   last_verified_at: "2026-02-09"
   notes: Prices as of February 2026
+  sources:
+  - https://www.hyundai.de/modelle/ioniq5

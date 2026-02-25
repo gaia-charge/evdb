@@ -18,149 +18,144 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Magnesium
-    code: R702
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Thunder
-    code: R707
-    type: metallic
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Midnight
-    code: R701
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  
-  - name: Snow
-    code: R709
-    type: solid
-    price_add:
-      amount: 1500
-      currency: EUR
-  
-  - name: Moon
-    code: R708
-    type: metallic
-    price_add:
-      amount: 1500
-      currency: EUR
-  
-  - name: Vapour
-    code: R710
-    type: matte
-    price_add:
-      amount: 2500
-      currency: EUR
-    notes: "Exclusive matte finish"
+- name: Magnesium
+  code: R702
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Thunder
+  code: R707
+  type: metallic
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Midnight
+  code: R701
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+
+- name: Snow
+  code: R709
+  type: solid
+  price_add:
+    amount: 1500
+    currency: EUR
+
+- name: Moon
+  code: R708
+  type: metallic
+  price_add:
+    amount: 1500
+    currency: EUR
+
+- name: Vapour
+  code: R710
+  type: matte
+  price_add:
+    amount: 2500
+    currency: EUR
+  notes: "Exclusive matte finish"
 
 # Wheel Options
 available_wheels:
-  - name: "21-inch 5-spoke Pro Forged wheels"
-    size_inches: 21
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Standard premium wheels"
-  
-  - name: "22-inch 5-spoke diamond cut wheels"
-    size_inches: 22
-    type: alloy
-    price_add:
-      amount: 1200
-      currency: EUR
-    notes: "Performance appearance, slight range reduction"
+- name: "21-inch 5-spoke Pro Forged wheels"
+  size_inches: 21
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Standard premium wheels"
+- name: "22-inch 5-spoke diamond cut wheels"
+  size_inches: 22
+  type: alloy
+  price_add:
+    amount: 1200
+    currency: EUR
+  notes: "Performance appearance, slight range reduction"
 
 # Interior Options
 available_interiors:
-  - name: Animal Welfare Standard
-    code: AWS
-    price_add:
-      amount: 0
-      currency: EUR
-    notes: "Vegan-friendly sustainable materials"
-  
-  - name: Nappa Leather with Contrast Stitching
-    code: NLC
-    price_add:
-      amount: 4500
-      currency: EUR
-    notes: "Premium Nappa leather, ventilated front seats"
+- name: Animal Welfare Standard
+  code: AWS
+  price_add:
+    amount: 0
+    currency: EUR
+  notes: "Vegan-friendly sustainable materials"
+- name: Nappa Leather with Contrast Stitching
+  code: NLC
+  price_add:
+    amount: 4500
+    currency: EUR
+  notes: "Premium Nappa leather, ventilated front seats"
 
 # Optional Packages
 available_packages:
-  - name: Pilot Pack
-    price_add:
-      amount: 3700
-      currency: EUR
-    description: "LiDAR-based autonomous driving features, lane change assistance"
-  
-  - name: Plus Pack
-    price_add:
-      amount: 5500
-      currency: EUR
-    description: "Panoramic roof, head-up display, 360° camera"
-  
-  - name: Pro Pack
-    price_add:
-      amount: 6900
-      currency: EUR
-    description: "Complete premium package with Bowers & Wilkins audio (25 speakers, 1610W)"
-  
-  - name: Climate Pack
-    price_add:
-      amount: 1200
-      currency: EUR
-    description: "Heated steering wheel, heated rear seats, windscreen wiper heating"
+- name: Pilot Pack
+  price_add:
+    amount: 3700
+    currency: EUR
+  description: "LiDAR-based autonomous driving features, lane change assistance"
+- name: Plus Pack
+  price_add:
+    amount: 5500
+    currency: EUR
+  description: "Panoramic roof, head-up display, 360° camera"
+- name: Pro Pack
+  price_add:
+    amount: 6900
+    currency: EUR
+  description: "Complete premium package with Bowers & Wilkins audio (25 speakers, 1610W)"
+- name: Climate Pack
+  price_add:
+    amount: 1200
+    currency: EUR
+  description: "Heated steering wheel, heated rear seats, windscreen wiper heating"
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (base price €83,900)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-    calculation:
-      monthly_tax_base: 20975  # €83,900 * 0.25%
-      annual_tax_value: 251700  # Monthly * 12
-    notes: "Significantly cheaper than 1% fossil fuel rule (€83,900 * 1% = €839/month vs €210/month)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (base price €83,900)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+  calculation:
+    monthly_tax_base: 20975    # €83,900 * 0.25%
+    annual_tax_value: 251700    # Monthly * 12
+  notes: "Significantly cheaper than 1% fossil fuel rule (€83,900 * 1% = €839/month vs €210/month)"
 
 # Market Notes
 notes: |
   Polestar 3 is Polestar's first SUV, competing with BMW iX (from €82,500), Audi Q8 e-tron 
   (from €77,900), and Mercedes EQS SUV (from €115,900). Positioned as premium alternative 
   with Scandinavian design and advanced technology.
-  
+
   Direct-to-consumer model through polestar.com. Polestar Spaces in major German cities 
   for test drives. Service through Volvo network.
-  
+
   Standard features include air suspension, LiDAR sensors (with Pilot Pack), Google 
   Automotive Services, heat pump, and advanced safety systems.
-  
+
   Company car tax benefit (0.25% rule) makes it attractive for business users. Base price 
   €83,900 results in €210/month taxable benefit vs €839/month for fossil fuel equivalent.
-  
+
   Strong competition from established German luxury brands, but Polestar offers distinctive 
   design, sustainability focus, and competitive pricing.
 
 # Data quality metadata
 metadata:
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   data_quality: verified
-  
+
   sources:
-    - https://www.polestar.com/de/polestar-3/
-    - https://www.polestar.com/de/polestar-3/design-your-polestar-3/
-    - https://www.carwow.de/polestar/3
-  
+  - https://www.polestar.com/de/polestar-3/
+  - https://www.polestar.com/de/polestar-3/design-your-polestar-3/
+  - https://www.carwow.de/polestar/3
+
   verified_by: official
+  updated_at: "2026-02-08"

@@ -8,7 +8,7 @@ manufacturer_id: porsche
 brand: "Porsche"
 name: Taycan
 model_year_start: 2019
-model_year_end: null
+model_year_end:
 generation: 1
 body_style: sedan
 segment: F  # Upper mid-size / sports sedan
@@ -20,7 +20,7 @@ description: |
   compromise on driving dynamics, build quality, or charging speed. The Taycan 
   showcases groundbreaking 800V architecture enabling ultra-fast charging (10-80% 
   in ~23 minutes), sports car handling, and trademark Porsche engineering excellence.
-  
+
   Available in multiple variants (4S, Turbo, Turbo S, GTS, plus Cross Turismo 
   and Sport Turismo body styles), the Taycan delivers exhilarating performance 
   with instant electric torque, precise handling, and luxurious comfort. The 
@@ -63,7 +63,7 @@ cargo:
     Cross Turismo (446L + folding seats) or Sport Turismo variants.
 
 towing:
-  max_capacity_kg: null
+  max_capacity_kg:
   notes: "Taycan is not rated for towing. Sports car focus."
 
 infotainment:
@@ -81,13 +81,13 @@ adas:
   level: 2
   system_name: Porsche InnoDrive
   features:
-    - Adaptive Cruise Control with Stop & Go
-    - Lane Keeping Assist
-    - Lane Change Assist
-    - Traffic Sign Recognition
-    - Night Vision Assist (optional)
-    - Surround View (360° cameras, optional)
-    - Park Assist (optional)
+  - Adaptive Cruise Control with Stop & Go
+  - Lane Keeping Assist
+  - Lane Change Assist
+  - Traffic Sign Recognition
+  - Night Vision Assist (optional)
+  - Surround View (360° cameras, optional)
+  - Park Assist (optional)
   description: |
     Porsche InnoDrive with adaptive cruise control provides Level 2 semi-autonomous 
     driving. The system combines adaptive cruise, lane keeping, and predictive 
@@ -96,22 +96,22 @@ adas:
     camera to detect pedestrians and animals beyond headlight range.
 
 awards:
-  - name: World Performance Car of the Year 2020
-    year: 2020
-    organization: World Car Awards
-  - name: World Luxury Car of the Year 2020
-    year: 2020
-    organization: World Car Awards
-  - name: Goldenes Lenkrad (Golden Steering Wheel) 2019
-    year: 2019
-    organization: Auto Bild / Bild am Sonntag (Germany)
-  - name: Electric Vehicle of the Year
-    year: 2020
-    organization: BBC TopGear Magazine
-  - name: Nürburgring EV Lap Record
-    year: 2019
-    organization: Porsche (verified)
-    description: "7:33.350 lap time (Taycan prototype, 2019)"
+- name: World Performance Car of the Year 2020
+  year: 2020
+  organization: World Car Awards
+- name: World Luxury Car of the Year 2020
+  year: 2020
+  organization: World Car Awards
+- name: Goldenes Lenkrad (Golden Steering Wheel) 2019
+  year: 2019
+  organization: Auto Bild / Bild am Sonntag (Germany)
+- name: Electric Vehicle of the Year
+  year: 2020
+  organization: BBC TopGear Magazine
+- name: Nürburgring EV Lap Record
+  year: 2019
+  organization: Porsche (verified)
+  description: "7:33.350 lap time (Taycan prototype, 2019)"
 
 safety:
   euro_ncap:
@@ -136,12 +136,11 @@ production:
 metadata:
   data_quality: verified
   created_at: "2024-02-07"
-  last_updated: "2024-02-07"
   sources:
-    - https://www.porsche.com/germany/models/taycan/
-    - https://newsroom.porsche.com
-    - https://www.euroncap.com/en/results/porsche/taycan/38489
-    - https://www.caranddriver.com/porsche/taycan
+  - https://www.porsche.com/germany/models/taycan/
+  - https://newsroom.porsche.com
+  - https://www.euroncap.com/en/results/porsche/taycan/38489
+  - https://www.caranddriver.com/porsche/taycan
   notes: |
     The Taycan is Porsche's electric flagship. Key differentiators vs competitors:
     - 800V architecture (fastest charging among production EVs)
@@ -149,10 +148,11 @@ metadata:
     - Porsche build quality and attention to detail
     - Multiple variants: 4S, Turbo, Turbo S, GTS (sedan); Cross Turismo, Sport Turismo
     - Nürburgring EV lap record holder
-    
+
     The Taycan 4S is the most popular variant, offering strong performance 
     (360kW/490hp with overboost), good range (up to 568km WLTP with Performance 
     Battery Plus), and more accessible pricing than Turbo models while maintaining 
     the core Taycan experience.
-    
+
     Competitors: Tesla Model S, BMW i4 M50, Mercedes EQE, Audi e-tron GT
+  updated_at: "2024-02-07"

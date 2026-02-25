@@ -9,124 +9,117 @@ pricing:
   base_price: 37985
   destination_charge: 0  # Included in base price
   total_msrp: 37985
-  
+
   incentives:
-    - name: German Federal EV Incentive
-      amount: 0  # Expired December 2023
-      type: federal_rebate
-      valid_until: null
-      notes: No longer available
-    - name: Company Car Tax Benefit
-      amount_annual: 3420  # Annual tax savings vs ICE
-      type: tax_benefit
-      description: 0.25% monthly taxation (under €70k threshold)
-      calculation: "List price €37,985 × 0.25% = €94.96/month = €1,140/year vs 1% ICE rate (€380/month, €4,560/year) = €3,420 saved"
-  
+  - name: German Federal EV Incentive
+    amount: 0    # Expired December 2023
+    type: federal_rebate
+    valid_until:
+    notes: No longer available
+  - name: Company Car Tax Benefit
+    amount_annual: 3420    # Annual tax savings vs ICE
+    type: tax_benefit
+    description: 0.25% monthly taxation (under €70k threshold)
+    calculation: "List price €37,985 × 0.25% = €94.96/month = €1,140/year vs 1% ICE rate (€380/month, €4,560/year) = €3,420 saved"
   effective_price: 37985  # No federal incentive available
   price_positioning: value
   incentive_notes: "Company car tax benefit (0.25% rate) provides €3,420 annual savings vs ICE equivalent C4 PureTech"
 
 options_packages:
   popular_packages:
-    - name: Safety Pack Plus
-      price: 950
-      description: "Comprehensive driver assistance upgrade"
-      includes: [Adaptive Cruise Control, Parking Camera, Blind Spot Monitoring, Driver Attention Alert]
-      recommended: true
-    
-    - name: Comfort Pack
-      price: 1100
-      description: "Heated comfort features"
-      includes: [Heated front seats, Heated steering wheel, Electric driver seat with lumbar, Keyless entry and start]
-    
-    - name: Visibility Pack
-      price: 600
-      description: "Enhanced visibility and convenience"
-      includes: [Front parking sensors, Auto-dimming rearview mirror, Rain-sensing wipers, Auto high beam]
-  
+  - name: Safety Pack Plus
+    price: 950
+    description: "Comprehensive driver assistance upgrade"
+    includes: [Adaptive Cruise Control, Parking Camera, Blind Spot Monitoring, Driver Attention Alert]
+    recommended: true
+
+  - name: Comfort Pack
+    price: 1100
+    description: "Heated comfort features"
+    includes: [Heated front seats, Heated steering wheel, Electric driver seat with lumbar, Keyless entry and start]
+  - name: Visibility Pack
+    price: 600
+    description: "Enhanced visibility and convenience"
+    includes: [Front parking sensors, Auto-dimming rearview mirror, Rain-sensing wipers, Auto high beam]
   standalone_options:
-    - name: Heat Pump
-      price: 750
-      description: "Essential for German winters, improves cold weather range by 15-20%"
-      recommended: true
-    
-    - name: Metallic Paint
-      price: 750
-    
-    - name: 18" Alloy Wheels
-      price: 800
-      description: "Upgraded from 17\" standard wheels"
-    
-    - name: Panoramic Glass Roof
-      price: 950
-    
-    - name: Advanced Comfort Driver Seat
-      price: 400
-      description: "Electric adjustment with massage function"
-    
-    - name: Wireless Phone Charging
-      price: 300
+  - name: Heat Pump
+    price: 750
+    description: "Essential for German winters, improves cold weather range by 15-20%"
+    recommended: true
+
+  - name: Metallic Paint
+    price: 750
+
+  - name: 18" Alloy Wheels
+    price: 800
+    description: "Upgraded from 17\" standard wheels"
+  - name: Panoramic Glass Roof
+    price: 950
+
+  - name: Advanced Comfort Driver Seat
+    price: 400
+    description: "Electric adjustment with massage function"
+  - name: Wireless Phone Charging
+    price: 300
 
 colors:
   standard:
-    - name: Polar White
-      price: 0
-      code: BWBW
-  
+  - name: Polar White
+    price: 0
+    code: BWBW
+
   metallic:
-    - name: Perla Nera Black
-      price: 750
-    - name: Steel Grey
-      price: 750
-    - name: Cumulus Grey
-      price: 750
-    - name: Eclipse Blue
-      price: 750
-    - name: Sand
-      price: 750
-    - name: Elixir Red
-      price: 750
-    - name: Pearl White
-      price: 750
-      notes: "Pearl finish more premium than standard white"
+  - name: Perla Nera Black
+    price: 750
+  - name: Steel Grey
+    price: 750
+  - name: Cumulus Grey
+    price: 750
+  - name: Eclipse Blue
+    price: 750
+  - name: Sand
+    price: 750
+  - name: Elixir Red
+    price: 750
+  - name: Pearl White
+    price: 750
+    notes: "Pearl finish more premium than standard white"
 
 popular_configurations:
-  - name: "You! Comfort"
-    description: "Most popular configuration - essential comfort and safety upgrades"
-    base_price: 37985
-    included_options:
-      - Heat Pump (€750)
-      - Safety Pack Plus (€950)
-      - Comfort Pack (€1,100)
-      - Metallic Paint (€750)
-    total_price: 41535
-    target_buyer: "Private buyers wanting comfort without premium trim costs"
-  
-  - name: "You! Winter Ready"
-    description: "Practical winter setup for German climate"
-    base_price: 37985
-    included_options:
-      - Heat Pump (€750)
-      - Safety Pack Plus (€950)
-      - Visibility Pack (€600)
-      - Metallic Paint (€750)
-    total_price: 41035
-    target_buyer: "Value-conscious buyers prioritizing safety and winter performance"
-  
-  - name: "You! Premium"
-    description: "Near Shine Plus specification at lower base price"
-    base_price: 37985
-    included_options:
-      - Heat Pump (€750)
-      - Safety Pack Plus (€950)
-      - Comfort Pack (€1,100)
-      - Visibility Pack (€600)
-      - Panoramic Glass Roof (€950)
-      - Wireless Phone Charging (€300)
-      - 18" Alloy Wheels (€800)
-      - Metallic Paint (€750)
-    total_price: 44185
-    target_buyer: "Still €200 more than Shine Plus (€43,985), but with more à la carte control"
+- name: "You! Comfort"
+  description: "Most popular configuration - essential comfort and safety upgrades"
+  base_price: 37985
+  included_options:
+  - Heat Pump (€750)
+  - Safety Pack Plus (€950)
+  - Comfort Pack (€1,100)
+  - Metallic Paint (€750)
+  total_price: 41535
+  target_buyer: "Private buyers wanting comfort without premium trim costs"
+- name: "You! Winter Ready"
+  description: "Practical winter setup for German climate"
+  base_price: 37985
+  included_options:
+  - Heat Pump (€750)
+  - Safety Pack Plus (€950)
+  - Visibility Pack (€600)
+  - Metallic Paint (€750)
+  total_price: 41035
+  target_buyer: "Value-conscious buyers prioritizing safety and winter performance"
+- name: "You! Premium"
+  description: "Near Shine Plus specification at lower base price"
+  base_price: 37985
+  included_options:
+  - Heat Pump (€750)
+  - Safety Pack Plus (€950)
+  - Comfort Pack (€1,100)
+  - Visibility Pack (€600)
+  - Panoramic Glass Roof (€950)
+  - Wireless Phone Charging (€300)
+  - 18" Alloy Wheels (€800)
+  - Metallic Paint (€750)
+  total_price: 44185
+  target_buyer: "Still €200 more than Shine Plus (€43,985), but with more à la carte control"
 
 delivery:
   typical_wait_weeks: 12-20
@@ -138,7 +131,6 @@ charging_costs:
     cost_per_100km: 6.93  # 19.8 kWh/100km real-world × €0.35
     annual_cost_15000km: 1040
     notes: "Based on average German household electricity rate (€0.35/kWh, 2024)"
-  
   public_dc_charging:
     cost_per_kwh: 0.69
     cost_per_100km: 13.66  # 19.8 kWh/100km × €0.69
@@ -154,7 +146,7 @@ company_car_tax:
     tax_rate: 30  # Approximate marginal rate
     monthly_tax: 28.49  # €94.96 × 30%
     annual_tax: 341.88
-  
+
   comparison_to_ice:
     ice_model: Citroën C4 PureTech 130 Shine
     ice_list_price: 32990
@@ -162,90 +154,78 @@ company_car_tax:
     ice_monthly_benefit: 330  # €32,990 × 1%
     ice_annual_tax_50k_bracket: 1188  # €330 × 12 × 30%
     ev_savings_annual: 846.12  # €1,188 - €341.88
-  
   notes: "Excellent company car choice - 0.25% rate makes ë-C4 You! €846 cheaper annually than combustion C4, despite €5,000 higher list price"
 
 total_cost_ownership:
   period_years: 3
   annual_mileage: 15000
-  
+
   costs:
     purchase_price: 37985
     depreciation_3yr: 13135  # 34.6%
     residual_value_3yr: 24850  # 65.4% (good residuals for Citroën EV)
-    
     fuel_costs_3yr: 3120  # €1,040/year × 3
     maintenance_3yr: 750  # €250/year (minimal EV maintenance)
     insurance_3yr: 2700  # €900/year
     tax_3yr: 0  # No road tax in Germany
-    
     total_3yr: 19705
     monthly_cost: 547
-  
+
   ice_comparison:
     model: "Citroën C4 PureTech 130 Shine (1.2L turbo petrol, 130hp)"
     purchase_price: 32990
     depreciation_3yr: 13196  # 40% (worse than EV)
     residual_value_3yr: 19794
-    
+
     fuel_costs_3yr: 6975  # €0.155/km × 15,000 × 3
     maintenance_3yr: 2400  # €800/year
     insurance_3yr: 2550  # €850/year
     tax_3yr: 450  # €150/year
-    
     total_3yr: 25571
     monthly_cost: 710
-    
+
     savings_vs_ev: 5866  # €25,571 - €19,705
     savings_monthly: 163
-  
+
   notes: "ë-C4 You! saves €5,866 over 3 years vs combustion equivalent despite €5,000 higher purchase price - fuel, maintenance, and better residuals offset premium"
 
 market_analysis:
   target_demographics:
-    - "Company car drivers maximizing 0.25% tax benefit"
-    - "Value-conscious private buyers seeking C-segment electric space"
-    - "Comfort-prioritizing drivers (Citroën Advanced Comfort focus)"
-    - "Urban professionals with home charging"
-    - "Families wanting coupe-crossover style at accessible price"
-  
+  - "Company car drivers maximizing 0.25% tax benefit"
+  - "Value-conscious private buyers seeking C-segment electric space"
+  - "Comfort-prioritizing drivers (Citroën Advanced Comfort focus)"
+  - "Urban professionals with home charging"
+  - "Families wanting coupe-crossover style at accessible price"
   competitive_position:
     strengths:
-      - "Most affordable electric C-segment coupe-crossover (€37,985)"
-      - "Citroën's legendary ride comfort (Progressive Hydraulic Cushions)"
-      - "Distinctive coupe design stands out from hatchback competition"
-      - "€6,000 cheaper than Shine Plus, same powertrain"
-      - "Excellent company car tax treatment (0.25%)"
-      - "Good residual values (65.4% after 3 years)"
-    
+    - "Most affordable electric C-segment coupe-crossover (€37,985)"
+    - "Citroën's legendary ride comfort (Progressive Hydraulic Cushions)"
+    - "Distinctive coupe design stands out from hatchback competition"
+    - "€6,000 cheaper than Shine Plus, same powertrain"
+    - "Excellent company car tax treatment (0.25%)"
+    - "Good residual values (65.4% after 3 years)"
     weaknesses:
-      - "Limited 357km WLTP range (305km real-world)"
-      - "Only 100kW DC charging (slower than 800V competitors)"
-      - "Basic standard equipment (need to add options)"
-      - "Smaller trunk than traditional C-segment (380L vs 410L typical)"
-      - "Heat pump not standard (€750 option, essential for Germany)"
-  
+    - "Limited 357km WLTP range (305km real-world)"
+    - "Only 100kW DC charging (slower than 800V competitors)"
+    - "Basic standard equipment (need to add options)"
+    - "Smaller trunk than traditional C-segment (380L vs 410L typical)"
+    - "Heat pump not standard (€750 option, essential for Germany)"
   competitors:
-    - model: Nissan Leaf 62kWh
-      price: 38900
-      comparison: "€915 more, 73km more range (430 vs 357km), older design (2017), CHAdeMO charging"
-    
-    - model: Kia Niro EV Long Range
-      price: 42990
-      comparison: "€5,005 more, 184km more range (541 vs 357km), better warranty (7yr vs 5yr), 400V 72kW slower DC"
-    
-    - model: MG4 Extended Range
-      price: 35990
-      comparison: "€2,000 cheaper, 107km more range (464 vs 357km), sportier handling but less comfortable"
-    
-    - model: Hyundai Kona Electric Long Range
-      price: 42990
-      comparison: "€5,005 more, 157km more range (514 vs 357km), better ADAS, 800V architecture"
-    
-    - model: Peugeot e-2008 GT
-      price: 43000
-      comparison: "€5,015 more, 49km more range (406 vs 357km), similar platform, higher driving position"
-  
+  - model: Nissan Leaf 62kWh
+    price: 38900
+    comparison: "€915 more, 73km more range (430 vs 357km), older design (2017), CHAdeMO charging"
+  - model: Kia Niro EV Long Range
+    price: 42990
+    comparison: "€5,005 more, 184km more range (541 vs 357km), better warranty (7yr vs 5yr), 400V 72kW slower DC"
+  - model: MG4 Extended Range
+    price: 35990
+    comparison: "€2,000 cheaper, 107km more range (464 vs 357km), sportier handling but less comfortable"
+  - model: Hyundai Kona Electric Long Range
+    price: 42990
+    comparison: "€5,005 more, 157km more range (514 vs 357km), better ADAS, 800V architecture"
+  - model: Peugeot e-2008 GT
+    price: 43000
+    comparison: "€5,015 more, 49km more range (406 vs 357km), similar platform, higher driving position"
   sales_data:
     annual_sales_germany_2023: 2100  # Estimated (You! trim only)
     market_share_c_segment_ev: 8  # Percent
@@ -253,18 +233,16 @@ market_analysis:
 
 recommendations:
   best_for:
-    - "Company car drivers maximizing 0.25% tax benefit"
-    - "Buyers prioritizing ride comfort over sporty handling"
-    - "Those with 30-50km daily commute (305km real-world range adequate)"
-    - "Value seekers wanting distinctive coupe-crossover style"
-    - "Buyers willing to add essential options (heat pump, safety pack)"
-  
+  - "Company car drivers maximizing 0.25% tax benefit"
+  - "Buyers prioritizing ride comfort over sporty handling"
+  - "Those with 30-50km daily commute (305km real-world range adequate)"
+  - "Value seekers wanting distinctive coupe-crossover style"
+  - "Buyers willing to add essential options (heat pump, safety pack)"
   not_recommended_for:
-    - "Long-distance drivers needing 500km+ range"
-    - "Performance enthusiasts (9.7s 0-100 km/h is relaxed)"
-    - "Those needing large cargo space (380L trunk small for C-segment)"
-    - "Buyers wanting all features standard (need to add options)"
-  
+  - "Long-distance drivers needing 500km+ range"
+  - "Performance enthusiasts (9.7s 0-100 km/h is relaxed)"
+  - "Those needing large cargo space (380L trunk small for C-segment)"
+  - "Buyers wanting all features standard (need to add options)"
   configuration_advice: |
     **Recommended Configuration (€41,035):**
     - Base You!: €37,985
@@ -272,15 +250,15 @@ recommendations:
     - Safety Pack Plus: €950 (ACC, parking camera, blind spot)
     - Visibility Pack: €600 (front sensors, auto-dimming mirror)
     - Metallic Paint: €750
-    
+
     This setup costs €2,950 less than base Shine Plus (€43,985) while covering essentials.
     Add Comfort Pack (€1,100) if heated seats/steering wheel important.
-    
+
     **Why not Shine Plus?**
     Shine Plus costs €6,000 more for premium trim and standard features.
     Most buyers prefer You! + essential options (saves €3,000-4,000).
     You! holds value slightly better (65.4% vs 63.2% after 3 years).
-    
+
     **Range Consideration:**
     305km real-world range means:
     - Perfect for daily commute + weekly charging
@@ -295,38 +273,31 @@ availability:
   test_drive_available: true
   notes: "Most dealers display Shine Plus trim. You! available as build-to-order with 12-20 week delivery. Test drives typically in Shine Plus trim (same driving experience)."
 
-data_quality:
-  overall: verified
-  pricing: verified
-  options: verified
-  incentives: current
-  last_updated: 2024-02-08
-
 sources:
-  - name: Citroën Germany Configurator
-    url: https://www.citroen.de/modelle/citroen-e-c4-elektro.html
-    type: manufacturer
-    date_accessed: 2024-02-08
-  - name: BAFA EV Incentive Program
-    url: https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html
-    type: government
-    date_accessed: 2024-02-08
-  - name: Citroën Germany Dealer Network Pricing
-    url: https://www.citroen.de/haendlersuche.html
-    type: dealer
-    date_accessed: 2024-02-08
+- name: Citroën Germany Configurator
+  url: https://www.citroen.de/modelle/citroen-e-c4-elektro.html
+  type: manufacturer
+  date_accessed: 2024-02-08
+- name: BAFA EV Incentive Program
+  url: https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/elektromobilitaet_node.html
+  type: government
+  date_accessed: 2024-02-08
+- name: Citroën Germany Dealer Network Pricing
+  url: https://www.citroen.de/haendlersuche.html
+  type: dealer
+  date_accessed: 2024-02-08
 
 notes: |
   **Why ë-C4 You! is a Smart Choice:**
-  
+
   The ë-C4 You! offers distinctive coupe-crossover style at the most accessible price:
-  
+
   **Value Proposition:**
   - €37,985 base price undercuts Kona Electric by €5,000
   - €6,000 savings vs Shine Plus with same powertrain
   - Can add only the options you need (à la carte approach)
   - Strong residual values (65.4% after 3 years)
-  
+
   **Citroën Comfort DNA:**
   What sets ë-C4 apart from competitors:
   - Progressive Hydraulic Cushions suspension (unique to Citroën)
@@ -334,48 +305,52 @@ notes: |
   - Softer suspension tuning prioritizes comfort over sport
   - Quiet cabin (20% better sound insulation than C4 petrol)
   - Smooth electric drivetrain amplifies comfort focus
-  
+
   **Range Reality Check:**
   357km WLTP (305km real-world mixed) is adequate for:
   - German average daily commute: 35-50km (charge 1-2x/week)
   - Weekend trips <250km (no charging needed)
   - Longer trips require one DC stop per 250-280km
   - 100kW DC charging (10-80% in 30 min) makes stops tolerable
-  
+
   Not ideal for:
   - Daily >150km commutes without workplace charging
   - Regular long-distance travel (consider Kona/Niro with 500km+ range)
-  
+
   **Company Car Sweet Spot:**
   At 0.25% monthly list price taxation:
   - €94.96/month taxable benefit (€342/year at 30% tax rate)
   - vs €330/month for combustion C4 (€1,188/year at 30%)
   - Saves €846/year despite €5,000 higher list price
   - Over 3-year lease: €2,538 tax savings
-  
+
   **Configuration Strategy:**
   Most buyers choose You! + Heat Pump + Safety Pack Plus = ~€40-41k total
   This saves €3,000-4,000 vs Shine Plus while covering essentials
-  
+
   **Sales Reality:**
   You! represents 40% of ë-C4 sales in Germany
   Buyers prioritize value and distinctive design over premium trim
   Heat pump take rate is ~70% (essential for German climate)
-  
+
   **Competition:**
   ë-C4 You! is unique in offering C-segment coupe-crossover at €37,985
   MG4 is cheaper but smaller (B-segment), sportier (not comfort-focused)
   Kona/Niro offer more range but cost €5k more and lack distinctive design
   Leaf has comparable price but older tech (2017 design, CHAdeMO)
-  
+
   **Bottom Line:**
   Choose ë-C4 You! if you want:
   - Distinctive coupe-crossover design
   - Citroën's legendary ride comfort
   - C-segment space at accessible price
   - Value over premium trim features
-  
+
   Skip it if you need:
   - Long-range capability (500km+)
   - Maximum cargo space (380L is tight for C-segment)
   - All features standard (You! requires option additions)
+metadata:
+  data_quality: unverified
+  updated_at: '2024-02-08'
+  created_at: '2026-02-08'

@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2024-03-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 16
   notes: New 2024 model, high demand; built at Eisenach, Germany
@@ -22,138 +22,136 @@ pricing:
 
 options:
   colors:
-    - name: Moonstone Grey (metallic)
-      price: 795
-      type: metallic
-    - name: Voltaic Blue (metallic)
-      price: 795
-      type: metallic
-    - name: Mataro Red (metallic)
-      price: 795
-      type: metallic
-    - name: Diamond Black (metallic)
-      price: 795
-      type: metallic
-    - name: Jade White (solid)
-      price: 0
-      type: solid
-    - name: Polar White (metallic)
-      price: 795
-      type: metallic
-    - name: Quartz Grey (metallic)
-      price: 795
-      type: metallic
-  
+  - name: Moonstone Grey (metallic)
+    price: 795
+    type: metallic
+  - name: Voltaic Blue (metallic)
+    price: 795
+    type: metallic
+  - name: Mataro Red (metallic)
+    price: 795
+    type: metallic
+  - name: Diamond Black (metallic)
+    price: 795
+    type: metallic
+  - name: Jade White (solid)
+    price: 0
+    type: solid
+  - name: Polar White (metallic)
+    price: 795
+    type: metallic
+  - name: Quartz Grey (metallic)
+    price: 795
+    type: metallic
+
   two_tone:
-    - name: Two-Tone Black Roof
-      price: 890
-      notes: Black roof with any color (popular SUV styling)
-  
+  - name: Two-Tone Black Roof
+    price: 890
+    notes: Black roof with any color (popular SUV styling)
+
   wheels:
-    - name: 19\" Alloy Wheels
-      price: 0
-      size_inches: 19
-      notes: Standard on GS trim
-    - name: 20\" Bi-Color Alloy Wheels
-      price: 990
-      size_inches: 20
-      notes: Premium upgrade with two-tone finish
-    - name: 21\" Diamond-Cut Alloy Wheels (Ultimate style)
-      price: 1890
-      size_inches: 21
-      notes: Top-spec wheels for sportier look
-  
+  - name: 19\" Alloy Wheels
+    price: 0
+    size_inches: 19
+    notes: Standard on GS trim
+  - name: 20\" Bi-Color Alloy Wheels
+    price: 990
+    size_inches: 20
+    notes: Premium upgrade with two-tone finish
+  - name: 21\" Diamond-Cut Alloy Wheels (Ultimate style)
+    price: 1890
+    size_inches: 21
+    notes: Top-spec wheels for sportier look
+
   interior:
-    - name: Black Alcantara/Leather Seats
-      price: 0
-      notes: Standard on GS trim with heating
-    - name: Nappa Leather Seats with Massage Function
-      price: 1990
-      notes: Premium upgrade with front seat massage
+  - name: Black Alcantara/Leather Seats
+    price: 0
+    notes: Standard on GS trim with heating
+  - name: Nappa Leather Seats with Massage Function
+    price: 1990
+    notes: Premium upgrade with front seat massage
 
 packages:
-  - name: Winter Package Pro
-    price: 890
-    includes:
-      - Heated front and rear seats
-      - Heated steering wheel
-      - Heated windscreen
-      - Heated washer nozzles
-      - Heat pump (standard, ensures efficiency)
-  
-  - name: IntelliLux LED Pixel Light Package
-    price: 1490
-    includes:
-      - IntelliLux LED Pixel headlights (84 elements)
-      - Automatic high beam with matrix beam control
-      - Cornering lights
-      - Dynamic welcome animation
-  
-  - name: Head-Up Display
-    price: 990
-    includes:
-      - Color head-up display with navigation arrows
-      - Speed and driver assistance information
-      - Adjustable brightness and position
-  
-  - name: Denon Premium Audio Package
-    price: 1290
-    includes:
-      - Denon premium audio system (12 speakers)
-      - 690W amplifier
-      - Subwoofer and surround sound
-  
-  - name: Comfort Package
-    price: 1690
-    includes:
-      - Front seat massage function
-      - Power-adjustable passenger seat
-      - Memory function for driver seat (2 positions)
-      - Ventilated front seats
-  
-  - name: Adaptive Cruise Control Plus
-    price: 790
-    includes:
-      - Adaptive cruise with stop-and-go
-      - Traffic jam assist with lane centering
-      - Semi-autonomous driving (Intelli-Drive 2.0)
-  
-  - name: 22kW 3-Phase AC Onboard Charger Upgrade
-    price: 590
-    includes:
-      - 22kW AC charging (upgrade from 11kW)
-      - Faster home charging (0-100% in 4.5 hours)
+- name: Winter Package Pro
+  price: 890
+  includes:
+  - Heated front and rear seats
+  - Heated steering wheel
+  - Heated windscreen
+  - Heated washer nozzles
+  - Heat pump (standard, ensures efficiency)
+
+- name: IntelliLux LED Pixel Light Package
+  price: 1490
+  includes:
+  - IntelliLux LED Pixel headlights (84 elements)
+  - Automatic high beam with matrix beam control
+  - Cornering lights
+  - Dynamic welcome animation
+
+- name: Head-Up Display
+  price: 990
+  includes:
+  - Color head-up display with navigation arrows
+  - Speed and driver assistance information
+  - Adjustable brightness and position
+
+- name: Denon Premium Audio Package
+  price: 1290
+  includes:
+  - Denon premium audio system (12 speakers)
+  - 690W amplifier
+  - Subwoofer and surround sound
+
+- name: Comfort Package
+  price: 1690
+  includes:
+  - Front seat massage function
+  - Power-adjustable passenger seat
+  - Memory function for driver seat (2 positions)
+  - Ventilated front seats
+
+- name: Adaptive Cruise Control Plus
+  price: 790
+  includes:
+  - Adaptive cruise with stop-and-go
+  - Traffic jam assist with lane centering
+  - Semi-autonomous driving (Intelli-Drive 2.0)
+
+- name: 22kW 3-Phase AC Onboard Charger Upgrade
+  price: 590
+  includes:
+  - 22kW AC charging (upgrade from 11kW)
+  - Faster home charging (0-100% in 4.5 hours)
 
 standalone_options:
-  - name: Tow Hitch with Electrically Foldable Ball
-    price: 990
-    notes: 1,500 kg towing capacity (officially rated)
-  
-  - name: Panoramic Glass Roof (Electrochromic)
-    price: 1490
-    notes: Fixed glass roof with electronic dimming control
+- name: Tow Hitch with Electrically Foldable Ball
+  price: 990
+  notes: 1,500 kg towing capacity (officially rated)
+
+- name: Panoramic Glass Roof (Electrochromic)
+  price: 1490
+  notes: Fixed glass roof with electronic dimming control
 
 incentives:
-  - type: rebate
-    name: "BAFA Umweltbonus"
-    amount: 0
-    currency: EUR
-    valid_until: null
-    notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption for BEVs"
-    amount: 0
-    currency: EUR
-    valid_until: "2030-12-31"
-    notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€350-450/year."
-  
-  - type: subsidy
-    name: "THG-Quote (greenhouse gas quota) certificate"
-    amount: 350
-    currency: EUR
-    valid_until: null
-    notes: "Owners can sell CO2 certificates for ~€300-400/year (rates vary by market)"
+- type: rebate
+  name: "BAFA Umweltbonus"
+  amount: 0
+  currency: EUR
+  valid_until:
+  notes: "Umweltbonus ended December 2023. No federal EV incentive in 2024."
+- type: tax_exemption
+  name: "Kfz-Steuer exemption for BEVs"
+  amount: 0
+  currency: EUR
+  valid_until: "2030-12-31"
+  notes: "BEVs exempt from vehicle tax (Kfz-Steuer) until 2030. ICE would pay ~€350-450/year."
+- type: subsidy
+  name: "THG-Quote (greenhouse gas quota) certificate"
+  amount: 350
+  currency: EUR
+  valid_until:
+  notes: "Owners can sell CO2 certificates for ~€300-400/year (rates vary by market)"
 
 company_car:
   taxation_rate: 0.25  # 0.25% for BEVs under €70k (vs 1% for ICE)
@@ -169,43 +167,40 @@ charging:
   public_network:
     name: "Opel Charging powered by Plugsurfing"
     coverage: "350,000+ charging points across 29 European countries"
-    membership_fee: null
+    membership_fee:
     notes: "Access to multiple networks with single RFID card or MyOpel app"
-  
   subscription:
     name: "Opel Charging Subscription Plus"
     monthly_fee: 14.99
     currency: EUR
     ionity_rate_eur_per_kwh: 0.35  # vs €0.79 pay-as-you-go
     benefits:
-      - "IONITY fast charging at €0.35/kWh (vs €0.79)"
-      - "Access to 350,000+ charging points across Europe"
-      - "MyOpel app integration with route planning"
-      - "Charging session history and cost tracking"
-  
+    - "IONITY fast charging at €0.35/kWh (vs €0.79)"
+    - "Access to 350,000+ charging points across Europe"
+    - "MyOpel app integration with route planning"
+    - "Charging session history and cost tracking"
   home_charging:
-    - name: "Opel Wallbox Pro 11kW"
-      price: 1290
-      power_kw: 11
-      features:
-        - "Integrated Type 2 cable (7.5m)"
-        - "WiFi + 4G connectivity with app control"
-        - "Dynamic load management"
-        - "Solar integration ready"
-        - "Weather-resistant (IP54)"
-      installation_cost: "€700-2,000 depending on location and electrical work"
-    
-    - name: "Opel Wallbox Pro 22kW"
-      price: 1690
-      power_kw: 22
-      features:
-        - "Integrated Type 2 cable (7.5m)"
-        - "WiFi + 4G connectivity with app control"
-        - "Dynamic load management"
-        - "Solar integration ready"
-        - "Weather-resistant (IP54)"
-      installation_cost: "€900-2,500 (requires 3-phase 32A connection)"
-      notes: "Requires 22kW onboard charger upgrade (€590) in vehicle"
+  - name: "Opel Wallbox Pro 11kW"
+    price: 1290
+    power_kw: 11
+    features:
+    - "Integrated Type 2 cable (7.5m)"
+    - "WiFi + 4G connectivity with app control"
+    - "Dynamic load management"
+    - "Solar integration ready"
+    - "Weather-resistant (IP54)"
+    installation_cost: "€700-2,000 depending on location and electrical work"
+  - name: "Opel Wallbox Pro 22kW"
+    price: 1690
+    power_kw: 22
+    features:
+    - "Integrated Type 2 cable (7.5m)"
+    - "WiFi + 4G connectivity with app control"
+    - "Dynamic load management"
+    - "Solar integration ready"
+    - "Weather-resistant (IP54)"
+    installation_cost: "€900-2,500 (requires 3-phase 32A connection)"
+    notes: "Requires 22kW onboard charger upgrade (€590) in vehicle"
 
 warranty:
   vehicle_years: 2
@@ -240,25 +235,21 @@ environmental:
 
 market_comparison:
   direct_competitors:
-    - name: "Volkswagen ID.4 Pro (77 kWh)"
-      base_price: 50990
-      comparison: "€1,000 more, similar range (552km), VW brand, less cargo space (543L vs 550L)"
-    
-    - name: "Hyundai Ioniq 5 Long Range RWD (77.4 kWh)"
-      base_price: 50990
-      comparison: "€1,000 more, similar specs, 800V architecture (faster charging), unique design"
-    
-    - name: "Peugeot e-3008 Long Range (73 kWh)"
-      base_price: 50990
-      comparison: "€1,000 more, platform sibling, sportier design, slightly less range (525km)"
-    
-    - name: "Škoda Enyaq iV 80 (82 kWh)"
-      base_price: 49990
-      comparison: "Same price, platform cousin (VW MEB), similar range (534km), more practical"
-    
-    - name: "Ford Mustang Mach-E Extended Range RWD (88 kWh)"
-      base_price: 56990
-      comparison: "€7,000 more, more range (600km), sportier positioning, US brand"
+  - name: "Volkswagen ID.4 Pro (77 kWh)"
+    base_price: 50990
+    comparison: "€1,000 more, similar range (552km), VW brand, less cargo space (543L vs 550L)"
+  - name: "Hyundai Ioniq 5 Long Range RWD (77.4 kWh)"
+    base_price: 50990
+    comparison: "€1,000 more, similar specs, 800V architecture (faster charging), unique design"
+  - name: "Peugeot e-3008 Long Range (73 kWh)"
+    base_price: 50990
+    comparison: "€1,000 more, platform sibling, sportier design, slightly less range (525km)"
+  - name: "Škoda Enyaq iV 80 (82 kWh)"
+    base_price: 49990
+    comparison: "Same price, platform cousin (VW MEB), similar range (534km), more practical"
+  - name: "Ford Mustang Mach-E Extended Range RWD (88 kWh)"
+    base_price: 56990
+    comparison: "€7,000 more, more range (600km), sportier positioning, US brand"
 
 sales_notes: |
   Opel Grandland Electric is the flagship model in Opel's electric SUV lineup.
@@ -268,7 +259,7 @@ sales_notes: |
 
 notes: |
   The Opel Grandland Electric Long Range at €49,990 offers excellent C-SUV value:
-  
+
   **Key Advantages:**
   - Excellent 580km WLTP range (class-leading efficiency)
   - Fast 160kW DC charging (10-80% in 26 minutes)
@@ -283,7 +274,7 @@ notes: |
   - Company car tax benefit: 0.25% = €125/month (saves €4,499/year vs ICE)
   - Strong Opel dealer network (850+ locations)
   - 8-year/160,000km battery warranty
-  
+
   **vs Peugeot e-3008 Long Range (platform sibling):**
   - Same price (€49,990)
   - More range (580km vs 525km) - larger 82 kWh battery
@@ -291,7 +282,7 @@ notes: |
   - More conservative design (German practicality vs French flair)
   - Same STLA Medium platform, similar tech
   - Built in Germany vs France
-  
+
   **vs Volkswagen ID.4 Pro:**
   - €1,000 cheaper (€49,990 vs €50,990)
   - Similar range (580km vs 552km)
@@ -299,14 +290,14 @@ notes: |
   - Newer platform (STLA Medium 2024 vs MEB 2020)
   - Google built-in (vs VW's proprietary system)
   - Faster DC charging (160kW vs 135kW)
-  
+
   **vs Hyundai Ioniq 5 Long Range RWD:**
   - €1,000 cheaper (€49,990 vs €50,990)
   - Similar range (580km vs 570km)
   - More traditional SUV design vs futuristic Ioniq 5
   - 400V architecture vs Ioniq 5's 800V (slower charging)
   - More cargo space with rear seats up (550L vs 527L)
-  
+
   **Best for:**
   - Families needing spacious SUV with excellent range
   - Company car drivers minimizing benefit-in-kind tax
@@ -314,14 +305,14 @@ notes: |
   - Road trip enthusiasts (580km range + 160kW charging)
   - Buyers wanting latest tech (Google built-in, OTA updates)
   - Supporting German manufacturing (built in Eisenach)
-  
+
   **Considerations:**
   - New model (2024) - limited long-term reliability data
   - 16-week delivery time (high demand, new model)
   - 400V architecture (not 800V like Ioniq 5/EV6)
   - No ultra-fast 350kW charging capability
   - Base trim (Edition) starts at €46,990 with less features
-  
+
   **Upgrade Path:**
   For €50,980 base + typical upgrades:
   - IntelliLux LED Pixel: +€1,490
@@ -329,7 +320,7 @@ notes: |
   - Denon audio: +€1,290
   - 22kW charger: +€590
   - Total: ~€55,340 (still excellent value for fully loaded C-SUV)
-  
+
   **Popular Configuration (GS Long Range):**
   - Base: €49,990
   - Metallic paint: +€795
@@ -341,10 +332,10 @@ notes: |
 metadata:
   data_quality: verified
   created_at: "2026-02-08"
-  last_updated: "2026-02-08"
   sources:
-    - https://www.opel.com/modelle/grandland-electric.html
-    - https://www.opel.com/tools/konfigurator.html
-    - https://www.adac.de/
-    - https://ev-database.org/
-    - https://www.auto-motor-und-sport.de/
+  - https://www.opel.com/modelle/grandland-electric.html
+  - https://www.opel.com/tools/konfigurator.html
+  - https://www.adac.de/
+  - https://ev-database.org/
+  - https://www.auto-motor-und-sport.de/
+  updated_at: "2026-02-08"

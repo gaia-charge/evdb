@@ -6,7 +6,7 @@ currency: EUR
 
 availability_status: available
 available_from: "2024-06-01"
-available_until: null
+available_until:
 
 pricing:
   base_price: 34990
@@ -16,44 +16,44 @@ pricing:
   total_price_estimate: 34990
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: >
-      MOVES III program ended in December 2024. No national EV purchase subsidy
-      currently active in Spain. Regional programs may apply.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: >
+    MOVES III program ended in December 2024. No national EV purchase subsidy
+    currently active in Spain. Regional programs may apply.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
 
 market_specific:
   standard_equipment:
-    - 10-inch HD touchscreen
-    - Digital instrument cluster
-    - Wireless Apple CarPlay and Android Auto
-    - Automatic climate control
-    - Rear parking sensors and camera
-    - Active Safety Brake
-    - Lane Keep Assist
-    - Cruise control
-    - LED headlights
-    - 18-inch alloy wheels
+  - 10-inch HD touchscreen
+  - Digital instrument cluster
+  - Wireless Apple CarPlay and Android Auto
+  - Automatic climate control
+  - Rear parking sensors and camera
+  - Active Safety Brake
+  - Lane Keep Assist
+  - Cruise control
+  - LED headlights
+  - 18-inch alloy wheels
 
   available_colors:
-    - name: Blanc Banquise
-      additional_cost: 0
-    - name: Noir Perla Nera
-      additional_cost: 600
-    - name: Gris Artense
-      additional_cost: 600
-    - name: Bleu Aegean
-      additional_cost: 800
+  - name: Blanc Banquise
+    additional_cost: 0
+  - name: Noir Perla Nera
+    additional_cost: 600
+  - name: Gris Artense
+    additional_cost: 600
+  - name: Bleu Aegean
+    additional_cost: 800
 
   available_interiors:
-    - name: Gris Anthracite
-      color: Grey
-      additional_cost: 0
+  - name: Gris Anthracite
+    color: Grey
+    additional_cost: 0
 
 dealer_network:
   online_sales_available: true
@@ -73,8 +73,7 @@ notes: |
 
 metadata:
   created_at: "2026-02-12"
-  updated_at: null
   data_quality: estimated
   price_checked_at: "2026-02-12"
   sources:
-    - https://www.citroen.es/modelos/e-c4.html
+  - https://www.citroen.es/modelos/e-c4.html

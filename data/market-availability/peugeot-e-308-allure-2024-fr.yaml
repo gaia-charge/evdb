@@ -8,7 +8,7 @@ currency: EUR
 availability:
   status: available
   release_date: 2023-06-01
-  discontinuation_date: null
+  discontinuation_date:
   order_status: accepting_orders
   typical_delivery_weeks: 10
   notes: Production at Mulhouse, France. Shorter delivery for domestic market.
@@ -22,106 +22,106 @@ pricing:
 
 options:
   colors:
-    - name: Rouge Elixir (solid)
-      price: 0
-      type: solid
-    - name: Blanc Okénite (solid)
-      price: 0
-      type: solid
-    - name: Noir Perla Nera (nacré)
-      price: 795
-      type: pearl
-    - name: Gris Cumulus (métallisé)
-      price: 795
-      type: metallic
-    - name: Bleu Vertigo (métallisé)
-      price: 795
-      type: metallic
-    - name: Gris Sélénium (métallisé)
-      price: 795
-      type: metallic
-    - name: Rouge Ultimate (métallisé)
-      price: 1095
-      type: metallic
-    - name: Vert Olivine (métallisé)
-      price: 1095
-      type: metallic
+  - name: Rouge Elixir (solid)
+    price: 0
+    type: solid
+  - name: Blanc Okénite (solid)
+    price: 0
+    type: solid
+  - name: Noir Perla Nera (nacré)
+    price: 795
+    type: pearl
+  - name: Gris Cumulus (métallisé)
+    price: 795
+    type: metallic
+  - name: Bleu Vertigo (métallisé)
+    price: 795
+    type: metallic
+  - name: Gris Sélénium (métallisé)
+    price: 795
+    type: metallic
+  - name: Rouge Ultimate (métallisé)
+    price: 1095
+    type: metallic
+  - name: Vert Olivine (métallisé)
+    price: 1095
+    type: metallic
 
   wheels:
-    - name: 17" Detroit diamond-cut alloy wheels
-      price: 0
-      size_inches: 17
-    - name: 18" Boston diamond-cut alloy wheels
-      price: 950
-      size_inches: 18
+  - name: 17" Detroit diamond-cut alloy wheels
+    price: 0
+    size_inches: 17
+  - name: 18" Boston diamond-cut alloy wheels
+    price: 950
+    size_inches: 18
 
 packages:
-  - name: Pack Sécurité Avancée
-    price: 1490
-    includes:
-      - Surveillance d'angle mort
-      - Alerte trafic arrière
-      - Reconnaissance étendue des panneaux
-      - Commutation auto des feux de route
+- name: Pack Sécurité Avancée
+  price: 1490
+  includes:
+  - Surveillance d'angle mort
+  - Alerte trafic arrière
+  - Reconnaissance étendue des panneaux
+  - Commutation auto des feux de route
 
-  - name: Pack Hiver
-    price: 690
-    includes:
-      - Sièges arrière chauffants
-      - Volant chauffant
-      - Buses de lave-glace chauffantes
+- name: Pack Hiver
+  price: 690
+  includes:
+  - Sièges arrière chauffants
+  - Volant chauffant
+  - Buses de lave-glace chauffantes
 
-  - name: Pack Confort
-    price: 1690
-    includes:
-      - Siège conducteur électrique 8 voies avec mémoire
-      - Soutien lombaire conducteur et passager
-      - Hayon motorisé mains libres
-      - Rétroviseurs rabattables automatiquement
+- name: Pack Confort
+  price: 1690
+  includes:
+  - Siège conducteur électrique 8 voies avec mémoire
+  - Soutien lombaire conducteur et passager
+  - Hayon motorisé mains libres
+  - Rétroviseurs rabattables automatiquement
 
-  - name: Pack Visibilité
-    price: 990
-    includes:
-      - Caméra 360°
-      - Radar de stationnement avant
-      - Aide au stationnement avancée
+- name: Pack Visibilité
+  price: 990
+  includes:
+  - Caméra 360°
+  - Radar de stationnement avant
+  - Aide au stationnement avancée
 
 standalone_options:
-  - name: Toit panoramique vitré
-    price: 1290
-  - name: Pompe à chaleur
-    price: 990
-    notes: Améliore l'autonomie en hiver jusqu'à 10%
+- name: Toit panoramique vitré
+  price: 1290
+- name: Pompe à chaleur
+  price: 990
+  notes: Améliore l'autonomie en hiver jusqu'à 10%
 
 incentives:
-  - type: rebate
-    name: "Bonus écologique"
-    amount: 4000
-    currency: EUR
-    valid_until: "2025-12-31"
-    notes: |
-      Bonus de €4,000 pour véhicules électriques neufs dont le prix est inférieur à €47,000.
-      Sous réserve du score environnemental minimal.
+- type: rebate
+  name: "Bonus écologique"
+  amount: 4000
+  currency: EUR
+  valid_until: "2025-12-31"
+  notes: |
+    Bonus de €4,000 pour véhicules électriques neufs dont le prix est inférieur à €47,000.
+    Sous réserve du score environnemental minimal.
 
-  - type: rebate
-    name: "Prime à la conversion"
-    amount: 1500
-    currency: EUR
-    notes: |
-      Jusqu'à €1,500 supplémentaires pour la mise au rebut d'un ancien véhicule
-      (Crit'Air 3 ou plus ancien). Conditions de revenus applicables.
+- type: rebate
+  name: "Prime à la conversion"
+  amount: 1500
+  currency: EUR
+  notes: |
+    Jusqu'à €1,500 supplémentaires pour la mise au rebut d'un ancien véhicule
+    (Crit'Air 3 ou plus ancien). Conditions de revenus applicables.
 
-  - type: tax_exemption
-    name: "Exonération carte grise"
-    amount: 0
-    currency: EUR
-    notes: "Exonération totale ou partielle de la taxe régionale d'immatriculation selon la région."
+- type: tax_exemption
+  name: "Exonération carte grise"
+  amount: 0
+  currency: EUR
+  notes: "Exonération totale ou partielle de la taxe régionale d'immatriculation selon la région."
 
-  - type: tax_exemption
-    name: "Exonération TVS"
-    amount: 0
-    currency: EUR
-    notes: "Exonération de la taxe sur les véhicules de société pour les entreprises."
+- type: tax_exemption
+  name: "Exonération TVS"
+  amount: 0
+  currency: EUR
+  notes: "Exonération de la taxe sur les véhicules de société pour les entreprises."
 
 total_cost_of_ownership:
   purchase_price: 44490
@@ -142,22 +142,19 @@ total_cost_of_ownership:
     With bonus écologique, net price drops to ~€40,490. Strong value for
     domestic French brand with short delivery times from Mulhouse factory.
 
-data_quality:
-  overall: estimated
-  last_updated: 2026-02-12
-  source_reliability: medium
-  pricing_verified: false
-  incentives_verified: true
-
 sources:
-  - name: Peugeot France Official Website
-    url: https://www.peugeot.fr
-    date_accessed: 2026-02-12
-  - name: Service-Public.fr - Bonus écologique
-    url: https://www.service-public.fr/particuliers/vosdroits/F34014
-    date_accessed: 2026-02-12
+- name: Peugeot France Official Website
+  url: https://www.peugeot.fr
+  date_accessed: 2026-02-12
+- name: Service-Public.fr - Bonus écologique
+  url: https://www.service-public.fr/particuliers/vosdroits/F34014
+  date_accessed: 2026-02-12
 
 notes: |
   Peugeot e-308 is a strong domestic product in France with excellent availability.
   Eligible for the €4,000 bonus écologique (price under €47,000).
   Produced at Mulhouse, France — shorter delivery times for French customers.
+metadata:
+  data_quality: estimated
+  updated_at: '2026-02-12'
+  created_at: '2026-02-12'

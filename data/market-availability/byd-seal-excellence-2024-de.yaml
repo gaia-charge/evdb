@@ -18,117 +18,117 @@ pricing:
 
 # Available Colors
 available_colors:
-  - name: Cosmos Black
-    code: BK
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Aurora White
-    code: WH
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Boulder Grey
-    code: GY
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Deep Blue
-    code: DBL
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Atlantis Grey
-    code: AG
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
-  - name: Adventure Green
-    code: GN
-    type: metallic
-    price_add:
-      amount: 990
-      currency: EUR
+- name: Cosmos Black
+  code: BK
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Aurora White
+  code: WH
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Boulder Grey
+  code: GY
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Deep Blue
+  code: DBL
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Atlantis Grey
+  code: AG
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
+- name: Adventure Green
+  code: GN
+  type: metallic
+  price_add:
+    amount: 990
+    currency: EUR
 
 # Wheel Options
 available_wheels:
-  - name: 20" Alloy Wheels
-    size_inches: 20
-    type: alloy
-    price_add:
-      amount: 0
-      currency: EUR
+- name: 20" Alloy Wheels
+  size_inches: 20
+  type: alloy
+  price_add:
+    amount: 0
+    currency: EUR
 
 # Interior Options
 available_interiors:
-  - name: Black Nappa Leather
-    material: nappa_leather
-    color: black
-    price_add:
-      amount: 0
-      currency: EUR
-  - name: Brown Nappa Leather
-    material: nappa_leather
-    color: brown
-    price_add:
-      amount: 800
-      currency: EUR
+- name: Black Nappa Leather
+  material: nappa_leather
+  color: black
+  price_add:
+    amount: 0
+    currency: EUR
+- name: Brown Nappa Leather
+  material: nappa_leather
+  color: brown
+  price_add:
+    amount: 800
+    currency: EUR
 
 # Incentives
 available_incentives:
-  - type: federal
-    name: "Umweltbonus (Environmental Bonus)"
-    amount:
-      amount: 4500
-      currency: EUR
-    conditions: ["Price under €65,000", "BEV", "First registration"]
-    expires_at: "2024-12-31"
-  - type: manufacturer
-    name: "BYD Conquest Bonus"
-    amount:
-      amount: 1500
-      currency: EUR
-    conditions: ["Trade-in of ICE vehicle"]
-    expires_at: "2024-06-30"
-  - type: company_car
-    name: "0.25% company car tax (BEV)"
-    description: "Reduced taxation for electric company cars under €70,000 gross list price"
-    conditions: ["Price under €70,000 gross list price"]
+- type: federal
+  name: "Umweltbonus (Environmental Bonus)"
+  amount:
+    amount: 4500
+    currency: EUR
+  conditions: ["Price under €65,000", "BEV", "First registration"]
+  expires_at: "2024-12-31"
+- type: manufacturer
+  name: "BYD Conquest Bonus"
+  amount:
+    amount: 1500
+    currency: EUR
+  conditions: ["Trade-in of ICE vehicle"]
+  expires_at: "2024-06-30"
+- type: company_car
+  name: "0.25% company car tax (BEV)"
+  description: "Reduced taxation for electric company cars under €70,000 gross list price"
+  conditions: ["Price under €70,000 gross list price"]
 
 # Options
 popular_packages:
-  - name: Winter Package
-    price:
-      amount: 800
-      currency: EUR
-    features:
-      - Heated windshield
-      - Heated washer nozzles
-      - Additional battery heating
+- name: Winter Package
+  price:
+    amount: 800
+    currency: EUR
+  features:
+  - Heated windshield
+  - Heated washer nozzles
+  - Additional battery heating
 
 # Notes
 notes: |
   BYD Seal Excellence AWD delivers supercar-level performance (3.8s 0-100 km/h, 530 hp)
   at a mid-range price point, competing directly with Tesla Model 3 Performance
   and BMW i4 M50.
-  
+
   Dual-motor all-wheel-drive with 390 kW (530 hp) and 670 Nm torque.
   82.5 kWh Blade Battery (LFP chemistry) provides exceptional safety and longevity.
   520 km WLTP range with impressive efficiency despite AWD performance.
   Premium standard equipment: Nappa leather, Dynaudio sound, head-up display, DiPilot.
   8-year/200,000 km battery warranty with 3000+ charge cycle durability.
-  
+
   Excellent all-weather capability with AWD traction control.
   Qualifies for 0.25% company car tax benefit (under €70k threshold).
   Lower total cost of ownership than comparable German premium EVs.
-  
+
   Popular Configuration: Seal Excellence with metallic paint + brown leather = €54,780
-  
+
   Company Car Calculation (Germany):
   - Gross list price: €52,990
   - Monthly tax base: €52,990 × 0.25% = €132.48 (vs. €529.90 for ICE)
@@ -138,7 +138,8 @@ notes: |
 metadata:
   data_quality: verified
   data_source: manufacturer
-  source_url: https://www.byd.com/de/seal
   created_at: "2026-02-08"
   last_verified_at: "2026-02-08"
   notes: Prices as of February 2026. BYD Seal Excellence AWD launched November 2023.
+  sources:
+  - https://www.byd.com/de/seal

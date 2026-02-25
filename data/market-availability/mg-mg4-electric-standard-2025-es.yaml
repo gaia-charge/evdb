@@ -17,32 +17,32 @@ pricing:
   total_price_estimate: 28990
 
 incentives:
-  - name: Plan MOVES III
-    type: grant
-    amount: 0
-    description: MOVES III program expired. Potential future MOVES IV program pending.
-    valid_from: null
-    valid_until: null
-    conditions:
-      - Program expired
+- name: Plan MOVES III
+  type: grant
+  amount: 0
+  description: MOVES III program expired. Potential future MOVES IV program pending.
+  valid_from:
+  valid_until:
+  conditions:
+  - Program expired
 
 market_specific:
   popular_options:
-    - name: Luxury Pack
-      price: 2000
+  - name: Luxury Pack
+    price: 2000
   available_colors:
-    - name: Pebble Black
-      type: solid
-      price_add: 0
-    - name: Dover White
-      type: solid
-      price_add: 0
-    - name: Medal Silver
-      type: metallic
-      price_add: 600
-    - name: Volcano Orange
-      type: metallic
-      price_add: 600
+  - name: Pebble Black
+    type: solid
+    price_add: 0
+  - name: Dover White
+    type: solid
+    price_add: 0
+  - name: Medal Silver
+    type: metallic
+    price_add: 600
+  - name: Volcano Orange
+    type: metallic
+    price_add: 600
 
 notes: |
   MG4 Electric Standard available in Spain through MG dealer network.
@@ -50,8 +50,10 @@ notes: |
   350km WLTP range with 51 kWh LFP battery. Excellent value proposition.
 
 metadata:
-  data_quality: estimated
+  data_quality: unverified
   data_source: manufacturer
-  source_url: https://www.mgmotor.es/mg4-electric
   created_at: "2026-02-10"
   last_verified_at: "2026-02-10"
+  sources:
+  - https://www.mgmotor.es/mg4-electric
+  notes: "Price conflict: duplicate record 'mg4-electric-standard-2025' listed base_price 26990 EUR vs this record's 28990 EUR. Needs source re-verification."

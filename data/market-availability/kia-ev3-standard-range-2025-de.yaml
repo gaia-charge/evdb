@@ -15,21 +15,21 @@ pricing:
 
 # Government Incentives (Germany)
 incentives:
-  - name: Company Car Tax Benefit
-    type: tax_exemption
-    amount: 0
-    description: "0.25% monthly gross list price taxation for company cars (list price under €70,000)"
-    eligibility: "Company car drivers"
-    valid_until: "2030-12-31"
-  - name: Kfz-Steuer exemption
-    type: tax_exemption
-    amount: 380
-    description: "Electric vehicles exempt from German road tax until 2030"
-    valid_until: "2030-12-31"
-  - name: THG-Quote
-    type: grant
-    amount: 280
-    description: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
+- name: Company Car Tax Benefit
+  type: tax_exemption
+  amount: 0
+  description: "0.25% monthly gross list price taxation for company cars (list price under €70,000)"
+  eligibility: "Company car drivers"
+  valid_until: "2030-12-31"
+- name: Kfz-Steuer exemption
+  type: tax_exemption
+  amount: 380
+  description: "Electric vehicles exempt from German road tax until 2030"
+  valid_until: "2030-12-31"
+- name: THG-Quote
+  type: grant
+  amount: 280
+  description: "Sell CO2 savings certificate, varies by provider (€250-350/year)"
 
 # Company Car Tax Calculation (Germany)
 company_car_tax:
@@ -40,49 +40,49 @@ company_car_tax:
 
 # Colors (Germany Market)
 available_colors:
-  - name: Clear White
-    code: CW
-    type: solid
-    price_add:
-      amount: 0
-      currency: EUR
+- name: Clear White
+  code: CW
+  type: solid
+  price_add:
+    amount: 0
+    currency: EUR
 
-  - name: Aurora Black Pearl
-    code: ABP
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Aurora Black Pearl
+  code: ABP
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Steel Gray Metallic
-    code: SGM
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Steel Gray Metallic
+  code: SGM
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Twilight Blue
-    code: TB
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Twilight Blue
+  code: TB
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
-  - name: Terra Brown
-    code: TBR
-    type: metallic
-    price_add:
-      amount: 790
-      currency: EUR
+- name: Terra Brown
+  code: TBR
+  type: metallic
+  price_add:
+    amount: 790
+    currency: EUR
 
 # Available Options (Germany)
 available_options:
-  - name: GT-Line Package
-    price: 2000
-    description: "Sport styling, 19-inch wheels, sport seats"
-  - name: Advanced Driver Assistance
-    price: 1000
-    description: "HDA, Smart Parking, Surround View"
+- name: GT-Line Package
+  price: 2000
+  description: "Sport styling, 19-inch wheels, sport seats"
+- name: Advanced Driver Assistance
+  price: 1000
+  description: "HDA, Smart Parking, Surround View"
 
 # Warranty (Germany)
 warranty:
@@ -95,9 +95,10 @@ warranty:
 metadata:
   data_quality: verified
   created_at: "2026-02-10"
-  last_updated: "2026-02-10"
-  source: "https://www.kia.com/de/modelle/ev3/entdecken/"
   notes: >
     Kia EV3 Standard Range 2025 available in Germany as "Air" trim from €35,990.
     One of the most affordable compact electric SUVs. Excellent company car value
     at only €90/month taxable benefit. Delivery times around 8 weeks.
+  updated_at: "2026-02-10"
+  sources:
+  - https://www.kia.com/de/modelle/ev3/entdecken/
