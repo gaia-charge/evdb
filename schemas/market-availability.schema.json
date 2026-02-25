@@ -4,13 +4,21 @@
   "title": "Market Availability",
   "description": "Schema for vehicle market availability and pricing information",
   "type": "object",
-  "required": ["id", "variant_id", "market", "currency"],
+  "required": [
+    "id",
+    "variant_id",
+    "market",
+    "currency"
+  ],
   "properties": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
       "description": "Unique identifier (lowercase, hyphens allowed)",
-      "examples": ["tesla-model-3-lr-awd-2024-de", "volkswagen-id4-pro-2023-us"]
+      "examples": [
+        "tesla-model-3-lr-awd-2024-de",
+        "volkswagen-id4-pro-2023-us"
+      ]
     },
     "variant_id": {
       "type": "string",
@@ -21,33 +29,59 @@
       "type": "string",
       "pattern": "^[A-Z]{2}$",
       "description": "Market/country code (ISO 3166-1 alpha-2)",
-      "examples": ["DE", "US", "GB", "PL", "FR", "NO"]
+      "examples": [
+        "DE",
+        "US",
+        "GB",
+        "PL",
+        "FR",
+        "NO"
+      ]
     },
     "currency": {
       "type": "string",
       "pattern": "^[A-Z]{3}$",
       "description": "Currency code (ISO 4217)",
-      "examples": ["EUR", "USD", "GBP", "PLN"]
+      "examples": [
+        "EUR",
+        "USD",
+        "GBP",
+        "PLN"
+      ]
     },
     "availability_status": {
       "type": "string",
-      "enum": ["available", "pre-order", "limited", "discontinued", "announced"],
+      "enum": [
+        "available",
+        "pre-order",
+        "limited",
+        "discontinued",
+        "announced"
+      ],
       "default": "available",
       "description": "Current availability status"
     },
     "available_from": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date",
       "description": "Date when vehicle became/becomes available (YYYY-MM-DD)"
     },
     "available_until": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date",
       "description": "Date when availability ends (YYYY-MM-DD)"
     },
     "pricing": {
       "type": "object",
-      "required": ["base_price"],
+      "required": [
+        "base_price"
+      ],
       "properties": {
         "base_price": {
           "type": "number",
@@ -55,38 +89,60 @@
           "description": "Base price in specified currency"
         },
         "price_including_vat": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "description": "Price including VAT/sales tax"
         },
         "vat_rate_percent": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 50,
           "description": "VAT/sales tax rate as percentage"
         },
         "destination_charge": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "description": "Delivery/destination charge"
         },
         "registration_fees": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "description": "Typical registration fees"
         },
         "total_price_estimate": {
-          "type": ["number", "null"],
+          "type": [
+            "number",
+            "null"
+          ],
           "minimum": 0,
           "description": "Estimated total on-road price"
         }
       }
     },
     "incentives": {
-      "type": ["array", "null"],
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "object",
-        "required": ["name", "type", "amount"],
+        "required": [
+          "name",
+          "type",
+          "amount"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -94,7 +150,14 @@
           },
           "type": {
             "type": "string",
-            "enum": ["rebate", "tax_credit", "grant", "subsidy", "tax_exemption", "discount"],
+            "enum": [
+              "rebate",
+              "tax_credit",
+              "grant",
+              "subsidy",
+              "tax_exemption",
+              "discount"
+            ],
             "description": "Type of incentive"
           },
           "amount": {
@@ -102,28 +165,43 @@
             "description": "Incentive amount in currency"
           },
           "description": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Detailed description and eligibility"
           },
           "valid_from": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "date",
             "description": "Incentive valid from date"
           },
           "valid_until": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "date",
             "description": "Incentive valid until date"
           },
           "conditions": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "string"
             },
             "description": "List of conditions/requirements"
           },
           "source_url": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "uri",
             "description": "Official source URL for incentive details"
           }
@@ -131,35 +209,55 @@
       }
     },
     "market_specific": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "standard_equipment": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "string"
           },
           "description": "Market-specific standard equipment"
         },
         "available_colors": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "object",
-            "required": ["name"],
+            "required": [
+              "name"
+            ],
             "properties": {
               "name": {
                 "type": "string",
                 "description": "Color name"
               },
               "code": {
-                "type": ["string", "null"],
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "description": "Color code"
               },
               "additional_cost": {
-                "type": ["number", "null"],
+                "type": [
+                  "number",
+                  "null"
+                ],
                 "description": "Additional cost for this color"
               },
               "hex": {
-                "type": ["string", "null"],
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "pattern": "^#[0-9A-Fa-f]{6}$",
                 "description": "Hex color code"
               }
@@ -167,31 +265,47 @@
           }
         },
         "available_interiors": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "object",
-            "required": ["name"],
+            "required": [
+              "name"
+            ],
             "properties": {
               "name": {
                 "type": "string",
                 "description": "Interior name/material"
               },
               "color": {
-                "type": ["string", "null"],
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "description": "Interior color"
               },
               "additional_cost": {
-                "type": ["number", "null"],
+                "type": [
+                  "number",
+                  "null"
+                ],
                 "description": "Additional cost"
               }
             }
           }
         },
         "available_wheels": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "object",
-            "required": ["size_inches"],
+            "required": [
+              "size_inches"
+            ],
             "properties": {
               "size_inches": {
                 "type": "integer",
@@ -200,16 +314,30 @@
                 "description": "Wheel size in inches"
               },
               "design": {
-                "type": ["string", "null"],
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "description": "Wheel design name"
               },
               "material": {
-                "type": ["string", "null"],
-                "enum": ["alloy", "steel", "carbon", null],
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "alloy",
+                  "steel",
+                  "carbon",
+                  null
+                ],
                 "description": "Wheel material"
               },
               "additional_cost": {
-                "type": ["number", "null"],
+                "type": [
+                  "number",
+                  "null"
+                ],
                 "description": "Additional cost"
               }
             }
@@ -218,35 +346,56 @@
       }
     },
     "dealer_network": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "dealer_count": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "description": "Number of dealers in market"
         },
         "service_centers": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "description": "Number of service centers"
         },
         "online_sales_available": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "description": "Whether online sales are available"
         }
       }
     },
     "delivery": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "typical_delivery_weeks": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 104,
           "description": "Typical delivery time in weeks"
         },
         "current_order_backlog_weeks": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 104,
           "description": "Current order backlog"
@@ -254,68 +403,165 @@
       }
     },
     "compliance": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "ncap_rating": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1,
           "maximum": 5,
           "description": "Euro NCAP safety rating (stars)"
         },
         "ncap_year": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 2010,
           "maximum": 2030,
           "description": "Year of NCAP test"
         },
         "emission_class": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Emission classification",
-          "examples": ["Euro 6d", "Zero Emission"]
+          "examples": [
+            "Euro 6d",
+            "Zero Emission"
+          ]
         },
         "type_approval": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Type approval certification"
         }
       }
     },
     "notes": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Market-specific notes or context"
     },
     "metadata": {
       "type": "object",
-      "required": ["created_at", "data_quality"],
+      "required": [
+        "created_at",
+        "data_quality"
+      ],
       "properties": {
         "created_at": {
           "type": "string",
-          "format": "date",
-          "description": "Date record was created (YYYY-MM-DD)"
+          "description": "Date the record was created (YYYY-MM-DD)"
         },
         "updated_at": {
-          "type": ["string", "null"],
-          "format": "date",
-          "description": "Date record was last updated (YYYY-MM-DD)"
+          "type": "string",
+          "description": "Date the record was last updated (YYYY-MM-DD)"
         },
         "data_quality": {
           "type": "string",
-          "enum": ["verified", "unverified", "estimated", "partial"],
-          "description": "Quality level of this data"
+          "enum": [
+            "verified",
+            "unverified",
+            "estimated",
+            "partial"
+          ],
+          "description": "verified requires at least one entry in sources"
         },
-        "price_checked_at": {
-          "type": ["string", "null"],
-          "format": "date",
-          "description": "Date when pricing was last verified"
+        "last_verified_at": {
+          "type": "string",
+          "description": "Date the record was last checked against its sources"
         },
         "sources": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
-            "type": "string",
-            "format": "uri"
+            "type": "string"
           },
-          "description": "Source URLs for verification"
+          "description": "Source URLs backing this record"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "data_source": {
+          "type": "string",
+          "description": "Coarse source category (manufacturer, automotive_press, ...)"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "verified_by": {
+          "type": "string"
+        },
+        "price_checked_at": {
+          "type": "string",
+          "description": "Date the price was last checked (YYYY-MM-DD)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "delivery_time_weeks": {
+      "type": [
+        "integer",
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 120,
+      "description": "Typical delivery time in weeks"
+    },
+    "warranty": {
+      "type": "object",
+      "description": "Market-specific warranty terms"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "metadata"
+        ],
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "required": [
+              "data_quality"
+            ],
+            "properties": {
+              "data_quality": {
+                "const": "verified"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "required": [
+              "sources"
+            ],
+            "properties": {
+              "sources": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

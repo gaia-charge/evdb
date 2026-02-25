@@ -842,16 +842,11 @@
       "properties": {
         "created_at": {
           "type": "string",
-          "format": "date",
-          "description": "Date record was created (YYYY-MM-DD)"
+          "description": "Date the record was created (YYYY-MM-DD)"
         },
         "updated_at": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date",
-          "description": "Date record was last updated (YYYY-MM-DD)"
+          "type": "string",
+          "description": "Date the record was last updated (YYYY-MM-DD)"
         },
         "data_quality": {
           "type": "string",
@@ -861,7 +856,11 @@
             "estimated",
             "partial"
           ],
-          "description": "Quality level of this data"
+          "description": "verified requires at least one entry in sources"
+        },
+        "last_verified_at": {
+          "type": "string",
+          "description": "Date the record was last checked against its sources"
         },
         "sources": {
           "type": [
@@ -869,23 +868,63 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "format": "uri"
+            "type": "string"
           },
-          "description": "Source URLs for verification"
+          "description": "Source URLs backing this record"
         },
-        "data_completeness_percent": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 100,
-          "description": "Estimated data completeness percentage"
+        "notes": {
+          "type": "string"
+        },
+        "data_source": {
+          "type": "string",
+          "description": "Coarse source category (manufacturer, automotive_press, ...)"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "verified_by": {
+          "type": "string"
         }
       },
       "additionalProperties": false
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "metadata"
+        ],
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "required": [
+              "data_quality"
+            ],
+            "properties": {
+              "data_quality": {
+                "const": "verified"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "required": [
+              "sources"
+            ],
+            "properties": {
+              "sources": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

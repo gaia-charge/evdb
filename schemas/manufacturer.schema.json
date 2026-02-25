@@ -4,115 +4,245 @@
   "title": "EV Manufacturer",
   "description": "Schema for electric vehicle manufacturers",
   "type": "object",
-  "required": ["id", "name", "country"],
+  "required": [
+    "id",
+    "name",
+    "country"
+  ],
   "properties": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
       "description": "Unique identifier (lowercase, hyphens allowed)",
-      "examples": ["tesla", "volkswagen-group", "byd"]
+      "examples": [
+        "tesla",
+        "volkswagen-group",
+        "byd"
+      ]
     },
     "name": {
       "type": "string",
       "minLength": 1,
       "description": "Official company name",
-      "examples": ["Tesla", "Volkswagen Group", "BYD"]
+      "examples": [
+        "Tesla",
+        "Volkswagen Group",
+        "BYD"
+      ]
     },
     "parent_company": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Parent company if subsidiary"
     },
     "country": {
       "type": "string",
       "pattern": "^[A-Z]{2}$",
       "description": "Country code (ISO 3166-1 alpha-2)",
-      "examples": ["US", "DE", "CN"]
+      "examples": [
+        "US",
+        "DE",
+        "CN"
+      ]
     },
     "founded_year": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1800,
       "maximum": 2100,
       "description": "Year company was founded"
     },
     "website": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri",
       "description": "Official website URL"
     },
     "logo_url": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri",
       "description": "Logo image URL"
     },
     "brands": {
-      "type": ["array", "null"],
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
       "description": "Brand names under this manufacturer",
-      "examples": [["Tesla"], ["Mercedes-Benz", "Mercedes-EQ", "EQ"]]
+      "examples": [
+        [
+          "Tesla"
+        ],
+        [
+          "Mercedes-Benz",
+          "Mercedes-EQ",
+          "EQ"
+        ]
+      ]
     },
     "markets": {
-      "type": ["array", "null"],
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
       "description": "Geographic markets served",
-      "examples": [["europe", "north-america", "china"]]
+      "examples": [
+        [
+          "europe",
+          "north-america",
+          "china"
+        ]
+      ]
     },
     "social": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "twitter": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Twitter/X handle"
         },
         "linkedin": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "LinkedIn company page"
         },
         "facebook": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Facebook page"
         },
         "instagram": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Instagram handle"
         }
       }
     },
     "notes": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Additional notes or context"
     },
     "metadata": {
       "type": "object",
-      "required": ["created_at", "data_quality"],
+      "required": [
+        "created_at",
+        "data_quality"
+      ],
       "properties": {
         "created_at": {
           "type": "string",
-          "format": "date",
-          "description": "Date record was created (YYYY-MM-DD)"
+          "description": "Date the record was created (YYYY-MM-DD)"
         },
         "updated_at": {
-          "type": ["string", "null"],
-          "format": "date",
-          "description": "Date record was last updated (YYYY-MM-DD)"
+          "type": "string",
+          "description": "Date the record was last updated (YYYY-MM-DD)"
         },
         "data_quality": {
           "type": "string",
-          "enum": ["verified", "unverified", "estimated", "partial"],
-          "description": "Quality level of this data"
+          "enum": [
+            "verified",
+            "unverified",
+            "estimated",
+            "partial"
+          ],
+          "description": "verified requires at least one entry in sources"
+        },
+        "last_verified_at": {
+          "type": "string",
+          "description": "Date the record was last checked against its sources"
         },
         "sources": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
-            "type": "string",
-            "format": "uri"
+            "type": "string"
           },
-          "description": "Source URLs for verification"
+          "description": "Source URLs backing this record"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "data_source": {
+          "type": "string",
+          "description": "Coarse source category (manufacturer, automotive_press, ...)"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "verified_by": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "metadata"
+        ],
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "required": [
+              "data_quality"
+            ],
+            "properties": {
+              "data_quality": {
+                "const": "verified"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "required": [
+              "sources"
+            ],
+            "properties": {
+              "sources": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

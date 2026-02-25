@@ -4,19 +4,34 @@
   "title": "EV Vehicle Model",
   "description": "Schema for electric vehicle models (base model information)",
   "type": "object",
-  "required": ["id", "name", "manufacturer_id", "brand", "body_style", "segment"],
+  "required": [
+    "id",
+    "name",
+    "manufacturer_id",
+    "brand",
+    "body_style",
+    "segment"
+  ],
   "properties": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
       "description": "Unique identifier (lowercase, hyphens allowed)",
-      "examples": ["tesla-model-3", "volkswagen-id4", "hyundai-ioniq-5"]
+      "examples": [
+        "tesla-model-3",
+        "volkswagen-id4",
+        "hyundai-ioniq-5"
+      ]
     },
     "name": {
       "type": "string",
       "minLength": 1,
       "description": "Official model name",
-      "examples": ["Model 3", "ID.4", "Ioniq 5"]
+      "examples": [
+        "Model 3",
+        "ID.4",
+        "Ioniq 5"
+      ]
     },
     "manufacturer_id": {
       "type": "string",
@@ -27,7 +42,13 @@
       "type": "string",
       "minLength": 1,
       "description": "Consumer-facing brand name (may differ from manufacturer for multi-brand groups)",
-      "examples": ["Tesla", "Volkswagen", "Fiat", "Peugeot", "Mercedes-Benz"]
+      "examples": [
+        "Tesla",
+        "Volkswagen",
+        "Fiat",
+        "Peugeot",
+        "Mercedes-Benz"
+      ]
     },
     "body_style": {
       "type": "string",
@@ -63,67 +84,111 @@
       "description": "Euro car segment (A=mini, B=small, C=medium, D=large, E=executive, F=luxury, J=SUV, M=MPV, S=sports)"
     },
     "production_start": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[0-9]{4}(-[0-9]{2})?$",
       "description": "Production start date (YYYY or YYYY-MM)",
-      "examples": ["2017", "2020-09"]
+      "examples": [
+        "2017",
+        "2020-09"
+      ]
     },
     "production_end": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[0-9]{4}(-[0-9]{2})?$",
       "description": "Production end date (YYYY or YYYY-MM), null if still in production"
     },
     "production_status": {
       "type": "string",
-      "enum": ["announced", "active", "discontinued"],
+      "enum": [
+        "announced",
+        "active",
+        "discontinued"
+      ],
       "default": "active",
       "description": "Current production status"
     },
     "generation": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1,
       "description": "Model generation number (1st gen, 2nd gen, etc.)"
     },
     "platform": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Platform/architecture name",
-      "examples": ["MEB", "E-GMP", "Ultium"]
+      "examples": [
+        "MEB",
+        "E-GMP",
+        "Ultium"
+      ]
     },
     "dimensions": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "length_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1000,
           "maximum": 10000,
           "description": "Vehicle length in millimeters"
         },
         "width_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1000,
           "maximum": 3000,
           "description": "Vehicle width in millimeters (without mirrors)"
         },
         "width_with_mirrors_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1000,
           "maximum": 3000,
           "description": "Vehicle width including mirrors"
         },
         "height_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1000,
           "maximum": 3000,
           "description": "Vehicle height in millimeters"
         },
         "wheelbase_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1000,
           "maximum": 5000,
           "description": "Wheelbase in millimeters"
         },
         "ground_clearance_mm": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 50,
           "maximum": 500,
           "description": "Ground clearance in millimeters"
@@ -131,41 +196,70 @@
       }
     },
     "seating": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "seats": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1,
           "maximum": 10,
           "description": "Number of seats"
         },
         "seating_configurations": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "integer"
           },
           "description": "Available seating configurations",
-          "examples": [[5], [5, 7]]
+          "examples": [
+            [
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ]
         }
       }
     },
     "cargo": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "trunk_capacity_liters": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 5000,
           "description": "Trunk/boot capacity in liters"
         },
         "frunk_capacity_liters": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 500,
           "description": "Front trunk (frunk) capacity in liters"
         },
         "total_cargo_liters": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 10000,
           "description": "Total cargo capacity with seats folded"
@@ -173,74 +267,161 @@
       }
     },
     "towing": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "max_towing_capacity_kg": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 10000,
           "description": "Maximum towing capacity in kilograms"
         },
         "max_trailer_weight_braked_kg": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 5000,
           "description": "Maximum trailer weight with brakes"
         },
         "max_trailer_weight_unbraked_kg": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0,
           "maximum": 1000,
           "description": "Maximum trailer weight without brakes"
         },
         "towbar_available": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "description": "Whether towbar/hitch is available"
         }
       }
     },
     "website": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri",
       "description": "Official model webpage"
     },
     "image_url": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri",
       "description": "Official model image URL"
     },
     "notes": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Additional notes or context"
     },
     "metadata": {
       "type": "object",
-      "required": ["created_at", "data_quality"],
+      "required": [
+        "created_at",
+        "data_quality"
+      ],
       "properties": {
         "created_at": {
           "type": "string",
-          "format": "date",
-          "description": "Date record was created (YYYY-MM-DD)"
+          "description": "Date the record was created (YYYY-MM-DD)"
         },
         "updated_at": {
-          "type": ["string", "null"],
-          "format": "date",
-          "description": "Date record was last updated (YYYY-MM-DD)"
+          "type": "string",
+          "description": "Date the record was last updated (YYYY-MM-DD)"
         },
         "data_quality": {
           "type": "string",
-          "enum": ["verified", "unverified", "estimated", "partial"],
-          "description": "Quality level of this data"
+          "enum": [
+            "verified",
+            "unverified",
+            "estimated",
+            "partial"
+          ],
+          "description": "verified requires at least one entry in sources"
+        },
+        "last_verified_at": {
+          "type": "string",
+          "description": "Date the record was last checked against its sources"
         },
         "sources": {
-          "type": ["array", "null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
-            "type": "string",
-            "format": "uri"
+            "type": "string"
           },
-          "description": "Source URLs for verification"
+          "description": "Source URLs backing this record"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "data_source": {
+          "type": "string",
+          "description": "Coarse source category (manufacturer, automotive_press, ...)"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "verified_by": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "metadata"
+        ],
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "required": [
+              "data_quality"
+            ],
+            "properties": {
+              "data_quality": {
+                "const": "verified"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "required": [
+              "sources"
+            ],
+            "properties": {
+              "sources": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }
