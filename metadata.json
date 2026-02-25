@@ -5,7 +5,7 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "GitHub",
-  "source_url": "https://github.com/yourusername/evdb",
+  "source_url": "https://github.com/gaia-charge/evdb",
   "plugins": {
     "datasette-cluster-map": {
       "latitude_column": "latitude",
@@ -24,39 +24,41 @@
           "title": "EV Manufacturers",
           "description": "Automotive manufacturers producing electric vehicles",
           "sort_desc": "created_at",
-          "facets": ["country", "parent_company"],
+          "facets": [
+            "country",
+            "parent_company"
+          ],
           "columns": {
             "id": "Unique manufacturer identifier (slug)",
             "name": "Official manufacturer name",
             "country": "Country of headquarters (ISO 3166-1 alpha-2)",
             "parent_company": "Parent company if applicable",
-            "founded": "Year founded",
             "website": "Official website URL",
             "logo_url": "Logo image URL",
             "description": "Brief description of the manufacturer",
             "created_at": "Record creation timestamp",
-            "updated_at": "Record last update timestamp"
+            "updated_at": "Record last update timestamp",
+            "founded_year": "Year the company was founded"
           }
         },
         "vehicle_models": {
           "title": "Vehicle Models",
           "description": "Base vehicle models (platform/generation level)",
           "sort_desc": "created_at",
-          "facets": ["manufacturer_id", "body_style", "segment", "production_status"],
+          "facets": [
+            "manufacturer_id",
+            "body_style",
+            "segment",
+            "production_status"
+          ],
           "columns": {
             "id": "Unique model identifier (manufacturer-model slug)",
             "manufacturer_id": "Manufacturer ID (foreign key)",
             "name": "Model name",
             "body_style": "Body style (SUV, sedan, hatchback, etc.)",
             "segment": "Market segment (A, B, C, D, E, F, S, J, M)",
-            "platform": "EV platform name",
             "production_start": "Production start date (YYYY-MM-DD)",
             "production_end": "Production end date if discontinued",
-            "production_status": "Current status (active/discontinued/announced)",
-            "seating_capacity_min": "Minimum seating capacity",
-            "seating_capacity_max": "Maximum seating capacity",
-            "cargo_capacity_min": "Minimum cargo capacity (liters)",
-            "cargo_capacity_max": "Maximum cargo capacity (liters)",
             "length_mm": "Vehicle length (millimeters)",
             "width_mm": "Vehicle width (millimeters)",
             "height_mm": "Vehicle height (millimeters)",
@@ -64,7 +66,6 @@
             "ground_clearance_mm": "Ground clearance (millimeters)",
             "drag_coefficient": "Aerodynamic drag coefficient (Cd)",
             "towing_capacity_kg": "Maximum towing capacity (kilograms)",
-            "description": "Model description",
             "created_at": "Record creation timestamp",
             "updated_at": "Record last update timestamp"
           }
@@ -85,8 +86,7 @@
             "model_id": "Vehicle model ID (foreign key)",
             "variant_name": "Variant/trim name",
             "model_year": "Model year",
-            "battery_gross_kwh": "Battery gross capacity (kWh)",
-            "battery_usable_kwh": "Battery usable capacity (kWh)",
+            "battery_usable_kwh": "Usable battery capacity in kWh",
             "battery_chemistry": "Battery chemistry (NMC/NCA/LFP/etc.)",
             "battery_warranty_years": "Battery warranty duration (years)",
             "battery_warranty_km": "Battery warranty distance (km)",
@@ -95,55 +95,52 @@
             "range_real_world_km": "Real-world range estimate (km)",
             "consumption_wltp_kwh_100km": "WLTP consumption (kWh/100km)",
             "consumption_real_world_kwh_100km": "Real-world consumption (kWh/100km)",
-            "charging_ac_max_kw": "Maximum AC charging power (kW)",
-            "charging_dc_max_kw": "Maximum DC fast charging power (kW)",
-            "charging_dc_10_80_minutes": "DC charging time 10-80% (minutes)",
-            "charging_ac_0_100_hours": "AC charging time 0-100% (hours)",
-            "charging_ports": "Charging port types (JSON array)",
             "bidirectional_charging": "V2X capability (V2L/V2H/V2G)",
-            "drive_type": "Drive configuration (RWD/FWD/AWD)",
-            "motors_total_power_kw": "Total motor power (kW)",
-            "motors_total_power_hp": "Total motor power (hp)",
-            "motors_total_torque_nm": "Total motor torque (Nm)",
-            "motors_count": "Number of motors",
-            "motors_layout": "Motor layout description",
-            "acceleration_0_100_seconds": "0-100 km/h acceleration (seconds)",
-            "top_speed_kph": "Top speed (km/h)",
-            "curb_weight_kg": "Curb weight (kg)",
-            "gross_weight_kg": "Gross vehicle weight (kg)",
-            "payload_capacity_kg": "Payload capacity (kg)",
+            "drive_type": "Drive type (FWD, RWD, AWD)",
+            "top_speed_kph": "Top speed in km/h",
             "efficiency_wh_km": "Energy efficiency (Wh/km)",
-            "efficiency_rating": "Efficiency class rating",
-            "version": "Specification version/revision",
-            "effective_from": "Spec effective date",
-            "effective_to": "Spec end date if superseded",
             "data_quality": "Data quality indicator",
-            "data_sources": "Data sources (JSON array)",
             "notes": "Additional notes",
             "created_at": "Record creation timestamp",
-            "updated_at": "Record last update timestamp"
+            "updated_at": "Record last update timestamp",
+            "battery_capacity_kwh": "Total (gross) battery capacity in kWh",
+            "ac_charge_power_kw": "Maximum AC charging power in kW",
+            "dc_charge_power_kw": "Maximum DC charging power in kW",
+            "dc_charge_time_10_80_min": "DC charge time 10-80% in minutes",
+            "dc_peak_power_kw": "Peak DC power from the charging curve in kW",
+            "connector_types": "JSON array of connector types (e.g. Type2, CCS2)",
+            "total_power_kw": "Total system power in kW",
+            "total_torque_nm": "Total system torque in Nm",
+            "motor_count": "Number of motors",
+            "motor_type": "Motor type (permanent magnet, induction, ...)",
+            "acceleration_0_100_sec": "0-100 km/h acceleration in seconds"
           }
         },
         "market_availability": {
           "title": "Market Availability",
           "description": "Vehicle pricing, options, and availability by market/country",
           "sort_desc": "created_at",
-          "facets": ["variant_id", "market_code", "currency", "availability_status"],
+          "facets": [
+            "variant_id",
+            "market_code",
+            "currency",
+            "availability_status"
+          ],
           "columns": {
             "id": "Unique market availability record ID",
             "variant_id": "Vehicle variant ID (foreign key)",
-            "market_code": "Market/country code (ISO 3166-1 alpha-2)",
+            "market_code": "ISO country code (DE, FR, PL, ...)",
             "currency": "Currency code (ISO 4217)",
-            "base_price": "Base MSRP (local currency)",
-            "price_including_incentives": "Price after incentives",
             "availability_status": "Availability (available/orderable/announced/discontinued)",
             "available_from": "Availability start date",
             "available_until": "Availability end date",
-            "lead_time_weeks": "Typical delivery time (weeks)",
-            "trim_name_local": "Local market trim name",
             "notes": "Market-specific notes",
             "created_at": "Record creation timestamp",
-            "updated_at": "Record last update timestamp"
+            "updated_at": "Record last update timestamp",
+            "price_base": "Base list price in local currency",
+            "price_including_vat": "Price including VAT",
+            "price_after_incentives": "Price after applicable incentives",
+            "delivery_time_weeks": "Typical delivery time in weeks"
           }
         },
         "market_incentives": {
@@ -151,8 +148,6 @@
           "description": "Government incentives and subsidies by market",
           "columns": {
             "market_availability_id": "Market availability record ID (foreign key)",
-            "incentive_name": "Incentive program name",
-            "incentive_amount": "Incentive amount (local currency)",
             "incentive_type": "Type (tax credit/rebate/grant/etc.)"
           }
         },
@@ -160,40 +155,31 @@
           "title": "Market Paint Colors",
           "description": "Available paint colors by market",
           "columns": {
-            "market_availability_id": "Market availability record ID (foreign key)",
-            "color_name": "Color name",
-            "color_code": "Manufacturer color code",
-            "color_type": "Paint type (solid/metallic/pearl)",
-            "additional_cost": "Additional cost for this color"
+            "market_availability_id": "Market availability record ID (foreign key)"
           }
         },
         "market_wheels": {
           "title": "Market Wheel Options",
           "description": "Available wheel options by market",
           "columns": {
-            "market_availability_id": "Market availability record ID (foreign key)",
-            "wheel_size": "Wheel size (inches)",
-            "wheel_design": "Wheel design name/code",
-            "tire_size": "Tire size specification",
-            "additional_cost": "Additional cost for this option"
+            "market_availability_id": "Market availability record ID (foreign key)"
           }
         },
         "market_interiors": {
           "title": "Market Interior Options",
           "description": "Available interior options by market",
           "columns": {
-            "market_availability_id": "Market availability record ID (foreign key)",
-            "interior_name": "Interior name/code",
-            "material": "Material (leather/vegan/fabric/etc.)",
-            "color": "Color name",
-            "additional_cost": "Additional cost for this option"
+            "market_availability_id": "Market availability record ID (foreign key)"
           }
         },
         "connectors": {
           "title": "Charging Connectors",
           "description": "EV charging connector types and specifications",
           "sort": "name",
-          "facets": ["type", "regions"],
+          "facets": [
+            "type",
+            "regions"
+          ],
           "columns": {
             "id": "Connector identifier",
             "name": "Connector name",
@@ -201,28 +187,24 @@
             "max_power_kw": "Maximum power rating (kW)",
             "max_voltage_v": "Maximum voltage (V)",
             "max_current_a": "Maximum current (A)",
-            "phases": "AC phases (1/3)",
             "regions": "Common regions (JSON array)",
-            "description": "Connector description",
-            "standard": "Technical standard name"
+            "description": "Connector description"
           }
         },
         "platforms": {
           "title": "EV Platforms",
           "description": "Electric vehicle platforms (skateboard chassis)",
           "sort": "name",
-          "facets": ["manufacturer", "type"],
+          "facets": [
+            "manufacturer",
+            "type"
+          ],
           "columns": {
             "id": "Platform identifier",
             "name": "Platform name",
             "manufacturer": "Platform manufacturer/developer",
             "type": "Platform type (BEV/flexible/PHEV)",
-            "introduced": "Introduction year",
-            "architecture": "Architecture description",
-            "battery_options": "Battery size options (JSON array)",
-            "drive_options": "Available drive configurations",
-            "voltage": "System voltage",
-            "examples": "Example vehicles (JSON array)"
+            "architecture": "Architecture description"
           }
         },
         "view_vehicles_full": {

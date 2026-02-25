@@ -71,23 +71,21 @@ This structure handles:
 
 ## 📋 Current Status
 
-**Progress**: 92% Complete - Ready for Deployment! 🚀  
-**Vehicles**: 63 variants across 41 models from 19 manufacturers  
-**Markets**: Germany (primary), France, USA, Poland, Italy  
-**Next Milestone**: Continue vehicle expansion + Deploy Streamlit app  
-**Target Public Launch**: 2026-02-15
+**Vehicles**: 530+ variants across 180 models from 45 manufacturers
+**Markets**: Germany, Spain, Poland, France, Netherlands, Italy (plus initial US/UK data)
 
-### What's Working Now ✅
+Live counts: [`/v1/stats.json`](https://gaia-charge.github.io/evdb/v1/stats.json)
+or the notes of the [latest release](https://github.com/gaia-charge/evdb/releases/latest).
 
-- ✅ **220+ vehicle variants** with comprehensive specifications across 28+ manufacturers
-- ✅ **Full validation pipeline** - All YAML files validated with JSON Schema
+### What's Working ✅
+
+- ✅ **Full validation pipeline** - All YAML files validated with JSON Schema in CI
 - ✅ **SQLite database** - Automated builds via GitHub Actions
 - ✅ **GitHub Releases** - Pre-built database downloadable from every push
-- ✅ **Datasette API** - 11 canned queries + full SQL access
-- ✅ **5 Datasette plugins** - Maps, charts, GraphQL, exports, search
-- ✅ **Streamlit dashboard** - 6 complete pages (Home, Browse, Compare, Analytics, Data Explorer, Documentation)
-- ✅ **CI/CD pipeline** - GitHub Actions for validation, builds, and releases
-- ✅ **Comprehensive docs** - API docs, contributing guide, FAQ
+- ✅ **Static JSON API** - Generated per push, served via GitHub Pages
+- ✅ **Datasette support** - Full SQL access with canned queries
+- ✅ **Streamlit dashboard** - 6 pages (Home, Browse, Compare, Analytics, Data Explorer, Documentation)
+- ✅ **Docs** - API docs, contributing guide, FAQ
 
 ### 📥 Download the Database
 
@@ -214,43 +212,36 @@ evdb/
 │   ├── vehicle-variant.schema.json
 │   └── market-availability.schema.json
 ├── scripts/                    # Build and validation tools
-│   ├── validate.py
-│   ├── build-sqlite.py
-│   └── import-yaml.py
+│   ├── validate.py             # JSON Schema validation
+│   ├── build-sqlite.py         # YAML -> SQLite build
+│   ├── generate-api.py         # SQLite -> static JSON API
+│   └── analyze_missing_data.py # Data completeness report
 ├── templates/                  # YAML templates for contributors
-├── streamlit_app.py           # Streamlit dashboard (6 pages)
-├── docs/                       # Documentation
+├── streamlit_app.py            # Streamlit dashboard (6 pages)
 ├── .github/workflows/          # CI/CD pipelines
-├── metadata.json              # Datasette configuration
-└── requirements.txt           # Python dependencies
+├── metadata.json               # Datasette configuration
+└── requirements.txt            # Python dependencies
 ```
 
 ## 🔌 API Examples
 
-### Get All Manufacturers
+Static JSON API served from GitHub Pages — see [API_DOCS.md](API_DOCS.md) for all endpoints.
 
 ```bash
-curl https://evdb.gaiacharge.com/manufacturers.json
-```
+# All manufacturers
+curl https://gaia-charge.github.io/evdb/v1/manufacturers.json
 
-### Find Vehicles by Range
+# All vehicles (summary)
+curl https://gaia-charge.github.io/evdb/v1/vehicles.json
 
-```bash
-curl "https://evdb.gaiacharge.com/vehicle-variants.json?range_real_world_combined_km__gte=500"
-```
+# One vehicle, full specs + market pricing
+curl https://gaia-charge.github.io/evdb/v1/vehicles/tesla-model-3-long-range-awd-2024.json
 
-### SQL Query
+# Pre-built queries
+curl https://gaia-charge.github.io/evdb/v1/queries/long-range.json
 
-```bash
-curl "https://evdb.gaiacharge.com/evdb.json?sql=\
-SELECT m.name as manufacturer, vm.name as model, vv.variant_name, \
-       vv.battery_usable_capacity_kwh, vv.range_real_world_combined_km \
-FROM vehicle_variants vv \
-JOIN vehicle_models vm ON vv.vehicle_model_id = vm.id \
-JOIN manufacturers m ON vm.manufacturer_id = m.id \
-WHERE vv.model_year = 2024 \
-ORDER BY vv.range_real_world_combined_km DESC \
-LIMIT 10"
+# Database statistics
+curl https://gaia-charge.github.io/evdb/v1/stats.json
 ```
 
 ## 📊 Example Queries
@@ -258,36 +249,35 @@ LIMIT 10"
 ### Compare Charging Speeds
 
 ```sql
-SELECT 
+SELECT
   m.name as manufacturer,
   vm.name as model,
   vv.variant_name,
-  vv.charging_dc_max_charge_power_kw as max_dc,
-  vv.charging_dc_charge_time_10_80_minutes as charge_time,
-  vv.charging_dc_charge_speed_kmh as km_per_hour
+  vv.dc_charge_power_kw as max_dc,
+  vv.dc_charge_time_10_80_min as charge_time_min
 FROM vehicle_variants vv
-JOIN vehicle_models vm ON vv.vehicle_model_id = vm.id
+JOIN vehicle_models vm ON vv.model_id = vm.id
 JOIN manufacturers m ON vm.manufacturer_id = m.id
-WHERE vv.charging_dc_max_charge_power_kw >= 150
-ORDER BY vv.charging_dc_charge_speed_kmh DESC
+WHERE vv.dc_charge_power_kw >= 150
+ORDER BY vv.dc_charge_time_10_80_min ASC
 LIMIT 20;
 ```
 
 ### Find Budget EVs
 
 ```sql
-SELECT 
+SELECT
   m.name, vm.name, vv.variant_name,
-  ma.pricing_base_price, ma.pricing_currency,
-  vv.range_real_world_combined_km
+  ma.price_base, ma.currency,
+  vv.range_wltp_km
 FROM vehicle_variants vv
-JOIN vehicle_models vm ON vv.vehicle_model_id = vm.id
+JOIN vehicle_models vm ON vv.model_id = vm.id
 JOIN manufacturers m ON vm.manufacturer_id = m.id
 JOIN market_availability ma ON vv.id = ma.variant_id
-WHERE ma.market = 'germany'
-  AND ma.pricing_base_price < 40000
-  AND vv.range_real_world_combined_km > 300
-ORDER BY vv.range_real_world_combined_km DESC;
+WHERE ma.market_code = 'DE'
+  AND ma.price_base < 40000
+  AND vv.range_wltp_km > 400
+ORDER BY vv.range_wltp_km DESC;
 ```
 
 ## 📜 License
@@ -297,9 +287,8 @@ ORDER BY vv.range_real_world_combined_km DESC;
 
 ## 🔗 Links
 
-- **Website**: https://evdb.gaiacharge.com/ *(coming soon)*
-- **API**: https://evdb.gaiacharge.com/evdb.json *(coming soon)*
-- **Dashboards**: https://dashboard.evdb.gaiacharge.com/ *(coming soon)*
+- **API**: https://gaia-charge.github.io/evdb/v1/index.json
+- **Database download**: https://github.com/gaia-charge/evdb/releases/latest
 - **GitHub**: https://github.com/gaia-charge/evdb
 
 ## 💡 Inspiration

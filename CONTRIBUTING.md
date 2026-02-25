@@ -55,20 +55,17 @@ Look in `data/manufacturers/` for the manufacturer. If it doesn't exist, create 
 ```yaml
 id: nissan
 name: Nissan Motor Corporation
-name_short: Nissan
-country: Japan
-headquarters: Yokohama, Japan
-founded_year: 1933
+country: JP
+founded: 1933
 website: https://www.nissan-global.com/
-logo_url: https://www.nissan-global.com/EN/LOGO/logo.png
 
 metadata:
-  data_source: "Official Nissan website"
-  data_source_url: https://www.nissan-global.com/
-  last_updated: "2024-02-07"
-  verified: true
-  notes: "Major Japanese automaker"
+  sources:
+    - https://www.nissan-global.com/
+  created_at: "2026-02-25"
 ```
+
+Required fields: `id`, `name`, `country` (ISO 3166-1 alpha-2 code).
 
 ### Step 2: Create Vehicle Model
 
@@ -77,33 +74,33 @@ metadata:
 ```yaml
 id: nissan-ariya
 manufacturer_id: nissan
+brand: Nissan
 name: Ariya
-model_code: FE0
 body_style: suv
-segment: compact_suv
-first_production_year: 2022
-production_status: current
+segment: C
+platform: CMF-EV
+production_start: 2022-03
+generation: 1
+production_status: active
 
 dimensions:
   length_mm: 4595
   width_mm: 1850
   height_mm: 1660
   wheelbase_mm: 2775
-  curb_weight_min_kg: 1900
-  curb_weight_max_kg: 2300
-  cargo_capacity_seats_up_l: 466
-  cargo_capacity_seats_down_l: 1300
 
-seating:
+interior:
   seating_capacity: 5
-  seat_configuration: "2+3"
+  cargo_volume_liters: 466
+  cargo_volume_seats_down_liters: 1300
 
 metadata:
-  data_source: "Nissan official specifications"
-  data_source_url: https://www.nissan-global.com/EN/ARIYA/
-  last_updated: "2024-02-07"
-  verified: true
+  sources:
+    - https://www.nissan-global.com/EN/ARIYA/
+  created_at: "2026-02-25"
 ```
+
+Required fields: `id`, `name`, `manufacturer_id`, `brand`, `body_style`, `segment`. `brand` is the consumer-facing brand name — it can differ from the manufacturer for multi-brand groups (e.g. manufacturer `stellantis`, brand `Fiat`).
 
 ### Step 3: Create Vehicle Variant
 
@@ -111,144 +108,109 @@ This is where detailed specs go. Use a template from `templates/vehicle-variant-
 
 **Example:** `data/vehicle-variants/nissan-ariya-87kwh-fwd-2024.yaml`
 
+The variant schema enforces `additionalProperties: false` — only fields defined in
+`schemas/vehicle-variant.schema.json` are accepted, all grouped in nested blocks:
+
 ```yaml
 id: nissan-ariya-87kwh-fwd-2024
-vehicle_model_id: nissan-ariya
-variant_name: "87kWh FWD"
+name: 87kWh FWD
+model_id: nissan-ariya
 model_year: 2024
 
-# Battery & Range (REQUIRED)
-battery_total_capacity_kwh: 90.0
-battery_usable_capacity_kwh: 87.0
-battery_chemistry: ncm811
-battery_voltage_nominal_v: 400
+battery:
+  usable_kwh: 87.0
+  total_kwh: 90.0
+  chemistry: NCM
+  warranty_years: 8
+  warranty_km: 160000
 
-range_wltp_km: 520
-range_epa_km: null  # Not available
-range_real_world_combined_km: 450
-range_real_world_highway_km: 380
-range_real_world_city_km: 570
+range:
+  wltp_km: 520
+  epa_km: null  # not available
+  real_world_km: 450
+  real_world_source: "Averaged from ADAC EcoTest and Auto Bild tests"
 
-# Powertrain (REQUIRED)
-drivetrain: fwd
-motors:
-  front:
-    type: permanent_magnet
-    max_power_kw: 178
-    max_power_hp: 242
-    max_torque_nm: 300
+charging:
+  ac_max_kw: 22
+  ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 130
+  dc_connector: CCS2
+  time_10_to_80_min: 35
 
-# Performance (REQUIRED)
-acceleration_0_100_kmh_s: 7.5
-top_speed_kmh: 160
+performance:
+  top_speed_kmh: 160
+  acceleration_0_100_sec: 7.5
+  total_power_kw: 178
+  total_torque_nm: 300
+  drive_type: FWD
 
-# Charging (REQUIRED)
-charging_ac_max_charge_power_kw: 22.0
-charging_ac_charge_time_0_100_hours: 4.5
+efficiency:
+  wltp_kwh_per_100km: 16.8
+  real_world_kwh_per_100km: 19.3
 
-charging_dc_max_charge_power_kw: 130.0
-charging_dc_charge_time_10_80_minutes: 35
-charging_dc_charge_speed_kmh: 370  # km added per hour
-
-# Efficiency (REQUIRED)
-consumption_wltp_kwh_per_100km: 16.8
-consumption_real_world_combined_kwh_per_100km: 19.3
-
-# Dimensions & Weight
-curb_weight_kg: 2100
-gross_vehicle_weight_kg: 2600
-towing_capacity_braked_kg: 1500
-towing_capacity_unbraked_kg: 750
+weight:
+  curb_weight_kg: 2100
+  gross_vehicle_weight_kg: 2600
+  towing_capacity_braked_kg: 1500
+  towing_capacity_unbraked_kg: 750
 
 metadata:
-  data_source: "Nissan official specifications + real-world testing"
-  data_source_url: https://www.nissan-global.com/EN/ARIYA/
-  last_updated: "2024-02-07"
-  verified: true
-  confidence_level: high
-  notes: "Real-world data from multiple test drives"
+  data_quality: verified
+  created_at: "2026-02-25"
+  sources:
+    - https://www.nissan-global.com/EN/ARIYA/
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/ariya/
 ```
+
+Required fields: `id`, `name`, `model_id`, `model_year`. Everything else is
+optional but the more complete, the better — `battery.usable_kwh`,
+`range.wltp_km`, `charging.dc_max_kw`, `performance.total_power_kw`, and
+`efficiency.wltp_kwh_per_100km` are the minimum for a useful entry.
 
 ### Step 4: Add Market Availability
 
 **Example:** `data/market-availability/nissan-ariya-87kwh-fwd-2024-de.yaml`
 
+The file name is `<variant-id>-<market>.yaml` with the market code lowercase,
+and must equal the `id` field.
+
 ```yaml
 id: nissan-ariya-87kwh-fwd-2024-de
 variant_id: nissan-ariya-87kwh-fwd-2024
-market: germany
-
-# Pricing (REQUIRED)
-pricing_base_price: 54990
-pricing_currency: EUR
-pricing_on_the_road_price: 56800
-pricing_destination_charge: 1200
-pricing_registration_fee: 610
-
-# Availability
+market: DE
+currency: EUR
 availability_status: available
-availability_lead_time_weeks: 8
-availability_production_location: "Tochigi, Japan"
+available_from: "2024-01"
 
-# Incentives
+pricing:
+  base_price: 54990
+  price_including_vat: 54990
+  vat_rate_percent: 19
+  destination_charge: 1200
+
 incentives:
-  - type: federal_subsidy
-    name: "BAFA Umweltbonus"
-    amount: 4500
-    currency: EUR
-    conditions: "List price under €65,000"
-  
-  - type: tax_exemption
-    name: "Kfz-Steuer exemption"
+  - name: "Kfz-Steuer exemption"
+    type: tax_exemption
     amount: 0
-    duration_years: 10
-    conditions: "First registration before 2025"
+    description: "Vehicle tax exemption for BEVs"
+    eligibility: "First registration before 2026"
 
-# Variants & Options
-variants:
-  colors:
-    - name: "Glacier White"
-      price: 0
-      availability: standard
-    
-    - name: "Aurora Green"
-      price: 890
-      availability: standard
-  
-  wheels:
-    - name: "19-inch alloy"
-      price: 0
-      diameter_inch: 19
-      availability: standard
-    
-    - name: "20-inch alloy"
-      price: 1200
-      diameter_inch: 20
-      availability: optional
-
-  packages:
-    - name: "Tech Package"
-      price: 2500
-      features:
-        - "ProPILOT Assist with Navi-link"
-        - "Intelligent Around View Monitor"
-        - "Head-Up Display"
-
-# Most popular configuration
-typical_configuration:
-  total_price: 59790
-  includes:
-    - "Aurora Green paint (+€890)"
-    - "20-inch wheels (+€1,200)"
-    - "Tech Package (+€2,500)"
-    - "Winter Package (+€1,200)"
+notes: >
+  German market pricing for the 87 kWh FWD variant. Build-to-order,
+  typical delivery 8 weeks.
 
 metadata:
-  data_source: "Nissan Germany official price list"
-  data_source_url: https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
-  last_updated: "2024-02-07"
-  verified: true
+  data_quality: verified
+  price_checked_at: "2026-02-25"
+  created_at: "2026-02-25"
+  sources:
+    - https://www.nissan.de/fahrzeuge/neuwagen/ariya.html
 ```
+
+Required fields: `id`, `variant_id`, `market` (uppercase ISO country code),
+`currency`. `incentives[].type` must be one of: `rebate`, `tax_credit`,
+`grant`, `subsidy`, `tax_exemption`, `discount`.
 
 ## ✅ Validation
 
@@ -269,15 +231,15 @@ python scripts/build-sqlite.py
 
 **Missing required fields:**
 ```
-❌ Required field 'battery_usable_capacity_kwh' is missing
+❌ 'model_year' is a required property
 ```
 → Add the missing field or set to `null` if truly unavailable
 
 **Invalid enum value:**
 ```
-❌ 'awd' is not a valid value for 'drivetrain' (must be one of: fwd, rwd, awd)
+❌ 'on_sale' is not one of ['available', 'pre-order', 'limited', 'discontinued', 'announced']
 ```
-→ Check `schemas/enums.json` for valid values
+→ Check the `enum` lists in `schemas/*.schema.json` for valid values
 
 **Invalid reference:**
 ```
@@ -287,7 +249,7 @@ python scripts/build-sqlite.py
 
 **Type error:**
 ```
-❌ Expected number for 'battery_usable_capacity_kwh', got string
+❌ At 'battery -> usable_kwh': '87.0' is not of type 'number'
 ```
 → Remove quotes from numeric values: `87.0` not `"87.0"`
 
@@ -295,31 +257,37 @@ python scripts/build-sqlite.py
 
 ### Required Fields
 
-Every vehicle variant **must** include:
+Every vehicle variant **should** include (beyond the schema-required
+`id`, `name`, `model_id`, `model_year`):
 
-- **Battery**: `battery_usable_capacity_kwh`
-- **Range**: `range_wltp_km` or `range_epa_km`
-- **Power**: `motors.front.max_power_kw` or `motors.rear.max_power_kw`
-- **Charging**: `charging_dc_max_charge_power_kw`
-- **Efficiency**: `consumption_wltp_kwh_per_100km`
+- **Battery**: `battery.usable_kwh`
+- **Range**: `range.wltp_km` or `range.epa_km`
+- **Power**: `performance.total_power_kw`
+- **Charging**: `charging.dc_max_kw`
+- **Efficiency**: `efficiency.wltp_kwh_per_100km`
 
 ### Data Sources
 
-**Always attribute your sources:**
+**Always attribute your sources** — deep links to the exact spec or price
+page, not just the manufacturer homepage:
 
 ```yaml
 metadata:
-  data_source: "Official manufacturer spec sheet + Car and Driver testing"
-  data_source_url: https://www.caranddriver.com/reviews/...
-  last_updated: "2024-02-07"
-  verified: true
-  confidence_level: high
+  data_quality: verified
+  created_at: "2026-02-25"
+  price_checked_at: "2026-02-25"  # market files: when the price was last checked
+  sources:
+    - https://www.nissan.de/fahrzeuge/neuwagen/ariya/preise.html
+    - https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/nissan/ariya/
 ```
 
-**Confidence levels:**
-- `high` - Official specs or verified real-world data
-- `medium` - Third-party testing, may have small variations
-- `low` - Community reports, estimates, or incomplete data
+**Data quality levels** (`metadata.data_quality`):
+- `verified` - confirmed against an official source that is cited in `sources`
+- `estimated` - derived or inferred (state how in `notes`)
+- `partial` - incomplete record, some fields missing
+- `unverified` - taken from a single secondary source, not yet cross-checked
+
+Records without sources cannot claim `verified`.
 
 ### Real-World Data
 
@@ -332,16 +300,12 @@ When adding real-world range/consumption:
 
 **Example:**
 ```yaml
-range_real_world_combined_km: 450  # Average from 5 independent tests
-range_real_world_highway_km: 380   # @120 km/h, 15°C
-range_real_world_city_km: 570      # @30 km/h avg, 20°C
-
-metadata:
-  notes: |
-    Real-world data averaged from:
-    - ADAC EcoTest (455 km, 18.5 kWh/100km)
-    - Auto Bild test (448 km, 19.1 kWh/100km)
-    - InsideEVs 70mph test (380 km highway)
+range:
+  real_world_km: 450  # average from independent tests
+  real_world_source: >
+    Averaged from ADAC EcoTest (455 km, 18.5 kWh/100km),
+    Auto Bild test (448 km, 19.1 kWh/100km),
+    InsideEVs 70mph test (380 km highway)
 ```
 
 ## 🔀 Pull Request Process
@@ -420,11 +384,13 @@ Found an error? [Create an issue](https://github.com/gaia-charge/evdb/issues/new
 - Edmunds testing (USA)
 - What Car? Real Range test (UK)
 
-**Community Data (Use with caution):**
-- ev-database.org
+**Community Data (Use with caution, never as the only source):**
 - Reddit communities (r/electricvehicles)
 - Owner forums
 - YouTube reviews
+
+**Do not use ev-database.org as a source** — its licensing is incompatible
+with this database.
 
 ### Tools
 
@@ -489,8 +455,6 @@ We especially need data for:
 - Chinese brands (BYD, NIO, XPeng, Li Auto)
 - Legacy automakers (Ford, GM, Stellantis)
 - New entrants (Rivian, Lucid, Polestar)
-
-See [TODO.md](TODO.md) Phase 6 for current status and targets.
 
 ## 📜 License
 
