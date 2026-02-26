@@ -202,6 +202,145 @@ class Validator:
         
         return success_count, len(yaml_files)
     
+    # Approximate FX rates for cross-market price comparison only (not stored)
+    EUR_RATES = {'EUR': 1.0, 'PLN': 4.3, 'GBP': 0.85, 'USD': 1.08, 'CHF': 0.94,
+                 'SEK': 11.3, 'NOK': 11.6, 'DKK': 7.46, 'CZK': 25.2}
+    MARKET_CURRENCY = {'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'NL': 'EUR',
+                       'AT': 'EUR', 'BE': 'EUR', 'PT': 'EUR', 'IE': 'EUR', 'FI': 'EUR',
+                       'PL': 'PLN', 'GB': 'GBP', 'UK': 'GBP', 'US': 'USD', 'CH': 'CHF',
+                       'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'CZ': 'CZK'}
+    # Sanity bands for base prices, in EUR
+    PRICE_BAND_EUR = (8000, 500000)
+    # Plausible efficiency band: km of WLTP range per kWh of usable battery
+    KM_PER_KWH_BAND = (2.5, 10.0)
+
+    def cross_validate(self, directory: Path):
+        """Cross-file checks: referential integrity, duplicates, plausibility."""
+        def load_dir(sub):
+            out = {}
+            d = directory / sub
+            if not d.exists():
+                return out
+            for f in sorted(d.glob('*.yaml')):
+                data = self.load_yaml_file(f)
+                if data and isinstance(data, dict) and 'id' in data:
+                    out[data['id']] = (f, data)
+            return out
+
+        manufacturers = load_dir('manufacturers')
+        models = load_dir('vehicle-models')
+        variants = load_dir('vehicle-variants')
+        markets = load_dir('market-availability')
+
+        def err(f, etype, msg, severity="error"):
+            target = self.errors if severity == "error" else self.warnings
+            target.append(ValidationError(str(f), etype, msg, severity=severity))
+
+        # 1. Filename must equal id
+        for coll in (manufacturers, models, variants, markets):
+            for rid, (f, _) in coll.items():
+                if f.stem != rid:
+                    err(f, "FilenameIdMismatch",
+                        f"File name '{f.stem}' != id '{rid}'")
+
+        # 2. Referential integrity
+        for rid, (f, d) in models.items():
+            if d.get('manufacturer_id') not in manufacturers:
+                err(f, "BrokenReference",
+                    f"manufacturer_id '{d.get('manufacturer_id')}' does not exist")
+        for rid, (f, d) in variants.items():
+            if d.get('model_id') not in models:
+                err(f, "BrokenReference", f"model_id '{d.get('model_id')}' does not exist")
+        for rid, (f, d) in markets.items():
+            if d.get('variant_id') not in variants:
+                err(f, "BrokenReference",
+                    f"variant_id '{d.get('variant_id')}' does not exist")
+
+        # 3. (variant_id, market) uniqueness
+        seen_vm: Dict[Tuple[str, str], str] = {}
+        for rid, (f, d) in markets.items():
+            key = (str(d.get('variant_id')), str(d.get('market', '')).upper())
+            if key in seen_vm:
+                err(f, "DuplicateMarketEntry",
+                    f"variant '{key[0]}' already has a {key[1]} entry in {seen_vm[key]}")
+            else:
+                seen_vm[key] = f.name
+
+        # 4. Semantic duplicate variants: same model, name, year under different ids
+        seen_variant: Dict[Tuple[str, str, Any], str] = {}
+        for rid, (f, d) in variants.items():
+            key = (str(d.get('model_id')), str(d.get('name', '')).strip().lower(),
+                   d.get('model_year'))
+            if key in seen_variant:
+                err(f, "DuplicateVariant",
+                    f"same (model_id, name, model_year) as {seen_variant[key]} - "
+                    f"one of the two ids is redundant")
+            else:
+                seen_variant[key] = f.name
+
+        # 5. Variant plausibility
+        for rid, (f, d) in variants.items():
+            battery = d.get('battery') or {}
+            usable = battery.get('usable_kwh')
+            total = battery.get('total_kwh')
+            if usable and total and usable > total + 0.5:
+                err(f, "Plausibility", f"usable_kwh {usable} > total_kwh {total}")
+            wltp = (d.get('range') or {}).get('wltp_km')
+            if usable and wltp:
+                ratio = wltp / usable
+                lo, hi = self.KM_PER_KWH_BAND
+                if not (lo <= ratio <= hi):
+                    err(f, "Plausibility",
+                        f"range {wltp} km / {usable} kWh = {ratio:.1f} km/kWh "
+                        f"outside plausible band {lo}-{hi}")
+            dc = (d.get('charging') or {}).get('dc_max_kw')
+            if dc is not None and not (10 <= dc <= 1000):
+                err(f, "Plausibility", f"dc_max_kw {dc} outside 10-1000")
+            acc = (d.get('performance') or {}).get('acceleration_0_100_sec')
+            if acc is not None and not (1.5 <= acc <= 25):
+                err(f, "Plausibility", f"acceleration_0_100_sec {acc} outside 1.5-25")
+
+        # 6. Market plausibility: currency map + price band + VAT arithmetic
+        for rid, (f, d) in markets.items():
+            market = str(d.get('market', '')).upper()
+            currency = d.get('currency')
+            expected = self.MARKET_CURRENCY.get(market)
+            if expected and currency != expected:
+                err(f, "CurrencyMismatch",
+                    f"market {market} expects {expected}, file says {currency}")
+            pricing = d.get('pricing') or {}
+            base = pricing.get('base_price')
+            rate = self.EUR_RATES.get(currency)
+            if base and rate:
+                eur = base / rate
+                lo, hi = self.PRICE_BAND_EUR
+                if not (lo <= eur <= hi):
+                    err(f, "Plausibility",
+                        f"base_price {base} {currency} (~EUR {eur:,.0f}) outside {lo}-{hi}")
+            incl = pricing.get('price_including_vat')
+            if base and incl and incl < base * 0.99:
+                err(f, "Plausibility",
+                    f"price_including_vat {incl} < base_price {base}")
+
+        # 7. Cross-market spread per variant (warning; verify prices when it fires)
+        by_variant: Dict[str, List[Tuple[str, float, str]]] = {}
+        for rid, (f, d) in markets.items():
+            base = (d.get('pricing') or {}).get('base_price')
+            rate = self.EUR_RATES.get(d.get('currency'))
+            if base and rate:
+                by_variant.setdefault(str(d.get('variant_id')), []).append(
+                    (str(d.get('market')), base / rate, f.name))
+        for vid, entries in by_variant.items():
+            if len(entries) < 2:
+                continue
+            entries.sort(key=lambda e: e[1])
+            low, high = entries[0], entries[-1]
+            if low[1] > 0 and high[1] / low[1] > 1.5:
+                err(high[2], "CrossMarketSpread",
+                    f"variant '{vid}': {high[0]} ~EUR {high[1]:,.0f} vs "
+                    f"{low[0]} ~EUR {low[1]:,.0f} ({high[1]/low[1]:.2f}x) - "
+                    f"verify both prices", severity="warning")
+
     def check_duplicate_ids(self, directory: Path) -> List[ValidationError]:
         """Check for duplicate IDs across files"""
         errors = []
@@ -279,10 +418,12 @@ class Validator:
               default='schemas', help='Directory containing JSON schemas')
 @click.option('--check-duplicates/--no-check-duplicates', default=True,
               help='Check for duplicate IDs')
+@click.option('--cross-checks/--no-cross-checks', default=True,
+              help='Cross-file referential integrity, duplicate and plausibility checks')
 @click.option('--recursive/--no-recursive', default=True,
               help='Recursively search for YAML files')
 def main(file_path: Optional[Path], directory_path: Optional[Path], schemas_dir: Path,
-         check_duplicates: bool, recursive: bool):
+         check_duplicates: bool, cross_checks: bool, recursive: bool):
     """
     Validate EVDB YAML files against JSON schemas.
     
@@ -320,7 +461,12 @@ def main(file_path: Optional[Path], directory_path: Optional[Path], schemas_dir:
             console.print("\n[bold]Checking for duplicate IDs...[/bold]")
             duplicate_errors = validator.check_duplicate_ids(directory_path)
             validator.errors.extend(duplicate_errors)
-        
+
+        # Cross-file checks (referential integrity, duplicates, plausibility)
+        if cross_checks:
+            console.print("\n[bold]Running cross-file checks...[/bold]")
+            validator.cross_validate(directory_path)
+
         validator.print_summary(success_count, total_count)
         sys.exit(0 if len(validator.errors) == 0 else 1)
     
