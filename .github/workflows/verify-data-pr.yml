@@ -1,0 +1,82 @@
+name: Verify Data PR
+
+# Adversarial verification gate (see VERIFICATION.md):
+# an independent agent re-checks every changed data record against its
+# cited sources and tries to refute it. Requires the ANTHROPIC_API_KEY
+# repository secret. Make this check required in branch protection.
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'data/**/*.yaml'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: List changed data files
+      id: changed
+      run: |
+        git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'data/**/*.yaml' > changed_files.txt
+        echo "count=$(wc -l < changed_files.txt | tr -d ' ')" >> $GITHUB_OUTPUT
+        cat changed_files.txt
+
+    - name: Adversarial verification
+      if: steps.changed.outputs.count != '0'
+      uses: anthropics/claude-code-action@v1
+      with:
+        anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+        prompt: |
+          You are the independent data verifier for EVDB (see VERIFICATION.md).
+          You did NOT write this data. Your job is to try to REFUTE it.
+
+          The files changed in this PR are listed in changed_files.txt.
+          For EVERY new or modified record in those files:
+
+          1. Read the record. Extract its claims: price, currency, trim,
+             model year, battery, availability, incentives.
+          2. Fetch every URL in metadata.sources. If a source does not load,
+             the verdict is source-unreachable.
+          3. Compare claims against the source text. Check specifically:
+             - Is the price for the RIGHT TRIM and RIGHT MODEL YEAR?
+             - Is VAT included as the market requires (DE 19%, FR 20%,
+               IT 22%, NL 21%, ES 21%, PL 23%)?
+             - If the record maps a foreign trim name onto this variant,
+               do battery capacity and motor power actually match?
+             - Do colors/options listed actually exist for THIS model?
+          4. When the only source is automotive press, find and check one
+             independent second source.
+          5. Default to skepticism: if you cannot confirm a claim from the
+             cited sources, it is refuted, not confirmed.
+
+          Then post ONE pull request review comment with a table:
+          | file | verdict | reason |
+          where verdict is confirmed / refuted / source-unreachable, and the
+          reason quotes or paraphrases the decisive source line.
+
+          Rules:
+          - A record whose data_quality claims "verified" but which you
+            cannot confirm is refuted.
+          - Never edit files. Never approve your own review. Report only.
+          - End your final message with the single line:
+            VERIFICATION: PASS   (all records confirmed)
+            or
+            VERIFICATION: FAIL  (anything refuted or unreachable)
+        claude_args: |
+          --allowedTools "Bash(cat:*),Bash(git diff:*),Read,Grep,Glob,WebFetch,WebSearch"
+
+    - name: No data changes
+      if: steps.changed.outputs.count == '0'
+      run: echo "No data files changed - nothing to verify."

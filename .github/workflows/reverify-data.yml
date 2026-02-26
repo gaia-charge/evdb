@@ -1,0 +1,82 @@
+name: Re-verify Stale Data
+
+# Weekly freshness sweep (see VERIFICATION.md): re-check the market records
+# with the oldest price_checked_at / last_verified_at against their cited
+# sources and open a PR with updates. Requires ANTHROPIC_API_KEY secret.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'  # Mondays 06:17 UTC
+  workflow_dispatch:
+    inputs:
+      sample_size:
+        description: 'How many records to re-verify'
+        default: '15'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  reverify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Pick stalest market records
+      id: sample
+      run: |
+        python3 - <<'PY'
+        import glob, re, os
+        n = int('${{ github.event.inputs.sample_size || 15 }}')
+        rows = []
+        for f in glob.glob('data/market-availability/*.yaml'):
+            text = open(f).read()
+            m = (re.search(r'price_checked_at:\s*["\']?([0-9-]+)', text)
+                 or re.search(r'last_verified_at:\s*["\']?([0-9-]+)', text)
+                 or re.search(r'updated_at:\s*["\']?([0-9-]+)', text)
+                 or re.search(r'created_at:\s*["\']?([0-9-]+)', text))
+            rows.append((m.group(1) if m else '0000-00-00', f))
+        rows.sort()
+        with open('stale_files.txt', 'w') as out:
+            for d, f in rows[:n]:
+                out.write(f"{d} {f}\n")
+        print(open('stale_files.txt').read())
+        PY
+
+    - name: Re-verify against sources
+      uses: anthropics/claude-code-action@v1
+      with:
+        anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+        prompt: |
+          You are the EVDB freshness verifier (see VERIFICATION.md).
+          stale_files.txt lists the market records with the oldest
+          verification dates, one "date path" per line.
+
+          For each file:
+          1. Fetch every URL in metadata.sources.
+          2. If the source still shows the same base price: set
+             metadata.last_verified_at to today's date. Do not touch
+             anything else.
+          3. If the price changed: update pricing.base_price and
+             price_including_vat, set metadata.price_checked_at to today,
+             keep data_quality: verified only if the source is official,
+             and note the old price in metadata.notes.
+          4. If the source is gone (404, redirect to homepage, model no
+             longer listed): set data_quality: unverified and describe
+             what happened in metadata.notes. If the model appears
+             discontinued, set availability_status: discontinued.
+
+          Then run:
+            pip install pyyaml jsonschema click rich
+            python scripts/validate.py --directory data --check-duplicates
+          Fix any validation errors you introduced.
+
+          Create a branch reverify/<today>, commit the changes with message
+          "Re-verify N stale market records", push, and open a pull request
+          summarizing per file: old date, verdict (unchanged / price
+          updated / source gone), new value.
+        claude_args: |
+          --allowedTools "Bash,Read,Edit,Write,Grep,Glob,WebFetch,WebSearch"
