@@ -5,13 +5,14 @@ currency: EUR
 
 # Pricing
 pricing:
-  base_price: 46900
+  base_price: 67500
+  price_including_vat: 67500
+  vat_rate_percent: 19
   destination_charge: 890
-  on_road_price: 47790
 
   trims:
     - name: "GT"
-      price: 46900
+      price: 67500
       description: "Standard AWD with 295 kW, sport seats, heat pump, V2L/V2H/V2G"
 
 # Options and packages
@@ -101,15 +102,16 @@ market_context:
     A110 sports car adds desirability versus mainstream alternatives.
 
 metadata:
-  created_at: "2026-02-10T12:00:00Z"
-  updated_at: "2026-02-10T12:00:00Z"
-  data_quality: estimated
+  created_at: "2026-02-10"
+  updated_at: "2026-02-26"
+  price_checked_at: "2026-02-26"
+  data_quality: verified
   notes: |
-    Pricing estimated based on Alpine's positioning and French market pricing.
-    Official German pricing not yet confirmed. Expected to be priced competitively
-    against Tesla Model Y and BMW iX1.
-
-sources:
-  - url: "https://ev-database.org/car/3390/Alpine-A390-GT"
-    title: "EV Database - Alpine A390 GT"
-    date_accessed: "2026-02-10"
+    Official German pricing: A390 starts at 67,500 EUR for the GT version
+    (295 kW), orderable since 2025-11-07 per Alpine's German price list.
+    Previous 46,900 EUR figure was an estimate carried over from A290-level
+    positioning and failed the cross-market plausibility check vs NL/ES.
+  sources:
+    - https://presse.alpinecars.de/?p=37860
+    - https://ecomento.de/2025/10/27/alpine-a390-startet-bei-67-500-euro-mit-der-gt-version/
+    - https://cdn.group.renault.com/alp/de/price_list/Alpine_Preisliste_A390.pdf.asset.pdf/60445e88a6.pdf

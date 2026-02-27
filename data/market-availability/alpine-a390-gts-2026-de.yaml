@@ -5,13 +5,14 @@ currency: EUR
 
 # Pricing
 pricing:
-  base_price: 54900
+  base_price: 78000
+  price_including_vat: 78000
+  vat_rate_percent: 19
   destination_charge: 890
-  on_road_price: 55790
 
   trims:
     - name: "GTS"
-      price: 54900
+      price: 78000
       description: "High-performance AWD with 345 kW, Sabelt sport seats, track mode"
 
 # Options and packages
@@ -95,14 +96,16 @@ market_context:
     more power, V2G capabilities, and French sports car brand cachet.
 
 metadata:
-  created_at: "2026-02-10T12:00:00Z"
-  updated_at: "2026-02-10T12:00:00Z"
-  data_quality: estimated
+  created_at: "2026-02-10"
+  updated_at: "2026-02-26"
+  price_checked_at: "2026-02-26"
+  data_quality: verified
   notes: |
-    Pricing estimated. GTS expected to carry ~€8,000 premium over GT.
-    Not yet available - expected launch late 2026.
-
-sources:
-  - url: "https://ev-database.org/car/3391/Alpine-A390-GTS"
-    title: "EV Database - Alpine A390 GTS"
-    date_accessed: "2026-02-10"
+    Official German pricing: A390 GTS (345 kW) starts at 78,000 EUR,
+    available from early 2026 per Alpine's German communications.
+    Previous 54,900 EUR figure was an estimate and failed the
+    cross-market plausibility check vs FR (78,000 EUR).
+  sources:
+    - https://presse.alpinecars.de/?p=37860
+    - https://ecomento.de/2025/10/27/alpine-a390-startet-bei-67-500-euro-mit-der-gt-version/
+    - https://www.ev-supply.de/blogs/elektroauto-news/alpine-a390-gts-preis-alle-details
