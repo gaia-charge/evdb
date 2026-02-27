@@ -201,7 +201,7 @@ notes: >
   typical delivery 8 weeks.
 
 metadata:
-  data_quality: verified
+  data_quality: unverified   # never claim verified - the verifier assigns that
   price_checked_at: "2026-02-25"
   created_at: "2026-02-25"
   sources:
@@ -211,6 +211,45 @@ metadata:
 Required fields: `id`, `variant_id`, `market` (uppercase ISO country code),
 `currency`. `incentives[].type` must be one of: `rebate`, `tax_credit`,
 `grant`, `subsidy`, `tax_exemption`, `discount`.
+
+### Trim mapping across markets
+
+When a variant's trim name doesn't exist in another market, **map by specs**
+(battery capacity, motor power, drivetrain), not by name:
+
+1. Battery capacity must match within ~1 kWh
+2. Motor power and drivetrain (RWD/AWD) must match
+3. Note the local trim name in `notes`
+4. If specs genuinely differ, do NOT map — create a new variant or skip it
+
+The verifier re-checks trim mappings on specs; a wrong mapping blocks the
+whole PR (see [VERIFICATION.md](VERIFICATION.md)).
+
+### Market-specific pricing notes
+
+- **Germany (DE):** prices in EUR incl. 19% MwSt.
+- **Netherlands (NL):** prices in EUR incl. 21% BTW; note BPM if relevant;
+  bijtelling matters for lease.
+- **France (FR):** prices in EUR incl. 20% TVA; bonus écologique only if
+  currently active and the model qualifies (China-built models generally do
+  not); L'Argus is the pricing reference.
+- **Italy (IT):** prices in EUR incl. 22% IVA; Ecobonus only if active;
+  Quattroruote is the pricing reference.
+- **Poland (PL):** prices in PLN incl. 23% VAT.
+- **Spain (ES):** prices in EUR incl. 21% IVA; note Plan MOVES status if cited.
+
+Recommended pricing/press sources when manufacturer configurators hide
+prices (common for BMW, Audi, Mercedes):
+
+- **DE:** ADAC, Auto Motor und Sport, AutoScout24.de
+- **NL:** AutoWeek.nl, Autovisie.nl, Elektrischeauto.nl
+- **FR:** L'Argus (largus.fr), Turbo.fr, Automobile Magazine
+- **IT:** Quattroruote.it, AutoScout24.it, alVolante.it, Motor1.com IT
+- **PL:** AutoScout24.pl, moto.pl
+- **ES:** km77.com, AutoScout24.es
+
+**Never use ev-database.org** — its licensing is incompatible with this
+database.
 
 ## ✅ Validation
 
@@ -273,7 +312,7 @@ page, not just the manufacturer homepage:
 
 ```yaml
 metadata:
-  data_quality: verified
+  data_quality: unverified
   created_at: "2026-02-25"
   price_checked_at: "2026-02-25"  # market files: when the price was last checked
   sources:
@@ -282,7 +321,8 @@ metadata:
 ```
 
 **Data quality levels** (`metadata.data_quality`):
-- `verified` - confirmed against an official source that is cited in `sources`
+- `verified` - confirmed against an official source that is cited in `sources`;
+  set by the independent verifier, never by the author (see [VERIFICATION.md](VERIFICATION.md))
 - `estimated` - derived or inferred (state how in `notes`)
 - `partial` - incomplete record, some fields missing
 - `unverified` - taken from a single secondary source, not yet cross-checked

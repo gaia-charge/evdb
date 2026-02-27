@@ -17,8 +17,7 @@ The only defense is separating the author from the verifier.
 
 ### Author (human or agent)
 
-- Works on a branch (`data-fill/YYYY-MM-DD` for the cron agent), never on
-  `main`. Opens a pull request.
+- Works on a branch, never on `main`. Opens a pull request.
 - Every new or changed record carries `metadata.sources` with **deep links**
   to the exact spec/price page (not a homepage), and
   `metadata.price_checked_at` (market files) or `metadata.updated_at`.
@@ -36,8 +35,8 @@ The only defense is separating the author from the verifier.
      price, trim name, model year, battery, VAT inclusion.
   3. Actively try to refute: is this price for the *right trim*? Right
      *model year*? Does the market file's trim mapping (see
-     CRON_INSTRUCTIONS.md) actually match on specs? Is the currency and
-     VAT treatment correct for the market?
+     CONTRIBUTING.md, "Trim mapping across markets") actually match on
+     specs? Is the currency and VAT treatment correct for the market?
   4. Cross-check one independent source when the primary is press rather
      than the manufacturer.
 - Verdict per record: `confirmed` | `refuted` | `source-unreachable`,
