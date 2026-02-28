@@ -1,0 +1,68 @@
+brand: fiat
+fetched_at: "2026-08-13"
+documents:
+  - file: fiat-500e/price-list.pdf
+    url: https://www.fiat.de/content/dam/fiat2023/de/pdf/july25/Preisliste_Fiat_500_Elektro_Icon_Preisliste_WEB.pdf
+    type: price_list
+    covers_models: [fiat-500e]
+    covers_variants: [fiat-500e-icon-42kwh-2024, fiat-500e-icon-42kwh-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_power_kw, performance.total_torque_nm, battery.total_kwh, battery.usable_kwh, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, dimensions.turning_circle_m]
+    fetched_at: "2026-08-13"
+    notes: "Fiat Germany 'FIAT 500 ELEKTRO ICON - Preise und Ausstattungen', Stand 07/2025 - the ICON trim list, which is exactly the queue's 'Icon 42kWh' variant name. Two battery columns, 23,8 kWh and 42 kWh: 42 kWh column has Nennkapazitaet 37,3 kWh (net), Motor 'Permanentmagnet-E-Motor' (single), Antriebsart Frontantrieb, Max. Drehmoment 220 Nm, Getriebe 'Automatisches Untersetzungsgetriebe' 1 Gang, Reichweite kombiniert 312-321 km and innerorts 447-460 km, Verbrauch 13,9-14,4 kWh/100 km, Radstand 2322, Laenge 3632, Breite 1683/1900, Hoehe 1527, Wendekreis 9,7 m. This German list does NOT contain charge-time rows, a Sitzplaetze row, a Waermepumpe row or a V2L row - see price-list-2.pdf for the charge times and seat count."
+  - file: fiat-500e/price-list-2.pdf
+    url: https://www.fiat.at/content/dam/fiat2023/at/pricelist/500e/july-26/Preisliste_Fiat_500_MY26_2026-07-01.pdf
+    type: price_list
+    covers_models: [fiat-500e]
+    covers_variants: [fiat-500e-icon-42kwh-2025]
+    fields_present: [seating.seats, performance.drive_type, performance.motors, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_0_to_80_min, battery.total_kwh, battery.usable_kwh, battery.chemistry, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Fiat Austria 'FIAT 500 Hybrid und Elektro, Modelljahr 2026 - Preise, Ausstattungen, Technische Daten', Stand 01.07.2026, from the official fiat.at Preislisten & Broschueren hub. This is the document that closes the 500e charging gap: 'Ladedauer DC 85 kW 80% SOC = 35 Minuten' for the 42 kWh (and 'DC 50 kW 80% SOC = 30 Minuten' for the 23,8 kWh) - note Fiat states these as 0-to-80% SOC, so map to charging.time_0_to_80_min, not time_10_to_80_min. Also AC 2,3 / 3,7 / 11 kW 0-100% times. Other verified rows: Anzahl der Sitzplaetze 4 (the 500e is a four-seater - do not assume 5), Antrieb Vorderraeder, Motortyp 'Permanentmagneterregter Synchronmotor' (single), 87 kW fuer 42 kWh, Drehmoment 220 Nm, Batterietyp Lithium-Ionen, Kapazitaet 42 (37,3 netto) kWh, Verbrauch 13,6-14,2 kWh/100 km, Reichweite 315-... km kombiniert und 450-... km Stadtverkehr, Radstand 2.322. No Waermepumpe row and no V2L row."
+  - file: fiat-600e/price-list.pdf
+    url: https://www.fiat.at/content/dam/fiat2023/at/pricelist/600/july-26/Preisliste_Fiat_600_2026-07-01.pdf
+    type: price_list
+    covers_models: [fiat-600e]
+    covers_variants: [fiat-600e-la-prima-2024, fiat-600e-red-2025]
+    fields_present: [seating.seats, performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_20_to_80_min, battery.total_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump]
+    fetched_at: "2026-08-13"
+    notes: "Fiat Austria 'FIAT 600 - Preise, Ausstattungen, Technische Daten', Stand 01.07.2026, from the fiat.at price-list hub (the separate 600-hybrid and 600-petrol lists are different files; this one is the BEV list). Verified in the text layer: Anzahl der Sitzplaetze 5, Radstand 2.557, Max. Drehmoment 260 Nm, Batteriekapazitaet (brutto) 54 kWh, 'Ladedauer DC 100 kW 20-80% = 27 Minuten' (again 20-80%, not 10-80%), AC 3,7 kW 0-100% 16:10 Std., AC 11 kW 0-100% 5:45 Std. 'Waermepumpe (BBV)' appears as an equipment/option line on multiple trims, so heat_pump = available as option. NO V2L / Vehicle-to-Load row anywhere in the document. The queue's La Prima (MY2024) and (RED) (MY2025) trims are not both in the 2026 line-up, but the powertrain block is a single BEV column covering all 600e trims."
+  - file: fiat-grande-panda/price-list.pdf
+    url: https://www.fiat.de/content/dam/fiat2023/de/pdf/grande-panda/bev/FiatGrandePandaElektroPreisliste.pdf
+    type: price_list
+    covers_models: [fiat-grande-panda]
+    covers_variants: [fiat-grande-panda-44-electric-2025]
+    fields_present: [seating.seats, performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_20_to_80_min, battery.total_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Fiat Germany 'Fiat Grande Panda Elektro - Preise und Ausstattungen', Stand 11/2024 - the launch BEV price list, closest to the queue's 44 kWh Electric MY2025 variant. Verified: Anzahl der Sitzplaetze 5, Radstand 2.540, Max. Drehmoment 122 Nm, Antriebsart Frontantrieb, 'Ladezeit (DC 100kW - 20 - 80 %) = 0:33', AC 7 kW 20-100% 3:43, AC 11 kW 20-100% 2:55. Charge times are 20-80%, not 10-80/0-80. No Waermepumpe row and no V2L row."
+  - file: fiat-grande-panda/price-list-2.pdf
+    url: https://www.fiat.at/content/dam/fiat2023/at/pricelist/grande-panda/july_26/Preisliste_Fiat_Grande_Panda_2026-07-01.pdf
+    type: price_list
+    covers_models: [fiat-grande-panda]
+    covers_variants: [fiat-grande-panda-44-electric-2025]
+    fields_present: [seating.seats, performance.drive_type, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Fiat Austria 'FIAT GRANDE PANDA - Preise, Ausstattungen, Technische Daten', Stand 01.07.2026 - the current list, useful as a spec-drift check against the German launch list. BEV block verified: Kapazitaet 44 (43,8 netto) kWh, 'Ladedauer DC 100 kW 20 - 80% SOC = 27 Minuten' (note: 27 min here vs 33 min in the 11/2024 German list - the DC time was revised, so pick by model year deliberately), AC 7,4 kW 20-100% 4:20 Std. (with the integrated coiled cable), AC 11 kW 20-100% 2:50 Std., Stromverbrauch kombiniert 16,8 kWh/100 km, Anzahl der Sitzplaetze 5, Radstand 2.540, Laenge 3.999, Antriebsart Frontantrieb. The document also covers the mild-hybrid Grande Panda in adjacent columns - read the BEV column only. No Waermepumpe row and no V2L row for the BEV."
+skipped: []
+notes: >-
+  Brand-wide findings for Fiat (all three models):
+  (1) fiat.de and fiat.at model pages are client-rendered SPAs and expose no PDF
+  links in the served HTML, but the Fiat Austria hub
+  https://www.fiat.at/kaufberatung/preislisten-broschuren DOES list every current
+  /content/dam/fiat2023/at/pricelist/... PDF path in plain HTML - that is the
+  reliable discovery route for this brand. Both domains serve the PDFs to a
+  browser-header curl without an Akamai block.
+  (2) The Austrian 'Preise, Ausstattungen, Technische Daten' lists are much richer
+  than the German 'Preise und Ausstattungen' lists: only the Austrian ones carry
+  the Anzahl-der-Sitzplaetze row and the full Ladedauer table. Where both exist,
+  the German one is closer to the queue's model year and the Austrian one closes
+  the field gaps.
+  (3) NO V2L / Vehicle-to-Load row appears in ANY Fiat document fetched here
+  (500e, 600e, Grande Panda, German and Austrian). The queue's bidirectional.v2l
+  gap cannot be closed from Fiat price lists - it needs a press-kit source or
+  must stay null.
+  (4) Waermepumpe appears only for the 600e (option code BBV). It is absent from
+  every 500e and Grande Panda list.
+  (5) Charge-time bases differ within the brand: the 500e is quoted 0-to-80% SOC,
+  the 600e and Grande Panda 20-to-80% SOC. Nothing is quoted 10-80%, so the
+  queue's charging.time_10_to_80_min gap cannot be closed from these documents.
+  (6) SEATS: 500e = 4 (explicitly 'Anzahl der Sitzplaetze 4'), 600e = 5,
+  Grande Panda = 5.

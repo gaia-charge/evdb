@@ -1,0 +1,44 @@
+brand: vinfast
+fetched_at: "2026-08-13"
+documents:
+  - file: vinfast-vf8/spec-page.md
+    url: https://vinfastauto.eu/en/vehicles/vf-8
+    type: spec_page
+    covers_models: [vinfast-vf8]
+    covers_variants: [vinfast-vf8-eco-2025, vinfast-vf8-plus-2025]
+    fields_present: [seats, performance.motors, performance.total_torque_nm, performance.total_power_kw, performance.acceleration_0_100_sec, battery.gross_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official VinFast Europe VF 8 model page, 'Vehicle Specification' table transcribed to Markdown because vinfastauto.eu sits behind Cloudflare (plain curl and WebFetch both return HTTP 403 / 'Just a moment...'); the file carries the '# saved via text fetch ... on 2026-08-13' provenance header required for text-fetch saves. Two columns VF 8 Eco / VF 8 Plus: 4.750 x 1.934 x 1.667 mm, wheelbase 2.950 mm, battery 87,7 kWh, 'Engine/e-Motor: Motor x 2' (dual motor), max power 260/300 kW, torque 500/620 Nm, WLTP combined range 471/457 km, efficiency 22,9/21,9 kWh/100 km, charging speed '10% - 70% in 31 mins' on a ≥150 kW CCS charger. IMPORTANT for extraction: VinFast publishes a 10–70 % DC time, not 10–80 %. No heat-pump and no V2L information anywhere on the page."
+  - file: vinfast-vf8/datasheet.pdf
+    url: https://static-bucket-sfcc.vinfastauto.us/US-VF-8.pdf
+    type: datasheet
+    covers_models: [vinfast-vf8]
+    covers_variants: [vinfast-vf8-eco-2025, vinfast-vf8-plus-2025]
+    fields_present: [seats, performance.motors, performance.drive_type, performance.total_power_kw, performance.total_torque_nm, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official VinFast 'SPECIFICATION sheet' for the VF 8 (US market, hosted on VinFast's own static bucket), 2 pages, ECO and PLUS columns. Confirms Engine type 'Dual Motor', Driveline AWD, Standard Range vs Enhanced Range sub-specs and DC fastest-charging times of ≤24 min (Standard Range) / 31 min (Enhanced Range) for 10–70 %. US units (inches, hp, lb-ft, miles) — cross-check against the EU spec-page.md before extracting metric values."
+  - file: vinfast-vf8/datasheet-2.pdf
+    url: https://static-cms-prod.vinfastauto.us/cms-vinfast-us/Specs/VF-8-Spec.pdf
+    type: datasheet
+    covers_models: [vinfast-vf8]
+    covers_variants: [vinfast-vf8-eco-2025, vinfast-vf8-plus-2025]
+    fields_present: [seats, performance.motors, performance.drive_type, performance.total_power_kw, performance.total_torque_nm, battery.net_kwh, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Newer official VinFast 'SPECIFICATION SHEET' leaflet for the VF 8 with dual metric/imperial values — easier to extract than US-VF-8.pdf. Columns 'VF 8 Eco (87.7 kWh)' and 'VF 8 Plus (87.7 kWh)': Wheelbase 2,950 mm, Length 4,750 mm, Width 1,934 mm, Height 1,667 mm, Ground clearance 175 mm; Engine/e-Motor 'Dual electric motor', Driveline AWD, Max Power 260 kW / 300 kW, Max Torque 500 Nm / 620 Nm; Battery capacity - Usable 87.7 kWh; Charging time - DC Fastest Charging (10 - 70 %) 31 minutes. Range figures on this sheet are EPA, not WLTP. No heat pump or V2L rows."
+  - file: vinfast-vf9/datasheet.pdf
+    url: https://static-bucket-sfcc.vinfastauto.us/US-VF-9.pdf
+    type: datasheet
+    covers_models: [vinfast-vf9]
+    covers_variants: [vinfast-vf9-plus-2025]
+    fields_present: [seats, performance.motors, performance.drive_type, performance.total_power_kw, performance.total_torque_nm, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official VinFast 'SPECIFICATION sheet' for the VF 9 (US market, VinFast static bucket), 2 pages, ECO and PLUS columns. Seat capacity 7 (optional 6 with captain chairs in the second row), Engine type 'Dual Motor', Driveline AWD, DC fastest charging 26 minutes (Standard Range) / 35 minutes (Enhanced Range) for 10–70 %. US units throughout."
+  - file: vinfast-vf9/datasheet-2.pdf
+    url: https://static-cms-prod.vinfastauto.us/cms-vinfast-us/Specs/VF-9-Spec.pdf
+    type: datasheet
+    covers_models: [vinfast-vf9]
+    covers_variants: [vinfast-vf9-plus-2025]
+    fields_present: [seats, performance.motors, performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, battery.net_kwh, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Newer official VinFast 'SPECIFICATION SHEET' leaflet for the VF 9 with dual metric/imperial values. ECO and PLUS columns: Wheel base 3,148 mm, Overall dimension 5,118 x 2,254 x 1,696 mm, Ground clearance 181 mm; 'Motor x 2 (150kW)' (two 150 kW motors), Max power 300 kW, Max torque 620 Nm, Max speed 200 km/h, Acceleration 0-100 km/h 6.63 s (Eco) / 6.71 s (Plus); Battery Capacity - Usable 123 kWh; Charging time - Fastest Charging 35 mins (10-70 %); Driveline AWD; a 'High Voltage battery heater: YES' row (battery heater — NOT a cabin heat pump; do not map to features.heat_pump). Range figures are EPA. No V2L row. BRAND-LEVEL NOTE: VinFast Europe no longer lists the VF 9 — https://vinfastauto.eu/en/vehicles/vf-9 redirects to the vinfastauto.eu home page and the European line-up shown there is VF 8 and VF 6 only; that is the best official evidence found for the vinfast-vf9 production_status gap. Neither VinFast Europe nor VinFast US publishes a 10–80 % DC time (all official figures are 10–70 %), a cabin heat-pump spec, or V2L for the VF 8 / VF 9, so those queue fields remain unsourced."
+skipped: []

@@ -1,0 +1,75 @@
+brand: cupra
+fetched_at: "2026-08-13"
+documents:
+  - file: cupra-born/price-list.pdf
+    url: https://www.cupraofficial.de/content/dam/countries/de/cupra-website/pdf/preisliste/cars-models-pricelist-K11-NA-NA-NA.pdf
+    type: price_list
+    covers_models: [cupra-born]
+    covers_variants: [cupra-born-58-kwh-2024, cupra-born-79-kwh-2025, cupra-born-vz-2025]
+    fields_present:
+      - performance.drive_type
+      - performance.total_torque_nm
+      - battery.gross_kwh
+      - battery.chemistry
+      - efficiency.wltp_kwh_per_100km
+      - features.heat_pump
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official CUPRA Germany price list, "Stand: 02. Juni 2026". Downloaded via
+      cupraofficial.de, which 301-redirects to the same asset on cupra.com;
+      file verified byte-identical (sha256 a1573dfc..., 1782975 bytes) to the
+      URL recorded here. TECHNISCHE DATEN table lists Antriebsart (Heckantrieb),
+      Motor-Bauart, Max. Leistung, Max. Drehmoment, Batterietyp (Lithium-Ionen),
+      Batteriekapazität brutto/netto kWh, Nennspannung, 0-100 km/h, WLTP
+      consumption and dimensions; equipment lists give max. AC-Ladeleistung
+      11 kW and max. DC-Ladeleistung 105 kW / 183 kW, plus a Wärmepumpe line.
+      Covers the three current motorisations 140 kW/58 kWh, 170 kW/79 kWh and
+      240 kW/79 kWh; there is no seat-count row and no DC 10-80% charge time,
+      no V2L, and no explicit motor-count field.
+  - file: cupra-raval/price-list.pdf
+    url: https://www.cupraofficial.de/content/dam/countries/de/cupra-website/pdf/preisliste/cars-models-pricelist-KS1-NA-NA-NA.pdf
+    type: price_list
+    covers_models: [cupra-raval]
+    covers_variants: [cupra-raval-38-kwh-2025, cupra-raval-58-kwh-2025]
+    fields_present:
+      - performance.drive_type
+      - performance.total_torque_nm
+      - battery.gross_kwh
+      - battery.chemistry
+      - efficiency.wltp_kwh_per_100km
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official CUPRA Germany price list, "Stand: 02. Juni 2026". Verified
+      byte-identical (sha256 73272fba..., 609506 bytes) to the URL recorded
+      here. Antriebsart is Frontantrieb. No seat-count row, no DC 10-80%
+      charge time, no heat-pump line and no V2L found in this document.
+  - file: cupra-tavascan/price-list.pdf
+    url: https://www.cupraofficial.de/content/dam/countries/de/cupra-website/pdf/preisliste/cars-models-pricelist-KR1-NA-NA-NA.pdf
+    type: price_list
+    covers_models: [cupra-tavascan]
+    covers_variants: [cupra-tavascan-endurance-2025, cupra-tavascan-vz-2025]
+    fields_present:
+      - performance.drive_type
+      - performance.total_torque_nm
+      - battery.gross_kwh
+      - battery.chemistry
+      - efficiency.wltp_kwh_per_100km
+      - features.heat_pump
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official CUPRA Germany price list, "Stand: 01. Juli 2026". Verified
+      byte-identical (sha256 869fe879..., 1256010 bytes) to the URL recorded
+      here. Antriebsart Heckantrieb for Endurance; max. AC-Ladeleistung 11 kW /
+      max. DC-Ladeleistung 135 kW; Wärmepumpe appears in the equipment list.
+      No seat-count row, no DC 10-80% charge time and no V2L.
+skipped: []
+notes: >-
+  The three PDFs were already present in this store from an earlier run with no
+  manifest and no recorded URLs. Each was re-fetched from cupraofficial.de and
+  confirmed byte-identical by sha256 before its URL was recorded, so the URLs
+  above are verified rather than assumed. The German price lists use the model
+  codes K11 (Born), KS1 (Raval) and KR1 (Tavascan) in the
+  cars-models-pricelist-<code>-NA-NA-NA.pdf pattern.

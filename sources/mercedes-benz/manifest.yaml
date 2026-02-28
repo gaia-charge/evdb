@@ -6,29 +6,36 @@ documents:
     type: press_kit
     covers_models: [mercedes-benz-cla]
     covers_variants: [mercedes-benz-cla-250-plus-2026, mercedes-benz-cla-350-4matic-2026]
-    fields_present: [features.heat_pump]
-    notes: "International launch press kit, 13 March 2025; 'Technical data' section from p.24 (motors, torque, charging); air-to-air heat pump standard"
+    fields_present: [features.heat_pump, charging.time_10_to_80_min]
+    notes: "International launch press kit, 13 March 2025; 'Technical data' section from p.24 (motors, torque, charging). Air-to-air heat pump standard. DC charging times stated as 10-80% at a category K/L 500 A station. Also states the CLA is prepared for bidirectional charging (V2G/V2H) - note this is grid/home, not V2L"
   - file: mercedes-benz-cla/press-kit-2.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49314-pm-clasalesrelease-080525.pdf
     type: press_kit
     covers_models: [mercedes-benz-cla]
     covers_variants: [mercedes-benz-cla-250-plus-2026]
-    fields_present: []
+    fields_present: [features.heat_pump]
     notes: "UK prices and specifications press release, 8 May 2025"
   - file: mercedes-benz-cla/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/50180-new-cla-c174-my8065-update-sr-02-02-2602-02-v1-02-02-26-online.pdf
     type: price_list
     covers_models: [mercedes-benz-cla]
     covers_variants: [mercedes-benz-cla-250-plus-2026]
-    fields_present: []
-    notes: "UK price list 'The new all-electric CLA', effective from October 2025 production; full technical data tables"
+    fields_present: [charging.time_10_to_80_min, performance.motors, features.heat_pump]
+    notes: "UK price list 'The new all-electric CLA' (C174, MY8065), effective from October 2025 production. Technical data table: DC charging station (320 kW) 10-80% = 22 mins, battery 85.0 kWh, 800 V operating voltage, on-board charger 11 kW AC / 320 kW DC, electric motor type row, 272 hp (200 kW). Standard equipment lists 'Multi source heat pump for efficient heat management'. Table only carries CLA 250+, not the 350 4MATIC"
   - file: mercedes-benz-cla-shooting-brake/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49481-pi-cla-shooting-brake-en.pdf
     type: press_kit
     covers_models: [mercedes-benz-cla-shooting-brake]
     covers_variants: [mercedes-benz-cla-shooting-brake-250-plus-2026, mercedes-benz-cla-shooting-brake-350-4matic-2026]
-    fields_present: []
-    notes: "International press information, 15 July 2025, incl. torque/peak output tables"
+    fields_present: [seats, dimensions.wheelbase_mm, dimensions.length_mm]
+    notes: "International press information, 15 July 2025. Five seats, wheelbase 2,790 mm, length/dimension table, WLTP range up to 761 km, 310 km recharged in 10 minutes, torque/peak output tables"
+  - file: mercedes-benz-cla-shooting-brake/price-list.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/50233-electric-cla-sb.pdf
+    type: price_list
+    covers_models: [mercedes-benz-cla-shooting-brake]
+    covers_variants: [mercedes-benz-cla-shooting-brake-250-plus-2026, mercedes-benz-cla-shooting-brake-350-4matic-2026]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km]
+    notes: "UK price list 'The new CLA Shooting Brake' (MY807), from April 2026 production. Full technical data table for both CLA 250+ electric Shooting Brake and CLA 350 4MATIC electric Shooting Brake: dual electric motor, 2-speed transmission, drive type 4x2 (RWD) / 4x4 (AWD), 268 hp (200 kW) / 349 hp (260 kW), torque 335 / 515 Nm, 0-62 mph 6.8 / 5.0 s, battery 85 kWh usable lithium-ion, on-board charger 11 kW AC / 320 kW DC, public rapid charger (320 kW) 10-80% = 22 minutes, consumption 130-143 / 136-148 Wh/km. Standard equipment lists 'Multi source heat pump for efficient heat management'"
   - file: mercedes-benz-eqa/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/45861-EQAVEDupdate03240426v1260424online.pdf
     type: price_list
@@ -41,8 +48,15 @@ documents:
     type: price_list
     covers_models: [mercedes-benz-eqa]
     covers_variants: [mercedes-benz-eqa-250-plus-2025]
-    fields_present: [charging.time_10_to_80_min]
-    notes: "UK price list 'The new EQA', effective from February 2025 production"
+    fields_present: [charging.time_10_to_80_min, performance.motors]
+    notes: "UK price list 'The new EQA' (MY806), effective from February 2025 production. Technical data: electric motor type asynchronous, battery 70.5 kWh, 400 V, on-board charger 11 kW AC / 100 kW DC, public rapid charging (100 kW DC) 10-80% = 35 min, acceleration 0-62 mph 8.6 / 7.7 s, torque 385 / 390 Nm"
+  - file: mercedes-benz-eqa/press-kit.doc
+    url: https://mercedes-benz-media.co.uk/assets/documents/original/43686-PIFLEQAEQBen.doc
+    type: press_kit
+    covers_models: [mercedes-benz-eqa]
+    covers_variants: [mercedes-benz-eqa-250-plus-2024, mercedes-benz-eqa-250-plus-2025]
+    fields_present: [features.heat_pump, performance.motors, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    notes: "Official Mercedes-Benz press information 'A new look and even more intelligence: EQA and EQB upgraded throughout', 24 August 2023. Word .doc - this is the original file format offered by the media portal; no PDF equivalent published. Section 'Sophisticated thermal management with standard heat pump' confirms the heat pump is standard on EQA and EQB. Technical data table per variant: e-motor front/rear PSM/- (250, 250+) and ASM/PSM (300/350 4MATIC), torque 385-520 Nm, usable battery 66.5/70.5 kWh, max AC 11 kW, max DC 100 kW, length/width/height 4,463/1,834/1,613 mm, wheelbase 2,729 mm, WLTP consumption 14.4-18.6 kWh/100 km"
   - file: mercedes-benz-eqb/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/45862-EQBVEDupdate03240426v1260424online.pdf
     type: price_list
@@ -55,36 +69,43 @@ documents:
     type: price_list
     covers_models: [mercedes-benz-eqb]
     covers_variants: [mercedes-benz-eqb-250-plus-2025, mercedes-benz-eqb-300-4matic-2025]
-    fields_present: [charging.time_10_to_80_min]
-    notes: "UK price list 'The new EQB', effective from February 2025 production"
+    fields_present: [charging.time_10_to_80_min, performance.motors]
+    notes: "UK price list 'The new EQB', effective from February 2025 production. Technical data: electric motor type asynchronous, battery 70.5 kWh, 400 V, on-board charger 11 kW AC / 100 kW DC, torque 385 / 390 Nm, boot 495/1,710 l"
+  - file: mercedes-benz-eqb/press-kit.doc
+    url: https://mercedes-benz-media.co.uk/assets/documents/original/43686-PIFLEQAEQBen.doc
+    type: press_kit
+    covers_models: [mercedes-benz-eqb]
+    covers_variants: [mercedes-benz-eqb-250-plus-2024, mercedes-benz-eqb-250-plus-2025, mercedes-benz-eqb-300-4matic-2024, mercedes-benz-eqb-300-4matic-2025, mercedes-benz-eqb-350-4matic-2024]
+    fields_present: [features.heat_pump, seats, performance.motors, efficiency.wltp_kwh_per_100km]
+    notes: "Same official press information as mercedes-benz-eqa/press-kit.doc (24 August 2023) - it covers EQA and EQB jointly, stored in both model folders. Word .doc, the portal's original format. Confirms standard heat pump; EQB section: compact SUV with up to seven seats, third-row seats usable up to 1.65 m, load volume 495-1,710 l (five-seater) / 465-1,620 l (seven-seater), braked towing 1,400 kg FWD / 1,700 kg 4MATIC, plus per-variant technical data table"
   - file: mercedes-benz-eqe/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/39468-DocumentPMDerneueEQEen.pdf
     type: press_kit
     covers_models: [mercedes-benz-eqe]
     covers_variants: []
-    fields_present: []
-    notes: "World-premiere press kit 'The EQE: the new business avant-garde', 5 September 2021; generation/platform background (EVA2)"
+    fields_present: [charging.time_10_to_80_min]
+    notes: "World-premiere press kit 'The EQE: the new business avant-garde', 5 September 2021; generation/platform background (EVA2). DC charging times stated as 10-80% at a category K/L 500 A station. Bidirectional charging mentioned only for Japan (CHAdeMO) - not applicable to EU cars"
   - file: mercedes-benz-eqe/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49016-eqe-saloon-my8055-update-10-2503-19-v1-19-03-25-online.pdf
     type: price_list
     covers_models: [mercedes-benz-eqe]
     covers_variants: [mercedes-benz-eqe-350-plus-2024, mercedes-benz-eqe-350-plus-2025]
-    fields_present: []
-    notes: "UK price list 'The EQE', effective from December 2024 production; trims EQE 350+, 500 4MATIC, AMG 53 (UK range has AMG 53, not AMG 43)"
+    fields_present: [charging.time_10_to_80_min, performance.motors, features.heat_pump]
+    notes: "UK price list 'The EQE' (MY8055), effective from December 2024 production; trims EQE 350+, 500 4MATIC, AMG 53 (UK range has AMG 53, not AMG 43). Heat pump appears in the equipment lists; technical data has electric motor type, torque, acceleration 0-62 mph and public rapid charger (170 kW DC) 10-80% rows"
   - file: mercedes-benz-eqe/price-list-2.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49308-eqe-saloon-my806-update-2504-28-v1-28-04-25-online.pdf
     type: price_list
     covers_models: [mercedes-benz-eqe]
     covers_variants: [mercedes-benz-eqe-350-plus-2026]
-    fields_present: []
-    notes: "UK price list 'The EQE', effective from July 2025 production (MY806)"
+    fields_present: [charging.time_10_to_80_min, performance.motors, features.heat_pump]
+    notes: "UK price list 'The EQE' (MY806), effective from July 2025 production. Public rapid charger (170 kW DC) 10-80% = 31 mins; heat pump listed in equipment; technical data with electric motor type, torque, acceleration 0-62 mph"
   - file: mercedes-benz-eqe-suv/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/47826-eqe-suv.pdf
     type: price_list
     covers_models: [mercedes-benz-eqe-suv]
     covers_variants: [mercedes-benz-eqe-suv-350-plus-2025, mercedes-benz-eqe-suv-350-plus-2024, mercedes-benz-eqe-suv-350-4matic-2024, mercedes-benz-eqe-suv-500-4matic-2024]
-    fields_present: [charging.time_10_to_80_min]
-    notes: "UK price list 'The EQE SUV', effective from January 2025 production; battery 91-96 kWh, AC 22 kW / DC 170 kW, 10-80% DC charging times"
+    fields_present: [charging.time_10_to_80_min, performance.motors]
+    notes: "UK price list 'The EQE SUV', effective from January 2025 production; battery 91-96 kWh, AC 22 kW / DC 170 kW, public rapid charger (170 kW DC) 10-80% rows, electric motor type and torque tables"
   - file: mercedes-benz-eqe-suv/price-list-2.pdf
     url: https://tools.mercedes-benz.co.uk/current/passenger-cars/e-brochures/eqe-suv.pdf
     type: price_list
@@ -92,6 +113,13 @@ documents:
     covers_variants: []
     fields_present: []
     notes: "Current UK e-brochure, effective from July 2026 production; useful for production_status"
+  - file: mercedes-benz-eqe-suv/press-kit.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/46937-the-new-eqe-suv-high-tech-and-luxury-meet-versatility-press-kit-march2023.pdf
+    type: press_kit
+    covers_models: [mercedes-benz-eqe-suv]
+    covers_variants: [mercedes-benz-eqe-suv-350-plus-2024, mercedes-benz-eqe-suv-350-plus-2025, mercedes-benz-eqe-suv-350-4matic-2024, mercedes-benz-eqe-suv-500-4matic-2024]
+    fields_present: [features.heat_pump, performance.motors, performance.drive_type]
+    notes: "Press kit 'The new EQE SUV: high-tech and luxury meet versatility', March 2023. Dedicated section 'Heat pump as standard' - the EQE SUV has a heat pump as standard and the battery is integrated into the thermal management with heat pump. Drivetrain section: all EQE SUVs have an eATS on the rear axle, 4MATIC versions add an eATS on the front axle; both motors are permanently excited synchronous motors (PSM), rear motor six-phase. 'Key technical data' table from p.38"
   - file: mercedes-benz-eqs/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/45722-PIEQSChangeYear2024enUK.pdf
     type: press_kit
@@ -99,67 +127,95 @@ documents:
     covers_variants: [mercedes-benz-eqs-450-plus-2024, mercedes-benz-eqs-450-plus-2025]
     fields_present: [features.heat_pump]
     notes: "Press information 10 April 2024 model-year update: battery 108.4 -> 118 kWh, heat pump now standard"
+  - file: mercedes-benz-eqs/press-kit-2.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/46932-extensive-update-eqs-now-with-an-upright-star-and-even-more-range-press-kit-april-2024.pdf
+    type: press_kit
+    covers_models: [mercedes-benz-eqs]
+    covers_variants: [mercedes-benz-eqs-450-plus-2024, mercedes-benz-eqs-450-plus-2025, mercedes-benz-eqs-580-4matic-2025, mercedes-amg-eqs-53-4matic-plus-2024]
+    fields_present: [features.heat_pump]
+    notes: "Full press kit 'Extensive update: EQS now with an upright star and even more range', April 2024. Confirms the now-standard heat pump using waste heat from the electric drive, battery capacity increased 108.4 -> 118 kWh, EQS 450+ WLTP range above 800 km, towing capacity raised 750 -> 1,700 kg for 4MATIC"
   - file: mercedes-benz-eqs/price-list.pdf
     url: https://tools.mercedes-benz.co.uk/current/passenger-cars/e-brochures/eqs.pdf
     type: price_list
     covers_models: [mercedes-benz-eqs]
     covers_variants: [mercedes-benz-eqs-450-plus-2025]
-    fields_present: []
-    notes: "Current UK e-brochure/price list 'The EQS', effective from December 2025 production; UK trims incl. EQS 350/450/450+ (no 580 in UK list)"
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.motors]
+    notes: "Current UK e-brochure/price list 'The EQS', effective from December 2025 production; UK trims incl. EQS 350/450/450+ (no 580 in the UK list). Charging table has public rapid charger (170 kW DC) and (200 kW DC) 10-80% rows; 'Heat pump' appears in the equipment lists; technical data with electric motor type, torque, acceleration"
   - file: mercedes-benz-eqs-suv/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/40546-EQSSUVPressInformation.pdf
     type: press_kit
     covers_models: [mercedes-benz-eqs-suv]
     covers_variants: []
-    fields_present: []
-    notes: "World-premiere press kit 'The EQS SUV: Redefined SUV luxury', 19 April 2022; platform/generation background"
+    fields_present: [charging.time_10_to_80_min]
+    notes: "World-premiere press kit 'The EQS SUV: Redefined SUV luxury', 19 April 2022; platform/generation background. DC charging times quoted as 10-80% at a category K/L 500 A station. Bidirectional charging mentioned only for Japan (CHAdeMO)"
   - file: mercedes-benz-eqs-suv/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/45725-EQSSUVVEDupdate03240412v1120424online.pdf
     type: price_list
     covers_models: [mercedes-benz-eqs-suv]
     covers_variants: [mercedes-benz-eqs-suv-450-plus-2024, mercedes-benz-eqs-suv-450-4matic-2024, mercedes-benz-eqs-suv-580-4matic-2024]
-    fields_present: []
+    fields_present: [charging.time_10_to_80_min, features.heat_pump]
     notes: "UK price list 'The EQS SUV', effective from January 2024 production"
   - file: mercedes-benz-eqs-suv/price-list-2.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49374-eqs-suv-my806-update-sr-03-04-2506-03-v1-03-06-25-online.pdf
     type: price_list
     covers_models: [mercedes-benz-eqs-suv]
     covers_variants: [mercedes-benz-eqs-suv-450-plus-2025]
-    fields_present: []
-    notes: "UK price list 'The EQS SUV', effective from July 2025 production (MY806)"
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.motors, performance.acceleration_0_100_sec]
+    notes: "UK price list 'The EQS SUV' (MY806), effective from July 2025 production. Technical data: public rapid charger (200 kW DC) 10-80% row, electric motor type, torque, acceleration 0-62 mph; 'Heat pump' in the equipment lists"
   - file: mercedes-benz-g580/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/documents/original/45855-PMMercedesBenzG580withEQTechnologyENUK1.pdf
     type: press_kit
     covers_models: [mercedes-benz-g580]
     covers_variants: [mercedes-benz-g580-2025]
     fields_present: [performance.acceleration_0_100_sec, charging.time_10_to_80_min]
-    notes: "Press kit 'The GELAENDEWAGEN. Electrified.', 24 April 2024; Technical data section p.16: 432 kW / 1164 Nm, 116 kWh battery, AC + DC charging times (10-80%), max DC 200 kW"
+    notes: "Press kit 'The GELAENDEWAGEN. Electrified.', 24 April 2024; Technical data section p.16: 432 kW / 1164 Nm, 116 kWh battery, AC + DC charging times, 10-80% SoC in around 32 minutes, max DC 200 kW"
+  - file: mercedes-benz-g580/price-list.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/50177-g-class-myx25-update-sr-02-02-2602-02-v1-02-02-26-online.pdf
+    type: price_list
+    covers_models: [mercedes-benz-g580]
+    covers_variants: [mercedes-benz-g580-2025]
+    fields_present: [charging.time_10_to_80_min]
+    notes: "UK price list 'The new G-Class' (MYX25), effective from December 2025 production; covers the G 580 with EQ Technology AMG Line Premium Plus. Charging table: DC charging station (200 kW) 10-80% = 32 mins; charging system rated 11 kW AC / 200 kW DC. Confirms the G 580 is still in the current UK range (production_status)"
   - file: mercedes-benz-glb/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/50025-pk-the-all-new-mercedes-benz-glb-a-versatile-everyday-hero-with-room-for-spontaneity-en.pdf
     type: press_kit
     covers_models: [mercedes-benz-glb]
     covers_variants: [mercedes-benz-glb-250-plus-2026, mercedes-benz-glb-350-4matic-2026]
     fields_present: [features.heat_pump, efficiency.wltp_kwh_per_100km]
-    notes: "International press kit, 8 December 2025; GLB 250+ (200 kW) and GLB 350 4MATIC (260 kW), heat pump, WLTP consumption, torque tables, 5/7-seater"
+    notes: "International press kit, 8 December 2025; GLB 250+ (200 kW) and GLB 350 4MATIC (260 kW), heat pump, WLTP consumption, torque tables, 5/7-seater. States the GLB is equipped for bidirectional charging as home energy storage (V2H/V2G framing, not V2L)"
+  - file: mercedes-benz-glb/price-list.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/50234-glb-electric.pdf
+    type: price_list
+    covers_models: [mercedes-benz-glb]
+    covers_variants: [mercedes-benz-glb-250-plus-2026, mercedes-benz-glb-350-4matic-2026]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km, seats]
+    notes: "UK price list 'The all-new electric GLB' (MY807), from April 2026 production. Technical data for GLB 250+ and GLB 350 4MATIC: 2-speed automatic, drive type 4X2 (RWD) / 4X4 (AWD), 268 hp (200 kW) / 349 hp (260 kW), torque 335 / 515 Nm, 0-62 mph 7.4 / 5.5 s, battery 85 kWh usable lithium-ion, on-board charger 11 kW AC / 320 kW DC, public rapid charger (320 kW) 10-80% = 22 mins, consumption 158-186 Wh/km, No. of seats 7, boot 540/1,715 l. Standard equipment lists 'Multi source heat pump for efficient heat management'"
+  - file: mercedes-benz-glb/price-list-2.pdf
+    url: https://mercedes-benz-media.co.uk/assets/applications/original/50051-glb-electric.pdf
+    type: price_list
+    covers_models: [mercedes-benz-glb]
+    covers_variants: [mercedes-benz-glb-250-plus-2026, mercedes-benz-glb-350-4matic-2026]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, features.heat_pump, seats]
+    notes: "UK price list 'The all-new electric GLB' (MY806.5 launch), from January 2026 production - the launch-spec list, kept alongside the MY807 one for the earlier launch configuration. Drivetype, torque, acceleration, public rapid charger (320 kW), No. of seats and multi source heat pump rows present"
   - file: mercedes-benz-glc-electric/press-kit.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49660-pi-electric-glc-2025.pdf
     type: press_kit
     covers_models: [mercedes-benz-glc-electric]
     covers_variants: [mercedes-benz-glc-400-4matic-2026]
-    fields_present: []
-    notes: "International press kit 'The all-new Mercedes-Benz GLC with EQ Technology', 7 September 2025"
+    fields_present: [features.heat_pump]
+    notes: "International press kit 'The all-new Mercedes-Benz GLC with EQ Technology', 7 September 2025. Multi-source heat pump described in detail; bidirectional charging supported as V2H / V2G via a compatible bidirectional DC charging station (not V2L)"
   - file: mercedes-benz-glc-electric/datasheet.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49659-pre-media-technical-data-glc-400-4matic-eq-technology.pdf
     type: datasheet
     covers_models: [mercedes-benz-glc-electric]
     covers_variants: [mercedes-benz-glc-400-4matic-2026]
     fields_present: [performance.drive_type, performance.motors, performance.acceleration_0_100_sec, dimensions.length_mm, dimensions.wheelbase_mm, charging.time_10_to_80_min]
-    notes: "Official technical data sheet GLC 400 4MATIC with EQ Technology, as of 26 August 2025; AWD, front+rear PSM e-motors, 360 kW, DC 330 kW / 22 min, 4845 mm length, 2972 mm wheelbase, 0-100 in 4.3 s"
+    notes: "Official technical data sheet GLC 400 4MATIC with EQ Technology, as of 26 August 2025; AWD, front+rear PSM e-motors, 360 kW, DC 330 kW / 22 min (10-80%), 4845 mm length, 2972 mm wheelbase, 0-100 in 4.3 s"
   - file: mercedes-benz-glc-electric/price-list.pdf
     url: https://mercedes-benz-media.co.uk/assets/applications/original/49894-pm-glc-sr-231025.pdf
     type: press_kit
     covers_models: [mercedes-benz-glc-electric]
     covers_variants: [mercedes-benz-glc-400-4matic-2026]
     fields_present: []
-    notes: "UK prices and specifications press release, 23 October 2025; initially GLC 400 4MATIC only, 94 kWh usable battery"
+    notes: "UK prices and specifications press release, 23 October 2025; initially GLC 400 4MATIC only, 94 kWh usable battery. Filed under the price-list.pdf name but is a press release, hence type press_kit"
 skipped: []

@@ -1,137 +1,180 @@
 brand: audi
 fetched_at: "2026-08-13"
+# fields_present below was re-verified by extracting the text of every stored PDF/HTML
+# and locating the actual row label, not by trusting the landing page. Where a value is
+# only available in a derived form (e.g. eTD sheets give torque per axle, not a total),
+# it is still listed but called out in notes.
 documents:
   - file: audi-q4-e-tron/price-list.pdf
     url: https://gpt-live.porsche.co.at/at/brand/A/pricelist/2630_q4_e_tron.pdf
     type: price_list
     covers_models: [audi-q4-e-tron, audi-q4-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.acceleration_0_100_sec]
-    notes: "Official Audi Austria price list (linked from audi.at/q4-e-tron/q4-suv-e-tron/preisliste), hosted by Porsche Austria (official importer). Covers Q4 SUV e-tron and Q4 Sportback e-tron incl. full Technische Daten tables (min. DC-Ladedauer 10-80%, Waermepumpe). MY2025 lineup; queue 2024/2026 variant mapping needs review during extraction."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, performance.drive_type, performance.total_torque_nm, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh]
+    fetched_at: "2026-08-13"
+    notes: "Official Audi Austria price list (linked from audi.at/q4-e-tron/q4-suv-e-tron/preisliste, hosted by Porsche Austria, the official importer). Verified rows: 'min. DC-Ladedauer (10 %-80 %) in min' = 27/29/28/27 across four powertrains, 'min. AC-Ladedauer (0 %-100 %) in h', 'Waermepumpe' (standard), 'Bidirektionales Laden Vehicle-to-Load und Vehicle-to-Home', 'elektrisches Drehmoment in Nm' (hinten/vorn, per axle). Covers Q4 SUV e-tron and Q4 Sportback e-tron. NO 'Sitzplaetze' data row - seats must come from the eTD sheets. NO WLTP city-range row. MY2025/2026 lineup; queue 2024/2026 variant mapping needs review during extraction."
   - file: audi-q4-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1286/file_en/3ddc20106e5da2eabb39e0097cb8dc76c3739832/eTD-Audi-Q4-SUV-e-tron-150kW_260506.pdf
     type: datasheet
     covers_models: [audi-q4-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "Official eTD technical datasheet from audi-mediacenter.com (Q4 SUV e-tron 150 kW, status 2026-05). Likely corresponds to queue Q4 40 (150 kW) variants."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official eTD technical datasheet from audi-mediacenter.com (Q4 SUV e-tron 150 kW, status 2026-05). Verified rows: 'Charging time DC 10-80% in min' = 27, 'Drive type', 'Number of electric motors front axle / rear axle', 'Electrical torque output front / rear in Nm' (per axle, not a total), 'Body type / number of doors / number of seats' = ... / 5 / 5, 'Gross / net battery capacity in kWh'. No heat-pump and no V2L row on eTD sheets. Likely corresponds to queue Q4 40 (150 kW) variants."
   - file: audi-q4-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1287/file_en/886493c11136de03ce0ba8782700e6cd397f6646/eTD-Audi-Q4-SUV-e-tron-quattro-220kW_260506.pdf
     type: datasheet
     covers_models: [audi-q4-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q4 SUV e-tron quattro 220 kW (status 2026-05) from audi-mediacenter.com."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q4 SUV e-tron quattro 220 kW (status 2026-05) from audi-mediacenter.com. Same row set as the 150 kW sheet."
   - file: audi-q4-sportback-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1289/file_en/e7569fdc713339d07f82a0da5cede7357ea4eae2/eTD-Audi-Q4-Sportback-e-tron-150kW_260506.pdf
     type: datasheet
     covers_models: [audi-q4-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD Q4 Sportback e-tron 150 kW (status 2026-05) from audi-mediacenter.com."
   - file: audi-q4-sportback-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1291/file_en/79dcd74609ee0c0b2592beef7d7634cff7527888/eTD-Audi-Q4-Sportback-e-tron-quattro-220kW_260506.pdf
     type: datasheet
     covers_models: [audi-q4-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q4 Sportback e-tron quattro 220 kW (status 2026-05) from audi-mediacenter.com."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q4 Sportback e-tron quattro 220 kW (status 2026-05) from audi-mediacenter.com. Heat pump for the Q4 Sportback has to come from the shared Q4 price list."
   - file: audi-q6-e-tron/price-list.pdf
     url: https://gpt-live.porsche.co.at/at/brand/A/pricelist/2227_q6_e_tron_preisliste.pdf
     type: price_list
     covers_models: [audi-q6-e-tron, audi-q6-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.acceleration_0_100_sec]
-    notes: "Official Audi Austria price list (audi.at), covers Q6 SUV e-tron and Q6 Sportback e-tron incl. SQ6, with Technische Daten tables."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.total_torque_nm, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official Audi Austria price list (audi.at). Verified rows: 'min. DC-Ladedauer (10 %-80 %) in min' = 22/21, 'Waermepumpe' (optional, marked o), 'elektrisches Drehmoment in Nm' hinten 485 / vorn 275 etc. Covers Q6 SUV e-tron and Q6 Sportback e-tron incl. SQ6. No 'Sitzplaetze' data row and no V2L row."
   - file: audi-q6-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1410/file_en/af6842fc8f43c8f8e6c91b09325a76268118758d/eTD-Audi-Q6-SUV-e-tron-185kW_260202.pdf
     type: datasheet
     covers_models: [audi-q6-e-tron]
     covers_variants: [audi-q6-e-tron-rwd-2024, audi-q6-e-tron-base-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q6 SUV e-tron 185 kW (status 2026-02) from audi-mediacenter.com. Confirmed contains 'Charging time DC 10-80% in min', torque front/rear, seats."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q6 SUV e-tron 185 kW (status 2026-02) from audi-mediacenter.com. Verified: 'Charging time DC 10-80% in min' = 21, 'Gross / net battery capacity in kWh' = 83 / 75.8, seats 5."
   - file: audi-q6-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1387/file_en/d5ef2fc68f8dae2efc40a2767a4d0bde8a3e0da2/eTD-Audi-Q6-SUV-e-tron-performance-225kW_260305.pdf
     type: datasheet
     covers_models: [audi-q6-e-tron]
     covers_variants: [audi-q6-e-tron-performance-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD Q6 SUV e-tron performance 225 kW (status 2026-03) from audi-mediacenter.com."
   - file: audi-q6-sportback-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1411/file_en/fe1c455bad1eae8579778660c8ec946bf3230ffa/eTD-Audi-Q6-Sportback-e-tron-185kW_260305.pdf
     type: datasheet
     covers_models: [audi-q6-sportback-e-tron]
     covers_variants: [audi-q6-sportback-e-tron-rwd-2024]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD Q6 Sportback e-tron 185 kW (status 2026-03) from audi-mediacenter.com."
   - file: audi-q6-sportback-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1413/file_en/3a7285ef671eace91d1804b282586e43764f37da/eTD-Audi-Q6-Sportback-e-tron-quattro-315kW_260305.pdf
     type: datasheet
     covers_models: [audi-q6-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q6 Sportback e-tron quattro 315 kW (status 2026-03) from audi-mediacenter.com. Queue 'performance-2025' is the 225 kW RWD; quattro sheet kept for cross-checking."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q6 Sportback e-tron quattro 315 kW (status 2026-03) from audi-mediacenter.com. Queue 'performance-2025' is the 225 kW RWD; this quattro sheet is kept for cross-checking."
   - file: audi-a6-sportback-e-tron/price-list.pdf
     url: https://gpt-live.porsche.co.at/at/brand/A/pricelist/2355_audi_a6_e_tron.pdf
     type: price_list
     covers_models: [audi-a6-sportback-e-tron, audi-a6-avant-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.acceleration_0_100_sec]
-    notes: "Official Audi Austria price list (audi.at), covers A6 Sportback e-tron and A6 Avant e-tron incl. S6 variants, with Technische Daten tables."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.total_torque_nm, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh]
+    fetched_at: "2026-08-13"
+    notes: "Official Audi Austria price list (audi.at). Verified rows: 'min. DC-Ladedauer (10 %-80 %) in min' = 21 with 'bei max. DC-Ladeleistung in kW' 225/270, 'Waermepumpe' (optional, o), 'elektrisches Drehmoment in Nm' per axle. Covers A6 Sportback e-tron and A6 Avant e-tron incl. both S6 variants - this is the only source found for the S6 charging/heat-pump gaps. No 'Sitzplaetze' data row, no V2L row, no city-range row."
   - file: audi-a6-sportback-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1417/file_en/c010d5c91ba92c82c73824ca8cc55c88dea33f8d/eTD-Audi-A6-Sportback-e-tron-210kW_260202.pdf
     type: datasheet
     covers_models: [audi-a6-sportback-e-tron]
     covers_variants: []
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD A6 Sportback e-tron 210 kW (status 2026-02) from audi-mediacenter.com."
   - file: audi-a6-sportback-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1407/file_en/636eabe663aa168ecfd57316308c0d34138a79e4/eTD-Audi-A6-Sportback-e-tron-performance-270kW_260202.pdf
     type: datasheet
     covers_models: [audi-a6-sportback-e-tron]
     covers_variants: [audi-a6-sportback-e-tron-performance-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD A6 Sportback e-tron performance 270 kW (status 2026-02) from audi-mediacenter.com."
   - file: audi-a6-avant-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1406/file_en/53aa1bed65ebf16516dc0c28ef5e1e1bac1fe44c/eTD-Audi-A6-Avant-e-tron-performance-270kW_260202.pdf
     type: datasheet
     covers_models: [audi-a6-avant-e-tron]
     covers_variants: [audi-a6-avant-e-tron-performance-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD A6 Avant e-tron performance 270 kW (status 2026-02) from audi-mediacenter.com."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD A6 Avant e-tron performance 270 kW (status 2026-02) from audi-mediacenter.com. Verified 'Charging time DC 10-80% in min' = 21 and seats 5."
   - file: audi-a6-avant-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/1416/file_en/1d563f6153c72a6db161c8effab47c583bbc732a/eTD-Audi-A6-Avant-e-tron-quattro-315kW_260202.pdf
     type: datasheet
     covers_models: [audi-a6-avant-e-tron]
     covers_variants: [audi-a6-avant-e-tron-quattro-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
     notes: "eTD A6 Avant e-tron quattro 315 kW (status 2026-02) from audi-mediacenter.com."
   - file: audi-e-tron-gt/price-list.pdf
     url: https://gpt-live.porsche.co.at/at/brand/A/pricelist/2264_s_e_tron_gt_pa.pdf
     type: price_list
     covers_models: [audi-e-tron-gt]
     covers_variants: []
-    fields_present: []
-    notes: "Official Audi Austria price list (audi.at) for the e-tron GT family (S/RS). Queue only lists model-level gaps (seats, production_status)."
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.total_torque_nm, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Audi Austria price list for the e-tron GT family (S/RS), re-confirmed 2026-08 as the PDF still linked from audi.at/e-tron-gt/e-tron-gt-quattro/preisliste. Verified 'elektrisches Drehmoment in Nm' 625/740. It has NO 'Sitzplaetze' data row and no Waermepumpe row - the earlier 'seats' reading was a false positive from upholstery copy ('mittleren Sitzplatz im Fond'). Use the eTD sheet below for seats."
+  - file: audi-e-tron-gt/datasheet.pdf
+    url: https://uploads.audi-mediacenter.com/system/production/car_motorizations/1392/file_en/91bfc69ec55530e277b5023245b77c1c82772920/eTD-Audi-RS-e-tron-GT-performance-550kW_240725.pdf
+    type: datasheet
+    covers_models: [audi-e-tron-gt]
+    covers_variants: []
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official eTD technical datasheet (Audi RS e-tron GT performance 550 kW, programme for Germany, status 2024-07-25) from uploads.audi-mediacenter.com. This is the source that closes the e-tron GT 'seats' model gap: 'Body type / number of doors / number of seats' = Unitary steel/aluminum composite construction / 4 / 5. Also 'Charging time DC 10-80% in min' = 18, 'Drive type' All-wheel drive, 'Max.torque output in Nm' 1027, 0-100 km/h 2.9 s, vehicle length 4997-5004 mm, wheelbase. Body/seat data is shared across the whole e-tron GT range."
+  - file: audi-e-tron-gt/price-list-2.pdf
+    url: https://emea-dam.audi.com/adobe/assets/urn:aaid:aem:a53af8cf-b7a9-4e77-8060-576c6437ce41/original/as/etrongtmy26.pdf
+    type: price_list
+    covers_models: [audi-e-tron-gt]
+    covers_variants: []
+    fields_present: [features.heat_pump, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official 'Audi e-tron GT Product and Price Guide Model Year 2026' hosted on Audi's own EMEA DAM (emea-dam.audi.com). Per-model 'Technical Data' tables for e-tron GT / S e-tron GT / RS e-tron GT / RS performance: 'Type of drive', 'Max. torque (Nm)' 590/740, 'Gross battery capacity (kWh)' 105, 'Battery type' Lithium-ion, top speed, 0-100 km/h, WLTP consumption and combined range. 'Heat pump' appears in the standard-equipment lists. Being an MY2026 guide it is also the evidence for production_status = in production."
   - file: audi-q8-e-tron/datasheet.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/984/file_en/d933a6f0a1f3a3bc0915035a491b370621af532d/eTD-Audi-Q8-SUV-50-e-tron-quattro-250kW_240906.pdf
     type: datasheet
     covers_models: [audi-q8-e-tron]
     covers_variants: [audi-q8-e-tron-50-quattro-2024]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q8 SUV 50 e-tron quattro 250 kW (status 2024-09) from audi-mediacenter.com archive page 'Audi Q8 e-tron (until 2025)' - also evidence for production_status: production ended 2025."
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q8 SUV 50 e-tron quattro 250 kW (status 2024-09) from the audi-mediacenter.com archive page 'Audi Q8 e-tron (until 2025)' - also evidence for production_status: production ended 2025. CORRECTION to the earlier manifest: this generation of eTD sheet does NOT carry a 'Charging time DC 10-80%' row (only 'Max. charging capacity AC / DC in kW' = 11 / 150 and 'Charging time AC 0-100%'). DC 10-80% for the Q8 family comes from spec-page.html below."
   - file: audi-q8-e-tron/datasheet-2.pdf
     url: https://uploads.audi.com/system/production/car_motorizations/802/file_en/20c91a94f286b5141bdf822da4c95c0962fb084e/eTD-Audi-Q8-SUV-55-e-tron-quattro-300kW_240906.pdf
     type: datasheet
     covers_models: [audi-q8-e-tron]
     covers_variants: [audi-q8-e-tron-55-quattro-2024]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q8 SUV 55 e-tron quattro 300 kW (status 2024-09) from audi-mediacenter.com."
-  - file: audi-q8-e-tron/datasheet-3.pdf
-    url: https://uploads.audi.com/system/production/car_motorizations/1368/file_en/38d4671359baaa29b747dc7ad57ed8a8b928795d/eTD-Audi-Q8-Sportback-50-e-tron-quattro-250kW_240906.pdf
-    type: datasheet
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "eTD Q8 SUV 55 e-tron quattro 300 kW (status 2024-09). Same caveat as above: no DC 10-80% row."
+  - file: audi-q8-e-tron/spec-page.html
+    url: https://www.audi.com/en/the-audi-q8-e-tron-until-2025-15069/more-battery-capacity-and-higher-charging-power-battery-15072
+    type: press_kit
     covers_models: [audi-q8-e-tron]
-    covers_variants: [audi-q8-sportback-e-tron-50-quattro-2024]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.acceleration_0_100_sec, seats]
-    notes: "eTD Q8 Sportback 50 e-tron quattro (status 2024-09) from audi-mediacenter.com. No eTD found for SQ8 variants; 55 Sportback shares tech data with SUV sheet."
-skipped: []
+    covers_variants: [audi-q8-e-tron-50-quattro-2024, audi-q8-e-tron-55-quattro-2024, audi-q8-sportback-e-tron-50-quattro-2024, audi-q8-sportback-e-tron-55-quattro-2024, audi-sq8-e-tron-2024, audi-sq8-sportback-e-tron-2024]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, battery.gross_kwh]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official Audi press-kit chapter 'More battery capacity and higher charging power: Battery' from the Q8 e-tron press kit on audi.com/audi-mediacenter.com. This is the ONLY official source found that states the Q8 e-tron DC 10-80% times and heat-pump status, and it applies to the whole family incl. SQ8 and the Sportback bodies: 'Q8 50 e-tron reaches a maximum charging power of 150 kW... the Q8 55 e-tron and SQ8 e-tron... up to 170 kW. For the smaller of the two batteries, it takes around 28 minutes to charge from 10 to 80 percent... while the larger battery takes around 31 minutes'; 'The standard heat pump uses the unavoidable waste heat...'; battery '89 kilowatt hours net (gross: 95kWh)' and '106 kWh net (gross: 114 kWh)'. Saved as HTML (66 KB, ~14.8k chars of real body text, not a JS shell). Note the figures are prose, not a per-variant table - flag as approximate ('around') during extraction. No V2L anywhere in the Q8 e-tron material; treat bidirectional.v2l as unsupported rather than unknown only after a human check."
+skipped:
+  - model: audi-q8-e-tron
+    reason: "Partial: no official Q8 e-tron price list with a Technische-Daten table is still published. Production ended 2025, audi.at moved the car to 'Vorgaengermodelle' (no /preisliste page in the sitemap), audi.com/de/publikationen/preislisten/...-modelljahr-2024-1243 now 404s, and the audi.at technische-daten pages render their tables from a JS API so a saved HTML file is an empty shell. The Audi Ireland MY24 'Q8 e-tron Product Guide' on media.audi.com downloads fine but contains only prices and equipment, no technical table. As a result charging.charging_speed_kmh and bidirectional.v2l remain uncovered for all six Q8 variants, and no eTD exists for the SQ8 / SQ8 Sportback or the Q8 Sportback 55."
+  - model: audi-e-tron-gt
+    reason: "Partial: the queue lists no variants for this model, only the model-level gaps (seats, production_status), both of which are now covered. No separate eTD sheet was located for the base e-tron GT quattro or S e-tron GT - audi.com's /technical-data listing pages are per-model-id and the e-tron GT id could not be resolved; the RS performance eTD carries the same body/seat data."

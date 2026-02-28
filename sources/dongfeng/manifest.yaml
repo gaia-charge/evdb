@@ -1,0 +1,20 @@
+brand: dongfeng
+fetched_at: "2026-08-13"
+documents:
+  - file: dongfeng-nammi-box/datasheet.pdf
+    url: https://www.dongfeng-nammi-box.ch/DONGFENGBoxSpek.pdf
+    type: datasheet
+    covers_models: [dongfeng-nammi-box]
+    covers_variants: [dongfeng-nammi-box-comfort-2025]
+    fields_present: [battery.gross_kwh, battery.chemistry, charging.ac_max_kw, charging.dc_max_kw, range.wltp_km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm]
+    fetched_at: "2026-08-13"
+    notes: "'DONGFENG Box – Spezifikationen. Alle Daten auf einen Blick.' — the official European (Swiss) spec sheet published by Dongfeng Schweiz / NOYO AG, Dongfeng's official Swiss importer (the same company that runs dongfeng-box.ch). 3 pages. Confirmed rows: Elektrische Reichweite WLTP 310 km; Batteriegrösse 43.89 kWh; Batterietyp LFP; Maximale AC-Ladeleistung max. 6.6 kW (in CH 3.6 kW, optional 5.8 kW); Maximale DC-Ladeleistung 60 kW; Europäischer Standard-Ladeport AC Type 2 / DC Combo (CCS2); Länge/Breite/Höhe 4 020 / 1 810 / 1 570 mm; Leergewicht 1 430 kg; Türen 5; Beschleunigung 0-50 km/h 4.6~4.8 s. IMPORTANT: the sheet has no DC charge-time row at all (neither 10–80 % nor 0–80 %), no Wärmepumpe row and no 0-100 km/h figure — those queue fields stay unsourced."
+  - file: dongfeng-nammi-box/spec-page.html
+    url: https://dongfeng-box.ch
+    type: spec_page
+    covers_models: [dongfeng-nammi-box]
+    covers_variants: [dongfeng-nammi-box-comfort-2025]
+    fields_present: [seats, performance.drive_type, performance.total_power_kw, battery.gross_kwh, range.wltp_km, dimensions.length_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official Dongfeng Schweiz model site (dongfeng-box.ch, operated by NOYO AG — the previous microsite www.dongfeng-nammi-box.ch now redirects here), saved as served HTML. Short but explicit spec block: 'Reichweite: 310 km (WLTP), Batterie: 42.3 kWh, Antrieb: 100 % elektrisch, Frontantrieb: 70 kW (95 PS), Länge: 4.02 m, 5-Plätzer'. The '5-Plätzer' line is the evidence for the model-level seats gap and 'Frontantrieb' for performance.drive_type (single front motor). Footer states the car is on sale in Switzerland (CHF 22'990.-) with values 'vorläufig abhängig von der europäischen Typgenehmigung', which bears on production_status. Note the site quotes the battery as 42.3 kWh while the PDF spec sheet says 43.89 kWh — flag this conflict during extraction. BRAND-LEVEL NOTE: Dongfeng's own corporate site (dongfeng-global.com) is a Nuxt SPA with no model spec pages and there is no Dongfeng Deutschland site, so the Swiss importer NOYO AG is the only official European Dongfeng channel publishing Box specifications. Nothing official was found for charging.time_10_to_80_min, charging.time_0_to_80_min, charging.charging_speed_kmh or features.heat_pump. Italian and New Zealand documents were rejected as out-of-policy or broken: dongfeng.spaziogroup.com is a single dealership ('Concessionaria Ufficiale ... a Torino'), not a national importer, and the dongfeng.co.nz brochure link returned a 103-byte HTML error stub."
+skipped: []

@@ -1,5 +1,5 @@
 brand: kia
-fetched_at: "2026-08-13"
+fetched_at: "2026-08-14"
 documents:
   - file: kia-ev3/price-list.pdf
     url: https://www.kia.com/content/dam/kwcms/kme/at/de/assets/contents/utility/Pricelist/aktuell/Kia-Pricelist-EV3.pdf
@@ -8,7 +8,15 @@ documents:
     covers_variants: [kia-ev3-standard-range-2024, kia-ev3-standard-range-2025, kia-ev3-long-range-2024, kia-ev3-long-range-2025]
     fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_km]
     fetched_at: "2026-08-13"
-    notes: "Kia Austria pricelist, März 2026 / Modelljahr 2027; covers Standard Range 58.3 kWh + Long Range 81.4 kWh trims (same trims as queue MY2024/2025 variants - check spec drift on extraction). No WLTP city range."
+    notes: "Kia Austria pricelist, Maerz 2026 / Modelljahr 2027; covers Standard Range 58.3 kWh + Long Range 81.4 kWh trims (same trims as queue MY2024/2025 variants - check spec drift on extraction). No WLTP city range - use price-list-2.pdf for that."
+  - file: kia-ev3/price-list-2.pdf
+    url: https://www.kia.com/content/dam/kwcms/kme/de/de/assets/contents/utility/Preisliste/Kia-Germany-EV3-Preisliste.pdf
+    type: price_list
+    covers_models: [kia-ev3]
+    covers_variants: [kia-ev3-standard-range-2024, kia-ev3-standard-range-2025, kia-ev3-long-range-2024, kia-ev3-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Kia Germany EV3 Preise/Daten. Verified in text layer: '10 - 80 % Batteriekapazitaet (in Minuten)' DC table; 'Antriebsart Frontantrieb / Allradantrieb'; 'Drehmoment max. (Nm) 283 / 385'; 'Batteriekapazitaet (kWh) 58,3 / 81,4'; 'Batterietyp Lithium-Ionen'; 'Innenstadt (kWh/100 km)' and 'Reichweite, Innenstadt (km)' rows; 'Laenge; Breite; Hoehe 4.300 ... x 1.850 x 1.560'; 'Radstand 2.680'. Waermepumpe is optional (Winter-Paket P1 / Winter-Connect-Paket P3) and standard on the top trim; V2L max 3,6 kW. No numeric seat-count row."
   - file: kia-ev4/price-list.pdf
     url: https://www.kia.com/content/dam/kwcms/kme/at/de/assets/contents/utility/Pricelist/aktuell/Kia-Pricelist-EV4.pdf
     type: price_list
@@ -30,9 +38,9 @@ documents:
     type: price_list
     covers_models: [kia-ev4]
     covers_variants: [kia-ev4-fastback-583-kwh-2025, kia-ev4-fastback-814-kwh-2025]
-    fields_present: []
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Kia Germany EV4 Fastback Preise/Daten (150 kW/204 PS header confirmed); full tech table not individually verified."
+    notes: "Kia Germany EV4 Fastback Preise/Daten (150 kW/204 PS). Full tech table verified in text layer on 2026-08-14: '10 - 80 % Batteriekapazitaet (in Minuten)'; 'Antriebsart Frontantrieb'; 'Drehmoment max. (Nm) 283'; 'Batteriekapazitaet (kWh) 58,3 / 81,4'; 'Innenstadt (kWh/100 km)' + 'Reichweite, Innenstadt (km)'; 'Laenge; Breite; Hoehe 4.730; 1.860; 1.480'; 'Radstand 2.820'. Waermepumpe and V2L adapter appear as equipment rows."
   - file: kia-ev5/price-list.pdf
     url: https://www.kia.com/content/dam/kwcms/kme/de/de/assets/contents/utility/Preisliste/Kia-Germany-EV5-Preisliste.pdf
     type: price_list
@@ -64,7 +72,15 @@ documents:
     covers_variants: [kia-ev9-long-range-awd-2024, kia-ev9-standard-range-rwd-2024]
     fields_present: [charging.time_10_to_80_min, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh]
     fetched_at: "2026-08-13"
-    notes: "Kia Austria pricelist, Jänner 2026 / Modelljahr 2026; Earth + GT-line trims. No heat pump mention found; queue variants are MY2024 - check spec drift on extraction."
+    notes: "Kia Austria pricelist, Jaenner 2026 / Modelljahr 2026; Earth + GT-line trims. No heat pump mention found here - use price-list-2.pdf. Queue variants are MY2024 - check spec drift on extraction."
+  - file: kia-ev9/price-list-2.pdf
+    url: https://www.kia.com/content/dam/kwcms/kme/de/de/assets/contents/utility/Preisliste/Kia-Germany-EV9-Preisliste.pdf
+    type: price_list
+    covers_models: [kia-ev9]
+    covers_variants: [kia-ev9-long-range-awd-2024, kia-ev9-standard-range-rwd-2024]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, features.heat_pump, bidirectional.v2l, seats, efficiency.wltp_kwh_per_100km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Kia Germany EV9 Preise/Daten - fills the heat-pump and city-range holes left by the Austrian list. Verified in text layer: '10 - 80 % Batteriekapazitaet (in Minuten)'; 'Antriebsart Heckantrieb / Allrad (Dual Engine)'; 'Drehmoment max. (Nm) 350 / 600 (Black Edition, GT-Line: 700)'; 'Batteriekapazitaet (kWh) 76,1 / 99,8' (matches queue standard-range-rwd + long-range-awd); 'Innenstadt (kWh/100 km)' + 'Reichweite Innenstadt (km)'; 'Laenge 5.010 (GT-Line 5.015)'; 'Radstand 3.100'; 'Waermepumpe fuer die Innenraumklimatisierung' (P1 option on base, standard above); 'V2L max. 3,6 kW'. Seats from '(7-Sitzer)' equipment row, not a numeric spec row."
   - file: kia-niro-ev/price-list.pdf
     url: https://www.kia.com/content/dam/kwcms/kme/nl/nl/assets/contents/utility/price-list/eerdere-bouwjaren/2025/kia-netherlands-niro-ev-archief-prijslijst-januari.pdf
     type: price_list
@@ -72,7 +88,7 @@ documents:
     covers_variants: [kia-niro-ev-64kwh-2025]
     fields_present: [charging.time_10_to_80_min, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, dimensions.length_mm, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km]
     fetched_at: "2026-08-13"
-    notes: "Kia Netherlands archived prijslijst januari 2025 (Niro EV dropped from DE lineup; NL archive is official). Dutch language."
+    notes: "Kia Netherlands archived prijslijst januari 2025 (Niro EV dropped from DE lineup; NL archive is official). Dutch language. Best model-year match for the 2025 queue variant."
   - file: kia-niro-ev/price-list-2.pdf
     url: https://www.kia.com/content/dam/kwcms/kme/nl/nl/assets/contents/utility/price-list/eerdere-bouwjaren/2024/kia-netherlands-niro-ev-archief-prijslijst-januari24.pdf
     type: price_list
@@ -80,7 +96,15 @@ documents:
     covers_variants: [kia-niro-ev-64kwh-2024]
     fields_present: [charging.time_10_to_80_min, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, dimensions.length_mm, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km]
     fetched_at: "2026-08-13"
-    notes: "Kia Netherlands archived prijslijst januari 2024. Dutch language."
+    notes: "Kia Netherlands archived prijslijst januari 2024. Dutch language. Best model-year match for the 2024 queue variant."
+  - file: kia-niro-ev/price-list-3.pdf
+    url: https://www.kia.com/content/dam/kwcms/kme/de/de/assets/vehicles/niro-ev/20220407_Kia_Niro_EV_MY23_Preisliste_mit%20Finanzierung%20(1).pdf
+    type: price_list
+    covers_models: [kia-niro-ev]
+    covers_variants: [kia-niro-ev-64kwh-2024, kia-niro-ev-64kwh-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Kia Germany Niro EV MY23 Preisliste (official kia.com/de asset) - the only German-language Niro EV list still online, and the only source found with heat-pump and drive-type rows. Verified in text layer: 'Ladezeiten Schnellladung (von 10 auf 80 % der Batteriekapazitaet)'; 'Antriebsart Frontantrieb'; 'Drehmoment nach EG-Norm 255 bei 0 - 6.000'; 'Beschleunigung 0-100 km/h (Sek.) 7,8'; 'Stromverbrauch gewichtet, kombiniert 15,9' and 'Stromverbrauch City, kombiniert 11,8'; 'Reichweite Citymodus, max. (km) 615' / 'Reichweite gewichtet, max. (km) 463'; 'Laenge 4.420'; 'Radstand 2.720'; 'Waermepumpe fuer die Innenraumklimatisierung' (P1 Eco-Paket, standard on higher trims); 'V2L max. 3,0 kW'. CAUTION: MY23 document - the queue variants are MY2024/2025, so treat as spec-drift-checked evidence."
   - file: kia-niro-ev/spec-page.md
     url: https://www.kia.com/ie/new-cars/niro-sg2/specifications-digital/
     type: spec_page
@@ -88,5 +112,5 @@ documents:
     covers_variants: [kia-niro-ev-64kwh-2024, kia-niro-ev-64kwh-2025]
     fields_present: [charging.time_0_to_80_min, performance.torque, battery.gross_kwh, battery.chemistry, bidirectional.v2l]
     fetched_at: "2026-08-13"
-    notes: "Kia Ireland Niro EV (SG2) specifications page saved as text fetch by an earlier run same day (source URL in the file header). Carries DC 0-80% charge times at 50/100/300 kW and 64.8 kWh Li-ion polymer battery; page did not expose 0-100, WLTP range, seats, drive type or heat pump."
+    notes: "Kia Ireland Niro EV (SG2) specifications page saved as text fetch (source URL in the file header). Kept as a 4th document for this model, over the 3-doc budget, because it is the only source carrying DC 0-80% charge times at 50/100/300 kW - every other Niro source gives 10-80% instead."
 skipped: []

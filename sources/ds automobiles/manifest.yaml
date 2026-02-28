@@ -1,0 +1,21 @@
+brand: ds automobiles
+fetched_at: "2026-08-13"
+documents:
+  - file: ds-3-e-tense/price-list.pdf
+    url: https://www.media.stellantis.com/uploads/de/model-document/preislisteds3my525404062024-6667fc2f3c702.pdf
+    type: price_list
+    covers_models: [ds-3-e-tense]
+    covers_variants: [ds-3-e-tense-so-chic-2024]
+    fields_present: [charging.time_0_to_80_min, charging.time_0_to_100_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, range.wltp_km, range.wltp_city_km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Stellantis Media (official DS Automobiles Deutschland document server) - 'DS 3 PREISE - AUSSTATTUNGEN - TECHNISCHE DATEN', Stand: Juni 2024, i.e. the right data state for the MY2024 queue variant. DC row is 'Ladedauer DC 100-kW-Schnellladestation (0-80 %)' - DS publishes no 10-80 % figure, do not map it to charging.time_10_to_80_min. Waermepumpe appears as an equipment row; Sitzplaetze and Radstand are in the technical table. No V2L row (DS 3 E-Tense does not offer V2L)."
+  - file: ds-n8/price-list.pdf
+    url: https://www.media.stellantis.com/uploads/de/model-document/preisliste_n8_my10_03032025-67c07fd322b7d.pdf
+    type: price_list
+    covers_models: [ds-n8]
+    covers_variants: [ds-n8-fwd-long-range-2025, ds-n8-awd-long-range-2025]
+    fields_present: [charging.time_20_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Stellantis Media - 'DS AUTOMOBILES N°8 PREISE - AUSSTATTUNGSLINIEN - TECHNISCHE DATEN', Maerz 2025 (MY10 list, dated 03.03.2025). Both queue variants are named in the tables: FWD LONG RANGE (169 kW / 230 PS) and AWD LONG RANGE (257 kW / 350 PS), across PALLAS and ETOILE trims. Charging is stated twice - marketing text 'Schnellladen von 20 % auf 80 % in nur 28 Minuten' and a 'LADEZEITEN' row 'Von 20% auf 80% (Schnellladestation >= 160 kW Gleichstrom)'; there is NO 10-80 % figure. Carries 'Maximale elektrische Reichweite (km) innerstaedtisch (City EAER), WLTP' (the missing range.wltp_city_km), 'Kapazitaet Hochvolt Batterie (kWh) Brutto', Waermepumpe, Sitzplaetze, Radstand (mm) and Aussenlaenge (mm)."
+skipped: []
+notes: "Both DS models are covered by one comprehensive official price list each; no second document was needed. The DS Automobiles Deutschland price-list index page (https://www.dsautomobiles.de/infocenter/preislisten.html) returns 403 to non-browser clients - the PDFs themselves are served from media.stellantis.com and were fetched directly from there."

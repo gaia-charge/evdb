@@ -1,0 +1,40 @@
+brand: hongqi
+fetched_at: "2026-08-13"
+documents:
+  - file: hongqi-eh7/spec-page.html
+    url: https://www.hongqi-auto.com/pages/cartype/cartype_eh7.html
+    type: spec_page
+    covers_models: [hongqi-eh7]
+    covers_variants: [hongqi-eh7-111kwh-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, range.wltp_km, performance.acceleration_0_100_sec]
+    notes: >
+      Official Hongqi global model page for the E-H7. Model-highlights text states fast charging
+      from 10 % to 80 % in 20 minutes with a 655 km range, 0-100 km/h in 3.5 s and a
+      22,500 rpm motor. The page's own SPECIFICATIONS tab (Model / Vehicle Parameters /
+      Exterior / Interior) is populated by JavaScript, so the saved HTML holds the highlights
+      text but not the full parameter table.
+  - file: hongqi-eh7/datasheet.pdf
+    url: https://www.hongqi-auto.com/pdf/web/pdfencode/eh7/EH7-Owner's%20Manual.pdf
+    type: datasheet
+    covers_models: [hongqi-eh7]
+    covers_variants: []
+    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, battery.chemistry, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    notes: >
+      Official EH7 Owner's Manual hosted on hongqi-auto.com. Section "10-4. Specifications"
+      carries the homologation table: overall length 4,980 mm, width 1,915 mm, height 1,490 mm,
+      wheelbase 3,000 mm, seating capacity 5; drive mode rear-wheel drive (models CA7001H0EVC,
+      CA7001H0EV) or four-wheel drive (CA7001H0EVXC, CA7001H0EVX); AC permanent-magnet
+      synchronous motors CAM190PT2 / CAM220PT8 / CAM220PT17 with peak torque 306 / 450 / 450 N.m;
+      power battery lithium iron phosphate (LFP), 412 V nominal, 85 kWh total energy.
+      IMPORTANT covers_variants is empty on purpose the table documents the 85 kWh
+      Chinese-homologation models, NOT the 111 kWh Long Range variant in the queue, so its
+      battery figures must not be applied to hongqi-eh7-111kwh-long-range-2025. The dimensions,
+      seat count and motor/drive architecture are bodyshell-level and do carry over.
+      Very large file (108 MB).
+skipped: []
+notes: >
+  The EH7 has almost no official European documentation. hongqi.be and hongqi.nl both
+  301-redirect to Hedin Automotive (the official Benelux importer), whose Hongqi model
+  listing carries only the E-HS9 - there is no EH7 page or price list there. No official
+  source found states a heat pump, V2L, WLTP consumption (kWh/100 km) or WLTP city range
+  for this model, so those gap fields remain unsourced.

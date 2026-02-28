@@ -1,0 +1,31 @@
+brand: alfa romeo
+fetched_at: "2026-08-13"
+documents:
+  - file: alfa-romeo-junior-elettrica/price-list.pdf
+    url: https://www.alfaromeo.de/content/dam/alfa/de/download-center/2024/Junior_Preisliste.pdf
+    type: price_list
+    covers_models: [alfa-romeo-junior-elettrica]
+    covers_variants: [alfa-romeo-junior-elettrica-speciale-2024, alfa-romeo-junior-veloce-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official Alfa Romeo Germany price list, cover "PREISLISTE HERBST 2025 /
+      MODELLJAHR 2026". Plain curl is 403-blocked on alfaromeo.de; the download
+      succeeds with a browser Accept / Accept-Language / Sec-Fetch header set
+      and a Referer of https://www.alfaromeo.de/downloadcenter. Confirmed rows:
+      "DC-Ladezeit (10-80 %) (öffentlich) 100 kW -> 27 min", AC-Ladezeit rows
+      for Mode 2 1,8 kW and Mode 3 7,4/11 kW, a "TECHNISCHE DATEN" block headed
+      "ELEKTROMOTOR, BATTERIE UND LADESYSTEM", Antrieb = Vorderradantrieb,
+      Maximales Drehmoment des Elektromotors, Wärmepumpe in the VELOCE
+      equipment column, Sitzplätze = 5, Radstand 2.562 mm and full exterior
+      dimensions. The document is a combined Junior price list covering the
+      Ibrida versions too, so read only the Elettrica / Veloce columns.
+      Not covered: V2L and WLTP city range.
+skipped: []

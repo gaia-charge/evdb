@@ -1,0 +1,65 @@
+brand: mitsubishi
+fetched_at: "2026-08-13"
+documents:
+  - file: mitsubishi-eclipse-cross-ev/spec-page.html
+    url: https://www.mitsubishi-motors.de/eclipse-cross/technik
+    type: spec_page
+    covers_models: [mitsubishi-eclipse-cross-ev]
+    covers_variants: [mitsubishi-eclipse-cross-ev-87kwh-2026]
+    fields_present:
+      - performance.motors
+      - performance.total_torque_nm
+      - efficiency.wltp_kwh_per_100km
+    notes: >-
+      Official Mitsubishi Germany (MMD Automobile GmbH) technology page for the
+      new fully-electric Eclipse Cross. Confirmed text: "Der elektrisch erregte
+      Synchronmotor (EESM) liefert kraftvolle 160 kW (218 PS) und ein
+      Drehmoment von 300 Nm" - a single EESM motor with a one-speed gearbox -
+      and "je nach Bedarf mit 11 kW oder optional 22 kW AC-Ladeleistung. An
+      Schnellladestationen mit bis zu 150 kW", plus WLTP consumption
+      16,7-17,1 kWh/100 km. Real server-rendered HTML (about 11.8k chars of
+      text), not a JS shell. No DC 10-80% time, no heat pump, no V2L, no
+      dimensions and no seat count on this page.
+  - file: mitsubishi-eclipse-cross-ev/spec-page-2.html
+    url: https://www.mitsubishi-motors.de/eclipse-cross/varianten-preise
+    type: spec_page
+    covers_models: [mitsubishi-eclipse-cross-ev]
+    covers_variants: [mitsubishi-eclipse-cross-ev-87kwh-2026]
+    fields_present:
+      - battery.gross_kwh
+      - efficiency.wltp_kwh_per_100km
+    notes: >-
+      Official Mitsubishi Germany variants-and-prices page. Names the trim
+      levels and the "87 kWh (11kW)" / 22 kW AC charging split, and repeats the
+      WLTP consumption figure. Useful mainly for variant naming and for
+      confirming the car is on sale; carries no full technical data table.
+  - file: mitsubishi-eclipse-cross-ev/press-kit.html
+    url: https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2025/20250918_2.html
+    type: press_kit
+    covers_models: [mitsubishi-eclipse-cross-ev]
+    covers_variants: [mitsubishi-eclipse-cross-ev-87kwh-2026]
+    fields_present:
+      - battery.gross_kwh
+      - performance.total_torque_nm
+      - production_status
+    notes: >-
+      Official Mitsubishi Motors Corporation newsroom release, Tokyo,
+      18 September 2025, "Mitsubishi Motors Launches the All-New Eclipse Cross
+      Electric Vehicle for the European Market". States a drive battery with a
+      total capacity of 87 kWh, approximately 600 km WLTP range, maximum output
+      160 kW and peak torque 300 Nm, and establishes the European launch, which
+      is the best available evidence for production status. The page links a
+      487 KB press-release PDF that was not additionally downloaded because the
+      three-document budget was already used.
+skipped: []
+notes: >-
+  Mitsubishi Germany publishes no downloadable Eclipse Cross price list or
+  technical-data PDF. /eclipse-cross/technische-daten is a 404; /broschueren
+  and /broschueren/bestellen/brochure/2 are order forms whose only PDF link is
+  an unrelated child-seat compatibility list; fileadmin PDF path guesses all
+  404. The German press portal at presse.mitsubishi-motors.de responds but its
+  landing page exposes no document links to a non-JS client, and
+  pr.mitsubishi-motors.de returns a 325-byte stub. As a result the model-level
+  gaps seats, dimensions.length_mm and dimensions.wheelbase_mm, plus
+  charging.time_10_to_80_min, features.heat_pump and bidirectional.v2l, remain
+  unsourced from official material.

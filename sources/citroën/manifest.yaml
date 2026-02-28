@@ -1,5 +1,5 @@
 brand: citroën
-fetched_at: "2026-08-13"
+fetched_at: "2026-08-14"
 documents:
   - file: citroen-e-c3/price-list.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/04-26/Preisliste-C3-01.04.2026.pdf
@@ -8,7 +8,7 @@ documents:
     covers_variants: [citroen-e-c3-you-2025]
     fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany 'Preise & Technische Daten' Stand 1. April 2026, e-C3 Electric + C3 ICE. No heat pump row. City range = 'Reichweite innerstaedtisch (EAER)'."
+    notes: "Citroen Germany 'Preise & Technische Daten' Stand 1. April 2026, e-C3 Electric + C3 ICE. 'Sitzplaetze 5' row confirmed in text layer. No Waermepumpe and no V2L row anywhere in the document - see brand note below. City range = 'Reichweite innerstaedtisch (EAER)'."
   - file: citroen-e-c3/price-list-2.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/Preisliste_Neuer_e-C3_C3_010725.pdf
     type: price_list
@@ -16,7 +16,7 @@ documents:
     covers_variants: [citroen-e-c3-base-2024, citroen-e-c3-you-2025]
     fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 01. Juli 2025 - closer to queue MY2024/2025 variants."
+    notes: "Citroen Germany Stand 01. Juli 2025 - closer to queue MY2024/2025 variants. 'Sitzplaetze 5' confirmed. No Waermepumpe / V2L rows."
   - file: citroen-e-c3-aircross/price-list.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/04-26/Preisliste_C3Aircross_01.04.2026-1.pdf
     type: price_list
@@ -24,45 +24,54 @@ documents:
     covers_variants: [citroen-e-c3-aircross-44-2025, citroen-e-c3-aircross-54-2025]
     fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 1. April 2026, e-C3 Aircross Electric + C3 Aircross ICE. No heat pump row."
+    notes: "Citroen Germany Stand 1. April 2026, e-C3 Aircross Electric + C3 Aircross ICE. 'Sitzplaetze 5' row confirmed in text layer (note: a 7-seat C3 Aircross exists in other markets). No Waermepumpe / V2L rows."
   - file: citroen-e-c4/price-list.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/06-26/Kundenpreisliste_C4_02.06.2026.pdf
     type: price_list
     covers_models: [citroen-e-c4]
     covers_variants: [citroen-e-c4-you-54-2025]
-    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 2. Juni 2026, facelift 'Neuer C4' + e-C4 Electric. Waermepumpe row present."
+    notes: "Citroen Germany Stand 2. Juni 2026, facelift 'Neuer C4' + e-C4 Electric. Verified in text layer: 'Waermepumpe fuer Klimaautomatik (2-Zonen)' and 'Vehicle to Load faehig (V2L) (Elektromotor 156)' - V2L is tied to the 156 hp motor only."
   - file: citroen-e-c4/price-list-2.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/Kundenpreisliste_neuer_C4_eC4_01072025.pdf
     type: price_list
     covers_models: [citroen-e-c4]
     covers_variants: [citroen-e-c4-you-54-2025]
-    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 01. Juli 2025 (facelift). Queue variants citroen-e-c4-you-2024 / shine-plus-2024 are pre-facelift MY2024 - not covered by any list still online; spec drift check needed."
+    notes: "Citroen Germany Stand 01. Juli 2025 (facelift). Same Waermepumpe + 'Vehicle to Load faehig (V2L) - Elektromotor 156' rows, plus 'Sitzplaetze 5'. Queue variants citroen-e-c4-you-2024 / shine-plus-2024 are pre-facelift MY2024 - not covered by any list still online; spec drift check needed."
   - file: citroen-e-c4-x/price-list.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/02-26/Kundenpreisliste_Neuer-C4X-eC4X_28012026.pdf
     type: price_list
     covers_models: [citroen-e-c4-x]
     covers_variants: [citroen-e-c4-x-you-2025, citroen-e-c4-x-max-2025]
-    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 28. Januar 2026, Neuer C4 X + e-C4 X Electric; You/Plus/Max trims confirmed in text."
+    notes: "Citroen Germany Stand 28. Januar 2026, Neuer C4 X + e-C4 X Electric; You/Plus/Max trims. Verified in text layer: 'Waermepumpe fuer Klimaautomatik (2-Zonen)', 'Vehicle to Load faehig (V2L) (Elektromotor 156)', 'Sitzplaetze 5'."
   - file: citroen-e-c4-x/price-list-2.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/KundenpreislisteNeuerC4XeC4X.pdf
     type: price_list
     covers_models: [citroen-e-c4-x]
     covers_variants: [citroen-e-c4-x-you-2025, citroen-e-c4-x-max-2025]
-    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 10. Oktober 2025 - closest to queue MY2025 variants."
+    notes: "Citroen Germany Stand 10. Oktober 2025 - closest to queue MY2025 variants. Same Waermepumpe / V2L / Sitzplaetze rows confirmed."
   - file: citroen-c5-aircross/price-list.pdf
     url: https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/04-26/Preisliste_C5_Aircross_01.04.2026.pdf
     type: price_list
     covers_models: [citroen-c5-aircross]
     covers_variants: [citroen-c5-aircross-long-range-2025]
-    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, seats, dimensions.length_mm, battery.gross_kwh, range.wltp_city_km]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, dimensions.length_mm, battery.gross_kwh, range.wltp_km, range.wltp_city_km]
     fetched_at: "2026-08-13"
-    notes: "Citroen Germany Stand 1. April 2026, new-generation e-C5 Aircross Electric (incl. extended range version) + hybrid trims."
+    notes: "Citroen Germany Stand 1. April 2026, new-generation e-C5 Aircross Electric (incl. extended range) + hybrid trims. Verified in text layer: 'Waermepumpe (nur fuer e-C5 Aircross)' / 'Waermepumpe fuer Klimaautomatik (nur fuer Elektro)' 800 EUR option; 'On-Board-Charger 11 kW (V2L-faehig) - 3-phasig (nur fuer Elektro)'; 'Elektromotor 210 Komfort-Range: Max. Leistung 157 kW (213), Max. Drehmoment 343 Nm, Elektrische Reichweite 503-520 km, Reichweite innerstaedtisch 630-667 km'. CAUTION: the same PDF also lists a PHEV with 80-81 km EAER - do not mix the two tables. No numeric seat-count row found."
 skipped: []
+# Brand note: Citroen's official German price lists carry no Waermepumpe and no
+# V2L row for the e-C3 and e-C3 Aircross (Smart Car platform). Checked the
+# 01.04.2026 and 01.07.2025 lists in full text plus the Stellantis DE press
+# index for C3 Aircross (https://www.media.stellantis.com/de-de/citroen/c3-aircross-und-e-c3-aircross),
+# which carries no technical table at all. The UK "Prices & Specifications"
+# guide linked from Stellantis Media redirects to pricelist.varioweb.co.uk,
+# a third-party host, so it was not used. Treat features.heat_pump and
+# bidirectional.v2l for those two models as "not offered / unevidenced"
+# rather than merely unfetched.

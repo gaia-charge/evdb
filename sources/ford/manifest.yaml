@@ -1,0 +1,114 @@
+brand: ford
+fetched_at: "2026-08-13"
+documents:
+  - file: ford-explorer-ev/datasheet.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/price-list/cars/explorer/Technische_Daten_Ford_Explorer_MY26.75_zur_Preisliste_vom_21.01.2026_s.pdf
+    type: datasheet
+    covers_models: [ford-explorer-ev]
+    covers_variants: [ford-explorer-ev-standard-range-rwd-2025, ford-explorer-ev-extended-range-rwd-2025, ford-explorer-ev-extended-range-awd-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten Ford Explorer' from the official Explorer Preisliste page. The DAM path is named MY26.75 but the file currently served is titled 'Technische Daten Ford Explorer MY27.25 per 18.06.2026' - Ford overwrites this asset in place. Best single source for the queue's charging gaps because Ford publishes charge times as EXACTLY 10-80%: 'Ladezeiten 10-80%: Schnellladefunktion bis zur maximalen Schnellladegeschwindigkeit' = 26 / 28-29 / 27 min for Standard Range / Extended Range RWD / AWD, plus 10-80% AC 11 kW times. Also: Antriebsart Heckantrieb / Allradantrieb; Drehmoment 350 / 545 / 'Vorderachse 134 / Hinterachse 545' Nm (the split row is what establishes performance.motors = 2 on AWD, 1 on RWD); Nettoleistung 140 / 210 / 250 kW; Batteriekapazitaet nutzbar 58 / 79 / 77 kWh; Batterietyp Lithium-Eisen-Phosphat (LFP) for the 58 kWh, Lithium-Ionen (NMC) for 79/77; WLTP 410-444 / 564-602 / 510-553 km; 0-100 8,0 / 6,4 / 5,3 s; Laenge 4468, Radstand 2767. NO seat-count row and NO heat pump / V2L row in the datasheet - see the price list entry for those."
+  - file: ford-explorer-ev/datasheet-2.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/brochures/cars/explorer/Technische_Daten_des_neuen_Ford_Explorer_MY25_75.pdf
+    type: datasheet
+    covers_models: [ford-explorer-ev]
+    covers_variants: [ford-explorer-ev-standard-range-rwd-2025, ford-explorer-ev-extended-range-rwd-2025, ford-explorer-ev-extended-range-awd-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten des neuen Ford Explorer MY25.75' - the model-year-25 sheet, i.e. the one that actually matches the queue's MY2025 variants (Style / Select / Premium in Standard Range RWD, Extended Range RWD, Extended Range AWD). Same table layout and same 10-80% charge-time rows as the current sheet. Note the MY25.75 sheet lists Lithium-Ionen (NMC) for every column, while the newer sheet introduces an LFP 58 kWh pack - a real spec change, so do not backfill LFP onto MY2025."
+  - file: ford-explorer-ev/price-list.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/price-list/cars/explorer/pl-ford_explorer__01.04.2026.pdf
+    type: price_list
+    covers_models: [ford-explorer-ev]
+    covers_variants: []
+    fields_present: [features.heat_pump, bidirectional.v2l, bidirectional.v2h]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany Explorer Preisliste gueltig ab 01.04.2026. Fetched specifically for the two feature flags the datasheets omit: 'Waermepumpe (CO2 Kaeltemittel: R744)' is a 1.050 EUR OPTION (not standard) on all trims, and bidirectional charging is split - 'Bidirektionales Laden (V2H ...)' is standard, while V2L is delivered as a '2,3 kW Spannungskonverter mit 230V Steckdose im Kofferraum (V2L)' inside the Fahrerassistenz-Paket. So v2l = true but option-gated, v2l_max_kw = 2,3. No seat-count row here either."
+  - file: ford-capri-ev/datasheet.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/brochures/cars/capri/ft-technische_daten_ford_capri_my26.75.pdf
+    type: datasheet
+    covers_models: [ford-capri-ev]
+    covers_variants: [ford-capri-ev-standard-range-rwd-2025, ford-capri-ev-extended-range-rwd-2025, ford-capri-ev-extended-range-awd-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten Ford Capri MY26.75'. Same three-drivetrain layout as the Explorer (the Capri shares the MEB platform and the 58 / 79 / 77 kWh packs): Antriebsart Heckantrieb / Heckantrieb / Allradantrieb, Drehmoment 350 / 545 / 'Vorderachse 134 / Hinterachse 545' Nm, Verbrauch 15,7-14,8 / 14,9-13,8 / 16,7-15,5 kWh/100 km, Laenge 4634, Radstand 2767. Charge times are given as 10-80% (AC 11 kW: 6:30 / 8:30 / 8:00 Std.; DC row present on the same block). No Sitzkapazitaet row, no heat pump / V2L row."
+  - file: ford-capri-ev/datasheet-2.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/brochures/cars/capri/Technische_Daten_des_Ford_Capri_MY25_75.pdf
+    type: datasheet
+    covers_models: [ford-capri-ev]
+    covers_variants: [ford-capri-ev-standard-range-rwd-2025, ford-capri-ev-extended-range-rwd-2025, ford-capri-ev-extended-range-awd-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten des Ford Capri MY25.75' - the model-year sheet matching the queue's MY2025 variants, columns Capri Style / Select / Premium x Standard Range RWD / Extended Range RWD / Extended Range AWD. All battery columns Lithium-Ionen (NMC) at MY25.75 (the newer MY26.75 sheet adds an LFP 58 kWh pack)."
+  - file: ford-capri-ev/price-list.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/price-list/cars/capri/PL_Ford_Capri_gultig_ab_27.03.2026_Bestellnummer_DE2060121_final_s.pdf
+    type: price_list
+    covers_models: [ford-capri-ev]
+    covers_variants: []
+    fields_present: [features.heat_pump, bidirectional.v2l, bidirectional.v2h]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany Capri Preisliste gueltig ab 27.03.2026. Same feature split as the Explorer: 'Waermepumpe (CO2 Kaeltemittel: R744)' is a 1.100 EUR option on all trims; 'Bidirektionales Laden (V2H - siehe Fahrerassistenz-Paket fuer zusaetzlich V2L)' standard, V2L via the assistance package. No seat-count row."
+  - file: ford-mustang-mach-e/datasheet.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/price-list/cars/mustang-mach-e/technische_daten_ford_mustang_mach_e.pdf
+    type: datasheet
+    covers_models: [ford-mustang-mach-e]
+    covers_variants: []
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten - Ford Mustang Mach-E Modelljahr 2026.00' (linked from the Mach-E Broschueren & Preislisten page). Four columns: 73 kWh RWD, 88 kWh RWD, 88 kWh AWD, 91 kWh AWD (GT); Drehmoment 525 / 525 / 675 / 950 Nm; Antriebsart Heckantrieb / Heckantrieb / Allradantrieb / Allradantrieb; Batterietyp Lithium-Ferrophosphat (LFP) for the 73 kWh, Lithium-Ionen (NMC) for the rest; Ladezeiten 10-80% DC 32,3 / 36,2 / 36,2 / 36,2 min; Laenge 4713-4743, Radstand 2984. MY2026 - kept as the current-spec reference; use datasheet-2.pdf for the queue's MY2025 rows."
+  - file: ford-mustang-mach-e/datasheet-2.pdf
+    url: https://www.ford.at/content/dam/guxeu/at/de_at/documents/technical-data/TD-ford-CX727-mach-e.pdf
+    type: datasheet
+    covers_models: [ford-mustang-mach-e]
+    covers_variants: [ford-mustang-mach-e-standard-range-rwd-2024, ford-mustang-mach-e-extended-range-rwd-2024, ford-mustang-mach-e-extended-range-awd-2024, ford-mustang-mach-e-gt-2024, ford-mustang-mach-e-extended-range-rwd-2025, ford-mustang-mach-e-extended-range-awd-2025, ford-mustang-mach-e-gt-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Austria 'Technische Daten - Ford Mustang Mach-E Modelljahr 2025.00', linked from ford.at/pkw-modelle/mustang-mach-e/preisliste. This is the MY2025 sheet, the closest official match to the queue's MY2024/MY2025 variants; Ford Germany no longer publishes the older sheet. Ladezeiten 10-80% DC 32 / 36 / 36 / 36 min, AC 11 kW 7h17 / 10h16. Same four drivetrains, torques and battery chemistries as the MY2026 sheet. Austrian document, German language, identical EU homologation values."
+  - file: ford-mustang-mach-e/price-list.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/price-list/cars/mustang-mach-e/Preisliste_des_Ford_Mustang_Mach-E.pdf
+    type: price_list
+    covers_models: [ford-mustang-mach-e]
+    covers_variants: []
+    fields_present: [features.heat_pump]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany Mustang Mach-E Preisliste, gueltig ab 30.01.2026 (Preisliste DE20260130MY26.00). Unlike Explorer/Capri, 'Waermepumpe' is listed as STANDARD equipment on all three trims here, not a paid option. No V2L / bidirectional row was found in this list, and no seat-count row."
+  - file: ford-puma-gen-e/datasheet.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/brochures/cars/puma-gen-e/PDF-technische_daten_des_neuen_vollelektrischen_puma_gen_e.pdf
+    type: datasheet
+    covers_models: [ford-puma-gen-e]
+    covers_variants: [ford-puma-gen-e-2025]
+    fields_present: [seating.seats, performance.drive_type, performance.motors, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.dc_max_kw, charging.time_10_to_80_min, battery.usable_kwh, battery.chemistry, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany 'Technische Daten des neuen vollelektrischen Puma Gen-E' - the richest single document in this brand folder and the only Ford datasheet that states a seat count. Verified: Sitzkapazitaet 5; Motor E-Motor (single), Antrieb Frontantrieb; Leistung 123,5 kW (168 PS), Drehmoment 290 Nm; 0-100 8,0 s, Vmax 160 km/h; Batteriekapazitaet nutzbar 46,8 kWh, Batterietyp Lithium-Ionen (NMC); maximale Ladeleistung DC 100 kW; 'Ladezeiten 10-80% (DC)' 26 min; elektrische Reichweite kombiniert 386-417 km and Stadt 530-572 km; Verbrauch 14,6-13,0 kWh/100 km; Laenge 4214 (4313 mit AHK), Radstand 2588, Breite 1805/1930, Hoehe 1555. No heat pump and no V2L row."
+  - file: ford-puma-gen-e/price-list.pdf
+    url: https://www.ford.de/content/dam/guxeu/de/documents/brochures/cars/puma-gen-e/PL_Ford_pumaGen-E-16.07.2026.pdf
+    type: price_list
+    covers_models: [ford-puma-gen-e]
+    covers_variants: [ford-puma-gen-e-2025]
+    fields_present: []
+    fetched_at: "2026-08-13"
+    notes: "Ford Germany Puma Gen-E Preisliste, gueltig ab 16.07.2026 - kept mainly as production-status evidence (the model is actively priced and orderable) and as the trim/option reference. Searched and found NO Waermepumpe row and NO V2L / bidirectional row in this list, so those two queue fields stay unresolved for the Puma Gen-E from official German documents."
+skipped: []
+notes: >-
+  Brand-wide findings for Ford (all four models):
+  (1) ford.de and ford.at serve their DAM PDFs to a normal browser-header curl
+  without any Akamai block; the per-model 'pricelist' / 'brochures-pricelists'
+  pages expose the PDF paths directly in the served HTML, so they are easy to
+  re-discover later.
+  (2) Ford is the one brand in this batch that publishes DC charge time as
+  exactly 10-80%, which is the field the queue asks for
+  (charging.time_10_to_80_min). Nothing in the Ford documents supports
+  charging.time_0_to_80_min or charging.charging_speed_kmh.
+  (3) performance.motors is not stated as a number; it has to be read off the
+  torque row - a single figure means one motor, a 'Vorderachse X / Hinterachse Y'
+  split means two - together with Antriebsart (Heckantrieb / Frontantrieb /
+  Allradantrieb).
+  (4) SEATS: only the Puma Gen-E datasheet has a 'Sitzkapazitaet' row (5).
+  The Explorer, Capri and Mustang Mach-E datasheets and price lists give
+  1./2. Sitzreihe interior dimensions but never an explicit seat count, so the
+  seats gap stays open for those three models within the 3-document budget.
+  (5) Heat pump differs per model and is NOT a platform constant: paid option on
+  Explorer (1.050 EUR) and Capri (1.100 EUR), standard on Mustang Mach-E,
+  absent from the Puma Gen-E list. V2L on Explorer/Capri is a 2,3 kW 230 V
+  socket inside the Fahrerassistenz-Paket while V2H is standard.

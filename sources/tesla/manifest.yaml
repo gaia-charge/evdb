@@ -1,0 +1,83 @@
+brand: tesla
+fetched_at: "2026-08-13"
+documents:
+  - file: tesla-model-3/datasheet.pdf
+    url: https://digitalassets.tesla.com/tesla-contents/image/upload/Model_3_Emergency_Response_Guide_en.pdf
+    type: datasheet
+    covers_models: [tesla-model-3]
+    covers_variants: []
+    fields_present:
+      - performance.motors
+      - performance.drive_type
+      - features.heat_pump
+    notes: >-
+      Official Tesla Emergency Response Guide (Model 3, version 001), hosted on
+      Tesla's own asset host digitalassets.tesla.com. Documents front and rear
+      drive units ("Vehicles without a front drive unit are Single Motor" /
+      "Dual Motor"), which establishes motor count and drive type, and has a
+      dedicated "Heat Pump" section. It is NOT a spec sheet: no charge times,
+      no torque figures, no WLTP data, no dimensions table.
+  - file: tesla-model-y/datasheet.pdf
+    url: https://digitalassets.tesla.com/tesla-contents/image/upload/Model_Y_Emergency_Response_Guide_en.pdf
+    type: datasheet
+    covers_models: [tesla-model-y]
+    covers_variants: []
+    fields_present:
+      - performance.motors
+      - performance.drive_type
+      - seats
+    notes: >-
+      Official Tesla Emergency Response Guide (Model Y, version 001). Front /
+      rear drive unit documentation gives motor count and drive type; notes
+      that vehicles may have third row occupants "depending on the vehicle's
+      seating configuration". No heat-pump section in this guide, no charge
+      times, torque, WLTP or dimensions.
+  - file: tesla-model-s/datasheet.pdf
+    url: https://digitalassets.tesla.com/tesla-contents/image/upload/Model_S_Emergency_Response_Guide.pdf
+    type: datasheet
+    covers_models: [tesla-model-s]
+    covers_variants: []
+    fields_present:
+      - performance.motors
+      - performance.drive_type
+    notes: >-
+      Official Tesla Emergency Response Guide (Model S, version 001). Covers
+      drive unit layout only. Does not carry the two fields actually missing
+      for Model S (total torque, WLTP city range).
+  - file: tesla-model-x/datasheet.pdf
+    url: https://digitalassets.tesla.com/tesla-contents/image/upload/2016_Model_X_Emergency_Response_Guide_en.pdf
+    type: datasheet
+    covers_models: [tesla-model-x]
+    covers_variants: []
+    fields_present:
+      - performance.motors
+      - performance.drive_type
+      - seats
+    notes: >-
+      Official Tesla Emergency Response Guide (Model X, version 001). Filename
+      on Tesla's asset host still carries a "2016_" prefix but the document is
+      the same current version-001 format as the other guides; treat model-year
+      specific figures with care. Documents drive unit layout and third-row
+      seating configurations. No charge times, torque, WLTP or dimensions.
+skipped: []
+notes: >-
+  IMPORTANT SOURCING LIMITATION FOR THIS BRAND. Tesla's own site is the only
+  place that publishes the missing fields (DC charge time 10-80%, charging
+  speed, total torque, heat pump per variant, V2L, WLTP city range, seats,
+  platform), and every tesla.com path is behind Akamai bot protection that
+  returns HTTP 403 "Access Denied" to curl and to WebFetch alike. Verified 403
+  on: /de_de/model3, /de_de/modely, /de_de/models, /de_de/modelx,
+  /de_de/model3/design, /de_at/modely, /de_de/support/meet-your-tesla/model-y,
+  /ownersmanual/model3/de_de/GUID-F617DA3E-11C1-4FBA-98A7-A9C3828E3536.html,
+  /ownersmanual/*/de_de/Owners_Manual.pdf and service.tesla.com. Loading
+  https://www.tesla.com/de_de/modely in a real browser rendered a blank
+  bot-challenge page; no attempt was made to defeat the challenge. The path
+  /de_de/model3/specs now returns 404 - Tesla folded specs into the model
+  pages. digitalassets.tesla.com IS reachable, so the Emergency Response
+  Guides above are the only official Tesla documents that could be retrieved;
+  they cover motor layout, drive type, seating and (Model 3 only) heat pump,
+  and nothing else on the target list. Probed and not found on that host:
+  Model_*_Owners_Manual*.pdf, Model_*_Quick_Guide*.pdf, Model_*_Spec_Sheet.pdf,
+  Model_*_Brochure_de.pdf, Model_*_Fleet_Brochure.pdf. The remaining Tesla gaps
+  need either a manual browser session or a non-official source, so they are
+  left unfilled rather than sourced from an aggregator.

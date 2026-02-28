@@ -6,8 +6,8 @@ documents:
     type: price_list
     covers_models: [omoda-e5]
     covers_variants: [omoda-e5-standard-2025]
-    fields_present: [features.heat_pump, bidirectional.v2l, performance.acceleration_0_100_sec, seats, efficiency.wltp_kwh_per_100km]
-    notes: "Official OMODA & JAECOO Netherlands importer price list (prijslijst) for OMODA 5 EV (= Omoda E5), dated 01.05.2026; technical table incl. heat pump, V2L 3.3 kW, battery capacity, AC/DC charge times (30-80%), consumption, seats"
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.acceleration_0_100_sec, seats, efficiency.wltp_kwh_per_100km, dimensions.length_mm]
+    notes: "Official OMODA & JAECOO Netherlands importer price list (prijslijst) for OMODA 5 EV (= Omoda E5), dated 01.05.2026. Equipment list has 'Warmtepomp' and 'V2L (Vehicle-to-Load) 3.3kW'; technical table has 'Acceleratie (0-100 km/u) (s)', 'Laadtijd 30-80% (11 kW)' and 'Laadtijd 30-80% (80 kW)' (note: 30-80%, not 10-80%), 'Lengte/Breedte/Hoogte (mm)', 'Zitplaatsen', battery capacity and consumption"
   - file: omoda-e5/datasheet.pdf
     url: https://obs-web.omodajaecoo.nl/obsmedia/pdf/54062_OJ_Omoda%205%20EV%20-%20Brochure.pdf
     type: datasheet
@@ -20,6 +20,6 @@ documents:
     type: spec_page
     covers_models: [omoda-e5]
     covers_variants: [omoda-e5-standard-2025]
-    fields_present: [efficiency.wltp_kwh_per_100km]
-    notes: "Official OMODA & JAECOO Germany importer technical-data page for OMODA 5 EV; WLTP consumption 15.9 kWh/100 km, range 430 km"
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    notes: "Official OMODA & JAECOO Germany importer technical-data page for OMODA 5 EV - the single richest source for this model. Confirmed values: 'Ladezeit DC (10-80 %) (Min.) 34', max DC 130 kW, max AC 11 kW, 'Antriebsart Vorderradantrieb' (FWD), 1-stufiges Reduktionsgetriebe, single 'Elektromotor - Leistung (kW) 155' with 'Drehmoment (Nm) 288', Batterietyp LFP, Batteriekapazität 61 kWh, 'Externe Stromabgabe (V2L) (kW) 3,3', 'Wärmepumpe (für effizientes Heizen des Innenraums)' as standard, Beschleunigung 0-100 km/h 7,2 s, Höchstgeschwindigkeit 171 km/h, WLTP range 430 km and consumption 15.9 kWh/100 km, Länge 4.424 mm, Radstand 2.630 mm, Kofferraumvolumen 370/1.149 l"
 skipped: []

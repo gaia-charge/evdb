@@ -25,6 +25,22 @@ documents:
     fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
     notes: "Separate IONIQ 5 N price list, 84 kWh, Allradantrieb (AWD)."
+  - file: hyundai-inster/datasheet.pdf
+    url: https://dmassets.hyundai.com/is/content/hyundaiautoever/INSTER_Tech_and_Spec_Guidepdf
+    type: datasheet
+    covers_models: [hyundai-inster]
+    covers_variants: [hyundai-inster-standard-42-2025, hyundai-inster-long-range-49-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, seats, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official Hyundai UK 'INSTER Tech and Spec Guide' from Hyundai's own DAM (data correct April 2026). Explicit 10-80% DC rows: 55 min at 50 kW CCS, 30 min at 150 kW CCS (73 kW max on 42 kWh, 85 kW max on 49 kWh); battery 42/49 kWh; torque 147 Nm both; 'Heat Pump & Battery Heater' as an equipment line; V2L internal 3-pin 230V 3.6 kW in the Tech Pack; 4 seats; wheelbase 2580 mm. Complements the German price list with the UK 10-80% figures."
+  - file: hyundai-ioniq-5/price-list-3.pdf
+    url: https://configurator.hyundai.ch/Data/All-New%20IONIQ%205/Pdf/PriceList/CH/DE/Hyundai_All-New%20IONIQ%205_preisliste_de.pdf
+    type: price_list
+    covers_models: [hyundai-ioniq-5]
+    covers_variants: [hyundai-ioniq-5-standard-range-2024, hyundai-ioniq-5-long-range-awd-2024]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, performance.drive_type, performance.motors, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Hyundai Suisse (official importer) price list, 'Model Year 2022 / gültig ab November 2022' — the PRE-FACELIFT IONIQ 5 the 2024 variants belong to, which hyundai.de no longer serves (the .de MY24 URL now redirects to the facelift PDF). Technical-data table: 58 and 77.4 kWh, Kraftübertragung 2WD/4WD, separate rear- and front-axle motor outputs (125/170 rear only for 2WD; 165+74 kW for 4WD), 'Zeit für 10-80% DC / 10-100% AC' = 18 min at HPC and 44/62 min at 50 kW, Wärmepumpe (CHF 2'000 option), V2L 230V sockets inside and outside, consumption 16.7-19.1 kWh/100 km. Vehicle length/wheelbase are only in a dimensions graphic, not the text layer."
   - file: hyundai-ioniq-6/price-list.pdf
     url: https://dmassets.hyundai.com/is/content/hyundaiautoever/hyundai-ioniq-6-my26-preislistepdf
     type: price_list
@@ -41,6 +57,14 @@ documents:
     fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
     notes: "Separate IONIQ 6 N price list: 84 kWh battery, 448 kW / 609 PS, Allradantrieb, max torque 740 Nm [770 Nm with N Grin Boost], DC-Ladedauer 10-80% at 50 kW and 350 kW stations, Wärmepumpe and Vehicle-to-Load Adapter (V2L) listed."
+  - file: hyundai-ioniq-6/price-list-3.pdf
+    url: https://configurator.hyundai.ch/Data/allelectricioniq6/Pdf/PriceList/CH/DE/Hyundai_allelectricioniq6_preisliste_de.pdf
+    type: price_list
+    covers_models: [hyundai-ioniq-6]
+    covers_variants: [hyundai-ioniq-6-long-range-rwd-2024, hyundai-ioniq-6-long-range-rwd-2025, hyundai-ioniq-6-long-range-awd-2024, hyundai-ioniq-6-long-range-awd-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, performance.drive_type, performance.motors, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Hyundai Suisse (official importer) price list, 'Model Year 2023 / gültig ab November 2022' — the PRE-FACELIFT IONIQ 6 that the 2024/2025 long-range variants belong to; hyundai.de's MY23 URL now redirects to the MY26 facelift PDF. Technical data: 77.4 kWh only, Kraftübertragung 2WD (168 kW rear) / 4WD (165 kW rear + 74 kW front, 239 kW combined), 'Zeit für 10-80% DC / 10-100% AC' = 18 min HPC, 73 min at 50 kW, 7 h 10 AC; Wärmepumpe standard; V2L 230V sockets inside and outside; consumption 14.3-16.9 kWh/100 km; range 614/545 and 583/519 km on 18\"/20\". Does NOT cover the 53 kWh standard-range-rwd 2024/2025 variants — the Swiss lineup never listed that pack."
   - file: hyundai-ioniq-9/price-list.pdf
     url: https://dmassets.hyundai.com/is/content/hyundaiautoever/hyundai-ioniq-9-preislistepdf
     type: price_list
@@ -58,3 +82,10 @@ documents:
     fetched_at: "2026-08-13"
     notes: "URL serves the PDF directly (Stand: Juli 2025). 48.7 kWh and 65.4 kWh versions; same generation as MY2024, so specs also evidence the 2024 variants."
 skipped: []
+unresolved_gaps:
+  - model: hyundai-inster
+    field: platform
+    reason: "No official Hyundai document names a platform code for INSTER. The world-premiere press release (hyundai.news/eu/articles/press-releases/hyundai-inster-world-premiere.html) only references the design legacy of the Korea-only CASPER; it states no platform/architecture name."
+  - model: hyundai-ioniq-6
+    variants: [hyundai-ioniq-6-standard-range-rwd-2024, hyundai-ioniq-6-standard-range-rwd-2025]
+    reason: "53 kWh standard-range pack is not in any currently-served official price list: hyundai.de serves only the MY26 facelift (63/84 kWh) and the Swiss importer archive lists only 77.4 kWh."

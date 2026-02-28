@@ -1,5 +1,5 @@
 brand: mazda
-fetched_at: "2026-08-13"
+fetched_at: "2026-08-14"
 documents:
   - file: mazda-6e/price-list.pdf
     url: https://media-assets.mazda.eu/raw/upload//mazdade/globalassets/pdfs/brochure/mazda6e/18-03-2025_preisliste_mazda6e.pdf
@@ -8,21 +8,41 @@ documents:
     covers_variants: [mazda-6e-long-range-80kwh-2025]
     fields_present: [charging.time_10_to_80_min, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, battery.chemistry, range.wltp_city_km, efficiency.wltp_kwh_per_100km]
     fetched_at: "2026-08-13"
-    notes: "Mazda Germany 'Der neue Mazda6e Preise & Technische Daten' 18.03.2025, hosted on official media-assets.mazda.eu CDN (linked from mazda.de). Explicit 'DC-Ladedauer 10-80 % (min)' row; covers both standard and Long Range 80 kWh."
+    notes: "Mazda Germany 'Der neue Mazda6e Preise & Technische Daten' 18.03.2025, hosted on the official media-assets.mazda.eu CDN (linked from mazda.de). Explicit 'DC-Ladedauer 10-80 % (min)' row; covers both the 68.8 kWh standard and the 80 kWh Long Range."
+  - file: mazda-6e/press-kit.pdf
+    url: https://de.mazda-press.com/api/assets/download/00c7ba37-66a3-491a-a0a9-c19b67c29508_Default?isDownload=false
+    type: press_kit
+    covers_models: [mazda-6e]
+    covers_variants: [mazda-6e-long-range-80kwh-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, features.heat_pump, battery.gross_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "MAZDA 6e PRESSEMAPPE from the official Mazda Germany press portal (de.mazda-press.com) - fills the drive_type / motors gap the price list leaves open. Verified in text layer: 'Mazda6e EV mit Heckantrieb, einer LFP Lithium-Ionen-Batterie' and 'Mazda6e EV Long Range mit Heckantrieb, einer NCM Lithium-Ionen-Batterie'; single motor 190 kW/258 PS (68.8 kWh) resp. 180 kW/245 PS (80 kWh), both 320 Nm 'an die Hinterraeder'; 'von 10 Prozent auf 80 Prozent' in 24 min at up to 165 kW (Long Range) and 47 min (standard); 'Laenge/Breite/Hoehe: 4.921 mm, 1.890 mm, 1.485 mm, Radstand: 2.895 mm'; a Waermepumpe equipment entry. No numeric seat-count row."
   - file: mazda-mx-30/price-list.pdf
     url: https://media-assets.mazda.eu/raw/upload//mazdach/globalassets/pdfs2/1---pricelists/de/2024-05-01-bis/pl_mx-30_240101_bjn_13277_2201-ipm1_d3promo0506.pdf
     type: price_list
     covers_models: [mazda-mx-30]
     covers_variants: []
-    fields_present: []
+    fields_present: [performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, battery.gross_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km]
     fetched_at: "2026-08-13"
-    notes: "Mazda Switzerland MX-30 price list 01.01.2024 (official Mazda EU asset CDN) - last list still covering the e-Skyactiv EV 145 BEV (Frontantrieb, trims Prime-Line..Makoto). Non-EU market (CH) but official Mazda document; German MX-30 BEV lists are no longer online."
+    notes: "Mazda Switzerland MX-30 price list 01.01.2024 (official Mazda EU asset CDN) - the last list still covering the e-Skyactiv EV 145 BEV. Non-EU market (CH) but an official Mazda document; German MX-30 BEV lists are no longer online. Verified in text layer: 'e-Skyactiv EV 145, Elektromotor, Frontantrieb'; 'Max. Leistung 107/145'; 'Max. Drehmoment 271 Nm'; 'Batterietyp Lithium-Ionen-Batterie | 355 V'; 'Batteriekapazitaet 35,5 kWh'; 'Waermepumpe ja'; 'Elektrische Reichweite im EV Mode (WLTP) 200 im Gesamt-Zyklus | 265 im City-Zyklus'; 'Kombiniert, EV kWh/100 km 17,9'; 'Laenge 4390'; 'Radstand 2655'; 'Beschleunigung 0-100 km/h 9,7'. CAUTION: charge-time rows in this document are 20-80%, not 10-80%. No numeric seat-count row."
   - file: mazda-mx-30/price-list-2.pdf
     url: https://media-assets.mazda.eu/raw/upload//mazdade/globalassets/pdfs/brochure/mx-30/21-07-2025_preisliste_2025_mazda-mx-30.pdf
     type: price_list
     covers_models: [mazda-mx-30]
     covers_variants: []
-    fields_present: []
+    fields_present: [production_status]
     fetched_at: "2026-08-13"
-    notes: "Mazda Germany MX-30 price list 21.07.2025 - covers only the MX-30 R-EV plug-in hybrid; evidence that the MX-30 BEV is out of the German lineup (production_status). Body/seat data shared with BEV."
+    notes: "Mazda Germany MX-30 price list 21.07.2025 - covers ONLY the MX-30 e-Skyactiv R-EV plug-in hybrid. Its value is negative evidence for production_status: the BEV is absent from the current German lineup. Do not extract drivetrain or consumption figures from it for the BEV; every consumption line in it is the R-EV's weighted PHEV figure."
+  - file: mazda-mx-30/press-kit.pdf
+    url: https://de.mazda-press.com/api/assets/download/9ca9abe0-951a-41b3-a2b4-413d624bac30_Default?isDownload=false
+    type: press_kit
+    covers_models: [mazda-mx-30]
+    covers_variants: []
+    fields_present: [performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh]
+    fetched_at: "2026-08-14"
+    notes: "Original Mazda Germany press kit for the fully electric MX-30 (press portal de.mazda-press.com, launch material from 16.06.2020). Corroborates 35,5 kWh battery, 271 Nm and the 0-100 km/h figure. CAUTION: this is an NEFZ-era document - it quotes 'kombinierter Stromverbrauch nach NEFZ: 17,3 kWh/100 km' and a WLTP range of 200-262 km. Use the 2024 Swiss price list, not this, for consumption and range."
 skipped: []
+# Brand note: no official Mazda source found for mazda-mx-30 seats or an
+# explicit production_status statement. Both MX-30 documents and the 6e
+# press kit lack a numeric seat-count row; the German 2025 price list is
+# the strongest available production_status signal (BEV no longer listed).

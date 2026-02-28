@@ -1,41 +1,51 @@
 brand: xpeng
 fetched_at: "2026-08-13"
+# No new documents were needed this pass - the four stored files already cover every
+# XPENG model that still has an official EU page. fields_present has been re-verified
+# against the extracted text of each PDF and is now noticeably longer than before:
+# every XPENG "Preise & Daten" PDF opens with an 'Anzahl Sitze' / 'Laenge x Breite x
+# Hoehe (mm)' / 'Radstand (mm)' block, which closes the seats + dimensions model gaps.
 documents:
   - file: xpeng-g6/price-list.pdf
     url: https://s-cdn.xpeng.com/commoncms/prod/2025-05-21/206396d2a8934ed588fbd6218d333533.pdf
     type: price_list
     covers_models: [xpeng-g6]
     covers_variants: [xpeng-g6-standard-range-2025, xpeng-g6-long-range-2025, xpeng-g6-performance-awd-2025]
-    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, efficiency.wltp_kwh_per_100km]
-    notes: "Official XPENG Germany 'G6 Preise & Daten' (Preisliste und technische Daten), May 2025 edition - covers the MY2025 G6 Standard Range / Long Range / AWD Performance exactly as in the gap queue. DC-Ladezeit (10-80%), V2L, Drehmoment, Sitze all present."
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, features.heat_pump, battery.net_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official XPENG Germany 'G6 Preise & Daten' (May 2025 edition) - covers the MY2025 G6 Standard Range / Long Range / AWD Performance exactly as in the gap queue. Verified rows: 'Anzahl Sitze' 5, 'Laenge x Breite x Hoehe (mm)' 4753 / 1920 / 1650, 'Radstand (mm)' 2890, 'Antriebsstrang' Heckantrieb / Allrad, 'Motor' Permanent Magnet Synchronous (AWD: Vorne Induction Motor), 'DC-Ladezeit (10-80%)' = 20 min, 'AC-Ladezeit (5-100%)', 'V2L (Vehicle2Load)' 3.3 kW 230V AC Steckdose, 'Waermemanagementsystem mit Waermepumpe' standard. Battery is given as 'Batterie-Nettokapazitaet (kWh)' 66,0 / 87,5 only - NET, not gross, on this edition."
   - file: xpeng-g6/price-list-2.pdf
     url: https://s-cdn.xpeng.com/commoncms/prod/2026-07-31/690a7912b3ee4693af76ca6186c855d1.pdf
     type: price_list
     covers_models: [xpeng-g6]
     covers_variants: []
-    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l]
-    notes: "Current (July 2026) XPENG Germany G6 Preisliste/technische Daten from the official xpeng.com/de/model/g6 page - covers the facelifted New G6; useful for cross-checks and newer model years."
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, features.heat_pump, battery.gross_kwh, battery.net_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Current (July 2026) XPENG Germany G6 Preisliste from xpeng.com/de/model/g6 - the facelifted New G6 (68,5 / 80,8 kWh brutto, 'DC-Ladezeit 10-80% ' = 12 Min., length 4758 mm). Useful for cross-checks and newer model years; do not mix its figures with the MY2025 variants in the queue."
   - file: xpeng-g9/price-list.pdf
     url: https://s-cdn.xpeng.com/commoncms/prod/2026-02-17/29c223a7813c40d5976fd1717282436a.pdf
     type: price_list
     covers_models: [xpeng-g9]
     covers_variants: [xpeng-g9-standard-range-2025, xpeng-g9-long-range-2025, xpeng-g9-performance-awd-2025]
-    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, features.heat_pump, efficiency.wltp_kwh_per_100km]
-    notes: "Official XPENG Germany/Austria G9 'Preisliste und technische Daten' (Feb 2026) from xpeng.com/de/model/g9. Trim names (Standard Range / Long Range / Performance) match the queue's 2025 variants; verify model-year alignment during extraction. Includes Klimatisierung & Waermepumpe section."
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, features.heat_pump, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official XPENG Germany/Austria G9 'Preisliste und technische Daten' (Feb 2026) from xpeng.com/de/model/g9. Verified rows: 'Anzahl Sitze' 5, 'Laenge x Breite x Hoehe (mm)' 4891 x 1937 x 1680, 'Radstand (mm)' 2998, 'Antriebsstrang' Heckantrieb / Allrad, 'Motor' Permanent Magnet Synchronous (AWD front: Induction Motor), 'DC-Ladezeit 10-80%' = 12 Min., 'V2L (Vehicle to Load)' 6 kW 230V AC Steckdose, section 'Klimatisierung & Waermepumpe' with 'mit Waermepumpe' standard on all three trims. Trim names match the queue's 2025 variants; verify model-year alignment during extraction."
   - file: xpeng-p7-plus/price-list.pdf
     url: https://s-cdn.xpeng.com/commoncms/prod/2026-07-31/8fabbf7cecd04c48823ea2990127e53b.pdf
     type: price_list
     covers_models: [xpeng-p7-plus]
     covers_variants: [xpeng-p7-plus-rwd-long-range-2025]
-    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, bidirectional.v2l, features.heat_pump]
-    notes: "Official XPENG Germany 'P7+ Preise & Daten' PDF from xpeng.com/de/model/p7plus (July 2026 edition)."
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, bidirectional.v2l, features.heat_pump, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official XPENG Germany 'P7+ Preise & Daten' PDF from xpeng.com/de/model/p7plus (July 2026 edition). Verified rows: 'Anzahl Sitze' 5, 'Laenge x Breite x Hoehe (mm)' 5071 x 1937 x 1512, 'Radstand (mm)' 3000, 'Antrieb' Heckantrieb / Allrad, 'Motor' Permanent Magnet Synchronous, 'Drehmoment (Nm)' 450/450/670, 'Zellentyp' LFP, 'Batteriekapazitaet brutto (kWh)' 61,7 / 74,9, 'V2L (Vehicle to Load)' 3,3 kW 230V AC Steckdose, 'mit Waermepumpe' standard. IMPORTANT for extraction: XPENG publishes 'DC-Ladezeit 20-80%' = 10 Min. for the P7+, NOT a 10-80% figure - charging.time_10_to_80_min stays unfilled from this source rather than being silently mapped."
   - file: xpeng-p7/spec-page.html
     url: https://www.xpeng.com/news/0186161f6fd585aab2752c9e85ce02f4
-    type: spec_page
+    type: press_kit
     covers_models: [xpeng-p7, xpeng-g9]
     covers_variants: [xpeng-p7-long-range-2025]
-    fields_present: [charging.time_10_to_80_min, performance.acceleration_0_100_sec, range.wltp_km]
-    notes: "Official XPENG global press release 'XPENG Launches G9 SUV and P7 Sedan for Europe' - the only remaining official page for the pre-2026 P7 sedan (model pages removed EU-wide). States 175 kW max DC, 10-80% in 29 min, 576 km WLTP (RWD Long Range), 0-100 in 4.1 s (AWD). Also covers EU G9 launch specs."
+    fields_present: [charging.time_10_to_80_min, performance.acceleration_0_100_sec, features.heat_pump, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official XPENG global press release 'XPENG Launches G9 SUV and P7 Sedan for Europe' - still the only remaining official page for the pre-2026 P7 sedan. States 175 kW max DC, 10-80% in 29 min, 576 km WLTP (RWD Long Range), 0-100 in 4.1 s (AWD), and 'a heat pump and heated steering wheel'. Re-checked 2026-08: https://www.xpeng.com/de/model/p7 and /at/model/p7 still 404, and https://www.xpeng.com/de/p7 serves the XPENG 404 page (its <title> is 'XPENG (AT)-404') that merely renders the site chrome plus the P7+ PDF link - so there is genuinely nothing newer to fetch."
 skipped:
   - model: xpeng-p7
-    reason: "Old P7 sedan model pages removed from all XPENG EU sites (de/nl/no/dk/se all 404); only the official 2023 EU launch press release remains (saved as spec-page.html). No price list or datasheet PDF available anymore."
+    reason: "Old P7 sedan model pages remain removed from all XPENG EU sites (de/at/nl/no/dk/se 404, re-verified 2026-08). Only the official 2023 EU launch press release survives (saved as spec-page.html); no price list or datasheet PDF exists any more. Consequence: seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.drive_type/motors, bidirectional.v2l and efficiency figures for xpeng-p7 cannot be sourced officially and should stay unknown."

@@ -1,0 +1,60 @@
+brand: renault
+fetched_at: "2026-08-13"
+documents:
+  - file: renault-4-e-tech/price-list.pdf
+    url: https://cdn.group.renault.com/ren/at/renaultat/downloadcenter/renault-4/renault4-e-tech-electric-preisliste.pdf
+    type: price_list
+    covers_models: [renault-4-e-tech]
+    covers_variants: [renault-4-e-tech-evolution-40-2025, renault-4-e-tech-techno-52-2025]
+    fields_present: [charging.time_15_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.usable_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Renault Austria official download center, 'RENAULT 4 E-TECH ELECTRIC Preisliste', Datenstand 15.05.2026. Full 'Technische Daten' tables: Motortyp, max. Drehmoment, Ladezeiten, Sitzplaetze, Radstand, Gesamtlaenge, homologierter Stromverbrauch kWh/100 km. IMPORTANT: the DC row is 'CCS Schnellladung DC (15-80%)', NOT 10-80 % - do not map it to charging.time_10_to_80_min. V2L appears as the priced 'V2L-Adapter' accessory; Waermepumpe listed in the equipment section. Covers 40-kWh (AC11/DC80) and 52-kWh (AC11/DC100) versions."
+  - file: renault-5-e-tech/price-list.pdf
+    url: https://cdn.group.renault.com/ren/at/renaultat/downloadcenter/renault-5/renault5-e-tech-electric-preisliste.pdf
+    type: price_list
+    covers_models: [renault-5-e-tech]
+    covers_variants: [renault-5-e-tech-evolution-40-2025, renault-5-e-tech-techno-52-2025]
+    fields_present: [charging.time_15_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.usable_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Renault Austria official download center, 'RENAULT 5 E-TECH ELECTRIC Preisliste', Datenstand 04.08.2026. Evolution/Techno/Iconic trims and both 40-kWh Urban Range and 52-kWh Comfort Range batteries are in the tables. Same caveat as the R4: charge windows are 15-80 %, not 10-80 %."
+  - file: renault-megane-e-tech/price-list.pdf
+    url: https://cdn.group.renault.com/ren/at/renaultat/downloadcenter/megane-e-tech/Megane-E-Tech_Preisliste.pdf
+    type: price_list
+    covers_models: [renault-megane-e-tech]
+    covers_variants: [renault-megane-e-tech-ev60-iconic-2025, renault-megane-e-tech-ev60-techno-2025]
+    fields_present: [charging.time_15_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.usable_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Renault Austria official download center, 'RENAULT MEGANE E-TECH ELECTRIC Preisliste', Datenstand 15.05.2026. WARNING: only the 60-kWh (EV60) battery is still listed - the queue variant renault-megane-e-tech-ev40-2025 (40 kWh) is NOT covered by this document; EV40 has been dropped from the current line-up. Charge windows 15-80 %; 22-kW AC wallbox is an option row."
+  - file: renault-scenic-e-tech/price-list.pdf
+    url: https://cdn.group.renault.com/ren/at/renaultat/downloadcenter/scenic-e-tech-electric/Scenic-E-Tech-Preisliste.pdf
+    type: price_list
+    covers_models: [renault-scenic-e-tech]
+    covers_variants: [renault-scenic-e-tech-comfort-range-60-2025, scenic-e-tech-comfort-range-2025, scenic-e-tech-long-range-2025]
+    fields_present: [charging.time_15_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.usable_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Renault Austria official download center, 'RENAULT SCENIC E-TECH ELECTRIC Preisliste', Datenstand 15.05.2026. Both Comfort Range 60 kWh (AC11/DC130) and Long Range 87 kWh (AC11/DC150) are in the tables, with 'Homologierter Stromverbrauch (kWh/100 km) laut WLTP' - the missing efficiency figure. 'Waermepumpe mit Batteriekonditionierung' is an explicit equipment row. The MY2024 queue variants (comfort-range-60-2024, long-range-87-2024) are the same technical versions but this list is a 2026 data state - check for spec drift before writing MY2024 rows."
+  - file: renault-twingo-e-tech/price-list.pdf
+    url: https://cdn.group.renault.com/ren/at/renaultat/downloadcenter/twingo-e-tech/twingo-e-tech-electric-preisliste.pdf
+    type: price_list
+    covers_models: [renault-twingo-e-tech]
+    covers_variants: [renault-twingo-e-tech-techno-40-2026, renault-twingo-e-tech-urban-40-2026]
+    fields_present: [charging.time_10_to_80_min, charging.time_10_to_100_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.usable_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Renault Austria official download center, 'RENAULT TWINGO E-TECH ELECTRIC Preisliste', Datenstand 22.07.2026. This one DOES carry a real 'CCS Schnelladung DC (10-80%)' row (0h30, AC11/DC50), plus Radstand and Gesamtlaenge - the missing dimensions.length_mm / dimensions.wheelbase_mm. NOTE: battery is an LFP pack of 27,5 kWh, so the queue's '...-40-2026' variant ids look mis-sized; verify before extraction. No Waermepumpe row anywhere in the list (only 'Klimaanlage manuell' / automatic) and no V2L row."
+  - file: renault-twingo-e-tech/spec-page.html
+    url: https://media.renault.com/renault-twingo-e-tech-electric-from-eur19490/
+    type: press_kit
+    covers_models: [renault-twingo-e-tech]
+    covers_variants: [renault-twingo-e-tech-techno-40-2026, renault-twingo-e-tech-urban-40-2026]
+    fields_present: [charging.time_10_to_80_min, bidirectional.v2l, bidirectional.v2g, range.wltp_km, battery.chemistry, performance.motors]
+    fetched_at: "2026-08-13"
+    notes: "Official Renault global media site press release (saved HTML, canonical URL as given). Confirms 10 %-80 % DC in 30 minutes, 11-kW AC charger with V2L up to 3.700 W via power-to-object adapter plus V2G support, LFP battery, 60 kW (82 hp) motor, up to 263 km WLTP. Complements the price list, which has no V2L row."
+  - file: renault-zoe/price-list.pdf
+    url: https://cdn.group.renault.com/ren/de/product-plans/zoe-b10-ph2-/REND-A-064655-ZOE_1b_RZ_www.pdf.asset.pdf/ff2969cd17.pdf
+    type: price_list
+    covers_models: [renault-zoe]
+    covers_variants: [renault-zoe-ze50-r110-2024]
+    fields_present: [features.heat_pump, seats, dimensions.length_mm, dimensions.wheelbase_mm, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Renault Deutschland 'ZOE E-TECH 100% ELEKTRISCH - Preise und Ausstattungen', gueltig ab 03. Januar 2023, ersetzt die Preisliste vom 01. Juni 2022. Last German Zoe list still reachable on the Renault CDN and it covers BOTH R110 and R135, so it matches the ze50-r110 queue variant. Contains 'Energiesparende 2-Kreis-Waermepumpe fuer Heizung und Klimatisierung' (the missing features.heat_pump), plus Radstand, Gesamtlaenge and Sitzplaetze. Zoe production ended in 2024; no newer official German list exists."
+skipped: []

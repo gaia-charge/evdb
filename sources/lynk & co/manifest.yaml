@@ -1,0 +1,56 @@
+brand: lynk & co
+fetched_at: "2026-08-13"
+documents:
+  - file: lynk-co-02/press-kit.pdf
+    url: https://d21buns5ku92am.cloudfront.net/69364/documents/55354-1728472996-Lynk%20%26%20Co%2002%20Press%20Kit-1fe17b.pdf
+    type: press_kit
+    covers_models: [lynk-co-02]
+    covers_variants: [lynk-co-02-core-2025, lynk-co-02-more-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - charging.max_dc_kw
+      - charging.max_ac_kw
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - performance.acceleration_0_100_sec
+      - features.heat_pump
+      - battery.gross_kwh
+      - battery.chemistry
+      - efficiency.wltp_kwh_per_100km
+      - range.wltp_km
+      - range.wltp_city_km
+      - dimensions.length_mm
+      - dimensions.width_mm
+      - dimensions.height_mm
+      - dimensions.wheelbase_mm
+    notes: >
+      Official "Lynk & Co 02 Press Kit" PDF, linked as the media asset of the 11 Oct 2024
+      launch release on the Lynk & Co newsroom. Carries a full Core/More technical
+      specification table: motor type "Electric Motor, synchronous, mounted on the rear axle"
+      (single motor), Powertrain RWD, torque 343 Nm, 200 kW, 0-100 km/h 5.5 s, top speed
+      180 km/h; battery type NCM, 66 kWh, 400 V; AC 11 kW (Core) / 22 kW (More),
+      DC 150 kW, rapid charging approx. 30 min from 10 % to 80 %; range combined
+      435 km (Core) / 445 km (More) and urban 563 km / 592 km; consumption 176 Wh/km /
+      171 Wh/km combined and 136 / 129 Wh/km urban; length 4460 mm, width (folded mirrors)
+      1845 mm, height 1573 mm, wheelbase 2755 mm. Heat pump is named as a More-only
+      feature ("the More version has a greater range due to the active grille shutter and
+      heat pump"). Large file (32 MB) because of the embedded press photography.
+  - file: lynk-co-02/spec-page.html
+    url: https://press.lynkco.com/en-WW/242073-lynk-co-introduces-the-all-electric-02-its-first-ev-for-europe-arrives-with-445-km-range-and-premium-features/
+    type: press_kit
+    covers_models: [lynk-co-02]
+    covers_variants: [lynk-co-02-core-2025, lynk-co-02-more-2025]
+    fields_present: [range.wltp_km, production_status]
+    notes: >
+      Official Lynk & Co newsroom launch release (11 Oct 2024) that hosts the press kit above:
+      445 km WLTP range, European on-sale date and starting price EUR 35,495, built on the SEA
+      platform. Thin on numbers itself - kept as the provenance page for press-kit.pdf.
+skipped: []
+notes: >
+  https://www.lynkco.com/de-de/cars/02 was fetched but discarded: curl returns a 426 KB
+  React shell with only ~2 KB of visible text ("Loading component...") and no specification
+  table; the /specifications, /specs and /technical-specifications paths under it all 404.
+  The press kit supersedes it for every field it would have carried. Two gap fields remain
+  unsourced for this model: seat count and V2L / bidirectional load are not stated in any
+  official Lynk & Co document found.

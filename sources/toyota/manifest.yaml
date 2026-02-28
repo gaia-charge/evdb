@@ -1,41 +1,86 @@
 brand: toyota
 fetched_at: "2026-08-13"
+# fields_present was re-verified by extracting the text of every stored PDF/HTML and
+# locating the actual row label. Note for extraction: NO Toyota price list in this store
+# has an explicit seat-count row, so the model-level `seats` gap is still open for all
+# three models (see skipped:).
 documents:
   - file: toyota-bz4x/price-list.pdf
     url: https://datablob.toyota.nl/data/ToyotaV8/prijslijsten/pdf_prijslijsten/bZ4X.pdf
     type: price_list
     covers_models: [toyota-bz4x]
     covers_variants: [toyota-bz4x-fwd-2025, toyota-bz4x-awd-2025]
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.drive_type, battery.gross_kwh]
-    notes: "Official Toyota Netherlands 'Prijslijst-brochure' (Oct 2025) - facelifted bZ4X with 57.7/73.1 kWh batteries, FWD and AWD. Contains 'DC laden 10 tot 80%', Warmtepomp, Maximaal koppel, Acceleratie 0-100, Aandrijving. NOTE: covers the facelift lineup; queue 2024 variants are the pre-facelift car (71.4 kWh) whose official price lists have been withdrawn."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Official Toyota Netherlands 'Prijslijst-brochure' (Oct 2025) - facelifted bZ4X with 57,7/73,1 kWh (bruto) batteries, FWD and AWD. Verified rows: 'DC laden 10 tot 80% bij 25 C' = ca. 28 minuten across all grades, 'Warmtepomp', 'Aandrijving', 'Maximaal koppel'. Covers the facelift lineup only; the queue's 2024 variants are the pre-facelift 71,4 kWh car - see press-kit.pdf."
+  - file: toyota-bz4x/price-list-2.pdf
+    url: https://broschueren.toyota.de/d/7opi
+    type: price_list
+    covers_models: [toyota-bz4x]
+    covers_variants: [toyota-bz4x-fwd-2025, toyota-bz4x-awd-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official Toyota Germany 'Preise und Fakten' bZ4X price list. The /d/7opi short link is the PDF download served from Toyota Germany's own brochure portal; the human-readable landing page is https://broschueren.toyota.de/de/profiles/9c59aae1a25d-toyota/editions/bz4x-preisliste, which is linked from https://www.toyota.de/downloads. Verified rows: 'Ladedauer DC (10-80%) (min)' = 28 for all three powertrains, 'Ladedauer, AC (10-100%) (h)', 'Waermepumpe' (standard, marked with a filled dot on every grade), 'Motorentechnologie: Elektro, Drehstromsynchronmotor', Frontantrieb / Allradantrieb. Also the only Toyota document here that gives a city range: 'elektrische Reichweite innerorts (EAER City)' = 640 / 709-788 / 637-694 km. Direct toyota.de DAM links (Toyota_bZ4X_PL_07_24_g.pdf etc.) are all 404 now, and de.toyota.ch's PL_bZ4X_de_03.pdf is gone too - this portal link is the surviving official route."
+  - file: toyota-bz4x/press-kit.pdf
+    url: https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240704-bZ4X-Press-Pack.pdf
+    type: press_kit
+    covers_models: [toyota-bz4x]
+    covers_variants: [toyota-bz4x-fwd-2024, toyota-bz4x-awd-2024]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official Toyota GB press pack (media.toyota.co.uk, updated June/July 2024) for the PRE-FACELIFT bZ4X - i.e. the 71,4 kWh car that matches the queue's 2024 variants, which no current price list covers any more. Verified: 'The lithium-ion battery unit has a 71.4kWh capacity and comprises 96 cells'; 'rapid charging from 10 to 80 per cent capacity in around 35 minutes'; 'an efficient and effective heating system, including a heat pump'; the equipment matrix has an 'Energy-saving heat pump' row ticked on all grades; full TECHNICAL SPECIFICATIONS table with FWD / X-MODE AWD columns, motor type, per-axle power, max torque 266/337 Nm, 0-62mph, dimensions. Caveat for extraction: the 35-minute figure is prose ('around'), and the document carries Toyota's internal 'PROTECTED' classification banner even though it is served publicly and unauthenticated from Toyota GB's press site."
   - file: toyota-c-hr-plus/price-list.pdf
     url: https://datablob.toyota.nl/data/brochures/C-HR+brochure.pdf
     type: price_list
     covers_models: [toyota-c-hr-plus]
     covers_variants: [toyota-c-hr-plus-77kwh-2025]
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, battery.gross_kwh]
-    notes: "Official Toyota Netherlands C-HR+ prijslijst-brochure from toyota.nl/modellen/c-hr-plus. Covers 57.7 kWh and 77 kWh (incl. Executive AWD): DC fast charging 10-80%, warmtepomp, koppel."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Official Toyota Netherlands C-HR+ prijslijst-brochure from toyota.nl/modellen/c-hr-plus. Covers 57,7 kWh and 77 kWh (incl. Executive AWD): 'DC-snelladen laad je de batterij van 10 tot 80%', warmtepomp, koppel, Aandrijving (Voorwielen / All-Wheel Drive)."
+  - file: toyota-c-hr-plus/price-list-2.pdf
+    url: https://broschueren.toyota.de/d/8dmr
+    type: price_list
+    covers_models: [toyota-c-hr-plus]
+    covers_variants: [toyota-c-hr-plus-77kwh-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official Toyota Germany 'Preise und Fakten' C-HR+ price list (PDF download behind /d/8dmr; landing page https://broschueren.toyota.de/de/profiles/9c59aae1a25d-toyota/editions/c-hr-preisliste, whose page title is 'C-HR+ Preisliste' - note the misleading slug, the plain C-HR list is c-hr-preisliste-2). This is the source that closes the C-HR+ city-range gap: 'elektrische Reichweite innerorts (EAER City)' = 658 km (57,7 kWh FWD), 836 km (77 kWh FWD), 645-653 km (77 kWh AWD). Also 'Ladedauer DC (10-80%)', 'Waermepumpe', Frontantrieb/Allradantrieb."
+  - file: toyota-c-hr-plus/price-list-3.pdf
+    url: https://localform.toyota.at/pdf/pricelist/c-hr-plus.pdf
+    type: price_list
+    covers_models: [toyota-c-hr-plus]
+    covers_variants: [toyota-c-hr-plus-77kwh-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "NEW. Official Toyota Austria 'Preise und Fakten' C-HR+ price list (localform.toyota.at is Toyota Austria's own PDF host, linked from toyota.at/neuwagen/brochures). Carries the cleanest full TECHNISCHE DATEN table of the three: 'Motorentechnologie: Elektro, Drehstromsynchronmotor', 'Antriebsart: FWD Vorderradantrieb / AWD Allradantrieb', 'Maximales Drehmoment (Nm)' 268/268/338, 'Beschleunigung 0-100 km/h (sek)' 8,4/7,3/5,2, 'Batteriekapazitaet brutto (kWh)' 57,7/77/77 and 'netto' 54/72/72, 'Batterietyp Lithium-Ionen', 'Ladedauer DC 150-kW-Ladestation (10-80%) (min)' = ca. 28, 'Maximale Ladeleistung AC (kW)' 11/11/22 with 'Ladedauer (10-100%)'. For the AWD it also splits the motors: 'E-Motor vorn: 165 kW, E-Motor hinten: 88 kW'."
   - file: toyota-urban-cruiser/price-list.pdf
     url: https://broschueren.toyota.de/d/7wer
     type: price_list
     covers_models: [toyota-urban-cruiser]
     covers_variants: [toyota-urban-cruiser-61-fwd-2025]
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, battery.gross_kwh, performance.total_torque_nm]
-    notes: "Official Toyota Germany 'Preise und Fakten' Urban Cruiser (served via broschueren.toyota.de, Toyota's brochure portal; resolves to urban-cruiser-preisliste PDF). Covers 61 kWh Frontantrieb 128 kW and Allradantrieb 135 kW incl. Ladedauer DC (10-80%), Waermepumpe. 49 kWh variant not sold in DE."
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Toyota Germany 'Preise und Fakten' Urban Cruiser (broschueren.toyota.de brochure portal, edition urban-cruiser-preisliste). Covers 61 kWh Frontantrieb 128 kW and Allradantrieb 135 kW incl. 'Ladedauer DC (10-80%)' and 'Waermepumpe'. The 49 kWh variant is not sold in DE. Richest single Toyota document in this store."
   - file: toyota-urban-cruiser/price-list-2.pdf
     url: https://datablob.toyota.nl/data/ToyotaV8/prijslijsten/pdf_prijslijsten/Urban-Cruiser.pdf
     type: price_list
     covers_models: [toyota-urban-cruiser]
     covers_variants: [toyota-urban-cruiser-61-fwd-2025]
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, battery.gross_kwh]
-    notes: "Official Toyota Netherlands Urban Cruiser prijslijst (61.1 kWh only). 'DC laden 10% tot 80% (snelladen)', 'Maximaal koppel (Nm)'."
+    fields_present: [performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Official Toyota Netherlands Urban Cruiser prijslijst (61,1 kWh only). Kept as a cross-check; the German list above is the stronger source. CORRECTION to the earlier manifest: the DC 10-80% and battery-capacity claims for this file could not be re-confirmed in the extracted text, so they have been removed here."
   - file: toyota-urban-cruiser/spec-page.html
     url: https://newsroom.toyota.eu/the-all-new-toyota-urban-cruiser-a-prime-contender-in-the-electric-b-suv-market/
     type: press_kit
     covers_models: [toyota-urban-cruiser]
     covers_variants: [toyota-urban-cruiser-49-fwd-2025, toyota-urban-cruiser-61-fwd-2025]
-    fields_present: [battery.chemistry]
-    notes: "Official Toyota Europe newsroom article - only official source found covering the 49 kWh FWD variant (49/61 kWh, LFP lithium-iron-phosphate chemistry, FWD/AWD layout, preliminary range figures)."
+    fields_present: [battery.chemistry, performance.drive_type]
+    fetched_at: "2026-08-13"
+    notes: "Official Toyota Europe newsroom article - the only official source found that covers the 49 kWh FWD variant. Verified text: 'Both batteries use durable but cost-efficient lithium-iron phosphate technology' (LFP), plus the 49/61 kWh split and the FWD/AWD layout with preliminary range figures."
 skipped:
   - model: toyota-bz4x
-    reason: "Partial: pre-facelift MY2024 price lists (Toyota_bZ4X_PL_*.pdf on toyota.de DAM) have been removed (404); only facelift-era documents are still published officially. 2024 variants need extraction from the facelift docs' comparable figures or a later archive pass."
+    reason: "Partial: the queue's 2024 variants are the pre-facelift 71,4 kWh car whose price lists have been withdrawn from toyota.de and de.toyota.ch (all direct DAM URLs 404). The Toyota GB press pack saved as press-kit.pdf is the substitute and does carry DC 10-80% (~35 min) and heat pump for that generation, but as prose rather than a per-variant table. Also: the model-level `seats` gap is NOT closed - no Toyota price list in this store has a seat-count row."
+  - model: toyota-c-hr-plus
+    reason: "Partial: bidirectional.v2l and charging.charging_speed_kmh are not stated in any of the three official price lists (searched for V2L / bidirektional / Vehicle-to-Load / 230V outlet - only the Mode-2 Schuko charging cable appears). Model-level `seats` also not covered; the Toyota GB C-HR+ tech-spec PDF (media.toyota.co.uk/.../260316-C-HR-Tech-Specs.pdf) was checked and has no seat row or charging times either, so it was not stored."
+  - model: toyota-urban-cruiser
+    reason: "Partial: `seats` (the only model-level gap) is not stated in either price list or the newsroom article; bidirectional.v2l and charging.charging_speed_kmh likewise absent from all official Urban Cruiser material found."

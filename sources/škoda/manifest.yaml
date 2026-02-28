@@ -34,8 +34,8 @@ documents:
       - skoda-enyaq-coupe-85x-2025
       - skoda-enyaq-coupe-vrs-2025
     fields_present: [features.heat_pump]
-    notes: "Official Austrian importer 'Enyaq Preisliste' incl. 'Technische Daten | Enyaq | Enyaq Coupé' section for the 2025 facelift lineup (85/85x/RS both bodies); Wärmepumpe in equipment list"
-  - file: skoda-enyaq-iv/datasheet.pdf
+    notes: "Official Austrian importer 'Enyaq Preisliste' incl. 'Technische Daten | Enyaq | Enyaq Coupé' section for the 2025 facelift lineup (85/85x/RS both bodies); Wärmepumpe in equipment list. Byte-identical copies previously stored under skoda-enyaq-coupe-iv/ (price-list.pdf and datasheet-2.pdf) were removed; these single files cover both bodies"
+  - file: skoda-enyaq-iv/datasheet-2.pdf
     url: https://cdn.skoda-storyboard.com/2024/02/TD-Enyaq-iV-en_9ed3112d_7065b055.pdf
     type: datasheet
     covers_models: [skoda-enyaq-iv, skoda-enyaq-coupe-iv]
@@ -46,8 +46,19 @@ documents:
       - skoda-enyaq-iv-vrs-2024
       - skoda-enyaq-coupe-iv-80-2024
       - skoda-enyaq-coupe-iv-vrs-2024
-    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.motors, performance.drive_type, battery.gross_kwh, seats, dimensions.length_mm]
-    notes: "Official technical specifications dated 13.2.2023 covering Enyaq iV 50/60/80/80x, Enyaq RS iV, Enyaq Coupé iV and Coupé RS iV: PSM/ASM motors, DC 10-80% power/time, AC 0-100%, torque, seat widths"
+    fields_present: [charging.time_10_to_80_min, performance.total_torque_nm, performance.motors, performance.drive_type, battery.gross_kwh, dimensions.length_mm]
+    notes: "Official technical specifications dated 13.2.2023 covering Enyaq iV 50/60/80/80x, Enyaq RS iV, Enyaq Coupé iV and Coupé RS iV: PSM rear / ASM front motors, wheel drive, DC 10-80% power/time, AC 0-100%, torque, seat widths (not seat count). Filename corrected: this URL is datasheet-2.pdf, not datasheet.pdf"
+  - file: skoda-enyaq-iv/datasheet.pdf
+    url: https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-en_0308de7f.pdf
+    type: datasheet
+    covers_models: [skoda-enyaq-iv]
+    covers_variants:
+      - skoda-enyaq-85-2025
+      - skoda-enyaq-85x-2025
+      - skoda-enyaq-vrs-2025
+      - skoda-enyaq-iv-60-2024
+    fields_present: [charging.time_10_to_80_min, charging.max_dc_kw, performance.motors, performance.drive_type, battery.gross_kwh, dimensions.length_mm, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    notes: "2025 facelift 'Škoda Enyaq' technical specifications dated 9.5.2025 (Enyaq 60/85/85x/RS): PSM motor / rear+front for 4x4, battery 63(59), 82(77), 84(79) kWh, DC 10-80% 165 kW/24 min, 135 kW/28 min, 175 kW/28 min, 185 kW/26 min, length 4658-4660 mm, WLTP 14.9-15.8 kWh/100 km"
   - file: skoda-enyaq-iv/press-kit.pdf
     url: https://cdn.skoda-storyboard.com/2022/12/Press_kit_SKODA_ENYAQ_RS_iV_Media_Launch_2640b702.pdf
     type: press_kit
@@ -56,12 +67,15 @@ documents:
     fields_present: [performance.total_torque_nm, performance.acceleration_0_100_sec]
     notes: "Enyaq RS iV media launch press kit (Dec 2022): 220 kW, 460 Nm, 6.5 s 0-100 for both body styles"
   - file: skoda-enyaq-coupe-iv/datasheet.pdf
-    url: https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf
+    url: https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-Coupe-en_d0e93c99.pdf
     type: datasheet
     covers_models: [skoda-enyaq-coupe-iv]
-    covers_variants: [skoda-enyaq-coupe-iv-80-2024]
-    fields_present: [performance.motors, performance.drive_type, performance.total_torque_nm, battery.gross_kwh]
-    notes: "Official technical specifications (7.3.2022) for Enyaq Coupé iV 60/80/80x"
+    covers_variants:
+      - skoda-enyaq-coupe-85-2025
+      - skoda-enyaq-coupe-85x-2025
+      - skoda-enyaq-coupe-vrs-2025
+    fields_present: [charging.time_10_to_80_min, charging.max_dc_kw, performance.motors, performance.drive_type, battery.gross_kwh, dimensions.length_mm, range.wltp_km]
+    notes: "2025 facelift 'Škoda Enyaq Coupé' technical specifications dated 9.5.2025 (Coupé 60/85/85x/RS): PSM motor, rear/four-wheel drive, DC 10-80% 165 kW/24 min, 135 kW/28 min, 175 kW/28 min, 185 kW/26 min, length 4658-4660 mm, WLTP range 443-591 km. URL corrected: the stored file is the 2025 Coupé sheet, not the 2022 TD-ENYAQ-COUPE-iV-en.pdf previously recorded here"
   - file: skoda-enyaq-coupe-iv/press-kit.pdf
     url: https://cdn.skoda-storyboard.com/2022/03/Press_Kit_SKODA_ENYAQ_COUPE_iV_Media_Launch.pdf
     type: press_kit

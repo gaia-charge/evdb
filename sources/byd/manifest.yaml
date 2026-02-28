@@ -33,6 +33,14 @@ documents:
     fields_present: [battery.capacity_gross_kwh, battery.chemistry, charging.time_10_to_80_min, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.drive_type, efficiency.wltp_kwh_per_100km, range.wltp_city_km, seats, dimensions.length_mm, dimensions.wheelbase_mm, bidirectional.v2l]
     fetched_at: "2026-08-13"
     notes: "Official EU English spec leaflet (Dolphin surf-0625-BPS-EN-V2, Jun 2025). Also covers the Active trim. No heat-pump row found in text layer. Digit-ligature caveat as above."
+  - file: byd-dolphin-surf/datasheet-2.pdf
+    url: https://www.byd.com/material/byd-site/de/pdfs/dolphin-surf/Dolphin-surf-0525-BPS-DE-V2_Web.pdf
+    type: datasheet
+    covers_models: [byd-dolphin-surf]
+    covers_variants: [byd-dolphin-surf-comfort-2025]
+    fields_present: [seats, bidirectional.v2l, battery.capacity_gross_kwh, battery.chemistry, range.wltp_city_km, efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, performance.motors, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official German DOLPHIN SURF technical-data sheet (Dolphin-surf-0525-BPS-DE-V2, May 2025) from byd.com/de. Columns Active/Boost/Comfort - the German range has no 'Design' trim, so only the Comfort queue variant maps directly. Adds what the EN leaflet lacked: explicit 'Externgeraete-Stromversorgung (V2L)' row (standard on all three trims), 'Antriebsart FWD', '5-Sitzer', Permanentmagnet-Synchronmotor, and two DC-Ladezeit SOC-window rows. Confirms BYD publishes NO Waermepumpe row for this model in either the EN or DE sheet - features.heat_pump stays unevidenced. Digits render as ligatures in pdftotext - read values visually during extraction."
   - file: byd-dolphin/datasheet.pdf
     url: https://www.byd.com/material/byd-site/eu/pdfs/dolphin/DOLPHIN%202025-0625-BPS-EN-V2.pdf
     type: datasheet
@@ -65,6 +73,14 @@ documents:
     fields_present: [battery.capacity_gross_kwh, battery.chemistry, charging.time_10_to_80_min, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.drive_type, efficiency.wltp_kwh_per_100km, range.wltp_city_km, seats, dimensions.length_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
     fetched_at: "2026-08-13"
     notes: "Official EU English spec leaflet (internal title Seal-0124-BPS-EN-V3-web, Jan 2024), current 'BROCHURE' link on https://www.byd.com/eu/electric-cars/seal. MY2024 sheet - 2025/2026 design-rwd variants need value carry-over checks. Digit-ligature caveat as above."
+  - file: byd-seal/datasheet-2.pdf
+    url: https://www.byd.com/material/byd-site/ch/pdfs/brochures/de/Folder_SEAL%202026_CH%20(DE).pdf
+    type: datasheet
+    covers_models: [byd-seal]
+    covers_variants: [byd-seal-design-rwd-2026]
+    fields_present: [features.heat_pump, bidirectional.v2l, battery.capacity_gross_kwh, battery.chemistry, range.wltp_city_km, efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, performance.motors, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official BYD Switzerland German SEAL 2026 brochure ('Folder_SEAL 2026_CH (DE)'), linked from https://www.byd.com/de-ch/e-fahrzeuge/seal. Columns Design (Hinterradantrieb) and Excellence AWD (Allradantrieb). This is the MY2026 sheet the Jan-2024 EN leaflet does not cover: explicit 'Waermepumpe' and 'Externgeraete-Stromversorgung (V2L)' rows (both standard), Elektromotortyp per axle, WLTP city range + city consumption, two DC-Ladezeit SOC-window rows, and Laenge/Radstand. Also evidence the SEAL is on sale as MY2026 (production_status). No seat-count row. Digit-ligature caveat as above."
   - file: byd-sealion-7/datasheet.pdf
     url: https://www.byd.com/material/byd-site/eu/pdfs/sealion-7/SEALION%207-1124-BPS-EN-8P-V2-print.pdf
     type: datasheet
@@ -81,4 +97,12 @@ documents:
     fields_present: [battery.capacity_gross_kwh, battery.chemistry, charging.time_10_to_80_min, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_city_km, seats, dimensions.length_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
     fetched_at: "2026-08-13"
     notes: "Official EU English spec leaflet (May 2024). No explicit drive-type row found in text layer (Tang is AWD-only). Digit-ligature caveat as above."
+  - file: byd-tang/datasheet-2.pdf
+    url: https://www.byd.com/material/byd-site/de/pdfs/tang/TANG-0624-BPS-DE-V6-web.pdf
+    type: datasheet
+    covers_models: [byd-tang]
+    covers_variants: [byd-tang-ev-awd-2025]
+    fields_present: [seats, features.heat_pump, bidirectional.v2l, battery.capacity_gross_kwh, battery.chemistry, range.wltp_city_km, efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, performance.motors, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official German TANG technical-data sheet (TANG-0624-BPS-DE-V6-web, Jun 2024) from byd.com/de, Flagship trim. Closes the drive-type gap the EN leaflet left open with an explicit 'Antriebsart: Intelligenter Allradantrieb' row, and adds 'Waermepumpe' and 'Externgeraete-Stromversorgung (V2L)' rows plus 'Drei Sitzreihen (2+3+2)' as the seat evidence. Max. Drehmoment is split Vorn/Hinten, not a system total - sum the two axles for performance.total_torque_nm. Digit-ligature caveat as above."
 skipped: []

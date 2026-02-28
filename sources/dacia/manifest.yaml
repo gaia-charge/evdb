@@ -1,0 +1,28 @@
+brand: dacia
+fetched_at: "2026-08-13"
+documents:
+  - file: dacia-spring/price-list.pdf
+    url: https://dokumente.dacia.de/preislisten/Dacia_Spring_Preisliste.pdf
+    type: price_list
+    covers_models: [dacia-spring]
+    covers_variants: []
+    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.total_power_kw, charging.time_0_to_80_min, charging.ac_max_kw, charging.dc_max_kw, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Dacia Deutschland price list 'DACIA SPRING – PREISE UND AUSSTATTUNGEN', gültig ab 16. April 2026 (13 pages, single always-current file on dokumente.dacia.de). Sections seen: TECHNISCHE DATEN (Antriebsart Frontantrieb, Max. Drehmoment, Motorleistung), BATTERIE-LADESYSTEM (Batterie-Nennwert kWh, Batterietyp Lithium-Eisen…, Gewicht der Batterie), LADEDAUER DER BATTERIE with the row 'DC-Schnellladung über CCS-Ladeanschluss – 40 kW (0–80 %)' (this is the 0→80 % figure the queue asks for; Dacia does not publish a 10–80 % time), and WEITERE ABMESSUNGEN with 'Sitzplätze 4'. CAVEAT: this is the MY2026 Spring with the new motors and new battery technology; the queue's variants are model-year 2025, so use dacia-spring/price-list-2.pdf for the 2025 powertrain/charging values and this file mainly for vehicle-level facts. No Wärmepumpe row anywhere in the document."
+  - file: dacia-spring/price-list-2.pdf
+    url: https://cdn.group.renault.com/dac/at/downloadcenter/spring/preisliste-spring.pdf
+    type: price_list
+    covers_models: [dacia-spring]
+    covers_variants: [dacia-spring-expression-2025, dacia-spring-extreme-2025]
+    fields_present: [performance.drive_type, performance.total_torque_nm, performance.total_power_kw, charging.time_0_to_80_min, charging.ac_max_kw, charging.dc_max_kw, battery.gross_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Dacia Österreich price list 'DACIA SPRING 100% elektrisch – Preisliste, Datenstand 01.07.2025' (7 pages, served from Renault Group's own CDN, linked from the dacia.at download centre). This is the model year that matches the queue's Expression/Extreme 2025 variants: line-up Essential/Expression Electric 45, Expression/Extreme Electric 65. Sections seen: Abmessungen, Technische Daten (Motortyp Synchron…, Leistung 33 kW (44 PS) / 48 kW (65 PS), Max. Drehmoment 125 Nm bei 0-2.520 1/min, Antrieb Vorderrad…), Batterie-Ladesystem (Batterie-Nennwert 26,x kWh, Batterietyp Lithium…), Ladedauer der Batterie with 'DC-Schnellladung, 30 kW (0 - 80 %)'. Note the 2025 car charges at 30 kW DC, the 2026 car at 40 kW. No Wärmepumpe row."
+  - file: dacia-spring/spec-page.html
+    url: https://www.dacia.de/hybrid-und-elektromodelle/spring-stadtauto/merkmale-vergleichen.html
+    type: spec_page
+    covers_models: [dacia-spring]
+    covers_variants: []
+    fields_present: [seats, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, performance.drive_type, performance.total_torque_nm, performance.total_power_kw, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official dacia.de 'Technisches Datenblatt – Spring' comparison page, saved as served HTML (real server-rendered spec table, not a JS shell). Directly answers the three model-level gaps: Länge 3701 mm, Breite 1583 mm, Radstand 2423 mm, 'Anzahl der Sitzplätze 4' (also Anzahl Türen 5, Wendekreis innen 9,63 m, Gepäckraum 288–1004 l). Powertrain rows seen: Maximale Leistung 52 kW, Maximales Drehmoment 137 Nm, Getriebeart automatisches Untersetzungsgetriebe, Antriebsart Frontantrieb, Reichweite 221–226 km — these are MY2026 figures, so take dimensions/seats from here and 2025 powertrain values from price-list-2.pdf. BRAND-LEVEL NOTE: Dacia publishes only one always-current price-list file per market (no dated archive), so the German list is necessarily the MY2026 Spring; the Austrian list captured at Datenstand 01.07.2025 is the closest official match to the queue's 2025 variants. No official Dacia document found for the Spring mentions a Wärmepumpe (heat pump) or a 10–80 % DC charge time — Dacia only quotes 0–80 %."
+skipped: []

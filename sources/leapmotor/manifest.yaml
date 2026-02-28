@@ -6,9 +6,9 @@ documents:
     type: press_kit
     covers_models: [leapmotor-b10]
     covers_variants: [leapmotor-b10-69-9-kwh-2025]
-    fields_present: [charging.time_10_to_80_min, features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Saved via text fetch (media.stellantis.com blocks curl with Access Denied). Official UK press information: LFP 67.1 kWh, RWD 160 kW / 240 Nm, DC 30-80% in 20 min at 168 kW, AC 11 kW, heat pump standard, V2L 230V, 5 seats, full dimensions. NOTE: charge time is 30-80%, not 10-80%; battery stated as 67.1 kWh usable (queue id says 69.9 - reconcile at extraction)."
+    notes: "Saved via text fetch (media.stellantis.com blocks curl with Access Denied). Official UK press information: LFP 67.1 kWh, RWD 160 kW / 240 Nm, DC 30-80% in 20 min at 168 kW, AC 11 kW, heat pump standard, V2L 230V, 5 seats, full dimensions, LEAP 3.5 architecture. NOTE: the DC figure is a 30-80% window, so it does NOT satisfy charging.time_10_to_80_min. Battery stated as 67.1 kWh usable (queue id says 69.9) and length as 4,515 mm where the Austrian price list says 4,530 mm - reconcile both at extraction."
   - file: leapmotor-c10/spec-page.md
     url: https://www.media.stellantis.com/uk-en/leapmotor/press/leapmotor-c10
     type: press_kit
@@ -56,5 +56,15 @@ documents:
     covers_variants: [leapmotor-b10-69-9-kwh-2025]
     fields_present: [features.heat_pump, bidirectional.v2l, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Official Leapmotor Austria price list (Stand 07/2026): B10 BEV with 56.2 kWh and 67.1 kWh packs, Wärmepumpe, V2L, torque, 0-100, seats, dimensions, AC/DC charge times (30-80% window). NOTE: queue variant id says 69.9 kWh but official docs state 56.2/67.1 kWh — reconcile at extraction."
+    notes: "Official Leapmotor Austria price list (Stand 07/2026): B10 BEV with 56.2 kWh and 67.1 kWh packs, Wärmepumpe, V2L, torque, 0-100, seats, dimensions (Länge 4530 mm, Radstand 2735 mm), AC/DC charge times (30-80% window). NOTE: queue variant id says 69.9 kWh but official docs state 56.2/67.1 kWh — reconcile at extraction."
 skipped: []
+unresolved_gaps:
+  - model: leapmotor-b10
+    field: charging.time_10_to_80_min
+    reason: "Leapmotor quotes a 30-80% DC window in every official document (press information and Austrian price list); no 10-80% figure is published."
+  - model: leapmotor-c10
+    field: charging.time_10_to_80_min
+    reason: "Same: official docs quote DC 30-80% in 30 min only."
+  - model: leapmotor-t03
+    field: charging.time_10_to_80_min
+    reason: "Same: official docs quote DC 30-80% in 36 min only."

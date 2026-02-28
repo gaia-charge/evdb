@@ -26,3 +26,7 @@ documents:
     fetched_at: "2026-08-13"
     notes: "Official EU catalogue PDF from Togg's own CDN (linked from togg.eu/t10f). Full technical table for all four versions (Standard Range RWD, Long Range RWD 18\"/19\", Long Range AWD): battery 52.4 / 88.5 kWh, WLTP combined AND city range, combined AND city consumption, AC 11 kW OBC, DC 180 kW 20-80% 28 min, traction system per version. Charge window is 20-80%, not 10-80%."
 skipped: []
+unresolved_gaps:
+  - model: togg-t10f
+    field: charging.time_10_to_80_min
+    reason: "Togg publishes a 20-80% DC window (26.5-28 min at 180 kW) on togg.com.tr, togg.eu and in the EU catalogue PDF; no 10-80% figure exists in any official source."

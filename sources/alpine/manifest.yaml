@@ -6,15 +6,15 @@ documents:
     type: price_list
     covers_models: [alpine-a290]
     covers_variants: [alpine-a290-gt-52-2025, alpine-a290-gts-52-2025]
-    fields_present: [features.heat_pump, performance.acceleration_0_100_sec]
-    notes: "German price list 'A290 Preise und Ausstattung', valid from 4 November 2025 (linked from alpinecars.de); technical data incl. heat pump, max torque, battery kWh, 0-100 km/h, AC 11 kW / DC 100 kW charging"
+    fields_present: [features.heat_pump, performance.acceleration_0_100_sec, performance.drive_type, dimensions.length_mm, dimensions.wheelbase_mm]
+    notes: "German price list 'A290 Preise und Ausstattung', valid from 4 November 2025 (linked from alpinecars.de). Standard equipment lists 'Wärmepumpe'. Technical table has ANTRIEB, BESCHLEUNIGUNG 0-100KM/H IN SEK., ANTRIEBSART = FRONTANTRIEB (FWD), LÄNGE IN MM, RADSTAND IN MM, battery kWh, max torque, AC 11 kW / DC 100 kW charging"
   - file: alpine-a290/spec-page.html
     url: https://www.alpinecars.de/elektromodelle/a290/page-comparator.html
     type: spec_page
     covers_models: [alpine-a290]
     covers_variants: [alpine-a290-gt-52-2025, alpine-a290-gts-52-2025]
     fields_present: []
-    notes: "Official alpinecars.de version-comparator page (canonical URL embedded in saved file); battery/torque/performance values per version"
+    notes: "Official alpinecars.de version-comparator page, title 'Alpine Technische Daten zur A290 100% elektrisch' (canonical URL embedded in saved file); battery/torque/performance values per version"
   - file: alpine-a290/spec-page-2.html
     url: https://media.alpinecars.com/alpine-a290-the-hot-hatch-for-the-electric-age/
     type: press_kit
@@ -27,15 +27,15 @@ documents:
     type: price_list
     covers_models: [alpine-a390]
     covers_variants: [alpine-a390-gt-2026, alpine-a390-gts-2026]
-    fields_present: [features.heat_pump, seats, bidirectional.v2l]
-    notes: "German price list 'A390 Preise und Ausstattung', valid from 7 November 2025 (linked from alpinecars.de); 89 kWh battery, heat pump, 11 kW charger for bidirectional charging, seat specifications GT/GTS"
+    fields_present: [features.heat_pump, seats, bidirectional.v2l, performance.motors, performance.drive_type]
+    notes: "German price list 'A390 Preise und Ausstattung', valid from 7 November 2025 (linked from alpinecars.de). Standard equipment explicitly lists 'Wärmepumpe', '11kw Lader für bidirektionales Laden' and 'V2L (Vehicle to Load - anschluss über optionalen Adapter)', with a separate option line 'V2L-ADAPTER ZUM ANSCHLUSS VON EXTERNEN ELEKTROGERÄTEN'. Also 'Alpine Active Torque Vectoring mit 3 E-Motoren und Allradantrieb' (three motors, AWD), 89 kWh battery, seat specifications GT/GTS"
   - file: alpine-a390/spec-page.html
     url: https://www.alpinecars.de/elektromodelle/a390/page-comparator.html
     type: spec_page
     covers_models: [alpine-a390]
     covers_variants: [alpine-a390-gt-2026, alpine-a390-gts-2026]
     fields_present: []
-    notes: "Official alpinecars.de version-comparator page (canonical URL embedded in saved file)"
+    notes: "Official alpinecars.de version-comparator page, title 'A390 Vergleich - Vollelektrischer Fastback Sportwagen' (canonical URL embedded in saved file)"
   - file: alpine-a390/spec-page-2.html
     url: https://media.alpinecars.com/alpine-a390-the-soul-of-alpine-in-a-sport-fastback/
     type: press_kit

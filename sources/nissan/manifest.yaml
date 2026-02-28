@@ -57,4 +57,24 @@ documents:
     fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
     notes: "German price list, 40 kWh and 52 kWh versions, with Technische Daten section."
+  - file: nissan-micra/datasheet.pdf
+    url: https://www-europe.nissan-cdn.net/content/dam/Nissan/nissan_europe/vehicles/micra/Micra2025/PDFTechSpecs/DE_Technische_Spezifikationen.pdf
+    type: datasheet
+    covers_models: [nissan-micra]
+    covers_variants: [nissan-micra-standard-range-40kwh-2025, nissan-micra-extended-range-52kwh-2025]
+    fields_present: [performance.drive_type, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official 'Der neue NISSAN MICRA Technische Spezifikationen • 2025' datasheet from Nissan's own European CDN. Net battery 40/52 kWh, WLTP combined 317/416 km, AC 11 kW with 10-100% in 3 h 40 / 4 h 45, DC 80/100 kW, power 90/110 kW, torque 225/245 Nm, 0-100 in 9.0/8.0 s, length 3974 mm, wheelbase 2541 mm, 5 seats, Vorderradantrieb. NOTE: the DC charge window is 15-80% (30 min), not 10-80%; no city range and no consumption figure on this sheet."
+  - file: nissan-micra/press-kit.html
+    url: https://germany.nissannews.com/de-DE/releases/nissan-praesentiert-den-neuen-vollelektrischen-micra
+    type: press_kit
+    covers_models: [nissan-micra]
+    covers_variants: [nissan-micra-standard-range-40kwh-2025, nissan-micra-extended-range-52kwh-2025]
+    fields_present: [features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Official Nissan Germany press portal launch release. Fills the two fields the datasheet omits: 'beide Batterievarianten serienmäßig über eine Wärmepumpe sowie über eine Batterieheizung und -kühlung' and '„Vehicle-to-Load“ Technologie (V2L)' on both packs; WLTP consumption 14.2-14.5 kWh/100 km (40 kWh) and 14.7-14.9 kWh/100 km (52 kWh). Also repeats battery/power/torque/range and gives kerb weights 1400/1524 kg."
 skipped: []
+unresolved_gaps:
+  - model: nissan-micra
+    field: range.wltp_city_km
+    reason: "Neither the official datasheet nor the launch release publishes a separate WLTP city range; Nissan quotes combined only."

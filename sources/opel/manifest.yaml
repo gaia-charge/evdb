@@ -1,0 +1,79 @@
+brand: opel
+fetched_at: "2026-08-13"
+documents:
+  - file: opel-astra-e/price-list.pdf
+    url: https://www.opel.de/content/dam/opel/germany/fahrzeuge/astra-l/downloads/2026/03/Preisliste_Neuer_Astra_Preislistendatum_23_03_2026.pdf
+    type: price_list
+    covers_models: [opel-astra-e]
+    covers_variants: [opel-astra-e-gs-58kwh-2026]
+    fields_present: [performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.ac_max_kw, charging.dc_max_kw, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany 'NEUER ASTRA 5-Tuerer und Sports Tourer', Preislistendatum 23. Maerz 2026 - the facelift list, carries the 58-kWh Astra Electric that matches the queue's GS 58 kWh MY2026 variant. Verified in the text layer: Batteriekapazitaet netto (brutto) 55 (58), Antrieb Frontantrieb, 115 kW (156 PS), Drehmoment 270 Nm, 0-100 9,3 s (5-Tuerer) / 9,5 s (Sports Tourer), WLTP kombiniert 432-454 km, WLTP innerstaedtisch 544-580 km, Verbrauch 15,5-15,3 kWh/100 km, Laenge 4.374 / Radstand 2.675 (5-Tuerer), max. Ladeleistung AC 11 / DC 100 kW. IMPORTANT: the DC charge time row is '20% bis 80%' (ca. 32 Min.), NOT 10-80 and NOT 0-80 - map it to charging.time_20_to_80_min only. Heat pump appears as equipment: 'Waermepumpe (nur in Verb. mit Electric)'; V2L appears as 'Vehicle-To-Load Vorbereitung (nur in Verb. mit Electric)' - i.e. preparation, full V2L needs an extra part, so treat v2l as option/prepared rather than plain true. No Sitzplaetze row anywhere in Opel price lists."
+  - file: opel-astra-e/price-list-2.pdf
+    url: https://www.opel.de/content/dam/opel/germany/fahrzeuge/astra-l/downloads/july-25/Opel_Astra_Preisliste_17072025v2.pdf
+    type: price_list
+    covers_models: [opel-astra-e]
+    covers_variants: [opel-astra-e-edition-2024, opel-astra-e-gs-2024, opel-astra-e-gs-2025]
+    fields_present: [performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_20_to_80_min, battery.usable_kwh, range.wltp_city_km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany Astra price list, Preislistendatum 17. Juli 2025 - the pre-facelift 54-kWh Astra Electric, closest official document to the queue's MY2024/MY2025 variants. Verified: Batteriekapazitaet 54 kWh, Antrieb Frontantrieb, Drehmoment 270 Nm, 0-100 9,2/9,3 s, WLTP innerstaedtisch 508-536 km, DC ca. 100 kW 20-80% ca. 30 Min., Laenge 4.374 / Radstand 2.675. 'Waermepumpe (nur in Verb. mit Electric)' present. NOTE: unlike the 2026 list, this July-2025 list has NO Vehicle-To-Load / V2L row at all - do not carry the 2026 V2L finding back onto MY2024/2025 variants without separate evidence."
+  - file: opel-corsa-e/price-list.pdf
+    url: https://www.opel.de/content/dam/opel/germany/tools/preislisten/corsa-preisliste.pdf
+    type: price_list
+    covers_models: [opel-corsa-e]
+    covers_variants: [opel-corsa-e-gs-2025]
+    fields_present: [performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany 'OPEL CORSA & OPEL CORSA YES - Benzin / Hybrid / Electric', Stand 17. Juli 2026 (stable alias URL /tools/preislisten/corsa-preisliste.pdf, which always serves the current list). Two Corsa Electric columns: 46 (49) kWh 100 kW (136 PS) and 51 (54) kWh - the 51/54 column matches the queue's 'GS 51kWh' MY2025 variant. Verified: Antrieb Frontantrieb, Drehmoment 260 Nm, 0-100 8,7 s, Verbrauch 15,7-16,2 kWh/100 km, DC 20-80% ca. 30 Min., AC 11 kW 20-80% ca. 3 Std. 10 Min. Equipment rows: 'Waermepumpe' as a 700 EUR option (code 2501) and 'Bidirektionaler (V2L) Onboard-Charger'. Again 20-80%, not 10-80/0-80. The MY2024 Edition / GS Line variants are not separately covered - the 2024 Corsa Electric price lists have been removed from opel.de (404)."
+  - file: opel-mokka-e/price-list.pdf
+    url: https://www.opel.de/content/dam/opel/germany/tools/preislisten/mokka-preisliste.pdf
+    type: price_list
+    covers_models: [opel-mokka-e]
+    covers_variants: [opel-mokka-e-electric-2025, opel-mokka-e-gse-2025]
+    fields_present: [performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany 'OPEL MOKKA - Benzin / Hybrid / Electric', Stand 30. Juli 2026. Technische Daten table has exactly the two queue variants side by side: Mokka Electric 115 kW (156 PS) and Mokka GSE 207 kW (281 PS), both 51 (54) kWh, both Frontantrieb, Drehmoment 260 / 345 Nm, 0-100 9,0 / 5,9 s, Vmax 150 / 200 km/h, Verbrauch 15,6 / 18,5 kWh/100 km, WLTP bis zu 403 / 336 km, DC ca. 100 kW 20-80% ca. 27 Min. (both). Equipment: 'Waermepumpe (nicht in Verb. mit Mokka GSE)' - so heat pump is NOT available on the GSE - and 'Bidirektionaler (V2L) Onboard-Charger'; a separate row LZ06 notes the bidirectional 11 kW onboard charger is GSE-only. MY2024 Edition/Ultimate variants are not separately covered; the 2024/2025 Mokka Electric lists are 404 on opel.de."
+  - file: opel-grandland-electric/price-list.pdf
+    url: https://www.opel.de/content/dam/opel/germany/tools/preislisten/grandland-preisliste.pdf
+    type: price_list
+    covers_models: [opel-grandland-electric]
+    covers_variants: [opel-grandland-electric-gs-73-2025, opel-grandland-electric-98-long-range-2025, opel-grandland-electric-long-range-2024]
+    fields_present: [performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.ac_max_kw, charging.dc_max_kw, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, features.heat_pump, bidirectional.v2l]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany 'DER OPEL GRANDLAND - Electric / Hybrid / Plug-in-Hybrid', Preislistendatum 1. Juli 2026. Three BEV columns that line up with the queue: 73 (78) kWh Frontantrieb, 73 (78) kWh Allradantrieb, and 96,9 (100) kWh Frontantrieb (the 'Long Range'). Verified for the 73 kWh FWD column: 157 kW (213 PS), Drehmoment 345 Nm, 0-100 9,0 s, Vmax 170, Verbrauch 17,8 kWh/100 km, WLTP kombiniert 501-521 km, innerstaedtisch 628-661 km, AC 11 kW / DC 160 kW, DC 20-80% ca. 30 Min. (Long Range ca. 27 Min.). The Allradantrieb column is the two-motor version (performance.motors = 2, drive_type AWD); FWD columns are single-motor. Abmessungen: Laenge 4.650, Radstand 2.784-2.795, Breite 1.934 (Spiegel eingeklappt), Hoehe 1.665-1.667. Equipment: 'Waermepumpe (nur in Verb. mit Electric)' and 'Vehicle-To-Load Vorbereitung (nur in Verb. mit Electric)'. Charge times are 20-80%, not 10-80/0-80. No Sitzplaetze row."
+  - file: opel-frontera-electric/price-list.pdf
+    url: https://www.opel.de/content/dam/opel/germany/tools/preislisten/frontera-preisliste.pdf
+    type: price_list
+    covers_models: [opel-frontera-electric]
+    covers_variants: []
+    fields_present: [seating.seats, performance.drive_type, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_20_to_80_min, battery.total_kwh, battery.usable_kwh, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Opel Germany 'OPEL FRONTERA - Hybrid / Electric', Stand 1. Juli 2026. The queue has no variants for this model yet, so this document is the base evidence for creating them: two BEV versions, 43 (44) kWh and 52 (54) kWh 'Extended Range', both 83 kW (113 PS), both Frontantrieb, Drehmoment 124,5 Nm, 0-100 12,8 / 14,2 s, Vmax 143, Verbrauch 18,3 / 16,7 kWh/100 km, WLTP kombiniert 304-308 / 385-400 km, innerstaedtisch 431-441 / 527-549 km, DC ca. 100 kW 20-80% 26 / 28 Min. Wagenabmessungen (alle Motorisierungen): Laenge 4.385, Radstand 2.670, Breite 1.849 (Spiegel eingeklappt), Hoehe 1.635. SEATS: the options section carries '7-Sitzer-Paket [AN10] - Dritte Reihe mit 2 zusaetzlichen Sitzen' and the hybrid data rows are labelled '(5/7 Sitzer)', i.e. base 5 seats with an optional third row. NO Waermepumpe row and NO bidirectional/V2L row anywhere in this list - the Frontera gets a plain (non-bidirectional) 11 kW onboard charger (LZ04)."
+  - file: opel-frontera-electric/spec-page.md
+    url: https://www.media.stellantis.com/em-en/opel/press/new-opel-frontera-spacious-and-fun-suv-also-available-fully-electric
+    type: press_kit
+    covers_models: [opel-frontera-electric]
+    covers_variants: []
+    fields_present: [seating.seats, production_status]
+    fetched_at: "2026-08-13"
+    notes: "Official Stellantis Media (Opel newsroom) launch press release. Saved as text-fetch markdown because the article body is rendered client-side - plain curl on media.stellantis.com returns only navigation chrome. Confirms the Frontera is a '5-seat SUV' (460+ l boot, 1,600 l folded, 60:40 split bench) launched with a battery-electric variant alongside 48 V hybrids, which together with the 1 July 2026 Preisliste establishes production_status = in production."
+skipped: []
+notes: >-
+  Brand-wide findings for Opel (all five models):
+  (1) opel.de is behind Akamai and rejects a bare curl with 'Access Denied';
+  it serves fine with a full browser header set (Accept, Accept-Language,
+  Sec-Fetch-*, sec-ch-ua, Referer). The dl helper used for these downloads sends
+  those headers.
+  (2) The stable alias URLs /content/dam/opel/germany/tools/preislisten/<model>-preisliste.pdf
+  always resolve to the current list and are the right thing to re-fetch later;
+  dated per-model paths under /fahrzeuge/<model>/downloads/ are removed once
+  superseded (both 2024 Corsa Electric and 2024/2025 Mokka Electric lists now 404).
+  (3) NO Opel price list states a seat count ('Sitzplaetze' does not appear in any
+  of them). The only seat evidence found is the Frontera's optional 7-Sitzer-Paket
+  plus the Stellantis press release; seats for Astra, Corsa, Mokka and Grandland
+  remain uncovered by official documents in this store.
+  (4) Every Opel DC charge-time row is stated for 20%-80%, never 10-80% or 0-80%.
+  Extraction must use charging.time_20_to_80_min; the queue's
+  charging.time_10_to_80_min / time_0_to_80_min gaps cannot be closed from Opel
+  price lists.
+  (5) charging.charging_speed_kmh is not published by Opel in any form.

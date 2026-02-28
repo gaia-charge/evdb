@@ -1,5 +1,5 @@
 brand: subaru
-fetched_at: "2026-08-13"
+fetched_at: "2026-08-14"
 documents:
   - file: subaru-solterra/price-list.pdf
     url: https://www.subaru-presse.de/fileadmin/data/Solterra/Assets/2026/Weitere_Assets/Solterra_MY26_WEBPTA_20052026.pdf
@@ -8,7 +8,7 @@ documents:
     covers_variants: []
     fields_present: [features.heat_pump, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, battery.chemistry, charging.max_ac_kw, charging.max_dc_kw, range.wltp_km, efficiency.wltp_kwh_per_100km]
     fetched_at: "2026-08-13"
-    notes: "Subaru Germany press portal 'Preise, Technische Daten, Ausstattung' MY26 (facelift, 73.1 kWh). No 10-80% charge-TIME row (only max AC/DC power). Queue variants are MY2024/2025 pre-facelift - use for model-level fields, check spec drift."
+    notes: "Subaru Germany press portal 'Preise, Technische Daten, Ausstattung' MY26 (facelift, 73.1 kWh). Heat pump confirmed in text layer as 'Batterie-Vorkonditionierungs-System mit Thermo-Management inklusive Waermepumpe' (standard across all four trims). No 10-80% charge-TIME row - only max AC/DC power. Queue variants are MY2024/2025 pre-facelift, so use for model-level fields and check spec drift."
   - file: subaru-solterra/price-list-2.pdf
     url: https://www.subaru.de/hubfs/Modellshowrooms/MSR%20SOLTERRA/RZ01_SOLTERRA_PTA_MY23_Web_0724.pdf
     type: price_list
@@ -16,7 +16,7 @@ documents:
     covers_variants: [subaru-solterra-awd-2024]
     fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, charging.max_ac_kw, charging.max_dc_kw]
     fetched_at: "2026-08-13"
-    notes: "Subaru Germany PTA (MY23 document revised 07/2024, linked from subaru.de/broschuerendownload) - pre-facelift 71.4 kWh AWD as sold in MY2024; official MY24/MY25-labelled PTA no longer online. No 10-80% charge-time or heat-pump row in text layer."
+    notes: "Subaru Germany PTA (MY23 document revised 07/2024, linked from subaru.de/broschuerendownload) - pre-facelift 71.4 kWh AWD as sold in MY2024; official MY24/MY25-labelled PTA no longer online. Re-checked the text layer on 2026-08-14: it carries neither a 10-80% charge-time row nor any Waermepumpe row, so the pre-facelift heat-pump question stays open."
   - file: subaru-solterra/spec-page.html
     url: https://www.subaru.de/modelle/solterra
     type: spec_page
@@ -24,5 +24,13 @@ documents:
     covers_variants: []
     fields_present: [charging.time_10_to_80_min, battery.gross_kwh, performance.motors, performance.drive_type, range.wltp_km]
     fetched_at: "2026-08-13"
-    notes: "Official subaru.de Solterra model page (MY26 facelift): states DC 150 kW charges 10-80% in 28 minutes, 73.1 kWh, dual-motor AWD 252 kW. Facelift figures - queue MY2024/2025 pre-facelift had 71.4 kWh and a slower 10-80% time; use only as model-level/current evidence."
+    notes: "Official subaru.de Solterra model page (MY26 facelift): states DC 150 kW charges 10-80% in 28 minutes, 73.1 kWh, dual-motor AWD 252 kW. Facelift figures only - the queue MY2024/2025 pre-facelift cars had 71.4 kWh and a slower 10-80% time. Use as model-level/current evidence, never as the pre-facelift variant value."
 skipped: []
+# Brand note: subaru-solterra is at the 3-document budget. The two gaps that
+# remain for the MY2024/2025 pre-facelift variants - charging.time_10_to_80_min
+# and features.heat_pump - are not answerable from anything Subaru still
+# publishes: the MY23/MY24 PTA has no such rows, and the MY26 PTA plus the
+# model page describe the facelift (73.1 kWh, 28 min) instead. A direct
+# subaru.de fileadmin PDF path found via search
+# (https://www.subaru.de/fileadmin/images/modelle/solterra/Technische_Date/SOLTERRA_Web-PTA.pdf)
+# was tried on 2026-08-14 and served the subaru.de homepage HTML, not a PDF.

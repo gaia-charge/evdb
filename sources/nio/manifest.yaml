@@ -1,0 +1,120 @@
+brand: nio
+fetched_at: "2026-08-13"
+documents:
+  - file: nio-el6/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/NIO_EL6_Preisliste
+    type: price_list
+    covers_models: [nio-el6]
+    covers_variants: [nio-el6-75kwh-2025, nio-el6-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list. Confirmed in the PDF: "Schnellladezeit
+      10 - 80 %: 30 min" (Standard Range) and "10 - 80 %: 40 oder 30 min"
+      (Long Range); front + rear "Elektrisches Antriebssystem (EDS)" giving
+      motor count and drive type; "Maximales Drehmoment 700 Nm";
+      "Wärmepumpen-Klimaanlage"; WLTP 20,4-22,1 kWh/100km. Some glyphs render
+      as mojibake in text extraction (e.g. "Standard Range" -> "3SèMCèQC2èMFD");
+      the rendered PDF is correct. No V2L and no WLTP city range in this doc.
+  - file: nio-el7/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/NIO_EL7_Preisliste
+    type: price_list
+    covers_models: [nio-el7]
+    covers_variants: [nio-el7-75kwh-2025, nio-el7-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list. "Schnellladezeit 10 - 80%: 30 min"
+      (75 kWh) / "10 - 80%: 40 min" (100 kWh), max charging power
+      11 kW AC / 140 kW DC and 125 or 180 kW DC. No V2L, no WLTP city range.
+  - file: nio-el8/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/All-New_EL8_Preisliste
+    type: price_list
+    covers_models: [nio-el8]
+    covers_variants: [nio-el8-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.total_torque_nm
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list, cover page "Preisliste | Modelljahr 2025
+      / DEUTSCHLAND - JANUAR 2025". Explicit rows "DC Schnellladezeit (10-80%)
+      (Standard Range) 30 min" and "(Long Range) 40 / 20 min"; separate
+      "Permanentmagnet-Motor" and "Induktionsmotor" rows; "Drehmoment (beide
+      Motoren)"; Länge 5.099 mm, Radstand 3.070 mm; three seat rows.
+      No heat-pump row found in this document, and no V2L.
+  - file: nio-et5/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/NIO_ET5_Preisliste
+    type: price_list
+    covers_models: [nio-et5]
+    covers_variants: [nio-et5-75kwh-2025, nio-et5-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list. "Schnellladezeit 10 - 80 % : 30 min"
+      (75 kWh) / "10 - 80 % : 40 oder 30 min" (100 kWh). No V2L, no city range.
+  - file: nio-et5-touring/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/NIO_ET5_Touring_Preisliste
+    type: price_list
+    covers_models: [nio-et5-touring]
+    covers_variants: [nio-et5-touring-75kwh-2025, nio-et5-touring-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list. "Schnellladezeit 10 - 80 % : 30 min"
+      (75 kWh) / "10 - 80 % : 40 oder 30 min" (100 kWh). No V2L, no city range.
+  - file: nio-et7/price-list.pdf
+    url: https://www.nio.com/cdn-static/luban/nextjs/images/default-large-files/NIO_ET7_Preisliste
+    type: price_list
+    covers_models: [nio-et7]
+    covers_variants: [nio-et7-75kwh-2025, nio-et7-100kwh-2025]
+    fields_present:
+      - charging.time_10_to_80_min
+      - performance.motors
+      - performance.drive_type
+      - performance.total_torque_nm
+      - features.heat_pump
+      - efficiency.wltp_kwh_per_100km
+      - seats
+      - dimensions.length_mm
+      - dimensions.wheelbase_mm
+    notes: >-
+      Official NIO Germany price list. "Schnellladezeit 10 - 80%: 30 min"
+      (75 kWh) / "10 - 80%: 40 oder 30 min" (100 kWh). No V2L, no city range.
+skipped: []

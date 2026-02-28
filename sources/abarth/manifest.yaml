@@ -1,36 +1,45 @@
 brand: abarth
 fetched_at: "2026-08-13"
+# No new documents were needed this pass - the four stored files already cover both
+# Abarth models. fields_present has been re-verified against the extracted text of each
+# file and corrected where the earlier pass over-claimed. Key finding for extraction:
+# the Abarth 500e has FOUR seats, not five ('Anzahl der Sitzplaetze 4'), while the 600e
+# has five. Neither model has a heat pump or V2L row in any official document.
 documents:
   - file: abarth-500e/price-list.pdf
     url: https://www.abarth.at/content/dam/abarth/at/pricelist/def-naming/june-26/Preisliste-Abarth-500e-2026-04-15.pdf
     type: price_list
     covers_models: [abarth-500e]
     covers_variants: [abarth-500e-turismo-2025]
-    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm]
+    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, battery.gross_kwh, battery.net_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Official Abarth Austria Preisliste (2026-04-15, linked as 'Abarth 500e Preisliste' from abarth.at home menu). Full Technische Daten: Anzahl der Sitzplaetze 4, Antrieb Typ Vorderradantrieb, Permanentmagneterregter Synchronmotor 113,7 kW/155 PS, 235 Nm, Batteriekapazitaet brutto/netto 42 kWh, Ladedauer DC 85 kW CCS (0-80%) 34 min, AC 11 kW times, WLTP Reichweite/Verbrauch. Covers 500e + Turismo in Hatchback and Cabrio. Queue's Scorpionissima trim not in current price list (2023 launch edition, sold out) but shares the identical 113,7 kW powertrain per the saved press release. No Waermepumpe or V2L rows. Site blocks curl/WebFetch (Akamai); fetched through the browser."
+    notes: "Official Abarth Austria Preisliste (2026-04-15, linked as 'Abarth 500e Preisliste' from the abarth.at home menu). Verified TECHNISCHE DATEN rows: 'Anzahl der Sitzplaetze' = 4 (NOT 5 - the 500e is a four-seater), 'Laenge (mm)' 3.673, 'Radstand (mm)' 2.322, 'Antrieb Typ' Vorderradantrieb, 'Motortyp' Permanentmagneterregter Synchronmotor, 'Drehmoment max. (Nm)' 235, 'Batteriekapazitaet brutto / netto (kWh)' 42,2 / 37,8, 'Ladedauer DC Gleichstrom 85kW' (0-80%), AC 3 kW and 11 kW rows, WLTP Reichweite and Verbrauch. Covers 500e and 500e Turismo in Hatchback and Cabrio. The queue's Scorpionissima trim is absent from the current list (2023 launch edition, sold out) but shares the identical 113,7 kW powertrain per the press release below. No Waermepumpe and no V2L row anywhere in the document. abarth.at blocks plain curl and WebFetch (Akamai); this file was fetched through the browser."
   - file: abarth-500e/spec-page.html
     url: https://www.media.stellantis.com/em-en/abarth/press/more-abarth-than-ever-abarth-goes-electric-and-more-global
     type: press_kit
     covers_models: [abarth-500e]
     covers_variants: [abarth-500e-scorpionissima-2025]
-    fields_present: [performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh]
+    fields_present: [performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, battery.gross_kwh]
     fetched_at: "2026-08-13"
-    notes: "Official Stellantis Media press release (2022-11-22) unveiling the Abarth 500e with the Scorpionissima launch edition named explicitly: 113,7 kW/155 hp, 235 Nm, 0-100 in 7 s, 42 kWh battery, 85 kW DC fast charging, 80% in 35 min (start SOC not stated). Also documents Turismo drive-mode power reduction (100 kW / 220 Nm)."
+    notes: "Official Stellantis Media press release (2022-11-22) unveiling the Abarth 500e with the Scorpionissima launch edition named explicitly - the only official document that covers that trim. Verified text: 'a 42-kWh battery coupled with a powerful e-motor, resulting in 113,7kW/155hp'; 'it can reach 100 km/h from 0 ... in just 7 seconds'; '85 kW fast charging ... reaches 80% of the range in only 35 minutes' (start SOC not stated - treat as 0-80 with a caveat, and note it disagrees with the price list's 34 min for the same car). Also documents the Turismo drive-mode power reduction (100 kW / 220 Nm)."
   - file: abarth-600e/datasheet.pdf
     url: https://www.media.stellantis.com/em-en/download-model-document/195?v=1730191716
     type: datasheet
     covers_models: [abarth-600e]
     covers_variants: [abarth-600e-turismo-2025, abarth-600e-scorpionissima-2025]
-    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, battery.gross_kwh, battery.net_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm]
+    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, charging.time_0_to_80_min, battery.gross_kwh, battery.net_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Official Abarth 600e technical sheet from media.stellantis.com model page (linked as 'Technical sheet'). Two columns: TURISMO (175 kW/240 HP) and SCORPIONISSIMA (207 kW/280 HP) - exactly the two queue variants. Seats 5, FWD, Electric Synchronous Motor, 345 Nm, 0-100 5,85/6,24 s, battery 54 kWh gross / 51 kWh usable Lithium-ion 400 V, AC 11 kW 0-100% 5h45, DC 100 kW 20-80% 27 min (note: 20-80, not 10-80), WLTP range 322-334 km, consumption 179,9-186,7 Wh/km, full dimensions and weights. No heat pump or V2L rows."
+    notes: "Official Abarth 600e technical sheet from the media.stellantis.com model page (linked there as 'Technical sheet'). Two columns - TURISMO (175 kW/240 HP) and SCORPIONISSIMA (207 kW/280 HP) - exactly the two queue variants. Verified rows: 'Number of seats' 5, 'Drive type' FWD, 'Electric engine technology' Electric Synchronous Motor, 'Max torque Nm EEC' 345, 'Top Speed (km)' 200, '0 - 100 km/h [s]' 6,24 / 5,85, 'Capacity (kWh)' 54 with 'Usable capacity (kWh)' 51, 'Technology' Lithium-ion, 'WLTP range combined cycle [km]' 322/334 (perfo/eco tyres), consumption 179,9-186,7 Wh/km, Length 4187 / Height 1502 / Width 1808 / Wheelbase 2559 mm. IMPORTANT: the DC row is '100 kW DC Fast Charging - MODE 4 (20-80%)' = 27 min - a 20-80 window, neither 10-80 nor 0-80. No heat-pump and no V2L row. Note media.stellantis.com now returns 403 to curl on the /download-model-document/ endpoint; this file was obtained before that block and re-download requires a browser."
   - file: abarth-600e/price-list.pdf
     url: https://www.abarth.at/content/dam/abarth/at/pricelist/def-naming/may-26/Preisliste_Abarth_600e_2026-05-26.pdf
     type: price_list
     covers_models: [abarth-600e]
     covers_variants: [abarth-600e-turismo-2025]
-    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fields_present: [seats, performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_0_to_80_min, battery.gross_kwh, battery.net_kwh, battery.chemistry, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm]
     fetched_at: "2026-08-13"
-    notes: "Official Abarth Austria Preisliste (2026-05-26, linked as 'Abarth 600e Preisliste' from abarth.at home menu). Technische Daten: Anzahl der Sitzplaetze 5, Antrieb Typ Vorderradantrieb, 54 kWh brutto, Ladedauer DC 100 kW CCS 0-80% 27 min, Ladegeschwindigkeit max DC/AC 100/11 kW, WLTP values. 2026 lineup trims are TURISMO + COMPETIZIONE (Competizione replaced Scorpionissima and is not in the queue); Scorpionissima specs are covered by the datasheet. No Waermepumpe or V2L rows. Site blocks curl/WebFetch (Akamai); fetched through the browser."
-skipped: []
+    notes: "Official Abarth Austria Preisliste (2026-05-26, linked as 'Abarth 600e Preisliste' from the abarth.at home menu). Verified rows: 'Anzahl der Sitzplaetze' 5, 'Laenge (mm)' 4.187, 'Radstand (mm)' 2.559, 'Antrieb Typ' Vorderradantrieb, 'Batteriekapazitaet brutto / netto (kWh)' 54 / 51, 'Ladedauer DC Gleichstrom 100kW (0-80%)', AC 3,7 kW and 11 kW rows, WLTP values. The 2026 lineup trims are TURISMO + COMPETIZIONE (Competizione replaced Scorpionissima and is not in the queue); Scorpionissima is covered by the datasheet above. Note the Austrian list frames the DC time as 0-80% while the Stellantis technical sheet frames the same 27 min as 20-80% - reconcile during extraction. No Waermepumpe and no V2L row. Site blocks curl/WebFetch (Akamai); fetched through the browser."
+skipped:
+  - model: abarth-500e
+    reason: "Partial: features.heat_pump, bidirectional.v2l and charging.charging_speed_kmh are not stated in any official Abarth 500e document - neither the Austrian price list nor the Stellantis press release has such a row, and no separate 500e 'Technical sheet' could be retrieved (the media.stellantis.com model page renders its download list via JS and the /em-en/download-model-document/ endpoint now answers 403 to curl, while the page itself returns a 420-byte Akamai stub). Treat those three fields as unsourced rather than false until a human confirms via the browser."
+  - model: abarth-600e
+    reason: "Partial: features.heat_pump, bidirectional.v2l and charging.charging_speed_kmh are likewise absent from both the technical sheet and the Austrian price list. Everything else in the queue for both 600e variants is covered."

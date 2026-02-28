@@ -11,7 +11,7 @@ documents:
       - porsche-taycan-turbo-performance-battery-plus-2024
       - porsche-taycan-turbo-s-performance-battery-plus-2024
     fields_present: [charging.time_10_to_80_min, features.heat_pump]
-    notes: "2024 facelift (J1 II) press kit: 10-80% in 18 min, heat pump standard, up to 678 km WLTP, covers all three body versions"
+    notes: "2024 facelift (J1 II) press kit: 10-80% in 18 min, heat pump standard, up to 678 km WLTP, covers all three body versions. A byte-identical copy previously stored at porsche-taycan-sport-turismo/press-kit.pdf was removed; this single file covers both models"
   - file: porsche-taycan/datasheet.pdf
     url: https://newsroom.porsche.com/dam/jcr:db7be217-7b2a-44a6-b2b3-3493b5baf1c1/pag-taycan-turbo-gt-td-en.pdf
     type: datasheet
@@ -31,6 +31,13 @@ documents:
       - porsche-taycan-gts-sport-turismo-2025
     fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, battery.gross_kwh, battery.chemistry, charging.max_dc_kw]
     notes: "MY26 full-line technical specifications (US newsroom, 2026-01-06): every current variant incl. GTS, GTS Sport Turismo, Turbo GT, Performance Battery Plus versions; US EPA figures, no WLTP"
+  - file: porsche-taycan/spec-page.html
+    url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan-gts/
+    type: spec_page
+    covers_models: [porsche-taycan]
+    covers_variants: [porsche-taycan-gts-2025]
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    notes: "German Taycan GTS model page: DC 10-80% in 18 min, Wärmepumpe now standard ('jetzt serienmäßigen Wärmepumpe'), up to 790 Nm at Launch Control, one e-machine on each axle (AWD), 637 km WLTP, 20.1-17.7 kWh/100 km"
   - file: porsche-taycan-sport-turismo/datasheet.pdf
     url: https://newsroom.porsche.com/dam/jcr:d30edf3d-2895-45a0-83bc-23c5058f2929/pag-taycan-4s-sport-turismo-td-en.pdf
     type: datasheet
@@ -39,12 +46,12 @@ documents:
     fields_present: [range.wltp_city_km, performance.motors, performance.drive_type, charging.time_10_to_80_min]
     notes: "Official EU technical data sheet, WLTP values incl. city range"
   - file: porsche-taycan-sport-turismo/spec-page.html
-    url: https://www.porsche.com/germany/models/taycan/taycan-models/taycan-gts-sport-turismo/
+    url: https://www.porsche.com/germany/models/taycan/taycan-sport-turismo-models/taycan-gts-sport-turismo/
     type: spec_page
     covers_models: [porsche-taycan-sport-turismo]
     covers_variants: [porsche-taycan-gts-sport-turismo-2025]
-    fields_present: [charging.time_10_to_80_min, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km]
-    notes: "German model page with embedded technical data (DC 10-80% Ladezeit, WLTP Reichweite, Launch Control acceleration)"
+    fields_present: [charging.time_10_to_80_min, features.heat_pump, performance.total_torque_nm, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    notes: "German model page with embedded technical data: DC 10-80% in 18 min, Wärmepumpe standard, up to 790 Nm, e-machine on each axle (AWD), 611 km WLTP, 21.1-18.6 kWh/100 km. URL corrected to the page's own canonical (taycan-sport-turismo-models path)"
   - file: porsche-macan-electric/press-kit.pdf
     url: https://newsroom.porsche.com/dam/jcr:e8b68c29-8aa8-4eaa-9ce2-5cf6c846b927/EN_Pressemappe_Macan.pdf
     type: press_kit

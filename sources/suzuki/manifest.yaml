@@ -1,0 +1,47 @@
+brand: suzuki
+fetched_at: "2026-08-13"
+documents:
+  - file: suzuki-e-vitara/price-list.pdf
+    url: https://webkiosk.suzuki.at/document/download/70907951/acd0f-73763-80b51-db734-cfae0-97856-10dc1-05642
+    type: price_list
+    covers_models: [suzuki-e-vitara]
+    covers_variants: [suzuki-e-vitara-49-fwd-2025, suzuki-e-vitara-61-fwd-2025, suzuki-e-vitara-61-allgrip-awd-2025]
+    fields_present: [seating.seats, performance.motors, performance.total_power_kw, performance.total_torque_nm, performance.acceleration_0_100_sec, performance.top_speed_kmh, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm, dimensions.ground_clearance_mm, dimensions.turning_circle_m]
+    fetched_at: "2026-08-13"
+    notes: "'e VITARA Preise, Ausstattung und Technische Daten, Stand Jaenner 2026' - the official Suzuki Austria (general importer) web-kiosk publication; the PDF sits behind a tokenised /document/download/<id>/<token> URL that is linked from the kiosk page https://webkiosk.suzuki.at/e-vitara-preise-ausstattung-und-technische-daten-stand-janner-2026/70907951 (that page 403s to WebFetch but serves fine to a browser-header curl). Columns are exactly the three queue variants: 49 kWh 2WD, 61 kWh 2WD, 61 kWh ALLGRIP. Verified in the text layer: Sitzplaetze 5; Leistung gesamt 106 / 128 / 135 kW with 'Leistung vorne' 106/128/128 and 'Leistung hinten' - / - / 48 kW, which is the row that establishes performance.motors = 1 on the 2WD cars and 2 on the ALLGRIP (drive_type AWD); Drehmoment gesamt 193 / 193 / 307 Nm with vorne 193 and hinten 114 on the ALLGRIP; Getriebe 1-Gang-Automatik; 0-100 9,6 / 8,7 / 7,4 s; Vmax 150; Energieverbrauch 14,9 / 15,1 / 16,6 kWh/100 km; Reichweite kombiniert 344 / 426 / 395 km; Gesamtlaenge 4.275, Breite 1.800, Hoehe 1.635, Radstand 2.700, Bodenfreiheit 180, Wendekreis 10,4 m. The 'LADEN' equipment block lists only the AC Type 2 / DC CCS2 ports - there are NO charge-time rows, no Waermepumpe row and no V2L row in this document."
+  - file: suzuki-e-vitara/spec-page.html
+    url: https://auto.suzuki.de/modelle/e-vitara
+    type: spec_page
+    covers_models: [suzuki-e-vitara]
+    covers_variants: [suzuki-e-vitara-49-fwd-2025, suzuki-e-vitara-61-fwd-2025, suzuki-e-vitara-61-allgrip-awd-2025]
+    fields_present: [performance.drive_type, performance.total_power_kw, performance.total_torque_nm, battery.usable_kwh, charging.time_10_to_80_min]
+    fetched_at: "2026-08-13"
+    notes: "Suzuki Deutschland official e VITARA model page, saved as HTML. The page is a Next.js app but the spec values are embedded in the served markup (grep-verified: '193 Nm', '45 Minuten', 'ALLGRIP-e' all present in the saved file), so this is usable evidence without a browser. Values confirmed on the page: Frontantrieb for the 2WD cars and Allradantrieb for ALLGRIP-e; 106 kW (144 PS) / 128 kW (174 PS) / 135 kW (183 PS) Systemleistung; 193 Nm and 307 Nm; 49 kWh and 61 kWh batteries; AC 10-100% ca. 4,5 bis 5,5 Stunden; and the one row the Austrian price list lacks - DC 10-80% in ca. 45 Minuten, which is stated on the exact 10-80% basis the queue asks for. No seat count, no Waermepumpe and no V2L statement on this page."
+  - file: suzuki-e-vitara/spec-page-2.html
+    url: https://cars.suzuki.co.uk/new-cars/e-vitara/range-and-charging/
+    type: spec_page
+    covers_models: [suzuki-e-vitara]
+    covers_variants: [suzuki-e-vitara-49-fwd-2025, suzuki-e-vitara-61-fwd-2025, suzuki-e-vitara-61-allgrip-awd-2025]
+    fields_present: [features.heat_pump, charging.time_10_to_80_min, battery.usable_kwh]
+    fetched_at: "2026-08-13"
+    notes: "Suzuki GB (official Suzuki UK importer site) e Vitara 'Range and Charging' page, saved as HTML - fetched only because it is the one official Suzuki source found that states the heat pump: 'A heat pump is fitted as standard to efficiently warm up your cabin, reduce strain on the battery, and help preserve driving range on even the coldest mornings.' It independently repeats the DC figure as 10-80% in 45 minutes and confirms the 49 kWh / 61 kWh battery choice. NOTE this is a UK-market page, not EU - use it for the heat_pump boolean, and prefer the German page and the Austrian price list for any numeric value. The saved file has no <title> tag but carries ~12k characters of real page text (not a cookie wall or JS shell)."
+skipped: []
+notes: >-
+  Brand-wide findings for Suzuki (single model, e Vitara):
+  (1) auto.suzuki.de was rebuilt on Next.js and the old Plone-style download URLs
+  (/beratung-kauf/beratung-kauf/<model>-preisliste.pdf and .../view) now 403 or
+  404 - there is no downloadable German e Vitara Preisliste PDF on suzuki.de any
+  more. The official Suzuki Austria web kiosk (webkiosk.suzuki.at) is the working
+  substitute and publishes the full 'Preise, Ausstattung und Technische Daten'
+  PDF, which is what was fetched here.
+  (2) No single Suzuki document covers everything, which is why this model has
+  three: the Austrian PDF has seats / motors / torque / dimensions but no charge
+  times, the German page has the 10-80% DC time and drive types but no seats, and
+  the UK page has the heat pump. All three were confirmed before saving.
+  (3) SEATS = 5 ('Sitzplaetze 5', Austrian price list).
+  (4) DC charge time is published on the 10-80% basis (ca. 45 min), which matches
+  charging.time_10_to_80_min directly. Nothing supports
+  charging.time_0_to_80_min or charging.charging_speed_kmh.
+  (5) bidirectional.v2l is NOT stated in any of the three official sources - the
+  Austrian price list's LADEN block lists only the AC Type 2 and DC CCS2 inlets.
+  That queue gap stays open.
