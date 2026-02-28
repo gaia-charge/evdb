@@ -44,3 +44,8 @@ evdb.db
 # Datasette
 metadata.db
 backups/
+
+# Local source evidence store (copyrighted downloads stay local)
+sources/**
+!sources/README.md
+!sources/*/manifest.yaml
