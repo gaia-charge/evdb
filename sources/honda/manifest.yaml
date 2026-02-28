@@ -1,0 +1,28 @@
+brand: honda
+fetched_at: "2026-08-13"
+documents:
+  - file: honda-e-ny1/spec-page.html
+    url: https://auto.honda.fr/cars/new/e-ny1-electric-suv/specifications.html
+    type: spec_page
+    covers_models: [honda-e-ny1]
+    covers_variants: [honda-e-ny1-68kwh-2025]
+    fields_present: [charging.time_10_to_80_min, battery.capacity_gross_kwh, performance.total_torque_nm, performance.acceleration_0_100_sec, seats, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Honda France e:Ny1 specifications page (canonical URL embedded in saved HTML): DC 10-80% approx. 45 min at max 78 kW, AC 11 kW 10-80% approx. 6 h, 68.8 kWh, 310 Nm, 0-100 in 7.6 s, 5 seats, 412 km WLTP. No heat-pump mention."
+  - file: honda-e-ny1/press-kit.pdf
+    url: https://hondanews.eu/eu/et/download/442971/pdf/pdf
+    type: press_kit
+    covers_models: [honda-e-ny1]
+    covers_variants: [honda-e-ny1-68kwh-2025]
+    fields_present: [charging.time_10_to_80_min, battery.capacity_gross_kwh, performance.motors, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official 2023 Honda e:Ny1 press kit, PDF export of https://hondanews.eu/eu/et/cars/media/pressreleases/442971/2023-honda-eny1-press-kit (byte-identical to the portal download). 10-80% approx. 45 min, e:N Architecture F front-motor platform. No heat-pump mention."
+  - file: honda-e-ny1/datasheet.pdf
+    url: https://www.honda.co.uk/content/dam/local/uk/cars/business-cars/HONDA%20eNY1%20Aug25.pdf
+    type: datasheet
+    covers_models: [honda-e-ny1]
+    covers_variants: [honda-e-ny1-68kwh-2025]
+    fields_present: [charging.time_10_to_80_min, production_status]
+    fetched_at: "2026-08-13"
+    notes: "Official Honda UK e:Ny1 product guide kept current as of Aug 2025 (business-cars fleet page): 10-80% in approx. 45 min on 100 kW charger, grade/equipment walk (Elegance/Advance), evidence the model was still marketed in 2025. No heat-pump row found in any official Honda document checked (honda.fr, honda.co.uk, hondanews.eu) - features.heat_pump remains unevidenced."
+skipped: []

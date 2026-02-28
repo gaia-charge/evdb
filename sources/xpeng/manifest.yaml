@@ -1,0 +1,41 @@
+brand: xpeng
+fetched_at: "2026-08-13"
+documents:
+  - file: xpeng-g6/price-list.pdf
+    url: https://s-cdn.xpeng.com/commoncms/prod/2025-05-21/206396d2a8934ed588fbd6218d333533.pdf
+    type: price_list
+    covers_models: [xpeng-g6]
+    covers_variants: [xpeng-g6-standard-range-2025, xpeng-g6-long-range-2025, xpeng-g6-performance-awd-2025]
+    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, efficiency.wltp_kwh_per_100km]
+    notes: "Official XPENG Germany 'G6 Preise & Daten' (Preisliste und technische Daten), May 2025 edition - covers the MY2025 G6 Standard Range / Long Range / AWD Performance exactly as in the gap queue. DC-Ladezeit (10-80%), V2L, Drehmoment, Sitze all present."
+  - file: xpeng-g6/price-list-2.pdf
+    url: https://s-cdn.xpeng.com/commoncms/prod/2026-07-31/690a7912b3ee4693af76ca6186c855d1.pdf
+    type: price_list
+    covers_models: [xpeng-g6]
+    covers_variants: []
+    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l]
+    notes: "Current (July 2026) XPENG Germany G6 Preisliste/technische Daten from the official xpeng.com/de/model/g6 page - covers the facelifted New G6; useful for cross-checks and newer model years."
+  - file: xpeng-g9/price-list.pdf
+    url: https://s-cdn.xpeng.com/commoncms/prod/2026-02-17/29c223a7813c40d5976fd1717282436a.pdf
+    type: price_list
+    covers_models: [xpeng-g9]
+    covers_variants: [xpeng-g9-standard-range-2025, xpeng-g9-long-range-2025, xpeng-g9-performance-awd-2025]
+    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.time_10_to_80_min, bidirectional.v2l, features.heat_pump, efficiency.wltp_kwh_per_100km]
+    notes: "Official XPENG Germany/Austria G9 'Preisliste und technische Daten' (Feb 2026) from xpeng.com/de/model/g9. Trim names (Standard Range / Long Range / Performance) match the queue's 2025 variants; verify model-year alignment during extraction. Includes Klimatisierung & Waermepumpe section."
+  - file: xpeng-p7-plus/price-list.pdf
+    url: https://s-cdn.xpeng.com/commoncms/prod/2026-07-31/8fabbf7cecd04c48823ea2990127e53b.pdf
+    type: price_list
+    covers_models: [xpeng-p7-plus]
+    covers_variants: [xpeng-p7-plus-rwd-long-range-2025]
+    fields_present: [seats, performance.drive_type, performance.total_torque_nm, performance.acceleration_0_100_sec, bidirectional.v2l, features.heat_pump]
+    notes: "Official XPENG Germany 'P7+ Preise & Daten' PDF from xpeng.com/de/model/p7plus (July 2026 edition)."
+  - file: xpeng-p7/spec-page.html
+    url: https://www.xpeng.com/news/0186161f6fd585aab2752c9e85ce02f4
+    type: spec_page
+    covers_models: [xpeng-p7, xpeng-g9]
+    covers_variants: [xpeng-p7-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, performance.acceleration_0_100_sec, range.wltp_km]
+    notes: "Official XPENG global press release 'XPENG Launches G9 SUV and P7 Sedan for Europe' - the only remaining official page for the pre-2026 P7 sedan (model pages removed EU-wide). States 175 kW max DC, 10-80% in 29 min, 576 km WLTP (RWD Long Range), 0-100 in 4.1 s (AWD). Also covers EU G9 launch specs."
+skipped:
+  - model: xpeng-p7
+    reason: "Old P7 sedan model pages removed from all XPENG EU sites (de/nl/no/dk/se all 404); only the official 2023 EU launch press release remains (saved as spec-page.html). No price list or datasheet PDF available anymore."

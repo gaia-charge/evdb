@@ -1,0 +1,28 @@
+brand: maxus
+fetched_at: "2026-08-13"
+documents:
+  - file: maxus-euniq-6/spec-page.html
+    url: https://maxus.no/modeller/euniq6-suv
+    type: spec_page
+    covers_models: [maxus-euniq-6]
+    covers_variants: [maxus-euniq-6-bev-2025]
+    fields_present: [dimensions.wheelbase_mm, battery.capacity_gross_kwh, range.wltp_city_km]
+    fetched_at: "2026-08-13"
+    notes: "Official Norwegian importer (RSA / maxus.no) Euniq 6 model page: wheelbase 2760 mm, 70 kWh battery, 7.2 kW AC on-board charger, WLTP combined/urban range, 754 l trunk. Narrative page, no full tech table."
+  - file: maxus-euniq-6/datasheet.pdf
+    url: https://viewer.ipaper.io/rsa-no/maxus/euniq-6-tekniske-spesifiasjoner/GetPdf.ashx
+    type: datasheet
+    covers_models: [maxus-euniq-6]
+    covers_variants: [maxus-euniq-6-bev-2025]
+    fields_present: [performance.motors, performance.drive_type, performance.total_torque_nm, battery.capacity_gross_kwh, charging.time_0_to_100_ac_h, charging.time_30_to_80_min, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official 'Euniq 6 - tekniske spesifikasjoner' PDF behind the iPaper flipbook linked from https://maxus.no/modeller/euniq6-suv. FWD, 118 kW / 225 Nm, AC 0-100% hours and DC 30-80% minutes (no 10-80% figure published). No heat-pump or V2L row."
+  - file: maxus-euniq-6/price-list.pdf
+    url: https://cdn.sanity.io/files/mcx434c9/production/d3703468defa18ac3794d02b18aed3832867b477.pdf
+    type: price_list
+    covers_models: [maxus-euniq-6]
+    covers_variants: [maxus-euniq-6-bev-2025]
+    fields_present: [price, seats, battery.capacity_gross_kwh, production_status]
+    fetched_at: "2026-08-13"
+    notes: "Official maxus.no 2026 passenger-car Prisliste (site CDN cdn.sanity.io/mcx434c9, linked from the Euniq 6 page; internal file title says 'eTerron 9' but the table lists Euniq5/Euniq6 rows). Euniq6 SUV '5 seter', 70 kWt - also evidence the model is still on sale in Norway in 2026. Euniq 6 is no longer listed by the German importer (maxusmotors.de; the old maxus-automotive.de domain no longer resolves)."
+skipped: []

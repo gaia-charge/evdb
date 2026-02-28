@@ -45,7 +45,10 @@ evdb.db
 metadata.db
 backups/
 
-# Local source evidence store (copyrighted downloads stay local)
+# Local source evidence store (copyrighted downloads stay local).
+# Only the README and the per-brand manifests are tracked; the brand
+# directories must be re-included first, or git never looks inside them.
 sources/**
+!sources/*/
 !sources/README.md
 !sources/*/manifest.yaml

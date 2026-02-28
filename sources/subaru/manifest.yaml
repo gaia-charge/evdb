@@ -1,0 +1,28 @@
+brand: subaru
+fetched_at: "2026-08-13"
+documents:
+  - file: subaru-solterra/price-list.pdf
+    url: https://www.subaru-presse.de/fileadmin/data/Solterra/Assets/2026/Weitere_Assets/Solterra_MY26_WEBPTA_20052026.pdf
+    type: price_list
+    covers_models: [subaru-solterra]
+    covers_variants: []
+    fields_present: [features.heat_pump, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, battery.chemistry, charging.max_ac_kw, charging.max_dc_kw, range.wltp_km, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Subaru Germany press portal 'Preise, Technische Daten, Ausstattung' MY26 (facelift, 73.1 kWh). No 10-80% charge-TIME row (only max AC/DC power). Queue variants are MY2024/2025 pre-facelift - use for model-level fields, check spec drift."
+  - file: subaru-solterra/price-list-2.pdf
+    url: https://www.subaru.de/hubfs/Modellshowrooms/MSR%20SOLTERRA/RZ01_SOLTERRA_PTA_MY23_Web_0724.pdf
+    type: price_list
+    covers_models: [subaru-solterra]
+    covers_variants: [subaru-solterra-awd-2024]
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, charging.max_ac_kw, charging.max_dc_kw]
+    fetched_at: "2026-08-13"
+    notes: "Subaru Germany PTA (MY23 document revised 07/2024, linked from subaru.de/broschuerendownload) - pre-facelift 71.4 kWh AWD as sold in MY2024; official MY24/MY25-labelled PTA no longer online. No 10-80% charge-time or heat-pump row in text layer."
+  - file: subaru-solterra/spec-page.html
+    url: https://www.subaru.de/modelle/solterra
+    type: spec_page
+    covers_models: [subaru-solterra]
+    covers_variants: []
+    fields_present: [charging.time_10_to_80_min, battery.gross_kwh, performance.motors, performance.drive_type, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official subaru.de Solterra model page (MY26 facelift): states DC 150 kW charges 10-80% in 28 minutes, 73.1 kWh, dual-motor AWD 252 kW. Facelift figures - queue MY2024/2025 pre-facelift had 71.4 kWh and a slower 10-80% time; use only as model-level/current evidence."
+skipped: []

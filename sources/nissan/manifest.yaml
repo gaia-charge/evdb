@@ -1,0 +1,60 @@
+brand: nissan
+fetched_at: "2026-08-13"
+documents:
+  - file: nissan-ariya/price-list.pdf
+    url: https://www.nissan.de/content/dam/Nissan/de/Pricelists_and_Brochures/Ariya/ariya-preisliste.pdf
+    type: price_list
+    covers_models: [nissan-ariya]
+    covers_variants: [nissan-ariya-e-4orce-87kwh-2024, nissan-ariya-e-4orce-87kwh-2025]
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "German price list with 'Technische Daten' section: torque, drive types (Vorderradantrieb / e-4ORCE Allradantrieb), battery, AC 11 kW / DC charging system, heat pump, V2L. Current edition lists the 87 kWh pack; no explicit 10-80% minute figure."
+  - file: nissan-ariya/price-list-2.pdf
+    url: https://www-europe.nissan-cdn.net/content/dam/Nissan/ch/Pricelists-and-Brochures/Ariya/ariya-preisliste.pdf
+    type: price_list
+    covers_models: [nissan-ariya]
+    covers_variants: [nissan-ariya-e-4orce-63kwh-2025, nissan-ariya-e-4orce-87kwh-2024, nissan-ariya-e-4orce-87kwh-2025]
+    fields_present: [features.heat_pump, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Swiss (official importer) price list 'gültig ab 1. Juni 2025', Model Year 24: covers BOTH 63 kWh and 87 kWh packs incl. e-4ORCE versions."
+  - file: nissan-ariya/spec-page.html
+    url: https://germany.nissannews.com/de-DE/releases/vollelektrische-vielfalt-mit-dem-nissan-ariya-erleben
+    type: press_kit
+    covers_models: [nissan-ariya]
+    covers_variants: [nissan-ariya-e-4orce-87kwh-2024, nissan-ariya-e-4orce-87kwh-2025, nissan-ariya-e-4orce-63kwh-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.acceleration_0_100_sec, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official Nissan Germany press portal release (25 Jan 2024) with full technical table for all four versions: 63 kWh 2WD 160 kW, 87 kWh 2WD 178 kW, 87 kWh e-4ORCE 225 kW, 87 kWh e-4ORCE 290 kW; torque 300/600 Nm, 0-100 (7.5/7.6/5.7/5.1 s), top speed, WLTP range, dimensions (L 4595 / wheelbase 2775 mm), AC 22 kW, DC 130 kW, DC range recovery in ~30 min. NOTE: 63 kWh is listed as 2WD here, not e-4ORCE."
+  - file: nissan-leaf/spec-page.html
+    url: https://germany.nissannews.com/de-DE/releases/release-426203572-technische-daten-nissan-leaf-2017
+    type: press_kit
+    covers_models: [nissan-leaf]
+    covers_variants: [nissan-leaf-40kwh-2024]
+    fields_present: [charging.time_0_to_80_min, performance.motors, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Official Nissan Germany press portal 'Technische Daten Nissan LEAF (2017)': previous-generation (ZE1) 40 kWh spec sheet — motor 110 kW / 320 Nm, top speed 144 km/h, AC charge times (3/6 kW), quick charge to 80%, dimensions (L 4490 / wheelbase 2700 mm), 5 seats. Same generation as the 2024 40 kWh variant; use as supporting evidence only (2017 NEFZ range figures outdated)."
+  - file: nissan-leaf/price-list.pdf
+    url: https://www.nissan.de/content/dam/Nissan/de/Pricelists_and_Brochures/Leaf/leaf-preisliste.pdf
+    type: price_list
+    covers_models: [nissan-leaf]
+    covers_variants: [nissan-leaf-52kwh-2025, nissan-leaf-75kwh-2025]
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "New-generation LEAF (52 kWh / 75 kWh) German price list with Technische Daten: torque, Vorderradantrieb, CCS2 DC system, 0-100, top speed."
+  - file: nissan-leaf/price-list-2.pdf
+    url: https://www-europe.nissan-cdn.net/content/dam/Nissan/ch/Pricelists-and-Brochures/Leaf/leaf-preisliste.pdf
+    type: price_list
+    covers_models: [nissan-leaf]
+    covers_variants: [nissan-leaf-40kwh-2024, nissan-leaf-e-plus-62kwh-2024]
+    fields_present: [features.heat_pump, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Swiss (official importer) price list for the PREVIOUS-generation Leaf ZE1, 'gültig ab 1. Januar 2024'; lists 39 kWh / 59 kWh usable (40/62 kWh packs), torque, range, consumption, heat pump. Evidence for the discontinued 2024 variants no longer on nissan.de."
+  - file: nissan-micra/price-list.pdf
+    url: https://www.nissan.de/content/dam/Nissan/de/Pricelists_and_Brochures/Micra/micra-preisliste.pdf
+    type: price_list
+    covers_models: [nissan-micra]
+    covers_variants: [nissan-micra-standard-range-40kwh-2025, nissan-micra-extended-range-52kwh-2025]
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "German price list, 40 kWh and 52 kWh versions, with Technische Daten section."
+skipped: []

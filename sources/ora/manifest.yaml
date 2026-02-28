@@ -1,0 +1,60 @@
+brand: ora
+fetched_at: "2026-08-13"
+documents:
+  - file: gwm-ora-03/spec-page.html
+    url: https://www.gwm-motor.de/technische-daten-ora-03
+    type: spec_page
+    covers_models: [gwm-ora-03]
+    covers_variants: [gwm-ora-03-300-2025, gwm-ora-03-400-pro-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.chemistry, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM Germany (gwm-motor.de) technical data page, all ORA 03 variants incl. GT. DC charge window is 15-80%, not 10-80%. No heat pump / V2L rows."
+  - file: gwm-ora-03/datasheet.pdf
+    url: https://presse.ora-motor.de/wp-content/uploads/2024/01/GWM-ORA-03-300_Technische-Daten.pdf
+    type: datasheet
+    covers_models: [gwm-ora-03]
+    covers_variants: [gwm-ora-03-300-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.chemistry, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM ORA press portal datasheet for ORA 03 300 (Frontantrieb; DC 15-80% window). Published 2024, applies to MY2025 queue variant."
+  - file: gwm-ora-03/datasheet-2.pdf
+    url: https://presse.ora-motor.de/wp-content/uploads/2024/01/GWM-ORA-03-400-Pro_Technische-Daten.pdf
+    type: datasheet
+    covers_models: [gwm-ora-03]
+    covers_variants: [gwm-ora-03-400-pro-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.chemistry, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM ORA press portal datasheet for ORA 03 400 Pro (DC 15-80% window)."
+  - file: gwm-ora-03/spec-page-2.html
+    url: https://www.gwm-motor.de/ausstattung-ora-03
+    type: spec_page
+    covers_models: [gwm-ora-03]
+    covers_variants: [gwm-ora-03-300-2025, gwm-ora-03-400-pro-2025]
+    fields_present: [features.heat_pump, seats]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM Germany equipment (Ausstattung) page - only found source with a Waermepumpe row for ORA 03. Saved by an earlier fetch run same day; provenance confirmed via canonical/og:url in the HTML. 4th doc for this model (over the 3-doc budget) kept deliberately for the unique heat-pump evidence."
+  - file: gwm-ora-07/spec-page.html
+    url: https://www.gwm-motor.de/technische-daten-ora-07
+    type: spec_page
+    covers_models: [gwm-ora-07]
+    covers_variants: [gwm-ora-07-pure-rwd-2025, gwm-ora-07-performance-awd-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.chemistry, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM Germany technical data page, ORA 07 Pure/Pro/GT. NOTE: Pure/Pro are Frontantrieb (FWD) per page - queue id says 'pure-rwd', flag for correction. GT = Allradantrieb matches 'performance-awd'. DC window 15-80% on page."
+  - file: gwm-ora-07/datasheet.pdf
+    url: https://presse.gwm-motor.de/wp-content/uploads/2024/06/Technische-Daten.pdf
+    type: datasheet
+    covers_models: [gwm-ora-07]
+    covers_variants: [gwm-ora-07-performance-awd-2025]
+    fields_present: [charging.time_10_to_80_min, charging.time_0_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.chemistry, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM press datasheet covering ORA 07 Pro (FWD) and ORA 07 GT (Allradantrieb); explicit 'Ladedauer (DC) 10-80%: 36 min' and AC 10-80% rows."
+  - file: gwm-ora-07/spec-page-2.html
+    url: https://www.gwm-motor.de/ausstattung-ora-07
+    type: spec_page
+    covers_models: [gwm-ora-07]
+    covers_variants: [gwm-ora-07-pure-rwd-2025, gwm-ora-07-performance-awd-2025]
+    fields_present: [features.heat_pump, seats]
+    fetched_at: "2026-08-13"
+    notes: "Official GWM Germany equipment (Ausstattung) page - only found source with a Waermepumpe row for ORA 07. Saved by an earlier fetch run same day; provenance confirmed via canonical/og:url in the HTML."
+skipped: []

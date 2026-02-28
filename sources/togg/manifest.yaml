@@ -1,0 +1,28 @@
+brand: togg
+fetched_at: "2026-08-13"
+documents:
+  - file: togg-t10f/spec-page.html
+    url: https://www.togg.com.tr/en/t10f
+    type: spec_page
+    covers_models: [togg-t10f]
+    covers_variants: [togg-t10f-long-range-rwd-2025, togg-t10f-long-range-awd-2025]
+    fields_present: [performance.motors, performance.drive_type, performance.acceleration_0_100_sec]
+    fetched_at: "2026-08-13"
+    notes: "Official Togg (Turkey) T10F page: RWD single motor 160 kW / 350 Nm (0-100 8.0 s), AWD twin motor 320 kW / 700 Nm (4.1 s, 523 km WLTP), long range up to 623 km, DC 180 kW 20-80% in 26.5 min. Charge window is 20-80%, not 10-80%."
+  - file: togg-t10f/spec-page-2.html
+    url: https://www.togg.eu/t10f
+    type: spec_page
+    covers_models: [togg-t10f]
+    covers_variants: [togg-t10f-long-range-rwd-2025, togg-t10f-long-range-awd-2025]
+    fields_present: [efficiency.wltp_kwh_per_100km, performance.motors, performance.drive_type, performance.acceleration_0_100_sec]
+    fetched_at: "2026-08-13"
+    notes: "Official Togg Europe (togg.eu, reached via togg.de redirect) T10F page: adds WLTP combined consumption 17.4 kWh/100 km (RWD) and EU market data; DC 20-80% 28 min at 180 kW."
+  - file: togg-t10f/datasheet.pdf
+    url: https://trumore-cdn.togg.cloud/eu_catalog/T10F_eu_catalog_en.pdf
+    type: datasheet
+    covers_models: [togg-t10f]
+    covers_variants: [togg-t10f-long-range-rwd-2025, togg-t10f-long-range-awd-2025]
+    fields_present: [efficiency.wltp_kwh_per_100km, range.wltp_city_km, performance.drive_type, performance.motors]
+    fetched_at: "2026-08-13"
+    notes: "Official EU catalogue PDF from Togg's own CDN (linked from togg.eu/t10f). Full technical table for all four versions (Standard Range RWD, Long Range RWD 18\"/19\", Long Range AWD): battery 52.4 / 88.5 kWh, WLTP combined AND city range, combined AND city consumption, AC 11 kW OBC, DC 180 kW 20-80% 28 min, traction system per version. Charge window is 20-80%, not 10-80%."
+skipped: []
