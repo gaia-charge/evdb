@@ -1,0 +1,87 @@
+brand: jaguar
+fetched_at: "2026-08-13"
+documents:
+  - file: jaguar-i-pace/datasheet.pdf
+    url: https://www.jaguar.com/content/dam/jdx/pdfs/uk/wltp/Jaguar-I-PACE-TD-Insert-1X5902450000GBEN01P.pdf
+    type: datasheet
+    covers_models: [jaguar-i-pace]
+    covers_variants: [jaguar-i-pace-ev400-2024]
+    fields_present: [charging.charging_speed_kmh, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Official Jaguar UK "I-PACE TECHNICAL SPECIFICATION OCTOBER 2023" WLTP insert - the best
+      model-year match for the MY2024 queue variant. Provenance re-established on 2026-08-14:
+      re-downloaded from this URL and shasum matches the stored file byte-for-byte
+      (5c8fed2220ff093e8074483db55f1f50d4183245, 23937194 bytes).
+      Verified in the text layer: 'Maximum Power PS (kW) 400 (294)'; 'Maximum Torque (Nm) 696';
+      'Battery (kWh) 90' + 'Battery capacity Total (Usable) kW 84.7'; 'Driveline AWD';
+      'Acceleration (secs) 0-60 mph (0-100 km/h) 4.5 (4.8)'; WLTP range/consumption rows for
+      Low/Medium/High/Extra High/Combined phases ('Combined 254-292 (408-470)' km,
+      'Combined 35.4-40.6 (22.0-25.2)' kWh/100 km); dimensions 4,682 mm length / 2,990 mm wheelbase.
+      CAVEAT on charging: Jaguar publishes NO 10-80% or 0-80% DC window anywhere in this document.
+      The 'CHARGING TIMES*' table is expressed as range-added-per-time instead, which is what
+      charging.charging_speed_kmh should be taken from: 'DC Charger 50kW miles (km) 39 (63) per
+      15 mins of charge', 'DC Charger 100kW miles (km) 78 (127) per 15 mins of charge',
+      'Home Charger / Wall box 7kW (hours) 12.75 to 100%', 'Wall box 11kW 8.58 to 100%'.
+      CAVEAT on city range: there is no row labelled 'City'. The WLTP 'Low' phase range row reads
+      '331-384 (533-618)' km; treat that as the WLTP-Low phase figure, NOT as a published
+      city-range number, if it is used for range.wltp_city_km at all.
+      Fields NOT present at all: seat count (only loadspace 'Rear seats upright/forward' rows),
+      heat pump, V2L.
+  - file: jaguar-i-pace/price-list.pdf
+    url: https://www.jaguar.de/content/dam/jdx/pdfs/de/I-PACE_Preisliste_MY24_02-23_D1b.pdf
+    type: price_list
+    covers_models: [jaguar-i-pace]
+    covers_variants: [jaguar-i-pace-ev400-2024]
+    fields_present: [performance.drive_type, performance.torque, battery.gross_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Jaguar Germany "I-PACE Preis- und Ausstattungsliste Februar 2023", Modelljahr 24,
+      gueltig ab 02.02.2023. Provenance re-established on 2026-08-14: re-downloaded from this URL,
+      shasum matches the stored file byte-for-byte (0cd19d612200415beae29028888a9b8d3c8f55f3,
+      2444710 bytes).
+      Verified in the 'I-PACE | TECHNISCHE DATEN' section of the text layer: 'Leistung 294 kW
+      (400 PS)'; 'Drehmoment 696 Nm'; 'Batterie 90 kWh'; 'Antriebsart Allradantrieb';
+      'Max. Ladeleistung (AC/DC) 11 kW (AC 3-phasig) / >100 kW (DC - CCS)'; 'Reichweite (km)
+      408 - 469'; 'Stromverbrauch (max. kombiniert)' row.
+      CAVEAT: only a peak DC power figure ('>100 kW'), no 10-80% or 0-80% charge time.
+      'Waermepumpe' does not appear anywhere in the document; neither does V2L or a numeric
+      seat count (the many 'Sitz' hits are Sitzheizung / Sitzbezug equipment lines).
+  - file: jaguar-i-pace/price-list-2.pdf
+    url: https://www.jaguar.com/content/dam/jdx/pdfs/uk/Jaguar-I-PACE-Specification-And-Price-Guide.pdf
+    type: price_list
+    covers_models: [jaguar-i-pace]
+    covers_variants: [jaguar-i-pace-ev400-2024]
+    fields_present: [performance.drive_type, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Jaguar UK "ALL-ELECTRIC JAGUAR I-PACE SPECIFICATION AND PRICE GUIDE MARCH 2023".
+      Provenance re-established on 2026-08-14: re-downloaded from this URL, shasum matches the
+      stored file byte-for-byte (a184d279944ae1a2239d8ab4a9ca7ac0292db846, 705630 bytes).
+      Verified in the text layer, 'TECHNICAL SPECIFICATIONS' pages (PDF pages 23-24):
+      'Power 400PS', 'Battery 90kWh', 'Drive AWD', dimension callouts 4,682mm length /
+      2,990mm wheelbase / 2,139mm width inc. mirrors / 1,566mm height.
+      Thinner than the datasheet on powertrain - kept mainly as the equipment-list companion
+      that shows which features are standard vs optional per trim.
+      CAVEAT: this is a trim/equipment and price document; it explicitly defers technical detail
+      ("Please refer to the accompanying Technical Specification for full details on performance
+      and economy"). No 10-80%/0-80% DC time, no heat pump, no V2L, no numeric seat count -
+      'Electric Cabin Pre-Conditioning' is an equipment line and is NOT evidence of a heat pump.
+skipped: []
+notes: >-
+  All three I-PACE files were already on disk from an interrupted earlier run with no manifest.
+  Provenance for every one of them was re-established on 2026-08-14 by locating the official
+  URL and re-downloading to a temp path: all three shasums match byte-for-byte, so nothing was
+  deleted. The datasheet URL was not directly indexed by search; it was derived from the
+  sibling Jaguar E-PACE October-2023 WLTP insert URL pattern
+  (.../uk/wltp/Jaguar-E-PACE-TD-Insert-1X5402450000GBEN01P.pdf -> I-PACE 1X5902450000GBEN01P)
+  and then confirmed by exact shasum match, which is stronger evidence than a search hit.
+  BRAND-LEVEL GAP CAVEAT - these five queue fields are simply not published by Jaguar for the
+  I-PACE in any official document found: charging.time_10_to_80_min, charging.time_0_to_80_min,
+  features.heat_pump, bidirectional.v2l, range.wltp_city_km, and the model-level seats count.
+  Jaguar's charging disclosure format is range-added-per-time, not a state-of-charge window.
+  The live official spec page (https://www.jaguar.com/en-gb/jdx/jaguar-range/i-pace/specifications/index.html,
+  reached via a 301 from the jaguar.co.uk path) was checked on 2026-08-14 and was NOT saved:
+  it now renders "We're sorry the information on this page is currently unavailable" and shows
+  only range/0-60/CO2/7 kW AC hours, i.e. strictly less than the datasheet already on disk.
+  The I-PACE was discontinued at the end of 2024, so no newer official material is being issued.

@@ -1,0 +1,142 @@
+brand: volvo
+fetched_at: "2026-08-13"
+documents:
+  # ---------------------------------------------------------------- EC40
+  - file: volvo-ec40/spec-page.md
+    url: https://www.volvocars.com/de/cars/ec40-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-ec40]
+    covers_variants: [volvo-ec40-single-motor-2024, volvo-ec40-single-motor-er-2025, volvo-ec40-twin-motor-2024]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany EC40 'Technische Daten' page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: page re-downloaded from the recorded URL and every numeric token in the file matched the live page (48/48). Carries all four DE trims (Single Motor, Single Motor Extended Range, Twin Motor, Twin Motor Performance). 'Batterieladedauer 10-80% (DC 200kW) 26 min / 28 min'; 'Batterieenergie (nominal) 70 / 82 kWh' (label is nominal, not gross - flag on extraction); 'Anzahl der Sitze 5'; 'Fahrzeuglänge 4 440 mm'; 'Radstand 2 702 mm'. No heat-pump row and no 0-80% charge figure on this page - see price-list.html for the heat pump."
+  - file: volvo-ec40/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ec40-electric/
+    type: price_list
+    covers_models: [volvo-ec40]
+    covers_variants: [volvo-ec40-single-motor-2024, volvo-ec40-single-motor-er-2025, volvo-ec40-twin-motor-2024]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo EC40_MY27' on Volvo's own price-list portal (iPaper viewer). HOW TO READ: the complete price-list text is embedded in the HTML as the JSON array \"pageTexts\" (97 pages) - extract with e.g. python re.search(r'\"pageTexts\":(\\[.*?\\]),\"', html, re.S) then json.loads. Verified in that text layer: 'Ladezeit DC 200 kW Schnellladestation 10 % -80 %, Min. ... 26 / 28'; 'Max. Drehmoment ... Nm ... Single Motor Elektromotor 175 (238) 101 (137) 420 einstufig Hinterrad / Single Motor Extended Range ... 420 ... Hinterrad'; 'Beschleunigung 0-100 km/h s 7,3 / 7,3'; Twin Motor AWD 300 (408) / Twin Motor Performance AWD 325 (442) on the Allrad table; 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 70 / 82'; 'Elektrische Reichweite innerorts (WLTP), km 616-643 / 739-784'; 'Stromverbrauch kombiniert (WLTP), kWh/100 km 16,7-18,1 / 16,2-17,5'; 'Wärmepumpe' as a Core-line highlight. CAVEATS: no V2L / bidirectional content anywhere in this list (EC40 does not offer it); no seat-count row and no dimensions/Radstand rows (use spec-page.md); queue variants are MY2024/2025 while this list is MY27 - check spec drift. Current MY27 pricing on Volvo's own portal is the evidence for production_status (on sale)."
+  # ---------------------------------------------------------------- ES90
+  - file: volvo-es90/spec-page.md
+    url: https://www.volvocars.com/de/cars/es90-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-es90]
+    covers_variants: [volvo-es90-single-motor-2026, volvo-es90-twin-motor-2026, volvo-es90-twin-motor-performance-2026]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany ES90 specifications page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: 41/41 numeric tokens matched the live page. 'Batterieladedauer 10-80% (DC 350kW) 22 min' for all three trims; 'Elektrische Anlage: 800 V'; 'Anzahl der Sitze 5'; 'Fahrzeuglänge 5 000 mm'; 'Radstand 3 102 mm'; 'Batterieenergie (nominal) 92 / 106 kWh'. NOTE the DE page names the entry trim 'Single Motor Extended Range' while the queue variant is 'Volvo ES90 Single Motor' - same 92 kWh / 245 kW car, but confirm before writing. No heat-pump, no V2L, no 0-80% row here."
+  - file: volvo-es90/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-es90-electric/
+    type: price_list
+    covers_models: [volvo-es90]
+    covers_variants: [volvo-es90-single-motor-2026, volvo-es90-twin-motor-2026, volvo-es90-twin-motor-performance-2026]
+    fields_present: [charging.time_10_to_80_min, charging.charging_speed_kmh, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo ES90 MY27.5' (101 pages) from Volvo's own price-list portal. Full text is in the embedded \"pageTexts\" JSON array - see the EC40 entry for the extraction recipe. Verified in that text layer: 'Ladezeit DC 350 kW/300 kW bei Single Motor Extended Range Schnellladestation 10 % - 80 %, Min. ... 22' (22 min for every trim); 'Nachgeladene Reichweite bei 10 Minuten DC-Laden, km 265 / 285' -> this is the only official basis for charging.charging_speed_kmh (km added in 10 min, NOT a km/h figure - convert deliberately); 'Max. Drehmoment ... 480 einstufig Hinterrad / 670 einstufig Allrad', Twin Motor Performance 500 (680) / 870 Nm; 'Beschleunigung 0-100 km/h s 6,6 / 5,4' (marked 'vorläufige Werte'); 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 92 / 106'; 'Elektrische Reichweite innerorts (WLTP), km 687-799 / 681-834'; 'Wärmepumpe'; V2L via the 'V2L Adapter' accessory (230 V, up to 3,6 kW). No 0-80% charge figure and no dimensions rows."
+  # ---------------------------------------------------------------- EX30
+  - file: volvo-ex30/spec-page.md
+    url: https://www.volvocars.com/de/cars/ex30-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-ex30]
+    covers_variants: [volvo-ex30-extended-range-single-motor-2024, volvo-ex30-extended-range-single-motor-2025, volvo-ex30-single-motor-2025, volvo-ex30-twin-motor-performance-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany EX30 specifications page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: 48/48 numeric tokens matched the live page. Trims are P3 / P5 / P5 Long Range / P8 AWD; map to the queue as Single Motor = P5 (51 kWh), Extended Range Single Motor = P5 Long Range (69 kWh), Twin Motor Performance = P8 AWD (69 kWh, 315 kW). 'Batterieladedauer 10-80% (DC 150kW) 26 min' (P3/P5) and '(DC 175kW) 27 min' (P5 LR / P8 AWD); 'Antriebsstrang RWD / AWD'; 'Anzahl der Sitze 5'; 'Fahrzeuglänge 4 233 mm'; 'Radstand 2 650 mm'. The 'Features - Aufladen' list on this page includes 'Bidirektionales Laden' and '22 kW On-Board Charger' - that is the V2L hint recorded as features.v2l_hint (not a schema field; treat bidirectional.v2l from price-list.html instead). No heat-pump row and no explicit motor count here."
+  - file: volvo-ex30/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ex30-electric/
+    type: price_list
+    covers_models: [volvo-ex30, volvo-ex30-cross-country]
+    covers_variants: [volvo-ex30-extended-range-single-motor-2024, volvo-ex30-extended-range-single-motor-2025, volvo-ex30-single-motor-2025, volvo-ex30-twin-motor-performance-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo EX30_MY27' (119 pages) from Volvo's own price-list portal; full text in the embedded \"pageTexts\" JSON array. Verified in that text layer: 'Ladezeit DC 150 kW bei Schnellladestation 10 % -80 %, Min. ... 26' (P3/P5) and 'Ladezeit DC 175 kW Schnellladestation 10 % -80 %, Min. ... 27' (P5 Long Range / P8 AWD); 'Max. Drehmoment ... Nm P3 electric Elektromotor 110 (150) 75 (102) 343 einstufig Hinterrad / P5 electric 200 (272) ... 343 ... Hinterrad'; 'Beschleunigung 0-100 km/h s 8,6 / 5,7'; 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 51' and 69 on the Long Range/AWD table; 'Elektrische Reichweite innerorts (WLTP), km 428-441' etc.; 'Wärmepumpe 1)' with footnote '1) Nicht in Verbindung mit Motor P3 electric und P5 electric' - i.e. heat pump is NOT available on the 51 kWh cars and is a Core-line highlight on the Long Range/AWD cars; V2L via 'V2L Adapter' accessory (230 V, bis zu 3,6 kW). CAVEAT: no seat-count row, no dimensions rows. This same document also carries the EX30 Cross Country trims - see volvo-ex30-cross-country/price-list.html (identical file, recorded separately per model)."
+  # ------------------------------------------------- EX30 Cross Country
+  - file: volvo-ex30-cross-country/spec-page.md
+    url: https://www.media.volvocars.com/at/de-at/media/pressreleases/339225/der-neue-volvo-ex30-cross-country-vollelektrisch-ins-abenteuer
+    type: press_kit
+    covers_models: [volvo-ex30-cross-country]
+    covers_variants: [volvo-ex30-cross-country-twin-motor-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Car Austria press-centre release (10 Feb 2025) saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: page re-downloaded and all distinctive strings matched the live release ('54.990 Euro', 'Twin Motor Performance AWD mit zwei Elektromotoren und 315 kW (428 PS)', 'Das Aufladen von 10 auf 80 Prozent dauert an Schnellladestationen dank 153 kW Ladeleistung nur 26 Minuten', 'bis zu 427 Kilometer'). This is the only official document that states the motor COUNT (zwei Elektromotoren) for the Cross Country. Range and charge figures are explicitly 'vorläufige Zielwerte' (preliminary). CAVEAT: charge figure here is 153 kW / 26 min (MY25 launch) whereas the MY27 German price list says DC 175 kW / 27 min for the same P8 AWD car - do not merge blindly, pick by model year."
+  - file: volvo-ex30-cross-country/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ex30-electric/
+    type: price_list
+    covers_models: [volvo-ex30-cross-country]
+    covers_variants: [volvo-ex30-cross-country-twin-motor-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Identical file to volvo-ex30/price-list.html (Volvo has no separate Cross Country price list - the CC is a trim family inside the EX30 MY27 list, and there is no volvocars.com/de EX30 Cross Country model page: /de/cars/ex30-cross-country-electric/ returns 404). Cross-Country-specific content verified in the embedded \"pageTexts\": trim columns 'Cross Country Plus', 'Cross Country Plus Summer Edition', 'Cross Country Ultra' priced under 'P5 Long Range electric' and 'P8 AWD electric'; footnote '2) Werte gelten für die Ausstattungslinie Cross Country' marks the CC-specific WLTP numbers next to the standard ones (P8 AWD: 17,5-18,0 standard vs 18,3-19,1 kWh/100 km CC; innerorts 591-595 vs 467-592 km; kombiniert 445-450 vs 417-437 km); '22 kW On-Board Charger' is 'Nur in Verbindung mit den Ausstattungslinien Ultra, Black Edition Ultra und Cross Country Ultra'. The queue variant (Twin Motor Performance, 315 kW) is the P8 AWD electric column. CAVEAT: the CC values are footnote-marked in a two-column layout that the flattened text interleaves - re-read the page image/PDF before writing any CC number. No seats, no dimensions rows."
+  - file: volvo-ex30-cross-country/spec-page-2.html
+    url: https://www.volvocars.com/de/support/car/ex30-cross-country/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409/
+    type: spec_page
+    covers_models: [volvo-ex30-cross-country]
+    covers_variants: [volvo-ex30-cross-country-twin-motor-2025]
+    fields_present: [dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany owner-support article 'EX30 Cross Country Abmessungen des Fahrzeugs' - the only official source found that gives dimensions for the Cross Country specifically (there is no CC model page on volvocars.com in any market tried: de, at, intl, uk all 404). Full table is in the HTML text layer: 'C Radstand 2650', 'D Länge 4233', 'E Höhe [1] 1567', 'G Bodenfreiheit [1] 190', 'M Breite 1850', front/rear track 1590/1595 mm. So the CC shares length and wheelbase with the standard EX30 but sits higher (1567 vs 1550 mm) with 190 mm ground clearance. Same article exists in English at /uk/ if a reviewer prefers it. No seats, powertrain or charging data in this article."
+  # ---------------------------------------------------------------- EX40
+  - file: volvo-ex40/spec-page.md
+    url: https://www.volvocars.com/de/cars/ex40-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-ex40]
+    covers_variants: [volvo-ex40-single-motor-2024, volvo-ex40-single-motor-extended-range-2025, volvo-ex40-twin-motor-2024, volvo-ex40-twin-motor-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany EX40 'Technische Daten' page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: 48/48 numeric tokens matched the live page. 'Batterieladedauer 10-80% (DC 200kW) 26 min' (Single Motor) / '28 min' (Single Motor ER, Twin Motor, Twin Motor Performance); 'Anzahl der Sitze 5'; 'Fahrzeuglänge 4 440 mm'; 'Radstand 2 702 mm'; 'Batterieenergie (nominal) 70 / 82 kWh'. No heat-pump row, no 0-80% figure."
+  - file: volvo-ex40/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ex40-electric/
+    type: price_list
+    covers_models: [volvo-ex40]
+    covers_variants: [volvo-ex40-single-motor-2024, volvo-ex40-single-motor-extended-range-2025, volvo-ex40-twin-motor-2024, volvo-ex40-twin-motor-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo EX40_MY27' (101 pages) from Volvo's own price-list portal; full text in the embedded \"pageTexts\" JSON array. Verified: 'Ladezeit DC 200 kW Schnellladestation 10 % -80 % , Min. ... 26 / 28'; 'Max. Drehmoment ... Single Motor Elektromotor 175 (238) 101 (137) 420 einstufig Hinterrad / Single Motor Extended Range 185 (252) 128 (174) 420 Hinterrad', Twin Motor AWD 300 (408) / Twin Motor Performance AWD 325 (442) on the Allrad table; 'Beschleunigung 0-100 km/h s 7,3 / 7,3'; 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 70 / 82'; 'Elektrische Reichweite innerorts (WLTP), km 609-643 / 734-804'; 'Wärmepumpe'. CAVEATS: no V2L / bidirectional content at all (EX40 does not offer it); no seats or dimensions rows; queue variants are MY2024/2025 vs this MY27 list."
+  # ---------------------------------------------------------------- EX60
+  - file: volvo-ex60/spec-page.md
+    url: https://www.volvocars.com/de/cars/ex60-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-ex60]
+    covers_variants: [volvo-ex60-p10-awd-2027, volvo-ex60-p12-awd-2027]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany EX60 specifications page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: 47/47 numeric tokens matched the live page. Covers P6 / P10 AWD / P12 AWD. 'Batterieladedauer 10-80% (DC 400kW) 16 min' (P10) and '19 min' (P12); 'Elektrische Reichweite innerorts (WLTP) Bis zu 819 km' (P10) / '980 km' (P12); 'Anzahl der Sitze 5'; 'Fahrzeuglänge 4 803 mm'; 'Radstand 2 970 mm'; 'Batterieenergie (nominal) 95 / 117 kWh'; features list includes 'Bidirektionales Laden', '800V-Technologie', '400-Volt-DC/DC-Booster'. Footnotes on the page state the range figures are preliminary WLTP values and that the charge time is measured at a 400 kW charger. NOTE: this page's city-range figures for P12 (980 km) are marked preliminary and the MY27 price list says the P12 innerorts value is not yet available - prefer the page but flag the conflict."
+  - file: volvo-ex60/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ex60-electric/
+    type: price_list
+    covers_models: [volvo-ex60]
+    covers_variants: [volvo-ex60-p10-awd-2027, volvo-ex60-p12-awd-2027]
+    fields_present: [charging.time_10_to_80_min, charging.charging_speed_kmh, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo EX60_MY27' (105 pages) from Volvo's own price-list portal; full text in the embedded \"pageTexts\" JSON array. Verified: 'Ladezeit DC 400 kW/ 350 kW bei P6 electric Schnellladestation 10 % - 80 %, Min. ... 16 16' (P6, P10) and '19' for P12; 'Nachgeladene Reichweite bei 10 Minuten DC-Laden, km 300 / 315 / 340' (basis for charging.charging_speed_kmh - km added in 10 min, not km/h); 'Max. Drehmoment ... P6 electric Elektromotor 275 (374) 168 (228) 480 einstufig Hinterrad / P10 AWD electric 375 (510) 259 (352) 710 einstufig Allrad', P12 AWD 500 (680); 'Beschleunigung 0-100 km/h s 5,9 / 4,6'; 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 83 / 95 / 117'; 'Wärmepumpe' (Plus-line highlight) plus 'Vorbereitung für Bidirektionales Laden (DC) für Vehicle-to-Grid (V2G), Vehicle-to-Home (V2H) und Vehicle-to-Load (V2L)' as standard equipment, and a 'V2L Adapter' accessory (230 V, bis zu 3,6 kW, 'Voraussichtlich erhältlich ab September 2026'). CAVEATS: all P12 data is flagged '1) vorläufige Werte' and its city range is '2) Daten liegen noch nicht vor'; no seats or dimensions rows; no 0-80% charge figure."
+  # ---------------------------------------------------------------- EX90
+  - file: volvo-ex90/spec-page.md
+    url: https://www.volvocars.com/de/cars/ex90-electric/specifications/
+    type: spec_page
+    covers_models: [volvo-ex90]
+    covers_variants: []
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Volvo Cars Germany EX90 specifications page saved as text fetch (source URL in file header). Provenance re-verified 2026-08-14: 44/44 numeric tokens matched the live page. Fills every EX90 model gap in the queue: 'Anzahl der Sitze 6 - 7', 'Fahrzeuglänge 5 037 mm', 'Radstand 2 985 mm', and current MY pricing (from 84.190 EUR) as production_status evidence. Also 'Batterieladedauer 10-80% (DC 350kW) 22 min' for all three trims, 'Elektrische Anlage 800 V', 'Batterieenergie (nominal) 92 / 106 kWh'. The queue has no EX90 variant entries, so covers_variants is empty."
+  - file: volvo-ex90/price-list.html
+    url: https://pricelists.volvocars.com/de/volvo-ex90-electric/
+    type: price_list
+    covers_models: [volvo-ex90]
+    covers_variants: []
+    fields_present: [charging.time_10_to_80_min, charging.charging_speed_kmh, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, seats]
+    fetched_at: "2026-08-14"
+    notes: "Official Volvo Cars Germany price list 'Volvo EX90_MY27' (97 pages) from Volvo's own price-list portal; full text in the embedded \"pageTexts\" JSON array. Verified: 'Ladezeit DC 350 kW/300 kW bei Single Motor Schnellladestation 10 % - 80 %, Min. ... 22 22'; 'Nachgeladene Reichweite bei 10 Minuten DC-Laden, km 230 / 245'; 'Max. Drehmoment ... Single Motor Elektromotor 245 (333) 140 (190) 480 einstufig Hinterrad / Twin Motor AWD 335 (456) 230 (313) 670 einstufig Allrad', Twin Motor Performance AWD 500 (680); 'Beschleunigung 0-100 km/h s 6,8 / 5,5'; 'Lithium-Ionen-Hochvoltbatterie Speicherkapazität nominal, kWh 92 / 106'; 'Elektrische Reichweite innerorts (WLTP), km 628-767 / 659-797'; 'Wärmepumpe'; 'Bidirektionales Laden 5)' as standard Core equipment with footnote '5) Bitte beachten Sie: Verfügbarkeit und Funktionalität des bidirektionalen Ladens können je nach Markt variieren' (plus bidirectional V2H/V2G wallbox accessories) - note this is V2H/V2G bidirectional charging, no V2L adapter is listed for the EX90. Seats appear as trim descriptors: 'Core (7-Sitzer)', 'Plus (6-Sitzer & 7-Sitzer)', 'Ultra (6-Sitzer & 7-Sitzer)'. No dimensions rows."
+skipped: []
+caveats:
+  - "charging.time_0_to_80_min: Volvo does not publish a 0-80% DC figure anywhere. Every official Volvo source (model spec pages and MY27 price lists) gives DC 10-80% in minutes and AC 0-100% in hours. This gap is unfillable from official sources - leave it empty rather than deriving it."
+  - "charging.charging_speed_kmh: Volvo publishes 'Nachgeladene Reichweite bei 10 Minuten DC-Laden, km' (ES90, EX60, EX90 price lists only). That is km recharged in 10 minutes, not km/h; convert explicitly if the schema wants km/h. No such figure exists for EX30, EX30 Cross Country, EC40 or EX40."
+  - "battery.chemistry: the only official statement is 'Lithium-Ionen-Hochvoltbatterie' in the price lists. No cell chemistry (NMC/LFP) is published by Volvo for any of these models."
+  - "battery.gross_kwh: Volvo labels the figure 'Batterieenergie (nominal)' / 'Speicherkapazität nominal' - decide gross vs net at extraction time; do not assume it is the usable capacity."
+  - "dimensions.* and seats: present only on the volvocars.com specifications pages, never in the price lists (which have no Radstand/Länge rows)."
+  - "features.heat_pump: only the price lists mention 'Wärmepumpe'. It is an equipment-line item (not a spec-table row), so it is trim-dependent - on the EX30 explicitly 'Nicht in Verbindung mit Motor P3 electric und P5 electric'."
+  - "Model-year drift: all price lists are MY27 (ES90 is MY27.5) while many queue variants are MY2024/2025 (EC40, EX30, EX30 Cross Country, EX40) or MY2026/2027 (ES90, EX60). Check drift before writing any value onto an older variant."
+  - "The volvocars.com and pricelists.volvocars.com hosts return HTTP 403 to plain curl and to WebFetch; they only answer a full browser header set (User-Agent + Accept + Accept-Language + Sec-Fetch-*). Use that if these documents need re-fetching."
+  - "seats for volvo-ex30-cross-country: no official document states it. The CC is the same 5-seat EX30 body (volvo-ex30/spec-page.md: 'Anzahl der Sitze 5'), and the CC dimensions article confirms identical length/wheelbase, but treat the seat count as inferred, not sourced."
+  - "production_status: evidenced only indirectly. EC40, EX30 (incl. Cross Country trims), EX40, EX90 and ES90 all have current MY27/MY27.5 German price lists with firm EUR prices = on sale. The EX60 list is headed 'Der neue Volvo EX60' with '1) vorläufige Werte' on the P12 and 'Daten liegen noch nicht vor' for its city range = announced/launching, not yet fully homologated. No document uses the words production status."

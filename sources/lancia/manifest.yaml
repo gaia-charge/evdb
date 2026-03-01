@@ -1,0 +1,119 @@
+brand: lancia
+fetched_at: "2026-08-14"
+documents:
+  - file: lancia-ypsilon/price-list.pdf
+    url: https://www.media.stellantis.com/uploads/nl/attachment/2764/consumentenprijslijst_lanciaypsilon_my25_-67f77d4c426b0.pdf
+    type: price_list
+    covers_models: [lancia-ypsilon]
+    covers_variants: [lancia-ypsilon-54-kwh-2025]
+    fields_present: [performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, battery.gross_kwh, battery.net_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, charging.charging_speed_kmh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: >-
+      "Lancia Ypsilon Prijslijst 8 april 2025" - the official Lancia Netherlands consumer price list
+      for MODEL YEAR 2025, published on Stellantis' own media portal. 22 pages; the "TECHNISCHE DATA"
+      section carries the full table for the "100% Electric" column next to the Hybrid one. This is
+      the best single match for the queue's 54 kWh MY2025 variant.
+      Verified in the text layer: 'Aandrijving ... Voorwielen' (front-wheel drive); 'Max. koppel in
+      Nm elektromotor 260'; 'Max. vermogen in kW (pk) elektromotor 115 (156)'; 'Acceleratie 0-100
+      km/u (sec.) 8,2'; 'Accucapaciteit in kWh - bruto / netto ... 54 kWh / 51 kWh'; 'Max. WLTP range
+      elektrisch gecombineerd (km) 421 - 426'; 'Max. WLTP range elektrisch in stadsverkeer (km)
+      579 - 588'; 'Electriciteitsverbruik gecombineerd (kWh/100 km) 14,3 - 14,6'; 'Max. AC
+      laadvermogen in kW 11'; 'Max. DC laadvermogen in kW 100'; 'Lengte (mm) 4080'; 'Wielbasis (mm)
+      2545'; 'Topsnelheid (km/u) volledig elektrisch 150'; 'Gewicht accu's in kg 340'.
+      Heat pump: 'Warmtepomp' appears twice - as standard on the higher trim ("S (enkel Electric)",
+      i.e. standard but only on the Electric powertrain) and as paid option code Y8P at EUR 550 on
+      the lower trim. So heat_pump is TRIM-DEPENDENT, not a flat model property.
+      V2L: '11 kW boordlader met Vehicle to Load functionaliteit (V2L)' listed as standard equipment
+      on both Electric trims - Lancia bundles V2L with the 11 kW on-board charger. No output rating
+      (W or A) is published anywhere in the document.
+      charging_speed_kmh comes from marketing prose, not a spec row: "Een actieradius tot 426 km en
+      tot 100 km met een oplaadtijd van minder dan 10 minuten" (100 km of range in under 10 minutes).
+      CAVEAT - THE CHARGE WINDOW IS NOT 10-80%: the only DC row is 'Laden van 20% - 80% DC snelladen
+      (100 kW) in uren ... 24 minuten'. The AC rows are 0-100% (2,3 kW = 24 h 21 min, 11 kW = 5 h
+      4 min). Lancia/Stellantis publish NO 10-80% and NO 0-80% figure for this car, so
+      charging.time_10_to_80_min and charging.time_0_to_80_min cannot be filled from official
+      sources - only a 20-80% value can, and it must be labelled as such.
+      Dutch language. No seat-count row (see datasheet.pdf for that).
+  - file: lancia-ypsilon/datasheet.pdf
+    url: https://www.media.stellantis.com/uploads/be/attachment//202405_lancia_y_my24-665582ce3a081.pdf
+    type: datasheet
+    covers_models: [lancia-ypsilon]
+    covers_variants: [lancia-ypsilon-54-kwh-2025]
+    fields_present: [seats, performance.drive_type, performance.torque, features.heat_pump, battery.gross_kwh, battery.net_kwh, battery.chemistry, dimensions.length_mm]
+    fetched_at: "2026-08-14"
+    notes: >-
+      "New YPSILON Product Guide 05/2024" - official bilingual (FR/NL) Lancia Belgium product guide
+      on Stellantis' media portal, created 24 May 2024. 14 pages with the deepest technical table of
+      the three documents.
+      THIS IS THE SEATS SOURCE: 'Nombre de places / Aantal zitplaatsen ... 5' for both powertrains -
+      the only official Lancia document found with a numeric seat row.
+      Also verified: 'Roues motrices / Aangedreven wielen: roues avant / voorwielen' (front-wheel
+      drive); 'Architecture/Architectuur ... BEV' with 'Voltage (V) 400'; 'Puissance maximale en kW
+      (hp) 115 (156)'; 'Couple maximal (Nm) 260'; 'Type de batterie / Type batterij Lithium - ion';
+      'Type de port de charge CCS 2'; 'AC on-board-charger 7,4 kW (S) / 11 kW (O)'; 'Boîte de
+      vitesses / Versnellingsbak Auto 1speed' with 'Nombre de rapports 1'; option code 'Y8P
+      Warmtepomp / Pompe à chaleur' shown per trim as - / O / - / O / - / S.
+      It also has the complete charge-time matrix, which is the clearest proof of what Stellantis
+      does and does not publish: rows exist for 0-100% and 20-80% and 20-100% at AC 2,3 / 7,4 /
+      11 kW and DC 100 kW ('20 - 80% (DC 100 kW) 00:24', '0 - 100% (DC 100 kW) 01:13'). There is NO
+      10-80% row and NO 0-80% row.
+      CAVEATS: (1) this is MODEL YEAR 2024 and it declares the battery as 'Capacité brute /
+      Capacité nette (kWh) 51 / 48' - the MY2025 price list declares the same pack as 54 / 51. Both
+      are official; the MY25 figure is the one to use for a 2025 variant, and the discrepancy is
+      exactly the "optimized battery ... enhanced chemistry" the MY25 press release refers to.
+      (2) MY24 gives the 11 kW on-board charger as an option, whereas MY25 makes it standard with
+      V2L - do not carry MY24 charger/V2L equipment over to the 2025 variant.
+      (3) performance.motors is NOT stated as a number here or anywhere else; a single ELECTROMOTEUR
+      block plus front-wheel drive and a 1-speed gearbox implies one motor, but that is an inference,
+      so it is deliberately not listed in fields_present.
+  - file: lancia-ypsilon/price-list-2.pdf
+    url: https://www.media.stellantis.com/uploads/it/model-pricelist/listino_nuovalanciaypsilon_serie1_250523-6830367e004f0.pdf
+    type: price_list
+    covers_models: [lancia-ypsilon]
+    covers_variants: [lancia-ypsilon-54-kwh-2025]
+    fields_present: [battery.gross_kwh, range.wltp_km, range.wltp_city_km, efficiency.wltp_kwh_per_100km, features.heat_pump, production_status]
+    fetched_at: "2026-08-14"
+    notes: >-
+      "NUOVA LANCIA YPSILON Listino del 23 Maggio 2025" - the Italian home-market price list
+      (Serie 1) from Stellantis' media portal, 8 pages. Kept as the third document because it is the
+      home-market MY25 confirmation of the Dutch figures and the only one that dates the line-up.
+      Verified: the electric versions are listed as '54 kWh / 156 cv / 115 kw' with 'Euro 6e-bis'
+      across the YPSILON, LX and Edizione Limitata trims; 'Ciclo urbano' (city) range per trim
+      588-586 km and 578 km; combined kWh/100 km column; 'Ricarica fast charge 100 kW' as standard
+      equipment on every electric trim; option 'Y8P Pompa di calore' priced EUR 450,82 + VAT /
+      EUR 550,00 and marked O (optional) on the electric trims.
+      Note the heat-pump mismatch against the Dutch list, which is a market-equipment difference and
+      not an error: in Italy the heat pump is optional on the electric trims, in the Netherlands it
+      is standard on the higher one. Record heat_pump per market/trim or leave it as "available".
+      production_status is only implicit - a current official price list dated 23 May 2025 with
+      orderable SINCOM codes (429.1S2.1, 429.1U2.1) is evidence the model was in production and on
+      sale at that date; no document states a production status in words.
+      CAVEAT: the earlier Italian listino of 30 April 2024
+      (https://www.media.stellantis.com/uploads/it/model-pricelist/listino_nuovalanciaypsilon_30042024-663dfe69496fc.pdf)
+      quotes the same car as '51 kWh' with 545/534/532 km city range - it was checked and NOT kept,
+      because it describes the pre-update MY24 car and would collide with the MY2025 queue variant.
+      Italian language. No seats, torque, 0-100, drive-type or charge-time rows.
+skipped: []
+notes: >-
+  Brand-level caveats for Lancia.
+  (1) Lancia has exactly one BEV in the queue (Ypsilon Electric) and no brand press portal of its
+  own - everything official lives on media.stellantis.com, which is the allowed Stellantis portal.
+  lancia.it/lancia.nl model pages carry no downloadable technical table, so the market price lists
+  and the Belgian product guide ARE the official datasheets here.
+  (2) media.stellantis.com serves these PDFs to a UA-less curl and answers 403 to a browser
+  User-Agent - the reverse of the usual pattern. Fetch with plain `curl -sSL --compressed` and no
+  -A flag.
+  (3) THE 10-80% FIELD IS UNFILLABLE from official Lancia sources. Stellantis publishes a 20-80% DC
+  window (24 minutes at 100 kW) plus 0-100% times, and nothing else; the complete charge-time matrix
+  in datasheet.pdf shows there is no 10-80% or 0-80% row to find. The nearest thing to a charge-speed
+  figure is marketing prose: 100 km of range in under 10 minutes.
+  (4) BATTERY CAPACITY CHANGED ON PAPER between model years for the same car: MY24 documents say
+  51 kWh gross / 48 net, MY25 documents say 54 kWh gross / 51 net. The queue variant is
+  "54 kWh" MY2025, so the MY25 price lists are authoritative for it; do not average or mix.
+  (5) Heat pump is a trim- and market-dependent option (code Y8P, EUR 550), standard only on the top
+  Dutch electric trim. V2L is standard on the MY25 electric trims, bundled with the 11 kW on-board
+  charger, with no published output rating. Neither is a flat model-level yes/no.
+  (6) performance.motors and production_status are not published as data by Lancia in any document
+  found; both would have to be inferred (single front motor; on sale as of the 23 May 2025 listino).
+  (7) No pre-existing files - the sources/lancia directory did not exist before this run, so nothing
+  was deleted (unattributed_deleted = 0).

@@ -1,0 +1,151 @@
+brand: volkswagen
+fetched_at: "2026-08-13"
+documents:
+  # ---------------- ID. Buzz ----------------
+  - file: volkswagen-id-buzz/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/035/001/file/0d979c4cdb238e209932c4f96c186249e52439fb/The_new_ID_Buzz_and_ID_Buzz_Cargo.pdf?1662467175
+    type: press_kit
+    covers_models: [volkswagen-id-buzz]
+    covers_variants: []
+    fields_present: [performance.torque, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm, seats]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded to temp and shasum-256 matched the on-disk file byte-for-byte. Official VW newsroom press kit 'The new ID. Buzz and ID. Buzz Cargo - International Media Drive', Copenhagen August 2022, linked from https://www.volkswagen-newsroom.com/en/the-new-id-buzz-and-id-buzz-cargo-international-media-drive-15144. Verified in text layer: 'maximum torque of 310 Nm'; 'net energy capacity of 77 kWh (82' gross; 'uses 21.7 to 20.5 kWh/100 km'; 'WLTP range: 402 to 423 km'; 'At 4,712 mm ... The wheelbase is long too, at 2,989 mm'; 'launching as a five-seater'. CAVEAT: 2022 launch document for ID. Buzz Pro / Cargo - it does NOT cover the GTX variants in the queue. No heat-pump and no V2L statement anywhere in the document."
+  - file: volkswagen-id-buzz/spec-page.html
+    url: https://www.volkswagen-newsroom.com/en/press-releases/world-premiere-of-the-new-id-buzz-gtx-with-4motion-all-wheel-drive-18306
+    type: press_kit
+    covers_models: [volkswagen-id-buzz]
+    covers_variants: [volkswagen-id-buzz-gtx-2024, volkswagen-id-buzz-gtx-2025]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.drive_type, seats]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded from the canonical URL in the file's own <link rel=canonical> and shasum-256 matched byte-for-byte. VW newsroom GTX world-premiere release (21 Mar 2024). Verified in text layer: 'equipped with two electric motors - both together form all-wheel drive'; 'standard 4MOTION all-wheel drive'; 'recharged from 10 to 80 percent in 26 minutes at DC fast charging stations with up to 185 kW or 200 kW'; 'a choice of 5-, 6- or 7-seater'. No WLTP consumption, no heat pump, no V2L in this release - see spec-page-3.html for GTX consumption."
+  - file: volkswagen-id-buzz/spec-page-2.html
+    url: https://www.volkswagen-newsroom.com/en/the-new-id-buzz-and-id-buzz-cargo-international-media-drive-15144/technical-data-of-the-id-buzz-pro-and-id-buzz-cargo-15156
+    type: spec_page
+    covers_models: [volkswagen-id-buzz]
+    covers_variants: []
+    fields_present: [performance.torque, performance.drive_type, performance.motors, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded from its own canonical URL, shasum-256 matched byte-for-byte. VW newsroom 'Technical Data of the ID. Buzz Pro and ID. Buzz Cargo' table. Verified in text layer: 'Max. power 150 kW / 204 PS Max. torque 310 Nm Gearbox 1-speed gearbox at the back Drive axle Rear axle'; 'Energy consumption (WLTP) 21.7 to ...'. CAVEATS: (a) covers ID. Buzz Pro / Cargo, not the queue's GTX variants; (b) the DC charge row is 'Charging time from 5 % to 80 % SOC (for DC charging using 170 kW) 0:30 h' - a 5-80 % window, NOT 10-80 % and NOT 0-80 %."
+  - file: volkswagen-id-buzz/spec-page-3.html
+    url: https://www.volkswagen-nutzfahrzeuge.de/de/modelle/id-buzz.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id-buzz]
+    covers_variants: [volkswagen-id-buzz-gtx-2024, volkswagen-id-buzz-gtx-2025]
+    fields_present: [efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, seats, performance.drive_type, range.wltp_km]
+    fetched_at: "2026-08-14"
+    notes: "4th document for this model, deliberately over the 3-doc budget: the ID. Buzz is a Volkswagen Nutzfahrzeuge model, and this is the only official page found that states GTX WLTP consumption and the model seat count - the two remaining queue gaps that the three newsroom documents above do not answer. Verified in text layer: 'ID. Buzz GTX - Energieverbrauch kombiniert: 21,7 - 20,6 kWh/100 km'; 'Ladezeit 10 % bis 80 %: ca. 26 - 29 min.' with footnote 'Ca. 26 min fuer 58 kWh, ca. 29 min. bei 79 kWh, ca. 28 min bei 86 kWh. Laden mit max. 170 kW DC Ladeleistung'; 'Anzahl Sitzplaetze 5 - 7'; 'mit 4MOTION Allradantrieb erhaeltlich'; 'WLTP-Reichweite kurzer Radstand: 460 - 423 km / langer Radstand: 498 - 460 km'. Note the '__ui/technische-daten.app' suffix - the plain model URL returns a lazy-loading shell whose HTML does NOT contain the data table. Waermepumpe appears only as prose in an offer block, not as a per-variant spec row; no V2L row."
+
+  # ---------------- ID.3 ----------------
+  - file: volkswagen-id3/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/016/185/file/a22d2c891d2a3fb4edb2510a8cb63b4aef305cb0/The_new_ID_3_-_International_Media_Drive.pdf?1595402445
+    type: press_kit
+    covers_models: [volkswagen-id3]
+    covers_variants: []
+    fields_present: [efficiency.wltp_kwh_per_100km, performance.torque, features.heat_pump, range.wltp_km, dimensions.wheelbase_mm, battery.chemistry]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded and shasum-256 matched byte-for-byte. Official press kit 'The new ID.3 - International Media Drive', July 2020, linked from https://www.volkswagen-newsroom.com/en/the-new-id3-6240. Verified in text layer: 'ID.3 Pro Performance, 150 kW / combined power consumption in kWh/100 km: 16.9 - 15.4 (WLTP)'; 'ID.3 Pro S ... 17.7 - 15.9 (WLTP)'; 'a torque of 310 Nm'; 'lithium-ion batteries'; 'wheelbase of 2,765 millimetres'; 'Heat pump for range. The seven preconfigured models ... optionally have a heat pump on board'. CAVEAT: this is the MY2020 launch document (Pro Performance 58 kWh / Pro S 77 kWh). The queue's variants are the MY2024/2025 'Pro' with the 59 kWh battery, so consumption figures here are NOT directly transferable - treat as spec-drift context only."
+  - file: volkswagen-id3/press-kit-2.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/040/631/file/c521c98495c363f825560a8e59a14bf769084d4d/EN_ID_3_GTX_and_ID_3_GTX_Performance.pdf?1727347743
+    type: press_kit
+    covers_models: [volkswagen-id3]
+    covers_variants: []
+    fields_present: [seats, dimensions.length_mm, dimensions.wheelbase_mm, battery.gross_kwh, performance.torque, performance.acceleration_0_100_sec, charging.time_10_to_80_min, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded and shasum-256 matched byte-for-byte. Official press kit 'ID.3 GTX and ID.3 GTX Performance', September 2024, linked from https://www.volkswagen-newsroom.com/en/id3-gtx-and-id3-gtx-performance-18675. Carries a real 'Technical data' table on page 10, verified in text layer: 'Battery size 79 kWh'; 'Range 604 km / 601 km'; 'Acceleration 5.9 s / 5.7 s'; 'DC charging 185 kW'; 'Length / width / height 4,265 mm / 1,809 mm (2,070 mm) / 1,563 mm'; 'Wheelbase 2,770 mm'; 'Seats 5'; plus prose 'battery with a net energy content of 79 kWh (gross: 84 kWh)', 'maximum torque of 545 Nm', 'charged from 10 to 80 per cent', 'ID.3 GTX - Combined power consumption 15.1-14.5 kWh/100 km'. CAVEAT: GTX trims only - the queue has no ID.3 GTX variant, so this document is evidence for the model-level 'seats' gap and for dimensions, not for the Pro variants."
+  - file: volkswagen-id3/spec-page.html
+    url: https://www.volkswagen.co.uk/en/electric-and-hybrid/electric-cars/id3.html/__ui/technical-data.app
+    type: spec_page
+    covers_models: [volkswagen-id3]
+    covers_variants: [volkswagen-id3-pro-2024, volkswagen-id3-pro-2025]
+    fields_present: [efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, performance.torque, battery.gross_kwh, charging.time_10_to_80_min, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Volkswagen UK official technical-data fragment - fetched because volkswagen.de has retired the MY2024/2025 ID.3 configurator (both /de/modelle/id3.html and /de/modelle/id-3-energy.html now redirect to the ID.3 Neo successor, and the '__ui/technische-daten.app' fragment 404s for every ID.3 slug). Verified in text layer: trims 'Pure Essential / Pure Match / Pro Match / Pro S Essential / Pro S Match / GTX Performance'; 'Battery capacity 59kW*h ... Maximum DC charging power ... Charging time 10% - 80% SOC with maximum kW DC'; 'Maximum power 150kW Maximum torque 265Nm' (Pro Match); 'Combined consumption 15.4 kWh/62mi' (Pro Match); 'Electric range - City 344 mi' / 'Electric range - combined 268 mi' (Pro Match); 'Length 4,264 mm ... Wheelbase 2,770 mm'. CAVEATS: (a) UK units - consumption is published as kWh/62mi (VW's imperial rendering of kWh/100 km) and ranges are in miles, so both need conversion/normalisation on extraction; (b) UK trim names (Pro Match) map to the queue's 'Pro' 59 kWh variant by battery size, not by name; (c) no seat-count row and no heat-pump or V2L row on this page."
+
+  # ---------------- ID.4 ----------------
+  - file: volkswagen-id4/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/039/666/file/0ca1d5ce04f5f45740916783f6bf430d30d38a7f/The_new_ID_4_und_ID_5.pdf?1697015706
+    type: press_kit
+    covers_models: [volkswagen-id4]
+    covers_variants: [volkswagen-id4-pro-2024, volkswagen-id4-pro-2025, volkswagen-id4-pro-4motion-2024, volkswagen-id4-pro-4motion-2025]
+    fields_present: [performance.motors, performance.drive_type, performance.torque, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded and shasum-256 matched byte-for-byte. Official press kit 'The new ID.4 and ID.5 - All the details at the start of presales' (PDF metadata title 'ID.4 und ID.5 / erste Fakten zum VVK-Start'), 11 Oct 2023, linked from https://www.volkswagen-newsroom.com/en/the-new-id4-and-id5-17756. Verified in text layer: 'the new drive develops 210 kW (286 PS); the GTX versions deliver 250 kW (340 PS)'; 'With the new rear electric drive motor and an additional drive motor on the [front axle]' - i.e. motor count and drive layout; 'the maximum torque even by 235 Nm'; 'the new DC charging capacity of up to 175 kW'; per-variant WLTP consumption footnotes '18.4-15.9 kWh/100 km', '18.0-15.5 kWh/100 km', etc. CAVEATS: no WLTP city range, no seat count, no heat-pump row, no V2L statement anywhere in the document."
+  - file: volkswagen-id4/spec-page.html
+    url: https://www.volkswagen.de/de/modelle/id4.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id4]
+    covers_variants: [volkswagen-id4-pro-2024, volkswagen-id4-pro-2025, volkswagen-id4-pro-4motion-2024, volkswagen-id4-pro-4motion-2025]
+    fields_present: [range.wltp_city_km, range.wltp_km, efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, charging.charging_speed_kmh, performance.acceleration_0_100_sec, performance.drive_type, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14. The file's own canonical tag says https://www.volkswagen.de/de/modelle/id4.html, but that plain URL serves a lazy-loading shell WITHOUT the data table; the '__ui/technische-daten.app' fragment recorded above reproduces the on-disk file exactly - extracted page text is byte-identical to the on-disk copy, so that is the true source URL. Verified in text layer: 'Elektrische Reichweite Stadt 600 - 686 km / 676 - 718 km / 633 - 727 km / ...' (the queue's missing city range); 'Verbrauch kombiniert' and 'Verbrauch Innenstadt' rows; 'Maximale DC Ladeleistung 185 kW / 165 kW / 105 kW' and 'Ladezeit 10-80 % SOC mit max. kW DC ca. 00:27 h / 00:29 h'; 'Reichweite in 10 min mit max. DC Ladeleistung'; 'Beschleunigung 0-100 km/h 5,4 s / 6,7 s / 6,1 s / 8,5 s'; 'Batterietyp Lithium-Ionen-Zellen (Li-Ni-Co-Mn)'; 'Laenge min. / Laenge max. 4.582 mm'; 'Radstand 2.773 mm / 2.771 mm'. Drive type is given by the column headers ('Pro', 'Pro 4MOTION', 'GTX 4MOTION', 'Pure'), not as an explicit row. CAVEATS: no seat-count row, no torque row, no heat-pump row (only a 'Mehr zur Waermepumpe' marketing link) and no V2L row - VW does not publish those in this table."
+
+  # ---------------- ID.5 ----------------
+  - file: volkswagen-id5/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/039/666/file/0ca1d5ce04f5f45740916783f6bf430d30d38a7f/The_new_ID_4_und_ID_5.pdf?1697015706
+    type: press_kit
+    covers_models: [volkswagen-id5]
+    covers_variants: []
+    fields_present: [performance.motors, performance.drive_type, performance.torque, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: shasum-256 identical to volkswagen-id4/press-kit.pdf and to a fresh download from the URL above - the same joint ID.4/ID.5 press kit was stored under both model folders. Same verified content and same caveats as the ID.4 copy. The queue has no ID.5 variants, only the model-level 'seats' gap, which this document does not answer."
+  - file: volkswagen-id5/spec-page.html
+    url: https://www.volkswagen.de/de/modelle/id5.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id5]
+    covers_variants: []
+    fields_present: [range.wltp_city_km, range.wltp_km, efficiency.wltp_kwh_per_100km, charging.time_10_to_80_min, charging.charging_speed_kmh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14 via the '__ui/technische-daten.app' fragment (the plain canonical URL serves a shell without the table). Extracted page text differs from the on-disk copy in exactly 9 characters - VW has since nudged two published figures ('17,4 - 15,1' -> '17,4 - 15,2' kWh/100 km and 'bis zu 579 km' -> 'bis zu 581 km'); every table row is otherwise identical, so provenance is confirmed and the on-disk copy is simply a slightly older snapshot. Verified in text layer: 'Elektrische Reichweite Stadt 607 - 692 km / 637 - 728 km / 641 - 751 km / 500 - 582 km'; 'Verbrauch Innenstadt'; 'Ladezeit 10-80 % SOC mit max. kW DC ca. 00:27 h'; 'Maximale DC Ladeleistung 185 kW / 165 kW'; 'Batterietyp Lithium-Ionen-Zellen (Li-Ni-Co-Mn)'; 'Laenge min. / Laenge max. 4.582 mm / 4.599 mm'; 'Radstand 2.772 mm / 2.771 mm'. CAVEAT: no seat-count row - the ID.5 model gap in the queue is 'seats', and VW publishes no numeric seat row on this page."
+
+  # ---------------- ID.7 ----------------
+  - file: volkswagen-id7/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/040/569/file/15005f6607c7a85f5c76077f2d3b202bae389d16/The_new_ID_7_GTX_and_ID_7_GTX_Tourer.pdf?1724154498
+    type: press_kit
+    covers_models: [volkswagen-id7]
+    covers_variants: [volkswagen-id7-gtx-2026]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.drive_type, performance.acceleration_0_100_sec, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: re-downloaded and shasum-256 matched byte-for-byte. Official press kit 'The new ID.7 GTX and ID.7 GTX Tourer - International Media Drive', Sweden August 2024, linked from https://www.volkswagen-newsroom.com/en/the-new-id7-gtx-and-id7-gtx-tourer-international-media-drive-18609. Verified in text layer: 'battery can be charged from 10 to 80 per cent in just 26 minutes under ideal [conditions]'; 'maximum 200-kW charging capacity at DC'; 'electric 4MOTION all-wheel drive system with a combined system power of 250 kW (340 PS)' and 'Both motors are powered by a new 86 kWh battery'; 'WLTP consumptions of 18.4 to 16.2 kWh/100 km (saloon)'; 'up to 595 km (saloon)'; 'passes the 100 km/h mark in just 5.5 seconds ... the saloon ... 5.4 seconds'. CAVEATS: the document contains NO heat-pump mention and NO V2L mention (grep-verified), so those two queue fields stay open; 10-80 % is quoted as 26 min here while the vw.de table says 28 min for the same car - different reference conditions, prefer the configurator table."
+  - file: volkswagen-id7/spec-page.html
+    url: https://www.volkswagen.de/de/modelle/id-7-gtx.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id7]
+    covers_variants: [volkswagen-id7-gtx-2026]
+    fields_present: [charging.time_10_to_80_min, charging.charging_speed_kmh, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, performance.acceleration_0_100_sec, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14 via the '__ui/technische-daten.app' fragment; extracted page text is byte-identical to the on-disk copy. Verified in text layer: 'Batterietyp Lithium-Ionen-Zellen (Li-Ni-Co-Mn)'; 'Batterieenergiegehalt (Nennwert netto) 86 kW*h'; 'Maximale DC Ladeleistung 199 kW'; 'Ladezeit 10-80 % SOC mit max. kW DC ca. 00:28 h'; 'Reichweite in 10 min mit max. DC Ladeleistung 201 km'; 'Verbrauch kombiniert 18,1 - 16,0 kWh/100 km' and 'Verbrauch Innenstadt 14,9 - 12,9 kWh/100 km'; 'Elektrische Reichweite kombiniert 539 - 606 km' / 'Elektrische Reichweite Stadt 640 - 739 km'; 'Beschleunigung 0-100 km/h 5,4 s'; 'Laenge min. / Laenge max. 4.961 mm'; 'Radstand 2.971 mm'; 'Systemleistung 250 kW / 340 PS'. Drive type is implicit in the model name (GTX 4MOTION) rather than an explicit row. CAVEATS: battery figure is NET (86 kWh) not gross; no seat-count row, no heat-pump row, no V2L row."
+
+  # ---------------- ID.7 Tourer ----------------
+  - file: volkswagen-id7-tourer/press-kit.pdf
+    url: https://uploads.vw-mms.de/system/production/files/vwn/040/569/file/15005f6607c7a85f5c76077f2d3b202bae389d16/The_new_ID_7_GTX_and_ID_7_GTX_Tourer.pdf?1724154498
+    type: press_kit
+    covers_models: [volkswagen-id7-tourer]
+    covers_variants: [volkswagen-id7-tourer-gtx-2026]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.drive_type, performance.acceleration_0_100_sec, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14: shasum-256 identical to volkswagen-id7/press-kit.pdf and to a fresh download from the URL above - the same joint saloon+Tourer press kit was stored under both model folders. Tourer-specific figures verified in text layer: 'up to 584 km (Tourer)'; 'The ID.7 GTX Tourer passes the 100 km/h mark in just 5.5 seconds'; 'the fully occupied ID.7 GTX Tourer has a capacity of up to 605 litres'. Same caveats as the saloon copy: no heat pump, no V2L, and no production-status/length/wheelbase statement for the Tourer that would close those model-level gaps."
+  - file: volkswagen-id7-tourer/spec-page.html
+    url: https://www.volkswagen.de/de/modelle/id-7-tourer.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id7-tourer]
+    covers_variants: [volkswagen-id7-tourer-pro-s-2026]
+    fields_present: [dimensions.length_mm, dimensions.wheelbase_mm, charging.time_10_to_80_min, charging.charging_speed_kmh, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, performance.acceleration_0_100_sec, battery.chemistry]
+    fetched_at: "2026-08-13"
+    notes: "Pre-existing file, provenance re-established 2026-08-14 via the '__ui/technische-daten.app' fragment; extracted page text is byte-identical to the on-disk copy. Covers the Pro and Pro S trims side by side, so it answers the queue's Pro S variant plus the model-level length/wheelbase gaps. Verified in text layer: 'Laenge min. / Laenge max. 4.961 mm'; 'Radstand 2.971 mm'; 'Batterie / Ladesystem Pro ... 77 kW*h ... Maximale DC Ladeleistung 185 kW ... Ladezeit 10-80 % SOC mit max. kW DC ca. 00:27 h ... Reichweite in 10 min 194 km'; 'Batterie / Ladesystem Pro S ... 86 kW*h ... 199 kW ... 00:28 h ... 229 km'; 'Verbrauch kombiniert 17,6 - 15,0 / 17,6 - 14,1 kWh/100 km'; 'Verbrauch Innenstadt 13,9 - 11,6 / 13,9 - 10,8'; 'Elektrische Reichweite Stadt 611 - 732 km / 682 - 868 km'; 'Beschleunigung 0-100 km/h 6,6 s / 6,7 s'; 'Batterietyp Lithium-Ionen-Zellen (Li-Ni-Co-Mn)'; 'Motorbezeichnung P| E-Antrieb' (single rear motor). CAVEATS: battery is NET; no seat-count row, no heat-pump row, no V2L row, no production-status statement."
+  - file: volkswagen-id7-tourer/spec-page-2.html
+    url: https://www.volkswagen.de/de/modelle/id-7-gtx-tourer.html/__ui/technische-daten.app
+    type: spec_page
+    covers_models: [volkswagen-id7-tourer]
+    covers_variants: [volkswagen-id7-tourer-gtx-2026]
+    fields_present: [charging.time_10_to_80_min, charging.charging_speed_kmh, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, performance.acceleration_0_100_sec, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-14"
+    notes: "Pre-existing file REPLACED on 2026-08-14. The original on-disk copy was verified first: it matched a fresh fetch of the plain https://www.volkswagen.de/de/modelle/id-7-gtx-tourer.html byte-for-byte in extracted text, i.e. provenance was sound, but that render is the lazy-loading shell and contained NO technical table at all - only marketing prose. It was overwritten in place (no extra document added) with the '__ui/technische-daten.app' render of the same page, which carries the full table. Verified in text layer: 'Verbrauch kombiniert 18,4 - 16,4 kWh/100 km'; 'Verbrauch Innenstadt 15,0 - 13,0'; 'Elektrische Reichweite kombiniert 528 - 595 km' / 'Elektrische Reichweite Stadt 631 - 730 km'; 'Batterietyp Lithium-Ionen-Zellen (Li-Ni-Co-Mn)'; 'Batterieenergiegehalt (Nennwert netto) 86 kW*h'; 'Maximale DC Ladeleistung 199 kW'; 'Ladezeit 10-80 % SOC mit max. kW DC ca. 00:28 h'; 'Reichweite in 10 min mit max. DC Ladeleistung 197 km'; 'Laenge min. / Laenge max. 4.961 mm'; 'Radstand 2.971 mm'; 'Systemleistung 250 kW / 340 PS'; 'Beschleunigung von 0 - 100 km/h 5,5 s'. CAVEATS: battery is NET; no seat-count, heat-pump or V2L row."
+skipped:
+  - model: volkswagen-id5
+    reason: "Not skipped for evidence (2 documents recorded) but the model-level 'seats' gap could not be closed: Volkswagen publishes no numeric seat-count row for the ID.5 on volkswagen.de's technical-data table, and the joint ID.4/ID.5 press kit does not state it either. Same holds for the ID.4 and ID.7 'seats' gaps."
+  - model: volkswagen-id7
+    reason: "features.heat_pump and bidirectional.v2l for volkswagen-id7-gtx-2026 remain unsourced. Grep-verified: neither the official ID.7 GTX press kit nor the volkswagen.de technical-data table contains a heat-pump or V2L/bidirectional row. Same for the ID.7 Tourer GTX and Pro S variants, and for the ID.4/ID.5 heat-pump question."
+  - model: volkswagen-id7-tourer
+    reason: "production_status not published in any official document fetched - VW does not state production/lifecycle status in press kits or configurator tables. dimensions.length_mm and dimensions.wheelbase_mm ARE covered (spec-page.html)."
+  - model: volkswagen-id3
+    reason: "efficiency.wltp_kwh_per_100km for the MY2024/2025 Pro is only available via the Volkswagen UK table in kWh/62mi (see volkswagen-id3/spec-page.html) - volkswagen.de has retired the pre-Neo ID.3 configurator entirely, so no German-market kWh/100 km figure for the 59 kWh Pro could be sourced officially."

@@ -1,0 +1,92 @@
+brand: maserati
+fetched_at: "2026-08-13"
+documents:
+  - file: maserati-granturismo-folgore/spec-page.md
+    url: https://www.media.stellantis.com/em-en/maserati/press/new-maserati-granturismo-1
+    type: press_kit
+    covers_models: [maserati-granturismo-folgore]
+    covers_variants: [maserati-granturismo-folgore-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, charging.charging_speed_kmh, battery.gross_kwh, range.wltp_km, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Official Maserati press release "New Maserati GranTurismo" (03 Oct 2022) on the Stellantis
+      press portal, saved as a text fetch because media.stellantis.com returns HTTP 403 to curl.
+      The source URL is recorded in the file's own first line.
+      Provenance confirmed on 2026-08-14 by re-fetching the URL and comparing against the stored
+      text: every figure matches - length 4,959 mm, wheelbase 2,929 mm, three 300-kW motors,
+      1,350 Nm peak torque, 92.5 kWh nominal / 83 kWh usable, 270 kW fast charge at 800V,
+      '20->80% in 18mins', 0-100 km/h in 2.7 s, 325 km/h, 450 km WLTP, and seating described as
+      "four adults in complete comfort".
+      CHARGE-WINDOW CAVEAT: the published window is 20-80% in 18 min, NOT the 10-80% the queue
+      asks for. Do not silently record it as time_10_to_80_min.
+      charging.charging_speed_kmh is derivable but only in Maserati's own phrasing - "100 km WLTP
+      in 5 minutes" at 800V/270 kW DC, and "100 km WLTP in 1 hour" on 22 kW AC.
+      seats = 4 comes from prose ("four adults", 2+2 GT layout), not a numeric spec row.
+      Fields the release does not state at all: features.heat_pump, bidirectional.v2l,
+      WLTP consumption kWh/100 km, city range.
+  - file: maserati-grecale-folgore/spec-page.md
+    url: https://www.media.stellantis.com/us-en/maserati/press/the-first-full-electric-maserati-suv-grecale-folgore-march-2024
+    type: press_kit
+    covers_models: [maserati-grecale-folgore]
+    covers_variants: [maserati-grecale-folgore-2025]
+    fields_present: [performance.drive_type, performance.motors, performance.total_torque_nm, performance.acceleration_0_100_sec, battery.gross_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Official Maserati press release "The first full-electric Maserati SUV: Grecale Folgore -
+      March 2024" on the Stellantis press portal, saved as a text fetch (media.stellantis.com
+      returns HTTP 403 to curl). Source URL is in the file's first line.
+      Provenance confirmed on 2026-08-14 by re-fetching the URL: every figure in the stored file
+      matches the live release - '2 x 205kW motors' / 410 kW combined, 820 Nm, 105 kWh nominal,
+      400V, 150 kW DC with '20->80% in 29 mins', 22 kW AC, 0-100 km/h 4.1 s, 220 km/h,
+      length 4865 mm, wheelbase 2903 mm, WLTP range 426-501 km, WLTP consumption 24 kWh/100 km,
+      535 L boot, 2480 kg.
+      CHARGE-WINDOW CAVEAT: published window is 20-80% in 29 min, NOT 10-80%. This is the single
+      most likely field to be mis-extracted for this model.
+      The EM-EN edition of the same release
+      (https://www.media.stellantis.com/em-en/maserati/press/the-first-full-electric-maserati-suv-grecale-folgore-march-2024)
+      was checked on 2026-08-14 and deliberately NOT saved as a second document: it is the same
+      spec table and adds only width-without-mirrors 1948 mm over the stored US-EN text.
+      Fields not stated: features.heat_pump, bidirectional.v2l, numeric seat count (the only
+      seat reference is the equipment line "sport 14-way ECONYL electric seats in black/tan"),
+      city range.
+skipped:
+  - model: maserati-granturismo-folgore
+    reason: >-
+      Partially covered, not fully. features.heat_pump, bidirectional.v2l and
+      charging.time_10_to_80_min remain unfilled after four independent attempts and no further
+      official document exists to fetch. maserati.com is unreachable for automated fetching -
+      it returns HTTP 403 to WebFetch and to curl with a browser UA, and HTTP 404 to UA-less curl,
+      on every model path tried (/int/en/models/granturismo/folgore, /int/en/models/grecale,
+      /de/de/modelle/grecale/folgore), so the brand's own configurator/spec pages could not be
+      saved at all. On the press portal, "The New Maserati GranTurismo" (us-en) and "New Maserati
+      GranTurismo, GranCabrio and Grecale" (em-en) were both read and add nothing - neither
+      mentions a heat pump or V2L, and neither gives a 10-80% window.
+      Maserati's press portal lists a downloadable press kit for the model but exposes no direct
+      asset URL to fetch.
+  - model: maserati-grecale-folgore
+    reason: >-
+      Partially covered, not fully. features.heat_pump, bidirectional.v2l,
+      charging.time_10_to_80_min and the model-level seats count remain unfilled after five
+      attempts. Read and rejected as adding nothing: "Maserati Grecale Folgore Model Year 2026"
+      (em-en, has only the AWD-Disconnect story and 580 km autonomy, no spec table), "Maserati
+      focus on Grecale: the new range expands..." (em-en, MY25, Folgore gets one line: 105-kWh
+      battery, 410 kW), "Grecale: the new Maserati SUV" (us-en launch release - it does carry
+      full spec tables, but only for the petrol/mild-hybrid GT, Modena and Trofeo; the Folgore
+      had no table yet in March 2022), and the em-en edition of the March-2024 Folgore release
+      (duplicate of what is already stored).
+      Also note the MY26 release quotes up to 580 km WLTP against the stored 426-501 km, i.e.
+      Maserati has re-homologated the car since the queue's 2025 variant - do not mix figures
+      across model years.
+notes: >-
+  Both pre-existing Maserati files were left by an interrupted earlier run with no manifest. Both
+  were already self-attributing (each carries its official source URL on its first line, plus a
+  note that the site 403s curl), and both were verified on 2026-08-14 by re-fetching that URL and
+  comparing figures - every value matched, so nothing was deleted. unattributed_deleted = 0.
+  These are text fetches (.md), not HTML/PDF, because media.stellantis.com refuses curl; that is
+  the documented fallback in the fetch procedure and the file headers say so explicitly.
+  BRAND-LEVEL GAP CAVEAT: Maserati publishes no heat-pump or V2L information for either Folgore
+  model in any reachable official source, and states its DC charging as a 20-80% window rather
+  than the 10-80% the queue expects. No official Maserati price list PDF (Preisliste / listino
+  prezzi) is published for any EU market or importer as far as searching could establish; every
+  hit for one was an aggregator and was therefore not used.
+  No V2L claim should be inferred for these cars from the absence of evidence either way.

@@ -1,0 +1,118 @@
+brand: mg
+fetched_at: "2026-08-13"
+documents:
+  - file: mg-cyberster/datasheet.pdf
+    url: https://cdn.mgmotor.eu/files/MG-Cyberster-Broschuere-4.2025-Letzt-WEB.pdf
+    type: datasheet
+    covers_models: [mg-cyberster]
+    covers_variants: [mg-cyberster-trophy-awd-2025]
+    fields_present: [charging.time_10_to_80_min, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Austria/Germany German-language Cyberster brochure (April 2025 edition, 29 pp). Provenance of the pre-existing file confirmed by re-download + shasum match (3678e9e1...). Verified in the text layer, section 'Technische Daten': 'DC-Ladezeit 10~80% (150kW DC - CCS) ca. 38 Min.'; 'Max. Drehmoment (Nm) 475 / 725'; 'Beschleunigung (s, 0~100 km/h) 5 / 3,2'; 'Batteriekapazitaet (kWh) 77' (gross; AC 11 kW, max DC 144 kW); 'Energieverbrauch (Wh/km) 167 / 191' (= 16,7 / 19,1 kWh/100 km); 'Elektrische Reichweite (km, WLTP) 507 / 443'; 'Laenge (mm) 4535', 'Radstand (mm) 2690', 'Breite 1913 / 2110', 'Hoehe 1329'; 'V2L (Vehicle-to-load)' appears as an equipment row. CAVEATS: the document knows only two trims, Trophy (single motor, rear-wheel drive, 250 kW) and GT (dual motor, all-wheel drive, 375 kW) - there is no 'Trophy AWD' trim, so the queue variant name needs reconciling before extraction (Trophy = RWD, GT = AWD). No heat-pump row and no WLTP city range in this document. No prices (it points at mgmotor.at for pricing)."
+  - file: mg-cyberster/datasheet-2.pdf
+    url: https://cdn.mgmotor.eu/files/MG-Brochure-Cyberster_Digital_2025_updated_compressed.pdf
+    type: datasheet
+    covers_models: [mg-cyberster]
+    covers_variants: [mg-cyberster-trophy-awd-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, range.wltp_km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Europe English Cyberster brochure (2025 updated edition). Provenance of the pre-existing file confirmed by re-download + shasum match (1ec696ee...). Verified in the text layer, 'CYBERSTER TECHNICAL SPECIFICATION': 'Estimated Charging Time (150 kW DC Public Rapid Charger 10-80%) 38 mins'; 'Total Capacity (Nominal) 77 kWh' / 'Battery Capacity (Usable) 74.4 kWh'; 'Max. Torque lb ft (NM) 475 / 725'; '0-100km/h, Seconds 5 / 3.2'; 'Combined WLTP maximum driving range - km 507 / 443'; 'Combined WLTP City Range - km 640 / 545'; 'Length (mm) 4535', 'Wheelbase (mm) 2690'. Drive type comes from the trim highlight lists ('Rear Wheel Drive' on Trophy Extended Range, 'All Wheel Drive' on GT), not from a spec row. Same Trophy/GT vs queue 'Trophy AWD' caveat as the German brochure. No heat-pump row; MG does not publish heat-pump fitment for the Cyberster in either brochure."
+  - file: mg-im5/datasheet.pdf
+    url: https://cdn.mgmotor.eu/files/260724_MG_IM5_Highlights_Prospekt_DE_DS_2026-07-27-064319_zvzv.pdf
+    type: datasheet
+    covers_models: [mg-im5]
+    covers_variants: [mg-im5-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, seats, dimensions.length_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Deutschland German IM5 'Highlights Prospekt' (24 July 2026, 19 pp) - freshly downloaded; replaces an unattributable pre-existing German IM5 PDF with the same content but a different byte stream (see skipped/deleted note below). Verified in the text layer, per-variant spec blocks: 'Anzahl Sitzplaetze 5'; 'Antrieb Elektromotor, Heckantrieb' (100 kWh Premium) and 'Antrieb Elektromotoren, Allradantrieb' (100 kWh Premium AWD) - drive type and motor count both readable; 'Batteriekapazitaet 100 kWh'; 'Maximales Drehmoment 500 Nm / 802 Nm'; 'Beschleunigung 0-100 km/h 4,9 / 3,2 Sekunden'; 'Verbrauch kombiniert WLTP 16,0 / 19,7 kWh/100 km'; 'Reichweite kombiniert WLTP 710 / 575 km'; 'Abmessungen Laenge/Breite/Hoehe 4.931/1.960/1.474 mm'; 'Maximale Ladeleistung AC/DC 11 kW/396 kW'; headline 'CA. 17 MINUTEN Ladezeit von 10-80 %'. CAVEAT on the charge time: the footnote says it applies to a 400-kW fast charger under standardised conditions, not a typical 150-350 kW station. No V2L row and no WLTP city range in this document; battery chemistry not stated. Document is MY2026 spec while the queue variant is MY2025 - treat as spec-drift-checked evidence."
+  - file: mg-im5/datasheet-2.pdf
+    url: https://www.mg.co.uk/sites/default/files/2026-06/MG_IM5_Brochure_June_2026.pdf
+    type: datasheet
+    covers_models: [mg-im5]
+    covers_variants: [mg-im5-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, seats, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor UK IM5 brochure (June 2026, 22 pp). Provenance of the pre-existing file confirmed by re-download + shasum match (8f4a2809...). Richest IM5 source: full three-column spec table verified in the text layer - 'Driven Wheels: Rear wheel drive, motor at rear | Rear wheel drive, motor at rear | All wheel drive, motor at front and rear'; 'Electric Motor Type Synchronous Motor'; 'Battery Type LFP (Lithium Iron Phosphate) | NCM (Nickel Cobalt Manganese) | NCM'; 'Battery Capacity (nominal) 75 / 100 / 100 kWh' and '(usable) 73.5 / 96.5 / 96.5 kWh'; 'Maximum Torque NM 450 / 500 / 802'; '0-62mph (0-100kmh) 6.8 / 4.9 / 3.2'; 'Estimated Charging Time (350kW DC public rapid charger) 10 to 80% 26 minutes / 17 minutes / 17 minutes' plus a '(50kW DC ...) 10 to 80% 1:05 / 1:30 / 1:30 hours' row; 'Electric Driving Efficiency - miles/kWh (kWh/100km) City 4.5 (13.6) / 4.7 (13) / 3.8 (16.1)' and a City range row '391 (630) / 544 (876) / 435 (701)'; 'Seats 5'; 'Overall length (mm) 4,931mm', 'Wheelbase (mm) 2,950mm'; 'Heat pump' listed as standard on all three grades. CAVEATS: the 10-80% figures are 350-kW-charger figures (the German brochure quotes 400 kW); no V2L row anywhere in the document; MY2026 spec vs MY2025 queue variant, and the queue's single 'Long Range' variant must be matched to one of Standard 75 kWh / Premium 100 kWh RWD / Premium 100 kWh AWD."
+  - file: mg-mg4-electric/price-list.pdf
+    url: https://cdn.mgmotor.eu/images/model/brochure/MG4-WEB-Broschuere-2.24-AT-WEB-Preise.pdf
+    type: price_list
+    covers_models: [mg-mg4-electric]
+    covers_variants: [mg-mg4-electric-standard-2025, mg-mg4-electric-extended-range-2025, mg-mg4-electric-xpower-2025, mg4-electric-standard-range-2024, mg4-electric-extended-range-2024, mg4-electric-xpower-2024]
+    fields_present: [charging.time_10_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Austria German MG4 Electric price brochure (February 2024, 33 pp, with Austrian prices). Provenance of the pre-existing file confirmed by re-download + shasum match (846a2d13...). Verified in the text layer, 'Technische Daten' across five trims (Standard / Comfort / Luxury / Trophy Extended Range / XPOWER): 'DC-Ladedauer (10-80%) ca. 37 min | ca. 26 min | ca. 26 min | ca. 38 min | ca. 26 min'; 'Batterie (kWh) 51 | 64 | 64 | 77 | 64' (gross); 'Max. DC Ladeleistung (kW) 88 | 140 | 140 | 144 | 140'; 'Motorisierung PMSM'; 'Max. Nennleistung (kW) 125 | 150 | 150 | 180 | 320'; 'Max. Drehmoment (Nm) 250 | 250 | 250 | 250 | 600'; 'Beschleunigung (sek., 0-100 km/h) 7.7 | 7.9 | 7.9 | 6.5 | 3.8'; 'Reichweite (lt. WLTP) 350 | 450 | 435 | 520 | 385'; 'Energieverbrauch (Wh/km) 170 | 160 | 166 | 165 | 187' (= 17,0-18,7 kWh/100 km); 'Laenge (mm) 4287', 'Radstand (mm) 2705'; equipment rows 'V2L-System (Vehicle-to-load)' and 'Waermepumpe'. Trim mapping for the queue: Standard = 51 kWh, Extended Range = Trophy Extended Range 77 kWh, XPower = XPOWER 64 kWh. CAVEATS: this is the pre-facelift MG4 (the generation behind both the MY2024 and MY2025 queue variants); the 2026 'new MG4' is a different car and is NOT covered here. No WLTP city range, no battery chemistry, no numeric seat-count row."
+  - file: mg-mg4-electric/datasheet.pdf
+    url: https://cdn.mgmotor.eu/images/model/brochure/MG4_MY2024_Brochure_Digital_250212_compressed.pdf
+    type: datasheet
+    covers_models: [mg-mg4-electric]
+    covers_variants: [mg-mg4-electric-standard-2025, mg-mg4-electric-extended-range-2025, mg-mg4-electric-xpower-2025, mg4-electric-standard-range-2024, mg4-electric-extended-range-2024, mg4-electric-xpower-2024]
+    fields_present: [performance.drive_type, performance.motors, performance.torque, features.heat_pump, bidirectional.v2l, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Europe English MG4 Electric MY2024 brochure (PDF Subject field: 'MG4 Electric, MG4 MY2024'). Provenance of the pre-existing file confirmed by re-download + shasum match (c7b6ee85...). Verified in the text layer: 'Gross Battery Size(Kwh) 49 | 64 | 49 | 64 | 77 | 64'; 'Type PMSM'; 'Max Torque (Nm) 250Nm | 350Nm | 600Nm'; 'Length (mm) 4287', 'Wheelbase (mm) 2705'; equipment matrix rows 'V2L' (all trims) and 'Heat Pump' (dash on the two lowest trims, dot from Luxury upwards) - so heat pump is trim-dependent, not universal; drive type from the body copy ('The Rear Wheel Drive, in combination with the 50:50 ...', 'All-Wheel Drive ... Dual-Motor ... max torque of 600Nm' for XPOWER) and V2L output given as '2,200W V2L'. CAVEAT: this brochure's battery line-up (49/64/77 kWh) differs from the Austrian price list's (51/64/77 kWh) - the 49 vs 51 kWh split is nominal-vs-gross labelling and must be reconciled at extraction. No 10-80% charge row (only a marketing '80% in just 30 minutes' claim), no WLTP city range."
+  - file: mg-s5-ev/price-list.pdf
+    url: https://cdn.mgmotor.eu/files/Brochure-MGS5EV-15.5.25_AT_WEB-Aktionspreis.pdf
+    type: price_list
+    covers_models: [mg-s5-ev]
+    covers_variants: [mg-s5-ev-standard-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, features.heat_pump, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Austria German MGS5 EV price brochure (15 May 2025, 49 pp, 'Aktionspreis' Austrian prices) - freshly downloaded. Best single MG source in this store: 'TECHNISCHE DATEN' covers Comfort Standard Range / Comfort Long Range / Luxury Long Range with 'Antrieb Hinterradantrieb' (all three); 'Batteriekapazitaet kWh 49 | 64 | 64'; 'Max. Leistung kw/PS 125/170 | 170/231 | 170/231'; 'Max. Drehmoment Nm 250 | 350 | 350'; 'Beschleunigung (0~100km/h) Sek. 8.0 | 6.3 | 6.3'; 'Geschaetzte Ladedauer (150 kW DC Schnellladegeraet) 10 - 80% 24 Minuten | 28 Minuten | 28 Minuten' plus a '(50 kW DC) 10 - 80% ca. 2 Stunden / ca. 1:46 Stunden' row; 'Energieverbrauch - kWh/100km Kombiniert 16,6 | 15,5 | 16,0' and 'Stadt 11,4 | 10,9 | 10,9'; 'Maximale Reichweite - km (WLTP) Kombiniert 340 | 480 | 465' and 'Stadt 491 | 682 | 645'; 'Laenge (mm) 4.476', 'Radstand (mm) 2.730'; equipment rows 'Waermepumpe fuer effizientere Heizleistung' (Luxury only) and 'Vehicle-to-Load-Funktion (V2L)' (all trims). Queue variant 'Standard' = Comfort Standard Range 49 kWh. No numeric seat-count row, no battery chemistry here (see datasheet.pdf for chemistry)."
+  - file: mg-s5-ev/datasheet.pdf
+    url: https://cdn.mgmotor.eu/files/EU-Brochure-MGS5EV-Sept-2025_compressed.pdf
+    type: datasheet
+    covers_models: [mg-s5-ev]
+    covers_variants: [mg-s5-ev-standard-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.acceleration_0_100_sec, battery.chemistry, dimensions.length_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Europe English MGS5 EV brochure (September 2025 edition). Provenance of the pre-existing file confirmed by re-download + shasum match (ad819042...). Verified in the text layer: 'Driven Wheels: Rear wheel drive, motor at rear' (all three grades); 'Electric Motor Type Synchronous Motor'; battery chemistry row 'LFP | NCM | NCM'; 'Overall length (mm) 4,476mm'; 'Overall width - including mirrors 2,094mm'; marketing headline '10-80% IN UP TO 28 MINUTES' and body copy '0-100kmh in 6.3 seconds ... equipped with a 170kW motor, powering the rear wheels'. Kept mainly for the chemistry row - the Austrian price list is the fuller source for everything else."
+  - file: mg-zs-ev/datasheet.pdf
+    url: https://cdn.mgmotor.eu/images/model/brochure/102022_Produktbroschuere_MG-ZSEV_web.pdf
+    type: datasheet
+    covers_models: [mg-zs-ev]
+    covers_variants: [mg-zs-ev-long-range-2024]
+    fields_present: [performance.torque, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Deutschland/Austria German ZS EV product brochure (October 2022). Provenance of the pre-existing file confirmed by re-download + shasum match (6c91e335...). Verified in the text layer: 'Batterie (kWh) 50,3 | 69,9 | 50,3 | 69,9'; 'Max. Drehmoment (Nm) 280'; 'Reichweite (km lt. WLTP) 320 | 440'; 'Stromverbrauch kombiniert (kWh/100 km)/WLTP 17,3 | 17,8'; 'Laenge (mm) 4323', 'Radstand (mm) 2581' (a graphic elsewhere says 2585 - inconsistent inside the document); V2L described in the body copy ('Mit der V2L-Funktion (Vehicle-to-load) ...'). CAVEATS: the DC charge row is 'DC-Ladedauer (30 - 80 %) ~30 min.' - a 30-80% window, NOT 10-80%. No heat-pump row, no drive-type row, no WLTP city range, no numeric seats row. Document is the 2022 facelift; the queue variant is MY2024, and the gross battery differs from the 2023 UK brochure (69,9 vs 72,6 kWh) - reconcile before extraction."
+  - file: mg-zs-ev/datasheet-2.pdf
+    url: https://cdn.mgmotor.eu/images/model/brochure/MG_NEW-ZS-EV_Brochure_A4_DIGITAL-VERSION-04-2023.pdf
+    type: datasheet
+    covers_models: [mg-zs-ev]
+    covers_variants: [mg-zs-ev-long-range-2024]
+    fields_present: [performance.motors, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Europe English 'new MG ZS EV' brochure (April 2023 digital version). Provenance of the pre-existing file confirmed by re-download + shasum match (38056cbf...). Verified in the text layer: 'Type PMS motor'; 'Max net power (kW) 130 | 115'; 'Max torque (Nm) 280'; 'Acceleration (s, 0~100 km/h) 8.6'; 'EV range (km, WLTP) 320 | 440'; 'Energy consumption (Wh/km) 178 | 178 | 173 | 178'; 'Length (mm) 4323', 'Wheelbase 2585mm'; 'V2L (vehicle-to-load) after discharging' equipment row. CAVEATS: the DC charge row is 'DC charging time (5~80%) ~40min' - a 5-80% window, NOT 10-80%. No battery-capacity row in the spec table, no heat-pump row, no city range, no drive-type row, no numeric seats row."
+  - file: mg-zs-ev/datasheet-3.pdf
+    url: https://www.mg.co.uk/sites/default/files/2023-04/MG_ZS_EV_Brochure_Apr_2023.pdf
+    type: datasheet
+    covers_models: [mg-zs-ev]
+    covers_variants: [mg-zs-ev-long-range-2024]
+    fields_present: [charging.time_0_to_80_min, performance.drive_type, performance.motors, performance.torque, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor UK ZS EV brochure (April 2023). Provenance of the pre-existing file confirmed by re-download + shasum match (b02f87c2...). Verified in the text layer: 'Driven wheels Front Wheel Drive'; 'Electric motor type Synchronous Motor'; 'Battery capacity (nominal), kWh 51.1 | 72.6'; 'Maximum torque, lb ft (NM) 206 (280)'; '0-62mph, seconds 8.2 | 8.4'; 'Estimated charging time (100kW public rapid charger), to 80% 36 minutes | 42 minutes' and '(50kW ...) to 80% 54 minutes | 1 hour 3 minutes'; 'Electric Driving Efficiency Combined 3.6 (17.3) | 3.5 (17.8)' kWh/100km; 'Combined 198 (320) | 273 (440)' km range and stated city ranges 'City Range: 266 miles (429 km)' / '370 miles (596 km)'; 'Length 4,323mm', 'Wheelbase 2,581mm'. CAVEATS: the charge rows are 'to 80%' with no stated start point (treated here as 0-80%, not 10-80%); no heat-pump row; no numeric seats row; the UK long-range battery is quoted as 72.6 kWh nominal against 69,9 kWh in the German 2022 brochure. MY2023 document vs MY2024 queue variant."
+  - file: mg5-electric/price-list.pdf
+    url: https://cdn.mgmotor.eu/images/model/brochure/MG5-Broschuere-AT-1.24-AT-WEB-Preise.pdf
+    type: price_list
+    covers_models: [mg5-electric]
+    covers_variants: [mg5-electric-standard-range-2024, mg5-electric-long-range-2024, mg5-electric-long-range-2025]
+    fields_present: [charging.time_0_to_80_min, performance.motors, performance.torque, performance.acceleration_0_100_sec, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, battery.gross_kwh, battery.chemistry, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor Austria German MG5 Electric price brochure (January 2024, 37 pp, with Austrian prices). Provenance of the pre-existing file confirmed by re-download + shasum match (37107e3a...). Verified in the text layer, 'Technische Daten' across Comfort/Luxury x Standard/Maximale Reichweite: 'Batterietyp LFP (Lithium Iron Phosphate) | NMC (Lithium Nickel Manganese Cobalt)' - the only chemistry row in the MG store; 'Batterie (kWh) 50,3 | 61,1 | 50,3 | 61,1'; 'Motorisierung PMS motor'; 'Max. Nennleistung (kW) 130 | 115'; 'Max. Drehmoment (Nm) 280'; 'Beschleunigung (sek. 0-100 km/h) 7,7'; 'Reichweite (km lt. WLTP) 320 | 400 | 310 | 380'; 'Energieverbrauch (Wh/km) 179 | 175 | 179'; 'Laenge (mm) 4600', 'Radstand (mm) 2659', 'Hoehe 1521/1543'; 'Maximale Leistung des Bordladegeraets 11 kW'; V2L described in the body copy. CAVEATS: the DC charge row is 'DC-Ladedauer (0 - 80 %) ca. 40 min' - a 0-80% window, NOT 10-80% (see datasheet.pdf for a real 10-80% figure). No drive-type row, no heat-pump row, no WLTP city range, no numeric seats row."
+  - file: mg5-electric/datasheet.pdf
+    url: https://www.mg.co.uk/sites/default/files/2024-08/MG5_EV_Brochure_Aug_2024.pdf
+    type: datasheet
+    covers_models: [mg5-electric]
+    covers_variants: [mg5-electric-long-range-2024, mg5-electric-long-range-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, bidirectional.v2l, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: "MG Motor UK 'MG5 EV Long Range' brochure (August 2024). Provenance of the pre-existing file confirmed by re-download + shasum match (133d7353...). The only MG5 source with a true 10-80% window: 'Estimated charging time (150kW public rapid charger), 10 to 80% 35 minutes' and '(50kW public rapid charger), 10 to 80% 61 minutes'. Also verified: 'Driven wheels Front Wheel Drive'; 'Electric motor type Synchronous Motor'; 'Battery capacity (nominal), kWh 61.1' / '(usable), kWh 57.4'; 'Maximum torque, lb ft (NM) 206 (280)'; '0-62mph (100kmh) 7.7'; City efficiency '4.8 (12.9) | 4.9 (12.6)' kWh/100km and City range '326 (525) | 313 (505)' km; 'Length 4,600mm', 'Wheelbase 2,659mm'; V2L in the body copy ('Our V2L technology gives you ...'). CAVEATS: Long Range 61.1 kWh only - the 50,3 kWh Standard Range queue variant is NOT covered here (use price-list.pdf). No heat-pump row; MG publishes no heat-pump fitment for the MG5 in either document."
+skipped:
+  - model: mg-cyberster
+    reason: "features.heat_pump could not be sourced - neither the German nor the English official Cyberster brochure has a heat-pump row, and the MG Motor Deutschland press portal (mgmotor.media/wpfd_file/mg-cyberster-press-kit-deutsch/) serves an HTML wrapper instead of the press-kit file, so it could not be saved as evidence."
+  - model: mg-im5
+    reason: "bidirectional.v2l could not be sourced - neither the German Highlights Prospekt nor the UK June 2026 brochure mentions V2L/vehicle-to-load anywhere in the text layer."
+  - model: mg-zs-ev
+    reason: "charging.time_10_to_80_min could not be sourced from any official ZS EV document - MG publishes 30-80% (German 2022 brochure), 5-80% (EU English 2023 brochure) and unqualified 'to 80%' (UK 2023 brochure) windows only. features.heat_pump is likewise absent from all three."
+  - model: mg5-electric
+    reason: "features.heat_pump could not be sourced - no heat-pump row in either the Austrian price brochure or the UK Long Range brochure."
+  - model: all
+    reason: "platform and production_status are not published in any MG brochure or price list; the only inference available is that a current-dated brochure exists for the model. Not recorded as a field in any entry above."

@@ -1,0 +1,250 @@
+brand: smart
+fetched_at: "2026-08-14"
+documents:
+  # ---------------- smart #1 ----------------
+  - file: smart-1/spec-page-2.html
+    url: https://de.smart.com/de/models/hashtag-one/specifications/
+    type: spec_page
+    covers_models: [smart-1]
+    covers_variants: [smart-1-brabus-2024, smart-1-brabus-2025, smart-1-premium-2024, smart-1-premium-2025, smart-1-pro-plus-2024, smart-1-pro-plus-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, seats, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart Germany "Technische Daten des smart #1" - the primary technical table for this model and
+      the only official source found that is broken out per line. Server-rendered, so the whole
+      table is in the saved HTML. Verified row by row: 'Gleichstrom-Ladezeit (400kW, 10~80%)' =
+      30 min (Pure+/Pro+/Premium/Pulse/BRABUS); 'Antrieb' = RWD for Pure/Pro/Pure+/Pro+/Premium and
+      AWD for Pulse/BRABUS; 'Drehmoment (Nm)' 343 base ... 543 BRABUS; 'Beschleunigung
+      (0-100 km/h) (s)' 6,7 ... 3,9; 'Batterietyp' LFP (Pure/Pro) / NCM (rest); 'Batteriegroesse
+      (kWh)' "49/47" and "66/62" = gross/net in one cell; 'Verbrauch WLTP kombiniert (kWh/100km)'
+      18,1 / 17,4 / 16,8 / 18,2; 'WLTP komb. Reichweite (Stadt)' 427-643 km; 'Gesamtzahl der Sitze'
+      = 5; 'Laenge (mm)' 4270 (BRABUS 4300); 'Radstand (mm)' 2750.
+      CAVEATS: (1) charge window is written "10~80%" and given per charger class - there is a
+      separate 150 kW column and 400 kW column, so record which one a value came from; (2) the page
+      tracks the current model year (7 lines incl. Pure/Pulse that the queue does not have) while
+      the queue holds MY2024/2025 variants - check spec drift on extraction (e.g. BRABUS torque is
+      543 Nm here vs 584 Nm in the 2023 UK launch release); (3) NO heat-pump, V2L or motor-count
+      row - 'Antriebsstrangtyp' just reads "BEV" for every line. Use datasheet.pdf for the heat pump.
+  - file: smart-1/datasheet.pdf
+    url: https://s7.future.smart.com/is/content/smarteurope/smart/smart-dam/digital/website/documents/de/de/downloads/smart-hashtag-1-Line-Overview-DE.pdf
+    type: datasheet
+    covers_models: [smart-1]
+    covers_variants: [smart-1-brabus-2024, smart-1-brabus-2025, smart-1-premium-2024, smart-1-premium-2025, smart-1-pro-plus-2024, smart-1-pro-plus-2025]
+    fields_present: [features.heat_pump, performance.drive_type, battery.gross_kwh, range.wltp_km]
+    fetched_at: "2026-08-14"
+    notes: >-
+      Official "smart #1 Line Uebersicht" (line/equipment overview) PDF from smart Germany's own
+      document store, linked from de.smart.com/de/models/hashtag-one/. Internal document title
+      "1870_smart_ProductBrochure #1 (DE-DE)_S5.indd", 1 page, text layer confirmed with pdftotext.
+      THIS IS THE HEAT-PUMP SOURCE for #1, and it is per line. Columns are Pure | Pure+ | Pro |
+      Pro+ | Pulse | Premium | BRABUS; "Waermepumpe" is listed under Pulse, Premium and BRABUS
+      only - Pure, Pure+, Pro and Pro+ do NOT list it. So for the queue: premium = yes,
+      brabus = yes, pro-plus = NOT equipped (an explicit absence in an official per-line list, not
+      merely unstated). Also carries per line 'Hinterradantrieb (RWD)' / 'Allradantrieb (AWD)',
+      "49 kWh Batterie" / "66 kWh Batterie" (gross, rounded), DC peak (130/150 kW DC-Ladung) and
+      WLTP range headline figures 310/420/400/440 km.
+      CAVEAT: NO V2L row anywhere in this document - smart does not publish V2L for the #1.
+  - file: smart-1/spec-page.html
+    url: https://media.smart.com/en-GB/261360-the-new-smart-1-uk-specification-and-pricing-revealed/
+    type: press_kit
+    covers_models: [smart-1]
+    covers_variants: [smart-1-brabus-2024, smart-1-premium-2024, smart-1-pro-plus-2024]
+    fields_present: [features.heat_pump, performance.drive_type, performance.torque, seats, dimensions.wheelbase_mm, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart UK newsroom release "The new smart #1 - UK specification and pricing revealed"
+      (25 April 2023) - the launch announcement for exactly the Pro+/Premium/BRABUS lines that the
+      queue's MY2024 variants describe, which is why it is kept alongside the current-model-year
+      German pages. Pre-existing file from an interrupted earlier run; provenance re-established
+      2026-08-14 by re-downloading the canonical URL - the fresh copy diffs to nothing but the Rails
+      CSRF token and a spam-honeypot CSS class name.
+      Facts are in prose, not a table: heat pump - "a state-of-the-art silicon carbide invertor and
+      heat pump" stated for the Premium line; "With all-wheel drive" for BRABUS; "the standard
+      200 kW of power increased to 315 kW and torque up from 343 Nm to 584 Nm" (584 Nm is the 2023
+      UK figure - superseded by 543 Nm on the current spec page); "spacious five-seat cabin";
+      "2750mm wheelbase". UK market: WLTP range quoted in miles (260/273). No V2L mention.
+  # ---------------- smart #3 ----------------
+  - file: smart-3/spec-page-2.html
+    url: https://de.smart.com/de/models/hashtag-three/specifications/
+    type: spec_page
+    covers_models: [smart-3]
+    covers_variants: [smart-3-brabus-2025, smart-3-premium-2025, smart-3-pro-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, seats, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart Germany "Technische Daten des smart #3" - primary technical table. Verified in the saved
+      HTML: 'Gleichstrom-Ladezeit (150kW, 10~80%)' = 30 min for Pro+/Premium/Keith Haring/BRABUS and
+      'Gleichstrom-Ladezeit (400kW, 10~80%)' = 30 min for Pro; 'Antrieb' = RWD for Pro/Pro+/Premium/
+      Keith Haring, AWD for BRABUS; 'Drehmoment (Nm)'; 'Beschleunigung (0-100 km/h) (s)';
+      'Batterietyp' LFP (Pro) / NCM (rest); 'Batteriegroesse (kWh)' "49/47" and "66/62" =
+      gross/net; 'Verbrauch WLTP kombiniert (kWh/100km)'; 'WLTP komb. Reichweite (Stadt)'
+      445-615 km; 'Gesamtzahl der Sitze' = 5; 'Laenge (mm)' 4400; 'Radstand (mm)'.
+      Columns Pro | Pro+ | Premium | Keith Haring Edition | BRABUS cover all three queue variants.
+      CAVEATS: "10~80%" window quoted per charger class only; current model year vs MY2025 queue
+      variants; no heat-pump, V2L or motor-count rows ('Antriebsstrangtyp' = "BEV"). Note also the
+      wheelbase here differs from the 2785 mm quoted in the 2023 premiere release.
+  - file: smart-3/datasheet.pdf
+    url: https://s7.future.smart.com/is/content/smarteurope/smart/smart-dam/digital/website/documents/de/de/downloads/smart-Hashtag-3-Line-Uebersicht-DE.pdf
+    type: datasheet
+    covers_models: [smart-3]
+    covers_variants: [smart-3-brabus-2025, smart-3-premium-2025, smart-3-pro-2025]
+    fields_present: [features.heat_pump, performance.drive_type, battery.gross_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-14"
+    notes: >-
+      Official "smart #3 Line Uebersicht" PDF from smart Germany's document store (de/de/downloads),
+      created 17 Nov 2025, 2 pages, text layer confirmed.
+      THIS IS THE HEAT-PUMP SOURCE for #3, per line. Columns Pro | Pro+ | Premium | Keith Haring
+      Edition | BRABUS; "Waermepumpe" is listed under Premium, Keith Haring Edition and BRABUS -
+      Pro and Pro+ do NOT list it. For the queue: premium = yes, brabus = yes, pro = NOT equipped.
+      Also per line: 'Hinterradantrieb (RWD)' / 'Allradantrieb (AWD)', "49 kWh Batterie" /
+      "66 kWh Batterie", WLTP range 325/435/455/455/415 km, and a German disclaimer block with
+      combined consumption 16,3 (Premium/25th Anniversary/Keith Haring) / 16,8 (Pro+) / 17,2 (Pro) /
+      17,6 (BRABUS/Pulse) kWh per 100 km.
+      CAVEATS: NO V2L row - smart does not publish V2L for the #3. Chosen over the alternative
+      official URL .../downloads/smart-hashtag-3-Line-Overview-DE.pdf, which is the Swiss-German
+      artwork ("(CH-DE)_S4.indd") covering only 4 lines; this one is the German 5-line version.
+  - file: smart-3/spec-page.html
+    url: https://media.smart.com/en-CEU/260755-european-premiere-of-smart-3-and-world-premiere-of-25th-anniversary-edition/
+    type: press_kit
+    covers_models: [smart-3]
+    covers_variants: [smart-3-brabus-2025, smart-3-premium-2025, smart-3-pro-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, efficiency.wltp_kwh_per_100km, range.wltp_km, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart Central-Europe newsroom release "European Premiere of smart #3 and World Premiere of
+      25th Anniversary Edition" (3 September 2023). Pre-existing file; provenance re-established
+      2026-08-14 by re-download (byte-identical except the CSRF token).
+      Prose figures: "with a performance of up to 150 kW/h, the smart #3 charges from 10 to 80
+      percent in under 30 minutes" - a CEILING ("under 30 minutes"), not an exact time, and the
+      German spec page gives exactly 30 min, so prefer the spec page; "all-wheel drive (AWD)" for
+      BRABUS; "2785 mm wheelbase" (2023 launch figure); disclaimer footnote with per-line combined
+      consumption 17.6 (BRABUS) / 16.3 (Premium) / 16.8 (Pro+) kWh/100 km and WLTP range
+      415/455/435 km. No heat pump, V2L or seat count.
+  # ---------------- smart #5 ----------------
+  - file: smart-5/spec-page-3.html
+    url: https://de.smart.com/de/models/hashtag-five/specifications/
+    type: spec_page
+    covers_models: [smart-5]
+    covers_variants: [smart-5-brabus-2025, smart-5-pro-2025, smart-5-pulse-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.torque, performance.acceleration_0_100_sec, efficiency.wltp_kwh_per_100km, range.wltp_km, range.wltp_city_km, battery.gross_kwh, battery.chemistry, seats, dimensions.length_mm, dimensions.width_mm, dimensions.height_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart Germany "Technische Daten des smart #5" - primary technical table. Verified in the saved
+      HTML: 'Gleichstrom-Ladezeit (400kW, 10~80%)' = 18 min for Pro+/Premium/Pulse/Summit/BRABUS and
+      'Gleichstrom-Ladezeit (150kW, 10~80%)' = 30 min for Pro; 'Antrieb' = RWD for Pro/Pro+/Premium,
+      AWD for Pulse/Summit/BRABUS; 'Drehmoment (Nm)' 373 / 643; 'Beschleunigung (0-100 km/h) (s)'
+      6,9 ... 3,8; 'Batterietyp' LFP (Pro) / NCM (rest); 'Batteriegroesse (kWh)' "76/74,4" and
+      "100/94" = gross/net; 'Verbrauch WLTP kombiniert (kWh/100km)' 18,4 / 18,5 / 19,9; 'WLTP komb.
+      Reichweite (Stadt)' 655-778 km; 'Gesamtzahl der Sitze' = 5; 'Laenge (mm)' 4695; 'Radstand
+      (mm)' 2900.
+      CAVEATS: the first column is labelled "Pro (2027)" and a second plain "Pro" column also
+      appears - this page carries the incoming model year next to the current one, so pin the column
+      carefully when extracting the MY2025 queue variants. "10~80%" window per charger class. No
+      heat-pump, V2L or motor-count rows ('Antriebsstrangtyp' = "BEV").
+  - file: smart-5/datasheet.pdf
+    url: https://s7.future.smart.com/is/content/smarteurope/smart/smart-dam/digital/website/documents/de/de/downloads/smart-Hashtag-5-Line-Uebersicht-DE.pdf
+    type: datasheet
+    covers_models: [smart-5]
+    covers_variants: [smart-5-brabus-2025, smart-5-pro-2025, smart-5-pulse-2025]
+    fields_present: [features.heat_pump, bidirectional.v2l, performance.drive_type, battery.gross_kwh, range.wltp_km, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-14"
+    notes: >-
+      Official "smart #5 Line Uebersicht" PDF from smart Germany's document store (de/de/downloads),
+      created 17 Nov 2025, 2 pages, text layer confirmed. The single most useful #5 document:
+      it is the only source that gives BOTH heat pump AND V2L per line.
+      Columns Pro | Pro+ | Pulse | Premium | Summit Edition | BRABUS.
+      "Waermepumpe": Pulse, Premium, Summit Edition, BRABUS - Pro and Pro+ do NOT list it.
+      "V2L Faehigkeit": listed under ALL SIX lines including Pro (no kW rating given anywhere).
+      So for the queue: pulse and brabus = heat pump yes + V2L yes; pro = V2L yes but heat pump NOT
+      equipped. Also per line: RWD/AWD, "76 kWh Batterie" / "100 kWh Batterie", WLTP range
+      465/590/540/590/540/540 km, and a disclaimer block with combined consumption 18,4 (Pro+/
+      Premium) / 18,5 (Pro) / 19,9 (BRABUS/Pulse/Summit) kWh per 100 km.
+  - file: smart-5/spec-page.html
+    url: https://media.smart.com/en-CEU/260574-the-most-spacious-versatile-and-technologically-advanced-smart-redefines-its-segment/
+    type: press_kit
+    covers_models: [smart-5]
+    covers_variants: [smart-5-brabus-2025, smart-5-pro-2025, smart-5-pulse-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, features.heat_pump, bidirectional.v2l, battery.gross_kwh, battery.chemistry, range.wltp_km, efficiency.wltp_kwh_per_100km, dimensions.length_mm, dimensions.wheelbase_mm]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart newsroom European-premiere release for the #5 (22 March 2025). Pre-existing file;
+      provenance re-established 2026-08-14 by re-download (byte-identical except the CSRF token).
+      Kept because it is the ONLY official source found that states a motor count and the nature of
+      the V2L outlet: "an intelligent dual-motor all-wheel drive, ... and an energy-efficient heat
+      pump" (Pulse line) and "a Vehicle-to-Load power outlet with 230 Volt integrated into the
+      charging port". Also "charged from 10% to 80% State of Charge in just 18 minutes under optimal
+      conditions" at up to 400 kW - note the "under optimal conditions" hedge; "smart #5 Pro with a
+      76 kWh Lithium iron phosphate battery (LFP)" and "From the smart #5 Pro+ onward, all models
+      have a 100-kWh Lithium nickel manganese cobalt oxide battery (NCM)" - this is where the
+      chemistry names spell out; 2,900 mm wheelbase / 4,695 mm length.
+      CAVEAT: at publication the "Pulse / Premium / Pro / Pro+ EU homologation process" was still
+      pending, so its WLTP numbers (19.9 kWh/100 km, 540 km) are quoted for the Summit Edition only.
+  - file: smart-5/spec-page-2.html
+    url: https://media.smart.com/en-CEU/268690-smart-5-premium-adds-awd-version-as-the-lineup-gets-updated-with-a-new-black-collection-and-colors/
+    type: press_kit
+    covers_models: [smart-1, smart-3, smart-5]
+    covers_variants: [smart-1-brabus-2025, smart-1-premium-2025, smart-1-pro-plus-2025, smart-3-brabus-2025, smart-3-premium-2025, smart-3-pro-2025, smart-5-brabus-2025, smart-5-pro-2025, smart-5-pulse-2025]
+    fields_present: [efficiency.wltp_kwh_per_100km, range.wltp_km, performance.drive_type, performance.motors]
+    fetched_at: "2026-08-13"
+    notes: >-
+      smart newsroom model-year-update release ("smart #5 Premium Adds AWD-version as the Lineup
+      Gets Updated ..."). Pre-existing file; provenance re-established 2026-08-14 by re-download
+      (byte-identical except the CSRF token). It sits in the smart-5 directory but is really a
+      BRAND-LEVEL document - that is why covers_models lists all three models and why this model
+      carries four documents: its disclaimer block gives per-line WLTP figures for the whole
+      current line-up in one place. smart #1: 16.8 (Premium) / 17.4 (Pro+, Pro+ Black Pack, Pure+) /
+      18.1 (Pro, Pure) / 18.2 (BRABUS, Pulse) kWh/100 km with ranges 440/420/310/400 km.
+      smart #3: 16.3 (Premium, Keith Haring) / 16.8 (Pro+, Pro+ Black Pack) / 17.2 (Pro) /
+      17.6 (BRABUS, Pulse) with 455/435/325/415 km. smart #5: 18.4 (Pro+, Pro+ Black Pack,
+      Premium) / 18.5 (Pro) / 19.9 (BRABUS, Pulse, Summit Edition, Premium AWD).
+      Also documents "smart's sovereign dual-motor drivetrain technology" for the new #5 Premium
+      AWD. No heat-pump, V2L or seat figures.
+skipped: []
+notes: >-
+  Brand-level caveats for smart, and what was done to the files inherited from the interrupted
+  earlier run.
+  (1) smart publishes NO price list ("Preisliste") PDF on any of its European sites. The official
+  substitutes, and what this store therefore holds for every model, are the model "Technische Daten"
+  web page (full per-line table, saved as HTML) plus the "Line Uebersicht" equipment PDF from
+  de.smart.com's own document store - between them they cover every queued field except V2L on
+  #1/#3 and motor counts.
+  (2 - the big gap) HEAT PUMP is published only in the Line Uebersicht PDFs, per line, and it is a
+  trim feature rather than a model feature: #1 Pulse/Premium/BRABUS only; #3 Premium/Keith Haring/
+  BRABUS only; #5 Pulse/Premium/Summit/BRABUS only. The queue's smart-1-pro-plus-*, smart-3-pro-2025
+  and smart-5-pro-2025 variants are explicitly NOT listed as having one.
+  (3) V2L is published for the #5 only ("V2L Faehigkeit" on all six lines; the press release
+  describes it as a 230 V outlet in the charging port, no kW rating anywhere). For the #1 and #3
+  smart publishes nothing - treat as not-published, not as false.
+  (4) performance.motors is never given as a number. Only 'Antrieb' RWD/AWD ('Antriebsstrangtyp'
+  reads "BEV"), plus prose "dual-motor all-wheel drive" for #5 AWD lines. Single-motor for RWD lines
+  is an inference, not a published fact.
+  (5) Every DC charge figure is labelled "10~80%" and lives in a per-charger-class column (150 kW
+  and 400 kW), so record which column a value came from. No 0-80% figure is published anywhere, so
+  charging.time_0_to_80_min stays unfillable from official smart sources.
+  (6) Battery capacity is published as gross/net in a single cell ("49/47", "66/62", "76/74,4",
+  "100/94"); the Line Uebersicht PDFs round to the gross figure ("49 kWh Batterie").
+  (7) The de.smart.com pages track the current/incoming model year - the #5 table even has a
+  "Pro (2027)" column - while the queue holds MY2024/2025 variants. Spec drift is real and visible
+  (e.g. #1 BRABUS torque 543 Nm now vs 584 Nm at UK launch; #3 wheelbase 2750/2785 mm), so extraction
+  must pin a model year.
+  (8) production_status is not a field any of these documents states; all queued models are on sale
+  on de.smart.com at the time of fetch, which is context, not a citable spec row.
+  (9) FILE PROVENANCE: eight files predated this run with no manifest. All eight were attributed on
+  2026-08-14 - the three newsroom PDFs by exact shasum match on re-download, the five newsroom HTML
+  pages by re-download diffing to nothing but the Rails CSRF token and a spam-honeypot CSS class.
+  NONE were deleted for being unattributable (unattributed_deleted = 0). Four were then pruned as
+  exact duplicates carrying no unique fact, to keep the store within the 3-document budget:
+  smart-1/press-kit.pdf, smart-3/press-kit.pdf and smart-5/press-kit.pdf were the newsroom
+  "download as PDF" exports of newsroom pages already saved here as HTML (text compared
+  sentence-by-sentence; identical, and the #5 PDF's text layer is actually lossy - it drops fi/ffi
+  ligatures, printing "ef ciency" and " ve"), and smart-3/spec-page-2.html was a Mallorca press-drive
+  release whose only figures ("under 30 minutes" 10-80%, 5.8-3.7 s, 315 kW) are all stated more
+  precisely on the German spec page. Their URLs were:
+  https://d21buns5ku92am.cloudfront.net/70301/pdf/campaigns/901-the-new-smart-1-uk-specification-and-pricing-revealed.pdf
+  (sha256 f6053ef775c7476afd5e6d3003dfd688929a8613ee9ba28bedc9bf0ef03d6f85),
+  https://d21buns5ku92am.cloudfront.net/70297/pdf/campaigns/921-european-premiere-of-smart-3-and-world-premiere-of-25th-anniversary-edition.pdf
+  (sha256 5191c007fbba5f3e8366a9ae97ac9d17c1dbd8dd414e0ffbbe107784c5d4462e),
+  https://d21buns5ku92am.cloudfront.net/70297/pdf/campaigns/789-the-most-spacious-versatile-and-technologically-advanced-smart-redefines-its-segment.pdf
+  (sha256 9f07525fad2bdf7ac6a281e5cc922ccabe1eb3bad9dd1b83d9e81e81cf8c617f) and
+  https://media.smart.com/en-CEU/260738-sporty-smart-3-suv-coupe-hits-the-serpentines-and-coastal-roads-of-mallorca/
+  - all four are one curl away if the extraction step wants them back.

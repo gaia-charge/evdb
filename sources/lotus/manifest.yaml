@@ -1,0 +1,207 @@
+brand: lotus
+fetched_at: "2026-08-13"
+documents:
+  - file: lotus-eletre/spec-page.html
+    url: https://www.lotuscars.com/en/press/models/eletre
+    type: press_kit
+    covers_models: [lotus-eletre]
+    covers_variants: [lotus-eletre-base-2025, lotus-eletre-s-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Lotus press-portal model page for the Eletre - the single most valuable Lotus document,
+      because it carries a real technical table (not marketing copy). Provenance re-established
+      on 2026-08-14: re-downloaded from this URL, shasum matches the stored file byte-for-byte
+      (57f7b02dff47d57cfb8eb4f0a361f6da4cbcc9e1, 265134 bytes); the file's own
+      <link rel="canonical"> and og:url both point here.
+      The table is embedded in the Vue/Sitecore SSR JSON payload (unicode-escaped HTML), so it is
+      NOT visible to a naive tag-strip - decode \uXXXX escapes first. Columns are the six trims:
+      600 | 600 GT | 600 GT SE | 600 SPORT SE | 900 SPORT | 900 SPORT CARBON. Rows verified:
+      'Powertrain configuration: Full time all wheel drive with Lotus ICC intelligent torque
+      distribution'; 'Electric motor front/rear: Permanent magnet'; 'Transmission: Single speed
+      (front and rear)' except 900 SPORT CARBON 'Single speed (front) and two speed (rear)';
+      'Max power (bhp/PS/kW) 603/612/450' (600 trims) and '905/918/675' (900 trims);
+      'Max torque (Nm) 710' / '985'; '0-62 mph / 0-100 km/h (secs) 4.5' / '2.95';
+      'Battery Capacity (kWh) - Gross 112'; 'Battery Type: Ternary lithium ion battery';
+      'Battery Voltage 708'; 'Charging time 10%-80% (350kW DC) 20' minutes;
+      'Charging time 10%-80% (22kW AC) 5.8' hours; 'WLTP Combined range (km/miles) 570-600'
+      down to '410'.
+      MAPPING CAVEAT: the queue variants are 'Base' and 'S', but Lotus has renamed the line-up to
+      600/900 trims - map before extracting. No seats, heat pump, V2L or city range here.
+      The identical page is also served from the press portal at
+      https://media.lotuscars.com/en/models/lotus-eletre-technology-performance-and-luxury-in-a-spacious-and-practical-pure-electric-hyper-suv.html
+      (byte-identical, 265134 bytes); the lotuscars.com canonical URL is recorded as the source.
+  - file: lotus-eletre/spec-page-2.html
+    url: https://www.lotuscars.com/en/press/news/lotus-revamps-eletre-and-emeya-line-up
+    type: press_kit
+    covers_models: [lotus-eletre, lotus-emeya]
+    covers_variants: [lotus-eletre-base-2025, lotus-eletre-s-2025, lotus-emeya-base-2025, lotus-emeya-s-2025, lotus-emeya-r-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, battery.gross_kwh, production_status]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Official Lotus press release "Lotus revamps Eletre and Emeya line-up". Provenance
+      re-established on 2026-08-14: re-downloaded from this URL, shasum matches byte-for-byte
+      (d28173c5da6aced4cb705974d0b2e97e3b7f6837, 244290 bytes).
+      Covers BOTH models, which is why the same file is stored in both model directories
+      (lotus-eletre/spec-page-2.html and lotus-emeya/spec-page-2.html are byte-identical) -
+      that duplication is intentional, not an accident.
+      Verified in the text layer: 'Eletre 600: 450 kW (612 bhp) dual-motor, 4WD, 112 kWh battery
+      pack, 22kW onboard charger, active air suspension with Continuous Damping Control, 20-inch
+      wheels, torque vectoring'; and on charging - 'Thanks to its 800V battery technology with
+      Advanced Lotus Hyper Charging it can be charged from 10-80% in around 14 minutes (under
+      perfect conditions) using a 400kW DC charger (Eletre: 20 minutes from 10-80% at a 350kW
+      DC charger)'.
+      CHARGING CAVEAT: two different 10-80% numbers appear here for two different chargers -
+      Emeya 14 min @ 400 kW DC, Eletre 20 min @ 350 kW DC. Use the 350 kW figure to stay
+      consistent with the press-portal spec tables; the 400 kW figure is a best-case claim.
+      This release is also the best available evidence for production_status (it describes the
+      current, actively-sold 600/900 line-up).
+  - file: lotus-eletre/spec-page-3.html
+    url: https://www.lotuscars.com/de-DE/eletre/models
+    type: spec_page
+    covers_models: [lotus-eletre]
+    covers_variants: [lotus-eletre-base-2025, lotus-eletre-s-2025]
+    fields_present: [performance.motors, performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Lotus Germany (de-DE) Eletre model/line-up page. Provenance re-established on 2026-08-14:
+      re-downloaded from this URL, shasum matches byte-for-byte
+      (10cbdfc5f65a5ad1392f0f61db25fc1fd7ee4416, 478327 bytes).
+      Its unique contribution is the German WLTP legal footer, which is the only place a
+      consumption figure appears: 'Lotus Eletre (600, 900); WLPT [sic]: Stromverbrauch kombiniert
+      21,4 - 25,4 kWh/100 km; Reichweite kombiniert ~ 600 ~ 500 km; CO2-Emissionen kombiniert
+      0 g/km. Effizienzklasse A.' Also verified: 'Hochleistungs-Doppelmotoren mit ueber 900 BPS,
+      985 Nm Drehmoment, 2-Gang-Getriebe' and '0 auf 100 km/h in nur 2,95 Sekunden' (900 trim),
+      '4,5 Sekunden' + '112 kWh' + 'Reichweite von bis zu 600 Kilometern' (600 trim).
+      CAVEATS: the consumption range 21,4-25,4 kWh/100 km is a combined span across the whole
+      600/900 line-up, NOT a per-variant value. A disclaimer states the charging times assume a
+      350-kW DC charger under optimal conditions ('Die angegebenen Ladezeiten basieren auf der
+      Nutzung eines 350-kW-DC-Schnellladegeraets unter optimalen Bedingungen und stellen
+      Bestwerte dar'). Mostly marketing copy - the press table above is the better source.
+  - file: lotus-eletre/spec-page-4.html
+    url: https://www.lotuscars.com/en-US/eletre/specifications
+    type: spec_page
+    covers_models: [lotus-eletre]
+    covers_variants: [lotus-eletre-base-2025, lotus-eletre-s-2025]
+    fields_present: [seats, features.heat_pump]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Fetched fresh on 2026-08-14. Kept as a 4th document for this model, over the 3-doc budget,
+      because it is the ONLY official Lotus source found that states either of the two remaining
+      gap fields. Verified in the decoded SSR payload equipment lists:
+      'SEAT ... 5-Seat Layout | Power Adjustable Front Seats (8-Way) | ...' and
+      'COMFORT ... Automatic 4 Zone Climate Control | Heat Pump | Air Quality System | PM 2.5
+      Filter | ...'.
+      MARKET CAVEAT: this is the en-US market page, used only because the EU-market equivalents do
+      not carry this equipment table - https://www.lotuscars.com/en-GB/eletre/specifications
+      returns a "Lotus Cars Official Site System Error" stub (6329 bytes, noindex) and was
+      correctly NOT saved, and https://www.lotuscars.com/de-DE/eletre/specifications renders as
+      marketing sections with no Waermepumpe or Sitz-layout row. Equipment content is
+      market-dependent, so confirm heat-pump availability for the EU car before publishing.
+      Carries no charging, powertrain or range table - use spec-page.html for those.
+  - file: lotus-emeya/spec-page.html
+    url: https://www.lotuscars.com/en/press/models/emeya
+    type: press_kit
+    covers_models: [lotus-emeya]
+    covers_variants: [lotus-emeya-base-2025, lotus-emeya-s-2025, lotus-emeya-r-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh, battery.chemistry, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Lotus press-portal model page for the Emeya, same table structure as the Eletre one and the
+      best Emeya document. Provenance established on 2026-08-14 by re-download from this URL: the
+      re-fetched body is identical to the stored file except that the live server appended
+      marketing tracking parameters to the canonical/og:url tags
+      (?sfmc_id=...&spuBusId=...&store_code=...&vin=...), so the shasum differs
+      (stored bdb81d7b762d7764a88362e9c9c8ff45662cf034, 269721 bytes vs re-fetched 269903 bytes)
+      while every technical row matches. Diff was inspected line-by-line: only those two meta
+      lines differ. Treated as confirmed.
+      Rows verified (decode \uXXXX escapes first - the table lives in the SSR JSON payload):
+      'Powertrain configuration: Full time all wheel drive with Lotus ICC intelligent torque
+      distribution'; 'Electric motor front/rear: Permanent magnet'; 'Max power (bhp/PS/kW)
+      603/612/450' / '905/918/675'; 'Max torque (Nm) 710' / '985'; '0-62 mph / 0-100 km/h (secs)
+      4.15' / '2.78'; 'Battery Capacity (kWh) - Gross 102'; 'Battery Type: Ternary lithium ion
+      battery'; 'Battery Voltage 705'; 'Charging time 10%-80% (350kW DC) 18' minutes;
+      'Charging time 10%-80% (22kW AC) 5.5' hours; 'WLTP Combined range (km/miles) 610/379' down
+      to '435-485 / 270-301'.
+      MAPPING CAVEAT: queue variants are Base / S / R, but the table is columned by the current
+      600 / 600 GT / 600 GT SE / 600 SPORT SE / 900 SPORT / 900 SPORT CARBON trims - the queue's
+      'R' is the 900-series car. Map before extracting.
+  - file: lotus-emeya/spec-page-2.html
+    url: https://www.lotuscars.com/en/press/news/lotus-revamps-eletre-and-emeya-line-up
+    type: press_kit
+    covers_models: [lotus-emeya, lotus-eletre]
+    covers_variants: [lotus-emeya-base-2025, lotus-emeya-s-2025, lotus-emeya-r-2025, lotus-eletre-base-2025, lotus-eletre-s-2025]
+    fields_present: [charging.time_10_to_80_min, performance.motors, production_status]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Byte-identical copy of lotus-eletre/spec-page-2.html (same URL, same shasum
+      d28173c5da6aced4cb705974d0b2e97e3b7f6837) - the release covers both models, so it is filed
+      under both. See that entry for the full verified quotes.
+      For the Emeya specifically: '800V battery technology with Advanced Lotus Hyper Charging it
+      can be charged from 10-80% in around 14 minutes (under perfect conditions) using a 400kW DC
+      charger'. CAVEAT: that 14 min is a 400 kW best-case figure and conflicts with the 18 min
+      @ 350 kW in the press spec table - prefer the table's figure.
+  - file: lotus-emeya/spec-page-3.html
+    url: https://www.lotuscars.com/de-DE/emeya/models
+    type: spec_page
+    covers_models: [lotus-emeya]
+    covers_variants: [lotus-emeya-base-2025, lotus-emeya-s-2025, lotus-emeya-r-2025]
+    fields_present: [charging.time_10_to_80_min, performance.drive_type, performance.motors, performance.torque, performance.acceleration_0_100_sec, battery.gross_kwh, efficiency.wltp_kwh_per_100km, range.wltp_km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Lotus Germany (de-DE) Emeya model/line-up page. Provenance re-established on 2026-08-14:
+      re-downloaded from this URL, shasum matches byte-for-byte
+      (8d297ee3029e9e94a174ebb4de19ded7a4152d86, 465778 bytes).
+      Verified in the decoded payload: 'Laden von 10 auf 80 % in nur 15 Minuten' together with
+      'der 420-kW-Schnellladefaehigkeit'; '450-kW-Doppelmotor [4WD]' + '102-kWh-Batterie' +
+      '22-kW-Wechselstrom-Onboard-Ladegeraet'; 'Hochleistungs-Doppelmotoren mit 675 kW ...
+      985 Nm Drehmoment ueber das 2-Gang-Getriebe'; '0 auf 100 km/h in nur 2,78 Sekunden';
+      and the WLTP footer 'Lotus Emeya (600, 900); WLTP: Stromverbrauch kombiniert 18,7-22,4
+      kWh/100 km; Reichweite kombiniert ~ 580 ~ 435 km; CO2-Emissionen kombiniert 0 g/km'.
+      CHARGING CAVEAT: this page gives a THIRD 10-80% figure - 15 min at 420 kW. Across the three
+      Emeya sources the same window is quoted as 18 min @ 350 kW, 15 min @ 420 kW and 14 min @
+      400 kW. Record the charger power alongside whichever is extracted.
+      CAVEAT: the consumption span is line-up-wide (600 and 900 together), not per-variant.
+  - file: lotus-emeya/spec-page-4.html
+    url: https://www.lotuscars.com/en-GB/emeya/specifications
+    type: spec_page
+    covers_models: [lotus-emeya]
+    covers_variants: [lotus-emeya-base-2025]
+    fields_present: [seats, performance.motors, efficiency.wltp_kwh_per_100km]
+    fetched_at: "2026-08-13"
+    notes: >-
+      Fetched fresh on 2026-08-14. Kept as a 4th document for this model, over the 3-doc budget,
+      because it is the only official Lotus source found that states the Emeya seat count.
+      Verified in the decoded SSR payload feature list: 'Interior ... 5 seat layout (40/20/40) |
+      12-way power front seats | 4 zone climate control | Keyless entry & start | KEF 1380 W 15
+      Speakers | AR HUD | Smartphone wireless charging'; 'Motor & Battery ... 450 kW motors |
+      1 Speed'; and the WLTP footer 'Lotus Emeya (600, 900), WLTP: ... electricity consumption
+      combined 17,7-22,4 kWh/100km; CO2 emissions combined 0 g/km; combined electric range
+      332-280 miles.'
+      CAVEATS: the feature list shown is the base 600 trim's, hence covers_variants is only the
+      base variant. NO heat-pump row exists on this page (unlike the Eletre en-US page) - the
+      en-US Emeya page (https://www.lotuscars.com/en-US/emeya/specifications, checked
+      2026-08-14) carries the same list and also has no heat-pump entry, so heat_pump stays
+      unfilled for the Emeya rather than being inferred from the Eletre.
+      Note this footer's consumption span (17,7-22,4) differs slightly from the German page's
+      (18,7-22,4) - market-specific WLTP homologation.
+skipped: []
+notes: >-
+  All six pre-existing Lotus HTML files were left on disk by an interrupted earlier run with no
+  manifest. Every one was attributed on 2026-08-14 from its own <link rel="canonical"> tag and
+  then confirmed by re-download: five match byte-for-byte, and lotus-emeya/spec-page.html differs
+  only by server-appended marketing tracking params in two meta tags (diff inspected). Nothing
+  was deleted - unattributed_deleted = 0.
+  READING THESE FILES: they are Vue/Sitecore server-rendered pages. The technical tables and
+  equipment lists are inside the embedded JSON payload with \uXXXX-escaped HTML, so plain
+  tag-stripping yields only ~1-3 KB of marketing text and looks like an empty JS shell. Decode
+  the unicode escapes first, then parse the <table> / feature-list blocks.
+  BRAND-LEVEL GAP CAVEAT - fields Lotus does not publish anywhere official that was reachable:
+  bidirectional.v2l (no Lotus source mentions V2L or vehicle-to-load at all for either model),
+  range.wltp_city_km (Lotus publishes only WLTP combined), charging.time_0_to_80_min (Lotus
+  publishes the 10-80% window instead), and features.heat_pump for the Emeya.
+  charging.charging_speed_kmh is not published as such either; the closest is the 400/420 kW peak
+  DC power claims.
+  No Lotus price list PDF exists for any EU market as far as searching could establish - Lotus
+  sells via an online configurator and publishes no downloadable Preisliste, which is why this
+  brand is covered by web pages rather than the preferred price-list PDFs.
