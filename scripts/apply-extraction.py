@@ -72,6 +72,22 @@ def fmt_value(v):
     return s
 
 
+def schema_has_path(schema, path):
+    """True if the dotted path is a declared property of the schema.
+
+    Three of the four schemas do not set additionalProperties:false, so an
+    invented field name (seats vs seating.seats) would validate happily and
+    silently land in the data. Check the path explicitly instead.
+    """
+    node = schema
+    for key in path.split("."):
+        props = node.get("properties")
+        if not props or key not in props:
+            return False
+        node = props[key]
+    return True
+
+
 def get_path(d, path):
     for k in path.split("."):
         if not isinstance(d, dict) or d.get(k) is None:
@@ -231,6 +247,11 @@ def main():
             if isinstance(u["value"], (list, dict)):
                 failed += 1
                 reasons[key] = "list/dict values need hand-written YAML"
+                continue
+            kind = target.split("/")[0]
+            if not schema_has_path(validators[kind].schema, field):
+                failed += 1
+                reasons[key] = f"'{field}' is not a declared property of the {kind} schema"
                 continue
 
             original = path.read_text()

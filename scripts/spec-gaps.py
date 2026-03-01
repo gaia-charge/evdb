@@ -42,7 +42,7 @@ CHARGE_TIME_ALTERNATIVES = {
 }
 
 MODEL_FIELDS = [
-    "seats",
+    "seating.seats",
     "production_status",
     "platform",
     "dimensions.length_mm",

@@ -19,11 +19,13 @@ range:
 charging:
   ac_max_kw: 11
   dc_max_kw: 350
+  time_10_to_80_min: 18
 performance:
   top_speed_kmh: 225
   total_power_kw: 280
   total_torque_nm: 700
   acceleration_0_100_sec: 4.5
+  drive_type: AWD
 efficiency:
   wltp_kwh_per_100km: 20.2
   real_world_kwh_per_100km: 22.5
@@ -43,6 +45,12 @@ weight:
   payload_kg: 625
   towing_capacity_braked_kg: 1800
   towing_capacity_unbraked_kg: 750
+
+bidirectional:
+  v2l: true
 metadata:
   created_at: "2026-02-08"
   data_quality: unverified
+  sources:
+    - https://www.genesisnewseurope.com/german/pressemeldungen/neuer-genesis-electrified-gv70-startet-zu-preisen-ab-67.300-euro/s/4ab7fe59-baab-41dd-a656-2f0d4930e52c
+  updated_at: "2026-03-01"

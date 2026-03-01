@@ -29,6 +29,7 @@ charging:
     power_kw: 150
   - soc_percent: 80
     power_kw: 80
+  time_10_to_80_min: 16
 performance:
   drive_type: RWD
   motors:
@@ -60,7 +61,16 @@ efficiency:
   wltp_kwh_per_100km: 15.6
   epa_kwh_per_100km:
   real_world_kwh_per_100km: 19.2
+
+features:
+  heat_pump: true
+
+bidirectional:
+  v2l: true
 metadata:
   created_at: '2026-02-09T16:00:00Z'
-  updated_at: '2026-02-09T16:00:00Z'
+  updated_at: "2026-03-01"
   data_quality: unverified
+  sources:
+    - https://www.datocms-assets.com/128969/1753866828-7x-nl.pdf
+    - https://www.datocms-assets.com/128969/1782718827-zeekr-7x-product-leaflet-eng-20260624.pdf
