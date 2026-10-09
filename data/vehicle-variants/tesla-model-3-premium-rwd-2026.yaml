@@ -19,15 +19,19 @@ range:
   real_world_km: null
 performance:
   motors:
-  - position: rear
-    type: permanent magnet
+    - position: rear
+      type: permanent magnet
   total_power_kw: 235
   total_torque_nm: 450
   drive_type: RWD
   top_speed_kmh: 201
   acceleration_0_100_sec: 5.2
 charging:
+  ac_max_kw: 11
   ac_phases: 3
+  ac_connector: Type2
+  dc_max_kw: 250
+  dc_connector: CCS2
 efficiency:
   wltp_kwh_per_100km: 10.5
   real_world_kwh_per_100km: 13.6
@@ -49,20 +53,19 @@ cargo:
   frunk_capacity_liters: 88
   trunk_max_liters: 1148
 features:
-notes: '2026 Tesla Model 3 Premium RWD - new trim level with larger 82 kWh NMC battery.
-
-  750 km WLTP range - class-leading for a mid-size sedan.
-
-  250 kW DC fast charging with battery preconditioning.
-
-  235 kW rear motor (up from 208 kW on base RWD).
-
-  Highland refresh features: ventilated seats, rear display, ambient lighting.
-
-  Premium trim includes enhanced interior materials and equipment.
-
-  '
+  heat_pump: true
+  one_pedal_driving: true
+notes: |
+  2026 Tesla Model 3 Premium RWD. In Europe this is the long-range rear-drive
+  car: 79 kWh usable, 750 km WLTP, 235 kW. Malaysia lists the same specification
+  as Premium Long Range RWD. The cheaper Malaysian Premium RWD is a different
+  car (about 62.5 kWh and 520 km) and is not this record.
+  Charging is 11 kW AC on three phases and 250 kW DC, Type 2 and CCS2.
+  No measured DC curve is stored for this trim.
 metadata:
   created_at: '2026-02-10'
+  updated_at: '2026-09-27'
   data_quality: estimated
-  sources: []
+  sources:
+    - https://paultan.org/research/tesla/model-3/highland-facelift/premium-long-range-rwd-2026/
+    - https://www.tesla.com/en_au/support/charging/onboard-charger
